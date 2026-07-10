@@ -1,89 +1,108 @@
-/*
-====================================
- SF6 DNA Responsive CSS
- Version : 0.1.0
-====================================
-*/
+/* ==========================================
+   Responsive
+========================================== */
 
-/* =========================
-   Laptop
-========================= */
+@media (max-width: 1024px){
 
-@media (max-width:1200px){
-
-    .container{
-        width:min(100% - 32px,100%);
+    .logo h1{
+        font-size:52px;
     }
 
-}
-
-/* =========================
-   Tablet
-========================= */
-
-@media (max-width:992px){
-
-    .hero-title{
+    .hero h2{
         font-size:44px;
     }
 
-    .grid-4{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .grid-3{
-        grid-template-columns:repeat(2,1fr);
+    .hero p{
+        font-size:20px;
     }
 
 }
 
-/* =========================
-   Mobile
-========================= */
+@media (max-width: 768px){
 
-@media (max-width:768px){
+    header,
+    main,
+    footer{
 
-    .header-inner{
-        flex-direction:column;
-        height:auto;
-        padding:16px 0;
-        gap:16px;
+        padding-inline:20px;
+
     }
 
-    .nav{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:16px;
+    .logo h1{
+
+        font-size:40px;
+
+    }
+
+    .logo p{
+
+        font-size:18px;
+
     }
 
     .hero{
-        padding:64px 0;
+
+        min-height:auto;
+
+        padding:60px 0;
+
+        gap:24px;
+
     }
 
-    .hero-title{
-        font-size:36px;
+    .hero h2{
+
+        font-size:34px;
+
     }
 
-    .grid-2,
-    .grid-3,
-    .grid-4{
-        grid-template-columns:1fr;
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+    .button-area{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .btn-primary,
+    .btn-secondary{
+
+        width:100%;
+
     }
 
 }
 
-/* =========================
-   Small Mobile
-========================= */
-
 @media (max-width:480px){
 
-    body{
-        font-size:15px;
+    .logo h1{
+
+        font-size:32px;
+
     }
 
-    .hero-title{
-        font-size:30px;
+    .hero h2{
+
+        font-size:28px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    footer{
+
+        font-size:14px;
+
     }
 
 }
