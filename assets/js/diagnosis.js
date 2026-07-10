@@ -22,31 +22,38 @@ const questions = [
 ];
 
 let currentQuestion = 0;
+const userAnswers = [];
 const nextButton = document.getElementById("nextButton");
 
 nextButton.addEventListener("click", () => {
 
     const selected =
-        document.querySelector('input[name="question"]:checked');
+    document.querySelector('input[name="question"]:checked');
 
-    if(!selected){
+if(!selected){
 
-        alert("回答を選択してください。");
-        return;
+    alert("回答を選択してください。");
+    return;
 
-    }
+}
 
-    if(currentQuestion < questions.length - 1){
+/* 回答保存 */
 
-        currentQuestion++;
+userAnswers[currentQuestion] = Number(selected.value);
 
-        renderQuestion();
+if(currentQuestion < questions.length - 1){
 
-    }else{
+    currentQuestion++;
 
-        alert("診断終了です。（次回、結果画面へ遷移）");
+    renderQuestion();
 
-    }
+}else{
+
+    console.log(userAnswers);
+
+    alert("診断終了です。（次回結果画面へ）");
+
+}
 
 });
 const questionNumber = document.getElementById("questionNumber");
@@ -66,14 +73,24 @@ function renderQuestion() {
 
     q.answers.forEach((answer, index) => {
 
-        answerList.innerHTML += `
-            <label class="answer-item">
-                <input type="radio"
-                       name="question"
-                       value="${index}">
-                <span class="answer-text">${answer}</span>
-            </label>
-        `;
+    const checked =
+        userAnswers[currentQuestion] === index
+        ? "checked"
+        : "";
+
+    answerList.innerHTML += `
+        <label class="answer-item">
+            <input
+                type="radio"
+                name="question"
+                value="${index}"
+                ${checked}
+            >
+            <span class="answer-text">${answer}</span>
+        </label>
+    `;
+
+});
 
     });
     progressBar.style.width =
