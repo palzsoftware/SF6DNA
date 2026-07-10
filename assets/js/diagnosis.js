@@ -26,8 +26,50 @@ const nextButton = document.getElementById("nextButton");
 
 nextButton.addEventListener("click", () => {
 
-    currentQuestion++;
+    if(currentQuestion < questions.length - 1){
 
-    alert("Q" + (currentQuestion + 1) + "へ進みます。（次回実装）");
+        currentQuestion++;
+
+        renderQuestion();
+
+    }else{
+
+        alert("ここから結果画面へ遷移します。");
+
+    }
 
 });
+const questionNumber = document.getElementById("questionNumber");
+const questionTitle = document.getElementById("questionTitle");
+const answerList = document.getElementById("answerList");
+const progressBar = document.getElementById("progressBar");
+
+function renderQuestion() {
+
+    const q = questions[currentQuestion];
+
+    questionNumber.textContent = `Q${currentQuestion + 1}`;
+
+    questionTitle.textContent = q.question;
+
+    answerList.innerHTML = "";
+
+    q.answers.forEach((answer, index) => {
+
+        answerList.innerHTML += `
+            <label class="answer-item">
+                <input type="radio"
+                       name="question"
+                       value="${index}">
+                <span class="answer-text">${answer}</span>
+            </label>
+        `;
+
+    });
+    progressBar.style.width =
+`${((currentQuestion + 1) / questions.length) * 100}%`;
+
+}
+
+renderQuestion();
+
