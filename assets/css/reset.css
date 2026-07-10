@@ -1,9 +1,6 @@
-/*
-====================================
- SF6 DNA Reset CSS
- Version : 0.1.0
-====================================
-*/
+/* ==========================================
+   Reset CSS
+========================================== */
 
 *,
 *::before,
@@ -18,24 +15,14 @@ html{
 }
 
 body{
-    min-height:100vh;
-    background:var(--color-background);
-    color:var(--color-text);
-    font-family:var(--font-main);
-    font-size:var(--fs-body);
     line-height:1.6;
+    -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
 }
 
 img{
     display:block;
     max-width:100%;
-    height:auto;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
 }
 
 ul,
@@ -43,31 +30,20 @@ ol{
     list-style:none;
 }
 
-button,
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font:inherit;
+}
+
 input,
 textarea,
 select{
     font:inherit;
-    border:none;
-    outline:none;
-    background:none;
 }
-
-button{
-    cursor:pointer;
-}
-
-table{
-    border-collapse:collapse;
-    border-spacing:0;
-}
-
-h1,h2,h3,h4,h5,h6{
-    font-weight:700;
-    line-height:1.2;
-}
-
-h1{font-size:var(--fs-h1);}
-h2{font-size:var(--fs-h2);}
-h3{font-size:var(--fs-h3);}
-h4{font-size:var(--fs-h4);}
