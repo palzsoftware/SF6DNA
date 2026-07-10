@@ -51,7 +51,7 @@ if(currentQuestion < questions.length - 1){
 
     console.log(userAnswers);
 
-    alert("診断終了です。（次回結果画面へ）");
+    window.location.href = "result.html";
 
 }
 
@@ -92,7 +92,6 @@ function renderQuestion() {
 
 });
 
-    });
     progressBar.style.width =
 `${((currentQuestion + 1) / questions.length) * 100}%`;
 
