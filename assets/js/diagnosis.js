@@ -26,6 +26,16 @@ const nextButton = document.getElementById("nextButton");
 
 nextButton.addEventListener("click", () => {
 
+    const selected =
+        document.querySelector('input[name="question"]:checked');
+
+    if(!selected){
+
+        alert("回答を選択してください。");
+        return;
+
+    }
+
     if(currentQuestion < questions.length - 1){
 
         currentQuestion++;
@@ -34,7 +44,7 @@ nextButton.addEventListener("click", () => {
 
     }else{
 
-        alert("ここから結果画面へ遷移します。");
+        alert("診断終了です。（次回、結果画面へ遷移）");
 
     }
 
