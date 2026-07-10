@@ -1,102 +1,39 @@
-/*
-====================================
- SF6 DNA Design System
- Version : 0.1.0
-====================================
-*/
+/* ==========================================
+   SF6 DNA Color System
+========================================== */
 
 :root{
 
-    /* ==========================
-   Colors
-========================== */
+    /* Main */
 
---color-primary:#E64A19;
---color-primary-hover:#BF360C;
+    --bg:#0d1117;
+    --surface:#161b22;
+    --surface-2:#1f2630;
 
---color-background:#0B0B0D;
+    --primary:#ff6b00;
+    --primary-hover:#ff8d32;
 
---color-surface:#18181B;
+    --text:#ffffff;
+    --text-sub:#b5bcc8;
 
---color-border:#34343A;
+    --border:#2b3442;
 
---color-text:#F5F5F5;
---color-text-muted:#B3B3B3;
+    --success:#38d996;
+    --danger:#ff4b55;
 
---color-success:#22C55E;
---color-warning:#F59E0B;
---color-danger:#DC2626;
+    /* Shadow */
 
-    /* ==========================
-       Font
-    ========================== */
+    --shadow:0 10px 30px rgba(0,0,0,.35);
 
-    --font-main:
-    "Noto Sans JP",
-    "Yu Gothic UI",
-    sans-serif;
+    /* Radius */
 
-    /* ==========================
-       Font Size
-    ========================== */
+    --radius:16px;
 
-    --fs-h1:48px;
-    --fs-h2:36px;
-    --fs-h3:28px;
-    --fs-h4:22px;
+    /* Width */
 
-    --fs-body:16px;
-    --fs-small:14px;
+    --container:1200px;
 
-    /* ==========================
-       Spacing
-    ========================== */
+    /* Animation */
 
-    --space-xs:8px;
-    --space-sm:16px;
-    --space-md:24px;
-    --space-lg:32px;
-    --space-xl:48px;
-    --space-xxl:64px;
-
-    /* ==========================
-       Radius
-    ========================== */
-
-    --radius-sm:8px;
-    --radius-md:12px;
-    --radius-lg:20px;
-
-    /* ==========================
-       Shadow
-    ========================== */
-
-    --shadow-card:
-        0 8px 24px rgba(0,0,0,.25);
-
-    --shadow-hover:
-        0 12px 32px rgba(0,0,0,.35);
-
-    /* ==========================
-       Animation
-    ========================== */
-
-    --transition-fast:.2s;
-
-    --transition-normal:.3s;
-
-    /* ==========================
-       Layout
-    ========================== */
-
-    --container-width:1200px;
-
-    /* ==========================
-       Z-index
-    ========================== */
-
-    --z-header:100;
-    --z-modal:1000;
-    --z-tooltip:2000;
-
+    --transition:.25s ease;
 }
