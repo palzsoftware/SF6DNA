@@ -323,3 +323,66 @@
     font-size:18px;
 
 }
+/* ==========================================
+   Navigation Buttons
+========================================== */
+
+.navigation{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:48px;
+
+}
+
+.navigation button{
+
+    width:220px;
+    height:58px;
+
+    border-radius:12px;
+
+    font-size:18px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.btn-back{
+
+    background:transparent;
+
+    color:var(--text);
+
+    border:2px solid var(--border);
+
+}
+
+.btn-back:hover{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+}
+
+.btn-next{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.btn-next:hover{
+
+    background:var(--primary-hover);
+
+}
