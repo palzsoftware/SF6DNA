@@ -1,0 +1,89 @@
+/*
+====================================
+ SF6 DNA Responsive CSS
+ Version : 0.1.0
+====================================
+*/
+
+/* =========================
+   Laptop
+========================= */
+
+@media (max-width:1200px){
+
+    .container{
+        width:min(100% - 32px,100%);
+    }
+
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width:992px){
+
+    .hero-title{
+        font-size:44px;
+    }
+
+    .grid-4{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .grid-3{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width:768px){
+
+    .header-inner{
+        flex-direction:column;
+        height:auto;
+        padding:16px 0;
+        gap:16px;
+    }
+
+    .nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:16px;
+    }
+
+    .hero{
+        padding:64px 0;
+    }
+
+    .hero-title{
+        font-size:36px;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width:480px){
+
+    body{
+        font-size:15px;
+    }
+
+    .hero-title{
+        font-size:30px;
+    }
+
+}

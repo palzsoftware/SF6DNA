@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF6 DNA | Design System</title>
+
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+
+    <style>
+
+        body{
+            padding:40px;
+        }
+
+        h1{
+            margin-bottom:30px;
+        }
+
+        h2{
+            margin:40px 0 20px;
+        }
+
+        .color-grid{
+            display:flex;
+            flex-wrap:wrap;
+            gap:20px;
+        }
+
+        .color-card{
+            width:180px;
+        }
+
+        .color-box{
+            height:100px;
+            border-radius:12px;
+            border:1px solid var(--color-border);
+            box-shadow:var(--shadow-card);
+            margin-bottom:10px;
+        }
+
+        .primary{
+            background:var(--color-primary);
+        }
+
+        .background{
+            background:var(--color-background);
+        }
+
+        .surface{
+            background:var(--color-surface);
+        }
+
+        .success{
+            background:var(--color-success);
+        }
+
+        .warning{
+            background:var(--color-warning);
+        }
+
+        .danger{
+            background:var(--color-danger);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>SF6 DNA Design System</h1>
+
+<h2>Color Palette</h2>
+
+<div class="color-grid">
+
+    <div class="color-card">
+        <div class="color-box primary"></div>
+        <p>Primary</p>
+    </div>
+
+    <div class="color-card">
+        <div class="color-box background"></div>
+        <p>Background</p>
+    </div>
+
+    <div class="color-card">
+        <div class="color-box surface"></div>
+        <p>Surface</p>
+    </div>
+
+    <div class="color-card">
+        <div class="color-box success"></div>
+        <p>Success</p>
+    </div>
+
+    <div class="color-card">
+        <div class="color-box warning"></div>
+        <p>Warning</p>
+    </div>
+
+    <div class="color-card">
+        <div class="color-box danger"></div>
+        <p>Danger</p>
+    </div>
+
+</div>
+
+</body>
+</html>

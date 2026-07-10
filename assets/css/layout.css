@@ -1,0 +1,227 @@
+/*
+====================================
+ SF6 DNA Layout CSS
+ Version : 0.1.0
+====================================
+*/
+
+/* ===== Container ===== */
+
+.container{
+    width:min(100% - 40px,var(--container-width));
+    margin-inline:auto;
+}
+
+/* ===== Section ===== */
+
+.section{
+    padding:64px 0;
+}
+
+.section-title{
+    margin-bottom:32px;
+}
+
+/* ===== Header ===== */
+
+.site-header{
+    position:sticky;
+    top:0;
+    z-index:var(--z-header);
+
+    background:var(--color-surface);
+
+    border-bottom:1px solid var(--color-border);
+}
+
+.header-inner{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:72px;
+}
+
+/* ===== Logo ===== */
+
+.logo{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:var(--color-text);
+
+}
+
+/* ===== Navigation ===== */
+
+.nav{
+
+    display:flex;
+
+    gap:24px;
+
+}
+
+.nav a{
+
+    transition:var(--transition-fast);
+
+}
+
+.nav a:hover{
+
+    color:var(--color-primary);
+
+}
+
+/* ===== Hero ===== */
+
+.hero{
+
+    padding:96px 0;
+
+}
+
+.hero-title{
+
+    font-size:56px;
+
+    margin-bottom:24px;
+
+}
+
+.hero-text{
+
+    max-width:720px;
+
+    color:var(--color-text-muted);
+
+}
+
+/* ===== Grid ===== */
+
+.grid{
+
+    display:grid;
+
+    gap:24px;
+
+}
+
+.grid-2{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.grid-3{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.grid-4{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+/* ====================================
+   SF6 Hero Background
+==================================== */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(230,74,25,.18),
+    transparent 40%),
+
+    radial-gradient(circle at bottom left,
+    rgba(255,106,0,.12),
+    transparent 45%);
+
+}
+
+/* オレンジの光 */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    right:-250px;
+    top:-180px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,90,0,.25),
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+/* 赤い光 */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    left:-180px;
+    bottom:-180px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(214,38,56,.18),
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+/* ====================================
+   Footer
+==================================== */
+
+.site-footer{
+
+    margin-top:80px;
+
+    padding:48px 0;
+
+    background:#111;
+
+    border-top:1px solid var(--color-border);
+
+    text-align:center;
+
+}
+
+.site-footer p{
+
+    color:var(--color-text-muted);
+
+    font-size:14px;
+
+}

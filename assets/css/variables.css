@@ -1,0 +1,102 @@
+/*
+====================================
+ SF6 DNA Design System
+ Version : 0.1.0
+====================================
+*/
+
+:root{
+
+    /* ==========================
+   Colors
+========================== */
+
+--color-primary:#E64A19;
+--color-primary-hover:#BF360C;
+
+--color-background:#0B0B0D;
+
+--color-surface:#18181B;
+
+--color-border:#34343A;
+
+--color-text:#F5F5F5;
+--color-text-muted:#B3B3B3;
+
+--color-success:#22C55E;
+--color-warning:#F59E0B;
+--color-danger:#DC2626;
+
+    /* ==========================
+       Font
+    ========================== */
+
+    --font-main:
+    "Noto Sans JP",
+    "Yu Gothic UI",
+    sans-serif;
+
+    /* ==========================
+       Font Size
+    ========================== */
+
+    --fs-h1:48px;
+    --fs-h2:36px;
+    --fs-h3:28px;
+    --fs-h4:22px;
+
+    --fs-body:16px;
+    --fs-small:14px;
+
+    /* ==========================
+       Spacing
+    ========================== */
+
+    --space-xs:8px;
+    --space-sm:16px;
+    --space-md:24px;
+    --space-lg:32px;
+    --space-xl:48px;
+    --space-xxl:64px;
+
+    /* ==========================
+       Radius
+    ========================== */
+
+    --radius-sm:8px;
+    --radius-md:12px;
+    --radius-lg:20px;
+
+    /* ==========================
+       Shadow
+    ========================== */
+
+    --shadow-card:
+        0 8px 24px rgba(0,0,0,.25);
+
+    --shadow-hover:
+        0 12px 32px rgba(0,0,0,.35);
+
+    /* ==========================
+       Animation
+    ========================== */
+
+    --transition-fast:.2s;
+
+    --transition-normal:.3s;
+
+    /* ==========================
+       Layout
+    ========================== */
+
+    --container-width:1200px;
+
+    /* ==========================
+       Z-index
+    ========================== */
+
+    --z-header:100;
+    --z-modal:1000;
+    --z-tooltip:2000;
+
+}
