@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>プロ選手詳細 | SF6 DNA</title>
+
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/components-v2.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+SF6 DNA
+</a>
+
+<nav class="nav">
+
+    <a href="index.html">TOP</a>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            診断 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="diagnosis.html"><span>📝 START</span>診断する</a>
+
+<a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+</div>
+
+    </div>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            図鑑 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="characters.html"><span>🎮 CHARACTER</span>キャラクター図鑑</a>
+
+<a href="players.html" class="active"><span>👤 PLAYER</span>プレイヤー図鑑</a>
+
+<a href="teams.html"><span>🏆 TEAM</span>チーム図鑑</a>
+
+</div>
+
+    </div>
+
+    <a href="compare.html">比較</a>
+    <a href="about.html">About</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<main class="container">
+
+<section class="result-page">
+
+<div class="result-card">
+
+<h1 id="playerName"></h1>
+
+<p id="playerCharacter"></p>
+
+<p id="playerStyle"></p>
+
+<h3>学べるポイント</h3>
+
+<ul id="playerTips"></ul>
+
+<h3>大会実績</h3>
+
+<ul id="playerResults"></ul>
+
+</div>
+
+</section>
+
+</main>
+
+<script>
+
+const params = new URLSearchParams(location.search);
+
+const id = params.get("id");
+
+const playerName = document.getElementById("playerName");
+const playerCharacter = document.getElementById("playerCharacter");
+const playerStyle = document.getElementById("playerStyle");
+const playerTips = document.getElementById("playerTips");
+const playerResults = document.getElementById("playerResults");
+
+const players = {
+
+    kakeru:{
+
+        name:"翔",
+
+        character:"JP",
+
+        style:"待ち・読み合い重視",
+
+        tips:[
+            "対空精度",
+            "距離管理",
+            "ゲージ管理"
+        ],
+
+        results:[
+            "CAPCOM CUP出場",
+            "SFL出場"
+        ]
+
+    },
+
+    gachikun:{
+
+        name:"ガチくん",
+
+        character:"ラシード",
+
+        style:"ラッシュ・立ち回り",
+
+        tips:[
+            "ラッシュ",
+            "画面端継続",
+            "読み合い"
+        ],
+
+        results:[
+            "CAPCOM CUP優勝",
+            "EVO上位"
+        ]
+
+    },
+
+    higuchi:{
+
+        name:"ひぐち",
+
+        character:"ガイル",
+
+        style:"攻守バランス",
+
+        tips:[
+            "守り",
+            "飛び道具",
+            "対空"
+        ],
+
+        results:[
+            "SFL優勝",
+            "CAPCOM CUP出場"
+        ]
+
+    },
+
+    menard:{
+
+    name:"MenaRD",
+
+    character:"ブランカ / ベガ",
+
+    style:"攻守バランス・読み合い",
+
+    tips:[
+        "立ち回り",
+        "読み合い",
+        "状況判断"
+    ],
+
+    results:[
+        "CAPCOM CUP優勝×2",
+        "Red Bull Kumite優勝"
+    ]
+
+},
+angrybird:{
+
+    name:"AngryBird",
+
+    character:"ケン",
+
+    style:"攻撃型",
+
+    tips:[
+        "ラッシュ",
+        "火力",
+        "起き攻め"
+    ],
+
+    results:[
+        "CAPCOM CUP優勝",
+        "EVO上位"
+    ]
+
+},
+
+punk:{
+
+    name:"Punk",
+
+    character:"キャミィ",
+
+    style:"差し返し・精密操作",
+
+    tips:[
+        "差し返し",
+        "通常技",
+        "確認精度"
+    ],
+
+    results:[
+        "EVO優勝",
+        "CAPCOM CUP上位"
+    ]
+
+}
+
+};
+
+const player = players[id];
+
+playerName.textContent = player.name;
+
+playerCharacter.textContent =
+"使用キャラ：" + player.character;
+
+playerStyle.textContent =
+"プレイスタイル：" + player.style;
+
+player.tips.forEach(item=>{
+
+    playerTips.innerHTML += `<li>${item}</li>`;
+
+});
+
+player.results.forEach(item=>{
+
+    playerResults.innerHTML += `<li>${item}</li>`;
+
+});
+
+</script>
+
+</body>
+
+</html>

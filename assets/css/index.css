@@ -1,0 +1,816 @@
+/*=========================================
+  Hero
+=========================================*/
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:85vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:100px 0;
+
+    background:
+
+    radial-gradient(circle at top left,
+    rgba(255,106,0,.18),
+    transparent 35%),
+
+    radial-gradient(circle at bottom right,
+    rgba(0,140,255,.18),
+    transparent 35%),
+
+    linear-gradient(
+    180deg,
+    #11141d,
+    #0c0f16
+    );
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(
+    rgba(255,255,255,.02) 1px,
+    transparent 1px),
+
+    linear-gradient(
+    90deg,
+    rgba(255,255,255,.02) 1px,
+    transparent 1px);
+
+    background-size:50px 50px;
+
+    pointer-events:none;
+
+}
+
+.hero-container{
+
+    display:grid;
+
+    grid-template-columns:1.2fr 0.8fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.hero-left h2{
+
+    font-size:4rem;
+
+    line-height:1.2;
+
+    margin:20px 0;
+
+}
+
+.hero-left p{
+
+    font-size:1.2rem;
+
+    color:#bfc7d5;
+
+    line-height:1.8;
+
+    max-width:600px;
+
+}
+
+.hero-badge{
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:#ff6b00;
+
+    color:#fff;
+
+    font-size:.9rem;
+
+    font-weight:bold;
+
+}
+
+.button-area{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+/*=========================================
+  Hero Result Card
+=========================================*/
+
+.hero-result-card{
+
+    background:#1b1f27;
+
+    border:1px solid #31394a;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.result-label{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    background:#2c3444;
+
+    margin-bottom:20px;
+
+    font-size:.8rem;
+
+}
+
+.hero-result-card h3{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+.hero-stars{
+
+    color:#ffb400;
+
+    font-size:1.3rem;
+
+    margin-bottom:30px;
+
+}
+
+.hero-result-card strong{
+
+    display:block;
+
+    font-size:1.3rem;
+
+    margin-bottom:25px;
+
+}
+
+/*=========================================
+  Hero Stats
+=========================================*/
+
+.hero-stats{
+
+    padding:80px 0;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:#1b1f27;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    border:1px solid #303847;
+
+}
+
+.stat-card h3{
+
+    font-size:3rem;
+
+    color:#ff6b00;
+
+    margin-bottom:15px;
+
+}
+
+.stat-card p{
+
+    letter-spacing:3px;
+
+    color:#9ca8bb;
+
+}
+
+/*==============================
+  悩みセクション
+==============================*/
+
+.problem-section{
+
+    padding:140px 0;
+
+}
+
+.problem-section h2{
+
+    text-align:center;
+
+    font-size:48px;
+
+    margin-bottom:60px;
+
+}
+
+.problem-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+    margin-bottom:80px;
+
+}
+
+.problem-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:30px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:16px;
+
+    background:#1d212b;
+
+}
+
+.problem-card span{
+
+    color:#ff7a00;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+.problem-card p{
+
+    font-size:22px;
+
+}
+
+.problem-message{
+
+    max-width:800px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.problem-message h3{
+
+    font-size:42px;
+
+    margin-bottom:24px;
+
+}
+
+.problem-message p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#c9ced8;
+
+}
+/*=========================================
+  このサイトでできること
+=========================================*/
+
+.feature-section{
+
+    padding:140px 0;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.section-description{
+
+    max-width:800px;
+
+    margin:0 auto 80px;
+
+    text-align:center;
+
+    color:#bfc7d5;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+}
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.feature-card{
+
+    padding:40px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    background:#1d212b;
+
+}
+
+.feature-card h3{
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+}
+
+.feature-card p{
+
+    color:#c7cbd4;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+/*=========================================
+  SF6 DNA図鑑
+=========================================*/
+
+.dictionary-section{
+
+    padding:140px 0;
+
+}
+
+.dictionary-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.dictionary-card{
+
+    padding:50px 30px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:#1d212b;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    color:#fff;
+
+}
+
+.dictionary-card h3{
+
+    font-size:64px;
+
+    color:#ff7a00;
+
+    margin-bottom:10px;
+
+}
+
+.dictionary-card span{
+
+    display:block;
+
+    font-size:20px;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+}
+
+.dictionary-card p{
+
+    color:#c7cbd4;
+
+    line-height:1.8;
+
+}
+
+/*=========================================
+  診断結果サンプル
+=========================================*/
+
+.result-preview-section{
+
+    padding:140px 0;
+
+}
+
+.result-preview-card{
+
+    max-width:700px;
+
+    margin:60px auto 0;
+
+    padding:50px;
+
+    background:#1d212b;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:20px;
+
+}
+
+.preview-item{
+
+    margin-top:35px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.preview-item h4{
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+}
+
+.preview-item p,
+.preview-item li{
+
+    color:#c7cbd4;
+
+    line-height:1.8;
+
+}
+
+.preview-item ul{
+
+    padding-left:20px;
+
+}
+
+/*=========================================
+ CTA
+=========================================*/
+
+.cta-section{
+
+    padding:140px 0;
+
+    text-align:center;
+
+}
+
+.cta-section h2{
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+}
+
+.cta-section p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:2;
+
+    color:#c8ccd4;
+
+}
+
+.cta-info{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    margin:50px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.cta-info span{
+
+    padding:12px 24px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:999px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+.hero-info{
+
+    display:flex;
+    gap:20px;
+    margin-top:50px;
+    flex-wrap:wrap;
+}
+
+.hero-info-card{
+
+    flex:1;
+    min-width:170px;
+
+    padding:22px;
+
+    background:#1d212b;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:16px;
+
+}
+
+.hero-info-card h3{
+
+    color:#ff7a00;
+    font-size:28px;
+    margin-bottom:10px;
+
+}
+
+.hero-info-card p{
+
+    color:#c7cbd4;
+    font-size:15px;
+
+}
+.hero-info{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:24px;
+
+    margin-top:80px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-info-card{
+
+    width:280px;
+
+    padding:30px;
+
+    background:#1d212b;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    transition:.25s;
+
+}
+
+.hero-info-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#ff7a00;
+
+}
+
+.hero-info-icon{
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+}
+
+.hero-info-card h3{
+
+    font-size:24px;
+
+    margin-bottom:16px;
+
+}
+
+.hero-info-card p{
+
+    color:#c8ccd4;
+
+    line-height:1.8;
+
+}
+.solution-flow{
+
+    max-width:900px;
+
+    margin:90px auto 0;
+
+}
+
+.solution-card{
+
+    background:#1d212b;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+.solution-card:not(:last-child){
+
+    margin-bottom:25px;
+
+}
+
+.solution-icon{
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+.solution-card h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.solution-card p{
+
+    color:#c8ccd4;
+
+    line-height:1.8;
+
+}
+
+.solution-arrow{
+
+    text-align:center;
+
+    font-size:42px;
+
+    color:#ff7a00;
+
+    margin:20px 0;
+
+}
+
+.feature-timeline{
+
+    max-width:900px;
+
+    margin:80px auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:50px;
+
+}
+
+.feature-bubble{
+
+    max-width:520px;
+
+    padding:28px 36px;
+
+    border-radius:24px;
+
+    background:#1d212b;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.6s;
+
+}
+
+.feature-bubble.left{
+
+    align-self:flex-start;
+
+}
+
+.feature-bubble.right{
+
+    align-self:flex-end;
+
+}
+
+.feature-bubble.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}

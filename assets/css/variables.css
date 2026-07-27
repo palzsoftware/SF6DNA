@@ -21,6 +21,13 @@
     --success:#38d996;
     --danger:#ff4b55;
 
+    /* 診断タイプごとのアクセントカラー(result.jsが動的に上書きする) */
+    --type-color:#ff6b00;
+    --type-color-soft:rgba(255,107,0,.15);
+
+    /* player.css で使用(元々定義が漏れていたため追加) */
+    --accent-color:#ff6b00;
+
     /* Shadow */
 
     --shadow:0 10px 30px rgba(0,0,0,.35);

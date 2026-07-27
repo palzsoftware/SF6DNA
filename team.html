@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>チーム一覧 | SF6 DNA</title>
+
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/components-v2.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+SF6 DNA
+</a>
+
+<nav class="nav">
+
+    <a href="index.html">TOP</a>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            診断 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="diagnosis.html"><span>📝 START</span>診断する</a>
+
+<a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+</div>
+
+    </div>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            図鑑 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="characters.html"><span>🎮 CHARACTER</span>キャラクター図鑑</a>
+
+<a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
+
+<a href="teams.html" class="active"><span>🏆 TEAM</span>チーム図鑑</a>
+
+</div>
+
+    </div>
+
+    <a href="compare.html">比較</a>
+    <a href="about.html">About</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<main class="container">
+
+<h1>チーム一覧</h1>
+
+<p>
+所属チームからプレイヤーを探そう
+</p>
+
+<div id="teamArea">
+
+</div>
+
+</main>
+
+</body>
+
+</html>
+
+<script src="assets/js/team-data.js"></script>
+<script src="assets/js/team.js"></script>

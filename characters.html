@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/components-v2.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
 </head>
@@ -21,139 +22,225 @@
 
 <header class="site-header">
 
-    <div class="container header-inner">
+<div class="container header-inner">
 
-        <a href="index.html" class="logo">
-            SF6 DNA
-        </a>
+<a href="index.html" class="logo">
+SF6 DNA
+</a>
 
-        <nav class="nav">
+<nav class="nav">
 
-            <a href="index.html">TOP</a>
-            <a href="#">診断</a>
-            <a href="characters.html">キャラクター</a>
-            <a href="#">About</a>
+    <a href="index.html">TOP</a>
 
-        </nav>
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            診断 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="diagnosis.html"><span>📝 START</span>診断する</a>
+
+<a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+</div>
 
     </div>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            図鑑 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="characters.html" class="active"><span>🎮 CHARACTER</span>キャラクター図鑑</a>
+
+<a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
+
+<a href="teams.html"><span>🏆 TEAM</span>チーム図鑑</a>
+
+</div>
+
+    </div>
+
+    <a href="compare.html">比較</a>
+    <a href="about.html">About</a>
+
+</nav>
+
+</div>
 
 </header>
 
 <main>
 
-<section class="hero">
+<section class="page-section">
 
 <div class="container">
 
-<h1 class="hero-title">
+<div class="page-header">
 
-キャラクター一覧
+    <div>
 
-</h1>
+        <h1>キャラクター一覧</h1>
 
-<p class="hero-text">
-
-あなたのプレイスタイルに合うキャラクターを見つけよう。
-
-</p>
-<div style="margin-top:40px;">
-
-    <input
-        class="input"
-        type="text"
-        placeholder="キャラクター名で検索（例：リュウ）">
-
-</div>
-<div class="grid grid-3" style="margin-top:40px;">
-
-    <div class="card">
-
-        <span class="badge">バランス型</span>
-
-        <h3 style="margin-top:20px;">リュウ</h3>
-
-        <p style="margin-top:16px;color:var(--color-text-muted);">
-            バランスの取れた性能で初心者にもおすすめ。
+        <p>
+            全30キャラクターの性能や特徴を比較できます
         </p>
-
-        <div style="margin-top:20px;">
-
-            <strong>難易度：</strong>★★☆☆☆
-
-            <br><br>
-
-            <strong>操作：</strong>モダン / クラシック
-
-        </div>
-
-       <a href="character.html?id=ryu" class="btn btn-primary" style="margin-top:24px;">
-    詳細を見る
-</a>
-
-    </div>
-
-    <div class="card">
-
-        <span class="badge">攻め型</span>
-
-        <h3 style="margin-top:20px;">ルーク</h3>
-
-        <p style="margin-top:16px;color:var(--color-text-muted);">
-            攻守ともに優秀で扱いやすい万能タイプ。
-        </p>
-
-        <div style="margin-top:20px;">
-
-            <strong>難易度：</strong>★★☆☆☆
-
-            <br><br>
-
-            <strong>操作：</strong>モダン / クラシック
-
-        </div>
-
-      <a href="character.html?id=luke" class="btn btn-primary" style="margin-top:24px;">
-    詳細を見る
-</a>
-
-    </div>
-
-    <div class="card">
-
-        <span class="badge">スピード型</span>
-
-        <h3 style="margin-top:20px;">春麗</h3>
-
-        <p style="margin-top:16px;color:var(--color-text-muted);">
-            素早い通常技と機動力で相手を翻弄する。
-        </p>
-
-        <div style="margin-top:20px;">
-
-            <strong>難易度：</strong>★★★★☆
-
-            <br><br>
-
-            <strong>操作：</strong>モダン / クラシック
-
-        </div>
-
-        <a href="character.html?id=chunli" class="btn btn-primary" style="margin-top:24px;">
-    詳細を見る
-</a>
 
     </div>
 
 </div>
 
-</div>
+<section class="search-section">
+
+    <div class="stack search-toolbar">
+
+        <input
+    id="characterSearch"
+    class="input"
+    type="text"
+    placeholder="キャラクター名で検索"
+>
+<a
+    href="#"
+    id="compareButton"
+    class="btn btn-secondary"
+>
+    ⚖ キャラクターを比較する
+</a>
+        <select
+            id="sortSelect"
+            class="input"
+        >
+            <option value="default">並び替えなし</option>
+            <option value="difficultyAsc">難易度が低い順</option>
+            <option value="difficultyDesc">難易度が高い順</option>
+            <option value="name">名前順</option>
+        </select>
+
+    </div>
 
 </section>
 
+<section class="filter-section">
+
+    <button class="compare-toggle">
+
+        ▼ プレイタイプ
+
+    </button>
+
+    <div class="stack filter-area">
+
+        <button class="filter-button active" data-filter="all">全て</button>
+        <button class="filter-button" data-filter="beginner">初心者向け</button>
+        <button class="filter-button" data-filter="balance">バランス型</button>
+        <button class="filter-button" data-filter="power">パワー型</button>
+        <button class="filter-button" data-filter="speed">スピード型</button>
+        <button class="filter-button" data-filter="defense">ディフェンス型</button>
+        <button class="filter-button" data-filter="grappler">グラップラー</button>
+        <button class="filter-button" data-filter="technical">テクニカル型</button>
+        <button class="filter-button" data-filter="shooting">シューティング型</button>
+    
+    </div>
+
+</section>
+
+<section class="favorite-section">
+
+    <h2 class="filter-title">
+        お気に入り
+    </h2>
+
+    <div class="stack favorite-filter">
+
+        <button class="favorite-button active" data-status="all">
+            全て
+        </button>
+
+        <button class="favorite-button" data-status="0">
+            ○ 未設定
+        </button>
+
+        <button class="favorite-button" data-status="1">
+            ★ メイン
+        </button>
+
+        <button class="favorite-button" data-status="2">
+            △ サブ
+        </button>
+
+        <button class="favorite-button" data-status="3">
+            ◇ 気になる
+        </button>
+
+        <button class="favorite-button" data-status="4">
+            ♡ 使ってみたい
+        </button>
+
+    </div>
+
+</section>
+
+<section class="character-section">
+
+    <div
+        id="characterArea"
+        class="grid grid-3"
+    ></div>
+
+</section>
+
+  </div>
+</section>
+
 </main>
+
+<div id="compareModal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <h2>キャラクター比較</h2>
+
+        <p>
+            比較したいキャラクターを
+            選択しますか？
+        </p>
+
+        <div class="modal-buttons">
+            
+            <button
+                id="startCompare"
+                class="btn btn-primary"
+            >
+                キャラクターを選ぶ
+            </button>
+
+            <button
+                id="cancelCompare"
+                class="btn btn-secondary"
+            >
+                キャンセル
+            </button>
+
+    
+        </div>
+
+    </div>
+
+</div>
+
 <script src="assets/js/character-data.js"></script>
-<script src="assets/js/characters.js"></script>
+<script src="assets/js/characters-list.js"></script>
 </body>
+
 
 </html>

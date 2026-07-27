@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>お気に入り | SF6 DNA</title>
+
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/components-v2.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+<style>
+
+.favorites-toolbar{
+    display:flex;
+    gap:16px;
+    margin:20px 0 30px;
+    flex-wrap:wrap;
+}
+
+.favorites-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+    gap:24px;
+}
+
+/* 保存された診断が無い時の案内: ページ中央に表示 */
+.favorites-empty{
+    grid-column:1 / -1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:40vh;
+    text-align:center;
+    color:var(--text-sub);
+    font-size:16px;
+    line-height:1.8;
+}
+
+.favorite-card{
+
+    text-align:left;
+
+    background:#1b1f27;
+    border:1px solid #303847;
+    border-radius:12px;
+    padding:20px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.favorite-card:hover{
+    border-color:#ff7a00;
+    transform:translateY(-3px);
+}
+
+.favorite-card.is-selected{
+    border-color:var(--primary);
+    box-shadow:0 0 0 1px var(--primary);
+    background:rgba(255,107,0,.06);
+}
+
+.favorite-select{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    color:var(--text-sub);
+    margin-bottom:12px;
+    cursor:pointer;
+}
+
+.favorite-select input:disabled ~ span{
+    opacity:.5;
+}
+
+.favorite-card-hint{
+    font-size:12px;
+    color:var(--text-sub);
+    margin:10px 0 4px;
+}
+
+/* おすすめキャラクターは縦並びのシンプルな一覧(カード化しない) */
+.favorite-characters{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin:14px 0;
+}
+
+.favorite-character-row{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:8px 10px;
+    border-radius:8px;
+    text-decoration:none;
+    color:inherit;
+    transition:.2s;
+}
+
+.favorite-character-row:hover{
+    background:rgba(255,255,255,.06);
+}
+
+.favorite-character-thumb{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+    background:#0e0e11;
+}
+
+.favorite-character-row h4{
+    font-size:14px;
+    margin:0;
+}
+
+/* ===========================
+   比較用フローティングバー
+=========================== */
+
+.compare-bar{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:24px;
+
+    transform:translateX(-50%) translateY(150%);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:16px 24px;
+
+    background:var(--surface);
+
+    border:1px solid var(--primary);
+
+    border-radius:999px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.5);
+
+    z-index:100;
+
+    transition:transform .25s ease, opacity .25s ease, visibility 0s linear .25s;
+
+}
+
+.compare-bar.is-visible{
+
+    transform:translateX(-50%) translateY(0);
+
+    opacity:1;
+
+    visibility:visible;
+
+    transition:transform .25s ease, opacity .25s ease, visibility 0s linear 0s;
+
+}
+
+.compare-bar-count{
+
+    font-weight:bold;
+
+    white-space:nowrap;
+
+}
+
+.compare-bar-count strong{
+
+    color:var(--primary);
+
+    font-size:18px;
+
+}
+
+.compare-bar .btn{
+
+    min-width:auto;
+
+    height:44px;
+
+    padding:0 20px;
+
+    font-size:14px;
+
+}
+
+.compare-table-wrap{
+    margin:20px 0 40px;
+    padding:24px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow-x:auto;
+}
+
+.compare-table-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.compare-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:16px;
+}
+
+.compare-table th,
+.compare-table td{
+    padding:10px 16px;
+    text-align:center;
+    border-bottom:1px solid var(--border);
+    white-space:nowrap;
+}
+
+.compare-table thead th{
+    color:var(--primary);
+    font-size:15px;
+}
+
+.compare-table tbody th{
+    text-align:left;
+    color:var(--text-sub);
+    font-weight:normal;
+}
+
+.compare-table td.is-best{
+    color:var(--success);
+    font-weight:bold;
+}
+
+.compare-date{
+    font-size:11px;
+    color:var(--text-sub);
+    font-weight:normal;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+SF6 DNA
+</a>
+
+<nav class="nav">
+
+    <a href="index.html">TOP</a>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            診断 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="diagnosis.html"><span>📝 START</span>診断する</a>
+
+<a href="favorites.html" class="active"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+</div>
+
+    </div>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            図鑑 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="characters.html"><span>🎮 CHARACTER</span>キャラクター図鑑</a>
+
+<a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
+
+<a href="teams.html"><span>🏆 TEAM</span>チーム図鑑</a>
+
+</div>
+
+    </div>
+
+    <a href="compare.html">比較</a>
+    <a href="about.html">About</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<main class="container">
+
+<section class="result-page">
+
+<h1>保存した診断・お気に入り</h1>
+
+<p>
+
+診断結果ページの「この診断を保存する」ボタンで保存した結果がここに並びます。
+2件以上選択すると、プレイスタイルを比較できます。
+
+</p>
+
+<div class="favorites-toolbar">
+
+    <button
+        id="clearFavorites"
+        class="btn btn-secondary"
+    >
+        すべて削除
+    </button>
+
+</div>
+
+<div id="compareArea"></div>
+
+<div id="favoriteArea" class="favorites-grid"></div>
+
+</section>
+
+</main>
+
+<div id="compareBar" class="compare-bar">
+
+    <span class="compare-bar-count">
+        <strong id="compareCount">0</strong>件選択中（最大4件）
+    </span>
+
+    <button id="compareRun" class="btn btn-primary" disabled>
+        比較する
+    </button>
+
+    <button id="compareClearSelection" class="btn btn-secondary">
+        選択を解除
+    </button>
+
+</div>
+
+<footer class="footer">
+
+© 2026 SF6 DNA Project
+
+</footer>
+
+<script>
+
+const favoriteArea = document.getElementById("favoriteArea");
+const compareArea = document.getElementById("compareArea");
+const compareBar = document.getElementById("compareBar");
+const compareCount = document.getElementById("compareCount");
+const compareRunBtn = document.getElementById("compareRun");
+const compareClearSelectionBtn = document.getElementById("compareClearSelection");
+
+const favorites = JSON.parse(localStorage.getItem("sf6dna_favorites")) || [];
+
+const clearFavorites = document.getElementById("clearFavorites");
+
+const MAX_COMPARE = 4;
+
+const STATUS_LABELS = {
+    aggressive: "攻撃力",
+    defensive: "守備力",
+    zoning: "間合い管理",
+    balanced: "万能性",
+    reading: "読み合い",
+    combo: "コンボ火力",
+    strategy: "戦略性",
+    instinct: "勝負強さ"
+};
+
+function renderFavorites() {
+
+    if (favorites.length === 0) {
+
+        favoriteArea.innerHTML = `
+            <div class="favorites-empty">
+                保存された診断はまだありません。<br>
+                診断結果ページで「この診断を保存する」を押すとここに追加されます。
+            </div>
+        `;
+        return;
+
+    }
+
+    favoriteArea.innerHTML = "";
+
+    favorites.forEach((item, index) => {
+
+        favoriteArea.innerHTML += `
+
+<div class="favorite-card" data-card-index="${index}">
+
+    <label class="favorite-select">
+        <input
+            type="checkbox"
+            class="compare-checkbox"
+            data-index="${index}"
+            ${item.score ? "" : "disabled"}
+        >
+        <span>${item.score ? "比較に選ぶ" : "比較不可(旧データ)"}</span>
+    </label>
+
+    <h3>${item.resultName || item.result}</h3>
+
+    <p>${item.date}</p>
+
+    <p class="favorite-card-hint">おすすめキャラクター</p>
+
+    <div class="favorite-characters">
+
+${(item.characters || []).map(character => `
+
+<a
+class="favorite-character-row"
+href="character.html?id=${character.id}"
+>
+
+<img
+src="${character.image}"
+class="favorite-character-thumb"
+>
+
+<h4>${character.name}</h4>
+
+</a>
+
+`).join("")}
+
+</div>
+
+    <button
+        class="btn btn-secondary delete-button"
+        data-index="${index}"
+    >
+        削除
+    </button>
+
+</div>
+
+`;
+
+    });
+
+    // 診断カード自体をクリックしたら、その回の結果を見返す
+    // (チェックボックス・キャラクターリンク・削除ボタンの操作は対象外にする)
+    document.querySelectorAll(".favorite-card").forEach(card => {
+
+        card.addEventListener("click", (event) => {
+
+            if (event.target.closest(".favorite-select")) return;
+            if (event.target.closest(".favorite-character-row")) return;
+            if (event.target.closest(".delete-button")) return;
+
+            const item = favorites[Number(card.dataset.cardIndex)];
+            if (!item || !item.score) return;
+
+            localStorage.setItem("sf6dna_result", item.result);
+            localStorage.setItem("sf6dna_score", JSON.stringify(item.score));
+
+            location.href = "result.html?view=1";
+
+        });
+
+    });
+
+    document.querySelectorAll(".delete-button").forEach(button => {
+
+        button.addEventListener("click", (event) => {
+
+            event.stopPropagation();
+
+            const index = Number(button.dataset.index);
+            favorites.splice(index, 1);
+
+            localStorage.setItem(
+                "sf6dna_favorites",
+                JSON.stringify(favorites)
+            );
+
+            location.reload();
+
+        });
+
+    });
+
+    document.querySelectorAll(".compare-checkbox").forEach(checkbox => {
+
+        checkbox.addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
+
+        checkbox.addEventListener("change", () => {
+
+            const checkedBoxes = [...document.querySelectorAll(".compare-checkbox:checked")];
+
+            // 選びすぎ防止(最大4件)
+            if (checkedBoxes.length > MAX_COMPARE) {
+                checkbox.checked = false;
+                alert(`比較できるのは最大${MAX_COMPARE}件までです。`);
+                return;
+            }
+
+            const card = checkbox.closest(".favorite-card");
+            card.classList.toggle("is-selected", checkbox.checked);
+
+            updateCompareBar();
+
+        });
+
+    });
+
+}
+
+function getCheckedCount() {
+    return document.querySelectorAll(".compare-checkbox:checked").length;
+}
+
+function updateCompareBar() {
+
+    const count = getCheckedCount();
+
+    compareCount.textContent = count;
+    compareBar.classList.toggle("is-visible", count >= 1);
+    compareRunBtn.disabled = count < 2;
+
+}
+
+function renderComparison() {
+
+    const checked = [...document.querySelectorAll(".compare-checkbox:checked")]
+        .map(cb => favorites[Number(cb.dataset.index)]);
+
+    if (checked.length < 2) return;
+
+    const rows = Object.keys(STATUS_LABELS).map(axis => {
+
+        const values = checked.map(item => item.score[axis] ?? 0);
+        const best = Math.max(...values);
+
+        const cells = checked.map(item => {
+            const v = item.score[axis] ?? 0;
+            const isBest = v === best && best > 0;
+            return `<td class="${isBest ? "is-best" : ""}">${v}点</td>`;
+        }).join("");
+
+        return `<tr><th>${STATUS_LABELS[axis]}</th>${cells}</tr>`;
+
+    }).join("");
+
+    const headerCells = checked.map(item =>
+        `<th>${item.resultName || item.result}<br><span class="compare-date">${item.date}</span></th>`
+    ).join("");
+
+    compareArea.innerHTML = `
+
+    <div class="compare-table-wrap">
+
+        <div class="compare-table-header">
+
+            <h2>診断結果の比較</h2>
+
+            <button id="compareClose" class="btn btn-secondary btn-small">
+                比較を閉じる
+            </button>
+
+        </div>
+
+        <table class="compare-table">
+
+            <thead>
+                <tr><th>項目</th>${headerCells}</tr>
+            </thead>
+
+            <tbody>
+                ${rows}
+            </tbody>
+
+        </table>
+
+        <p class="compare-date" style="margin-top:12px;">
+            ※ 緑色のマスがその項目の最高得点です
+        </p>
+
+    </div>
+
+    `;
+
+    document.getElementById("compareClose").addEventListener("click", () => {
+        compareArea.innerHTML = "";
+    });
+
+    compareArea.scrollIntoView({ behavior: "smooth" });
+
+}
+
+compareRunBtn.addEventListener("click", renderComparison);
+
+compareClearSelectionBtn.addEventListener("click", () => {
+
+    document.querySelectorAll(".compare-checkbox:checked").forEach(cb => {
+        cb.checked = false;
+        cb.closest(".favorite-card").classList.remove("is-selected");
+    });
+
+    compareArea.innerHTML = "";
+    updateCompareBar();
+
+});
+
+clearFavorites.addEventListener("click", () => {
+
+    const ok = confirm("保存した診断をすべて削除しますか？");
+
+    if (!ok) return;
+
+    localStorage.removeItem("sf6dna_favorites");
+
+    location.reload();
+
+});
+
+renderFavorites();
+
+</script>
+
+</body>
+
+</html>

@@ -11,17 +11,69 @@
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/components-v2.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
 
-    <div class="logo">
-        <h1>SF6 DNA</h1>
-        <p>あなたを知れば、もっと勝てる。</p>
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+SF6 DNA
+</a>
+
+<nav class="nav">
+
+    <a href="index.html" class="active">TOP</a>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            診断 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="diagnosis.html"><span>📝 START</span>診断する</a>
+
+<a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+</div>
+
     </div>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            図鑑 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="characters.html"><span>🎮 CHARACTER</span>キャラクター図鑑</a>
+
+<a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
+
+<a href="teams.html"><span>🏆 TEAM</span>チーム図鑑</a>
+
+</div>
+
+    </div>
+
+    <a href="compare.html">比較</a>
+    <a href="about.html">About</a>
+
+</nav>
+
+</div>
 
 </header>
 
@@ -29,30 +81,517 @@
 
 <section class="hero">
 
-<h2>Street Fighter 6<br>Player Diagnosis</h2>
+    <div class="container hero-container">
 
-<p>
+        <div class="hero-left">
 
-プレイスタイルを分析し、
-あなたに合った戦い方を見つけよう。
+            <span class="hero-badge">
+                Street Fighter 6 Player Diagnosis
+            </span>
 
-</p>
+            <h2>
 
-<div class="button-area">
+                あなたを知れば、<br>
+                もっと勝てる。
 
-<a href="diagnosis.html" class="btn-primary">
+            </h2>
 
-診断を始める
+            <p>
 
-</a>
+                プレイスタイルを分析し、
+                あなたに合ったキャラクターや
+                参考になるプロプレイヤーを見つけよう。
 
-<a href="characters.html" class="btn-secondary">
+            </p>
+            <div class="hero-buttons">
+                <a href="diagnosis.html" class="btn-primary">
+                    診断を始める
+                </a>
+                <a
+                 href="#result-preview" class="btn-secondary">
+                 診断結果を見る
+                
+                </a>
+            </div>
+        </div>
 
-キャラクター一覧
+        
 
-</a>
+        <div class="hero-right">
+
+            <div class="hero-result-card">
+
+                <span class="result-label">
+
+                    診断結果サンプル
+
+                </span>
+
+                <h3>
+
+                    攻略型
+
+                </h3>
+
+                <div class="hero-stars">
+
+                    ★★★★★
+
+                </div>
+
+                <p>
+
+                    おすすめキャラ
+
+                </p>
+
+                <strong>
+
+                    JP / ケン
+
+                </strong>
+
+                <p>
+
+                    参考プロ
+
+                </p>
+
+                <strong>
+
+                    ときど
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="hero-info">
+
+    <div class="hero-info-card">
+
+        <div class="hero-info-icon">🧬</div>
+
+        <h3>プレイタイプ診断</h3>
+
+        <p>
+            あなたの戦い方を分析し、
+            プレイスタイルを可視化します。
+        </p>
+
+    </div>
+
+    <div class="hero-info-card">
+
+        <div class="hero-info-icon">🎯</div>
+
+        <h3>おすすめキャラ</h3>
+
+        <p>
+            あなたのタイプに合った
+            キャラクターを提案します。
+        </p>
+
+    </div>
+
+    <div class="hero-info-card">
+
+        <div class="hero-info-icon">👑</div>
+
+        <h3>参考プレイヤー</h3>
+
+        <p>
+            プレイスタイルが近い
+            プロプレイヤーを紹介します。
+        </p>
+
+    </div>
 
 </div>
+
+</section>
+
+
+<section class="problem-section">
+
+    <div class="container">
+
+        <h2>
+
+            あなたはこんな悩みありませんか？
+
+        </h2>
+
+        <div class="problem-list">
+
+            <div class="problem-card">
+
+                <span>✓</span>
+
+                <p>自分に合うキャラクターが分からない</p>
+
+            </div>
+
+            <div class="problem-card">
+
+                <span>✓</span>
+
+                <p>プロの真似をしても勝てない</p>
+
+            </div>
+
+            <div class="problem-card">
+
+                <span>✓</span>
+
+                <p>MRが伸び悩んでいる</p>
+
+            </div>
+
+            <div class="problem-card">
+
+                <span>✓</span>
+
+                <p>何を練習すればいいか分からない</p>
+
+            </div>
+
+        </div>
+
+        <div class="problem-message">
+
+            <h3>
+
+                SF6 DNA が解決します。
+
+            </h3>
+
+            <p>
+
+                プレイスタイルを分析し、
+                あなたに合うキャラクターや
+                参考になるプロプレイヤーを提案します。
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<div class="solution-flow">
+
+    <div class="solution-card">
+
+        <div class="solution-icon">
+            🧬
+        </div>
+
+        <h3>
+            プレイスタイル分析
+        </h3>
+
+        <p>
+            あなたの戦い方を分析し、
+            プレイタイプを診断します。
+        </p>
+
+    </div>
+
+    <div class="solution-arrow">
+
+        ↓
+
+    </div>
+
+    <div class="solution-card">
+
+        <div class="solution-icon">
+            🎯
+        </div>
+
+        <h3>
+            おすすめキャラクター
+        </h3>
+
+        <p>
+            診断結果から
+            あなたに合うキャラクターを提案します。
+        </p>
+
+    </div>
+
+    <div class="solution-arrow">
+
+        ↓
+
+    </div>
+
+    <div class="solution-card">
+
+        <div class="solution-icon">
+            👑
+        </div>
+
+        <h3>
+            参考プレイヤー
+        </h3>
+
+        <p>
+            プレイスタイルが近い
+            プロプレイヤーを紹介します。
+        </p>
+
+    </div>
+
+</div>
+
+<section class="feature-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            このサイトでできること
+
+        </h2>
+
+        <p class="section-description">
+
+            診断だけでは終わらない。
+            SF6をもっと楽しみ、もっと上達するためのコンテンツを用意しています。
+
+        </p>
+
+        <div class="feature-timeline">
+
+    <div class="feature-bubble left">
+
+        💬 あなたのプレイタイプを診断します
+
+    </div>
+
+    <div class="feature-bubble right">
+
+        🎯 あなたに合うキャラクターを提案します
+
+    </div>
+
+    <div class="feature-bubble left">
+
+        👑 プレイスタイルが近いプロを紹介します
+
+    </div>
+
+    <div class="feature-bubble right">
+
+        ⚔ キャラクター同士を比較できます
+
+    </div>
+
+    <div class="feature-bubble left">
+
+        📚 プレイヤー・キャラクター・チーム図鑑も利用できます
+
+    </div>
+
+</div>
+
+    </div>
+
+</section>
+
+<section class="dictionary-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            SF6 DNA 図鑑
+
+        </h2>
+
+        <p class="section-description">
+
+            プレイヤー・キャラクター・チームをまとめて掲載。
+            診断だけでは終わらない、SF6のデータベースです。
+
+        </p>
+
+        <div class="dictionary-grid">
+
+            <div class="dictionary-card">
+
+                <h3>100+</h3>
+
+                <span>PLAYER</span>
+
+                <p>
+
+                    100名以上のプレイヤーを掲載
+
+                </p>
+
+            </div>
+
+            <div class="dictionary-card">
+
+                <h3>30+</h3>
+
+                <span>CHARACTER</span>
+
+                <p>
+
+                    全キャラクターを詳しく紹介
+
+                </p>
+
+            </div>
+
+            <div class="dictionary-card">
+
+                <h3>20+</h3>
+
+                <span>TEAM</span>
+
+                <p>
+
+                    国内外のチームを掲載
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    id="result-preview"
+    class="result-preview-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            診断すると何が分かる？
+
+        </h2>
+
+        <p class="section-description">
+
+            あなたのプレイスタイルを分析し、
+            強みや弱点、おすすめキャラクターなどを表示します。
+
+        </p>
+
+        <div class="result-preview-card">
+
+            <span class="result-label">
+
+                診断結果サンプル
+
+            </span>
+
+            <h3>攻略型</h3>
+
+            <div class="hero-stars">
+
+                ★★★★★
+
+            </div>
+
+            <div class="preview-item">
+
+                <h4>おすすめキャラクター</h4>
+
+                <p>JP / ケン</p>
+
+            </div>
+
+            <div class="preview-item">
+
+                <h4>参考プロプレイヤー</h4>
+
+                <p>ときど</p>
+
+            </div>
+
+            <div class="preview-item">
+
+                <h4>あなたのプレイの特徴</h4>
+
+                <ul>
+
+                    <li>攻めが得意</li>
+                    <li>読み合いが強い</li>
+                    <li>ヒット確認が得意</li>
+
+                </ul>
+
+            </div>
+
+            <div class="preview-item">
+
+                <h4>改善ポイント</h4>
+
+                <ul>
+
+                    <li>守りを強化</li>
+                    <li>端の防御</li>
+                    <li>暴れ癖を減らす</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <h2>
+
+            あなたのプレイスタイルを診断してみませんか？
+
+        </h2>
+
+        <p>
+
+            約3分であなたのプレイタイプを分析します。<br>
+            おすすめキャラクターや参考になるプレイヤーも分かります。
+
+        </p>
+
+        <div class="cta-info">
+
+            <span>質問数：約○問</span>
+
+            <span>所要時間：約3分</span>
+
+            <span>完全無料</span>
+
+        </div>
+
+        <a
+            href="diagnosis.html"
+            class="btn-primary"
+        >
+
+            診断を始める
+
+        </a>
+
+    </div>
 
 </section>
 

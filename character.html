@@ -3,16 +3,17 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>キャラクター詳細 | SF6 DNA</title>
+<title>キャラクター詳細 | SF6 DNA</title>
 
-    <link rel="stylesheet" href="assets/css/variables.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/components-v2.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
 
 </head>
 
@@ -20,84 +21,327 @@
 
 <header class="site-header">
 
-    <div class="container header-inner">
+<div class="container header-inner">
 
-        <a href="index.html" class="logo">SF6 DNA</a>
+<a href="index.html" class="logo">
+SF6 DNA
+</a>
 
-        <nav class="nav">
+<nav class="nav">
 
-            <a href="index.html">TOP</a>
-            <a href="characters.html">キャラクター一覧</a>
+    <a href="index.html">TOP</a>
 
-        </nav>
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            診断 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="diagnosis.html"><span>📝 START</span>診断する</a>
+
+<a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+</div>
 
     </div>
 
-</header>
+    <div class="dropdown">
 
-<main>
+        <button class="dropdown-button">
 
-<section class="hero">
+            図鑑 ▼
 
-<div class="container">
+        </button>
 
-<span class="badge">バランス型</span>
+       <div class="dropdown-content">
 
-<h1 class="hero-title" style="margin-top:20px;">
-リュウ
-</h1>
+    <a href="characters.html" class="active"><span>🎮 CHARACTER</span>キャラクター図鑑</a>
 
-<p class="hero-text">
+<a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
 
-バランスの良い性能を持ち、初心者から上級者まで扱いやすいキャラクターです。
-
-</p>
+<a href="teams.html"><span>🏆 TEAM</span>チーム図鑑</a>
 
 </div>
+
+    </div>
+
+    <a href="compare.html">比較</a>
+    <a href="about.html">About</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<main class="container">
+
+<section class="result-page">
+
+<div class="result-card">
+
+<div class="hero-area">
+
+    <img
+        id="characterImage"
+        class="hero-image"
+        loading="eager"
+        decoding="async"
+        src=""
+        alt=""
+    >
+
+    <div class="hero-left">
+
+        <h1 id="characterName"></h1>
+
+        <p id="characterType"></p>
+
+        <p id="difficulty"></p>
+
+    </div>
+
+    <div class="hero-right">
+
+        <h2>能力チャート</h2>
+
+        <canvas
+            id="statusChart"
+            class="hero-chart"
+            width="320"
+            height="320">
+        </canvas>
+
+    </div>
+
+</div>
+
+<section class="hero-concept-card">
+
+    <h2>キャラクターコンセプト</h2>
+
+    <p id="characterDescription"></p>
 
 </section>
 
-<section class="section">
 
-<div class="container">
+<h2>ステータス</h2>
 
-<div class="grid grid-2">
+<div class="status-list">
 
-<div class="card">
+    <div class="status-item">
+        <span>火力</span>
+        <div class="status-bar">
+            <div id="powerBar" class="status-fill"></div>
+        </div>
+    </div>
 
-<h2>基本情報</h2>
+    <div class="status-item">
+        <span>スピード</span>
+        <div class="status-bar">
+            <div id="speedBar" class="status-fill"></div>
+        </div>
+    </div>
 
-<p style="margin-top:20px;">
-難易度：★★☆☆☆
-</p>
+    <div class="status-item">
+        <span>守備力</span>
+        <div class="status-bar">
+            <div id="defenseBar" class="status-fill"></div>
+        </div>
+    </div>
 
-<p style="margin-top:12px;">
-おすすめ：初心者～上級者
-</p>
+    <div class="status-item">
+        <span>リーチ</span>
+        <div class="status-bar">
+            <div id="reachBar" class="status-fill"></div>
+        </div>
+    </div>
+
+    <div class="status-item">
+        <span>初心者向け</span>
+        <div class="status-bar">
+            <div id="beginnerBar" class="status-fill"></div>
+        </div>
+    </div>
 
 </div>
 
-<div class="card">
+<div class="feature-grid">
 
-<h2>特徴</h2>
+    <div class="feature-card strength-card">
 
-<ul style="margin-top:20px;">
+        <div class="feature-header">
 
-<li>飛び道具を持つ</li>
-<li>対空性能が高い</li>
-<li>攻守のバランスが良い</li>
+            <span class="feature-icon">🟢</span>
 
-</ul>
+            <div>
+
+                <p class="feature-subtitle">STRENGTH</p>
+
+                <h2>長所</h2>
+
+            </div>
+
+        </div>
+
+        <ul id="strengths"></ul>
+
+    </div>
+
+    <div class="feature-card weakness-card">
+
+        <div class="feature-header">
+
+            <span class="feature-icon">🔴</span>
+
+            <div>
+
+                <p class="feature-subtitle">WEAKNESS</p>
+
+                <h2>短所</h2>
+
+            </div>
+
+        </div>
+
+        <ul id="weaknesses"></ul>
+
+    </div>
 
 </div>
 
+<div class="recommend-card">
+
+    <div class="recommend-header">
+
+        <span class="recommend-icon">🎯</span>
+
+        <div>
+
+            <p class="recommend-subtitle">
+                RECOMMENDED FOR
+            </p>
+
+            <h2>このキャラが向いている人</h2>
+
+        </div>
+
+    </div>
+
+    <ul id="recommend"></ul>
+
+    <div class="recommend-info">
+
+        <div>
+
+            <span>プレイスタイル</span>
+
+            <strong id="playstyle"></strong>
+
+        </div>
+
+        <div>
+
+            <span>得意距離</span>
+
+            <strong id="range"></strong>
+
+        </div>
+
+    </div>
+
 </div>
+
+<section class="video-section">
+
+    <h2>おすすめ動画</h2>
+
+    <div class="video-tabs">
+
+<button class="video-tab active" data-category="beginner">
+    初心者
+</button>
+
+<button class="video-tab" data-category="intermediate">
+    中級者
+</button>
+
+<button class="video-tab" data-category="advanced">
+    上級者
+</button>
+
+<button class="video-tab" data-category="match">
+    対戦動画
+</button>
+
+    </div>
+
+    <div id="comboVideos" class="video-scroll">
+
+    </div>
+
+</section>
+
+<section class="matchup-section">
+
+    <div class="matchup-card matchup-strong">
+
+        <h2>🟢 有利な相手</h2>
+
+        <ul id="matchStrong"></ul>
+
+    </div>
+
+    <div class="matchup-card matchup-weak">
+
+        <h2>🔴 苦手な相手</h2>
+
+        <ul id="matchWeak"></ul>
+
+    </div>
+
+</section>
+
+<h2>関連キャラクター</h2>
+
+<div id="relatedCharacters" class="related-grid"></div>
+
+<br>
+
+<h2>このキャラを使用しているプレイヤー</h2>
+
+<div
+    id="relatedPlayers"
+    class="related-grid"
+></div>
+
+<div id="characterPager" class="character-pager"></div>
+
+<a href="characters.html" class="btn btn-primary">
+
+一覧へ戻る
+
+</a>
 
 </div>
 
 </section>
 
 </main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/character-data.js"></script>
+<!-- player-data.js は pro/streamer/vtuber/youtuber の各データを合体させるため、先に読み込む必要がある -->
+<script src="assets/js/pro.js"></script>
+<script src="assets/js/streamer.js"></script>
+<script src="assets/js/vtuber.js"></script>
+<script src="assets/js/youtuber.js"></script>
+<script src="assets/js/player-data.js"></script>
+<script src="assets/js/characters.js"></script>
 
 </body>
 

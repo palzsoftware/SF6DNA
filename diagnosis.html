@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/components-v2.css">
+    <link rel="stylesheet" href="assets/css/diagnosis.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
 </head>
@@ -20,36 +22,85 @@
 
 <header class="site-header">
 
-    <div class="header-inner">
+<div class="container header-inner">
 
-        <a href="index.html" class="logo">
-            <h1>SF6 DNA</h1>
-        </a>
+<a href="index.html" class="logo">
+SF6 DNA
+</a>
 
-        <nav class="header-nav">
+<nav class="nav">
 
-            <a href="index.html">TOP</a>
-            <a href="characters.html">キャラクター</a>
-            <a href="diagnosis.html" class="active">診断</a>
+    <a href="index.html">TOP</a>
 
-        </nav>
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            診断 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="diagnosis.html" class="active"><span>📝 START</span>診断する</a>
+
+<a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+</div>
 
     </div>
 
-</header>
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            図鑑 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="characters.html"><span>🎮 CHARACTER</span>キャラクター図鑑</a>
+
+<a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
+
+<a href="teams.html"><span>🏆 TEAM</span>チーム図鑑</a>
+
+</div>
+
+    </div>
+
+    <a href="compare.html">比較</a>
+    <a href="about.html">About</a>
+
+</nav>
+
+</div>
 
 </header>
 
 <main>
 
-<section class="hero">
+<section class="hero diagnosis-hero">
 
-<div class="container">
-<div class="progress-area">
+<div class="diagnosis-container">
+<div class="progress-header">
 
-    <span>進捗</span>
+   <span
+id="progressText"
+class="progress-count">
 
-    <span>1 / 50</span>
+QUESTION 01 / 50
+
+</span>
+
+<span
+id="remainingText"
+class="progress-remaining">
+
+残り49問
+
+</span>
 
 </div>
 
@@ -58,17 +109,6 @@
     <div class="progress-bar" id="progressBar"></div>
 
 </div>
-<h1 class="hero-title">
-
-プレイスタイル診断
-
-</h1>
-
-<p class="hero-text">
-
-1〜50問の質問に答えて、あなたのプレイスタイルを分析します。
-
-</p>
 
 </div>
 
@@ -76,9 +116,9 @@
 
 <section class="section">
 
-<div class="container">
+<div class="container diagnosis-container">
 
-<section class="question-card">
+<section class="question-card diagnosis-question">
 
     <div class="question-number" id="questionNumber">
     Q1
@@ -94,31 +134,13 @@
 
 </div>
 
-<div style="margin-top:32px;">
-
-<div class="navigation">
-
-    <button class="btn-back">
-        戻る
-    </button>
-
-    <button class="btn-next" id="nextButton">
-    次の質問へ
-</button>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 </main>
 
 <footer class="site-footer">
 
-<div class="container">
+<div class="diagnosis-container">
 
 <p>
 

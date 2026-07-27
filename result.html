@@ -1,25 +1,356 @@
-<section class="result-page">
+<!DOCTYPE html>
+<html lang="ja">
 
-    <p class="result-label">診断完了</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <h1>診断結果</h1>
+    <title>診断結果 | SF6 DNA</title>
 
-    <p class="result-text">
-        あなたのプレイスタイルを解析しました。
-    </p>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/components-v2.css">
+    <link rel="stylesheet" href="assets/css/result.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
 
-    <div class="result-card">
+<body>
 
-        <h2>COMING SOON</h2>
+<header class="site-header">
 
-        <p>
-            Sprint2で診断結果を表示します。
-        </p>
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+SF6 DNA
+</a>
+
+<nav class="nav">
+
+    <a href="index.html">TOP</a>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            診断 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="diagnosis.html"><span>📝 START</span>診断する</a>
+
+<a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+</div>
 
     </div>
 
-    <a href="index.html" class="btn btn-primary">
-        TOPへ戻る
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            図鑑 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="characters.html"><span>🎮 CHARACTER</span>キャラクター図鑑</a>
+
+<a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
+
+<a href="teams.html"><span>🏆 TEAM</span>チーム図鑑</a>
+
+</div>
+
+    </div>
+
+    <a href="compare.html">比較</a>
+    <a href="about.html">About</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<main class="result-layout">
+
+<section class="result-hero" id="pageTop">
+
+    <p class="result-label">
+        DIAGNOSIS COMPLETE
+    </p>
+
+    <p class="hero-comment">
+
+あなたのSF6プレイスタイルを解析しました
+
+</p>
+
+<div class="result-type-badge">
+
+<span class="badge-glow"></span>
+
+<p class="badge-label">YOUR TYPE</p>
+
+<h1 id="resultType"></h1>
+
+<p id="resultCatchCopy" class="badge-catchcopy"></p>
+
+</div>
+
+<p
+id="resultSummary"
+class="result-summary">
+</p>
+
+<p class="result-subtitle">
+    あなたのSF6 DNAタイプ
+</p>
+
+    <p id="resultDescription"
+       class="result-description">
+    </p>
+
+    <div class="hero-actions">
+
+        <button
+            id="favoriteButton"
+            class="btn btn-primary hero-action-btn"
+        >
+            💾 この診断を保存する
+        </button>
+
+        <a
+            id="shareButton"
+            class="btn btn-secondary hero-action-btn share-btn"
+            href="#"
+        >
+            𝕏 で結果をシェア
+        </a>
+
+        <a href="favorites.html" class="hero-action-link">
+            保存した診断を見る・比較する ▶
+        </a>
+
+    </div>
+
+    <a href="#characters" class="hero-next">
+
+おすすめキャラクターを見る
+
+↓
+
+</a>
+
+</section>
+
+<div class="result-wrapper">
+
+<aside class="result-nav">
+
+    <h3>結果メニュー</h3>
+
+    <a href="#reason">▶ 診断理由</a>
+
+    <a href="#analysis">▶ プレイスタイル分析</a>
+
+    <a href="#confidence">▶ 診断信頼度</a>
+
+    <a href="#tactics">▶ おすすめ戦術</a>
+
+    <a href="#pro">▶ おすすめプロプレイヤー</a>
+
+    <a href="#status">▶ プレイ傾向</a>
+
+    <a href="#strengths">▶ 長所</a>
+
+    <a href="#weaknesses">▶ 苦手</a>
+
+    <a href="#characters">▶ おすすめキャラクター</a>
+
+    <a href="#improve">▶ 改善ポイント</a>
+
+    <a href="#weakCharacters">▶ 苦手キャラクター</a>
+
+    <a href="#matchups">▶ 対戦相性</a>
+
+    <a href="#history">▶ 診断履歴</a>
+
+</aside>
+
+<section class="result-content">
+
+    <div class="result-card">
+
+    <div class="result-section" id="reason">
+
+    <h3>診断理由</h3>
+
+    <p id="resultReason"></p>
+
+</div>
+
+    <div class="result-section" id="analysis">
+
+<h3>プレイスタイル分析</h3>
+
+<div id="scoreArea"></div>
+
+</div>
+
+<div class="result-section" id="confidence">
+
+<h3>診断信頼度</h3>
+
+<div id="confidenceArea"></div>
+
+</div>
+
+    <div class="result-section" id="tactics">
+
+    <h3>あなたに向いている戦術</h3>
+
+    <div id="recommendedTactics"></div>
+
+</div>
+
+    <div class="result-section" id="pro">
+
+    <h3>おすすめプロプレイヤー</h3>
+
+    <div class="tab-area">
+
+        <button id="jpTab" class="btn btn-secondary">
+            日本勢
+        </button>
+
+        <button id="worldTab" class="btn btn-secondary">
+            海外勢
+        </button>
+
+    </div>
+
+    <div id="proPlayerArea"></div>
+
+</div>
+
+    <div class="result-section" id="status">
+
+    <h3>プレイ傾向</h3>
+
+    <div id="statusArea" class="status-grid"></div>
+
+</div>
+
+<div class="strengths-weaknesses-row">
+
+    <div class="result-section" id="strengths">
+
+    <h3>長所</h3>
+
+    <ul id="resultStrengths"></ul>
+
+</div>
+
+    <div class="result-section" id="weaknesses">
+
+    <h3>苦手</h3>
+
+    <ul id="resultWeaknesses"></ul>
+
+</div>
+
+</div>
+
+<div class="result-section" id="characters">
+
+    <h3>おすすめキャラクター</h3>
+
+    <p id="resultCharacterReason" class="section-lead"></p>
+
+    <div id="resultCharacters"></div>
+
+</div>
+
+   <div class="result-section" id="improve">
+
+    <h3>改善ポイント</h3>
+
+    <ul id="resultImprove"></ul>
+
+</div>
+
+    <div class="result-section" id="weakCharacters">
+
+    <h3>苦手になりやすいキャラクター</h3>
+
+    <div id="resultWeakCharacters"></div>
+
+</div>
+
+<div class="result-section" id="matchups">
+
+    <h3>対戦相性</h3>
+
+    <p class="section-lead">
+        ※「あなたが対戦相手として当たった時」の相性です（チームの相性ではありません）
+    </p>
+
+    <div id="resultMatchups"></div>
+
+</div>
+
+<div class="result-section" id="history">
+
+    <div class="history-header">
+
+        <h3>診断履歴</h3>
+
+        <button
+            id="clearHistoryButton"
+            class="btn btn-secondary btn-small"
+        >
+            履歴を削除
+        </button>
+
+    </div>
+
+    <div id="historyArea"></div>
+
+</div>
+
+</div>
+
+    <a href="#pageTop" class="btn btn-primary">
+        ↑ ページ上部に戻る
+    </a>
+
+    <a href="index.html" class="btn btn-secondary">
+        サイトTOPへ
     </a>
 
 </section>
+
+</div>
+
+</main>
+
+<footer class="footer">
+    © 2026 SF6 DNA Project
+</footer>
+
+<script src="assets/js/character-data.js"></script>
+<script src="assets/js/character-evaluation.js"></script>
+<script src="assets/js/pro-player-directory.js"></script>
+<script src="assets/js/result-data.js"></script>
+
+<script src="assets/js/result.js"></script>
+
+</body>
+
+</html>
