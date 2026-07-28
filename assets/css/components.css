@@ -324,6 +324,7 @@
 .character-card:hover{
     transform:translateY(-3px);
     border-color:#ff7a00;
+    box-shadow:0 12px 28px rgba(255,122,0,.25);
 }
 
 .character-card h4{
@@ -775,6 +776,8 @@ margin:8px 0;
     transform:translateY(-6px);
 
     border:1px solid #ff6b00;
+
+    box-shadow:0 12px 28px rgba(255,107,0,.25);
 
 }
 

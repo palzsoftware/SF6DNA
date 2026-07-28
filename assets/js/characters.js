@@ -293,6 +293,18 @@ if(character.related.characters){
 
 }
 
+function teamLabelHtml(player) {
+
+    const team = Object.values(teamData).find(t => t.players.includes(player.id));
+
+    if (team) {
+        return `<span class="team-badge" onclick="event.preventDefault(); event.stopPropagation(); location.href='team-detail.html?id=${team.id}';">${player.team}</span>`;
+    }
+
+    return player.team || "フリー";
+
+}
+
 const PLAYER_ROLE_LABELS = {
     pros: "🏆 プロ",
     streamers: "📡 ストリーマー",
@@ -355,7 +367,7 @@ function renderRelatedPlayers(elementId, playersByRole){
     <h3>${player.name}</h3>
 
     <p class="player-team">
-        ${player.team}
+        ${teamLabelHtml(player)}
     </p>
 
     <p class="player-character">
@@ -427,7 +439,37 @@ img.onload = () => {
 
 };
 
-function renderVideos(category){
+// バックエンド(YouTube動画検索API)のURL。
+// 未デプロイの間は空文字のままにしておけば、従来通り
+// 「YouTubeで検索する」リンクにフォールバックする。
+// デプロイ後はここにRenderのURLを設定する。
+// 例: const VIDEO_API_BASE_URL = "https://sf6dna-video-api.onrender.com";
+const VIDEO_API_BASE_URL = "https://sf6dna-backend.onrender.com";
+
+async function fetchVideosFromApi(query, maxResults = 3) {
+
+    if (!VIDEO_API_BASE_URL) return null;
+
+    try {
+
+        const url = `${VIDEO_API_BASE_URL}/api/videos/search?q=${encodeURIComponent(query)}&max=${maxResults}`;
+
+        const res = await fetch(url);
+        if (!res.ok) return null;
+
+        const data = await res.json();
+        return data.results || null;
+
+    } catch (err) {
+
+        console.warn("[renderVideos] API取得に失敗、検索リンクにフォールバックします", err);
+        return null;
+
+    }
+
+}
+
+async function renderVideos(category){
 
     const container = document.getElementById("comboVideos");
 
@@ -444,10 +486,38 @@ function renderVideos(category){
 
     }
 
-    videos.forEach(video=>{
+    for (const video of videos) {
 
-        // type:"search" の場合はキャラ+分類名でYouTube検索結果に飛ぶリンクとして扱う
-        // (個別の動画を保証はできないが、クリックすれば必ずYouTubeへ辿り着ける)
+        // type:"search" のエントリは、バックエンドAPIが使えれば
+        // 実際の動画をその場で取得して表示を差し替える。
+        // APIが未設定/失敗した場合は従来通り検索リンクを表示する。
+        if (video.type === "search") {
+
+            const query = new URL(video.url).searchParams.get("search_query") || video.title;
+            const apiResults = await fetchVideosFromApi(query, 3);
+
+            if (apiResults && apiResults.length > 0) {
+
+                apiResults.forEach(result => {
+
+                    container.innerHTML += `
+                        <a class="video-card" href="${result.url}" target="_blank" rel="noopener">
+                            <img src="${result.thumbnail}" alt="${result.title}">
+                            <div class="video-info">
+                                <h3>${result.title}</h3>
+                                <span class="video-link-label">YouTubeで見る ↗</span>
+                            </div>
+                        </a>
+                    `;
+
+                });
+
+                continue;
+
+            }
+
+        }
+
         const isSearch = video.type === "search";
 
         const thumbnailHtml = isSearch
@@ -481,7 +551,7 @@ function renderVideos(category){
             </a>
         `;
 
-    });
+    }
 
 }
 renderVideos("beginner");

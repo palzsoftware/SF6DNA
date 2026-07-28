@@ -656,17 +656,25 @@
 
     border:1px solid rgba(255,255,255,.08);
 
+    border-top:3px solid var(--card-accent, #ff7a00);
+
     border-radius:18px;
 
     transition:.25s;
 
 }
 
+.hero-info-card:nth-child(1){ --card-accent:#ff7a00; }
+.hero-info-card:nth-child(2){ --card-accent:#3b82f6; }
+.hero-info-card:nth-child(3){ --card-accent:#eab308; }
+
 .hero-info-card:hover{
 
     transform:translateY(-8px);
 
-    border-color:#ff7a00;
+    border-color:var(--card-accent, #ff7a00);
+
+    box-shadow:0 16px 30px rgba(0,0,0,.35);
 
 }
 
@@ -675,6 +683,8 @@
     font-size:34px;
 
     margin-bottom:20px;
+
+    filter:drop-shadow(0 0 12px rgba(255,255,255,.15));
 
 }
 
@@ -707,6 +717,8 @@
 
     border:1px solid rgba(255,255,255,.08);
 
+    border-left:4px solid var(--card-accent, #ff7a00);
+
     border-radius:18px;
 
     padding:35px;
@@ -714,6 +726,10 @@
     text-align:center;
 
 }
+
+.solution-card:nth-of-type(1){ --card-accent:#ff7a00; }
+.solution-card:nth-of-type(2){ --card-accent:#3b82f6; }
+.solution-card:nth-of-type(3){ --card-accent:#eab308; }
 
 .solution-card:not(:last-child){
 
@@ -742,6 +758,38 @@
     color:#c8ccd4;
 
     line-height:1.8;
+
+}
+
+/* ===========================
+   スクロールで表示されるフェードイン演出
+=========================== */
+
+.reveal-on-scroll{
+
+    opacity:0;
+
+    transform:translateY(28px);
+
+    transition:opacity .7s ease, transform .7s ease;
+
+}
+
+.reveal-on-scroll.in-view{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .reveal-on-scroll{
+        opacity:1;
+        transform:none;
+        transition:none;
+    }
 
 }
 
@@ -812,5 +860,393 @@
     opacity:1;
 
     transform:translateY(0);
+
+}
+/* ===========================
+   Heroボタン(ピル型・アイコン付き)と背景キャラアート
+=========================== */
+
+.hero-btn{
+
+    border-radius:999px;
+
+    font-size:16px;
+
+}
+
+.btn.btn-secondary.hero-btn{
+
+    background:rgba(255,255,255,.04);
+
+}
+
+.hero-right{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-character-art{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:280px;
+
+    height:280px;
+
+    object-fit:cover;
+
+    object-position:top;
+
+    border-radius:50%;
+
+    opacity:.35;
+
+    filter:grayscale(30%);
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+.hero-result-card{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+@media (max-width:1000px){
+
+    .hero-character-art{
+
+        display:none;
+
+    }
+
+}
+
+/* ===========================
+   図鑑セクション: キャラクター画像ストリップ
+=========================== */
+
+.dictionary-character-strip{
+
+    position:relative;
+
+    margin-top:48px;
+
+    padding:28px 0;
+
+    overflow-x:hidden;
+
+}
+
+/* 端のフェード演出は、mask-imageではなくグラデーションのオーバーレイで作る。
+   こうすることで、ホバーで前面に飛び出した画像をz-indexで
+   オーバーレイより上に出せば、フェードの影響を受けずに全体表示できる */
+.dictionary-character-strip::before,
+.dictionary-character-strip::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    width:100px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+.dictionary-character-strip::before{
+
+    left:0;
+
+    background:linear-gradient(90deg, #0d1117, transparent);
+
+}
+
+.dictionary-character-strip::after{
+
+    right:0;
+
+    background:linear-gradient(270deg, #0d1117, transparent);
+
+}
+
+.dictionary-character-track{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    width:max-content;
+
+    animation:characterStripScroll 40s linear infinite;
+
+}
+
+@keyframes characterStripScroll{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        /* トラックの中身は同じ画像を2セット並べているので、
+           ちょうど半分移動したところでシームレスにループする */
+        transform:translateX(-50%);
+    }
+
+}
+
+.dictionary-character-strip img{
+
+    position:relative;
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid var(--border);
+
+    flex-shrink:0;
+
+    opacity:.85;
+
+    transition:.3s ease;
+
+}
+
+/* ホバー演出はPC(マウス操作可能な環境)限定 */
+@media (hover:hover) and (pointer:fine){
+
+    .dictionary-character-strip:hover .dictionary-character-track{
+
+        animation-play-state:paused;
+
+    }
+
+    .dictionary-character-strip img:hover{
+
+        border-color:var(--primary);
+
+        opacity:1;
+
+        transform:translateY(-14px) scale(1.25) rotate(-4deg);
+
+        box-shadow:0 16px 30px rgba(255,107,0,.5);
+
+        /* フェード用オーバーレイ(z-index:2)より前面に出す */
+        z-index:3;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .dictionary-character-strip img{
+        width:52px;
+        height:52px;
+    }
+
+    .dictionary-character-strip::before,
+    .dictionary-character-strip::after{
+        width:50px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .dictionary-character-track{
+        animation:none;
+    }
+
+}
+
+/* ===========================
+   一部セクションの幅を狭くする
+=========================== */
+
+.container-narrow > .container{
+
+    max-width:920px;
+
+}
+
+@media (max-width:1000px){
+
+    .container-narrow > .container{
+
+        max-width:100%;
+
+    }
+
+}
+
+/* ===========================
+   プレイヤー版ストリップ(キャラアイコンの下、逆方向に流れる)
+=========================== */
+
+.dictionary-player-strip{
+
+    position:relative;
+
+    margin-top:20px;
+
+    padding:14px 0;
+
+    overflow-x:hidden;
+
+}
+
+.dictionary-player-strip::before,
+.dictionary-player-strip::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    width:100px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+.dictionary-player-strip::before{
+
+    left:0;
+
+    background:linear-gradient(90deg, #0d1117, transparent);
+
+}
+
+.dictionary-player-strip::after{
+
+    right:0;
+
+    background:linear-gradient(270deg, #0d1117, transparent);
+
+}
+
+.dictionary-player-track{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    width:max-content;
+
+    /* キャラクターストリップとは逆方向(左から右)に流す */
+    animation:playerStripScroll 32s linear infinite;
+}
+
+@keyframes playerStripScroll{
+
+    from{
+        transform:translateX(-50%);
+    }
+
+    to{
+        transform:translateX(0);
+    }
+
+}
+
+.player-chip-img{
+
+    position:relative;
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    flex-shrink:0;
+
+    object-fit:cover;
+
+    object-position:top;
+
+    border:2px solid rgba(255,255,255,.15);
+
+    opacity:.85;
+
+    transition:.3s ease;
+
+}
+
+@media (hover:hover) and (pointer:fine){
+
+    .player-chip-img:hover{
+
+        opacity:1;
+
+        border-color:var(--primary);
+
+        transform:translateY(-8px) scale(1.2);
+
+        box-shadow:0 12px 20px rgba(0,0,0,.4);
+
+        z-index:3;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .player-chip-img{
+        width:34px;
+        height:34px;
+    }
+
+    .dictionary-player-strip::before,
+    .dictionary-player-strip::after{
+        width:50px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .dictionary-player-track{
+        animation:none;
+    }
 
 }

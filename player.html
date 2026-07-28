@@ -28,6 +28,12 @@
 SF6 DNA
 </a>
 
+<button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
 <nav class="nav">
 
     <a href="index.html">TOP</a>
@@ -64,7 +70,7 @@ SF6 DNA
 
 <a href="players.html" class="active"><span>👤 PLAYER</span>プレイヤー図鑑</a>
 
-<a href="teams.html"><span>🏆 TEAM</span>チーム図鑑</a>
+<a href="team.html"><span>🏆 TEAM</span>チーム図鑑</a>
 
 </div>
 
@@ -201,15 +207,22 @@ SF6 DNA
 </div>
 
 </div>
-        <!-- 使用キャラクター -->
 
-        <section class="player-section">
+        <!-- タブ切り替え(公式サイトのOVERVIEW/PLAY風レイアウトを参考) -->
 
-            <h2 class="section-title">
+        <div class="player-tabs">
 
+            <button class="player-tab-button active" data-tab="characters">
                 使用キャラクター
+            </button>
 
-            </h2>
+            <button class="player-tab-button" data-tab="achievements">
+                大会実績
+            </button>
+
+        </div>
+
+        <section class="player-section player-tab-panel active" data-panel="characters">
 
             <div
                 id="playerCharacters"
@@ -218,15 +231,7 @@ SF6 DNA
 
         </section>
 
-        <!-- 大会実績 -->
-
-        <section class="player-section">
-
-            <h2 class="section-title">
-
-                大会実績
-
-            </h2>
+        <section class="player-section player-tab-panel" data-panel="achievements">
 
             <ul id="playerAchievements"></ul>
 
@@ -247,7 +252,10 @@ SF6 DNA
 <script src="assets/js/caster.js"></script>
 <!-- player.js は characterData (character-data.js) を参照するため、必ず先に読み込む -->
 <script src="assets/js/character-data.js"></script>
+<script src="assets/js/team-data.js"></script>
 <script src="assets/js/player.js"></script>
+
+<script src="assets/js/nav.js"></script>
 
 </body>
 </html>

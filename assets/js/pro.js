@@ -307,13 +307,13 @@ haitani:{
 
     team:"reject",
 
-    image:"assets/images/players/haitani.png",
+    image:"",
 
     style:"",
 
     characters:[
-
-    ],
+            "chunli"
+        ],
 
     youtube:"",
 
@@ -453,7 +453,7 @@ jazzy:{
 
     team:"zeta",
 
-    image:"assets/images/players/jazzy.png",
+    image:"",
 
     style:"",
 
@@ -602,8 +602,8 @@ twobassa:{
     style:"",
 
     characters:[
-        "juri"
-    ],
+        "juri",
+            "cammy"],
 
     youtube:"",
 
@@ -617,9 +617,9 @@ twobassa:{
   DetonatioN FocusMe
 =========================================*/
 
-itazan:{
+itabashizangief:{
 
-    id:"itazan",
+    id:"itabashizangief",
 
     name:"板橋ザンギエフ",
 
@@ -690,8 +690,8 @@ johntakeuchi:{
     style:"堅実・対応型",
 
     characters:[
-        "rashid"
-    ],
+        "rashid",
+            "jamie"],
 
     youtube:"",
 
@@ -718,8 +718,8 @@ keib:{
     style:"",
 
     characters:[
-
-    ],
+            "mai"
+        ],
 
     youtube:"",
 
@@ -859,7 +859,7 @@ gachikun:{
 
     country:"日本",
 
-    team:"good8",
+    team:"Good 8 Squad",
 
     image:"assets/images/players/gachikun.png",
 
@@ -887,7 +887,7 @@ kawano:{
 
     country:"日本",
 
-    team:"good8",
+    team:"Good 8 Squad",
 
     image:"assets/images/players/kawano.png",
 
@@ -915,7 +915,7 @@ pugera:{
 
     country:"日本",
 
-    team:"good8",
+    team:"Good 8 Squad",
 
     image:"assets/images/players/pugera.png",
 
@@ -943,7 +943,7 @@ sahara:{
 
     country:"日本",
 
-    team:"good8",
+    team:"Good 8 Squad",
 
     image:"assets/images/players/sahara.png",
 
@@ -983,8 +983,8 @@ cosa:{
     style:"対応・堅実型",
 
     characters:[
-        "jp"
-    ],
+        "jp",
+            "ryu"],
 
     youtube:"",
 
@@ -1039,8 +1039,8 @@ kobayan:{
     style:"",
 
     characters:[
-
-    ],
+            "zangief"
+        ],
 
     youtube:"",
 
@@ -1067,8 +1067,8 @@ kincho:{
     style:"",
 
     characters:[
-
-    ],
+            "terry"
+        ],
 
     youtube:"",
 
@@ -1095,8 +1095,9 @@ nemo:{
     style:"",
 
     characters:[
-
-    ],
+            "bison",
+            "alex"
+        ],
 
     youtube:"",
 
@@ -1128,8 +1129,8 @@ dogura:{
 
     characters:[
         "bison",
-        "elena"
-    ],
+        "elena",
+            "alex"],
 
     youtube:"",
 
@@ -1156,8 +1157,8 @@ bonchan:{
     style:"堅実・対応型",
 
     characters:[
-        "sagat"
-    ],
+        "sagat",
+            "gouki"],
 
     youtube:"",
 
@@ -1184,8 +1185,8 @@ kazunoko:{
     style:"攻守バランス型",
 
     characters:[
-        "cammy"
-    ],
+        "cammy",
+            "cviper"],
 
     youtube:"",
 
@@ -1212,8 +1213,8 @@ shuto:{
     style:"攻撃・対応型",
 
     characters:[
-        "gouki"
-    ],
+        "gouki",
+            "ryu"],
 
     youtube:"",
 
@@ -1241,8 +1242,10 @@ tachikawa:{
     style:"",
 
     characters:[
-
-    ],
+            "manon",
+            "cviper",
+            "ed"
+        ],
 
     youtube:"",
 
@@ -1300,8 +1303,9 @@ acqua:{
     style:"",
 
     characters:[
-
-    ],
+            "blanka",
+            "jp"
+        ],
 
     youtube:"",
 
@@ -1328,8 +1332,8 @@ hibiki:{
     style:"",
 
     characters:[
-
-    ],
+            "lily"
+        ],
 
     youtube:"",
 
@@ -1356,8 +1360,8 @@ akira:{
     style:"",
 
     characters:[
-
-    ],
+            "cammy"
+        ],
 
     youtube:"",
 
@@ -1411,13 +1415,13 @@ seiya:{
 
     team:"名古屋NTPOJA",
 
-    image:"assets/images/players/seiya.png",
+    image:"",
 
     style:"",
 
     characters:[
-
-    ],
+            "chunli"
+        ],
 
     youtube:"",
 
@@ -1439,7 +1443,7 @@ raoyamu:{
 
     team:"名古屋NTPOJA",
 
-    image:"assets/images/players/raoyamu.png",
+    image:"",
 
     style:"",
 
@@ -1467,7 +1471,7 @@ otani:{
 
     team:"名古屋NTPOJA",
 
-    image:"assets/images/players/otani.png",
+    image:"",
 
     style:"",
 
@@ -1495,7 +1499,7 @@ mocchi:{
 
     team:"名古屋NTPOJA",
 
-    image:"assets/images/players/mocchi.png",
+    image:"",
 
     style:"",
 
@@ -1527,13 +1531,13 @@ takagi:{
 
     team:"RIDDLE ORDER",
 
-    image:"assets/images/players/takagi.png",
+    image:"",
 
     style:"",
 
     characters:[
-
-    ],
+            "blanka"
+        ],
 
     youtube:"",
 
@@ -1555,7 +1559,7 @@ adelie:{
 
     team:"RIDDLE ORDER",
 
-    image:"assets/images/players/adelie.png",
+    image:"",
 
     style:"",
 
@@ -1583,7 +1587,7 @@ jr:{
 
     team:"RIDDLE ORDER",
 
-    image:"assets/images/players/jr.png",
+    image:"",
 
     style:"",
 
@@ -1611,13 +1615,13 @@ hikaru:{
 
     team:"RIDDLE ORDER",
 
-    image:"assets/images/players/hikaru.png",
+    image:"",
 
     style:"",
 
     characters:[
-
-    ],
+            "aki"
+        ],
 
     youtube:"",
 
@@ -1648,8 +1652,8 @@ akutagawa:{
     style:"",
 
     characters:[
-
-    ],
+            "manon"
+        ],
 
     youtube:"",
 
@@ -1676,8 +1680,8 @@ ryusei:{
     style:"",
 
     characters:[
-
-    ],
+            "jp"
+        ],
 
     youtube:"",
 
@@ -1703,7 +1707,7 @@ angrybird:{
 
     team:"Team Falcons",
 
-    image:"assets/images/players/angrybird.png",
+    image:"",
 
     style:"",
 
@@ -1731,7 +1735,7 @@ bigbird:{
 
     team:"Team Falcons",
 
-    image:"assets/images/players/bigbird.png",
+    image:"",
 
     style:"",
 
@@ -1759,7 +1763,7 @@ nuckledu:{
 
     team:"Team Liquid",
 
-    image:"assets/images/players/nuckledu.png",
+    image:"",
 
     style:"",
 
@@ -1787,7 +1791,7 @@ punk:{
 
     team:"FlyQuest",
 
-    image:"assets/images/players/punk.png",
+    image:"",
 
     style:"",
 
@@ -1815,7 +1819,7 @@ oilking:{
 
     team:"Team Falcons",
 
-    image:"assets/images/players/oilking.png",
+    image:"",
 
     style:"",
 
@@ -1843,7 +1847,7 @@ xiaohai:{
 
     team:"KuaiShou Gaming",
 
-    image:"assets/images/players/xiaohai.png",
+    image:"",
 
     style:"",
 
@@ -1871,13 +1875,14 @@ leshar:{
 
     team:"DRX",
 
-    image:"assets/images/players/leshar.png",
+    image:"",
 
     style:"",
 
     characters:[
-
-    ],
+            "ed",
+            "terry"
+        ],
 
     youtube:"",
 
@@ -1899,7 +1904,7 @@ nl:{
 
     team:"DRX",
 
-    image:"assets/images/players/nl.png",
+    image:"",
 
     style:"",
 
@@ -1927,13 +1932,13 @@ noahtheprodigy:{
 
     team:"Twisted Minds",
 
-    image:"assets/images/players/noahtheprodigy.png",
+    image:"",
 
     style:"",
 
     characters:[
-
-    ],
+            "luke"
+        ],
 
     youtube:"",
 
@@ -1955,7 +1960,7 @@ caba:{
 
     team:"",
 
-    image:"assets/images/players/caba.png",
+    image:"",
 
     style:"",
 
@@ -1983,7 +1988,7 @@ broski:{
 
     team:"",
 
-    image:"assets/images/players/broski.png",
+    image:"",
 
     style:"",
 
@@ -2011,7 +2016,7 @@ problemx:{
 
     team:"",
 
-    image:"assets/images/players/problemx.png",
+    image:"",
 
     style:"",
 
@@ -2039,7 +2044,7 @@ phenom:{
 
     team:"",
 
-    image:"assets/images/players/phenom.png",
+    image:"",
 
     style:"",
 
@@ -2067,7 +2072,7 @@ endingwalker:{
 
     team:"Virtus.pro",
 
-    image:"assets/images/players/endingwalker.png",
+    image:"",
 
     style:"",
 
@@ -2095,7 +2100,7 @@ kilzyou:{
 
     team:"",
 
-    image:"assets/images/players/kilzyou.png",
+    image:"",
 
     style:"",
 
@@ -2123,7 +2128,7 @@ blaz:{
 
     team:"",
 
-    image:"assets/images/players/blaz.png",
+    image:"",
 
     style:"",
 
@@ -2151,7 +2156,7 @@ mickey:{
 
     team:"",
 
-    image:"assets/images/players/mickey.png",
+    image:"",
 
     style:"",
 
@@ -2179,7 +2184,7 @@ chriswong:{
 
     team:"",
 
-    image:"assets/images/players/chriswong.png",
+    image:"",
 
     style:"",
 
@@ -2207,7 +2212,7 @@ dcq:{
 
     team:"",
 
-    image:"assets/images/players/dcq.png",
+    image:"",
 
     style:"",
 
@@ -2235,7 +2240,7 @@ zhen:{
 
     team:"",
 
-    image:"assets/images/players/zhen.png",
+    image:"",
 
     style:"",
 
@@ -2263,7 +2268,7 @@ kusanagi:{
 
     team:"",
 
-    image:"assets/images/players/kusanagi.png",
+    image:"",
 
     style:"",
 
@@ -2291,7 +2296,7 @@ mistercrimson:{
 
     team:"",
 
-    image:"assets/images/players/mistercrimson.png",
+    image:"",
 
     style:"",
 
@@ -2319,7 +2324,7 @@ valmaster:{
 
     team:"",
 
-    image:"assets/images/players/valmaster.png",
+    image:"",
 
     style:"",
 
@@ -2347,7 +2352,7 @@ hotdog29:{
 
     team:"",
 
-    image:"assets/images/players/hotdog29.png",
+    image:"",
 
     style:"",
 
@@ -2375,7 +2380,7 @@ gamerbee:{
 
     team:"",
 
-    image:"assets/images/players/gamerbee.png",
+    image:"",
 
     style:"",
 
@@ -2396,9 +2401,9 @@ gamerbee:{
 =========================================*/
 
 // 2026/7/27 追加: 検索で裏取りした実在選手
-itazan:{
+itabashizangief:{
 
-    id:"itazan",
+    id:"itabashizangief",
     name:"板橋ザンギエフ",
     type:"pro",
     country:"日本",
@@ -2417,5 +2422,113 @@ itazan:{
     twitter:"https://x.com/Itazan_Kuma"
 
 },
+
+
+    // 2026/7/27 追加: 検索で裏取りした実在選手(@Sycom所属)
+
+    orarin:{
+        id:"orarin",
+        name:"おらりん",
+        type:"pro",
+        country:"日本",
+        team:"@Sycom",
+        image:"https://www.sycom.co.jp/esports/wp-content/uploads/2026/02/orarin_1024x1024.webp",
+        main:["ken","mai"],
+        style:"攻撃型",
+        characters:["ken","mai"],
+        teamMembers:["zabuton","pipokun","imaishouta","seichi"],
+        achievements:[
+            {date:"2024",tournament:"World Warrior Japan #1",result:"2位"},
+            {date:"2024",tournament:"World Warrior Japan 日本決勝",result:"3位"},
+            {date:"2025",tournament:"BATTLE ARENA TOKUSHIMA 2025",result:"1位"},
+            {date:"2025",tournament:"SCARZ Genesis Tournament",result:"4位"}
+        ],
+        youtube:"https://www.youtube.com/@orarin0823",
+        twitch:"https://m.twitch.tv/orarin1/home",
+        twitter:"https://x.com/orachaaaaaan"
+    },
+
+    zabuton:{
+        id:"zabuton",
+        name:"さぶとん",
+        type:"pro",
+        country:"日本",
+        team:"@Sycom",
+        image:"https://www.sycom.co.jp/esports/wp-content/uploads/2026/02/zabuton_1200x1200.webp",
+        main:["deejay"],
+        style:"技巧型",
+        characters:["deejay"],
+        teamMembers:["orarin","pipokun","imaishouta","seichi"],
+        achievements:[
+            {date:"2025",tournament:"SCARZ Genesis Tournament",result:"優勝"}
+        ],
+        youtube:"https://www.youtube.com/@zabutonn1",
+        twitch:"https://www.twitch.tv/zabutonn_",
+        twitter:"https://x.com/zabutonn_"
+    },
+
+    pipokun:{
+        id:"pipokun",
+        name:"ピーポーくん",
+        type:"pro",
+        country:"日本",
+        team:"@Sycom",
+        image:"https://www.sycom.co.jp/esports/wp-content/uploads/2026/02/pi-pokun_1024x1024.webp",
+        main:["kimberly"],
+        style:"技巧型",
+        characters:["kimberly"],
+        teamMembers:["orarin","zabuton","imaishouta","seichi"],
+        achievements:[
+            {date:"2024",tournament:"BATTLE ARENA TOKUSHIMA 2024",result:"4位"},
+            {date:"2025",tournament:"第4回 TOKYO METRO CUP STREET FIGHTER 6 ソロ部門",result:"準優勝"},
+            {date:"2025",tournament:"第12回 ゆなっこ杯 supported by LaVISION。 スト6",result:"5位"},
+            {date:"2025",tournament:"GRAPHT CUP 2025 大阪予選",result:"優勝"},
+            {date:"2025",tournament:"GRAPHT CUP 2025",result:"5位"}
+        ],
+        youtube:"https://www.youtube.com/@Pipokun2025",
+        twitch:"https://www.twitch.tv/pipokun2025",
+        twitter:"https://x.com/pipokun2011"
+    },
+
+    imaishouta:{
+        id:"imaishouta",
+        name:"今井翔太",
+        type:"pro",
+        country:"日本",
+        team:"@Sycom",
+        image:"https://www.sycom.co.jp/esports/wp-content/uploads/2026/02/shotaimai_1024x1024.webp",
+        main:["elena"],
+        style:"技巧型",
+        characters:["elena","manon"],
+        teamMembers:["orarin","zabuton","pipokun","seichi"],
+        achievements:[
+            {date:"2025",tournament:"王者杯 第1戦",result:"9位"}
+        ],
+        youtube:"",
+        twitch:"",
+        twitter:"https://x.com/imai_sf6"
+    },
+
+    seichi:{
+        id:"seichi",
+        name:"せいち",
+        type:"pro",
+        country:"日本",
+        team:"@Sycom",
+        image:"https://www.sycom.co.jp/esports/wp-content/uploads/2026/03/seichi_1024x1024.webp",
+        main:["elena"],
+        style:"技巧型",
+        characters:["elena"],
+        teamMembers:["orarin","zabuton","pipokun","imaishouta"],
+        achievements:[
+            {date:"2025",tournament:"毛～腕 Grand Prix 2025",result:"5位"},
+            {date:"2025",tournament:"若手杯",result:"1位"},
+            {date:"2025",tournament:"Crazy Raccoon Street Fighter Academy部門 最終選考対戦会 2日目グループ",result:"1位"},
+            {date:"2026",tournament:"東京eスポーツフェスタ2026",result:"3位"}
+        ],
+        youtube:"",
+        twitch:"",
+        twitter:"https://x.com/Seichi_p_q"
+    },
 
 };

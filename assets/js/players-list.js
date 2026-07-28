@@ -17,6 +17,22 @@ function isJapan(player) {
     return player.country === "日本";
 }
 
+function findTeam(player) {
+    return Object.values(teamData).find(t => t.players.includes(player.id));
+}
+
+function teamLabelHtml(player) {
+
+    const team = findTeam(player);
+
+    if (team) {
+        return `<span class="team-badge" onclick="event.preventDefault(); event.stopPropagation(); location.href='team-detail.html?id=${team.id}';">${player.team}</span>`;
+    }
+
+    return player.team || "フリー";
+
+}
+
 function renderPlayers(list) {
 
     playerArea.innerHTML = "";
@@ -49,6 +65,20 @@ function renderPlayers(list) {
                 >`
             : `<div class="related-avatar-fallback">${player.name.charAt(0)}</div>`;
 
+        const team = findTeam(player);
+
+        const teammateList = team
+            ? team.players
+                .filter(id => id !== player.id)
+                .map(id => playerData[id] ? playerData[id].name : null)
+                .filter(Boolean)
+            : [];
+
+        // カードがごちゃつかないよう、3人以上いる場合は先頭2人+「など」に省略する
+        const teammateNames = teammateList.length >= 3
+            ? `${teammateList.slice(0, 2).join(" ・ ")} など（${teammateList.length}人）`
+            : teammateList.join(" ・ ");
+
         playerArea.innerHTML += `
 
 <a
@@ -63,13 +93,20 @@ function renderPlayers(list) {
     <h3>${player.name}</h3>
 
     <p class="player-team">
-        ${player.team || "フリー"}
+        ${teamLabelHtml(player)}
     </p>
 
     <p class="player-main">
         <strong>使用キャラ</strong><br>
         ${charNames || "未登録"}
     </p>
+
+    ${teammateNames ? `
+    <p class="player-teammates">
+        <strong>チームメンバー</strong><br>
+        ${teammateNames}
+    </p>
+    ` : ""}
 
     <span class="detail-link">
         ▶ 詳細を見る
@@ -86,29 +123,33 @@ function renderPlayers(list) {
 renderPlayers(Object.values(playerData));
 
 const search = document.getElementById("playerSearch");
-const characterSearch = document.getElementById("characterSearch");
 
 let currentCategory = "all";
 let currentCountry = "all";
 
 function filterPlayers() {
 
-    const keyword = search.value.toLowerCase();
-    const characterKeyword = characterSearch.value.toLowerCase();
+    const keyword = search.value.trim().toLowerCase();
 
     const filtered = Object.values(playerData).filter(player => {
 
-        const matchPlayer =
+        const matchName =
             keyword === "" ||
-            player.name.toLowerCase().includes(keyword) ||
+            player.name.toLowerCase().includes(keyword);
+
+        const matchTeam =
+            keyword === "" ||
             (player.team || "").toLowerCase().includes(keyword);
 
         const matchCharacter =
-            characterKeyword === "" ||
+            keyword === "" ||
             (player.characters || []).some(cid => {
                 const cName = characterData[cid] ? characterData[cid].name.toLowerCase() : cid.toLowerCase();
-                return cName.includes(characterKeyword) || cid.toLowerCase().includes(characterKeyword);
+                return cName.includes(keyword) || cid.toLowerCase().includes(keyword);
             });
+
+        // プレイヤー名・使用キャラ・所属チームのいずれかに一致すればOK
+        const matchKeyword = matchName || matchTeam || matchCharacter;
 
         const matchCategory =
             currentCategory === "all" ||
@@ -119,7 +160,7 @@ function filterPlayers() {
             (currentCountry === "japan" && isJapan(player)) ||
             (currentCountry === "overseas" && !isJapan(player));
 
-        return matchPlayer && matchCharacter && matchCategory && matchCountry;
+        return matchKeyword && matchCategory && matchCountry;
 
     });
 
@@ -146,7 +187,6 @@ categoryButtons.forEach(button => {
 });
 
 search.addEventListener("input", filterPlayers);
-characterSearch.addEventListener("input", filterPlayers);
 
 const countryButtons =
 document.querySelectorAll(".country-button");

@@ -10,18 +10,236 @@ const vtuberData = {
         team:"にじさんじ",
         image:"",
         main:[
-            "luke",
-            "gouki"
+            "gouki",
+            "terry",
+            "sagat"
         ],
         style:"研究・反復練習型",
         characters:[
-            "luke",
-            "gouki"
+            "gouki",
+            "terry",
+            "sagat",
+            "ryu",
+            "luke"
         ],
         youtube:"https://www.youtube.com/@Kuzuha",
         twitch:"",
         twitter:"https://x.com/Vamp_Kuzu"
 
+    },
+
+
+    // 2026/7/27 追加: 検索で裏取りした実在Vtuber(にじさんじ・ぶいすぽ・ホロスターズ)
+
+    onotora:{
+        id:"onotora",
+        name:"男虎",
+        type:"vtuber",
+        country:"日本",
+        team:"にじさんじ",
+        image:"",
+        main:["guile"],
+        style:"堅実型",
+        characters:["guile"],
+        youtube:"https://www.youtube.com/@Onotora_Y4T4",
+        twitch:"",
+        twitter:"https://x.com/OnoTora333"
+    },
+
+    kanae:{
+        id:"kanae",
+        name:"叶",
+        type:"vtuber",
+        country:"日本",
+        team:"にじさんじ",
+        image:"",
+        main:["aki"],
+        style:"技巧型",
+        characters:["aki","cammy","cviper","mai",
+            "rashid"],
+        youtube:"https://www.youtube.com/channel/UCspv01oxUFf_MTSipURRhkA",
+        twitch:"",
+        twitter:""
+    },
+
+    murakumokagetsu:{
+        id:"murakumokagetsu",
+        name:"叢雲カゲツ",
+        type:"vtuber",
+        country:"日本",
+        team:"にじさんじ",
+        image:"",
+        main:["blanka"],
+        style:"研究型",
+        characters:["blanka","lily","kimberly"],
+        youtube:"https://www.youtube.com/@MurakumoKagetsu",
+        twitch:"",
+        twitter:"https://x.com/Kagetsu_2434"
+    },
+
+    usamirito:{
+        id:"usamirito",
+        name:"宇佐美リト",
+        type:"vtuber",
+        country:"日本",
+        team:"にじさんじ",
+        image:"",
+        main:["zangief"],
+        style:"コマンド投げ主体",
+        characters:["zangief"],
+        youtube:"https://www.youtube.com/@UsamiRito",
+        twitch:"",
+        twitter:""
+    },
+
+    kurieita:{
+        id:"kurieita",
+        name:"九里詠太",
+        type:"vtuber",
+        country:"日本",
+        team:"にじさんじ",
+        image:"",
+        main:["juri"],
+        style:"技巧型",
+        characters:["juri"],
+        youtube:"https://www.youtube.com/@KuriEita_Y4T4",
+        twitch:"",
+        twitter:""
+    },
+
+    inamirai:{
+        id:"inamirai",
+        name:"伊波ライ",
+        type:"vtuber",
+        country:"日本",
+        team:"にじさんじ",
+        image:"",
+        main:["ken"],
+        style:"攻撃型",
+        characters:["ken","mai","luke","gouki","ed","bison","terry","alex"],
+        youtube:"",
+        twitch:"",
+        twitter:""
+    },
+
+    wataraihibari:{
+        id:"wataraihibari",
+        name:"渡会雲雀",
+        type:"vtuber",
+        country:"日本",
+        team:"にじさんじ",
+        image:"",
+        main:["ken"],
+        style:"攻撃型",
+        characters:["ken","ryu","gouki","mai","luke"],
+        youtube:"",
+        twitch:"",
+        twitter:""
+    },
+
+    nagaokei:{
+        id:"nagaokei",
+        name:"長尾景",
+        type:"vtuber",
+        country:"日本",
+        team:"にじさんじ",
+        image:"",
+        main:["zangief"],
+        style:"コマンド投げ主体",
+        characters:["zangief","elena"],
+        youtube:"",
+        twitch:"",
+        twitter:""
+    },
+
+    choyahanabi:{
+        id:"choyahanabi",
+        name:"蝶屋はなび",
+        type:"vtuber",
+        country:"日本",
+        team:"ぶいすぽっ！",
+        image:"",
+        main:["marisa"],
+        style:"技巧型",
+        characters:["marisa","mai","zangief"],
+        youtube:"https://www.youtube.com/@HanabiChoya",
+        twitch:"",
+        twitter:""
+    },
+
+    kishidotemma:{
+        id:"kishidotemma",
+        name:"岸堂天真",
+        type:"vtuber",
+        country:"日本",
+        team:"ホロスターズ",
+        image:"",
+        main:["lily"],
+        style:"技巧型",
+        characters:["lily"],
+        youtube:"https://www.youtube.com/channel/UCGNI4MENvnsymYjKiZwv9eg",
+        twitch:"",
+        twitter:""
+    },
+
+    aruran:{
+        id:"aruran",
+        name:"アルランディス",
+        type:"vtuber",
+        country:"日本",
+        team:"ホロスターズ",
+        image:"",
+        main:["guile"],
+        style:"堅実型",
+        characters:["guile","terry","ryu","sagat","jp"],
+        youtube:"https://www.youtube.com/channel/UCKeAhJvy8zgXWbh9duVjIaQ",
+        twitch:"",
+        twitter:""
+    },
+
+    rikka:{
+        id:"rikka",
+        name:"律可",
+        type:"vtuber",
+        country:"日本",
+        team:"ホロスターズ",
+        image:"",
+        main:["luke"],
+        style:"バランス型",
+        characters:["luke"],
+        youtube:"",
+        twitch:"",
+        twitter:""
+    },
+
+    kisaragiren:{
+        id:"kisaragiren",
+        name:"如月れん",
+        type:"vtuber",
+        country:"日本",
+        team:"ぶいすぽっ！",
+        image:"",
+        main:["jp"],
+        style:"技巧型",
+        characters:["jp"],
+        youtube:"https://www.youtube.com/@ren_kisaragi__",
+        twitch:"",
+        twitter:"https://x.com/ren_kisaragi__"
+    },
+
+    amayuimoka:{
+        id:"amayuimoka",
+        name:"甘結もか",
+        type:"vtuber",
+        country:"日本",
+        team:"ぶいすぽっ！",
+        image:"",
+        main:["luke","gouki"],
+        style:"技巧型",
+        characters:["luke","gouki","alex"],
+        youtube:"https://www.youtube.com/@Moka_Amayui",
+        twitch:"",
+        twitter:"https://x.com/Amayui_Moka"
     },
 
 };

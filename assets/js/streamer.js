@@ -16,12 +16,28 @@ const streamerData = {
         characters:[
             "jp",
             "marisa",
-            "blanka"
-        ],
+            "blanka",
+            "deejay"],
         youtube:"",
         twitch:"https://www.twitch.tv/k4sen",
         twitter:"https://x.com/k4sen"
 
+    },
+
+    // 2026/7/27 追加: 検索で裏取りした実在ストリーマー
+    donpisha:{
+        id:"donpisha",
+        name:"ドンピシャ",
+        type:"streamer",
+        country:"日本",
+        team:"三人称",
+        image:"",
+        main:["guile"],
+        style:"堅実型",
+        characters:["guile"],
+        youtube:"",
+        twitch:"",
+        twitter:"https://x.com/DONPISHA22"
     },
 
 };

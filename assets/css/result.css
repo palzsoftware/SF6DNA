@@ -347,6 +347,58 @@ transform:translateY(5px);
 
 }
 
+@media (max-width:900px){
+
+    .result-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:24px;
+
+    }
+
+    .result-nav{
+
+        position:static;
+
+        display:flex;
+
+        overflow-x:auto;
+
+        gap:8px;
+
+        padding:16px;
+
+    }
+
+    .result-nav h3{
+
+        display:none;
+
+    }
+
+    .result-nav a{
+
+        white-space:nowrap;
+
+        flex-shrink:0;
+
+    }
+
+    .result-type-badge h1{
+
+        font-size:36px;
+
+    }
+
+    .result-type-badge{
+
+        padding:28px 32px;
+
+    }
+
+}
+
 
 /* ===========================
    Navigation

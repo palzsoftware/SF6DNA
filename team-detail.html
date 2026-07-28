@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/components-v2.css">
+    <link rel="stylesheet" href="assets/css/team.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
 </head>
@@ -27,6 +28,12 @@
 <a href="index.html" class="logo">
 SF6 DNA
 </a>
+
+<button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 
 <nav class="nav">
 
@@ -64,7 +71,7 @@ SF6 DNA
 
 <a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
 
-<a href="teams.html" class="active"><span>🏆 TEAM</span>チーム図鑑</a>
+<a href="team.html" class="active"><span>🏆 TEAM</span>チーム図鑑</a>
 
 </div>
 
@@ -90,6 +97,8 @@ SF6 DNA
 
         <h1 id="teamName"></h1>
 
+        <p id="teamCountry" class="team-country"></p>
+
         <p id="teamDescription"></p>
 
         <div
@@ -101,9 +110,16 @@ SF6 DNA
 
 </main>
 
-<script src="assets/js/team-data.js"></script>
+<script src="assets/js/character-data.js"></script>
 <script src="assets/js/pro.js"></script>
+<script src="assets/js/streamer.js"></script>
+<script src="assets/js/vtuber.js"></script>
+<script src="assets/js/youtuber.js"></script>
+<script src="assets/js/player-data.js"></script>
+<script src="assets/js/team-data.js"></script>
 <script src="assets/js/team-detail.js"></script>
+
+<script src="assets/js/nav.js"></script>
 
 </body>
 

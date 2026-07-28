@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>キャラクター一覧 | SF6 DNA</title>
+    <title>About | SF6 DNA</title>
 
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -27,6 +27,12 @@
 <a href="index.html" class="logo">
 SF6 DNA
 </a>
+
+<button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 
 <nav class="nav">
 
@@ -64,7 +70,7 @@ SF6 DNA
 
 <a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
 
-<a href="teams.html"><span>🏆 TEAM</span>チーム図鑑</a>
+<a href="team.html"><span>🏆 TEAM</span>チーム図鑑</a>
 
 </div>
 
@@ -80,63 +86,281 @@ SF6 DNA
 </header>
 
 <main class="container">
-    
+
     <div class="page-header">
 
-    <section class="about-section">
+        <p class="section-label">ABOUT</p>
 
-    <div class="about-card">
+        <h1>About</h1>
 
-        <h2>SF6 DNAとは</h2>
+    </div>
 
-        <p>
+    <div class="about-hero-row">
 
-            SF6 DNAは、Street Fighter 6プレイヤー向けの
-            プレイスタイル診断・キャラクター比較サイトです。
+        <div class="about-column about-column-left">
 
-            自分に合った戦い方やキャラクターを見つけることを
-            目的として制作しています。
+            <div class="about-card">
 
+                <h2>SF6 DNAとは</h2>
+
+                <p>
+
+                    SF6 DNAは、Street Fighter 6プレイヤー向けの
+                    プレイスタイル診断・キャラクター比較サイトです。
+                    自分に合った戦い方やキャラクターを見つけることを
+                    目的として制作しています。
+
+                </p>
+
+            </div>
+
+            <div class="about-card">
+
+                <h2>主な機能</h2>
+
+                <ul>
+
+                    <li>プレイスタイル診断（全50問）</li>
+                    <li>診断結果の保存・比較</li>
+                    <li>キャラクター図鑑（全30キャラ）</li>
+                    <li>プレイヤー図鑑（プロ・ストリーマー・VTuber・YouTuber）</li>
+                    <li>チーム図鑑</li>
+                    <li>キャラクター比較</li>
+                    <li>おすすめキャラクター表示</li>
+
+                </ul>
+
+            </div>
+
+            <div class="about-card">
+
+                <h2>今後追加予定</h2>
+
+                <ul>
+
+                    <li>AIによる詳細診断コメント</li>
+                    <li>おすすめ動画の充実（初心者〜対戦動画）</li>
+                    <li>プレイヤー・チーム情報の拡充</li>
+                    <li>PC/スマホ表示の切り替え機能</li>
+                    <li>初心者用・上級者用の診断モード</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="about-column about-column-right">
+
+            <section class="about-search-section">
+
+                <h2>知りたいことを検索</h2>
+
+                <input
+                    id="faqSearch"
+                    class="input"
+                    type="text"
+                    placeholder="キーワードで検索（例：診断、保存、データ）"
+                >
+
+                <div id="faqQuickLinks" class="faq-quick-links">
+
+                    <a href="diagnosis.html">📝 診断する</a>
+                    <a href="characters.html">🎮 キャラクター図鑑</a>
+                    <a href="players.html">👤 プレイヤー図鑑</a>
+                    <a href="team.html">🏆 チーム図鑑</a>
+                    <a href="compare.html">⚔ キャラクター比較</a>
+                    <a href="favorites.html">📋 保存した診断を見る</a>
+
+                </div>
+
+            </section>
+
+            <section class="about-contact-section">
+
+                <h2>お問い合わせ</h2>
+
+                <p class="about-contact-note">
+                    ※ 現在準備中の仮の受付フォームです。データ誤りのご指摘・プレイヤー掲載のご希望などをお送りください。
+                </p>
+
+                <form id="contactForm" class="contact-form">
+
+                    <label>
+                        お名前（任意）
+                        <input type="text" name="name" placeholder="例：山田太郎">
+                    </label>
+
+                    <label>
+                        ご用件の種類
+                        <select name="category">
+                            <option>データの誤りを報告する</option>
+                            <option>プレイヤー・チームの掲載希望</option>
+                            <option>その他のご意見・ご要望</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        内容
+                        <textarea name="message" rows="4" placeholder="内容をご記入ください"></textarea>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary">
+                        送信する（準備中）
+                    </button>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <section class="faq-section faq-section-full">
+
+        <h2>よくある質問</h2>
+
+        <div id="faqList" class="faq-list">
+
+            <div class="faq-item" data-keywords="診断 質問 時間 無料 料金">
+                <button class="faq-question">
+                    診断はどれくらい時間がかかりますか？料金はかかりますか？
+                </button>
+                <div class="faq-answer">
+                    <p>質問は全50問で、所要時間の目安は約3分です。診断・サイトの利用は全て無料です。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="保存 結果 データ 消える 履歴">
+                <button class="faq-question">
+                    診断結果はどこに保存されますか？他の端末からも見られますか？
+                </button>
+                <div class="faq-answer">
+                    <p>診断結果はお使いのブラウザ内（localStorage）に保存されます。そのため、ブラウザやスマホ端末を変えると引き継がれません。大事な結果は「この診断を保存する」ボタンを押した上で、favorites.htmlのページをブックマークしておくことをおすすめします。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="比較 診断 保存 favorites">
+                <button class="faq-question">
+                    過去の診断結果を比較できますか？
+                </button>
+                <div class="faq-answer">
+                    <p>できます。診断結果ページで保存した診断は、favorites.htmlで2件以上選択すると、8つの能力軸をスコアで比較できます。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="おすすめ キャラクター 決め方 仕組み">
+                <button class="faq-question">
+                    おすすめキャラクターはどうやって決まっていますか？
+                </button>
+                <div class="faq-answer">
+                    <p>診断の回答から算出される8軸のスコアと、各キャラクターに設定された同じ8軸のパラメータを比較し、傾向が近いキャラクターを毎回その場で算出しています。そのため同じタイプでも、回答内容によっておすすめされるキャラクターが変わります。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="プレイヤー データ 間違い 情報 修正 追加">
+                <button class="faq-question">
+                    プレイヤー情報に間違いがあった場合はどうすればいいですか？
+                </button>
+                <div class="faq-answer">
+                    <p>プレイヤー・チームの情報は運営が調査の上、随時追加・修正しています。表記の誤りなどにお気づきの場合は、上のお問い合わせフォームよりお知らせください。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="スマホ pc 対応 レイアウト 崩れる">
+                <button class="faq-question">
+                    スマホでも使えますか？
+                </button>
+                <div class="faq-answer">
+                    <p>スマホ・PCどちらにも対応しています。表示が崩れている箇所があれば、順次改善していきます。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="診断 やり直し 再診断 何度も">
+                <button class="faq-question">
+                    診断は何度でもやり直せますか？
+                </button>
+                <div class="faq-answer">
+                    <p>何度でも診断できます。やり直すたびに新しい結果として診断履歴に残り、気に入った結果だけ個別に保存することもできます。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="キャラクター 情報 出典 データ 元">
+                <button class="faq-question">
+                    キャラクターのステータスやDNA評価はどうやって決めていますか？
+                </button>
+                <div class="faq-answer">
+                    <p>各キャラクターの性能・使用感をもとに運営が設定しています。実際のプレイ感覚と異なる場合は、今後随時調整していく予定です。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="プレイヤー 追加 掲載 応募 申請">
+                <button class="faq-question">
+                    自分（配信者・プレイヤー）の情報を掲載してほしい場合はどうすればいいですか？
+                </button>
+                <div class="faq-answer">
+                    <p>上のお問い合わせフォームから「プレイヤー・チームの掲載希望」を選んでお送りください。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="動画 おすすめ 初心者 上級者 対戦">
+                <button class="faq-question">
+                    おすすめ動画はどうやって選ばれていますか？
+                </button>
+                <div class="faq-answer">
+                    <p>現在は運営が選んだ動画に加え、一部のカテゴリはYouTube検索へのリンクで対応しています。今後、条件に合った動画を自動で取得する仕組みを追加予定です。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="チーム ロゴ 画像 未表示">
+                <button class="faq-question">
+                    チームのロゴ画像が表示されない場合がありますが、なぜですか？
+                </button>
+                <div class="faq-answer">
+                    <p>ロゴ画像が未登録のチームは、チーム名の頭文字を使った仮のアイコンを表示しています。画像を登録次第、順次差し替わります。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="アカウント 登録 ログイン 会員">
+                <button class="faq-question">
+                    会員登録は必要ですか？
+                </button>
+                <div class="faq-answer">
+                    <p>不要です。診断・図鑑の閲覧・比較機能はすべて登録なしで利用できます。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="ブラウザ 対応 動作環境 推奨">
+                <button class="faq-question">
+                    対応しているブラウザはありますか？
+                </button>
+                <div class="faq-answer">
+                    <p>Chrome・Safari・Edgeなど主要な最新ブラウザに対応しています。古いバージョンのブラウザでは一部表示が崩れる可能性があります。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="運営 制作者 個人 開発">
+                <button class="faq-question">
+                    誰が運営しているサイトですか？
+                </button>
+                <div class="faq-answer">
+                    <p>Street Fighter 6を愛好する個人・有志によって制作・運営されています。Capcom様および公式とは関係のないファンサイトです。</p>
+                </div>
+            </div>
+
+        </div>
+
+        <p id="faqNoResult" class="faq-no-result" style="display:none;">
+            該当する質問が見つかりませんでした。
         </p>
 
-    </div>
-
-    <div class="about-card">
-
-        <h2>主な機能</h2>
-
-        <ul>
-
-            <li>プレイスタイル診断</li>
-            <li>キャラクター一覧・詳細</li>
-            <li>キャラクター比較</li>
-            <li>おすすめキャラクター表示</li>
-
-        </ul>
-
-    </div>
-
-    <div class="about-card">
-
-        <h2>今後追加予定</h2>
-
-        <ul>
-
-            <li>AI診断コメント</li>
-            <li>キャラクター相性表示</li>
-            <li>プロ・ストリーマー紹介</li>
-            <li>診断履歴保存</li>
-
-        </ul>
-
-    </div>
-
-</section>
-
-</div>
-
+    </section>
 
 </main>
+
+<script src="assets/js/about.js"></script>
+<script src="assets/js/nav.js"></script>
 
 </body>
 

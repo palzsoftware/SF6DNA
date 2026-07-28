@@ -9,6 +9,49 @@ body{
         "Segoe UI",
         "Noto Sans JP",
         sans-serif;
+
+    /* うっすらグリッドのテクスチャを全ページ背景に敷く(公式サイト風の質感) */
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-attachment: fixed;
+}
+
+/* ===========================
+   esports風の太字見出し(全ページ共通)
+=========================== */
+
+h1, h2, h3{
+    font-weight: 800;
+    letter-spacing: .02em;
+}
+
+/* セクション見出しの前に付ける小さなラベルタグ
+   (公式サイトの "PROFILE" のような小さな金色/オレンジのタグを参考)
+   使い方: <p class="section-label">PLAYERS</p><h2>プレイヤー図鑑</h2> */
+.section-label{
+
+    display:inline-block;
+
+    padding:4px 14px;
+
+    margin-bottom:12px;
+
+    border-radius:4px;
+
+    background:var(--primary);
+
+    color:#0d0d0d;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
 }
 
 /* ---------- Container ---------- */

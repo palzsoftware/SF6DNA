@@ -30,11 +30,28 @@ const player = players[id];
     document.getElementById("playerCountry").textContent =
     player.country;
 
-    document.getElementById("playerTeam").textContent =
-    player.team;
+    // 所属チームがteamData(チーム図鑑)に登録されていれば、
+    // クリックでチーム詳細ページへ飛べるバッジとして表示する
+    const belongingTeam = Object.values(teamData).find(
+        t => t.players.includes(player.id)
+    );
 
-    document.getElementById("playerTeamInline").textContent =
-    player.team;
+    function renderTeamLabel(elementId) {
+
+        const el = document.getElementById(elementId);
+        if (!el) return;
+
+        if (belongingTeam) {
+            el.innerHTML =
+                `<a href="team-detail.html?id=${belongingTeam.id}" class="team-badge-link">${player.team}</a>`;
+        } else {
+            el.textContent = player.team || "フリー";
+        }
+
+    }
+
+    renderTeamLabel("playerTeam");
+    renderTeamLabel("playerTeamInline");
 
     document.getElementById("playerMainCharacters").textContent =
 player.characters
@@ -100,22 +117,38 @@ const memberContainer =
 
 memberContainer.innerHTML = "";
 
-if(player.teamMembers){
+// team-data.jsに登録されている全チームから、このプレイヤーの所属チームを探し、
+// 同じチームの他のメンバーを自動的に表示する(VARREL/REJECT以外にも対応)
+const belongingTeamForMembers = typeof teamData !== "undefined"
+    ? Object.values(teamData).find(t => t.players.includes(player.id))
+    : null;
 
-    player.teamMembers.forEach(id=>{
+const memberIds = belongingTeamForMembers
+    ? belongingTeamForMembers.players.filter(id => id !== player.id)
+    : (player.teamMembers || []);
 
-        const member = players[id];
+memberIds.forEach(id=>{
 
-        if(!member) return;
+    const member = players[id];
 
-        memberContainer.innerHTML += `
+    if(!member) return;
+
+    const memberImageHtml = member.image
+        ? `<img
+                src="${member.image}"
+                alt="${member.name}"
+                onerror="this.replaceWith(Object.assign(document.createElement('div'), {className:'related-avatar-fallback', textContent:'${member.name.charAt(0)}'}));"
+            >`
+        : `<div class="related-avatar-fallback">${member.name.charAt(0)}</div>`;
+
+    memberContainer.innerHTML += `
 
         <a
             href="player.html?id=${member.id}"
             class="team-member-card"
         >
 
-            <img src="${member.image}">
+            ${memberImageHtml}
 
             <span>${member.name}</span>
 
@@ -123,9 +156,7 @@ if(player.teamMembers){
 
         `;
 
-    });
-
-}
+});
 
     document.getElementById("playerAchievements").innerHTML =
     (player.achievements || [])
@@ -171,5 +202,28 @@ if(player.twitch){
 }else{
     twitchLink.style.display = "none";
 }
+
+// ===== タブ切り替え(公式サイトのOVERVIEW/PLAY風レイアウト) =====
+const tabButtons = document.querySelectorAll(".player-tab-button");
+const tabPanels = document.querySelectorAll(".player-tab-panel");
+
+tabButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        tabButtons.forEach(b => b.classList.remove("active"));
+        tabPanels.forEach(p => p.classList.remove("active"));
+
+        button.classList.add("active");
+
+        const target = document.querySelector(
+            `.player-tab-panel[data-panel="${button.dataset.tab}"]`
+        );
+
+        if (target) target.classList.add("active");
+
+    });
+
+});
 
 });

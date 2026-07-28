@@ -28,6 +28,12 @@
 SF6 DNA
 </a>
 
+<button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
 <nav class="nav">
 
     <a href="index.html">TOP</a>
@@ -64,7 +70,7 @@ SF6 DNA
 
 <a href="players.html" class="active"><span>👤 PLAYER</span>プレイヤー図鑑</a>
 
-<a href="teams.html"><span>🏆 TEAM</span>チーム図鑑</a>
+<a href="team.html"><span>🏆 TEAM</span>チーム図鑑</a>
 
 </div>
 
@@ -89,6 +95,8 @@ SF6 DNA
 
     <div>
 
+        <p class="section-label">PLAYERS</p>
+
         <h1>プレイヤー一覧</h1>
 
         <p>
@@ -107,14 +115,7 @@ SF6 DNA
             id="playerSearch"
             class="input"
             type="text"
-            placeholder="プレイヤー名で検索"
-        >
-
-        <input
-            id="characterSearch"
-            class="input"
-            type="text"
-            placeholder="使用キャラクター名で検索（例：JP、ケン、豪鬼）"
+            placeholder="🔍 プレイヤー名・使用キャラ・所属チームで検索（例：JP、ときど、VARREL）"
         >
 
     </div>
@@ -174,7 +175,10 @@ SF6 DNA
 <script src="assets/js/vtuber.js"></script>
 <script src="assets/js/youtuber.js"></script>
 <script src="assets/js/player-data.js"></script>
+<script src="assets/js/team-data.js"></script>
 <script src="assets/js/players-list.js"></script>
+<script src="assets/js/nav.js"></script>
+
 </body>
 
 </html>

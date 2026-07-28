@@ -103,7 +103,7 @@ recommend:[
             pros: [
                 "tokido",
                 "orarin",
-                "ryuukichi"
+                "ryukichi"
             ],
             streamers: [
                 "なし"
@@ -244,8 +244,8 @@ recommend:[
         players: {
 
             pros: [
-                "umeharadaigo",
-                "Kawano",
+                "daigo",
+                "kawano",
                 "bonchan"
             ],
 
@@ -697,7 +697,7 @@ recommend:[
             "gouki"
         ],
         players: {
-            pros: ["Noble","NoahTheProdigy"],
+            pros: ["Noble","noahtheprodigy"],
             streamers: ["yoshinama"],
             vtubers: ["なし"],youtubers:[]}
     },
@@ -1135,7 +1135,7 @@ recommend:[
             "aki"
         ],
         players:{
-            pros:["mago","2bassa","pugera"],
+            pros:["mago","twobassa","pugera"],
             streamers:["betty"],
             vtubers:["ibrahim","amakipururu"],youtubers:[]}
     }
@@ -1262,7 +1262,7 @@ recommend:[
             "kimberly"
         ],
         players:{
-            pros:["kazunoko","akira","2bassa"],
+            pros:["kazunoko","akira","twobassa"],
             streamers:["なし"],
             vtubers:["sorahoshikirame","uchiwa"],youtubers:[]}
     }
@@ -1352,7 +1352,7 @@ recommend:[
     related:{
         characters:["chunli","juri","kimberly"],
         players:{
-            pros:["tantanmen","takeuchijohn","uryo"],
+            pros:["tantanmen","johntakeuchi","uryo"],
             streamers:["naruo",],
             vtubers:["kaminariqpi"],youtubers:[]}
     },
@@ -1724,7 +1724,7 @@ recommend:[
             "lily"
         ],
         players:{
-            pros:["akutagawa","tachikawa"],
+            pros:["akutagawa","tachikawa","imaishouta"],
             streamers:["shaka",],
             vtubers:["saikiittetsu"],youtubers:[]}
     },
@@ -2621,7 +2621,7 @@ recommend:[
             "aki"
         ],
         players:{
-            pros:["tokido","ryuusei","acqua"],
+            pros:["tokido","ryusei","acqua"],
             streamers:[],
             vtubers:["kisaragiren"],youtubers:[]}
     },
@@ -2873,7 +2873,7 @@ recommend:[
 
     related:{
         characters:["erena","deejay","dhalsim"],
-        players:{pros:["fuudo","momochi","leshar"],streamers:[],vtubers:[],youtubers:[]}
+        players:{pros:["fuudo","momochi","leshar","tachikawa"],streamers:[],vtubers:[],youtubers:[]}
     },
 
     comboVideos: {
@@ -3117,7 +3117,7 @@ recommend:[
 
     related:{
         characters:["ken","ryu","luke"],
-        players:{pros:["kintyo","leshar","wabiichi"],streamers:[],vtubers:[],youtubers:[]}
+        players:{pros:["kincho","leshar","wabiichi"],streamers:[],vtubers:[],youtubers:[]}
     },
 
     comboVideos: {
@@ -3239,7 +3239,7 @@ recommend:[
 
     related:{
         characters:["terry","kimberly","juri"],
-        players:{pros:["mago","kei.b"],streamers:[],vtubers:[],youtubers:[]}
+        players:{pros:["mago","keib"],streamers:[],vtubers:[],youtubers:[]}
     },
 
     comboVideos: {
@@ -3358,7 +3358,7 @@ recommend:[
 
     related:{
         characters:["chunli","jamie","manon"],
-        players:{pros:["dogura","imaishouta",""],streamers:["kosaku"],vtubers:[],youtubers:[]}
+        players:{pros:["dogura","imaishouta"],streamers:["kosaku"],vtubers:[],youtubers:[]}
     },
 
 comboVideos:{

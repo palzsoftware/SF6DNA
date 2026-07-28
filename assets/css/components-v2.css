@@ -1930,7 +1930,8 @@
 
 }
 
-.dropdown:hover .dropdown-content{
+.dropdown:hover .dropdown-content,
+.dropdown.is-open .dropdown-content{
 
     opacity:1;
 
@@ -2280,4 +2281,579 @@
 
     padding:60px 0;
 
+}
+
+/* ==========================
+   ハンバーガーメニュー(スマホ用)
+========================== */
+
+.nav-toggle{
+
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:5px;
+
+    width:44px;
+
+    height:44px;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:0;
+
+    z-index:1100;
+
+}
+
+.nav-toggle span{
+
+    display:block;
+
+    width:24px;
+
+    height:2px;
+
+    background:#fff;
+
+    border-radius:2px;
+
+    transition:.25s;
+
+}
+
+.nav-toggle.is-open span:nth-child(1){
+    transform:translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-open span:nth-child(2){
+    opacity:0;
+}
+
+.nav-toggle.is-open span:nth-child(3){
+    transform:translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width:900px){
+
+    .nav-toggle{
+
+        display:flex;
+
+    }
+
+    .nav{
+
+        position:fixed;
+
+        top:90px;
+
+        left:0;
+
+        right:0;
+
+        bottom:0;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:0;
+
+        background:#11141b;
+
+        padding:12px 24px 40px;
+
+        overflow-y:auto;
+
+        transform:translateX(100%);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        transition:transform .25s ease, opacity .25s ease, visibility 0s linear .25s;
+
+    }
+
+    .nav.is-open{
+
+        transform:translateX(0);
+
+        opacity:1;
+
+        visibility:visible;
+
+        transition:transform .25s ease, opacity .25s ease, visibility 0s linear 0s;
+
+    }
+
+    .nav>a{
+
+        padding:18px 4px;
+
+        border-bottom:1px solid rgba(255,255,255,.08);
+
+    }
+
+    /* スマホ幅ではドロップダウンをその場で展開する形にする
+       (絶対配置のフローティングパネルだと画面外にはみ出すため) */
+    .dropdown{
+
+        width:100%;
+
+    }
+
+    .dropdown-button{
+
+        width:100%;
+
+        text-align:left;
+
+        padding:18px 4px;
+
+        border-bottom:1px solid rgba(255,255,255,.08);
+
+    }
+
+    .dropdown-content{
+
+        position:static;
+
+        width:100%;
+
+        transform:none;
+
+        max-height:0;
+
+        opacity:1;
+
+        visibility:visible;
+
+        border:none;
+
+        border-radius:0;
+
+        box-shadow:none;
+
+        background:#181c25;
+
+        overflow:hidden;
+
+        transition:max-height .25s ease;
+
+    }
+
+    .dropdown.is-open .dropdown-content{
+
+        max-height:300px;
+
+    }
+
+    .dropdown-content a{
+
+        padding:16px 20px;
+
+    }
+
+}
+
+/* ===========================
+   チームバッジ(プレイヤーカード上でチーム名をクリックできるように)
+=========================== */
+
+.team-badge,
+.team-badge-link{
+
+    display:inline-block;
+
+    padding:3px 12px;
+
+    border-radius:999px;
+
+    background:rgba(255,107,0,.15);
+
+    border:1px solid rgba(255,107,0,.4);
+
+    color:#ffb347;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+}
+
+.team-badge:hover,
+.team-badge-link:hover{
+
+    background:rgba(255,107,0,.3);
+
+}
+
+/* ===========================
+   about.html: 検索・FAQ
+=========================== */
+
+.about-search-section{
+
+    margin:48px 0 24px;
+
+    text-align:center;
+
+}
+
+.about-search-section h2{
+
+    margin-bottom:20px;
+
+}
+
+.about-search-section .input{
+
+    max-width:480px;
+
+    margin:0 auto;
+
+}
+
+.faq-quick-links{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:24px;
+
+}
+
+.faq-quick-links a{
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.2s;
+
+}
+
+.faq-quick-links a:hover{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+}
+
+.faq-section{
+
+    margin:48px 0 80px;
+
+}
+
+.faq-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-top:20px;
+
+}
+
+.faq-item{
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+}
+
+.faq-question{
+
+    display:block;
+
+    width:100%;
+
+    text-align:left;
+
+    padding:20px 24px;
+
+    background:none;
+
+    border:none;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    line-height:1.6;
+
+    white-space:normal;
+
+    word-break:break-word;
+
+    cursor:pointer;
+
+    position:relative;
+
+    padding-right:50px;
+
+}
+
+.faq-question::after{
+
+    content:"+";
+
+    position:absolute;
+
+    right:24px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:22px;
+
+    color:var(--primary);
+
+    transition:.25s;
+
+}
+
+.faq-item.is-open .faq-question::after{
+
+    transform:translateY(-50%) rotate(45deg);
+
+}
+
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .25s ease;
+
+    color:var(--text-sub);
+
+    line-height:1.8;
+
+}
+
+.faq-item.is-open .faq-answer{
+
+    max-height:300px;
+
+}
+
+.faq-answer p{
+
+    padding:0 24px 20px;
+
+}
+
+.faq-no-result{
+
+    text-align:center;
+
+    color:var(--text-sub);
+
+    margin-top:24px;
+
+}
+
+/* ===========================
+   about.html: 2カラムレイアウト
+   (左:概要・機能、右:検索+お問い合わせ / 下部によくある質問を全幅で配置)
+=========================== */
+
+.about-hero-row{
+
+    display:grid;
+
+    grid-template-columns:1.1fr 0.9fr;
+
+    gap:32px;
+
+    align-items:start;
+
+    margin-top:20px;
+
+}
+
+.about-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    min-width:0;
+
+}
+
+.about-search-section .input{
+
+    max-width:none;
+
+    width:100%;
+
+}
+
+.faq-section-full{
+
+    margin-top:48px;
+
+}
+
+/* ===========================
+   お問い合わせ(仮)
+=========================== */
+
+.about-contact-section{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:28px;
+
+}
+
+.about-contact-note{
+
+    color:var(--text-sub);
+
+    font-size:13px;
+
+    margin-bottom:16px;
+
+    line-height:1.7;
+
+}
+
+.contact-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.contact-form label{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    font-size:14px;
+
+    color:var(--text-sub);
+
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+
+    background:#12151c;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    padding:12px 14px;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-family:inherit;
+
+    resize:vertical;
+
+}
+
+.contact-form button{
+
+    align-self:flex-start;
+
+}
+
+@media (max-width:1000px){
+
+    .about-hero-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* ===========================
+   プレイヤーカードのチームメンバー表示
+=========================== */
+
+.player-teammates{
+
+    margin-top:10px;
+
+    padding-top:10px;
+
+    border-top:1px dashed var(--border);
+
+    font-size:13px;
+
+    color:var(--text-sub);
+
+    line-height:1.6;
+
+}
+
+.player-teammates strong{
+
+    color:#fff;
 }
