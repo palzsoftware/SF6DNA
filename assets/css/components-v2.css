@@ -100,6 +100,8 @@
 
     color:#ffffff;
 
+    box-shadow:0 0 16px rgba(255,122,0,.5);
+
 }
 
 /* ==========================================
@@ -929,6 +931,7 @@
     background:var(--surface);
 
     border:1px solid var(--border);
+    border-top:3px solid var(--primary);
 
     border-radius:16px;
 
@@ -2751,6 +2754,7 @@
     background:var(--surface);
 
     border:1px solid var(--border);
+    border-top:3px solid var(--primary);
 
     border-radius:var(--radius);
 
@@ -2856,4 +2860,120 @@
 .player-teammates strong{
 
     color:#fff;
+}
+
+/* ===========================
+   お問い合わせフォームの送信ステータス
+=========================== */
+
+.contact-status{
+
+    font-size:14px;
+
+    min-height:20px;
+}
+
+.contact-status.success{
+    color:#46c878;
+}
+
+.contact-status.error{
+    color:#ff7850;
+}
+
+/* ===========================
+   about.html: 検索をFAQ直上に全幅配置
+=========================== */
+
+.about-search-section-full{
+
+    margin:48px 0 24px;
+
+    text-align:center;
+}
+
+/* ===========================
+   比較ページ: 相性・使用プレイヤー
+=========================== */
+
+.matchup-compare-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+
+    gap:20px;
+
+    padding:20px 0;
+}
+
+.matchup-character-col{
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    border-radius:14px;
+
+    padding:18px 20px;
+}
+
+.matchup-character-col h4{
+
+    font-size:16px;
+
+    margin-bottom:14px;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid #303847;
+}
+
+.matchup-vs-item{
+
+    padding:10px 0;
+
+    border-bottom:1px dashed #303847;
+
+    font-size:13px;
+}
+
+.matchup-vs-item p{
+
+    color:var(--text-sub);
+
+    margin-top:6px;
+
+    line-height:1.6;
+}
+
+.matchup-good strong{ color:#46c878; }
+.matchup-bad strong{ color:#ff7850; }
+.matchup-even strong{ color:#eab308; }
+
+.matchup-players{
+
+    margin-top:14px;
+
+    padding-top:14px;
+
+    border-top:1px solid #303847;
+
+    font-size:13px;
+}
+
+.matchup-players strong{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:#fff;
+}
+
+.matchup-players p{
+
+    color:var(--text-sub);
+
+    line-height:1.6;
 }

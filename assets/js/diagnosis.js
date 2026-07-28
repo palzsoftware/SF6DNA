@@ -579,10 +579,36 @@ const questions = [
 ];
 
 // -----------------------------
+// 診断モード判定(URLパラメータ ?mode=advanced で上級者用に切り替え)
+// -----------------------------
+const diagnosisMode =
+    new URLSearchParams(window.location.search).get("mode") === "advanced"
+        ? "advanced"
+        : "beginner";
+
+// 上級者用の質問データ(diagnosis-advanced.js)が読み込まれていればそちらを使う。
+// 読み込まれていない場合(万一の読み込み漏れ時)は初心者用にフォールバックする。
+const activeQuestions =
+    diagnosisMode === "advanced" && typeof questionsAdvanced !== "undefined"
+        ? questionsAdvanced
+        : questions;
+
+localStorage.setItem("sf6dna_diagnosis_mode", diagnosisMode);
+
+const modeBadgeEl = document.getElementById("modeBadge");
+if (modeBadgeEl) {
+    modeBadgeEl.textContent =
+        diagnosisMode === "advanced" ? "🔥 上級者用診断" : "⚡ 初心者用診断";
+    modeBadgeEl.classList.add(
+        diagnosisMode === "advanced" ? "mode-badge-advanced" : "mode-badge-beginner"
+    );
+}
+
+// -----------------------------
 // 総問題数
 // -----------------------------
 
-const TOTAL_QUESTIONS = questions.length;
+const TOTAL_QUESTIONS = activeQuestions.length;
 
 // =========================================
 // 質問表示
@@ -590,7 +616,7 @@ const TOTAL_QUESTIONS = questions.length;
 
 function renderQuestion() {
 
-    const question = questions[currentQuestion];
+    const question = activeQuestions[currentQuestion];
 
     const questionCard = document.querySelector(".question-card");
 
@@ -687,7 +713,7 @@ function selectAnswer(index) {
     userAnswers[currentQuestion] = index;
 
     // スコア加算
-    const answer = questions[currentQuestion].answers[index];
+    const answer = activeQuestions[currentQuestion].answers[index];
 
     for (const type in answer.score) {
         score[type] += answer.score[type];
@@ -736,7 +762,22 @@ function finishDiagnosis() {
         JSON.stringify(score)
     );
 
-    location.href = "result.html";
+    // 結果ページへ移る前に、数秒間ローディング演出を挟む
+    const loadingOverlay = document.getElementById("loadingOverlay");
+
+    if (loadingOverlay) {
+
+        loadingOverlay.classList.add("show");
+
+        setTimeout(() => {
+            location.href = "result.html";
+        }, 2200);
+
+    } else {
+
+        location.href = "result.html";
+
+    }
 
 }
 

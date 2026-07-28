@@ -58,6 +58,65 @@ player.characters
     .map(id => characterData[id] ? characterData[id].name : id)
     .join(" / ");
 
+    // ===== 新規プロフィール項目(未登録の場合は「未登録」と表示) =====
+    document.getElementById("playerDevice").textContent =
+        player.device || "未登録";
+
+    document.getElementById("playerControlType").textContent =
+        player.controlType || "未登録";
+
+    document.getElementById("playerSf6History").textContent =
+        player.sf6History || "未登録";
+
+    // ===== 学べるポイント =====
+    // 立ち回り/読み合い/守り/攻め/コンボ/キャラクター理解/メンタル/大会力の
+    // カテゴリ別データ(learningCategories)があればそちらを優先して箇条書き表示する。
+    // 無い場合は、以前からある強み解説文(learningPointsDetail)のみ表示する。
+    const strengthDetailEl = document.getElementById("playerStrengthDetail");
+    const learningCategoriesEl = document.getElementById("playerLearningCategories");
+
+    strengthDetailEl.textContent =
+        player.learningPointsDetail || "このプレイヤーの強みは準備中です。";
+
+    const categoryLabels = {
+        movement: "■ 立ち回り",
+        reading: "■ 読み合い",
+        defense: "■ 守り",
+        offense: "■ 攻め",
+        combo: "■ コンボ",
+        characterKnowledge: "■ キャラクター理解",
+        mental: "■ メンタル",
+        tournament: "■ 大会力"
+    };
+
+    if (player.learningCategories) {
+
+        learningCategoriesEl.innerHTML = Object.keys(categoryLabels)
+            .filter(key => player.learningCategories[key] && player.learningCategories[key].length > 0)
+            .map(key => `
+                <div class="learning-category">
+                    <h4>${categoryLabels[key]}</h4>
+                    <ul>
+                        ${player.learningCategories[key].map(point => `<li>${point}</li>`).join("")}
+                    </ul>
+                </div>
+            `).join("");
+
+    } else if (player.learningPoints && player.learningPoints.length > 0) {
+
+        // 旧データ(タグのみ)の互換表示
+        learningCategoriesEl.innerHTML = `
+            <div class="learning-points-tags">
+                ${player.learningPoints.map(point => `<span class="learning-point-tag">${point}</span>`).join("")}
+            </div>
+        `;
+
+    } else {
+
+        learningCategoriesEl.innerHTML = "";
+
+    }
+
     document.getElementById("playerStyle").textContent =
         player.style;
 
@@ -158,8 +217,19 @@ memberIds.forEach(id=>{
 
 });
 
+    // 大会実績: ベスト8までに絞って表示する
+    function isTop8(resultText) {
+        if (!resultText) return false;
+        if (resultText.includes("優勝")) return true; // 準優勝も含む
+        const m = resultText.match(/(\d+)\s*位/);
+        if (m) return Number(m[1]) <= 8;
+        return false;
+    }
+
+    const top8Achievements = (player.achievements || []).filter(a => isTop8(a.result));
+
     document.getElementById("playerAchievements").innerHTML =
-    (player.achievements || [])
+    top8Achievements
         .map(a => `
 
 <li class="achievement-item">
@@ -225,5 +295,62 @@ tabButtons.forEach(button => {
     });
 
 });
+
+// ===== おすすめ動画(API取得) =====
+// プロなら大型大会の対戦動画、ストリーマー/YouTuber/VTuberはスト6関連動画を検索する。
+// 大会実績が無い人は、代わりにおすすめ動画を多めに取得する。
+const VIDEO_API_BASE_URL = "https://sf6dna-backend.onrender.com";
+
+async function loadPlayerVideos() {
+
+    const videosArea = document.getElementById("playerVideosArea");
+
+    const hasAchievements = top8Achievements.length > 0;
+
+    const query = player.type === "pro"
+        ? `${player.name} 対戦動画 大会 ストリートファイター6`
+        : `${player.name} ストリートファイター6`;
+
+    // 実績が無いプレイヤーは、代わりにおすすめ動画を多めに表示する
+    const maxResults = hasAchievements ? 6 : 10;
+
+    if (!VIDEO_API_BASE_URL) {
+        videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
+        return;
+    }
+
+    try {
+
+        const url = `${VIDEO_API_BASE_URL}/api/videos/search?q=${encodeURIComponent(query)}&max=${maxResults}`;
+        const res = await fetch(url);
+
+        if (!res.ok) throw new Error("API error");
+
+        const data = await res.json();
+
+        if (!data.results || data.results.length === 0) {
+            videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
+            return;
+        }
+
+        videosArea.innerHTML = data.results.map(video => `
+            <a class="video-scroll-card" href="${video.url}" target="_blank" rel="noopener">
+                <img src="${video.thumbnail}" alt="${video.title}">
+                <div class="video-scroll-info">
+                    <h4>${video.title}</h4>
+                </div>
+            </a>
+        `).join("");
+
+    } catch (err) {
+
+        console.warn("[playerVideos] 取得に失敗しました", err);
+        videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
+
+    }
+
+}
+
+loadPlayerVideos();
 
 });

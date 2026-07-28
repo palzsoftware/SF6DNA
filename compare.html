@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>キャラクター一覧 | SF6 DNA</title>
+    <title>キャラクター比較 | SF6 DNA</title>
 
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -51,6 +51,8 @@ SF6 DNA
     <a href="diagnosis.html"><span>📝 START</span>診断する</a>
 
 <a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+<a href="rank-tracker.html"><span>📈 RANK</span>ランク管理</a>
 
 </div>
 
@@ -126,9 +128,24 @@ SF6 DNA
 
 </section>
 
+<section id="compareVideoSection" class="result-section" style="display:none;">
+
+    <h2>この2キャラの対戦動画</h2>
+
+    <div id="compareVideosArea" class="video-scroll-row">
+        <p class="video-empty">動画を読み込み中です…</p>
+    </div>
+
+</section>
+
 </main>
 
 <script src="assets/js/character-data.js"></script>
+<script src="assets/js/pro.js"></script>
+<script src="assets/js/streamer.js"></script>
+<script src="assets/js/vtuber.js"></script>
+<script src="assets/js/youtuber.js"></script>
+<script src="assets/js/player-data.js"></script>
 <script src="assets/js/compare.js"></script>
 
 <script src="assets/js/nav.js"></script>

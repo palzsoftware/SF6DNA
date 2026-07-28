@@ -133,6 +133,29 @@ character.matchups.weak
     document.getElementById("beginnerBar").style.width =
         `${stats.beginner * 20}%`;
 
+    // コンボ難易度: 既存のdifficulty(1〜5)を流用
+    document.getElementById("comboDifficultyBar").style.width =
+        `${(character.difficulty || 3) * 20}%`;
+
+    // ラッシュ性能: 火力とスピードの平均値から簡易算出
+    const rushPower = Math.round((stats.power + stats.speed) / 2);
+    document.getElementById("rushPowerBar").style.width =
+        `${rushPower * 20}%`;
+
+    // プロ使用率: このサイトに登録されているプロの人数のうち、
+    // このキャラを使用しているプロの割合から算出(実データに基づく動的計算)
+    const allPros = Object.values(playerData).filter(p => p.type === "pro");
+    const usingPros = allPros.filter(p => (p.characters || []).includes(id));
+    const usageRate = allPros.length > 0
+        ? Math.round((usingPros.length / allPros.length) * 100)
+        : 0;
+
+    document.getElementById("proUsageBar").style.width =
+        `${Math.min(usageRate * 2, 100)}%`; // 見やすさのため2倍スケールで表示
+
+    document.getElementById("proUsageLabel").textContent =
+        `${usageRate}%（${usingPros.length}/${allPros.length}人）`;
+
         const tabs = document.querySelectorAll(".video-tab");
 
        tabs.forEach(tab=>{
@@ -475,12 +498,54 @@ async function renderVideos(category){
 
     container.innerHTML = "";
 
+    // 「コンボ・立ち回り」カテゴリは、キャラごとの手入力データに頼らず
+    // 常にAPIから自動取得する(最低5件・最大10件を目指す)
+    if (category === "combo") {
+
+        container.innerHTML = `<p class="video-empty">動画を読み込み中です…</p>`;
+
+        const query = `${character.name} コンボ 立ち回り ストリートファイター6`;
+        const apiResults = await fetchVideosFromApi(query, 10);
+
+        if (apiResults && apiResults.length > 0) {
+
+            container.innerHTML = apiResults.map(result => `
+                <a class="video-card" href="${result.url}" target="_blank" rel="noopener">
+                    <img src="${result.thumbnail}" alt="${result.title}">
+                    <div class="video-info">
+                        <h3>${result.title}</h3>
+                        <span class="video-link-label">YouTubeで見る ↗</span>
+                    </div>
+                </a>
+            `).join("");
+
+        } else {
+
+            // API取得に失敗、または0件だった場合はYouTube検索リンクにフォールバック
+            const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+
+            container.innerHTML = `
+                <a class="video-card" href="${searchUrl}" target="_blank" rel="noopener">
+                    <div class="video-thumb-search">🔍<span>YouTubeで検索</span></div>
+                    <div class="video-info">
+                        <h3>${character.name}のコンボ・立ち回り動画を探す</h3>
+                        <span class="video-link-label">YouTubeで検索する ↗</span>
+                    </div>
+                </a>
+            `;
+
+        }
+
+        return;
+
+    }
+
     const videos = character.comboVideos[category];
 
     if (!videos || videos.length === 0) {
 
         container.innerHTML = `
-            <p class="video-empty">この分類の動画はまだ登録されていません。</p>
+            <p class="video-empty">現在関連動画はありません</p>
         `;
         return;
 

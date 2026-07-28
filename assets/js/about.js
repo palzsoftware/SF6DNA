@@ -1,14 +1,62 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // Formspreeのフォームエンドポイント。
+    // 未設定の間は「準備中です」と表示するフォールバックになる。
+    // 設定手順はREADME等を参照。
+    // 例: const CONTACT_FORM_ENDPOINT = "https://formspree.io/f/xxxxxxxx";
+    const CONTACT_FORM_ENDPOINT = "";
+
     const contactForm = document.getElementById("contactForm");
+    const contactStatus = document.getElementById("contactStatus");
 
     if (contactForm) {
 
-        contactForm.addEventListener("submit", (event) => {
+        contactForm.addEventListener("submit", async (event) => {
 
             event.preventDefault();
 
-            alert("現在お問い合わせフォームは準備中です。もうしばらくお待ちください。");
+            if (!CONTACT_FORM_ENDPOINT) {
+                contactStatus.textContent =
+                    "現在お問い合わせフォームは準備中です。もうしばらくお待ちください。";
+                contactStatus.className = "contact-status error";
+                return;
+            }
+
+            const submitButton = contactForm.querySelector("button[type=submit]");
+            submitButton.disabled = true;
+            contactStatus.textContent = "送信中です…";
+            contactStatus.className = "contact-status";
+
+            try {
+
+                const formData = new FormData(contactForm);
+
+                const res = await fetch(CONTACT_FORM_ENDPOINT, {
+                    method: "POST",
+                    body: formData,
+                    headers: { "Accept": "application/json" }
+                });
+
+                if (res.ok) {
+                    contactStatus.textContent = "送信しました。ありがとうございます。";
+                    contactStatus.className = "contact-status success";
+                    contactForm.reset();
+                } else {
+                    throw new Error("送信に失敗しました");
+                }
+
+            } catch (err) {
+
+                console.warn("[contactForm] 送信に失敗しました", err);
+                contactStatus.textContent =
+                    "送信に失敗しました。お手数ですが時間をおいて再度お試しください。";
+                contactStatus.className = "contact-status error";
+
+            } finally {
+
+                submitButton.disabled = false;
+
+            }
 
         });
 

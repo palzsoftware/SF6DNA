@@ -10,7 +10,11 @@ const teamData = {
 
         country:"日本",
 
-        description:"日本の格闘ゲームシーンを牽引するプロチーム。所属選手はストリートファイター6の国内外の大会で活躍しています。",
+        official:"",
+
+        sflRank:"2026シーズン Division F 出場中",
+
+        description:"マゴと水派が長年チームを支え、そこにVARRELを世界へ導く使命を持つときど、若手の急先鋒わびいちが加わった編成。ALL VARRELの一体感でSFL制覇を目指しています。",
 
         players:[
             "tokido",
@@ -31,7 +35,11 @@ const teamData = {
 
         country:"日本",
 
-        description:"数々のタイトルで実績を残す選手が所属する、日本を代表する格闘ゲームチーム。",
+        official:"",
+
+        sflRank:"2026シーズン Division F 出場中",
+
+        description:"数々のタイトルで実績を残す選手が所属する、日本を代表する格闘ゲームチーム。連覇を目標に掲げ、毎シーズン優勝候補の一角として名前が挙がります。",
 
         players:[
             "daigo",
@@ -45,6 +53,8 @@ const teamData = {
 
     // 2026/7/27 追加: VTuber事務所を「チーム」として扱い、
     // 同じ事務所のメンバーをまとめて表示できるようにする
+    // ※VTuber事務所は公式大会「SFL」への出場チームではないため、
+    //   sflRank欄は設けない(team-detail.jsで自動的に非表示になる)
 
     nijisanji:{
 
@@ -55,6 +65,8 @@ const teamData = {
         logo:"assets/images/teams/nijisanji.png",
 
         country:"日本",
+
+        official:"https://www.nijisanji.jp",
 
         description:"多数のライバーが所属するVTuberグループ。ストリートファイター6をプレイするライバーも多数活動しています。",
 
@@ -82,6 +94,8 @@ const teamData = {
 
         country:"日本",
 
+        official:"",
+
         description:"eスポーツに力を入れるVTuberグループ。格闘ゲームをプレイするメンバーも多く在籍しています。",
 
         players:[
@@ -102,6 +116,8 @@ const teamData = {
 
         country:"日本",
 
+        official:"https://holostars.hololivepro.com",
+
         description:"ホロライブプロダクション所属の男性VTuberグループ。",
 
         players:[
@@ -110,9 +126,7 @@ const teamData = {
             "rikka"
         ]
 
-    }
-
-    ,
+    },
 
     sycom:{
 
@@ -123,6 +137,8 @@ const teamData = {
         logo:"assets/images/teams/sycom.png",
 
         country:"日本",
+
+        official:"https://www.sycom.co.jp/esports/",
 
         description:"BTOパソコンメーカー・サイコムが運営する自社eスポーツチーム。ストリートファイター6部門を主軸に活動しています。",
 
@@ -136,8 +152,6 @@ const teamData = {
 
     },
 
-
-
     zeta:{
 
         id:"zeta",
@@ -148,15 +162,17 @@ const teamData = {
 
         country:"日本",
 
-        description:"ストリートファイター6のプレイヤーが所属するチーム。",
+        official:"https://zetadivision.com",
+
+        sflRank:"2026シーズン Division S 出場中",
+
+        description:"2018年設立、GANYMEDE株式会社が運営する日本最大級のプロeスポーツ組織。VALORANTやApex Legendsなど14以上の部門を持ち、格闘ゲーム部門には頂点を知るももち、難攻不落のひぐち、努力家のヤマグチ、絶対王者MenaRDが集結しています。",
 
         players:[
             "momochi",
             "higuchi",
             "yamaguchi",
-            "menard",
-            "jazzy",
-            "chocoblanka"
+            "menard"
         ]
 
     },
@@ -171,7 +187,11 @@ const teamData = {
 
         country:"日本",
 
-        description:"ストリートファイター6のプレイヤーが所属するチーム。",
+        official:"",
+
+        sflRank:"2026シーズン Division S 出場中",
+
+        description:"福島県を拠点に活動するチーム。前シーズン最下位からの巻き返しを掲げ、全員が福島に集まって練習を重ねています。",
 
         players:[
             "yanai",
@@ -192,13 +212,17 @@ const teamData = {
 
         country:"日本",
 
-        description:"ストリートファイター6のプレイヤーが所属するチーム。",
+        official:"https://team-detonation.net/",
+
+        sflRank:"2026シーズン Division S 出場中",
+
+        description:"2015年設立、名古屋にホームスタジアムを構える国内トップクラスのプロeスポーツチーム。所属選手は60名を超え、格闘ゲームだけでなくMOBAやFPSなど幅広いタイトルで活動しています。格闘ゲーム部門は前年SFL得点王・MVPのKEI.Bを迎えた新体制です。",
 
         players:[
             "itabashizangief",
+            "keib",
             "nauman",
-            "johntakeuchi",
-            "keib"
+            "johntakeuchi"
         ]
 
     },
@@ -213,11 +237,15 @@ const teamData = {
 
         country:"日本",
 
-        description:"ストリートファイター6のプレイヤーが所属するチーム。",
+        official:"https://www.favgaming.com/",
+
+        sflRank:"2026シーズン Division S 出場中",
+
+        description:"埼玉を拠点に、『ファミ通』『電撃オンライン』でおなじみのKADOKAWA Game Linkageがプロデュースするeスポーツチーム。りゅうきちが新リーダーを務める体制で優勝を目指しています。",
 
         players:[
-            "sako",
             "ryukichi",
+            "sako",
             "fujimura",
             "moke"
         ]
@@ -234,7 +262,11 @@ const teamData = {
 
         country:"日本",
 
-        description:"ストリートファイター6のプレイヤーが所属するチーム。",
+        official:"https://good8squad.com/",
+
+        sflRank:"2026シーズン Division S 出場中",
+
+        description:"2018年結成、「esports makes our life」を掲げるプロeスポーツチーム。世界選手権優勝経験を持つガチくん、さはらをはじめ、実力と人気を兼ね備えた選手が所属しています。",
 
         players:[
             "gachikun",
@@ -255,7 +287,11 @@ const teamData = {
 
         country:"日本",
 
-        description:"ストリートファイター6のプレイヤーが所属するチーム。",
+        official:"",
+
+        sflRank:"2026シーズン Division S 出場中",
+
+        description:"熊本を拠点に活動するチーム。長年チームを牽引したネモをコーチに据え、新リーダーのcosaを中心とした新体制でシーズンに挑んでいます。「熊本を、日本を、世界を照らす太陽のようなチームに」を目標に掲げています。",
 
         players:[
             "cosa",
@@ -277,15 +313,17 @@ const teamData = {
 
         country:"日本",
 
-        description:"ストリートファイター6のプレイヤーが所属するチーム。",
+        official:"https://crazyraccoon.jp/",
+
+        sflRank:"2026シーズン Division S 出場中",
+
+        description:"2018年発足、「ゲーマーをかっこよく魅せる」をコンセプトに掲げる総合エンタメ型のeスポーツチーム。競技部門だけでなくストリーマー・クリエイター部門も抱え、独自大会「CR CUP」やイベント「CR FES」も主催しています。",
 
         players:[
             "dogura",
             "bonchan",
             "kazunoko",
-            "shuto",
-            "tachikawa",
-            "dualkevin"
+            "shuto"
         ]
 
     },
@@ -300,7 +338,11 @@ const teamData = {
 
         country:"日本",
 
-        description:"ストリートファイター6のプレイヤーが所属するチーム。",
+        official:"",
+
+        sflRank:"2026シーズン Division S 出場中",
+
+        description:"広島を拠点に活動するチーム。「勝敗だけでなく魅せる試合でリーグを盛り上げる」ことを目標に、日本一・世界一を目指しています。",
 
         players:[
             "acqua",
@@ -321,7 +363,11 @@ const teamData = {
 
         country:"日本",
 
-        description:"ストリートファイター6のプレイヤーが所属するチーム。",
+        official:"",
+
+        sflRank:"2026シーズン Division F 出場中",
+
+        description:"「名古屋を元気に」を理念に活動する、名古屋発のプロスポーツクラブ。名古屋ゆかりの選手が集う”ALL名古屋”体制で、地域活性化にも貢献しながら悲願の初優勝を目指しています。",
 
         players:[
             "seiya",
@@ -342,7 +388,11 @@ const teamData = {
 
         country:"日本",
 
-        description:"ストリートファイター6のプレイヤーが所属するチーム。",
+        official:"https://riddle.info/",
+
+        sflRank:"2026シーズン Division F 出場中(SFL初参戦)",
+
+        description:"2016年、配信者ボドカにより発足したプロゲーミングチーム。Apex LegendsやVALORANTなど複数部門で活動しており、格闘ゲーム部門はSFL初参戦のフレッシュな編成に挑戦しています。",
 
         players:[
             "takagi",
@@ -363,7 +413,9 @@ const teamData = {
 
         country:"日本",
 
-        description:"ストリートファイター6のプレイヤーが所属するチーム。",
+        official:"https://www.scarz.net/",
+
+        description:"2012年設立、「人々の心に爪痕(scars)を残す」という思いから名付けられた国内老舗のプロeスポーツ組織。若手選手の育成プログラムにも力を入れています。",
 
         players:[
             "akutagawa",

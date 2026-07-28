@@ -52,6 +52,8 @@ SF6 DNA
 
 <a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
 
+<a href="rank-tracker.html"><span>📈 RANK</span>ランク管理</a>
+
 </div>
 
     </div>
@@ -89,9 +91,7 @@ SF6 DNA
 
     <div class="page-header">
 
-        <p class="section-label">ABOUT</p>
-
-        <h1>About</h1>
+<h1>About</h1>
 
     </div>
 
@@ -139,10 +139,12 @@ SF6 DNA
                 <ul>
 
                     <li>AIによる詳細診断コメント</li>
-                    <li>おすすめ動画の充実（初心者〜対戦動画）</li>
                     <li>プレイヤー・チーム情報の拡充</li>
                     <li>PC/スマホ表示の切り替え機能</li>
                     <li>初心者用・上級者用の診断モード</li>
+                    <li>ランク（MR）推移の記録機能</li>
+                    <li>パッチノート・アップデート情報</li>
+                    <li>初心者向け用語集</li>
 
                 </ul>
 
@@ -152,36 +154,12 @@ SF6 DNA
 
         <div class="about-column about-column-right">
 
-            <section class="about-search-section">
-
-                <h2>知りたいことを検索</h2>
-
-                <input
-                    id="faqSearch"
-                    class="input"
-                    type="text"
-                    placeholder="キーワードで検索（例：診断、保存、データ）"
-                >
-
-                <div id="faqQuickLinks" class="faq-quick-links">
-
-                    <a href="diagnosis.html">📝 診断する</a>
-                    <a href="characters.html">🎮 キャラクター図鑑</a>
-                    <a href="players.html">👤 プレイヤー図鑑</a>
-                    <a href="team.html">🏆 チーム図鑑</a>
-                    <a href="compare.html">⚔ キャラクター比較</a>
-                    <a href="favorites.html">📋 保存した診断を見る</a>
-
-                </div>
-
-            </section>
-
             <section class="about-contact-section">
 
                 <h2>お問い合わせ</h2>
 
                 <p class="about-contact-note">
-                    ※ 現在準備中の仮の受付フォームです。データ誤りのご指摘・プレイヤー掲載のご希望などをお送りください。
+                    データ誤りのご指摘・プレイヤー掲載のご希望・ご意見ご要望など、お気軽にお送りください。
                 </p>
 
                 <form id="contactForm" class="contact-form">
@@ -201,13 +179,20 @@ SF6 DNA
                     </label>
 
                     <label>
+                        メールアドレス（返信が必要な場合）
+                        <input type="email" name="email" placeholder="例：example@mail.com">
+                    </label>
+
+                    <label>
                         内容
-                        <textarea name="message" rows="4" placeholder="内容をご記入ください"></textarea>
+                        <textarea name="message" rows="5" placeholder="内容をご記入ください" required></textarea>
                     </label>
 
                     <button type="submit" class="btn btn-primary">
-                        送信する（準備中）
+                        送信する
                     </button>
+
+                    <p id="contactStatus" class="contact-status"></p>
 
                 </form>
 
@@ -216,6 +201,30 @@ SF6 DNA
         </div>
 
     </div>
+
+    <section class="about-search-section about-search-section-full">
+
+        <h2>知りたいことを検索</h2>
+
+        <input
+            id="faqSearch"
+            class="input"
+            type="text"
+            placeholder="キーワードで検索（例：診断、保存、データ）"
+        >
+
+        <div id="faqQuickLinks" class="faq-quick-links">
+
+            <a href="diagnosis.html">📝 診断する</a>
+            <a href="characters.html">🎮 キャラクター図鑑</a>
+            <a href="players.html">👤 プレイヤー図鑑</a>
+            <a href="team.html">🏆 チーム図鑑</a>
+            <a href="compare.html">⚔ キャラクター比較</a>
+            <a href="favorites.html">📋 保存した診断を見る</a>
+
+        </div>
+
+    </section>
 
     <section class="faq-section faq-section-full">
 
@@ -346,6 +355,33 @@ SF6 DNA
                 </button>
                 <div class="faq-answer">
                     <p>Street Fighter 6を愛好する個人・有志によって制作・運営されています。Capcom様および公式とは関係のないファンサイトです。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="動画 リンク切れ 見れない 削除">
+                <button class="faq-question">
+                    おすすめ動画のリンクが見られないことがあります
+                </button>
+                <div class="faq-answer">
+                    <p>動画はYouTube上から自動で取得しているため、投稿者による削除や非公開設定により、まれにリンク切れが発生することがあります。ご了承ください。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="チーム SFL 順位 リーグ 出場">
+                <button class="faq-question">
+                    「SFL」とは何ですか？
+                </button>
+                <div class="faq-answer">
+                    <p>Capcom公式が主催する「ストリートファイターリーグ」の略称です。チーム図鑑では、各チームが現在のシーズンでどのディビジョンに出場しているかを表示しています（VTuber事務所など、SFLに出場していないチームには表示していません）。</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-keywords="比較 キャラクター 相性 使い方">
+                <button class="faq-question">
+                    キャラクター比較ページでは何がわかりますか？
+                </button>
+                <div class="faq-answer">
+                    <p>2〜3体のキャラクターを選んで、基本情報・性能・相性・使用しているプレイヤーなどを横並びで比較できます。気になるキャラクター同士を選んで、対戦時の有利不利の参考にしてください。</p>
                 </div>
             </div>
 

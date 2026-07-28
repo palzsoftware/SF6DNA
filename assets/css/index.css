@@ -1045,12 +1045,6 @@
 /* ホバー演出はPC(マウス操作可能な環境)限定 */
 @media (hover:hover) and (pointer:fine){
 
-    .dictionary-character-strip:hover .dictionary-character-track{
-
-        animation-play-state:paused;
-
-    }
-
     .dictionary-character-strip img:hover{
 
         border-color:var(--primary);
@@ -1249,4 +1243,27 @@
         animation:none;
     }
 
+}
+
+/* ===========================
+   初心者用/上級者用ボタン
+=========================== */
+
+.hero-btn-advanced{
+
+    background:linear-gradient(160deg, #ff3d3d, #a80000);
+}
+
+.hero-mode-note{
+
+    margin-top:14px;
+
+    font-size:13px;
+
+    color:#9aa1ad;
+}
+
+.hero-buttons{
+
+    flex-wrap:wrap;
 }

@@ -107,6 +107,7 @@ linear-gradient(
     background:#1a1f29;
 
     border:1px solid #31394a;
+    border-top:3px solid var(--type-color, #ff6b00);
 
     border-radius:18px;
 
@@ -597,6 +598,100 @@ transform:translateY(5px);
     font-weight:bold;
 
     font-size:16px;
+
+}
+
+/* ===========================
+   短所カード: ホバーで改善点を表示
+=========================== */
+
+.weakness-item{
+
+    cursor:default;
+
+    transition:.25s;
+
+}
+
+.weakness-item:hover{
+
+    background:rgba(255,120,80,.14);
+
+    transform:translateY(-2px);
+}
+
+.weakness-front{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.weakness-hint{
+
+    font-size:12px;
+
+    color:#ff9c7a;
+
+    white-space:nowrap;
+
+    opacity:.85;
+
+}
+
+.weakness-improve{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    color:#ffd9a0;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    transition:max-height .3s ease, opacity .3s ease, margin-top .3s ease;
+
+}
+
+.weakness-item:hover .weakness-improve{
+
+    max-height:120px;
+
+    opacity:1;
+
+    margin-top:10px;
+
+}
+
+.weakness-item:hover .weakness-hint{
+
+    display:none;
+
+}
+
+@media (hover:none){
+
+    /* スマホなどホバー不可の環境では常に改善点を表示しておく */
+    .weakness-improve{
+        max-height:none;
+        opacity:1;
+        margin-top:10px;
+    }
+
+    .weakness-hint{
+        display:none;
+    }
 
 }
 
@@ -1191,4 +1286,301 @@ transform:translateY(5px);
 
     font-size:13px;
 
+}
+
+/* ===========================
+   おすすめ動画: 横スクロール
+=========================== */
+
+.video-scroll-row{
+
+    display:flex;
+
+    gap:16px;
+
+    overflow-x:auto;
+
+    padding:8px 4px 16px;
+
+    scroll-snap-type:x proximity;
+
+}
+
+.video-scroll-card{
+
+    flex:0 0 auto;
+
+    width:220px;
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    scroll-snap-align:start;
+
+    transition:.2s;
+
+}
+
+.video-scroll-card:hover{
+
+    border-color:var(--type-color, #ff6b00);
+
+    transform:translateY(-4px);
+}
+
+.video-scroll-card img{
+
+    width:100%;
+
+    height:124px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.video-scroll-info{
+
+    padding:12px 14px;
+
+}
+
+.video-scroll-info h4{
+
+    font-size:13px;
+
+    line-height:1.5;
+
+    display:-webkit-box;
+
+    -webkit-line-clamp:3;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+
+}
+
+.video-empty{
+
+    color:var(--text-sub);
+
+    padding:16px 0;
+}
+
+/* ===========================
+   Hero演出強化: フェードイン・炎エフェクト・拡大
+=========================== */
+
+.result-label,
+.hero-comment,
+.result-type-badge,
+.result-summary,
+.result-subtitle,
+.result-description,
+.hero-actions,
+.hero-next{
+
+    opacity:0;
+
+    transform:translateY(18px);
+
+    animation:heroFadeIn .7s ease forwards;
+
+}
+
+.result-label{ animation-delay:.05s; }
+.hero-comment{ animation-delay:.15s; }
+.result-type-badge{ animation-delay:.3s; }
+.result-summary{ animation-delay:.55s; }
+.result-subtitle{ animation-delay:.65s; }
+.result-description{ animation-delay:.75s; }
+.hero-actions{ animation-delay:.9s; }
+.hero-next{ animation-delay:1.05s; }
+
+@keyframes heroFadeIn{
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* タイプバッジを一段階大きく、炎のようなゆらぎエフェクトを追加 */
+.result-type-badge{
+
+    padding:44px 84px;
+
+    transform-origin:center;
+
+}
+
+.result-type-badge::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-30px;
+
+    background:
+        radial-gradient(circle, var(--type-color, #ff6b00) 0%, transparent 70%);
+
+    opacity:.35;
+
+    filter:blur(20px);
+
+    z-index:-1;
+
+    animation:heroFlicker 2.4s ease-in-out infinite;
+
+}
+
+@keyframes heroFlicker{
+
+    0%, 100%{
+        opacity:.25;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:.45;
+        transform:scale(1.08);
+    }
+
+}
+
+#resultType{
+
+    font-size:56px;
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .result-label,
+    .hero-comment,
+    .result-type-badge,
+    .result-summary,
+    .result-subtitle,
+    .result-description,
+    .hero-actions,
+    .hero-next{
+        opacity:1;
+        transform:none;
+        animation:none;
+    }
+
+    .result-type-badge::after{
+        animation:none;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #resultType{
+        font-size:40px;
+    }
+
+    .result-type-badge{
+        padding:32px 40px;
+    }
+
+}
+
+/* ===========================
+   あなたに向いている戦術(詳細付き)
+=========================== */
+
+#recommendedTactics{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+.tactic-card{
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    border-left:3px solid var(--type-color, #ff6b00);
+
+    border-radius:14px;
+
+    padding:22px 24px;
+
+}
+
+.tactic-card h4{
+
+    font-size:16px;
+
+    margin-bottom:12px;
+
+}
+
+.tactic-card p{
+
+    color:var(--text-sub);
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+/* ===========================
+   診断モードバッジ(result.html)
+=========================== */
+
+.mode-badge{
+
+    display:inline-block;
+
+    margin-bottom:12px;
+
+    padding:6px 18px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:800;
+
+}
+
+.mode-badge-beginner{
+
+    background:rgba(255,107,0,.15);
+
+    border:1px solid rgba(255,107,0,.4);
+
+    color:#ffb347;
+}
+
+.mode-badge-advanced{
+
+    background:rgba(255,61,61,.15);
+
+    border:1px solid rgba(255,61,61,.4);
+
+    color:#ff6b6b;
 }

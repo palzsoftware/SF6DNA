@@ -59,13 +59,7 @@ function renderCompare(){
 
         </span>
 
-        <p class="character-difficulty">
-
-            難易度：
-            ${"★".repeat(character.difficulty)}
-            ${"☆".repeat(5-character.difficulty)}
-
-        </p>
+        <p class="character-difficulty">難易度：${"★".repeat(character.difficulty)}${"☆".repeat(5-character.difficulty)}</p>
 
     </div>
 
@@ -214,6 +208,148 @@ function renderCompareSections(){
         ]
 
     );
+
+    renderMatchupSection();
+    renderVideoSection();
+
+}
+
+// ===== 相性・使用プレイヤー・有利不利ポイント =====
+function getMatchupInfo(fromId, toId) {
+
+    const from = characterData[fromId];
+    if (!from || !from.matchups) return null;
+
+    const strong = (from.matchups.strong || []).find(m => m.id === toId);
+    if (strong) return { result: "有利", reason: strong.reason };
+
+    const weak = (from.matchups.weak || []).find(m => m.id === toId);
+    if (weak) return { result: "不利", reason: weak.reason };
+
+    return { result: "五分", reason: "" };
+
+}
+
+function renderMatchupSection() {
+
+    const content = document.getElementById("compareContent");
+
+    if (compareIds.length < 2) return;
+
+    let html = `
+        <div class="compare-group">
+            <button class="compare-toggle" data-title="相性・使用プレイヤー">
+                ▼ 相性・使用プレイヤー
+            </button>
+            <div class="matchup-compare-grid">
+    `;
+
+    compareIds.forEach(id => {
+
+        const character = characterData[id];
+
+        // 使用プレイヤー(このサイトに登録されているプロ・ストリーマー・VTuber・YouTuber)
+        const relatedPlayerIds = character.related && character.related.players
+            ? [
+                ...(character.related.players.pros || []),
+                ...(character.related.players.streamers || []),
+                ...(character.related.players.vtubers || []),
+                ...(character.related.players.youtubers || [])
+              ].filter(pid => pid !== "なし" && typeof playerData !== "undefined" && playerData[pid])
+            : [];
+
+        // このキャラから見た、比較している他キャラとの相性
+        const matchupHtml = compareIds
+            .filter(otherId => otherId !== id)
+            .map(otherId => {
+                const info = getMatchupInfo(id, otherId);
+                if (!info) return "";
+                const otherName = characterData[otherId].name;
+                const resultClass = info.result === "有利" ? "matchup-good" : info.result === "不利" ? "matchup-bad" : "matchup-even";
+                return `
+                    <div class="matchup-vs-item ${resultClass}">
+                        <strong>対 ${otherName}：${info.result}</strong>
+                        ${info.reason ? `<p>${info.reason}</p>` : `<p>大きな有利不利は無く、実力が拮抗しやすい相性です。</p>`}
+                    </div>
+                `;
+            }).join("");
+
+        html += `
+            <div class="matchup-character-col">
+                <h4>${character.name}</h4>
+                ${matchupHtml}
+                <div class="matchup-players">
+                    <strong>使用プレイヤー</strong>
+                    <p>${relatedPlayerIds.length > 0
+                        ? relatedPlayerIds.map(pid => playerData[pid].name).join(" ・ ")
+                        : "未登録"}</p>
+                </div>
+            </div>
+        `;
+
+    });
+
+    html += `
+            </div>
+        </div>
+    `;
+
+    content.innerHTML += html;
+
+}
+
+// ===== 対戦動画(2キャラ比較時のみ、API取得) =====
+const VIDEO_API_BASE_URL = "https://sf6dna-backend.onrender.com";
+
+async function renderVideoSection() {
+
+    const section = document.getElementById("compareVideoSection");
+    const videosArea = document.getElementById("compareVideosArea");
+
+    if (compareIds.length !== 2) {
+        section.style.display = "none";
+        return;
+    }
+
+    section.style.display = "";
+
+    const [nameA, nameB] = compareIds.map(id => characterData[id].name);
+    const query = `${nameA} ${nameB} 対戦動画 ストリートファイター6`;
+
+    if (!VIDEO_API_BASE_URL) {
+        videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
+        return;
+    }
+
+    try {
+
+        const url = `${VIDEO_API_BASE_URL}/api/videos/search?q=${encodeURIComponent(query)}&max=8`;
+        const res = await fetch(url);
+
+        if (!res.ok) throw new Error("API error");
+
+        const data = await res.json();
+
+        if (!data.results || data.results.length === 0) {
+            videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
+            return;
+        }
+
+        videosArea.innerHTML = data.results.map(video => `
+            <a class="video-scroll-card" href="${video.url}" target="_blank" rel="noopener">
+                <img src="${video.thumbnail}" alt="${video.title}">
+                <div class="video-scroll-info">
+                    <h4>${video.title}</h4>
+                </div>
+            </a>
+        `).join("");
+
+    } catch (err) {
+
+        console.warn("[compareVideos] 取得に失敗しました", err);
+        videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
+
+    }
 
 }
 function createSection(title,rows){

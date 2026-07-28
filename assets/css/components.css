@@ -759,6 +759,9 @@ margin:8px 0;
 
     background:#1d232d;
 
+    border:1px solid #2b3442;
+    border-top:3px solid var(--primary);
+
     border-radius:14px;
 
     padding:18px 16px;
@@ -994,3 +997,18 @@ margin:8px 0;
 
 }
 
+
+/* ===========================
+   プロ使用率などの数値ラベル
+=========================== */
+
+.status-value{
+
+    font-size:13px;
+
+    color:var(--text-sub);
+
+    white-space:nowrap;
+
+    margin-left:8px;
+}

@@ -40,4 +40,19 @@ const streamerData = {
         twitter:"https://x.com/DONPISHA22"
     },
 
+    shaka:{
+        id:"shaka",
+        name:"SHAKA",
+        type:"streamer",
+        country:"日本",
+        team:"DETONATOR",
+        image:"",
+        main:["manon"],
+        style:"技巧型",
+        characters:["manon","marisa","bison"],
+        youtube:"",
+        twitch:"",
+        twitter:""
+    },
+
 };

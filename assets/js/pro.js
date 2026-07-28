@@ -23,6 +23,40 @@ tokido:{
 
     style:"攻略型",
 
+    device:"Hit Box Ultra",
+
+    controlType:"レバーレス",
+
+    sf6History:"2023年6月〜（格闘ゲーム歴は2001年〜、東大在学中からプロ活動）",
+
+    learningCategories:{
+        movement:[
+            "新作タイトルでも早い段階でキャラの強みと立ち回りの型を見極める分析力",
+            "画面を広く使い、相手に選択肢を強要する間合い管理"
+        ],
+        reading:[
+            "対戦を重ねるごとに相手の癖を的確に読み切っていく対応力"
+        ],
+        defense:[
+            "無敵技やドライブリバーサルの発生を正確に把握した守りの選択"
+        ],
+        offense:[
+            "百鬼襲などの攻め継続技を使った主導権の維持"
+        ],
+        combo:[
+            "実戦で安定して決めきれる、火力と再現性を両立したコンボ選択"
+        ],
+        characterKnowledge:[
+            "使用キャラを一本に絞り込み、隅々まで研究し尽くす姿勢"
+        ],
+        mental:[
+            "緻密な生活・練習ルーティンによる、大会本番でのコンディション管理"
+        ],
+        tournament:[
+            "劣勢からでも逆転につなげる、大舞台での勝負強さ"
+        ]
+    },
+
     characters:[
         "jp",
         "ken"
@@ -48,6 +82,56 @@ achievements:[
         date:"2026-03-15",
         tournament:"ストリートファイターリーグ ワールドチャンピオンシップ2025",
         result:"優勝"
+    },
+    {
+        date:"2026",
+        tournament:"Winter Clash 2026",
+        result:"優勝"
+    },
+    {
+        date:"2026",
+        tournament:"ストリートファイターリーグ: Pro-JP 2025",
+        result:"優勝"
+    },
+    {
+        date:"2025",
+        tournament:"Asian Champions League 2025",
+        result:"優勝"
+    },
+    {
+        date:"2025",
+        tournament:"The Versus Festival: Habba Edition",
+        result:"優勝"
+    },
+    {
+        date:"2024",
+        tournament:"CAPCOM Pro Tour 2024 SUPER PREMIER JAPAN",
+        result:"優勝"
+    },
+    {
+        date:"2024",
+        tournament:"Battle Arena Melbourne 14",
+        result:"優勝"
+    },
+    {
+        date:"2024",
+        tournament:"ストリートファイターリーグ: Pro-JP 2023",
+        result:"優勝"
+    },
+    {
+        date:"2023",
+        tournament:"FRONTIER CUP -STREET FIGHTER 6-",
+        result:"優勝"
+    },
+    {
+        date:"2023",
+        tournament:"CAPCOM Pro Tour 2023 World Warrior Japan #3",
+        result:"優勝"
+    },
+    {
+        date:"2023",
+        tournament:"EVO 2023",
+        result:"4位"
     }
 ],
 
@@ -375,6 +459,11 @@ higuchi:{
         "guile"
     ],
 
+        learningPoints: ["守り", "飛び道具", "対空"],
+
+        learningPointsDetail:
+            "ガイルの飛び道具と対空技を軸に、無理をしない堅実な立ち回りで試合を組み立てるスタイルが特徴です。攻めと守りのバランス感覚に優れ、リスクの低い選択を積み重ねて着実に勝ちを拾う技術は、堅実型・待ち型のプレイヤーにとって特に参考になります。",
+
     youtube:"",
 
     twitch:"",
@@ -432,6 +521,11 @@ menard:{
         "blanka",
         "bison"
     ],
+
+        learningPoints: ["立ち回り", "読み合い", "状況判断"],
+
+        learningPointsDetail:
+            "ブランカとベガを操り、攻守どちらにも寄りすぎない柔軟な立ち回りと、状況に応じた冷静な判断力が持ち味です。読み合いを重視しながらも極端なリスクは取らないバランス感覚は、万能型・戦略型のプレイヤーが「柔軟な対応力」を学ぶ好例です。",
 
     youtube:"",
 
@@ -868,6 +962,11 @@ gachikun:{
     characters:[
         "rashid"
     ],
+
+        learningPoints: ["ラッシュ", "画面端継続", "読み合い"],
+
+        learningPointsDetail:
+            "ラシードのラッシュ性能を最大限に活かし、一度掴んだ主導権を離さない攻めの継続力が持ち味です。画面端に運んでからの攻めを絶やさない技術と、相手の切り返しを読み切る精度の高さが強みで、攻撃型のプレイヤーが「攻めを継続する技術」を学ぶ上で参考になります。",
 
     youtube:"",
 
@@ -1715,6 +1814,11 @@ angrybird:{
 
     ],
 
+        learningPoints: ["ラッシュ", "火力", "起き攻め"],
+
+        learningPointsDetail:
+            "ケンのラッシュ性能を活かした攻撃的な立ち回りと、一度捕まえた相手を離さない起き攻めの継続力が特徴です。高い火力を安定して叩き込む技術力もあり、攻撃型・コンボ型のプレイヤーが「攻めの畳みかけ方」を学ぶ上で参考になります。",
+
     youtube:"",
 
     twitch:"",
@@ -1798,6 +1902,11 @@ punk:{
     characters:[
 
     ],
+
+        learningPoints: ["差し返し", "通常技", "確認精度"],
+
+        learningPointsDetail:
+            "キャミィの通常技を的確に使った差し返しの精度と、状況を見極めた冷静な操作技術が持ち味です。無闇にリスクを取らず、相手の技に正確に技を合わせて反撃する技術は、堅実型・戦略型のプレイヤーが「精密な操作技術」を学ぶ上で参考になります。",
 
     youtube:"",
 
@@ -2529,6 +2638,44 @@ itabashizangief:{
         youtube:"",
         twitch:"",
         twitter:"https://x.com/Seichi_p_q"
+    },
+
+    yhcmochi:{
+        id:"yhcmochi",
+        name:"YHC-餅",
+        type:"pro",
+        country:"日本",
+        team:"",
+        image:"",
+        main:["dhalsim"],
+        style:"技巧型",
+        characters:["dhalsim"],
+        youtube:"",
+        twitch:"",
+        twitter:""
+    },
+
+    kakeru:{
+        id:"kakeru",
+        name:"翔",
+        type:"pro",
+        country:"日本",
+        team:"",
+        image:"",
+        main:["jp"],
+        style:"待ち・読み合い重視",
+        characters:["jp"],
+        learningPoints: ["対空精度", "距離管理", "ゲージ管理"],
+
+        learningPointsDetail:
+            "JPの飛び道具と間合い管理を軸に、相手を動かしながら試合を支配する待ち・読み合い重視のスタイルが特徴です。正確な対空技術と、ドライブゲージを含めたリソース管理の巧みさが持ち味で、待ち型・読み合い型のプレイヤーが「間合いの支配力」を学ぶ上で参考になります。",
+        achievements:[
+            {date:"",tournament:"CAPCOM CUP",result:"出場"},
+            {date:"",tournament:"SFL",result:"出場"}
+        ],
+        youtube:"",
+        twitch:"",
+        twitter:""
     },
 
 };

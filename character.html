@@ -51,6 +51,8 @@ SF6 DNA
 
 <a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
 
+<a href="rank-tracker.html"><span>📈 RANK</span>ランク管理</a>
+
 </div>
 
     </div>
@@ -174,6 +176,28 @@ SF6 DNA
         </div>
     </div>
 
+    <div class="status-item">
+        <span>コンボ難易度</span>
+        <div class="status-bar">
+            <div id="comboDifficultyBar" class="status-fill"></div>
+        </div>
+    </div>
+
+    <div class="status-item">
+        <span>ラッシュ性能</span>
+        <div class="status-bar">
+            <div id="rushPowerBar" class="status-fill"></div>
+        </div>
+    </div>
+
+    <div class="status-item">
+        <span>プロ使用率</span>
+        <div class="status-bar">
+            <div id="proUsageBar" class="status-fill"></div>
+        </div>
+        <span id="proUsageLabel" class="status-value"></span>
+    </div>
+
 </div>
 
 <div class="feature-grid">
@@ -272,8 +296,8 @@ SF6 DNA
     初心者
 </button>
 
-<button class="video-tab" data-category="intermediate">
-    中級者
+<button class="video-tab" data-category="combo">
+    コンボ・立ち回り
 </button>
 
 <button class="video-tab" data-category="advanced">

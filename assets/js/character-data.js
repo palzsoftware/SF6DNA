@@ -1,454 +1,5 @@
 const characterData = {
-    ken: {
-    // ======================
-    // 基本情報
-    // ======================
-    id: "ken",
-    name: "ケン",
-    image: "assets/images/characters/ken.png",
-    release: "初期",
-    type: "バランス型",
-    difficulty: 2,
-    hp:10000,
-    combo:3,
-    power: 2,
-    speed: 4,
-    defense: 3,
-    reach: 3,
-    beginner: 4,
-    rush:5,
-    projectile:true,
-    invincible:true,
-    antiAir:4,
-    commandGrab:false,
-
-    // ======================
-    // ステータス
-    // ======================
-    stats: {
-        power: 2,
-        speed: 4,
-        defense: 3,
-        reach: 3,
-        beginner: 4
-    },
-
-    // ======================
-    // キャラクター情報
-    // ======================
-    playstyle:"ラッシュ",
-    range:"近〜中距離",
-    concept:"素早い接近とラッシュで相手を画面端まで追い詰め、攻めを継続してプレッシャーをかけるキャラクター",
-    strengths:[
-    "画面端へ運ぶ能力が高い",
-    "ラッシュを絡めた攻めが非常に強力",
-    "通常技が優秀で攻めを継続しやすい"
-],
-
-weaknesses:[
-    "コンボ習得の難易度がやや高い",
-    "飛び道具戦は得意ではない",
-    "守りでは読み合いが必要"
-],
-
-recommend:[
-    "攻め続けるプレイが好きな人",
-    "スピード感のある試合を楽しみたい人",
-    "主人公キャラクターを使いたい人"
-],
-
-    matchups:{
-    strong:[
-        {
-            id:"elena",
-            reason:"ラッシュで懐に入りやすく画面端に追い詰めやすい"
-        },
-        {
-            id:"dhalsim",
-            reason:"素早く接近でき遠距離戦を拒否しやすい"
-        },
-        {
-            id:"lily",
-            reason:"ラッシュで接近戦に持ち込み固められる"
-        }
-    ],
-
-    weak:[
-        {
-            id:"luke",
-            reason:"通常技のリーチと火力で競り負けやすい"
-        },
-        {
-            id:"sagat",
-            reason:"リーチ差と火力差で押し切られてしまう"
-        },
-        {
-            id:"guile",
-            reason:"ソニックブーム主体の展開を崩しにくい"
-        }
-    ]
-},
-
-    // ======================
-    // 関連情報
-    // ======================
-    related: {
-
-        characters: [
-            "ryu",
-            "gouki",
-            "luke"
-        ],
-        players: {
-            pros: [
-                "tokido",
-                "orarin",
-                "ryukichi"
-            ],
-            streamers: [
-                "なし"
-            ],
-            vtubers: [
-               "なし"
-            ],youtubers:[]}
-    },
-    // ======================
-    // コンボ動画
-    // ======================
-    comboVideos: {
-        beginner: [
-            {
-                title: "初心者コンボ",
-                thumbnail: "assets/images/thumbnails/ken_beginner.jpg",
-                url: "https://youtu.be/q6curP-XhbQ?si=aMkiIx14NunCkulB"
-            }
-        ],
-
-        intermediate: [
-            {
-                title: "中級コンボ",
-                thumbnail: "assets/images/thumbnails/ken_intermediate.jpg",
-                url: "https://youtu.be/XiXDk52Advg?si=R3V4v1jIdHuvMFAP"
-            }
-        ],
-
-        advanced: [
-            {
-                type: "search",
-                title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%B1%E3%83%B3%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
-            }
-        ],
-
-        match: [
-            {
-                type: "search",
-                title: "対戦動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%B1%E3%83%B3%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
-            }
-        ]
-    }
-},
-
-gouki: {
-    // ======================
-    // 基本情報
-    // ======================
-    id: "gouki",
-    name: "豪鬼",
-    image: "assets/images/characters/gouki.png",
-    release: "Year1",
-    type: "パワー型",
-    difficulty:3,
-    hp:9000,
-    combo:3,
-    power: 5,
-    speed: 4,
-    defense: 2,
-    reach: 4,
-    beginner: 1,
-    rush:5,
-    projectile:true,
-    invincible:true,
-    antiAir:4,
-    commandGrab:true,
-
-    // ======================
-    // ステータス
-    // ======================
-   playstyle:"ハイリスク・ハイリターン",
-range:"中距離",
-concept:
-"高い攻撃力と豊富な攻め手を持ち、一度のチャンスで試合を決められる破壊力を持つキャラクター。",
-
-strengths:[
-    "全キャラクター屈指の火力",
-    "攻めの選択肢が非常に豊富",
-    "どの距離でも戦える万能性能"
-],
-
-weaknesses:[
-    "体力が低くミスが許されにくい",
-    "操作難易度が高い",
-    "状況判断力が求められる"
-],
-
-recommend:[
-    "高火力キャラが好きな人",
-    "難しいキャラに挑戦したい人",
-    "読み合いで勝負したい人"
-],
-    matchups:{
-    strong:[
-        {
-            id:"zangief",
-            reason:"飛び道具と機動力で接近を拒否しやすい"
-        },
-        {
-            id:"ehonda",
-            reason:"頭突きを誘って反撃を狙いやすい"
-        },
-        {
-            id:"marisa",
-            reason:"機動力を活かして重い攻撃をかわしやすい"
-        }
-    ],
-
-    weak:[
-        {
-            id:"jp",
-            reason:"遠距離戦で思うように攻め込めない"
-        },
-        {
-            id:"bison",
-            reason:"攻めを継続されると体力の低さが響きやすい"
-        },
-        {
-            id:"guile",
-            reason:"飛び道具主体の展開を崩しにくい"
-        }
-    ]
-},
-
-    // ======================
-    // 関連情報
-    // ======================
-    related: {
-
-        characters: [
-            "ken",
-            "ryu",
-            "luke"
-        ],
-
-        players: {
-
-            pros: [
-                "daigo",
-                "kawano",
-                "bonchan"
-            ],
-
-            streamers: [
-                "なし"
-            ],
-            vtubers: [
-                "kuzuha",
-                "amayuimoka"
-            ],youtubers:[]}
-    },
-
-    // ======================
-    // コンボ動画
-    // ======================
-    comboVideos: {
-        beginner: [
-            {
-                title: "初心者コンボ",
-                thumbnail: "assets/images/thumbnails/gouki_beginner.jpg",
-                url: "https://youtu.be/X9CYG7oBJ9M?si=_dg1WPp30NLBRWCm"
-            }
-        ],
-
-        intermediate: [
-            {
-                title: "中級コンボ",
-                thumbnail: "assets/images/thumbnails/gouki_intermediate.jpg",
-                url: "https://youtu.be/P-oE9yV1MHc?si=3facKptAGenaLlYq"
-            }
-        ],
-
-        advanced: [
-            {
-                type: "search",
-                title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E8%B1%AA%E9%AC%BC%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
-            }
-        ],
-
-        match: [
-            {
-                type: "search",
-                title: "対戦動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E8%B1%AA%E9%AC%BC%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
-            }
-        ]
-    }
-
-},
-rashid: {
-
-    // ======================
-    // 基本情報
-    // ======================
-    id: "rashid",
-    name: "ラシード",
-    image: "assets/images/characters/rashid.png",
-    release: "Year1",
-    type: "スピード型",
-    difficulty: 4,
-    hp:10000,
-    combo:4,
-    power: 3,
-    speed: 5,
-    defense: 3,
-    reach: 2,
-    beginner: 2,
-    rush:5,
-    projectile:true,
-    invincible:true,
-    antiAir:3,
-    commandGrab:false,
-
-    // ======================
-    // ステータス
-    // ======================
-    stats: {
-        power: 3,
-        speed: 5,
-        defense: 3,
-        reach: 2,
-        beginner: 2
-    },
-
-    // ======================
-    // キャラクター情報
-    // ======================
-    playstyle:"ヒット＆アウェイ",
-range:"近〜中距離",
-concept:
-"素早い移動と高い機動力を活かし、相手を翻弄しながら主導権を握るキャラクター。",
-
-strengths:[
-    "全キャラクターでもトップクラスの機動力",
-    "画面を広く使った攻めができる",
-    "相手を翻弄しやすい"
-],
-
-weaknesses:[
-    "コンボ難易度が高い",
-    "火力はやや控えめ",
-    "立ち回りの理解が必要"
-],
-
-recommend:[
-    "素早く動き回るキャラが好きな人",
-    "相手を翻弄する戦い方が好きな人",
-    "操作にやり込み要素を求める人"
-],
-    matchups:{
-    strong:[
-        {
-            id:"dhalsim",
-            reason:"高い機動力で遠距離戦を崩しやすい"
-        },
-        {
-            id:"manon",
-            reason:"攻めを継続して投げを狙わせにくい"
-        },
-        {
-            id:"marisa",
-            reason:"機動力で重い通常技をかわしやすい"
-        }
-    ],
-
-    weak:[
-        {
-            id:"zangief",
-            reason:"一度接近されると読み合いで苦しくなりやすい"
-        },
-        {
-            id:"chunli",
-            reason:"通常技で風を使った攻めを止められやすい"
-        },
-        {
-            id:"guile",
-            reason:"飛び道具主体の立ち回りを崩しにくい"
-        }
-    ]
-},
-    // ======================
-    // 関連情報
-    // ======================
-    related: {
-
-        characters: [
-            "ken",
-            "cammy",
-            "juri"
-        ],
-        players: {
-            pros: [
-                "gachikun",
-            ],
-
-            streamers: [
-                "なし"
-            ],
-            vtubers: [
-                "kanae",
-            ],youtubers:[]}
-    },
-    // ======================
-    // コンボ動画
-    // ======================
-    comboVideos: {
-        beginner: [
-            {
-                title: "初心者コンボ",
-                thumbnail: "assets/images/thumbnails/rashid_beginner.jpg",
-                url: "https://youtu.be/YgJ7S4durpE?si=H0OCLCemekqHkHaC"
-            }
-        ],
-
-        intermediate: [
-            {
-                title: "中級コンボ",
-                thumbnail: "assets/images/thumbnails/rashid_intermediate.jpg",
-                url: "https://youtu.be/Cvo3ecRx9M4?si=3Hae0fghB14BFKZ4"
-            }
-        ],
-
-        advanced: [
-            {
-                type: "search",
-                title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%A9%E3%82%B7%E3%83%BC%E3%83%89%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
-            }
-        ],
-
-        match: [
-            {
-                type: "search",
-                title: "対戦動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%A9%E3%82%B7%E3%83%BC%E3%83%89%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
-            }
-        ]
-    }
-
-},
-
-ryu: {
+    ryu: {
 
     // ======================
     // 基本情報
@@ -585,7 +136,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%AA%E3%83%A5%E3%82%A6%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%83%AA%E3%83%A5%E3%82%A6%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -725,7 +276,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%AB%E3%83%BC%E3%82%AF%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%83%AB%E3%83%BC%E3%82%AF%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -871,7 +422,7 @@ matchups:{
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E6%98%A5%E9%BA%97%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E6%98%A5%E9%BA%97%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -988,7 +539,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%AC%E3%82%A4%E3%83%AB%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%82%AC%E3%82%A4%E3%83%AB%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -1013,102 +564,136 @@ recommend:[
     }
 },
 
-juri:{
-
-    id:"juri",
-    name:"ジュリ",
-    image:"assets/images/characters/juri.jpg",
+ken: {
+    // ======================
+    // 基本情報
+    // ======================
+    id: "ken",
+    name: "ケン",
+    image: "assets/images/characters/ken.png",
     release: "初期",
-    type:"スピード型",
-    difficulty:3,
+    type: "バランス型",
+    difficulty: 2,
     hp:10000,
     combo:3,
-    power:3,
-    speed:5,
-    defense:2,
-    reach:3,
-    beginner:2,
+    power: 2,
+    speed: 4,
+    defense: 3,
+    reach: 3,
+    beginner: 4,
     rush:5,
     projectile:true,
     invincible:true,
-    antiAir:5,
+    antiAir:4,
     commandGrab:false,
 
-    stats:{
-        power:3,
-        speed:5,
-        defense:2,
-        reach:3,
-        beginner:2
+    // ======================
+    // ステータス
+    // ======================
+    stats: {
+        power: 2,
+        speed: 4,
+        defense: 3,
+        reach: 3,
+        beginner: 4
     },
 
-    playstyle:"トリッキー",
-range:"近〜中距離",
-concept:
-"素早い動きと豊富な崩しを活かし、相手を翻弄しながら攻め続けるキャラクター。",
-
-strengths:[
-    "崩し性能が高い",
-    "機動力に優れる",
-    "攻めの選択肢が豊富"
+    // ======================
+    // キャラクター情報
+    // ======================
+    playstyle:"ラッシュ",
+    range:"近〜中距離",
+    concept:"素早い接近とラッシュで相手を画面端まで追い詰め、攻めを継続してプレッシャーをかけるキャラクター",
+    strengths:[
+    "画面端へ運ぶ能力が高い",
+    "ラッシュを絡めた攻めが非常に強力",
+    "通常技が優秀で攻めを継続しやすい"
 ],
 
 weaknesses:[
-    "操作難易度が高い",
-    "コンボの練習が必要",
-    "守りでは読み合いが求められる"
+    "コンボ習得の難易度がやや高い",
+    "飛び道具戦は得意ではない",
+    "守りでは読み合いが必要"
 ],
 
 recommend:[
-    "相手を翻弄するのが好きな人",
-    "スピード感ある攻めが好きな人",
-    "やり込みがいのあるキャラを使いたい人"
+    "攻め続けるプレイが好きな人",
+    "スピード感のある試合を楽しみたい人",
+    "主人公キャラクターを使いたい人"
 ],
+
     matchups:{
     strong:[
         {
-            id:"ehonda",
-            reason:"頭突きや百貫を咎めやすく主導権を握りやすい"
+            id:"elena",
+            reason:"ラッシュで懐に入りやすく画面端に追い詰めやすい"
         },
         {
-            id:"zangief",
-            reason:"機動力を活かして投げ間合いを維持しやすい"
+            id:"dhalsim",
+            reason:"素早く接近でき遠距離戦を拒否しやすい"
         },
         {
-            id:"marisa",
-            reason:"差し返し性能が高く大技を狙わせにくい"
+            id:"lily",
+            reason:"ラッシュで接近戦に持ち込み固められる"
         }
     ],
 
     weak:[
         {
             id:"luke",
-            reason:"通常技と飛び道具の性能で押し返されやすい"
+            reason:"通常技のリーチと火力で競り負けやすい"
+        },
+        {
+            id:"sagat",
+            reason:"リーチ差と火力差で押し切られてしまう"
         },
         {
             id:"guile",
-            reason:"飛び道具主体の展開を崩しにくい"
-        },
-        {
-            id:"rashid",
-            reason:"攻めを継続されると守りに回りやすい"
+            reason:"ソニックブーム主体の展開を崩しにくい"
         }
     ]
 },
+
+    // ======================
+    // 関連情報
+    // ======================
+    related: {
+
+        characters: [
+            "ryu",
+            "gouki",
+            "luke"
+        ],
+        players: {
+            pros: [
+                "tokido",
+                "orarin",
+                "ryukichi"
+            ],
+            streamers: [
+                "なし"
+            ],
+            vtubers: [
+               "なし"
+            ],youtubers:[]}
+    },
+    // ======================
+    // コンボ動画
+    // ======================
     comboVideos: {
         beginner: [
             {
                 title: "初心者コンボ",
-                thumbnail: "assets/images/thumbnails/juri_beginner.jpg",
-                url: "https://youtu.be/ZQourqvHEvM?si=HpRTfIsKmVjRBPuo"
+                thumbnail: "assets/images/thumbnails/ken_beginner.jpg",
+                url: "https://youtu.be/q6curP-XhbQ?si=aMkiIx14NunCkulB"
             }
         ],
 
         intermediate: [
             {
                 title: "中級コンボ",
-                thumbnail: "assets/images/thumbnails/juri_intermediate.jpg",
-                url: "https://youtu.be/34Ai7CwyYXk?si=87YX_0po-lcCzHS1"
+                thumbnail: "assets/images/thumbnails/ken_intermediate.jpg",
+                url: "https://youtu.be/XiXDk52Advg?si=R3V4v1jIdHuvMFAP"
             }
         ],
 
@@ -1116,7 +701,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%B8%E3%83%A5%E3%83%AA%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%82%B1%E3%83%B3%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -1124,147 +709,9 @@ recommend:[
             {
                 type: "search",
                 title: "対戦動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%B8%E3%83%A5%E3%83%AA%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
+                url: "https://www.youtube.com/results?search_query=%E3%82%B1%E3%83%B3%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
             }
         ]
-    },
-    related:{
-        characters:[
-            "cammy",
-            "chunli",
-            "aki"
-        ],
-        players:{
-            pros:["mago","twobassa","pugera"],
-            streamers:["betty"],
-            vtubers:["ibrahim","amakipururu"],youtubers:[]}
-    }
-},
-
-cammy:{
-    id:"cammy",
-    name:"キャミィ",
-    image:"assets/images/characters/cammy.jpg",
-    release: "初期",
-    type:"スピード型",
-    difficulty:2,
-    hp:10000,
-    combo:2,
-    power:2,
-    speed:5,
-    defense:3,
-    reach:2,
-    beginner:3,
-    rush:5,
-    projectile:false,
-    invincible:true,
-    antiAir:5,
-    commandGrab:true,
-    
-    stats:{
-        power:2,
-        speed:5,
-        defense:3,
-        reach:2,
-        beginner:3
-    },
-playstyle:"ラッシュ",
-range:"近距離",
-concept:
-"素早い接近能力を活かし、一気に距離を詰めて攻め続ける近距離戦が得意なキャラクター。",
-
-strengths:[
-    "接近能力が非常に高い",
-    "ラッシュとの相性が良い",
-    "画面端での攻めが強力"
-],
-
-weaknesses:[
-    "飛び道具を持たない",
-    "遠距離戦は苦手",
-    "相手に近づく工夫が必要"
-],
-
-recommend:[
-    "近距離戦が好きな人",
-    "攻め続けるスタイルが好きな人",
-    "スピード感を楽しみたい人"
-],
-
-    matchups:{
-    strong:[
-        {
-            id:"guile",
-            reason:"高い接近能力で飛び道具を突破しやすい"
-        },
-        {
-            id:"jp",
-            reason:"遠距離戦を許さず一気に距離を詰められる"
-        },
-        {
-            id:"dhalsim",
-            reason:"長距離戦を拒否して攻めを継続しやすい"
-        }
-    ],
-
-    weak:[
-        {
-            id:"zangief",
-            reason:"一度捕まると大ダメージを受けやすい"
-        },
-        {
-            id:"chunli",
-            reason:"通常技の差し返し性能で競り負けやすい"
-        },
-        {
-            id:"juri",
-            reason:"地上戦で主導権を握られやすい"
-        }
-    ]
-},
-    comboVideos: {
-        beginner: [
-            {
-                title: "初心者コンボ",
-                thumbnail: "assets/images/thumbnails/cammy_beginner.jpg",
-                url: "https://youtu.be/tqFsYQ_zcAg?si=0rxf24C5jMBmCqhe"
-            }
-        ],
-
-        intermediate: [
-            {
-                title: "中級コンボ",
-                thumbnail: "assets/images/thumbnails/cammy_intermediate.jpg",
-                url: "https://youtu.be/x8ZSMq0ogww?si=BASrEuZW9quo-2bK"
-            }
-        ],
-
-        advanced: [
-            {
-                type: "search",
-                title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%AD%E3%83%A3%E3%83%9F%E3%82%A3%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
-            }
-        ],
-
-        match: [
-            {
-                type: "search",
-                title: "対戦動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%AD%E3%83%A3%E3%83%9F%E3%82%A3%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
-            }
-        ]
-    },
-    related:{
-        characters:[
-            "juri",
-            "chunli",
-            "kimberly"
-        ],
-        players:{
-            pros:["kazunoko","akira","twobassa"],
-            streamers:["なし"],
-            vtubers:["sorahoshikirame","uchiwa"],youtubers:[]}
     }
 },
 
@@ -1377,7 +824,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%B8%E3%82%A7%E3%82%A4%E3%83%9F%E3%83%BC%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%82%B8%E3%82%A7%E3%82%A4%E3%83%9F%E3%83%BC%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -1500,7 +947,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%AD%E3%83%B3%E3%83%90%E3%83%AA%E3%83%BC%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%82%AD%E3%83%B3%E3%83%90%E3%83%AA%E3%83%BC%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -1627,7 +1074,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%9E%E3%83%AA%E3%83%BC%E3%82%B6%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%83%9E%E3%83%AA%E3%83%BC%E3%82%B6%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -1750,7 +1197,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%9E%E3%83%8E%E3%83%B3%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%83%9E%E3%83%8E%E3%83%B3%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -1759,134 +1206,6 @@ recommend:[
                 type: "search",
                 title: "対戦動画を探す",
                 url: "https://www.youtube.com/results?search_query=%E3%83%9E%E3%83%8E%E3%83%B3%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
-            }
-        ]
-    }
-},
-
-deejay:{
-    id:"deejay",
-    name:"ディージェイ",
-    image:"assets/images/characters/deejay.jpg",
-    release:"初期",
-    type:"テクニカル型",
-    difficulty:3,
-    hp:10000,
-    combo:4,
-     power:3,
-    speed:5,
-    defense:4,
-    reach:4,
-    beginner:3,
-    rush:5,
-    projectile:true,
-    invincible:true,
-    antiAir:3,
-    commandGrab:false,
-
-    stats:{
-        power:3,
-        speed:5,
-        defense:4,
-        reach:4,
-        beginner:3
-    },
-playstyle:"トリッキー",
-range:"中距離",
-concept:
-"緩急のある動きと多彩な技を使い分け、相手を惑わせながら攻めるキャラクター。",
-
-strengths:[
-    "攻めのバリエーションが豊富",
-    "飛び道具と突進技を使い分けられる",
-    "相手を翻弄しやすい"
-],
-
-weaknesses:[
-    "扱いには慣れが必要",
-    "安定した火力を出すには練習が必要",
-    "読み負けると苦しくなりやすい"
-],
-
-recommend:[
-    "自由度の高いキャラが好きな人",
-    "相手を惑わせる戦い方をしたい人",
-    "多彩な技を使いこなしたい人"
-],
-    matchups:{
-    strong:[
-        {
-            id:"dhalsim",
-            reason:"機動力を活かして遠距離戦を崩しやすい"
-        },
-        {
-            id:"jp",
-            reason:"飛び道具をかいくぐって接近しやすい"
-        },
-        {
-            id:"ehonda",
-            reason:"通常技と飛び道具で頭突きを止めやすい"
-        }
-    ],
-
-    weak:[
-        {
-            id:"cammy",
-            reason:"一度近付かれると守りが苦しくなりやすい"
-        },
-        {
-            id:"juri",
-            reason:"差し返し性能が高く主導権を握られやすい"
-        },
-        {
-            id:"luke",
-            reason:"通常技の強さで地上戦を支配されやすい"
-        }
-    ]
-},
-
-    related:{
-        characters:[
-            "guile",
-            "jamie",
-            "kimberly"
-        ],
-        players:{
-            pros:["zabuton",],
-            streamers:["takera","ohsuakira","k4sen"],
-            vtubers:["なし"],youtubers:[]}
-    },
-
-    comboVideos: {
-        beginner: [
-            {
-                title: "初心者コンボ",
-                thumbnail: "assets/images/thumbnails/deejay_beginner.jpg",
-                url: "https://youtu.be/j6K0a1FZQlQ?si=DbNHCtk7nv6Riq2r"
-            }
-        ],
-
-        intermediate: [
-            {
-                title: "中級コンボ",
-                thumbnail: "assets/images/thumbnails/deejay_intermediate.jpg",
-                url: "https://youtu.be/zS4Pm-9yCxc?si=KgBE0QTgjbIrXzpP"
-            }
-        ],
-
-        advanced: [
-            {
-                type: "search",
-                title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B8%E3%82%A7%E3%82%A4%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
-            }
-        ],
-
-        match: [
-            {
-                type: "search",
-                title: "対戦動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B8%E3%82%A7%E3%82%A4%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
             }
         ]
     }
@@ -2007,7 +1326,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%B6%E3%83%B3%E3%82%AE%E3%82%A8%E3%83%95%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%82%B6%E3%83%B3%E3%82%AE%E3%82%A8%E3%83%95%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -2021,113 +1340,114 @@ recommend:[
     }
 },
 
-dhalsim:{
-    id:"dhalsim",
-    name:"ダルシム",
-    image:"assets/images/characters/dhalsim.jpg",
+jp:{
+    id:"jp",
+    name:"JP",
+    image:"assets/images/characters/jp.jpg",
     release:"初期",
     type:"シューティング型",
     difficulty:5,
     hp:10000,
-    combo:3,
-    power:3,
-    speed:1,
-    defense:4,
+    combo:4,
+    power:4,
+    speed:2,
+    defense:3,
     reach:5,
     beginner:1,
-    rush:1,
+    rush:2,
     projectile:true,
-    invincible:false,
-    antiAir:3,
-    commandGrab:false,
+    invincible:true,
+    antiAir:2,
+    commandGrab:true,
 
     stats:{
-        power:3,
-        speed:1,
-        defense:4,
+        power:4,
+        speed:2,
+        defense:3,
         reach:5,
         beginner:1
     },
-playstyle:"シューティング",
+    playstyle:"シューティング",
 range:"遠距離",
 concept:
-"圧倒的なリーチと多彩な飛び道具を活かし、相手を寄せ付けずに戦う遠距離戦が得意なキャラクター。",
+"飛び道具と設置技を駆使し、相手を近づけさせずに主導権を握るキャラクター。",
 
 strengths:[
-    "通常技のリーチが非常に長い",
-    "遠距離戦で高い制圧力を持つ",
-    "相手の動きを制限しやすい"
+    "遠距離戦が非常に強力",
+    "設置技で相手を制限できる",
+    "どの距離でも相手を動かしやすい"
 ],
 
 weaknesses:[
-    "接近戦は苦手",
-    "守りには高い判断力が必要",
-    "扱いには慣れが必要"
+    "近距離では守りが難しい",
+    "技の使い分けが重要",
+    "扱いには練習が必要"
 ],
 
 recommend:[
     "遠距離戦が好きな人",
-    "相手をコントロールして戦いたい人",
-    "個性的なキャラを使いたい人"
+    "戦略的に戦いたい人",
+    "相手をコントロールする戦い方が好きな人"
 ],
+
     matchups:{
     strong:[
         {
-            id:"lily",
-            reason:"長いリーチと飛び道具で接近を許しにくい"
+            id:"zangief",
+            reason:"飛び道具と設置技で接近を封じやすい"
         },
         {
             id:"ryu",
-            reason:"長いリーチと飛び道具で遠距離戦の主導権を握りやすい"
+            reason:"遠距離戦で主導権を握りやすい"
         },
         {
-            id:"zangief",
-            reason:"長いリーチと飛び道具で接近させずに戦える"
+            id:"manon",
+            reason:"投げ間合いに入らせず試合を進めやすい"
         }
     ],
 
     weak:[
         {
-            id:"bison",
-            reason:"早いラッシュと展開で間合いを詰められやすい"
+            id:"aki",
+            reason:"毒と機動力で遠距離戦を崩されやすい"
         },
         {
             id:"cammy",
-            reason:"素早い立ち回りで得意な距離を維持しにくい"
+            reason:"飛び道具をかいくぐる接近能力が高い"
         },
         {
-            id:"kimberly",
-            reason:"高い機動力で崩られやすい"
+            id:"juri",
+            reason:"機動力で設置技を突破されやすい"
         }
     ]
 },
 
     related:{
         characters:[
-            "jp",
+            "dhalsim",
             "guile",
             "aki"
         ],
         players:{
-            pros:["yhcmochi","torimeshi",],
-            streamers:["なし"],
-            vtubers:["kibakibaru","hoshino"],youtubers:[]}
+            pros:["tokido","ryusei","acqua"],
+            streamers:[],
+            vtubers:["kisaragiren"],youtubers:[]}
     },
 
     comboVideos: {
         beginner: [
             {
                 title: "初心者コンボ",
-                thumbnail: "assets/images/thumbnails/dhalsim_beginner.jpg",
-                url: "https://youtu.be/JAx6qRSq4gQ?si=9biA2Wcpov2AIh78"
+                thumbnail: "assets/images/thumbnails/jp_beginner.jpg",
+                url: "https://youtu.be/tDSVHrylr3k?si=oyxAcYD7GILYaE4E"
             }
         ],
 
         intermediate: [
             {
                 title: "中級コンボ",
-                thumbnail: "assets/images/thumbnails/dhalsim_intermediate.jpg",
-                url: "https://youtu.be/VPKlmKW-nlg?si=GpFdaSZVQbgCrmwZ"
+                thumbnail: "assets/images/thumbnails/jp_intermediate.jpg",
+                url: "https://youtu.be/nyFNgnzjV3M?si=MSeIVE-2KSFMLFAv"
             }
         ],
 
@@ -2135,7 +1455,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%80%E3%83%AB%E3%82%B7%E3%83%A0%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=JP%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -2143,11 +1463,522 @@ recommend:[
             {
                 type: "search",
                 title: "対戦動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%80%E3%83%AB%E3%82%B7%E3%83%A0%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
+                url: "https://www.youtube.com/results?search_query=JP%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
             }
         ]
     }
 },
+deejay:{
+    id:"deejay",
+    name:"ディージェイ",
+    image:"assets/images/characters/deejay.jpg",
+    release:"初期",
+    type:"テクニカル型",
+    difficulty:3,
+    hp:10000,
+    combo:4,
+     power:3,
+    speed:5,
+    defense:4,
+    reach:4,
+    beginner:3,
+    rush:5,
+    projectile:true,
+    invincible:true,
+    antiAir:3,
+    commandGrab:false,
+
+    stats:{
+        power:3,
+        speed:5,
+        defense:4,
+        reach:4,
+        beginner:3
+    },
+playstyle:"トリッキー",
+range:"中距離",
+concept:
+"緩急のある動きと多彩な技を使い分け、相手を惑わせながら攻めるキャラクター。",
+
+strengths:[
+    "攻めのバリエーションが豊富",
+    "飛び道具と突進技を使い分けられる",
+    "相手を翻弄しやすい"
+],
+
+weaknesses:[
+    "扱いには慣れが必要",
+    "安定した火力を出すには練習が必要",
+    "読み負けると苦しくなりやすい"
+],
+
+recommend:[
+    "自由度の高いキャラが好きな人",
+    "相手を惑わせる戦い方をしたい人",
+    "多彩な技を使いこなしたい人"
+],
+    matchups:{
+    strong:[
+        {
+            id:"dhalsim",
+            reason:"機動力を活かして遠距離戦を崩しやすい"
+        },
+        {
+            id:"jp",
+            reason:"飛び道具をかいくぐって接近しやすい"
+        },
+        {
+            id:"ehonda",
+            reason:"通常技と飛び道具で頭突きを止めやすい"
+        }
+    ],
+
+    weak:[
+        {
+            id:"cammy",
+            reason:"一度近付かれると守りが苦しくなりやすい"
+        },
+        {
+            id:"juri",
+            reason:"差し返し性能が高く主導権を握られやすい"
+        },
+        {
+            id:"luke",
+            reason:"通常技の強さで地上戦を支配されやすい"
+        }
+    ]
+},
+
+    related:{
+        characters:[
+            "guile",
+            "jamie",
+            "kimberly"
+        ],
+        players:{
+            pros:["zabuton",],
+            streamers:["takera","ohsuakira","k4sen"],
+            vtubers:["なし"],youtubers:[]}
+    },
+
+    comboVideos: {
+        beginner: [
+            {
+                title: "初心者コンボ",
+                thumbnail: "assets/images/thumbnails/deejay_beginner.jpg",
+                url: "https://youtu.be/j6K0a1FZQlQ?si=DbNHCtk7nv6Riq2r"
+            }
+        ],
+
+        intermediate: [
+            {
+                title: "中級コンボ",
+                thumbnail: "assets/images/thumbnails/deejay_intermediate.jpg",
+                url: "https://youtu.be/zS4Pm-9yCxc?si=KgBE0QTgjbIrXzpP"
+            }
+        ],
+
+        advanced: [
+            {
+                type: "search",
+                title: "上級者向けの動画を探す",
+                url: "https://www.youtube.com/results?search_query=%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B8%E3%82%A7%E3%82%A4%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+            }
+        ],
+
+        match: [
+            {
+                type: "search",
+                title: "対戦動画を探す",
+                url: "https://www.youtube.com/results?search_query=%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B8%E3%82%A7%E3%82%A4%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
+            }
+        ]
+    }
+},
+
+cammy:{
+    id:"cammy",
+    name:"キャミィ",
+    image:"assets/images/characters/cammy.jpg",
+    release: "初期",
+    type:"スピード型",
+    difficulty:2,
+    hp:10000,
+    combo:2,
+    power:2,
+    speed:5,
+    defense:3,
+    reach:2,
+    beginner:3,
+    rush:5,
+    projectile:false,
+    invincible:true,
+    antiAir:5,
+    commandGrab:true,
+    
+    stats:{
+        power:2,
+        speed:5,
+        defense:3,
+        reach:2,
+        beginner:3
+    },
+playstyle:"ラッシュ",
+range:"近距離",
+concept:
+"素早い接近能力を活かし、一気に距離を詰めて攻め続ける近距離戦が得意なキャラクター。",
+
+strengths:[
+    "接近能力が非常に高い",
+    "ラッシュとの相性が良い",
+    "画面端での攻めが強力"
+],
+
+weaknesses:[
+    "飛び道具を持たない",
+    "遠距離戦は苦手",
+    "相手に近づく工夫が必要"
+],
+
+recommend:[
+    "近距離戦が好きな人",
+    "攻め続けるスタイルが好きな人",
+    "スピード感を楽しみたい人"
+],
+
+    matchups:{
+    strong:[
+        {
+            id:"guile",
+            reason:"高い接近能力で飛び道具を突破しやすい"
+        },
+        {
+            id:"jp",
+            reason:"遠距離戦を許さず一気に距離を詰められる"
+        },
+        {
+            id:"dhalsim",
+            reason:"長距離戦を拒否して攻めを継続しやすい"
+        }
+    ],
+
+    weak:[
+        {
+            id:"zangief",
+            reason:"一度捕まると大ダメージを受けやすい"
+        },
+        {
+            id:"chunli",
+            reason:"通常技の差し返し性能で競り負けやすい"
+        },
+        {
+            id:"juri",
+            reason:"地上戦で主導権を握られやすい"
+        }
+    ]
+},
+    comboVideos: {
+        beginner: [
+            {
+                title: "初心者コンボ",
+                thumbnail: "assets/images/thumbnails/cammy_beginner.jpg",
+                url: "https://youtu.be/tqFsYQ_zcAg?si=0rxf24C5jMBmCqhe"
+            }
+        ],
+
+        intermediate: [
+            {
+                title: "中級コンボ",
+                thumbnail: "assets/images/thumbnails/cammy_intermediate.jpg",
+                url: "https://youtu.be/x8ZSMq0ogww?si=BASrEuZW9quo-2bK"
+            }
+        ],
+
+        advanced: [
+            {
+                type: "search",
+                title: "上級者向けの動画を探す",
+                url: "https://www.youtube.com/results?search_query=%E3%82%AD%E3%83%A3%E3%83%9F%E3%82%A3%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+            }
+        ],
+
+        match: [
+            {
+                type: "search",
+                title: "対戦動画を探す",
+                url: "https://www.youtube.com/results?search_query=%E3%82%AD%E3%83%A3%E3%83%9F%E3%82%A3%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
+            }
+        ]
+    },
+    related:{
+        characters:[
+            "juri",
+            "chunli",
+            "kimberly"
+        ],
+        players:{
+            pros:["kazunoko","akira","twobassa"],
+            streamers:["なし"],
+            vtubers:["sorahoshikirame","uchiwa"],youtubers:[]}
+    }
+},
+
+lily:{
+    id:"lily",
+    name:"リリー",
+    image:"assets/images/characters/lily.jpg",
+    release:"初期",
+    type:"グラップラー",
+    difficulty:2,
+    hp:10000,
+    combo:2,
+    power:3,
+    speed:3,
+    defense:3,
+    reach:2,
+    beginner:4,
+    rush:3,
+    projectile:false,
+    invincible:true,
+    antiAir:3,
+    commandGrab:true,
+
+    stats:{
+        power:3,
+        speed:3,
+        defense:3,
+        reach:2,
+        beginner:4
+    },
+playstyle:"ヒット＆アウェイ",
+range:"近距離",
+concept:
+"機動力と風の力を活かし、一瞬のチャンスから攻め込むキャラクター。",
+
+strengths:[
+    "機動力が高い",
+    "風ストックによる強力な攻め",
+    "接近戦で一気に流れを掴める"
+],
+
+weaknesses:[
+    "風ストックが無いと性能が落ちる",
+    "通常技のリーチは短め",
+    "火力はやや控えめ"
+],
+
+recommend:[
+    "素早く動くキャラが好きな人",
+    "強化要素を活かしたい人",
+    "攻守の切り替えを楽しみたい人"
+],
+
+    matchups:{
+    strong:[
+        {
+            id:"ehonda",
+            reason:"風ストックから一気に攻めを押し付けやすい"
+        },
+        {
+            id:"manon",
+            reason:"機動力で投げ間合いを外しやすい"
+        },
+        {
+            id:"marisa",
+            reason:"先に動いて攻めを継続しやすい"
+        }
+    ],
+
+    weak:[
+        {
+            id:"zangief",
+            reason:"火力差と読み合いで押し負けやすい"
+        },
+        {
+            id:"rashid",
+            reason:"機動力が高く風ストックを使いづらい"
+        },
+        {
+            id:"guile",
+            reason:"飛び道具で近付くまでが苦しい"
+        }
+    ]
+},
+
+    related:{
+        characters:[
+            "manon",
+            "cammy",
+            "zangief"
+        ],
+        players:{
+            pros:["hibiki"],
+            streamers:["なし"],
+            vtubers:["なし"],youtubers:[]}
+    },
+
+    comboVideos: {
+        beginner: [
+            {
+                title: "初心者コンボ",
+                thumbnail: "assets/images/thumbnails/lily_beginner.jpg",
+                url: "https://youtu.be/f67FJ4G7Dso?si=kyZCZd7pejSBCfL3"
+            }
+        ],
+
+        intermediate: [
+            {
+                title: "中級コンボ",
+                thumbnail: "assets/images/thumbnails/lily_intermediate.jpg",
+                url: "https://youtu.be/ZAkXuZqiWYE?si=bxmCOEuVURICRm9o"
+            }
+        ],
+
+        advanced: [
+            {
+                type: "search",
+                title: "上級者向けの動画を探す",
+                url: "https://www.youtube.com/results?search_query=%E3%83%AA%E3%83%AA%E3%83%BC%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+            }
+        ],
+
+        match: [
+            {
+                type: "search",
+                title: "対戦動画を探す",
+                url: "https://www.youtube.com/results?search_query=%E3%83%AA%E3%83%AA%E3%83%BC%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
+            }
+        ]
+    }
+},
+juri:{
+
+    id:"juri",
+    name:"ジュリ",
+    image:"assets/images/characters/juri.jpg",
+    release: "初期",
+    type:"スピード型",
+    difficulty:3,
+    hp:10000,
+    combo:3,
+    power:3,
+    speed:5,
+    defense:2,
+    reach:3,
+    beginner:2,
+    rush:5,
+    projectile:true,
+    invincible:true,
+    antiAir:5,
+    commandGrab:false,
+
+    stats:{
+        power:3,
+        speed:5,
+        defense:2,
+        reach:3,
+        beginner:2
+    },
+
+    playstyle:"トリッキー",
+range:"近〜中距離",
+concept:
+"素早い動きと豊富な崩しを活かし、相手を翻弄しながら攻め続けるキャラクター。",
+
+strengths:[
+    "崩し性能が高い",
+    "機動力に優れる",
+    "攻めの選択肢が豊富"
+],
+
+weaknesses:[
+    "操作難易度が高い",
+    "コンボの練習が必要",
+    "守りでは読み合いが求められる"
+],
+
+recommend:[
+    "相手を翻弄するのが好きな人",
+    "スピード感ある攻めが好きな人",
+    "やり込みがいのあるキャラを使いたい人"
+],
+    matchups:{
+    strong:[
+        {
+            id:"ehonda",
+            reason:"頭突きや百貫を咎めやすく主導権を握りやすい"
+        },
+        {
+            id:"zangief",
+            reason:"機動力を活かして投げ間合いを維持しやすい"
+        },
+        {
+            id:"marisa",
+            reason:"差し返し性能が高く大技を狙わせにくい"
+        }
+    ],
+
+    weak:[
+        {
+            id:"luke",
+            reason:"通常技と飛び道具の性能で押し返されやすい"
+        },
+        {
+            id:"guile",
+            reason:"飛び道具主体の展開を崩しにくい"
+        },
+        {
+            id:"rashid",
+            reason:"攻めを継続されると守りに回りやすい"
+        }
+    ]
+},
+    comboVideos: {
+        beginner: [
+            {
+                title: "初心者コンボ",
+                thumbnail: "assets/images/thumbnails/juri_beginner.jpg",
+                url: "https://youtu.be/ZQourqvHEvM?si=HpRTfIsKmVjRBPuo"
+            }
+        ],
+
+        intermediate: [
+            {
+                title: "中級コンボ",
+                thumbnail: "assets/images/thumbnails/juri_intermediate.jpg",
+                url: "https://youtu.be/34Ai7CwyYXk?si=87YX_0po-lcCzHS1"
+            }
+        ],
+
+        advanced: [
+            {
+                type: "search",
+                title: "上級者向けの動画を探す",
+                url: "https://www.youtube.com/results?search_query=%E3%82%B8%E3%83%A5%E3%83%AA%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+            }
+        ],
+
+        match: [
+            {
+                type: "search",
+                title: "対戦動画を探す",
+                url: "https://www.youtube.com/results?search_query=%E3%82%B8%E3%83%A5%E3%83%AA%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
+            }
+        ]
+    },
+    related:{
+        characters:[
+            "cammy",
+            "chunli",
+            "aki"
+        ],
+        players:{
+            pros:["mago","twobassa","pugera"],
+            streamers:["betty"],
+            vtubers:["ibrahim","amakipururu"],youtubers:[]}
+    }
+},
+
 blanka:{
     id:"blanka",
     name:"ブランカ",
@@ -2263,7 +2094,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%96%E3%83%A9%E3%83%B3%E3%82%AB%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%83%96%E3%83%A9%E3%83%B3%E3%82%AB%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -2390,7 +2221,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E6%9C%AC%E7%94%B0%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E6%9C%AC%E7%94%B0%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -2404,242 +2235,113 @@ recommend:[
     }
 },
 
-lily:{
-    id:"lily",
-    name:"リリー",
-    image:"assets/images/characters/lily.jpg",
-    release:"初期",
-    type:"グラップラー",
-    difficulty:2,
-    hp:10000,
-    combo:2,
-    power:3,
-    speed:3,
-    defense:3,
-    reach:2,
-    beginner:4,
-    rush:3,
-    projectile:false,
-    invincible:true,
-    antiAir:3,
-    commandGrab:true,
-
-    stats:{
-        power:3,
-        speed:3,
-        defense:3,
-        reach:2,
-        beginner:4
-    },
-playstyle:"ヒット＆アウェイ",
-range:"近距離",
-concept:
-"機動力と風の力を活かし、一瞬のチャンスから攻め込むキャラクター。",
-
-strengths:[
-    "機動力が高い",
-    "風ストックによる強力な攻め",
-    "接近戦で一気に流れを掴める"
-],
-
-weaknesses:[
-    "風ストックが無いと性能が落ちる",
-    "通常技のリーチは短め",
-    "火力はやや控えめ"
-],
-
-recommend:[
-    "素早く動くキャラが好きな人",
-    "強化要素を活かしたい人",
-    "攻守の切り替えを楽しみたい人"
-],
-
-    matchups:{
-    strong:[
-        {
-            id:"ehonda",
-            reason:"風ストックから一気に攻めを押し付けやすい"
-        },
-        {
-            id:"manon",
-            reason:"機動力で投げ間合いを外しやすい"
-        },
-        {
-            id:"marisa",
-            reason:"先に動いて攻めを継続しやすい"
-        }
-    ],
-
-    weak:[
-        {
-            id:"zangief",
-            reason:"火力差と読み合いで押し負けやすい"
-        },
-        {
-            id:"rashid",
-            reason:"機動力が高く風ストックを使いづらい"
-        },
-        {
-            id:"guile",
-            reason:"飛び道具で近付くまでが苦しい"
-        }
-    ]
-},
-
-    related:{
-        characters:[
-            "manon",
-            "cammy",
-            "zangief"
-        ],
-        players:{
-            pros:["hibiki"],
-            streamers:["なし"],
-            vtubers:["なし"],youtubers:[]}
-    },
-
-    comboVideos: {
-        beginner: [
-            {
-                title: "初心者コンボ",
-                thumbnail: "assets/images/thumbnails/lily_beginner.jpg",
-                url: "https://youtu.be/f67FJ4G7Dso?si=kyZCZd7pejSBCfL3"
-            }
-        ],
-
-        intermediate: [
-            {
-                title: "中級コンボ",
-                thumbnail: "assets/images/thumbnails/lily_intermediate.jpg",
-                url: "https://youtu.be/ZAkXuZqiWYE?si=bxmCOEuVURICRm9o"
-            }
-        ],
-
-        advanced: [
-            {
-                type: "search",
-                title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%AA%E3%83%AA%E3%83%BC%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
-            }
-        ],
-
-        match: [
-            {
-                type: "search",
-                title: "対戦動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%AA%E3%83%AA%E3%83%BC%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
-            }
-        ]
-    }
-},
-jp:{
-    id:"jp",
-    name:"JP",
-    image:"assets/images/characters/jp.jpg",
+dhalsim:{
+    id:"dhalsim",
+    name:"ダルシム",
+    image:"assets/images/characters/dhalsim.jpg",
     release:"初期",
     type:"シューティング型",
     difficulty:5,
     hp:10000,
-    combo:4,
-    power:4,
-    speed:2,
-    defense:3,
+    combo:3,
+    power:3,
+    speed:1,
+    defense:4,
     reach:5,
     beginner:1,
-    rush:2,
+    rush:1,
     projectile:true,
-    invincible:true,
-    antiAir:2,
-    commandGrab:true,
+    invincible:false,
+    antiAir:3,
+    commandGrab:false,
 
     stats:{
-        power:4,
-        speed:2,
-        defense:3,
+        power:3,
+        speed:1,
+        defense:4,
         reach:5,
         beginner:1
     },
-    playstyle:"シューティング",
+playstyle:"シューティング",
 range:"遠距離",
 concept:
-"飛び道具と設置技を駆使し、相手を近づけさせずに主導権を握るキャラクター。",
+"圧倒的なリーチと多彩な飛び道具を活かし、相手を寄せ付けずに戦う遠距離戦が得意なキャラクター。",
 
 strengths:[
-    "遠距離戦が非常に強力",
-    "設置技で相手を制限できる",
-    "どの距離でも相手を動かしやすい"
+    "通常技のリーチが非常に長い",
+    "遠距離戦で高い制圧力を持つ",
+    "相手の動きを制限しやすい"
 ],
 
 weaknesses:[
-    "近距離では守りが難しい",
-    "技の使い分けが重要",
-    "扱いには練習が必要"
+    "接近戦は苦手",
+    "守りには高い判断力が必要",
+    "扱いには慣れが必要"
 ],
 
 recommend:[
     "遠距離戦が好きな人",
-    "戦略的に戦いたい人",
-    "相手をコントロールする戦い方が好きな人"
+    "相手をコントロールして戦いたい人",
+    "個性的なキャラを使いたい人"
 ],
-
     matchups:{
     strong:[
         {
-            id:"zangief",
-            reason:"飛び道具と設置技で接近を封じやすい"
+            id:"lily",
+            reason:"長いリーチと飛び道具で接近を許しにくい"
         },
         {
             id:"ryu",
-            reason:"遠距離戦で主導権を握りやすい"
+            reason:"長いリーチと飛び道具で遠距離戦の主導権を握りやすい"
         },
         {
-            id:"manon",
-            reason:"投げ間合いに入らせず試合を進めやすい"
+            id:"zangief",
+            reason:"長いリーチと飛び道具で接近させずに戦える"
         }
     ],
 
     weak:[
         {
-            id:"aki",
-            reason:"毒と機動力で遠距離戦を崩されやすい"
+            id:"bison",
+            reason:"早いラッシュと展開で間合いを詰められやすい"
         },
         {
             id:"cammy",
-            reason:"飛び道具をかいくぐる接近能力が高い"
+            reason:"素早い立ち回りで得意な距離を維持しにくい"
         },
         {
-            id:"juri",
-            reason:"機動力で設置技を突破されやすい"
+            id:"kimberly",
+            reason:"高い機動力で崩られやすい"
         }
     ]
 },
 
     related:{
         characters:[
-            "dhalsim",
+            "jp",
             "guile",
             "aki"
         ],
         players:{
-            pros:["tokido","ryusei","acqua"],
-            streamers:[],
-            vtubers:["kisaragiren"],youtubers:[]}
+            pros:["yhcmochi","torimeshi",],
+            streamers:["なし"],
+            vtubers:["kibakibaru","hoshino"],youtubers:[]}
     },
 
     comboVideos: {
         beginner: [
             {
                 title: "初心者コンボ",
-                thumbnail: "assets/images/thumbnails/jp_beginner.jpg",
-                url: "https://youtu.be/tDSVHrylr3k?si=oyxAcYD7GILYaE4E"
+                thumbnail: "assets/images/thumbnails/dhalsim_beginner.jpg",
+                url: "https://youtu.be/JAx6qRSq4gQ?si=9biA2Wcpov2AIh78"
             }
         ],
 
         intermediate: [
             {
                 title: "中級コンボ",
-                thumbnail: "assets/images/thumbnails/jp_intermediate.jpg",
-                url: "https://youtu.be/nyFNgnzjV3M?si=MSeIVE-2KSFMLFAv"
+                thumbnail: "assets/images/thumbnails/dhalsim_intermediate.jpg",
+                url: "https://youtu.be/VPKlmKW-nlg?si=GpFdaSZVQbgCrmwZ"
             }
         ],
 
@@ -2647,7 +2349,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=JP%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%83%80%E3%83%AB%E3%82%B7%E3%83%A0%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -2655,11 +2357,163 @@ recommend:[
             {
                 type: "search",
                 title: "対戦動画を探す",
-                url: "https://www.youtube.com/results?search_query=JP%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
+                url: "https://www.youtube.com/results?search_query=%E3%83%80%E3%83%AB%E3%82%B7%E3%83%A0%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
             }
         ]
     }
 },
+rashid: {
+
+    // ======================
+    // 基本情報
+    // ======================
+    id: "rashid",
+    name: "ラシード",
+    image: "assets/images/characters/rashid.png",
+    release: "Year1",
+    type: "スピード型",
+    difficulty: 4,
+    hp:10000,
+    combo:4,
+    power: 3,
+    speed: 5,
+    defense: 3,
+    reach: 2,
+    beginner: 2,
+    rush:5,
+    projectile:true,
+    invincible:true,
+    antiAir:3,
+    commandGrab:false,
+
+    // ======================
+    // ステータス
+    // ======================
+    stats: {
+        power: 3,
+        speed: 5,
+        defense: 3,
+        reach: 2,
+        beginner: 2
+    },
+
+    // ======================
+    // キャラクター情報
+    // ======================
+    playstyle:"ヒット＆アウェイ",
+range:"近〜中距離",
+concept:
+"素早い移動と高い機動力を活かし、相手を翻弄しながら主導権を握るキャラクター。",
+
+strengths:[
+    "全キャラクターでもトップクラスの機動力",
+    "画面を広く使った攻めができる",
+    "相手を翻弄しやすい"
+],
+
+weaknesses:[
+    "コンボ難易度が高い",
+    "火力はやや控えめ",
+    "立ち回りの理解が必要"
+],
+
+recommend:[
+    "素早く動き回るキャラが好きな人",
+    "相手を翻弄する戦い方が好きな人",
+    "操作にやり込み要素を求める人"
+],
+    matchups:{
+    strong:[
+        {
+            id:"dhalsim",
+            reason:"高い機動力で遠距離戦を崩しやすい"
+        },
+        {
+            id:"manon",
+            reason:"攻めを継続して投げを狙わせにくい"
+        },
+        {
+            id:"marisa",
+            reason:"機動力で重い通常技をかわしやすい"
+        }
+    ],
+
+    weak:[
+        {
+            id:"zangief",
+            reason:"一度接近されると読み合いで苦しくなりやすい"
+        },
+        {
+            id:"chunli",
+            reason:"通常技で風を使った攻めを止められやすい"
+        },
+        {
+            id:"guile",
+            reason:"飛び道具主体の立ち回りを崩しにくい"
+        }
+    ]
+},
+    // ======================
+    // 関連情報
+    // ======================
+    related: {
+
+        characters: [
+            "ken",
+            "cammy",
+            "juri"
+        ],
+        players: {
+            pros: [
+                "gachikun",
+            ],
+
+            streamers: [
+                "なし"
+            ],
+            vtubers: [
+                "kanae",
+            ],youtubers:[]}
+    },
+    // ======================
+    // コンボ動画
+    // ======================
+    comboVideos: {
+        beginner: [
+            {
+                title: "初心者コンボ",
+                thumbnail: "assets/images/thumbnails/rashid_beginner.jpg",
+                url: "https://youtu.be/YgJ7S4durpE?si=H0OCLCemekqHkHaC"
+            }
+        ],
+
+        intermediate: [
+            {
+                title: "中級コンボ",
+                thumbnail: "assets/images/thumbnails/rashid_intermediate.jpg",
+                url: "https://youtu.be/Cvo3ecRx9M4?si=3Hae0fghB14BFKZ4"
+            }
+        ],
+
+        advanced: [
+            {
+                type: "search",
+                title: "上級者向けの動画を探す",
+                url: "https://www.youtube.com/results?search_query=%E3%83%A9%E3%82%B7%E3%83%BC%E3%83%89%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+            }
+        ],
+
+        match: [
+            {
+                type: "search",
+                title: "対戦動画を探す",
+                url: "https://www.youtube.com/results?search_query=%E3%83%A9%E3%82%B7%E3%83%BC%E3%83%89%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
+            }
+        ]
+    }
+
+},
+
 aki:{
     id:"aki",
     name:"A.K.I.",
@@ -2769,7 +2623,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=A.K.I.%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=A.K.I.%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -2897,7 +2751,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%A8%E3%83%89%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%82%A8%E3%83%89%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -2910,108 +2764,131 @@ recommend:[
         ]
     }
 },
-bison:{
-    id:"bison",
-    name:"ベガ",
-    image:"assets/images/characters/bison.jpg",
-    release:"Year2",
-    type:"パワー型",
+gouki: {
+    // ======================
+    // 基本情報
+    // ======================
+    id: "gouki",
+    name: "豪鬼",
+    image: "assets/images/characters/gouki.png",
+    release: "Year1",
+    type: "パワー型",
     difficulty:3,
-    hp:10000,
-    combo:2,
-    power:5,
-    speed:4,
-    defense:2,
-    reach:4,
-    beginner:3,
+    hp:9000,
+    combo:3,
+    power: 5,
+    speed: 4,
+    defense: 2,
+    reach: 4,
+    beginner: 1,
     rush:5,
-    projectile:false,
-    invincible:false,
-    antiAir:2,
-    commandGrab:false,
+    projectile:true,
+    invincible:true,
+    antiAir:4,
+    commandGrab:true,
 
-    stats:{
-        power:5,
-        speed:4,
-        defense:2,
-        reach:4,
-        beginner:3
-    },
-
-    playstyle:"ラッシュ",
-
+    // ======================
+    // ステータス
+    // ======================
+   playstyle:"ハイリスク・ハイリターン",
+range:"中距離",
 concept:
-"高い機動力と素早い攻めを武器に、一気に攻撃を畳み掛けて相手を追い詰めるキャラクター。",
-range:"近距離",
+"高い攻撃力と豊富な攻め手を持ち、一度のチャンスで試合を決められる破壊力を持つキャラクター。",
+
 strengths:[
-    "攻め継続能力が高い",
-    "機動力に優れる",
-    "ラッシュとの相性が非常に良い"
+    "全キャラクター屈指の火力",
+    "攻めの選択肢が非常に豊富",
+    "どの距離でも戦える万能性能"
 ],
 
 weaknesses:[
-    "守りはやや不安定",
-    "無理な攻めは反撃を受けやすい",
-    "火力を伸ばすにはコンボ練習が必要"
+    "体力が低くミスが許されにくい",
+    "操作難易度が高い",
+    "状況判断力が求められる"
 ],
 
 recommend:[
-    "攻め続けるプレイが好きな人",
-    "スピード感のある試合を楽しみたい人",
-    "スタイリッシュなキャラを使いたい人"
+    "高火力キャラが好きな人",
+    "難しいキャラに挑戦したい人",
+    "読み合いで勝負したい人"
 ],
-
     matchups:{
     strong:[
         {
-            id:"manon",
-            reason:"攻めを継続して投げを狙わせにくい"
+            id:"zangief",
+            reason:"飛び道具と機動力で接近を拒否しやすい"
         },
         {
             id:"ehonda",
-            reason:"頭突きに対応しながら主導権を握りやすい"
+            reason:"頭突きを誘って反撃を狙いやすい"
         },
         {
             id:"marisa",
-            reason:"機動力で重い通常技をかわしやすい"
+            reason:"機動力を活かして重い攻撃をかわしやすい"
         }
     ],
 
     weak:[
         {
-            id:"cammy",
-            reason:"接近戦で素早く攻め込まれやすい"
+            id:"jp",
+            reason:"遠距離戦で思うように攻め込めない"
         },
         {
-            id:"zangief",
-            reason:"一度捕まると火力差で押し切られやすい"
+            id:"bison",
+            reason:"攻めを継続されると体力の低さが響きやすい"
         },
         {
-            id:"chunli",
-            reason:"通常技の差し返し性能で苦戦しやすい"
+            id:"guile",
+            reason:"飛び道具主体の展開を崩しにくい"
         }
     ]
 },
 
-    related:{
-        characters:["gouki","jp","aki"],
-        players:{pros:["dogura","yanai","nemo"],streamers:[],vtubers:[],youtubers:[]}
+    // ======================
+    // 関連情報
+    // ======================
+    related: {
+
+        characters: [
+            "ken",
+            "ryu",
+            "luke"
+        ],
+
+        players: {
+
+            pros: [
+                "daigo",
+                "kawano",
+                "bonchan"
+            ],
+
+            streamers: [
+                "なし"
+            ],
+            vtubers: [
+                "kuzuha",
+                "amayuimoka"
+            ],youtubers:[]}
     },
 
+    // ======================
+    // コンボ動画
+    // ======================
     comboVideos: {
         beginner: [
             {
                 title: "初心者コンボ",
-                thumbnail: "assets/images/thumbnails/bison_beginner.jpg",
-                url: "https://youtu.be/U_fq20cnfdg?si=ziuSAABQag6WoVYt"
+                thumbnail: "assets/images/thumbnails/gouki_beginner.jpg",
+                url: "https://youtu.be/X9CYG7oBJ9M?si=_dg1WPp30NLBRWCm"
             }
         ],
 
         intermediate: [
             {
                 title: "中級コンボ",
-                thumbnail: "assets/images/thumbnails/bison_intermediate.jpg",
-                url: "https://youtu.be/H3m9GlRQ0vU?si=kQGKmVO_uiuiG9gq"
+                thumbnail: "assets/images/thumbnails/gouki_intermediate.jpg",
+                url: "https://youtu.be/P-oE9yV1MHc?si=3facKptAGenaLlYq"
             }
         ],
 
@@ -3019,7 +2896,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%99%E3%82%AC%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E8%B1%AA%E9%AC%BC%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -3027,10 +2904,11 @@ recommend:[
             {
                 type: "search",
                 title: "対戦動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%99%E3%82%AC%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
+                url: "https://www.youtube.com/results?search_query=%E8%B1%AA%E9%AC%BC%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
             }
         ]
     }
+
 },
 terry:{
     id:"terry",
@@ -3141,7 +3019,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%83%86%E3%83%AA%E3%83%BC%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%83%86%E3%83%AA%E3%83%BC%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -3263,7 +3141,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E8%88%9E%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E8%88%9E%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -3387,7 +3265,7 @@ comboVideos:{
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%A8%E3%83%AC%E3%83%8A%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%82%A8%E3%83%AC%E3%83%8A%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -3402,6 +3280,128 @@ comboVideos:{
 },
 },
 
+bison:{
+    id:"bison",
+    name:"ベガ",
+    image:"assets/images/characters/bison.jpg",
+    release:"Year2",
+    type:"パワー型",
+    difficulty:3,
+    hp:10000,
+    combo:2,
+    power:5,
+    speed:4,
+    defense:2,
+    reach:4,
+    beginner:3,
+    rush:5,
+    projectile:false,
+    invincible:false,
+    antiAir:2,
+    commandGrab:false,
+
+    stats:{
+        power:5,
+        speed:4,
+        defense:2,
+        reach:4,
+        beginner:3
+    },
+
+    playstyle:"ラッシュ",
+
+concept:
+"高い機動力と素早い攻めを武器に、一気に攻撃を畳み掛けて相手を追い詰めるキャラクター。",
+range:"近距離",
+strengths:[
+    "攻め継続能力が高い",
+    "機動力に優れる",
+    "ラッシュとの相性が非常に良い"
+],
+
+weaknesses:[
+    "守りはやや不安定",
+    "無理な攻めは反撃を受けやすい",
+    "火力を伸ばすにはコンボ練習が必要"
+],
+
+recommend:[
+    "攻め続けるプレイが好きな人",
+    "スピード感のある試合を楽しみたい人",
+    "スタイリッシュなキャラを使いたい人"
+],
+
+    matchups:{
+    strong:[
+        {
+            id:"manon",
+            reason:"攻めを継続して投げを狙わせにくい"
+        },
+        {
+            id:"ehonda",
+            reason:"頭突きに対応しながら主導権を握りやすい"
+        },
+        {
+            id:"marisa",
+            reason:"機動力で重い通常技をかわしやすい"
+        }
+    ],
+
+    weak:[
+        {
+            id:"cammy",
+            reason:"接近戦で素早く攻め込まれやすい"
+        },
+        {
+            id:"zangief",
+            reason:"一度捕まると火力差で押し切られやすい"
+        },
+        {
+            id:"chunli",
+            reason:"通常技の差し返し性能で苦戦しやすい"
+        }
+    ]
+},
+
+    related:{
+        characters:["gouki","jp","aki"],
+        players:{pros:["dogura","yanai","nemo"],streamers:[],vtubers:[],youtubers:[]}
+    },
+
+    comboVideos: {
+        beginner: [
+            {
+                title: "初心者コンボ",
+                thumbnail: "assets/images/thumbnails/bison_beginner.jpg",
+                url: "https://youtu.be/U_fq20cnfdg?si=ziuSAABQag6WoVYt"
+            }
+        ],
+
+        intermediate: [
+            {
+                title: "中級コンボ",
+                thumbnail: "assets/images/thumbnails/bison_intermediate.jpg",
+                url: "https://youtu.be/H3m9GlRQ0vU?si=kQGKmVO_uiuiG9gq"
+            }
+        ],
+
+        advanced: [
+            {
+                type: "search",
+                title: "上級者向けの動画を探す",
+                url: "https://www.youtube.com/results?search_query=%E3%83%99%E3%82%AC%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+            }
+        ],
+
+        match: [
+            {
+                type: "search",
+                title: "対戦動画を探す",
+                url: "https://www.youtube.com/results?search_query=%E3%83%99%E3%82%AC%20%E5%AF%BE%E6%88%A6%E5%8B%95%E7%94%BB%20SF6"
+            }
+        ]
+    }
+},
 sagat:{
     id:"sagat",
     name:"サガット",
@@ -3511,7 +3511,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%B5%E3%82%AC%E3%83%83%E3%83%88%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%82%B5%E3%82%AC%E3%83%83%E3%83%88%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -3632,7 +3632,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=C.%E3%83%B4%E3%82%A1%E3%82%A4%E3%83%91%E3%83%BC%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=C.%E3%83%B4%E3%82%A1%E3%82%A4%E3%83%91%E3%83%BC%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -3753,7 +3753,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%A2%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%82%A2%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 
@@ -3874,7 +3874,7 @@ recommend:[
             {
                 type: "search",
                 title: "上級者向けの動画を探す",
-                url: "https://www.youtube.com/results?search_query=%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%20%E4%B8%8A%E7%B4%9A%E8%80%85%20%E6%94%BB%E7%95%A5%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
+                url: "https://www.youtube.com/results?search_query=%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%20%E4%B8%8A%E7%B4%9A%20%E3%82%B3%E3%83%B3%E3%83%9C%20%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A%20%E8%A7%A3%E8%AA%AC%20%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6"
             }
         ],
 

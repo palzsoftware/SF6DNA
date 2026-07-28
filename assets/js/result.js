@@ -5,6 +5,17 @@ const proPlayerArea = document.getElementById("proPlayerArea");
 const statusArea =document.getElementById("statusArea");
 const result = localStorage.getItem("sf6dna_result");
 const score =JSON.parse(localStorage.getItem("sf6dna_score"));
+
+// ===== 診断モード表示(初心者用/上級者用) =====
+const diagnosisModeUsed = localStorage.getItem("sf6dna_diagnosis_mode") || "beginner";
+const resultModeBadgeEl = document.getElementById("resultModeBadge");
+if (resultModeBadgeEl) {
+    resultModeBadgeEl.textContent =
+        diagnosisModeUsed === "advanced" ? "🔥 上級者用診断の結果" : "⚡ 初心者用診断の結果";
+    resultModeBadgeEl.classList.add(
+        diagnosisModeUsed === "advanced" ? "mode-badge-advanced" : "mode-badge-beginner"
+    );
+}
 const resultType = document.getElementById("resultType");
 const resultDescription = document.getElementById("resultDescription");
 const resultCharacters = document.getElementById("resultCharacters");
@@ -147,6 +158,79 @@ function calculateCharacterRecommendations(scoreObj, topN = 3) {
 
 const recommendedCharacters = calculateCharacterRecommendations(score, 3);
 
+// ===== 苦手になりやすいキャラクター(スコア配分から動的算出) =====
+// 「〇〇型だからこのキャラが苦手」という固定リストではなく、
+// ユーザーの8軸スコアの中で相対的に低い軸(弱点)を特定し、
+// その軸のDNA評価が高いキャラクター(=弱点を突いてきやすい相手)を選ぶ。
+// これにより、同じ診断タイプでもスコア配分が違えば違う苦手キャラが出る。
+
+const AXIS_TRAIT_LABELS = {
+    aggressive: { weak: "攻めの継続力", strong: "攻めを継続してくる" },
+    defensive: { weak: "守りの堅さ", strong: "守りが堅く崩しにくい" },
+    zoning: { weak: "間合い管理", strong: "間合い管理が巧みで距離を詰めさせない" },
+    balanced: { weak: "対応力の高さ", strong: "隙が少なく対応力が高い" },
+    reading: { weak: "読み合いの精度", strong: "読みが鋭く行動を見切ってくる" },
+    combo: { weak: "コンボの安定感", strong: "一度捕まると火力が高い" },
+    strategy: { weak: "対策・分析力", strong: "対策や研究がしっかりしている" },
+    instinct: { weak: "勝負強さ", strong: "土壇場での勝負強さがある" }
+};
+
+function calculateWeakCharacters(scoreObj, topN = 3) {
+
+    const axes = Object.keys(scoreObj);
+
+    const average =
+        axes.reduce((sum, axis) => sum + (scoreObj[axis] || 0), 0) / axes.length;
+
+    // 平均より低い軸ほど「弱点」として重みを持たせる
+    const weakness = {};
+    axes.forEach(axis => {
+        weakness[axis] = Math.max(0, average - (scoreObj[axis] || 0));
+    });
+
+    const scored = Object.keys(characterEvaluation).map(id => {
+
+        const dna = characterEvaluation[id].dna;
+        if (!dna) return null;
+
+        // このキャラが、ユーザーの弱点軸をどれだけ強く突いてくるか
+        let matchScore = 0;
+        let topAxis = null;
+        let topAxisContribution = -1;
+
+        axes.forEach(axis => {
+            const contribution = weakness[axis] * (dna[axis] || 0);
+            matchScore += contribution;
+
+            if (contribution > topAxisContribution) {
+                topAxisContribution = contribution;
+                topAxis = axis;
+            }
+        });
+
+        const charInfo = characterData[id];
+        if (!charInfo) return null;
+
+        const traitLabel = topAxis ? AXIS_TRAIT_LABELS[topAxis] : null;
+
+        return {
+            id,
+            matchScore,
+            reason: traitLabel
+                ? `あなたは「${traitLabel.weak}」がやや控えめな傾向があるため、${traitLabel.strong}${charInfo.name}のようなキャラには苦戦しやすい可能性があります。`
+                : `プレイスタイルの噛み合わせによっては、苦戦する可能性があるキャラクターです。`
+        };
+
+    }).filter(entry => entry !== null && entry.matchScore > 0);
+
+    scored.sort((a, b) => b.matchScore - a.matchScore);
+
+    return scored.slice(0, topN);
+
+}
+
+const dynamicWeakCharacters = calculateWeakCharacters(score, 3);
+
 
 recommendedTactics.innerHTML = "";
 
@@ -154,9 +238,11 @@ resultData[result].recommendedTactics.forEach(tactic => {
 
     recommendedTactics.innerHTML += `
 
-    <div class="character-card">
+    <div class="tactic-card">
 
-        <h4>🔥 ${tactic}</h4>
+        <h4>🔥 ${tactic.title}</h4>
+
+        <p>${tactic.detail}</p>
 
     </div>
 
@@ -233,7 +319,17 @@ resultWeaknesses.innerHTML = "";
 
 resultData[result].weaknesses.forEach(item => {
 
-    resultWeaknesses.innerHTML += `<li>${item}</li>`;
+    resultWeaknesses.innerHTML += `
+    <li class="weakness-item">
+        <div class="weakness-front">
+            <span>${item.text}</span>
+            <span class="weakness-hint">カーソルを合わせると改善点が見れます ▶</span>
+        </div>
+        <div class="weakness-improve">
+            💡 ${item.improve}
+        </div>
+    </li>
+    `;
 
 });
 const status = resultData[result].status;
@@ -268,10 +364,10 @@ scoreArea.innerHTML = Object.keys(score).map(key => `
 
 // プレイ傾向: 診断と同じ8軸すべてを星評価で表示
 const statusLabels = {
-    aggressive: "攻撃力",
-    defensive: "守備力",
+    aggressive: "攻めの強さ",
+    defensive: "受けの堅さ",
     zoning: "間合い管理",
-    balanced: "万能性",
+    balanced: "対応力",
     reading: "読み合い",
     combo: "コンボ火力",
     strategy: "戦略性",
@@ -290,7 +386,7 @@ statusArea.innerHTML = Object.keys(statusLabels).map(key => {
 
 resultWeakCharacters.innerHTML = "";
 
-resultData[result].weakCharacters.forEach(weak => {
+dynamicWeakCharacters.forEach(weak => {
 
     const charInfo = characterData[weak.id];
     if (!charInfo) return;
@@ -322,10 +418,7 @@ resultData[result].matchups.forEach(type => {
 
         <h4>${type.name}</h4>
 
-        <div class="matchup-stars">
-            ${"★".repeat(type.rate)}
-            ${"☆".repeat(5 - type.rate)}
-        </div>
+        <div class="matchup-stars">${"★".repeat(type.rate)}${"☆".repeat(5 - type.rate)}</div>
 
         <p>${type.reason}</p>
 
@@ -360,9 +453,13 @@ function renderProPlayers(country){
 
     const countryLabel = country === "japan" ? "🇯🇵 日本勢" : "🌍 海外勢";
 
-    resultData[result].proPlayers[country].forEach(entry => {
+    const entries = country === "japan"
+        ? getDynamicJapanProPlayers(score)
+        : resultData[result].proPlayers.world;
 
-        const info = proPlayerDirectory[entry.id];
+    entries.forEach(entry => {
+
+        const info = proPlayerDirectory[entry.id] || dynamicPlayerToDirectoryEntry(entry.id);
         if (!info) return;
 
         const charInfo = characterData[info.characterId];
@@ -376,7 +473,7 @@ function renderProPlayers(country){
 
 <a
     class="character-card pro-player-card"
-    href="pro-player.html?id=${entry.id}"
+    href="player.html?id=${entry.id}"
 >
 
     <span class="country-badge">${countryLabel}</span>
@@ -400,6 +497,92 @@ function renderProPlayers(country){
 `;
 
     });
+
+}
+
+// ===== 日本勢おすすめプロプレイヤーの動的選出 =====
+// 「診断タイプ1つ」だけでなく、8軸すべてのスコアを重みとして使い、
+// 選手のプレイスタイル(style)とどれだけマッチするかを算出する。
+// これにより、同じ診断タイプでもスコアの配分(何点でその型になったか)が
+// 違えば、違うおすすめ選手が表示されるようになる。
+const AXIS_STYLE_KEYWORDS = {
+    aggressive: ["攻撃", "攻め", "爆発力"],
+    defensive: ["堅実", "対応", "守"],
+    zoning: ["待ち", "間合い"],
+    balanced: ["万能", "バランス"],
+    reading: ["読み合い"],
+    combo: ["技巧", "コンボ"],
+    strategy: ["研究", "分析", "攻略"],
+    instinct: ["挑戦", "勝負", "型"]
+};
+
+function getDynamicJapanProPlayers(scoreObj) {
+
+    const axes = Object.keys(scoreObj);
+
+    const candidates = Object.values(proData)
+        .filter(p => p.style)
+        .map(p => {
+
+            // このプレイヤーのstyleが、ユーザーのどの軸のキーワードに
+            // 一致するかを見て、一致した軸のスコアの合計をマッチ度とする
+            let matchScore = 0;
+            let bestAxis = null;
+            let bestAxisScore = -1;
+
+            axes.forEach(axis => {
+                const keywords = AXIS_STYLE_KEYWORDS[axis] || [];
+                const hit = keywords.some(kw => p.style.includes(kw));
+                if (hit) {
+                    const s = scoreObj[axis] || 0;
+                    matchScore += s;
+                    if (s > bestAxisScore) {
+                        bestAxisScore = s;
+                        bestAxis = axis;
+                    }
+                }
+            });
+
+            return { player: p, matchScore, bestAxis };
+
+        })
+        .filter(entry => entry.matchScore > 0);
+
+    candidates.sort((a, b) => b.matchScore - a.matchScore);
+
+    // マッチする選手が3人未満の場合は、既存の固定リストで不足分を補う
+    const fallback = resultData[result].proPlayers.japan;
+
+    const picked = candidates.slice(0, 3).map(entry => ({
+        id: entry.player.id,
+        reason: `プレイスタイル「${entry.player.style}」が、あなたのスコア配分と特に近い選手です。`
+    }));
+
+    while (picked.length < 3 && fallback[picked.length]) {
+        picked.push(fallback[picked.length]);
+    }
+
+    return picked;
+
+}
+
+// proPlayerDirectory(固定6名)に無い、動的に選ばれた選手用に
+// playerDataから同じ形式の情報を組み立てる
+function dynamicPlayerToDirectoryEntry(id) {
+
+    const player = typeof playerData !== "undefined" ? playerData[id] : null;
+    if (!player) return null;
+
+    const mainCharId = player.characters && player.characters[0];
+    const mainCharName = mainCharId && characterData[mainCharId] ? characterData[mainCharId].name : "";
+
+    return {
+        name: player.name,
+        characterId: mainCharId,
+        character: mainCharName,
+        image: player.image || "",
+        country: "japan"
+    };
 
 }
 
@@ -567,11 +750,23 @@ renderHistory();
 
 clearHistoryButton.addEventListener("click", () => {
 
-    const ok = confirm("診断履歴をすべて削除しますか？（保存済みの診断はfavorites.htmlに残ります）");
+    const ok = confirm("診断履歴を削除しますか？（保存済みの診断は残ります）");
     if (!ok) return;
 
-    localStorage.removeItem("sf6dna_history");
+    // saved:true(お気に入り登録済み)のものは履歴からも削除しない
+    const currentHistory = JSON.parse(
+        localStorage.getItem("sf6dna_history")
+    ) || [];
+
+    const keptHistory = currentHistory.filter(h => h.saved);
+
+    localStorage.setItem(
+        "sf6dna_history",
+        JSON.stringify(keptHistory)
+    );
+
     history.length = 0;
+    history.push(...keptHistory);
 
     renderHistory();
 
@@ -606,3 +801,69 @@ if ("IntersectionObserver" in window) {
     });
 
 }
+
+// ===== おすすめ動画(診断タイプに合わせて座学系の動画を取得) =====
+const VIDEO_API_BASE_URL = "https://sf6dna-backend.onrender.com";
+
+const recommendedVideosArea = document.getElementById("recommendedVideosArea");
+
+async function loadRecommendedVideos() {
+
+    const typeName = resultData[result].name;
+
+    // タイプごとに座学として学べそうな検索クエリを組み立てる
+    const queries = [
+        `${typeName} 立ち回り 座学 ストリートファイター6`,
+        `SF6 初心者 上達 コツ 解説`,
+    ];
+
+    let videos = [];
+
+    if (VIDEO_API_BASE_URL) {
+
+        for (const q of queries) {
+
+            try {
+
+                const url = `${VIDEO_API_BASE_URL}/api/videos/search?q=${encodeURIComponent(q)}&max=6`;
+                const res = await fetch(url);
+
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.results && data.results.length > 0) {
+                        videos = videos.concat(data.results);
+                    }
+                }
+
+            } catch (err) {
+                console.warn("[recommendedVideos] 取得に失敗しました", err);
+            }
+
+            if (videos.length >= 5) break;
+
+        }
+
+    }
+
+    if (videos.length === 0) {
+
+        // API取得に失敗、または0件だった場合の代替表示
+        recommendedVideosArea.innerHTML = `
+            <p class="video-empty">現在関連動画はありません</p>
+        `;
+        return;
+
+    }
+
+    recommendedVideosArea.innerHTML = videos.slice(0, 10).map(video => `
+        <a class="video-scroll-card" href="${video.url}" target="_blank" rel="noopener">
+            <img src="${video.thumbnail}" alt="${video.title}">
+            <div class="video-scroll-info">
+                <h4>${video.title}</h4>
+            </div>
+        </a>
+    `).join("");
+
+}
+
+loadRecommendedVideos();

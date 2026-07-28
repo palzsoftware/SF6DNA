@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ランク管理 | SF6 DNA</title>
+
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/components-v2.css">
+<link rel="stylesheet" href="assets/css/rank-tracker.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+SF6 DNA
+</a>
+
+<button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<nav class="nav">
+
+    <a href="index.html">TOP</a>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            診断 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="diagnosis.html"><span>📝 START</span>診断する</a>
+
+<a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+<a href="rank-tracker.html"><span>📈 RANK</span>ランク管理</a>
+
+</div>
+
+    </div>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            図鑑 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="characters.html"><span>🎮 CHARACTER</span>キャラクター図鑑</a>
+
+<a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
+
+<a href="team.html"><span>🏆 TEAM</span>チーム図鑑</a>
+
+</div>
+
+    </div>
+
+    <a href="compare.html">比較</a>
+    <a href="about.html">About</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<main class="container">
+
+    <div class="page-header">
+
+        <p class="section-label">RANK</p>
+        <h1>ランク管理</h1>
+
+        <p>
+            自分のMR（マスターレート）の推移を記録できます。公式サイトで確認したMRを手動で入力してください。
+        </p>
+
+    </div>
+
+    <section class="rank-input-section">
+
+        <h2>今日の記録を追加</h2>
+
+        <form id="rankForm" class="rank-form">
+
+            <label>
+                日付
+                <input type="date" name="date" id="rankDate" required>
+            </label>
+
+            <label>
+                MR（マスターレート）
+                <input type="number" name="mr" placeholder="例：1650" min="0" required>
+            </label>
+
+            <label>
+                LP（リーグポイント・任意）
+                <input type="number" name="lp" placeholder="例：45000" min="0">
+            </label>
+
+            <label>
+                使用キャラ（任意）
+                <select name="character" id="rankCharacterSelect">
+                    <option value="">選択しない</option>
+                </select>
+            </label>
+
+            <label class="rank-form-note-field">
+                メモ（任意）
+                <input type="text" name="note" placeholder="例：連勝中、調子が良い">
+            </label>
+
+            <button type="submit" class="btn btn-primary">
+                記録を追加
+            </button>
+
+        </form>
+
+    </section>
+
+    <section class="rank-chart-section">
+
+        <h2>MR推移グラフ</h2>
+
+        <div id="rankChartArea" class="rank-chart-area">
+            <p class="rank-empty">まだ記録がありません。上のフォームから記録を追加してください。</p>
+        </div>
+
+    </section>
+
+    <section class="rank-history-section">
+
+        <div class="history-header">
+
+            <h2>記録一覧</h2>
+
+            <button id="clearRankButton" class="btn btn-secondary btn-small">
+                全て削除
+            </button>
+
+        </div>
+
+        <div id="rankHistoryArea" class="rank-history-area"></div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    © 2026 SF6 DNA Project
+</footer>
+
+<script src="assets/js/character-data.js"></script>
+<script src="assets/js/rank-tracker.js"></script>
+
+<script src="assets/js/nav.js"></script>
+
+</body>
+
+</html>

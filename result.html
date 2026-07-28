@@ -50,6 +50,8 @@ SF6 DNA
 
 <a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
 
+<a href="rank-tracker.html"><span>📈 RANK</span>ランク管理</a>
+
 </div>
 
     </div>
@@ -90,6 +92,8 @@ SF6 DNA
     <p class="result-label">
         DIAGNOSIS COMPLETE
     </p>
+
+    <p id="resultModeBadge" class="mode-badge"></p>
 
     <p class="hero-comment">
 
@@ -175,7 +179,7 @@ class="result-summary">
 
     <a href="#strengths">▶ 長所</a>
 
-    <a href="#weaknesses">▶ 苦手</a>
+    <a href="#weaknesses">▶ 短所</a>
 
     <a href="#characters">▶ おすすめキャラクター</a>
 
@@ -184,6 +188,8 @@ class="result-summary">
     <a href="#weakCharacters">▶ 苦手キャラクター</a>
 
     <a href="#matchups">▶ 対戦相性</a>
+
+    <a href="#recommendedVideos">▶ おすすめ動画</a>
 
     <a href="#history">▶ 診断履歴</a>
 
@@ -265,9 +271,9 @@ class="result-summary">
 
     <div class="result-section" id="weaknesses">
 
-    <h3>苦手</h3>
+    <h3>短所</h3>
 
-    <ul id="resultWeaknesses"></ul>
+    <ul id="resultWeaknesses" class="weakness-list"></ul>
 
 </div>
 
@@ -303,11 +309,21 @@ class="result-summary">
 
     <h3>対戦相性</h3>
 
+    <div id="resultMatchups"></div>
+
+</div>
+
+<div class="result-section" id="recommendedVideos">
+
+    <h3>あなたにおすすめの動画</h3>
+
     <p class="section-lead">
-        ※「あなたが対戦相手として当たった時」の相性です（チームの相性ではありません）
+        あなたの診断タイプに合った、座学として学べる動画をピックアップしました
     </p>
 
-    <div id="resultMatchups"></div>
+    <div id="recommendedVideosArea" class="video-scroll-row">
+        <p class="video-empty">動画を読み込み中です…</p>
+    </div>
 
 </div>
 
@@ -353,6 +369,11 @@ class="result-summary">
 <script src="assets/js/character-data.js"></script>
 <script src="assets/js/character-evaluation.js"></script>
 <script src="assets/js/pro-player-directory.js"></script>
+<script src="assets/js/pro.js"></script>
+<script src="assets/js/streamer.js"></script>
+<script src="assets/js/vtuber.js"></script>
+<script src="assets/js/youtuber.js"></script>
+<script src="assets/js/player-data.js"></script>
 <script src="assets/js/result-data.js"></script>
 
 <script src="assets/js/result.js"></script>
