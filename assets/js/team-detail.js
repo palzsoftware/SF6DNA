@@ -145,42 +145,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const videosArea = document.getElementById("teamVideosArea");
 
-        const query = `${team.name} ストリートファイターリーグ 対戦 アーカイブ`;
-
         if (!VIDEO_API_BASE_URL) {
             videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
             return;
         }
 
-        try {
+        // 1回目のクエリで見つからない場合、表記を変えて再検索する
+        // (SFLでの対戦動画は「正式チーム名」よりも「SFL」+チーム名の略称で
+        //  ヒットしやすい傾向があるため)
+        const queries = [
+            `SFL ${team.name} 対戦`,
+            `${team.name} ストリートファイターリーグ 対戦 アーカイブ`,
+            `${team.name} SFL ハイライト`,
+            `ストリートファイター6 ${team.name}`,
+        ];
 
-            const url = `${VIDEO_API_BASE_URL}/api/videos/search?q=${encodeURIComponent(query)}&max=8`;
-            const res = await fetch(url);
+        for (const query of queries) {
 
-            if (!res.ok) throw new Error("API error");
+            try {
 
-            const data = await res.json();
+                const url = `${VIDEO_API_BASE_URL}/api/videos/search?q=${encodeURIComponent(query)}&max=8`;
+                const res = await fetch(url);
 
-            if (!data.results || data.results.length === 0) {
-                videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
-                return;
+                if (!res.ok) continue;
+
+                const data = await res.json();
+
+                if (data.results && data.results.length > 0) {
+
+                    videosArea.innerHTML = data.results.map(video => `
+                        <a class="video-scroll-card" href="${video.url}" target="_blank" rel="noopener">
+                            <img src="${video.thumbnail}" alt="${video.title}">
+                            <div class="video-scroll-info">
+                                <h4>${video.title}</h4>
+                            </div>
+                        </a>
+                    `).join("");
+
+                    return;
+
+                }
+
+            } catch (err) {
+
+                console.warn("[teamVideos] 取得に失敗しました", query, err);
+
             }
 
-            videosArea.innerHTML = data.results.map(video => `
-                <a class="video-scroll-card" href="${video.url}" target="_blank" rel="noopener">
-                    <img src="${video.thumbnail}" alt="${video.title}">
-                    <div class="video-scroll-info">
-                        <h4>${video.title}</h4>
-                    </div>
-                </a>
-            `).join("");
-
-        } catch (err) {
-
-            console.warn("[teamVideos] 取得に失敗しました", err);
-            videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
-
         }
+
+        // すべてのクエリで取得できなかった場合
+        videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
 
     }
 
