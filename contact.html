@@ -7,14 +7,13 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>チーム詳細 | SF6 DNA</title>
+    <title>お問い合わせ | SF6 DNA</title>
 
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
-<link rel="stylesheet" href="assets/css/components-v2.css">
-    <link rel="stylesheet" href="assets/css/team.css">
+    <link rel="stylesheet" href="assets/css/components-v2.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/view-mode.css">
 
@@ -78,16 +77,17 @@ SF6 DNA
 
 <a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
 
-<a href="team.html" class="active"><span>🏆 TEAM</span>チーム図鑑</a>
+<a href="team.html"><span>🏆 TEAM</span>チーム図鑑</a>
 
 </div>
 
     </div>
 
     <a href="compare.html">比較</a>
+
     <div class="dropdown">
 
-        <button class="dropdown-button">
+        <button class="dropdown-button active">
 
             About ▼
 
@@ -97,7 +97,7 @@ SF6 DNA
 
     <a href="about.html"><span>ℹ️ OVERVIEW</span>About概要</a>
 
-<a href="contact.html"><span>✉️ CONTACT</span>お問い合わせ</a>
+<a href="contact.html" class="active"><span>✉️ CONTACT</span>お問い合わせ</a>
 
 <a href="faq.html"><span>❓ FAQ</span>よくある質問</a>
 
@@ -117,68 +117,69 @@ SF6 DNA
 
 <main class="container">
 
-    <section class="team-detail">
+    <div class="page-header">
 
-        <img
-            id="teamLogo"
-            class="team-logo"
-        >
+        <p class="section-label">CONTACT</p>
 
-        <h1 id="teamName"></h1>
+        <h1>お問い合わせ</h1>
 
-        <p id="teamCountry" class="team-country"></p>
+    </div>
 
-        <p id="teamDescription"></p>
+    <nav class="about-subnav">
 
-        <p id="teamSflRank" class="team-sfl-rank"></p>
+        <a href="about.html">概要</a>
+        <a href="contact.html" class="active">お問い合わせ</a>
+        <a href="faq.html">よくある質問</a>
+        <a href="changelog.html">バージョン情報</a>
+        <a href="sources.html">参照サイト一覧</a>
 
-        <a
-            id="teamOfficialLink"
-            class="btn btn-secondary"
-            target="_blank"
-            rel="noopener"
-        >
-            🔗 公式サイト
-        </a>
+    </nav>
 
-        <h3 class="team-roster-heading" id="currentRosterHeading">現在のロスター</h3>
+    <section class="about-contact-section">
 
-        <div
-            id="teamPlayers"
-            class="team-player-grid"
-        ></div>
+        <p class="about-contact-note">
+            データ誤りのご指摘・プレイヤー掲載のご希望・ご意見ご要望など、お気軽にお送りください。
+        </p>
 
-    </section>
+        <form id="contactForm" class="contact-form">
 
-    <section class="team-detail-section" id="rosterHistorySection" style="display:none;">
+            <label>
+                お名前（任意）
+                <input type="text" name="name" placeholder="例：山田太郎">
+            </label>
 
-        <h2>年代別ロスター</h2>
+            <label>
+                ご用件の種類
+                <select name="category">
+                    <option>データの誤りを報告する</option>
+                    <option>プレイヤー・チームの掲載希望</option>
+                    <option>その他のご意見・ご要望</option>
+                </select>
+            </label>
 
-        <div id="rosterHistoryArea"></div>
+            <label>
+                メールアドレス（返信が必要な場合）
+                <input type="email" name="email" placeholder="例：example@mail.com">
+            </label>
 
-    </section>
+            <label>
+                内容
+                <textarea name="message" rows="5" placeholder="内容をご記入ください" required></textarea>
+            </label>
 
-    <section class="team-detail-section">
+            <button type="submit" class="btn btn-primary">
+                送信する
+            </button>
 
-        <h2>チームの対戦動画・アーカイブ</h2>
+            <p id="contactStatus" class="contact-status"></p>
 
-        <div id="teamVideosArea" class="video-scroll-row">
-            <p class="video-empty">動画を読み込み中です…</p>
-        </div>
+        </form>
 
     </section>
 
 </main>
 
-<script src="assets/js/character-data.js"></script>
-<script src="assets/js/pro.js"></script>
-<script src="assets/js/streamer.js"></script>
-<script src="assets/js/vtuber.js"></script>
-<script src="assets/js/youtuber.js"></script>
-<script src="assets/js/player-data.js"></script>
-<script src="assets/js/team-data.js"></script>
-<script src="assets/js/team-detail.js"></script>
-
+<script src="assets/js/about.js"></script>
 <script src="assets/js/nav.js"></script>
 
 </body>

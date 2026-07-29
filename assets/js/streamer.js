@@ -55,4 +55,34 @@ const streamerData = {
         twitter:""
     },
 
+    kosaku:{
+        id:"kosaku",
+        name:"コサク",
+        type:"streamer",
+        country:"日本",
+        team:"TOPANGA / VARREL",
+        image:"",
+        main:["elena"],
+        style:"",
+        characters:["elena","cammy"],
+        youtube:"",
+        twitch:"",
+        twitter:"https://x.com/kosaku_075"
+    },
+
+    takera:{
+        id:"takera",
+        name:"takera",
+        type:"streamer",
+        country:"日本",
+        team:"忍ism Gaming",
+        image:"",
+        main:["deejay"],
+        style:"",
+        characters:["deejay","bison"],
+        youtube:"",
+        twitch:"https://www.twitch.tv/takera0628",
+        twitter:"https://x.com/takeraketa"
+    },
+
 };

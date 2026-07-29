@@ -104,6 +104,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    // ===== 年代別ロスター(データがあるチームのみ表示) =====
+    if (team.rosterHistory) {
+
+        document.getElementById("currentRosterHeading").style.display = "";
+
+        const rosterHistorySection = document.getElementById("rosterHistorySection");
+        const rosterHistoryArea = document.getElementById("rosterHistoryArea");
+
+        rosterHistorySection.style.display = "";
+
+        // 新しい年が上に来るように降順で表示する
+        const years = Object.keys(team.rosterHistory).sort((a, b) => b.localeCompare(a));
+
+        rosterHistoryArea.innerHTML = years.map(year => {
+
+            const memberNames = team.rosterHistory[year]
+                .map(pid => playerData[pid] ? playerData[pid].name : pid)
+                .join(" ・ ");
+
+            return `
+                <div class="roster-history-item">
+                    <span class="roster-history-year">${year}年</span>
+                    <span class="roster-history-members">${memberNames}</span>
+                </div>
+            `;
+
+        }).join("");
+
+    } else {
+
+        document.getElementById("currentRosterHeading").style.display = "none";
+
+    }
+
     // ===== チームの対戦動画・アーカイブ(API取得) =====
     const VIDEO_API_BASE_URL = "https://sf6dna-backend.onrender.com";
 

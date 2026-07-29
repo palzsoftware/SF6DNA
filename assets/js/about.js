@@ -66,6 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const faqItems = document.querySelectorAll(".faq-item");
     const faqNoResult = document.getElementById("faqNoResult");
 
+    if (faqSearch && faqItems.length > 0) {
+
     // アコーディオン開閉
     faqItems.forEach(item => {
 
@@ -115,5 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         faqNoResult.style.display = visibleCount === 0 ? "" : "none";
 
     });
+
+    }
 
 });

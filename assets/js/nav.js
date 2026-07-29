@@ -4,6 +4,84 @@
 //   クリック/タップでも開閉できるようにする
 document.addEventListener("DOMContentLoaded", () => {
 
+    // ヘッダーの実際の高さを測ってCSS変数に反映する。
+    // ハンバーガーメニューのパネルがヘッダー直下からズレず開くようにするため
+    // (画面幅やフォントサイズでヘッダーの高さが変わってもズレない)
+    const header = document.querySelector(".site-header");
+
+    function updateHeaderHeight() {
+        if (header) {
+            document.documentElement.style.setProperty(
+                "--header-height",
+                `${header.offsetHeight}px`
+            );
+        }
+    }
+
+    updateHeaderHeight();
+    window.addEventListener("resize", updateHeaderHeight);
+
+    // ===== PC版/スマホ版 表示切り替え =====
+    // - 「force-mobile」: 実際の画面幅に関わらず、カード類・文字サイズをスマホ向けに強制する
+    //   (PCの広い画面でスマホでの見え方を確認したい場合に使う)
+    // - 「force-pc」: スマホの実機で見ていても、meta viewportの幅を広げてPC版のレイアウトを
+    //   強制表示する(いわゆる「デスクトップ用サイトを見る」と同じ仕組み)
+    const viewModeToggle = document.getElementById("viewModeToggle");
+    const viewportMeta = document.querySelector('meta[name="viewport"]');
+    const defaultViewportContent = viewportMeta ? viewportMeta.getAttribute("content") : "width=device-width, initial-scale=1.0";
+
+    function applyViewMode(mode) {
+
+        document.body.classList.remove("force-mobile", "force-pc");
+
+        if (mode === "mobile") {
+            document.body.classList.add("force-mobile");
+            if (viewModeToggle) {
+                viewModeToggle.textContent = "🖥️";
+                viewModeToggle.title = "PC版の表示に切り替えます";
+            }
+        } else if (mode === "pc") {
+            document.body.classList.add("force-pc");
+            // meta viewportの幅を広げることで、スマホ実機でもPC版レイアウトで表示させる
+            if (viewportMeta) {
+                viewportMeta.setAttribute("content", "width=1280");
+            }
+            if (viewModeToggle) {
+                viewModeToggle.textContent = "📱";
+                viewModeToggle.title = "スマホ版の表示に切り替えます";
+            }
+        } else {
+            // "auto": 実際の画面幅にそのまま従う(初期状態)
+            if (viewportMeta) {
+                viewportMeta.setAttribute("content", defaultViewportContent);
+            }
+            if (viewModeToggle) {
+                viewModeToggle.textContent = "📱";
+                viewModeToggle.title = "PC版/スマホ版の表示を切り替えます";
+            }
+        }
+
+    }
+
+    if (viewModeToggle) {
+
+        const savedMode = localStorage.getItem("sf6dna_view_mode") || "auto";
+        applyViewMode(savedMode);
+
+        viewModeToggle.addEventListener("click", () => {
+
+            const current = localStorage.getItem("sf6dna_view_mode") || "auto";
+
+            // auto/pc状態からは「スマホ版を強制」へ、mobile状態からは「PC版を強制」へ切り替える
+            const next = current === "mobile" ? "pc" : "mobile";
+
+            localStorage.setItem("sf6dna_view_mode", next);
+            applyViewMode(next);
+
+        });
+
+    }
+
     const navToggle = document.getElementById("navToggle");
     const nav = document.querySelector(".site-header .nav");
 

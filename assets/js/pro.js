@@ -2678,4 +2678,34 @@ itabashizangief:{
         twitter:""
     },
 
+    go1:{
+        id:"go1",
+        name:"GO1",
+        type:"pro",
+        country:"日本",
+        team:"CAG OSAKA",
+        image:"",
+        main:["chunli"],
+        style:"",
+        characters:["chunli","cammy","luke","ehonda"],
+        youtube:"",
+        twitch:"",
+        twitter:"https://x.com/GO13151"
+    },
+
+    noble:{
+        id:"noble",
+        name:"Noble",
+        type:"pro",
+        country:"日本",
+        team:"",
+        image:"",
+        main:["luke"],
+        style:"",
+        characters:["luke"],
+        youtube:"",
+        twitch:"",
+        twitter:"https://x.com/Noble_fgc"
+    },
+
 };

@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/components-v2.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/view-mode.css">
 
 </head>
 
@@ -26,6 +27,10 @@
 <a href="index.html" class="logo">
 SF6 DNA
 </a>
+
+<button id="viewModeToggle" class="view-mode-toggle" aria-label="表示モード切り替え" title="PC版/スマホ版の表示を切り替えます">
+    📱
+</button>
 
 <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
     <span></span>
@@ -78,7 +83,29 @@ SF6 DNA
     </div>
 
     <a href="compare.html">比較</a>
-    <a href="about.html">About</a>
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            About ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="about.html"><span>ℹ️ OVERVIEW</span>About概要</a>
+
+<a href="contact.html"><span>✉️ CONTACT</span>お問い合わせ</a>
+
+<a href="faq.html"><span>❓ FAQ</span>よくある質問</a>
+
+<a href="changelog.html"><span>📝 LOG</span>バージョン情報</a>
+
+<a href="sources.html"><span>🔗 SOURCES</span>参照サイト一覧</a>
+
+</div>
+
+    </div>
 
 </nav>
 

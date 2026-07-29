@@ -260,3 +260,45 @@
 
     margin-bottom:16px;
 }
+
+/* ===========================
+   年代別ロスター
+=========================== */
+
+.team-roster-heading{
+
+    font-size:18px;
+
+    margin:32px 0 16px;
+}
+
+.roster-history-item{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:baseline;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #303847;
+}
+
+.roster-history-year{
+
+    flex-shrink:0;
+
+    width:70px;
+
+    font-weight:800;
+
+    color:var(--primary);
+}
+
+.roster-history-members{
+
+    color:var(--text-sub);
+
+    line-height:1.7;
+}

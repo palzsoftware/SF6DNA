@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>バージョン情報 | SF6 DNA</title>
+
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/components-v2.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/view-mode.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+SF6 DNA
+</a>
+
+<button id="viewModeToggle" class="view-mode-toggle" aria-label="表示モード切り替え" title="PC版/スマホ版の表示を切り替えます">
+    📱
+</button>
+
+<button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<nav class="nav">
+
+    <a href="index.html">TOP</a>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            診断 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="diagnosis.html"><span>📝 START</span>診断する</a>
+
+<a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+<a href="rank-tracker.html"><span>📈 RANK</span>ランク管理</a>
+
+</div>
+
+    </div>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            図鑑 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="characters.html"><span>🎮 CHARACTER</span>キャラクター図鑑</a>
+
+<a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
+
+<a href="team.html"><span>🏆 TEAM</span>チーム図鑑</a>
+
+</div>
+
+    </div>
+
+    <a href="compare.html">比較</a>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button active">
+
+            About ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="about.html"><span>ℹ️ OVERVIEW</span>About概要</a>
+
+<a href="contact.html"><span>✉️ CONTACT</span>お問い合わせ</a>
+
+<a href="faq.html"><span>❓ FAQ</span>よくある質問</a>
+
+<a href="changelog.html" class="active"><span>📝 LOG</span>バージョン情報</a>
+
+<a href="sources.html"><span>🔗 SOURCES</span>参照サイト一覧</a>
+
+</div>
+
+    </div>
+
+</nav>
+
+</div>
+
+</header>
+
+<main class="container">
+
+    <div class="page-header">
+
+        <p class="section-label">CHANGELOG</p>
+
+        <h1>バージョン情報</h1>
+
+        <p>SF6 DNAのこれまでの主な更新内容と、今後追加予定の機能をまとめています。</p>
+
+    </div>
+
+    <nav class="about-subnav">
+
+        <a href="about.html">概要</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="faq.html">よくある質問</a>
+        <a href="changelog.html" class="active">バージョン情報</a>
+        <a href="sources.html">参照サイト一覧</a>
+
+    </nav>
+
+    <section class="about-card">
+
+        <h2>今後追加予定</h2>
+
+        <ul class="changelog-upcoming-list">
+
+            <li>AIによるプレイ相談機能</li>
+            <li>プレイヤー・チーム情報のさらなる拡充</li>
+            <li>PC/スマホ表示の切り替え機能</li>
+            <li>ライトモード／ダークモードの切り替え</li>
+            <li>キャラクター情報の公式データ・使用率に基づく精査</li>
+            <li>初心者向け用語集</li>
+
+        </ul>
+
+    </section>
+
+    <section class="about-card">
+
+        <h2>これまでの主な更新</h2>
+
+        <div class="changelog-list">
+
+            <div class="changelog-item">
+                <h3>プレイヤー・チーム機能の拡充</h3>
+                <ul>
+                    <li>プレイヤー詳細ページに「学べるポイント」「大会実績」「おすすめ動画」タブを追加</li>
+                    <li>チーム図鑑に年代別ロスター・SFL出場状況・公式サイトリンクを追加</li>
+                    <li>ランク（MR）管理機能・推移グラフ（キャラクター別フィルタ対応）を追加</li>
+                </ul>
+            </div>
+
+            <div class="changelog-item">
+                <h3>診断機能の強化</h3>
+                <ul>
+                    <li>上級者用診断モード（全100問）を追加</li>
+                    <li>おすすめプロプレイヤー・苦手キャラクターを、8軸スコアの配分から動的に算出する方式に変更</li>
+                    <li>診断結果ページに「あなたに向いている戦術」の詳細解説を追加</li>
+                </ul>
+            </div>
+
+            <div class="changelog-item">
+                <h3>動画・データ連携</h3>
+                <ul>
+                    <li>YouTube動画自動取得API（キャラクター図鑑・プレイヤー図鑑・チーム図鑑・比較ページ）を追加</li>
+                </ul>
+            </div>
+
+            <div class="changelog-item">
+                <h3>基本機能</h3>
+                <ul>
+                    <li>プレイスタイル診断・診断結果ページを公開</li>
+                    <li>キャラクター図鑑・プレイヤー図鑑・チーム図鑑・比較ページを公開</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="assets/js/nav.js"></script>
+
+</body>
+
+</html>

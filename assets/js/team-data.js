@@ -218,6 +218,10 @@ const teamData = {
 
         description:"2015年設立、名古屋にホームスタジアムを構える国内トップクラスのプロeスポーツチーム。所属選手は60名を超え、格闘ゲームだけでなくMOBAやFPSなど幅広いタイトルで活動しています。格闘ゲーム部門は前年SFL得点王・MVPのKEI.Bを迎えた新体制です。",
 
+        rosterHistory:{
+            "2024": ["machabo", "itabashizangief", "keib", "nauman"]
+        },
+
         players:[
             "itabashizangief",
             "keib",
@@ -268,6 +272,11 @@ const teamData = {
 
         description:"2018年結成、「esports makes our life」を掲げるプロeスポーツチーム。世界選手権優勝経験を持つガチくん、さはらをはじめ、実力と人気を兼ね備えた選手が所属しています。",
 
+        rosterHistory:{
+            "2024": ["gachikun", "kawano", "pugera", "yhcmochi"],
+            "2025": ["gachikun", "kawano", "pugera", "sahara"]
+        },
+
         players:[
             "gachikun",
             "kawano",
@@ -292,6 +301,10 @@ const teamData = {
         sflRank:"2026シーズン Division S 出場中",
 
         description:"熊本を拠点に活動するチーム。長年チームを牽引したネモをコーチに据え、新リーダーのcosaを中心とした新体制でシーズンに挑んでいます。「熊本を、日本を、世界を照らす太陽のようなチームに」を目標に掲げています。",
+
+        rosterHistory:{
+            "2025": ["nemo", "machabo", "cosa", "kobayan"]
+        },
 
         players:[
             "cosa",
@@ -318,6 +331,10 @@ const teamData = {
         sflRank:"2026シーズン Division S 出場中",
 
         description:"2018年発足、「ゲーマーをかっこよく魅せる」をコンセプトに掲げる総合エンタメ型のeスポーツチーム。競技部門だけでなくストリーマー・クリエイター部門も抱え、独自大会「CR CUP」やイベント「CR FES」も主催しています。",
+
+        rosterHistory:{
+            "2025": ["dogura", "shuto", "kazunoko", "bonchan"]
+        },
 
         players:[
             "dogura",
@@ -368,6 +385,11 @@ const teamData = {
         sflRank:"2026シーズン Division F 出場中",
 
         description:"「名古屋を元気に」を理念に活動する、名古屋発のプロスポーツクラブ。名古屋ゆかりの選手が集う”ALL名古屋”体制で、地域活性化にも貢献しながら悲願の初優勝を目指しています。",
+
+        rosterHistory:{
+            "2024": ["keib", "tachikawa", "otani", "mocchi"],
+            "2025": ["keib", "seiya", "otani", "mocchi"]
+        },
 
         players:[
             "seiya",
