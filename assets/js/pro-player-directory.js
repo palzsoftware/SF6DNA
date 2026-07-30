@@ -6,8 +6,9 @@
 // 現状、詳細ページ(pro-player.html)が存在するのは以下6名のみ。
 // 新しい選手を追加する場合は、pro-player.html側にも詳細データを追加すること。
 //
-// image が無い選手(kakeru/angrybird/punk)は実写真素材が無いため、
+// image が無い選手(kakeru)は実写真素材が無いため、
 // result.js側でイニシャルアバターにフォールバックする。
+// (2026年7月: angrybird/punkの画像を追加済み)
 
 const proPlayerDirectory = {
 
@@ -46,14 +47,16 @@ const proPlayerDirectory = {
         name: "AngryBird",
         characterId: "ken",
         character: "ケン",
-        country: "world"
+        country: "world",
+        image: "assets/images/players/angrybird.png"
     },
 
     punk: {
         name: "Punk",
         characterId: "cammy",
         character: "キャミィ",
-        country: "world"
+        country: "world",
+        image: "assets/images/players/punk.png"
     }
 
 };

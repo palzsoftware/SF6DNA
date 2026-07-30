@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/view-mode.css">
+
+    <!-- Phase1: ホームページのみアイコンシステム(Tabler Icons)を先行導入。他ページはPhase3で対応予定 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.44.0/tabler-icons.min.css">
 </head>
 
 <body>
@@ -52,6 +55,8 @@ SF6 DNA
 <a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
 
 <a href="rank-tracker.html"><span>📈 RANK</span>ランク管理</a>
+
+<a href="training.html"><span>💪 TRAINING</span>練習メニュー</a>
 
 </div>
 
@@ -114,656 +119,162 @@ SF6 DNA
 
 <main>
 
-<section class="hero">
+<div class="container">
 
-    <div class="container hero-container">
+    <!-- ===== ヒーロー(診断有無でJSが内容を出し分ける、Primary CTAは常に1つのみ) ===== -->
+    <section id="homeHero" class="home-hero reveal-on-scroll">
+        <p class="home-hero-loading">読み込み中…</p>
+    </section>
 
-        <div class="hero-left">
+    <!-- ===== 診断済みユーザー向け: 今日のあなたへ(日替わりコンテンツ) ===== -->
+    <section id="homeDailySection" class="home-daily reveal-on-scroll" style="display:none;">
 
-            <span class="hero-badge">
-                Street Fighter 6 Player Diagnosis
-            </span>
+        <h2 class="home-section-title">今日のあなたへ</h2>
 
-            <h2>
+        <div id="homeDailyArea" class="home-daily-grid"></div>
 
-                あなたを知れば、<br>
-                もっと勝てる。
+    </section>
 
-            </h2>
+    <!-- ===== 診断済みユーザー向け: 最近の成長 ===== -->
+    <section id="homeGrowthSection" class="home-growth reveal-on-scroll" style="display:none;">
 
-            <p>
+        <h2 class="home-section-title">最近の成長</h2>
 
-                プレイスタイルを分析し、
-                あなたに合ったキャラクターや
-                参考になるプロプレイヤーを見つけよう。
+        <div id="homeGrowthArea" class="home-growth-card"></div>
 
-            </p>
-            <div class="hero-buttons">
-                <a href="diagnosis.html?mode=beginner" class="btn btn-primary hero-btn">
-                    ⚡ 初心者用診断
-                </a>
-                <a href="diagnosis.html?mode=advanced" class="btn btn-primary hero-btn hero-btn-advanced">
-                    🔥 上級者用診断
-                </a>
-                <a
-                 href="#result-preview" class="btn btn-secondary hero-btn">
-                 🔍 診断結果を見る
-                </a>
-            </div>
+    </section>
 
-            <p class="hero-mode-note">
-                初心者用：全50問・約3分／上級者用：全100問・約8分（プラチナ以上推奨）
-            </p>
+    <!-- ===== 診断済みユーザー向け: 実績バッジ ===== -->
+    <section id="homeBadgeSection" class="home-badges reveal-on-scroll" style="display:none;">
+
+        <h2 class="home-section-title">実績</h2>
+
+        <div id="homeBadgeArea" class="home-badge-grid"></div>
+
+    </section>
+
+    <!-- ===== 診断済みユーザー向け: 最近見たキャラクター/プレイヤー ===== -->
+    <section id="homeRecentSection" class="home-recent reveal-on-scroll" style="display:none;">
+
+        <div class="home-recent-col">
+            <h2 class="home-section-title">最近見たキャラクター</h2>
+            <div id="homeRecentCharacterArea" class="home-recent-empty"></div>
         </div>
 
-        
+        <div class="home-recent-col">
+            <h2 class="home-section-title">最近見たプレイヤー</h2>
+            <div id="homeRecentPlayerArea" class="home-recent-empty"></div>
+        </div>
 
-        <div class="hero-right">
+    </section>
 
-            <img
-                src="assets/images/characters/ryu.jpg"
-                alt=""
-                class="hero-character-art"
-            >
+    <!-- ===== 未診断ユーザー向け: サービス価値の説明(CTAボタンは置かない) ===== -->
+    <section id="homeValueSection" class="home-value-section reveal-on-scroll" style="display:none;">
 
-            <div class="hero-result-card hero-result-card-compact">
+        <h2 class="home-section-title">このサイトでできること</h2>
 
-                <span class="result-label">
+        <div class="home-value-grid">
 
-                    診断結果サンプル
+            <div class="home-value-card">
+                <i class="ti ti-clipboard-list" aria-hidden="true"></i>
+                <h3>診断でタイプを知る</h3>
+                <p>質問に答えるだけで、あなたのプレイスタイルと弱点を8軸で診断します。</p>
+                <span class="home-value-card-status">詳しく見る</span>
+            </div>
 
-                </span>
+            <div class="home-value-card">
+                <i class="ti ti-target-arrow" aria-hidden="true"></i>
+                <h3>専用の練習メニュー</h3>
+                <p>診断結果の弱点に合わせて、今日やるべき練習をピンポイントで提案します。</p>
+                <span class="home-value-card-status">詳しく見る</span>
+            </div>
 
-                <h3>
-
-                    戦略型
-
-                </h3>
-
-                <div class="hero-stars">
-
-                    ★★★★★
-
-                </div>
-
-                <p>
-
-                    おすすめキャラ
-
-                </p>
-
-                <strong>
-
-                    JP / ガイル
-
-                </strong>
-
-                <p>
-
-                    参考プロ
-
-                </p>
-
-                <strong>
-
-                    ひぐち
-
-                </strong>
-
+            <div class="home-value-card">
+                <i class="ti ti-trending-up" aria-hidden="true"></i>
+                <h3>成長を記録する</h3>
+                <p>練習の完了を記録し、実績として積み上げながら継続できます。</p>
+                <span class="home-value-card-status">詳しく見る</span>
             </div>
 
         </div>
 
-    </div><div class="hero-info">
+        <a href="about.html" class="home-ghost-link">SF6 DNAとは? <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
 
-    <div class="hero-info-card">
+    </section>
 
-        <div class="hero-info-icon">🧬</div>
+    <!-- ===== 常設: 図鑑・機能への導線 ===== -->
+    <section class="home-quicknav reveal-on-scroll">
 
-        <h3>プレイタイプ診断</h3>
+        <h2 class="home-section-title">図鑑・機能</h2>
 
-        <p>
-            あなたの戦い方を分析し、
-            プレイスタイルを可視化します。
-        </p>
+        <div class="home-quicknav-grid">
 
-    </div>
+            <a href="characters.html" class="home-quicknav-card">
+                <i class="ti ti-swords" aria-hidden="true"></i>
+                <span>キャラクター図鑑</span>
+            </a>
 
-    <div class="hero-info-card">
+            <a href="players.html" class="home-quicknav-card">
+                <i class="ti ti-users" aria-hidden="true"></i>
+                <span>プレイヤー図鑑</span>
+            </a>
 
-        <div class="hero-info-icon">🎯</div>
+            <a href="team.html" class="home-quicknav-card">
+                <i class="ti ti-shield" aria-hidden="true"></i>
+                <span>チーム図鑑</span>
+            </a>
 
-        <h3>おすすめキャラ</h3>
+            <a href="compare.html" class="home-quicknav-card">
+                <i class="ti ti-git-compare" aria-hidden="true"></i>
+                <span>比較する</span>
+            </a>
 
-        <p>
-            あなたのタイプに合った
-            キャラクターを提案します。
-        </p>
+            <a href="training.html" class="home-quicknav-card">
+                <i class="ti ti-target-arrow" aria-hidden="true"></i>
+                <span>練習メニュー</span>
+            </a>
 
-    </div>
+            <a href="rank-tracker.html" class="home-quicknav-card">
+                <i class="ti ti-chart-line" aria-hidden="true"></i>
+                <span>ランク管理</span>
+            </a>
 
-    <div class="hero-info-card">
+        </div>
 
-        <div class="hero-info-icon">👑</div>
+    </section>
 
-        <h3>参考プレイヤー</h3>
+    <!-- ===== 近日公開(未実装機能。優先度を明確に下げて表示) ===== -->
+    <section class="home-comingsoon reveal-on-scroll">
 
-        <p>
-            プレイスタイルが近い
-            プロプレイヤーを紹介します。
-        </p>
+        <h2 class="home-section-title home-section-title-muted">近日公開</h2>
 
-    </div>
+        <p class="home-comingsoon-lead">今後追加予定の機能です。楽しみにお待ちください。</p>
+
+        <div class="home-comingsoon-grid">
+
+            <div class="home-comingsoon-card">
+                <i class="ti ti-trophy" aria-hidden="true"></i>
+                <span>ランキング</span>
+                <span class="home-comingsoon-badge">Coming Soon</span>
+            </div>
+
+            <div class="home-comingsoon-card">
+                <i class="ti ti-calendar-event" aria-hidden="true"></i>
+                <span>大会情報</span>
+                <span class="home-comingsoon-badge">Coming Soon</span>
+            </div>
+
+            <div class="home-comingsoon-card">
+                <i class="ti ti-video" aria-hidden="true"></i>
+                <span>AIリプレイ分析</span>
+                <span class="home-comingsoon-badge">Coming Soon</span>
+            </div>
+
+        </div>
+
+    </section>
 
 </div>
-
-</section>
-
-
-<section class="problem-section reveal-on-scroll container-narrow">
-
-    <div class="container">
-
-        <h2>
-
-            あなたはこんな悩みありませんか？
-
-        </h2>
-
-        <div class="problem-list">
-
-            <div class="problem-card">
-
-                <span>✓</span>
-
-                <p>自分に合うキャラクターが分からない</p>
-
-            </div>
-
-            <div class="problem-card">
-
-                <span>✓</span>
-
-                <p>プロの真似をしても勝てない</p>
-
-            </div>
-
-            <div class="problem-card">
-
-                <span>✓</span>
-
-                <p>MRが伸び悩んでいる</p>
-
-            </div>
-
-            <div class="problem-card">
-
-                <span>✓</span>
-
-                <p>何を練習すればいいか分からない</p>
-
-            </div>
-
-        </div>
-
-        <div class="problem-message">
-
-            <h3>
-
-                SF6 DNA が解決します。
-
-            </h3>
-
-            <p>
-
-                プレイスタイルを分析し、
-                あなたに合うキャラクターや
-                参考になるプロプレイヤーを提案します。
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-<div class="solution-flow reveal-on-scroll">
-
-    <div class="solution-card">
-
-        <div class="solution-icon">
-            🧬
-        </div>
-
-        <h3>
-            プレイスタイル分析
-        </h3>
-
-        <p>
-            あなたの戦い方を分析し、
-            プレイタイプを診断します。
-        </p>
-
-    </div>
-
-    <div class="solution-arrow">
-
-        ↓
-
-    </div>
-
-    <div class="solution-card">
-
-        <div class="solution-icon">
-            🎯
-        </div>
-
-        <h3>
-            おすすめキャラクター
-        </h3>
-
-        <p>
-            診断結果から
-            あなたに合うキャラクターを提案します。
-        </p>
-
-    </div>
-
-    <div class="solution-arrow">
-
-        ↓
-
-    </div>
-
-    <div class="solution-card">
-
-        <div class="solution-icon">
-            👑
-        </div>
-
-        <h3>
-            参考プレイヤー
-        </h3>
-
-        <p>
-            プレイスタイルが近い
-            プロプレイヤーを紹介します。
-        </p>
-
-    </div>
-
-</div>
-
-<section class="feature-section reveal-on-scroll container-narrow">
-
-    <div class="container">
-
-        <h2 class="section-title">
-
-            このサイトでできること
-
-        </h2>
-
-        <p class="section-description">
-
-            診断だけでは終わらない。
-            SF6をもっと楽しみ、もっと上達するためのコンテンツを用意しています。
-
-        </p>
-
-        <div class="feature-timeline">
-
-    <div class="feature-bubble left">
-
-        💬 あなたのプレイタイプを診断します
-
-    </div>
-
-    <div class="feature-bubble right">
-
-        🎯 あなたに合うキャラクターを提案します
-
-    </div>
-
-    <div class="feature-bubble left">
-
-        👑 プレイスタイルが近いプロを紹介します
-
-    </div>
-
-    <div class="feature-bubble right">
-
-        ⚔ キャラクター同士を比較できます
-
-    </div>
-
-    <div class="feature-bubble left">
-
-        📚 プレイヤー・キャラクター・チーム図鑑も利用できます
-
-    </div>
-
-</div>
-
-    </div>
-
-</section>
-
-<section class="dictionary-section reveal-on-scroll container-narrow">
-
-    <div class="container">
-
-        <h2 class="section-title">
-
-            SF6 DNA 図鑑
-
-        </h2>
-
-        <p class="section-description">
-
-            プレイヤー・キャラクター・チームをまとめて掲載。
-            診断だけでは終わらない、SF6のデータベースです。
-
-        </p>
-
-        <div class="dictionary-grid">
-
-            <div class="dictionary-card">
-
-                <h3>80+</h3>
-
-                <span>PLAYER</span>
-
-                <p>
-
-                    80名以上のプレイヤーを掲載
-
-                </p>
-
-            </div>
-
-            <div class="dictionary-card">
-
-                <h3>30</h3>
-
-                <span>CHARACTER</span>
-
-                <p>
-
-                    全30キャラクターを詳しく紹介
-
-                </p>
-
-            </div>
-
-            <div class="dictionary-card">
-
-                <h3>2+</h3>
-
-                <span>TEAM</span>
-
-                <p>
-
-                    国内トップチームを掲載
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="dictionary-character-strip">
-
-            <div class="dictionary-character-track">
-
-            <img src="assets/images/characters/aki.jpg" alt="">
-            <img src="assets/images/characters/alex.jpg" alt="">
-            <img src="assets/images/characters/bison.jpg" alt="">
-            <img src="assets/images/characters/blanka.jpg" alt="">
-            <img src="assets/images/characters/cammy.jpg" alt="">
-            <img src="assets/images/characters/chunli.jpg" alt="">
-            <img src="assets/images/characters/cviper.jpg" alt="">
-            <img src="assets/images/characters/deejay.jpg" alt="">
-            <img src="assets/images/characters/dhalsim.jpg" alt="">
-            <img src="assets/images/characters/ed.jpg" alt="">
-            <img src="assets/images/characters/ehonda.jpg" alt="">
-            <img src="assets/images/characters/elena.jpg" alt="">
-            <img src="assets/images/characters/gouki.png" alt="">
-            <img src="assets/images/characters/guile.jpg" alt="">
-            <img src="assets/images/characters/ingrid.jpg" alt="">
-            <img src="assets/images/characters/jamie.jpg" alt="">
-            <img src="assets/images/characters/jp.jpg" alt="">
-            <img src="assets/images/characters/juri.jpg" alt="">
-            <img src="assets/images/characters/ken.png" alt="">
-            <img src="assets/images/characters/kimberly.jpg" alt="">
-            <img src="assets/images/characters/lily.jpg" alt="">
-            <img src="assets/images/characters/luke.png" alt="">
-            <img src="assets/images/characters/mai.jpg" alt="">
-            <img src="assets/images/characters/manon.jpg" alt="">
-            <img src="assets/images/characters/marisa.jpg" alt="">
-            <img src="assets/images/characters/rashid.png" alt="">
-            <img src="assets/images/characters/ryu.jpg" alt="">
-            <img src="assets/images/characters/sagat.jpg" alt="">
-            <img src="assets/images/characters/terry.jpg" alt="">
-            <img src="assets/images/characters/zangief.jpg" alt="">
-            <img src="assets/images/characters/aki.jpg" alt="">
-            <img src="assets/images/characters/alex.jpg" alt="">
-            <img src="assets/images/characters/bison.jpg" alt="">
-            <img src="assets/images/characters/blanka.jpg" alt="">
-            <img src="assets/images/characters/cammy.jpg" alt="">
-            <img src="assets/images/characters/chunli.jpg" alt="">
-            <img src="assets/images/characters/cviper.jpg" alt="">
-            <img src="assets/images/characters/deejay.jpg" alt="">
-            <img src="assets/images/characters/dhalsim.jpg" alt="">
-            <img src="assets/images/characters/ed.jpg" alt="">
-            <img src="assets/images/characters/ehonda.jpg" alt="">
-            <img src="assets/images/characters/elena.jpg" alt="">
-            <img src="assets/images/characters/gouki.png" alt="">
-            <img src="assets/images/characters/guile.jpg" alt="">
-            <img src="assets/images/characters/ingrid.jpg" alt="">
-            <img src="assets/images/characters/jamie.jpg" alt="">
-            <img src="assets/images/characters/jp.jpg" alt="">
-            <img src="assets/images/characters/juri.jpg" alt="">
-            <img src="assets/images/characters/ken.png" alt="">
-            <img src="assets/images/characters/kimberly.jpg" alt="">
-            <img src="assets/images/characters/lily.jpg" alt="">
-            <img src="assets/images/characters/luke.png" alt="">
-            <img src="assets/images/characters/mai.jpg" alt="">
-            <img src="assets/images/characters/manon.jpg" alt="">
-            <img src="assets/images/characters/marisa.jpg" alt="">
-            <img src="assets/images/characters/rashid.png" alt="">
-            <img src="assets/images/characters/ryu.jpg" alt="">
-            <img src="assets/images/characters/sagat.jpg" alt="">
-            <img src="assets/images/characters/terry.jpg" alt="">
-            <img src="assets/images/characters/zangief.jpg" alt="">
-
-            </div>
-
-        </div>
-
-        <div class="dictionary-player-strip">
-
-            <div class="dictionary-player-track">
-
-                <img class="player-chip-img" src="assets/images/players/tokido.png" alt="ときど">
-                <img class="player-chip-img" src="assets/images/players/mago.png" alt="マゴ">
-                <img class="player-chip-img" src="assets/images/players/mizuha.png" alt="水派">
-                <img class="player-chip-img" src="assets/images/players/wabiichi.png" alt="わびいち">
-                <img class="player-chip-img" src="assets/images/players/daigo.png" alt="ウメハラ">
-                <img class="player-chip-img" src="assets/images/players/fuudo.png" alt="ふ～ど">
-                <img class="player-chip-img" src="assets/images/players/yas.png" alt="YAS">
-                <img class="player-chip-img" src="assets/images/players/hinao.png" alt="ひなお">
-                <img class="player-chip-img" src="assets/images/players/momochi.png" alt="ももち">
-                <img class="player-chip-img" src="assets/images/players/higuchi.png" alt="ひぐち">
-                <img class="player-chip-img" src="assets/images/players/yamaguchi.png" alt="山口">
-                <img class="player-chip-img" src="assets/images/players/menard.png" alt="MenaRD">
-                <img class="player-chip-img" src="assets/images/players/chocoblanka.png" alt="ちょこぶらんか">
-                <img class="player-chip-img" src="assets/images/players/yanai.png" alt="やない">
-                <img class="player-chip-img" src="assets/images/players/johnny.png" alt="ジョニィ">
-                <img class="player-chip-img" src="assets/images/players/torimeshi.png" alt="とりめし">
-
-                <img class="player-chip-img" src="assets/images/players/tokido.png" alt="ときど">
-                <img class="player-chip-img" src="assets/images/players/mago.png" alt="マゴ">
-                <img class="player-chip-img" src="assets/images/players/mizuha.png" alt="水派">
-                <img class="player-chip-img" src="assets/images/players/wabiichi.png" alt="わびいち">
-                <img class="player-chip-img" src="assets/images/players/daigo.png" alt="ウメハラ">
-                <img class="player-chip-img" src="assets/images/players/fuudo.png" alt="ふ～ど">
-                <img class="player-chip-img" src="assets/images/players/yas.png" alt="YAS">
-                <img class="player-chip-img" src="assets/images/players/hinao.png" alt="ひなお">
-                <img class="player-chip-img" src="assets/images/players/momochi.png" alt="ももち">
-                <img class="player-chip-img" src="assets/images/players/higuchi.png" alt="ひぐち">
-                <img class="player-chip-img" src="assets/images/players/yamaguchi.png" alt="山口">
-                <img class="player-chip-img" src="assets/images/players/menard.png" alt="MenaRD">
-                <img class="player-chip-img" src="assets/images/players/chocoblanka.png" alt="ちょこぶらんか">
-                <img class="player-chip-img" src="assets/images/players/yanai.png" alt="やない">
-                <img class="player-chip-img" src="assets/images/players/johnny.png" alt="ジョニィ">
-                <img class="player-chip-img" src="assets/images/players/torimeshi.png" alt="とりめし">
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section
-    id="result-preview"
-    class="result-preview-section container-narrow">
-
-    <div class="container">
-
-        <h2 class="section-title">
-
-            診断すると何が分かる？
-
-        </h2>
-
-        <p class="section-description">
-
-            あなたのプレイスタイルを分析し、
-            強みや弱点、おすすめキャラクターなどを表示します。
-
-        </p>
-
-        <div class="result-preview-card">
-
-            <span class="result-label">
-
-                診断結果サンプル
-
-            </span>
-
-            <h3>攻略型</h3>
-
-            <div class="hero-stars">
-
-                ★★★★★
-
-            </div>
-
-            <div class="preview-item">
-
-                <h4>おすすめキャラクター</h4>
-
-                <p>JP / ケン</p>
-
-            </div>
-
-            <div class="preview-item">
-
-                <h4>参考プロプレイヤー</h4>
-
-                <p>ときど</p>
-
-            </div>
-
-            <div class="preview-item">
-
-                <h4>あなたのプレイの特徴</h4>
-
-                <ul>
-
-                    <li>攻めが得意</li>
-                    <li>読み合いが強い</li>
-                    <li>ヒット確認が得意</li>
-
-                </ul>
-
-            </div>
-
-            <div class="preview-item">
-
-                <h4>改善ポイント</h4>
-
-                <ul>
-
-                    <li>守りを強化</li>
-                    <li>端の防御</li>
-                    <li>暴れ癖を減らす</li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="cta-section container-narrow">
-
-    <div class="container">
-
-        <h2>
-
-            あなたのプレイスタイルを診断してみませんか？
-
-        </h2>
-
-        <p>
-
-            約3分であなたのプレイタイプを分析します。<br>
-            おすすめキャラクターや参考になるプレイヤーも分かります。
-
-        </p>
-
-        <div class="cta-info">
-
-            <span>初心者用：約50問・約3分</span>
-
-            <span>上級者用：約100問・約8分</span>
-
-            <span>完全無料</span>
-
-        </div>
-
-        <div class="hero-buttons" style="justify-content:center;">
-
-        <a
-            href="diagnosis.html?mode=beginner"
-            class="btn btn-primary hero-btn"
-        >
-
-            ⚡ 初心者用診断
-
-        </a>
-
-        <a
-            href="diagnosis.html?mode=advanced"
-            class="btn btn-primary hero-btn hero-btn-advanced"
-        >
-
-            🔥 上級者用診断
-
-        </a>
-
-    </div>
-
-    </div>
-
-</section>
 
 </main>
 
@@ -777,7 +288,13 @@ SF6 DNA
 
 </footer>
 
+<script src="assets/js/character-data.js"></script>
+<script src="assets/js/result-data.js"></script>
+<script src="assets/js/training-menu-data.js"></script>
+<script src="assets/js/daily-tips-data.js"></script>
+<script src="assets/js/video-search.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/home.js"></script>
 
 <script src="assets/js/nav.js"></script>
 

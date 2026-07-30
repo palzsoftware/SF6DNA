@@ -504,8 +504,15 @@ async function renderVideos(category){
 
         container.innerHTML = `<p class="video-empty">動画を読み込み中です…</p>`;
 
+        // 1つ目のクエリで結果が0件だった場合に備え、
+        // 言い回しの異なる複数のクエリを上から順に試す(video-search.jsの共通関数を使用)
         const query = `${character.name} コンボ 立ち回り ストリートファイター6`;
-        const apiResults = await fetchVideosFromApi(query, 10);
+        const queries = [
+            query,
+            `${character.name} SF6 コンボ`,
+            `${character.name} ストリートファイター6`
+        ];
+        const apiResults = await fetchVideosWithQueryRetry(VIDEO_API_BASE_URL, queries, 10);
 
         if (apiResults && apiResults.length > 0) {
 

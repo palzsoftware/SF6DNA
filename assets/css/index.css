@@ -1,785 +1,721 @@
-/*=========================================
-  Hero
-=========================================*/
+/* ==========================================
+   ホームページ(Phase1改善版: ダッシュボード構成)
+   このファイルは index.html 専用。他ページには影響しない。
+========================================== */
 
-.hero{
+main > .container{
 
-    position:relative;
-
-    overflow:hidden;
-
-    min-height:85vh;
-
-    display:flex;
-
-    align-items:center;
-
-    padding:100px 0;
-
-    background:
-
-    radial-gradient(circle at top left,
-    rgba(255,106,0,.18),
-    transparent 35%),
-
-    radial-gradient(circle at bottom right,
-    rgba(0,140,255,.18),
-    transparent 35%),
-
-    linear-gradient(
-    180deg,
-    #11141d,
-    #0c0f16
-    );
+    max-width:960px;
 
 }
 
-.hero::before{
+/* ===== 共通ボタン/リンク(Design System: Button) ===== */
 
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background-image:
-
-    linear-gradient(
-    rgba(255,255,255,.02) 1px,
-    transparent 1px),
-
-    linear-gradient(
-    90deg,
-    rgba(255,255,255,.02) 1px,
-    transparent 1px);
-
-    background-size:50px 50px;
-
-    pointer-events:none;
-
-}
-
-.hero-container{
-
-    display:grid;
-
-    grid-template-columns:1.2fr 0.8fr;
-
-    gap:80px;
-
-    align-items:center;
-
-}
-
-.hero-left h2{
-
-    font-size:4rem;
-
-    line-height:1.2;
-
-    margin:20px 0;
-
-}
-
-.hero-left p{
-
-    font-size:1.2rem;
-
-    color:#bfc7d5;
-
-    line-height:1.8;
-
-    max-width:600px;
-
-}
-
-.hero-badge{
+.home-btn{
 
     display:inline-block;
 
-    padding:8px 16px;
+    border:none;
 
-    border-radius:999px;
+    font-size:14px;
 
-    background:#ff6b00;
+    font-weight:500;
 
-    color:#fff;
+    padding:10px 20px;
 
-    font-size:.9rem;
+    cursor:pointer;
 
-    font-weight:bold;
+    text-decoration:none;
 
-}
-
-.button-area{
-
-    display:flex;
-
-    gap:20px;
-
-    margin-top:40px;
+    transition:background var(--ds-duration-fast) var(--ds-ease-standard),
+               transform var(--ds-duration-fast) var(--ds-ease-standard);
 
 }
 
-/*=========================================
-  Hero Result Card
-=========================================*/
+.home-btn:active{
 
-.hero-result-card{
-
-    background:#1b1f27;
-
-    border:1px solid #31394a;
-
-    border-radius:20px;
-
-    padding:40px;
-
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    transform:scale(.97);
 
 }
 
-.hero-result-card-compact{
+.home-btn-primary{
 
-    padding:26px 30px;
+    background:var(--primary);
 
-    max-width:280px;
+    color:#2c1500;
 
-    transform:scale(0.92);
-
-}
-
-.hero-result-card-compact h3{
-
-    font-size:24px;
+    clip-path:polygon(0 0,100% 0,100% calc(100% - var(--ds-clip-button)),calc(100% - var(--ds-clip-button)) 100%,0 100%);
 
 }
 
-.result-label{
+.home-btn-primary:hover{
 
-    display:inline-block;
-
-    padding:6px 12px;
-
-    border-radius:999px;
-
-    background:#2c3444;
-
-    margin-bottom:20px;
-
-    font-size:.8rem;
+    background:var(--primary-hover);
 
 }
 
-.hero-result-card h3{
+.home-ghost-link{
 
-    font-size:2rem;
-
-    margin-bottom:20px;
-
-}
-
-.hero-stars{
-
-    color:#ffb400;
-
-    font-size:1.3rem;
-
-    margin-bottom:30px;
-
-}
-
-.hero-result-card strong{
-
-    display:block;
-
-    font-size:1.3rem;
-
-    margin-bottom:25px;
-
-}
-
-/*=========================================
-  Hero Stats
-=========================================*/
-
-.hero-stats{
-
-    padding:80px 0;
-
-}
-
-.stats-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
-
-}
-
-.stat-card{
-
-    background:#1b1f27;
-
-    border-radius:20px;
-
-    padding:40px;
-
-    text-align:center;
-
-    border:1px solid #303847;
-
-}
-
-.stat-card h3{
-
-    font-size:3rem;
-
-    color:#ff6b00;
-
-    margin-bottom:15px;
-
-}
-
-.stat-card p{
-
-    letter-spacing:3px;
-
-    color:#9ca8bb;
-
-}
-
-/*==============================
-  悩みセクション
-==============================*/
-
-.problem-section{
-
-    padding:140px 0;
-
-}
-
-.problem-section h2{
-
-    text-align:center;
-
-    font-size:48px;
-
-    margin-bottom:60px;
-
-}
-
-.problem-list{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:24px;
-
-    margin-bottom:80px;
-
-}
-
-.problem-card{
-
-    display:flex;
+    display:inline-flex;
 
     align-items:center;
 
-    gap:20px;
+    gap:var(--ds-space-xs);
 
-    padding:30px;
+    color:var(--text-sub);
 
-    border:1px solid rgba(255,255,255,.1);
+    font-size:13px;
 
-    border-radius:16px;
+    text-decoration:none;
 
-    background:#1d212b;
-
-}
-
-.problem-card span{
-
-    color:#ff7a00;
-
-    font-size:28px;
-
-    font-weight:bold;
+    transition:color var(--ds-duration-fast) var(--ds-ease-standard);
 
 }
 
-.problem-card p{
+.home-ghost-link:hover{
 
-    font-size:22px;
-
-}
-
-.problem-message{
-
-    max-width:800px;
-
-    margin:auto;
-
-    text-align:center;
+    color:var(--primary-hover);
 
 }
 
-.problem-message h3{
+/* ===== セクション共通 ===== */
 
-    font-size:42px;
-
-    margin-bottom:24px;
-
-}
-
-.problem-message p{
-
-    font-size:22px;
-
-    line-height:1.8;
-
-    color:#c9ced8;
-
-}
-/*=========================================
-  このサイトでできること
-=========================================*/
-
-.feature-section{
-
-    padding:140px 0;
-
-}
-
-.section-title{
-
-    text-align:center;
-
-    font-size:48px;
-
-    margin-bottom:20px;
-
-}
-
-.section-description{
-
-    max-width:800px;
-
-    margin:0 auto 80px;
-
-    text-align:center;
-
-    color:#bfc7d5;
-
-    line-height:1.8;
-
-    font-size:20px;
-
-}
-
-.feature-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:30px;
-
-}
-
-.feature-card{
-
-    padding:40px;
-
-    border-radius:20px;
-
-    border:1px solid rgba(255,255,255,.1);
-
-    background:#1d212b;
-
-}
-
-.feature-card h3{
-
-    font-size:30px;
-
-    margin-bottom:25px;
-
-}
-
-.feature-card p{
-
-    color:#c7cbd4;
-
-    line-height:1.8;
+.home-section-title{
 
     font-size:18px;
 
-}
-
-/*=========================================
-  SF6 DNA図鑑
-=========================================*/
-
-.dictionary-section{
-
-    padding:140px 0;
+    margin:0 0 var(--ds-space-lg) 0;
 
 }
 
-.dictionary-grid{
+.home-section-title-muted{
+
+    color:var(--text-sub);
+
+    font-size:15px;
+
+}
+
+.home-comingsoon-lead{
+
+    font-size:13px;
+
+    color:var(--text-sub);
+
+    margin:0 0 var(--ds-space-lg) 0;
+
+}
+
+.home-daily,
+.home-growth,
+.home-badges,
+.home-recent,
+.home-value-section,
+.home-quicknav,
+.home-comingsoon{
+
+    margin-top:var(--ds-space-3xl);
+
+}
+
+/* ===== ヒーロー ===== */
+
+.home-hero{
+
+    background:#12161d;
+
+    border:0.5px solid var(--border);
+
+    clip-path:polygon(0 0,100% 0,100% calc(100% - var(--ds-clip-hero)),calc(100% - var(--ds-clip-hero)) 100%,0 100%);
+
+    padding:var(--ds-space-3xl) var(--ds-space-2xl);
+
+    margin-top:var(--ds-space-2xl);
+
+}
+
+.home-hero-loading{
+
+    color:var(--text-sub);
+
+    font-size:14px;
+
+}
+
+.home-hero-eyebrow{
+
+    font-size:12px;
+
+    font-weight:500;
+
+    letter-spacing:.08em;
+
+    color:var(--primary-hover);
+
+    margin:0 0 var(--ds-space-sm) 0;
+
+}
+
+.home-hero h1{
+
+    color:var(--text);
+
+    font-size:26px;
+
+    margin:0 0 var(--ds-space-md) 0;
+
+}
+
+.home-hero-lead{
+
+    color:var(--text-sub);
+
+    font-size:14px;
+
+    max-width:420px;
+
+    margin:0 0 var(--ds-space-xl) 0;
+
+}
+
+.home-hero-xpbar{
+
+    height:4px;
+
+    background:var(--surface-2);
+
+    margin-bottom:var(--ds-space-sm);
+
+    max-width:320px;
+
+}
+
+.home-hero-xpbar-fill{
+
+    height:100%;
+
+    background:var(--primary);
+
+    transition:width var(--ds-duration-slow) var(--ds-ease-standard);
+
+}
+
+.home-hero-xptext{
+
+    font-size:12px;
+
+    color:var(--text-sub);
+
+    margin:0 0 var(--ds-space-lg) 0;
+
+}
+
+.home-hero-status{
+
+    display:flex;
+
+    gap:var(--ds-space-xl);
+
+    font-size:13px;
+
+    color:var(--text-sub);
+
+    margin-bottom:var(--ds-space-xl);
+
+}
+
+.home-hero-status i{
+
+    margin-right:var(--ds-space-xs);
+
+    color:var(--primary-hover);
+
+}
+
+/* ===== 今日のあなたへ(日替わりタイル) ===== */
+
+.home-daily-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:var(--ds-space-md);
+
+}
+
+.home-daily-tile{
+
+    display:block;
+
+    position:relative;
+
+    background:var(--surface);
+
+    border:0.5px solid var(--border);
+
+    border-radius:8px;
+
+    padding:var(--ds-space-lg);
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    transition:border-color var(--ds-duration-fast) var(--ds-ease-standard);
+
+}
+
+.home-daily-tile-clickable{
+
+    cursor:pointer;
+
+    padding-right:calc(var(--ds-space-lg) + 20px);
+
+    transition:border-color var(--ds-duration-fast) var(--ds-ease-standard),
+               transform var(--ds-duration-fast) var(--ds-ease-standard);
+
+}
+
+.home-daily-tile-clickable:hover{
+
+    border-color:var(--primary);
+
+    transform:translateY(-2px);
+
+}
+
+.home-daily-tile-arrow{
+
+    position:absolute;
+
+    right:var(--ds-space-lg);
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:var(--primary-hover);
+
+    opacity:0;
+
+    transition:opacity var(--ds-duration-fast) var(--ds-ease-standard);
+
+}
+
+.home-daily-tile-clickable:hover .home-daily-tile-arrow{
+
+    opacity:1;
+
+}
+
+.home-daily-tile-static{
+
+    cursor:default;
+
+}
+
+.home-daily-tile-label{
+
+    font-size:11px;
+
+    color:var(--text-sub);
+
+    margin:0 0 var(--ds-space-sm) 0;
+
+}
+
+.home-daily-tile-label i{
+
+    margin-right:var(--ds-space-xs);
+
+    color:var(--primary-hover);
+
+}
+
+.home-daily-tile-body{
+
+    font-size:14px;
+
+    font-weight:500;
+
+    margin:0;
+
+    line-height:1.5;
+
+}
+
+/* ===== 最近の成長 ===== */
+
+.home-growth-card{
+
+    background:var(--surface);
+
+    border:0.5px solid var(--border);
+
+    border-radius:8px;
+
+    padding:var(--ds-space-lg);
+
+}
+
+.home-growth-empty{
+
+    color:var(--text-sub);
+
+    font-size:13px;
+
+    margin:0;
+
+}
+
+.home-growth-axis{
+
+    font-size:12px;
+
+    color:var(--text-sub);
+
+    margin:0 0 var(--ds-space-xs) 0;
+
+}
+
+.home-growth-value{
+
+    font-size:26px;
+
+    font-weight:500;
+
+    margin:0 0 var(--ds-space-xs) 0;
+
+}
+
+.home-growth-diff{
+
+    font-size:14px;
+
+    margin-left:var(--ds-space-sm);
+
+}
+
+.home-growth-up{ color:var(--success); }
+.home-growth-down{ color:var(--danger); }
+.home-growth-flat{ color:var(--text-sub); }
+
+.home-growth-note{
+
+    font-size:12px;
+
+    color:var(--text-sub);
+
+    margin:0;
+
+}
+
+/* ===== 実績バッジ ===== */
+
+.home-badge-grid{
 
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:30px;
+    gap:var(--ds-space-md);
 
 }
 
-.dictionary-card{
+.home-badge{
 
-    padding:50px 30px;
+    background:var(--surface);
 
-    text-align:center;
+    border:0.5px solid var(--border);
 
-    border-radius:20px;
+    border-radius:8px;
 
-    background:#1d212b;
-
-    border:1px solid rgba(255,255,255,.1);
-
-    color:#fff;
-
-}
-
-.dictionary-card h3{
-
-    font-size:64px;
-
-    color:#ff7a00;
-
-    margin-bottom:10px;
-
-}
-
-.dictionary-card span{
-
-    display:block;
-
-    font-size:20px;
-
-    letter-spacing:3px;
-
-    margin-bottom:25px;
-
-}
-
-.dictionary-card p{
-
-    color:#c7cbd4;
-
-    line-height:1.8;
-
-}
-
-/*=========================================
-  診断結果サンプル
-=========================================*/
-
-.result-preview-section{
-
-    padding:140px 0;
-
-}
-
-.result-preview-card{
-
-    max-width:700px;
-
-    margin:60px auto 0;
-
-    padding:50px;
-
-    background:#1d212b;
-
-    border:1px solid rgba(255,255,255,.1);
-
-    border-radius:20px;
-
-}
-
-.preview-item{
-
-    margin-top:35px;
-
-    padding-top:25px;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-}
-
-.preview-item h4{
-
-    margin-bottom:15px;
-
-    font-size:22px;
-
-}
-
-.preview-item p,
-.preview-item li{
-
-    color:#c7cbd4;
-
-    line-height:1.8;
-
-}
-
-.preview-item ul{
-
-    padding-left:20px;
-
-}
-
-/*=========================================
- CTA
-=========================================*/
-
-.cta-section{
-
-    padding:140px 0;
+    padding:var(--ds-space-lg);
 
     text-align:center;
 
 }
 
-.cta-section h2{
-
-    font-size:48px;
-
-    margin-bottom:25px;
-
-}
-
-.cta-section p{
-
-    max-width:700px;
-
-    margin:auto;
-
-    line-height:2;
-
-    color:#c8ccd4;
-
-}
-
-.cta-info{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:40px;
-
-    margin:50px 0;
-
-    flex-wrap:wrap;
-
-}
-
-.cta-info span{
-
-    padding:12px 24px;
-
-    border:1px solid rgba(255,255,255,.1);
-
-    border-radius:999px;
-
-}
-
-.hero-buttons{
-
-    display:flex;
-
-    gap:20px;
-
-    margin-top:40px;
-
-}
-
-.hero-info{
-
-    display:flex;
-    gap:20px;
-    margin-top:30px;
-    flex-wrap:wrap;
-}
-
-.hero-info-card{
-
-    flex:1;
-    min-width:170px;
-
-    padding:22px;
-
-    background:#1d212b;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:16px;
-
-}
-
-.hero-info-card h3{
-
-    color:#ff7a00;
-    font-size:28px;
-    margin-bottom:10px;
-
-}
-
-.hero-info-card p{
-
-    color:#c7cbd4;
-    font-size:15px;
-
-}
-.hero-info{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:24px;
-
-    margin-top:48px;
-
-    flex-wrap:wrap;
-
-}
-
-.hero-info-card{
-
-    width:280px;
-
-    padding:30px;
-
-    background:#1d212b;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-top:3px solid var(--card-accent, #ff7a00);
-
-    border-radius:18px;
-
-    transition:.25s;
-
-}
-
-.hero-info-card:nth-child(1){ --card-accent:#ff7a00; }
-.hero-info-card:nth-child(2){ --card-accent:#3b82f6; }
-.hero-info-card:nth-child(3){ --card-accent:#eab308; }
-
-.hero-info-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:var(--card-accent, #ff7a00);
-
-    box-shadow:0 16px 30px rgba(0,0,0,.35);
-
-}
-
-.hero-info-icon{
-
-    font-size:34px;
-
-    margin-bottom:20px;
-
-    filter:drop-shadow(0 0 12px rgba(255,255,255,.15));
-
-}
-
-.hero-info-card h3{
+.home-badge i{
 
     font-size:24px;
 
-    margin-bottom:16px;
+    margin-bottom:var(--ds-space-sm);
+
+    display:block;
 
 }
 
-.hero-info-card p{
+.home-badge-title{
 
-    color:#c8ccd4;
+    font-size:13px;
 
-    line-height:1.8;
+    font-weight:500;
 
-}
-.solution-flow{
-
-    max-width:900px;
-
-    margin:90px auto 0;
+    margin:0 0 var(--ds-space-xs) 0;
 
 }
 
-.solution-card{
+.home-badge-hint{
 
-    background:#1d212b;
+    font-size:11px;
 
-    border:1px solid rgba(255,255,255,.08);
+    color:var(--text-sub);
 
-    border-left:4px solid var(--card-accent, #ff7a00);
+    margin:0;
 
-    border-radius:18px;
+}
 
-    padding:35px;
+.home-badge-unlocked i{ color:var(--primary); }
+.home-badge-unlocked .home-badge-hint{ color:var(--success); }
+.home-badge-locked{ opacity:.5; }
+.home-badge-locked i{ color:var(--text-sub); }
+
+/* ===== 最近見たキャラクター/プレイヤー ===== */
+
+.home-recent{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:var(--ds-space-xl);
+
+}
+
+.home-recent-col{
+
+    min-width:0;
+
+}
+
+.home-recent-empty{
+
+    background:var(--surface);
+
+    border:0.5px dashed var(--border);
+
+    border-radius:8px;
+
+    padding:var(--ds-space-lg);
 
     text-align:center;
 
 }
 
-.solution-card:nth-of-type(1){ --card-accent:#ff7a00; }
-.solution-card:nth-of-type(2){ --card-accent:#3b82f6; }
-.solution-card:nth-of-type(3){ --card-accent:#eab308; }
+.home-recent-empty-text{
 
-.solution-card:not(:last-child){
+    font-size:13px;
 
-    margin-bottom:25px;
+    color:var(--text-sub);
 
-}
-
-.solution-icon{
-
-    font-size:38px;
-
-    margin-bottom:20px;
+    margin:0 0 var(--ds-space-sm) 0;
 
 }
 
-.solution-card h3{
+/* ===== 未診断ユーザー向け価値説明 ===== */
 
-    font-size:28px;
+.home-value-grid{
 
-    margin-bottom:15px;
+    display:grid;
 
-}
+    grid-template-columns:repeat(3,1fr);
 
-.solution-card p{
+    gap:var(--ds-space-lg);
 
-    color:#c8ccd4;
-
-    line-height:1.8;
+    margin-bottom:var(--ds-space-lg);
 
 }
 
-/* ===========================
-   スクロールで表示されるフェードイン演出
-=========================== */
+.home-value-card{
+
+    background:var(--surface);
+
+    border:0.5px solid var(--border);
+
+    border-radius:8px;
+
+    padding:var(--ds-space-lg);
+
+}
+
+.home-value-card i{
+
+    font-size:24px;
+
+    color:var(--primary-hover);
+
+    margin-bottom:var(--ds-space-md);
+
+    display:block;
+
+}
+
+.home-value-card h3{
+
+    font-size:15px;
+
+    margin:0 0 var(--ds-space-sm) 0;
+
+}
+
+.home-value-card p{
+
+    font-size:13px;
+
+    color:var(--text-sub);
+
+    margin:0 0 var(--ds-space-md) 0;
+
+    line-height:1.6;
+
+}
+
+.home-value-card-status{
+
+    display:inline-block;
+
+    font-size:11px;
+
+    color:var(--text-sub);
+
+    cursor:not-allowed;
+
+    border-top:0.5px solid var(--border);
+
+    padding-top:var(--ds-space-sm);
+
+    width:100%;
+
+}
+
+/* ===== クイックナビゲーション ===== */
+
+.home-quicknav-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:var(--ds-space-md);
+
+}
+
+.home-quicknav-card{
+
+    background:var(--surface);
+
+    border:0.5px solid var(--border);
+
+    border-radius:8px;
+
+    padding:var(--ds-space-lg) var(--ds-space-sm);
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    transition:border-color var(--ds-duration-fast) var(--ds-ease-standard),
+               background var(--ds-duration-fast) var(--ds-ease-standard);
+
+}
+
+.home-quicknav-card:hover{
+
+    border-color:var(--primary);
+
+    background:var(--surface-2);
+
+}
+
+.home-quicknav-card i{
+
+    font-size:24px;
+
+    color:var(--primary-hover);
+
+    display:block;
+
+    margin-bottom:var(--ds-space-sm);
+
+}
+
+.home-quicknav-card span{
+
+    font-size:12px;
+
+}
+
+/* ===== 近日公開(未実装機能。優先度を明確に落とす) ===== */
+
+.home-comingsoon-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:var(--ds-space-md);
+
+}
+
+.home-comingsoon-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:var(--ds-space-xs);
+
+    background:transparent;
+
+    border:0.5px dashed var(--border);
+
+    border-radius:8px;
+
+    padding:var(--ds-space-md);
+
+    text-align:center;
+
+    opacity:.6;
+
+}
+
+.home-comingsoon-card i{
+
+    font-size:20px;
+
+    color:var(--text-sub);
+
+}
+
+.home-comingsoon-card span:not(.home-comingsoon-badge){
+
+    font-size:12px;
+
+    color:var(--text-sub);
+
+}
+
+.home-comingsoon-badge{
+
+    font-size:10px;
+
+    color:var(--ds-warning);
+
+    border:0.5px solid var(--ds-warning);
+
+    border-radius:999px;
+
+    padding:1px 8px;
+
+}
+
+/* ===== スクロールで表示されるフェードイン演出(既存ロジックを踏襲) ===== */
 
 .reveal-on-scroll{
 
@@ -809,477 +745,25 @@
 
 }
 
-.solution-arrow{
+/* ===== モバイル対応 ===== */
 
-    text-align:center;
+@media (max-width:768px){
 
-    font-size:42px;
-
-    color:#ff7a00;
-
-    margin:20px 0;
-
-}
-
-.feature-timeline{
-
-    max-width:900px;
-
-    margin:80px auto;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:50px;
-
-}
-
-.feature-bubble{
-
-    max-width:520px;
-
-    padding:28px 36px;
-
-    border-radius:24px;
-
-    background:#1d212b;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    font-size:22px;
-
-    line-height:1.8;
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-    transition:.6s;
-
-}
-
-.feature-bubble.left{
-
-    align-self:flex-start;
-
-}
-
-.feature-bubble.right{
-
-    align-self:flex-end;
-
-}
-
-.feature-bubble.show{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-/* ===========================
-   Heroボタン(ピル型・アイコン付き)と背景キャラアート
-=========================== */
-
-.hero-btn{
-
-    border-radius:999px;
-
-    font-size:16px;
-
-}
-
-.btn.btn-secondary.hero-btn{
-
-    background:rgba(255,255,255,.04);
-
-}
-
-.hero-right{
-
-    position:relative;
-
-    display:flex;
-
-    justify-content:center;
-
-}
-
-.hero-character-art{
-
-    position:absolute;
-
-    top:50%;
-
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:280px;
-
-    height:280px;
-
-    object-fit:cover;
-
-    object-position:top;
-
-    border-radius:50%;
-
-    opacity:.35;
-
-    filter:grayscale(30%);
-
-    z-index:0;
-
-    pointer-events:none;
-
-}
-
-.hero-result-card{
-
-    position:relative;
-
-    z-index:1;
-
-}
-
-@media (max-width:1000px){
-
-    .hero-character-art{
-
-        display:none;
-
+    .home-hero{
+        padding:var(--ds-space-2xl) var(--ds-space-lg);
     }
 
-}
-
-/* ===========================
-   図鑑セクション: キャラクター画像ストリップ
-=========================== */
-
-.dictionary-character-strip{
-
-    position:relative;
-
-    margin-top:48px;
-
-    padding:28px 0;
-
-    overflow-x:hidden;
-
-}
-
-/* 端のフェード演出は、mask-imageではなくグラデーションのオーバーレイで作る。
-   こうすることで、ホバーで前面に飛び出した画像をz-indexで
-   オーバーレイより上に出せば、フェードの影響を受けずに全体表示できる */
-.dictionary-character-strip::before,
-.dictionary-character-strip::after{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    bottom:0;
-
-    width:100px;
-
-    z-index:2;
-
-    pointer-events:none;
-
-}
-
-.dictionary-character-strip::before{
-
-    left:0;
-
-    background:linear-gradient(90deg, #0d1117, transparent);
-
-}
-
-.dictionary-character-strip::after{
-
-    right:0;
-
-    background:linear-gradient(270deg, #0d1117, transparent);
-
-}
-
-.dictionary-character-track{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:20px;
-
-    width:max-content;
-
-    animation:characterStripScroll 40s linear infinite;
-
-}
-
-@keyframes characterStripScroll{
-
-    from{
-        transform:translateX(0);
+    .home-hero h1{
+        font-size:22px;
     }
 
-    to{
-        /* トラックの中身は同じ画像を2セット並べているので、
-           ちょうど半分移動したところでシームレスにループする */
-        transform:translateX(-50%);
+    .home-daily-grid,
+    .home-badge-grid,
+    .home-value-grid,
+    .home-quicknav-grid,
+    .home-comingsoon-grid,
+    .home-recent{
+        grid-template-columns:1fr;
     }
 
-}
-
-.dictionary-character-strip img{
-
-    position:relative;
-
-    width:72px;
-
-    height:72px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    border:2px solid var(--border);
-
-    flex-shrink:0;
-
-    opacity:.85;
-
-    transition:.3s ease;
-
-}
-
-/* ホバー演出はPC(マウス操作可能な環境)限定 */
-@media (hover:hover) and (pointer:fine){
-
-    .dictionary-character-strip img:hover{
-
-        border-color:var(--primary);
-
-        opacity:1;
-
-        transform:translateY(-14px) scale(1.25) rotate(-4deg);
-
-        box-shadow:0 16px 30px rgba(255,107,0,.5);
-
-        /* フェード用オーバーレイ(z-index:2)より前面に出す */
-        z-index:3;
-
-    }
-
-}
-
-@media (max-width:640px){
-
-    .dictionary-character-strip img{
-        width:52px;
-        height:52px;
-    }
-
-    .dictionary-character-strip::before,
-    .dictionary-character-strip::after{
-        width:50px;
-    }
-
-}
-
-@media (prefers-reduced-motion: reduce){
-
-    .dictionary-character-track{
-        animation:none;
-    }
-
-}
-
-/* ===========================
-   一部セクションの幅を狭くする
-=========================== */
-
-.container-narrow > .container{
-
-    max-width:920px;
-
-}
-
-@media (max-width:1000px){
-
-    .container-narrow > .container{
-
-        max-width:100%;
-
-    }
-
-}
-
-/* ===========================
-   プレイヤー版ストリップ(キャラアイコンの下、逆方向に流れる)
-=========================== */
-
-.dictionary-player-strip{
-
-    position:relative;
-
-    margin-top:20px;
-
-    padding:14px 0;
-
-    overflow-x:hidden;
-
-}
-
-.dictionary-player-strip::before,
-.dictionary-player-strip::after{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    bottom:0;
-
-    width:100px;
-
-    z-index:2;
-
-    pointer-events:none;
-
-}
-
-.dictionary-player-strip::before{
-
-    left:0;
-
-    background:linear-gradient(90deg, #0d1117, transparent);
-
-}
-
-.dictionary-player-strip::after{
-
-    right:0;
-
-    background:linear-gradient(270deg, #0d1117, transparent);
-
-}
-
-.dictionary-player-track{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:16px;
-
-    width:max-content;
-
-    /* キャラクターストリップとは逆方向(左から右)に流す */
-    animation:playerStripScroll 32s linear infinite;
-}
-
-@keyframes playerStripScroll{
-
-    from{
-        transform:translateX(-50%);
-    }
-
-    to{
-        transform:translateX(0);
-    }
-
-}
-
-.player-chip-img{
-
-    position:relative;
-
-    width:44px;
-
-    height:44px;
-
-    border-radius:50%;
-
-    flex-shrink:0;
-
-    object-fit:cover;
-
-    object-position:top;
-
-    border:2px solid rgba(255,255,255,.15);
-
-    opacity:.85;
-
-    transition:.3s ease;
-
-}
-
-@media (hover:hover) and (pointer:fine){
-
-    .player-chip-img:hover{
-
-        opacity:1;
-
-        border-color:var(--primary);
-
-        transform:translateY(-8px) scale(1.2);
-
-        box-shadow:0 12px 20px rgba(0,0,0,.4);
-
-        z-index:3;
-
-    }
-
-}
-
-@media (max-width:640px){
-
-    .player-chip-img{
-        width:34px;
-        height:34px;
-    }
-
-    .dictionary-player-strip::before,
-    .dictionary-player-strip::after{
-        width:50px;
-    }
-
-}
-
-@media (prefers-reduced-motion: reduce){
-
-    .dictionary-player-track{
-        animation:none;
-    }
-
-}
-
-/* ===========================
-   初心者用/上級者用ボタン
-=========================== */
-
-.hero-btn-advanced{
-
-    background:linear-gradient(160deg, #ff3d3d, #a80000);
-}
-
-.hero-mode-note{
-
-    margin-top:14px;
-
-    font-size:13px;
-
-    color:#9aa1ad;
-}
-
-.hero-buttons{
-
-    flex-wrap:wrap;
 }

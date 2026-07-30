@@ -314,42 +314,35 @@ async function renderVideoSection() {
     section.style.display = "";
 
     const [nameA, nameB] = compareIds.map(id => characterData[id].name);
-    const query = `${nameA} ${nameB} 対戦動画 ストリートファイター6`;
+
+    // 1つ目のクエリで結果が0件だった場合に備え、
+    // 言い回しの異なる複数のクエリを上から順に試す(video-search.jsの共通関数を使用)
+    const queries = [
+        `${nameA} ${nameB} 対戦動画 ストリートファイター6`,
+        `${nameA} ${nameB} SF6`,
+        `${nameA} vs ${nameB} ストリートファイター6`
+    ];
 
     if (!VIDEO_API_BASE_URL) {
         videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
         return;
     }
 
-    try {
+    const results = await fetchVideosWithQueryRetry(VIDEO_API_BASE_URL, queries, 8);
 
-        const url = `${VIDEO_API_BASE_URL}/api/videos/search?q=${encodeURIComponent(query)}&max=8`;
-        const res = await fetch(url);
-
-        if (!res.ok) throw new Error("API error");
-
-        const data = await res.json();
-
-        if (!data.results || data.results.length === 0) {
-            videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
-            return;
-        }
-
-        videosArea.innerHTML = data.results.map(video => `
-            <a class="video-scroll-card" href="${video.url}" target="_blank" rel="noopener">
-                <img src="${video.thumbnail}" alt="${video.title}">
-                <div class="video-scroll-info">
-                    <h4>${video.title}</h4>
-                </div>
-            </a>
-        `).join("");
-
-    } catch (err) {
-
-        console.warn("[compareVideos] 取得に失敗しました", err);
+    if (!results) {
         videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
-
+        return;
     }
+
+    videosArea.innerHTML = results.map(video => `
+        <a class="video-scroll-card" href="${video.url}" target="_blank" rel="noopener">
+            <img src="${video.thumbnail}" alt="${video.title}">
+            <div class="video-scroll-info">
+                <h4>${video.title}</h4>
+            </div>
+        </a>
+    `).join("");
 
 }
 function createSection(title,rows){

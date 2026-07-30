@@ -307,59 +307,42 @@ async function loadPlayerVideos() {
 
     const hasAchievements = top8Achievements.length > 0;
 
-    // 実績が無いプレイヤーは、代わりにおすすめ動画を多めに表示する
-    const maxResults = hasAchievements ? 6 : 10;
-
+    // 1つ目のクエリで結果が0件だった場合に備え、
+    // 言い回しの異なる複数のクエリを上から順に試す(video-search.jsの共通関数を使用)
     const queries = player.type === "pro"
         ? [
             `${player.name} 対戦動画 大会 ストリートファイター6`,
-            `${player.name} SFL 対戦`,
-            `${player.name} ストリートファイター6`,
-          ]
+            `${player.name} SF6 大会`,
+            `${player.name} ストリートファイター6`
+        ]
         : [
             `${player.name} ストリートファイター6`,
-            `${player.name} スト6 配信`,
-          ];
+            `${player.name} SF6`
+        ];
+
+    // 実績が無いプレイヤーは、代わりにおすすめ動画を多めに表示する
+    const maxResults = hasAchievements ? 6 : 10;
 
     if (!VIDEO_API_BASE_URL) {
         videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
         return;
     }
 
-    for (const query of queries) {
+    const results = await fetchVideosWithQueryRetry(VIDEO_API_BASE_URL, queries, maxResults);
 
-        try {
-
-            const url = `${VIDEO_API_BASE_URL}/api/videos/search?q=${encodeURIComponent(query)}&max=${maxResults}`;
-            const res = await fetch(url);
-
-            if (!res.ok) continue;
-
-            const data = await res.json();
-
-            if (!data.results || data.results.length === 0) continue;
-
-            videosArea.innerHTML = data.results.map(video => `
-                <a class="video-scroll-card" href="${video.url}" target="_blank" rel="noopener">
-                    <img src="${video.thumbnail}" alt="${video.title}">
-                    <div class="video-scroll-info">
-                        <h4>${video.title}</h4>
-                    </div>
-                </a>
-            `).join("");
-
-            return;
-
-        } catch (err) {
-
-            console.warn("[playerVideos] 取得に失敗しました", query, err);
-
-        }
-
+    if (!results) {
+        videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
+        return;
     }
 
-    // すべてのクエリで取得できなかった場合
-    videosArea.innerHTML = `<p class="video-empty">現在関連動画はありません</p>`;
+    videosArea.innerHTML = results.map(video => `
+        <a class="video-scroll-card" href="${video.url}" target="_blank" rel="noopener">
+            <img src="${video.thumbnail}" alt="${video.title}">
+            <div class="video-scroll-info">
+                <h4>${video.title}</h4>
+            </div>
+        </a>
+    `).join("");
 
 }
 

@@ -121,8 +121,6 @@ const teamData = {
         description:"ホロライブプロダクション所属の男性VTuberグループ。",
 
         players:[
-            "kishidotemma",
-            "aruran",
             "rikka"
         ]
 

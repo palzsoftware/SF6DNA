@@ -248,7 +248,7 @@ recommend:[
             "gouki"
         ],
         players: {
-            pros: ["Noble","noahtheprodigy"],
+            pros: ["noble","noahtheprodigy"],
             streamers: ["yoshinama"],
             vtubers: ["なし"],youtubers:[]}
     },

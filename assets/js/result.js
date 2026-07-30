@@ -6,6 +6,14 @@ const statusArea =document.getElementById("statusArea");
 const result = localStorage.getItem("sf6dna_result");
 const score =JSON.parse(localStorage.getItem("sf6dna_score"));
 
+// ===== 診断未実施でこのページに直接アクセスした場合のガード =====
+// score/resultが無い状態でこの先の処理(スコア集計など)を行うとエラーになるため、
+// 診断ページへ誘導する(training.html等、他ページと同様のフォールバック方針)
+if (!score || typeof score !== "object" || !result) {
+    location.href = "diagnosis.html";
+    throw new Error("[result] 診断結果が無いため diagnosis.html へリダイレクトします");
+}
+
 // ===== 診断モード表示(初心者用/上級者用) =====
 const diagnosisModeUsed = localStorage.getItem("sf6dna_diagnosis_mode") || "beginner";
 const resultModeBadgeEl = document.getElementById("resultModeBadge");
