@@ -4,7 +4,7 @@ const resultMatchups =document.getElementById("resultMatchups");
 const proPlayerArea = document.getElementById("proPlayerArea");
 const statusArea =document.getElementById("statusArea");
 const result = localStorage.getItem("sf6dna_result");
-const score =JSON.parse(localStorage.getItem("sf6dna_score"));
+const score = getLocalJSON("sf6dna_score", null);
 
 // ===== 診断未実施でこのページに直接アクセスした場合のガード =====
 // score/resultが無い状態でこの先の処理(スコア集計など)を行うとエラーになるため、
@@ -624,9 +624,9 @@ const isViewingPastResult =
 // ===== 診断履歴保存 =====
 // view=1 (履歴から過去の結果を見返している状態)の時は、
 // 履歴を新しく積み増さない
-const history = JSON.parse(
-    localStorage.getItem("sf6dna_history")
-) || [];
+const history = (typeof getLocalJSON === "function")
+    ? getLocalJSON("sf6dna_history", [])
+    : [];
 
 let currentHistoryEntry;
 
@@ -651,9 +651,9 @@ if (!isViewingPastResult) {
 
 favoriteButton.addEventListener("click", () => {
 
-    const favorites = JSON.parse(
-        localStorage.getItem("sf6dna_favorites")
-    ) || [];
+    const favorites = (typeof getLocalJSON === "function")
+        ? getLocalJSON("sf6dna_favorites", [])
+        : [];
 
    favorites.push({
 
@@ -681,9 +681,9 @@ favoriteButton.addEventListener("click", () => {
 
         currentHistoryEntry.saved = true;
 
-        const savedHistory = JSON.parse(
-            localStorage.getItem("sf6dna_history")
-        ) || [];
+        const savedHistory = (typeof getLocalJSON === "function")
+            ? getLocalJSON("sf6dna_history", [])
+            : [];
 
         const target = savedHistory.find(h => h.id === currentHistoryEntry.id);
         if (target) target.saved = true;
@@ -762,9 +762,9 @@ clearHistoryButton.addEventListener("click", () => {
     if (!ok) return;
 
     // saved:true(お気に入り登録済み)のものは履歴からも削除しない
-    const currentHistory = JSON.parse(
-        localStorage.getItem("sf6dna_history")
-    ) || [];
+    const currentHistory = (typeof getLocalJSON === "function")
+        ? getLocalJSON("sf6dna_history", [])
+        : [];
 
     const keptHistory = currentHistory.filter(h => h.saved);
 
@@ -875,3 +875,11 @@ async function loadRecommendedVideos() {
 }
 
 loadRecommendedVideos();
+
+// ===== 「次にすること」導線(Phase6-C) =====
+// character.html/player.htmlと同じnext-actions.jsの共通コンポーネントを使う。
+// result-next-actions.js側に組み立てロジックを分離しているため、
+// このファイルは「呼び出すだけ」で済んでいる。
+if (typeof renderNextActions === "function" && typeof buildResultNextActions === "function") {
+    renderNextActions("resultNextActions", buildResultNextActions(result));
+}

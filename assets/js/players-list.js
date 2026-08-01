@@ -205,3 +205,130 @@ countryButtons.forEach(button => {
     });
 
 });
+
+// ===== キャラクター詳細ページからの絞り込み導線(Phase6-A) =====
+// character.html の「次にすること」から「?character=キャラID」付きで遷移してきた場合、
+// 既存の検索欄(名前・チーム・使用キャラのいずれかに一致すればヒットする仕組み)に
+// キャラクター名を自動入力して絞り込む。新しいフィルターUIを追加するのではなく、
+// 既にある検索の仕組みをそのまま再利用することで、実装・保守の対象を増やさない。
+(function applyCharacterFilterFromUrl() {
+
+    const characterId = new URLSearchParams(window.location.search).get("character");
+    if (!characterId) return;
+
+    // characterDataに存在しないIDが渡された場合は、IDそのものをキーワードとして使う
+    // (character-data.js側の参照切れ・表記揺れがあっても検索自体は動作するようにするため)
+    const characterName = (typeof characterData !== "undefined" && characterData[characterId])
+        ? characterData[characterId].name
+        : characterId;
+
+    search.value = characterName;
+    filterPlayers();
+
+    // 「なぜ絞り込まれているか」が分からないと初心者が迷うため、
+    // 画面上に理由と解除方法を明示する(Phase6-B)
+    const notice = document.getElementById("playerCharacterFilterNotice");
+    if (notice) {
+        notice.innerHTML = `${characterName}を使うプレイヤーで絞り込み中 ・ <a href="players.html">絞り込みを解除</a>`;
+        notice.classList.remove("hidden");
+    }
+
+})();
+
+// ===== 初心者向けピックアップ(Phase3-B) =====
+// 「人気」を示す実データ(閲覧数・お気に入り数)が現状無いため、
+// 実際に存在するデータ(大会実績の件数)から客観的に算出できる指標のみを使用する。
+// 将来、閲覧数などのデータが追加されたら、ここのソート条件を差し替えるだけで対応できる。
+
+function renderPickupRow(areaId, players) {
+
+    const area = document.getElementById(areaId);
+    if (!area) return;
+
+    const cardsArea = area.querySelector(".player-pickup-cards");
+    if (!cardsArea) return;
+
+    if (players.length === 0) {
+        area.style.display = "none";
+        return;
+    }
+
+    cardsArea.innerHTML = players.map(p => `
+        <a href="player.html?id=${p.id}" class="player-pickup-card">
+            ${p.image
+                ? `<img src="${p.image}" alt="${p.name}" class="player-pickup-img" onerror="this.onerror=null;this.replaceWith(Object.assign(document.createElement('div'),{className:'player-pickup-img player-pickup-img-fallback',textContent:'${p.name.charAt(0)}'}));">`
+                : `<div class="player-pickup-img player-pickup-img-fallback">${p.name.charAt(0)}</div>`
+            }
+            <span class="player-pickup-name">${p.name}</span>
+        </a>
+    `).join("");
+
+}
+
+function initPlayerPickups() {
+
+    if (typeof proPlayerDirectory !== "undefined") {
+
+        const beginnerPicks = Object.entries(proPlayerDirectory)
+            .map(([id, data]) => ({ id, ...data }))
+            .filter(p => p.name)
+            .slice(0, 4);
+
+        renderPickupRow("pickupBeginnerArea", beginnerPicks);
+
+    }
+
+    if (typeof playerData !== "undefined") {
+
+        const byAchievements = Object.values(playerData)
+            .filter(p => Array.isArray(p.achievements))
+            .sort((a, b) => b.achievements.length - a.achievements.length)
+            .slice(0, 4);
+
+        renderPickupRow("pickupAchievementArea", byAchievements);
+
+        // 「攻め」「守り」は、実在するstyleフィールドの文言から機械的に判定する
+        // (架空の指標を作らず、既存データのみを使う)
+        const offensePlayers = Object.values(playerData)
+            .filter(p => typeof p.style === "string" && /攻撃|攻め/.test(p.style))
+            .slice(0, 4);
+
+        const defensePlayers = Object.values(playerData)
+            .filter(p => typeof p.style === "string" && /堅実|対応|待ち/.test(p.style))
+            .slice(0, 4);
+
+        renderPickupRow("pickupOffenseArea", offensePlayers);
+        renderPickupRow("pickupDefenseArea", defensePlayers);
+
+    }
+
+}
+
+initPlayerPickups();
+
+// ===== 今日のおすすめプレイヤー(Phase4) =====
+// 「今日のおすすめキャラクター」(salt=0)とズラすため、salt=3を使用する
+(function renderTodayPickPlayer() {
+
+    const area = document.getElementById("todayPickPlayer");
+    if (!area || typeof playerData === "undefined") return;
+
+    const players = Object.values(playerData);
+    const player = getDailyPick(players, 3);
+
+    if (!player) return;
+
+    area.innerHTML = `
+        <a href="player.html?id=${player.id}" class="today-pick-link">
+            ${player.image
+                ? `<img src="${player.image}" alt="${player.name}" class="today-pick-avatar">`
+                : `<span class="today-pick-avatar player-pickup-img-fallback">${player.name.charAt(0)}</span>`
+            }
+            <div>
+                <p class="today-pick-sublabel">今日のプレイヤー</p>
+                <p class="today-pick-name">${player.name}</p>
+            </div>
+        </a>
+    `;
+
+})();

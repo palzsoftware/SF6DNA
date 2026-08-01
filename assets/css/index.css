@@ -9,6 +9,170 @@ main > .container{
 
 }
 
+/* ===== キャラクター/プレイヤー横スクロール演出(Phase3-B) ===== */
+
+.home-marquee-section{
+
+    margin-top:var(--ds-space-xl, 24px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    overflow:hidden;
+
+    padding:4px 0;
+
+}
+
+.home-marquee-track{
+
+    display:flex;
+
+    gap:16px;
+
+    width:max-content;
+
+    animation:homeMarqueeScroll 70s linear infinite;
+
+}
+
+.home-marquee-section:hover .home-marquee-track{
+
+    animation-play-state:paused;
+
+}
+
+.home-marquee-reverse{
+
+    animation-direction:reverse;
+
+    animation-duration:60s;
+
+}
+
+@keyframes homeMarqueeScroll{
+
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
+
+}
+
+.home-marquee-item{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:8px;
+
+    object-fit:cover;
+
+    opacity:.85;
+
+    flex-shrink:0;
+
+    transition:opacity .2s ease;
+
+}
+
+.home-marquee-item-round{
+
+    border-radius:50%;
+
+}
+
+.home-marquee-item:hover{
+
+    opacity:1;
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .home-marquee-track{
+        animation:none;
+    }
+
+}
+
+/* ===== 初心者導線ボタン(Phase3-A) ===== */
+
+.home-beginner-cta{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-top:var(--ds-space-md, 12px);
+
+    background:var(--surface);
+
+    border:0.5px solid var(--border);
+
+    border-left:3px solid var(--primary);
+
+    border-radius:8px;
+
+    padding:14px 18px;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    transition:border-color var(--ds-duration-fast) var(--ds-ease-standard),
+               background var(--ds-duration-fast) var(--ds-ease-standard);
+
+}
+
+.home-beginner-cta:hover{
+
+    background:var(--surface-2);
+
+}
+
+.home-beginner-cta-icon{
+
+    font-size:22px;
+
+}
+
+.home-beginner-cta-text{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.home-beginner-cta-title{
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+.home-beginner-cta-sub{
+
+    font-size:12px;
+
+    color:var(--text-sub);
+
+}
+
+.home-beginner-cta > i{
+
+    color:var(--primary-hover);
+
+}
+
 /* ===== 共通ボタン/リンク(Design System: Button) ===== */
 
 .home-btn{
@@ -229,6 +393,13 @@ main > .container{
     margin-right:var(--ds-space-xs);
 
     color:var(--primary-hover);
+
+}
+
+.home-hero-streak{
+
+    color:#ff6b35;
+    font-weight:600;
 
 }
 
@@ -511,6 +682,60 @@ main > .container{
     color:var(--text-sub);
 
     margin:0 0 var(--ds-space-sm) 0;
+
+}
+
+/* 最近見たキャラ/プレイヤーの実データ表示 (Phase6-C) */
+
+.home-recent-list{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:var(--ds-space-md);
+
+}
+
+.home-recent-item{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    width:72px;
+    text-decoration:none;
+    color:var(--text);
+    text-align:center;
+
+}
+
+.home-recent-item img,
+.home-recent-fallback{
+
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    object-fit:cover;
+
+}
+
+.home-recent-fallback{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(160deg, var(--primary, #ff6b00), #7a3b00);
+    color:#fff;
+    font-weight:900;
+
+}
+
+.home-recent-item span{
+
+    font-size:11px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    max-width:100%;
 
 }
 

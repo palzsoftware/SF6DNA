@@ -112,15 +112,7 @@ footer{
 
 }
 
-.nav{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:48px;
-
-}
+/* .nav の定義は components-v2.css に統一している(重複定義を解消) */
 
 /* ---------- Hero ---------- */
 

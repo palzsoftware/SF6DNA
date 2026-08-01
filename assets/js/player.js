@@ -53,9 +53,14 @@ const player = players[id];
     renderTeamLabel("playerTeam");
     renderTeamLabel("playerTeamInline");
 
-    document.getElementById("playerMainCharacters").textContent =
+    // 「メイン」表示は、以前はテキストのみでキャラクター詳細ページへの導線が
+    // 無かった(Phase6-A設計で判明した課題)。既にデータが揃っているキャラクターは
+    // character.html へのリンクにし、character-dataに存在しないIDのみテキストのまま表示する。
+    document.getElementById("playerMainCharacters").innerHTML =
 player.characters
-    .map(id => characterData[id] ? characterData[id].name : id)
+    .map(id => characterData[id]
+        ? `<a href="character.html?id=${id}" class="player-main-character-link">${characterData[id].name}</a>`
+        : id)
     .join(" / ");
 
     // ===== 新規プロフィール項目(未登録の場合は「未登録」と表示) =====
@@ -347,5 +352,68 @@ async function loadPlayerVideos() {
 }
 
 loadPlayerVideos();
+
+// ===== お気に入り機能(Phase4) =====
+// localStorageキー: sf6dna_favorite_players(選手ID配列)
+(function setupFavoriteButton() {
+
+    const KEY = "sf6dna_favorite_players";
+    const btn = document.getElementById("favoritePlayerBtn");
+    if (!btn) return;
+
+    function getFavorites() {
+        return (typeof getLocalJSON === "function") ? getLocalJSON(KEY, []) : [];
+    }
+
+    function isFavorite() {
+        return getFavorites().includes(player.id);
+    }
+
+    function updateButtonState() {
+        const active = isFavorite();
+        btn.classList.toggle("favorite-toggle-btn-active", active);
+        btn.setAttribute("aria-pressed", String(active));
+        btn.querySelector("span").textContent = active ? "お気に入り済み" : "お気に入り";
+    }
+
+    btn.addEventListener("click", () => {
+
+        const favorites = getFavorites();
+        const index = favorites.indexOf(player.id);
+
+        if (index === -1) {
+            favorites.push(player.id);
+        } else {
+            favorites.splice(index, 1);
+        }
+
+        localStorage.setItem(KEY, JSON.stringify(favorites));
+        updateButtonState();
+
+    });
+
+    updateButtonState();
+
+})();
+
+// ===== 「次にすること」導線(Phase6-B) =====
+// character.html と同じ next-actions.js の共通コンポーネントを使う。
+// player-next-actions.js側に組み立てロジックを分離しているため、
+// このファイルは「呼び出すだけ」で済んでいる。
+if (typeof renderNextActions === "function" && typeof buildPlayerNextActions === "function") {
+    renderNextActions("playerNextActions", buildPlayerNextActions(player));
+}
+
+// ===== ページ閲覧の記録(Phase6-B) =====
+// 「このプレイヤーを見た」という事実を、閲覧履歴・参考にしたプレイヤーの
+// 分析基盤として記録しておく(1ページ表示につき1回のみ)
+if (typeof recordActivity === "function" && typeof ACTIVITY_TYPES !== "undefined") {
+    recordActivity(
+        ACTIVITY_TYPES.PLAYER_VIEW,
+        player.id,
+        player.name,
+        { entityType: "player", entityId: player.id, sourcePage: "player_detail" }
+    );
+}
 
 });

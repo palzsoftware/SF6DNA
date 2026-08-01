@@ -18,17 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const axisSummaryArea = document.getElementById("axisSummaryArea");
     const trainingMenuArea = document.getElementById("trainingMenuArea");
 
-    // ===== 8軸の日本語ラベル(診断結果ページの表記に合わせる) =====
-    const axisLabels = {
-        aggressive: "攻撃",
-        defensive: "守り",
-        zoning: "牽制",
-        balanced: "バランス",
-        reading: "読み合い",
-        combo: "コンボ",
-        strategy: "戦略",
-        instinct: "直感"
-    };
+    // ===== 8軸の日本語ラベル(assets/js/site-constants.jsの共通定数を使用) =====
+    const axisLabels = AXIS_LABELS;
 
     const difficultyLabels = {
         beginner: "初級",
@@ -38,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ===== 1. 診断結果の読み込み =====
     const result = localStorage.getItem("sf6dna_result");
-    const score = JSON.parse(localStorage.getItem("sf6dna_score") || "null");
+    const score = getLocalJSON("sf6dna_score", null);
 
     // スコアが無い(診断未実施)場合は、診断への導線だけを表示して終了する
     if (!score || typeof score !== "object") {
@@ -73,13 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===== 3. 完了状況(進捗)の読み込み =====
     // キー: ドリルID、値: { completedCount, lastCompletedAt }
     function loadProgress() {
-        try {
-            return JSON.parse(localStorage.getItem("sf6dna_training_progress") || "{}");
-        } catch (err) {
-            // 万一データが壊れていた場合も、練習メニュー自体は表示できるようにする
-            console.warn("[training] 進捗データの読み込みに失敗しました", err);
-            return {};
-        }
+        return getLocalJSON("sf6dna_training_progress", {});
     }
 
     function saveProgress(progress) {
@@ -230,6 +215,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         saveProgress(progress);
         renderProgressStatus(drillId);
+
+        // 活動ログへ記録(将来のストリーク・週次レポート等で再利用するため)
+        if (typeof recordActivity === "function") {
+            const drillCard = button.closest(".training-card");
+            const drillTitle = drillCard ? drillCard.querySelector(".training-title")?.textContent.trim() : drillId;
+            recordActivity(ACTIVITY_TYPES.TRAINING, drillId, drillTitle);
+        }
 
     });
 

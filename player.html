@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="assets/css/player.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/view-mode.css">
+<link rel="stylesheet" href="assets/css/onboarding.css">
 
 </head>
 
@@ -56,6 +57,8 @@ SF6 DNA
 <a href="rank-tracker.html"><span>📈 RANK</span>ランク管理</a>
 
 <a href="training.html"><span>💪 TRAINING</span>練習メニュー</a>
+<a href="mypage.html"><span>🏠 MYPAGE</span>マイページ</a>
+
 
 </div>
 
@@ -76,6 +79,9 @@ SF6 DNA
 <a href="players.html" class="active"><span>👤 PLAYER</span>プレイヤー図鑑</a>
 
 <a href="team.html"><span>🏆 TEAM</span>チーム図鑑</a>
+<a href="ranking.html"><span>🏅 RANKING</span>ランキング</a>
+<a href="tournament.html"><span>📅 TOURNAMENT</span>大会情報</a>
+
 
 </div>
 
@@ -117,6 +123,12 @@ SF6 DNA
 </header>
 
 <main class="container">
+<nav class="breadcrumb" aria-label="現在位置">
+    <a href="index.html">TOP</a>
+    <span aria-hidden="true">›</span>
+    <a href="players.html">プレイヤー図鑑</a>
+</nav>
+
 
 <section class="player-page">
 
@@ -212,6 +224,11 @@ SF6 DNA
     <p id="playerCountry"></p>
 
     <p id="playerStyle"></p>
+
+    <button type="button" id="favoritePlayerBtn" class="favorite-toggle-btn" aria-pressed="false">
+        <i class="ti ti-heart" aria-hidden="true"></i>
+        <span>お気に入り</span>
+    </button>
 
     <div class="player-divider"></div>
 
@@ -318,6 +335,8 @@ SF6 DNA
 
     </div>
 
+    <div id="playerNextActions" class="next-actions"></div>
+
 </section>   <!-- player-main -->
 
 </section>   <!-- player-page -->
@@ -330,11 +349,16 @@ SF6 DNA
 <script src="assets/js/youtuber.js"></script>
 <script src="assets/js/caster.js"></script>
 <!-- player.js は characterData (character-data.js) を参照するため、必ず先に読み込む -->
+<script src="assets/js/site-constants.js"></script>
 <script src="assets/js/character-data.js"></script>
 <script src="assets/js/team-data.js"></script>
 <script src="assets/js/video-search.js"></script>
+<script src="assets/js/activity-log.js"></script>
+<script src="assets/js/next-actions.js"></script>
+<script src="assets/js/player-next-actions.js"></script>
 <script src="assets/js/player.js"></script>
 
+<script src="assets/js/onboarding.js"></script>
 <script src="assets/js/nav.js"></script>
 
 </body>

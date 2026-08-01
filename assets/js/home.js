@@ -29,16 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const valueSection = document.getElementById("homeValueSection");
 
     // ===== localStorageの読み込み =====
-    const score = JSON.parse(localStorage.getItem("sf6dna_score") || "null");
+    const score = getLocalJSON("sf6dna_score", null);
     const result = localStorage.getItem("sf6dna_result");
     const diagnosisMode = localStorage.getItem("sf6dna_diagnosis_mode") || "beginner";
 
-    let trainingProgress = {};
-    try {
-        trainingProgress = JSON.parse(localStorage.getItem("sf6dna_training_progress") || "{}");
-    } catch (err) {
-        console.warn("[home] 練習進捗データの読み込みに失敗しました", err);
-    }
+    const trainingProgress = getLocalJSON("sf6dna_training_progress", {});
 
     const isDiagnosed = !!(score && typeof score === "object");
 
@@ -89,26 +84,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ===== 日替わりの選択ロジック =====
-    // 「今日」を基準に、配列やオブジェクトから1件だけ決定的に選ぶ。
-    // 将来この関数の中身をAPI呼び出しに差し替えるだけで、
-    // 呼び出し側(下のrenderDailySection等)は変更不要な設計にしている。
-    function getDayIndex(poolLength) {
-        const now = new Date();
-        const startOfYear = new Date(now.getFullYear(), 0, 0);
-        const dayOfYear = Math.floor((now - startOfYear) / (1000 * 60 * 60 * 24));
-        return dayOfYear % poolLength;
-    }
+    // 「今日」を基準に、配列やオブジェクトから1件だけ決定的に選ぶ処理は
+    // assets/js/site-constants.js の getDailyIndex() / getDailyPick() に一本化している。
 
     function getDailyCharacterId() {
         if (typeof characterData === "undefined") return null;
-        const ids = Object.keys(characterData);
-        if (ids.length === 0) return null;
-        return ids[getDayIndex(ids.length)];
+        return pickDailyCharacterId(characterData, 0);
     }
 
     function getDailyTip() {
         if (typeof dailyTipsData === "undefined" || dailyTipsData.length === 0) return null;
-        return dailyTipsData[getDayIndex(dailyTipsData.length)];
+        return dailyTipsData[getDailyIndex(dailyTipsData.length, 1)];
     }
 
     // ===== ヒーローの描画 =====
@@ -133,6 +119,15 @@ document.addEventListener("DOMContentLoaded", () => {
             ? (daysAgo(lastPracticeDate) === 0 ? "今日練習しました" : `最終練習: ${daysAgo(lastPracticeDate)}日前`)
             : "まだ練習記録がありません";
 
+        // ストリーク(連続活動日数)。以前はmypage.htmlにしか表示しておらず、
+        // サイトを開いた瞬間に見えないと「あと1日で途切れる」という気づきに
+        // 繋がらないため、訪問時に必ず目に入るindex.htmlのヒーローにも表示する(Phase6-C)
+        const streakDays = typeof getStreakDays === "function" ? getStreakDays() : 0;
+        // mypage.jsの表現(絵文字)と統一する。Tabler Iconsの ti-flame は
+        // このプロジェクトの他箇所で使用実績が無く、見た目の一貫性と
+        // 表示保証の両面から、既存のmypage.jsと同じ絵文字表現に揃える。
+        const streakText = streakDays > 0 ? `<span class="home-hero-streak">🔥 ${streakDays}日連続</span>` : "";
+
         heroArea.innerHTML = `
             <p class="home-hero-eyebrow">Lv.${level} ・ ${typeName}</p>
             <h1>おかえりなさい</h1>
@@ -143,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="home-hero-status">
                 <span><i class="ti ti-target-arrow" aria-hidden="true"></i>累計練習 ${totalCompletions}回</span>
                 <span><i class="ti ti-calendar" aria-hidden="true"></i>${lastPracticeText}</span>
+                ${streakText}
             </div>
             <a href="training.html" class="home-btn home-btn-primary">今日の練習をする</a>
         `;
@@ -239,47 +235,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ===== 最近の成長 =====
-    // score-history をこのページで少しずつ蓄積し、次回以降の訪問で比較できるようにする
+    // 比較ロジック自体は site-constants.js の getGrowthComparison() に一本化した
+    // (以前はhome.js/mypage.jsそれぞれが独自に「比較の基準」を実装しており、
+    //  ページによって表示内容が矛盾していたため)
     function renderGrowthSection() {
 
-        const HISTORY_KEY = "sf6dna_score_history";
-        const today = new Date().toISOString().slice(0, 10);
-
-        let history = [];
-        try {
-            history = JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
-        } catch (err) {
-            history = [];
-        }
-
-        const alreadyLoggedToday = history.some(entry => entry.date === today);
-
-        if (!alreadyLoggedToday) {
-            history.push({ date: today, score });
-            if (history.length > 30) history = history.slice(history.length - 30);
-            localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
-        }
-
         const weakestAxis = getWeakestAxis();
-        const axisLabel = {
-            aggressive: "攻撃", defensive: "守り", zoning: "牽制", balanced: "バランス",
-            reading: "読み合い", combo: "コンボ", strategy: "戦略", instinct: "直感"
-        };
+        const comparison = (typeof getGrowthComparison === "function")
+            ? getGrowthComparison(score, weakestAxis)
+            : null;
 
-        if (history.length <= 1 || !weakestAxis) {
-
-            growthArea.innerHTML = `
-                <p class="home-growth-empty">記録を開始しました。次回以降の訪問から、成長の推移を表示します。</p>
-            `;
-            return;
-
-        }
-
-        const earliest = history[0];
-        const earliestScore = earliest.score && earliest.score[weakestAxis];
-        const currentScore = score[weakestAxis];
-
-        if (typeof earliestScore !== "number") {
+        if (!comparison) {
 
             growthArea.innerHTML = `
                 <p class="home-growth-empty">記録を開始しました。次回以降の訪問から、成長の推移を表示します。</p>
@@ -287,37 +253,100 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
 
         }
-
-        const diff = currentScore - earliestScore;
-        const diffText = diff > 0 ? `+${diff}` : `${diff}`;
-        const diffClass = diff > 0 ? "home-growth-up" : (diff < 0 ? "home-growth-down" : "home-growth-flat");
 
         growthArea.innerHTML = `
-            <p class="home-growth-axis">${axisLabel[weakestAxis] || weakestAxis}のスコア</p>
+            <p class="home-growth-axis">${AXIS_LABELS[comparison.axis] || comparison.axis}のスコア</p>
             <p class="home-growth-value">
-                ${currentScore}<span class="home-growth-diff ${diffClass}">(${diffText})</span>
+                ${comparison.currentScore}<span class="home-growth-diff ${comparison.diffClass}">(${comparison.diffText})</span>
             </p>
-            <p class="home-growth-note">記録開始日(${earliest.date})との比較</p>
+            <p class="home-growth-note">前回の記録(${comparison.comparisonDate})との比較</p>
         `;
 
     }
 
     // ===== 最近見たキャラクター/プレイヤー =====
-    // 現時点では、character.html / player.html 側に閲覧履歴を記録する仕組みが
-    // まだ無いため、正直な空状態を表示する(Phase3でそれらのページに着手する際、
-    // 閲覧時に sf6dna_recent_characters / sf6dna_recent_players へ記録する処理を追加し、
-    // ここを実データ表示に差し替える想定)
+    // Phase6-Bでcharacter.html/player.htmlに閲覧記録(CHARACTER_VIEW/PLAYER_VIEW)を
+    // 追加したため、そのデータを活動ログから読み出して表示する(Phase6-C)。
+    // 以前はここに記録の仕組みが無く、常に空状態を表示していた。
     function renderRecentSection() {
 
-        recentCharacterArea.innerHTML = `
-            <p class="home-recent-empty-text">まだ閲覧履歴がありません。</p>
-            <a href="characters.html" class="home-ghost-link">図鑑を見る <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
-        `;
+        function renderRecentList(area, viewType, resolve, browseHref) {
 
-        recentPlayerArea.innerHTML = `
-            <p class="home-recent-empty-text">まだ閲覧履歴がありません。</p>
-            <a href="players.html" class="home-ghost-link">図鑑を見る <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
-        `;
+            const emptyHtml = `
+                <p class="home-recent-empty-text">まだ閲覧履歴がありません。</p>
+                <a href="${browseHref}" class="home-ghost-link">図鑑を見る <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            `;
+
+            if (typeof getActivityLogSince !== "function" || typeof ACTIVITY_TYPES === "undefined") {
+                area.className = "home-recent-empty";
+                area.innerHTML = emptyHtml;
+                return;
+            }
+
+            // 直近30日分の活動ログから、指定した種類(CHARACTER_VIEW/PLAYER_VIEW)だけを、
+            // 新しい順・重複を除いて最大4件抽出する
+            const log = getActivityLogSince(30);
+            const seenIds = new Set();
+            const recentIds = [];
+
+            for (let i = log.length - 1; i >= 0 && recentIds.length < 4; i--) {
+
+                const actions = log[i].actions;
+
+                for (let j = actions.length - 1; j >= 0 && recentIds.length < 4; j--) {
+
+                    const action = actions[j];
+                    if (action.type !== viewType || seenIds.has(action.target)) continue;
+
+                    seenIds.add(action.target);
+                    recentIds.push(action.target);
+
+                }
+
+            }
+
+            const items = recentIds.map(resolve).filter(Boolean);
+
+            if (items.length === 0) {
+                area.className = "home-recent-empty";
+                area.innerHTML = emptyHtml;
+                return;
+            }
+
+            area.className = "home-recent-list";
+            area.innerHTML = items.map(item => `
+                <a href="${item.href}" class="home-recent-item">
+                    ${item.image
+                        ? `<img src="${item.image}" alt="${item.name}">`
+                        : `<span class="home-recent-fallback">${item.name.charAt(0)}</span>`
+                    }
+                    <span>${item.name}</span>
+                </a>
+            `).join("");
+
+        }
+
+        renderRecentList(
+            recentCharacterArea,
+            ACTIVITY_TYPES.CHARACTER_VIEW,
+            (id) => {
+                const c = typeof characterData !== "undefined" ? characterData[id] : null;
+                if (!c) return null;
+                return { href: `character.html?id=${id}`, image: c.image, name: c.name };
+            },
+            "characters.html"
+        );
+
+        renderRecentList(
+            recentPlayerArea,
+            ACTIVITY_TYPES.PLAYER_VIEW,
+            (id) => {
+                const p = typeof playerData !== "undefined" ? playerData[id] : null;
+                if (!p) return null;
+                return { href: `player.html?id=${id}`, image: p.image, name: p.name };
+            },
+            "players.html"
+        );
 
     }
 
@@ -355,4 +384,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    renderMarquee();
+
 });
+
+// ===== キャラクター/プレイヤーの横スクロール演出(Phase3-B) =====
+// CSSのアニメーション(@keyframes marqueeScroll)でループさせるため、
+// JS側は要素を2セット並べて継ぎ目なくループできるようにするだけでよい。
+function renderMarquee() {
+
+    const charArea = document.getElementById("homeMarqueeCharacters");
+    const playerArea = document.getElementById("homeMarqueePlayers");
+
+    if (charArea && typeof characterData !== "undefined") {
+
+        const chars = Object.values(characterData).slice(0, 12);
+        const itemsHtml = chars.map(c => `
+            <img src="${c.image}" alt="${c.name}" class="home-marquee-item" loading="lazy">
+        `).join("");
+
+        // 同じ内容を2回並べて、ループ時の継ぎ目を目立たなくする
+        charArea.innerHTML = itemsHtml + itemsHtml;
+
+    }
+
+    if (playerArea && typeof playerData !== "undefined") {
+
+        const players = Object.values(playerData).filter(p => p.image).slice(0, 12);
+
+        if (players.length > 0) {
+
+            const itemsHtml = players.map(p => `
+                <img src="${p.image}" alt="${p.name}" class="home-marquee-item home-marquee-item-round" loading="lazy">
+            `).join("");
+
+            playerArea.innerHTML = itemsHtml + itemsHtml;
+
+        }
+
+    }
+
+}

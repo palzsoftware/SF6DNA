@@ -1,12 +1,18 @@
 const characterArea = document.getElementById("characterArea");
 const characterSearch = document.getElementById("characterSearch");
 
+// 「未設定」+ site-constants.jsのRELATION_STATUS_CONFIG(設定テーブル)を
+// この順番でカード上のステータス表示・クリック時の巡回に使う。
+// ステータスの種類を増減する場合は、このファイルではなくsite-constants.js側の
+// RELATION_STATUS_CONFIGを変更するだけでよい(Phase6-B)。
 const statusList = [
-    {icon:"○",text:"未設定",class:"status-none"},
-    {icon:"★",text:"メイン",class:"status-main"},
-    {icon:"△",text:"サブ",class:"status-sub"},
-    {icon:"◇",text:"気になる",class:"status-interest"},
-    {icon:"♡",text:"使ってみたい",class:"status-try"}
+    { status: null, icon: "○", text: "未設定", class: "status-none" },
+    ...RELATION_STATUS_CONFIG.map(item => ({
+        status: item.status,
+        icon: item.icon,
+        text: item.label,
+        class: item.badgeClass
+    }))
 ];
 
 let currentTypeFilter = "all";
@@ -72,12 +78,12 @@ function filterByFavorite(list){
 
     }
 
-    const status =
-        JSON.parse(localStorage.getItem("sf6dna_status")) || {};
-
-    return list.filter(character =>
-        (status[character.id] ?? 0).toString() === currentFavoriteFilter
-    );
+    // currentFavoriteFilterは "none"(未設定) または RELATION_STATUS の値のいずれか
+    return list.filter(character => {
+        const relation = getCharacterRelation(character.id);
+        const status = relation ? relation.status : "none";
+        return status === currentFavoriteFilter;
+    });
 
 }
 
@@ -103,14 +109,6 @@ function sortCharacters(list){
 
 }
 
-function getStatusData(){
-
-    return JSON.parse(
-        localStorage.getItem("sf6dna_status")
-    ) || {};
-
-}
-
 function applyFilters(){
     
     let list = Object.values(characterData);
@@ -129,13 +127,12 @@ function applyFilters(){
 
 function createCharacterCard(character){
 
-    const savedStatus = getStatusData();
+    const relation = getCharacterRelation(character.id);
+    const currentStatusValue = relation ? relation.status : null;
 
-    const statusIndex =
-        savedStatus[character.id] ?? 0;
-
+    // statusListの中から現在のステータスに一致するものを探す(先頭は「未設定」=status:null)
     const status =
-        statusList[statusIndex];
+        statusList.find(item => item.status === currentStatusValue) || statusList[0];
 
     return `
 <div class="card">
@@ -274,27 +271,20 @@ document.addEventListener("click", e => {
     e.stopPropagation();
 
     const id = target.dataset.id;
+    const character = characterData[id];
 
-    const status =
-        JSON.parse(localStorage.getItem("sf6dna_status")) || {};
+    // statusList([未設定, メイン, サブ, 練習中, 苦手, 気になる])の中で、
+    // 現在のステータスの次のものへ巡回する(末尾の次は「未設定」に戻る)
+    const relation = getCharacterRelation(id);
+    const currentIndex = statusList.findIndex(item => item.status === (relation ? relation.status : null));
+    const nextItem = statusList[(currentIndex + 1) % statusList.length];
 
-    status[id] =
-        ((status[id] ?? 0) + 1) % statusList.length;
+    setCharacterRelation(id, nextItem.status, character ? character.name : id);
 
-    localStorage.setItem(
-        "sf6dna_status",
-        JSON.stringify(status)
-    );
+    target.querySelector(".status-icon").textContent = nextItem.icon;
+    target.querySelector(".status-text").textContent = nextItem.text;
+    target.className = "character-status " + nextItem.class;
 
-    target.querySelector(".status-icon").textContent =
-        statusList[status[id]].icon;
-
-    target.querySelector(".status-text").textContent =
-        statusList[status[id]].text;
-
-    target.className =
-    "character-status " + statusList[status[id]].class;
-    
 applyFilters();
 
 });
@@ -352,3 +342,65 @@ filterToggle.addEventListener("click",()=>{
 
 
 applyFilters();
+// ===== 今日のおすすめ(Phase4) =====
+// 「今日」を基準にキャラクターを1体選ぶ(site-constants.jsのgetDailyPickを使用)。
+// キャラクター用のsaltは0、動画用は2(他の「今日のおすすめ」機能とズラすことで
+// カテゴリ間の偏りを避ける。ホームのキャラ=salt0、ワンポイント=salt1と重複しないよう2にしている)
+(function renderTodayPicks() {
+
+    const charArea = document.getElementById("todayPickCharacter");
+    const videoArea = document.getElementById("todayPickVideo");
+    if (!charArea || typeof characterData === "undefined") return;
+
+    const dailyId = pickDailyCharacterId(characterData, 0);
+    const character = dailyId ? characterData[dailyId] : null;
+
+    if (!character) return;
+
+    charArea.innerHTML = `
+        <a href="character.html?id=${dailyId}" class="today-pick-link">
+            <img src="${character.image}" alt="${character.name}" class="today-pick-avatar">
+            <div>
+                <p class="today-pick-sublabel">今日のキャラクター</p>
+                <p class="today-pick-name">${character.name}</p>
+            </div>
+        </a>
+    `;
+
+    if (videoArea) {
+
+        videoArea.innerHTML = `<p class="today-pick-loading">読み込み中…</p>`;
+
+        const VIDEO_API_BASE_URL = "https://sf6dna-backend.onrender.com";
+        const queries = [
+            `${character.name} コンボ ストリートファイター6`,
+            `${character.name} ストリートファイター6`
+        ];
+
+        fetchVideosWithQueryRetry(VIDEO_API_BASE_URL, queries, 1).then(results => {
+
+            if (results && results.length > 0) {
+
+                const video = results[0];
+
+                videoArea.innerHTML = `
+                    <a href="${video.url}" target="_blank" rel="noopener" class="today-pick-link">
+                        <img src="${video.thumbnail}" alt="${video.title}" class="today-pick-avatar today-pick-avatar-square">
+                        <div>
+                            <p class="today-pick-sublabel">今日のおすすめ動画</p>
+                            <p class="today-pick-name">${video.title}</p>
+                        </div>
+                    </a>
+                `;
+
+            } else {
+
+                videoArea.innerHTML = `<p class="today-pick-loading">動画が見つかりませんでした</p>`;
+
+            }
+
+        });
+
+    }
+
+})();

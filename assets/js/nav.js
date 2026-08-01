@@ -154,4 +154,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    // ===== 初心者モードに応じたナビゲーション文言の切り替え =====
+    // 「図鑑」は初心者には伝わりにくいため、初心者モード選択時のみ
+    // 「学ぶ」という表現に切り替える。中上級者向けの表示は変更しない。
+    // (sf6dna_experience_level は onboarding.js が保存する)
+    applyExperienceLevelNavLabels();
+
 });
+
+function applyExperienceLevelNavLabels() {
+
+    const level = localStorage.getItem("sf6dna_experience_level");
+    const isBeginner = level === "beginner";
+
+    const charLink = document.querySelector('.dropdown-content a[href="characters.html"]');
+    const playerLink = document.querySelector('.dropdown-content a[href="players.html"]');
+
+    function setLinkText(link, beginnerText, normalText) {
+
+        if (!link) return;
+
+        const badge = link.querySelector("span");
+        link.textContent = "";
+        if (badge) link.appendChild(badge);
+        link.appendChild(document.createTextNode(isBeginner ? beginnerText : normalText));
+
+    }
+
+    setLinkText(charLink, "キャラを学ぶ", "キャラクター図鑑");
+    setLinkText(playerLink, "選手を学ぶ", "プレイヤー図鑑");
+
+    // ドロップダウンの見出し(「図鑑 ▼」)自体も、キャラ/選手リンクを含む
+    // ドロップダウンに限って「学ぶ ▼」に切り替える
+    if (charLink) {
+
+        const dropdown = charLink.closest(".dropdown");
+        const trigger = dropdown ? dropdown.querySelector(".dropdown-button") : null;
+
+        if (trigger) {
+            trigger.textContent = isBeginner ? "学ぶ ▼" : "図鑑 ▼";
+        }
+
+    }
+
+}

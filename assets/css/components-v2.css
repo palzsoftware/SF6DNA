@@ -237,9 +237,15 @@
 
 }
 
-.status-try{
+.status-practicing{
 
     color:#ff69b4;
+
+}
+
+.status-weak{
+
+    color:#ef4444;
 
 }
 /* ==========================================
@@ -2045,6 +2051,38 @@
     font-weight:600;
 
 }
+
+.nav-level-btn{
+
+    background:rgba(255,107,0,.12);
+
+    border:1px solid rgba(255,107,0,.4);
+
+    color:#ffb347;
+
+    font-weight:700;
+
+    font-size:14px;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    transition:background .2s, border-color .2s;
+
+}
+
+.nav-level-btn:hover{
+
+    background:rgba(255,107,0,.22);
+
+    border-color:var(--primary, #ff6b00);
+
+}
 /* ===========================
    動画カードの追加スタイル
    (video-cardがdivからaタグに変更されたための調整と、
@@ -2466,6 +2504,70 @@
 
         padding:16px 20px;
 
+    }
+
+    /* view-mode-toggle(PC/スマホ切替)を、他のナビ項目と統一された
+       フル幅の行として表示する(40x40の小さいボタンのまま浮いて見えるのを防ぐ) */
+    .view-mode-toggle{
+
+        width:100%;
+        height:auto;
+
+        justify-content:flex-start;
+        gap:10px;
+
+        margin-right:0;
+        margin-top:8px;
+
+        padding:16px 20px;
+
+        border-radius:8px;
+
+        font-size:16px;
+
+    }
+
+    .view-mode-toggle::after{
+        content:"表示モードを切り替え";
+        font-size:14px;
+    }
+
+    /* レベル変更ボタンも、他のナビ項目と統一されたフル幅の行として表示する */
+    .nav-level-btn{
+
+        width:100%;
+
+        text-align:left;
+
+        border-radius:8px;
+
+        padding:16px 20px;
+
+        margin-top:8px;
+
+        background:rgba(255,107,0,.1);
+
+    }
+
+}
+
+/* ===========================
+   狭い画面(480px以下)でのヘッダー微調整
+   ロゴが大きすぎてハンバーガー/表示切替ボタンと窮屈になるのを防ぐ
+=========================== */
+
+@media (max-width:480px){
+
+    .logo{
+        font-size:20px;
+    }
+
+    .header-inner{
+        height:64px;
+    }
+
+    .view-mode-toggle{
+        margin-right:4px;
     }
 
 }
@@ -3201,4 +3303,683 @@
     font-size:14px;
 
     line-height:1.6;
+}
+
+/* ===========================
+   動画カード情報拡張(Phase3-B継続)
+=========================== */
+
+.video-thumb-wrap{
+
+    position:relative;
+
+}
+
+.video-duration-badge{
+
+    position:absolute;
+
+    right:6px;
+
+    bottom:6px;
+
+    background:rgba(0,0,0,.75);
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    padding:2px 6px;
+
+    border-radius:4px;
+
+}
+
+.video-meta{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+    font-size:11px;
+
+    color:#9aa4b2;
+
+    margin:4px 0;
+
+}
+
+.video-channel{
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   動画カード コンパクトバリアント(Phase3.5)
+   一覧が多いページ(Beginner Guide等)向けに一回り小さく表示する
+=========================== */
+
+.video-card-compact{
+
+    font-size:13px;
+
+}
+
+.video-card-compact .video-thumb-search{
+
+    height:auto;
+
+    aspect-ratio:16/9;
+
+    font-size:24px;
+
+}
+
+.video-card-compact .video-info h3{
+
+    font-size:13px;
+
+    -webkit-line-clamp:2;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+
+}
+
+/* ===========================
+   パンくずリスト(Phase3.5)
+=========================== */
+
+.breadcrumb{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    flex-wrap:wrap;
+
+    font-size:12px;
+
+    color:#9aa4b2;
+
+    margin-top:16px;
+
+}
+
+.breadcrumb a{
+
+    color:#9aa4b2;
+
+    text-decoration:none;
+
+}
+
+.breadcrumb a:hover{
+
+    color:var(--primary, #ff6b00);
+
+}
+
+.breadcrumb .breadcrumb-current{
+
+    color:#fff;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   お気に入りボタン(Phase4)
+=========================== */
+
+.favorite-toggle-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:12px;
+
+    padding:8px 16px;
+
+    background:transparent;
+
+    border:1px solid #303847;
+
+    border-radius:999px;
+
+    color:#9aa4b2;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    transition:border-color .2s, color .2s, background .2s;
+
+}
+
+.favorite-toggle-btn:hover{
+
+    border-color:#ff6b00;
+
+    color:#ffb347;
+
+}
+
+.favorite-toggle-btn-active{
+
+    background:rgba(255,61,113,.12);
+
+    border-color:#ff3d71;
+
+    color:#ff3d71;
+
+}
+
+.favorite-toggle-btn-active i{
+
+    color:#ff3d71;
+}
+
+/* ===========================
+   今日のおすすめ(Phase4、複数ページ共通)
+=========================== */
+
+.today-pick-section{
+
+    margin:20px 0;
+
+}
+
+.today-pick-label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    color:#ffb347;
+
+    margin-bottom:10px;
+
+}
+
+.today-pick-row{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+.today-pick-card{
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    border-left:3px solid #ff6b00;
+
+    border-radius:14px;
+
+    padding:12px;
+
+    min-height:60px;
+
+}
+
+.today-pick-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+}
+
+.today-pick-avatar{
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    flex-shrink:0;
+
+}
+
+.today-pick-avatar-square{
+
+    border-radius:8px;
+
+}
+
+.today-pick-sublabel{
+
+    font-size:11px;
+
+    color:#9aa4b2;
+
+    margin:0 0 2px 0;
+
+}
+
+.today-pick-name{
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin:0;
+
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+
+}
+
+.today-pick-loading{
+
+    font-size:12px;
+
+    color:#9aa4b2;
+
+}
+
+@media (max-width:768px){
+
+    .today-pick-row{
+        grid-template-columns:1fr;
+    }
+
+}
+
+.today-pick-faq-question{
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin:0 0 6px 0;
+
+}
+
+.today-pick-faq-answer{
+
+    font-size:12px;
+
+    color:#c8c8c8;
+
+    line-height:1.6;
+
+    margin:0;
+}
+
+/* ===========================
+   動画カードのお気に入りボタン(Phase4)
+=========================== */
+
+.video-favorite-btn{
+
+    position:absolute;
+
+    top:6px;
+
+    right:6px;
+
+    width:28px;
+
+    height:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(0,0,0,.6);
+
+    border:none;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:background .2s, color .2s;
+
+}
+
+.video-favorite-btn:hover{
+
+    background:rgba(0,0,0,.8);
+
+}
+
+.video-favorite-btn-active{
+
+    color:#ff3d71;
+
+}
+
+/* ===========================
+   FAQのお気に入りボタン(Phase4)
+=========================== */
+
+.faq-item{
+    position:relative;
+}
+
+.faq-favorite-btn{
+
+    position:absolute;
+
+    top:14px;
+
+    right:44px;
+
+    width:28px;
+
+    height:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:none;
+
+    border:none;
+
+    color:#9aa4b2;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    z-index:2;
+
+    transition:color .2s;
+
+}
+
+.faq-favorite-btn:hover{
+
+    color:#ff3d71;
+
+}
+
+.faq-favorite-btn-active{
+
+    color:#ff3d71;
+
+}
+
+/* ===========================
+   苦手キャラクター登録ボタン(Phase4-B)
+=========================== */
+
+.character-toggle-row{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.weak-toggle-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:12px;
+
+    padding:8px 16px;
+
+    background:transparent;
+
+    border:1px solid #303847;
+
+    border-radius:999px;
+
+    color:#9aa4b2;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    transition:border-color .2s, color .2s, background .2s;
+
+}
+
+.weak-toggle-btn:hover{
+
+    border-color:#378ade;
+
+    color:#7ab0e8;
+
+}
+
+.weak-toggle-btn-active{
+
+    background:rgba(55,138,222,.12);
+
+    border-color:#378ade;
+
+    color:#7ab0e8;
+
+}
+
+.weak-toggle-btn-active i{
+
+    color:#7ab0e8;
+}
+
+/* ==========================================
+   「次にすること」共通コンポーネント (Phase6-A)
+
+   assets/js/next-actions.js の renderNextActions() が生成するDOM構造に対応する。
+   キャラクター詳細ページ専用のスタイルではなく、Phase6-B以降でプレイヤー詳細・
+   図鑑一覧などに同じ導線を追加する際もこのクラス名をそのまま使う想定のため、
+   character.html固有のスタイルをこのブロックに追加しないこと。
+   ========================================== */
+
+.next-actions{
+
+    margin-top:var(--ds-space-4xl, 64px);
+
+}
+
+.next-actions-heading{
+
+    margin-bottom:var(--ds-space-lg, 16px);
+    font-size:24px;
+
+}
+
+.next-actions-list{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:var(--ds-space-md, 12px);
+
+}
+
+.next-actions-item{
+
+    display:flex;
+    align-items:center;
+    gap:var(--ds-space-sm, 8px);
+    padding:var(--ds-space-lg, 16px);
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    color:var(--text);
+    text-decoration:none;
+    transition:var(--transition);
+    clip-path:polygon(0 0,100% 0,100% calc(100% - var(--ds-clip-card, 16px)),calc(100% - var(--ds-clip-card, 16px)) 100%,0 100%);
+
+}
+
+.next-actions-item:hover{
+
+    border-color:var(--primary);
+    background:#1c2330;
+
+}
+
+.next-actions-item-primary{
+
+    border-color:var(--primary);
+    background:var(--type-color-soft);
+
+}
+
+.next-actions-icon{
+
+    font-size:22px;
+    line-height:1;
+    flex-shrink:0;
+
+}
+
+.next-actions-text{
+
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    min-width:0;
+
+}
+
+.next-actions-label{
+
+    font-size:14px;
+    font-weight:600;
+
+}
+
+.next-actions-desc{
+
+    font-size:12px;
+    color:var(--text-sub);
+    /* FAQの質問文などが長い場合に備え、2行までで省略する */
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+
+}
+
+@media (max-width:480px){
+
+    .next-actions-list{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ==========================================
+   キャラクターとの関係ステータス選択 (Phase6-B)
+
+   assets/js/site-constants.js の RELATION_STATUS_CONFIG から
+   assets/js/characters.js が動的に生成するボタン群のスタイル。
+   ステータスごとの色は各ボタンのstyle属性(--relation-color)で個別に渡されるため、
+   ステータスの種類が増えてもこのCSS自体は変更不要(config駆動)。
+   favorite-toggle-btn/weak-toggle-btnと似た見た目にして、既存デザインとの
+   統一感を保っている。
+   ========================================== */
+
+.relation-status-row{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+
+}
+
+.relation-status-btn{
+
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:12px;
+    padding:8px 14px;
+    background:transparent;
+    border:1px solid #303847;
+    border-radius:999px;
+    color:#9aa4b2;
+    font-size:13px;
+    cursor:pointer;
+    transition:border-color .2s, color .2s, background .2s;
+
+}
+
+.relation-status-btn:hover{
+
+    border-color:var(--relation-color, #ff6b00);
+    color:var(--relation-color, #ffb347);
+
+}
+
+.relation-status-btn-active{
+
+    background:color-mix(in srgb, var(--relation-color, #ff6b00) 15%, transparent);
+    border-color:var(--relation-color, #ff6b00);
+    color:var(--relation-color, #ff6b00);
+
+}
+
+/* ==========================================
+   プレイヤー図鑑: キャラクター絞り込み中インジケーター (Phase6-B)
+   ========================================== */
+
+.player-character-filter-notice{
+
+    margin-bottom:12px;
+    padding:10px 16px;
+    background:rgba(255,107,0,.12);
+    border:1px solid rgba(255,107,0,.4);
+    border-radius:8px;
+    color:#ffb347;
+    font-size:13px;
+
+}
+
+.player-character-filter-notice a{
+
+    color:#ffb347;
+    text-decoration:underline;
+
 }

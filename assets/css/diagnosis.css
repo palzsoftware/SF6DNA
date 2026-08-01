@@ -124,6 +124,281 @@
 
 }
 
+.question-card.slide-in-forward{
+
+    animation:slideInForward var(--ds-duration-base, .2s) var(--ds-ease-standard, ease) both;
+
+}
+
+.question-card.slide-in-back{
+
+    animation:slideInBack var(--ds-duration-base, .2s) var(--ds-ease-standard, ease) both;
+
+}
+
+@keyframes slideInForward{
+
+    from{
+        opacity:0;
+        transform:translateX(24px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes slideInBack{
+
+    from{
+        opacity:0;
+        transform:translateX(-24px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+/* ===========================
+   ステージ表示・期待感メッセージ
+=========================== */
+
+.stage-text{
+
+    font-size:13px;
+
+    color:var(--text-sub);
+
+    font-weight:700;
+
+    letter-spacing:.03em;
+
+}
+
+.stage-dots{
+
+    display:flex;
+
+    gap:6px;
+
+    margin-top:10px;
+
+}
+
+.stage-dot{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--border);
+
+    transition:background var(--ds-duration-base, .2s) var(--ds-ease-standard, ease),
+               transform var(--ds-duration-base, .2s) var(--ds-ease-standard, ease);
+
+}
+
+.stage-dot.filled{
+
+    background:var(--primary, #ff6b00);
+
+    transform:scale(1.15);
+
+}
+
+.encourage-message{
+
+    min-height:18px;
+
+    margin-top:10px;
+
+    font-size:13px;
+
+    color:var(--primary-hover, #ff8d32);
+
+    font-weight:700;
+
+}
+
+.encourage-message.encourage-flash{
+
+    animation:encourageFadeIn .4s ease both;
+
+}
+
+@keyframes encourageFadeIn{
+
+    from{ opacity:0; transform:translateY(-4px); }
+    to{ opacity:1; transform:translateY(0); }
+
+}
+
+/* ===========================
+   戻るボタン
+=========================== */
+
+.back-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:28px;
+
+    padding:8px 16px;
+
+    background:transparent;
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+    color:var(--text-sub);
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    transition:border-color var(--ds-duration-fast, .12s) var(--ds-ease-standard, ease),
+               color var(--ds-duration-fast, .12s) var(--ds-ease-standard, ease);
+
+}
+
+.back-button:hover{
+
+    border-color:var(--primary, #ff6b00);
+
+    color:var(--primary-hover, #ff8d32);
+
+}
+
+/* ===========================
+   回答チェックマーク(押した瞬間のフィードバック)
+=========================== */
+
+.answer-check{
+
+    position:absolute;
+
+    right:20px;
+
+    top:50%;
+
+    transform:translateY(-50%) scale(0);
+
+    color:var(--primary, #ff6b00);
+
+    font-size:20px;
+
+    font-weight:900;
+
+    transition:transform var(--ds-duration-fast, .12s) var(--ds-ease-overshoot, ease);
+
+}
+
+.answer-item.selected .answer-check{
+
+    transform:translateY(-50%) scale(1);
+
+}
+
+/* ===========================
+   ステージクリア演出
+=========================== */
+
+.stage-clear-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(13,17,23,.92);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:opacity .2s ease;
+
+    z-index:9998;
+
+}
+
+.stage-clear-overlay.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.stage-clear-content{
+
+    text-align:center;
+
+    animation:stageClearPop .5s var(--ds-ease-overshoot, ease) both;
+
+}
+
+@keyframes stageClearPop{
+
+    0%{ transform:scale(.7); opacity:0; }
+    100%{ transform:scale(1); opacity:1; }
+
+}
+
+.stage-clear-title{
+
+    color:var(--primary, #ff6b00);
+
+    font-size:32px;
+
+    font-weight:900;
+
+    letter-spacing:.04em;
+
+    margin-bottom:8px;
+
+}
+
+.stage-clear-sub{
+
+    color:#fff;
+
+    font-size:14px;
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .question-card.slide-in-forward,
+    .question-card.slide-in-back,
+    .stage-clear-content,
+    .encourage-message.encourage-flash{
+        animation:none;
+        opacity:1;
+        transform:none;
+    }
+
+}
+
+
+
 /*=========================================
   Question
 =========================================*/
@@ -152,6 +427,8 @@
 
 .question-title{
 
+    outline:none;
+
     font-size:36px;
 
     font-weight:800;
@@ -159,6 +436,14 @@
     line-height:1.4;
 
     margin-bottom:36px;
+
+}
+
+.question-title:focus-visible{
+
+    outline:2px solid var(--primary, #ff6b00);
+    outline-offset:6px;
+    border-radius:4px;
 
 }
 
@@ -475,4 +760,47 @@
     border:1px solid rgba(255,61,61,.4);
 
     color:#ff6b6b;
+}
+
+/* ===========================
+   Phase2 セルフレビューによるモバイル調整
+   (ファイル末尾に配置し、上記の基本スタイルより後に評価されるようにしている)
+=========================== */
+
+@media (max-width:768px){
+
+    .stage-clear-title{
+        font-size:24px;
+    }
+
+    .back-button{
+        width:100%;
+        justify-content:center;
+    }
+
+    /* QUESTION表示とSTAGE表示が横並びのままだと狭い画面で窮屈になり、
+       上級モードでは特に文字が詰まって見づらくなるため、縦積みに変更する */
+    .progress-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:4px;
+    }
+
+    .progress-count{
+        font-size:15px;
+    }
+
+    .stage-text{
+        font-size:12px;
+    }
+
+    /* 親指操作時の余白確保のため、カード内側の余白を狭める */
+    .question-card{
+        padding:28px 20px;
+    }
+
+    .answer-item{
+        padding:18px 20px;
+    }
+
 }

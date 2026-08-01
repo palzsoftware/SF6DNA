@@ -51,8 +51,72 @@ const progressBar =
 const progressText =
     document.getElementById("progressText");
 
-const remainingText =
-    document.getElementById("remainingText");
+const stageText =
+    document.getElementById("stageText");
+
+const stageDots =
+    document.getElementById("stageDots");
+
+const encourageMessage =
+    document.getElementById("encourageMessage");
+
+const backButton =
+    document.getElementById("backButton");
+
+const stageClearOverlay =
+    document.getElementById("stageClearOverlay");
+
+const stageClearTitle =
+    document.getElementById("stageClearTitle");
+
+const stageClearSub =
+    document.getElementById("stageClearSub");
+
+// -----------------------------
+// ステージ構成(UI表示専用。質問データ・スコアリングには一切影響しない)
+// -----------------------------
+// 1ステージ = 10問。ステージ名は回答内容を誘導しないよう、
+// 抽象的なテーマ名にしている。ステージ数は質問配列の長さから自動算出する。
+
+const STAGE_SIZE = 10;
+
+const STAGE_NAMES_BEGINNER = [
+    "基本スタイル", "プレイ傾向", "立ち回り", "判断", "総合分析"
+];
+
+const STAGE_NAMES_ADVANCED = [
+    "基本スタイル", "プレイ傾向", "立ち回り", "判断", "読み合い",
+    "対応力", "精密分析", "深層心理", "実戦傾向", "総合分析"
+];
+
+// ステージクリア時のサブメッセージ(短く・軽いテンポを保つ)
+const STAGE_CLEAR_SUB_MESSAGES = [
+    "分析を続行します…",
+    "次の分析へ…",
+    "特徴をさらに解析します…",
+    "傾向を読み取っています…"
+];
+
+// 回答モチベーションメッセージ(進捗率で切り替える)
+// 実際の診断結果には一切影響しない、演出目的のテキストのみ
+const ENCOURAGE_MESSAGES = [
+    { threshold: 0.3, text: "ここから診断精度が上がります" },
+    { threshold: 0.6, text: "かなり特徴が見えてきました" },
+    { threshold: 0.8, text: "あと少しでタイプが判明します" },
+    { threshold: 0.95, text: "最後の分析です" }
+];
+
+// ローディング画面(結果ページ遷移前)で順番に表示するメッセージ
+const LOADING_MESSAGES = [
+    "プレイスタイルを解析中...",
+    "立ち回り傾向を分析中...",
+    "攻撃性・読み合い傾向を測定中...",
+    "あなたのSF6 DNAを生成しています..."
+];
+
+// 期待感メッセージの重複表示防止・自動消去用の状態
+let lastEncourageMessage = "";
+let encourageMessageTimer = null;
 
 // -----------------------------
 // 質問データ
@@ -614,7 +678,7 @@ const TOTAL_QUESTIONS = activeQuestions.length;
 // 質問表示
 // =========================================
 
-function renderQuestion() {
+function renderQuestion(direction) {
 
     const question = activeQuestions[currentQuestion];
 
@@ -637,6 +701,7 @@ function renderQuestion() {
 
         label.className = "answer-item answer-enter";
         label.style.animationDelay = `${index * 60}ms`;
+        label.dataset.answerIndex = index;
 
         label.innerHTML = `
             <input
@@ -647,26 +712,15 @@ function renderQuestion() {
             <span class="answer-text">
                 ${answer.text}
             </span>
+
+            <span class="answer-check" aria-hidden="true">✓</span>
         `;
 
         // クリックイベント
         const input = label.querySelector("input");
 
 input.addEventListener("change", () => {
-
-    document
-        .querySelectorAll(".answer-item")
-        .forEach(item =>
-            item.classList.remove("selected"));
-
-    label.classList.add("selected");
-
-    setTimeout(() => {
-
-        selectAnswer(index);
-
-    }, 300);
-
+    confirmAnswer(index, label);
 });
 
         answerList.appendChild(label);
@@ -675,22 +729,65 @@ input.addEventListener("change", () => {
 
     updateProgress();
 
-    // 質問カードをフェードインさせる(既存の.hideクラスを使った演出)
+    // 戻るボタンは最初の質問では表示しない
+    if (backButton) {
+        backButton.style.visibility = currentQuestion === 0 ? "hidden" : "visible";
+    }
+
+    // 質問カードの遷移アニメーション(進む/戻るで方向を変える)
     if (questionCard) {
+
+        questionCard.classList.remove("slide-in-forward", "slide-in-back");
         questionCard.classList.add("hide");
+
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
                 questionCard.classList.remove("hide");
+                questionCard.classList.add(direction === "back" ? "slide-in-back" : "slide-in-forward");
             });
         });
+
     }
 
+    // スクリーンリーダー向けに、質問見出しへフォーカスを移す
+    // (視覚的なフォーカスリングが目立ちすぎないよう、CSSでoutlineは調整済み)
+    questionTitle.focus({ preventScroll: true });
+
 }
+
+// =========================================
+// 回答確定(クリック直後の軽いフィードバック→自動で次へ)
+// =========================================
+
+function confirmAnswer(index, label) {
+
+    document
+        .querySelectorAll(".answer-item")
+        .forEach(item =>
+            item.classList.remove("selected"));
+
+    label.classList.add("selected");
+
+    // 0.2〜0.3秒だけ「回答を記録した」ことが伝わるフィードバックを見せてから進む
+    // (この待機時間は既存の遷移テンポとほぼ同じに保つため、新たに待ち時間を追加しない)
+    setTimeout(() => {
+
+        selectAnswer(index);
+
+    }, 280);
+
+}
+
 // =========================================
 // プログレス更新
 // =========================================
 
 function updateProgress() {
+
+    const stageNames = diagnosisMode === "advanced" ? STAGE_NAMES_ADVANCED : STAGE_NAMES_BEGINNER;
+    const totalStages = Math.ceil(TOTAL_QUESTIONS / STAGE_SIZE);
+    const currentStage = Math.floor(currentQuestion / STAGE_SIZE) + 1;
+    const posInStage = (currentQuestion % STAGE_SIZE) + 1;
 
     progressBar.style.width =
         `${((currentQuestion + 1) / TOTAL_QUESTIONS) * 100}%`;
@@ -698,8 +795,56 @@ function updateProgress() {
     progressText.textContent =
         `QUESTION ${String(currentQuestion + 1).padStart(2, "0")} / ${TOTAL_QUESTIONS}`;
 
-    remainingText.textContent =
-        `残り${TOTAL_QUESTIONS - (currentQuestion + 1)}問`;
+    const stageName = stageNames[currentStage - 1] || "";
+    stageText.textContent = `STAGE ${currentStage}/${totalStages} ${stageName}`;
+
+    // ステージ内のミニ進捗ドット
+    if (stageDots) {
+
+        stageDots.innerHTML = "";
+
+        for (let i = 0; i < STAGE_SIZE; i++) {
+            const dot = document.createElement("span");
+            dot.className = "stage-dot" + (i < posInStage ? " filled" : "");
+            stageDots.appendChild(dot);
+        }
+
+    }
+
+    // 進捗率に応じた期待感メッセージ
+    // (演出目的のみ。診断結果には影響しない)
+    //
+    // セルフレビューでの気づき: 閾値を跨いだ後、同じメッセージを
+    // 何問も表示し続けると「常にそこにあるだけの文字」になり、
+    // かえって存在感が薄れてしまう。そのため、閾値を跨いだ瞬間だけ
+    // 数秒間フラッシュ表示し、その後は自動的に消す仕様にしている。
+    if (encourageMessage) {
+
+        const progressRatio = (currentQuestion + 1) / TOTAL_QUESTIONS;
+        let message = "";
+
+        ENCOURAGE_MESSAGES.forEach(m => {
+            if (progressRatio >= m.threshold) message = m.text;
+        });
+
+        if (message && message !== lastEncourageMessage) {
+
+            lastEncourageMessage = message;
+
+            encourageMessage.textContent = message;
+            encourageMessage.classList.remove("encourage-flash");
+            void encourageMessage.offsetWidth; // アニメーションを再トリガーするための強制リフロー
+            encourageMessage.classList.add("encourage-flash");
+
+            clearTimeout(encourageMessageTimer);
+            encourageMessageTimer = setTimeout(() => {
+                encourageMessage.textContent = "";
+                encourageMessage.classList.remove("encourage-flash");
+            }, 2800);
+
+        }
+
+    }
 
 }
 
@@ -727,12 +872,98 @@ function selectAnswer(index) {
 
     }
 
-    // 次の質問
+    const finishedQuestionIndex = currentQuestion;
     currentQuestion++;
 
-    renderQuestion();
+    // ステージの区切りに到達していれば、短いクリア演出を挟んでから次のステージへ
+    const isEndOfStage = (finishedQuestionIndex % STAGE_SIZE) === STAGE_SIZE - 1;
+
+    if (isEndOfStage && stageClearOverlay) {
+
+        const clearedStageNumber = Math.floor(finishedQuestionIndex / STAGE_SIZE) + 1;
+
+        stageClearTitle.textContent = `STAGE ${clearedStageNumber} CLEAR!`;
+        stageClearSub.textContent =
+            STAGE_CLEAR_SUB_MESSAGES[Math.floor(Math.random() * STAGE_CLEAR_SUB_MESSAGES.length)];
+
+        stageClearOverlay.classList.add("show");
+
+        setTimeout(() => {
+            stageClearOverlay.classList.remove("show");
+            renderQuestion("forward");
+        }, 650);
+
+    } else {
+
+        renderQuestion("forward");
+
+    }
 
 }
+
+// =========================================
+// 戻る処理(誤操作からの復帰)
+// =========================================
+
+function goToPreviousQuestion() {
+
+    if (currentQuestion === 0) return;
+
+    currentQuestion--;
+
+    // 戻った質問で直前に選んでいた回答がある場合、スコアへの影響を一旦取り消す
+    // (再度回答した時点で selectAnswer が改めてスコアを加算するため、
+    //  ここで取り消しておかないと二重加算になってしまう)
+    const previousAnswerIndex = userAnswers[currentQuestion];
+
+    if (previousAnswerIndex !== undefined) {
+
+        const previousAnswer = activeQuestions[currentQuestion].answers[previousAnswerIndex];
+
+        for (const type in previousAnswer.score) {
+            score[type] -= previousAnswer.score[type];
+        }
+
+        userAnswers[currentQuestion] = undefined;
+
+    }
+
+    renderQuestion("back");
+
+}
+
+if (backButton) {
+    backButton.addEventListener("click", goToPreviousQuestion);
+}
+
+// =========================================
+// キーボード操作対応
+// =========================================
+// 数字キー(1〜5)で選択肢を選ぶ、Backspaceで1つ前の質問に戻る
+
+document.addEventListener("keydown", (e) => {
+
+    if (e.key === "Backspace") {
+        e.preventDefault();
+        goToPreviousQuestion();
+        return;
+    }
+
+    const num = Number(e.key);
+
+    if (Number.isInteger(num) && num >= 1 && num <= 5) {
+
+        const targetLabel = answerList.querySelector(`[data-answer-index="${num - 1}"]`);
+
+        if (targetLabel) {
+            const input = targetLabel.querySelector("input");
+            if (input) input.checked = true;
+            confirmAnswer(num - 1, targetLabel);
+        }
+
+    }
+
+});
 
 // =========================================
 // 診断終了
@@ -762,16 +993,35 @@ function finishDiagnosis() {
         JSON.stringify(score)
     );
 
-    // 結果ページへ移る前に、数秒間ローディング演出を挟む
+    // 活動ログへ記録(将来のストリーク・週次レポート等で再利用するため)
+    if (typeof recordActivity === "function") {
+        recordActivity(ACTIVITY_TYPES.DIAGNOSIS, resultKey, "診断を完了");
+    }
+
+    // 結果ページへ移る前に、SF6DNAらしい世界観のローディング演出を挟む
     const loadingOverlay = document.getElementById("loadingOverlay");
+    const loadingText = document.getElementById("loadingText");
 
     if (loadingOverlay) {
 
         loadingOverlay.classList.add("show");
 
+        const totalDuration = 2600;
+        const stepDuration = totalDuration / LOADING_MESSAGES.length;
+
+        if (loadingText) {
+
+            LOADING_MESSAGES.forEach((message, i) => {
+                setTimeout(() => {
+                    loadingText.textContent = message;
+                }, i * stepDuration);
+            });
+
+        }
+
         setTimeout(() => {
             location.href = "result.html";
-        }, 2200);
+        }, totalDuration);
 
     } else {
 
@@ -783,4 +1033,4 @@ function finishDiagnosis() {
 
 
 // 初回表示
-renderQuestion();
+renderQuestion("forward");

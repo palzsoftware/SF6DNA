@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // バックエンド(YouTube動画検索API)のURL。
+    // タブ切り替え等の非同期処理から参照されるため、コールバックの最上部で宣言しておく。
+    const VIDEO_API_BASE_URL = "https://sf6dna-backend.onrender.com";
+
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
 
@@ -171,93 +175,122 @@ character.matchups.weak
     });
 
 });
-const ctx = document
-    .getElementById("statusChart")
-    .getContext("2d");
 
-new Chart(ctx, {
+// ===== レーダーチャート描画 =====
+// Chart.js(CDN)が何らかの理由(通信環境・広告ブロッカー等)で読み込めない場合でも、
+// このグラフ以外のページ機能(動画タブ・対策キャラ表示等)が止まらないようにする。
+try {
 
-    type: "radar",
+    if (typeof Chart === "undefined") {
 
-    data: {
+        console.warn("[characters] Chart.jsが読み込まれていないため、レーダーチャートを非表示にします");
 
-        labels: [
+        const chartCanvas = document.getElementById("statusChart");
+        if (chartCanvas) chartCanvas.style.display = "none";
 
-            "火力",
-            "スピード",
-            "守備",
-            "リーチ",
-            "初心者"
+    } else {
 
-        ],
+        const ctx = document
+            .getElementById("statusChart")
+            .getContext("2d");
 
-        datasets: [{
+        new Chart(ctx, {
 
-            label: character.name,
+            type: "radar",
 
-            data: [
+            data: {
 
-                stats.power,
-                stats.speed,
-                stats.defense,
-                stats.reach,
-                stats.beginner
+                labels: [
 
-            ],
+                    "火力",
+                    "スピード",
+                    "守備",
+                    "リーチ",
+                    "初心者"
 
-            backgroundColor: "rgba(255,107,0,0.25)",
+                ],
 
-            borderColor: "#ff6b00",
+                datasets: [{
 
-            borderWidth: 3,
+                    label: character.name,
 
-            pointBackgroundColor: "#ff6b00"
+                    data: [
 
-        }]
+                        stats.power,
+                        stats.speed,
+                        stats.defense,
+                        stats.reach,
+                        stats.beginner
 
-    },
+                    ],
 
-    options: {
+                    backgroundColor: "rgba(255,107,0,0.25)",
 
-        responsive: true,
+                    borderColor: "#ff6b00",
 
-        scales: {
+                    borderWidth: 3,
 
-            r: {
+                    pointBackgroundColor: "#ff6b00"
 
-                min: 0,
+                }]
 
-                max: 5,
+            },
 
-                ticks: {
+            options: {
 
-                    stepSize: 1,
+                responsive: true,
 
-                    backdropColor: "transparent",
+                scales: {
 
-                    color: "#cccccc"
+                    r: {
+
+                        min: 0,
+
+                        max: 5,
+
+                        ticks: {
+
+                            stepSize: 1,
+
+                            backdropColor: "transparent",
+
+                            color: "#cccccc"
+
+                        },
+
+                        grid: {
+
+                            color: "#444"
+
+                        },
+
+                        angleLines: {
+
+                            color: "#555"
+
+                        },
+
+                        pointLabels: {
+
+                            color: "#ffffff",
+
+                            font: {
+
+                                size: 14
+
+                            }
+
+                        }
+
+                    }
 
                 },
 
-                grid: {
+                plugins: {
 
-                    color: "#444"
+                    legend: {
 
-                },
-
-                angleLines: {
-
-                    color: "#555"
-
-                },
-
-                pointLabels: {
-
-                    color: "#ffffff",
-
-                    font: {
-
-                        size: 14
+                        display: false
 
                     }
 
@@ -265,22 +298,21 @@ new Chart(ctx, {
 
             }
 
-        },
 
-        plugins: {
-
-            legend: {
-
-                display: false
-
-            }
-
-        }
+        });
 
     }
-    
-    
-});
+
+} catch (err) {
+
+    // 万一Chart.js自体はロードできたが描画時にエラーが起きた場合も、
+    // ここで止めて後続の動画タブ等の処理には影響させない
+    console.warn("[characters] レーダーチャートの描画に失敗しました", err);
+
+    const chartCanvas = document.getElementById("statusChart");
+    if (chartCanvas) chartCanvas.style.display = "none";
+
+}
 
 const relatedArea =
 document.getElementById("relatedCharacters");
@@ -462,12 +494,7 @@ img.onload = () => {
 
 };
 
-// バックエンド(YouTube動画検索API)のURL。
-// 未デプロイの間は空文字のままにしておけば、従来通り
-// 「YouTubeで検索する」リンクにフォールバックする。
-// デプロイ後はここにRenderのURLを設定する。
-// 例: const VIDEO_API_BASE_URL = "https://sf6dna-video-api.onrender.com";
-const VIDEO_API_BASE_URL = "https://sf6dna-backend.onrender.com";
+// バックエンド(YouTube動画検索API)のURLは、このコールバックの最上部で宣言済み
 
 async function fetchVideosFromApi(query, maxResults = 3) {
 
@@ -498,51 +525,51 @@ async function renderVideos(category){
 
     container.innerHTML = "";
 
-    // 「コンボ・立ち回り」カテゴリは、キャラごとの手入力データに頼らず
-    // 常にAPIから自動取得する(最低5件・最大10件を目指す)
-    if (category === "combo") {
-
-        container.innerHTML = `<p class="video-empty">動画を読み込み中です…</p>`;
-
-        // 1つ目のクエリで結果が0件だった場合に備え、
-        // 言い回しの異なる複数のクエリを上から順に試す(video-search.jsの共通関数を使用)
-        const query = `${character.name} コンボ 立ち回り ストリートファイター6`;
-        const queries = [
-            query,
-            `${character.name} SF6 コンボ`,
-            `${character.name} ストリートファイター6`
-        ];
-        const apiResults = await fetchVideosWithQueryRetry(VIDEO_API_BASE_URL, queries, 10);
-
-        if (apiResults && apiResults.length > 0) {
-
-            container.innerHTML = apiResults.map(result => `
-                <a class="video-card" href="${result.url}" target="_blank" rel="noopener">
-                    <img src="${result.thumbnail}" alt="${result.title}">
-                    <div class="video-info">
-                        <h3>${result.title}</h3>
-                        <span class="video-link-label">YouTubeで見る ↗</span>
-                    </div>
-                </a>
-            `).join("");
-
-        } else {
-
-            // API取得に失敗、または0件だった場合はYouTube検索リンクにフォールバック
-            const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
-
-            container.innerHTML = `
-                <a class="video-card" href="${searchUrl}" target="_blank" rel="noopener">
-                    <div class="video-thumb-search">🔍<span>YouTubeで検索</span></div>
-                    <div class="video-info">
-                        <h3>${character.name}のコンボ・立ち回り動画を探す</h3>
-                        <span class="video-link-label">YouTubeで検索する ↗</span>
-                    </div>
-                </a>
-            `;
-
+    // 「初心者向け」「コンボ・立ち回り」「対戦動画」は、キャラごとの手入力データに
+    // 頼らず常にAPIから自動取得する(将来バックエンドAPIの仕様が変わっても、
+    // ここの設定値(件数・クエリ)を変えるだけで対応できるデータ駆動設計にしている)
+    const API_VIDEO_CATEGORIES = {
+        beginner: {
+            maxResults: 10,
+            buildQueries: name => [
+                `${name} 初心者 使い方 ストリートファイター6`,
+                `${name} 初心者講座 SF6`,
+                `${name} ストリートファイター6`
+            ],
+            emptyTitle: name => `${name}の初心者向け動画を探す`
+        },
+        combo: {
+            maxResults: 10,
+            buildQueries: name => [
+                `${name} コンボ ストリートファイター6`,
+                `${name} SF6 コンボ`,
+                `${name} ストリートファイター6`
+            ],
+            emptyTitle: name => `${name}のコンボ動画を探す`
+        },
+        neutral: {
+            maxResults: 10,
+            buildQueries: name => [
+                `${name} 立ち回り 解説 ストリートファイター6`,
+                `${name} SF6 立ち回り`,
+                `${name} ストリートファイター6`
+            ],
+            emptyTitle: name => `${name}の立ち回り解説動画を探す`
+        },
+        match: {
+            maxResults: 15,
+            buildQueries: name => [
+                `${name} 対戦動画 大会 ストリートファイター6`,
+                `${name} SF6 対戦`,
+                `${name} ストリートファイター6`
+            ],
+            emptyTitle: name => `${name}の対戦動画を探す`
         }
+    };
 
+    if (API_VIDEO_CATEGORIES[category]) {
+
+        await renderApiVideoCategory(container, API_VIDEO_CATEGORIES[category], VIDEO_API_BASE_URL);
         return;
 
     }
@@ -626,7 +653,148 @@ async function renderVideos(category){
     }
 
 }
+// ===== APIから動画を自動取得して表示する共通処理 =====
+// beginner/combo/match の3カテゴリで共通利用する(重複コードを避けるため関数化)
+async function renderApiVideoCategory(container, config, apiBaseUrl) {
+
+    container.innerHTML = `<p class="video-empty">動画を読み込み中です…</p>`;
+
+    const queries = config.buildQueries(character.name);
+    const apiResults = await fetchVideosWithQueryRetry(apiBaseUrl, queries, config.maxResults);
+
+    if (apiResults && apiResults.length > 0) {
+
+        container.innerHTML = apiResults.map(result => renderVideoCardHtml(result, { showFavorite: true })).join("");
+        applyVideoFavoriteStates(container);
+
+    } else {
+
+        // API取得に失敗、または0件だった場合はYouTube検索リンクにフォールバック
+        container.innerHTML = renderVideoSearchFallbackHtml(queries[0], config.emptyTitle(character.name));
+
+    }
+
+}
+
 renderVideos("beginner");
+
+// ===== キャラクターとの関係ステータス(Phase6-B) =====
+// これまで「お気に入り」「苦手」という独立した2つのボタンだったものを、
+// site-constants.jsのRELATION_STATUS_CONFIG(設定テーブル)を参照する
+// 1つの選択コンポーネントに統一する。
+// 将来ステータスの種類が増減しても、このファイルではなく
+// site-constants.jsの設定テーブルを変更するだけでよい(switch文を増やさない)。
+(function setupRelationStatusSelector() {
+
+    const container = document.getElementById("characterRelationRow");
+    if (!container || typeof RELATION_STATUS_CONFIG === "undefined") return;
+
+    function render() {
+
+        const relation = (typeof getCharacterRelation === "function") ? getCharacterRelation(character.id) : null;
+        const activeStatus = relation ? relation.status : null;
+
+        container.innerHTML = RELATION_STATUS_CONFIG.map(item => {
+
+            const isActive = item.status === activeStatus;
+
+            return `
+                <button
+                    type="button"
+                    class="relation-status-btn${isActive ? " relation-status-btn-active" : ""}"
+                    data-status="${item.status}"
+                    aria-pressed="${isActive}"
+                    style="--relation-color:${item.color}"
+                >
+                    <span aria-hidden="true">${item.icon}</span>
+                    <span>${item.label}</span>
+                </button>
+            `;
+
+        }).join("");
+
+    }
+
+    container.addEventListener("click", (e) => {
+
+        const btn = e.target.closest(".relation-status-btn");
+        if (!btn) return;
+
+        const clickedStatus = btn.dataset.status;
+        const relation = (typeof getCharacterRelation === "function") ? getCharacterRelation(character.id) : null;
+        const currentStatus = relation ? relation.status : null;
+
+        // 選択中のボタンをもう一度押すと「未設定」に戻す(従来のON/OFFトグルと同じ操作感)
+        const nextStatus = (currentStatus === clickedStatus) ? null : clickedStatus;
+
+        setCharacterRelation(character.id, nextStatus, character.name);
+
+        render();
+
+        // 「次にすること」も、関係ステータスの変化に合わせて再描画する
+        if (typeof window.refreshCharacterNextActions === "function") {
+            window.refreshCharacterNextActions();
+        }
+
+    });
+
+    render();
+
+})();
+
+// ===== 動画クリック時の活動記録(Phase4-B②) =====
+// 動画カードは新規タブで開くリンクのため、クリック時点で「見た」とみなして記録する
+// (実際に最後まで視聴したかまでは判定できないため、あくまで簡易的な記録である点に留意)
+(function setupVideoActivityLogging() {
+
+    const videoContainer = document.getElementById("comboVideos");
+    if (!videoContainer || typeof recordActivity !== "function") return;
+
+    videoContainer.addEventListener("click", (e) => {
+
+        const card = e.target.closest(".video-card");
+        if (!card) return;
+
+        const titleEl = card.querySelector(".video-info h3");
+        const title = titleEl ? titleEl.textContent.trim() : character.name;
+
+        recordActivity(ACTIVITY_TYPES.VIDEO, character.id, title);
+
+    });
+
+})();
+
+// ===== 「次にすること」導線(Phase6-A) =====
+// next-actions.js の共通コンポーネントを使い、練習/対策/関連プロ/関連FAQへの
+// 導線をページ末尾に表示する。関係ステータスによって内容が変わるため、
+// 初回描画に加えて、関係ステータスが変更された直後にも再描画する。
+(function setupNextActionsSection() {
+
+    if (typeof renderNextActions !== "function" || typeof buildCharacterNextActions !== "function") return;
+
+    function refreshNextActions() {
+        renderNextActions("characterNextActions", buildCharacterNextActions(character));
+    }
+
+    refreshNextActions();
+
+    // 上の関係ステータス選択コンポーネント(setupRelationStatusSelector)から
+    // 呼び出せるよう、window経由で公開する(2つのIIFEをまたぐ連携のため)
+    window.refreshCharacterNextActions = refreshNextActions;
+
+})();
+
+// ===== ページ閲覧の記録(Phase6-B) =====
+// 「このキャラクターを見た」という事実そのものを、閲覧履歴・参考にした
+// キャラクターの分析基盤として記録しておく(1ページ表示につき1回のみ)
+if (typeof recordActivity === "function" && typeof ACTIVITY_TYPES !== "undefined") {
+    recordActivity(
+        ACTIVITY_TYPES.CHARACTER_VIEW,
+        character.id,
+        character.name,
+        { entityType: "character", entityId: character.id, sourcePage: "character_detail" }
+    );
+}
 
 });
 
