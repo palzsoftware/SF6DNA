@@ -290,6 +290,13 @@ punk:{
 
 const player = players[id];
 
+if (!player) {
+    document.querySelector(".result-card").innerHTML = `
+        <h1>選手が見つかりません</h1>
+        <p>指定された選手データは存在しません。<a href="players.html">プレイヤー図鑑</a>から選手をお探しください。</p>
+    `;
+} else {
+
 playerName.textContent = player.name;
 
 playerCharacter.textContent =
@@ -309,6 +316,8 @@ player.results.forEach(item=>{
     playerResults.innerHTML += `<li>${item}</li>`;
 
 });
+
+}
 
 </script>
 
