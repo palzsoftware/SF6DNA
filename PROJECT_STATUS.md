@@ -16,9 +16,9 @@
 | v2 Phase6 | 横断検索・Alias検索 | ✅ PostgreSQL統合検索RPCを実DBで動作確認 |
 | v2 Phase7 | 短時間診断 | ✅ 4診断公開 + verified Trait Score型の実キャラ推薦Engine/APIまで実装。Trait Score投入が残り |
 | v2 Phase8 | プレイヤーDB | ✅ 一覧・詳細・Character関連基盤 |
-| v2 Phase9 | 攻略/コンボ/セットプレイ/連携/トレモ | ✅ 一覧・詳細・Character子ページ接続基盤 |
+| v2 Phase9 | 攻略/コンボ/セットプレイ/連携/トレモ | ✅ 表示基盤 + JP完成テンプレート候補データを実DBへ投入 |
 | v2 Phase10 | 管理機能 | ✅ 主要Entity CRUD + 関係データ + Data Quality + キャラ適性マッピング管理まで実装。実Admin E2Eのみ未実施 |
-| v2 Phase11 | AIコーチ | 🧱 Current Patch + Source付きEvidence Retrievalまで実装。生成回答は信頼データ投入まで無効 |
+| v2 Phase11 | AIコーチ | 🧱 Current Patch + Source付きEvidence Retrievalまで実装。生成回答はverifiedデータ充足まで無効 |
 | v2 Phase12 | リプレイコーチ研究 | 📐 研究計画策定済み |
 
 開発ブランチ: `sf6dna-v2`
@@ -50,12 +50,9 @@ Project `SF6DNAPro` をv2 DBとして使用。
 - Diagnosis / Question / Option
 - Profile / Favorite / DiagnosisResult
 - Character Trait / Character Trait Score
-- updated_at trigger
-- RLS
-- private admin role判定
+- updated_at trigger / RLS / private admin role
 - auth.users -> profiles自動作成trigger
-- 外部キー/主要query index
-- `pg_trgm` Alias index
+- 外部キー/主要query index / pg_trgm Alias index
 - 統合検索RPC `search_sf6dna`
 
 Current Patch:
@@ -70,14 +67,34 @@ Current Patch:
 - 公開済み基本キャラ情報は公式Source付き
 - 未検証攻略データは自動Publishしない
 
-JP Move投入パイロット:
-- Move: 20 draft
-- Command: 20
-- Frame候補: 20
-- published: 0
-- 内訳: 地上通常技/特殊技14 + ジャンプ通常技6
-- Secondary Sourceのバージョン表示に `.000/.001` 差異が観測されたため、全件unverifiedを維持
-- CAPCOM公式Frame URLは把握済みだが取得環境から403のため、直接確認またはゲーム内確認前はPublishしない
+### JP完成テンプレート進捗
+
+実DB現在値:
+- Move: 49
+- Current Frame: 49
+- Frame reviewed: 48
+- Frame unverified: 1
+- Move Alias: 76
+- Combo: 10
+- Setup: 6
+- Sequence: 6
+- Counter: 6
+- Training: 16
+- Reference Player: 3（ときど / りゅうせい / takepi）
+- Character Video: 1
+- Published Move/strategy: 0（品質ゲート維持）
+
+JPは残り30キャラ横展開用の先行テンプレートとして、Move/Frame/Alias/Combo/Setup/Sequence/Counter/Training/Player/Videoまで候補データを揃えた。
+
+重要:
+- `reviewed` は `verified` ではない。
+- 2026.08.03現行パッチでゲーム内トレモまたは直接公式データ照合後にverified/publishedへ昇格する。
+- ODアムネジアは2026.08.03で投げ成立時のJP硬直が4F増えているため旧パッチ起き攻めを流用しない。
+- DI壁/DIパニカンの+42F詐欺飛び、DIパニカン後ヴィーハト+15F、SA2/設置ワープ系はタイミング依存のためラボ確認必須。
+- Modern操作は2026.08.03で変更があるため、旧コマンド資料をそのままpublishedにしない。
+
+詳細: `docs/V2_JP_CONTENT_PACKAGE_STATUS.md`
+再現Seed: `supabase/seeds/20260826_jp_content_package.sql`
 
 ## Phase10 管理機能
 
@@ -87,8 +104,8 @@ JP Move投入パイロット:
 - `/admin/characters`
 - `/admin/character-traits`
 - `/admin/moves`
-- `/admin/content/[kind]`（Combo / Setup / Sequence / Counter / Training）
-- `/admin/reference/[kind]`（Player / Tournament / Video / Glossary）
+- `/admin/content/[kind]`
+- `/admin/reference/[kind]`
 - `/admin/diagnoses`
 - `/admin/relations`
 - `/admin/sources`
@@ -115,7 +132,7 @@ Server Actionは`requireAdmin()`、DB書込はSupabase RLSの二重ガード。
 - 31キャラ別 Character Trait Mapping件数
 - キャラクター推薦のverified + published準備数
 
-主要ボトルネックはコードではなく検証済みコンテンツ投入。
+主要ボトルネックはコードではなく、現行パッチでの実機検証と検証済みコンテンツ投入。
 
 ## 短時間診断
 
@@ -125,14 +142,11 @@ Server Actionは`requireAdmin()`、DB書込はSupabase RLSの二重ガード。
 - `character-fit-check` キャラクター適性診断: 10問 / 40選択肢
 - `comprehensive-check` 総合簡易診断: 20問 / 80選択肢
 
-総合簡易診断は、改善優先度TOP3とプレイスタイル傾向TOP3を分離表示する。
-各結果から横断検索とAI Coach Evidenceへ接続。
-
 Character Recommendation:
 - `character_fit` と `comprehensive` からRecommendation APIを呼び出す
 - weighted trait scoring + coverage gate
 - TOP5候補、一致度、照合Trait数、主な一致理由を表示
-- Trait Scoreが0件の現状では正しく「推薦データ不足」と表示
+- Trait Scoreが0件の現状では「推薦データ不足」と表示
 
 ## AI Coach
 
@@ -171,21 +185,19 @@ Vercel接続は利用可能。現行GitHub repository/subdirectoryと環境変�
 
 ## 次工程
 
-1. JPの残り特殊技・必殺技・SAをdraft candidateとして揃え、直接確認できた項目からverified化
-2. JPでCombo / Setup / Sequence / Counter / TrainingのSource付き完成サンプルを作る
-3. 完成した投入方式を残り30キャラへ展開
-4. Character Trait ScoreをSource付きでレビュー・投入し、キャラクター推薦を解禁
-5. Player / Tournament / Match / Videoの検証済みデータ投入
-6. 実Adminユーザー作成後の管理画面E2E書込試験
-7. Vercel Preview deploymentと環境変数・実機確認
-8. SEO / OGP / sitemap / metadata最終調整
-9. verified Evidenceが十分になった領域からAI Coach生成回答を段階的に有効化
-10. Replay Coachは実データ取得方法・精度・規約・コストを実証後に着手
+1. JP 49技・Modern操作・Combo/Setup/Sequence/Counterを2026.08.03版トレモで最終検証しverified/publishedへ昇格
+2. JPのCharacter Trait ScoreをSource付きでレビュー・投入
+3. JPテンプレートのverified化手順を確定後、残り30キャラへ同じEntity構造で展開
+4. Player / Tournament / Match / Videoを30キャラ側へ展開
+5. 実Adminユーザー作成後の管理画面E2E書込試験
+6. Vercel Preview deploymentと環境変数・実機確認
+7. SEO / OGP / sitemap / metadata最終調整
+8. verified Evidenceが十分になった領域からAI Coach生成回答を段階的に有効化
+9. Replay Coachは実データ取得方法・精度・規約・コストを実証後に着手
 
 詳細:
+- [docs/V2_JP_CONTENT_PACKAGE_STATUS.md](./docs/V2_JP_CONTENT_PACKAGE_STATUS.md)
 - [docs/V2_CHARACTER_RECOMMENDATION_ENGINE.md](./docs/V2_CHARACTER_RECOMMENDATION_ENGINE.md)
 - [docs/V2_RELEASE_READINESS.md](./docs/V2_RELEASE_READINESS.md)
-- [docs/V2_PHASE10_RELATIONS_QUALITY.md](./docs/V2_PHASE10_RELATIONS_QUALITY.md)
 - [docs/V2_MOVE_INGEST_PILOT.md](./docs/V2_MOVE_INGEST_PILOT.md)
 - [docs/V2_PHASE12_REPLAY_RESEARCH.md](./docs/V2_PHASE12_REPLAY_RESEARCH.md)
-- [docs/V2_SUPABASE_STATUS.md](./docs/V2_SUPABASE_STATUS.md)
