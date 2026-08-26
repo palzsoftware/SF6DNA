@@ -9,6 +9,28 @@ export function normalizeSearchQuery(input: string) {
   return input.normalize("NFKC").trim().toLowerCase().replace(/\s+/g, " ");
 }
 
+type SearchRpcRow = {
+  entity_type: string | null;
+  entity_id: string | null;
+  slug: string | null;
+  title: string | null;
+  subtitle: string | null;
+  matched_by: string | null;
+  score: number | null;
+};
+
+const SEARCH_ENTITY_TYPES = new Set<SearchEntityType>([
+  "character",
+  "move",
+  "combo",
+  "counter",
+  "training",
+  "player",
+  "tournament",
+  "video",
+  "glossary",
+]);
+
 function hrefFor(type: SearchEntityType, slug: string) {
   const roots: Record<SearchEntityType, string> = {
     character: "/characters",
@@ -39,22 +61,32 @@ export async function searchAcrossContent(rawQuery: string): Promise<SearchResul
     return [];
   }
 
-  return (data ?? []).flatMap((row) => {
-    const type = String(row.entity_type) as SearchEntityType;
-    const slug = String(row.slug ?? "");
-    if (!slug || !(type in {
-      character: 1, move: 1, combo: 1, counter: 1, training: 1,
-      player: 1, tournament: 1, video: 1, glossary: 1,
-    })) return [];
+  const rows = (data ?? []) as SearchRpcRow[];
 
-    const matchedBy = row.matched_by === "alias" ? "alias" : row.matched_by === "content" ? "content" : "name";
+  return rows.flatMap((row): SearchResultItem[] => {
+    const rawType = row.entity_type ?? "";
+    if (!SEARCH_ENTITY_TYPES.has(rawType as SearchEntityType)) return [];
+
+    const type = rawType as SearchEntityType;
+    const slug = row.slug ?? "";
+    const id = row.entity_id ?? "";
+    const title = row.title ?? "";
+    if (!slug || !id || !title) return [];
+
+    const matchedBy: SearchResultItem["matchedBy"] =
+      row.matched_by === "alias"
+        ? "alias"
+        : row.matched_by === "content"
+          ? "content"
+          : "name";
+
     return [{
-      id: String(row.entity_id),
+      id,
       type,
-      title: String(row.title),
-      subtitle: typeof row.subtitle === "string" ? row.subtitle : null,
+      title,
+      subtitle: row.subtitle,
       href: hrefFor(type, slug),
       matchedBy,
-    } satisfies SearchResultItem];
+    }];
   });
 }
