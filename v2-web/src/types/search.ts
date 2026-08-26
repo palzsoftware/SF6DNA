@@ -2,6 +2,8 @@ export type SearchEntityType =
   | "character"
   | "move"
   | "combo"
+  | "setup"
+  | "sequence"
   | "counter"
   | "training"
   | "player"
