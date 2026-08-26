@@ -1,5 +1,10 @@
 import { getSupabaseServerClient } from "@/lib/supabase/server";
-import type { CharacterDetail, CharacterGuideSection, CharacterSummary } from "@/types/character";
+import type {
+  CharacterDetail,
+  CharacterGuideSection,
+  CharacterSummary,
+  SourceReference,
+} from "@/types/character";
 
 function isSupabaseConfigured() {
   return Boolean(
@@ -16,9 +21,9 @@ function toSummary(row: Record<string, unknown>): CharacterSummary {
     shortDescription: typeof row.summary === "string" ? row.summary : null,
     imageUrl: typeof row.image_url === "string" ? row.image_url : null,
     difficulty: typeof row.difficulty === "number" ? row.difficulty : null,
-    rangeLabel:
-      typeof row.preferred_range === "string" ? row.preferred_range : null,
+    rangeLabel: typeof row.preferred_range === "string" ? row.preferred_range : null,
     archetypeLabel: typeof row.archetype === "string" ? row.archetype : null,
+    releaseDate: typeof row.release_date === "string" ? row.release_date : null,
     updatedAt: typeof row.updated_at === "string" ? row.updated_at : null,
   };
 }
@@ -30,7 +35,7 @@ export async function listCharacters(): Promise<CharacterSummary[]> {
   const { data, error } = await supabase
     .from("characters")
     .select(
-      "id, slug, name_ja, name_en, summary, image_url, difficulty, preferred_range, archetype, updated_at"
+      "id, slug, name_ja, name_en, summary, image_url, difficulty, preferred_range, archetype, release_date, updated_at"
     )
     .eq("status", "published")
     .eq("is_playable", true)
@@ -52,7 +57,7 @@ export async function getCharacterBySlug(slug: string): Promise<CharacterDetail 
   const { data: character, error } = await supabase
     .from("characters")
     .select(
-      "id, slug, name_ja, name_en, summary, image_url, difficulty, preferred_range, archetype, updated_at, strengths_summary, weaknesses_summary"
+      "id, slug, name_ja, name_en, summary, image_url, difficulty, preferred_range, archetype, release_date, updated_at, strengths_summary, weaknesses_summary"
     )
     .eq("slug", slug)
     .eq("status", "published")
@@ -64,16 +69,23 @@ export async function getCharacterBySlug(slug: string): Promise<CharacterDetail 
     return null;
   }
 
-  const { data: sections, error: sectionError } = await supabase
-    .from("character_guide_sections")
-    .select("id, section_type, title, body, display_order")
-    .eq("character_id", character.id)
-    .eq("status", "published")
-    .order("display_order", { ascending: true });
+  const [{ data: sections, error: sectionError }, { data: sourceLinks, error: sourceError }] =
+    await Promise.all([
+      supabase
+        .from("character_guide_sections")
+        .select("id, section_type, title, body, display_order")
+        .eq("character_id", character.id)
+        .eq("status", "published")
+        .order("display_order", { ascending: true }),
+      supabase
+        .from("entity_sources")
+        .select("relationship, sources!inner(id, title, url, publisher, source_type)")
+        .eq("entity_type", "character")
+        .eq("entity_id", character.id),
+    ]);
 
-  if (sectionError) {
-    console.error("[characters] guide sections failed", sectionError.message);
-  }
+  if (sectionError) console.error("[characters] guide sections failed", sectionError.message);
+  if (sourceError) console.error("[characters] sources failed", sourceError.message);
 
   const guideSections: CharacterGuideSection[] = (sections ?? []).map((row) => ({
     id: String(row.id),
@@ -83,6 +95,25 @@ export async function getCharacterBySlug(slug: string): Promise<CharacterDetail 
     sortOrder: Number(row.display_order ?? 0),
   }));
 
+  const sources: SourceReference[] = (sourceLinks ?? []).flatMap((row) => {
+    const source = row.sources as unknown as {
+      id?: string;
+      title?: string;
+      url?: string;
+      publisher?: string | null;
+      source_type?: string;
+    } | null;
+    if (!source?.id || !source.title || !source.url || !source.source_type) return [];
+    return [{
+      id: source.id,
+      title: source.title,
+      url: source.url,
+      publisher: source.publisher ?? null,
+      sourceType: source.source_type,
+      relationship: String(row.relationship ?? "supporting"),
+    }];
+  });
+
   return {
     ...toSummary(character),
     strengthsSummary:
@@ -90,6 +121,7 @@ export async function getCharacterBySlug(slug: string): Promise<CharacterDetail 
     weaknessesSummary:
       typeof character.weaknesses_summary === "string" ? character.weaknesses_summary : null,
     guideSections,
+    sources,
   };
 }
 
