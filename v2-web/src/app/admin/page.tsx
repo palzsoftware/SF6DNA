@@ -5,6 +5,7 @@ export const metadata = { title: "管理 | SF6DNA" };
 
 const ADMIN_SECTIONS = [
   ["データ投入状況", "/admin/data-status"],
+  ["データ品質", "/admin/data-quality"],
   ["キャラクター", "/admin/characters"],
   ["技・フレーム", "/admin/moves"],
   ["コンボ", "/admin/content/combos"],
