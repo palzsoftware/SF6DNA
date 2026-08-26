@@ -28,7 +28,7 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
           <p className="eyebrow">CHARACTER</p>
           <h1>{character.name}</h1>
           {character.nameEn ? <p className="character-subtitle">{character.nameEn}</p> : null}
-          <p>{character.shortDescription ?? character.concept ?? "概要情報を準備中です。"}</p>
+          <p>{character.shortDescription ?? "概要情報を準備中です。"}</p>
           <div className="chip-row">
             {character.archetypeLabel ? <span className="chip">{character.archetypeLabel}</span> : null}
             {character.rangeLabel ? <span className="chip">{character.rangeLabel}</span> : null}
@@ -46,19 +46,11 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
       <section className="character-columns">
         <article className="info-panel">
           <h2>強み</h2>
-          {character.strengths.length ? (
-            <ul>{character.strengths.map((item) => <li key={item}>{item}</li>)}</ul>
-          ) : (
-            <p>検証済みデータを準備中です。</p>
-          )}
+          <p className="preline">{character.strengthsSummary ?? "検証済みデータを準備中です。"}</p>
         </article>
         <article className="info-panel">
           <h2>弱み</h2>
-          {character.weaknesses.length ? (
-            <ul>{character.weaknesses.map((item) => <li key={item}>{item}</li>)}</ul>
-          ) : (
-            <p>検証済みデータを準備中です。</p>
-          )}
+          <p className="preline">{character.weaknessesSummary ?? "検証済みデータを準備中です。"}</p>
         </article>
       </section>
 
