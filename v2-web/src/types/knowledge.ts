@@ -7,4 +7,4 @@ export type KnowledgeListItem = {
   difficulty: number | null;
 };
 
-export type KnowledgeCategory = "combo" | "setup" | "counter" | "training";
+export type KnowledgeCategory = "combo" | "setup" | "sequence" | "counter" | "training";
