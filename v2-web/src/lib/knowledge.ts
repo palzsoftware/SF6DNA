@@ -29,6 +29,16 @@ export async function listKnowledge(category: KnowledgeCategory): Promise<Knowle
     return (data ?? []).map((row) => mapItem(row, "name", "description"));
   }
 
+  if (category === "sequence") {
+    const { data, error } = await supabase
+      .from("sequences")
+      .select("id, slug, name, sequence_text, characters(name_ja)")
+      .eq("status", "published")
+      .limit(100);
+    if (error) return logAndEmpty(category, error.message);
+    return (data ?? []).map((row) => mapItem(row, "name", "sequence_text"));
+  }
+
   if (category === "counter") {
     const { data, error } = await supabase
       .from("counters")
