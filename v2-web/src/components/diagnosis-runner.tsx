@@ -31,6 +31,21 @@ const AXIS_LABELS: Record<string, string> = {
   explosive: "一気に試合を動かす",
 };
 
+const IMPROVEMENT_AXES = new Set([
+  "anti_air",
+  "drive_rush_defense",
+  "impact_response",
+  "punish",
+  "defense",
+  "offense",
+  "meter",
+  "matchup",
+  "execution",
+  "neutral",
+  "corner_defense",
+  "decision",
+]);
+
 function axisLabel(key: string) {
   return AXIS_LABELS[key] ?? key;
 }
@@ -82,6 +97,45 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
 
   if (!diagnosis.questions.length) {
     return <div className="empty-state"><p>公開済みの質問がまだありません。</p></div>;
+  }
+
+  if (completed && diagnosis.diagnosisType === "comprehensive") {
+    const improvement = result.filter(([key, score]) => IMPROVEMENT_AXES.has(key) && score > 0).slice(0, 3);
+    const style = result.filter(([key, score]) => !IMPROVEMENT_AXES.has(key) && score > 0).slice(0, 3);
+    const topQuery = [...improvement.slice(0, 2), ...style.slice(0, 2)].map(([key]) => axisLabel(key)).join(" ");
+
+    return (
+      <section className="info-panel diagnosis-result">
+        <p className="eyebrow">RESULT</p>
+        <h2>総合診断結果</h2>
+        <p>「今優先して改善したいこと」と「好みやすい戦い方」を分けて表示します。自己評価なので、実戦ログと合わせると精度が上がります。</p>
+
+        <div className="character-columns">
+          <section>
+            <h3>改善優先度 TOP3</h3>
+            {improvement.length ? (
+              <ol>
+                {improvement.map(([key, score]) => <li key={key}><strong>{axisLabel(key)}</strong>：優先度 {score}</li>)}
+              </ol>
+            ) : <p className="muted">大きな自己申告上の弱点は出ませんでした。</p>}
+          </section>
+          <section>
+            <h3>プレイスタイル傾向 TOP3</h3>
+            {style.length ? (
+              <ol>
+                {style.map(([key, score]) => <li key={key}><strong>{axisLabel(key)}</strong>：傾向 {score}</li>)}
+              </ol>
+            ) : <p className="muted">はっきりした好みの傾向は出ませんでした。</p>}
+          </section>
+        </div>
+
+        <div className="diagnosis-actions">
+          {topQuery ? <Link className="button-primary" href={`/search?q=${encodeURIComponent(topQuery)}`}>関連攻略・キャラを探す</Link> : null}
+          {topQuery ? <Link className="button-secondary" href={`/coach?q=${encodeURIComponent(topQuery)}`}>AIコーチ用Evidenceを見る</Link> : null}
+          <button className="button-secondary" type="button" onClick={() => { setIndex(0); setAnswers({}); }}>最初からやり直す</button>
+        </div>
+      </section>
+    );
   }
 
   if (completed) {
