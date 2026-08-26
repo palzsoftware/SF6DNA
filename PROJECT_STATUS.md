@@ -14,10 +14,10 @@
 | v2 Phase4 | Next.js基盤・既存資産の移行基盤 | ✅ CI成功 |
 | v2 Phase5 | キャラクター辞典 | ✅ 31プレイアブル基本データ・出典・各セクション接続基盤 |
 | v2 Phase6 | 横断検索・Alias検索 | ✅ PostgreSQL統合検索RPCを実DBで動作確認 |
-| v2 Phase7 | 短時間診断 | 🧱 上達課題・プレイスタイル・キャラクター適性の3診断を実DBで公開。総合簡易診断とキャラ推薦モデルが残り |
+| v2 Phase7 | 短時間診断 | ✅ 上達課題・プレイスタイル・キャラクター適性・総合簡易の4診断を実DBで公開。実キャラ推薦スコア投入が残り |
 | v2 Phase8 | プレイヤーDB | ✅ 一覧・詳細・Character関連基盤 |
 | v2 Phase9 | 攻略/コンボ/セットプレイ/連携/トレモ | ✅ 一覧・詳細・Character子ページ接続基盤 |
-| v2 Phase10 | 管理機能 | ✅ 主要Entity CRUD + 関係データ管理 + Data Quality可視化まで実装。実Admin E2Eのみ未実施 |
+| v2 Phase10 | 管理機能 | ✅ 主要Entity CRUD + 関係データ + Data Quality + キャラ適性マッピング管理まで実装。実Admin E2Eのみ未実施 |
 | v2 Phase11 | AIコーチ | 🧱 Current Patch + Source付きEvidence Retrievalまで実装。生成回答は信頼データ投入まで無効 |
 | v2 Phase12 | リプレイコーチ研究 | 📐 研究計画策定済み |
 
@@ -31,8 +31,7 @@
 - GitHub Actions: install -> typecheck -> lint -> build
 - `/auth` とSupabase SSR cookie session基盤
 - `/admin` は認証 + `profiles.role = admin` で保護
-- Relation / Data Quality追加後を含むCIでtypecheck/lint/build成功確認済み
-- 複数Diagnosis typeに応じて結果表示を切り替えるRunnerへ拡張し、CI成功確認済み
+- Diagnosis Runnerは改善診断・スタイル診断・キャラ適性・総合診断の結果モードに対応
 
 ## Supabase実DB
 
@@ -48,6 +47,7 @@ Project `SF6DNAPro` をv2 DBとして使用。
 - Glossary
 - Diagnosis / Question / Option
 - Profile / Favorite / DiagnosisResult
+- Character Trait / Character Trait Score
 - updated_at trigger
 - RLS
 - private admin role判定
@@ -81,6 +81,7 @@ JP Move投入パイロット:
 - `/admin/data-status`
 - `/admin/data-quality`
 - `/admin/characters`
+- `/admin/character-traits`
 - `/admin/moves`
 - `/admin/content/[kind]`（Combo / Setup / Sequence / Counter / Training）
 - `/admin/reference/[kind]`（Player / Tournament / Video / Glossary）
@@ -88,26 +89,12 @@ JP Move投入パイロット:
 - `/admin/relations`
 - `/admin/sources`
 
-管理可能:
-- Character create/edit/archive
-- Patch登録・Current切替
-- Source登録
-- Move / Classic-Modern Command / Patch別Frame / Source
-- Combo / Setup / Sequence / Counter / Training
-- Player / Tournament / Video / Glossary
-- Diagnosis / Question / Option / score_payload
-
-関係データ:
-- Player Alias
-- Glossary Alias
-- Player ↔ Character + Patch期間
-- Tournament Result
-- Match
-- Match Participant
-- Video ↔ Entity (`entity_videos`)
-- Combo Move Steps
-- Setup Move Steps
-- Training Relations
+キャラクター適性マッピング:
+- 共通Trait 12種を正式DB化
+- `character_trait_scores` は0〜5
+- publishedには `verification_status = verified` + Source必須
+- 現時点ではTrait定義12件のみ公開、実キャラScoreは0件
+- 十分なverified Scoreが揃うまで診断からの直接キャラ推薦は解禁しない
 
 Server Actionは`requireAdmin()`、DB書込はSupabase RLSの二重ガード。
 
@@ -119,21 +106,10 @@ Server Actionは`requireAdmin()`、DB書込はSupabase RLSの二重ガード。
 - Source / Video / Result / Participant / Alias関係件数
 - Moveに対するFrame存在率
 - 31キャラ別 Move / Frame / Combo / Setup / Sequence / Counter / Training / Player網羅率
+- 31キャラ別 Character Trait Mapping件数
+- キャラクター推薦のverified + published準備数
 
-2026-08-26実DB確認時:
-- Move 14 / published 0
-- Combo 0
-- Setup 0
-- Sequence 0
-- Counter 0
-- Training 0
-- Player 0
-- Tournament 0
-- Match 0
-- Video 0
-- Glossary 0
-
-したがって、現時点の主要ボトルネックはコードではなく検証済みコンテンツ投入。
+主要ボトルネックはコードではなく検証済みコンテンツ投入。
 
 ## 短時間診断
 
@@ -141,13 +117,13 @@ Server Actionは`requireAdmin()`、DB書込はSupabase RLSの二重ガード。
 - `improvement-check` 上達課題診断: 12問 / 48選択肢
 - `playstyle-check` プレイスタイル診断: 10問 / 40選択肢
 - `character-fit-check` キャラクター適性診断: 10問 / 40選択肢
+- `comprehensive-check` 総合簡易診断: 20問 / 80選択肢
 
-Runnerは`diagnosis_type`に応じて、改善優先度 / プレイスタイル傾向 / キャラクター特性適性として結果文言を切り替える。
-結果上位項目から横断検索とAI Coach Evidenceへ接続。
+総合簡易診断は、改善優先度TOP3とプレイスタイル傾向TOP3を分離表示する。
+各結果から横断検索とAI Coach Evidenceへ接続。
 
 残り:
-- 総合簡易診断
-- キャラクター特性スコア → 実キャラクター推薦の正式マッピング
+- verified Character Trait Score投入後の実キャラクター推薦
 - 診断結果保存・比較の本格運用
 
 ## AI Coach
@@ -178,21 +154,27 @@ OpenAI/replay prototypeはnested側に保持。信頼DB連携と最新API仕様�
 
 ## Vercel
 
-接続アカウント内Project一覧は0件。接続側には`deploy_to_vercel`操作が存在するが、現行GitHub repository/subdirectoryと環境変数が正しく対象になることを確認してからPreview deploymentを行う。
+Vercel接続は利用可能。現行GitHub repository/subdirectoryと環境変数の対象確認後にPreview deploymentを行う。
+
+## Release readiness
+
+公開判定基準を `docs/V2_RELEASE_READINESS.md` に定義。
+実装済み / データ投入済み / verified + published済みを分けて判断する。
 
 ## 次工程
 
-1. 実Adminユーザー作成後の管理画面E2E書込試験
-2. 全31キャラのMove / Frame / Classic-Modern Commandを公式・検証済みSourceから投入
-3. Combo / Setup / Sequence / Counter / Trainingのverifiedデータ投入
+1. 全31キャラのMove / Frame / Classic-Modern Commandを公式・検証済みSourceから投入
+2. Combo / Setup / Sequence / Counter / Trainingのverifiedデータ投入
+3. Character Trait ScoreをSource付きでレビュー・投入し、キャラクター推薦を解禁
 4. Player / Tournament / Match / Videoの検証済みデータ投入
-5. 総合簡易診断とキャラクター推薦マッピングを完成
+5. 実Adminユーザー作成後の管理画面E2E書込試験
 6. Vercel Preview deploymentと環境変数・実機確認
-7. verified Evidenceが十分になった領域からAI Coach生成回答を段階的に有効化
-8. SEO / OGP / sitemap / metadata最終調整
+7. SEO / OGP / sitemap / metadata最終調整
+8. verified Evidenceが十分になった領域からAI Coach生成回答を段階的に有効化
 9. Replay Coachは実データ取得方法・精度・規約・コストを実証後に着手
 
 詳細:
+- [docs/V2_RELEASE_READINESS.md](./docs/V2_RELEASE_READINESS.md)
 - [docs/V2_PHASE10_RELATIONS_QUALITY.md](./docs/V2_PHASE10_RELATIONS_QUALITY.md)
 - [docs/V2_MOVE_INGEST_PILOT.md](./docs/V2_MOVE_INGEST_PILOT.md)
 - [docs/V2_PHASE12_REPLAY_RESEARCH.md](./docs/V2_PHASE12_REPLAY_RESEARCH.md)
