@@ -1,17 +1,74 @@
+import Link from "next/link";
+import { getSupabaseAuthServerClient } from "@/lib/supabase/auth-server";
+
 export const metadata = { title: "管理 | SF6DNA" };
 
-export default function AdminPage() {
+const ADMIN_SECTIONS = [
+  ["キャラクター", "/admin/characters"],
+  ["技・フレーム", "/admin/moves"],
+  ["コンボ", "/admin/combos"],
+  ["対策", "/admin/counters"],
+  ["トレーニング", "/admin/trainings"],
+  ["プレイヤー", "/admin/players"],
+  ["大会・試合", "/admin/tournaments"],
+  ["動画", "/admin/videos"],
+  ["用語", "/admin/glossary"],
+  ["Patch・Source", "/admin/sources"],
+  ["診断", "/admin/diagnoses"],
+] as const;
+
+export default async function AdminPage() {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    return <AdminMessage title="未設定" body="Supabase環境変数が設定されていません。" />;
+  }
+
+  const supabase = await getSupabaseAuthServerClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) {
+    return (
+      <AdminMessage
+        title="ログインが必要です"
+        body="管理機能は認証済み管理者だけが利用できます。"
+        action={<Link className="button-primary inline-button" href="/auth">ログイン</Link>}
+      />
+    );
+  }
+
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("role, display_name")
+    .eq("id", user.id)
+    .maybeSingle();
+
+  if (profile?.role !== "admin") {
+    return <AdminMessage title="権限がありません" body="このアカウントには管理者権限が付与されていません。" />;
+  }
+
   return (
     <div className="site-shell page-stack">
-      <section className="hero">
+      <section className="hero compact-hero">
         <p className="eyebrow">ADMIN</p>
-        <h1>管理機能</h1>
-        <p>管理画面の書き込み機能は、Supabase AuthとRLSを実DBで確認してから有効化します。</p>
+        <h1>管理ダッシュボード</h1>
+        <p>{profile.display_name ? `${profile.display_name} としてログイン中。` : "管理者としてログイン中。"} 公開前にPatch・Source・検証状態を確認します。</p>
       </section>
-      <section className="data-notice">
-        <h2>現在はロック中</h2>
-        <p>認証なしの管理APIやDB書き込み画面は安全上実装しません。Phase10の権限設計は docs/V2_PHASE10_ADMIN_SECURITY.md を正とします。</p>
+      <section className="card-grid">
+        {ADMIN_SECTIONS.map(([label, href]) => (
+          <Link className="feature-card" href={href} key={href}>
+            <h3>{label}</h3>
+            <span>管理 →</span>
+          </Link>
+        ))}
       </section>
+    </div>
+  );
+}
+
+function AdminMessage({ title, body, action }: { title: string; body: string; action?: React.ReactNode }) {
+  return (
+    <div className="site-shell page-stack">
+      <section className="hero compact-hero"><p className="eyebrow">ADMIN</p><h1>管理機能</h1></section>
+      <section className="data-notice"><h2>{title}</h2><p>{body}</p>{action}</section>
     </div>
   );
 }
