@@ -62,36 +62,12 @@ export async function createMove(formData: FormData) {
   }
 
   if (hasFrameData(formData)) {
-    const { error } = await supabase.from("move_frame_data").insert({
-      move_id: move.id,
-      startup: nullable(formData, "startup"),
-      active: nullable(formData, "active"),
-      recovery: nullable(formData, "recovery"),
-      on_hit: nullable(formData, "on_hit"),
-      on_block: nullable(formData, "on_block"),
-      damage: nullableNumber(formData, "damage"),
-      drive_damage: nullableNumber(formData, "drive_damage"),
-      super_gain: nullableNumber(formData, "super_gain"),
-      hit_level: nullable(formData, "hit_level"),
-      cancel_type: nullable(formData, "cancel_type"),
-      invincibility: nullable(formData, "invincibility"),
-      notes: nullable(formData, "frame_notes"),
-      valid_from_patch_id: nullable(formData, "valid_from_patch_id"),
-      verification_status: text(formData, "verification_status") || "unverified",
-    });
-    if (error) throw new Error(error.message);
+    await insertFrameData(supabase, move.id, formData);
   }
 
   const sourceId = text(formData, "source_id");
   if (sourceId) {
-    const { error } = await supabase.from("entity_sources").insert({
-      entity_type: "move",
-      entity_id: move.id,
-      source_id: sourceId,
-      relationship: "primary",
-      note: nullable(formData, "source_note"),
-    });
-    if (error) throw new Error(error.message);
+    await insertMoveSource(supabase, move.id, sourceId, nullable(formData, "source_note"));
   }
 
   revalidatePath("/admin/moves");
@@ -134,6 +110,21 @@ export async function archiveMove(id: string) {
   revalidatePath("/admin/moves");
 }
 
+export async function addFrameVersion(moveId: string, formData: FormData) {
+  const { supabase } = await requireAdmin();
+  if (!hasFrameData(formData)) throw new Error("frame data is required");
+  await insertFrameData(supabase, moveId, formData);
+  revalidatePath(`/admin/moves/${moveId}`);
+}
+
+export async function attachMoveSource(moveId: string, formData: FormData) {
+  const { supabase } = await requireAdmin();
+  const sourceId = text(formData, "source_id");
+  if (!sourceId) throw new Error("source_id is required");
+  await insertMoveSource(supabase, moveId, sourceId, nullable(formData, "source_note"));
+  revalidatePath(`/admin/moves/${moveId}`);
+}
+
 function buildCommand(fd: FormData, moveId: string, scheme: "classic" | "modern"): MoveCommandInput | null {
   const commandText = text(fd, `${scheme}_command_text`);
   if (!commandText) return null;
@@ -151,4 +142,41 @@ function buildCommand(fd: FormData, moveId: string, scheme: "classic" | "modern"
 function hasFrameData(fd: FormData) {
   return ["startup", "active", "recovery", "on_hit", "on_block", "damage", "drive_damage", "hit_level", "cancel_type", "invincibility"]
     .some((key) => Boolean(text(fd, key)));
+}
+
+async function insertFrameData(supabase: Awaited<ReturnType<typeof requireAdmin>>["supabase"], moveId: string, formData: FormData) {
+  const { error } = await supabase.from("move_frame_data").insert({
+    move_id: moveId,
+    startup: nullable(formData, "startup"),
+    active: nullable(formData, "active"),
+    recovery: nullable(formData, "recovery"),
+    on_hit: nullable(formData, "on_hit"),
+    on_block: nullable(formData, "on_block"),
+    damage: nullableNumber(formData, "damage"),
+    drive_damage: nullableNumber(formData, "drive_damage"),
+    super_gain: nullableNumber(formData, "super_gain"),
+    hit_level: nullable(formData, "hit_level"),
+    cancel_type: nullable(formData, "cancel_type"),
+    invincibility: nullable(formData, "invincibility"),
+    notes: nullable(formData, "frame_notes"),
+    valid_from_patch_id: nullable(formData, "valid_from_patch_id"),
+    verification_status: text(formData, "verification_status") || "unverified",
+  });
+  if (error) throw new Error(error.message);
+}
+
+async function insertMoveSource(
+  supabase: Awaited<ReturnType<typeof requireAdmin>>["supabase"],
+  moveId: string,
+  sourceId: string,
+  note: string | null,
+) {
+  const { error } = await supabase.from("entity_sources").insert({
+    entity_type: "move",
+    entity_id: moveId,
+    source_id: sourceId,
+    relationship: "primary",
+    note,
+  });
+  if (error) throw new Error(error.message);
 }
