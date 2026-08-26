@@ -7,6 +7,7 @@ const ADMIN_SECTIONS = [
   ["データ投入状況", "/admin/data-status"],
   ["データ品質", "/admin/data-quality"],
   ["キャラクター", "/admin/characters"],
+  ["キャラクター適性マッピング", "/admin/character-traits"],
   ["技・フレーム", "/admin/moves"],
   ["コンボ", "/admin/content/combos"],
   ["セットプレイ", "/admin/content/setups"],
