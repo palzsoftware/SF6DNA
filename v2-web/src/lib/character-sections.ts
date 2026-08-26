@@ -117,8 +117,27 @@ export async function listCharacterSectionItems(
     });
   }
 
-  // Video relation table is intentionally not guessed. It will be added once
-  // Character <-> Video relation requirements are finalized.
+  if (section === "videos") {
+    const { data, error } = await supabase
+      .from("entity_videos")
+      .select("relationship, display_order, videos!inner(id, slug, title, video_type, description, status)")
+      .eq("entity_type", "character")
+      .eq("entity_id", characterId)
+      .order("display_order", { ascending: true });
+    if (error) return fail(section, error.message);
+    return (data ?? []).flatMap((row) => {
+      const video = row.videos as unknown as { id: string; slug: string; title: string; video_type: string | null; description: string | null; status: string } | null;
+      if (!video || video.status !== "published") return [];
+      return [{
+        id: video.id,
+        title: video.title,
+        subtitle: video.description,
+        href: `/videos/${video.slug}`,
+        meta: [row.relationship, video.video_type].filter(Boolean).join(" / ") || null,
+      }];
+    });
+  }
+
   return [];
 }
 
