@@ -2,7 +2,7 @@ import Link from "next/link";
 import { requireAdmin } from "@/lib/admin";
 
 type CountCard = { label: string; total: number; published?: number; verified?: number };
-type CoverageRow = { id: string; name: string; moves: number; frames: number; combos: number; setups: number; sequences: number; counters: number; trainings: number; players: number };
+type CoverageRow = { id: string; name: string; moves: number; frames: number; combos: number; setups: number; sequences: number; counters: number; trainings: number; players: number; traitScores: number };
 
 async function countTable(
   supabase: Awaited<ReturnType<typeof requireAdmin>>["supabase"],
@@ -22,6 +22,7 @@ export default async function DataQualityPage() {
     ["moves", "技"], ["combos", "コンボ"], ["setups", "セットプレイ"], ["sequences", "連携"],
     ["counters", "対策"], ["trainings", "トレーニング"], ["players", "プレイヤー"], ["tournaments", "大会"],
     ["matches", "試合"], ["videos", "動画"], ["glossary", "用語"], ["diagnoses", "診断"],
+    ["character_trait_scores", "キャラ適性マッピング"],
   ] as const;
 
   const cards: CountCard[] = await Promise.all(tableSpecs.map(async ([table, label]) => ({
@@ -30,7 +31,7 @@ export default async function DataQualityPage() {
     published: await countTable(supabase, table, { column: "status", value: "published" }),
   })));
 
-  const verificationTables = ["move_frame_data", "combos", "setups", "sequences", "counters", "trainings"] as const;
+  const verificationTables = ["move_frame_data", "combos", "setups", "sequences", "counters", "trainings", "character_trait_scores"] as const;
   const verification = await Promise.all(verificationTables.map(async (table) => ({
     table,
     total: await countTable(supabase, table),
@@ -38,8 +39,8 @@ export default async function DataQualityPage() {
   })));
 
   const [
-    charactersRes, movesRes, framesRes, combosRes, setupsRes, sequencesRes, countersRes, trainingsRes, playerCharactersRes,
-    entitySourcesCount, entityVideosCount, tournamentResultsCount, participantsCount, aliasesCount,
+    charactersRes, movesRes, framesRes, combosRes, setupsRes, sequencesRes, countersRes, trainingsRes, playerCharactersRes, traitScoresRes,
+    entitySourcesCount, entityVideosCount, tournamentResultsCount, participantsCount, aliasesCount, traitCount,
   ] = await Promise.all([
     supabase.from("characters").select("id, name_ja").eq("status", "published").eq("is_playable", true).order("display_order"),
     supabase.from("moves").select("id, character_id").neq("status", "archived"),
@@ -50,14 +51,16 @@ export default async function DataQualityPage() {
     supabase.from("counters").select("defender_character_id, opponent_character_id").neq("status", "archived"),
     supabase.from("trainings").select("player_character_id").neq("status", "archived"),
     supabase.from("player_characters").select("character_id"),
+    supabase.from("character_trait_scores").select("character_id,verification_status,status").neq("status", "archived"),
     countTable(supabase, "entity_sources"),
     countTable(supabase, "entity_videos"),
     countTable(supabase, "tournament_results"),
     countTable(supabase, "match_participants"),
     Promise.all([countTable(supabase, "character_aliases"), countTable(supabase, "move_aliases"), countTable(supabase, "player_aliases"), countTable(supabase, "glossary_aliases")]).then((values) => values.reduce((a, b) => a + b, 0)),
+    countTable(supabase, "character_traits", { column: "status", value: "published" }),
   ]);
 
-  const queryError = [charactersRes, movesRes, framesRes, combosRes, setupsRes, sequencesRes, countersRes, trainingsRes, playerCharactersRes].find((result) => result.error)?.error;
+  const queryError = [charactersRes, movesRes, framesRes, combosRes, setupsRes, sequencesRes, countersRes, trainingsRes, playerCharactersRes, traitScoresRes].find((result) => result.error)?.error;
   if (queryError) throw new Error(queryError.message);
 
   const moveCharacter = new Map((movesRes.data ?? []).map((row) => [String(row.id), String(row.character_id)]));
@@ -75,19 +78,21 @@ export default async function DataQualityPage() {
       counters: (countersRes.data ?? []).filter((row) => String(row.defender_character_id) === id || String(row.opponent_character_id) === id).length,
       trainings: (trainingsRes.data ?? []).filter((row) => String(row.player_character_id) === id).length,
       players: (playerCharactersRes.data ?? []).filter((row) => String(row.character_id) === id).length,
+      traitScores: (traitScoresRes.data ?? []).filter((row) => String(row.character_id) === id).length,
     };
   });
 
   const movesWithFrames = new Set((framesRes.data ?? []).map((row) => String(row.move_id))).size;
   const verifiedFrameMoves = new Set((framesRes.data ?? []).filter((row) => row.verification_status === "verified").map((row) => String(row.move_id))).size;
   const orphanFrameCount = (framesRes.data ?? []).filter((row) => !moveCharacter.has(String(row.move_id))).length;
+  const verifiedPublishedTraitScores = (traitScoresRes.data ?? []).filter((row) => row.verification_status === "verified" && row.status === "published").length;
 
   return (
     <div className="site-shell page-stack">
       <section className="hero compact-hero">
         <p className="eyebrow">ADMIN / DATA QUALITY</p>
         <h1>データ品質・網羅率</h1>
-        <p>「画面がある」と「信頼できるデータが揃っている」を分離して確認します。AI Coachの生成回答解禁判断にも使用します。</p>
+        <p>「画面がある」と「信頼できるデータが揃っている」を分離して確認します。AI Coachとキャラクター推薦の解禁判断にも使用します。</p>
       </section>
 
       <section>
@@ -97,7 +102,7 @@ export default async function DataQualityPage() {
 
       <section className="character-columns">
         <article className="info-panel"><h2>検証状態</h2><div className="detail-list">{verification.map((item) => <div key={item.table}><dt>{item.table}</dt><dd>{item.verified} / {item.total} verified</dd></div>)}</div></article>
-        <article className="info-panel"><h2>関係データ</h2><div className="detail-list"><div><dt>Entity Sources</dt><dd>{entitySourcesCount}</dd></div><div><dt>Entity Videos</dt><dd>{entityVideosCount}</dd></div><div><dt>Tournament Results</dt><dd>{tournamentResultsCount}</dd></div><div><dt>Match Participants</dt><dd>{participantsCount}</dd></div><div><dt>Aliases</dt><dd>{aliasesCount}</dd></div></div></article>
+        <article className="info-panel"><h2>関係データ</h2><div className="detail-list"><div><dt>Entity Sources</dt><dd>{entitySourcesCount}</dd></div><div><dt>Entity Videos</dt><dd>{entityVideosCount}</dd></div><div><dt>Tournament Results</dt><dd>{tournamentResultsCount}</dd></div><div><dt>Match Participants</dt><dd>{participantsCount}</dd></div><div><dt>Aliases</dt><dd>{aliasesCount}</dd></div><div><dt>Character Traits</dt><dd>{traitCount}</dd></div></div></article>
       </section>
 
       <section className="data-notice">
@@ -105,10 +110,16 @@ export default async function DataQualityPage() {
         <p>Move {movesRes.data?.length ?? 0}件のうちFrameあり {movesWithFrames}件、verified Frameあり {verifiedFrameMoves}件。存在しないMoveを参照するFrameは {orphanFrameCount}件です。</p>
       </section>
 
+      <section className="data-notice">
+        <h2>キャラクター推薦準備</h2>
+        <p>診断共通Traitは {traitCount}件。キャラ別Trait Scoreは {traitScoresRes.data?.length ?? 0}件、そのうちverified + publishedは {verifiedPublishedTraitScores}件です。キャラ推薦は十分なverifiedマッピングが揃うまで解禁しません。</p>
+        <Link className="button-secondary inline-button" href="/admin/character-traits">適性マッピングを管理</Link>
+      </section>
+
       <section className="admin-table-wrap">
         <div className="admin-section-heading"><div><h2>31キャラ網羅率</h2><p>0の列は未投入領域です。未検証候補も含むため、件数だけで公開可否は判断しません。</p></div><Link className="button-secondary" href="/admin/relations">関連データ管理</Link></div>
-        <table className="admin-table data-quality-table"><thead><tr><th>Character</th><th>Move</th><th>Frame</th><th>Combo</th><th>Setup</th><th>Sequence</th><th>Counter</th><th>Training</th><th>Players</th></tr></thead><tbody>
-          {coverage.map((row) => <tr key={row.id}><td>{row.name}</td><td>{row.moves}</td><td>{row.frames}</td><td>{row.combos}</td><td>{row.setups}</td><td>{row.sequences}</td><td>{row.counters}</td><td>{row.trainings}</td><td>{row.players}</td></tr>)}
+        <table className="admin-table data-quality-table"><thead><tr><th>Character</th><th>Move</th><th>Frame</th><th>Combo</th><th>Setup</th><th>Sequence</th><th>Counter</th><th>Training</th><th>Players</th><th>Trait Map</th></tr></thead><tbody>
+          {coverage.map((row) => <tr key={row.id}><td>{row.name}</td><td>{row.moves}</td><td>{row.frames}</td><td>{row.combos}</td><td>{row.setups}</td><td>{row.sequences}</td><td>{row.counters}</td><td>{row.trainings}</td><td>{row.players}</td><td>{row.traitScores}</td></tr>)}
         </tbody></table>
       </section>
     </div>
