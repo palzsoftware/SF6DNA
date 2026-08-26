@@ -78,9 +78,7 @@ function payloadFor(kind: ReferenceKind, fd: FormData) {
         slug: text(fd, "slug"),
         term: text(fd, "term"),
         short_definition: nullable(fd, "short_definition"),
-        definition: text(fd, "definition"),
-        category: nullable(fd, "category"),
-        beginner_level: nullable(fd, "beginner_level"),
+        definition: nullable(fd, "definition"),
         status,
       };
   }
@@ -91,7 +89,7 @@ function validate(kind: ReferenceKind, payload: Record<string, unknown>) {
   if (kind === "players" && (!payload.display_name || !payload.player_type)) throw new Error("display_name and player_type are required");
   if (kind === "tournaments" && !payload.name) throw new Error("name is required");
   if (kind === "videos" && (!payload.platform || !payload.url || !payload.title)) throw new Error("platform, url and title are required");
-  if (kind === "glossary" && (!payload.term || !payload.definition)) throw new Error("term and definition are required");
+  if (kind === "glossary" && !payload.term) throw new Error("term is required");
 }
 
 export async function saveReferenceContent(kindValue: string, id: string | null, formData: FormData) {
