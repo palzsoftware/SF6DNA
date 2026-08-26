@@ -15,8 +15,8 @@
 | フェーズ | 対象 | ステータス |
 |---|---|---|
 | v2 Phase1 | 安全な開発基盤・ブランチ分離・要件正本化 | ✅ 完了 |
-| v2 Phase2 | Backend整理・正式アーキテクチャ設計 | ⏭ 次工程 |
-| v2 Phase3 | DB・基礎データモデル | 未着手 |
+| v2 Phase2 | Backend整理・正式アーキテクチャ設計 | ✅ 完了 |
+| v2 Phase3 | DB・基礎データモデル | ⏭ 次工程 |
 | v2 Phase4 | 既存資産の移行基盤 | 未着手 |
 | v2 Phase5 | キャラクター辞典 | 未着手 |
 | v2 Phase6 | 横断検索・Alias検索 | 未着手 |
@@ -32,6 +32,19 @@ v2開発ブランチ: `sf6dna-v2`
 新要件の正本: [docs/V2_REQUIREMENTS.md](./docs/V2_REQUIREMENTS.md)
 
 Phase1の開発ルール: [docs/V2_PHASE1_FOUNDATION.md](./docs/V2_PHASE1_FOUNDATION.md)
+
+Phase2アーキテクチャ決定: [docs/V2_ARCHITECTURE.md](./docs/V2_ARCHITECTURE.md)
+
+### Phase2で確定した基本構成
+
+- Web: Next.js + TypeScript
+- 正式DB: PostgreSQL
+- DB/Auth/Storage: Supabaseを第一候補
+- Search: PostgreSQL + Alias + pg_trgmから開始
+- 外部API/AI: 既存Node.js/Express Backendを整理して再利用
+- 現行GitHub Pagesはv2切替まで維持
+- v2 Web公開先はVercelを第一候補
+- AIはSF6DNAの構造化DBを検索してから回答する方式を基本とする
 
 > v2開発では旧PROJECT_STATUSのPhase番号と混同しないこと。旧Phase群は既存版の履歴として以下に残す。
 
@@ -107,6 +120,7 @@ Phase1の開発ルール: [docs/V2_PHASE1_FOUNDATION.md](./docs/V2_PHASE1_FOUNDA
 
 - [docs/V2_REQUIREMENTS.md](./docs/V2_REQUIREMENTS.md) — v2確定要件
 - [docs/V2_PHASE1_FOUNDATION.md](./docs/V2_PHASE1_FOUNDATION.md) — v2 Phase1安全基盤
+- [docs/V2_ARCHITECTURE.md](./docs/V2_ARCHITECTURE.md) — v2 Phase2正式アーキテクチャ
 - [CHANGELOG.md](./CHANGELOG.md) — 既存版フェーズごとの変更履歴
 - [docs/KNOWN_ISSUES.md](./docs/KNOWN_ISSUES.md) — 既知の課題
 - [docs/DESIGN_SYSTEM.md](./docs/DESIGN_SYSTEM.md) — デザインルール
