@@ -17,161 +17,111 @@
 | v2 Phase1 | 安全な開発基盤・ブランチ分離・要件正本化 | ✅ 完了 |
 | v2 Phase2 | Backend整理・正式アーキテクチャ設計 | ✅ 完了 |
 | v2 Phase3 | DB・基礎データモデル | ✅ 完了 |
-| v2 Phase4 | Next.js基盤・既存資産の移行基盤 | ✅ 完了（実行環境でのbuild検証は後続） |
+| v2 Phase4 | Next.js基盤・既存資産の移行基盤 | ✅ 基盤完了（build検証は未実行） |
 | v2 Phase5 | キャラクター辞典 | ✅ 表示・URL・Repository基盤完了（実データ投入は継続） |
-| v2 Phase6 | 横断検索・Alias検索 | ⏭ 次工程 |
-| v2 Phase7 | 短時間診断への再構築 | 未着手 |
-| v2 Phase8 | プレイヤーDB | 未着手 |
-| v2 Phase9 | 対策・コンボ・セットプレイ・トレモ | 未着手 |
-| v2 Phase10 | 管理機能 | 未着手 |
-| v2 Phase11 | AIコーチ | 未着手 |
+| v2 Phase6 | 横断検索・Alias検索 | ✅ 基盤実装（完全横断・FTS最適化は継続） |
+| v2 Phase7 | 短時間診断への再構築 | ✅ 汎用エンジン基盤実装（正式質問・推薦ロジックは継続） |
+| v2 Phase8 | プレイヤーDB | ✅ 一覧・詳細・キャラ関連基盤実装 |
+| v2 Phase9 | 対策・コンボ・セットプレイ・トレモ | ✅ 一覧・詳細基盤実装（関連表示・Sequenceは継続） |
+| v2 Phase10 | 管理機能 | 📐 セキュリティ設計完了・実装保留（Supabase Auth/RLS実環境待ち） |
+| v2 Phase11 | AIコーチ | 🧱 Retrieval基盤実装・生成回答は意図的に未有効化 |
 | v2 Phase12 | リプレイコーチ研究・実証 | 未着手 |
 
 v2開発ブランチ: `sf6dna-v2`
 
-新要件の正本: [docs/V2_REQUIREMENTS.md](./docs/V2_REQUIREMENTS.md)
+## 現在の主な実装
 
-Phase1の開発ルール: [docs/V2_PHASE1_FOUNDATION.md](./docs/V2_PHASE1_FOUNDATION.md)
-
-Phase2アーキテクチャ決定: [docs/V2_ARCHITECTURE.md](./docs/V2_ARCHITECTURE.md)
-
-Phase3データモデル: [docs/V2_DATA_MODEL.md](./docs/V2_DATA_MODEL.md)
-
-Phase3 PostgreSQL草案: [docs/V2_SCHEMA_DRAFT.sql](./docs/V2_SCHEMA_DRAFT.sql)
-
-Phase4実装記録: [docs/V2_PHASE4_IMPLEMENTATION.md](./docs/V2_PHASE4_IMPLEMENTATION.md)
-
-Phase5実装記録: [docs/V2_PHASE5_CHARACTER_ENCYCLOPEDIA.md](./docs/V2_PHASE5_CHARACTER_ENCYCLOPEDIA.md)
-
-### Phase2で確定した基本構成
-
-- Web: Next.js + TypeScript
-- 正式DB: PostgreSQL
-- DB/Auth/Storage: Supabaseを第一候補
-- Search: PostgreSQL + Alias + pg_trgmから開始
-- 外部API/AI: 既存Node.js/Express Backendを整理して再利用
-- 現行GitHub Pagesはv2切替まで維持
-- v2 Web公開先はVercelを第一候補
-- AIはSF6DNAの構造化DBを検索してから回答する方式を基本とする
-
-### Phase3で確定したデータ設計
-
-- 内部主キーは原則UUID、URLはslugを使用
-- Character / Move / FrameData / Commandを分離
-- Classic / ModernコマンドをMoveCommandとして管理
-- MoveAlias / CharacterAlias / PlayerAlias / GlossaryAliasを正式データ化
-- Combo / Setup / Sequence / Counter / Trainingを独立エンティティ化
-- Player / Tournament / Match / VideoをIDで相互接続
-- PatchとSourceを独立管理し、攻略データに有効期間・検証状態を持たせる
-- Diagnosis / Question / Option / Resultを短時間診断向けに再構築可能な形で定義
-- Supabase AuthとはProfileを分離
-- AIコーチがCharacter / Move / Counter / Training / Source等を構造化取得できる設計
-
-### Phase4で実装した基盤
-
+### Web基盤
 - `v2-web/`にNext.js 16.3 + React 19 + TypeScriptの独立アプリを作成
-- App Router / strict TypeScript / ESLintを設定
-- 共通Root Layoutとモバイル対応の基本Navigationを実装
-- `/diagnosis` `/characters` `/players` `/coach` の4大コンテンツrouteを作成
-- SF6DNA v2用の基本CSSを作成
-- Supabase browser/server client factoryを追加
-- `.env.example`を追加
-- 既存Express Backend用の共通fetch helperを追加
-- 既存静的HTML/CSS/JSとv2を分離し、公開版への影響を回避
-- npm install / typecheck / lint / buildはGitHubファイル操作環境では未実行。実行環境取得時に検証する
+- App Router / strict TypeScript / ESLint
+- Supabase browser/server client factory
+- 現行静的サイトと分離
 
-### Phase5で実装したキャラクター辞典基盤
+### キャラクター辞典
+- `/characters`
+- `/characters/[slug]`
+- `/characters/[slug]/[section]`
+- Move / Combo / Setup / Counter / Training等への子導線
 
-- `/characters` のDB駆動一覧を実装
-- `/characters/[slug]` の詳細routeを実装
-- 技・コンボ・セットプレイ・対策・トレモ・プレイヤー・動画の子URLを実装
-- Character / CharacterGuideSectionのTypeScript型を追加
-- Phase3 schemaに合わせたSupabase Character Repositoryを追加
-- `status = published` の検証済み公開データだけを表示する方針に統一
-- DB未接続時に旧データを勝手に代替表示しない安全設計を採用
-- 旧 `character-data.js` の内容は自動移行せず、出典・パッチ・検証状態を確認してから投入する
+### 横断検索
+- `/search`
+- NFKC正規化
+- Character / CharacterAlias
+- Move / MoveAlias
+- Combo
+- Player / PlayerAlias
+- Glossary
+- Alias一致表示と重複排除
 
-> `docs/V2_SCHEMA_DRAFT.sql` はPhase3の設計草案であり、本番Migrationではない。RLS、Migration、updated_at trigger、厳密な制約は後続Phaseで実装する。
+### 短時間診断
+- `/diagnosis`
+- `/diagnosis/[slug]`
+- Question / OptionをDBから描画
+- 進捗、戻る、次へ
+- `score_payload`汎用集計
+- 少数問前提UI
 
-> v2開発では旧PROJECT_STATUSのPhase番号と混同しないこと。旧Phase群は既存版の履歴として以下に残す。
+### プレイヤーDB
+- `/players`
+- `/players/[slug]`
+- PlayerCharacter関連
+- プロ/非プロ強豪/Legend/職人/配信者/VTuber/攻略投稿者/コーチ等の型を想定
 
----
+### 攻略・トレーニング
+- `/moves/[slug]`
+- `/combos` / `/combos/[slug]`
+- `/setups` / `/setups/[slug]`
+- `/counters` / `/counters/[slug]`
+- `/training` / `/training/[slug]`
+- `/glossary/[slug]`
 
-## 既存版リデザインの進捗（履歴）
+### 管理
+- `/admin` は安全のためロック状態
+- 認証なし書き込みAPIは作成しない
+- Supabase Auth + admin role + RLS必須
+- 詳細: `docs/V2_PHASE10_ADMIN_SECURITY.md`
 
-| フェーズ | 対象 | ステータス |
-|---|---|---|
-| Phase1 | ホームページ | ✅ 完了・凍結中 |
-| Phase2 | 診断ページ | ✅ 完了 |
-| Phase3 | 初心者ポータル化（キャラ/プレイヤー図鑑・ランキング・大会情報等） | ✅ 完了 |
-| Phase3.5 | リファクタリング（部分実施） | ✅ 完了 |
-| Phase4 | マイページ・お気に入り・活動ログ・デイリークエスト・週次レポート | ✅ 完了 |
-| Phase5 | リファクタリング（localStorage共通化、部分実施） | ✅ 完了 |
-| Phase6 | キャラ/プレイヤー図鑑リニューアル | 📐 設計完了・v2移行により旧計画として保留 |
+### AIコーチ
+- `/coach`
+- `/api/coach/retrieve`
+- ユーザー質問からSF6DNA DBを検索してEvidence候補を返す
+- 現段階ではAI生成回答を無効化
+- 信頼できるデータ、Patch、Source、Backend接続後に生成を有効化する
 
-既存版Phase1は凍結（Freeze）済み。重大なバグ修正を除き、公開版ホームページの仕様変更は行わない。
+## まだ必要な外部・実行環境作業
 
-詳細な旧引き継ぎ内容は[docs/PROJECT_HANDOFF.md](./docs/PROJECT_HANDOFF.md)を参照。
+GitHubファイル操作だけでは以下は未実施。
 
----
+- `npm install`
+- `npm run typecheck`
+- `npm run lint`
+- `npm run build`
+- Vercel Preview
+- 実Supabase Project作成/接続
+- PostgreSQL Migration適用
+- RLS適用・検証
+- Auth設定
+- 管理者ユーザー設定
+- 実データ投入
+- OpenAI/AI Backendの本番接続
 
-## 既存版で実装済みの機能（再利用候補）
-
-✅ ホーム（index.html）
-
-✅ プレイヤー診断（diagnosis.html / 通常モード・上級モード）
-
-✅ 診断結果ページ（result.html、8軸スコアに基づくプロ選手・キャラ推薦）
-
-✅ プレイヤー図鑑（players.html / player.html）
-
-✅ プロ選手名鑑（pro-player.html）
-
-✅ キャラクター図鑑（characters.html / character.html / character-select.html）
-
-✅ チーム図鑑（team.html / team-detail.html）
-
-✅ キャラクター・選手比較機能（compare.html）
-
-✅ お気に入り機能（favorites.html、localStorage使用）
-
-✅ ランク管理（rank-tracker.html、手動MR入力・推移グラフ）
-
-✅ 練習メニュー（training.html、診断結果の弱点軸に基づくドリル提案・完了記録）
-
-✅ About関連サブページ群（about.html / contact.html / faq.html / changelog.html / sources.html）
-
-✅ 動画API連携（YouTube動画取得、複数クエリでのリトライに対応）
-
-## v2で再設計・新規構築する主要領域
-
-- 短時間診断
-- 本格キャラクター辞典
-- 技・フレームデータ
-- コンボ
-- セットプレイ
-- キャラ/技/連携対策
-- トレーニングDB
-- プレイヤーDB拡張
-- 大会・試合DB
-- 横断検索
-- 表記揺れ / Alias検索
-- Patch / Source管理
-- 管理画面
-- AIコーチ
-- 将来のリプレイコーチ
-
----
+このため、現在は「コード基盤を前倒しで構築し、安全性・データ精度に関わる箇所は外部環境確認まで有効化しない」状態。
 
 ## 関連ドキュメント
 
-- [docs/V2_REQUIREMENTS.md](./docs/V2_REQUIREMENTS.md) — v2確定要件
-- [docs/V2_PHASE1_FOUNDATION.md](./docs/V2_PHASE1_FOUNDATION.md) — v2 Phase1安全基盤
-- [docs/V2_ARCHITECTURE.md](./docs/V2_ARCHITECTURE.md) — v2 Phase2正式アーキテクチャ
-- [docs/V2_DATA_MODEL.md](./docs/V2_DATA_MODEL.md) — v2 Phase3データモデル
-- [docs/V2_SCHEMA_DRAFT.sql](./docs/V2_SCHEMA_DRAFT.sql) — PostgreSQL草案
-- [docs/V2_PHASE4_IMPLEMENTATION.md](./docs/V2_PHASE4_IMPLEMENTATION.md) — v2 Phase4実装記録
-- [docs/V2_PHASE5_CHARACTER_ENCYCLOPEDIA.md](./docs/V2_PHASE5_CHARACTER_ENCYCLOPEDIA.md) — v2 Phase5実装記録
-- [CHANGELOG.md](./CHANGELOG.md) — 既存版フェーズごとの変更履歴
-- [docs/KNOWN_ISSUES.md](./docs/KNOWN_ISSUES.md) — 既知の課題
-- [docs/DESIGN_SYSTEM.md](./docs/DESIGN_SYSTEM.md) — デザインルール
+- `docs/V2_REQUIREMENTS.md` — v2確定要件
+- `docs/V2_PHASE1_FOUNDATION.md` — Phase1安全基盤
+- `docs/V2_ARCHITECTURE.md` — Phase2正式アーキテクチャ
+- `docs/V2_DATA_MODEL.md` — Phase3データモデル
+- `docs/V2_SCHEMA_DRAFT.sql` — PostgreSQL草案
+- `docs/V2_PHASE4_IMPLEMENTATION.md` — Phase4実装記録
+- `docs/V2_PHASE5_CHARACTER_ENCYCLOPEDIA.md` — Phase5実装記録
+- `docs/V2_PHASE6_11_PROGRESS.md` — Phase6〜11進捗
+- `docs/V2_PHASE10_ADMIN_SECURITY.md` — 管理機能セキュリティ設計
+
+---
+
+## 既存版について
+
+現行公開版は`main`に維持し、v2開発中は直接変更しない。
+旧HTML/CSS/JavaScript、旧診断、プレイヤー図鑑、キャラクター図鑑、チーム図鑑、比較、お気に入り、ランク管理、練習メニュー、YouTube API等は移行候補資産として保存する。
