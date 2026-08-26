@@ -57,14 +57,45 @@ export async function getSetupBySlug(slug: string): Promise<SimpleDetail | null>
   const supabase = getSupabaseServerClient();
   const { data, error } = await supabase
     .from("setups")
-    .select("id, slug, name, setup_type, starter_condition, sequence_text, frame_advantage, position, meter_condition, description, counter_notes")
+    .select("id, slug, name, setup_type, starter_condition, sequence_text, frame_advantage, position, meter_condition, description, counter_notes, characters(name_ja)")
     .eq("slug", slug)
     .eq("status", "published")
     .maybeSingle();
   if (error || !data) return null;
+  const c = data.characters as unknown as { name_ja?: string } | null;
   return {
     id: String(data.id), slug: String(data.slug), title: String(data.name), summary: data.description ?? null,
-    body: [["種類", data.setup_type ?? null], ["始動条件", data.starter_condition ?? null], ["手順", data.sequence_text ?? null], ["有利F", data.frame_advantage ?? null], ["位置", data.position ?? null], ["ゲージ条件", data.meter_condition ?? null], ["対策メモ", data.counter_notes ?? null]],
+    body: [["キャラクター", c?.name_ja ?? null], ["種類", data.setup_type ?? null], ["始動条件", data.starter_condition ?? null], ["手順", data.sequence_text ?? null], ["有利F", data.frame_advantage ?? null], ["位置", data.position ?? null], ["ゲージ条件", data.meter_condition ?? null], ["対策メモ", data.counter_notes ?? null]],
+  };
+}
+
+export async function getSequenceBySlug(slug: string): Promise<SimpleDetail | null> {
+  if (!configured()) return null;
+  const supabase = getSupabaseServerClient();
+  const { data, error } = await supabase
+    .from("sequences")
+    .select("id, slug, name, sequence_type, sequence_text, is_true_blockstring, mash_point, throw_point, shimmy_point, jump_option, parry_option, drive_reversal_option, invincible_option, notes, characters(name_ja)")
+    .eq("slug", slug)
+    .eq("status", "published")
+    .maybeSingle();
+  if (error || !data) return null;
+  const c = data.characters as unknown as { name_ja?: string } | null;
+  return {
+    id: String(data.id), slug: String(data.slug), title: String(data.name), summary: data.notes ?? null,
+    body: [
+      ["キャラクター", c?.name_ja ?? null],
+      ["種類", data.sequence_type ?? null],
+      ["連携", data.sequence_text ?? null],
+      ["連続ガード", data.is_true_blockstring === true ? "はい" : data.is_true_blockstring === false ? "いいえ" : null],
+      ["暴れどころ", data.mash_point ?? null],
+      ["投げ択", data.throw_point ?? null],
+      ["シミー", data.shimmy_point ?? null],
+      ["ジャンプ", data.jump_option ?? null],
+      ["パリィ", data.parry_option ?? null],
+      ["Dリバーサル", data.drive_reversal_option ?? null],
+      ["無敵技", data.invincible_option ?? null],
+      ["補足", data.notes ?? null],
+    ],
   };
 }
 
