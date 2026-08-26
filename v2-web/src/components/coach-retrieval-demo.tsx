@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import type { SearchResultItem } from "@/types/search";
 
 type SourceItem = {
@@ -22,18 +21,12 @@ type CurrentPatch = {
   officialUrl: string | null;
 };
 
-export function CoachRetrievalDemo() {
-  const searchParams = useSearchParams();
-  const [question, setQuestion] = useState("");
+export function CoachRetrievalDemo({ initialQuestion = "" }: { initialQuestion?: string }) {
+  const [question, setQuestion] = useState(initialQuestion.slice(0, 500));
   const [loading, setLoading] = useState(false);
   const [evidence, setEvidence] = useState<EvidenceItem[]>([]);
   const [currentPatch, setCurrentPatch] = useState<CurrentPatch | null>(null);
   const [message, setMessage] = useState<string | null>(null);
-
-  useEffect(() => {
-    const q = searchParams.get("q")?.trim();
-    if (q) setQuestion(q.slice(0, 500));
-  }, [searchParams]);
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
