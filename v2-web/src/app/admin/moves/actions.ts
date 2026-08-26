@@ -16,6 +16,16 @@ const nullableNumber = (fd: FormData, key: string) => {
   return Number.isFinite(parsed) ? parsed : null;
 };
 
+type MoveCommandInput = {
+  move_id: string;
+  control_scheme: "classic" | "modern";
+  command_text: string;
+  numeric_notation: string | null;
+  button_notation: string | null;
+  condition_text: string | null;
+  sort_order: number;
+};
+
 export async function createMove(formData: FormData) {
   const { supabase } = await requireAdmin();
   const characterId = text(formData, "character_id");
@@ -45,7 +55,7 @@ export async function createMove(formData: FormData) {
   const commands = [
     buildCommand(formData, move.id, "classic"),
     buildCommand(formData, move.id, "modern"),
-  ].filter(Boolean);
+  ].filter((command): command is MoveCommandInput => command !== null);
   if (commands.length) {
     const { error } = await supabase.from("move_commands").insert(commands);
     if (error) throw new Error(error.message);
@@ -124,7 +134,7 @@ export async function archiveMove(id: string) {
   revalidatePath("/admin/moves");
 }
 
-function buildCommand(fd: FormData, moveId: string, scheme: "classic" | "modern") {
+function buildCommand(fd: FormData, moveId: string, scheme: "classic" | "modern"): MoveCommandInput | null {
   const commandText = text(fd, `${scheme}_command_text`);
   if (!commandText) return null;
   return {
