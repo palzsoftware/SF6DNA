@@ -33,7 +33,7 @@ export async function getDiagnosisBySlug(slug: string): Promise<DiagnosisDefinit
   const supabase = getSupabaseServerClient();
   const { data: diagnosis, error } = await supabase
     .from("diagnoses")
-    .select("id, slug, title, description, question_count")
+    .select("id, slug, title, description, diagnosis_type, question_count")
     .eq("slug", slug)
     .eq("status", "published")
     .maybeSingle();
@@ -83,6 +83,7 @@ export async function getDiagnosisBySlug(slug: string): Promise<DiagnosisDefinit
     slug: String(diagnosis.slug),
     title: String(diagnosis.title),
     description: typeof diagnosis.description === "string" ? diagnosis.description : null,
+    diagnosisType: String(diagnosis.diagnosis_type ?? "improvement"),
     questionCount: Number(diagnosis.question_count ?? mapped.length),
     questions: mapped,
   };
