@@ -33,6 +33,7 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
             {character.archetypeLabel ? <span className="chip">{character.archetypeLabel}</span> : null}
             {character.rangeLabel ? <span className="chip">{character.rangeLabel}</span> : null}
             {character.difficulty ? <span className="chip">難易度 {character.difficulty}/5</span> : null}
+            {character.releaseDate ? <span className="chip">参戦日 {character.releaseDate}</span> : null}
           </div>
         </div>
         {character.imageUrl ? (
@@ -71,6 +72,26 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
             <div className="empty-state"><p>公開済み攻略セクションはまだありません。</p></div>
           )}
         </div>
+      </section>
+
+      <section>
+        <div className="section-heading">
+          <h2>出典</h2>
+          <p>SF6DNAでは、基本情報・客観データと攻略評価を区別して管理します。</p>
+        </div>
+        {character.sources.length ? (
+          <div className="search-result-list">
+            {character.sources.map((source) => (
+              <a className="search-result" href={source.url} target="_blank" rel="noreferrer" key={source.id}>
+                <span className="search-result__type">{source.publisher ?? source.sourceType}</span>
+                <strong>{source.title}</strong>
+                <span>{source.relationship}</span>
+              </a>
+            ))}
+          </div>
+        ) : (
+          <div className="empty-state"><p>公開済みの出典情報はまだありません。</p></div>
+        )}
       </section>
     </div>
   );
