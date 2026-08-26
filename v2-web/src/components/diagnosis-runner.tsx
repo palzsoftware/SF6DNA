@@ -17,10 +17,47 @@ const AXIS_LABELS: Record<string, string> = {
   neutral: "中距離・立ち回り",
   corner_defense: "画面端の守り",
   decision: "観察・判断",
+  aggression: "前に出る攻め",
+  patience: "待ち・観察",
+  keepout: "遠距離・けん制",
+  rushdown: "近距離ラッシュ",
+  grappling: "投げ・コマンド投げ",
+  setup: "設置・セットプレイ",
+  footsies: "差し合い・地上戦",
+  mobility: "機動力・位置調整",
+  simplicity: "操作の分かりやすさ",
+  technicality: "テクニカル操作",
+  defense_preference: "守りから組み立てる",
+  explosive: "一気に試合を動かす",
 };
 
 function axisLabel(key: string) {
   return AXIS_LABELS[key] ?? key;
+}
+
+function resultCopy(type: string) {
+  if (type === "playstyle") {
+    return {
+      title: "あなたのプレイスタイル傾向",
+      body: "点数が高い項目ほど、回答から見える好み・得意志向が強い傾向です。実戦では複数のスタイルを併用します。",
+      scoreLabel: "傾向",
+      searchLabel: "関連する攻略を探す",
+    };
+  }
+  if (type === "character_fit") {
+    return {
+      title: "相性が良さそうなキャラクター特性",
+      body: "点数が高い項目ほど、キャラクター選びで重視すると相性が良くなりやすい特性です。キャラ固有の難易度や操作タイプも合わせて確認してください。",
+      scoreLabel: "適性",
+      searchLabel: "関連キャラ・攻略を探す",
+    };
+  }
+  return {
+    title: "優先して改善したい項目",
+    body: "点数が高いほど「今の練習優先度が高い」という自己評価結果です。実戦ログやリプレイで確認すると精度が上がります。",
+    scoreLabel: "優先度",
+    searchLabel: "関連攻略を探す",
+  };
 }
 
 export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition }) {
@@ -48,25 +85,26 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
   }
 
   if (completed) {
+    const copy = resultCopy(diagnosis.diagnosisType);
     const priorities = result.filter(([, score]) => score > 0).slice(0, 3);
     const topQuery = priorities.map(([key]) => axisLabel(key)).join(" ");
 
     return (
       <section className="info-panel diagnosis-result">
         <p className="eyebrow">RESULT</p>
-        <h2>優先して改善したい項目</h2>
-        <p>点数が高いほど「今の練習優先度が高い」という自己評価結果です。実戦ログやリプレイで確認すると精度が上がります。</p>
+        <h2>{copy.title}</h2>
+        <p>{copy.body}</p>
         {priorities.length ? (
           <ol>
             {priorities.map(([key, score]) => (
-              <li key={key}><strong>{axisLabel(key)}</strong>：優先度 {score}/3</li>
+              <li key={key}><strong>{axisLabel(key)}</strong>：{copy.scoreLabel} {score}</li>
             ))}
           </ol>
         ) : (
-          <p>自己評価上は大きな弱点がありません。実戦ログから細かな課題を確認してください。</p>
+          <p>はっきりした傾向が出ませんでした。回答を変えて再診断するか、実戦ログと合わせて確認してください。</p>
         )}
         <div className="diagnosis-actions">
-          {topQuery ? <Link className="button-primary" href={`/search?q=${encodeURIComponent(topQuery)}`}>関連攻略を探す</Link> : null}
+          {topQuery ? <Link className="button-primary" href={`/search?q=${encodeURIComponent(topQuery)}`}>{copy.searchLabel}</Link> : null}
           {topQuery ? <Link className="button-secondary" href={`/coach?q=${encodeURIComponent(topQuery)}`}>AIコーチ用Evidenceを見る</Link> : null}
           <button className="button-secondary" type="button" onClick={() => { setIndex(0); setAnswers({}); }}>最初からやり直す</button>
         </div>
