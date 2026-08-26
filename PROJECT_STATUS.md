@@ -17,8 +17,8 @@
 | v2 Phase1 | 安全な開発基盤・ブランチ分離・要件正本化 | ✅ 完了 |
 | v2 Phase2 | Backend整理・正式アーキテクチャ設計 | ✅ 完了 |
 | v2 Phase3 | DB・基礎データモデル | ✅ 完了 |
-| v2 Phase4 | Next.js基盤・既存資産の移行基盤 | ⏭ 次工程 |
-| v2 Phase5 | キャラクター辞典 | 未着手 |
+| v2 Phase4 | Next.js基盤・既存資産の移行基盤 | ✅ 完了（実行環境でのbuild検証は後続） |
+| v2 Phase5 | キャラクター辞典 | ⏭ 次工程 |
 | v2 Phase6 | 横断検索・Alias検索 | 未着手 |
 | v2 Phase7 | 短時間診断への再構築 | 未着手 |
 | v2 Phase8 | プレイヤーDB | 未着手 |
@@ -38,6 +38,8 @@ Phase2アーキテクチャ決定: [docs/V2_ARCHITECTURE.md](./docs/V2_ARCHITECT
 Phase3データモデル: [docs/V2_DATA_MODEL.md](./docs/V2_DATA_MODEL.md)
 
 Phase3 PostgreSQL草案: [docs/V2_SCHEMA_DRAFT.sql](./docs/V2_SCHEMA_DRAFT.sql)
+
+Phase4実装記録: [docs/V2_PHASE4_IMPLEMENTATION.md](./docs/V2_PHASE4_IMPLEMENTATION.md)
 
 ### Phase2で確定した基本構成
 
@@ -63,7 +65,20 @@ Phase3 PostgreSQL草案: [docs/V2_SCHEMA_DRAFT.sql](./docs/V2_SCHEMA_DRAFT.sql)
 - Supabase AuthとはProfileを分離
 - AIコーチがCharacter / Move / Counter / Training / Source等を構造化取得できる設計
 
-> `docs/V2_SCHEMA_DRAFT.sql` はPhase3の設計草案であり、本番Migrationではない。RLS、Migration、updated_at trigger、厳密な制約はPhase4以降で実装する。
+### Phase4で実装した基盤
+
+- `v2-web/`にNext.js 16.3 + React 19 + TypeScriptの独立アプリを作成
+- App Router / strict TypeScript / ESLintを設定
+- 共通Root Layoutとモバイル対応の基本Navigationを実装
+- `/diagnosis` `/characters` `/players` `/coach` の4大コンテンツrouteを作成
+- SF6DNA v2用の基本CSSを作成
+- Supabase browser/server client factoryを追加
+- `.env.example`を追加
+- 既存Express Backend用の共通fetch helperを追加
+- 既存静的HTML/CSS/JSとv2を分離し、公開版への影響を回避
+- npm install / typecheck / lint / buildはGitHubファイル操作環境では未実行。実行環境取得時に検証する
+
+> `docs/V2_SCHEMA_DRAFT.sql` はPhase3の設計草案であり、本番Migrationではない。RLS、Migration、updated_at trigger、厳密な制約は後続Phaseで実装する。
 
 > v2開発では旧PROJECT_STATUSのPhase番号と混同しないこと。旧Phase群は既存版の履歴として以下に残す。
 
@@ -142,6 +157,7 @@ Phase3 PostgreSQL草案: [docs/V2_SCHEMA_DRAFT.sql](./docs/V2_SCHEMA_DRAFT.sql)
 - [docs/V2_ARCHITECTURE.md](./docs/V2_ARCHITECTURE.md) — v2 Phase2正式アーキテクチャ
 - [docs/V2_DATA_MODEL.md](./docs/V2_DATA_MODEL.md) — v2 Phase3データモデル
 - [docs/V2_SCHEMA_DRAFT.sql](./docs/V2_SCHEMA_DRAFT.sql) — PostgreSQL草案
+- [docs/V2_PHASE4_IMPLEMENTATION.md](./docs/V2_PHASE4_IMPLEMENTATION.md) — v2 Phase4実装記録
 - [CHANGELOG.md](./CHANGELOG.md) — 既存版フェーズごとの変更履歴
 - [docs/KNOWN_ISSUES.md](./docs/KNOWN_ISSUES.md) — 既知の課題
 - [docs/DESIGN_SYSTEM.md](./docs/DESIGN_SYSTEM.md) — デザインルール
