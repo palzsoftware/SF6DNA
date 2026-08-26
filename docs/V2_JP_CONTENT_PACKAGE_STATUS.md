@@ -17,6 +17,7 @@ Current Patchは `2026.08.03`。
 - Training: 16
 - Reference Players: 3
 - Character Videos: 1
+- Character Trait Scores: 12 reviewed draft
 
 ## Verification policy
 
@@ -32,6 +33,7 @@ Current Patchは `2026.08.03`。
 - SA2ラヴーシュカの分岐
 - ODアムネジア投げ成立後の2026.08.03以降の状況
 - 設置・ワープ絡みの距離依存ルート
+- Character Trait Scoreの編集レビュー
 
 ## Sources in use
 
@@ -41,6 +43,7 @@ Current Patchは `2026.08.03`。
 - 格ゲーブログ JP combo article (updated 2026-03-17)
 - レイ スト6 JP combo/oki/setup video (2026-03-18)
 - current player references for Tokido / Ryusei / takepi
+- FGC Top Players JP profile for trait/player cross-reference
 
 ## Reference players
 
@@ -60,7 +63,8 @@ Current Patchは `2026.08.03`。
 6. Training drills present
 7. Player/video references present
 8. Source/Patch relationship present
-9. Data Qualityで欠落を可視化可能
-10. verified化手順が再現可能
+9. Character Trait draft mapping present
+10. Data Qualityで欠落を可視化可能
+11. verified化手順が再現可能
 
-現時点で1〜9の「器と候補データ」は揃った。残る重要工程は10の実機検証とverified/published昇格である。
+現時点で1〜10の「器と候補データ」は揃った。残る重要工程は11の実機検証とverified/published昇格である。
