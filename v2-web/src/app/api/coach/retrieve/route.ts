@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { attachSourcesToEvidence, getCurrentPatch } from "@/lib/coach-evidence";
 import { searchAcrossContent } from "@/lib/search";
 
 export async function POST(request: Request) {
@@ -22,12 +23,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "question_too_long" }, { status: 400 });
   }
 
-  const evidence = await searchAcrossContent(question);
+  const searchResults = (await searchAcrossContent(question)).slice(0, 12);
+  const [evidence, currentPatch] = await Promise.all([
+    attachSourcesToEvidence(searchResults),
+    getCurrentPatch(),
+  ]);
 
   return NextResponse.json({
     question,
-    evidence: evidence.slice(0, 12),
+    currentPatch,
+    evidence,
     generationEnabled: false,
-    note: "Phase11 retrieval foundation: generative answer is intentionally disabled until trusted data and backend integration are ready.",
+    note: "Trusted retrieval is active. Generative answers remain disabled until verified gameplay data is sufficiently populated and the backend AI contract is finalized.",
   });
 }
