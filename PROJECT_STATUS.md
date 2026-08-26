@@ -18,8 +18,8 @@
 | v2 Phase2 | Backend整理・正式アーキテクチャ設計 | ✅ 完了 |
 | v2 Phase3 | DB・基礎データモデル | ✅ 完了 |
 | v2 Phase4 | Next.js基盤・既存資産の移行基盤 | ✅ 完了（実行環境でのbuild検証は後続） |
-| v2 Phase5 | キャラクター辞典 | ⏭ 次工程 |
-| v2 Phase6 | 横断検索・Alias検索 | 未着手 |
+| v2 Phase5 | キャラクター辞典 | ✅ 表示・URL・Repository基盤完了（実データ投入は継続） |
+| v2 Phase6 | 横断検索・Alias検索 | ⏭ 次工程 |
 | v2 Phase7 | 短時間診断への再構築 | 未着手 |
 | v2 Phase8 | プレイヤーDB | 未着手 |
 | v2 Phase9 | 対策・コンボ・セットプレイ・トレモ | 未着手 |
@@ -40,6 +40,8 @@ Phase3データモデル: [docs/V2_DATA_MODEL.md](./docs/V2_DATA_MODEL.md)
 Phase3 PostgreSQL草案: [docs/V2_SCHEMA_DRAFT.sql](./docs/V2_SCHEMA_DRAFT.sql)
 
 Phase4実装記録: [docs/V2_PHASE4_IMPLEMENTATION.md](./docs/V2_PHASE4_IMPLEMENTATION.md)
+
+Phase5実装記録: [docs/V2_PHASE5_CHARACTER_ENCYCLOPEDIA.md](./docs/V2_PHASE5_CHARACTER_ENCYCLOPEDIA.md)
 
 ### Phase2で確定した基本構成
 
@@ -77,6 +79,17 @@ Phase4実装記録: [docs/V2_PHASE4_IMPLEMENTATION.md](./docs/V2_PHASE4_IMPLEMEN
 - 既存Express Backend用の共通fetch helperを追加
 - 既存静的HTML/CSS/JSとv2を分離し、公開版への影響を回避
 - npm install / typecheck / lint / buildはGitHubファイル操作環境では未実行。実行環境取得時に検証する
+
+### Phase5で実装したキャラクター辞典基盤
+
+- `/characters` のDB駆動一覧を実装
+- `/characters/[slug]` の詳細routeを実装
+- 技・コンボ・セットプレイ・対策・トレモ・プレイヤー・動画の子URLを実装
+- Character / CharacterGuideSectionのTypeScript型を追加
+- Phase3 schemaに合わせたSupabase Character Repositoryを追加
+- `status = published` の検証済み公開データだけを表示する方針に統一
+- DB未接続時に旧データを勝手に代替表示しない安全設計を採用
+- 旧 `character-data.js` の内容は自動移行せず、出典・パッチ・検証状態を確認してから投入する
 
 > `docs/V2_SCHEMA_DRAFT.sql` はPhase3の設計草案であり、本番Migrationではない。RLS、Migration、updated_at trigger、厳密な制約は後続Phaseで実装する。
 
@@ -158,6 +171,7 @@ Phase4実装記録: [docs/V2_PHASE4_IMPLEMENTATION.md](./docs/V2_PHASE4_IMPLEMEN
 - [docs/V2_DATA_MODEL.md](./docs/V2_DATA_MODEL.md) — v2 Phase3データモデル
 - [docs/V2_SCHEMA_DRAFT.sql](./docs/V2_SCHEMA_DRAFT.sql) — PostgreSQL草案
 - [docs/V2_PHASE4_IMPLEMENTATION.md](./docs/V2_PHASE4_IMPLEMENTATION.md) — v2 Phase4実装記録
+- [docs/V2_PHASE5_CHARACTER_ENCYCLOPEDIA.md](./docs/V2_PHASE5_CHARACTER_ENCYCLOPEDIA.md) — v2 Phase5実装記録
 - [CHANGELOG.md](./CHANGELOG.md) — 既存版フェーズごとの変更履歴
 - [docs/KNOWN_ISSUES.md](./docs/KNOWN_ISSUES.md) — 既知の課題
 - [docs/DESIGN_SYSTEM.md](./docs/DESIGN_SYSTEM.md) — デザインルール
