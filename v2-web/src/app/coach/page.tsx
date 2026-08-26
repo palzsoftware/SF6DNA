@@ -2,7 +2,10 @@ import { CoachRetrievalDemo } from "@/components/coach-retrieval-demo";
 
 export const metadata = { title: "AIコーチ | SF6DNA" };
 
-export default function CoachPage() {
+export default async function CoachPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
+  const params = await searchParams;
+  const initialQuestion = typeof params.q === "string" ? params.q.trim().slice(0, 500) : "";
+
   return (
     <div className="site-shell page-stack">
       <section className="hero">
@@ -13,7 +16,7 @@ export default function CoachPage() {
           現段階では安全のため生成回答を有効化せず、検索・根拠取得まで実装しています。
         </p>
       </section>
-      <CoachRetrievalDemo />
+      <CoachRetrievalDemo initialQuestion={initialQuestion} />
     </div>
   );
 }
