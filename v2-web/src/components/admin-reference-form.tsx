@@ -64,8 +64,6 @@ function VideoFields({ value }: { value?: Row | null }) { return <>
 
 function GlossaryFields({ value }: { value?: Row | null }) { return <>
   <label><span>用語 *</span><input name="term" required defaultValue={input(value?.term)} /></label>
-  <label><span>カテゴリ</span><input name="category" defaultValue={input(value?.category)} /></label>
-  <label><span>初心者レベル</span><input name="beginner_level" defaultValue={input(value?.beginner_level)} /></label>
   <label className="admin-span-2"><span>短い説明</span><textarea name="short_definition" rows={2} defaultValue={input(value?.short_definition)} /></label>
-  <label className="admin-span-2"><span>定義 *</span><textarea name="definition" required rows={5} defaultValue={input(value?.definition)} /></label>
+  <label className="admin-span-2"><span>定義</span><textarea name="definition" rows={5} defaultValue={input(value?.definition)} /></label>
 </>; }
