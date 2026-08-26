@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,14 +17,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <header className="site-header">
           <div className="site-shell site-header__inner">
-            <a className="site-brand" href="/">
-              SF6DNA
-            </a>
+            <Link className="site-brand" href="/">SF6DNA</Link>
             <nav className="site-nav" aria-label="主要ナビゲーション">
-              <a href="/diagnosis">診断</a>
-              <a href="/characters">キャラクター</a>
-              <a href="/players">プレイヤー</a>
-              <a href="/coach">AIコーチ</a>
+              <Link href="/search">検索</Link>
+              <Link href="/diagnosis">診断</Link>
+              <Link href="/characters">キャラクター</Link>
+              <Link href="/players">プレイヤー</Link>
+              <Link href="/training">トレーニング</Link>
+              <Link href="/coach">AIコーチ</Link>
             </nav>
           </div>
         </header>
