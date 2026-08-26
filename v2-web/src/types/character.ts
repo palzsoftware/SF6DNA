@@ -1,3 +1,12 @@
+export type SourceReference = {
+  id: string;
+  title: string;
+  url: string;
+  publisher: string | null;
+  sourceType: string;
+  relationship: string;
+};
+
 export type CharacterSummary = {
   id: string;
   slug: string;
@@ -8,6 +17,7 @@ export type CharacterSummary = {
   difficulty: number | null;
   rangeLabel: string | null;
   archetypeLabel: string | null;
+  releaseDate: string | null;
   updatedAt: string | null;
 };
 
@@ -23,6 +33,7 @@ export type CharacterDetail = CharacterSummary & {
   strengthsSummary: string | null;
   weaknessesSummary: string | null;
   guideSections: CharacterGuideSection[];
+  sources: SourceReference[];
 };
 
 export const CHARACTER_SECTION_KEYS = [
