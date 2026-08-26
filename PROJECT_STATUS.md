@@ -14,7 +14,7 @@
 | v2 Phase4 | Next.js基盤・既存資産の移行基盤 | ✅ CI成功 |
 | v2 Phase5 | キャラクター辞典 | ✅ 31プレイアブル基本データ・出典・各セクション接続基盤 |
 | v2 Phase6 | 横断検索・Alias検索 | ✅ PostgreSQL統合検索RPCを実DBで動作確認 |
-| v2 Phase7 | 短時間診断 | ✅ 汎用エンジン + 12問上達課題診断を実DBで公開 |
+| v2 Phase7 | 短時間診断 | 🧱 上達課題・プレイスタイル・キャラクター適性の3診断を実DBで公開。総合簡易診断とキャラ推薦モデルが残り |
 | v2 Phase8 | プレイヤーDB | ✅ 一覧・詳細・Character関連基盤 |
 | v2 Phase9 | 攻略/コンボ/セットプレイ/連携/トレモ | ✅ 一覧・詳細・Character子ページ接続基盤 |
 | v2 Phase10 | 管理機能 | ✅ 主要Entity CRUD + 関係データ管理 + Data Quality可視化まで実装。実Admin E2Eのみ未実施 |
@@ -32,6 +32,7 @@
 - `/auth` とSupabase SSR cookie session基盤
 - `/admin` は認証 + `profiles.role = admin` で保護
 - Relation / Data Quality追加後を含むCIでtypecheck/lint/build成功確認済み
+- 複数Diagnosis typeに応じて結果表示を切り替えるRunnerへ拡張し、CI成功確認済み
 
 ## Supabase実DB
 
@@ -137,12 +138,17 @@ Server Actionは`requireAdmin()`、DB書込はSupabase RLSの二重ガード。
 ## 短時間診断
 
 公開済み:
-- slug: `improvement-check`
-- 名称: 上達課題診断
-- 12問 / 12評価軸 / 48選択肢
-- 結果上位3項目から横断検索とAI Coach Evidenceへ接続
+- `improvement-check` 上達課題診断: 12問 / 48選択肢
+- `playstyle-check` プレイスタイル診断: 10問 / 40選択肢
+- `character-fit-check` キャラクター適性診断: 10問 / 40選択肢
 
-診断AdminからDiagnosis / Question / OptionをDB駆動で追加可能。
+Runnerは`diagnosis_type`に応じて、改善優先度 / プレイスタイル傾向 / キャラクター特性適性として結果文言を切り替える。
+結果上位項目から横断検索とAI Coach Evidenceへ接続。
+
+残り:
+- 総合簡易診断
+- キャラクター特性スコア → 実キャラクター推薦の正式マッピング
+- 診断結果保存・比較の本格運用
 
 ## AI Coach
 
@@ -172,7 +178,7 @@ OpenAI/replay prototypeはnested側に保持。信頼DB連携と最新API仕様�
 
 ## Vercel
 
-接続アカウント内Project一覧は0件。利用可能な接続操作にはGitHub repositoryから新規Projectを作成する安全な操作が見当たらないため、Preview deploymentは停止中。
+接続アカウント内Project一覧は0件。接続側には`deploy_to_vercel`操作が存在するが、現行GitHub repository/subdirectoryと環境変数が正しく対象になることを確認してからPreview deploymentを行う。
 
 ## 次工程
 
@@ -180,10 +186,10 @@ OpenAI/replay prototypeはnested側に保持。信頼DB連携と最新API仕様�
 2. 全31キャラのMove / Frame / Classic-Modern Commandを公式・検証済みSourceから投入
 3. Combo / Setup / Sequence / Counter / Trainingのverifiedデータ投入
 4. Player / Tournament / Match / Videoの検証済みデータ投入
-5. キャラクター適性・プレイスタイル・総合簡易診断の正式データ追加
-6. Data Quality基準策定と公開ゲート実装
-7. Vercel Project作成・環境変数・Preview確認
-8. verified Evidenceが十分になった領域からAI Coach生成回答を段階的に有効化
+5. 総合簡易診断とキャラクター推薦マッピングを完成
+6. Vercel Preview deploymentと環境変数・実機確認
+7. verified Evidenceが十分になった領域からAI Coach生成回答を段階的に有効化
+8. SEO / OGP / sitemap / metadata最終調整
 9. Replay Coachは実データ取得方法・精度・規約・コストを実証後に着手
 
 詳細:
