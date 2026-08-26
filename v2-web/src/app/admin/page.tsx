@@ -4,6 +4,7 @@ import { getSupabaseAuthServerClient } from "@/lib/supabase/auth-server";
 export const metadata = { title: "管理 | SF6DNA" };
 
 const ADMIN_SECTIONS = [
+  ["データ投入状況", "/admin/data-status"],
   ["キャラクター", "/admin/characters"],
   ["技・フレーム", "/admin/moves"],
   ["コンボ", "/admin/combos"],
