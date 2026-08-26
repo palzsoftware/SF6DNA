@@ -20,9 +20,8 @@ export type CharacterGuideSection = {
 };
 
 export type CharacterDetail = CharacterSummary & {
-  concept: string | null;
-  strengths: string[];
-  weaknesses: string[];
+  strengthsSummary: string | null;
+  weaknessesSummary: string | null;
   guideSections: CharacterGuideSection[];
 };
 
