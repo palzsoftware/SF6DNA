@@ -34,6 +34,12 @@ export async function createMove(formData: FormData) {
   const moveType = text(formData, "move_type");
   if (!characterId || !slug || !nameJa || !moveType) throw new Error("character, slug, name_ja and move_type are required");
 
+  const commands = [
+    buildCommand(formData, "pending", "classic"),
+    buildCommand(formData, "pending", "modern"),
+  ].filter((command): command is MoveCommandInput => command !== null);
+  await ensureNewMovePublishable(formData, commands.length);
+
   const { data: move, error: moveError } = await supabase
     .from("moves")
     .insert({
@@ -52,25 +58,19 @@ export async function createMove(formData: FormData) {
     .single();
   if (moveError) throw new Error(moveError.message);
 
-  const commands = [
-    buildCommand(formData, move.id, "classic"),
-    buildCommand(formData, move.id, "modern"),
-  ].filter((command): command is MoveCommandInput => command !== null);
-  if (commands.length) {
-    const { error } = await supabase.from("move_commands").insert(commands);
+  const persistedCommands = commands.map((command) => ({ ...command, move_id: move.id }));
+  if (persistedCommands.length) {
+    const { error } = await supabase.from("move_commands").insert(persistedCommands);
     if (error) throw new Error(error.message);
   }
 
-  if (hasFrameData(formData)) {
-    await insertFrameData(supabase, move.id, formData);
-  }
+  if (hasFrameData(formData)) await insertFrameData(supabase, move.id, formData);
 
   const sourceId = text(formData, "source_id");
-  if (sourceId) {
-    await insertMoveSource(supabase, move.id, sourceId, nullable(formData, "source_note"));
-  }
+  if (sourceId) await insertMoveSource(supabase, move.id, sourceId, nullable(formData, "source_note"));
 
   revalidatePath("/admin/moves");
+  revalidatePath("/admin/data-quality");
   revalidatePath("/characters");
   redirect("/admin/moves");
 }
@@ -82,6 +82,7 @@ export async function updateMove(id: string, formData: FormData) {
   const nameJa = text(formData, "name_ja");
   const moveType = text(formData, "move_type");
   if (!characterId || !slug || !nameJa || !moveType) throw new Error("character, slug, name_ja and move_type are required");
+  if ((text(formData, "status") || "draft") === "published") await ensureExistingMovePublishable(supabase, id);
 
   const { error } = await supabase.from("moves").update({
     character_id: characterId,
@@ -98,6 +99,7 @@ export async function updateMove(id: string, formData: FormData) {
   if (error) throw new Error(error.message);
 
   revalidatePath("/admin/moves");
+  revalidatePath("/admin/data-quality");
   revalidatePath(`/admin/moves/${id}`);
   revalidatePath(`/moves/${slug}`);
   redirect("/admin/moves");
@@ -108,13 +110,18 @@ export async function archiveMove(id: string) {
   const { error } = await supabase.from("moves").update({ status: "archived" }).eq("id", id);
   if (error) throw new Error(error.message);
   revalidatePath("/admin/moves");
+  revalidatePath("/admin/data-quality");
 }
 
 export async function addFrameVersion(moveId: string, formData: FormData) {
   const { supabase } = await requireAdmin();
   if (!hasFrameData(formData)) throw new Error("frame data is required");
+  if (text(formData, "verification_status") === "verified" && !text(formData, "valid_from_patch_id")) {
+    throw new Error("verified FrameにはValid-from Patchが必要です");
+  }
   await insertFrameData(supabase, moveId, formData);
   revalidatePath(`/admin/moves/${moveId}`);
+  revalidatePath("/admin/data-quality");
 }
 
 export async function attachMoveSource(moveId: string, formData: FormData) {
@@ -123,6 +130,7 @@ export async function attachMoveSource(moveId: string, formData: FormData) {
   if (!sourceId) throw new Error("source_id is required");
   await insertMoveSource(supabase, moveId, sourceId, nullable(formData, "source_note"));
   revalidatePath(`/admin/moves/${moveId}`);
+  revalidatePath("/admin/data-quality");
 }
 
 function buildCommand(fd: FormData, moveId: string, scheme: "classic" | "modern"): MoveCommandInput | null {
@@ -142,6 +150,31 @@ function buildCommand(fd: FormData, moveId: string, scheme: "classic" | "modern"
 function hasFrameData(fd: FormData) {
   return ["startup", "active", "recovery", "on_hit", "on_block", "damage", "drive_damage", "hit_level", "cancel_type", "invincibility"]
     .some((key) => Boolean(text(fd, key)));
+}
+
+async function ensureNewMovePublishable(formData: FormData, commandCount: number) {
+  if ((text(formData, "status") || "draft") !== "published") return;
+  if (!commandCount) throw new Error("published MoveにはClassicまたはModern Commandが必要です");
+  if (!hasFrameData(formData)) throw new Error("published MoveにはFrame Dataが必要です");
+  if (text(formData, "verification_status") !== "verified") throw new Error("published MoveのFrameはverifiedである必要があります");
+  if (!text(formData, "valid_from_patch_id")) throw new Error("published MoveにはFrameのValid-from Patchが必要です");
+  if (!text(formData, "source_id")) throw new Error("published MoveにはSourceが必要です");
+}
+
+async function ensureExistingMovePublishable(
+  supabase: Awaited<ReturnType<typeof requireAdmin>>["supabase"],
+  moveId: string,
+) {
+  const [commands, frames, sources] = await Promise.all([
+    supabase.from("move_commands").select("id", { count: "exact", head: true }).eq("move_id", moveId),
+    supabase.from("move_frame_data").select("id", { count: "exact", head: true }).eq("move_id", moveId).eq("verification_status", "verified").not("valid_from_patch_id", "is", null),
+    supabase.from("entity_sources").select("id", { count: "exact", head: true }).eq("entity_type", "move").eq("entity_id", moveId),
+  ]);
+  const error = [commands, frames, sources].find((result) => result.error)?.error;
+  if (error) throw new Error(error.message);
+  if (!commands.count) throw new Error("published MoveにはCommandが必要です");
+  if (!frames.count) throw new Error("published MoveにはPatch付きverified Frameが必要です");
+  if (!sources.count) throw new Error("published MoveにはSourceが必要です");
 }
 
 async function insertFrameData(supabase: Awaited<ReturnType<typeof requireAdmin>>["supabase"], moveId: string, formData: FormData) {
