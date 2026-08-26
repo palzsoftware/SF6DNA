@@ -1,7 +1,27 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { DiagnosisDefinition } from "@/types/diagnosis";
+
+const AXIS_LABELS: Record<string, string> = {
+  anti_air: "対空",
+  drive_rush_defense: "ドライブラッシュ対応",
+  impact_response: "インパクト返し",
+  punish: "確定反撃",
+  defense: "防御・切り返し",
+  offense: "攻めの選択肢",
+  meter: "ゲージ管理",
+  matchup: "キャラ対策",
+  execution: "コンボ・セットプレイ精度",
+  neutral: "中距離・立ち回り",
+  corner_defense: "画面端の守り",
+  decision: "観察・判断",
+};
+
+function axisLabel(key: string) {
+  return AXIS_LABELS[key] ?? key;
+}
 
 export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition }) {
   const [index, setIndex] = useState(0);
@@ -28,17 +48,28 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
   }
 
   if (completed) {
+    const priorities = result.filter(([, score]) => score > 0).slice(0, 3);
+    const topQuery = priorities.map(([key]) => axisLabel(key)).join(" ");
+
     return (
       <section className="info-panel diagnosis-result">
         <p className="eyebrow">RESULT</p>
-        <h2>簡易診断結果</h2>
-        <p>この結果は短時間診断の傾向値です。キャラクター辞典・練習・AIコーチへの導線に利用します。</p>
-        {result.length ? (
+        <h2>優先して改善したい項目</h2>
+        <p>点数が高いほど「今の練習優先度が高い」という自己評価結果です。実戦ログやリプレイで確認すると精度が上がります。</p>
+        {priorities.length ? (
           <ol>
-            {result.slice(0, 5).map(([key, score]) => <li key={key}><strong>{key}</strong>：{score}</li>)}
+            {priorities.map(([key, score]) => (
+              <li key={key}><strong>{axisLabel(key)}</strong>：優先度 {score}/3</li>
+            ))}
           </ol>
-        ) : <p>判定用スコアが設定されていません。</p>}
-        <button className="button-secondary" type="button" onClick={() => { setIndex(0); setAnswers({}); }}>最初からやり直す</button>
+        ) : (
+          <p>自己評価上は大きな弱点がありません。実戦ログから細かな課題を確認してください。</p>
+        )}
+        <div className="diagnosis-actions">
+          {topQuery ? <Link className="button-primary" href={`/search?q=${encodeURIComponent(topQuery)}`}>関連攻略を探す</Link> : null}
+          {topQuery ? <Link className="button-secondary" href={`/coach?q=${encodeURIComponent(topQuery)}`}>AIコーチ用Evidenceを見る</Link> : null}
+          <button className="button-secondary" type="button" onClick={() => { setIndex(0); setAnswers({}); }}>最初からやり直す</button>
+        </div>
       </section>
     );
   }
