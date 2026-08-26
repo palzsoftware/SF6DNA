@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CharacterTabs } from "@/components/character-tabs";
+import { listCharacterSectionItems } from "@/lib/character-sections";
 import { getCharacterBySlug } from "@/lib/characters";
 import {
   CHARACTER_SECTION_KEYS,
@@ -41,28 +43,18 @@ function isSection(value: string): value is Exclude<CharacterSectionKey, "overvi
   return value !== "overview" && CHARACTER_SECTION_KEYS.includes(value as CharacterSectionKey);
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string; section: string }>;
-}) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string; section: string }> }) {
   const { slug, section } = await params;
   if (!isSection(section)) return {};
-
   const character = await getCharacterBySlug(slug);
   if (!character) return {};
-
   return {
     title: `${character.name} ${sectionMeta[section].title} | SF6DNA`,
     description: `${character.name}の${sectionMeta[section].description}`,
   };
 }
 
-export default async function CharacterSectionPage({
-  params,
-}: {
-  params: Promise<{ slug: string; section: string }>;
-}) {
+export default async function CharacterSectionPage({ params }: { params: Promise<{ slug: string; section: string }> }) {
   const { slug, section } = await params;
   if (!isSection(section)) notFound();
 
@@ -70,6 +62,7 @@ export default async function CharacterSectionPage({
   if (!character) notFound();
 
   const meta = sectionMeta[section];
+  const items = await listCharacterSectionItems(character.id, section);
 
   return (
     <div className="site-shell page-stack">
@@ -81,12 +74,25 @@ export default async function CharacterSectionPage({
 
       <CharacterTabs slug={character.slug} active={section} />
 
-      <section className="empty-state">
-        <h2>データ接続準備済み</h2>
-        <p>
-          この画面は正式DBの各エンティティへ接続するためのルートです。旧版の未検証情報は自動移植せず、出典・パッチ・検証状態を確認したデータから順次公開します。
-        </p>
-      </section>
+      {items.length ? (
+        <section className="search-result-list">
+          {items.map((item) => (
+            <Link className="search-result" href={item.href} key={item.id}>
+              {item.meta ? <span className="search-result__type">{item.meta}</span> : null}
+              <strong>{item.title}</strong>
+              {item.subtitle ? <span>{item.subtitle}</span> : null}
+            </Link>
+          ))}
+        </section>
+      ) : (
+        <section className="empty-state">
+          <h2>公開済みデータはまだありません</h2>
+          <p>
+            旧版の未検証情報は自動移植せず、出典・パッチ・検証状態を確認したデータから公開します。
+            {section === "videos" ? " 動画の多対多関連は専用Relation設計後に接続します。" : ""}
+          </p>
+        </section>
+      )}
     </div>
   );
 }
