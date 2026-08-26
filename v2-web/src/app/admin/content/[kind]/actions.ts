@@ -27,6 +27,10 @@ function assertKind(kind: string): asserts kind is StrategyKind {
   if (!isStrategyKind(kind)) throw new Error("Unsupported content kind");
 }
 
+function entityTypeFor(kind: StrategyKind) {
+  return kind === "trainings" ? "training" : kind.slice(0, -1);
+}
+
 function payloadFor(kind: StrategyKind, fd: FormData) {
   const common = {
     slug: text(fd, "slug"),
@@ -139,6 +143,29 @@ function validate(kind: StrategyKind, payload: Record<string, unknown>) {
   if (kind === "trainings" && (!payload.name || !payload.training_type || !payload.purpose || !payload.method)) throw new Error("name, training_type, purpose and method are required");
 }
 
+async function ensurePublishable(
+  supabase: Awaited<ReturnType<typeof requireAdmin>>["supabase"],
+  kind: StrategyKind,
+  id: string | null,
+  payload: Record<string, unknown>,
+  sourceId: string,
+) {
+  if (payload.status !== "published") return;
+  if (payload.verification_status !== "verified") {
+    throw new Error("publishedにするにはverification_status=verifiedが必要です");
+  }
+  if (sourceId) return;
+  if (!id) throw new Error("publishedにするにはSourceが必要です");
+
+  const { count, error } = await supabase
+    .from("entity_sources")
+    .select("id", { count: "exact", head: true })
+    .eq("entity_type", entityTypeFor(kind))
+    .eq("entity_id", id);
+  if (error) throw new Error(error.message);
+  if (!count) throw new Error("publishedにするには既存Sourceまたは新しいSource指定が必要です");
+}
+
 export async function saveStrategyContent(kindValue: string, id: string | null, formData: FormData) {
   assertKind(kindValue);
   const kind = kindValue;
@@ -146,6 +173,8 @@ export async function saveStrategyContent(kindValue: string, id: string | null, 
   const payload = payloadFor(kind, formData) as Record<string, unknown>;
   validate(kind, payload);
   const table = STRATEGY_META[kind].table;
+  const sourceId = text(formData, "source_id");
+  await ensurePublishable(supabase, kind, id, payload, sourceId);
 
   let entityId = id;
   if (id) {
@@ -157,10 +186,9 @@ export async function saveStrategyContent(kindValue: string, id: string | null, 
     entityId = String(data.id);
   }
 
-  const sourceId = text(formData, "source_id");
   if (sourceId && entityId) {
     const { error } = await supabase.from("entity_sources").insert({
-      entity_type: kind === "trainings" ? "training" : kind.slice(0, -1),
+      entity_type: entityTypeFor(kind),
       entity_id: entityId,
       source_id: sourceId,
       relationship: text(formData, "source_relationship") || "primary",
@@ -170,6 +198,7 @@ export async function saveStrategyContent(kindValue: string, id: string | null, 
   }
 
   revalidatePath(`/admin/content/${kind}`);
+  revalidatePath("/admin/data-quality");
   revalidatePath(STRATEGY_META[kind].publicPath);
   redirect(`/admin/content/${kind}`);
 }
@@ -181,4 +210,5 @@ export async function archiveStrategyContent(kindValue: string, id: string) {
   const { error } = await supabase.from(STRATEGY_META[kind].table).update({ status: "archived" }).eq("id", id);
   if (error) throw new Error(error.message);
   revalidatePath(`/admin/content/${kind}`);
+  revalidatePath("/admin/data-quality");
 }
