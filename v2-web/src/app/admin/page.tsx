@@ -16,6 +16,7 @@ const ADMIN_SECTIONS = [
   ["大会", "/admin/reference/tournaments"],
   ["動画", "/admin/reference/videos"],
   ["用語", "/admin/reference/glossary"],
+  ["関連データ", "/admin/relations"],
   ["Patch・Source", "/admin/sources"],
   ["診断", "/admin/diagnoses"],
 ] as const;
