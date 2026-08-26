@@ -18,6 +18,7 @@ export type DiagnosisDefinition = {
   slug: string;
   title: string;
   description: string | null;
+  diagnosisType: string;
   questionCount: number;
   questions: DiagnosisQuestion[];
 };
