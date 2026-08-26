@@ -16,8 +16,8 @@
 |---|---|---|
 | v2 Phase1 | 安全な開発基盤・ブランチ分離・要件正本化 | ✅ 完了 |
 | v2 Phase2 | Backend整理・正式アーキテクチャ設計 | ✅ 完了 |
-| v2 Phase3 | DB・基礎データモデル | ⏭ 次工程 |
-| v2 Phase4 | 既存資産の移行基盤 | 未着手 |
+| v2 Phase3 | DB・基礎データモデル | ✅ 完了 |
+| v2 Phase4 | Next.js基盤・既存資産の移行基盤 | ⏭ 次工程 |
 | v2 Phase5 | キャラクター辞典 | 未着手 |
 | v2 Phase6 | 横断検索・Alias検索 | 未着手 |
 | v2 Phase7 | 短時間診断への再構築 | 未着手 |
@@ -35,6 +35,10 @@ Phase1の開発ルール: [docs/V2_PHASE1_FOUNDATION.md](./docs/V2_PHASE1_FOUNDA
 
 Phase2アーキテクチャ決定: [docs/V2_ARCHITECTURE.md](./docs/V2_ARCHITECTURE.md)
 
+Phase3データモデル: [docs/V2_DATA_MODEL.md](./docs/V2_DATA_MODEL.md)
+
+Phase3 PostgreSQL草案: [docs/V2_SCHEMA_DRAFT.sql](./docs/V2_SCHEMA_DRAFT.sql)
+
 ### Phase2で確定した基本構成
 
 - Web: Next.js + TypeScript
@@ -45,6 +49,21 @@ Phase2アーキテクチャ決定: [docs/V2_ARCHITECTURE.md](./docs/V2_ARCHITECT
 - 現行GitHub Pagesはv2切替まで維持
 - v2 Web公開先はVercelを第一候補
 - AIはSF6DNAの構造化DBを検索してから回答する方式を基本とする
+
+### Phase3で確定したデータ設計
+
+- 内部主キーは原則UUID、URLはslugを使用
+- Character / Move / FrameData / Commandを分離
+- Classic / ModernコマンドをMoveCommandとして管理
+- MoveAlias / CharacterAlias / PlayerAlias / GlossaryAliasを正式データ化
+- Combo / Setup / Sequence / Counter / Trainingを独立エンティティ化
+- Player / Tournament / Match / VideoをIDで相互接続
+- PatchとSourceを独立管理し、攻略データに有効期間・検証状態を持たせる
+- Diagnosis / Question / Option / Resultを短時間診断向けに再構築可能な形で定義
+- Supabase AuthとはProfileを分離
+- AIコーチがCharacter / Move / Counter / Training / Source等を構造化取得できる設計
+
+> `docs/V2_SCHEMA_DRAFT.sql` はPhase3の設計草案であり、本番Migrationではない。RLS、Migration、updated_at trigger、厳密な制約はPhase4以降で実装する。
 
 > v2開発では旧PROJECT_STATUSのPhase番号と混同しないこと。旧Phase群は既存版の履歴として以下に残す。
 
@@ -121,6 +140,8 @@ Phase2アーキテクチャ決定: [docs/V2_ARCHITECTURE.md](./docs/V2_ARCHITECT
 - [docs/V2_REQUIREMENTS.md](./docs/V2_REQUIREMENTS.md) — v2確定要件
 - [docs/V2_PHASE1_FOUNDATION.md](./docs/V2_PHASE1_FOUNDATION.md) — v2 Phase1安全基盤
 - [docs/V2_ARCHITECTURE.md](./docs/V2_ARCHITECTURE.md) — v2 Phase2正式アーキテクチャ
+- [docs/V2_DATA_MODEL.md](./docs/V2_DATA_MODEL.md) — v2 Phase3データモデル
+- [docs/V2_SCHEMA_DRAFT.sql](./docs/V2_SCHEMA_DRAFT.sql) — PostgreSQL草案
 - [CHANGELOG.md](./CHANGELOG.md) — 既存版フェーズごとの変更履歴
 - [docs/KNOWN_ISSUES.md](./docs/KNOWN_ISSUES.md) — 既知の課題
 - [docs/DESIGN_SYSTEM.md](./docs/DESIGN_SYSTEM.md) — デザインルール
