@@ -17,7 +17,7 @@
 | v2 Phase7 | 短時間診断 | ✅ 汎用エンジン + 最初の12問上達課題診断を実DBで公開 |
 | v2 Phase8 | プレイヤーDB | ✅ 一覧・詳細・Character関連基盤 |
 | v2 Phase9 | 攻略/コンボ/セットプレイ/連携/トレモ | ✅ 一覧・詳細・Character子ページ接続基盤 |
-| v2 Phase10 | 管理機能 | 🧱 Supabase Auth/RLS/admin guardまで実装。CRUDは管理者アカウント設定後 |
+| v2 Phase10 | 管理機能 | 🧱 Auth/RLS/admin guard + Character / Patch / Source / Move初期CRUDを実装。実Adminでの書込試験は未実施 |
 | v2 Phase11 | AIコーチ | 🧱 Current Patch + Source付きEvidence Retrievalまで実装。生成回答は信頼データ投入まで無効 |
 | v2 Phase12 | リプレイコーチ研究 | 📐 研究計画策定済み |
 
@@ -31,6 +31,7 @@
 - CIエラーを都度修正。AI Coachのquery初期化で検出されたReact lintエラーもServer Componentへ処理を移して修正済み
 - `/auth` とSupabase SSR cookie session基盤を追加
 - `/admin` は認証 + `profiles.role = admin` で保護
+- Character管理とPatch/Source管理、Move投入管理のServer Actionsを追加
 - 現行静的サイト`main`は変更していない
 
 ## Supabase実DB
@@ -73,6 +74,41 @@ Performance Advisor: unused index INFOとmultiple permissive policies WARNあり
 Aliasの初期例も登録し、`ベガ`、`舞`等の検索を実DBで確認済み。
 
 攻略評価・技・フレーム等の未検証旧データは自動Publishしていない。
+
+## 管理・データ投入
+実装済みの管理Route:
+- `/admin/data-status`
+- `/admin/characters`
+- `/admin/characters/new`
+- `/admin/characters/[id]`
+- `/admin/sources`
+- `/admin/moves`
+- `/admin/moves/new`
+- `/admin/moves/[id]`
+
+Character:
+- create / edit / archive
+- draft / published / archived
+- playable状態、表示順、概要等
+
+Patch / Source:
+- Patch登録
+- Current Patch切替
+- Source登録
+- publisher / reliability / published_at管理
+
+Move新規登録:
+- Character / Move基本情報
+- Classic command
+- Modern command
+- Frame Data
+- Valid-from Patch
+- verification_status
+- Source紐付け
+
+既存Frame履歴はPatch単位の履歴データとして扱うため、Move基本編集画面から上書きしない。
+管理Server Actionsは`requireAdmin()` + Supabase RLSの二重ガードで保護する。
+実Adminユーザーをまだ作成していないため、実DB書込のE2E確認は未実施。
 
 ## 短時間診断
 最初の正式公開診断:
@@ -148,11 +184,12 @@ Vercel connectionは確認済みだが、接続アカウント内のProject一�
 1. 全31キャラのMove / Frame / Classic-Modern Commandを公式・検証済みソースから投入
 2. Combo / Setup / Sequence / Counter / Trainingの検証済みデータ投入
 3. Player / Tournament / Match / Videoの検証済みデータ投入
-4. キャラクター適性・プレイスタイル・総合簡易診断の正式質問/推薦モデル
-5. Supabase Authで実ユーザー作成後、管理者role設定とCRUD UI実地検証
-6. Vercel Project作成・環境変数設定・Preview確認
-7. 信頼データが十分になった後、AI Coach生成回答を段階的に有効化
-8. Replay Coachは実データ取得方法・精度・規約・コストを実証してから着手
+4. 残る管理CRUD（Combo / Setup / Sequence / Counter / Training / Player等）
+5. キャラクター適性・プレイスタイル・総合簡易診断の正式質問/推薦モデル
+6. Supabase Authで実ユーザー作成後、管理者role設定とCRUD UI実地検証
+7. Vercel Project作成・環境変数設定・Preview確認
+8. 信頼データが十分になった後、AI Coach生成回答を段階的に有効化
+9. Replay Coachは実データ取得方法・精度・規約・コストを実証してから着手
 
 詳細:
 - [docs/V2_PHASE6_11_PROGRESS.md](./docs/V2_PHASE6_11_PROGRESS.md)
