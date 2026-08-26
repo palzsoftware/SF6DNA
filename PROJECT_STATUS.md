@@ -14,7 +14,7 @@
 | v2 Phase4 | Next.js基盤・既存資産の移行基盤 | ✅ CI成功 |
 | v2 Phase5 | キャラクター辞典 | ✅ 31プレイアブル基本データ・出典・各セクション接続基盤 |
 | v2 Phase6 | 横断検索・Alias検索 | ✅ PostgreSQL統合検索RPCを実DBで動作確認 |
-| v2 Phase7 | 短時間診断 | ✅ 上達課題・プレイスタイル・キャラクター適性・総合簡易の4診断を実DBで公開。実キャラ推薦スコア投入が残り |
+| v2 Phase7 | 短時間診断 | ✅ 4診断公開 + verified Trait Score型の実キャラ推薦Engine/APIまで実装。Trait Score投入が残り |
 | v2 Phase8 | プレイヤーDB | ✅ 一覧・詳細・Character関連基盤 |
 | v2 Phase9 | 攻略/コンボ/セットプレイ/連携/トレモ | ✅ 一覧・詳細・Character子ページ接続基盤 |
 | v2 Phase10 | 管理機能 | ✅ 主要Entity CRUD + 関係データ + Data Quality + キャラ適性マッピング管理まで実装。実Admin E2Eのみ未実施 |
@@ -32,6 +32,8 @@
 - `/auth` とSupabase SSR cookie session基盤
 - `/admin` は認証 + `profiles.role = admin` で保護
 - Diagnosis Runnerは改善診断・スタイル診断・キャラ適性・総合診断の結果モードに対応
+- Character Recommendation Engine/APIを実装し、キャラ適性・総合診断から呼び出し可能
+- Recommendation UI接続コミット `9807d80...` はtypecheck/lint/build成功
 
 ## Supabase実DB
 
@@ -69,11 +71,13 @@ Current Patch:
 - 未検証攻略データは自動Publishしない
 
 JP Move投入パイロット:
-- Move: 14 draft
-- Command: 14
-- Frame候補: 14
+- Move: 20 draft
+- Command: 20
+- Frame候補: 20
 - published: 0
-- verification前のためAI/public表示には使用しない
+- 内訳: 地上通常技/特殊技14 + ジャンプ通常技6
+- Secondary Sourceのバージョン表示に `.000/.001` 差異が観測されたため、全件unverifiedを維持
+- CAPCOM公式Frame URLは把握済みだが取得環境から403のため、直接確認またはゲーム内確認前はPublishしない
 
 ## Phase10 管理機能
 
@@ -94,7 +98,9 @@ JP Move投入パイロット:
 - `character_trait_scores` は0〜5
 - publishedには `verification_status = verified` + Source必須
 - 現時点ではTrait定義12件のみ公開、実キャラScoreは0件
-- 十分なverified Scoreが揃うまで診断からの直接キャラ推薦は解禁しない
+- `/api/diagnosis/recommend` はpublished + verifiedのみ照合
+- active traitの75%以上が揃うキャラだけ推薦対象
+- データ不足時は推薦を捏造せず不足メッセージを返す
 
 Server Actionは`requireAdmin()`、DB書込はSupabase RLSの二重ガード。
 
@@ -122,9 +128,11 @@ Server Actionは`requireAdmin()`、DB書込はSupabase RLSの二重ガード。
 総合簡易診断は、改善優先度TOP3とプレイスタイル傾向TOP3を分離表示する。
 各結果から横断検索とAI Coach Evidenceへ接続。
 
-残り:
-- verified Character Trait Score投入後の実キャラクター推薦
-- 診断結果保存・比較の本格運用
+Character Recommendation:
+- `character_fit` と `comprehensive` からRecommendation APIを呼び出す
+- weighted trait scoring + coverage gate
+- TOP5候補、一致度、照合Trait数、主な一致理由を表示
+- Trait Scoreが0件の現状では正しく「推薦データ不足」と表示
 
 ## AI Coach
 
@@ -163,17 +171,19 @@ Vercel接続は利用可能。現行GitHub repository/subdirectoryと環境変�
 
 ## 次工程
 
-1. 全31キャラのMove / Frame / Classic-Modern Commandを公式・検証済みSourceから投入
-2. Combo / Setup / Sequence / Counter / Trainingのverifiedデータ投入
-3. Character Trait ScoreをSource付きでレビュー・投入し、キャラクター推薦を解禁
-4. Player / Tournament / Match / Videoの検証済みデータ投入
-5. 実Adminユーザー作成後の管理画面E2E書込試験
-6. Vercel Preview deploymentと環境変数・実機確認
-7. SEO / OGP / sitemap / metadata最終調整
-8. verified Evidenceが十分になった領域からAI Coach生成回答を段階的に有効化
-9. Replay Coachは実データ取得方法・精度・規約・コストを実証後に着手
+1. JPの残り特殊技・必殺技・SAをdraft candidateとして揃え、直接確認できた項目からverified化
+2. JPでCombo / Setup / Sequence / Counter / TrainingのSource付き完成サンプルを作る
+3. 完成した投入方式を残り30キャラへ展開
+4. Character Trait ScoreをSource付きでレビュー・投入し、キャラクター推薦を解禁
+5. Player / Tournament / Match / Videoの検証済みデータ投入
+6. 実Adminユーザー作成後の管理画面E2E書込試験
+7. Vercel Preview deploymentと環境変数・実機確認
+8. SEO / OGP / sitemap / metadata最終調整
+9. verified Evidenceが十分になった領域からAI Coach生成回答を段階的に有効化
+10. Replay Coachは実データ取得方法・精度・規約・コストを実証後に着手
 
 詳細:
+- [docs/V2_CHARACTER_RECOMMENDATION_ENGINE.md](./docs/V2_CHARACTER_RECOMMENDATION_ENGINE.md)
 - [docs/V2_RELEASE_READINESS.md](./docs/V2_RELEASE_READINESS.md)
 - [docs/V2_PHASE10_RELATIONS_QUALITY.md](./docs/V2_PHASE10_RELATIONS_QUALITY.md)
 - [docs/V2_MOVE_INGEST_PILOT.md](./docs/V2_MOVE_INGEST_PILOT.md)
