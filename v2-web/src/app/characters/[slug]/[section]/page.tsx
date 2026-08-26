@@ -87,10 +87,7 @@ export default async function CharacterSectionPage({ params }: { params: Promise
       ) : (
         <section className="empty-state">
           <h2>公開済みデータはまだありません</h2>
-          <p>
-            旧版の未検証情報は自動移植せず、出典・パッチ・検証状態を確認したデータから公開します。
-            {section === "videos" ? " 動画の多対多関連は専用Relation設計後に接続します。" : ""}
-          </p>
+          <p>旧版の未検証情報は自動移植せず、出典・パッチ・検証状態を確認したデータから公開します。</p>
         </section>
       )}
     </div>
