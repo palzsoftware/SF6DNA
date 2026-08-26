@@ -5,7 +5,7 @@ export const REFERENCE_META: Record<ReferenceKind, { label: string; table: strin
   players: { label: "プレイヤー", table: "players", titleColumn: "display_name", publicPath: "/players" },
   tournaments: { label: "大会", table: "tournaments", titleColumn: "name", publicPath: "/tournaments" },
   videos: { label: "動画", table: "videos", titleColumn: "title", publicPath: "/videos" },
-  glossary: { label: "用語", table: "glossary_terms", titleColumn: "term", publicPath: "/glossary" },
+  glossary: { label: "用語", table: "glossary", titleColumn: "term", publicPath: "/glossary" },
 };
 
 export function isReferenceKind(value: string): value is ReferenceKind {
