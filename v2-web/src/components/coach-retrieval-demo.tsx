@@ -1,20 +1,46 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import type { SearchResultItem } from "@/types/search";
 
+type SourceItem = {
+  title: string;
+  url: string;
+  sourceType: string;
+  publisher: string | null;
+  reliabilityLevel: string | null;
+};
+
+type EvidenceItem = SearchResultItem & { sources?: SourceItem[] };
+
+type CurrentPatch = {
+  versionLabel: string;
+  name: string | null;
+  releasedAt: string | null;
+  officialUrl: string | null;
+};
+
 export function CoachRetrievalDemo() {
+  const searchParams = useSearchParams();
   const [question, setQuestion] = useState("");
   const [loading, setLoading] = useState(false);
-  const [evidence, setEvidence] = useState<SearchResultItem[]>([]);
+  const [evidence, setEvidence] = useState<EvidenceItem[]>([]);
+  const [currentPatch, setCurrentPatch] = useState<CurrentPatch | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const q = searchParams.get("q")?.trim();
+    if (q) setQuestion(q.slice(0, 500));
+  }, [searchParams]);
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setLoading(true);
     setMessage(null);
     setEvidence([]);
+    setCurrentPatch(null);
 
     try {
       const response = await fetch("/api/coach/retrieve", {
@@ -28,9 +54,10 @@ export function CoachRetrievalDemo() {
         return;
       }
       setEvidence(Array.isArray(data.evidence) ? data.evidence : []);
+      setCurrentPatch(data.currentPatch ?? null);
       setMessage(
         data.evidence?.length
-          ? "現在は根拠候補の検索まで実装済みです。生成回答は信頼できるデータ投入後に有効化します。"
+          ? "SF6DNA内の根拠候補を取得しました。生成回答は検証済み攻略データが十分に揃うまで無効です。"
           : "関連する公開済みデータがまだありません。"
       );
     } catch {
@@ -57,15 +84,33 @@ export function CoachRetrievalDemo() {
         </button>
       </form>
 
+      {currentPatch ? (
+        <div className="info-panel">
+          <p className="eyebrow">CURRENT PATCH</p>
+          <strong>{currentPatch.name ?? currentPatch.versionLabel}</strong>
+          <p className="muted">Version: {currentPatch.versionLabel}</p>
+          {currentPatch.officialUrl ? <a className="text-link" href={currentPatch.officialUrl} target="_blank" rel="noreferrer">公式変更リスト ↗</a> : null}
+        </div>
+      ) : null}
+
       {message ? <p className="muted">{message}</p> : null}
       {evidence.length ? (
         <div className="search-result-list">
           {evidence.map((item) => (
-            <Link className="search-result" href={item.href} key={`${item.type}:${item.id}`}>
+            <article className="search-result" key={`${item.type}:${item.id}`}>
               <span className="search-result__type">{item.type}</span>
-              <strong>{item.title}</strong>
+              <Link href={item.href}><strong>{item.title}</strong></Link>
               {item.subtitle ? <span>{item.subtitle}</span> : null}
-            </Link>
+              {item.sources?.length ? (
+                <div className="source-list">
+                  {item.sources.map((source) => (
+                    <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>
+                      出典: {source.publisher ? `${source.publisher} / ` : ""}{source.title} ↗
+                    </a>
+                  ))}
+                </div>
+              ) : <small className="muted">紐付け済み出典なし</small>}
+            </article>
           ))}
         </div>
       ) : null}
