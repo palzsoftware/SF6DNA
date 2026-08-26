@@ -1,6 +1,4 @@
-function requirePublicEnv(name: "NEXT_PUBLIC_SUPABASE_URL" | "NEXT_PUBLIC_SUPABASE_ANON_KEY") {
-  const value = process.env[name];
-
+function requireValue(value: string | undefined, name: string) {
   if (!value) {
     throw new Error(`${name} is not configured`);
   }
@@ -10,8 +8,11 @@ function requirePublicEnv(name: "NEXT_PUBLIC_SUPABASE_URL" | "NEXT_PUBLIC_SUPABA
 
 export function getPublicSupabaseEnv() {
   return {
-    url: requirePublicEnv("NEXT_PUBLIC_SUPABASE_URL"),
-    anonKey: requirePublicEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY"),
+    url: requireValue(process.env.NEXT_PUBLIC_SUPABASE_URL, "NEXT_PUBLIC_SUPABASE_URL"),
+    anonKey: requireValue(
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+      "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+    ),
   };
 }
 
