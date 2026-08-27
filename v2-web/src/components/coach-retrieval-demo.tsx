@@ -49,9 +49,9 @@ export function CoachRetrievalDemo({ initialQuestion = "" }: { initialQuestion?:
       setEvidence(Array.isArray(data.evidence) ? data.evidence : []);
       setCurrentPatch(data.currentPatch ?? null);
       setMessage(
-        data.evidence?.length
-          ? "SF6DNA内の根拠候補を取得しました。生成回答は検証済み攻略データが十分に揃うまで無効です。"
-          : "関連する公開済みデータがまだありません。"
+        typeof data.message === "string"
+          ? data.message
+          : "公開品質ゲートを通過した根拠データを確認できませんでした。",
       );
     } catch {
       setMessage("検索処理に失敗しました。");
@@ -94,15 +94,14 @@ export function CoachRetrievalDemo({ initialQuestion = "" }: { initialQuestion?:
               <span className="search-result__type">{item.type}</span>
               <Link href={item.href}><strong>{item.title}</strong></Link>
               {item.subtitle ? <span>{item.subtitle}</span> : null}
-              {item.sources?.length ? (
-                <div className="source-list">
-                  {item.sources.map((source) => (
-                    <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>
-                      出典: {source.publisher ? `${source.publisher} / ` : ""}{source.title} ↗
-                    </a>
-                  ))}
-                </div>
-              ) : <small className="muted">紐付け済み出典なし</small>}
+              <div className="source-list">
+                {(item.sources ?? []).map((source) => (
+                  <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>
+                    出典: {source.publisher ? `${source.publisher} / ` : ""}{source.title}
+                    {source.reliabilityLevel ? ` [${source.reliabilityLevel}]` : ""} ↗
+                  </a>
+                ))}
+              </div>
             </article>
           ))}
         </div>
