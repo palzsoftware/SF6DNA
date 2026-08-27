@@ -72,6 +72,24 @@ export async function listCharacterSectionItems(
     }));
   }
 
+  if (section === "sequences") {
+    const { data, error } = await supabase
+      .from("sequences")
+      .select("id, slug, name, sequence_type, sequence_text, notes")
+      .eq("character_id", characterId)
+      .eq("status", "published")
+      .eq("verification_status", "verified")
+      .limit(100);
+    if (error) return fail(section, error.message);
+    return (data ?? []).map((row) => ({
+      id: String(row.id),
+      title: String(row.name),
+      subtitle: row.notes ?? row.sequence_text ?? null,
+      href: `/sequences/${row.slug}`,
+      meta: row.sequence_type ?? null,
+    }));
+  }
+
   if (section === "matchups") {
     const { data, error } = await supabase
       .from("counters")
