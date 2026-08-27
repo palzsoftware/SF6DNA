@@ -147,6 +147,66 @@ JPを全31キャラ共通テンプレートにするなら、公式フレーム�
 
 これは現監査で確認できた唯一の「件数差としての実欠落候補」。
 
+## 参照影響監査
+
+分割・正規化候補14 Moveについて、現時点の参照数を確認した。
+
+対象:
+- `jp-back-mp`
+- `jp-grom-strelka`
+- `jp-zilant`
+- `jp-zilant-mid`
+- `jp-zilant-low`
+- `jp-triglav`
+- `jp-triglav-od`
+- `jp-departure`
+- `jp-departure-od`
+- `jp-sa3`
+- `jp-forward-throw`
+- `jp-back-throw`
+- `jp-embrace`
+- `jp-embrace-od`
+
+結果:
+- `move_commands`: 各Move 1件（すべてClassic）
+- `move_aliases`: 前後投げのみ各1件、その他は各2件
+- `combo_moves`: 全対象0件
+- `setup_moves`: 全対象0件
+- `training_relations` (`related_type='move'`): 全対象0件
+
+したがって、現時点ではSplit/Rename時の直接参照影響は主に **Classic Command と Alias**。Combo / Setup / Trainingの既存外部キー付け替えは発生しない。
+
+### Command粒度で判明した問題
+
+- `jp-triglav`: `22P` の1件だけで弱/中/強を表現
+- `jp-triglav-od`: `22PP` の1件だけでOD3入力を表現
+- `jp-departure`: `214P` の1件だけで弱/中/強を表現
+- `jp-departure-od`: `214PP` の1件だけでOD3入力を表現
+- `jp-grom-strelka`: `4MP~MP` としてターゲットコンボ全体を1 Moveへ格納
+- `jp-zilant`: `HK~HP`、`jp-zilant-mid`: `HK~HP~HP`、`jp-zilant-low`: `HK~HP~HK` として全体入力をMoveに格納
+- `jp-sa3`: SA3/CA共通の `236236K` 1件
+
+これはModern追加以前にClassic側も公式行粒度へ再設計する必要があることを示す。
+
+## Source監査
+
+JP全Moveについて `entity_sources` を確認した。
+
+- MoveへのSourceリンク: **69件**
+- Frame (`frame` / `move_frame_data`) への直接Sourceリンク: **0件**
+- 主なMove Source:
+  - `Ultimate Frame Data`（community aggregator / corroborating）
+  - `frame-search.com`（community aggregator / candidate）
+- 既存Source noteにも `Direct CAPCOM verification pending` が明記されている。
+
+したがって、現状の `move_frame_data` は **直接一次Sourceによる追跡可能性を満たしていない**。`reviewed` のまま扱い、`verified` へ昇格しない。
+
+現行Patch:
+- `version_label`: `2026.08.03`
+- `name`: `2026.08.03 全体バトルバランス調整`
+- `is_current`: `true`
+- `official_url`: `https://www.streetfighter.com/6/buckler/ja-jp/battle_change`
+
 ## Frame監査で次に確認する項目
 
 Move対応確定後、各公式59行について次を比較する。
@@ -184,7 +244,8 @@ Move対応確定後、各公式59行について次を比較する。
 ## 次工程
 
 1. 59行対応表を基準にMove修正案を作成
-2. 削除ではなく、既存参照関係を確認してsplit/rename/alias化計画を作る
-3. `move_commands`, `move_aliases`, `combo_moves`, `setup_moves`, `training_relations` の参照影響を確認
-4. 変更SQLを作るが、実行前に重複・Source・Patch・参照整合性を再監査
-5. Move基盤修正後にFrame → Classic → Modernへ進む
+2. 既存参照影響はCommand/Alias中心であることを前提にsplit/rename/alias化計画を作る
+3. `move_commands` と `move_aliases` の新旧対応表を作る
+4. Frameの一次Source確保または実機確認手順を設計する
+5. 変更SQLを作るが、実行前に重複・Source・Patch・参照整合性を再監査
+6. Move基盤修正後にFrame → Classic → Modernへ進む
