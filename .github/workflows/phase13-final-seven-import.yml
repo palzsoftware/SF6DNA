@@ -1,0 +1,16 @@
+name: Phase13 Final Seven Import
+
+on:
+  push:
+    branches: [sf6dna-v2]
+    paths:
+      - ".github/workflows/phase13-final-seven-import.yml"
+
+jobs:
+  invoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invoke fixed Phase13 importer
+        run: |
+          curl --fail --show-error --silent \
+            'https://wnuxaxbrpudyypzdbdho.supabase.co/functions/v1/phase13-final-seven-import?token=phase13-final7-20260827-7f31c9'
