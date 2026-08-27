@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   },
   description:
     "Street Fighter 6の診断・キャラクター情報・プレイヤー情報・AIコーチングを統合する総合プラットフォーム。",
+  openGraph: {
+    type: "website",
+    siteName: "SF6DNA",
+    title: "SF6DNA",
+    description:
+      "Street Fighter 6の診断・キャラクター情報・プレイヤー情報・AIコーチングを統合する総合プラットフォーム。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SF6DNA",
+    description:
+      "Street Fighter 6の診断・キャラクター情報・プレイヤー情報・AIコーチングを統合する総合プラットフォーム。",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
