@@ -41,6 +41,7 @@ export const CHARACTER_SECTION_KEYS = [
   "moves",
   "combos",
   "setups",
+  "sequences",
   "matchups",
   "training",
   "players",
