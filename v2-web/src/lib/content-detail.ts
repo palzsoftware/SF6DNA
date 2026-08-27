@@ -4,13 +4,70 @@ function configured() {
   return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 }
 
+export type DetailSource = {
+  id: string;
+  title: string;
+  url: string;
+  publisher: string | null;
+  sourceType: string;
+  relationship: string;
+};
+
 export type SimpleDetail = {
   id: string;
   slug: string;
   title: string;
   summary: string | null;
   body: Array<[string, string | number | null]>;
+  sources?: DetailSource[];
 };
+
+type SourceLinkRow = {
+  relationship?: string | null;
+  sources?: {
+    id?: string;
+    title?: string;
+    url?: string;
+    publisher?: string | null;
+    source_type?: string;
+  } | null;
+};
+
+function toSources(rows: unknown[] | null | undefined): DetailSource[] {
+  return (rows ?? []).flatMap((raw) => {
+    const row = raw as SourceLinkRow;
+    const source = row.sources;
+    if (!source?.id || !source.title || !source.url || !source.source_type) return [];
+    return [{
+      id: source.id,
+      title: source.title,
+      url: source.url,
+      publisher: source.publisher ?? null,
+      sourceType: source.source_type,
+      relationship: String(row.relationship ?? "supporting"),
+    }];
+  });
+}
+
+function dedupeSources(sources: DetailSource[]): DetailSource[] {
+  const map = new Map<string, DetailSource>();
+  for (const source of sources) {
+    const key = `${source.url}::${source.title}`;
+    if (!map.has(key)) map.set(key, source);
+  }
+  return [...map.values()];
+}
+
+function commandLabel(command: {
+  command_text?: string | null;
+  numeric_notation?: string | null;
+  button_notation?: string | null;
+  condition_text?: string | null;
+}) {
+  const primary = command.command_text ?? command.numeric_notation ?? command.button_notation ?? null;
+  if (!primary) return null;
+  return command.condition_text ? `${primary}（${command.condition_text}）` : primary;
+}
 
 export async function getMoveBySlug(slug: string): Promise<SimpleDetail | null> {
   if (!configured()) return null;
@@ -22,13 +79,95 @@ export async function getMoveBySlug(slug: string): Promise<SimpleDetail | null> 
     .eq("status", "published")
     .maybeSingle();
   if (error || !data) return null;
+
+  const [{ data: commands, error: commandError }, { data: frame, error: frameError }, { data: moveSourceLinks, error: moveSourceError }] = await Promise.all([
+    supabase
+      .from("move_commands")
+      .select("id, control_scheme, command_text, numeric_notation, button_notation, condition_text, sort_order")
+      .eq("move_id", data.id)
+      .order("sort_order", { ascending: true }),
+    supabase
+      .from("move_frame_data")
+      .select("id, startup, active, recovery, on_hit, on_block, damage, drive_damage, super_gain, cancel_type, hit_level, invincibility, notes, valid_from_patch_id, verification_status")
+      .eq("move_id", data.id)
+      .eq("verification_status", "verified")
+      .is("valid_to_patch_id", null)
+      .limit(1)
+      .maybeSingle(),
+    supabase
+      .from("entity_sources")
+      .select("relationship, sources!inner(id, title, url, publisher, source_type)")
+      .eq("entity_type", "move")
+      .eq("entity_id", data.id),
+  ]);
+
+  if (commandError) console.error("[content-detail] move commands failed", commandError.message);
+  if (frameError) console.error("[content-detail] move frame failed", frameError.message);
+  if (moveSourceError) console.error("[content-detail] move sources failed", moveSourceError.message);
+
+  let patch: { version_label?: string; name?: string | null } | null = null;
+  let frameSources: DetailSource[] = [];
+
+  if (frame) {
+    const frameQueries = await Promise.all([
+      frame.valid_from_patch_id
+        ? supabase.from("patches").select("version_label, name").eq("id", frame.valid_from_patch_id).maybeSingle()
+        : Promise.resolve({ data: null, error: null }),
+      supabase
+        .from("entity_sources")
+        .select("relationship, sources!inner(id, title, url, publisher, source_type)")
+        .in("entity_type", ["frame", "move_frame_data"])
+        .eq("entity_id", frame.id),
+    ]);
+
+    const [patchResult, frameSourceResult] = frameQueries;
+    if (patchResult.error) console.error("[content-detail] move patch failed", patchResult.error.message);
+    if (frameSourceResult.error) console.error("[content-detail] move frame sources failed", frameSourceResult.error.message);
+    patch = patchResult.data;
+    frameSources = toSources(frameSourceResult.data as unknown[] | null);
+  }
+
+  const classicCommands = (commands ?? [])
+    .filter((command) => command.control_scheme === "classic")
+    .map(commandLabel)
+    .filter((value): value is string => Boolean(value));
+  const modernCommands = (commands ?? [])
+    .filter((command) => command.control_scheme === "modern")
+    .map(commandLabel)
+    .filter((value): value is string => Boolean(value));
+
   const c = data.characters as unknown as { name_ja?: string } | null;
   return {
     id: String(data.id),
     slug: String(data.slug),
     title: String(data.name_ja),
     summary: data.usage_summary ?? data.description ?? null,
-    body: [["キャラクター", c?.name_ja ?? null], ["英語名", data.name_en ?? null], ["技種別", data.move_type ?? null], ["強度", data.strength_variant ?? null]],
+    body: [
+      ["キャラクター", c?.name_ja ?? null],
+      ["英語名", data.name_en ?? null],
+      ["技種別", data.move_type ?? null],
+      ["強度", data.strength_variant ?? null],
+      ["Classic Command", classicCommands.length ? classicCommands.join(" / ") : null],
+      ["Modern Command", modernCommands.length ? modernCommands.join(" / ") : null],
+      ["Frame Verification", frame?.verification_status ?? null],
+      ["Patch", patch?.version_label ? `${patch.version_label}${patch.name ? ` / ${patch.name}` : ""}` : null],
+      ["発生", frame?.startup ?? null],
+      ["持続", frame?.active ?? null],
+      ["硬直", frame?.recovery ?? null],
+      ["ヒット", frame?.on_hit ?? null],
+      ["ガード", frame?.on_block ?? null],
+      ["ダメージ", frame?.damage ?? null],
+      ["Dゲージダメージ", frame?.drive_damage ?? null],
+      ["SAゲージ増加", frame?.super_gain ?? null],
+      ["キャンセル", frame?.cancel_type ?? null],
+      ["判定", frame?.hit_level ?? null],
+      ["無敵", frame?.invincibility ?? null],
+      ["Frame補足", frame?.notes ?? null],
+    ],
+    sources: dedupeSources([
+      ...toSources(moveSourceLinks as unknown[] | null),
+      ...frameSources,
+    ]),
   };
 }
 
