@@ -5,6 +5,7 @@ on:
     branches: [sf6dna-v2]
     paths:
       - "v2-web/**"
+      - "supabase/migrations/**"
       - ".github/workflows/v2-web-check.yml"
   workflow_dispatch:
 
@@ -31,6 +32,9 @@ jobs:
 
       - name: Lint
         run: npm run lint
+
+      - name: Release gate tests
+        run: npm run test:release-gates
 
       - name: Build
         run: npm run build
