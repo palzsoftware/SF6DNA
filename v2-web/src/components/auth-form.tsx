@@ -48,7 +48,7 @@ export function AuthForm() {
         <button className="button-primary" type="button" disabled={loading || !email || password.length < 8} onClick={login}>ログイン</button>
         <button className="button-secondary" type="button" disabled={loading || !email || password.length < 8} onClick={signup}>新規登録</button>
       </div>
-      {message ? <p className="muted">{message}</p> : null}
+      {message ? <p className="muted" role="status" aria-live="polite">{message}</p> : null}
     </div>
   );
 }

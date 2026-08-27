@@ -74,9 +74,12 @@ test("coach retrieval only returns sourced evidence and keeps generation disable
 test("player and video public loaders require published status", () => {
   const players = readProjectFile("src/lib/players.ts");
   const media = readProjectFile("src/lib/event-media.ts");
+  const sections = readProjectFile("src/lib/character-sections.ts");
   assert.match(players, /\.from\("players"\)[\s\S]*?\.eq\("status",\s*"published"\)/);
   assert.match(media, /listVideos[\s\S]*?\.from\("videos"\)[\s\S]*?\.eq\("status",\s*"published"\)/);
   assert.match(media, /getVideoBySlug[\s\S]*?\.from\("videos"\)[\s\S]*?\.eq\("status",\s*"published"\)/);
+  assert.match(players, /character\.status\s*!==\s*"published"/, "draft linked characters must not leak through player pages");
+  assert.match(sections, /video\.status\s*!==\s*"published"/, "draft related videos must not leak through character pages");
 });
 
 test("sitemap only includes verified strategy entities", () => {
@@ -105,4 +108,35 @@ test("latest search RPC keeps strategy published + verified gate", () => {
   const latestRpc = sql.slice(latestIndex);
   const guardedStrategies = latestRpc.match(/status\s*=\s*'published'\s+and\s+x\.verification_status\s*=\s*'verified'/gi) ?? [];
   assert.ok(guardedStrategies.length >= 5, "search RPC must gate all strategy entity types");
+});
+
+test("site URL configuration never guesses a production domain", () => {
+  const files = [
+    "src/app/layout.tsx",
+    "src/app/robots.ts",
+    "src/app/sitemap.ts",
+  ];
+  const source = files.map(readProjectFile).join("\n");
+  assert.match(source, /NEXT_PUBLIC_SITE_URL/, "explicit site URL support missing");
+  assert.match(source, /VERCEL_URL/, "Vercel preview URL support missing");
+  assert.doesNotMatch(source, /https?:\/\/[^`'"\s$]*(?:sf6dna|palzsoftware)/i, "production domain must not be hard-coded");
+});
+
+test("all five strategy detail loaders expose release evidence", () => {
+  const source = readProjectFile("src/lib/content-detail.ts");
+  for (const [getter, entityType] of [
+    ["getComboBySlug", "combo"],
+    ["getSetupBySlug", "setup"],
+    ["getSequenceBySlug", "sequence"],
+    ["getCounterBySlug", "counter"],
+    ["getTrainingBySlug", "training"],
+  ]) {
+    const start = source.indexOf(`export async function ${getter}`);
+    assert.notEqual(start, -1, `${getter} missing`);
+    const next = source.indexOf("export async function ", start + 24);
+    const block = source.slice(start, next === -1 ? source.length : next);
+    assert.match(block, new RegExp(`getReleaseMetadata\\(\\"${entityType}\\"`), `${getter}: release evidence lookup missing`);
+    assert.match(block, /\.\.\.release\.body/, `${getter}: patch and verification metadata missing`);
+    assert.match(block, /sources:\s*release\.sources/, `${getter}: sources missing`);
+  }
 });

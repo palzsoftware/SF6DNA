@@ -180,7 +180,14 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
 
   return (
     <section className="diagnosis-runner">
-      <div className="diagnosis-progress"><span style={{ width: `${progress}%` }} /></div>
+      <div
+        className="diagnosis-progress"
+        role="progressbar"
+        aria-label="診断の進捗"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={Math.round(progress)}
+      ><span style={{ width: `${progress}%` }} /></div>
       <p className="muted">{index + 1} / {diagnosis.questions.length}</p>
       <h2>{question.prompt}</h2>
       {question.helpText ? <p className="muted">{question.helpText}</p> : null}

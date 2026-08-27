@@ -86,7 +86,7 @@ export function CoachRetrievalDemo({ initialQuestion = "" }: { initialQuestion?:
         </div>
       ) : null}
 
-      {message ? <p className="muted">{message}</p> : null}
+      {message ? <p className="muted" role="status" aria-live="polite">{message}</p> : null}
       {evidence.length ? (
         <div className="search-result-list">
           {evidence.map((item) => (
