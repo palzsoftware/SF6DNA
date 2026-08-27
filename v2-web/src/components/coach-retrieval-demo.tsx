@@ -82,7 +82,7 @@ export function CoachRetrievalDemo({ initialQuestion = "" }: { initialQuestion?:
           <p className="eyebrow">CURRENT PATCH</p>
           <strong>{currentPatch.name ?? currentPatch.versionLabel}</strong>
           <p className="muted">Version: {currentPatch.versionLabel}</p>
-          {currentPatch.officialUrl ? <a className="text-link" href={currentPatch.officialUrl} target="_blank" rel="noreferrer">公式変更リスト ↗</a> : null}
+          {currentPatch.officialUrl ? <a className="text-link" href={currentPatch.officialUrl} target="_blank" rel="noopener noreferrer">公式変更リスト ↗</a> : null}
         </div>
       ) : null}
 
@@ -96,7 +96,7 @@ export function CoachRetrievalDemo({ initialQuestion = "" }: { initialQuestion?:
               {item.subtitle ? <span>{item.subtitle}</span> : null}
               <div className="source-list">
                 {(item.sources ?? []).map((source) => (
-                  <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>
+                  <a href={source.url} target="_blank" rel="noopener noreferrer" key={source.url}>
                     出典: {source.publisher ? `${source.publisher} / ` : ""}{source.title}
                     {source.reliabilityLevel ? ` [${source.reliabilityLevel}]` : ""} ↗
                   </a>

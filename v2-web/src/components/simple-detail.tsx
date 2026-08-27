@@ -22,7 +22,7 @@ export function SimpleDetailView({ detail, eyebrow }: { detail: SimpleDetail; ey
           <ul>
             {detail.sources.map((source) => (
               <li key={`${source.id}-${source.relationship}`}>
-                <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a>
+                <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>
                 {source.publisher ? ` / ${source.publisher}` : ""}
                 {` / ${source.sourceType} / ${source.relationship}`}
               </li>

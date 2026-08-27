@@ -109,7 +109,7 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
           <ul className="admin-source-list">
             {sourceLinks.map((link) => {
               const source = sourceMap.get(link.source_id);
-              return <li key={link.id}><strong>{source?.publisher ?? "Source"}</strong> — {source ? <a className="text-link" href={source.url} target="_blank" rel="noreferrer">{source.title}</a> : link.source_id}{link.note ? <span> / {link.note}</span> : null}</li>;
+              return <li key={link.id}><strong>{source?.publisher ?? "Source"}</strong> — {source ? <a className="text-link" href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a> : link.source_id}{link.note ? <span> / {link.note}</span> : null}</li>;
             })}
           </ul>
         ) : <p>Source未登録です。</p>}

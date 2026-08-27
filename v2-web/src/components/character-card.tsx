@@ -7,7 +7,7 @@ export function CharacterCard({ character }: { character: CharacterSummary }) {
       <div className="character-card__media" aria-hidden="true">
         {character.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={character.imageUrl} alt="" loading="lazy" />
+          <img src={character.imageUrl} alt="" width={480} height={320} loading="lazy" />
         ) : (
           <span>{character.name.slice(0, 1)}</span>
         )}

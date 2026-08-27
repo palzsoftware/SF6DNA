@@ -38,7 +38,7 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
         </div>
         {character.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img className="character-hero__image" src={character.imageUrl} alt={character.name} />
+          <img className="character-hero__image" src={character.imageUrl} alt={character.name} width={760} height={760} />
         ) : null}
       </section>
 
@@ -82,7 +82,7 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
         {character.sources.length ? (
           <div className="search-result-list">
             {character.sources.map((source) => (
-              <a className="search-result" href={source.url} target="_blank" rel="noreferrer" key={source.id}>
+              <a className="search-result" href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}>
                 <span className="search-result__type">{source.publisher ?? source.sourceType}</span>
                 <strong>{source.title}</strong>
                 <span>{source.relationship}</span>

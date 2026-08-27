@@ -1,6 +1,6 @@
 # SF6DNA Project Completion Dashboard
 
-最終更新: 2026-08-27 23:48 JST
+最終更新: 2026-08-28 06:24 JST
 
 ## 現在Phase
 
@@ -86,6 +86,7 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
   - unverified **6**
 - Classic Command: **2,065**
 - Modern Command: **1,441**（Classic比69.8%）
+- Modern Command未登録: **624**（うち公式Move Source relationあり41、公式Source付きClassic Commandあり41。Modern入力の直接根拠は未確認）
 - Move Alias: **3,552**
 - Combo: archived/unverified 40、draft/reviewed 76、draft/unverified 224、draft/verified 1
 - Setup: draft/reviewed 20、draft/unverified 166
@@ -127,18 +128,13 @@ Preview上の最終回帰確認は未完。
 
 ## CI
 
-最新のコード変更を含むcommit:
+最新のコード変更を含むcommit / GitHub Actionsは、今回変更のpush後に更新する。
 
-`89f00022e4ae1fb3aaddbf2c01d0e1238b2a2121`
-
-GitHub Actions:
+ローカル検証:
 - Typecheck: **success**
 - Lint: **success**
+- Tests: **24 / 24 success**
 - Build: **success**
-- check: **success**
-- Policy tests: **18 / 18 success**
-
-この後のPlan/Dashboard更新はdocs-only。
 
 ---
 
@@ -155,7 +151,7 @@ GitHub Actions:
 | 7 | Move | データ不足 | 2,065件あるが全件draft |
 | 8 | Frame | 検証待ち | verified 307 / reviewed 1,752 / unverified 6 |
 | 9 | Classic Command | 検証待ち | 2,065件、公開時official Source条件あり |
-| 10 | Modern Command | データ不足 | 1,441 / 2,065 |
+| 10 | Modern Command | データ不足 | 1,441 / 2,065。未登録624件をキャラ別・Source別にread-only集計済み |
 | 11 | Alias | 部分完成 | Move alias 3,552ほか構造あり |
 | 12 | Combo | データ不足 | published 0 |
 | 13 | Setup | データ不足 | published 0 |
@@ -186,13 +182,13 @@ GitHub Actions:
 | 38 | Authentication | 検証待ち | Login/Session/Admin E2E残り |
 | 39 | Public / Draft separation | 検証待ち | DB/Search/UI Gate確認済み、Preview回帰確認待ち |
 | 40 | API | 部分完成 | Diagnosis Recommend / Coach Retrieve等あり |
-| 41 | Error handling | 部分完成 | fallbackあり、Preview runtime smoke残り |
-| 42 | Responsive UI | 検証待ち | CSS基盤あり、実viewport確認残り |
+| 41 | Error handling | 部分完成 | global error / 404を追加、Preview runtime smoke残り |
+| 42 | Responsive UI | 検証待ち | Static Review完了。長文・table・nav対策済み、実viewport確認残り |
 | 43 | SEO | 検証待ち | metadata/OGP/Twitter/robots/sitemap実装、実Preview URL確認待ち |
 | 44 | Performance | 検証待ち | Preview計測未実施 |
 | 45 | Security | 部分完成 | RLS/Admin guard基盤あり、Auth/Admin E2E残り |
-| 46 | Testing | 部分完成 | Public Gate/Recommendation/Coach/Search/Sitemap/Data Qualityを18 Policy testsで自動化。Auth E2Eは残り |
-| 47 | CI | 完成 | 最新コードcommit `89f0002...` check success |
+| 46 | Testing | 部分完成 | Public Gate/Recommendation/Coach/Search/Sitemap/Data Quality/Static Accessibilityを24 testsで自動化。Auth E2Eは残り |
+| 47 | CI | 完成 | 今回変更はローカル4チェック成功。最新HEAD Actions確認後にcommitを記録 |
 | 48 | Deployment | 未実装 | v2 Preview未成立 |
 | 49 | Vercel | ブロック中 | 接続TeamにProject 0件 |
 | 50 | Demo Release Readiness | ブロック中 | 公開主要攻略データ不足 + Preview未成立 |
@@ -257,10 +253,10 @@ GitHub Actions:
 
 計5件。完了2、残り**3**。
 
-- P2-01 Modern Command Coverage Improvement
+- P2-01 Modern Command Coverage Improvement — **不足状況整理完了、一次情報/実機検証待ち**
 - P2-02 Automated Test Expansion — **完了**
 - P2-03 Performance Measurement / Optimization — Preview依存
-- P2-04 Responsive / Accessibility Polish — **Static Review前進、最終確認Preview依存**
+- P2-04 Responsive / Accessibility Polish — **Static Review完了、最終確認Preview依存**
 - P2-05 Data Quality / Progress Automation — **完了**
 
 ## P3
@@ -291,13 +287,17 @@ Phase14完成率の母数外。
 
 # 今回完了したこと
 
+- P2-04 Static Review: skip navigation、main landmark、global error / 404、外部リンク保護、画像寸法、長文折返し、table overflowを改善
+- Static Accessibility回帰テスト5件を追加し、全Tests **24 / 24 success**
+- P2-01: 実DBのModern不足624件を31キャラ別・Source relation別にread-only集計
+- Modern入力を推測せず、一次情報/実機確認候補として監査資料と再実行SQLを追加
 - P2-02: Public Release Gate 13要件を18 Policy testsへ拡張
 - 失敗していたAI Coach readinessテストを現行実装へ整合
 - CI依存導入を`npm ci`へ固定し、lockfileを追加
 - P2-05: `phase14_public_readiness.sql`を追加し実DBでread-only実行成功
 - Move/Strategy/Trait/Player/Video、31キャラ別coverage、Release Readyを自動集計
 - Responsive / Accessibility Static Reviewとして進捗bar、状態通知、タップ領域、長文折返しを改善
-- 最新HEAD `89f0002...` でTypecheck/Lint/Policy tests/Build成功
+- 今回変更を含むローカルHEADでTypecheck/Lint/Tests/Build成功
 - Strategy詳細へPatch / Verification / Sourceを共通統合
 - Character → SequenceのCI不整合修正を含む統合確定
 - Player Source表示
@@ -313,6 +313,6 @@ Phase14完成率の母数外。
 
 # 次の作業
 
-1. P2-04 Responsive / Accessibility Static Reviewを継続し、Preview成立後にviewport・keyboard最終確認
-2. P2-01 Modern Commandのキャラ別不足状況をread-onlyで整理（一次情報・実機確認なしの補完は禁止）
+1. Modern未登録のうち少数不足キャラと公式Source relationあり41件を、現行一次情報または実機で個別確認
+2. Vercel Project利用可能後、P2-04の複数viewport・keyboard最終確認を実施
 3. Vercel Project利用可能後、P0-06 / P0-07 / P1-06 / P2-03を再開

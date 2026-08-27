@@ -33,7 +33,11 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ s
             {player.region ? <span className="chip">{player.region}</span> : null}
           </div>
         </div>
-        {player.imageUrl ? <img className="character-hero__image" src={player.imageUrl} alt={player.displayName} /> : null}
+        {player.imageUrl ? (
+          // Player images are admin-managed arbitrary URLs; fixed dimensions prevent layout shift without broadening Next Image hosts.
+          // eslint-disable-next-line @next/next/no-img-element
+          <img className="character-hero__image" src={player.imageUrl} alt={player.displayName} width={760} height={760} />
+        ) : null}
       </section>
 
       <section className="character-columns">
@@ -45,7 +49,7 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ s
         </article>
         <article className="info-panel">
           <h2>外部リンク</h2>
-          {externalLinks.length ? <ul>{externalLinks.map(([label, href]) => <li key={label}><a href={href} target="_blank" rel="noreferrer">{label}</a></li>)}</ul> : <p>登録情報はまだありません。</p>}
+          {externalLinks.length ? <ul>{externalLinks.map(([label, href]) => <li key={label}><a href={href} target="_blank" rel="noopener noreferrer">{label}</a></li>)}</ul> : <p>登録情報はまだありません。</p>}
         </article>
       </section>
 
@@ -55,7 +59,7 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ s
           <ul>
             {player.sources.map((source) => (
               <li key={`${source.id}:${source.relationship}`}>
-                <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a>
+                <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>
                 {source.publisher ? ` / ${source.publisher}` : ""}
                 {` / ${source.sourceType} / ${source.relationship}`}
               </li>

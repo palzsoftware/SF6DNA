@@ -6,6 +6,10 @@ const sql = readFileSync(
   new URL("../../supabase/quality/phase14_public_readiness.sql", import.meta.url),
   "utf8",
 );
+const modernSql = readFileSync(
+  new URL("../../supabase/quality/phase14_modern_command_gaps.sql", import.meta.url),
+  "utf8",
+);
 const executableSql = sql
   .replace(/--.*$/gm, "")
   .replace(/\/\*[\s\S]*?\*\//g, "");
@@ -60,4 +64,13 @@ test("31-character coverage includes every requested content category", () => {
   assert.match(sql, /strategy_character_links as/);
   assert.match(sql, /defender_character_id[\s\S]*opponent_character_id/);
   assert.match(sql, /player_character_id[\s\S]*dummy_character_id/);
+});
+
+test("Modern Command gap audit stays read-only and does not infer commands", () => {
+  const executable = modernSql.replace(/--.*$/gm, "").replace(/\/\*[\s\S]*?\*\//g, "");
+  assert.doesNotMatch(executable, /\b(insert|update|delete|merge|alter|drop|truncate|create|grant|revoke|call|do)\b/i);
+  assert.match(modernSql, /control_scheme='modern'/);
+  assert.match(modernSql, /missing_modern_with_official_move_source/);
+  assert.match(modernSql, /official_classic_command_sources/);
+  assert.doesNotMatch(modernSql, /command_text\s*=|numeric_notation\s*=/i);
 });

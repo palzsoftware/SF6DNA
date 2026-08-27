@@ -76,7 +76,7 @@ export default async function AdminSourcesPage() {
           <tbody>
             {(sources ?? []).map((source) => (
               <tr key={source.id}>
-                <td><a href={source.url} target="_blank" rel="noreferrer"><strong>{source.title}</strong></a></td>
+                <td><a href={source.url} target="_blank" rel="noopener noreferrer"><strong>{source.title}</strong></a></td>
                 <td>{source.source_type}</td>
                 <td>{source.publisher ?? "-"}</td>
                 <td>{source.reliability_level ?? "-"}</td>
