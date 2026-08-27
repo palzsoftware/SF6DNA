@@ -19,7 +19,11 @@ const sectionMeta: Record<Exclude<CharacterSectionKey, "overview">, { title: str
   },
   setups: {
     title: "セットプレイ",
-    description: "起き攻め、連携、セットプレイと条件・対処方法を扱います。",
+    description: "起き攻め、セットプレイと条件・対処方法を扱います。",
+  },
+  sequences: {
+    title: "連携",
+    description: "攻め継続、連携手順、割り込み・投げ・シミーなどの対応関係を扱います。",
   },
   matchups: {
     title: "対策",
