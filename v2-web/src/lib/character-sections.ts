@@ -48,6 +48,7 @@ export async function listCharacterSectionItems(
       .select("id, slug, name, purpose, damage, drive_cost, sa_cost, difficulty")
       .eq("character_id", characterId)
       .eq("status", "published")
+      .eq("verification_status", "verified")
       .limit(100);
     if (error) return fail(section, error.message);
     return (data ?? []).map((row) => ({
@@ -62,6 +63,7 @@ export async function listCharacterSectionItems(
       .select("id, slug, name, setup_type, description, frame_advantage, position")
       .eq("character_id", characterId)
       .eq("status", "published")
+      .eq("verification_status", "verified")
       .limit(100);
     if (error) return fail(section, error.message);
     return (data ?? []).map((row) => ({
@@ -75,6 +77,7 @@ export async function listCharacterSectionItems(
       .from("counters")
       .select("id, slug, title, summary, counter_type, difficulty, defender_character_id, opponent_character_id")
       .eq("status", "published")
+      .eq("verification_status", "verified")
       .or(`defender_character_id.eq.${characterId},opponent_character_id.eq.${characterId}`)
       .limit(100);
     if (error) return fail(section, error.message);
@@ -89,6 +92,7 @@ export async function listCharacterSectionItems(
       .from("trainings")
       .select("id, slug, name, purpose, training_type, level, duration_minutes, player_character_id, dummy_character_id")
       .eq("status", "published")
+      .eq("verification_status", "verified")
       .or(`player_character_id.eq.${characterId},dummy_character_id.eq.${characterId}`)
       .limit(100);
     if (error) return fail(section, error.message);
