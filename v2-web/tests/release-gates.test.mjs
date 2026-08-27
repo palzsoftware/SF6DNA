@@ -99,10 +99,10 @@ test("latest search RPC keeps strategy published + verified gate", () => {
     .map((name) => readFileSync(new URL(name, migrationsUrl), "utf8"))
     .join("\n");
 
-  const marker = "CREATE OR REPLACE FUNCTION public.search_sf6dna";
-  const latestIndex = sql.lastIndexOf(marker);
-  assert.notEqual(latestIndex, -1, "search_sf6dna migration not found");
+  const definitions = [...sql.matchAll(/create\s+or\s+replace\s+function\s+public\.search_sf6dna/gi)];
+  assert.ok(definitions.length > 0, "search_sf6dna migration not found");
+  const latestIndex = definitions.at(-1).index;
   const latestRpc = sql.slice(latestIndex);
-  const guardedStrategies = latestRpc.match(/status='published' and x\.verification_status='verified'/g) ?? [];
+  const guardedStrategies = latestRpc.match(/status\s*=\s*'published'\s+and\s+x\.verification_status\s*=\s*'verified'/gi) ?? [];
   assert.ok(guardedStrategies.length >= 5, "search RPC must gate all strategy entity types");
 });
