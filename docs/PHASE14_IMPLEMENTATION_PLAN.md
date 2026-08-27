@@ -212,7 +212,7 @@ P0〜P2の19タスクを完了、またはユーザー確認のうえPhase15以�
 - 対象DB: fixtureまたは安全なread-only test data
 - 依存関係: P0/P1仕様確定
 - 完了条件: 主要release gateをCIで自動検証
-- テスト方法: 18 Policy tests、Typecheck、Lint、Build。commit `c3c232b...` のGitHub Actions success
+- テスト方法: 18 Policy tests、Typecheck、Lint、Build。最新commit `89f0002...` のGitHub Actions success
 - リスク: 実DB依存テストの不安定化
 
 ## P2-03 Performance Measurement / Optimization

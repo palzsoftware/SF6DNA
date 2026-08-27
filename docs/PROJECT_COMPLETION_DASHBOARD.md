@@ -129,7 +129,7 @@ Preview上の最終回帰確認は未完。
 
 最新のコード変更を含むcommit:
 
-`c3c232ba2cbea89ca0dc0cb86c19e2e1120df038`
+`89f00022e4ae1fb3aaddbf2c01d0e1238b2a2121`
 
 GitHub Actions:
 - Typecheck: **success**
@@ -192,7 +192,7 @@ GitHub Actions:
 | 44 | Performance | 検証待ち | Preview計測未実施 |
 | 45 | Security | 部分完成 | RLS/Admin guard基盤あり、Auth/Admin E2E残り |
 | 46 | Testing | 部分完成 | Public Gate/Recommendation/Coach/Search/Sitemap/Data Qualityを18 Policy testsで自動化。Auth E2Eは残り |
-| 47 | CI | 完成 | 最新コードcommit `c3c232b...` check success |
+| 47 | CI | 完成 | 最新コードcommit `89f0002...` check success |
 | 48 | Deployment | 未実装 | v2 Preview未成立 |
 | 49 | Vercel | ブロック中 | 接続TeamにProject 0件 |
 | 50 | Demo Release Readiness | ブロック中 | 公開主要攻略データ不足 + Preview未成立 |
@@ -297,7 +297,7 @@ Phase14完成率の母数外。
 - P2-05: `phase14_public_readiness.sql`を追加し実DBでread-only実行成功
 - Move/Strategy/Trait/Player/Video、31キャラ別coverage、Release Readyを自動集計
 - Responsive / Accessibility Static Reviewとして進捗bar、状態通知、タップ領域、長文折返しを改善
-- 最新HEAD `c3c232b...` でTypecheck/Lint/Policy tests/Build成功
+- 最新HEAD `89f0002...` でTypecheck/Lint/Policy tests/Build成功
 - Strategy詳細へPatch / Verification / Sourceを共通統合
 - Character → SequenceのCI不整合修正を含む統合確定
 - Player Source表示
