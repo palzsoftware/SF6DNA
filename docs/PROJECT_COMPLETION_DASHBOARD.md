@@ -1,6 +1,6 @@
 # SF6DNA Project Completion Dashboard
 
-最終更新: 2026-08-28 06:24 JST
+最終更新: 2026-08-28 06:29 JST
 
 ## 現在Phase
 
@@ -128,13 +128,16 @@ Preview上の最終回帰確認は未完。
 
 ## CI
 
-最新のコード変更を含むcommit / GitHub Actionsは、今回変更のpush後に更新する。
+最新のコード変更を含むcommit:
 
-ローカル検証:
+`a4beef16a5609c0bb2007ea0ea7f78fbef6ba8c5`
+
+GitHub Actions run `33118205585`:
 - Typecheck: **success**
 - Lint: **success**
-- Tests: **24 / 24 success**
+- Policy tests: **24 / 24 success**
 - Build: **success**
+- check: **success**
 
 ---
 
@@ -188,7 +191,7 @@ Preview上の最終回帰確認は未完。
 | 44 | Performance | 検証待ち | Preview計測未実施 |
 | 45 | Security | 部分完成 | RLS/Admin guard基盤あり、Auth/Admin E2E残り |
 | 46 | Testing | 部分完成 | Public Gate/Recommendation/Coach/Search/Sitemap/Data Quality/Static Accessibilityを24 testsで自動化。Auth E2Eは残り |
-| 47 | CI | 完成 | 今回変更はローカル4チェック成功。最新HEAD Actions確認後にcommitを記録 |
+| 47 | CI | 完成 | 最新コードcommit `a4beef1...`、Actions run `33118205585` check success |
 | 48 | Deployment | 未実装 | v2 Preview未成立 |
 | 49 | Vercel | ブロック中 | 接続TeamにProject 0件 |
 | 50 | Demo Release Readiness | ブロック中 | 公開主要攻略データ不足 + Preview未成立 |
@@ -297,7 +300,7 @@ Phase14完成率の母数外。
 - P2-05: `phase14_public_readiness.sql`を追加し実DBでread-only実行成功
 - Move/Strategy/Trait/Player/Video、31キャラ別coverage、Release Readyを自動集計
 - Responsive / Accessibility Static Reviewとして進捗bar、状態通知、タップ領域、長文折返しを改善
-- 今回変更を含むローカルHEADでTypecheck/Lint/Tests/Build成功
+- 最新コードHEAD `a4beef1...` でTypecheck/Lint/24 Policy tests/Build成功
 - Strategy詳細へPatch / Verification / Sourceを共通統合
 - Character → SequenceのCI不整合修正を含む統合確定
 - Player Source表示
