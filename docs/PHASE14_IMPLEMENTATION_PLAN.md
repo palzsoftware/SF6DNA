@@ -1,6 +1,6 @@
 # SF6DNA Phase14 Implementation Plan
 
-最終更新: 2026-08-27 21:51 JST
+最終更新: 2026-08-27 22:18 JST
 
 ## Phase14正式名称
 
@@ -8,372 +8,311 @@
 
 ## 目的
 
-Phase13までに構築したCharacter Content、DB、検索、診断、Player、Admin、AI Coach Retrievalを実Webアプリへ統合し、次を満たすデモ状態へ到達する。
+Phase13までに構築したCharacter Content、Supabase DB、API、UI、Unified Search、Diagnosis、Recommendation、Admin、AI Coach Retrievalを統合し、SF6DNAを安全にデモ確認できるWebアプリへ近づける。
 
-1. 主要機能がSupabase実DBを正本として動く。
-2. `draft / reviewed / unverified` を確定攻略情報としてPublic UI・Search・Recommendation・AI Coachへ漏らさない。
-3. Move / Frame / Command / Strategy / Player / Video / Source / Patch / Verificationを画面上で正しく関連付ける。
-4. 4診断とCharacter Recommendationの不足時挙動を安全にする。
-5. build / CI / runtime / responsive / securityを確認する。
-6. Vercel Previewでデモ確認できる状態を作る。
-7. Phase13のVerification BacklogをPhase13未完了として扱わない。
+必須原則:
+- Supabase実DBを正本とする。
+- `reviewed ≠ verified`。
+- `draft ≠ published`。
+- 推測値をverified/publishedへ昇格しない。
+- Phase13のVerification BacklogをPhase13未完了として扱わない。
+- AI Coachは構造化データ・Source・Patchを優先する。
+- Replay解析は実解析機構が確認できるまで「可能」と扱わない。
+- `main`、本番公開、不可逆DB変更、認証全面変更はユーザー明示許可なしで行わない。
 
 ## Phase14完了条件
 
-P0〜P2の全19タスクを完了、または明示的にPhase15以降へ再分類し、次を満たすこと。
+P0〜P2の19タスクを完了、またはユーザー確認のうえPhase15以降へ再分類し、以下を満たす。
 
-- P0残件 = 0
-- 重大ブロッカー = 0
-- Vercel Preview成功
-- 主要Routeに重大エラーなし
-- Public画面でdraft漏洩なし
-- verified必須Entityで非verified漏洩なし
-- 4 Diagnosis動作
-- Character Recommendationはverified dataのみ使用し、不足時に不足を返す
-- AI Coach Retrievalは根拠Source/Current Patch付きEvidenceを返し、不足時に断定しない
-- build / typecheck / lint成功
-- Phase14終了監査とDashboard更新
+- P0残件 0
+- 重大ブロッカー 0
+- GitHub Actions typecheck / lint / build成功
+- Vercel Preview成功（Production公開ではない）
+- 主要Public Routeに重大runtime errorなし
+- draft/reviewed/unverifiedの確定情報漏洩なし
+- 4 Diagnosisが動作
+- Recommendationがverified dataのみを使用し、不足時に安全に不足を返す
+- AI Coach RetrievalがSource/Patch付きEvidenceを扱い、不足時に断定しない
+- Responsive/basic securityを確認
+- Dashboard/終了監査を更新
 
-本番公開、`main`変更、全31キャラ完全verified化、AI Coach Generation、Replay Coach実装はPhase14必須条件に含めない。
-
-## 優先度定義
+## 優先度
 
 - **P0**: デモ公開を阻害する問題
 - **P1**: SF6DNA主要機能として必要
 - **P2**: 品質向上
 - **P3**: Phase15以降でも問題ない
 
-## P0 — 7件
+---
 
-### P0-01 全体監査・正式進捗基準・Phase14計画
+# P0 — 7件
+
+## P0-01 全体監査・進捗基準・Phase14計画
 
 - 状態: **完了**
-- 目的: Phase13完了状態を正しく引き継ぎ、実DB・実コードを基準に現在地を固定する。
-- 対象ファイル:
-  - `docs/PHASE13_ALL_31_CHARACTER_COMPLETION_AUDIT.md`
-  - `docs/V2_REQUIREMENTS.md`
-  - `docs/V2_ARCHITECTURE.md`
-  - `docs/V2_RELEASE_READINESS.md`
-  - `docs/PROJECT_COMPLETION_DASHBOARD.md`
-  - `docs/PHASE14_IMPLEMENTATION_PLAN.md`
+- 目的: Phase13完了状態を固定し、実DB・実コードからPhase14基準点を作る。
+- 対象ファイル: `docs/PHASE13_ALL_31_CHARACTER_COMPLETION_AUDIT.md`, `docs/PROJECT_COMPLETION_DASHBOARD.md`, 本書
 - 対象DB: public schema全体、RLS、Patch、Source、主要Entity
 - 依存関係: Phase13完了
-- 完了条件: 50項目監査、完成率計算、P0〜P3分類をGitHubへ記録
-- テスト方法: GitHub HEAD / Supabase実DB / Vercel接続状態を再取得して記録値と照合
-- リスク: 古いPhase資料だけを参照して実DBと乖離すること
+- 完了条件: 50項目監査、数値化、P0〜P3分類
+- テスト方法: GitHub HEAD / Supabase実DB / Vercel状態の再取得
+- リスク: 古い会話・資料だけで現在値を判断すること
 
-### P0-02 Public Verification Gate Hardening
+## P0-02 Public Verification Gate Hardening
 
-- 状態: **未着手**
-- 目的: `published` だけではなく、攻略Entityで `verification_status = verified` をPublic公開条件としてDB・Search・UIで強制する。
-- 対象ファイル:
-  - `supabase/migrations/20260827_phase14_public_verification_gate.sql`
-  - `v2-web/src/lib/character-sections.ts`
-  - `v2-web/src/lib/content-detail.ts`
-  - 必要に応じて `v2-web/src/lib/search.ts`
-- 対象DB:
-  - `combos`
-  - `setups`
-  - `sequences`
-  - `counters`
-  - `trainings`
-  - `move_frame_data`
-  - RPC `search_sf6dna`
-- 依存関係: 現行RLS/検索RPC確認済み
-- 完了条件:
-  - Strategy public SELECTが `published + verified` のみ
-  - public Frameがverifiedのみ
-  - Unified Search/AI Coach Retrievalに非verified Strategyが出ない
-  - Admin policyは維持
-- テスト方法:
-  - RLS policy定義再取得
-  - RPC定義再取得
-  - draft/reviewed/unverified件数がPublic経路へ出ないことをSQL/コードで確認
-  - Supabase Security Advisor再実行
-- リスク: RLS条件を強くしすぎてAdminまたは将来の履歴表示を壊すこと。Admin ALL policyを維持し、Public SELECTだけ変更する。
+- 状態: **完了**
+- 目的: Public経路で未検証攻略情報を確定情報として返さない。
+- 対象ファイル: Supabase Phase14 migration、`v2-web/src/lib/knowledge.ts`, `character-sections.ts`, `search.ts`, content detail系
+- 対象DB: `moves`, `move_frame_data`, `move_commands`, `combos`, `setups`, `sequences`, `counters`, `trainings`, `character_trait_scores`, RPC `search_sf6dna`
+- 依存関係: 既存RLS/Admin policy
+- 完了条件: Strategy=`published+verified`、Frame=published親+verified、Command=published親+official Source、Admin policy維持
+- テスト方法: `pg_policies`、RPC定義、実DB status件数、Public query条件確認
+- リスク: Adminや履歴参照まで遮断すること
 
-### P0-03 Move Detail Integration
+## P0-03 Move Detail Integration
 
-- 状態: **未着手**
-- 目的: Move詳細でMove本体だけでなくCurrent Frame、Classic/Modern Command、Patch、Source、Verificationを一体表示できるようにする。
-- 対象ファイル:
-  - `v2-web/src/lib/content-detail.ts`
-  - `v2-web/src/app/moves/[slug]/page.tsx`
-  - 必要に応じて型/表示component
-- 対象DB:
-  - `moves`
-  - `move_frame_data`
-  - `move_commands`
-  - `entity_sources`
-  - `sources`
-  - `patches`
+- 状態: **完了**
+- 目的: Move詳細へFrame/Classic/Modern/Patch/Source/Verificationを統合する。
+- 対象ファイル: `v2-web/src/lib/content-detail.ts`, `v2-web/src/app/moves/[slug]/page.tsx`、関連型/Component
+- 対象DB: `moves`, `move_frame_data`, `move_commands`, `entity_sources`, `sources`, `patches`
 - 依存関係: P0-02
-- 完了条件:
-  - verified current Frameのみ表示
-  - Classic Command表示
-  - Modernは存在するときだけ表示し、欠損を推測補完しない
-  - Source/Patch/Verificationを確認できる
-- テスト方法: verified Frameを持つMove候補でquery結果を検証、非verified Frameが表示されないことを確認
-- リスク: Move本体はstatusのみでverification列がないため、子Entityの品質ゲートを誤ってMove全体の確定性と混同しないこと
+- 完了条件: verified current Frame、Classic、存在時のみModern、Source/Patch/Verificationを表示可能
+- テスト方法: strict candidateでquery/表示条件確認
+- リスク: Modern欠損を推測補完すること
 
-### P0-04 Safe Demo Content Release Gate
+## P0-04 Safe Demo Content Release Gate
 
-- 状態: **未着手**
-- 目的: デモで表示するMove/Combo/Setup/Counter/Training等について、公開可否を機械的に判定できる最低条件を定義する。
-- 対象ファイル:
-  - `docs/V2_RELEASE_READINESS.md`
-  - `docs/PROJECT_COMPLETION_DASHBOARD.md`
-  - 必要なData Quality/Admin code
-- 対象DB: Move/Frame/Command/Strategy/Source/Patch/Verification各テーブル
-- 依存関係: P0-02、P0-03
-- 完了条件:
-  - 推測値をpublishしない
-  - `reviewed ≠ verified` を維持
-  - Move公開時のFrame/Command/Source条件を明文化
-  - Strategyはpublished + verified + Source + Patch条件を満たす候補だけ公開対象
-  - 条件を満たさない場合は安全な空状態を表示
-- テスト方法: Data Quality queryで候補件数を算出し、条件不適合Entityが候補に混ざらないことを確認
-- リスク: デモ件数を増やすために検証不足データを昇格すること。禁止。
+- 状態: **完了**
+- 目的: デモ公開候補を機械的に絞れる条件を確立する。
+- 対象ファイル: `docs/V2_RELEASE_READINESS.md`, Dashboard、Data Quality関連
+- 対象DB: Move/Frame/Command/Strategy/Source/Patch/Verification
+- 依存関係: P0-02, P0-03
+- 完了条件: Release Gate明文化、strict Move候補抽出、Strategyはverified条件、条件外はsafe empty
+- テスト方法: read-only quality queryで候補と除外対象を比較
+- リスク: 件数目的の自動publish。禁止。
 
-### P0-05 Current HEAD Build / CI / Static Check
+## P0-05 Current HEAD Build / CI / Static Check
 
-- 状態: **未着手**
-- 目的: Phase14変更後のCurrent HEADでtypecheck/lint/buildを成功させる。
-- 対象ファイル:
-  - `.github/workflows/v2-web-check.yml`
-  - `v2-web/**`
+- 状態: **完了**
+- 目的: Current HEADでTypeScript/Lint/Buildを通す。
+- 対象ファイル: `.github/workflows/v2-web-check.yml`, `v2-web/**`
 - 対象DB: なし
-- 依存関係: P0-02、P0-03のコード変更
-- 完了条件: GitHub Actionsのtypecheck / lint / buildがCurrent HEADで成功
-- テスト方法: workflow runのconclusionを確認
-- リスク: docs-only HEADではworkflowが走らないため、古い成功結果をCurrent HEAD成功と誤認しないこと
+- 依存関係: Phase14 UI変更
+- 完了条件: GitHub Actions check成功
+- テスト方法: commit `fba99ea20ad44d7e38eba79e01d2913411d1257b` のcheck success確認
+- リスク: 古い成功runを最新成功と誤認すること
 
-### P0-06 Vercel Preview Project / Deployment
+## P0-06 Vercel Preview Project / Deployment
 
 - 状態: **ブロック中**
-- 目的: `sf6dna-v2` のデモ用Previewを作成する。本番公開はしない。
-- 対象ファイル:
-  - `v2-web/.env.example`
-  - Vercel Project設定
-- 対象DB: Supabase接続先の環境変数のみ。DBデータ変更なし。
+- 目的: `sf6dna-v2`をPreviewで実機確認可能にする。本番公開はしない。
+- 対象ファイル: `v2-web/.env.example`、必要なVercel設定
+- 対象DB: DB変更なし。Preview環境変数のみ。
 - 依存関係: P0-05
-- 完了条件:
-  - Vercel Projectが存在
-  - Root Directory=`v2-web` 等の設定が正しい
-  - Preview環境変数設定
-  - Preview deployment成功
-- テスト方法: Vercel deployment status/build log確認
-- リスク: 現在接続TeamのProjectが0件。誤ってProduction deployment/本番ドメイン変更をしない。
+- 完了条件: Vercel Project存在、Root Directory/Env設定、Preview deployment成功
+- テスト方法: Vercel deployment/build log確認
+- リスク: 現在接続TeamのProject 0件。Productionを誤操作しないこと
 
-### P0-07 Preview Runtime / Demo Gate Smoke
+## P0-07 Preview Runtime / Demo Gate Smoke
 
 - 状態: **未着手**
-- 目的: 実Preview上で主要Route・draft漏洩・レスポンシブ・重大runtime errorを確認する。
-- 対象ファイル: `v2-web/src/app/**`、`v2-web/src/lib/**`
+- 目的: Preview上で主要Route、draft漏洩、runtime error、responsiveを確認する。
+- 対象ファイル: `v2-web/src/app/**`, `v2-web/src/lib/**`
 - 対象DB: Public read経路全般
 - 依存関係: P0-06
-- 完了条件:
-  - トップ/Character/Move/Strategy/Player/Video/Search/Diagnosis/Recommendation/Coachの主要導線で重大エラーなし
-  - draft漏洩なし
-  - iPhone幅/PC幅で利用可能
-- テスト方法: Preview route smoke、Vercel runtime logs、Public query確認
-- リスク: Preview未作成のままローカル構造だけで「デモ可能」と判定すること
+- 完了条件: 主要導線重大エラー0、draft漏洩0、PC/スマホ利用可能
+- テスト方法: Preview smoke + Vercel runtime logs + Public query確認
+- リスク: Previewなしでデモ可能と判定すること
 
-## P1 — 7件
+---
 
-### P1-01 Character → Sequence統合
+# P1 — 7件
 
-- 目的: Phase14特別確認事項のCharacter → Sequence導線をWeb UIへ追加する。
-- 対象ファイル: `v2-web/src/types/character.ts`, `v2-web/src/lib/character-sections.ts`, Character tabs/section page
+## P1-01 Character → Sequence統合
+
+- 状態: **完了**
+- 目的: Character詳細からSequenceへ到達できるようにする。
+- 対象ファイル: `v2-web/src/types/character.ts`, `components/character-tabs.tsx`, `lib/character-sections.ts`, `app/characters/[slug]/[section]/page.tsx`
 - 対象DB: `sequences`
 - 依存関係: P0-02
-- 完了条件: Character詳細からverified + published Sequenceへ到達できる。未公開時は安全な空表示。
-- テスト方法: Character section routeでquery/リンク確認
-- リスク: draft Sequenceを表示しないこと
+- 完了条件: `sequences` tab/meta/queryが揃い、published+verifiedのみ取得
+- テスト方法: Typecheck/Lint/Build成功、コード条件確認
+- リスク: draft Sequence漏洩
 
-### P1-02 Strategy Public UI Integration
+## P1-02 Strategy Public UI Integration
 
-- 目的: Combo/Setup/Sequence/Counter/Trainingを共通の公開品質ルールで表示し、Source/Patch/Verificationも確認可能にする。
-- 対象ファイル: strategy list/detail routes、`content-detail.ts`、共通component
+- 状態: **未着手**
+- 目的: Combo/Setup/Sequence/Counter/Trainingを共通品質ルールで表示する。
+- 対象ファイル: 各list/detail route、`content-detail.ts`、共通Component
 - 対象DB: Strategy各表、`entity_sources`, `sources`, `patches`
-- 依存関係: P0-02、P0-04
-- 完了条件: 公開対象のみ表示、Source/Patch表示、欠損時の安全なempty state
-- テスト方法: verified/published・draft・reviewed各ケースを比較
+- 依存関係: P0-02, P0-04
+- 完了条件: published+verifiedのみ、Source/Patch/Verification確認可能、安全なempty state
+- テスト方法: verified/published・draft・reviewedケース比較
 - リスク: verifiedとpublishedの片方だけで公開すること
 
-### P1-03 Player / Video Integration Completion
+## P1-03 Player / Video Integration Completion
 
-- 目的: Character → Player / Video、Player詳細、Video詳細の導線と空状態を整える。
-- 対象ファイル: Player/Video/Character section routes、関連lib
+- 状態: **未着手**
+- 目的: Character→Player/Videoと詳細導線を完成させる。
+- 対象ファイル: Player/Video/Character section routes/libs
 - 対象DB: `players`, `player_characters`, `videos`, `entity_videos`, Source relation
 - 依存関係: Public status gate
-- 完了条件: published EntityのみPublic表示、リンク切れなし
-- テスト方法: published Player 41件、Video 5件の代表データで確認
+- 完了条件: publishedのみ、リンク切れなし、empty stateあり
+- テスト方法: published Player 41 / Video 5の代表レコード確認
 - リスク: draft Player/Video漏洩
 
-### P1-04 Character Recommendation Verified Data Pipeline
+## P1-04 Character Recommendation Verified Data Pipeline
 
-- 目的: Recommendation Engineに必要なTrait Scoreの公開品質導線を確立する。
-- 対象ファイル: recommendation lib/API、Admin Trait/Data Quality、Release docs
+- 状態: **未着手**
+- 目的: Recommendationをverified Trait Scoreだけで成立させる。
+- 対象ファイル: recommendation lib/API、Admin Trait/Data Quality
 - 対象DB: `character_traits`, `character_trait_scores`, `entity_sources`
-- 依存関係: Source/Verification policy
-- 完了条件: published + verified + Source付きScoreだけ推薦に使用し、coverage不足時は不足表示
-- テスト方法: 75% coverage gate、0件時、不足時、十分時のAPI確認
-- リスク: 372 reviewed draftをverifiedと誤認しないこと
+- 依存関係: Verification/Source policy
+- 完了条件: published+verified+Source付きScoreのみ使用、coverage不足時は不足表示
+- テスト方法: 0件/不足/十分のAPIケース確認
+- リスク: 372 reviewed draftをverified扱いすること
 
-### P1-05 AI Coach Verified Evidence Policy
+## P1-05 AI Coach Verified Evidence Policy
 
-- 目的: AI Coach Retrievalをverified public evidence優先に統一し、Evidence不足時に断定しない。
-- 対象ファイル: `v2-web/src/lib/coach-evidence.ts`, `v2-web/src/app/api/coach/retrieve/route.ts`, Coach UI
+- 状態: **未着手**
+- 目的: AI Coach RetrievalをCurrent Patch/Source付きEvidence中心に統一する。
+- 対象ファイル: `v2-web/src/lib/coach-evidence.ts`, `app/api/coach/retrieve/route.ts`, Coach UI
 - 対象DB: Search対象Entity、Source、Patch
-- 依存関係: P0-02、P0-04
-- 完了条件: Current Patch/Source付きverified evidence、Evidence不足時の明示、GenerationはOFF維持
-- テスト方法: evidenceあり/なし、draft/unverifiedキーワードでAPI確認
-- リスク: Search結果をそのまま「確定情報」として生成へ渡すこと
+- 依存関係: P0-02, P0-04
+- 完了条件: Evidence不足時に断定しない、Generation OFF維持
+- テスト方法: evidenceあり/なし、draft/unverified検索ケース
+- リスク: Retrieval結果を根拠なし生成へ流すこと
 
-### P1-06 Auth / Admin E2E
+## P1-06 Auth / Admin E2E
 
-- 目的: Login/Session/Admin role/Create/Edit/Publish/Archiveの実動作を確認する。
+- 状態: **未着手**
+- 目的: Login/Session/Admin role/CRUDの実動作を確認する。
 - 対象ファイル: Auth/Admin/Proxy/Supabase SSR関連
-- 対象DB: `profiles`、Admin管理Entity、RLS
+- 対象DB: `profiles`、Admin対象Entity、RLS
 - 依存関係: Previewまたは安全なE2E環境
-- 完了条件: 非Admin遮断、Admin書込成功、Public反映条件正常
-- テスト方法: 実Admin accountによるE2E。大量変更はしない。
-- リスク: 本番データを誤編集しないよう最小テストレコードで行う
+- 完了条件: 非Admin遮断、Admin操作成立、Public Gate維持
+- テスト方法: 実セッションでread/write/role確認
+- リスク: 本番データの不要な変更。テストデータを限定する。
 
-### P1-07 SEO Baseline
+## P1-07 SEO / Public Metadata Baseline
 
-- 目的: デモ公開に必要な検索エンジン向け最低構成を追加する。
-- 対象ファイル: route metadata、`sitemap.ts`, `robots.ts`, OGP設定
-- 対象DB: published public Entity URL生成
+- 状態: **未着手**
+- 目的: デモ公開に最低限必要なmetadata/robots/sitemap/OGPを整える。
+- 対象ファイル: root layout、主要page metadata、robots/sitemap関連
+- 対象DB: published EntityのみURL対象
 - 依存関係: Public URL構造確定
-- 完了条件: Character等の主要個別metadata、sitemap、robots、基本OGP
-- テスト方法: build結果と生成metadata/route確認
-- リスク: draft URLをsitemapへ含めないこと
+- 完了条件: 主要metadata、sitemap、robots、基本OGP
+- テスト方法: Build出力/生成route確認
+- リスク: draft URLをsitemapへ含めること
 
-## P2 — 5件
+---
 
-### P2-01 Modern Command Coverage Improvement
+# P2 — 5件
 
-- 目的: Modern 1,441/2,065の不足を優先度順に補完する。
+## P2-01 Modern Command Coverage Improvement
+
+- 状態: **未着手**
+- 目的: Modern 1,441/2,065の不足を検証可能な範囲で改善する。
 - 対象ファイル: ingest/admin/docs
 - 対象DB: `move_commands`, Source relation
-- 依存関係: 十分な一次情報または実機確認
-- 完了条件: 検証可能な範囲でcoverageを上げ、推測補完0
-- テスト方法: control_scheme別coverage query、Source確認
-- リスク: 2026.08.03変更を旧資料から転記すること
+- 依存関係: 一次情報または実機確認
+- 完了条件: 推測補完0でcoverage向上
+- テスト方法: control_scheme別件数/Source確認
+- リスク: 旧Patch情報の誤転記
 
-### P2-02 Automated Test Expansion
+## P2-02 Automated Test Expansion
 
-- 目的: Public gate、Search、Recommendation、主要lib/APIの回帰テストを増やす。
-- 対象ファイル: `v2-web` test設定/テストコード、CI
+- 状態: **未着手**
+- 目的: Public Gate/Search/Recommendation/APIの回帰テストを自動化する。
+- 対象ファイル: `v2-web` test設定/テスト、CI
 - 対象DB: fixtureまたは安全なread-only test data
 - 依存関係: P0/P1仕様確定
-- 完了条件: gate/search/recommendationの主要ケースを自動検証
-- テスト方法: CIで自動実行
+- 完了条件: 主要release gateをCIで自動検証
+- テスト方法: CI実行
 - リスク: 実DB依存テストの不安定化
 
-### P2-03 Performance Measurement / Optimization
+## P2-03 Performance Measurement / Optimization
 
-- 目的: デモPreviewでページ速度と大量データqueryを計測・改善する。
-- 対象ファイル: Next.js page/lib、画像/動画表示
+- 状態: **未着手**
+- 目的: Previewでページ速度とqueryを計測・改善する。
+- 対象ファイル: Next page/lib、画像/動画表示
 - 対象DB: query/index
-- 依存関係: Vercel Preview
-- 完了条件: 主要ページで明確な性能問題がない、必要なindex/query改善を記録
-- テスト方法: Lighthouse/Preview runtime/query確認
+- 依存関係: P0-06
+- 完了条件: 主要ページに重大性能問題なし
+- テスト方法: Lighthouse/Runtime/query確認
 - リスク: 計測前の過剰最適化
 
-### P2-04 Responsive / Accessibility Polish
+## P2-04 Responsive / Accessibility Polish
 
-- 目的: スマホファースト要件に沿ってiPhone幅/PC幅、キーボード/ARIA等を改善する。
-- 対象ファイル: `v2-web/src/app/globals.css`, components/pages
+- 状態: **未着手**
+- 目的: スマホ/PC、キーボード、基本ARIAを改善する。
+- 対象ファイル: `globals.css`, components/pages
 - 対象DB: なし
 - 依存関係: P0-07
-- 完了条件: 主要画面で横崩れ・操作不能なし、基本アクセシビリティ確認
+- 完了条件: 主要画面で横崩れ・操作不能なし
 - テスト方法: 複数viewport/manual smoke
-- リスク: 見た目修正で既存導線を壊すこと
+- リスク: 見た目変更による導線破壊
 
-### P2-05 Data Quality / Progress Automation
+## P2-05 Data Quality / Progress Automation
 
+- 状態: **未着手**
 - 目的: verified/published/Source/Patch coverageを継続監査しやすくする。
-- 対象ファイル: Admin Data Quality、Dashboard更新手順、必要なread-only query
+- 対象ファイル: Admin Data Quality、Dashboard更新手順
 - 対象DB: 全Content Entity
-- 依存関係: 公開品質ルール確定
-- 完了条件: Character別/Entity別の公開準備状況を再計算可能
-- テスト方法: live DB件数と管理画面表示を照合
-- リスク: 件数だけを品質と誤認しないこと
+- 依存関係: Release Gate確定
+- 完了条件: 主要coverageを一貫したread-only queryで再計算可能
+- テスト方法: Dashboard値と実DB再集計の一致
+- リスク: スナップショット値を正本化すること
 
-## P3 — 4件
+---
 
-### P3-01 31 Character Full Verification / Publication
+# P3 — Phase15以降候補
 
-- 目的: Phase13から残った全Move/Combo/Setup/Sequence/Counter/Training等を完全verified化する。
-- 対象DB: 全Character Content
-- 完了条件: 一次情報/実機確認に基づくverified + published
-- リスク: 長期作業。Phase14デモをこれだけのために止めない。
+## P3-01 Phase13 Verification / Release Quality Backlog全面完了
 
-### P3-02 AI Coach Generation
+- 目的: Modern、ローカライズ、Combo/Setup/Sequence/Counter/Training等を継続検証する。
+- 対象ファイル: ingest/docs/admin
+- 対象DB: Character Content全般
+- 依存関係: 一次情報/実機検証
+- 完了条件: 別途Release Quality基準を満たす範囲で昇格
+- テスト方法: Source/Patch/Verification監査
+- リスク: Phase13へ巻き戻して扱うこと
 
-- 目的: 十分なverified Evidenceが揃った領域から根拠付き生成回答を段階解禁する。
-- 対象ファイル/DB: Coach Backend/API、trusted evidence DB
-- 完了条件: 根拠・Patch・Source・不足時拒否を含む生成品質試験合格
-- リスク: DB外攻略知識の断定、APIコスト、プロンプト注入
+## P3-02 AI Coach Generation
 
-### P3-03 Replay Coach Implementation
+- 目的: 十分なEvidence基盤が整った後に生成機能を検討する。
+- 対象ファイル: 将来のgeneration API/UI
+- 対象DB: verified public evidence
+- 依存関係: P1-05、Evidence coverage
+- 完了条件: 根拠引用・不足時抑制・安全な生成契約
+- テスト方法: groundedness/漏洩テスト
+- リスク: 根拠のないSF6攻略生成
 
-- 目的: 実際の動画/ゲームプレイ解析が可能と実証できた場合のみ実装へ進む。
-- 対象: Backend/Replay pipeline
-- 完了条件: 実映像解析方式、精度、規約、コスト、データ保護を実証
-- リスク: 現在のprototypeを「映像解析済み」と誤認しないこと
+## P3-03 Replay Coach
 
-### P3-04 Production Launch / Domain / Monetization
+- 目的: 実際の動画/リプレイ解析方式が成立した場合のみ実装する。
+- 対象ファイル/DB: 未確定
+- 依存関係: 実解析技術の確認
+- 完了条件: 実データを解析可能な仕組みが存在すること
+- テスト方法: 実リプレイで再現性確認
+- リスク: 未実装技術を「解析可能」と表現すること
 
-- 目的: Demo合格後の正式公開準備。
-- 対象: `main` merge、Production Vercel、domain、広告等
-- 依存関係: ユーザーの明示承認
-- 完了条件: Phase15以降で別途定義
-- リスク: Phase14中に勝手に本番公開・main変更しないこと
+## 現在の進捗
 
-## Phase13 Verification / Release Quality Backlogの扱い
+- P0: 5/7完了、残り2
+- P1: 1/7完了、残り6
+- P2: 0/5完了、残り5
+- Phase14必須: **6/19 = 31.6%**
+- P3: Phase14母数外
 
-以下はPhase13未完了タスクではない。
+## 次の実装順
 
-- Modern操作完全転記
-- 日本語技名完全ローカライズ
-- Combo正確ダメージ
-- Combo現行ルート再検証
-- Setup有利F
-- Sequence成立確認
-- Counter実機検証
-- Training実機検証
-- JP一部Frame等の実機/公式照合
-- unverified → verified
-- draft → published
+1. P1-02 Strategy Public UI Integration
+2. P1-03 Player / Video Integration Completion
+3. P1-04 Recommendation Verified Data Pipeline
+4. P1-05 AI Coach Verified Evidence Policy
+5. P1-06 Auth/Admin E2E（Preview環境が利用可能になった段階）
+6. P0-06 Vercel Preview Project / Deployment（Project利用可能後）
+7. P0-07 Preview Runtime / Demo Gate Smoke
 
-Phase14ではデモを阻害するものだけP0/P1へ引き上げ、残りはP2/P3として管理する。
-
-## 現在の実行順
-
-1. P0-01 完了
-2. **P0-02 Public Verification Gate Hardening**
-3. P0-03 Move Detail Integration
-4. P0-04 Safe Demo Content Release Gate
-5. P0-05 Current HEAD Build / CI
-6. P0-06 Vercel Preview
-7. P0-07 Preview Runtime Smoke
-8. P1へ進む
-
-## 禁止事項
-
-Phase14中、明示承認なしに以下を実行しない。
-
-- `main`変更/merge
-- 本番データ大量削除
-- 不可逆DB変更
-- 認証方式全面変更
-- 課金契約
-- Production公開
-- 本番ドメイン変更
-- 重要仕様の全面変更
-- 推測値のverified/published化
-- Phase15開始
+P0-06/P0-07はVercel Project 0件のため現在ブロック中だが、Claude Code待ちを理由にPhase14の他作業は停止しない。
