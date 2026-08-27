@@ -16,6 +16,20 @@ export function SimpleDetailView({ detail, eyebrow }: { detail: SimpleDetail; ey
           ))}
         </dl>
       </section>
+      {detail.sources?.length ? (
+        <section className="info-panel">
+          <h2>Sources</h2>
+          <ul>
+            {detail.sources.map((source) => (
+              <li key={`${source.id}-${source.relationship}`}>
+                <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a>
+                {source.publisher ? ` / ${source.publisher}` : ""}
+                {` / ${source.sourceType} / ${source.relationship}`}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
     </div>
   );
 }
