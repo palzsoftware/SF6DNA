@@ -15,6 +15,15 @@ export type PlayerCharacter = {
   role: string;
 };
 
+export type PlayerSource = {
+  id: string;
+  title: string;
+  url: string;
+  publisher: string | null;
+  sourceType: string;
+  relationship: string;
+};
+
 export type PlayerDetail = PlayerSummary & {
   realName: string | null;
   region: string | null;
@@ -24,4 +33,5 @@ export type PlayerDetail = PlayerSummary & {
   xUrl: string | null;
   websiteUrl: string | null;
   characters: PlayerCharacter[];
+  sources: PlayerSource[];
 };
