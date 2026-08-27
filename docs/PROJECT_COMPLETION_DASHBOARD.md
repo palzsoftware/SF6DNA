@@ -1,11 +1,11 @@
 # SF6DNA Project Completion Dashboard
 
-最終更新: 2026-08-27 21:51 JST
+最終更新: 2026-08-27 22:03 JST
 
 ## 現在Phase
 
 - **Phase13: Character Content Verification & Expansion — 完了済み**
-- **Phase14: Application Integration, Public Data Gating & Demo Release Readiness — 開始**
+- **Phase14: Application Integration, Public Data Gating & Demo Release Readiness — 進行中**
 - `main` は変更しない。
 - 作業ブランチ: `sf6dna-v2`
 - Supabase正本: `SF6DNAPro` (`wnuxaxbrpudyypzdbdho`)
@@ -32,13 +32,13 @@ Phase13の構造完成をやり直さない。Phase13から残ったModern、完
 
 `全体完成率 = 加点合計 / 50 × 100`
 
-現状は `26.00 / 50 = 52.0%`。
+現状は `26.75 / 50 = 53.5%`。
 
 ### デモ完成率
 
 母数はPhase14開始指示のデモ最低条件23ゲート。上記と同じ加点で計算する。
 
-現状は `12.00 / 23 = 52.2%`。
+現状は `12.50 / 23 = 54.3%`。
 
 ### 本番版完成率
 
@@ -49,7 +49,7 @@ Phase13の構造完成をやり直さない。Phase13から残ったModern、完
 - 部分完成 = 0.25
 - データ不足 / 未実装 / ブロック中 = 0
 
-現状は `16.25 / 50 = 32.5%`。
+現状は `17.25 / 50 = 34.5%`。
 
 ### Phase14完成率
 
@@ -57,7 +57,9 @@ Phase13の構造完成をやり直さない。Phase13から残ったModern、完
 
 初期計画: P0 7件 + P1 7件 + P2 5件 = **19件**。
 
-監査・ダッシュボード・実装計画確定を `P0-01` とする。計画作成完了後の初期Phase14完成率は `1 / 19 = 5.3%`。
+現在完了: P0-01〜P0-05 = **5件**。
+
+`Phase14完成率 = 5 / 19 = 26.3%`
 
 ## 現在の主要DB事実
 
@@ -81,7 +83,19 @@ Phase13の構造完成をやり直さない。Phase13から残ったModern、完
 - Diagnosis Question: published **52**
 - Current Patch: `2026.08.03 全体バトルバランス調整`
 - public schemaの38テーブル: **RLS 38/38有効**
-- Supabase Security Advisor: **指摘0件**（2026-08-27確認）
+- Strategy Public RLS: **published + verified を強制済み**
+- Frame Public RLS: **親Move published + Frame verified を強制済み**
+- Command Public RLS: **親Move published + Command official Sourceを強制済み**
+- Unified Search Strategy: **published + verified を明示済み**
+- Supabase Security Advisor: **指摘0件**（Phase14 migration後再確認）
+- Strict Move release candidate: **307件 / 4キャラ**
+  - ジェイミー 93
+  - キンバリー 76
+  - ガイル 70
+  - 春麗 68
+  - 307件すべてCurrent verified Frame + official Move/Frame/Classic Command Sourceあり
+  - Modernあり295 / なし12
+- Strategy verified candidate: **Kimberly Combo 1件、draft維持**
 - Vercel接続チーム: **Project 0件**
 
 注意:
@@ -89,6 +103,7 @@ Phase13の構造完成をやり直さない。Phase13から残ったModern、完
 - `reviewed` は `verified` ではない。
 - `draft` は `published` ではない。
 - Phase13の `STRUCTURAL GATE PASSED` は「公開品質100%」を意味しない。
+- 機械的なRelease Gate通過は自動publish承認ではない。
 
 ## 全体監査 — 50項目
 
@@ -97,15 +112,15 @@ Phase13の構造完成をやり直さない。Phase13から残ったModern、完
 | 1 | 要件定義 | 完成 | `docs/V2_REQUIREMENTS.md` を正本として確認 |
 | 2 | アーキテクチャ | 完成 | `docs/V2_ARCHITECTURE.md`、Next.js + Supabase + Backend構成 |
 | 3 | DB Schema | 完成 | Supabase実DBに主要38テーブル、関係・Patch・Sourceを実装済み |
-| 4 | Supabase RLS | 部分完成 | 38/38有効。ただしStrategy/Frameのpublic SELECTがverificationを強制していない |
+| 4 | Supabase RLS | 完成 | 38/38有効。Strategy/Frame/CommandのPublic品質GateもPhase14で強化済み |
 | 5 | Auth | 部分完成 | Supabase SSR/Auth UI/Session基盤あり。実ユーザーE2E未完 |
 | 6 | Character | 完成 | 31 playable published、Phase13 31/31 structural gate passed |
-| 7 | Move | データ不足 | 2,065件登録済みだが全件draft。公開可能Move 0 |
+| 7 | Move | データ不足 | 2,065件登録済みだが全件draft。strict release candidateは307件 |
 | 8 | Frame | 検証待ち | Current 2,065件。verified 307 / reviewed 1,752 / unverified 6 |
-| 9 | Classic Command | 検証待ち | 2,065/2,065構造登録済み。公開前品質確認が残る |
+| 9 | Classic Command | 検証待ち | 2,065/2,065構造登録済み。Public時はofficial SourceをRLSで要求 |
 | 10 | Modern Command | データ不足 | 1,441/2,065 = 69.8%。Phase13 carryover |
 | 11 | Alias | 部分完成 | Character/Move/Player等のAlias構造と検索連携あり。完全表記揺れ監査は未完 |
-| 12 | Combo | データ不足 | 341件あるがpublished 0。verifiedはdraft 1件のみ |
+| 12 | Combo | データ不足 | 341件あるがpublished 0。verifiedはKimberly draft 1件のみ |
 | 13 | Setup | データ不足 | 186件あるがpublished 0。reviewed 20、残りunverified |
 | 14 | Sequence | データ不足 | 186件あるがpublished 0。reviewed 17、残りunverified |
 | 15 | Counter | データ不足 | 1,122件あるがpublished 0。reviewed 67、残りunverified |
@@ -117,39 +132,39 @@ Phase13の構造完成をやり直さない。Phase13から残ったModern、完
 | 21 | Patch | 完成 | Current Patch=`2026.08.03` を実DBで確認 |
 | 22 | Verification | 検証待ち | Phase13 carryover。verified化は構造完成と別タスク |
 | 23 | Character UI | 部分完成 | 一覧/詳細/section routeあり。公開攻略データ不足とSequence統合不足あり |
-| 24 | Move UI | 部分完成 | detail routeあり。ただし現detailはFrame/Command/Source/Patchを統合表示していない |
-| 25 | Combo UI | 部分完成 | list/detail基盤あり。公開データ0 |
-| 26 | Setup UI | 部分完成 | list/detail基盤あり。公開データ0 |
-| 27 | Counter UI | 部分完成 | list/detail基盤あり。公開データ0 |
-| 28 | Training UI | 部分完成 | list/detail基盤あり。公開データ0 |
+| 24 | Move UI | 部分完成 | Move detailへverified Frame / Classic・Modern Command / Patch / Source / Verificationを統合済み。公開Move 0 |
+| 25 | Combo UI | 部分完成 | list/detail基盤あり。published + verifiedのみ取得、公開データ0 |
+| 26 | Setup UI | 部分完成 | list/detail基盤あり。published + verifiedのみ取得、公開データ0 |
+| 27 | Counter UI | 部分完成 | list/detail基盤あり。published + verifiedのみ取得、公開データ0 |
+| 28 | Training UI | 部分完成 | list/detail基盤あり。published + verifiedのみ取得、公開データ0 |
 | 29 | Player UI | 部分完成 | list/detailあり、published 41。Preview実機確認未完 |
 | 30 | Video UI | 部分完成 | detail/Character relationあり。公開件数少、一覧導線は限定的 |
-| 31 | Unified Search | 部分完成 | `search_sf6dna` + `/search` 実装。verification強制不足と公開データ不足あり |
+| 31 | Unified Search | 部分完成 | `search_sf6dna` + `/search` 実装。Strategyはpublished + verifiedを明示。公開攻略データ不足あり |
 | 32 | Diagnosis | 完成 | 4診断published、52 question。Runner/API基盤あり |
 | 33 | Character Recommendation | データ不足 | Engineはpublished+verifiedのみを要求するが対象Trait Scoreが0 |
 | 34 | Admin | 検証待ち | CRUD/relations/data-quality実装済み。実Admin E2E書込未確認 |
-| 35 | Data Quality | 部分完成 | Admin dashboard/Source/Patch/Verification管理基盤あり。公開品質バックログ大 |
-| 36 | AI Coach Retrieval | 部分完成 | Current Patch + Search Evidence + Sourceあり。verified evidence gateの強化が必要 |
+| 35 | Data Quality | 部分完成 | Admin dashboard/Source/Patch/Verification管理基盤あり。Release GateをPhase14で明文化 |
+| 36 | AI Coach Retrieval | 部分完成 | Current Patch + Search Evidence + Sourceあり。Search側verified gate強化済み。Evidence coverage不足 |
 | 37 | AI Coach Generation | 未実装 | 意図的にOFF。信頼DB充足前は有効化しない |
 | 38 | Authentication | 検証待ち | Auth基盤はあるがSignup/Login/Session/Adminを通したE2E未完 |
-| 39 | Public / Draft separation | 部分完成 | status filter/RLSあり。Strategy/Frameのverified強制が不十分 |
+| 39 | Public / Draft separation | 検証待ち | DB/Search/UI gateは強化済み。Vercel Preview上の漏洩回帰確認待ち |
 | 40 | API | 部分完成 | Diagnosis Recommend / Coach Retrieve等あり。総合API・外部Backend統合は未完 |
-| 41 | Error handling | 部分完成 | Supabase未設定/Query errorのfallbackあり。主要Route runtime smoke未完 |
+| 41 | Error handling | 部分完成 | Supabase未設定/Query errorのfallbackあり。Preview主要Route runtime smoke未完 |
 | 42 | Responsive UI | 検証待ち | CSS実装あり。iPhone幅/PC実機確認未完 |
 | 43 | SEO | 部分完成 | Root metadataあり。個別metadata/OGP/sitemap/robotsが未完 |
 | 44 | Performance | 検証待ち | 最適化方針あり。Preview上の計測・Lighthouse等未実施 |
-| 45 | Security | 部分完成 | RLS 38/38、Security Advisor 0、Admin二重ガードあり。E2E/公開品質gate強化が残る |
-| 46 | Testing | 部分完成 | typecheck/lint/build CIあり。Unit/E2E/公開漏洩回帰テスト不足 |
-| 47 | CI | 完成 | `.github/workflows/v2-web-check.yml` 実装済み。現HEADはdocs-onlyのためstatusなし |
+| 45 | Security | 部分完成 | RLS 38/38、Security Advisor 0、Admin二重ガードあり。Auth/Admin E2Eが残る |
+| 46 | Testing | 部分完成 | typecheck/lint/build成功。Unit/E2E/公開漏洩回帰テスト不足 |
+| 47 | CI | 完成 | `7dbc0a7` のGitHub Actions `check` がsuccess。以降はmigration/docsのみ |
 | 48 | Deployment | 未実装 | v2 Preview deployment未成立 |
 | 49 | Vercel | ブロック中 | 接続チームにProject 0件。Preview先未作成 |
 | 50 | Demo Release Readiness | ブロック中 | 公開Move/攻略データ0、Preview未作成、runtime/E2E未完 |
 
 ### 状態内訳
 
-- 完成: **7**
-- 部分完成: **23**
-- 検証待ち: **7**
+- 完成: **8**
+- 部分完成: **21**
+- 検証待ち: **8**
 - データ不足: **9**
 - 未実装: **2**
 - ブロック中: **2**
@@ -177,17 +192,17 @@ Phase13の構造完成をやり直さない。Phase13から残ったModern、完
 | 17 | AI Coach Retrieval最低限動作 | 部分完成 |
 | 18 | レスポンシブ | 検証待ち |
 | 19 | 重大エラーなし | 検証待ち |
-| 20 | draft漏洩なし | 部分完成 |
+| 20 | draft漏洩なし | 検証待ち |
 | 21 | 基本セキュリティ | 部分完成 |
-| 22 | build成功 | 検証待ち |
+| 22 | build成功 | 完成 |
 | 23 | Vercel Preview可能 | ブロック中 |
 
 ## 正式進捗
 
-- **SF6DNA全体完成率: 52.0%**
-- **デモ版完成率: 52.2%**
-- **Phase14完成率: 5.3%**（P0-01完了時点。P0〜P2 19件を母数）
-- **本番版完成率: 32.5%**
+- **SF6DNA全体完成率: 53.5%**
+- **デモ版完成率: 54.3%**
+- **Phase14完成率: 26.3%**（5 / 19）
+- **本番版完成率: 34.5%**
 
 ## 優先度別タスク数
 
@@ -198,11 +213,24 @@ Phase13の構造完成をやり直さない。Phase13から残ったModern、完
 - P2: **5件**
 - P3: **4件**（Phase14完成率の母数外）
 
-P0-01（全体監査・ダッシュボード・実装計画）完了後の残件:
+現在:
 
-- 残りP0: **6件**
+- P0完了: **5件**
+- 残りP0: **2件**
 - 残りP1: **7件**
 - 残りP2: **5件**
+
+## P0状況
+
+| Task | 状態 | 内容 |
+|---|---|---|
+| P0-01 | 完了 | 全体監査・Dashboard・Phase14 Plan |
+| P0-02 | 完了 | Public Verification Gate Hardening。Strategy/Frame/Command/RPC/UI |
+| P0-03 | 完了 | Move DetailへFrame/Command/Patch/Source/Verification統合 |
+| P0-04 | 完了 | Safe Demo Release Gate定義。307 Move候補を抽出、auto publishなし |
+| P0-05 | 完了 | Current Web codeでtypecheck/lint/build success |
+| P0-06 | ブロック中 | Vercel Preview Projectが存在しない |
+| P0-07 | ブロック中 | P0-06依存。Preview runtime / responsive / leak smoke |
 
 ## ブロッカー
 
@@ -215,51 +243,52 @@ P0-01（全体監査・ダッシュボード・実装計画）完了後の残件
 2. **公開可能なMove/Strategy知識が最低デモラインに未到達**
    - Move published 0。
    - Combo/Setup/Sequence/Counter/Training published 0。
+   - strict Move release candidateは307件あるが、機械Gate通過だけでは自動publishしない。
    - これはPhase13未完了ではなく、Phase14 Release Quality / Verification Backlog。
-   - 推測値をpublishして解消しない。
 
-## 完了項目
+## 今回までに完了したこと
 
-- Phase13 31/31 Character structural gate passed
-- v2 requirements / architecture / PostgreSQL schema
-- 38 public tables RLS enabled
-- Current Patch / Source基盤
-- 31 Character published
-- 2,065 Move / Frame / Classic Command構造登録
-- Unified Search RPC/UI基盤
-- 4 Diagnosis
-- Character Recommendation Engine
-- Player DB/UI基盤
-- Admin CRUD/Data Quality基盤
-- AI Coach Evidence Retrieval基盤
-- GitHub Actions typecheck/lint/build workflow
-- Phase14開始時全体監査
-- 本ダッシュボード作成
+- Phase13 31/31 Character structural gate passedを再確認
+- Phase14正式名称・完了条件・進捗算定式確定
+- `docs/PROJECT_COMPLETION_DASHBOARD.md` 作成
+- `docs/PHASE14_IMPLEMENTATION_PLAN.md` 作成
+- `docs/V2_RELEASE_READINESS.md` にPhase14 Safe Demo Release Gate追加
+- Supabase Strategy Public RLSをpublished + verifiedへ強化
+- Supabase Frame Public RLSをpublished parent Move + verified Frameへ強化
+- Supabase Command Public RLSをpublished parent Move + official Sourceへ強化
+- Unified Search Strategyをpublished + verifiedへ強化
+- Character Strategy sections / Knowledge lists / Detailでverifiedを明示
+- Move Detailへverified Frame / Command / Patch / Source / Verificationを統合
+- Supabase Security Advisor 0件をmigration後再確認
+- GitHub Actions build success確認
+- Strict Move release candidate 307件を抽出。自動publishは実施していない
 
 ## 進行中項目
 
-- Phase14 P0-01: 全体監査・正式計画確定
-- Public / Draft / Verification gateの強化設計
-- デモ公開に必要な最低verified contentの選定
+- P0-06 Vercel Preview接続方法の解消
+- P0-07 Preview smokeはP0-06待ち
+- Vercel外部ブロック中でも進められるP1統合作業を継続する
 
 ## 未着手 / 後続項目
 
-- Vercel Preview Project接続
-- Preview runtime smoke test
+- Character → Sequence UI統合
+- Strategy Source/Patch表示統合
+- Player/Video統合仕上げ
+- Character Recommendation verified Trait pipeline
+- AI Coach Evidence不足時挙動の強化
 - 実Admin/Auth E2E
 - 個別SEO / sitemap / robots / OGP
 - Performance計測
+- 31キャラ全データの完全verified化
 - AI Coach Generation
 - Replay Coach実装
-- 31キャラ全データの完全verified化
 
 ## 次の作業
 
-1. `docs/PHASE14_IMPLEMENTATION_PLAN.md` を確定
-2. P0-02 Public Verification Gate Hardeningを実装
-3. Supabase RLS / Unified Search / Public UIで `published + verified` を強制
-4. Move detailへFrame / Command / Source / Patchを統合するP0設計へ進む
-5. CI/buildを再実行し、公開漏洩回帰を確認
+1. Vercel Project作成手段は外部ブロッカーとして保持し、勝手にProduction deployしない
+2. **P1-01 Character → Sequence統合** を開始
+3. P1-02 Strategy Source/Patch/Verification表示へ進む
+4. Preview先が用意でき次第P0-06/P0-07へ戻る
 
 ## 更新ルール
 
