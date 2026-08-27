@@ -77,7 +77,7 @@ seedを2回実行し、Modern行1件・当該Modern Source relation 1件・全�
 
 ## 次回の検証順
 
-1. ダルシムの重複Move Entityは、Frame・Source・参照コードへの影響を調査してから整理方針を決める。
+1. ダルシムの重複Move Entityは影響調査済み。canonical移行・archiveを行う場合は、Move総数とcoverageが変わるため事前確認する。
 2. 残る公式Modern一覧非掲載26件は、実機確認なしに補完しない。
 3. 公式Source relationなしの残件は、現行一次情報または実機確認が可能な小単位だけ継続する。
 

@@ -1,6 +1,6 @@
 # SF6DNA Phase14 Implementation Plan
 
-最終更新: 2026-08-28 07:45 JST
+最終更新: 2026-08-28 07:47 JST
 
 ## Phase14正式名称
 
@@ -285,7 +285,7 @@ P0〜P2の19タスクを完了、またはユーザー確認のうえPhase15以�
 
 ## 次の実装順
 
-1. P2-01 ダルシム「ロングスライディング」の重複Move Entity影響調査（DB変更なし）
+1. P2-01 ダルシム重複Entityのcanonical移行・archive判断（実行前確認が必要）
 2. P0-06 Vercel Preview Project / Deployment（Project利用可能後）
 3. P2-04 Preview複数viewport・keyboard最終確認
 4. P0-07 Preview Runtime / Demo Gate Smoke

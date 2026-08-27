@@ -1,6 +1,6 @@
 # SF6DNA Project Completion Dashboard
 
-最終更新: 2026-08-28 07:45 JST
+最終更新: 2026-08-28 07:47 JST
 
 ## 現在Phase
 
@@ -296,6 +296,7 @@ Phase14完成率の母数外。
 - P2-01: 公式Source relationあり41件をCAPCOM公式Modern一覧と照合
 - ディージェイ「フライングパーティー」`M>M`だけを追加し、公式Movelist Source relationを付与
 - Modern 1,442 / 2,065、未登録623。draft / reviewを維持し、推測補完なし
+- ダルシム「ロングスライディング」重複2 Entityをread-only監査。Frame/Classic/Source一致、参照0を確認し、削除・archive・Command複製は未実施
 - P2-02: Public Release Gate 13要件を18 Policy testsへ拡張
 - 失敗していたAI Coach readinessテストを現行実装へ整合
 - CI依存導入を`npm ci`へ固定し、lockfileを追加
@@ -318,6 +319,6 @@ Phase14完成率の母数外。
 
 # 次の作業
 
-1. ダルシム「ロングスライディング」の重複Move Entityを、Frame・Source・参照コードへの影響込みで調査
+1. ダルシム重複Entityのcanonical移行・archiveを行うかユーザー判断（実行時はMove総数とcoverageを再計算）
 2. 公式Modern一覧非掲載の残件は実機確認なしに補完せず、確認可能な小単位だけ継続
 3. Vercel Project利用可能後、P2-04 / P0-06 / P0-07 / P1-06 / P2-03を再開
