@@ -23,6 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/diagnosis">診断</Link>
               <Link href="/characters">キャラクター</Link>
               <Link href="/players">プレイヤー</Link>
+              <Link href="/videos">動画</Link>
               <Link href="/training">トレーニング</Link>
               <Link href="/coach">AIコーチ</Link>
             </nav>
