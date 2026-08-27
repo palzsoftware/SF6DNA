@@ -14,6 +14,7 @@ export async function listKnowledge(category: KnowledgeCategory): Promise<Knowle
       .from("combos")
       .select("id, slug, name, purpose, difficulty, characters(name_ja)")
       .eq("status", "published")
+      .eq("verification_status", "verified")
       .limit(100);
     if (error) return logAndEmpty(category, error.message);
     return (data ?? []).map((row) => mapItem(row, "name", "purpose", "difficulty"));
@@ -24,6 +25,7 @@ export async function listKnowledge(category: KnowledgeCategory): Promise<Knowle
       .from("setups")
       .select("id, slug, name, description, characters(name_ja)")
       .eq("status", "published")
+      .eq("verification_status", "verified")
       .limit(100);
     if (error) return logAndEmpty(category, error.message);
     return (data ?? []).map((row) => mapItem(row, "name", "description"));
@@ -34,6 +36,7 @@ export async function listKnowledge(category: KnowledgeCategory): Promise<Knowle
       .from("sequences")
       .select("id, slug, name, sequence_text, characters(name_ja)")
       .eq("status", "published")
+      .eq("verification_status", "verified")
       .limit(100);
     if (error) return logAndEmpty(category, error.message);
     return (data ?? []).map((row) => mapItem(row, "name", "sequence_text"));
@@ -44,6 +47,7 @@ export async function listKnowledge(category: KnowledgeCategory): Promise<Knowle
       .from("counters")
       .select("id, slug, title, summary, difficulty")
       .eq("status", "published")
+      .eq("verification_status", "verified")
       .limit(100);
     if (error) return logAndEmpty(category, error.message);
     return (data ?? []).map((row) => mapItem(row, "title", "summary", "difficulty", false));
@@ -53,6 +57,7 @@ export async function listKnowledge(category: KnowledgeCategory): Promise<Knowle
     .from("trainings")
     .select("id, slug, name, purpose")
     .eq("status", "published")
+    .eq("verification_status", "verified")
     .limit(100);
   if (error) return logAndEmpty(category, error.message);
   return (data ?? []).map((row) => mapItem(row, "name", "purpose", undefined, false));
