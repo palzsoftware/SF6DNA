@@ -40,6 +40,7 @@ export async function getComboBySlug(slug: string): Promise<SimpleDetail | null>
     .select("id, slug, name, notation, starter_text, damage, drive_cost, sa_cost, position, difficulty, purpose, conditions, notes, characters(name_ja)")
     .eq("slug", slug)
     .eq("status", "published")
+    .eq("verification_status", "verified")
     .maybeSingle();
   if (error || !data) return null;
   const c = data.characters as unknown as { name_ja?: string } | null;
@@ -60,6 +61,7 @@ export async function getSetupBySlug(slug: string): Promise<SimpleDetail | null>
     .select("id, slug, name, setup_type, starter_condition, sequence_text, frame_advantage, position, meter_condition, description, counter_notes, characters(name_ja)")
     .eq("slug", slug)
     .eq("status", "published")
+    .eq("verification_status", "verified")
     .maybeSingle();
   if (error || !data) return null;
   const c = data.characters as unknown as { name_ja?: string } | null;
@@ -77,6 +79,7 @@ export async function getSequenceBySlug(slug: string): Promise<SimpleDetail | nu
     .select("id, slug, name, sequence_type, sequence_text, is_true_blockstring, mash_point, throw_point, shimmy_point, jump_option, parry_option, drive_reversal_option, invincible_option, notes, characters(name_ja)")
     .eq("slug", slug)
     .eq("status", "published")
+    .eq("verification_status", "verified")
     .maybeSingle();
   if (error || !data) return null;
   const c = data.characters as unknown as { name_ja?: string } | null;
@@ -107,6 +110,7 @@ export async function getCounterBySlug(slug: string): Promise<SimpleDetail | nul
     .select("id, slug, title, summary, method, benefit, risk, difficulty, conditions, situation")
     .eq("slug", slug)
     .eq("status", "published")
+    .eq("verification_status", "verified")
     .maybeSingle();
   if (error || !data) return null;
   return {
@@ -123,6 +127,7 @@ export async function getTrainingBySlug(slug: string): Promise<SimpleDetail | nu
     .select("id, slug, name, training_type, purpose, level, duration_minutes, recording_instructions, playback_settings, cpu_settings, method, success_criteria, recommended_reps, next_step")
     .eq("slug", slug)
     .eq("status", "published")
+    .eq("verification_status", "verified")
     .maybeSingle();
   if (error || !data) return null;
   return {
