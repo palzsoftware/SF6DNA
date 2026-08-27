@@ -6,6 +6,7 @@ const tabs: Array<{ key: CharacterSectionKey; label: string; path: string }> = [
   { key: "moves", label: "技・フレーム", path: "/moves" },
   { key: "combos", label: "コンボ", path: "/combos" },
   { key: "setups", label: "セットプレイ", path: "/setups" },
+  { key: "sequences", label: "連携", path: "/sequences" },
   { key: "matchups", label: "対策", path: "/matchups" },
   { key: "training", label: "トレモ", path: "/training" },
   { key: "players", label: "プレイヤー", path: "/players" },
