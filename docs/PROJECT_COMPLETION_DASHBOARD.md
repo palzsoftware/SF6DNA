@@ -1,6 +1,6 @@
 # SF6DNA Project Completion Dashboard
 
-最終更新: 2026-08-28 07:39 JST
+最終更新: 2026-08-28 07:45 JST
 
 ## 現在Phase
 
@@ -131,12 +131,12 @@ Preview上の最終回帰確認は未完。
 
 最新のコード変更を含むcommit:
 
-`a4beef16a5609c0bb2007ea0ea7f78fbef6ba8c5`
+`8334ea0e5243009867cf006bd8e3837f70712830`
 
-GitHub Actions run `33118205585`:
+GitHub Actions run `33123665692`:
 - Typecheck: **success**
 - Lint: **success**
-- Policy tests: **24 / 24 success**
+- Policy tests: **25 / 25 success**
 - Build: **success**
 - check: **success**
 
@@ -191,8 +191,8 @@ GitHub Actions run `33118205585`:
 | 43 | SEO | 検証待ち | metadata/OGP/Twitter/robots/sitemap実装、実Preview URL確認待ち |
 | 44 | Performance | 検証待ち | Preview計測未実施 |
 | 45 | Security | 部分完成 | RLS/Admin guard基盤あり、Auth/Admin E2E残り |
-| 46 | Testing | 部分完成 | Public Gate/Recommendation/Coach/Search/Sitemap/Data Quality/Static Accessibilityを24 testsで自動化。Auth E2Eは残り |
-| 47 | CI | 完成 | 最新コードcommit `a4beef1...`、Actions run `33118205585` check success |
+| 46 | Testing | 部分完成 | Public Gate/Recommendation/Coach/Search/Sitemap/Data Quality/Static Accessibilityを25 testsで自動化。Auth E2Eは残り |
+| 47 | CI | 完成 | 最新コードcommit `8334ea0...`、Actions run `33123665692` check success |
 | 48 | Deployment | 未実装 | v2 Preview未成立 |
 | 49 | Vercel | ブロック中 | 接続TeamにProject 0件 |
 | 50 | Demo Release Readiness | ブロック中 | 公開主要攻略データ不足 + Preview未成立 |
@@ -292,7 +292,7 @@ Phase14完成率の母数外。
 # 今回完了したこと
 
 - P2-04 Static Review: skip navigation、main landmark、global error / 404、外部リンク保護、画像寸法、長文折返し、table overflowを改善
-- Static Accessibility回帰テスト5件を追加し、全Tests **24 / 24 success**
+- Static Accessibility回帰テスト5件を含む全Tests **25 / 25 success**
 - P2-01: 公式Source relationあり41件をCAPCOM公式Modern一覧と照合
 - ディージェイ「フライングパーティー」`M>M`だけを追加し、公式Movelist Source relationを付与
 - Modern 1,442 / 2,065、未登録623。draft / reviewを維持し、推測補完なし
@@ -302,7 +302,7 @@ Phase14完成率の母数外。
 - P2-05: `phase14_public_readiness.sql`を追加し実DBでread-only実行成功
 - Move/Strategy/Trait/Player/Video、31キャラ別coverage、Release Readyを自動集計
 - Responsive / Accessibility Static Reviewとして進捗bar、状態通知、タップ領域、長文折返しを改善
-- 最新コードHEAD `a4beef1...` でTypecheck/Lint/24 Policy tests/Build成功
+- 最新コードHEAD `8334ea0...` でTypecheck/Lint/25 Policy tests/Build成功
 - Strategy詳細へPatch / Verification / Sourceを共通統合
 - Character → SequenceのCI不整合修正を含む統合確定
 - Player Source表示
