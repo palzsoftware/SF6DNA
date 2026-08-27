@@ -34,23 +34,11 @@ Applied to Supabase:
 
 ### Modern command pass
 
-Modern JP command references were re-checked against the Modern JP normal / unique / special / SA guide pages and the current 2026-08-03 baseline.
-
 - Modern Command rows: `0 -> 54`.
-- Registered directly documented Modern controls for accessible normals, assist normals, jump normals, unique attacks, target combos, Triglav variants, Stribog variants where available, Departure variants, Amnesia, Torbalan, Embrace, SA1/SA2/SA3/CA, throws and Tornado.
-- For Triglav, preserved both shortcut direction and manual input context where documented.
-- The following five JP Move rows intentionally have no Modern command row because they are not directly available in the Modern move set rather than being unknown commands:
-  - standing LK
-  - crouching MP
-  - crouching HK
-  - medium Stribog
-  - heavy Stribog
-- These five are not filled with invented commands merely to reach 59/59.
-- Added the Modern JP guide as a community corroborating Source; it does not promote verification state.
+- Five Move rows intentionally have no Modern command because they are not directly available in the Modern move set: standing LK, crouching MP, crouching HK, medium Stribog, heavy Stribog.
+- No invented command was added merely to reach 59/59.
 
 ### Combo / Setup relation pass
-
-Existing prose notation was normalized toward structured references without inventing ambiguous strengths.
 
 - Combo Move links: `0 -> 24` in the first structured pass.
 - Setup Move links: `0 -> 15`.
@@ -60,26 +48,40 @@ Existing prose notation was normalized toward structured references without inve
 
 ### Training pass
 
-- Added explicit CPU configuration text to all 16 JP Training rows (`CPU OFF; dummy record/playback`).
-- Added 27 `training_relations` Move links for anti-air, punish, Amnesia, Departure, SA, Stribog, Torbalan, Triglav and combo-confirm drills.
+- Added explicit CPU configuration text to all 16 JP Training rows.
+- Added 27 `training_relations` Move links.
 - Training remains `unverified` until actual in-game reproduction is recorded.
 
 ### Guide Section pass
 
 Guide Sections: `0 -> 8`.
 
-Added reviewed/draft sections for:
+Added reviewed/draft sections for overview, beginner, intermediate, advanced, MR1700+, defense, resource management and training progression.
 
-1. overview / neutral plan
-2. beginner priorities
-3. intermediate priorities
-4. advanced priorities
-5. MR1700+ decision standards
-6. defense / reversal selection
-7. Drive / SA resource management
-8. training progression
+### Target-combo re-audit correction
 
-Each Guide Section is linked to both the JP 2026-08-03 official patch baseline and a current frame-data corroborating source. Strategy text remains `draft / reviewed`, not `verified`.
+The earlier audit described Grom Strelka / Zilant / Zilant Mid / Zilant Low as a row-granularity problem. Re-checking the current frame-data representation showed that the target-combo entries themselves are intentionally represented as one row with per-hit arrays (for example `8,10` or `12,20,21`). Therefore:
+
+- Do **not** split Grom Strelka / Zilant / Zilant Mid / Zilant Low into separate Move records by hit.
+- Existing one-row target-combo storage is compatible with the 59-row canonical count.
+- Added missing `active` arrays for the four target-combo Frame rows.
+- Filled 3F landing recovery on all six jump normals from the current corroborating frame reference.
+- Verification remains `reviewed`; this is not an official-primary-source promotion.
+
+### Trait source correction
+
+A data-quality defect was found in all 12 JP Trait Score rows: their direct `source_id` pointed to `JP tournament player snapshot`, which is a player/tournament database and not an appropriate basis for playstyle scoring.
+
+Applied correction:
+
+- Repointed all 12 Trait Score direct sources to the current JP strategy/guide source.
+- Added a second independent JP neutral-game analysis source (`JP立ち回り考察`, 2026-03-05) as corroborating evidence.
+- Added 24 direct `entity_sources` links across the 12 Trait Score rows (two source links each).
+- Trait values remain subjective `reviewed / draft`, not `verified`.
+
+### Existing matchup-card reuse audit
+
+The File Library contains the previously completed `30秒カード一覧.html` and final audit artifacts for all 31 playable characters. These cards already include opponent win condition, distance plan, anti-air, JP-facing plan and cautions, with 2026-08-03 sources. They are explicitly marked as training-unverified for numeric punish / combo / setup details. They may be migrated into matchup-specific Counter records only as candidate strategy data; numeric certainty must not be inferred from them.
 
 ## Current known counts after this pass
 
@@ -96,32 +98,30 @@ Each Guide Section is linked to both the JP 2026-08-03 official patch baseline a
 | Setup | 6 |
 | Setup Move links | 15 |
 | Sequence | 6 |
-| Counter | 6 |
+| Counter | 6 generic JP-system counters |
 | Training | 16 |
 | Training Move relations | 27 |
 | Guide Section | 8 |
 | Trait Score | 12 |
+| Trait Source links | 24 |
 | JP-linked Players | 3 |
+| JP-linked Videos | 1 |
 | Frame Source links | 59 |
 | Frame reviewed | 57 |
 | Frame unverified | 2 |
 | Frame verified | 0 |
 
-## Notes on Tornado
-
-The air throw was re-checked after a temporary concern during audit. Multiple independent current/reference sources confirm JP has an air throw named Tornado. The DB currently stores only sourced values; unsupported fields remain NULL until an official primary source or in-game verification is available.
-
 ## Remaining JP work before moving to the next character
 
-1. Finish target-combo row granularity cleanup for Grom Strelka / Zilant / Zilant Mid / Zilant Low.
-2. Official/primary-source verification of Frame rows where possible.
-3. Combo audit: fill damage only where current-patch reproduction/source is sufficient; finish structured component links.
-4. Setup audit: resolve the three NULL advantage rows only when reproducible.
-5. Sequence audit and conversion from generic prose to reproducible situations.
-6. Counter audit including opponent character and target move; expand toward all-matchup coverage without fabricated entries.
-7. Training audit: add matchup-specific dummy characters and reproduction evidence where appropriate.
-8. Trait source diversification and verification review.
-9. Player / Video / Source / Patch final consistency audit.
-10. Final JP completion gate.
+1. Official/primary-source verification of Frame rows where possible.
+2. Combo audit: fill damage only where current-patch reproduction/source is sufficient; finish structured component links.
+3. Setup audit: resolve the three NULL advantage rows only when reproducible.
+4. Sequence audit: exact gap / defense-option reproduction where possible.
+5. Counter audit: migrate the existing 30 opponent cards into opponent-specific candidate records, then separately add exact target-move punish/counter data only when sourced or reproduced.
+6. Training audit: add matchup-specific dummy characters to the opponent-specific drills as they are migrated.
+7. Player / Video / Source / Patch final consistency audit and add current high-level reference videos where materially useful.
+8. Final JP completion gate.
+
+The JP completion gate must not claim that training-mode-only facts are complete when this environment cannot reproduce them. Such data remains `unverified` / `needs retest` rather than fabricated.
 
 Only after the JP completion gate passes should remediation proceed in the original post-JP addition order, beginning with Ryu and then the subsequent rollout order.
