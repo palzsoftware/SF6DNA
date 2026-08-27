@@ -48,6 +48,21 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ s
           {externalLinks.length ? <ul>{externalLinks.map(([label, href]) => <li key={label}><a href={href} target="_blank" rel="noreferrer">{label}</a></li>)}</ul> : <p>登録情報はまだありません。</p>}
         </article>
       </section>
+
+      <section className="info-panel">
+        <h2>Sources</h2>
+        {player.sources.length ? (
+          <ul>
+            {player.sources.map((source) => (
+              <li key={`${source.id}:${source.relationship}`}>
+                <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a>
+                {source.publisher ? ` / ${source.publisher}` : ""}
+                {` / ${source.sourceType} / ${source.relationship}`}
+              </li>
+            ))}
+          </ul>
+        ) : <p>公開済みの出典情報はまだありません。</p>}
+      </section>
     </div>
   );
 }
