@@ -47,7 +47,7 @@ export async function recommendCharacters(
 
   const { data: rows, error: scoreError } = await supabase
     .from("character_trait_scores")
-    .select("character_id, trait_id, score, characters!inner(id, slug, name_ja, image_url, status, is_playable)")
+    .select("id, character_id, trait_id, score, characters!inner(id, slug, name_ja, image_url, status, is_playable)")
     .eq("status", "published")
     .eq("verification_status", "verified")
     .in("trait_id", traitIds)
@@ -58,6 +58,21 @@ export async function recommendCharacters(
     if (scoreError) console.error("[recommendations] score lookup failed", scoreError.message);
     return [];
   }
+
+  const scoreIds = rows.map((row) => String(row.id));
+  const { data: sourceLinks, error: sourceError } = await supabase
+    .from("entity_sources")
+    .select("entity_id")
+    .eq("entity_type", "character_trait_score")
+    .in("entity_id", scoreIds);
+
+  if (sourceError) {
+    console.error("[recommendations] source lookup failed", sourceError.message);
+    return [];
+  }
+
+  const sourcedScoreIds = new Set((sourceLinks ?? []).map((row) => String(row.entity_id)));
+  if (!sourcedScoreIds.size) return [];
 
   const inputMap = new Map(activeEntries);
   const grouped = new Map<string, {
@@ -71,6 +86,8 @@ export async function recommendCharacters(
   }>();
 
   for (const row of rows) {
+    if (!sourcedScoreIds.has(String(row.id))) continue;
+
     const trait = traitById.get(String(row.trait_id));
     if (!trait) continue;
     const userWeight = inputMap.get(trait.key) ?? 0;
