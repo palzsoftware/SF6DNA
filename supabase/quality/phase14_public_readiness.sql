@@ -62,6 +62,15 @@ strategy_rollup as (
     coalesce((select source_count from source_links s where s.entity_type='training' and s.entity_id=trainings.id),0)
   from public.trainings
 ),
+strategy_character_links as (
+  select 'combo'::text entity_type, id entity_id, character_id from public.combos
+  union all select 'setup', id, character_id from public.setups
+  union all select 'sequence', id, character_id from public.sequences
+  union all select 'counter', id, defender_character_id from public.counters where defender_character_id is not null
+  union select 'counter', id, opponent_character_id from public.counters where opponent_character_id is not null
+  union all select 'training', id, player_character_id from public.trainings where player_character_id is not null
+  union select 'training', id, dummy_character_id from public.trainings where dummy_character_id is not null
+),
 strategy_summary as (
   select
     entity_type,
@@ -111,7 +120,8 @@ character_coverage as (
     )::integer release_ready_strategies
   from public.characters c
   left join move_rollup m on m.character_id=c.id
-  left join strategy_rollup s on s.character_id=c.id
+  left join strategy_character_links scl on scl.character_id=c.id
+  left join strategy_rollup s on s.entity_type=scl.entity_type and s.id=scl.entity_id
   where c.status='published' and c.is_playable=true
   group by c.id, c.slug, c.name_ja
 ),

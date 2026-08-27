@@ -57,4 +57,7 @@ test("31-character coverage includes every requested content category", () => {
     assert.match(coverage, new RegExp(`\\b${metric}\\b`), `missing character coverage: ${metric}`);
   }
   assert.match(coverage, /c\.status='published' and c\.is_playable=true/);
+  assert.match(sql, /strategy_character_links as/);
+  assert.match(sql, /defender_character_id[\s\S]*opponent_character_id/);
+  assert.match(sql, /player_character_id[\s\S]*dummy_character_id/);
 });
