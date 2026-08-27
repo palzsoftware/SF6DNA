@@ -48,12 +48,20 @@ export async function getPlayerBySlug(slug: string): Promise<PlayerDetail | null
     return null;
   }
 
-  const { data: links, error: linkError } = await supabase
-    .from("player_characters")
-    .select("character_id, role, characters!inner(slug, name_ja, status)")
-    .eq("player_id", player.id);
+  const [{ data: links, error: linkError }, { data: sourceLinks, error: sourceError }] = await Promise.all([
+    supabase
+      .from("player_characters")
+      .select("character_id, role, characters!inner(slug, name_ja, status)")
+      .eq("player_id", player.id),
+    supabase
+      .from("entity_sources")
+      .select("relationship, sources!inner(id, title, url, publisher, source_type)")
+      .eq("entity_type", "player")
+      .eq("entity_id", player.id),
+  ]);
 
   if (linkError) console.error("[players] character links failed", linkError.message);
+  if (sourceError) console.error("[players] source links failed", sourceError.message);
 
   return {
     ...toSummary(player),
@@ -72,6 +80,24 @@ export async function getPlayerBySlug(slug: string): Promise<PlayerDetail | null
         characterSlug: character.slug,
         characterName: character.name_ja,
         role: String(row.role ?? "main"),
+      }];
+    }),
+    sources: (sourceLinks ?? []).flatMap((row) => {
+      const source = row.sources as unknown as {
+        id?: string;
+        title?: string;
+        url?: string;
+        publisher?: string | null;
+        source_type?: string;
+      } | null;
+      if (!source?.id || !source.title || !source.url || !source.source_type) return [];
+      return [{
+        id: source.id,
+        title: source.title,
+        url: source.url,
+        publisher: source.publisher ?? null,
+        sourceType: source.source_type,
+        relationship: String(row.relationship ?? "supporting"),
       }];
     }),
   };
