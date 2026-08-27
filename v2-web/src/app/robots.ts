@@ -1,0 +1,21 @@
+import type { MetadataRoute } from "next";
+
+function getSiteUrl() {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
+  if (explicit) return explicit;
+  const vercelUrl = process.env.VERCEL_URL?.trim().replace(/\/$/, "");
+  return vercelUrl ? `https://${vercelUrl}` : null;
+}
+
+export default function robots(): MetadataRoute.Robots {
+  const siteUrl = getSiteUrl();
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/admin/", "/api/", "/login", "/signup"],
+    },
+    sitemap: siteUrl ? `${siteUrl}/sitemap.xml` : undefined,
+    host: siteUrl ?? undefined,
+  };
+}
