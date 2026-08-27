@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs",
+    "test:release-gates": "node --test tests/release-gates.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.7.0",
