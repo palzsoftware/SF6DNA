@@ -1,6 +1,6 @@
 # SF6DNA Phase14 Implementation Plan
 
-最終更新: 2026-08-27 22:38 JST
+最終更新: 2026-08-27 23:48 JST
 
 ## Phase14正式名称
 
@@ -206,13 +206,13 @@ P0〜P2の19タスクを完了、またはユーザー確認のうえPhase15以�
 - リスク: 旧Patch情報の誤転記
 
 ## P2-02 Automated Test Expansion
-- 状態: **次作業**
+- 状態: **完了**
 - 目的: Public Gate/Search/Recommendation/APIの回帰テストを自動化する。
 - 対象ファイル: `v2-web` test設定/テスト、CI
 - 対象DB: fixtureまたは安全なread-only test data
 - 依存関係: P0/P1仕様確定
 - 完了条件: 主要release gateをCIで自動検証
-- テスト方法: CI実行
+- テスト方法: 18 Policy tests、Typecheck、Lint、Build。commit `c3c232b...` のGitHub Actions success
 - リスク: 実DB依存テストの不安定化
 
 ## P2-03 Performance Measurement / Optimization
@@ -226,7 +226,7 @@ P0〜P2の19タスクを完了、またはユーザー確認のうえPhase15以�
 - リスク: 計測前の過剰最適化
 
 ## P2-04 Responsive / Accessibility Polish
-- 状態: **一部ブロック**
+- 状態: **進行中（Static Review前進、最終確認はブロック）**
 - 目的: スマホ/PC、キーボード、基本ARIAを改善する。
 - 対象ファイル: `globals.css`, components/pages
 - 対象DB: なし
@@ -236,13 +236,13 @@ P0〜P2の19タスクを完了、またはユーザー確認のうえPhase15以�
 - リスク: 見た目変更による導線破壊
 
 ## P2-05 Data Quality / Progress Automation
-- 状態: **未着手**
+- 状態: **完了**
 - 目的: verified/published/Source/Patch coverageを継続監査しやすくする。
 - 対象ファイル: Admin Data Quality、Dashboard更新手順、必要なread-only query
 - 対象DB: 全Content Entity
 - 依存関係: Release Gate確定
 - 完了条件: 主要coverageを一貫したread-only queryで再計算可能
-- テスト方法: Dashboard値と実DB再集計の一致
+- テスト方法: `supabase/quality/phase14_public_readiness.sql`を実DBでread-only実行。全体・31キャラ別・Release Ready集計成功、read-only自動テスト成功
 - リスク: スナップショット値を正本化すること
 
 ---
@@ -279,19 +279,17 @@ P0〜P2の19タスクを完了、またはユーザー確認のうえPhase15以�
 
 - P0: **5/7完了、残り2（Vercel依存）**
 - P1: **6/7完了、残り1（Preview依存）**
-- P2: **0/5完了、残り5**
-- Phase14必須: **11/19 = 57.9%**
+- P2: **2/5完了、残り3**
+- Phase14必須: **13/19 = 68.4%**
 - P3: Phase14母数外
 
 ## 次の実装順
 
-1. P2-02 Automated Test Expansion
-2. P2-05 Data Quality / Progress Automation
-3. P2-04 Responsive / Accessibility static review
-4. P2-01 Modern Command Coverage Improvement（一次情報/実機確認できる範囲のみ）
-5. P0-06 Vercel Preview Project / Deployment（Project利用可能後）
-6. P0-07 Preview Runtime / Demo Gate Smoke
-7. P1-06 Auth/Admin E2E
-8. P2-03 Performance Measurement / Optimization
+1. P2-04 Responsive / Accessibility static review継続
+2. P2-01 Modern Command不足状況整理（推測補完なし）
+3. P0-06 Vercel Preview Project / Deployment（Project利用可能後）
+4. P0-07 Preview Runtime / Demo Gate Smoke
+5. P1-06 Auth/Admin E2E
+6. P2-03 Performance Measurement / Optimization
 
 P0-06/P0-07/P1-06/P2-03の最終確認はVercel Project 0件のため現在ブロックしている。Claude Code待ちを理由にその他のPhase14作業は停止しない。

@@ -1,6 +1,6 @@
 # SF6DNA Project Completion Dashboard
 
-最終更新: 2026-08-27 22:40 JST
+最終更新: 2026-08-27 23:48 JST
 
 ## 現在Phase
 
@@ -31,7 +31,7 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
 - データ不足 = 0.25
 - 未実装 / ブロック中 = 0.00
 
-**27.75 / 50 = 55.5%**
+**28.25 / 50 = 56.5%**
 
 ## デモ版完成率
 
@@ -43,7 +43,7 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
 
 母数: `PHASE14_IMPLEMENTATION_PLAN.md` のP0〜P2、計19タスク。P3はPhase15以降へ送れるため除外。
 
-**11 / 19 = 57.9%**
+**13 / 19 = 68.4%**
 
 完了:
 - P0-01 全体監査・進捗基準・Phase14計画
@@ -57,6 +57,8 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
 - P1-04 Character Recommendation Verified Data Pipeline
 - P1-05 AI Coach Verified Evidence Policy
 - P1-07 SEO / Public Metadata Baseline
+- P2-02 Automated Test Expansion
+- P2-05 Data Quality / Progress Automation
 
 ## 本番版完成率
 
@@ -67,7 +69,7 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
 - 部分完成 = 0.25
 - データ不足 / 未実装 / ブロック中 = 0.00
 
-**18.25 / 50 = 36.5%**
+**19.00 / 50 = 38.0%**
 
 ---
 
@@ -76,6 +78,8 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
 - Playable Character: published **31** / non-playable draft **3**
 - Character Content Package: **31 / 31**
 - Move: **2,065件、全件draft、published 0**
+- Move Source付き: **1,347**
+- Release Ready Move: **0**
 - Current Frame: **2,065件**
   - verified **307**
   - reviewed **1,752**
@@ -95,6 +99,9 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
 - Video: published **5** / draft **8**
 - Character→Video relation: published Videoへのlink **5**、draft Videoを含むlink **30**
 - Video Source relation: **0**（Video自体のURLは保持）
+- Release Ready Strategy: **0**
+- Recommendation Ready Candidate: **0**
+- AI Coach Source Evidence Entity: **9,870**
 - Diagnosis: published **4**
 - Diagnosis Question: published **52**
 - Source: **328**（official 84 / primary 2 / secondary 137 / community 104 / internal_candidate 1）
@@ -122,13 +129,14 @@ Preview上の最終回帰確認は未完。
 
 最新のコード変更を含むcommit:
 
-`d356095ff18c7b1851e6ae8614f20fa4c25c656d`
+`c3c232ba2cbea89ca0dc0cb86c19e2e1120df038`
 
 GitHub Actions:
 - Typecheck: **success**
 - Lint: **success**
 - Build: **success**
 - check: **success**
+- Policy tests: **18 / 18 success**
 
 この後のPlan/Dashboard更新はdocs-only。
 
@@ -172,7 +180,7 @@ GitHub Actions:
 | 32 | Diagnosis | 完成 | 4 published / 52 questions |
 | 33 | Character Recommendation | データ不足 | Pipeline完成、公開Trait Score 0 |
 | 34 | Admin | 検証待ち | CRUD/relations/data-qualityあり、実Admin E2E残り |
-| 35 | Data Quality | 部分完成 | Dashboard/Source/Patch/Verification管理あり |
+| 35 | Data Quality | 完成 | read-only再集計SQLで全体・31キャラ別・Release Readyを同一条件集計 |
 | 36 | AI Coach Retrieval | 検証待ち | Source付きEvidence + Current Patch gate実装。Preview API確認待ち |
 | 37 | AI Coach Generation | 未実装 | 意図的に未有効化 |
 | 38 | Authentication | 検証待ち | Login/Session/Admin E2E残り |
@@ -183,15 +191,15 @@ GitHub Actions:
 | 43 | SEO | 検証待ち | metadata/OGP/Twitter/robots/sitemap実装、実Preview URL確認待ち |
 | 44 | Performance | 検証待ち | Preview計測未実施 |
 | 45 | Security | 部分完成 | RLS/Admin guard基盤あり、Auth/Admin E2E残り |
-| 46 | Testing | 部分完成 | CI static checksあり、自動Unit/E2E不足 |
-| 47 | CI | 完成 | 最新コードcommit `d356095...` check success |
+| 46 | Testing | 部分完成 | Public Gate/Recommendation/Coach/Search/Sitemap/Data Qualityを18 Policy testsで自動化。Auth E2Eは残り |
+| 47 | CI | 完成 | 最新コードcommit `c3c232b...` check success |
 | 48 | Deployment | 未実装 | v2 Preview未成立 |
 | 49 | Vercel | ブロック中 | 接続TeamにProject 0件 |
 | 50 | Demo Release Readiness | ブロック中 | 公開主要攻略データ不足 + Preview未成立 |
 
 状態内訳:
-- 完成: **8**
-- 部分完成: **17**
+- 完成: **9**
+- 部分完成: **16**
 - 検証待ち: **12**
 - データ不足: **9**
 - 未実装: **2**
@@ -247,13 +255,13 @@ GitHub Actions:
 
 ## P2
 
-計5件。完了0、残り**5**。
+計5件。完了2、残り**3**。
 
 - P2-01 Modern Command Coverage Improvement
-- P2-02 Automated Test Expansion — **次作業**
+- P2-02 Automated Test Expansion — **完了**
 - P2-03 Performance Measurement / Optimization — Preview依存
-- P2-04 Responsive / Accessibility Polish — static review可、最終確認Preview依存
-- P2-05 Data Quality / Progress Automation
+- P2-04 Responsive / Accessibility Polish — **Static Review前進、最終確認Preview依存**
+- P2-05 Data Quality / Progress Automation — **完了**
 
 ## P3
 
@@ -283,6 +291,13 @@ Phase14完成率の母数外。
 
 # 今回完了したこと
 
+- P2-02: Public Release Gate 13要件を18 Policy testsへ拡張
+- 失敗していたAI Coach readinessテストを現行実装へ整合
+- CI依存導入を`npm ci`へ固定し、lockfileを追加
+- P2-05: `phase14_public_readiness.sql`を追加し実DBでread-only実行成功
+- Move/Strategy/Trait/Player/Video、31キャラ別coverage、Release Readyを自動集計
+- Responsive / Accessibility Static Reviewとして進捗bar、状態通知、タップ領域、長文折返しを改善
+- 最新HEAD `c3c232b...` でTypecheck/Lint/Policy tests/Build成功
 - Strategy詳細へPatch / Verification / Sourceを共通統合
 - Character → SequenceのCI不整合修正を含む統合確定
 - Player Source表示
@@ -298,6 +313,6 @@ Phase14完成率の母数外。
 
 # 次の作業
 
-**P2-02 Automated Test Expansion**
-
-Public Gate、Search、Recommendation、Coach Retrievalの安全条件を、実DBへ破壊的変更を行わない自動テストへ固定する。その後P2-05 Data Quality / Progress Automationへ進む。
+1. P2-04 Responsive / Accessibility Static Reviewを継続し、Preview成立後にviewport・keyboard最終確認
+2. P2-01 Modern Commandのキャラ別不足状況をread-onlyで整理（一次情報・実機確認なしの補完は禁止）
+3. Vercel Project利用可能後、P0-06 / P0-07 / P1-06 / P2-03を再開
