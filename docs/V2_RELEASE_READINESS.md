@@ -86,3 +86,73 @@
 3. verified + published済み
 
 「実装済み」を「コンテンツ完成」と扱わない。
+
+---
+
+## Phase14 Safe Demo Release Gate — 2026-08-27
+
+Phase14では上記Gateをデモ公開判定へ具体化する。件数確保のための自動publishは行わない。
+
+### Public Strategy Gate
+
+Combo / Setup / Sequence / Counter / Training はPublic UI・Unified Search・AI Coach Retrievalの全経路で、最低限次を同時に満たすこと。
+
+1. `status = published`
+2. `verification_status = verified`
+3. Source relationが存在する
+4. Patch依存データは現行または明示した有効Patchを持つ
+5. `draft / reviewed / unverified` は確定攻略情報としてPublicへ出さない
+
+Phase14 P0-02でRLSと`search_sf6dna`へ `published + verified` を強制した。Web側もKnowledge list / Character section / Detailで同条件を明示する。
+
+### Public Move Gate
+
+Moveには独立した`verification_status`列がないため、Moveの`status=published`だけを品質判定に使わない。
+
+デモ公開候補Moveは最低限次を満たすこと。
+
+1. Characterがplayable + published
+2. Moveが公開候補としてレビュー済み
+3. Current Frameが存在する
+4. Current Frameが `verification_status = verified`
+5. Current Frameの`valid_from_patch_id`がCurrent Patchと一致する
+6. Classic Commandが存在する
+7. Frameにofficial Sourceが存在する
+8. Moveにofficial Sourceが存在する
+9. Modern Commandは存在する場合のみ表示し、欠損を推測補完しない
+
+2026-08-27の実DB監査では、この機械条件を満たすdraft Move候補は **307件 / 4キャラ**。
+
+- ジェイミー: 93
+- キンバリー: 76
+- ガイル: 70
+- 春麗: 68
+- 307件中Modern Commandあり: 295
+- Modern Commandなし: 12
+
+これは**公開承認件数ではない**。Move本体は全件draftのため、Phase14では候補抽出と表示基盤を先に整え、Source/名称/Command/Frameの最終公開チェックを通過したものだけを個別にpublish対象とする。
+
+### Strategy candidate snapshot
+
+2026-08-27時点で `verification_status=verified` のStrategyは、キンバリーのCombo 1件のみ確認済み。
+
+- `kimberly-20260803-modern-assist2`
+- `Modern アシストコンボ2（2026.08.03）`
+- Patch: `2026.08.03`
+- Source relation: 2
+- Status: `draft`
+
+Phase13クリーンアップ方針どおりdraftを維持し、Phase14の監査だけを理由にpublishへ戻さない。
+
+### Safe empty state
+
+条件を満たすPublicデータが0件の場合、画面は未検証データを代替表示せず「公開済みデータはまだありません」等のempty stateを表示する。
+
+### Release decision rule
+
+- 機械Gate通過 ≠ 自動publish
+- Sourceあり ≠ verified
+- reviewed ≠ verified
+- draft ≠ published
+- 検証できない値をデモ都合で埋めない
+- 本番公開はPhase14中に自動実行しない
