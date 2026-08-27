@@ -1,6 +1,6 @@
 # SF6DNA Project Completion Dashboard
 
-最終更新: 2026-08-28 06:29 JST
+最終更新: 2026-08-28 07:39 JST
 
 ## 現在Phase
 
@@ -85,8 +85,9 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
   - reviewed **1,752**
   - unverified **6**
 - Classic Command: **2,065**
-- Modern Command: **1,441**（Classic比69.8%）
-- Modern Command未登録: **624**（うち公式Move Source relationあり41、公式Source付きClassic Commandあり41。Modern入力の直接根拠は未確認）
+- Modern Command: **1,442**（Classic比69.8%）
+- Modern Command未登録: **623**（うち公式Move Source relationあり40、公式Source付きClassic Commandあり40）
+- 公式Source relationあり41件を公式Modern一覧と照合し、直接確認できたディージェイ「フライングパーティー」1件のみ追加。Moveはdraft、packageはreviewを維持
 - Move Alias: **3,552**
 - Combo: archived/unverified 40、draft/reviewed 76、draft/unverified 224、draft/verified 1
 - Setup: draft/reviewed 20、draft/unverified 166
@@ -154,7 +155,7 @@ GitHub Actions run `33118205585`:
 | 7 | Move | データ不足 | 2,065件あるが全件draft |
 | 8 | Frame | 検証待ち | verified 307 / reviewed 1,752 / unverified 6 |
 | 9 | Classic Command | 検証待ち | 2,065件、公開時official Source条件あり |
-| 10 | Modern Command | データ不足 | 1,441 / 2,065。未登録624件をキャラ別・Source別にread-only集計済み |
+| 10 | Modern Command | データ不足 | 1,442 / 2,065。公式Modern一覧照合で根拠確認できた1件のみ改善 |
 | 11 | Alias | 部分完成 | Move alias 3,552ほか構造あり |
 | 12 | Combo | データ不足 | published 0 |
 | 13 | Setup | データ不足 | published 0 |
@@ -256,7 +257,7 @@ GitHub Actions run `33118205585`:
 
 計5件。完了2、残り**3**。
 
-- P2-01 Modern Command Coverage Improvement — **不足状況整理完了、一次情報/実機検証待ち**
+- P2-01 Modern Command Coverage Improvement — **公式候補41件照合・1件改善、残りは一次情報/実機検証待ち**
 - P2-02 Automated Test Expansion — **完了**
 - P2-03 Performance Measurement / Optimization — Preview依存
 - P2-04 Responsive / Accessibility Polish — **Static Review完了、最終確認Preview依存**
@@ -292,8 +293,9 @@ Phase14完成率の母数外。
 
 - P2-04 Static Review: skip navigation、main landmark、global error / 404、外部リンク保護、画像寸法、長文折返し、table overflowを改善
 - Static Accessibility回帰テスト5件を追加し、全Tests **24 / 24 success**
-- P2-01: 実DBのModern不足624件を31キャラ別・Source relation別にread-only集計
-- Modern入力を推測せず、一次情報/実機確認候補として監査資料と再実行SQLを追加
+- P2-01: 公式Source relationあり41件をCAPCOM公式Modern一覧と照合
+- ディージェイ「フライングパーティー」`M>M`だけを追加し、公式Movelist Source relationを付与
+- Modern 1,442 / 2,065、未登録623。draft / reviewを維持し、推測補完なし
 - P2-02: Public Release Gate 13要件を18 Policy testsへ拡張
 - 失敗していたAI Coach readinessテストを現行実装へ整合
 - CI依存導入を`npm ci`へ固定し、lockfileを追加
@@ -316,6 +318,6 @@ Phase14完成率の母数外。
 
 # 次の作業
 
-1. Modern未登録のうち少数不足キャラと公式Source relationあり41件を、現行一次情報または実機で個別確認
-2. Vercel Project利用可能後、P2-04の複数viewport・keyboard最終確認を実施
-3. Vercel Project利用可能後、P0-06 / P0-07 / P1-06 / P2-03を再開
+1. ダルシム「ロングスライディング」の重複Move Entityを、Frame・Source・参照コードへの影響込みで調査
+2. 公式Modern一覧非掲載の残件は実機確認なしに補完せず、確認可能な小単位だけ継続
+3. Vercel Project利用可能後、P2-04 / P0-06 / P0-07 / P1-06 / P2-03を再開

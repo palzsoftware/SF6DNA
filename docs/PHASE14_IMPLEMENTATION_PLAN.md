@@ -1,6 +1,6 @@
 # SF6DNA Phase14 Implementation Plan
 
-最終更新: 2026-08-28 06:29 JST
+最終更新: 2026-08-28 07:39 JST
 
 ## Phase14正式名称
 
@@ -196,13 +196,13 @@ P0〜P2の19タスクを完了、またはユーザー確認のうえPhase15以�
 # P2 — 5件
 
 ## P2-01 Modern Command Coverage Improvement
-- 状態: **進行中（不足状況整理完了、一次情報/実機検証待ち）**
-- 目的: Modern 1,441/2,065の不足を検証可能な範囲で改善する。
+- 状態: **進行中（公式候補41件照合・1件改善、一次情報/実機検証継続）**
+- 目的: Modern 1,442/2,065の不足を検証可能な範囲で改善する。
 - 対象ファイル: ingest/admin/docs
 - 対象DB: `move_commands`, Source relation
 - 依存関係: 一次情報または実機確認
 - 完了条件: 推測補完0でcoverage向上
-- テスト方法: `phase14_modern_command_gaps.sql`を実DBでread-only実行。Modern 1,441/2,065、未登録624、公式Source relationあり候補41を確認
+- テスト方法: 公式Source relationあり41件をCAPCOM公式Modern一覧と照合。直接確認できたフライングパーティー`M>M`のみ追加後、Modern 1,442/2,065、未登録623、重複Modern 0、Move draft / package review維持を実DB確認
 - リスク: 旧Patch情報の誤転記
 
 ## P2-02 Automated Test Expansion
@@ -285,7 +285,7 @@ P0〜P2の19タスクを完了、またはユーザー確認のうえPhase15以�
 
 ## 次の実装順
 
-1. P2-01 Modern未登録の少数不足キャラと公式Source relationあり41件を一次情報/実機で個別確認（推測補完なし）
+1. P2-01 ダルシム「ロングスライディング」の重複Move Entity影響調査（DB変更なし）
 2. P0-06 Vercel Preview Project / Deployment（Project利用可能後）
 3. P2-04 Preview複数viewport・keyboard最終確認
 4. P0-07 Preview Runtime / Demo Gate Smoke

@@ -10,6 +10,10 @@ const modernSql = readFileSync(
   new URL("../../supabase/quality/phase14_modern_command_gaps.sql", import.meta.url),
   "utf8",
 );
+const flyingPartySeed = readFileSync(
+  new URL("../../supabase/seeds/20260828_phase14_deejay_flying_party_modern.sql", import.meta.url),
+  "utf8",
+);
 const executableSql = sql
   .replace(/--.*$/gm, "")
   .replace(/\/\*[\s\S]*?\*\//g, "");
@@ -73,4 +77,15 @@ test("Modern Command gap audit stays read-only and does not infer commands", () 
   assert.match(modernSql, /missing_modern_with_official_move_source/);
   assert.match(modernSql, /official_classic_command_sources/);
   assert.doesNotMatch(modernSql, /command_text\s*=|numeric_notation\s*=/i);
+});
+
+test("verified Flying Party Modern seed stays narrow, sourced, and idempotent", () => {
+  assert.match(flyingPartySeed, /m\.slug = 'dee-jay-capcom-frame-029'/);
+  assert.match(flyingPartySeed, /'中攻撃 > 中攻撃', 'M>M', 'M>M'/);
+  assert.match(flyingPartySeed, /character\/deejay\/movelist/);
+  assert.match(flyingPartySeed, /reliability_level = 'official'/);
+  assert.match(flyingPartySeed, /where not exists[\s\S]*control_scheme = 'modern'/);
+  assert.match(flyingPartySeed, /on conflict \(entity_type, entity_id, source_id\) do nothing/);
+  assert.doesNotMatch(flyingPartySeed, /update\s+public\.(moves|character_content_packages)/i);
+  assert.doesNotMatch(flyingPartySeed, /verification_status\s*=|status\s*=\s*'published'/i);
 });
