@@ -8,8 +8,7 @@ const characters = [
 const outDir = path.resolve('artifacts/phase20-official-frame-snapshots');
 await fs.mkdir(outDir, { recursive: true });
 
-const results = [];
-for (const [projectSlug, officialSlug] of characters) {
+async function fetchOne([projectSlug, officialSlug]) {
   const sourceUrl = `https://www.streetfighter.com/6/en-uk/character/${officialSlug}/frame`;
   const mirrorUrl = `https://r.jina.ai/http://${sourceUrl}`;
   let ok = false;
@@ -17,7 +16,10 @@ for (const [projectSlug, officialSlug] of characters) {
   let text = '';
   let error = null;
   try {
-    const response = await fetch(mirrorUrl, { headers: { 'User-Agent': 'SF6DNA-Phase20-Audit/1.0' } });
+    const response = await fetch(mirrorUrl, {
+      headers: { 'User-Agent': 'SF6DNA-Phase20-Audit/1.0' },
+      signal: AbortSignal.timeout(30000),
+    });
     status = response.status;
     text = await response.text();
     ok = response.ok && text.length > 1000 && /Frame|Normal Moves|Startup|Recovery/i.test(text);
@@ -25,15 +27,23 @@ for (const [projectSlug, officialSlug] of characters) {
   } catch (e) {
     error = String(e?.message ?? e);
   }
-  results.push({ projectSlug, officialSlug, sourceUrl, mirrorUrl, status, ok, bytes: text.length, error });
   console.log(`${projectSlug}: status=${status} ok=${ok} bytes=${text.length}${error ? ` error=${error}` : ''}`);
-  await new Promise(r => setTimeout(r, 350));
+  return { projectSlug, officialSlug, sourceUrl, mirrorUrl, status, ok, bytes: text.length, error };
 }
 
+const results = [];
+const batchSize = 6;
+for (let i = 0; i < characters.length; i += batchSize) {
+  const batch = characters.slice(i, i + batchSize);
+  results.push(...await Promise.all(batch.map(fetchOne)));
+  await new Promise(r => setTimeout(r, 700));
+}
+
+results.sort((a,b) => a.projectSlug.localeCompare(b.projectSlug));
 await fs.writeFile(path.join(outDir, 'manifest.json'), JSON.stringify({ fetchedAt: new Date().toISOString(), results }, null, 2), 'utf8');
 const failed = results.filter(r => !r.ok);
 console.log(`success=${results.length - failed.length}/${results.length}`);
 if (failed.length) {
-  console.log('failed:', failed.map(r => `${r.projectSlug}:${r.status}`).join(', '));
+  console.log('failed:', failed.map(r => `${r.projectSlug}:${r.status}:${r.error ?? ''}`).join(', '));
   process.exitCode = 1;
 }
