@@ -14,6 +14,10 @@ const flyingPartySeed = readFileSync(
   new URL("../../supabase/seeds/20260828_phase14_deejay_flying_party_modern.sql", import.meta.url),
   "utf8",
 );
+const dhalsimCanonicalSeed = readFileSync(
+  new URL("../../supabase/seeds/20260828_phase14_dhalsim_long_slide_canonicalization.sql", import.meta.url),
+  "utf8",
+);
 const executableSql = sql
   .replace(/--.*$/gm, "")
   .replace(/\/\*[\s\S]*?\*\//g, "");
@@ -68,6 +72,7 @@ test("31-character coverage includes every requested content category", () => {
   assert.match(sql, /strategy_character_links as/);
   assert.match(sql, /defender_character_id[\s\S]*opponent_character_id/);
   assert.match(sql, /player_character_id[\s\S]*dummy_character_id/);
+  assert.match(sql, /from public\.moves m\s+where m\.status <> 'archived'/);
 });
 
 test("Modern Command gap audit stays read-only and does not infer commands", () => {
@@ -88,4 +93,15 @@ test("verified Flying Party Modern seed stays narrow, sourced, and idempotent", 
   assert.match(flyingPartySeed, /on conflict \(entity_type, entity_id, source_id\) do nothing/);
   assert.doesNotMatch(flyingPartySeed, /update\s+public\.(moves|character_content_packages)/i);
   assert.doesNotMatch(flyingPartySeed, /verification_status\s*=|status\s*=\s*'published'/i);
+});
+
+test("Dhalsim duplicate consolidation is narrow, reversible, and preserves verification", () => {
+  assert.match(dhalsimCanonicalSeed, /dhalsim-crouching-hk/);
+  assert.match(dhalsimCanonicalSeed, /dhalsim-capcom-frame-031/);
+  assert.match(dhalsimCanonicalSeed, /numeric_notation = '3\+H'/);
+  assert.match(dhalsimCanonicalSeed, /reliability_level = 'official'/);
+  assert.match(dhalsimCanonicalSeed, /update public\.move_commands[\s\S]*set move_id = canonical_move_id/);
+  assert.match(dhalsimCanonicalSeed, /set status = 'archived'/);
+  assert.match(dhalsimCanonicalSeed, /on conflict \(move_id, normalized_alias\) do nothing/);
+  assert.doesNotMatch(dhalsimCanonicalSeed, /\bdelete\b|verification_status\s*=|status\s*=\s*'published'/i);
 });

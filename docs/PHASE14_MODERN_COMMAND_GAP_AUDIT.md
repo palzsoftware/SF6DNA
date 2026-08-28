@@ -12,12 +12,12 @@
 
 ## 実DB集計
 
-- Move: 2,065
-- Classic Commandあり: 2,065
-- Modern Commandあり: 1,442（69.8%）
-- Modern行なし: 623
-- Modern行なしのうち公式Move Sourceあり: 40
-- Modern行なしのうち公式Source付きClassic Commandあり: 40
+- Active Move: 2,064（重複1件archive）
+- Active Classic Commandあり: 2,064
+- Active Modern Commandあり: 1,442（69.9%）
+- Modern行なし: 622
+- Modern行なしのうち公式Move Sourceあり: 39
+- Modern行なしのうち公式Source付きClassic Commandあり: 39
 
 照合開始時に公式Source relationが存在した41件も、Source本文がModern入力を直接裏付けるとは限らない。自動昇格・自動補完の対象にはしない。
 
@@ -30,8 +30,8 @@
   - CAPCOM公式Movelist Source relationを付与。Moveは`draft`、packageは`review`のまま。
 - 同系統の別強度・OD・派生行にのみ対応する入力: **13件**
   - 公式一覧の総称入力を、利用できない強度別DB行へ複製しない。
-- 既存の別Move Entityに同一技・Modern入力がある重複候補: **1件**
-  - ダルシム「しゃがみ強K（ロングスライディング）」は、別Entity「ロングスライディング」に`3+H`が存在する。重複整理前は追加しない。
+- 既存の別Move Entityに同一技・Modern入力があった重複候補: **1件（整理完了）**
+  - ダルシム「ロングスライディング」の既存`3+H`を`dhalsim-crouching-hk`へ移し、別Entityは削除せずarchiveした。
 - 公式Modern一覧に対応技名がない: **26件**
 
 合計 **41件**。Source relationが公式Frameページであることだけでは、Modern入力の直接根拠にならないことを確認した。
@@ -59,7 +59,7 @@ seedを2回実行し、Modern行1件・当該Modern Source relation 1件・全�
 | ザンギエフ | 47 | 14 | 33 | 29.8% |
 | ジェイミー | 93 | 91 | 2 | 97.8% |
 | ジュリ | 46 | 43 | 3 | 93.5% |
-| ダルシム | 89 | 77 | 12 | 86.5% |
+| ダルシム | 88 | 77 | 11 | 87.5% |
 | ディージェイ | 105 | 102 | 3 | 97.1% |
 | テリー | 54 | 15 | 39 | 27.8% |
 | ブランカ | 91 | 83 | 8 | 91.2% |
@@ -77,8 +77,8 @@ seedを2回実行し、Modern行1件・当該Modern Source relation 1件・全�
 
 ## 次回の検証順
 
-1. ダルシムの重複Move Entityは影響調査済み。canonical移行・archiveを行う場合は、Move総数とcoverageが変わるため事前確認する。
+1. ダルシムの重複Move Entityはcanonical移行・archive・coverage再計算まで完了。
 2. 残る公式Modern一覧非掲載26件は、実機確認なしに補完しない。
 3. 公式Source relationなしの残件は、現行一次情報または実機確認が可能な小単位だけ継続する。
 
-P2-01は一次情報による1件のcoverage向上まで前進した。ただし未登録623件が残り、実機確認が必要な項目もあるため完了扱いにしない。
+P2-01は一次情報による1件のcoverage向上と重複Move整理まで前進した。ただし未登録622件が残り、実機確認が必要な項目もあるため完了扱いにしない。

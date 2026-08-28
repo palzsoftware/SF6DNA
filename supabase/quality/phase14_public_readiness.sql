@@ -35,6 +35,7 @@ move_rollup as (
     exists (select 1 from public.move_commands c where c.move_id = m.id and c.control_scheme = 'modern') as has_modern,
     coalesce((select source_count from source_links s where s.entity_type = 'move' and s.entity_id = m.id), 0) > 0 as has_source
   from public.moves m
+  where m.status <> 'archived'
 ),
 strategy_rollup as (
   select 'combo'::text entity_type, id, character_id, status, verification_status,

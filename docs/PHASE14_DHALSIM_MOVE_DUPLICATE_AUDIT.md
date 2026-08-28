@@ -33,13 +33,15 @@ Supabase正本 `SF6DNAPro` (`wnuxaxbrpudyypzdbdho`) にある以下の2 Move Ent
 - GitHub実コード・seed・docs内のID/Slug直接参照: 0
 - Command Sourceは各Commandへ公式Source relationあり
 
-## 判定
+## 判定と実施結果
 
-同じ実技を表す重複Entityである可能性が極めて高い。ただし、現時点では次の変更を行わない。
+同じ実技を表す重複Entityと判定し、2026-08-28に次の限定変更を実施した。
 
-- Entity削除
-- 自動archive
-- Modern Commandの複製
-- reviewed / draftの昇格
+- `dhalsim-crouching-hk`をcanonicalとして維持
+- 既存Modern Command `3+H`の同じIDをcanonical Moveへ付け替え
+- canonicalへ「ロングスライディング」Aliasを追加
+- `dhalsim-capcom-frame-031`を削除せず`archived`
+- 両Frame、Classic Command、Source relationは監査履歴として保持
+- reviewed / draftの昇格なし
 
-推奨する整理案は、`dhalsim-crouching-hk`をcanonical候補としてModern CommandとSource relationを移し、別Entityを削除せずarchiveする方法。ただしMove総数・coverage・検索結果が変わるため、実行前にユーザー確認と再計算が必要。
+実DB再計算後はActive Move 2,064、Modern 1,442、Modern未登録622。ダルシムはActive Move 88、Modern 77、未登録11。変更SQLは`supabase/seeds/20260828_phase14_dhalsim_long_slide_canonicalization.sql`へ記録し、再実行可能な条件検証付きとした。

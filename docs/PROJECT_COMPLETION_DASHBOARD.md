@@ -1,6 +1,6 @@
 # SF6DNA Project Completion Dashboard
 
-最終更新: 2026-08-28 07:47 JST
+最終更新: 2026-08-28 09:04 JST
 
 ## 現在Phase
 
@@ -77,18 +77,18 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
 
 - Playable Character: published **31** / non-playable draft **3**
 - Character Content Package: **31 / 31**
-- Move: **2,065件、全件draft、published 0**
-- Move Source付き: **1,347**
+- Active Move: **2,064件、全件draft、published 0**（archived 1）
+- Active Move Source付き: **1,346**
 - Release Ready Move: **0**
-- Current Frame: **2,065件**
+- Active Current Frame: **2,064件**
   - verified **307**
-  - reviewed **1,752**
+  - reviewed **1,751**
   - unverified **6**
-- Classic Command: **2,065**
-- Modern Command: **1,442**（Classic比69.8%）
-- Modern Command未登録: **623**（うち公式Move Source relationあり40、公式Source付きClassic Commandあり40）
+- Active Classic Command: **2,064**
+- Active Modern Command: **1,442**（Classic比69.9%）
+- Modern Command未登録: **622**（うち公式Move Source relationあり39、公式Source付きClassic Commandあり39）
 - 公式Source relationあり41件を公式Modern一覧と照合し、直接確認できたディージェイ「フライングパーティー」1件のみ追加。Moveはdraft、packageはreviewを維持
-- Move Alias: **3,552**
+- Active Move Alias: **3,553**
 - Combo: archived/unverified 40、draft/reviewed 76、draft/unverified 224、draft/verified 1
 - Setup: draft/reviewed 20、draft/unverified 166
 - Sequence: draft/reviewed 17、draft/unverified 169
@@ -103,11 +103,11 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
 - Video Source relation: **0**（Video自体のURLは保持）
 - Release Ready Strategy: **0**
 - Recommendation Ready Candidate: **0**
-- AI Coach Source Evidence Entity: **9,870**
+- AI Coach Source Evidence Entity: **9,871**
 - Diagnosis: published **4**
 - Diagnosis Question: published **52**
 - Source: **328**（official 84 / primary 2 / secondary 137 / community 104 / internal_candidate 1）
-- Entity Source relation: **16,716**
+- Entity Source relation: **16,717**
 - Current Patch: `2026.08.03`
 - public schema: **38 tables / RLS 38/38 enabled**
 - Vercel接続チーム: **Project 0件**
@@ -152,11 +152,11 @@ GitHub Actions run `33123665692`:
 | 4 | Supabase RLS | 完成 | 38/38有効、公開品質Gateあり |
 | 5 | Auth | 部分完成 | SSR/Auth UI基盤あり、E2E未完 |
 | 6 | Character | 完成 | 31 playable published、31/31 package |
-| 7 | Move | データ不足 | 2,065件あるが全件draft |
-| 8 | Frame | 検証待ち | verified 307 / reviewed 1,752 / unverified 6 |
-| 9 | Classic Command | 検証待ち | 2,065件、公開時official Source条件あり |
-| 10 | Modern Command | データ不足 | 1,442 / 2,065。公式Modern一覧照合で根拠確認できた1件のみ改善 |
-| 11 | Alias | 部分完成 | Move alias 3,552ほか構造あり |
+| 7 | Move | データ不足 | Active 2,064件あるが全件draft、重複1件archive済み |
+| 8 | Frame | 検証待ち | Active verified 307 / reviewed 1,751 / unverified 6 |
+| 9 | Classic Command | 検証待ち | Active 2,064件、公開時official Source条件あり |
+| 10 | Modern Command | データ不足 | 1,442 / 2,064。公式Modern一覧照合で根拠確認できた1件のみ改善 |
+| 11 | Alias | 部分完成 | Active Move alias 3,553ほか構造あり |
 | 12 | Combo | データ不足 | published 0 |
 | 13 | Setup | データ不足 | published 0 |
 | 14 | Sequence | データ不足 | published 0 |
@@ -165,7 +165,7 @@ GitHub Actions run `33123665692`:
 | 17 | Player | 部分完成 | published 41 / draft 50 |
 | 18 | Video | 部分完成 | published 5 / draft 8 |
 | 19 | Character Trait Score | データ不足 | 372 draft/reviewed、published+verified 0 |
-| 20 | Source | 部分完成 | 328 Source / 16,716 relation、Entity別coverage残り |
+| 20 | Source | 部分完成 | 328 Source / 16,717 relation、Entity別coverage残り |
 | 21 | Patch | 完成 | Current Patch 2026.08.03 |
 | 22 | Verification | 検証待ち | Phase13 carryoverあり |
 | 23 | Character UI | 部分完成 | list/detail/sections/Sequence導線あり、公開攻略データ不足 |
@@ -295,8 +295,9 @@ Phase14完成率の母数外。
 - Static Accessibility回帰テスト5件を含む全Tests **25 / 25 success**
 - P2-01: 公式Source relationあり41件をCAPCOM公式Modern一覧と照合
 - ディージェイ「フライングパーティー」`M>M`だけを追加し、公式Movelist Source relationを付与
-- Modern 1,442 / 2,065、未登録623。draft / reviewを維持し、推測補完なし
-- ダルシム「ロングスライディング」重複2 Entityをread-only監査。Frame/Classic/Source一致、参照0を確認し、削除・archive・Command複製は未実施
+- Modern 1,442 / Active Move 2,064、未登録622。draft / reviewを維持し、推測補完なし
+- ダルシム「ロングスライディング」は既存Modern `3+H`をcanonical Moveへ移し、検索Aliasを追加、重複Moveを削除せずarchive。Frame/Classic/Source履歴とreviewed状態を維持
+- archive済みMoveをMove/Frame/Command/AliasのActive品質集計から除外し、26 Policy testsで回帰確認
 - P2-02: Public Release Gate 13要件を18 Policy testsへ拡張
 - 失敗していたAI Coach readinessテストを現行実装へ整合
 - CI依存導入を`npm ci`へ固定し、lockfileを追加
@@ -319,6 +320,6 @@ Phase14完成率の母数外。
 
 # 次の作業
 
-1. ダルシム重複Entityのcanonical移行・archiveを行うかユーザー判断（実行時はMove総数とcoverageを再計算）
-2. 公式Modern一覧非掲載の残件は実機確認なしに補完せず、確認可能な小単位だけ継続
-3. Vercel Project利用可能後、P2-04 / P0-06 / P0-07 / P1-06 / P2-03を再開
+1. 公式Modern一覧非掲載の残件は実機確認なしに補完せず、確認可能な小単位だけ継続
+2. Vercel Project利用可能後、P0-06 Preview Deploymentを開始
+3. Preview成立後、P2-04 / P0-07 / P1-06 / P2-03を順に再開

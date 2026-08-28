@@ -4,16 +4,16 @@
 with metrics(metric, value) as (
   select 'characters_playable_published', count(*)::text from public.characters where status='published' and is_playable=true
   union all select 'characters_draft', count(*)::text from public.characters where status='draft'
-  union all select 'moves_total', count(*)::text from public.moves
+  union all select 'moves_total', count(*)::text from public.moves where status<>'archived'
   union all select 'moves_published', count(*)::text from public.moves where status='published'
   union all select 'moves_draft', count(*)::text from public.moves where status='draft'
-  union all select 'current_frames_total', count(*)::text from public.move_frame_data where valid_to_patch_id is null
-  union all select 'current_frames_verified', count(*)::text from public.move_frame_data where valid_to_patch_id is null and verification_status='verified'
-  union all select 'current_frames_reviewed', count(*)::text from public.move_frame_data where valid_to_patch_id is null and verification_status='reviewed'
-  union all select 'current_frames_unverified', count(*)::text from public.move_frame_data where valid_to_patch_id is null and verification_status='unverified'
-  union all select 'classic_command_moves', count(distinct move_id)::text from public.move_commands where control_scheme='classic'
-  union all select 'modern_command_moves', count(distinct move_id)::text from public.move_commands where control_scheme='modern'
-  union all select 'move_aliases', count(*)::text from public.move_aliases
+  union all select 'current_frames_total', count(*)::text from public.move_frame_data f join public.moves m on m.id=f.move_id where m.status<>'archived' and f.valid_to_patch_id is null
+  union all select 'current_frames_verified', count(*)::text from public.move_frame_data f join public.moves m on m.id=f.move_id where m.status<>'archived' and f.valid_to_patch_id is null and f.verification_status='verified'
+  union all select 'current_frames_reviewed', count(*)::text from public.move_frame_data f join public.moves m on m.id=f.move_id where m.status<>'archived' and f.valid_to_patch_id is null and f.verification_status='reviewed'
+  union all select 'current_frames_unverified', count(*)::text from public.move_frame_data f join public.moves m on m.id=f.move_id where m.status<>'archived' and f.valid_to_patch_id is null and f.verification_status='unverified'
+  union all select 'classic_command_moves', count(distinct c.move_id)::text from public.move_commands c join public.moves m on m.id=c.move_id where m.status<>'archived' and c.control_scheme='classic'
+  union all select 'modern_command_moves', count(distinct c.move_id)::text from public.move_commands c join public.moves m on m.id=c.move_id where m.status<>'archived' and c.control_scheme='modern'
+  union all select 'move_aliases', count(*)::text from public.move_aliases a join public.moves m on m.id=a.move_id where m.status<>'archived'
   union all select 'combos_total', count(*)::text from public.combos
   union all select 'combos_published_verified', count(*)::text from public.combos where status='published' and verification_status='verified'
   union all select 'setups_total', count(*)::text from public.setups
