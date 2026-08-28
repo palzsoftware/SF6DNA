@@ -10,6 +10,7 @@ on:
       - "scripts/phase20-match-same-name-groups.py"
       - "scripts/phase20-match-field-only.py"
       - "scripts/phase20-match-bilingual-names.py"
+      - "scripts/phase20-match-en-name-ja-values.py"
       - "scripts/phase20-fetch-official-frame-snapshots.mjs"
   workflow_dispatch:
 
@@ -58,6 +59,8 @@ jobs:
         run: python scripts/phase20-match-field-only.py
       - name: Match bilingual official move names
         run: python scripts/phase20-match-bilingual-names.py
+      - name: Pair English names with Japanese official values
+        run: python scripts/phase20-match-en-name-ja-values.py
       - name: Upload crosscheck evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -68,6 +71,7 @@ jobs:
             artifacts/phase20-same-name-groups
             artifacts/phase20-field-only
             artifacts/phase20-bilingual-names
+            artifacts/phase20-en-name-ja-values
             artifacts/phase20-official-frame-snapshots-ja-jp
             artifacts/phase20-official-frame-snapshots-en-uk
           retention-days: 7
