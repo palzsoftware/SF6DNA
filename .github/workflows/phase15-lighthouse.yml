@@ -1,0 +1,106 @@
+name: Phase15 Lighthouse Audit
+
+on:
+  push:
+    branches:
+      - sf6dna-v2
+    paths:
+      - "v2-web/**"
+      - ".github/workflows/phase15-lighthouse.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  NEXT_PUBLIC_SUPABASE_URL: https://wnuxaxbrpudyypzdbdho.supabase.co
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: sb_publishable_TCdyNFnbYzAGAN6Zlic0yA_YYPZfnTq
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: v2-web
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: v2-web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Start app
+        run: |
+          npm start -- -H 127.0.0.1 -p 3000 > /tmp/sf6dna-next.log 2>&1 &
+          echo $! > /tmp/sf6dna-next.pid
+          for i in {1..30}; do
+            if curl --silent --fail http://127.0.0.1:3000/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/sf6dna-next.log
+          exit 1
+
+      - name: Lighthouse mobile audit
+        run: |
+          npx --yes lighthouse http://127.0.0.1:3000/ \
+            --quiet \
+            --chrome-flags="--headless --no-sandbox" \
+            --output=json \
+            --output-path=/tmp/lighthouse-home.json
+          npx --yes lighthouse http://127.0.0.1:3000/characters/aki \
+            --quiet \
+            --chrome-flags="--headless --no-sandbox" \
+            --output=json \
+            --output-path=/tmp/lighthouse-character.json
+
+      - name: Evaluate Lighthouse evidence
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const files = [
+            ['home', '/tmp/lighthouse-home.json'],
+            ['character', '/tmp/lighthouse-character.json'],
+          ];
+          for (const [name, file] of files) {
+            const report = JSON.parse(fs.readFileSync(file, 'utf8'));
+            const c = report.categories;
+            const summary = {
+              performance: c.performance.score,
+              accessibility: c.accessibility.score,
+              bestPractices: c['best-practices'].score,
+              seo: c.seo.score,
+              fcpMs: report.audits['first-contentful-paint'].numericValue,
+              lcpMs: report.audits['largest-contentful-paint'].numericValue,
+              cls: report.audits['cumulative-layout-shift'].numericValue,
+              tbtMs: report.audits['total-blocking-time'].numericValue,
+            };
+            console.log(name, JSON.stringify(summary));
+            if (summary.accessibility < 0.9) throw new Error(`${name}: accessibility below 0.90`);
+            if (summary.bestPractices < 0.85) throw new Error(`${name}: best-practices below 0.85`);
+            if (summary.seo < 0.85) throw new Error(`${name}: SEO below 0.85`);
+          }
+          NODE
+
+      - name: Print server log on failure
+        if: failure()
+        run: cat /tmp/sf6dna-next.log || true
+
+      - name: Stop app
+        if: always()
+        run: |
+          if [ -f /tmp/sf6dna-next.pid ]; then
+            kill "$(cat /tmp/sf6dna-next.pid)" || true
+          fi
