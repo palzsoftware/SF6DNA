@@ -37,8 +37,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright Chromium
-        run: npx --yes playwright@1.55.0 install --with-deps chromium
+      - name: Install Playwright for CI only
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
 
       - name: Build
         run: npm run build
@@ -58,14 +60,14 @@ jobs:
 
       - name: Run browser acceptance
         run: |
-          cat > /tmp/phase15-browser.mjs <<'EOF'
+          cat > ./phase15-browser.mjs <<'EOF'
           import { chromium } from 'playwright';
           import assert from 'node:assert/strict';
 
           const browser = await chromium.launch({ headless: true });
           const base = 'http://127.0.0.1:3000';
 
-          // Mobile viewport: layout, horizontal overflow, touch-sized controls, search.
+          // Mobile viewport: layout and horizontal overflow.
           const mobile = await browser.newPage({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
           for (const path of ['/', '/characters', '/characters/aki', '/players', '/videos', '/search', '/diagnosis/character-fit-check', '/coach', '/auth']) {
             const response = await mobile.goto(base + path, { waitUntil: 'networkidle' });
@@ -74,6 +76,7 @@ jobs:
             assert.ok(overflow <= 1, `${path}: horizontal overflow ${overflow}px`);
           }
 
+          // Search interaction.
           await mobile.goto(base + '/search', { waitUntil: 'networkidle' });
           const searchInput = mobile.locator('input').first();
           await searchInput.fill('JP');
@@ -98,7 +101,7 @@ jobs:
           await mobile.waitForTimeout(500);
           assert.equal(await mobile.locator('.diagnosis-result').count(), 1, 'diagnosis result was not reached');
 
-          // Desktop keyboard-only smoke: skip link/focus visibility and reachable nav.
+          // Desktop keyboard-only smoke: skip link and visible focus.
           const desktop = await browser.newPage({ viewport: { width: 1440, height: 900 } });
           await desktop.goto(base + '/', { waitUntil: 'networkidle' });
           await desktop.keyboard.press('Tab');
@@ -111,14 +114,15 @@ jobs:
           assert.ok(active.text?.includes('本文'), 'skip link is not first focus target');
           assert.notEqual(active.outline, 'none', 'focused element has no visible outline');
 
-          // Auth return path safety: external-looking // path must not be retained in rendered destination behavior.
+          // Auth page remains usable with an external-looking next parameter; app sanitization is covered by static regression tests.
           await desktop.goto(base + '/auth?next=//example.com', { waitUntil: 'networkidle' });
           assert.equal(await desktop.locator('input[type=email]').count(), 1, 'auth form unavailable');
 
           await browser.close();
           console.log('Phase15 browser acceptance: PASS');
           EOF
-          npx --yes -p playwright@1.55.0 node /tmp/phase15-browser.mjs
+          node ./phase15-browser.mjs
+          rm ./phase15-browser.mjs
 
       - name: Print server log on failure
         if: failure()
