@@ -4,12 +4,13 @@
 
 ## SF6DNA v2 現在状態
 
-SF6DNA v2はPhase13、Phase14を完了し、Phase15のAcceptance回収を進めたうえで、2026-08-28のユーザー明示指示により**Phase16を開始**した。
+SF6DNA v2はPhase13、Phase14を完了し、Phase15のAcceptance回収を進めた後、Phase16 `Demo Release Candidate / Launch Preparation` を完了した。
 
-Phase15はVercel Preview / real Auth/Admin session / actual device / Public network performanceという外部依存項目を残しており、完了扱いにはしない。Phase16ではこれらを消去・推測完了せず、Demo Release Decisionの依存条件として保持する。
+現在のDemo Release Decisionは **CONDITIONAL GO**。
 
-Phase16正式名称:
-**Demo Release Candidate / Launch Preparation**
+現行 `sf6dna-v2` は、CI / Runtime / Browser / Lighthouse / Release Acceptance / Supabase Security監査を通過し、デモ版Release CandidateとしてPreviewへ進める状態にある。
+
+ただしPhase15のVercel Preview、real Auth/Admin E2E、actual device、Public network performance等の外部依存Acceptanceは未完了である。したがってProduction Release Readyとは判定しない。
 
 ## 正本
 
@@ -20,9 +21,11 @@ Phase16正式名称:
 - Project ID: `wnuxaxbrpudyypzdbdho`
 - Current Patch: `2026.08.03`
 - Phase14 Final Audit: `docs/PHASE14_FINAL_AUDIT_2026-08-28.md`
-- Phase15 Plan: `docs/PHASE15_IMPLEMENTATION_PLAN.md`
 - Phase15 Evidence: `docs/PHASE15_ACCEPTANCE_EVIDENCE_2026-08-28.md`
 - Phase16 Plan: `docs/PHASE16_IMPLEMENTATION_PLAN.md`
+- Phase16 Content Inventory: `docs/PHASE16_DEMO_CONTENT_INVENTORY_2026-08-28.md`
+- Phase16 Launch Runbook: `docs/PHASE16_DEMO_LAUNCH_RUNBOOK.md`
+- Phase16 Final Audit: `docs/PHASE16_RELEASE_CANDIDATE_AUDIT_2026-08-28.md`
 - Release Gate: `docs/V2_RELEASE_READINESS.md`
 - Phase15 PC Device Test: `docs/PHASE15_PC_DEVICE_TEST_CHECKLIST.md`
 
@@ -33,68 +36,88 @@ Phase16正式名称:
 | Phase1〜12 | 完了または各Phase定義どおり終了 |
 | Phase13 | **完了** |
 | Phase14 | **完了** |
-| Phase15 | **外部依存残件あり / Evidence回収継続** |
-| Phase16 | **進行中** |
+| Phase15 | **外部依存残件あり / Acceptance継続** |
+| Phase16 | **完了 / Conditional Go** |
+| Phase17 | **未開始** |
 
-## Phase15 carryover
+## Phase16完了状況
 
-未完了のままPhase16 Release Decisionへ持ち越す:
-1. Vercel Project / Preview URL成立
-2. Preview runtime/log確認
-3. Authenticated Admin/non-admin E2E + limited CRUD/cleanup
-4. Audit Log受け入れ先の要件確定
-5. ユーザーactual device/browser確認
-6. Public Preview/network Performance確認
+| Task | 状態 |
+|---|---|
+| P16-00 Release Candidate Baseline / Scope Freeze | 完了 |
+| P16-01 Demo Content Minimum Inventory | 完了 |
+| P16-02 SEO / Metadata / Crawlability Release Audit | 完了 |
+| P16-03 Public UX / Safe Empty / Error-State Audit | 完了 |
+| P16-04 Demo Launch Operations Package | 完了 |
+| P16-05 Demo Release Decision Package | 完了 / Conditional Go |
 
-Phase15で自動確認済み:
-- Runtime Smoke success
-- Auth return-path fix + CI success
-- unauthenticated Admin redirect runtime success
-- Lighthouse mobile: Top Performance 99 / Accessibility 100
-- Lighthouse mobile: Character Performance 98 / Accessibility 100
-- Chromium 390x844 major route overflow check success
-- Search interaction success
-- Character Fit Diagnosis completion success
-- Desktop Skip Link / visible focus success
-- Security Advisor lint 0
+## Phase16主要改善
 
-## Phase16
+- root metadataBaseをPreview/実URLに追従できる設計へ変更
+- OGP / Twitter metadata整備
+- Public page titleの二重 `| SF6DNA` を解消
+- Auth/Adminをnoindex/nofollow/noarchive
+- robotsを実routeへ整合
+- Public dynamic detail metadata追加
+- Search no-result / invalid slug / AI Coach invalid inputのruntime acceptance追加
+- Character Guide Public Gateを `published + verified` に強化
+- Character Guide GateをRLSとapp query双方で防御
 
-計画: `docs/PHASE16_IMPLEMENTATION_PLAN.md`
+## Demo Content Inventory
 
-### P16-00 Release Candidate Baseline / Scope Freeze
-状態: **進行中**
-
-### P16-01 Demo Content Minimum Inventory
-状態: **未完了**
-
-### P16-02 SEO / Metadata / Crawlability Release Audit
-状態: **未完了**
-
-### P16-03 Public UX / Safe Empty / Error-State Audit
-状態: **未完了**
-
-### P16-04 Demo Launch Operations Package
-状態: **未完了**
-
-### P16-05 Demo Release Decision Package
-状態: **未完了**
-
-## Supabase実DB baseline
-
-Phase15開始時点までのRead-only監査:
-- public base tables: 38
-- RLS: 38 / 38 enabled
+Public/release-gated:
 - playable + published Character: 31
 - published Move: 0
 - verified Frame: 307
+- published + verified Combo/Setup/Sequence/Counter/Training: 0
+- published Player: 41
+- published Video: 5
 - published Diagnosis: 4
 - published Diagnosis Question: 52
-- Current Patch: `2026.08.03`
-- Security Advisor: lint 0
-- Performance Advisor: `unused_index` INFO / `multiple_permissive_policies` WARN
+- published + verified Character Trait Score: 0
 
-Phase16 P16-01で最新のDemo Content Inventoryを再取得する。
+Working:
+- Move: 2065
+- Classic Command: 2065
+- Modern Command: 1443 / 2065（約69.9%、missing 622）
+- Combo: 341
+- Setup: 186
+- Sequence: 186
+- Counter: 1122
+- Training: 1477
+- Player: 91
+- Video: 13
+- Trait Score: 372
+
+候補件数を理由にstatus/verificationを昇格していない。
+
+## Latest automated evidence
+
+- SF6DNA v2 Web Check `33142510906`: **success**
+  - Typecheck success
+  - Lint success
+  - Policy tests success
+  - Build success
+- Phase16 Release Acceptance `33142510995`: **success**
+- Phase15 Runtime Smoke `33142510966`: **success**
+- Phase15 Browser Acceptance `33142511001`: **success**
+- Phase15 Lighthouse `33142510926`: **success**
+- Supabase Security Advisor: **0 lints**
+
+## Phase15 carryover / Production blockers
+
+未完了:
+1. Vercel Project / Preview URL成立
+2. Preview runtime/log確認
+3. authenticated Admin/non-admin E2E + limited CRUD/cleanup
+4. Audit Log acceptance requirementの受け入れ先確定
+5. user actual PC/device/browser確認
+6. Public Preview/network Performance確認
+
+Vercel最終確認:
+- Connected Team Project: **0**
+- Preview deployment: **none**
+- Production deployment: **none**
 
 ## Public Data Policy
 
@@ -106,7 +129,7 @@ Phase16 P16-01で最新のDemo Content Inventoryを再取得する。
 - Modern Commandを推測補完しない
 - SourceなしFrame値を確定しない
 - Release件数目的で自動publishしない
-- Strategy Public Gateは`published + verified`
+- Strategy / Character Guide Public Gateは`published + verified`
 - Recommendationは`published + verified + Source`付きTrait Scoreのみ
 - AI CoachはSource付きEvidence + Current Patchを要求
 - AI Coach GenerationはOFF
@@ -123,5 +146,9 @@ Phase16 P16-01で最新のDemo Content Inventoryを再取得する。
 - Evidence不足でのAI Coach Generation有効化
 - Auth全面再設計
 - Audit機能の勝手な新設
-- Phase16での未承認新機能追加
 - ユーザー指示なしのPhase17移行
+
+## 次の状態
+
+Phase16は完了した。
+Phase17はユーザーの明示指示を受けるまで開始しない。
