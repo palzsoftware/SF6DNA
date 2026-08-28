@@ -59,7 +59,11 @@ jobs:
           node --input-type=module <<'NODE'
           import assert from 'node:assert/strict';
           const base = 'http://127.0.0.1:3000';
-          const routes = ['/', '/search', '/characters', '/characters/aki', '/players', '/players/blaz', '/diagnosis/character-fit-check', '/auth', '/admin'];
+          const routes = [
+            '/', '/search', '/characters', '/characters/aki', '/players', '/players/blaz',
+            '/videos', '/videos/jp-ray-20260318-combo-oki', '/diagnosis', '/diagnosis/character-fit-check',
+            '/coach', '/training', '/combos', '/counters', '/setups', '/sequences', '/auth', '/admin'
+          ];
           for (const path of routes) {
             const response = await fetch(base + path, { redirect: 'manual' });
             assert.equal(response.status, 200, `${path}: HTTP ${response.status}`);
@@ -84,7 +88,7 @@ jobs:
           node --input-type=module <<'NODE'
           import assert from 'node:assert/strict';
           const base = 'http://127.0.0.1:3000';
-          for (const path of ['/characters/__phase16_missing__', '/players/__phase16_missing__', '/diagnosis/__phase16_missing__', '/moves/__phase16_missing__']) {
+          for (const path of ['/characters/__phase16_missing__', '/players/__phase16_missing__', '/diagnosis/__phase16_missing__', '/moves/__phase16_missing__', '/videos/__phase16_missing__']) {
             const response = await fetch(base + path, { redirect: 'manual' });
             assert.equal(response.status, 404, `${path}: expected 404, got ${response.status}`);
           }
