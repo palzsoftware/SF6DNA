@@ -13,6 +13,9 @@ on:
 jobs:
   crosscheck:
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
     env:
       SUPABASE_URL: https://wnuxaxbrpudyypzdbdho.supabase.co
       SUPABASE_PUBLISHABLE_KEY: sb_publishable_TCdyNFnbYzAGAN6Zlic0yA_YYPZfnTq
@@ -21,14 +24,29 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Fetch CAPCOM Japanese frame snapshots
+      - name: Reuse Phase20 official snapshots
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p artifacts /tmp/phase20-reuse
+          gh run download 33156234153 -n phase20-frame-crosscheck-v2 -D /tmp/phase20-reuse || true
+          for d in phase20-official-frame-snapshots-ja-jp phase20-official-frame-snapshots-en-uk; do
+            if [ -d "/tmp/phase20-reuse/$d" ]; then cp -R "/tmp/phase20-reuse/$d" "artifacts/$d"; fi
+          done
+      - name: Fetch CAPCOM Japanese frame snapshots if needed
         env:
           FRAME_LOCALE: ja-jp
-        run: node scripts/phase20-fetch-official-frame-snapshots.mjs
-      - name: Fetch CAPCOM English frame snapshots
+        run: |
+          if [ ! -f artifacts/phase20-official-frame-snapshots-ja-jp/manifest.json ]; then
+            node scripts/phase20-fetch-official-frame-snapshots.mjs
+          fi
+      - name: Fetch CAPCOM English frame snapshots if needed
         env:
           FRAME_LOCALE: en-uk
-        run: node scripts/phase20-fetch-official-frame-snapshots.mjs
+        run: |
+          if [ ! -f artifacts/phase20-official-frame-snapshots-en-uk/manifest.json ]; then
+            node scripts/phase20-fetch-official-frame-snapshots.mjs
+          fi
       - name: Crosscheck DB fingerprints against CAPCOM current data
         run: python scripts/phase20-crosscheck-official-frames-v2.py
       - name: Upload crosscheck evidence
