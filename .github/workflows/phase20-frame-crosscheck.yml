@@ -5,22 +5,30 @@ on:
     branches: [sf6dna-v2]
     paths:
       - ".github/workflows/phase20-frame-crosscheck.yml"
-      - "scripts/phase20-frame-crosscheck.mjs"
+      - "scripts/phase20-crosscheck-official-frames.py"
+      - "scripts/phase20-fetch-official-frame-snapshots.mjs"
   workflow_dispatch:
 
 jobs:
   crosscheck:
     runs-on: ubuntu-latest
     env:
-      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+      SUPABASE_URL: https://wnuxaxbrpudyypzdbdho.supabase.co
+      SUPABASE_PUBLISHABLE_KEY: sb_publishable_TCdyNFnbYzAGAN6Zlic0yA_YYPZfnTq
+      FRAME_LOCALE: ja-jp
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Check secure DB access availability without exposing values
-        run: |
-          node -e "const names=['SUPABASE_URL','SUPABASE_SERVICE_ROLE_KEY','NEXT_PUBLIC_SUPABASE_URL','NEXT_PUBLIC_SUPABASE_ANON_KEY']; for (const n of names) console.log(n+':'+(process.env[n]?'set':'unset'))"
+      - name: Fetch CAPCOM Japanese frame snapshots
+        run: node scripts/phase20-fetch-official-frame-snapshots.mjs
+      - name: Crosscheck DB fingerprints against CAPCOM current data
+        run: python scripts/phase20-crosscheck-official-frames.py
+      - name: Upload crosscheck evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase20-frame-crosscheck
+          path: artifacts/phase20-frame-crosscheck
+          retention-days: 7
