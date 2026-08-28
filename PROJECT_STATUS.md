@@ -13,6 +13,8 @@ Phase17正式名称:
 
 Phase17では、Phase16までに完成したDemo Release Candidateを実Preview環境・実認証・実ブラウザで検証し、Production公開可否をEvidenceベースで判定する。
 
+現在Phase17は、Vercel connectorのDeploy入力スキーマ不整合により **BLOCKED / 未完了**。アプリコード由来のDeploy failureではない。
+
 ## 正本
 
 - Repository: `palzsoftware/SF6DNA`
@@ -25,6 +27,7 @@ Phase17では、Phase16までに完成したDemo Release Candidateを実Preview�
 - Phase15 Evidence: `docs/PHASE15_ACCEPTANCE_EVIDENCE_2026-08-28.md`
 - Phase16 Final Audit: `docs/PHASE16_RELEASE_CANDIDATE_AUDIT_2026-08-28.md`
 - Phase17 Plan: `docs/PHASE17_IMPLEMENTATION_PLAN.md`
+- Phase17 Evidence: `docs/PHASE17_ACCEPTANCE_EVIDENCE_2026-08-28.md`
 - Release Gate: `docs/V2_RELEASE_READINESS.md`
 
 ## v2 Phase管理
@@ -36,20 +39,32 @@ Phase17では、Phase16までに完成したDemo Release Candidateを実Preview�
 | Phase14 | **完了** |
 | Phase15 | **外部依存残件あり / Phase17で回収** |
 | Phase16 | **完了 / Conditional Go** |
-| Phase17 | **進行中** |
+| Phase17 | **BLOCKED / 未完了** |
 
 ## Phase17 Backlog
 
 | Task | 状態 |
 |---|---|
-| P17-00 Phase17 Baseline / Scope Freeze | 進行中 |
-| P17-01 Vercel Preview Environment | 未完了 |
-| P17-02 Preview Runtime Acceptance | 未完了 |
+| P17-00 Phase17 Baseline / Scope Freeze | **完了** |
+| P17-01 Vercel Preview Environment | **BLOCKED** |
+| P17-02 Preview Runtime Acceptance | P17-01待ち |
 | P17-03 Real Auth / Admin E2E | 未完了 |
 | P17-04 Real Device / Browser Acceptance | 未完了 |
-| P17-05 Preview Performance / Runtime Logs | 未完了 |
-| P17-06 Production Readiness Final Audit | 未完了 |
+| P17-05 Preview Performance / Runtime Logs | P17-01待ち |
+| P17-06 Production Readiness Final Audit | 未判定 |
 | P17-07 Phase17 Closure / Handoff | 未完了 |
+
+## Phase17 blocker evidence
+
+2026-08-28 JST:
+- Vercel Connected Team Project: **0**
+- Preview deployment: **none**
+- Production deployment: **none**
+- 接続済み `deploy_to_vercel` 実行時、内部では `target / name / files` を必須要求するが、公開呼び出しスキーマは引数0個であり値を渡せない。
+- `target=production` の推測実行はしていない。
+- 誤Deployは発生していない。
+
+詳細: `docs/PHASE17_ACCEPTANCE_EVIDENCE_2026-08-28.md`
 
 ## Phase16 latest automated evidence
 
@@ -60,7 +75,7 @@ Phase17では、Phase16までに完成したDemo Release Candidateを実Preview�
 - Phase15 Lighthouse `33142510926`: **success**
 - Supabase Security Advisor: **0 lints**
 
-## Phase17開始時 Production blockers
+## Production blockers
 
 1. Vercel Project / Preview URL成立
 2. Preview runtime/log確認
@@ -68,11 +83,6 @@ Phase17では、Phase16までに完成したDemo Release Candidateを実Preview�
 4. Audit Log acceptance requirementの扱い確定
 5. user actual PC/device/browser確認
 6. Public Preview/network Performance確認
-
-開始時Vercel状態:
-- Connected Team Project: **0**
-- Preview deployment: **none**
-- Production deployment: **none**
 
 ## Demo Content Inventory
 
