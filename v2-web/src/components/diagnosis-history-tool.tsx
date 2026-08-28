@@ -9,8 +9,11 @@ export function DiagnosisHistoryTool() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setRecords(getDiagnosisHistory());
-    setReady(true);
+    const frame = window.requestAnimationFrame(() => {
+      setRecords(getDiagnosisHistory());
+      setReady(true);
+    });
+    return () => window.cancelAnimationFrame(frame);
   }, []);
 
   function remove(id: string) {
