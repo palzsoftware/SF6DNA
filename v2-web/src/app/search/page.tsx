@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { searchAcrossContent } from "@/lib/search";
 
-export const metadata = { title: "検索 | SF6DNA" };
+export const metadata = { title: "検索" };
 
 const TYPE_LABELS: Record<string, string> = {
   character: "キャラクター",
