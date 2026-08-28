@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "マイ機能",
-  description: "お気に入り、マイキャラ、キャラクター比較、ランク記録をまとめた個人向けツールです。",
+  description: "お気に入り、マイキャラ、キャラクター比較、ランク記録、診断履歴をまとめた個人向けツールです。",
 };
 
 const tools = [
@@ -10,6 +10,7 @@ const tools = [
   { href: "/my-characters", title: "マイキャラ", body: "メイン・サブ・練習中の使用状況を管理します。" },
   { href: "/compare", title: "キャラクター比較", body: "公開済み基本情報を2キャラ並べて比較します。" },
   { href: "/rank-tracker", title: "ランク記録", body: "キャラクター別にMR/LPとメモを記録します。" },
+  { href: "/diagnosis/history", title: "診断履歴", body: "完了した診断の上位傾向を最大50件まで確認できます。" },
 ];
 
 export default function ToolsPage() {
