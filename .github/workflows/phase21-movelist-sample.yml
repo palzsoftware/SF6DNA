@@ -1,0 +1,23 @@
+name: Phase21 Movelist Sample
+
+on:
+  push:
+    branches: [sf6dna-v2]
+    paths:
+      - ".github/workflows/phase21-movelist-sample.yml"
+  workflow_dispatch:
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    env:
+      MOVELIST_LOCALE: ja-jp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch A.K.I. movelist only
+        run: node scripts/phase21-fetch-official-movelist-snapshots.mjs aki
+      - name: Print snapshot
+        run: cat artifacts/phase21-official-movelist-snapshots-ja-jp/aki.md
