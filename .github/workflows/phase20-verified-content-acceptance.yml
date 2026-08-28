@@ -7,6 +7,7 @@ on:
       - "v2-web/**"
       - "scripts/phase20-promote-direct-official-frames.sql"
       - "docs/PHASE20_*"
+      - "supabase/migrations/20260828_phase20_remove_temporary_audit_rpc.sql"
       - ".github/workflows/phase20-verified-content-acceptance.yml"
   workflow_dispatch:
 
@@ -50,6 +51,7 @@ jobs:
           const sql = fs.readFileSync('scripts/phase20-promote-direct-official-frames.sql', 'utf8');
           const report = fs.readFileSync('docs/PHASE20_VERIFIED_CONTENT_COVERAGE_REPORT_2026-08-28.md', 'utf8');
           const moveGate = fs.readFileSync('v2-web/src/lib/public-move-gate.ts', 'utf8');
+          const rpcCleanup = fs.readFileSync('supabase/migrations/20260828_phase20_remove_temporary_audit_rpc.sql', 'utf8');
 
           for (const required of [
             "mf.verification_status = 'reviewed'",
@@ -63,9 +65,11 @@ jobs:
 
           assert.ok(!sql.includes("status = 'published'"), 'Phase20 frame verification must not auto-publish content');
           assert.ok(report.includes('reviewed ≠ verified'), 'Phase20 report must preserve verification rule');
-          assert.ok(report.includes('verified after Phase20: **808 / 2065'), 'Phase20 report must record final frame coverage');
+          assert.ok(report.includes('verified: **2020 / 2052 (98.4%)**'), 'Phase20 report must record final active frame coverage');
+          assert.ok(report.includes('reviewed exception: **32**'), 'Phase20 report must record the non-CAPCOM-comparable exception set');
           assert.ok(moveGate.includes('.eq("verification_status", "verified")'), 'Public Move Gate must still require verified frame data');
           assert.ok(moveGate.includes('entity_sources'), 'Public Move Gate must still require evidence');
+          assert.ok(rpcCleanup.includes('drop function if exists public._phase20_frame_audit_fingerprints()'), 'Temporary Phase20 audit RPC must be removed');
 
           console.log('Phase20 verification policy static acceptance: PASS');
           NODE
