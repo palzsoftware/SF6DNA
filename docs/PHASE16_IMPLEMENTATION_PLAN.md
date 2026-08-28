@@ -2,7 +2,7 @@
 
 最終更新: 2026-08-28 JST
 
-状態: **進行中**
+状態: **完了**
 
 ## Phase16名称
 
@@ -25,6 +25,7 @@ Phase15の未完了項目（Vercel Preview、real Auth/Admin E2E、actual device
 - Current Patch: `2026.08.03`
 - Release Gate: `docs/V2_RELEASE_READINESS.md`
 - Phase15 Evidence: `docs/PHASE15_ACCEPTANCE_EVIDENCE_2026-08-28.md`
+- Phase16 Final Audit: `docs/PHASE16_RELEASE_CANDIDATE_AUDIT_2026-08-28.md`
 
 ## 絶対ルール
 
@@ -46,94 +47,82 @@ Phase15の未完了項目（Vercel Preview、real Auth/Admin E2E、actual device
 
 ## P16-00 Release Candidate Baseline / Scope Freeze
 
-目的:
-- Phase16開始時点のGitHub / CI / Supabase / Phase15残件を固定する。
-- デモ版に含める既存機能と含めない機能を明確にする。
+状態: **完了**
 
-完了条件:
-- Phase16 baseline文書化
-- Phase15 carryoverを未完了のまま明示
-- Production未公開を確認
+- GitHub / CI / Supabase / Phase15 carryoverを固定。
+- Demo Release Candidateの対象とNon-goalを明確化。
+- Production未公開を確認。
 
 ## P16-01 Demo Content Minimum Inventory
 
-目的:
-- デモ版で実際にPublic表示可能なコンテンツ量を機械的に把握する。
+状態: **完了**
 
-確認対象:
-- Character
-- Move / Frame / Command
-- Combo / Setup / Sequence / Counter / Training
-- Player / Video
-- Diagnosis
-- Character Trait Score / Recommendation
-
-ルール:
-- candidateとpublish承認を区別する。
-- 件数確保のための自動publishはしない。
-- verified / Source / Current Patch条件を維持する。
+- Supabase実DBをread-only集計。
+- `docs/PHASE16_DEMO_CONTENT_INVENTORY_2026-08-28.md` を作成。
+- candidateとpublish承認を分離。
+- 自動publish/verifyなし。
 
 ## P16-02 SEO / Metadata / Crawlability Release Audit
 
-確認対象:
-- root metadata
-- title / description
-- canonical / metadataBase
-- robots
-- sitemap
-- OGP / Twitter metadata
-- Dynamic detail metadata
-- noindex対象のAdmin/Auth
-- broken metadata URLやProduction domain hard-codeの有無
+状態: **完了**
 
-安全に修正可能な既存実装上の欠陥だけ修正する。
+- metadataBase / OGP / Twitter metadata整備。
+- title templateによる二重ブランドを解消。
+- Auth/Admin noindex。
+- robotsの実route整合。
+- Public dynamic detail metadata追加。
+- Phase16 Release Acceptanceでruntime確認済み。
 
 ## P16-03 Public UX / Safe Empty / Error-State Audit
 
-確認対象:
-- Public list/detail
-- 0件時表示
-- 不正slug/404
-- Supabase/API失敗時fallback
-- draft/reviewed/unverified leakage
-- Search 0件
-- Diagnosisデータ不足
-- AI Coach Evidence不足
+状態: **完了**
 
-新しいコンテンツや機能を作らず、既存仕様の安全性をRelease Candidateとして確認する。
+- invalid slug 404、Search safe empty、AI Coach入力制約をruntime確認。
+- Character Guide Public Gateの漏れを発見し、RLSとapp双方を`published + verified`へ修正。
+- Security Advisor 0 lintsを維持。
 
 ## P16-04 Demo Launch Operations Package
 
-目的:
-- Vercel Preview成立後、ユーザーが少ない操作でデモ公開判定できる手順を作る。
+状態: **完了**
 
-含める:
-- Root Directory `v2-web`
-- 必要な公開環境変数一覧
-- Preview verification checklist
-- Production deploy前チェック
-- rollback / stop conditions
-- main merge禁止状態の明示
-
-Production deploymentそのものはPhase16で自動実行しない。
+- `docs/PHASE16_DEMO_LAUNCH_RUNBOOK.md` 作成。
+- Root Directory、env vars、Preview確認、Production前Gate、stop/rollback条件を固定。
+- Production deployment自体は未実施。
 
 ## P16-05 Demo Release Decision Package
 
-目的:
-- Release Ready / Conditional Go / No-GoをEvidenceで判定する。
+状態: **完了**
 
-判定に必須:
-- Phase16 P16-00〜04完了
-- Phase15残件の結果
-- Public Gate維持
-- Security重大blocker 0
-- Release blocking UX/runtime error 0
+判定: **CONDITIONAL GO**
 
-Phase15外部依存が未解消の場合、Phase16の自動作業は完了してもDemo Release DecisionをPASSにしない。
+- Release CandidateとしてPreviewへ進める品質Evidenceは成立。
+- ただしPhase15外部依存Acceptanceが未完了のためProduction Release Readyとは判定しない。
+
+残る外部依存:
+1. Vercel Project / Preview URL成立
+2. Preview runtime/log確認
+3. authenticated Admin/non-admin real session E2E + limited CRUD/cleanup
+4. Audit Log acceptance requirementの受け入れ先確定
+5. user actual PC/device/browser確認
+6. Public Preview/network Performance計測
 
 ---
 
-# Phase16 Non-goals
+# Phase16 Final Evidence
+
+- SF6DNA v2 Web Check `33142510906`: success
+- Phase16 Release Acceptance `33142510995`: success
+- Phase15 Runtime Smoke `33142510966`: success
+- Phase15 Browser Acceptance `33142511001`: success
+- Phase15 Lighthouse `33142510926`: success
+- Supabase Security Advisor: 0 lints
+- Vercel Project: 0
+- Preview: none
+- Production: none
+
+---
+
+# Phase16 Non-goals / 未実施
 
 - 新診断タイプ
 - Replay Coach本実装
@@ -144,5 +133,12 @@ Phase15外部依存が未解消の場合、Phase16の自動作業は完了して
 - 大量自動publish / verify
 - main merge
 - Production deploy
+- Phase17開始
 
-必要性を発見した場合は、実装せず提案/Release blockerとして記録する。
+## 完了判定
+
+P16-00〜P16-05をすべて完了。
+
+**Phase16完了。Demo Release DecisionはConditional Go。**
+
+Phase17へはユーザーの明示指示を受けるまで進まない。
