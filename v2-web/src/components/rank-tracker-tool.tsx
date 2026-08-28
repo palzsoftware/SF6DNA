@@ -16,7 +16,10 @@ export function RankTrackerTool({ characters }: { characters: CharacterSummary[]
   const [value, setValue] = useState("");
   const [note, setNote] = useState("");
 
-  useEffect(() => setRecords(getRankHistory()), []);
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => setRecords(getRankHistory()));
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
 
   const selected = characters.find((character) => character.slug === characterSlug) ?? null;
   const filtered = useMemo(
