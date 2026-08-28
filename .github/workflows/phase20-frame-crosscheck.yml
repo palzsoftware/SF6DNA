@@ -1,0 +1,26 @@
+name: Phase20 Frame Crosscheck
+
+on:
+  push:
+    branches: [sf6dna-v2]
+    paths:
+      - ".github/workflows/phase20-frame-crosscheck.yml"
+      - "scripts/phase20-frame-crosscheck.mjs"
+  workflow_dispatch:
+
+jobs:
+  crosscheck:
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check secure DB access availability without exposing values
+        run: |
+          node -e "const names=['SUPABASE_URL','SUPABASE_SERVICE_ROLE_KEY','NEXT_PUBLIC_SUPABASE_URL','NEXT_PUBLIC_SUPABASE_ANON_KEY']; for (const n of names) console.log(n+':'+(process.env[n]?'set':'unset'))"
