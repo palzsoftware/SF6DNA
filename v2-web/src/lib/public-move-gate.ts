@@ -8,9 +8,9 @@ function configured() {
  * Public Move Gate.
  *
  * moves has no verification_status of its own, so status=published is not enough.
- * A public move must have a Classic command, a verified frame for the current patch,
- * and Source relations for both the move and that frame. Modern Command is optional
- * and must never be inferred when absent.
+ * A public move must have a Classic command with official evidence, a verified frame
+ * for the current patch with official evidence, and an official Source relation for
+ * the move itself. Modern Command is optional and must never be inferred when absent.
  */
 export async function isMovePublicReady(slug: string): Promise<boolean> {
   if (!configured()) return false;
@@ -26,9 +26,10 @@ export async function isMovePublicReady(slug: string): Promise<boolean> {
   const [{ data: classic }, { data: frame }, { data: moveSources }] = await Promise.all([
     supabase
       .from("move_commands")
-      .select("id")
+      .select("id, entity_sources!inner(sources!inner(reliability_level))")
       .eq("move_id", move.id)
       .eq("control_scheme", "classic")
+      .eq("entity_sources.sources.reliability_level", "official")
       .limit(1),
     supabase
       .from("move_frame_data")
@@ -41,9 +42,10 @@ export async function isMovePublicReady(slug: string): Promise<boolean> {
       .maybeSingle(),
     supabase
       .from("entity_sources")
-      .select("id")
+      .select("id, sources!inner(reliability_level)")
       .eq("entity_type", "move")
       .eq("entity_id", move.id)
+      .eq("sources.reliability_level", "official")
       .limit(1),
   ]);
 
@@ -51,9 +53,10 @@ export async function isMovePublicReady(slug: string): Promise<boolean> {
 
   const { data: frameSources } = await supabase
     .from("entity_sources")
-    .select("id")
+    .select("id, sources!inner(reliability_level)")
     .in("entity_type", ["frame", "move_frame_data"])
     .eq("entity_id", frame.id)
+    .eq("sources.reliability_level", "official")
     .limit(1);
 
   return Boolean(frameSources?.length);
