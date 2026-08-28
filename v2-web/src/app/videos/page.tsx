@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { listVideos } from "@/lib/event-media";
 
-export const metadata = { title: "動画 | SF6DNA" };
+export const metadata = { title: "動画" };
 
 export default async function VideosPage() {
   const videos = await listVideos();
