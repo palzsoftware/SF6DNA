@@ -1,4 +1,5 @@
 import { getSupabaseServerClient } from "@/lib/supabase/server";
+import { isMovePublicReady } from "@/lib/public-move-gate";
 import type { SearchEntityType, SearchResultItem } from "@/types/search";
 
 function isConfigured() {
@@ -66,8 +67,7 @@ export async function searchAcrossContent(rawQuery: string): Promise<SearchResul
   }
 
   const rows = (data ?? []) as SearchRpcRow[];
-
-  return rows.flatMap((row): SearchResultItem[] => {
+  const mapped = rows.flatMap((row): SearchResultItem[] => {
     const rawType = row.entity_type ?? "";
     if (!SEARCH_ENTITY_TYPES.has(rawType as SearchEntityType)) return [];
 
@@ -93,4 +93,12 @@ export async function searchAcrossContent(rawQuery: string): Promise<SearchResul
       matchedBy,
     }];
   });
+
+  // moves has no verification_status column. Do not let status=published alone
+  // bypass the stricter Current Patch + verified Frame + Source + Classic gate.
+  const readiness = await Promise.all(
+    mapped.map((item) => item.type === "move" ? isMovePublicReady(item.href.split("/").pop() ?? "") : true),
+  );
+
+  return mapped.filter((_, index) => readiness[index]);
 }
