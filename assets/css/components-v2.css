@@ -1,0 +1,3985 @@
+/* ==========================================
+   SF6 DNA Components v2
+========================================== */
+
+
+
+/* ==========================================
+   Search Section
+========================================== */
+
+.search-section{
+
+    margin-bottom:32px;
+
+}
+
+.search-toolbar{
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.search-toolbar input{
+
+    flex:1;
+
+    min-width:280px;
+
+}
+
+.search-toolbar input:focus{
+
+    outline:none;
+
+    border-color:#ff7a00;
+
+}
+
+#sortSelect{
+
+    width:220px;
+
+}
+
+/* ==========================================
+   Filter Section
+========================================== */
+
+.filter-section{
+
+    margin-bottom:32px;
+
+}
+
+.filter-title{
+
+    margin-bottom:24px;
+
+    font-size:16px;
+
+    font-weight:400;
+
+    color:#ffffff;
+
+}
+
+.filter-button{
+
+    padding:10px 18px;
+
+    border:1px solid #404756;
+
+    border-radius:999px;
+
+    background:#1b1f27;
+
+    color:#d7d7d7;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.filter-button:hover{
+
+    border-color:#ff7a00;
+
+    color:#ffffff;
+
+}
+
+.filter-button.active{
+
+    background:#ff7a00;
+
+    border-color:#ff7a00;
+
+    color:#ffffff;
+
+    box-shadow:0 0 16px rgba(255,122,0,.5);
+
+}
+
+/* ==========================================
+   Favorite Section
+========================================== */
+
+.favorite-section{
+
+    margin-top:24px;
+
+    margin-bottom:40px;
+
+}
+
+.filter-button,
+.favorite-button{
+
+    padding:10px 18px;
+
+    border:1px solid #404756;
+
+    border-radius:999px;
+
+    background:#1b1f27;
+
+    color:#d7d7d7;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.filter-button:hover,
+.favorite-button:hover{
+
+    border-color:#ff7a00;
+
+    color:#ffffff;
+
+}
+
+.filter-button.active,
+.favorite-button.active{
+
+    background:#ff7a00;
+
+    border-color:#ff7a00;
+
+    color:#ffffff;
+
+}
+/* ==========================================
+   Character Grid
+========================================== */
+
+.character-section{
+
+    margin-top:24px;
+
+}
+
+.grid{
+
+    display:grid;
+
+    gap:24px;
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,minmax(0,1fr));
+
+    gap:24px;
+
+}
+
+/* ==========================================
+   Character Status
+========================================== */
+
+.character-status{
+
+    position:absolute;
+
+    top:14px;
+
+    left:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    z-index:5;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+.status-none{
+
+    color:#9aa3ad;
+
+}
+
+.status-main{
+
+    color:#ffd700;
+
+}
+
+.status-sub{
+
+    color:#4aa3ff;
+
+}
+
+.status-interest{
+
+    color:#ff8c42;
+
+}
+
+.status-practicing{
+
+    color:#ff69b4;
+
+}
+
+.status-weak{
+
+    color:#ef4444;
+
+}
+/* ==========================================
+   Character Card
+========================================== */
+.card{
+
+    position:relative;
+    
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    border-radius:16px;
+
+    padding:24px;
+
+    min-height:300px;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--primary);
+
+    box-shadow:
+        0 14px 36px rgba(255,107,0,.18);
+
+}
+/* ==========================================
+   Character Image
+========================================== */
+
+.character-image{
+
+    position:absolute;
+
+    top:20px;
+
+    left:50%;
+
+    transform:translateX(-50%) scale(1.05);
+
+    width:210px;
+
+    height:210px;
+
+    object-fit:contain;
+
+    opacity:.22;
+
+    filter:grayscale(100%);
+
+    transition:
+    transform .25s,
+    border-color .25s,
+    box-shadow .25s;
+
+}
+
+.card:hover .character-image{
+
+    opacity:.9;
+
+    filter:grayscale(0);
+
+}
+
+/* ==========================================
+   Button
+========================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:180px;
+
+    height:56px;
+
+    padding:0 28px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+    box-sizing:border-box;
+
+    gap:8px;
+
+}
+
+/* ==========================================
+   Primary Button
+========================================== */
+
+.btn-primary{
+
+    background:#ff6b00;
+
+    color:#ffffff;
+
+}
+
+.result-card.character-image{
+
+    position:static;
+
+    display:block;
+
+    margin:0 auto 24px;
+
+    width:260px;
+    height:260px;
+
+    transform:none;
+
+    filter:none;
+
+    opacity:1;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(255,107,0,.25);
+
+}
+
+/* ==========================================
+   Secondary Button
+========================================== */
+
+.btn-secondary{
+
+    background:transparent;
+
+    border:1px solid #404756;
+
+    color:#ffffff;
+
+}
+
+.btn-secondary:hover{
+
+    background:rgba(255,107,0,.08);
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   Input
+========================================== */
+
+.input{
+
+    width:100%;
+
+    height:56px;
+
+    padding:0 20px;
+
+    border:1px solid #303847;
+
+    border-radius:12px;
+
+    background:#1b1f27;
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    transition:.25s;
+
+}
+
+.input:focus{
+
+    outline:none;
+
+    border-color:#ff6b00;
+
+    box-shadow:0 0 0 3px rgba(255,107,0,.15);
+
+}
+
+/* ==========================================
+   Character Content
+========================================== */
+
+.character-content{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:180px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:2px;
+
+}
+
+.character-name{
+
+    font-size:24px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    margin-bottom:16px;
+
+    text-shadow:0 2px 10px rgba(0,0,0,.8);
+
+}
+
+.character-type{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#c5ccd7;
+
+}
+
+.character-difficulty{
+
+    font-size:16px;
+
+    color:#b5bcc8;
+
+     color:var(--text-sub);
+
+}
+/* ==========================================
+   Stack
+========================================== */
+
+.stack{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+}
+/* ==========================================
+   Toolbar
+========================================== */
+
+.search-toolbar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+}
+
+.search-toolbar .input{
+
+    flex:1;
+
+    min-width:320px;
+
+}
+
+.search-toolbar .btn{
+
+    flex-shrink:0;
+
+}
+
+.search-toolbar select{
+
+    flex-shrink:0;
+
+    width:220px;
+
+}
+
+/* ==========================================
+   Modal
+========================================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.7);
+
+    z-index:9999;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+.modal-content{
+
+    width:480px;
+
+    max-width:90%;
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+.modal-content h2{
+
+    margin-bottom:20px;
+
+}
+
+.modal-content p{
+
+    margin-bottom:32px;
+
+    line-height:1.8;
+
+}
+
+.modal-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+/* ==========================================
+   Selected Characters
+========================================== */
+
+.selected-area{
+
+    margin:32px 0;
+
+}
+
+.selected-area h2{
+
+    margin-bottom:16px;
+
+}
+
+#selectedCharacters{
+
+    margin-bottom:20px;
+
+    color:#d7d7d7;
+
+}
+
+#startCompareButton:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+}
+/* ==========================================
+   Compare Toolbar
+========================================== */
+
+.compare-toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:32px 0;
+
+}
+
+#selectedCount{
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.card.selected{
+
+    border:2px solid #ff7a00;
+
+    box-shadow:0 0 28px rgba(255,122,0,.45);
+
+}
+
+/* ==========================================
+   Compare
+========================================== */
+
+.compare-section{
+
+    margin-top:40px;
+    
+    margin-bottom:32px;
+
+}
+
+#compareArea{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:24px;
+
+}
+
+/* ==========================================
+   Compare Table
+========================================== */
+
+.compare-table-section{
+
+    margin-top:48px;
+
+}
+
+.compare-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.compare-table th,
+.compare-table td{
+
+    border:1px solid #303847;
+
+    padding:16px;
+
+    text-align:center;
+
+}
+
+.compare-table th{
+
+    background:#1b1f27;
+
+    font-size:18px;
+
+}
+
+.compare-table td:first-child{
+
+    font-weight:700;
+
+    background:#151922;
+
+}
+
+/* ==========================================
+   Compare Actions
+========================================== */
+
+.compare-actions{
+
+    margin-top:24px;
+    margin-bottom:40px;
+
+}
+
+.compare-list{
+
+    margin:0;
+    padding-left:18px;
+    text-align:left;
+    line-height:1.7;
+
+}
+
+.compare-list li{
+
+    margin:6px 0;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+.compare-toggle{
+
+    width:100%;
+
+    background:none;
+
+    border:none;
+
+    color:var(--color-text);
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    text-align:left;
+
+    cursor:pointer;
+
+    padding:16px 0;
+
+    transition:.2s;
+
+}
+
+.compare-toggle:hover{
+
+    color:var(--color-accent);
+
+}
+
+.nav a{
+
+    padding:8px 14px;
+    border-radius:8px;
+    transition:.2s;
+
+}
+
+.nav a:hover{
+
+    color:var(--primary);
+
+}
+
+.nav a.active{
+
+    color:var(--primary);
+
+    font-weight:bold;
+
+}
+
+.compare-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:24px;
+
+    margin-bottom:40px;
+
+}
+
+.compare-header h1{
+
+    margin-bottom:8px;
+
+}
+
+.compare-header p{
+
+    margin:0;
+
+}
+/* ==========================================
+   Page Header
+========================================== */
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:24px;
+
+    margin-bottom:40px;
+
+}
+
+.page-header h1{
+
+    margin-bottom:8px;
+
+}
+
+.page-header p{
+
+    margin:0;
+
+    color:var(--text-sub);
+
+}
+
+.page-section{
+
+    padding:48px 0;
+
+}
+
+.about-section{
+
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+
+}
+
+.about-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+    border-top:3px solid var(--primary);
+
+    border-radius:16px;
+
+    padding:32px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-card h2{
+
+    margin-bottom:16px;
+
+}
+
+.about-card p{
+
+    line-height:1.9;
+
+    color:var(--text-sub);
+
+}
+
+.about-card ul{
+
+    margin-left:20px;
+
+    line-height:2;
+
+    color:var(--text-sub);
+
+}
+
+/* ==========================================
+   Character Detail Profile
+========================================== */
+
+.character-profile{
+
+    display:flex;
+
+    gap:40px;
+
+    align-items:center;
+
+    margin-bottom:48px;
+
+}
+
+.character-detail-image{
+
+    width:260px;
+
+    height:260px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+    filter:none;
+
+    opacity:1;
+
+}
+
+.character-profile-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.character-profile-info h1{
+
+    font-size:42px;
+
+    margin:0;
+
+}
+
+.character-description{
+
+    color:var(--text-sub);
+
+    line-height:1.8;
+
+    max-width:700px;
+
+}
+
+.character-profile-info .character-difficulty{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+#characterName{
+
+    margin-bottom:20px;
+
+}
+
+#characterType{
+
+    margin-bottom:14px;
+
+}
+
+#difficulty{
+
+    margin-bottom:40px;
+
+}
+
+/*=========================================
+  Character Detail Hero
+=========================================*/
+
+.hero-area{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:48px;
+
+    align-items:start;
+
+    min-height:700px;
+
+    overflow:visible;
+
+}
+
+.hero-left{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:32px;
+
+    padding-left:40px;
+
+    padding-top:20px;
+
+}
+
+.hero-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+}
+.hero-right h2{
+
+    white-space:nowrap;
+
+    margin-bottom:20px;
+
+}
+
+/*==========================
+ Character Image
+==========================*/
+
+.hero-image{
+
+    position:absolute;
+
+    left:50%;
+
+    top:90%;
+
+    transform:translate(-50%,-50%);
+
+    width:min(860px,65vw);
+
+    opacity:.28;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+/*==========================
+ Name
+==========================*/
+
+#characterName{
+
+    font-size:64px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    margin-bottom:16px;
+
+}
+
+/*==========================
+ Type
+==========================*/
+
+#characterType{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:var(--text-sub);
+
+    margin-bottom:12px;
+
+}
+
+/*==========================
+ Difficulty
+==========================*/
+
+#difficulty{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:36px;
+
+}
+
+/*==========================
+ Concept
+==========================*/
+
+#characterDescription{
+
+    max-width:520px;
+
+    line-height:1.9;
+
+    color:var(--text-sub);
+
+}
+
+/*==========================
+ Chart
+==========================*/
+
+.hero-chart{
+
+    width:280px;
+
+    max-width:100%;
+
+}
+
+/*==============================
+ Character Concept
+==============================*/
+
+.hero-concept-card{
+
+    margin:48px auto;
+
+    max-width:900px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+}
+
+.hero-concept-card h2{
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+}
+
+.hero-concept-card p{
+
+    font-size:18px;
+
+    line-height:2.2;
+
+    max-width:700px;
+
+    margin:0 auto;
+
+}
+
+
+/*=========================================
+ 長所・短所
+=========================================*/
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+    margin:48px 0;
+
+}
+
+.feature-card{
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:28px;
+
+}
+
+.feature-card h2{
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+}
+
+.feature-card ul{
+
+    margin:0;
+
+    padding-left:22px;
+
+}
+
+.feature-card li{
+
+    margin-bottom:14px;
+
+    line-height:1.8;
+
+    color:var(--text-sub);
+
+}
+
+/*=========================================
+ Feature Card
+=========================================*/
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+    margin:60px 0;
+
+}
+
+.feature-card{
+
+    background:#232832;
+
+    border-radius:18px;
+
+    padding:32px;
+
+    border:1px solid #323b4b;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+    transition:.25s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.feature-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:28px;
+
+}
+
+.feature-icon{
+
+    font-size:34px;
+
+}
+
+.feature-subtitle{
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    color:#999;
+
+    margin-bottom:4px;
+
+    text-transform:uppercase;
+
+}
+
+.feature-header h2{
+
+    margin:0;
+
+    font-size:30px;
+
+}
+
+.strength-card{
+
+    border-left:6px solid #4CAF50;
+
+}
+
+.weakness-card{
+
+    border-left:6px solid #F44336;
+
+}
+
+.feature-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+.feature-card li{
+
+    position:relative;
+
+    padding-left:34px;
+
+    margin-bottom:18px;
+
+    line-height:1.8;
+
+    color:var(--text-sub);
+
+    font-size:17px;
+
+}
+.strength-card li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:#4CAF50;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+}
+.weakness-card li::before{
+
+    content:"✕";
+
+    position:absolute;
+
+    left:0;
+
+    color:#F44336;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+}
+
+/*=========================================
+ Recommend Card
+=========================================*/
+
+.recommend-card{
+
+    margin:60px 0;
+
+    padding:36px;
+
+    background:#232832;
+
+    border-radius:18px;
+
+    border:1px solid #323b4b;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+}
+
+.recommend-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:30px;
+
+}
+
+.recommend-icon{
+
+    font-size:38px;
+
+}
+
+.recommend-subtitle{
+
+    font-size:14px;
+
+    color:#888;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:6px;
+
+}
+
+.recommend-header h2{
+
+    margin:0;
+
+}
+
+.recommend-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin-bottom:36px;
+
+}
+
+.recommend-card li{
+
+    position:relative;
+
+    padding-left:34px;
+
+    margin-bottom:18px;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+.recommend-card li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:#ff6b00;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+.recommend-info{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.recommend-info div{
+
+    background:#1b1f27;
+
+    border-radius:14px;
+
+    padding:20px;
+
+}
+
+.recommend-info span{
+
+    display:block;
+
+    color:#888;
+
+    font-size:13px;
+
+    margin-bottom:8px;
+
+}
+
+.recommend-info strong{
+
+    font-size:22px;
+
+}
+/*=========================================
+  Recommended Videos
+=========================================*/
+
+.video-section{
+
+    margin-top:64px;
+
+}
+
+.video-scroll{
+
+    display:flex;
+
+    gap:32px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    padding:20px 12px;
+
+    scroll-behavior:smooth;
+
+}
+
+.video-scroll::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.video-scroll::-webkit-scrollbar-thumb{
+
+    background:#555;
+
+    border-radius:999px;
+
+}
+
+.video-card{
+
+    flex:0 0 420px;
+
+    background:#20252f;
+
+    border:1px solid #303847;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.25s;
+
+}
+
+.video-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#ff6b00;
+
+    box-shadow:0 10px 30px rgba(255,107,0,.2);
+
+}
+
+.video-card img{
+
+    width:100%;
+
+    height:240px;
+
+    display:block;
+
+    aspect-ratio:16 / 9;
+
+    object-fit:cover;
+
+}
+
+.video-info{
+
+    padding:18px;
+
+}
+
+.video-info h3{
+
+    font-size:18px;
+
+    margin-bottom:12px;
+
+}
+
+.video-info a{
+
+    color:#ff6b00;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+/*=========================================
+  Video Tabs
+=========================================*/
+
+.video-tabs{
+
+    display:flex;
+
+    gap:16px;
+
+    margin:28px 0 24px;
+
+    flex-wrap:wrap;
+
+}
+
+.video-tab{
+
+    padding:12px 24px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#2a303c;
+
+    color:#c8c8c8;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.video-tab:hover{
+
+    background:#343b49;
+
+    color:#ffffff;
+
+}
+
+.video-tab.active{
+
+    background:#ff6b00;
+
+    color:#ffffff;
+
+}
+
+/*=========================================
+  Matchup Section
+=========================================*/
+
+.matchup-section{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:32px;
+
+    margin:64px 0;
+
+}
+
+.matchup-card{
+
+    background:#252a35;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:32px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.matchup-card h2{
+
+    margin-bottom:24px;
+
+    font-size:28px;
+
+}
+
+.matchup-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.matchup-card li{
+
+    padding:16px 18px;
+
+    margin-bottom:14px;
+
+    border-radius:12px;
+
+    background:#1d222c;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+.matchup-card li:hover{
+
+    transform:translateX(6px);
+
+}
+
+.matchup-strong{
+
+    border-left:6px solid #4caf50;
+
+}
+
+.matchup-strong h2{
+
+    color:#6fe36f;
+
+}
+
+.matchup-weak{
+
+    border-left:6px solid #ff5252;
+
+}
+
+.matchup-weak h2{
+
+    color:#ff7070;
+
+}
+
+/*=========================================
+ Matchup Character
+=========================================*/
+
+.matchup-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+.matchup-image{
+
+    width:64px;
+
+    height:64px;
+
+    object-fit:contain;
+
+    transition:.25s;
+
+}
+.matchup-link span{
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+.matchup-link:hover .matchup-image{
+
+    transform:scale(1.08);
+
+}
+
+.matchup-link:hover{
+
+    color:#ff6b00;
+
+}
+/* ==========================
+   Dropdown
+========================== */
+
+.dropdown{
+
+    position:relative;
+
+}
+
+.dropdown-button{
+
+    background:none;
+    border:none;
+    color:#fff;
+    font:inherit;
+    cursor:pointer;
+    padding:8px 0;
+
+}
+
+.dropdown-content{
+
+    position:absolute;
+
+    top:calc(100% + 12px);
+
+    left:50%;
+
+    transform:translate(-50%,10px);
+
+    width:300px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+        opacity .25s,
+        transform .25s;
+
+    background:#1c212b;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown.is-open .dropdown-content{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translate(-50%,0);
+
+}
+
+.dropdown-content a{
+
+    display:flex;
+
+    flex-direction:column;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    gap:6px;
+
+    padding:18px 22px;
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.2s;
+
+}
+
+.dropdown-content a:last-child{
+
+    border-bottom:none;
+
+}
+
+.dropdown-content span{
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    color:#ff7a00;
+
+    font-weight:700;
+
+}
+
+.dropdown-content a:hover{
+
+    background:#262d39;
+
+    color:#ff7a00;
+
+}
+
+.dropdown-content a:hover span{
+
+    color:#ff7a00;
+
+}
+/* ==========================
+   Header
+========================== */
+
+.site-header{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:#11141b;
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.header-inner{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    height:90px;
+
+}
+
+.logo{
+
+    color:#fff;
+    font-size:28px;
+    font-weight:800;
+    text-decoration:none;
+
+}
+
+.nav{
+
+    display:flex;
+    align-items:center;
+    gap:32px;
+
+}
+
+.nav>a,
+.dropdown-button{
+
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+
+}
+
+.nav-level-btn{
+
+    background:rgba(255,107,0,.12);
+
+    border:1px solid rgba(255,107,0,.4);
+
+    color:#ffb347;
+
+    font-weight:700;
+
+    font-size:14px;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    transition:background .2s, border-color .2s;
+
+}
+
+.nav-level-btn:hover{
+
+    background:rgba(255,107,0,.22);
+
+    border-color:var(--primary, #ff6b00);
+
+}
+/* ===========================
+   動画カードの追加スタイル
+   (video-cardがdivからaタグに変更されたための調整と、
+    YouTube検索リンク用のプレースホルダー)
+=========================== */
+
+.video-card{
+    display:block;
+    color:inherit;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.video-info .video-link-label{
+    display:inline-block;
+    color:#ff6b00;
+    font-weight:700;
+}
+
+.video-thumb-search{
+    width:100%;
+    height:240px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    background:
+        linear-gradient(160deg, #2a303c, #1a1e26);
+    font-size:40px;
+}
+
+.video-thumb-search span{
+    font-size:14px;
+    color:#c8c8c8;
+    font-weight:700;
+}
+
+.video-empty{
+    color:var(--text-sub);
+    padding:20px 0;
+}
+
+/* ===========================
+   プレイヤーカードの役割バッジ
+   (プロ/ストリーマー/VTuber/YouTuberを1つの横並びグリッドで
+   まとめて表示する際の見分け用)
+=========================== */
+
+.related-card{
+    position:relative;
+}
+
+.player-role-badge{
+
+    display:inline-block;
+
+    margin-bottom:10px;
+
+    padding:4px 12px;
+
+    border-radius:999px;
+
+    background:rgba(255,107,0,.15);
+
+    border:1px solid rgba(255,107,0,.4);
+
+    color:#ffb347;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   前後キャラクターへのナビゲーション
+=========================== */
+
+.character-pager{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+    margin:40px 0;
+
+}
+
+.character-pager-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:16px 20px;
+
+    background:#1d232d;
+
+    border:1px solid #303847;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:.2s;
+
+}
+
+.character-pager-link:hover{
+
+    border-color:#ff6b00;
+
+    transform:translateY(-3px);
+
+}
+
+.character-pager-link img{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    flex-shrink:0;
+
+}
+
+.character-pager-next{
+
+    justify-content:flex-end;
+
+    text-align:right;
+
+}
+
+.character-pager-link small{
+
+    display:block;
+
+    color:var(--text-sub);
+
+    font-size:12px;
+
+    margin-bottom:4px;
+
+}
+
+.character-pager-link strong{
+
+    font-size:16px;
+
+}
+
+@media (max-width:640px){
+
+    .character-pager{
+        grid-template-columns:1fr;
+    }
+
+    .character-pager-next{
+        justify-content:flex-start;
+        text-align:left;
+    }
+
+}
+
+/* ===========================
+   関連プレイヤーカード内の画像サイズ統一
+   (player.css が読み込まれていないページでも一定サイズで表示する)
+=========================== */
+
+.related-card .player-image{
+
+    width:100px;
+    height:100px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin-bottom:12px;
+
+}
+
+.related-avatar-fallback{
+
+    width:100px;
+    height:100px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:36px;
+    font-weight:900;
+    color:#fff;
+
+    background:linear-gradient(160deg, #ff6b00, #7a3b00);
+
+    margin-bottom:12px;
+
+}
+
+/* ===========================
+   プレイヤー一覧: 検索結果件数・空状態
+=========================== */
+
+.result-count{
+
+    color:var(--text-sub);
+
+    font-size:14px;
+
+    margin:24px 0 8px;
+
+}
+
+.empty-message{
+
+    grid-column:1 / -1;
+
+    text-align:center;
+
+    color:var(--text-sub);
+
+    padding:60px 0;
+
+}
+
+/* ==========================
+   ハンバーガーメニュー(スマホ用)
+========================== */
+
+.nav-toggle{
+
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:5px;
+
+    width:44px;
+
+    height:44px;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:0;
+
+    z-index:1100;
+
+}
+
+.nav-toggle span{
+
+    display:block;
+
+    width:24px;
+
+    height:2px;
+
+    background:#fff;
+
+    border-radius:2px;
+
+    transition:.25s;
+
+}
+
+.nav-toggle.is-open span:nth-child(1){
+    transform:translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-open span:nth-child(2){
+    opacity:0;
+}
+
+.nav-toggle.is-open span:nth-child(3){
+    transform:translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width:1100px){
+
+    .nav-toggle{
+
+        display:flex;
+
+    }
+
+    .nav{
+
+        position:fixed;
+
+        top:var(--header-height, 90px);
+
+        left:0;
+
+        right:0;
+
+        bottom:0;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:0;
+
+        background:#11141b;
+
+        padding:12px 24px 40px;
+
+        overflow-y:auto;
+
+        transform:translateX(100%);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        transition:transform .25s ease, opacity .25s ease, visibility 0s linear .25s;
+
+    }
+
+    .nav.is-open{
+
+        transform:translateX(0);
+
+        opacity:1;
+
+        visibility:visible;
+
+        transition:transform .25s ease, opacity .25s ease, visibility 0s linear 0s;
+
+    }
+
+    .nav>a{
+
+        padding:18px 4px;
+
+        border-bottom:1px solid rgba(255,255,255,.08);
+
+    }
+
+    /* スマホ幅ではドロップダウンをその場で展開する形にする
+       (絶対配置のフローティングパネルだと画面外にはみ出すため) */
+    .dropdown{
+
+        width:100%;
+
+    }
+
+    .dropdown-button{
+
+        width:100%;
+
+        text-align:left;
+
+        padding:18px 4px;
+
+        border-bottom:1px solid rgba(255,255,255,.08);
+
+    }
+
+    .dropdown-content{
+
+        position:static;
+
+        width:100%;
+
+        transform:none;
+
+        max-height:0;
+
+        opacity:1;
+
+        visibility:visible;
+
+        border:none;
+
+        border-radius:0;
+
+        box-shadow:none;
+
+        background:#181c25;
+
+        overflow:hidden;
+
+        transition:max-height .25s ease;
+
+    }
+
+    .dropdown.is-open .dropdown-content{
+
+        max-height:300px;
+
+    }
+
+    .dropdown-content a{
+
+        padding:16px 20px;
+
+    }
+
+    /* view-mode-toggle(PC/スマホ切替)を、他のナビ項目と統一された
+       フル幅の行として表示する(40x40の小さいボタンのまま浮いて見えるのを防ぐ) */
+    .view-mode-toggle{
+
+        width:100%;
+        height:auto;
+
+        justify-content:flex-start;
+        gap:10px;
+
+        margin-right:0;
+        margin-top:8px;
+
+        padding:16px 20px;
+
+        border-radius:8px;
+
+        font-size:16px;
+
+    }
+
+    .view-mode-toggle::after{
+        content:"表示モードを切り替え";
+        font-size:14px;
+    }
+
+    /* レベル変更ボタンも、他のナビ項目と統一されたフル幅の行として表示する */
+    .nav-level-btn{
+
+        width:100%;
+
+        text-align:left;
+
+        border-radius:8px;
+
+        padding:16px 20px;
+
+        margin-top:8px;
+
+        background:rgba(255,107,0,.1);
+
+    }
+
+}
+
+/* ===========================
+   狭い画面(480px以下)でのヘッダー微調整
+   ロゴが大きすぎてハンバーガー/表示切替ボタンと窮屈になるのを防ぐ
+=========================== */
+
+@media (max-width:480px){
+
+    .logo{
+        font-size:20px;
+    }
+
+    .header-inner{
+        height:64px;
+    }
+
+    .view-mode-toggle{
+        margin-right:4px;
+    }
+
+}
+
+/* ===========================
+   チームバッジ(プレイヤーカード上でチーム名をクリックできるように)
+=========================== */
+
+.team-badge,
+.team-badge-link{
+
+    display:inline-block;
+
+    padding:3px 12px;
+
+    border-radius:999px;
+
+    background:rgba(255,107,0,.15);
+
+    border:1px solid rgba(255,107,0,.4);
+
+    color:#ffb347;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+}
+
+.team-badge:hover,
+.team-badge-link:hover{
+
+    background:rgba(255,107,0,.3);
+
+}
+
+/* ===========================
+   about.html: 検索・FAQ
+=========================== */
+
+.about-search-section{
+
+    margin:48px 0 24px;
+
+    text-align:center;
+
+}
+
+.about-search-section h2{
+
+    margin-bottom:20px;
+
+}
+
+.about-search-section .input{
+
+    max-width:480px;
+
+    margin:0 auto;
+
+}
+
+.faq-quick-links{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:24px;
+
+}
+
+.faq-quick-links a{
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.2s;
+
+}
+
+.faq-quick-links a:hover{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+}
+
+.faq-section{
+
+    margin:48px 0 80px;
+
+}
+
+.faq-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-top:20px;
+
+}
+
+.faq-item{
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+}
+
+.faq-question{
+
+    display:block;
+
+    width:100%;
+
+    text-align:left;
+
+    padding:20px 24px;
+
+    background:none;
+
+    border:none;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    line-height:1.6;
+
+    white-space:normal;
+
+    word-break:break-word;
+
+    cursor:pointer;
+
+    position:relative;
+
+    padding-right:50px;
+
+}
+
+.faq-question::after{
+
+    content:"+";
+
+    position:absolute;
+
+    right:24px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:22px;
+
+    color:var(--primary);
+
+    transition:.25s;
+
+}
+
+.faq-item.is-open .faq-question::after{
+
+    transform:translateY(-50%) rotate(45deg);
+
+}
+
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .25s ease;
+
+    color:var(--text-sub);
+
+    line-height:1.8;
+
+}
+
+.faq-item.is-open .faq-answer{
+
+    max-height:300px;
+
+}
+
+.faq-answer p{
+
+    padding:0 24px 20px;
+
+}
+
+.faq-no-result{
+
+    text-align:center;
+
+    color:var(--text-sub);
+
+    margin-top:24px;
+
+}
+
+/* ===========================
+   about.html: 2カラムレイアウト
+   (左:概要・機能、右:検索+お問い合わせ / 下部によくある質問を全幅で配置)
+=========================== */
+
+.about-hero-row{
+
+    display:grid;
+
+    grid-template-columns:1.1fr 0.9fr;
+
+    gap:32px;
+
+    align-items:start;
+
+    margin-top:20px;
+
+}
+
+.about-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    min-width:0;
+
+}
+
+.about-search-section .input{
+
+    max-width:none;
+
+    width:100%;
+
+}
+
+.faq-section-full{
+
+    margin-top:48px;
+
+}
+
+/* ===========================
+   お問い合わせ(仮)
+=========================== */
+
+.about-contact-section{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+    border-top:3px solid var(--primary);
+
+    border-radius:var(--radius);
+
+    padding:28px;
+
+}
+
+.about-contact-note{
+
+    color:var(--text-sub);
+
+    font-size:13px;
+
+    margin-bottom:16px;
+
+    line-height:1.7;
+
+}
+
+.contact-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.contact-form label{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    font-size:14px;
+
+    color:var(--text-sub);
+
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+
+    background:#12151c;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    padding:12px 14px;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-family:inherit;
+
+    resize:vertical;
+
+}
+
+.contact-form button{
+
+    align-self:flex-start;
+
+}
+
+@media (max-width:1000px){
+
+    .about-hero-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* ===========================
+   プレイヤーカードのチームメンバー表示
+=========================== */
+
+.player-teammates{
+
+    margin-top:10px;
+
+    padding-top:10px;
+
+    border-top:1px dashed var(--border);
+
+    font-size:13px;
+
+    color:var(--text-sub);
+
+    line-height:1.6;
+
+}
+
+.player-teammates strong{
+
+    color:#fff;
+}
+
+/* ===========================
+   お問い合わせフォームの送信ステータス
+=========================== */
+
+.contact-status{
+
+    font-size:14px;
+
+    min-height:20px;
+}
+
+.contact-status.success{
+    color:#46c878;
+}
+
+.contact-status.error{
+    color:#ff7850;
+}
+
+/* ===========================
+   about.html: 検索をFAQ直上に全幅配置
+=========================== */
+
+.about-search-section-full{
+
+    margin:48px 0 24px;
+
+    text-align:center;
+}
+
+/* ===========================
+   比較ページ: 相性・使用プレイヤー
+=========================== */
+
+.matchup-compare-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+
+    gap:20px;
+
+    padding:20px 0;
+}
+
+.matchup-character-col{
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    border-radius:14px;
+
+    padding:18px 20px;
+}
+
+.matchup-character-col h4{
+
+    font-size:16px;
+
+    margin-bottom:14px;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid #303847;
+}
+
+.matchup-vs-item{
+
+    padding:10px 0;
+
+    border-bottom:1px dashed #303847;
+
+    font-size:13px;
+}
+
+.matchup-vs-item p{
+
+    color:var(--text-sub);
+
+    margin-top:6px;
+
+    line-height:1.6;
+}
+
+.matchup-good strong{ color:#46c878; }
+.matchup-bad strong{ color:#ff7850; }
+.matchup-even strong{ color:#eab308; }
+
+.matchup-players{
+
+    margin-top:14px;
+
+    padding-top:14px;
+
+    border-top:1px solid #303847;
+
+    font-size:13px;
+}
+
+.matchup-players strong{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:#fff;
+}
+
+.matchup-players p{
+
+    color:var(--text-sub);
+
+    line-height:1.6;
+}
+
+/* ===========================
+   Aboutドロップダウンのアクティブ表示
+=========================== */
+
+.dropdown-button.active{
+
+    color:var(--primary);
+
+    font-weight:bold;
+}
+
+/* ===========================
+   Aboutサブページ共通: サブナビ
+=========================== */
+
+.about-subnav{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin:24px 0 32px;
+
+    padding-bottom:16px;
+
+    border-bottom:1px solid var(--border);
+}
+
+.about-subnav a{
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    color:var(--text-sub);
+
+    text-decoration:none;
+
+    font-size:14px;
+}
+
+.about-subnav a.active{
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+
+    color:#0d0d0d;
+
+    font-weight:700;
+}
+
+/* ===========================
+   About概要: リンクカード
+=========================== */
+
+.about-links-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+
+    gap:14px;
+
+    margin-top:16px;
+}
+
+.about-link-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:20px 12px;
+
+    background:#12151c;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:14px;
+
+    text-align:center;
+
+    transition:.2s;
+}
+
+.about-link-item:hover{
+
+    border-color:var(--primary);
+
+    transform:translateY(-3px);
+}
+
+.about-link-icon{
+
+    font-size:26px;
+}
+
+/* ===========================
+   参照サイト一覧
+=========================== */
+
+.sources-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.sources-list a{
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    font-size:15px;
+}
+
+.sources-list a:hover{
+
+    text-decoration:underline;
+}
+
+/* ===========================
+   バージョン情報ページ
+=========================== */
+
+.changelog-upcoming-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+
+    gap:10px;
+
+    list-style:none;
+
+    padding:0;
+
+    margin-top:12px;
+}
+
+.changelog-upcoming-list li{
+
+    padding:12px 16px;
+
+    background:#12151c;
+
+    border:1px solid var(--border);
+
+    border-left:3px solid var(--primary);
+
+    border-radius:8px;
+
+    font-size:14px;
+}
+
+.changelog-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    margin-top:16px;
+}
+
+.changelog-item{
+
+    padding-left:20px;
+
+    border-left:2px solid var(--border);
+}
+
+.changelog-item h3{
+
+    font-size:16px;
+
+    margin-bottom:10px;
+
+    color:var(--primary);
+}
+
+.changelog-item ul{
+
+    padding-left:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    color:var(--text-sub);
+
+    font-size:14px;
+
+    line-height:1.6;
+}
+
+/* ===========================
+   動画カード情報拡張(Phase3-B継続)
+=========================== */
+
+.video-thumb-wrap{
+
+    position:relative;
+
+}
+
+.video-duration-badge{
+
+    position:absolute;
+
+    right:6px;
+
+    bottom:6px;
+
+    background:rgba(0,0,0,.75);
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    padding:2px 6px;
+
+    border-radius:4px;
+
+}
+
+.video-meta{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+    font-size:11px;
+
+    color:#9aa4b2;
+
+    margin:4px 0;
+
+}
+
+.video-channel{
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   動画カード コンパクトバリアント(Phase3.5)
+   一覧が多いページ(Beginner Guide等)向けに一回り小さく表示する
+=========================== */
+
+.video-card-compact{
+
+    font-size:13px;
+
+}
+
+.video-card-compact .video-thumb-search{
+
+    height:auto;
+
+    aspect-ratio:16/9;
+
+    font-size:24px;
+
+}
+
+.video-card-compact .video-info h3{
+
+    font-size:13px;
+
+    -webkit-line-clamp:2;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+
+}
+
+/* ===========================
+   パンくずリスト(Phase3.5)
+=========================== */
+
+.breadcrumb{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    flex-wrap:wrap;
+
+    font-size:12px;
+
+    color:#9aa4b2;
+
+    margin-top:16px;
+
+}
+
+.breadcrumb a{
+
+    color:#9aa4b2;
+
+    text-decoration:none;
+
+}
+
+.breadcrumb a:hover{
+
+    color:var(--primary, #ff6b00);
+
+}
+
+.breadcrumb .breadcrumb-current{
+
+    color:#fff;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   お気に入りボタン(Phase4)
+=========================== */
+
+.favorite-toggle-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:12px;
+
+    padding:8px 16px;
+
+    background:transparent;
+
+    border:1px solid #303847;
+
+    border-radius:999px;
+
+    color:#9aa4b2;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    transition:border-color .2s, color .2s, background .2s;
+
+}
+
+.favorite-toggle-btn:hover{
+
+    border-color:#ff6b00;
+
+    color:#ffb347;
+
+}
+
+.favorite-toggle-btn-active{
+
+    background:rgba(255,61,113,.12);
+
+    border-color:#ff3d71;
+
+    color:#ff3d71;
+
+}
+
+.favorite-toggle-btn-active i{
+
+    color:#ff3d71;
+}
+
+/* ===========================
+   今日のおすすめ(Phase4、複数ページ共通)
+=========================== */
+
+.today-pick-section{
+
+    margin:20px 0;
+
+}
+
+.today-pick-label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    color:#ffb347;
+
+    margin-bottom:10px;
+
+}
+
+.today-pick-row{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+.today-pick-card{
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    border-left:3px solid #ff6b00;
+
+    border-radius:14px;
+
+    padding:12px;
+
+    min-height:60px;
+
+}
+
+.today-pick-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+}
+
+.today-pick-avatar{
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    flex-shrink:0;
+
+}
+
+.today-pick-avatar-square{
+
+    border-radius:8px;
+
+}
+
+.today-pick-sublabel{
+
+    font-size:11px;
+
+    color:#9aa4b2;
+
+    margin:0 0 2px 0;
+
+}
+
+.today-pick-name{
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin:0;
+
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+
+}
+
+.today-pick-loading{
+
+    font-size:12px;
+
+    color:#9aa4b2;
+
+}
+
+@media (max-width:768px){
+
+    .today-pick-row{
+        grid-template-columns:1fr;
+    }
+
+}
+
+.today-pick-faq-question{
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin:0 0 6px 0;
+
+}
+
+.today-pick-faq-answer{
+
+    font-size:12px;
+
+    color:#c8c8c8;
+
+    line-height:1.6;
+
+    margin:0;
+}
+
+/* ===========================
+   動画カードのお気に入りボタン(Phase4)
+=========================== */
+
+.video-favorite-btn{
+
+    position:absolute;
+
+    top:6px;
+
+    right:6px;
+
+    width:28px;
+
+    height:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(0,0,0,.6);
+
+    border:none;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:background .2s, color .2s;
+
+}
+
+.video-favorite-btn:hover{
+
+    background:rgba(0,0,0,.8);
+
+}
+
+.video-favorite-btn-active{
+
+    color:#ff3d71;
+
+}
+
+/* ===========================
+   FAQのお気に入りボタン(Phase4)
+=========================== */
+
+.faq-item{
+    position:relative;
+}
+
+.faq-favorite-btn{
+
+    position:absolute;
+
+    top:14px;
+
+    right:44px;
+
+    width:28px;
+
+    height:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:none;
+
+    border:none;
+
+    color:#9aa4b2;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    z-index:2;
+
+    transition:color .2s;
+
+}
+
+.faq-favorite-btn:hover{
+
+    color:#ff3d71;
+
+}
+
+.faq-favorite-btn-active{
+
+    color:#ff3d71;
+
+}
+
+/* ===========================
+   苦手キャラクター登録ボタン(Phase4-B)
+=========================== */
+
+.character-toggle-row{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.weak-toggle-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:12px;
+
+    padding:8px 16px;
+
+    background:transparent;
+
+    border:1px solid #303847;
+
+    border-radius:999px;
+
+    color:#9aa4b2;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    transition:border-color .2s, color .2s, background .2s;
+
+}
+
+.weak-toggle-btn:hover{
+
+    border-color:#378ade;
+
+    color:#7ab0e8;
+
+}
+
+.weak-toggle-btn-active{
+
+    background:rgba(55,138,222,.12);
+
+    border-color:#378ade;
+
+    color:#7ab0e8;
+
+}
+
+.weak-toggle-btn-active i{
+
+    color:#7ab0e8;
+}
+
+/* ==========================================
+   「次にすること」共通コンポーネント (Phase6-A)
+
+   assets/js/next-actions.js の renderNextActions() が生成するDOM構造に対応する。
+   キャラクター詳細ページ専用のスタイルではなく、Phase6-B以降でプレイヤー詳細・
+   図鑑一覧などに同じ導線を追加する際もこのクラス名をそのまま使う想定のため、
+   character.html固有のスタイルをこのブロックに追加しないこと。
+   ========================================== */
+
+.next-actions{
+
+    margin-top:var(--ds-space-4xl, 64px);
+
+}
+
+.next-actions-heading{
+
+    margin-bottom:var(--ds-space-lg, 16px);
+    font-size:24px;
+
+}
+
+.next-actions-list{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:var(--ds-space-md, 12px);
+
+}
+
+.next-actions-item{
+
+    display:flex;
+    align-items:center;
+    gap:var(--ds-space-sm, 8px);
+    padding:var(--ds-space-lg, 16px);
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    color:var(--text);
+    text-decoration:none;
+    transition:var(--transition);
+    clip-path:polygon(0 0,100% 0,100% calc(100% - var(--ds-clip-card, 16px)),calc(100% - var(--ds-clip-card, 16px)) 100%,0 100%);
+
+}
+
+.next-actions-item:hover{
+
+    border-color:var(--primary);
+    background:#1c2330;
+
+}
+
+.next-actions-item-primary{
+
+    border-color:var(--primary);
+    background:var(--type-color-soft);
+
+}
+
+.next-actions-icon{
+
+    font-size:22px;
+    line-height:1;
+    flex-shrink:0;
+
+}
+
+.next-actions-text{
+
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    min-width:0;
+
+}
+
+.next-actions-label{
+
+    font-size:14px;
+    font-weight:600;
+
+}
+
+.next-actions-desc{
+
+    font-size:12px;
+    color:var(--text-sub);
+    /* FAQの質問文などが長い場合に備え、2行までで省略する */
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+
+}
+
+@media (max-width:480px){
+
+    .next-actions-list{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ==========================================
+   キャラクターとの関係ステータス選択 (Phase6-B)
+
+   assets/js/site-constants.js の RELATION_STATUS_CONFIG から
+   assets/js/characters.js が動的に生成するボタン群のスタイル。
+   ステータスごとの色は各ボタンのstyle属性(--relation-color)で個別に渡されるため、
+   ステータスの種類が増えてもこのCSS自体は変更不要(config駆動)。
+   favorite-toggle-btn/weak-toggle-btnと似た見た目にして、既存デザインとの
+   統一感を保っている。
+   ========================================== */
+
+.relation-status-row{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+
+}
+
+.relation-status-btn{
+
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:12px;
+    padding:8px 14px;
+    background:transparent;
+    border:1px solid #303847;
+    border-radius:999px;
+    color:#9aa4b2;
+    font-size:13px;
+    cursor:pointer;
+    transition:border-color .2s, color .2s, background .2s;
+
+}
+
+.relation-status-btn:hover{
+
+    border-color:var(--relation-color, #ff6b00);
+    color:var(--relation-color, #ffb347);
+
+}
+
+.relation-status-btn-active{
+
+    background:color-mix(in srgb, var(--relation-color, #ff6b00) 15%, transparent);
+    border-color:var(--relation-color, #ff6b00);
+    color:var(--relation-color, #ff6b00);
+
+}
+
+/* ==========================================
+   プレイヤー図鑑: キャラクター絞り込み中インジケーター (Phase6-B)
+   ========================================== */
+
+.player-character-filter-notice{
+
+    margin-bottom:12px;
+    padding:10px 16px;
+    background:rgba(255,107,0,.12);
+    border:1px solid rgba(255,107,0,.4);
+    border-radius:8px;
+    color:#ffb347;
+    font-size:13px;
+
+}
+
+.player-character-filter-notice a{
+
+    color:#ffb347;
+    text-decoration:underline;
+
+}

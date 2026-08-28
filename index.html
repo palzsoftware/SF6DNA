@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SF6 DNA | あなたを知れば、もっと勝てる。</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/components-v2.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/view-mode.css">
+<link rel="stylesheet" href="assets/css/onboarding.css">
+
+    <!-- Phase1: ホームページのみアイコンシステム(Tabler Icons)を先行導入。他ページはPhase3で対応予定 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.44.0/tabler-icons.min.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+SF6 DNA
+</a>
+
+<button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<nav class="nav">
+
+    <a href="index.html" class="active">TOP</a>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            診断 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="diagnosis.html"><span>📝 START</span>診断する</a>
+
+<a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+<a href="rank-tracker.html"><span>📈 RANK</span>ランク管理</a>
+
+<a href="training.html"><span>💪 TRAINING</span>練習メニュー</a>
+<a href="mypage.html"><span>🏠 MYPAGE</span>マイページ</a>
+
+
+</div>
+
+    </div>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            図鑑 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="characters.html"><span>🎮 CHARACTER</span>キャラクター図鑑</a>
+
+<a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
+
+<a href="team.html"><span>🏆 TEAM</span>チーム図鑑</a>
+<a href="ranking.html"><span>🏅 RANKING</span>ランキング</a>
+<a href="tournament.html"><span>📅 TOURNAMENT</span>大会情報</a>
+
+
+</div>
+
+    </div>
+
+    <a href="compare.html">比較</a>
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            About ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="about.html"><span>ℹ️ OVERVIEW</span>About概要</a>
+
+<a href="contact.html"><span>✉️ CONTACT</span>お問い合わせ</a>
+
+<a href="faq.html"><span>❓ FAQ</span>よくある質問</a>
+
+<a href="changelog.html"><span>📝 LOG</span>バージョン情報</a>
+
+<a href="sources.html"><span>🔗 SOURCES</span>参照サイト一覧</a>
+
+</div>
+
+    </div>
+
+    <button id="viewModeToggle" class="view-mode-toggle" aria-label="表示モード切り替え" title="PC版/スマホ版の表示を切り替えます">
+    📱
+</button>
+
+</nav>
+
+</div>
+
+</header>
+
+<main>
+
+<div class="container">
+
+    <!-- ===== ヒーロー(診断有無でJSが内容を出し分ける、Primary CTAは常に1つのみ) ===== -->
+    <section id="homeHero" class="home-hero reveal-on-scroll">
+        <p class="home-hero-loading">読み込み中…</p>
+    </section>
+
+    <!-- ===== 初心者導線(Phase3-A、承認済みのPhase1凍結例外) ===== -->
+    <a href="beginner-guide.html" class="home-beginner-cta reveal-on-scroll">
+        <span class="home-beginner-cta-icon">🌱</span>
+        <span class="home-beginner-cta-text">
+            <span class="home-beginner-cta-title">初心者はこちら</span>
+            <span class="home-beginner-cta-sub">おすすめキャラ・動画・基本操作をまとめて見る</span>
+        </span>
+        <i class="ti ti-arrow-right" aria-hidden="true"></i>
+    </a>
+
+    <!-- ===== キャラクター/プレイヤーの横スクロール演出(Phase3-B、承認済みのPhase1凍結例外) ===== -->
+    <section class="home-marquee-section reveal-on-scroll">
+
+        <div class="home-marquee-track" id="homeMarqueeCharacters"></div>
+        <div class="home-marquee-track home-marquee-reverse" id="homeMarqueePlayers"></div>
+
+    </section>
+
+    <!-- ===== 診断済みユーザー向け: 今日のあなたへ(日替わりコンテンツ) ===== -->
+    <section id="homeDailySection" class="home-daily reveal-on-scroll" style="display:none;">
+
+        <h2 class="home-section-title">今日のあなたへ</h2>
+
+        <div id="homeDailyArea" class="home-daily-grid"></div>
+
+    </section>
+
+    <!-- ===== 診断済みユーザー向け: 最近の成長 ===== -->
+    <section id="homeGrowthSection" class="home-growth reveal-on-scroll" style="display:none;">
+
+        <h2 class="home-section-title">最近の成長</h2>
+
+        <div id="homeGrowthArea" class="home-growth-card"></div>
+
+    </section>
+
+    <!-- ===== 診断済みユーザー向け: 実績バッジ ===== -->
+    <section id="homeBadgeSection" class="home-badges reveal-on-scroll" style="display:none;">
+
+        <h2 class="home-section-title">実績</h2>
+
+        <div id="homeBadgeArea" class="home-badge-grid"></div>
+
+    </section>
+
+    <!-- ===== 診断済みユーザー向け: 最近見たキャラクター/プレイヤー ===== -->
+    <section id="homeRecentSection" class="home-recent reveal-on-scroll" style="display:none;">
+
+        <div class="home-recent-col">
+            <h2 class="home-section-title">最近見たキャラクター</h2>
+            <div id="homeRecentCharacterArea" class="home-recent-empty"></div>
+        </div>
+
+        <div class="home-recent-col">
+            <h2 class="home-section-title">最近見たプレイヤー</h2>
+            <div id="homeRecentPlayerArea" class="home-recent-empty"></div>
+        </div>
+
+    </section>
+
+    <!-- ===== 未診断ユーザー向け: サービス価値の説明(CTAボタンは置かない) ===== -->
+    <section id="homeValueSection" class="home-value-section reveal-on-scroll" style="display:none;">
+
+        <h2 class="home-section-title">このサイトでできること</h2>
+
+        <div class="home-value-grid">
+
+            <div class="home-value-card">
+                <i class="ti ti-clipboard-list" aria-hidden="true"></i>
+                <h3>診断でタイプを知る</h3>
+                <p>質問に答えるだけで、あなたのプレイスタイルと弱点を8軸で診断します。</p>
+                <span class="home-value-card-status">詳しく見る</span>
+            </div>
+
+            <div class="home-value-card">
+                <i class="ti ti-target-arrow" aria-hidden="true"></i>
+                <h3>専用の練習メニュー</h3>
+                <p>診断結果の弱点に合わせて、今日やるべき練習をピンポイントで提案します。</p>
+                <span class="home-value-card-status">詳しく見る</span>
+            </div>
+
+            <div class="home-value-card">
+                <i class="ti ti-trending-up" aria-hidden="true"></i>
+                <h3>成長を記録する</h3>
+                <p>練習の完了を記録し、実績として積み上げながら継続できます。</p>
+                <span class="home-value-card-status">詳しく見る</span>
+            </div>
+
+        </div>
+
+        <a href="about.html" class="home-ghost-link">SF6 DNAとは? <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+
+    </section>
+
+    <!-- ===== 常設: 図鑑・機能への導線 ===== -->
+    <section class="home-quicknav reveal-on-scroll">
+
+        <h2 class="home-section-title">図鑑・機能</h2>
+
+        <div class="home-quicknav-grid">
+
+            <a href="characters.html" class="home-quicknav-card">
+                <i class="ti ti-swords" aria-hidden="true"></i>
+                <span>キャラクター図鑑</span>
+            </a>
+
+            <a href="players.html" class="home-quicknav-card">
+                <i class="ti ti-users" aria-hidden="true"></i>
+                <span>プレイヤー図鑑</span>
+            </a>
+
+            <a href="team.html" class="home-quicknav-card">
+                <i class="ti ti-shield" aria-hidden="true"></i>
+                <span>チーム図鑑</span>
+            </a>
+
+            <a href="compare.html" class="home-quicknav-card">
+                <i class="ti ti-git-compare" aria-hidden="true"></i>
+                <span>比較する</span>
+            </a>
+
+            <a href="training.html" class="home-quicknav-card">
+                <i class="ti ti-target-arrow" aria-hidden="true"></i>
+                <span>練習メニュー</span>
+            </a>
+
+            <a href="rank-tracker.html" class="home-quicknav-card">
+                <i class="ti ti-chart-line" aria-hidden="true"></i>
+                <span>ランク管理</span>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ===== 近日公開(未実装機能。優先度を明確に下げて表示) ===== -->
+    <section class="home-comingsoon reveal-on-scroll">
+
+        <h2 class="home-section-title home-section-title-muted">近日公開</h2>
+
+        <p class="home-comingsoon-lead">今後追加予定の機能です。楽しみにお待ちください。</p>
+
+        <div class="home-comingsoon-grid">
+
+            <div class="home-comingsoon-card">
+                <i class="ti ti-trophy" aria-hidden="true"></i>
+                <span>ランキング</span>
+                <span class="home-comingsoon-badge">Coming Soon</span>
+            </div>
+
+            <div class="home-comingsoon-card">
+                <i class="ti ti-calendar-event" aria-hidden="true"></i>
+                <span>大会情報</span>
+                <span class="home-comingsoon-badge">Coming Soon</span>
+            </div>
+
+            <div class="home-comingsoon-card">
+                <i class="ti ti-video" aria-hidden="true"></i>
+                <span>AIリプレイ分析</span>
+                <span class="home-comingsoon-badge">Coming Soon</span>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+</main>
+
+<footer>
+
+<p>
+
+©2026 SF6 DNA
+
+</p>
+
+</footer>
+
+<script src="assets/js/site-constants.js"></script>
+<script src="assets/js/character-data.js"></script>
+<script src="assets/js/pro.js"></script>
+<script src="assets/js/streamer.js"></script>
+<script src="assets/js/vtuber.js"></script>
+<script src="assets/js/youtuber.js"></script>
+<script src="assets/js/player-data.js"></script>
+<script src="assets/js/result-data.js"></script>
+<script src="assets/js/training-menu-data.js"></script>
+<script src="assets/js/daily-tips-data.js"></script>
+<script src="assets/js/video-search.js"></script>
+<script src="assets/js/activity-log.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/home.js"></script>
+
+<script src="assets/js/onboarding.js"></script>
+<script src="assets/js/nav.js"></script>
+
+</body>
+
+</html>

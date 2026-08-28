@@ -1,0 +1,115 @@
+# Phase14 Modern Command Gap Audit
+
+最終更新: 2026-08-28 10:00 JST（公式Modern一覧照合）
+
+## 判定ルール
+
+- 正本: `SF6DNAPro` (`wnuxaxbrpudyypzdbdho`)
+- 集計SQL: `supabase/quality/phase14_modern_command_gaps.sql`
+- SQLはread-onlyで、Modern Commandを追加・推測・公開しない。
+- 「Modern行なし」は監査候補であり、その技にModern専用入力が存在する証明ではない。
+- MoveやClassic Commandに公式Sourceがあっても、Modern入力を直接確認できなければ転記しない。
+
+## 実DB集計
+
+- Active Move: 2,064（重複1件archive）
+- Active Classic Commandあり: 2,064
+- Active Modern Commandあり: 1,443（69.9%）
+- Modern行なし: 621
+- Modern行なしのうち公式Move Sourceあり: 39
+- Modern行なしのうち公式Source付きClassic Commandあり: 39
+
+照合開始時に公式Source relationが存在した41件も、Source本文がModern入力を直接裏付けるとは限らない。自動昇格・自動補完の対象にはしない。
+
+## 公式Modern一覧との照合結果
+
+対象41件が属する8キャラについて、CAPCOM公式Command ListのModern表示を2026-08-28に直接確認した。
+
+- 直接確認でき、安全に追加済み: **1件**
+  - ディージェイ「フライングパーティー」: `中攻撃 > 中攻撃`（`M>M`）
+  - CAPCOM公式Movelist Source relationを付与。Moveは`draft`、packageは`review`のまま。
+- 同系統の別強度・OD・派生行にのみ対応する入力: **13件**
+  - 公式一覧の総称入力を、利用できない強度別DB行へ複製しない。
+- 既存の別Move Entityに同一技・Modern入力があった重複候補: **1件（整理完了）**
+  - ダルシム「ロングスライディング」の既存`3+H`を`dhalsim-crouching-hk`へ移し、別Entityは削除せずarchiveした。
+- 公式Modern一覧に対応技名がない: **26件**
+
+合計 **41件**。Source relationが公式Frameページであることだけでは、Modern入力の直接根拠にならないことを確認した。
+
+今回追加する1件も`move_commands`へ入力と公式Movelist Source relationを追加するだけで、Moveの`draft`、packageの`review`、公開状態は変更しない。
+seedを2回実行し、Modern行1件・当該Modern Source relation 1件・全体の重複Modern 0件を確認した。
+
+## 31キャラ別coverage
+
+| キャラクター | Move | Modern | 行なし | Coverage |
+|---|---:|---:|---:|---:|
+| A.K.I. | 52 | 23 | 29 | 44.2% |
+| C.ヴァイパー | 72 | 67 | 5 | 93.1% |
+| JP | 59 | 55 | 4 | 93.2% |
+| アレックス | 76 | 15 | 61 | 19.7% |
+| イングリッド | 83 | 32 | 51 | 38.6% |
+| エド | 49 | 18 | 31 | 36.7% |
+| エドモンド本田 | 70 | 65 | 5 | 92.9% |
+| エレナ | 86 | 74 | 12 | 86.0% |
+| ガイル | 70 | 66 | 4 | 94.3% |
+| キャミィ | 53 | 16 | 37 | 30.2% |
+| キンバリー | 76 | 74 | 2 | 97.4% |
+| ケン | 59 | 53 | 6 | 89.8% |
+| サガット | 69 | 58 | 11 | 84.1% |
+| ザンギエフ | 47 | 14 | 33 | 29.8% |
+| ジェイミー | 93 | 91 | 2 | 97.8% |
+| ジュリ | 46 | 43 | 3 | 93.5% |
+| ダルシム | 88 | 77 | 11 | 87.5% |
+| ディージェイ | 105 | 102 | 3 | 97.1% |
+| テリー | 54 | 15 | 39 | 27.8% |
+| ブランカ | 91 | 83 | 8 | 91.2% |
+| ベガ | 47 | 14 | 33 | 29.8% |
+| マノン | 49 | 17 | 32 | 34.7% |
+| マリーザ | 53 | 13 | 40 | 24.5% |
+| ヤスミン | 85 | 78 | 7 | 91.8% |
+| ラシード | 54 | 16 | 38 | 29.6% |
+| リュウ | 57 | 51 | 6 | 89.5% |
+| リリー | 47 | 14 | 33 | 29.8% |
+| ルーク | 50 | 22 | 28 | 44.0% |
+| 不知火舞 | 95 | 89 | 6 | 93.7% |
+| 春麗 | 68 | 64 | 4 | 94.1% |
+| 豪鬼 | 61 | 24 | 37 | 39.3% |
+
+## 次回の検証順
+
+1. ダルシムの重複Move Entityはcanonical移行・archive・coverage再計算まで完了。
+2. 現在の公式Source付き未登録39件は、8キャラのCAPCOM公式Frame Data Modern表示で全件非掲載を確認した。
+3. 公式Source relationなしを含む未登録621件は、現行一次情報または実機確認なしに補完しない。
+
+## 公式Source付き未登録39件の追跡監査
+
+2026-08-28に、現在の実DBで「Modern未登録かつ公式Move Source relationあり」の39件を再抽出した。
+
+| キャラクター | 監査件数 | Modern Frame Data掲載 | 追加 |
+|---|---:|---:|---:|
+| ダルシム | 11 | 0 | 0 |
+| ブランカ | 8 | 0 | 0 |
+| エドモンド本田 | 5 | 0 | 0 |
+| 春麗 | 4 | 0 | 0 |
+| ガイル | 4 | 0 | 0 |
+| ディージェイ | 3 | 0 | 0 |
+| ジェイミー | 2 | 0 | 0 |
+| キンバリー | 2 | 0 | 0 |
+| **合計** | **39** | **0** | **0** |
+
+- CAPCOM公式Frame DataをClassicからModernへ切り替え、対象技名がModern表に存在しないことを直接確認した。
+- 公式Frame Data Source relationがあること自体をModern入力の根拠にはしない。
+- 対象39件にはCommandを追加せず、status / verification_statusも変更していない。
+- Phase14のP2-01は「推測補完0でcoverage向上」という計画上の完了条件を満たしたため完了とする。Modern完全収録を意味せず、未登録621件は一次情報・実機確認待ちのRelease Quality Backlogとして継続する。
+
+## JP未登録5件の追加監査
+
+CAPCOM公式JP Command List / Frame DataのModern表示を2026-08-28に確認した。
+
+- しゃがみ中P: Modern Frame Dataで中攻撃表示を直接確認し、`2M`を追加。
+- 立ち弱K / しゃがみ強K: Modern Frame Dataに当該行がないため追加しない。
+- 中 / 強ストリボーグ: Frame行はあるが、簡易入力`↓ + SP`との強度対応を直接特定できないため追加しない。
+
+詳細は`docs/PHASE14_JP_MODERN_COMMAND_AUDIT.md`に記録した。
+
+P2-01は一次情報による2件のcoverage向上、重複Move整理、現存する公式Source付き未登録39件の全件非掲載確認まで完了した。未登録621件はModern対応を推測できないため、Phase14を止めずRelease Quality Backlogとして継続する。

@@ -1,0 +1,233 @@
+/* ==========================================
+   Layout
+========================================== */
+
+body{
+    background: var(--bg);
+    color: var(--text);
+    font-family:
+        "Segoe UI",
+        "Noto Sans JP",
+        sans-serif;
+
+    /* うっすらグリッドのテクスチャを全ページ背景に敷く(公式サイト風の質感) */
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-attachment: fixed;
+}
+
+/* ===========================
+   esports風の太字見出し(全ページ共通)
+=========================== */
+
+h1, h2, h3{
+    font-weight: 800;
+    letter-spacing: .02em;
+}
+
+/* セクション見出しの前に付ける小さなラベルタグ
+   (公式サイトの "PROFILE" のような小さな金色/オレンジのタグを参考)
+   使い方: <p class="section-label">PLAYERS</p><h2>プレイヤー図鑑</h2> */
+.section-label{
+
+    display:inline-block;
+
+    padding:4px 14px;
+
+    margin-bottom:12px;
+
+    border-radius:4px;
+
+    background:var(--primary);
+
+    color:#0d0d0d;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+}
+
+/* ---------- Container ---------- */
+
+main,
+footer{
+
+    width:min(100%,1500px);
+
+    margin:0 auto;
+
+    padding-inline:16px;
+
+}
+
+/*=========================================
+  Header
+=========================================*/
+
+.site-header{
+
+    position:sticky;
+    top:0;
+
+    width:100%;
+
+    background:#11141b;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:1000;
+
+}
+
+.header-inner{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:80px;
+
+}
+
+.logo{
+
+    font-size:42px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+}
+
+/* .nav の定義は components-v2.css に統一している(重複定義を解消) */
+
+/* ---------- Hero ---------- */
+
+.hero{
+
+    min-height:70vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    gap:32px;
+
+}
+
+.hero h2{
+
+    font-size:56px;
+    line-height:1.1;
+    font-weight:900;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    font-size:22px;
+    color:var(--text-sub);
+    line-height:1.8;
+
+}
+
+/* ---------- Button ---------- */
+
+.button-area{
+
+    display:flex;
+    gap:20px;
+    margin-top:10px;
+
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+
+    padding:60px 24px;
+    text-align:center;
+
+    color:var(--text-sub);
+
+    border-top:1px solid var(--border);
+
+    margin-top:100px;
+
+}
+
+/* ---------- Background ---------- */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at left top,
+        rgba(255,107,0,.25),
+        transparent 40%),
+
+    radial-gradient(circle at right bottom,
+        rgba(255,255,255,.05),
+        transparent 35%);
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+.container{
+
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 24px;
+    box-sizing:border-box;
+
+}
+
+.toolbar{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+    margin:32px 0 48px;
+
+    flex-wrap:wrap;
+
+}
+.hero-area{
+
+    display:grid;
+
+    grid-template-columns:1.7fr 1fr;
+
+    gap:80px;
+
+    align-items:start;
+
+}

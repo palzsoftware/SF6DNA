@@ -1,0 +1,191 @@
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 1024px){
+
+    .logo h1{
+        font-size:52px;
+    }
+
+    .hero h2{
+        font-size:44px;
+    }
+
+    .hero p{
+        font-size:20px;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    header,
+    main,
+    footer{
+
+        padding-inline:20px;
+
+    }
+
+    .logo h1{
+
+        font-size:40px;
+
+    }
+
+    .logo p{
+
+        font-size:18px;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+
+        padding:60px 0;
+
+        gap:24px;
+
+    }
+
+    .hero h2{
+
+        font-size:34px;
+
+    }
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+    .button-area{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .btn-primary,
+    .btn-secondary{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .logo h1{
+
+        font-size:32px;
+
+    }
+
+    .hero h2{
+
+        font-size:28px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    footer{
+
+        font-size:14px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+.hero-area{
+
+display:flex;
+flex-direction:column;
+gap:32px;
+
+}
+
+.hero-right{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.hero-image{
+
+max-width:100%;
+margin:24px auto;
+
+}
+
+.feature-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.feature-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+@media (max-width: 1000px){
+
+    .hero-container{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .hero-left p{
+
+        margin:auto;
+
+    }
+
+    .hero-result-card{
+
+        max-width:500px;
+
+        margin:50px auto 0;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .feature-grid,
+    .dictionary-grid,
+    .problem-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+}

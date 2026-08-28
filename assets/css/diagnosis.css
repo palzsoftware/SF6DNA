@@ -1,0 +1,806 @@
+/* =========================================
+   Diagnosis Layout
+========================================= */
+
+.diagnosis-hero{
+
+    min-height:auto;
+
+    display:block;
+
+    padding:32px 0 12px;
+
+}
+
+.diagnosis-container{
+
+    width:100%;
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:0 24px;
+
+}
+
+.diagnosis-question{
+
+    margin-top:20px;
+
+}
+/*=========================================
+  Progress
+=========================================*/
+
+.progress-bar{
+
+    height:12px;
+
+    background:#252c38;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    height:100%;
+    width:0;
+
+    background:linear-gradient(
+        90deg,
+        #ff6b00,
+        #ff9a3c
+    );
+
+    border-radius:999px;
+
+    transition:.3s;
+
+    box-shadow:0 0 12px rgba(255,122,0,.6);
+
+    position:relative;
+
+}
+
+.progress-bar::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:linear-gradient(
+        135deg,
+        rgba(255,255,255,.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255,255,255,.2) 50%,
+        rgba(255,255,255,.2) 75%,
+        transparent 75%,
+        transparent
+    );
+
+    background-size:24px 24px;
+
+}
+
+/*=========================================
+  Question Card
+=========================================*/
+
+.question-card{
+
+    position:relative;
+
+    margin-top: 32px;
+
+    width:100%;
+    max-width:1100px;
+
+    margin:24px auto 0;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+    border-top:3px solid var(--primary);
+
+    border-radius:20px;
+
+    padding:48px;
+
+    box-shadow:var(--shadow);
+
+    transition:
+        opacity .25s,
+        transform .25s;
+
+}
+
+.question-card.hide{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+}
+
+.question-card.slide-in-forward{
+
+    animation:slideInForward var(--ds-duration-base, .2s) var(--ds-ease-standard, ease) both;
+
+}
+
+.question-card.slide-in-back{
+
+    animation:slideInBack var(--ds-duration-base, .2s) var(--ds-ease-standard, ease) both;
+
+}
+
+@keyframes slideInForward{
+
+    from{
+        opacity:0;
+        transform:translateX(24px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes slideInBack{
+
+    from{
+        opacity:0;
+        transform:translateX(-24px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+/* ===========================
+   ステージ表示・期待感メッセージ
+=========================== */
+
+.stage-text{
+
+    font-size:13px;
+
+    color:var(--text-sub);
+
+    font-weight:700;
+
+    letter-spacing:.03em;
+
+}
+
+.stage-dots{
+
+    display:flex;
+
+    gap:6px;
+
+    margin-top:10px;
+
+}
+
+.stage-dot{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--border);
+
+    transition:background var(--ds-duration-base, .2s) var(--ds-ease-standard, ease),
+               transform var(--ds-duration-base, .2s) var(--ds-ease-standard, ease);
+
+}
+
+.stage-dot.filled{
+
+    background:var(--primary, #ff6b00);
+
+    transform:scale(1.15);
+
+}
+
+.encourage-message{
+
+    min-height:18px;
+
+    margin-top:10px;
+
+    font-size:13px;
+
+    color:var(--primary-hover, #ff8d32);
+
+    font-weight:700;
+
+}
+
+.encourage-message.encourage-flash{
+
+    animation:encourageFadeIn .4s ease both;
+
+}
+
+@keyframes encourageFadeIn{
+
+    from{ opacity:0; transform:translateY(-4px); }
+    to{ opacity:1; transform:translateY(0); }
+
+}
+
+/* ===========================
+   戻るボタン
+=========================== */
+
+.back-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:28px;
+
+    padding:8px 16px;
+
+    background:transparent;
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+    color:var(--text-sub);
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    transition:border-color var(--ds-duration-fast, .12s) var(--ds-ease-standard, ease),
+               color var(--ds-duration-fast, .12s) var(--ds-ease-standard, ease);
+
+}
+
+.back-button:hover{
+
+    border-color:var(--primary, #ff6b00);
+
+    color:var(--primary-hover, #ff8d32);
+
+}
+
+/* ===========================
+   回答チェックマーク(押した瞬間のフィードバック)
+=========================== */
+
+.answer-check{
+
+    position:absolute;
+
+    right:20px;
+
+    top:50%;
+
+    transform:translateY(-50%) scale(0);
+
+    color:var(--primary, #ff6b00);
+
+    font-size:20px;
+
+    font-weight:900;
+
+    transition:transform var(--ds-duration-fast, .12s) var(--ds-ease-overshoot, ease);
+
+}
+
+.answer-item.selected .answer-check{
+
+    transform:translateY(-50%) scale(1);
+
+}
+
+/* ===========================
+   ステージクリア演出
+=========================== */
+
+.stage-clear-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(13,17,23,.92);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:opacity .2s ease;
+
+    z-index:9998;
+
+}
+
+.stage-clear-overlay.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.stage-clear-content{
+
+    text-align:center;
+
+    animation:stageClearPop .5s var(--ds-ease-overshoot, ease) both;
+
+}
+
+@keyframes stageClearPop{
+
+    0%{ transform:scale(.7); opacity:0; }
+    100%{ transform:scale(1); opacity:1; }
+
+}
+
+.stage-clear-title{
+
+    color:var(--primary, #ff6b00);
+
+    font-size:32px;
+
+    font-weight:900;
+
+    letter-spacing:.04em;
+
+    margin-bottom:8px;
+
+}
+
+.stage-clear-sub{
+
+    color:#fff;
+
+    font-size:14px;
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .question-card.slide-in-forward,
+    .question-card.slide-in-back,
+    .stage-clear-content,
+    .encourage-message.encourage-flash{
+        animation:none;
+        opacity:1;
+        transform:none;
+    }
+
+}
+
+
+
+/*=========================================
+  Question
+=========================================*/
+
+.question-number{
+
+    display:inline-block;
+
+    color:#0d0d0d;
+
+    background:linear-gradient(160deg, #ff9a3c, var(--primary));
+
+    padding:8px 20px;
+
+    border-radius:999px;
+
+    font-size:16px;
+
+    font-weight:800;
+
+    letter-spacing:.05em;
+
+    margin-bottom:20px;
+
+}
+
+.question-title{
+
+    outline:none;
+
+    font-size:36px;
+
+    font-weight:800;
+
+    line-height:1.4;
+
+    margin-bottom:36px;
+
+}
+
+.question-title:focus-visible{
+
+    outline:2px solid var(--primary, #ff6b00);
+    outline-offset:6px;
+    border-radius:4px;
+
+}
+
+/*=========================================
+  Answers
+=========================================*/
+
+.answer-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.answer-item{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:24px 28px;
+
+    border:1px solid #31394a;
+
+    border-radius:16px;
+
+    background:#1b1f27;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    overflow:hidden;
+
+        transition:
+        background .25s,
+        border-color .25s,
+        transform .2s;
+
+}
+
+@keyframes answerFadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(14px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.answer-enter{
+
+    animation:answerFadeIn .4s ease both;
+
+}
+
+.answer-item.selected{
+
+    background:rgba(255,107,0,.12);
+
+    border-color:var(--primary);
+
+    transform:scale(1.015);
+
+    box-shadow:0 0 20px rgba(255,107,0,.25);
+
+}
+
+.answer-item:hover{
+
+    border-color:#ff6b00;
+
+    background:#232938;
+
+    transform:translateX(6px);
+
+}
+
+.answer-item input{
+
+    transform:scale(1.6);
+
+    accent-color:#ff6b00;
+
+}
+
+.answer-text{
+
+    font-size:20px;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+}
+
+.answer-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:#ff6b00;
+
+    transform:scaleY(0);
+
+    transition:.25s;
+
+}
+
+.answer-item:hover::before{
+
+    transform:scaleY(1);
+
+}
+
+/*=========================================
+  Progress Header
+=========================================*/
+
+.progress{
+
+    margin-bottom:24px;
+
+}
+
+.progress-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+}
+
+.progress-count{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    color:var(--primary);
+
+    letter-spacing:2px;
+
+    font-weight:800;
+
+}
+
+.progress-remaining{
+
+    color:#9ca8bb;
+
+    font-size:15px;
+
+}
+
+.diagnosis-header{
+
+    background:#171c25;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:40px;
+    margin:50px 0;
+
+}
+
+
+
+/* ===========================
+   結果ページ遷移時のローディング演出
+=========================== */
+
+.loading-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#0d1117;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:opacity .3s ease;
+
+    z-index:9999;
+
+}
+
+.loading-overlay.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.loading-content{
+
+    text-align:center;
+
+}
+
+.loading-spinner{
+
+    width:56px;
+
+    height:56px;
+
+    margin:0 auto 24px;
+
+    border:4px solid rgba(255,107,0,.2);
+
+    border-top-color:var(--primary, #ff6b00);
+
+    border-radius:50%;
+
+    animation:loadingSpin .8s linear infinite;
+
+}
+
+@keyframes loadingSpin{
+
+    to{ transform:rotate(360deg); }
+
+}
+
+.loading-text{
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    letter-spacing:.05em;
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .loading-spinner{
+        animation:none;
+    }
+
+}
+
+/* ===========================
+   診断モードバッジ
+=========================== */
+
+.mode-badge{
+
+    display:inline-block;
+
+    margin-bottom:16px;
+
+    padding:6px 18px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:800;
+
+}
+
+.mode-badge-beginner{
+
+    background:rgba(255,107,0,.15);
+
+    border:1px solid rgba(255,107,0,.4);
+
+    color:#ffb347;
+}
+
+.mode-badge-advanced{
+
+    background:rgba(255,61,61,.15);
+
+    border:1px solid rgba(255,61,61,.4);
+
+    color:#ff6b6b;
+}
+
+/* ===========================
+   Phase2 セルフレビューによるモバイル調整
+   (ファイル末尾に配置し、上記の基本スタイルより後に評価されるようにしている)
+=========================== */
+
+@media (max-width:768px){
+
+    .stage-clear-title{
+        font-size:24px;
+    }
+
+    .back-button{
+        width:100%;
+        justify-content:center;
+    }
+
+    /* QUESTION表示とSTAGE表示が横並びのままだと狭い画面で窮屈になり、
+       上級モードでは特に文字が詰まって見づらくなるため、縦積みに変更する */
+    .progress-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:4px;
+    }
+
+    .progress-count{
+        font-size:15px;
+    }
+
+    .stage-text{
+        font-size:12px;
+    }
+
+    /* 親指操作時の余白確保のため、カード内側の余白を狭める */
+    .question-card{
+        padding:28px 20px;
+    }
+
+    .answer-item{
+        padding:18px 20px;
+    }
+
+}

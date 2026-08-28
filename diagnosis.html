@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>プレイスタイル診断 | SF6 DNA</title>
+
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/components-v2.css">
+    <link rel="stylesheet" href="assets/css/diagnosis.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/view-mode.css">
+<link rel="stylesheet" href="assets/css/onboarding.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+SF6 DNA
+</a>
+
+<button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<nav class="nav">
+
+    <a href="index.html">TOP</a>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            診断 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="diagnosis.html" class="active"><span>📝 START</span>診断する</a>
+
+<a href="favorites.html"><span>📋 HISTORY</span>過去の診断結果を確認する</a>
+
+<a href="rank-tracker.html"><span>📈 RANK</span>ランク管理</a>
+
+<a href="training.html"><span>💪 TRAINING</span>練習メニュー</a>
+<a href="mypage.html"><span>🏠 MYPAGE</span>マイページ</a>
+
+
+</div>
+
+    </div>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            図鑑 ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="characters.html"><span>🎮 CHARACTER</span>キャラクター図鑑</a>
+
+<a href="players.html"><span>👤 PLAYER</span>プレイヤー図鑑</a>
+
+<a href="team.html"><span>🏆 TEAM</span>チーム図鑑</a>
+<a href="ranking.html"><span>🏅 RANKING</span>ランキング</a>
+<a href="tournament.html"><span>📅 TOURNAMENT</span>大会情報</a>
+
+
+</div>
+
+    </div>
+
+    <a href="compare.html">比較</a>
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+
+            About ▼
+
+        </button>
+
+       <div class="dropdown-content">
+
+    <a href="about.html"><span>ℹ️ OVERVIEW</span>About概要</a>
+
+<a href="contact.html"><span>✉️ CONTACT</span>お問い合わせ</a>
+
+<a href="faq.html"><span>❓ FAQ</span>よくある質問</a>
+
+<a href="changelog.html"><span>📝 LOG</span>バージョン情報</a>
+
+<a href="sources.html"><span>🔗 SOURCES</span>参照サイト一覧</a>
+
+</div>
+
+    </div>
+
+    <button id="viewModeToggle" class="view-mode-toggle" aria-label="表示モード切り替え" title="PC版/スマホ版の表示を切り替えます">
+    📱
+</button>
+
+</nav>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="hero diagnosis-hero">
+
+<div class="diagnosis-container">
+
+<p id="modeBadge" class="mode-badge"></p>
+
+<div class="progress-header">
+
+   <span
+id="progressText"
+class="progress-count">
+
+QUESTION 01 / 50
+
+</span>
+
+<span
+id="stageText"
+class="stage-text">
+
+</span>
+
+</div>
+
+<div class="progress" id="progressTrack">
+
+    <div class="progress-bar" id="progressBar"></div>
+
+</div>
+
+<div class="stage-dots" id="stageDots"></div>
+
+<p id="encourageMessage" class="encourage-message" aria-live="polite"></p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container diagnosis-container">
+
+<section class="question-card diagnosis-question">
+
+    <div class="question-number" id="questionNumber">
+    Q1
+      </div>
+
+    <h2 class="question-title" id="questionTitle" tabindex="-1">
+        相手の体力が残り少なくなった時、あなたはどう行動しますか？
+    </h2>
+
+   <div class="answer-list" id="answerList"></div>
+
+   <button
+       type="button"
+       id="backButton"
+       class="back-button"
+       aria-label="1つ前の質問に戻る"
+   >
+       ← 戻る
+   </button>
+
+</section>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- ステージクリア演出(短時間で自動的に消える) -->
+<div id="stageClearOverlay" class="stage-clear-overlay" aria-live="polite">
+    <div class="stage-clear-content">
+        <p class="stage-clear-title" id="stageClearTitle">STAGE 1 CLEAR!</p>
+        <p class="stage-clear-sub" id="stageClearSub">分析を続行します…</p>
+    </div>
+</div>
+
+<!-- 診断完了→結果ページ遷移時のローディング演出 -->
+<div id="loadingOverlay" class="loading-overlay">
+
+    <div class="loading-content">
+
+        <div class="loading-spinner"></div>
+
+        <p class="loading-text" id="loadingText">プレイスタイルを解析中...</p>
+
+    </div>
+
+</div>
+
+<footer class="site-footer">
+
+<div class="diagnosis-container">
+
+<p>
+
+© 2026 SF6 DNA Project
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="assets/js/site-constants.js"></script>
+<script src="assets/js/activity-log.js"></script>
+<script src="assets/js/diagnosis-advanced.js"></script>
+<script src="assets/js/diagnosis.js"></script>
+
+<script src="assets/js/onboarding.js"></script>
+<script src="assets/js/nav.js"></script>
+
+</body>
+
+</html>

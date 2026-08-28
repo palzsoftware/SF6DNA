@@ -1,0 +1,176 @@
+/* ==========================================
+   ランキングページ
+========================================== */
+
+main > .container{
+
+    max-width:720px;
+
+}
+
+.ranking-category{
+
+    margin-top:var(--ds-space-3xl, 48px);
+
+}
+
+.ranking-category-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:18px;
+
+    margin:0 0 4px 0;
+
+}
+
+.ranking-category-title i{
+
+    color:var(--primary-hover, #ff8d32);
+
+    font-size:20px;
+
+}
+
+.ranking-category-desc{
+
+    font-size:12px;
+
+    color:var(--text-sub);
+
+    margin:0 0 var(--ds-space-lg, 16px) 0;
+
+}
+
+.ranking-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.ranking-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    background:var(--surface);
+
+    border:0.5px solid var(--border);
+
+    border-radius:8px;
+
+    padding:12px 16px;
+
+    transition:border-color .12s ease;
+
+}
+
+.ranking-row:hover{
+
+    border-color:var(--primary);
+
+}
+
+.ranking-rank{
+
+    width:24px;
+
+    text-align:center;
+
+    font-weight:700;
+
+    color:var(--text-sub);
+
+}
+
+.ranking-rank-top{
+
+    color:var(--primary-hover, #ff8d32);
+
+}
+
+.ranking-avatar{
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.ranking-avatar-fallback{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(160deg, var(--primary, #ff6b00), #7a3b00);
+
+    color:#fff;
+
+    font-weight:900;
+
+}
+
+.ranking-name{
+
+    flex:1;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+.ranking-value{
+
+    font-size:12px;
+
+    color:var(--text-sub);
+
+}
+
+.ranking-empty,
+.ranking-comingsoon{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    color:var(--text-sub);
+
+    font-size:13px;
+
+    background:var(--surface);
+
+    border:0.5px dashed var(--border);
+
+    border-radius:8px;
+
+    padding:24px;
+
+}

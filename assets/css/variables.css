@@ -1,0 +1,78 @@
+/* ==========================================
+   SF6 DNA Color System
+========================================== */
+
+:root{
+
+    /* Main */
+
+    --bg:#0d1117;
+    --surface:#161b22;
+    --surface-2:#1f2630;
+
+    --primary:#ff6b00;
+    --primary-hover:#ff8d32;
+
+    --text:#ffffff;
+    --text-sub:#b5bcc8;
+
+    --border:#2b3442;
+
+    --success:#38d996;
+    --danger:#ff4b55;
+
+    /* 診断タイプごとのアクセントカラー(result.jsが動的に上書きする) */
+    --type-color:#ff6b00;
+    --type-color-soft:rgba(255,107,0,.15);
+
+    /* player.css で使用(元々定義が漏れていたため追加) */
+    --accent-color:#ff6b00;
+
+    /* Shadow */
+
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+
+    /* Radius */
+
+    --radius:16px;
+
+    /* Width */
+
+    --container:1200px;
+
+    /* Animation */
+
+    --transition:.25s ease;
+
+    /* ==========================================
+       ここから下は Design System (docs/DESIGN_SYSTEM.md) 導入分。
+       既存の変数は一切変更せず、新規トークンのみ追記している。
+       Phase1(ホームページ)から使用開始。
+    ========================================== */
+
+    /* Design System: Color */
+    --ds-accent-cool:#3ad6ff;
+    --ds-warning:#f5a623;
+
+    /* Design System: Spacing スケール */
+    --ds-space-xs:4px;
+    --ds-space-sm:8px;
+    --ds-space-md:12px;
+    --ds-space-lg:16px;
+    --ds-space-xl:24px;
+    --ds-space-2xl:32px;
+    --ds-space-3xl:48px;
+    --ds-space-4xl:64px;
+
+    /* Design System: クリップ形状のカット幅 */
+    --ds-clip-hero:24px;
+    --ds-clip-card:16px;
+    --ds-clip-button:8px;
+
+    /* Design System: Animation */
+    --ds-duration-fast:120ms;
+    --ds-duration-base:200ms;
+    --ds-duration-slow:400ms;
+    --ds-ease-standard:cubic-bezier(0.4,0,0.2,1);
+    --ds-ease-overshoot:cubic-bezier(0.34,1.56,0.64,1);
+}

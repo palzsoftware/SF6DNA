@@ -1,0 +1,504 @@
+/* ===========================
+   ランク管理ページ
+=========================== */
+
+.rank-input-section,
+.rank-chart-section,
+.rank-history-section{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-top:3px solid var(--primary);
+
+    border-radius:var(--radius);
+
+    padding:28px;
+
+    margin-top:32px;
+
+}
+
+.rank-form{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+
+    gap:16px;
+
+    margin-top:16px;
+
+    align-items:end;
+
+}
+
+.rank-form-note-field{
+
+    grid-column:1 / -1;
+
+}
+
+.rank-form label{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    font-size:14px;
+
+    color:var(--text-sub);
+
+}
+
+.rank-form input,
+.rank-form select{
+
+    background:#12151c;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    padding:12px 14px;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-family:inherit;
+
+}
+
+.rank-form button{
+
+    height:48px;
+
+}
+
+.rank-chart-area{
+
+    margin-top:16px;
+
+}
+
+.rank-chart-svg{
+
+    width:100%;
+
+    height:auto;
+
+    background:#12151c;
+
+    border-radius:12px;
+
+}
+
+.rank-empty{
+
+    color:var(--text-sub);
+
+    text-align:center;
+
+    padding:40px 0;
+
+}
+
+.rank-history-area{
+
+    margin-top:16px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.rank-history-item{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    background:#1b1f27;
+
+    border:1px solid #303847;
+
+    border-radius:12px;
+
+    padding:14px 44px 14px 18px;
+
+}
+
+.rank-history-main{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    font-weight:700;
+
+}
+
+.rank-history-date{
+
+    color:var(--text-sub);
+
+    font-weight:400;
+
+    font-size:13px;
+
+}
+
+.rank-history-mr{
+
+    font-size:16px;
+
+}
+
+.rank-diff{
+
+    font-size:13px;
+
+    padding:2px 10px;
+
+    border-radius:999px;
+
+}
+
+.rank-diff-up{
+    color:#46c878;
+    background:rgba(70,200,120,.12);
+}
+
+.rank-diff-down{
+    color:#ff7850;
+    background:rgba(255,120,80,.12);
+}
+
+.rank-diff-flat{
+    color:var(--text-sub);
+    background:rgba(255,255,255,.06);
+}
+
+.rank-history-sub{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    font-size:13px;
+
+    color:var(--text-sub);
+
+}
+
+.rank-delete-button{
+
+    position:absolute;
+
+    top:14px;
+
+    right:14px;
+
+    width:26px;
+
+    height:26px;
+
+    border-radius:50%;
+
+    background:none;
+
+    border:1px solid var(--border);
+
+    color:var(--text-sub);
+
+    cursor:pointer;
+
+    font-size:12px;
+
+    line-height:1;
+
+}
+
+.rank-delete-button:hover{
+
+    border-color:#ff7850;
+
+    color:#ff7850;
+
+}
+
+/* ===========================
+   カレンダーウィジェット
+=========================== */
+
+.rank-form-date-field{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    grid-column:1 / -1;
+
+    max-width:340px;
+}
+
+.rank-calendar{
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    right:0;
+
+    z-index:50;
+
+    margin-top:8px;
+
+    width:100%;
+
+    max-width:340px;
+
+    background:#181c25;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:14px 10px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+
+    box-sizing:border-box;
+
+}
+
+.rank-calendar-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+}
+
+.rank-calendar-header button{
+
+    background:none;
+
+    border:none;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    padding:4px 10px;
+}
+
+.rank-calendar-legend{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    font-size:11px;
+
+    color:var(--text-sub);
+
+    margin-bottom:10px;
+}
+
+.rank-calendar-legend .dot{
+
+    display:inline-block;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    margin-right:4px;
+}
+
+.rank-calendar-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(7, 1fr);
+
+    gap:3px;
+}
+
+.calendar-weekday{
+
+    text-align:center;
+
+    font-size:11px;
+
+    color:var(--text-sub);
+
+    padding-bottom:4px;
+}
+
+.calendar-cell{
+
+    position:relative;
+
+    aspect-ratio:1;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#12151c;
+
+    border:1px solid transparent;
+
+    border-radius:6px;
+
+    color:#fff;
+
+    font-size:12px;
+
+    cursor:pointer;
+}
+
+.calendar-cell-empty{
+
+    background:none;
+
+    cursor:default;
+}
+
+.calendar-cell:hover:not(.calendar-cell-empty){
+
+    border-color:var(--primary);
+}
+
+.calendar-cell-act{
+
+    background:rgba(255,61,61,.18);
+}
+
+.calendar-cell-update{
+
+    background:rgba(70,150,255,.18);
+}
+
+.dot-act{ background:#ff3d3d; }
+.dot-update{ background:#4696ff; }
+
+.dot-record{
+
+    position:absolute;
+
+    bottom:3px;
+
+    right:3px;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+}
+
+/* ===========================
+   キャラクター別フィルタボタン
+=========================== */
+
+.rank-char-filter-row{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-bottom:16px;
+}
+
+.rank-char-filter-btn{
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    border:1px solid var(--border);
+
+    background:#12151c;
+
+    color:var(--text-sub);
+
+    font-size:13px;
+
+    cursor:pointer;
+}
+
+.rank-char-filter-btn.active{
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+
+    color:#0d0d0d;
+
+    font-weight:700;
+}
+
+.rank-history-char-link{
+
+    background:none;
+
+    border:1px solid var(--border);
+
+    border-radius:999px;
+
+    padding:2px 10px;
+
+    color:var(--text-sub);
+
+    font-size:12px;
+
+    cursor:pointer;
+}
+
+.rank-history-char-link:hover{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+}
