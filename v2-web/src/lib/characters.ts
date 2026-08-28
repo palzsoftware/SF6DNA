@@ -1,3 +1,4 @@
+import { legacyCharacterImageUrl } from "@/lib/legacy-character-images";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type {
   CharacterDetail,
@@ -13,13 +14,17 @@ function isSupabaseConfigured() {
 }
 
 function toSummary(row: Record<string, unknown>): CharacterSummary {
+  const slug = String(row.slug);
   return {
     id: String(row.id),
-    slug: String(row.slug),
+    slug,
     name: String(row.name_ja),
     nameEn: typeof row.name_en === "string" ? row.name_en : null,
     shortDescription: typeof row.summary === "string" ? row.summary : null,
-    imageUrl: typeof row.image_url === "string" ? row.image_url : null,
+    imageUrl:
+      typeof row.image_url === "string" && row.image_url.trim()
+        ? row.image_url
+        : legacyCharacterImageUrl(slug),
     difficulty: typeof row.difficulty === "number" ? row.difficulty : null,
     rangeLabel: typeof row.preferred_range === "string" ? row.preferred_range : null,
     archetypeLabel: typeof row.archetype === "string" ? row.archetype : null,
