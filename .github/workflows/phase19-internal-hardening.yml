@@ -46,6 +46,7 @@ jobs:
           import fs from 'node:fs';
 
           const read = (path) => fs.readFileSync(path, 'utf8');
+          const compactSql = (value) => value.replace(/\s+/g, ' ');
           const moveGate = read('src/lib/public-move-gate.ts');
           const search = read('src/lib/search.ts');
           const knowledge = read('src/lib/knowledge.ts');
@@ -54,9 +55,9 @@ jobs:
           const coach = read('src/app/api/coach/retrieve/route.ts');
           const auth = read('src/app/auth/page.tsx');
           const robots = read('src/app/robots.ts');
-          const moveRls = read('../supabase/migrations/20260828_phase19_strict_public_move_rls.sql');
-          const strategyRls = read('../supabase/migrations/20260828_phase18_strategy_source_public_gate.sql');
-          const sourceNormalization = read('../supabase/migrations/20260828_phase19_normalize_guide_section_source_type.sql');
+          const moveRls = compactSql(read('../supabase/migrations/20260828_phase19_strict_public_move_rls.sql'));
+          const strategyRls = compactSql(read('../supabase/migrations/20260828_phase18_strategy_source_public_gate.sql'));
+          const sourceNormalization = compactSql(read('../supabase/migrations/20260828_phase19_normalize_guide_section_source_type.sql'));
 
           for (const required of [
             '.eq("status", "published")',
@@ -71,15 +72,15 @@ jobs:
           assert.ok(moveRls.includes('private.is_move_public_ready'), 'Move RLS helper missing');
           assert.ok(moveRls.includes("s.reliability_level = 'official'"), 'Classic command must have official evidence');
           assert.ok(moveRls.includes("p.is_current = true"), 'Move RLS must require current patch');
-          assert.ok(moveRls.includes("verification_status = 'verified'"), 'Move RLS must require verified frame');
+          assert.ok(moveRls.includes("f.verification_status = 'verified'"), 'Move RLS must require verified frame');
           assert.ok(moveRls.includes('public read release-ready moves'), 'strict Move SELECT policy missing');
 
           for (const entity of ['combo', 'setup', 'sequence', 'counter', 'training']) {
-            assert.ok(strategyRls.includes(`es.entity_type = '${entity}'`), `${entity} source RLS missing`);
+            assert.match(strategyRls, new RegExp(`es\\.entity_type\\s*=\\s*'${entity}'`), `${entity} source RLS missing`);
           }
 
-          assert.ok(sourceNormalization.includes("entity_type = 'guide_section'"));
-          assert.ok(sourceNormalization.includes("entity_type = 'character_guide_section'"));
+          assert.match(sourceNormalization, /entity_type\s*=\s*'guide_section'/);
+          assert.match(sourceNormalization, /entity_type\s*=\s*'character_guide_section'/);
 
           assert.ok(characters.includes('.eq("status", "published")'));
           assert.ok(characters.includes('.eq("verification_status", "verified")'));
