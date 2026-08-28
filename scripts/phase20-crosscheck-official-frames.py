@@ -74,9 +74,7 @@ def table_rows(lines):
         if len(cells) == 1 and cells[0] in SECTIONS:
             section = cells[0]
             continue
-        if len(cells) < 8 or cells[0] in ("技名", "---") or cells[0].startswith("---"):
-            continue
-        if section is None:
+        if len(cells) < 8 or cells[0] in ("技名", "---") or cells[0].startswith("---") or section is None:
             continue
         name = extract_name_cell(cells[0])
         if not name:
@@ -90,23 +88,30 @@ def table_rows(lines):
 
 def split_hitblock(tok):
     t = str(tok or "").lstrip("*")
+    damage = None
+    appended = re.fullmatch(r"(.*?)[※*](\d+)\*?", t)
+    if appended:
+        t, damage = appended.group(1), appended.group(2)
     m = re.fullmatch(r"(\d+)-([0-9]+)-([0-9]+)", t)
     if m:
-        return {"recovery": m.group(1), "on_hit": "-" + m.group(2), "on_block": "-" + m.group(3)}
+        return {"recovery": m.group(1), "on_hit": "-" + m.group(2), "on_block": "-" + m.group(3), "damage": damage}
     m = re.fullmatch(r"(\d+)D-([0-9]+)", t)
     if m:
-        return {"recovery": m.group(1), "on_hit": "D", "on_block": "-" + m.group(2)}
+        return {"recovery": m.group(1), "on_hit": "D", "on_block": "-" + m.group(2), "damage": damage}
+    m = re.fullmatch(r"D\+([0-9]+)-([0-9]+)", t)
+    if m:
+        return {"on_hit": "D+" + m.group(1), "on_block": "-" + m.group(2), "damage": damage}
     m = re.fullmatch(r"D-([0-9]+)", t)
     if m:
-        return {"on_hit": "D", "on_block": "-" + m.group(1)}
-    m = re.fullmatch(r"(\d+)-([0-9]+)", t)
+        return {"on_hit": "D", "on_block": "-" + m.group(1), "damage": damage}
+    m = re.fullmatch(r"([+-]?\d+)-([0-9]+)", t)
     if m:
-        return {"on_hit": normalize_adv(m.group(1)), "on_block": "-" + m.group(2)}
+        return {"on_hit": normalize_adv(m.group(1)), "on_block": "-" + m.group(2), "damage": damage}
     return None
 
 
 def parse_stat_line(raw):
-    s = norm_space(clean_images(raw)).replace("※", "*")
+    s = norm_space(clean_images(raw))
     s = re.sub(r"^（[^）]*）\s*", "", s)
     toks = s.split()
     start_idx = None
@@ -147,27 +152,31 @@ def parse_stat_line(raw):
         else:
             comp = split_hitblock(t)
             if comp and "recovery" in comp:
-                d.update(comp)
+                d.update({k: v for k, v in comp.items() if v is not None})
                 idx += 1
     if not d["on_hit"] and idx < len(toks):
         comp = split_hitblock(toks[idx])
         if comp:
-            d.update(comp)
+            d.update({k: v for k, v in comp.items() if v is not None})
             idx += 1
         elif toks[idx] in ("D", "-") or re.fullmatch(r"D\+\d+|[+-]?\d+", toks[idx]):
-            h = toks[idx]
-            if idx + 1 < len(toks) and re.fullmatch(r"[+-]?\d+", toks[idx + 1]):
-                d["on_hit"] = normalize_adv(h) if h != "-" else ""
-                d["on_block"] = normalize_adv(toks[idx + 1])
-                idx += 2
-            elif h == "D" or h.startswith("D+"):
-                d["on_hit"] = h
+            hit = toks[idx]
+            d["on_hit"] = normalize_adv(hit) if hit != "-" else ""
+            idx += 1
+            if idx < len(toks) and re.fullmatch(r"[+-]?\d+", toks[idx]) and abs(int(toks[idx])) < 100:
+                d["on_block"] = normalize_adv(toks[idx])
                 idx += 1
-    for t in toks[idx:]:
-        m = re.match(r"^[※*]?(\d+)", t)
+    if not d["damage"] and idx < len(toks):
+        m = re.search(r"(?:C|SA[123]|SA).*?[※*](\d+)", toks[idx])
+        if m:
+            d["damage"] = m.group(1)
+            idx += 1
+        elif re.fullmatch(r"(?:C|SA[123]|SA|-)", toks[idx]):
+            idx += 1
+    if not d["damage"] and idx < len(toks):
+        m = re.fullmatch(r"[※*]?(\d+)\*?", toks[idx])
         if m and int(m.group(1)) >= 100:
             d["damage"] = m.group(1)
-            break
     return d
 
 
