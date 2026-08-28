@@ -104,6 +104,7 @@ Combo / Setup / Sequence / Counter / Training はPublic UI・Unified Search・AI
 5. `draft / reviewed / unverified` は確定攻略情報としてPublicへ出さない
 
 Phase14 P0-02でRLSと`search_sf6dna`へ `published + verified` を強制した。Web側もKnowledge list / Character section / Detailで同条件を明示する。
+Phase18ではStrategy Public RLSをさらに`published + verified + Source relation`へ強化した。
 
 ### Public Move Gate
 
@@ -119,7 +120,8 @@ Moveには独立した`verification_status`列がないため、Moveの`status=p
 6. Classic Commandが存在する
 7. Frameにofficial Sourceが存在する
 8. Moveにofficial Sourceが存在する
-9. Modern Commandは存在する場合のみ表示し、欠損を推測補完しない
+9. Classic Commandにofficial Sourceが存在する
+10. Modern Commandは存在する場合のみ表示し、欠損を推測補完しない
 
 2026-08-27の実DB監査では、この機械条件を満たすdraft Move候補は **307件 / 4キャラ**。
 
@@ -130,7 +132,9 @@ Moveには独立した`verification_status`列がないため、Moveの`status=p
 - 307件中Modern Commandあり: 295
 - Modern Commandなし: 12
 
-これは**公開承認件数ではない**。Move本体は全件draftのため、Phase14では候補抽出と表示基盤を先に整え、Source/名称/Command/Frameの最終公開チェックを通過したものだけを個別にpublish対象とする。
+2026-08-28 Phase19で307候補すべてについて、Move / Current Frame / Classic Commandのofficial Evidenceを再確認した。App GateとMove RLSも同条件へ統一した。
+
+これは**公開承認件数ではない**。Move本体は全件draftのため、候補抽出と表示基盤を先に整え、Source/名称/Command/Frameの最終公開チェックを通過したものだけを個別にpublish対象とする。
 
 ### Strategy candidate snapshot
 
@@ -142,7 +146,7 @@ Moveには独立した`verification_status`列がないため、Moveの`status=p
 - Source relation: 2
 - Status: `draft`
 
-Phase13クリーンアップ方針どおりdraftを維持し、Phase14の監査だけを理由にpublishへ戻さない。
+Phase13クリーンアップ方針どおりdraftを維持し、監査だけを理由にpublishへ戻さない。
 
 ### Safe empty state
 
@@ -155,4 +159,23 @@ Phase13クリーンアップ方針どおりdraftを維持し、Phase14の監査�
 - reviewed ≠ verified
 - draft ≠ published
 - 検証できない値をデモ都合で埋めない
-- 本番公開はPhase14中に自動実行しない
+- Production公開はユーザーの明示許可なしに実行しない
+
+---
+
+## Phase19 Internal Hardening — 2026-08-28
+
+Phase19では外部AcceptanceをPhase20へ分離したまま、内部Release Gateを横断監査した。
+
+- PostgreSQL FK: validated
+- Current Patch: 1件
+- duplicate / blank slug重大問題: 0
+- Current Frame duplicate: 0
+- Patch validity reversal: 0
+- polymorphic Source invalid target: 0（legacy type 16件を構造正規化後）
+- Supabase Security Advisor: 0 lints
+- Public Move Gate: App + RLSをCurrent Patch verified Frame + official Move/Frame/Classic Evidenceへ統一
+- Strategy Public RLS: published + verified + Source
+- AI Coach Generation: OFF維持
+
+Phase19の内部PASSは、Gate GのVercel Preview・実機・実認証E2Eを代替しない。Production Ready最終判定はPhase20で行う。
