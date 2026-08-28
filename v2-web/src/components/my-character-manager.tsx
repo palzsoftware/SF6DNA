@@ -29,9 +29,12 @@ export function MyCharacterManager({
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setFavorites(getFavoriteCharacterSlugs());
-    setStatuses(getCharacterStatuses());
-    setReady(true);
+    const frame = window.requestAnimationFrame(() => {
+      setFavorites(getFavoriteCharacterSlugs());
+      setStatuses(getCharacterStatuses());
+      setReady(true);
+    });
+    return () => window.cancelAnimationFrame(frame);
   }, []);
 
   const visible = useMemo(
