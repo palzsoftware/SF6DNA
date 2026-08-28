@@ -2,7 +2,7 @@
 
 最終更新: 2026-08-28 JST
 
-状態: **未開始 / 定義済み**
+状態: **進行中**
 
 ## Phase19名称
 
@@ -15,6 +15,14 @@ Phase19は、人力・外部UI・実デバイス・実認証セッション・Ve
 Phase18で完了したVerified Content Coverage / Public Gate hardeningを基準に、Production前に機械的に検査・改善できる整合性、回帰耐性、運用安全性をさらに高める。
 
 人力・外部検証はPhase19に含めない。すべてFinal Phase（Phase20）へ移管する。
+
+## 開始Baseline
+
+- Phase19開始HEAD: `5665063d193b9aa9bcafcd3563eb219863007413`
+- main SHA: `b9a2a8f638a3d4a98bfa042d56470664fe225ba7`
+- Current Patch: `2026.08.03`
+- Phase18: Complete / Data Gate PASS
+- Production Ready: 未判定 / Phase20依存
 
 ## 正本
 
