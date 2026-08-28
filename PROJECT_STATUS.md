@@ -12,9 +12,10 @@ Phase18 `Verified Content Coverage & Publish Candidate Preparation` では、Sup
 
 - Automated / Internal Readiness: **PASS**
 - Data Gate Readiness: **PASS**
-- Production Ready: **未判定 / Phase19依存**
+- Production Ready: **未判定 / Final Phase依存**
 - Phase18: **完了**
-- Phase19 Manual / External Acceptance: **未開始**
+- Phase19 Internal Data Integrity & Release Hardening: **未開始 / 定義済み**
+- Phase20 Final Manual / External Acceptance: **未開始 / Final Phase予約**
 
 ## 正本
 
@@ -32,7 +33,9 @@ Phase18 `Verified Content Coverage & Publish Candidate Preparation` では、Sup
 - Phase18 Plan: `docs/PHASE18_IMPLEMENTATION_PLAN.md`
 - Phase18 Data Quality: `docs/PHASE18_DATA_QUALITY_REPORT_2026-08-28.md`
 - Phase18 Final Audit: `docs/PHASE18_FINAL_AUDIT_2026-08-28.md`
-- Phase19 Manual Acceptance Plan: `docs/PHASE19_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md`
+- Phase19 Plan: `docs/PHASE19_IMPLEMENTATION_PLAN.md`
+- Phase20 Final Manual Acceptance Plan: `docs/PHASE20_FINAL_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md`
+- Legacy Phase19 Manual Plan: `docs/PHASE19_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md`（廃止 / Phase20へ移管済み）
 - Release Gate: `docs/V2_RELEASE_READINESS.md`
 
 ## v2 Phase管理
@@ -42,11 +45,12 @@ Phase18 `Verified Content Coverage & Publish Candidate Preparation` では、Sup
 | Phase1〜12 | 完了または各Phase定義どおり終了 |
 | Phase13 | **完了** |
 | Phase14 | **完了** |
-| Phase15 | 外部Acceptance残件をPhase19へ移管 |
+| Phase15 | 外部Acceptance残件をFinal Phaseへ移管 |
 | Phase16 | **完了 / Conditional Go** |
 | Phase17 | **完了 / Automated & Internal PASS** |
 | Phase18 | **完了 / Data Gate PASS** |
-| Phase19 | **未開始 / Manual & External Acceptance予約** |
+| Phase19 | **未開始 / Internal Data Integrity & Release Hardening** |
+| Phase20 | **未開始 / Final Manual & External Acceptance予約** |
 
 ## Phase18 Final Status
 
@@ -156,16 +160,42 @@ Performance Advisor:
 
 計測なしのblind fixは行っていない。
 
-## Phase19へ移管済みの人力・外部作業
+## Phase19 — Internal Data Integrity & Release Hardening
 
-1. Vercel Project / Preview URL成立
-2. Preview runtime / build / runtime logs
-3. real Admin / non-admin session E2E + limited CRUD / cleanup
-4. user actual PC/device/browser確認
-5. Public Preview/network Performance確認
-6. Production Readiness final decision
+Phase19はChatGPT / GitHub / Supabaseのみで完結する内部作業Phaseとする。
+
+主要作業:
+1. Referential Integrity Audit
+2. Identifier / Uniqueness / Required Field Audit
+3. Patch Lifecycle Integrity Audit
+4. Public Gate Matrix Audit（App Query / RPC / RLS）
+5. Source Integrity & Evidence Classification
+6. Duplicate / Near-Duplicate Content Audit
+7. Internal Runtime / Failure-mode Hardening
+8. CI / Regression Expansion
+9. Security / Performance Advisor Triage
+10. Release Documentation Consistency Audit
+11. Final Audit / Phase20 handoff
 
 Phase19はユーザーの明示指示まで開始しない。
+
+## Final Phaseへ移管した人力・外部作業
+
+Final Phaseを **Phase20 `Final Manual / External Acceptance & Production Decision`** とする。
+
+以下はPhase19から完全に除外し、Phase20へ集約する。
+
+1. Vercel Project / Git import
+2. Preview deployment / Preview URL
+3. Preview runtime / build / runtime logs
+4. real Admin / non-admin session E2E + limited CRUD / cleanup
+5. user PC / iPhone / actual device/browser確認
+6. Public Preview/network Performance
+7. 外部ブラウザ互換性最終確認
+8. Production Readiness final decision
+9. Production deploy（ユーザー明示許可がある場合のみ）
+
+Phase20は人力作業が可能になるまで開始しない。
 
 ## Public Data Policy
 
