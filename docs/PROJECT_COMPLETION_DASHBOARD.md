@@ -1,6 +1,6 @@
 # SF6DNA Project Completion Dashboard
 
-最終更新: 2026-08-28 09:30 JST
+最終更新: 2026-08-28 09:36 JST
 
 ## 現在Phase
 
@@ -87,7 +87,7 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
 - Active Classic Command: **2,064**
 - Active Modern Command: **1,443**（Classic比69.9%）
 - Modern Command未登録: **621**（うち公式Move Source relationあり39、公式Source付きClassic Commandあり39）
-- 公式Source relationあり41件を公式Modern一覧と照合し、直接確認できたディージェイ「フライングパーティー」1件のみ追加。Moveはdraft、packageはreviewを維持
+- 公式Source relationあり41件とJP未登録5件を公式Modern/Frame一覧で照合し、直接確認できたディージェイ「フライングパーティー」とJP「しゃがみ中P」の計2件のみ追加。Moveはdraft、packageはreviewを維持
 - Active Move Alias: **3,553**
 - Combo: archived/unverified 40、draft/reviewed 76、draft/unverified 224、draft/verified 1
 - Setup: draft/reviewed 20、draft/unverified 166
@@ -131,12 +131,12 @@ Preview上の最終回帰確認は未完。
 
 最新のコード変更を含むcommit:
 
-`7040af686db513b99b41ff7bcac91010ade185ae`
+`2fe0b90c6ff2e642f3028df0a5edc9ccaeb5b60e`
 
-GitHub Actions run `33128860163`:
+GitHub Actions run `33130148956`:
 - Typecheck: **success**
 - Lint: **success**
-- Policy tests: **26 / 26 success**
+- Policy tests: **27 / 27 success**
 - Build: **success**
 - check: **success**
 
@@ -191,8 +191,8 @@ GitHub Actions run `33128860163`:
 | 43 | SEO | 検証待ち | metadata/OGP/Twitter/robots/sitemap実装、実Preview URL確認待ち |
 | 44 | Performance | 検証待ち | Preview計測未実施 |
 | 45 | Security | 部分完成 | RLS/Admin guard基盤あり、Auth/Admin E2E残り |
-| 46 | Testing | 部分完成 | Public Gate/Recommendation/Coach/Search/Sitemap/Data Quality/Static Accessibilityを26 testsで自動化。Auth E2Eは残り |
-| 47 | CI | 完成 | 最新コードcommit `7040af6...`、Actions run `33128860163` check success |
+| 46 | Testing | 部分完成 | Public Gate/Recommendation/Coach/Search/Sitemap/Data Quality/Static Accessibility/Modern seed safetyを27 testsで自動化。Auth E2Eは残り |
+| 47 | CI | 完成 | 最新コードcommit `2fe0b90...`、Actions run `33130148956` check success |
 | 48 | Deployment | 未実装 | v2 Preview未成立 |
 | 49 | Vercel | ブロック中 | 接続TeamにProject 0件 |
 | 50 | Demo Release Readiness | ブロック中 | 公開主要攻略データ不足 + Preview未成立 |
@@ -305,7 +305,7 @@ Phase14完成率の母数外。
 - P2-05: `phase14_public_readiness.sql`を追加し実DBでread-only実行成功
 - Move/Strategy/Trait/Player/Video、31キャラ別coverage、Release Readyを自動集計
 - Responsive / Accessibility Static Reviewとして進捗bar、状態通知、タップ領域、長文折返しを改善
-- 最新コードHEAD `7040af6...` でTypecheck/Lint/26 Policy tests/Build成功
+- 最新コードHEAD `2fe0b90...` でTypecheck/Lint/27 Policy tests/Build成功
 - Strategy詳細へPatch / Verification / Sourceを共通統合
 - Character → SequenceのCI不整合修正を含む統合確定
 - Player Source表示
