@@ -62,26 +62,29 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
   const completed = diagnosis.questions.length > 0 && index >= diagnosis.questions.length;
 
   useEffect(() => {
-    try {
-      const raw = window.localStorage.getItem(draftKey(diagnosis.slug));
-      if (!raw) { setHydrated(true); return; }
-      const parsed = JSON.parse(raw) as Record<string, string>;
-      const valid: Record<string, string> = {};
-      for (const q of diagnosis.questions) {
-        if (q.options.some((option) => option.id === parsed[q.id])) valid[q.id] = parsed[q.id];
+    const timer = window.setTimeout(() => {
+      try {
+        const raw = window.localStorage.getItem(draftKey(diagnosis.slug));
+        if (!raw) return;
+        const parsed = JSON.parse(raw) as Record<string, string>;
+        const valid: Record<string, string> = {};
+        for (const q of diagnosis.questions) {
+          if (q.options.some((option) => option.id === parsed[q.id])) valid[q.id] = parsed[q.id];
+        }
+        const count = Object.keys(valid).length;
+        if (count) {
+          setAnswers(valid);
+          setResumedCount(count);
+          const firstUnanswered = diagnosis.questions.findIndex((q) => !valid[q.id]);
+          setIndex(firstUnanswered === -1 ? diagnosis.questions.length : firstUnanswered);
+        }
+      } catch {
+        window.localStorage.removeItem(draftKey(diagnosis.slug));
+      } finally {
+        setHydrated(true);
       }
-      const count = Object.keys(valid).length;
-      if (count) {
-        setAnswers(valid);
-        setResumedCount(count);
-        const firstUnanswered = diagnosis.questions.findIndex((q) => !valid[q.id]);
-        setIndex(firstUnanswered === -1 ? diagnosis.questions.length : firstUnanswered);
-      }
-    } catch {
-      window.localStorage.removeItem(draftKey(diagnosis.slug));
-    } finally {
-      setHydrated(true);
-    }
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, [diagnosis.questions, diagnosis.slug]);
 
   useEffect(() => {
