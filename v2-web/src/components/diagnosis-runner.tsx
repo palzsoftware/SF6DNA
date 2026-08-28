@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { saveDiagnosisHistory } from "@/lib/local-user-tools";
 import type { DiagnosisDefinition } from "@/types/diagnosis";
 
 type Recommendation = {
@@ -94,6 +95,7 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
   const [recommendations, setRecommendations] = useState<Recommendation[]>([]);
   const [recommendationMessage, setRecommendationMessage] = useState<string | null>(null);
   const [recommendationLoading, setRecommendationLoading] = useState(false);
+  const historySaved = useRef(false);
   const question = diagnosis.questions[index];
   const completed = diagnosis.questions.length > 0 && index >= diagnosis.questions.length;
 
@@ -105,6 +107,23 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
     () => Object.entries(totals).sort((a, b) => b[1] - a[1]),
     [totals],
   );
+
+  useEffect(() => {
+    if (!completed || historySaved.current) return;
+    const topResults = result
+      .filter(([, score]) => score > 0)
+      .slice(0, 6)
+      .map(([key, score]) => ({ key, label: axisLabel(key), score }));
+    saveDiagnosisHistory({
+      id: typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : `${Date.now()}-${Math.random()}`,
+      diagnosisSlug: diagnosis.slug,
+      diagnosisTitle: diagnosis.title,
+      diagnosisType: diagnosis.diagnosisType,
+      topResults,
+      completedAt: new Date().toISOString(),
+    });
+    historySaved.current = true;
+  }, [completed, diagnosis.diagnosisType, diagnosis.slug, diagnosis.title, result]);
 
   async function loadRecommendations(scorePayload: Record<string, number>) {
     setRecommendationLoading(true);
@@ -124,6 +143,14 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
     } finally {
       setRecommendationLoading(false);
     }
+  }
+
+  function reset() {
+    historySaved.current = false;
+    setIndex(0);
+    setAnswers({});
+    setRecommendations([]);
+    setRecommendationMessage(null);
   }
 
   if (!diagnosis.questions.length) {
@@ -147,7 +174,7 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
           <div className="diagnosis-actions">
             {topQuery ? <Link className="button-primary" href={`/search?q=${encodeURIComponent(topQuery)}`}>関連情報を横断検索</Link> : null}
             {topQuery ? <Link className="button-secondary" href={`/coach?q=${encodeURIComponent(topQuery)}`}>AIコーチ用Evidenceを見る</Link> : null}
-            <ResetButton onReset={() => { setIndex(0); setAnswers({}); setRecommendations([]); setRecommendationMessage(null); }} />
+            <ResetButton onReset={reset} />
           </div>
         </section>
       );
@@ -169,7 +196,7 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
         <div className="diagnosis-actions">
           {topQuery ? <Link className="button-primary" href={`/search?q=${encodeURIComponent(topQuery)}`}>{copy.searchLabel}</Link> : null}
           {topQuery ? <Link className="button-secondary" href={`/coach?q=${encodeURIComponent(topQuery)}`}>AIコーチ用Evidenceを見る</Link> : null}
-          <ResetButton onReset={() => { setIndex(0); setAnswers({}); setRecommendations([]); setRecommendationMessage(null); }} />
+          <ResetButton onReset={reset} />
         </div>
       </section>
     );
