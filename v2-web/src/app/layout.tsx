@@ -60,6 +60,17 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </div>
         </header>
         <main id="main-content" tabIndex={-1}>{children}</main>
+        <footer className="site-footer">
+          <div className="site-shell site-footer__inner">
+            <p>SF6DNA</p>
+            <nav aria-label="補助ナビゲーション">
+              <Link href="/about">About</Link>
+              <Link href="/faq">FAQ</Link>
+              <Link href="/sources">情報源</Link>
+              <Link href="/changelog">更新履歴</Link>
+            </nav>
+          </div>
+        </footer>
       </body>
     </html>
   );
