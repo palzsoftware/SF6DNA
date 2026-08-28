@@ -4,18 +4,23 @@
 
 ## SF6DNA v2 現在状態
 
-SF6DNA v2はPhase13、Phase14、Phase16、Phase17、Phase18、Phase19を完了した。
+Phase13、Phase14、Phase16、Phase17、Phase18、Phase19は完了済み。
+Phase15の外部Acceptance残件はFinal Phaseへ移管済み。
 
-Phase19 `Internal Data Integrity & Release Hardening` では、Supabase実DBを正本として参照整合性・識別子・Patch lifecycle・Source/Evidence・duplicate候補・Public Gate Matrixを横断監査し、Move Public GateのApp/RLS差異とlegacy Source種別を修正した。Phase19専用CIも追加しPASSを確認した。
+Phase19後、旧版独自機能のうちv2と重複せず安全に移植可能なものとして、Favorites / My Characters / Character Compare / Rank Tracker / Diagnosis History / About / FAQ / Sources / Changelogを追加した。
+
+ユーザー方針により、従来Phase20に予定していたManual / External Acceptanceを**Phase23**へ移動し、Phase20〜22を追加開発Phaseとして再定義した。
 
 現在のDemo Release Decisionは **CONDITIONAL GO**。
 
 - Automated / Internal Readiness: **PASS**
 - Data Gate Readiness: **PASS**
 - Internal Integrity / Hardening: **PASS**
-- Production Ready: **未判定 / Phase20依存**
-- Phase19: **完了**
-- Phase20 Final Manual / External Acceptance: **未開始 / Final Phase予約**
+- Production Ready: **未判定 / Phase23依存**
+- Phase20: **未開始 / Priority S**
+- Phase21: **未開始 / Priority A**
+- Phase22: **未開始 / Improvement Features**
+- Phase23: **未開始 / Final Manual & External Acceptance**
 
 ## 正本
 
@@ -26,6 +31,8 @@ Phase19 `Internal Data Integrity & Release Hardening` では、Supabase実DBを�
 - Supabase: `SF6DNAPro`
 - Project ID: `wnuxaxbrpudyypzdbdho`
 - Current Patch: `2026.08.03`
+
+主要文書:
 - Phase14 Final Audit: `docs/PHASE14_FINAL_AUDIT_2026-08-28.md`
 - Phase15 Evidence: `docs/PHASE15_ACCEPTANCE_EVIDENCE_2026-08-28.md`
 - Phase16 Final Audit: `docs/PHASE16_RELEASE_CANDIDATE_AUDIT_2026-08-28.md`
@@ -35,40 +42,91 @@ Phase19 `Internal Data Integrity & Release Hardening` では、Supabase実DBを�
 - Phase19 Plan: `docs/PHASE19_IMPLEMENTATION_PLAN.md`
 - Phase19 Integrity Audit: `docs/PHASE19_INTERNAL_INTEGRITY_AUDIT_2026-08-28.md`
 - Phase19 Final Audit: `docs/PHASE19_FINAL_AUDIT_2026-08-28.md`
-- Phase20 Final Manual Acceptance Plan: `docs/PHASE20_FINAL_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md`
-- Legacy Phase19 Manual Plan: `docs/PHASE19_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md`（廃止 / Phase20へ移管済み）
+- Legacy Parity Audit: `docs/PRE_PHASE20_LEGACY_PARITY_AUDIT_2026-08-28.md`
+- Priority / Feature Backlog: `docs/PRE_PHASE20_PRIORITY_BACKLOG_AND_FEATURE_IDEAS_2026-08-28.md`
+- Phase20 Plan: `docs/PHASE20_VERIFIED_CONTENT_EXPANSION_PLAN.md`
+- Phase21 Plan: `docs/PHASE21_PRIORITY_A_PLAN.md`
+- Phase22 Plan: `docs/PHASE22_IMPROVEMENT_FEATURES_PLAN.md`
+- Phase23 Final Manual Acceptance Plan: `docs/PHASE23_FINAL_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md`
+- Deprecated old Phase20 Manual Plan: `docs/PHASE20_FINAL_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md`
 - Release Gate: `docs/V2_RELEASE_READINESS.md`
 
 ## v2 Phase管理
 
-| Phase | 状態 |
-|---|---|
-| Phase1〜12 | 完了または各Phase定義どおり終了 |
-| Phase13 | **完了** |
-| Phase14 | **完了** |
-| Phase15 | 外部Acceptance残件をFinal Phaseへ移管 |
-| Phase16 | **完了 / Conditional Go** |
-| Phase17 | **完了 / Automated & Internal PASS** |
-| Phase18 | **完了 / Data Gate PASS** |
-| Phase19 | **完了 / Internal Integrity & Hardening PASS** |
-| Phase20 | **未開始 / Final Manual & External Acceptance予約** |
+| Phase | 状態 | 内容 |
+|---|---|---|
+| Phase1〜12 | 完了または各Phase定義どおり終了 | 基盤・v2構築 |
+| Phase13 | **完了** | Character Content Verification & Expansion |
+| Phase14 | **完了** | Application Integration / Public Gate |
+| Phase15 | 外部残件をPhase23へ移管 | Acceptance強化 |
+| Phase16 | **完了 / Conditional Go** | Release Candidate準備 |
+| Phase17 | **完了 / Automated & Internal PASS** | Internal Acceptance |
+| Phase18 | **完了 / Data Gate PASS** | Verified Content Coverage準備 |
+| Phase19 | **完了 / Internal Integrity & Hardening PASS** | DB / Gate / CI総監査 |
+| Phase20 | **未開始** | Priority S / Verified Content Expansion |
+| Phase21 | **未開始** | Priority A / Modern Command & Integration |
+| Phase22 | **未開始** | Player Improvement Loop & Advanced Utility Features |
+| Phase23 | **未開始 / Final Phase** | Manual / External Acceptance & Production Decision |
 
-## Phase19 Final Status
+## Phase20 — Priority S
 
-| Task | 状態 |
-|---|---|
-| P19-00 Baseline / Scope Freeze | **完了** |
-| P19-01 Referential Integrity Audit | **完了** |
-| P19-02 Identifier / Uniqueness / Required Field Audit | **完了** |
-| P19-03 Patch Lifecycle Integrity Audit | **完了** |
-| P19-04 Public Gate Matrix Audit | **完了 / hardening実施** |
-| P19-05 Source Integrity & Evidence Classification | **完了** |
-| P19-06 Duplicate / Near-Duplicate Content Audit | **完了** |
-| P19-07 Internal Runtime / Failure-mode Hardening | **完了** |
-| P19-08 CI / Regression Expansion | **完了 / PASS** |
-| P19-09 Security / Performance Advisor Triage | **完了** |
-| P19-10 Release Documentation Consistency Audit | **完了** |
-| P19-11 Final Audit / Closure | **完了** |
+1. Strategy verified攻略データ拡大
+   - Combo
+   - Setup
+   - Sequence
+   - Counter
+   - Training
+2. Current Patch Frame verification拡大
+3. Character Guide verification
+4. Character Trait Score verification
+5. Coverage Report / CI / Final Audit
+
+ルール:
+- 件数目的のbulk verify禁止
+- Source不足の昇格禁止
+- reviewed ≠ verified
+
+## Phase21 — Priority A
+
+1. Modern Command不足622件のSource付き収集
+2. Legacy parity追加機能をPhase23 Acceptanceへ追加
+3. `PROJECT_STATUS.md` / `FEATURES.md` / Release docs同期
+4. Vercel / 実画面 / Real Auth / 実機作業はPhase23へ明示移管
+5. Regression / Final Audit
+
+## Phase22 — Improvement Features
+
+Primary:
+1. 対戦後30秒ログ + 10戦弱点分析
+2. 弱点ヒートマップ + 今日の練習メニュー
+3. Punish Finder / 確反検索
+4. 対戦前30秒キャラ対策カード
+5. Replay復習ワークフロー
+
+Secondary候補:
+- 状況別クイズ
+- Frame / 確反クイズ
+- 自分の癖検出
+- リーサル計算機
+- ゲージ効率比較
+- Matchup win-rate dashboard
+
+## Phase23 — Final Manual / External Acceptance
+
+Phase23をFinal Phaseとする。
+
+1. Vercel Project / Git import
+2. Preview deployment / Preview URL
+3. Preview runtime / build / runtime logs
+4. real Admin / non-admin session E2E + limited CRUD / cleanup
+5. user PC / iPhone / actual device/browser確認
+6. Public Preview/network Performance
+7. Phase20〜22追加機能の実画面Acceptance
+8. 外部ブラウザ互換性最終確認
+9. Production Readiness final decision
+10. Production deploy（ユーザー明示許可がある場合のみ）
+
+人力・外部確認が可能になるまでPhase23を開始しない。
 
 ## Phase19 Integrity Results
 
@@ -85,35 +143,28 @@ Phase19 `Internal Data Integrity & Release Hardening` では、Supabase実DBを�
 - duplicate entity_source relation: 0
 - exact duplicate Alias/Strategy/Guide groups: 0
 
-legacy `entity_sources.entity_type='guide_section'` 16件は全target実在・競合0確認後、`character_guide_section`へ構造正規化した。
-
 Source metadata:
 - total 329
 - blank title/url/source_type/reliability: 0
 - blank publisher: 30（nullable / non-blocking / 推測補完なし）
 - normalized duplicate URL candidate: 8 groups（異なるEvidence contextのため自動統合なし）
 
-## Public Data Gate — Final Internal State
+## Public Data Gate — Current Internal State
 
 ### Strategy
-
-Combo / Setup / Sequence / Counter / Training Public RLS:
-- `status = published`
-- `verification_status = verified`
+Combo / Setup / Sequence / Counter / Training:
+- published
+- verified
 - matching Source relationあり
 
 ### Character Guide
-
 - published + verified
 
 ### Recommendation
-
 - published + verified + Source付きTrait Scoreのみ
 
 ### Move
-
-Public MoveはApp + RLSで以下を要求する。
-
+Public MoveはApp + RLSで以下を要求:
 1. Move published
 2. Classic Commandあり
 3. Classic Command official Evidence
@@ -123,47 +174,11 @@ Public MoveはApp + RLSで以下を要求する。
 7. Current Frame official Source
 8. Modern Commandは任意 / 推測しない
 
-307件のCurrent verified Frame候補はMove / Frame / Classic Commandのofficial Evidenceを全件満たすことを確認した。ただしcandidate ≠ published。
-
 ### AI Coach
-
 - Source付きEvidenceのみ
 - Current Patch取得
 - input boundaryあり
 - Generation OFF
-
-## Phase19 DB / Code Changes
-
-Supabase migrations:
-- `phase19_normalize_guide_section_source_type`
-- `phase19_strict_public_move_rls`
-- `phase19_require_official_move_and_frame_sources`
-
-Repo migrations:
-- `supabase/migrations/20260828_phase19_normalize_guide_section_source_type.sql`
-- `supabase/migrations/20260828_phase19_strict_public_move_rls.sql`
-- `supabase/migrations/20260828_phase19_require_official_move_and_frame_sources.sql`
-
-App/CI:
-- `v2-web/src/lib/public-move-gate.ts` official Evidence gateへ厳格化
-- `.github/workflows/phase19-internal-hardening.yml` 追加
-- `docs/V2_RELEASE_READINESS.md` Phase19実装と同期
-
-## Phase19 Automated Evidence
-
-- Phase19 Internal Hardening `33147283023`: **success**
-- Phase19 Internal Hardening `33147262450`: **success**
-- Phase18 Data Gate Acceptance `33147262444`: **success**
-- SF6DNA v2 Web Check `33146979482`: **success**
-- Supabase Security Advisor after Phase19 DDL: **0 lints**
-
-Phase19 CI初回 `33147088363` はSQL static assertionの空白依存によるtest harness failure。Typecheck/Lint/Policy/Buildは成功しており、assertionを修正後のrunでPASSした。
-
-Performance Advisor:
-- `unused_index` INFO
-- `multiple_permissive_policies` WARN
-
-実測なしのblind fixは行っていない。
 
 ## Phase18/19 Data Snapshot
 
@@ -186,23 +201,22 @@ Performance Advisor:
 - Player: 91 / published 41
 - Video: 13 / published 5
 
-件数を理由にstatus/verificationを昇格していない。
+件数を理由にstatus / verificationを昇格しない。
 
-## Final Phaseへ移管した人力・外部作業
+## Legacy Parity追加済み機能
 
-Final Phaseを **Phase20 `Final Manual / External Acceptance & Production Decision`** とする。
+- `/tools`
+- `/favorites`
+- `/my-characters`
+- `/compare`
+- `/rank-tracker`
+- `/diagnosis/history`
+- `/about`
+- `/faq`
+- `/sources`
+- `/changelog`
 
-1. Vercel Project / Git import
-2. Preview deployment / Preview URL
-3. Preview runtime / build / runtime logs
-4. real Admin / non-admin session E2E + limited CRUD / cleanup
-5. user PC / iPhone / actual device/browser確認
-6. Public Preview/network Performance
-7. 外部ブラウザ互換性最終確認
-8. Production Readiness final decision
-9. Production deploy（ユーザー明示許可がある場合のみ）
-
-Phase20はユーザーの明示指示まで開始しない。
+個人データは現時点ではbrowser localStorage保存で、Supabase Public Data Gateを書き換えない。
 
 ## Public Data Policy
 
@@ -233,4 +247,4 @@ Phase20はユーザーの明示指示まで開始しない。
 - Evidence不足でのAI Coach Generation有効化
 - Auth全面再設計
 - Audit機能の勝手な新設
-- ユーザー指示なしのPhase20開始
+- ユーザー指示なしの次Phase開始
