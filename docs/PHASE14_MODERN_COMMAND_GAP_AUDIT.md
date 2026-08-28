@@ -1,6 +1,6 @@
 # Phase14 Modern Command Gap Audit
 
-最終更新: 2026-08-28 JST（公式Modern一覧照合）
+最終更新: 2026-08-28 10:00 JST（公式Modern一覧照合）
 
 ## 判定ルール
 
@@ -78,8 +78,29 @@ seedを2回実行し、Modern行1件・当該Modern Source relation 1件・全�
 ## 次回の検証順
 
 1. ダルシムの重複Move Entityはcanonical移行・archive・coverage再計算まで完了。
-2. 残る公式Modern一覧非掲載26件は、実機確認なしに補完しない。
-3. 公式Source relationなしの残件は、現行一次情報または実機確認が可能な小単位だけ継続する。
+2. 現在の公式Source付き未登録39件は、8キャラのCAPCOM公式Frame Data Modern表示で全件非掲載を確認した。
+3. 公式Source relationなしを含む未登録621件は、現行一次情報または実機確認なしに補完しない。
+
+## 公式Source付き未登録39件の追跡監査
+
+2026-08-28に、現在の実DBで「Modern未登録かつ公式Move Source relationあり」の39件を再抽出した。
+
+| キャラクター | 監査件数 | Modern Frame Data掲載 | 追加 |
+|---|---:|---:|---:|
+| ダルシム | 11 | 0 | 0 |
+| ブランカ | 8 | 0 | 0 |
+| エドモンド本田 | 5 | 0 | 0 |
+| 春麗 | 4 | 0 | 0 |
+| ガイル | 4 | 0 | 0 |
+| ディージェイ | 3 | 0 | 0 |
+| ジェイミー | 2 | 0 | 0 |
+| キンバリー | 2 | 0 | 0 |
+| **合計** | **39** | **0** | **0** |
+
+- CAPCOM公式Frame DataをClassicからModernへ切り替え、対象技名がModern表に存在しないことを直接確認した。
+- 公式Frame Data Source relationがあること自体をModern入力の根拠にはしない。
+- 対象39件にはCommandを追加せず、status / verification_statusも変更していない。
+- Phase14のP2-01は「推測補完0でcoverage向上」という計画上の完了条件を満たしたため完了とする。Modern完全収録を意味せず、未登録621件は一次情報・実機確認待ちのRelease Quality Backlogとして継続する。
 
 ## JP未登録5件の追加監査
 
@@ -91,4 +112,4 @@ CAPCOM公式JP Command List / Frame DataのModern表示を2026-08-28に確認し
 
 詳細は`docs/PHASE14_JP_MODERN_COMMAND_AUDIT.md`に記録した。
 
-P2-01は一次情報による2件のcoverage向上と重複Move整理まで前進した。ただし未登録621件が残り、実機確認が必要な項目もあるため完了扱いにしない。
+P2-01は一次情報による2件のcoverage向上、重複Move整理、現存する公式Source付き未登録39件の全件非掲載確認まで完了した。未登録621件はModern対応を推測できないため、Phase14を止めずRelease Quality Backlogとして継続する。

@@ -1,6 +1,6 @@
 # SF6DNA Project Completion Dashboard
 
-最終更新: 2026-08-28 09:36 JST
+最終更新: 2026-08-28 10:00 JST
 
 ## 現在Phase
 
@@ -43,7 +43,7 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
 
 母数: `PHASE14_IMPLEMENTATION_PLAN.md` のP0〜P2、計19タスク。P3はPhase15以降へ送れるため除外。
 
-**13 / 19 = 68.4%**
+**14 / 19 = 73.7%**
 
 完了:
 - P0-01 全体監査・進捗基準・Phase14計画
@@ -57,6 +57,7 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
 - P1-04 Character Recommendation Verified Data Pipeline
 - P1-05 AI Coach Verified Evidence Policy
 - P1-07 SEO / Public Metadata Baseline
+- P2-01 Modern Command Coverage Improvement
 - P2-02 Automated Test Expansion
 - P2-05 Data Quality / Progress Automation
 
@@ -255,9 +256,9 @@ GitHub Actions run `33130148956`:
 
 ## P2
 
-計5件。完了2、残り**3**。
+計5件。完了3、残り**2**。
 
-- P2-01 Modern Command Coverage Improvement — **公式候補41件とJP未登録5件を照合・計2件改善、残りは一次情報/実機検証待ち**
+- P2-01 Modern Command Coverage Improvement — **完了。計2件改善、重複整理、現存公式Source付き未登録39件を公式Modern Frame Dataで全件非掲載確認**
 - P2-02 Automated Test Expansion — **完了**
 - P2-03 Performance Measurement / Optimization — Preview依存
 - P2-04 Responsive / Accessibility Polish — **Static Review完了、最終確認Preview依存**
@@ -298,6 +299,8 @@ Phase14完成率の母数外。
 - Modern 1,443 / Active Move 2,064、未登録621。draft / reviewを維持し、推測補完なし
 - ダルシム「ロングスライディング」は既存Modern `3+H`をcanonical Moveへ移し、検索Aliasを追加、重複Moveを削除せずarchive。Frame/Classic/Source履歴とreviewed状態を維持
 - JP未登録5件をCAPCOM公式Command List / Frame DataのModern表示と照合し、しゃがみ中P `2M`だけを追加。Move draft / Frame reviewedを維持し、公式Sourceを付与
+- 現存する公式Source付きModern未登録39件を8キャラのCAPCOM公式Frame Data Modern表示で全件照合。全39件が非掲載のため追加0、status / verification変更0
+- P2-01を計画上の完了条件達成として完了。未登録621件はModern対応を推測せずRelease Quality Backlogへ継続
 - archive済みMoveをMove/Frame/Command/AliasのActive品質集計から除外し、26 Policy testsで回帰確認
 - P2-02: Public Release Gate 13要件を18 Policy testsへ拡張
 - 失敗していたAI Coach readinessテストを現行実装へ整合
@@ -321,6 +324,6 @@ Phase14完成率の母数外。
 
 # 次の作業
 
-1. 公式Modern一覧非掲載の残件は実機確認なしに補完せず、確認可能な小単位だけ継続
-2. Vercel Project利用可能後、P0-06 Preview Deploymentを開始
-3. Preview成立後、P2-04 / P0-07 / P1-06 / P2-03を順に再開
+1. Vercel Project利用可能後、P0-06 Preview Deploymentを開始
+2. Preview成立後、P2-04 / P0-07 / P1-06 / P2-03を順に再開
+3. Modern未登録621件はPhase14を止めず、一次情報・実機確認可能時だけRelease Quality Backlogとして継続

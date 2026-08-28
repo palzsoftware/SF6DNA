@@ -1,6 +1,6 @@
 # SF6DNA Phase14 Implementation Plan
 
-最終更新: 2026-08-28 09:36 JST
+最終更新: 2026-08-28 10:00 JST
 
 ## Phase14正式名称
 
@@ -196,13 +196,13 @@ P0〜P2の19タスクを完了、またはユーザー確認のうえPhase15以�
 # P2 — 5件
 
 ## P2-01 Modern Command Coverage Improvement
-- 状態: **進行中（公式候補41件とJP未登録5件を照合・計2件改善、重複Move整理完了、一次情報/実機検証継続）**
+- 状態: **完了（公式候補41件・JP未登録5件・現存公式Source付き未登録39件を照合、計2件改善、重複Move整理完了）**
 - 目的: Modern 1,443/Active Move 2,064の不足を検証可能な範囲で改善する。
 - 対象ファイル: ingest/admin/docs
 - 対象DB: `move_commands`, Source relation
 - 依存関係: 一次情報または実機確認
 - 完了条件: 推測補完0でcoverage向上
-- テスト方法: 公式Source relationあり41件とJP未登録5件をCAPCOM公式Modern/Frame一覧で照合。フライングパーティー`M>M`とJPしゃがみ中P`2M`だけを追加。ダルシム重複Moveは既存Modern `3+H`をcanonicalへ移し、重複Moveをarchive。Modern 1,443/Active Move 2,064、未登録621、重複Modern 0、Move draft / Frame reviewed維持を実DB確認
+- テスト方法: 公式Source relationあり41件とJP未登録5件をCAPCOM公式Modern/Frame一覧で照合。フライングパーティー`M>M`とJPしゃがみ中P`2M`だけを追加。ダルシム重複Moveは既存Modern `3+H`をcanonicalへ移し、重複Moveをarchive。現存する公式Source付き未登録39件は8キャラの公式Modern Frame Dataで全件非掲載を確認。Modern 1,443/Active Move 2,064、未登録621、重複Modern 0、Move draft / Frame reviewed維持を実DB確認
 - リスク: 旧Patch情報の誤転記
 
 ## P2-02 Automated Test Expansion
@@ -279,17 +279,16 @@ P0〜P2の19タスクを完了、またはユーザー確認のうえPhase15以�
 
 - P0: **5/7完了、残り2（Vercel依存）**
 - P1: **6/7完了、残り1（Preview依存）**
-- P2: **2/5完了、残り3**
-- Phase14必須: **13/19 = 68.4%**
+- P2: **3/5完了、残り2（Preview依存）**
+- Phase14必須: **14/19 = 73.7%**
 - P3: Phase14母数外
 
 ## 次の実装順
 
-1. P2-01 公式Modern一覧非掲載残件を、一次情報/実機確認可能な小単位だけ継続
-2. P0-06 Vercel Preview Project / Deployment（Project利用可能後）
-3. P2-04 Preview複数viewport・keyboard最終確認
-4. P0-07 Preview Runtime / Demo Gate Smoke
-5. P1-06 Auth/Admin E2E
-6. P2-03 Performance Measurement / Optimization
+1. P0-06 Vercel Preview Project / Deployment（Project利用可能後）
+2. P2-04 Preview複数viewport・keyboard最終確認
+3. P0-07 Preview Runtime / Demo Gate Smoke
+4. P1-06 Auth/Admin E2E
+5. P2-03 Performance Measurement / Optimization
 
 P0-06/P0-07/P1-06/P2-03の最終確認はVercel Project 0件のため現在ブロックしている。Claude Code待ちを理由にその他のPhase14作業は停止しない。
