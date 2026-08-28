@@ -76,6 +76,7 @@ export async function getCharacterBySlug(slug: string): Promise<CharacterDetail 
         .select("id, section_type, title, body, display_order")
         .eq("character_id", character.id)
         .eq("status", "published")
+        .eq("verification_status", "verified")
         .order("display_order", { ascending: true }),
       supabase
         .from("entity_sources")
