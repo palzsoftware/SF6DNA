@@ -4,11 +4,9 @@
 
 ## SF6DNA v2 現在状態
 
-SF6DNA v2は、Phase13のCharacter Content Verification & Expansionを完了し、Phase14のApplication Integration / Public Data Gating / Demo Release Readinessも完了した。
+SF6DNA v2はPhase13、Phase14を完了し、現在は**Phase15進行中**。
 
-現在は**Phase15進行中**。
-
-2026-08-28、ユーザーの明示指示によりPhase15を開始した。Phase14はやり直さず、`docs/PHASE15_IMPLEMENTATION_PLAN.md` に従ってAcceptance Evidence回収を進める。
+2026-08-28、ユーザーの明示指示によりPhase15を開始した。Phase14はやり直さず、`docs/PHASE15_IMPLEMENTATION_PLAN.md` に従ってAcceptance Evidence回収を進めている。
 
 ## 正本
 
@@ -20,8 +18,8 @@ SF6DNA v2は、Phase13のCharacter Content Verification & Expansionを完了し�
 - Current Patch: `2026.08.03`
 - Phase14 Final Audit: `docs/PHASE14_FINAL_AUDIT_2026-08-28.md`
 - Phase15 Plan: `docs/PHASE15_IMPLEMENTATION_PLAN.md`
+- Phase15 Evidence: `docs/PHASE15_ACCEPTANCE_EVIDENCE_2026-08-28.md`
 - Release Gate: `docs/V2_RELEASE_READINESS.md`
-- Completion Dashboard: `docs/PROJECT_COMPLETION_DASHBOARD.md`
 - Phase15 PC Device Test: `docs/PHASE15_PC_DEVICE_TEST_CHECKLIST.md`
 
 ## v2 Phase管理
@@ -33,8 +31,7 @@ SF6DNA v2は、Phase13のCharacter Content Verification & Expansionを完了し�
 | Phase14 | **完了** |
 | Phase15 | **進行中** |
 
-Phase14は19タスク中14件をPhase14内で完了し、Preview/実環境依存の5件をユーザー承認のうえPhase15へ正式に再分類した。
-
+Phase14からPhase15へ再分類した5件:
 - P0-06 → P15-00 Preview Environment / Deployment
 - P0-07 → P15-01 Preview Runtime / Public Demo Gate Smoke
 - P1-06 → P15-02 Auth / Admin E2E
@@ -47,59 +44,102 @@ Phase14は19タスク中14件をPhase14内で完了し、Preview/実環境依存
 
 ### P15-00 Preview Environment / Deployment
 
-状態: **外部ブロック / 未完了**
+状態: **外部ツール制約 / 未完了**
 
-- 接続Vercel TeamのProject: 0件
+- Connected Vercel Team Project: 0
 - Vercel Preview: 未成立
+- Preview URL: 未発行
 - Production deployment: 未実施
-- 接続ツール上で、新規ProjectをGitHub repoへ紐付け、Preview targetを安全に明示して作成する操作が利用できないため、Production誤Deployを避けて停止
+- 現在公開されているVercel deploy connectorはtarget/name/files/rootDirectoryを明示できず、SF6DNAの`v2-web`を安全に指定できない
 - Production deployで回避しない
 
-### P15-01 Preview Runtime / Public Demo Gate Smoke
+### P15-01 Runtime / Public Demo Gate Smoke
 
-状態: **Preview待ち**
+状態: **CI Runtime確認済み / Vercel Preview再確認待ち**
 
-- Runtime smokeはP15-00完了後に実施
-- Preview不要のPublic Gate静的監査・既存CI Evidenceは維持
+GitHub Actions:
+- run `33140999720`: success
+- run `33141087038`: success
+
+確認済み:
+- 現行`sf6dna-v2` production build成功
+- 実Supabase public接続成功
+- Top / Character / Player / Video / Search / Diagnosis / Coach / Auth / Adminの主要route HTTP 200
+- AI Coach: Current Patch `2026.08.03`
+- AI Coach: `generationEnabled=false`
+- unauthenticated `/admin/characters`: HTTP 307 → `/auth?next=/admin`
+
+残り:
+- Vercel Preview上の同等smoke
+- Vercel runtime logs
 
 ### P15-02 Auth / Admin E2E
 
-状態: **安全なE2E環境待ち**
+状態: **静的 + unauth Runtime + RLS確認済み / real session E2E待ち**
 
-- 実セッションCRUDはPreviewまたは同等の安全な環境成立後に実施
-- 本番攻略データをテスト目的で不要に変更しない
+確認済み:
+- Admin return-path不整合をPhase15で修正
+- auth修正CI run `33138407354`: Typecheck / Lint / Policy tests / Build success
+- unauthenticated Admin subrouteのruntime block成功
+- major Admin write policyは`private.is_admin()`を要求
+- `private.is_admin()`は`auth.uid()` + `profiles.role='admin'`を確認
+
+残り:
+- authenticated non-admin write拒否
+- admin login / route access
+- limited Create/Edit
+- save/re-fetch
+- cleanup
+- Public Gate維持
+- Audit Log
+
+Audit Log調査:
+- `public` / `private`にaudit tableを確認できず
+- audit triggerも確認できず
+- 新規Audit機能はユーザー承認なく追加しない
 
 ### P15-04 Device / Responsive / Accessibility Runtime Verification
 
-状態: **PC実機確認待ち**
+状態: **Static + browser emulation確認済み / actual PC待ち**
 
-- ユーザーは帰宅後、自宅PCで実機テストを実施予定
-- Phase14のStatic responsive/accessibility reviewは完了済み
-- PC実機結果は `docs/PHASE15_PC_DEVICE_TEST_CHECKLIST.md` のAcceptance Evidenceへ反映する
+Lighthouse run `33141100694`: success
+- Top: Performance 99 / Accessibility 100 / Best Practices 96 / SEO 100
+- Character detail: Performance 98 / Accessibility 100 / Best Practices 96 / SEO 100
+
+Browser Acceptance run `33141327374`: success
+- Chromium 390x844で主要画面horizontal overflowなし
+- Search操作成功
+- Character Fit Diagnosis完走→Result到達
+- Desktop 1440x900でSkip Linkが最初のTab target
+- visible focus確認
+
+残り:
+- ユーザー自宅PC actual browser確認
+- actual device visual/scroll/back等の最終確認
 
 ### P15-03 Performance Measurement / Advisor Review
 
-状態: **部分監査実施 / 実測待ち**
+状態: **CI実測・Advisor監査済み / Public Preview計測待ち**
 
-2026-08-28 read-only再確認:
+確認済み:
+- Lighthouse実測良好
+- warm local runtime sampleで重大遅延なし
 - Security Advisor: lint 0
-- Performance Advisor: `unused_index` INFO / `multiple_permissive_policies` WARN継続
-- Lighthouse / runtime response / mobile perceived performanceはPreview未成立のため未計測
-- index削除やRLS policy統合は実測前に行わない
+- Performance Advisor: `unused_index` INFO / `multiple_permissive_policies` WARN
+- `pg_stat_user_indexes` read-only baseline確認
 
-## GitHub / CI
+判断:
+- Evidence上、緊急Performance修正なし
+- index削除やRLS policy統合はblind fixしない
+- Public Preview/network performanceはP15-00待ち
 
-Phase14終了時の最新source code変更commit:
-- `2fe0b90c6ff2e642f3028df0a5edc9ccaeb5b60e`
+## Phase15で追加したCI Acceptance
 
-GitHub Actions run `33130148956`:
-- Typecheck: success
-- Lint: success
-- Tests: **27 / 27 success**
-- Build: success
-- check: success
+- `.github/workflows/phase15-runtime-smoke.yml`
+- `.github/workflows/phase15-lighthouse.yml`
+- `.github/workflows/phase15-browser-e2e.yml`
 
-Phase15開始時点のbranch HEADはPhase14終了文書commit `f2b2f8916d5e3fce9aeeff0788d240b92bae537a` から開始した。
+Browser E2E初回run `33141238840`はPlaywright module resolutionというCI設定不備でfailure。アプリ不具合ではなく、CI runnerだけにPlaywrightを一時導入する方式へ修正し、run `33141327374`でsuccessを確認した。
 
 ## Supabase実DB
 
@@ -116,12 +156,6 @@ Phase14終了時Read-only監査:
 Phase14 Public Gate migration適用確認:
 - `phase14_public_verification_gate`
 - `phase14_public_command_source_gate`
-
-2026-08-28 Phase15開始後Advisor再確認:
-- Security Advisor: lint **0**
-- Performance Advisor: `unused_index` INFO / `multiple_permissive_policies` WARN
-
-Performance警告は実測後に評価し、未計測のままindex/policyを変更しない。
 
 ## Public Data Policy
 
@@ -142,27 +176,15 @@ Performance警告は実測後に評価し、未計測のままindex/policyを変
 
 Phase15進行中だがRelease Readyではない。
 
-現時点:
-- Vercel Project: **0**
-- Vercel Preview: 未成立
-- Production deployment: 未実施
-- Authenticated Admin E2E: 未実施
-- Actual PC device確認: 帰宅後実施予定 / 未検証
-- Preview Performance計測: 未実施
-- Release Ready Move / Strategy / Recommendation: 0
+残るAcceptance:
+1. Vercel Project / Preview URL成立
+2. Preview runtime/log確認
+3. Authenticated Admin/non-admin E2E + limited CRUD/cleanup
+4. Audit Log受け入れ先の要件確定
+5. ユーザーPC actual device/browser確認
+6. Public Preview/network Performance確認
 
 これらを推測・自動昇格・Production deployで解消しない。
-
-## Phase15実施順
-
-1. **P15-00** Preview環境成立
-2. **P15-01** Preview Runtime / Public Gate Smoke
-3. **P15-02** Auth / Admin E2E
-4. **P15-04** Responsive / Accessibility Runtime Verification
-5. **P15-03** Performance実測 / Advisor Review
-6. Acceptance Evidenceをまとめる
-
-P15-00が外部要因でブロック中でも、Preview不要の静的監査・DB read-only監査・テスト準備は進める。
 
 ## 禁止事項
 
@@ -175,7 +197,5 @@ P15-00が外部要因でブロック中でも、Preview不要の静的監査・D
 - SourceなしFrame
 - Evidence不足でのAI Coach Generation有効化
 - Auth全面再設計
-- Phase15要件確定前の新機能追加
+- Audit機能の勝手な新設
 - ユーザー指示なしのPhase16移行
-
-新要素が必要な場合は実装せず、提案としてユーザーへ報告する。
