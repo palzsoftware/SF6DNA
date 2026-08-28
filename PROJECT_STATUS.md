@@ -4,22 +4,23 @@
 
 ## SF6DNA v2 現在状態
 
-SF6DNA v2はPhase13、Phase14、Phase16を完了し、2026-08-28のユーザー明示指示により**Phase17を開始**した。
+SF6DNA v2はPhase13、Phase14、Phase16、Phase17を完了した。
 
-Phase16のDemo Release Decisionは **CONDITIONAL GO**。
+Phase17では、ChatGPT / GitHub / Supabase上で安全に実行できるRelease Readiness監査を完了し、人力・外部UI・実認証・実デバイス依存のAcceptanceをPhase19へ明示的に移管した。
 
-Phase17正式名称:
-**Preview Deployment, Real Environment Acceptance & Production Readiness**
+現在のDemo Release Decisionは **CONDITIONAL GO**。
 
-Phase17では、Phase16までに完成したDemo Release Candidateを実Preview環境・実認証・実ブラウザで検証し、Production公開可否をEvidenceベースで判定する。
-
-現在Phase17は、ChatGPT単独で実施可能な内部監査を進めたうえで **外部確認待ち / 未完了**。Vercel Project作成・Preview・actual device・実認証sessionが残っている。
+- Automated / Internal Readiness: **PASS**
+- Production Ready: **未判定**
+- Phase18: **未開始**
+- Phase19 Manual / External Acceptance: **未開始 / 移管済み**
 
 ## 正本
 
 - Repository: `palzsoftware/SF6DNA`
 - Work branch: `sf6dna-v2`
 - `main`: ユーザー明示許可まで変更禁止
+- main SHA: `b9a2a8f638a3d4a98bfa042d56470664fe225ba7`
 - Supabase: `SF6DNAPro`
 - Project ID: `wnuxaxbrpudyypzdbdho`
 - Current Patch: `2026.08.03`
@@ -28,6 +29,8 @@ Phase17では、Phase16までに完成したDemo Release Candidateを実Preview�
 - Phase16 Final Audit: `docs/PHASE16_RELEASE_CANDIDATE_AUDIT_2026-08-28.md`
 - Phase17 Plan: `docs/PHASE17_IMPLEMENTATION_PLAN.md`
 - Phase17 Evidence: `docs/PHASE17_ACCEPTANCE_EVIDENCE_2026-08-28.md`
+- Phase17 Final Audit: `docs/PHASE17_FINAL_AUDIT_2026-08-28.md`
+- Phase19 Manual Acceptance Plan: `docs/PHASE19_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md`
 - Release Gate: `docs/V2_RELEASE_READINESS.md`
 
 ## v2 Phase管理
@@ -37,66 +40,67 @@ Phase17では、Phase16までに完成したDemo Release Candidateを実Preview�
 | Phase1〜12 | 完了または各Phase定義どおり終了 |
 | Phase13 | **完了** |
 | Phase14 | **完了** |
-| Phase15 | **外部依存残件あり / Phase17で回収** |
+| Phase15 | 外部Acceptance残件をPhase19へ移管 |
 | Phase16 | **完了 / Conditional Go** |
-| Phase17 | **外部確認待ち / 未完了** |
+| Phase17 | **完了 / Automated & Internal PASS** |
+| Phase18 | **未開始** |
+| Phase19 | **未開始 / Manual & External Acceptance予約** |
 
-## Phase17 Backlog
+## Phase17 Final Status
 
-| Task | 状態 |
+| Task | 最終状態 |
 |---|---|
-| P17-00 Phase17 Baseline / Scope Freeze | **完了** |
-| P17-01 Vercel Preview Environment | **外部確認待ち / connector制約** |
-| P17-02 Preview Runtime Acceptance | P17-01待ち |
-| P17-03 Real Auth / Admin E2E | **内部監査完了 / 実session待ち** |
-| P17-04 Real Device / Browser Acceptance | **ユーザー実機待ち** |
-| P17-05 Preview Performance / Runtime Logs | P17-01待ち |
-| P17-06 Production Readiness Final Audit | **Pre-audit完了 / 最終判定待ち** |
-| P17-07 Phase17 Closure / Handoff | 未完了 |
+| P17-00 Baseline / Scope Freeze | **完了** |
+| P17-01 Vercel Preview Environment | **Phase19へ移管** |
+| P17-02 Preview Runtime Acceptance | **Phase19へ移管** |
+| P17-03 Auth / Admin Release Audit | **内部監査完了 / real sessionはPhase19** |
+| P17-04 Real Device / Browser Acceptance | **Phase19へ移管** |
+| P17-05 Preview Performance / Runtime Logs | **Phase19へ移管** |
+| P17-06 Production Readiness Pre-audit | **完了** |
+| P17-07 Closure / Handoff | **完了** |
 
-## Phase17 current evidence
-
-### Vercel
-- Connected Team Project: **0**
-- Preview deployment: **none**
-- Production deployment: **none**
-- 接続済み `deploy_to_vercel` は内部で `target / name / files` を必須要求する一方、公開呼び出しスキーマは引数0個であり安全なPreview作成を実行できない。
-- ユーザー方針により、Vercel Project作成はactual PC確認と同じタイミングで実施する。
-
-### Auth / Admin
-- `public.profiles`: **0件**
-- 既存Admin/non-admin profileがないためreal session E2Eは未実施。
-- Phase完了目的でAuth userを勝手に作成しない。
-- unauthenticated Admin block / auth return path / Admin guard / RLSは既存自動・静的Evidenceあり。
-
-### Audit Log
-- `docs/V2_RELEASE_READINESS.md`の正式Release GateにはAudit Log必須要件なし。
-- Phase15の追加確認項目としてのみ存在。
-- Audit機能を勝手に新設しない。
-- Audit Log未実装単独ではProduction No-Go理由としない。
-
-### Security
-- Supabase Security Advisor（2026-08-28再確認）: **0 lints**
-
-詳細: `docs/PHASE17_ACCEPTANCE_EVIDENCE_2026-08-28.md`
-
-## Phase16 latest automated evidence
+## Phase17 Automated / Internal Evidence
 
 - SF6DNA v2 Web Check `33142510906`: **success**
 - Phase16 Release Acceptance `33142510995`: **success**
 - Phase15 Runtime Smoke `33142510966`: **success**
 - Phase15 Browser Acceptance `33142511001`: **success**
 - Phase15 Lighthouse `33142510926`: **success**
+- Supabase Security Advisor: **0 lints**
+- Auth/Admin static release audit: **new blockerなし**
 
-## Production blockers / remaining acceptance
+## Phase19へ移管した人力・外部作業
 
 1. Vercel Project / Preview URL成立
-2. Preview runtime/log確認
-3. real Admin session E2E（承認済みテストまたは実アカウントが必要）
+2. Preview runtime / build / runtime logs
+3. real Admin / non-admin session E2E + limited CRUD / cleanup
 4. user actual PC/device/browser確認
 5. Public Preview/network Performance確認
+6. Production Readiness final decision
 
-Audit Logは正式Release Gate必須項目ではないため、上記blocker一覧から分離した。
+Audit Logは`docs/V2_RELEASE_READINESS.md`の必須Release Gateではないため、人力Acceptance blockerとは扱わない。必要なら将来別途要件化する。
+
+## Phase18 Proposed Scope — 未開始
+
+Phase18は人力Acceptance待ちで停止しない、ChatGPT側で進行可能な **Verified Content Coverage & Publish Candidate Preparation** を候補とする。
+
+予定作業:
+1. 31キャラのCurrent Patchデータ品質・Source coverage再監査
+2. Move / Frame / Classic Command / Modern Commandの公開候補品質分類
+3. Combo / Setup / Sequence / Counter / TrainingのSource・Patch・verification readiness分類
+4. verified/publishedへ昇格可能な候補と、Evidence不足候補を明確に分離
+5. Public Search / Character Guide / AI Coach Retrievalのverification gate regression監査
+6. Data Quality / release candidate report更新
+7. Phase18 automated acceptanceとFinal Audit
+8. Phase19へ渡すRelease Candidate baseline固定
+
+注意:
+- 候補抽出 ≠ verified
+- 候補抽出 ≠ published
+- 自動bulk verify/publishは行わない
+- 推測値補完は行わない
+
+Phase18の正式Planは、ユーザーがPhase18開始を明示した時点でGitHubへ作成する。
 
 ## Demo Content Inventory
 
@@ -153,5 +157,4 @@ Working:
 - Evidence不足でのAI Coach Generation有効化
 - Auth全面再設計
 - Audit機能の勝手な新設
-- Phase17での未承認新機能追加
-- ユーザー指示なしのPhase18移行
+- ユーザー指示なしのPhase18開始
