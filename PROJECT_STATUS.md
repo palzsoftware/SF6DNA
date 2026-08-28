@@ -4,9 +4,12 @@
 
 ## SF6DNA v2 現在状態
 
-SF6DNA v2はPhase13、Phase14を完了し、現在は**Phase15進行中**。
+SF6DNA v2はPhase13、Phase14を完了し、Phase15のAcceptance回収を進めたうえで、2026-08-28のユーザー明示指示により**Phase16を開始**した。
 
-2026-08-28、ユーザーの明示指示によりPhase15を開始した。Phase14はやり直さず、`docs/PHASE15_IMPLEMENTATION_PLAN.md` に従ってAcceptance Evidence回収を進めている。
+Phase15はVercel Preview / real Auth/Admin session / actual device / Public network performanceという外部依存項目を残しており、完了扱いにはしない。Phase16ではこれらを消去・推測完了せず、Demo Release Decisionの依存条件として保持する。
+
+Phase16正式名称:
+**Demo Release Candidate / Launch Preparation**
 
 ## 正本
 
@@ -19,6 +22,7 @@ SF6DNA v2はPhase13、Phase14を完了し、現在は**Phase15進行中**。
 - Phase14 Final Audit: `docs/PHASE14_FINAL_AUDIT_2026-08-28.md`
 - Phase15 Plan: `docs/PHASE15_IMPLEMENTATION_PLAN.md`
 - Phase15 Evidence: `docs/PHASE15_ACCEPTANCE_EVIDENCE_2026-08-28.md`
+- Phase16 Plan: `docs/PHASE16_IMPLEMENTATION_PLAN.md`
 - Release Gate: `docs/V2_RELEASE_READINESS.md`
 - Phase15 PC Device Test: `docs/PHASE15_PC_DEVICE_TEST_CHECKLIST.md`
 
@@ -29,133 +33,68 @@ SF6DNA v2はPhase13、Phase14を完了し、現在は**Phase15進行中**。
 | Phase1〜12 | 完了または各Phase定義どおり終了 |
 | Phase13 | **完了** |
 | Phase14 | **完了** |
-| Phase15 | **進行中** |
+| Phase15 | **外部依存残件あり / Evidence回収継続** |
+| Phase16 | **進行中** |
 
-Phase14からPhase15へ再分類した5件:
-- P0-06 → P15-00 Preview Environment / Deployment
-- P0-07 → P15-01 Preview Runtime / Public Demo Gate Smoke
-- P1-06 → P15-02 Auth / Admin E2E
-- P2-03 → P15-03 Performance Measurement / Advisor Review
-- P2-04 runtime部分 → P15-04 Device / Responsive / Accessibility Runtime Verification
+## Phase15 carryover
 
-**再分類 ≠ 検証済み**。
+未完了のままPhase16 Release Decisionへ持ち越す:
+1. Vercel Project / Preview URL成立
+2. Preview runtime/log確認
+3. Authenticated Admin/non-admin E2E + limited CRUD/cleanup
+4. Audit Log受け入れ先の要件確定
+5. ユーザーactual device/browser確認
+6. Public Preview/network Performance確認
 
-## Phase15進捗
+Phase15で自動確認済み:
+- Runtime Smoke success
+- Auth return-path fix + CI success
+- unauthenticated Admin redirect runtime success
+- Lighthouse mobile: Top Performance 99 / Accessibility 100
+- Lighthouse mobile: Character Performance 98 / Accessibility 100
+- Chromium 390x844 major route overflow check success
+- Search interaction success
+- Character Fit Diagnosis completion success
+- Desktop Skip Link / visible focus success
+- Security Advisor lint 0
 
-### P15-00 Preview Environment / Deployment
+## Phase16
 
-状態: **外部ツール制約 / 未完了**
+計画: `docs/PHASE16_IMPLEMENTATION_PLAN.md`
 
-- Connected Vercel Team Project: 0
-- Vercel Preview: 未成立
-- Preview URL: 未発行
-- Production deployment: 未実施
-- 現在公開されているVercel deploy connectorはtarget/name/files/rootDirectoryを明示できず、SF6DNAの`v2-web`を安全に指定できない
-- Production deployで回避しない
+### P16-00 Release Candidate Baseline / Scope Freeze
+状態: **進行中**
 
-### P15-01 Runtime / Public Demo Gate Smoke
+### P16-01 Demo Content Minimum Inventory
+状態: **未完了**
 
-状態: **CI Runtime確認済み / Vercel Preview再確認待ち**
+### P16-02 SEO / Metadata / Crawlability Release Audit
+状態: **未完了**
 
-GitHub Actions:
-- run `33140999720`: success
-- run `33141087038`: success
+### P16-03 Public UX / Safe Empty / Error-State Audit
+状態: **未完了**
 
-確認済み:
-- 現行`sf6dna-v2` production build成功
-- 実Supabase public接続成功
-- Top / Character / Player / Video / Search / Diagnosis / Coach / Auth / Adminの主要route HTTP 200
-- AI Coach: Current Patch `2026.08.03`
-- AI Coach: `generationEnabled=false`
-- unauthenticated `/admin/characters`: HTTP 307 → `/auth?next=/admin`
+### P16-04 Demo Launch Operations Package
+状態: **未完了**
 
-残り:
-- Vercel Preview上の同等smoke
-- Vercel runtime logs
+### P16-05 Demo Release Decision Package
+状態: **未完了**
 
-### P15-02 Auth / Admin E2E
+## Supabase実DB baseline
 
-状態: **静的 + unauth Runtime + RLS確認済み / real session E2E待ち**
-
-確認済み:
-- Admin return-path不整合をPhase15で修正
-- auth修正CI run `33138407354`: Typecheck / Lint / Policy tests / Build success
-- unauthenticated Admin subrouteのruntime block成功
-- major Admin write policyは`private.is_admin()`を要求
-- `private.is_admin()`は`auth.uid()` + `profiles.role='admin'`を確認
-
-残り:
-- authenticated non-admin write拒否
-- admin login / route access
-- limited Create/Edit
-- save/re-fetch
-- cleanup
-- Public Gate維持
-- Audit Log
-
-Audit Log調査:
-- `public` / `private`にaudit tableを確認できず
-- audit triggerも確認できず
-- 新規Audit機能はユーザー承認なく追加しない
-
-### P15-04 Device / Responsive / Accessibility Runtime Verification
-
-状態: **Static + browser emulation確認済み / actual PC待ち**
-
-Lighthouse run `33141100694`: success
-- Top: Performance 99 / Accessibility 100 / Best Practices 96 / SEO 100
-- Character detail: Performance 98 / Accessibility 100 / Best Practices 96 / SEO 100
-
-Browser Acceptance run `33141327374`: success
-- Chromium 390x844で主要画面horizontal overflowなし
-- Search操作成功
-- Character Fit Diagnosis完走→Result到達
-- Desktop 1440x900でSkip Linkが最初のTab target
-- visible focus確認
-
-残り:
-- ユーザー自宅PC actual browser確認
-- actual device visual/scroll/back等の最終確認
-
-### P15-03 Performance Measurement / Advisor Review
-
-状態: **CI実測・Advisor監査済み / Public Preview計測待ち**
-
-確認済み:
-- Lighthouse実測良好
-- warm local runtime sampleで重大遅延なし
+Phase15開始時点までのRead-only監査:
+- public base tables: 38
+- RLS: 38 / 38 enabled
+- playable + published Character: 31
+- published Move: 0
+- verified Frame: 307
+- published Diagnosis: 4
+- published Diagnosis Question: 52
+- Current Patch: `2026.08.03`
 - Security Advisor: lint 0
 - Performance Advisor: `unused_index` INFO / `multiple_permissive_policies` WARN
-- `pg_stat_user_indexes` read-only baseline確認
 
-判断:
-- Evidence上、緊急Performance修正なし
-- index削除やRLS policy統合はblind fixしない
-- Public Preview/network performanceはP15-00待ち
-
-## Phase15で追加したCI Acceptance
-
-- `.github/workflows/phase15-runtime-smoke.yml`
-- `.github/workflows/phase15-lighthouse.yml`
-- `.github/workflows/phase15-browser-e2e.yml`
-
-Browser E2E初回run `33141238840`はPlaywright module resolutionというCI設定不備でfailure。アプリ不具合ではなく、CI runnerだけにPlaywrightを一時導入する方式へ修正し、run `33141327374`でsuccessを確認した。
-
-## Supabase実DB
-
-Phase14終了時Read-only監査:
-- public base tables: **38**
-- RLS: **38 / 38 enabled**
-- playable + published Character: **31**
-- published Move: **0**
-- verified Frame: **307**
-- published Diagnosis: **4**
-- published Diagnosis Question: **52**
-- Current Patch: **2026.08.03**
-
-Phase14 Public Gate migration適用確認:
-- `phase14_public_verification_gate`
-- `phase14_public_command_source_gate`
+Phase16 P16-01で最新のDemo Content Inventoryを再取得する。
 
 ## Public Data Policy
 
@@ -172,20 +111,6 @@ Phase14 Public Gate migration適用確認:
 - AI CoachはSource付きEvidence + Current Patchを要求
 - AI Coach GenerationはOFF
 
-## Release Readiness
-
-Phase15進行中だがRelease Readyではない。
-
-残るAcceptance:
-1. Vercel Project / Preview URL成立
-2. Preview runtime/log確認
-3. Authenticated Admin/non-admin E2E + limited CRUD/cleanup
-4. Audit Log受け入れ先の要件確定
-5. ユーザーPC actual device/browser確認
-6. Public Preview/network Performance確認
-
-これらを推測・自動昇格・Production deployで解消しない。
-
 ## 禁止事項
 
 - main変更
@@ -198,4 +123,5 @@ Phase15進行中だがRelease Readyではない。
 - Evidence不足でのAI Coach Generation有効化
 - Auth全面再設計
 - Audit機能の勝手な新設
-- ユーザー指示なしのPhase16移行
+- Phase16での未承認新機能追加
+- ユーザー指示なしのPhase17移行
