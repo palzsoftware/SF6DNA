@@ -13,7 +13,7 @@ Phase17正式名称:
 
 Phase17では、Phase16までに完成したDemo Release Candidateを実Preview環境・実認証・実ブラウザで検証し、Production公開可否をEvidenceベースで判定する。
 
-現在Phase17は、Vercel connectorのDeploy入力スキーマ不整合により **BLOCKED / 未完了**。アプリコード由来のDeploy failureではない。
+現在Phase17は、ChatGPT単独で実施可能な内部監査を進めたうえで **外部確認待ち / 未完了**。Vercel Project作成・Preview・actual device・実認証sessionが残っている。
 
 ## 正本
 
@@ -39,30 +39,44 @@ Phase17では、Phase16までに完成したDemo Release Candidateを実Preview�
 | Phase14 | **完了** |
 | Phase15 | **外部依存残件あり / Phase17で回収** |
 | Phase16 | **完了 / Conditional Go** |
-| Phase17 | **BLOCKED / 未完了** |
+| Phase17 | **外部確認待ち / 未完了** |
 
 ## Phase17 Backlog
 
 | Task | 状態 |
 |---|---|
 | P17-00 Phase17 Baseline / Scope Freeze | **完了** |
-| P17-01 Vercel Preview Environment | **BLOCKED** |
+| P17-01 Vercel Preview Environment | **外部確認待ち / connector制約** |
 | P17-02 Preview Runtime Acceptance | P17-01待ち |
-| P17-03 Real Auth / Admin E2E | 未完了 |
-| P17-04 Real Device / Browser Acceptance | 未完了 |
+| P17-03 Real Auth / Admin E2E | **内部監査完了 / 実session待ち** |
+| P17-04 Real Device / Browser Acceptance | **ユーザー実機待ち** |
 | P17-05 Preview Performance / Runtime Logs | P17-01待ち |
-| P17-06 Production Readiness Final Audit | 未判定 |
+| P17-06 Production Readiness Final Audit | **Pre-audit完了 / 最終判定待ち** |
 | P17-07 Phase17 Closure / Handoff | 未完了 |
 
-## Phase17 blocker evidence
+## Phase17 current evidence
 
-2026-08-28 JST:
-- Vercel Connected Team Project: **0**
+### Vercel
+- Connected Team Project: **0**
 - Preview deployment: **none**
 - Production deployment: **none**
-- 接続済み `deploy_to_vercel` 実行時、内部では `target / name / files` を必須要求するが、公開呼び出しスキーマは引数0個であり値を渡せない。
-- `target=production` の推測実行はしていない。
-- 誤Deployは発生していない。
+- 接続済み `deploy_to_vercel` は内部で `target / name / files` を必須要求する一方、公開呼び出しスキーマは引数0個であり安全なPreview作成を実行できない。
+- ユーザー方針により、Vercel Project作成はactual PC確認と同じタイミングで実施する。
+
+### Auth / Admin
+- `public.profiles`: **0件**
+- 既存Admin/non-admin profileがないためreal session E2Eは未実施。
+- Phase完了目的でAuth userを勝手に作成しない。
+- unauthenticated Admin block / auth return path / Admin guard / RLSは既存自動・静的Evidenceあり。
+
+### Audit Log
+- `docs/V2_RELEASE_READINESS.md`の正式Release GateにはAudit Log必須要件なし。
+- Phase15の追加確認項目としてのみ存在。
+- Audit機能を勝手に新設しない。
+- Audit Log未実装単独ではProduction No-Go理由としない。
+
+### Security
+- Supabase Security Advisor（2026-08-28再確認）: **0 lints**
 
 詳細: `docs/PHASE17_ACCEPTANCE_EVIDENCE_2026-08-28.md`
 
@@ -73,16 +87,16 @@ Phase17では、Phase16までに完成したDemo Release Candidateを実Preview�
 - Phase15 Runtime Smoke `33142510966`: **success**
 - Phase15 Browser Acceptance `33142511001`: **success**
 - Phase15 Lighthouse `33142510926`: **success**
-- Supabase Security Advisor: **0 lints**
 
-## Production blockers
+## Production blockers / remaining acceptance
 
 1. Vercel Project / Preview URL成立
 2. Preview runtime/log確認
-3. authenticated Admin/non-admin E2E + limited CRUD/cleanup
-4. Audit Log acceptance requirementの扱い確定
-5. user actual PC/device/browser確認
-6. Public Preview/network Performance確認
+3. real Admin session E2E（承認済みテストまたは実アカウントが必要）
+4. user actual PC/device/browser確認
+5. Public Preview/network Performance確認
+
+Audit Logは正式Release Gate必須項目ではないため、上記blocker一覧から分離した。
 
 ## Demo Content Inventory
 
