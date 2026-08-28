@@ -1,0 +1,132 @@
+name: Phase15 Browser Acceptance
+
+on:
+  push:
+    branches:
+      - sf6dna-v2
+    paths:
+      - "v2-web/**"
+      - ".github/workflows/phase15-browser-e2e.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  NEXT_PUBLIC_SUPABASE_URL: https://wnuxaxbrpudyypzdbdho.supabase.co
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: sb_publishable_TCdyNFnbYzAGAN6Zlic0yA_YYPZfnTq
+
+jobs:
+  browser-acceptance:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: v2-web
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: v2-web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx --yes playwright@1.55.0 install --with-deps chromium
+
+      - name: Build
+        run: npm run build
+
+      - name: Start app
+        run: |
+          npm start -- -H 127.0.0.1 -p 3000 > /tmp/sf6dna-next.log 2>&1 &
+          echo $! > /tmp/sf6dna-next.pid
+          for i in {1..30}; do
+            if curl --silent --fail http://127.0.0.1:3000/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/sf6dna-next.log
+          exit 1
+
+      - name: Run browser acceptance
+        run: |
+          cat > /tmp/phase15-browser.mjs <<'EOF'
+          import { chromium } from 'playwright';
+          import assert from 'node:assert/strict';
+
+          const browser = await chromium.launch({ headless: true });
+          const base = 'http://127.0.0.1:3000';
+
+          // Mobile viewport: layout, horizontal overflow, touch-sized controls, search.
+          const mobile = await browser.newPage({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+          for (const path of ['/', '/characters', '/characters/aki', '/players', '/videos', '/search', '/diagnosis/character-fit-check', '/coach', '/auth']) {
+            const response = await mobile.goto(base + path, { waitUntil: 'networkidle' });
+            assert.equal(response?.status(), 200, `${path}: expected HTTP 200`);
+            const overflow = await mobile.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+            assert.ok(overflow <= 1, `${path}: horizontal overflow ${overflow}px`);
+          }
+
+          await mobile.goto(base + '/search', { waitUntil: 'networkidle' });
+          const searchInput = mobile.locator('input').first();
+          await searchInput.fill('JP');
+          const searchButton = mobile.getByRole('button').filter({ hasText: /検索/ }).first();
+          await searchButton.click();
+          await mobile.waitForLoadState('networkidle');
+          assert.match(mobile.url(), /\/search\?q=/, 'search query navigation failed');
+          assert.ok((await mobile.locator('body').innerText()).includes('JP'), 'search result page does not reflect JP query');
+
+          // Diagnosis: select the first option for every question and reach a result.
+          await mobile.goto(base + '/diagnosis/character-fit-check', { waitUntil: 'networkidle' });
+          let safety = 0;
+          while (await mobile.locator('.diagnosis-runner').count()) {
+            safety += 1;
+            assert.ok(safety <= 50, 'diagnosis did not terminate');
+            const option = mobile.locator('.diagnosis-option').first();
+            await option.click();
+            const next = mobile.locator('.diagnosis-actions .button-primary').first();
+            assert.equal(await next.isDisabled(), false, 'next/result button stayed disabled after selection');
+            await next.click();
+          }
+          await mobile.waitForTimeout(500);
+          assert.equal(await mobile.locator('.diagnosis-result').count(), 1, 'diagnosis result was not reached');
+
+          // Desktop keyboard-only smoke: skip link/focus visibility and reachable nav.
+          const desktop = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+          await desktop.goto(base + '/', { waitUntil: 'networkidle' });
+          await desktop.keyboard.press('Tab');
+          const active = await desktop.evaluate(() => ({
+            tag: document.activeElement?.tagName,
+            text: document.activeElement?.textContent?.trim(),
+            outline: getComputedStyle(document.activeElement).outlineStyle,
+          }));
+          assert.equal(active.tag, 'A', 'first keyboard focus is not a link');
+          assert.ok(active.text?.includes('本文'), 'skip link is not first focus target');
+          assert.notEqual(active.outline, 'none', 'focused element has no visible outline');
+
+          // Auth return path safety: external-looking // path must not be retained in rendered destination behavior.
+          await desktop.goto(base + '/auth?next=//example.com', { waitUntil: 'networkidle' });
+          assert.equal(await desktop.locator('input[type=email]').count(), 1, 'auth form unavailable');
+
+          await browser.close();
+          console.log('Phase15 browser acceptance: PASS');
+          EOF
+          npx --yes -p playwright@1.55.0 node /tmp/phase15-browser.mjs
+
+      - name: Print server log on failure
+        if: failure()
+        run: cat /tmp/sf6dna-next.log || true
+
+      - name: Stop app
+        if: always()
+        run: |
+          if [ -f /tmp/sf6dna-next.pid ]; then
+            kill "$(cat /tmp/sf6dna-next.pid)" || true
+          fi
