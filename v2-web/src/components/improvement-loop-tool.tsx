@@ -63,8 +63,11 @@ export function ImprovementLoopTool({ characters }: { characters: CharacterSumma
   const [retrainingTarget, setRetrainingTarget] = useState("");
 
   useEffect(() => {
-    setState(readState());
-    setReady(true);
+    const timer = window.setTimeout(() => {
+      setState(readState());
+      setReady(true);
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, []);
 
   useEffect(() => {
