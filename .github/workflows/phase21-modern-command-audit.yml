@@ -1,0 +1,35 @@
+name: Phase21 Modern Command Audit
+
+on:
+  push:
+    branches: [sf6dna-v2]
+    paths:
+      - "scripts/phase21-fetch-official-movelist-snapshots.mjs"
+      - ".github/workflows/phase21-modern-command-audit.yml"
+  workflow_dispatch:
+
+jobs:
+  fetch-movelists:
+    runs-on: ubuntu-latest
+    env:
+      MOVELIST_LOCALE: ja-jp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch CAPCOM official Japanese movelist snapshots
+        run: node scripts/phase21-fetch-official-movelist-snapshots.mjs
+      - name: Print A.K.I. snapshot sample
+        if: always()
+        run: |
+          if [ -f artifacts/phase21-official-movelist-snapshots-ja-jp/aki.md ]; then
+            sed -n '1,220p' artifacts/phase21-official-movelist-snapshots-ja-jp/aki.md
+          fi
+      - name: Upload snapshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase21-official-movelist-snapshots-ja-jp
+          path: artifacts/phase21-official-movelist-snapshots-ja-jp
+          retention-days: 7
