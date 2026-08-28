@@ -1,0 +1,24 @@
+name: Phase21 Source Probe
+on:
+  push:
+    branches: [sf6dna-v2]
+    paths:
+      - "scripts/phase21-probe-official-movelist-source.mjs"
+      - ".github/workflows/phase21-source-probe.yml"
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/phase21-probe-official-movelist-source.mjs
+      - run: |
+          grep -o -E '.{0,100}(紫煙砲|modern|d2\.png|command).{0,180}' artifacts/phase21-source-probe/aki.html | head -100 || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phase21-source-probe
+          path: artifacts/phase21-source-probe
+          retention-days: 2
