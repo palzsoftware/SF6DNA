@@ -6,10 +6,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const character = await getCharacterBySlug(slug);
 
-  if (!character) return { title: "キャラクター情報 | SF6DNA" };
+  if (!character) return { title: "キャラクター情報" };
 
   return {
-    title: `${character.name} | キャラクター情報 | SF6DNA`,
+    title: `${character.name} | キャラクター情報`,
     description:
       character.shortDescription ?? `${character.name}の攻略・技・コンボ・対策情報をまとめています。`,
   };

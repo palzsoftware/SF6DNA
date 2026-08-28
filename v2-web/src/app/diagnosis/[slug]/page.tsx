@@ -5,7 +5,7 @@ import { getDiagnosisBySlug } from "@/lib/diagnosis";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const diagnosis = await getDiagnosisBySlug(slug);
-  return { title: diagnosis ? `${diagnosis.title} | SF6DNA` : "診断 | SF6DNA" };
+  return { title: diagnosis ? diagnosis.title : "診断" };
 }
 
 export default async function DiagnosisDetailPage({ params }: { params: Promise<{ slug: string }> }) {

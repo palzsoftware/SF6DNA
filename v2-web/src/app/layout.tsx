@@ -2,7 +2,21 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 
+function getMetadataBase() {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  const vercelUrl = process.env.VERCEL_URL?.trim();
+  const candidate = explicit || (vercelUrl ? `https://${vercelUrl}` : null);
+  if (!candidate) return undefined;
+
+  try {
+    return new URL(candidate);
+  } catch {
+    return undefined;
+  }
+}
+
 export const metadata: Metadata = {
+  metadataBase: getMetadataBase(),
   title: {
     default: "SF6DNA",
     template: "%s | SF6DNA",

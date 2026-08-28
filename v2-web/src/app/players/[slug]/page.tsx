@@ -5,7 +5,7 @@ import { getPlayerBySlug } from "@/lib/players";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const player = await getPlayerBySlug(slug);
-  return { title: player ? `${player.displayName} | プレイヤー情報 | SF6DNA` : "プレイヤー情報 | SF6DNA" };
+  return { title: player ? `${player.displayName} | プレイヤー情報` : "プレイヤー情報" };
 }
 
 export default async function PlayerDetailPage({ params }: { params: Promise<{ slug: string }> }) {

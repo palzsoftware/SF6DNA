@@ -1,6 +1,10 @@
+import type { Metadata } from "next";
 import { AuthForm } from "@/components/auth-form";
 
-export const metadata = { title: "ログイン | SF6DNA" };
+export const metadata: Metadata = {
+  title: "ログイン",
+  robots: { index: false, follow: false, noarchive: true },
+};
 
 function getSafeNextPath(next: string | string[] | undefined) {
   const candidate = Array.isArray(next) ? next[0] : next;
