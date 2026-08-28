@@ -2,7 +2,7 @@ import { CharacterCard } from "@/components/character-card";
 import { characterDataSourceStatus, listCharacters } from "@/lib/characters";
 
 export const metadata = {
-  title: "キャラクター情報 | SF6DNA",
+  title: "キャラクター情報",
   description: "SF6のキャラクター情報を、技・フレーム・コンボ・セットプレイ・対策・トレーニングまで横断して確認できる辞典です。",
 };
 
