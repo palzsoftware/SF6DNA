@@ -5,7 +5,7 @@ import re
 import urllib.request
 from pathlib import Path
 
-ROOT = Path("artifacts/phase20-official-frame-snapshots")
+ROOT = Path("artifacts/phase20-official-frame-snapshots-ja-jp")
 OUT = Path("artifacts/phase20-frame-crosscheck")
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -84,16 +84,7 @@ def table_rows(lines):
         damage = norm_space(clean_images(cells[7]))
         if damage and re.match(r"^\d+", damage):
             damage = re.sub(r"[^0-9].*$", "", damage)
-        out.append({
-            "section": section,
-            "name": name,
-            "startup": norm_space(clean_images(cells[1])),
-            "active": norm_space(clean_images(cells[2])),
-            "recovery": normalize_recovery(clean_images(cells[3])),
-            "on_hit": normalize_adv(clean_images(cells[4])),
-            "on_block": normalize_adv(clean_images(cells[5])),
-            "damage": damage,
-        })
+        out.append({"section": section, "name": name, "startup": norm_space(clean_images(cells[1])), "active": norm_space(clean_images(cells[2])), "recovery": normalize_recovery(clean_images(cells[3])), "on_hit": normalize_adv(clean_images(cells[4])), "on_block": normalize_adv(clean_images(cells[5])), "damage": damage})
     return out
 
 
@@ -206,15 +197,12 @@ def line_rows(lines):
 
 def parse_file(path):
     lines = path.read_text(encoding="utf-8").splitlines()
-    if any(l.startswith("| 技名 |") for l in lines):
-        return table_rows(lines)
-    return line_rows(lines)
+    return table_rows(lines) if any(l.startswith("| 技名 |") for l in lines) else line_rows(lines)
 
 
 def canonical_for_mask(row, mask):
     values = [row.get("startup", ""), row.get("active", ""), normalize_recovery(row.get("recovery", "")), normalize_adv(row.get("on_hit", "")), normalize_adv(row.get("on_block", "")), str(row.get("damage", "") or "")]
-    selected = [values[i] if mask[i] == "1" else "~" for i in range(6)]
-    return hashlib.md5("|".join(selected).encode()).hexdigest()
+    return hashlib.md5("|".join(values[i] if mask[i] == "1" else "~" for i in range(6)).encode()).hexdigest()
 
 
 def get_db_fingerprints():
@@ -225,36 +213,20 @@ def get_db_fingerprints():
 
 
 def main():
-    official = {}
-    for p in sorted(ROOT.glob("*.md")):
-        official[p.stem] = [r for r in parse_file(p) if r["section"] != "共通システム"]
+    official = {p.stem: [r for r in parse_file(p) if r["section"] != "共通システム"] for p in sorted(ROOT.glob("*.md"))}
     db = get_db_fingerprints()
-    matches = []
-    unresolved = []
-    summaries = {}
+    matches, unresolved, summaries = [], [], {}
     for item in db:
-        slug = item["slug"]
-        rows = official.get(slug, [])
-        mask = item["mask"]
-        direct = []
-        for r in rows:
-            nh = hashlib.md5(norm_name(r["name"]).encode()).hexdigest()
-            bh = hashlib.md5(base_name(r["name"]).encode()).hexdigest()
-            if item["name_hash"] in (nh, bh) and canonical_for_mask(r, mask) == item["fp"]:
-                direct.append(r)
-        method = None
-        if direct:
-            method = "name+fields"
-        else:
+        rows, mask = official.get(item["slug"], []), item["mask"]
+        direct = [r for r in rows if item["name_hash"] in (hashlib.md5(norm_name(r["name"]).encode()).hexdigest(), hashlib.md5(base_name(r["name"]).encode()).hexdigest()) and canonical_for_mask(r, mask) == item["fp"]]
+        method = "name+fields" if direct else None
+        if not method:
             field_only = [r for r in rows if canonical_for_mask(r, mask) == item["fp"]]
             if len(field_only) == 1:
                 method = "unique-fields"
-        target = matches if method else unresolved
-        target.append({"slug": slug, "name_hash": item["name_hash"], "mask": mask, "fp": item["fp"], "verification_status": item["verification_status"], "method": method})
+        (matches if method else unresolved).append({"slug": item["slug"], "name_hash": item["name_hash"], "mask": mask, "fp": item["fp"], "verification_status": item["verification_status"], "method": method})
     for slug in sorted({x["slug"] for x in db}):
-        d = [x for x in db if x["slug"] == slug]
-        m = [x for x in matches if x["slug"] == slug]
-        u = [x for x in unresolved if x["slug"] == slug]
+        d, m, u = [x for x in db if x["slug"] == slug], [x for x in matches if x["slug"] == slug], [x for x in unresolved if x["slug"] == slug]
         summaries[slug] = {"db_total": len(d), "official_parsed": len(official.get(slug, [])), "concordant": len(m), "unresolved": len(u), "verified_before": sum(x["verification_status"] == "verified" for x in d), "verified_conflict_or_unresolved": sum(x["verification_status"] == "verified" for x in u)}
     result = {"total_db": len(db), "total_concordant": len(matches), "total_unresolved": len(unresolved), "verified_unresolved": sum(x["verification_status"] == "verified" for x in unresolved), "summary": summaries, "matches": matches, "unresolved": unresolved}
     (OUT / "crosscheck.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
