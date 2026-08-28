@@ -99,21 +99,23 @@ def main():
                     name_ok=item['name_en_hash'] in (en_hash(row['name']),en_base_hash(row['name']))
                 if name_ok: candidates.append((locale,'name+fields'))
         method=None
-        if candidates:
+        matched_locales=sorted({locale for locale,_ in candidates})
+        if set(matched_locales)=={'ja','en'}:
             method='bilingual-name+fields'
+        elif matched_locales:
+            method=f'{matched_locales[0]}-name+fields'
         else:
-            # Field-only fallback is accepted only when unique within the expected move category across both locales.
-            fps=[]
+            # Field-only fallback is accepted only when the fingerprint identifies at most
+            # one row in each available locale within the expected move category.
+            per_locale=[]
             for locale,rows in [('ja',ja.get(slug,[])),('en',en.get(slug,[]))]:
-                for row in rows:
-                    if compatible(item,row) and base.canonical_for_mask(row,mask)==item['fp']:
-                        key=(row.get('kind'),base.canonical_for_mask(row,mask))
-                        fps.append(key)
-            if len(set(fps))==1 and len(fps)>0:
-                # Require enough populated factual fields to avoid weak one-field coincidences.
-                if mask.count('1')>=3:
-                    method='category-unique-fields'
-        rec={'slug':slug,'name_hash':item['name_hash'],'name_en_hash':item.get('name_en_hash'),'move_type':item.get('move_type'),'display_order':item.get('display_order'),'mask':mask,'fp':item['fp'],'verification_status':item['verification_status'],'method':method}
+                matched=[row for row in rows if compatible(item,row) and base.canonical_for_mask(row,mask)==item['fp']]
+                if matched:
+                    per_locale.append((locale,len(matched)))
+            if per_locale and all(count==1 for _,count in per_locale) and mask.count('1')>=3:
+                matched_locales=sorted(locale for locale,_ in per_locale)
+                method='category-unique-fields'
+        rec={'frame_id':item.get('frame_id'),'move_id':item.get('move_id'),'slug':slug,'name_hash':item['name_hash'],'name_en_hash':item.get('name_en_hash'),'move_type':item.get('move_type'),'display_order':item.get('display_order'),'mask':mask,'fp':item['fp'],'verification_status':item['verification_status'],'method':method,'matched_locales':matched_locales}
         (matches if method else unresolved).append(rec)
     for slug in sorted({x['slug'] for x in db}):
         d=[x for x in db if x['slug']==slug]; m=[x for x in matches if x['slug']==slug]; u=[x for x in unresolved if x['slug']==slug]
