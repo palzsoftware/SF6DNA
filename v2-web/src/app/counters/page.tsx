@@ -1,7 +1,7 @@
 import { KnowledgeList } from "@/components/knowledge-list";
 import { listKnowledge } from "@/lib/knowledge";
 
-export const metadata = { title: "対策 | SF6DNA" };
+export const metadata = { title: "対策" };
 
 export default async function CountersPage() {
   const items = await listKnowledge("counter");
