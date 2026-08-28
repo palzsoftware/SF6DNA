@@ -44,6 +44,7 @@ function readState(): ImprovementState {
 export function ImprovementLoopTool({ characters }: { characters: CharacterSummary[] }) {
   const [state, setState] = useState<ImprovementState>(EMPTY_IMPROVEMENT_STATE);
   const [ready, setReady] = useState(false);
+  const [ownCharacterId, setOwnCharacterId] = useState(characters[0]?.id ?? "");
   const [opponentId, setOpponentId] = useState(characters[0]?.id ?? "");
   const [result, setResult] = useState<"win" | "loss">("loss");
   const [rating, setRating] = useState("");
@@ -71,6 +72,8 @@ export function ImprovementLoopTool({ characters }: { characters: CharacterSumma
     window.localStorage.setItem(IMPROVEMENT_STORAGE_KEY, JSON.stringify(state));
   }, [ready, state]);
 
+  const ownCharacter = characters.find((item) => item.id === ownCharacterId) ?? characters[0];
+  const opponent = characters.find((item) => item.id === opponentId) ?? characters[0];
   const analysis = useMemo(() => analyzeLastTen(state.battleLogs), [state.battleLogs]);
   const weakest = [...analysis.weaknessMetrics]
     .filter((metric) => metric.opportunities > 0)
@@ -127,6 +130,11 @@ export function ImprovementLoopTool({ characters }: { characters: CharacterSumma
         <h2>対戦後30秒ログ</h2>
         <p>未入力・不明項目があっても保存できます。分析は直近10戦を対象にします。</p>
         <form className="page-stack" onSubmit={submitBattleLog}>
+          <label>使用キャラ
+            <select value={ownCharacterId} onChange={(e) => setOwnCharacterId(e.target.value)}>
+              {characters.map((character) => <option value={character.id} key={character.id}>{character.name}</option>)}
+            </select>
+          </label>
           <label>相手キャラ
             <select value={opponentId} onChange={(e) => setOpponentId(e.target.value)}>
               {characters.map((character) => <option value={character.id} key={character.id}>{character.name}</option>)}
@@ -187,7 +195,8 @@ export function ImprovementLoopTool({ characters }: { characters: CharacterSumma
           </>
         ) : <p>対戦ログを追加すると候補を表示します。</p>}
         <p>Source付きTraining/Counterを確認して内容を確定してください。未verified攻略をここで断定表示しません。</p>
-        <p><Link href="/trainings">Trainingを見る</Link> / <Link href="/counters">Counterを見る</Link></p>
+        {ownCharacter ? <p><Link href={`/characters/${ownCharacter.slug}/training`}>{ownCharacter.name}のTraining</Link></p> : null}
+        {opponent ? <p><Link href={`/characters/${opponent.slug}/matchups`}>{opponent.name}の対策データ</Link></p> : null}
       </section>
 
       <section className="info-panel">
@@ -208,6 +217,7 @@ export function ImprovementLoopTool({ characters }: { characters: CharacterSumma
                 <p>原因: {review.cause || "不明"}</p>
                 <p>採用回答: {review.adoptedAnswer || "未確定"}</p>
                 <p>再練習: {review.retrainingTarget || "未設定"}</p>
+                {ownCharacter ? <p><Link href={`/characters/${ownCharacter.slug}/training`}>Trainingで再確認</Link></p> : null}
                 <button type="button" onClick={() => setState((current) => ({ ...current, replayReviews: current.replayReviews.filter((item) => item.id !== review.id) }))}>削除</button>
               </article>
             ))}
