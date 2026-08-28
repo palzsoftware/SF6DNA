@@ -108,6 +108,24 @@ Modern CommandはPublic候補条件に必須化しない。欠損時は表示し
 | Counter | 1122 | 0 | 0 | 1122 | 1122 | 0 | 0 | 67 | 1055 |
 | Training | 1477 | 0 | 0 | 1477 | 1477 | 0 | 0 | 8 | 1469 |
 
+### Strategy Public Gate hardening
+
+Phase18でStrategyのPublic RLSを再監査した結果、従来は`published + verified`までをRLSで要求し、Source要件はアプリ側のRelease Gate定義に依存していた。
+
+将来のunsourced verified data公開を防ぐため、次の5テーブルのPublic SELECT RLSを **published + verified + Source relation** に強化した。
+
+- `combos`
+- `setups`
+- `sequences`
+- `counters`
+- `trainings`
+
+適用Migration:
+- Supabase: `phase18_strategy_source_public_gate`
+- Repository: `supabase/migrations/20260828_phase18_strategy_source_public_gate.sql`
+
+実DBの`pg_policies`再確認でも5テーブルすべてに`entity_sources`存在条件が入っていることを確認済み。
+
 ### Strategy publish candidate
 
 唯一の`draft + verified + Current Patch + Source`候補:
@@ -167,7 +185,7 @@ Recommendationは`published + verified + Source`のみ使用するため、現�
 
 VideoはURL自体が一次参照先となるため、`entity_sources` 0件を他EntityのSource不足と同一には扱わない。
 
-## Phase18 Public Gate finding
+## Phase18 Public Move Gate hardening
 
 Moveは他Strategy Entityと異なりMove本体に`verification_status`がない。
 
@@ -177,9 +195,9 @@ Moveは他Strategy Entityと異なりMove本体に`verification_status`がない
 - Character Move section
 - direct Move detail
 
-2026-08-28時点のpublished Moveは0件のため実データ漏洩は発生していないが、将来の回帰リスクとしてPhase18で修正対象とした。
+2026-08-28時点のpublished Moveは0件のため実データ漏洩は発生していないが、将来の回帰リスクとしてPhase18で修正した。
 
-Public Move Gateを以下に統一する。
+Public Move Gateを以下に統一した。
 
 1. Move status = published
 2. Classic Commandあり
@@ -187,6 +205,44 @@ Public Move Gateを以下に統一する。
 4. Move Sourceあり
 5. Current Frame Sourceあり
 6. Modern Commandは任意。欠損時に推測しない
+
+適用先:
+- `v2-web/src/lib/public-move-gate.ts`
+- direct Move detail
+- Character Move section
+- Unified Search
+
+## Automated Acceptance
+
+Phase18専用workflow:
+- `.github/workflows/phase18-data-gate-acceptance.yml`
+
+確認内容:
+- Typecheck
+- Lint
+- Policy tests
+- Build
+- Public Move Gate static acceptance
+- Character Guide verification gate
+- Strategy list published+verified gate
+- Recommendation published+verified+Source gate
+
+Evidence:
+- run `33145909173`: **success**
+- migration適用後 run `33145974207`: **success**
+- migration適用後 `SF6DNA v2 Web Check` run `33145974201`: **success**
+
+## Supabase Advisor
+
+Phase18 DDL適用後:
+- Security Advisor: **0 lints**
+- Performance Advisor: `unused_index` INFO / `multiple_permissive_policies` WARNを確認
+
+Performance警告は実利用状況・RLS挙動を計測せずにblind fixしない。Phase18ではindex削除やRLS統合を実施していない。
+
+参考:
+- unused index remediation: https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index
+- multiple permissive policies remediation: https://supabase.com/docs/guides/database/database-linter?lint=0006_multiple_permissive_policies
 
 ## Conclusion
 
@@ -197,4 +253,6 @@ Phase18の公開候補整理では、データ量ではなくEvidence品質が�
 - Trait Score: Public Recommendation Ready 0
 - Character Guide: Public Ready 0
 
-これらをPhase完了目的で自動verify/publishしない。
+一方、将来の公開操作に備えてMove Public GateとStrategy Source Gateを防御的に強化し、自動回帰検査を追加した。
+
+これらの監査結果を理由にstatus/verificationを自動昇格していない。
