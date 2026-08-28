@@ -1,7 +1,7 @@
 import { KnowledgeList } from "@/components/knowledge-list";
 import { listKnowledge } from "@/lib/knowledge";
 
-export const metadata = { title: "コンボ | SF6DNA" };
+export const metadata = { title: "コンボ" };
 
 export default async function CombosPage() {
   const items = await listKnowledge("combo");
