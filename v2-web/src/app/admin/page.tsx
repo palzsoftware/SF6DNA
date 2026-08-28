@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getSupabaseAuthServerClient } from "@/lib/supabase/auth-server";
 
-export const metadata = { title: "管理 | SF6DNA" };
+export const metadata = { title: "管理" };
 
 const ADMIN_SECTIONS = [
   ["データ投入状況", "/admin/data-status"],
