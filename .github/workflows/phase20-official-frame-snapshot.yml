@@ -11,17 +11,19 @@ on:
 jobs:
   snapshot:
     runs-on: ubuntu-latest
+    env:
+      FRAME_LOCALE: ja-jp
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Fetch current CAPCOM frame snapshots through read-only mirror
+      - name: Fetch current CAPCOM Japanese frame snapshots through read-only mirror
         run: node scripts/phase20-fetch-official-frame-snapshots.mjs
       - name: Upload snapshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: phase20-official-frame-snapshots
-          path: artifacts/phase20-official-frame-snapshots
+          name: phase20-official-frame-snapshots-ja-jp
+          path: artifacts/phase20-official-frame-snapshots-ja-jp
           retention-days: 7
