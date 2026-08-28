@@ -2,7 +2,7 @@
 
 最終更新: 2026-08-28 JST
 
-状態: **進行中**
+状態: **完了**
 
 ## Phase18名称
 
@@ -23,6 +23,8 @@ Phase18は品質分類・Public Gate回帰監査・自動Acceptance整備を行�
 - Project ID: `wnuxaxbrpudyypzdbdho`
 - Current Patch: `2026.08.03`
 - Phase17 Final Audit: `docs/PHASE17_FINAL_AUDIT_2026-08-28.md`
+- Phase18 Data Quality Report: `docs/PHASE18_DATA_QUALITY_REPORT_2026-08-28.md`
+- Phase18 Final Audit: `docs/PHASE18_FINAL_AUDIT_2026-08-28.md`
 - Release Gate: `docs/V2_RELEASE_READINESS.md`
 
 ## 絶対ルール
@@ -38,80 +40,71 @@ Phase18は品質分類・Public Gate回帰監査・自動Acceptance整備を行�
 - 人力・外部AcceptanceはPhase19へ維持する
 - Phase18作業記録をGitHubへ残す
 
-## Backlog
+## Backlog Final Status
 
-### P18-00 Baseline / Scope Freeze
-- Phase17完了状態とDB baselineを固定
-- Current Patch確認
-- main未変更確認
+| ID | Task | 状態 |
+|---|---|---|
+| P18-00 | Baseline / Scope Freeze | **完了** |
+| P18-01 | 31 Character Current Patch Quality Audit | **完了** |
+| P18-02 | Move / Frame / Command Publish Candidate Classification | **完了** |
+| P18-03 | Strategy Content Readiness Classification | **完了** |
+| P18-04 | Trait / Diagnosis / Reference Coverage Audit | **完了** |
+| P18-05 | Public Gate Regression Audit | **完了** |
+| P18-06 | Data Quality Report / Publish Candidate Report | **完了** |
+| P18-07 | Automated Acceptance | **完了** |
+| P18-08 | Final Audit / Closure | **完了** |
 
-### P18-01 31 Character Current Patch Quality Audit
-- 31 playable published Character
-- Character Source coverage
-- Move / Frame / Command coverageをキャラ別集計
-- 現行Patch verified Frame coverage
+## P18-05で実施したRelease Gate改善
 
-### P18-02 Move / Frame / Command Publish Candidate Classification
-- Move総数
-- Current Patch Frame
-- verified Frame
-- Classic Command
-- Modern Command
-- Move Source / Frame Source
-- 機械的公開候補を抽出
-- Evidence不足理由を分類
+### Public Move Gate
 
-### P18-03 Strategy Content Readiness Classification
-対象:
-- Combo
-- Setup
-- Sequence
-- Counter
-- Training
+Move本体には`verification_status`がないため、`status=published`だけで公開しないよう、以下の共通Gateを追加した。
 
-分類:
-- status
-- verification_status
-- Source
-- Current Patch
-- published+verified+Source
-- draft verified candidate
-- reviewed/unverified backlog
+- Move status = published
+- Classic Commandあり
+- Current Patch verified Frameあり
+- Move Sourceあり
+- Current Frame Sourceあり
+- Modern Commandは任意・推測禁止
 
-### P18-04 Trait / Diagnosis / Reference Coverage Audit
-- Character Trait Score
-- Diagnosis / Question
-- Player / Video
-- Source coverage
-- Public gate readiness
+適用先:
+- direct Move detail
+- Character Move section
+- Unified Search
 
-### P18-05 Public Gate Regression Audit
-- Search
-- Character Guide
-- Knowledge list/detail
-- AI Coach Retrieval
-- Recommendation
-- draft/reviewed/unverified leakage防止
+### Strategy Source Gate
 
-### P18-06 Data Quality Report / Publish Candidate Report
-- 全31キャラ別品質表
-- 公開候補
-- Evidence不足
-- 実機確認待ち
-- 推測禁止領域
+Combo / Setup / Sequence / Counter / TrainingのPublic RLSを、
 
-### P18-07 Automated Acceptance
-- Phase18用CI/静的Acceptanceを整備
-- Data gate regressionを検出
-- Typecheck / lint / build / policyを維持
+- published
+- verified
+- Source relationあり
 
-### P18-08 Final Audit / Closure
-- Phase18 Final Audit
-- PROJECT_STATUS更新
-- Phase19へ渡すbaseline固定
-- Phase19は自動開始しない
+の3条件へ強化した。
 
-## Non-goals
+Migration:
+`supabase/migrations/20260828_phase18_strategy_source_public_gate.sql`
+
+## Automated Acceptance
+
+- Phase18 Data Gate Acceptance `33145909173`: **success**
+- Phase18 Data Gate Acceptance `33145974207`: **success**
+- SF6DNA v2 Web Check `33145974201`: **success**
+- Supabase Security Advisor: **0 lints**
+
+## Completion Rule
+
+Phase18では人力・外部環境作業を完了条件に含めない。
+
+以下はPhase19へ維持する。
+- Vercel Project / Preview
+- Preview Runtime / Logs
+- real Auth/Admin session E2E
+- actual PC/device/browser
+- Public network Performance
+- Production Readiness final decision
+
+## Non-goals / 実施していないもの
 
 - 推測Modern Command
 - SourceなしFrame
@@ -123,3 +116,8 @@ Phase18は品質分類・Public Gate回帰監査・自動Acceptance整備を行�
 - Production deploy
 - main merge
 - Vercel/actual device/manual acceptance
+
+## Closure
+
+Phase18の全作業は完了した。
+Phase19はユーザーの明示指示を受けるまで開始しない。
