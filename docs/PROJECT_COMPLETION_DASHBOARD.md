@@ -4,208 +4,101 @@
 
 ## 現在Phase
 
-- **Phase13: Character Content Verification & Expansion — 完了済み**
-- **Phase14: Application Integration, Public Data Gating & Demo Release Readiness — 完了**
-- **Phase15 — 準備完了 / 未着手**
+- Phase1〜20 automated/internal scope: **完了**
+- Phase20 `Verified Content Expansion`: **COMPLETE / PASS**
+- Phase21: **未開始**
+- Phase22: **未開始**
+- Phase23: **未開始 / Final Manual & External Acceptance**
 - 作業ブランチ: `sf6dna-v2`
-- `main`: 変更禁止（ユーザー明示許可まで）
+- `main`: ユーザー明示許可まで変更禁止
 - Supabase正本: `SF6DNAPro` (`wnuxaxbrpudyypzdbdho`)
-- SF6現行基準: `2026.08.03`以降
+- Current Patch: `2026.08.03`
 
-Phase14最終判定の正本:
-- `docs/PHASE14_FINAL_AUDIT_2026-08-28.md`
+## Phase20 Final Data Quality
 
-Phase15準備の正本:
-- `docs/PHASE15_IMPLEMENTATION_PLAN.md`
+| Item | Final |
+|---|---:|
+| Active Move | 2052 |
+| Current Frame | 2052 |
+| Verified Current Frame | **2020** |
+| Verified Rate | **98.4%** |
+| Reviewed exception | **32** |
+| Unverified | **0** |
+| Verified with official CAPCOM Frame Source | **2020 / 2020** |
+| Active Move without Current Frame | **0** |
+| Active Move with multiple Current Frame | **0** |
 
-`docs/PHASE14_IMPLEMENTATION_PLAN.md` はPhase14実装中の計画・履歴として保持する。そこに残るPreview依存タスクの古いstatus表記は、Phase14最終監査の再分類表で上書きして解釈する。
+Reviewed 32:
+- Taunt 31
+- Alex `Exit Prowler Stance` 1
 
----
+CAPCOM公式Character Frame Dataに直接比較可能な独立行が無いため、Evidence基準を下げずreviewedを維持する。
 
-# Phase14 Final Disposition
+## Phase20 Final Cleanup
 
-Phase14計画のP0〜P2は計19タスク。
+- CAPCOM ja-jp / en-uk Frame照合完了
+- legacy / duplicate working rowsを履歴化
+- obsolete Moveをarchived化
+- archived Dhalsim duplicate open Frameをcleanup
+- temporary audit RPC削除
+- temporary Frame Crosscheck workflow退役
+- Supabase Security Advisor: **0 lints**
+- Phase1〜20 retrospective implementation gap audit: **PASS**
 
-- Phase14内で完了: **14 / 19**
-- ユーザー承認のうえPhase15へ再分類: **5 / 19**
-- 未分類Phase14残件: **0**
-- Phase14 scope重大ブロッカー: **0**
+## Phase1〜20 Implementation Gap
 
-再分類:
+正本:
+- `docs/PHASE20_PHASE1_TO_20_RETROSPECTIVE_GAP_AUDIT_2026-08-28.md`
 
-| Phase14 | Phase15 | 状態 |
-|---|---|---|
-| P0-06 Vercel Preview Project / Deployment | P15-00 | 未検証・Phase15へ繰越 |
-| P0-07 Preview Runtime / Demo Gate Smoke | P15-01 | 未検証・Phase15へ繰越 |
-| P1-06 Auth / Admin E2E | P15-02 | 未検証・Phase15へ繰越 |
-| P2-03 Performance Measurement / Optimization | P15-03 | 未検証・Phase15へ繰越 |
-| P2-04 Responsive / Accessibility runtime確認 | P15-04 | Static完了、runtime/実機のみPhase15へ繰越 |
+判定:
+- automated/internal完了条件の重大未実装: **0**
+- 将来機能 / UX提案 / External Acceptanceは正式Phase境界に従い別扱い
+- Replay映像解析はPhase12定義どおり将来研究対象
+- AI Coach GenerationはEvidence条件成立までOFFが仕様
+- Vercel / real Auth / actual device / public network performanceはPhase23へ移管
+- Audit LogはPhase17でRelease Gate必須ではないと正式判定済み
 
-重要:
-- 再分類 ≠ 検証済み
-- Phase14完了 ≠ Release Ready
-- Preview未成立のまま「Preview成功」とは記録しない
-- 実機未確認のまま「実機確認済み」とは記録しない
+## Public Gate
 
----
-
-# GitHub / CI
-
-Phase14終了監査開始時HEAD:
-- `583bab045d112394a85fff757efa4218946a5736`
-- `docs: complete Phase14 Modern coverage audit`
-
-最新source code変更commit:
-- `2fe0b90c6ff2e642f3028df0a5edc9ccaeb5b60e`
-
-GitHub Actions run `33130148956`:
-- Typecheck: **success**
-- Lint: **success**
-- Policy tests: **27 / 27 success**
-- Build: **success**
-- check: **success**
-
-`2fe0b90...`以降、Phase14終了監査開始時HEADまでsource code変更はなく、documentation更新のみ。
-
-Public/Release Gate test coverage:
-- Strategy `published + verified`
-- Character Strategy section `published + verified`
-- Recommendation `published + verified + Source` + 75% coverage
-- AI Coach Source Evidence + Current Patch + Generation OFF
-- Player/Video published gate
-- draft linked leakage防止
-- Sitemap/Search RPC public gate
-- Site URLでProduction domainを推測しない
-- Patch / Verification / Source Evidence表示
-- Static accessibility
-- Data Quality / Public Integration
-
----
-
-# Supabase実DB — Phase14終了監査値
-
-Read-only最終確認:
-
-- public base tables: **38**
-- RLS enabled: **38 / 38**
-- playable + published Character: **31**
-- published Move: **0**
-- verified Frame: **307**
-- published Diagnosis: **4**
-- published Diagnosis Question: **52**
-- Current Patch: **2026.08.03**
-
-Phase14 Public Gate migration適用確認:
-- `phase14_public_verification_gate`
-- `phase14_public_command_source_gate`
-
-Security Advisor:
-- **lint 0**
-
-Performance Advisor:
-- `unused_index` INFO
-- `multiple_permissive_policies` WARN
-
-Performance警告はPhase15 P15-03で実測後に評価し、blind fixしない。
-
----
-
-# Data Quality Snapshot
-
-Phase14終了前の監査値を維持する。
-
-- Playable Character: published **31**
-- Active Move: **2,064**、published **0**
-- Release Ready Move: **0**
-- Current Frame: **2,064**
-  - verified **307**
-  - reviewed **1,751**
-  - unverified **6**
-- Classic Command: **2,064**
-- Modern Command: **1,443 / 2,064 (69.9%)**
-- Modern Command未登録: **621**
-- Move Alias: **3,553**
-- Player: published **41** / draft **50**
-- Video: published **5** / draft **8**
-- Character Trait Score: **372**、全件draft + reviewed
-- Release Ready Strategy: **0**
-- Recommendation Ready Candidate: **0**
-- Diagnosis: published **4**
-- Diagnosis Question: published **52**
-- Source: **329**
-- Entity Source relation: **16,720**
-
-Modern Command監査では推測補完を行わず、公式資料で直接確認できた2件のみ改善している。
-
-Data Quality原則:
+維持:
 - `reviewed ≠ verified`
 - `draft ≠ published`
-- Sourceあり ≠ verified
-- 機械Gate通過 ≠ 自動publish
-- Modern欠損を推測補完しない
-- Release件数を目的にstatusを昇格しない
+- Move: published + Classic official Evidence + official Move Source + Current verified Frame + official Frame Source
+- Strategy: published + verified + Source
+- Character Guide: published + verified
+- Recommendation: published + verified + Source
+- AI Coach: Source Evidence + Current Patch / Generation OFF
 
----
+## Phase Summary
 
-# Public Quality Gate
+| Phase | Status |
+|---|---|
+| Phase1〜12 | 完了または各Phase定義どおり終了 |
+| Phase13 | 完了 |
+| Phase14 | 完了 |
+| Phase15 | Internal acceptance実施 / external残件移管 |
+| Phase16 | 完了 / Conditional Go |
+| Phase17 | 完了 / Automated & Internal PASS |
+| Phase18 | 完了 / Data Gate PASS |
+| Phase19 | 完了 / Integrity & Hardening PASS |
+| Phase20 | **完了 / Verification Expansion PASS** |
+| Phase21 | **未開始** |
+| Phase22 | **未開始** |
+| Phase23 | **未開始 / Manual & External Final Phase** |
 
-確認済み:
-- Character: `published`
-- Move: `published`
-- Frame: 親Move `published` + Frame `verified`
-- Command: 親Move `published` + official Source
-- Combo / Setup / Sequence / Counter / Training / Trait Score: `published + verified`
-- Player / Video: `published`
-- Unified Search RPC: Strategy `published + verified`
-- Recommendation: `published + verified + Source`付きTrait Scoreのみ
-- AI Coach Retrieval: Public Gate通過後、Source付きEvidence + Current Patchを要求
-- AI Coach Generation: **OFF**
+## Current Release Decision
 
-公開可能データがない場合は未検証データを代替表示せずsafe empty stateを使用する。
+- Automated / Internal Readiness: **PASS**
+- Data Gate: **PASS**
+- Security: **PASS**
+- Demo Release Decision: **CONDITIONAL GO**
+- Production Ready: **未判定 / Phase23依存**
+- Production deploy: **未実施**
 
----
+## Phase21 Entry
 
-# Release Readiness
+Phase21はユーザー明示指示まで開始しない。
+正本:
+- `docs/PHASE21_PRIORITY_A_PLAN.md`
 
-Phase14は完了したが、Release Readinessは完了していない。
-
-未成立:
-- Vercel Project: **0件**
-- Vercel Preview: **未成立**
-- Production deployment: **未実施**
-- Authenticated Admin E2E: **未実施**
-- Actual device確認: **未実施**
-- Preview Performance計測: **未実施**
-- Release Ready Move / Strategy / Recommendation: **0**
-
-これらをPhase14完了のために推測・自動昇格・Production deployで解消しない。
-
----
-
-# Phase15 Entry
-
-Phase15は**準備完了 / 未着手**。
-
-開始時は `docs/PHASE15_IMPLEMENTATION_PLAN.md` に従い、ユーザーの明示指示後に次の順で進める。
-
-1. P15-00 Preview Environment / Deployment
-2. P15-01 Preview Runtime / Public Demo Gate Smoke
-3. P15-02 Auth / Admin E2E
-4. P15-04 Device / Responsive / Accessibility Runtime Verification
-5. P15-03 Performance Measurement / Advisor Review
-
-Phase15で新要素が必要と判明しても、ユーザー指示なしで追加しない。
-
----
-
-# Phase14 Final Status
-
-**COMPLETE**
-
-- 14 tasks completed in Phase14
-- 5 tasks explicitly reclassified to Phase15
-- 0 unclassified Phase14 tasks
-- 0 Phase14-scope critical blockers
-- main untouched
-- Production undeployed
-- DB statuses not auto-promoted
+Phase21のModern Command不足対応などをPhase20の実装漏れとして先行実施しない。
