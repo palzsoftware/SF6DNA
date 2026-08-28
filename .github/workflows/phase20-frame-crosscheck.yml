@@ -7,6 +7,7 @@ on:
       - ".github/workflows/phase20-frame-crosscheck.yml"
       - "scripts/phase20-crosscheck-official-frames.py"
       - "scripts/phase20-crosscheck-official-frames-v2.py"
+      - "scripts/phase20-match-same-name-groups.py"
       - "scripts/phase20-fetch-official-frame-snapshots.mjs"
   workflow_dispatch:
 
@@ -49,6 +50,8 @@ jobs:
           fi
       - name: Crosscheck DB fingerprints against CAPCOM current data
         run: python scripts/phase20-crosscheck-official-frames-v2.py
+      - name: Match same-name strength and OD groups
+        run: python scripts/phase20-match-same-name-groups.py
       - name: Upload crosscheck evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -56,6 +59,7 @@ jobs:
           name: phase20-frame-crosscheck-v2
           path: |
             artifacts/phase20-frame-crosscheck-v2
+            artifacts/phase20-same-name-groups
             artifacts/phase20-official-frame-snapshots-ja-jp
             artifacts/phase20-official-frame-snapshots-en-uk
           retention-days: 7
