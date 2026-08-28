@@ -122,6 +122,10 @@ def strong_semantic(item,matched):
     return populated>=2 and len(matched)==populated
 
 
+def row_public(row,locale,matched):
+    return {'locale':locale,'name':row.get('name'),'section':row.get('section'),'matched_fields':matched,**{f:row.get(f) for f in FIELDS}}
+
+
 def main():
     ja={p.stem:[dict(r,kind=SECTION_KIND.get(r['section'])) for r in base.parse_file(p)] for p in JA_ROOT.glob('*.md')}
     en={p.stem:parse_en(p) for p in EN_ROOT.glob('*.md')}
@@ -137,23 +141,25 @@ def main():
                 fm=semantic_fields(item,row)
                 if strong_semantic(item,fm):
                     semantic.append((locale,row,fm))
-        method=None; matched_locales=[]; field_matches=[]
+        method=None; matched_locales=[]; field_matches=[]; official_candidates=[]
         chosen=exact if exact else semantic
         if chosen:
             matched_locales=sorted({x[0] for x in chosen})
             field_matches=sorted(set().union(*(set(x[2]) for x in chosen)), key=FIELDS.index)
+            official_candidates=[row_public(row,locale,fm) for locale,row,fm in chosen]
             prefix='bilingual' if set(matched_locales)=={'ja','en'} else matched_locales[0]
             method=f'{prefix}-name+fields' if exact else f'{prefix}-name+semantic-fields'
         else:
             per_locale=[]
             for locale,rows in [('ja',ja.get(slug,[])),('en',en.get(slug,[]))]:
                 mr=[row for row in rows if compatible(item,row) and base.canonical_for_mask(row,mask)==item['fp']]
-                if mr: per_locale.append((locale,len(mr)))
-            if per_locale and all(count==1 for _,count in per_locale) and mask.count('1')>=3:
+                if mr: per_locale.append((locale,mr))
+            if per_locale and all(len(rows)==1 for _,rows in per_locale) and mask.count('1')>=3:
                 matched_locales=sorted(locale for locale,_ in per_locale)
                 method='category-unique-fields'
                 field_matches=FIELDS.copy()
-        rec={'frame_id':item.get('frame_id'),'move_id':item.get('move_id'),'slug':slug,'name_hash':item['name_hash'],'name_en_hash':item.get('name_en_hash'),'move_type':item.get('move_type'),'display_order':item.get('display_order'),'mask':mask,'fp':item['fp'],'verification_status':item['verification_status'],'method':method,'matched_locales':matched_locales,'field_matches':field_matches}
+                official_candidates=[row_public(rows[0],locale,FIELDS.copy()) for locale,rows in per_locale]
+        rec={'frame_id':item.get('frame_id'),'move_id':item.get('move_id'),'slug':slug,'name_hash':item['name_hash'],'name_en_hash':item.get('name_en_hash'),'move_type':item.get('move_type'),'display_order':item.get('display_order'),'db_values':item.get('db_values'),'mask':mask,'fp':item['fp'],'verification_status':item['verification_status'],'method':method,'matched_locales':matched_locales,'field_matches':field_matches,'official_candidates':official_candidates}
         (matches if method else unresolved).append(rec)
     for slug in sorted({x['slug'] for x in db}):
         d=[x for x in db if x['slug']==slug]; m=[x for x in matches if x['slug']==slug]; u=[x for x in unresolved if x['slug']==slug]
