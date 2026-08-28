@@ -146,7 +146,7 @@ Static assertions cover:
 
 ## CI acceptance
 
-Head verified before this documentation commit:
+Application head verified before documentation-only commits:
 
 `056b555b25df7755b76edaa17c8d8826843c9f09`
 
@@ -159,8 +159,12 @@ Confirmed PASS:
 - SF6DNA v2 Web Check — run `33185695895`
 - Phase15 Browser Acceptance — run `33185695915`
 - Phase15 Lighthouse Audit — run `33185695853`
-
-Phase20 Verified Content Acceptance on the same head had already passed Typecheck, Lint and Policy tests and was in its final Build/static-acceptance stage when this audit document was prepared. Its final state must be checked before declaring the Phase23 handoff complete.
+- Phase20 Verified Content Acceptance — run `33185695877`
+  - Typecheck: PASS
+  - Lint: PASS
+  - Policy tests: PASS
+  - Build: PASS
+  - Phase20 verification policy static acceptance: PASS
 
 ## Supabase final pre-device checks
 
@@ -181,6 +185,8 @@ The 611 entries were audited against CAPCOM movelists in Phase21, but the obtain
 
 ## Exit decision
 
-Phase22 application work is complete.
+**Phase22 COMPLETE.**
 
-After the final Phase20 acceptance run is confirmed green, the next activity is **Phase23 real-device testing** using `docs/PHASE23_REAL_DEVICE_TEST_CHECKLIST_2026-08-29.md`.
+All required pre-device internal gates are green on the application head above, Supabase Security Advisor is clean, and no production deployment or `main` merge was performed.
+
+The next activity is **Phase23 real-device testing** using `docs/PHASE23_REAL_DEVICE_TEST_CHECKLIST_2026-08-29.md`.
