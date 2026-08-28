@@ -5,17 +5,17 @@ const characters = [
   ['ryu','ryu'],['luke','luke'],['jamie','jamie'],['chun-li','chunli'],['guile','guile'],['kimberly','kimberly'],['juri','juri'],['ken','ken'],['blanka','blanka'],['dhalsim','dhalsim'],['e-honda','ehonda'],['dee-jay','deejay'],['manon','manon'],['marisa','marisa'],['jp','jp'],['zangief','zangief'],['lily','lily'],['cammy','cammy'],['rashid','rashid'],['aki','aki'],['ed','ed'],['akuma','gouki_akuma'],['m-bison','vega_mbison'],['terry','terry'],['mai','mai'],['elena','elena'],['sagat','sagat'],['c-viper','cviper'],['alex','alex'],['ingrid','ingrid'],['yasmine','yasmine'],
 ];
 
+const locale = process.env.FRAME_LOCALE || 'ja-jp';
 const retryOnly = new Set(process.argv.slice(2));
 const targets = retryOnly.size ? characters.filter(([slug]) => retryOnly.has(slug)) : characters;
-const outDir = path.resolve('artifacts/phase20-official-frame-snapshots');
+const outDir = path.resolve(`artifacts/phase20-official-frame-snapshots-${locale}`);
 await fs.mkdir(outDir, { recursive: true });
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function fetchOne([projectSlug, officialSlug]) {
-  const sourceUrl = `https://www.streetfighter.com/6/en-uk/character/${officialSlug}/frame`;
+  const sourceUrl = `https://www.streetfighter.com/6/${locale}/character/${officialSlug}/frame`;
   const mirrorUrl = `https://r.jina.ai/http://${sourceUrl}`;
   let last = { status: 0, text: '', error: null };
-
   for (let attempt = 1; attempt <= 6; attempt += 1) {
     try {
       const response = await fetch(mirrorUrl, {
@@ -24,11 +24,11 @@ async function fetchOne([projectSlug, officialSlug]) {
       });
       const text = await response.text();
       last = { status: response.status, text, error: null };
-      const ok = response.ok && text.length > 1000 && /Frame|Normal Moves|Startup|Recovery/i.test(text);
+      const ok = response.ok && text.length > 1000 && /FRAME|フレーム|通常技|Normal Moves|Startup|Recovery/i.test(text);
       if (ok) {
         await fs.writeFile(path.join(outDir, `${projectSlug}.md`), text, 'utf8');
         console.log(`${projectSlug}: status=${response.status} ok=true bytes=${text.length} attempt=${attempt}`);
-        return { projectSlug, officialSlug, sourceUrl, mirrorUrl, status: response.status, ok: true, bytes: text.length, attempts: attempt, error: null };
+        return { projectSlug, officialSlug, locale, sourceUrl, mirrorUrl, status: response.status, ok: true, bytes: text.length, attempts: attempt, error: null };
       }
       console.log(`${projectSlug}: status=${response.status} retry attempt=${attempt}`);
     } catch (e) {
@@ -37,8 +37,7 @@ async function fetchOne([projectSlug, officialSlug]) {
     }
     await sleep(Math.min(5000 * attempt, 25000));
   }
-
-  return { projectSlug, officialSlug, sourceUrl, mirrorUrl, status: last.status, ok: false, bytes: last.text.length, attempts: 6, error: last.error };
+  return { projectSlug, officialSlug, locale, sourceUrl, mirrorUrl, status: last.status, ok: false, bytes: last.text.length, attempts: 6, error: last.error };
 }
 
 const results = [];
@@ -46,9 +45,8 @@ for (const target of targets) {
   results.push(await fetchOne(target));
   await sleep(2500);
 }
-
 results.sort((a,b) => a.projectSlug.localeCompare(b.projectSlug));
-await fs.writeFile(path.join(outDir, 'manifest.json'), JSON.stringify({ fetchedAt: new Date().toISOString(), results }, null, 2), 'utf8');
+await fs.writeFile(path.join(outDir, 'manifest.json'), JSON.stringify({ fetchedAt: new Date().toISOString(), locale, results }, null, 2), 'utf8');
 const failed = results.filter(r => !r.ok);
 console.log(`success=${results.length - failed.length}/${results.length}`);
 if (failed.length) {
