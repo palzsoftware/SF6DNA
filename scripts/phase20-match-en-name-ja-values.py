@@ -34,6 +34,20 @@ def key(s):
     return re.sub(r'[^0-9a-z]+','',s)
 
 
+def parse_ja_safe(raw):
+    s=clean(raw)
+    appended_damage=None
+    # CAPCOM compact rows may concatenate recovery and damage, e.g. 着地後3※700.
+    m=re.search(r'((?:着地後\s*\d+)|(?:\d+\+着地後\d+))[※*](\d+)\*?',s)
+    if m:
+        appended_damage=m.group(2)
+        s=s[:m.start()]+m.group(1)+s[m.end():]
+    parsed=base.parse_stat_line(s)
+    if parsed and appended_damage:
+        parsed['damage']=appended_damage
+    return parsed
+
+
 def raw_rows(path,sections,locale):
     lines=path.read_text(encoding='utf-8').splitlines(); section=None; out=[]; ords={}
     headings=set(sections)
@@ -47,7 +61,7 @@ def raw_rows(path,sections,locale):
         nxt=lines[j].strip()
         if '![Image' not in nxt and '![画像' not in nxt and not nxt.startswith(('（','(During','(After')):continue
         kind=sections[section]; ords[kind]=ords.get(kind,0)+1
-        parsed=base.parse_stat_line(nxt) if locale=='ja' else None
+        parsed=parse_ja_safe(nxt) if locale=='ja' else None
         out.append({'kind':kind,'ordinal':ords[kind],'section':section,'name':st,'raw':nxt,'parsed':parsed})
     return out
 
@@ -115,9 +129,10 @@ def main():
             cands.append({'official_name_en':pr['en']['name'],'official_name_ja':pr['ja']['name'],'kind':pr['kind'],'ordinal':pr['ordinal'],'official':{f:canon(row,f) for f in FIELDS},'matched':matched,'missing':missing,'conflicts':conflicts})
         if not cands:
             no_match.append({'frame_id':item['frame_id'],'slug':item['slug'],'name_en':item['name_en']});continue
-        # exact English name must identify exactly one paired official row
         unique=len(cands)==1
         best=sorted(cands,key=lambda c:(len(c['matched']),-len(c['missing']),-len(c['conflicts'])),reverse=True)[0]
+        # Official English name establishes identity; Japanese page supplies canonical values.
+        # Require at least two existing factual matches and no populated DB field absent from official row.
         eligible=unique and len(best['matched'])>=2 and not best['missing']
         rec={'frame_id':item['frame_id'],'move_id':item['move_id'],'slug':item['slug'],'display_order':item.get('display_order'),'move_type':item.get('move_type'),'name_ja':item.get('name_ja'),'name_en':item.get('name_en'),'db':{f:item.get(f) for f in FIELDS},'best':best,'candidate_count':len(cands)}
         (safe if eligible else ambiguous).append(rec)
