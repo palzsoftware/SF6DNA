@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { listPlayers } from "@/lib/players";
 
-export const metadata = { title: "プレイヤー情報 | SF6DNA" };
+export const metadata = { title: "プレイヤー情報" };
 
 const TYPE_LABELS: Record<string, string> = {
   pro: "プロ",
