@@ -1,41 +1,130 @@
-# 次にClaude Codeへ送る最初の指示文
+# SF6DNA 次回開始指示 — Phase15
 
-以下をそのままコピーして、新しいプロジェクトでの最初のメッセージとして送ってください。
+最終更新: 2026-08-28 JST
 
----
+この文書は、Phase15を新しいチャットで開始する場合の引き継ぎ用です。
 
-このZIPはSF6DNA(Street Fighter 6プレイヤー向け成長支援サイト)の既存プロジェクトです。
-Phase1〜Phase5までの実装が完了しており、Phase6(キャラクター図鑑・プレイヤー図鑑の全面リニューアル)は設計のみ完了、実装はまだ行っていません。
+## 開始文
 
-まず以下を読み込み、現在の状態を正確に把握してください。
+SF6DNAの開発をPhase14完了状態から引き継いでください。
 
-1. `docs/PROJECT_HANDOFF.md`(引き継ぎ資料、最優先で読んでください)
-2. `CLAUDE.md`(開発ルール)
-3. `PROJECT_STATUS.md`(フェーズ進捗)
-4. `docs/DESIGN_SYSTEM.md`(デザインルール)
-5. `docs/PHASE6_DICTIONARY_REDESIGN.md`と`docs/PHASE6_ACTION_DESIGN.md`(Phase6の設計内容)
+現在の状態は:
+- Phase13完了
+- Phase14完了
+- Phase15準備完了 / 未着手
 
-読み込み後、以下を実施してください。
+Phase14をやり直さず、Phase15の開始監査から進めてください。
 
-■今回のタスク
+最初に必ず以下を現在のGitHub / Supabase実状態と照合してください。
 
-`docs/PHASE6_ACTION_DESIGN.md`に記載されているPhase6-Aを実装してください。
+1. `PROJECT_STATUS.md`
+2. `docs/PHASE14_FINAL_AUDIT_2026-08-28.md`
+3. `docs/PHASE15_IMPLEMENTATION_PLAN.md`
+4. `docs/PROJECT_COMPLETION_DASHBOARD.md`
+5. `docs/V2_RELEASE_READINESS.md`
 
-Phase6-Aの内容:
-- キャラクター詳細ページ(character.html)の末尾に「次にすること」導線を新設
-  (練習メニューへ / 対策動画へ / このキャラを使うプロを見る / 関連FAQを見る)
-- プレイヤー詳細ページ(player.html)の「使用キャラ」表示をキャラクター詳細ページへのリンクに変更
-- プレイヤー一覧(players.html)への「使用キャラ別」フィルターの追加検討(既存の`main`フィールドを使用)
+## 最重要ルール
 
-■守ってほしい方針
+GitHub:
+- Repository: `palzsoftware/SF6DNA`
+- Work branch: `sf6dna-v2`
+- `main`はユーザーが明示的に許可するまで変更禁止
 
-- 新しいデータを捏造しないでください。既存のcharacter-data.js/pro.js等のデータのみを使用してください
-- Phase1で固まったDesign System(docs/DESIGN_SYSTEM.md)のトークン・コンポーネントを踏襲してください
-- ホームページ(index.html)はPhase1で凍結されています。今回のタスクでは変更しないでください
-- 実装前に、変更対象ファイル・変更内容・影響範囲を提示し、承認を得てから着手してください
-- 開発の流れは「調査→設計→実装→自己レビュー→文章で報告」としてください
-- 報告は簡潔に、以下の形式でお願いします:
-  ■実装内容 / ■変更ファイル / ■UI/UX改善点 / ■品質確認結果 / ■既知の課題 / ■次に実装予定
-- ZIPは私が依頼した時、またはPhaseが完了した時のみ作成してください
+Supabase:
+- Project: `SF6DNAPro`
+- Project ID: `wnuxaxbrpudyypzdbdho`
+- Supabase実DBを正本とする
 
-まずは調査結果と実装方針の提示からお願いします。
+SF6 Current Patch:
+- `2026.08.03`以降
+
+品質ルール:
+- `reviewed ≠ verified`
+- `draft ≠ published`
+- Sourceありだけでverifiedへ昇格しない
+- 推測Modern Commandを登録しない
+- SourceなしFrame値を確定登録しない
+- Release件数目的で自動publishしない
+- AI Coach GenerationをEvidence不足のまま有効化しない
+
+禁止:
+- Production deployment
+- main merge
+- 不可逆DB変更
+- bulk delete
+- Auth全面再設計
+- Phase15要件確定前の新機能追加
+
+## Phase14からPhase15へ正式に繰り越した5項目
+
+1. `P15-00` Preview Environment / Deployment
+   - Phase14 P0-06由来
+   - Vercel Project 0件のため未検証
+
+2. `P15-01` Preview Runtime / Public Demo Gate Smoke
+   - Phase14 P0-07由来
+
+3. `P15-02` Auth / Admin E2E
+   - Phase14 P1-06由来
+
+4. `P15-03` Performance Measurement / Advisor Review
+   - Phase14 P2-03由来
+
+5. `P15-04` Device / Responsive / Accessibility Runtime Verification
+   - Phase14 P2-04のruntime部分
+   - Static ReviewはPhase14で完了
+
+重要:
+- 再分類しただけであり、これらを検証済み扱いしない。
+- 実機確認はユーザーが確認可能になった時点で行う。
+- 実機確認ができない間も、可能なPreview/static/read-only監査を進める。
+
+## Phase15開始順
+
+Phase15開始後は原則として:
+
+1. P15-00 Preview環境成立
+2. P15-01 Preview Runtime / Public Gate Smoke
+3. P15-02 Auth / Admin E2E
+4. P15-04 Responsive / Accessibility Runtime確認
+5. P15-03 Performance実測 / Advisor Review
+
+の順に進める。
+
+P15-00が外部要因でブロックされた場合はProduction deployで回避せず、進められるread-only監査・静的検証・テストのみ先行する。
+
+## Phase14終了時Evidence
+
+Source code側の最新成功CI対象commit:
+- `2fe0b90c6ff2e642f3028df0a5edc9ccaeb5b60e`
+
+GitHub Actions run:
+- `33130148956`
+- Typecheck success
+- Lint success
+- Tests 27 / 27 success
+- Build success
+
+Supabase:
+- public tables 38
+- RLS 38 / 38
+- playable + published Character 31
+- published Move 0
+- verified Frame 307
+- published Diagnosis 4
+- published Diagnosis Question 52
+- Security Advisor lint 0
+- Current Patch `2026.08.03`
+
+Vercel:
+- Project 0
+- Preview未成立
+- Production未公開
+
+## 開始時の指示
+
+過去会話の推測ではなく、現在のGitHub branch / CI / Supabase / Vercel状態を再取得してください。
+
+Phase15の既存計画と現在状態の差分を確認した後、P15-00から実作業を開始してください。
+
+ユーザー指示なしでPhase16へ進めないでください。
