@@ -20,8 +20,11 @@ export function CharacterPreferenceActions({ slug }: { slug: string }) {
   const [status, setStatus] = useState<CharacterUseStatus | "">("");
 
   useEffect(() => {
-    setFavorite(isFavoriteCharacter(slug));
-    setStatus(getCharacterStatuses()[slug] ?? "");
+    const frame = window.requestAnimationFrame(() => {
+      setFavorite(isFavoriteCharacter(slug));
+      setStatus(getCharacterStatuses()[slug] ?? "");
+    });
+    return () => window.cancelAnimationFrame(frame);
   }, [slug]);
 
   function toggleFavorite() {
