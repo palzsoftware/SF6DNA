@@ -79,6 +79,21 @@ jobs:
             test "$code" = "200"
           done
 
+      - name: Unauthenticated admin subroute is blocked
+        shell: bash
+        run: |
+          set -euo pipefail
+          headers=$(mktemp)
+          code=$(curl --silent --show-error --output /tmp/admin-redirect.html --dump-header "$headers" --write-out "%{http_code}" \
+            http://127.0.0.1:3000/admin/characters)
+          location=$(awk 'BEGIN{IGNORECASE=1} /^location:/ {sub(/\r$/, "", $2); print $2}' "$headers" | tail -n1)
+          echo "admin subroute HTTP=$code location=$location"
+          test "$code" = "307" || test "$code" = "308"
+          case "$location" in
+            /auth?next=/admin*) ;;
+            *) echo "unexpected admin redirect: $location"; exit 1 ;;
+          esac
+
       - name: AI Coach safe retrieval smoke
         run: |
           response=$(curl --silent --show-error --fail \
