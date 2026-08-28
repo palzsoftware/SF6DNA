@@ -26,10 +26,15 @@ SECTION_KIND = {
 }
 TYPE_KINDS = {'normal':{'normal'},'unique':{'unique'},'target_combo':{'unique'},'special':{'special'},'super':{'super'},'throw':{'throw'},'drive':{'drive'},'taunt':{'taunt'}}
 IMG_RE = re.compile(r'!\[[^\]]*\]\([^)]*\)')
+FIELDS = ['startup','active','recovery','on_hit','on_block','damage']
 
 
 def clean(s):
     return re.sub(r'\s+', ' ', IMG_RE.sub(' ', str(s or ''))).strip()
+
+
+def h(s):
+    return hashlib.md5(str(s).encode()).hexdigest()
 
 
 def en_hash(s):
@@ -43,7 +48,7 @@ def en_base_hash(s):
 
 
 def preprocess_en_stats(s):
-    s = clean(s).replace('*','*')
+    s = clean(s)
     s = re.sub(r'(\d+)\+(\d+) frame\(s\) after landing', r'\1+着地後\2', s, flags=re.I)
     s = re.sub(r'(\d+) frame\(s\) after landing', r'着地後\1', s, flags=re.I)
     s = re.sub(r'(\d+) total frames?', r'全体 \1', s, flags=re.I)
@@ -81,41 +86,74 @@ def compatible(item,row):
     return row.get('kind') in TYPE_KINDS.get(item.get('move_type'), set())
 
 
+def name_ok(item,row,locale):
+    if locale=='ja':
+        nh=hashlib.md5(base.norm_name(row['name']).encode()).hexdigest()
+        bh=hashlib.md5(base.base_name(row['name']).encode()).hexdigest()
+        return item['name_hash'] in (nh,bh)
+    if item.get('name_en_hash'):
+        return item['name_en_hash'] in (en_hash(row['name']),en_base_hash(row['name']))
+    return False
+
+
+def semantic_fields(item,row):
+    vals={
+        'startup': str(row.get('startup','') or '').strip(),
+        'active': str(row.get('active','') or '').strip(),
+        'recovery': base.normalize_recovery(row.get('recovery','')),
+        'on_hit': base.normalize_adv(row.get('on_hit','')),
+        'on_block': base.normalize_adv(row.get('on_block','')),
+        'damage': str(row.get('damage','') or '').strip(),
+    }
+    fh=item.get('field_hashes') or {}
+    matched=[]
+    for i,f in enumerate(FIELDS):
+        if item['mask'][i]!='1' or not vals[f]:
+            continue
+        if h(vals[f]) in set(fh.get(f) or []):
+            matched.append(f)
+    return matched
+
+
+def strong_semantic(item,matched):
+    populated=item['mask'].count('1')
+    if populated>=4:
+        return len(matched)>=4
+    return populated>=2 and len(matched)==populated
+
+
 def main():
     ja={p.stem:[dict(r,kind=SECTION_KIND.get(r['section'])) for r in base.parse_file(p)] for p in JA_ROOT.glob('*.md')}
     en={p.stem:parse_en(p) for p in EN_ROOT.glob('*.md')}
     db=get_db(); matches=[]; unresolved=[]; summaries={}
     for item in db:
-        slug=item['slug']; mask=item['mask']; candidates=[]
+        slug=item['slug']; mask=item['mask']; exact=[]; semantic=[]
         for locale,rows in [('ja',ja.get(slug,[])),('en',en.get(slug,[]))]:
             for row in rows:
-                if not compatible(item,row): continue
-                if base.canonical_for_mask(row,mask)!=item['fp']: continue
-                name_ok=False
-                if locale=='ja':
-                    nh=hashlib.md5(base.norm_name(row['name']).encode()).hexdigest(); bh=hashlib.md5(base.base_name(row['name']).encode()).hexdigest()
-                    name_ok=item['name_hash'] in (nh,bh)
-                elif item.get('name_en_hash'):
-                    name_ok=item['name_en_hash'] in (en_hash(row['name']),en_base_hash(row['name']))
-                if name_ok: candidates.append((locale,'name+fields'))
-        method=None
-        matched_locales=sorted({locale for locale,_ in candidates})
-        if set(matched_locales)=={'ja','en'}:
-            method='bilingual-name+fields'
-        elif matched_locales:
-            method=f'{matched_locales[0]}-name+fields'
+                if not compatible(item,row) or not name_ok(item,row,locale): continue
+                if base.canonical_for_mask(row,mask)==item['fp']:
+                    exact.append((locale,row,FIELDS.copy()))
+                    continue
+                fm=semantic_fields(item,row)
+                if strong_semantic(item,fm):
+                    semantic.append((locale,row,fm))
+        method=None; matched_locales=[]; field_matches=[]
+        chosen=exact if exact else semantic
+        if chosen:
+            matched_locales=sorted({x[0] for x in chosen})
+            field_matches=sorted(set().union(*(set(x[2]) for x in chosen)), key=FIELDS.index)
+            prefix='bilingual' if set(matched_locales)=={'ja','en'} else matched_locales[0]
+            method=f'{prefix}-name+fields' if exact else f'{prefix}-name+semantic-fields'
         else:
-            # Field-only fallback is accepted only when the fingerprint identifies at most
-            # one row in each available locale within the expected move category.
             per_locale=[]
             for locale,rows in [('ja',ja.get(slug,[])),('en',en.get(slug,[]))]:
-                matched=[row for row in rows if compatible(item,row) and base.canonical_for_mask(row,mask)==item['fp']]
-                if matched:
-                    per_locale.append((locale,len(matched)))
+                mr=[row for row in rows if compatible(item,row) and base.canonical_for_mask(row,mask)==item['fp']]
+                if mr: per_locale.append((locale,len(mr)))
             if per_locale and all(count==1 for _,count in per_locale) and mask.count('1')>=3:
                 matched_locales=sorted(locale for locale,_ in per_locale)
                 method='category-unique-fields'
-        rec={'frame_id':item.get('frame_id'),'move_id':item.get('move_id'),'slug':slug,'name_hash':item['name_hash'],'name_en_hash':item.get('name_en_hash'),'move_type':item.get('move_type'),'display_order':item.get('display_order'),'mask':mask,'fp':item['fp'],'verification_status':item['verification_status'],'method':method,'matched_locales':matched_locales}
+                field_matches=FIELDS.copy()
+        rec={'frame_id':item.get('frame_id'),'move_id':item.get('move_id'),'slug':slug,'name_hash':item['name_hash'],'name_en_hash':item.get('name_en_hash'),'move_type':item.get('move_type'),'display_order':item.get('display_order'),'mask':mask,'fp':item['fp'],'verification_status':item['verification_status'],'method':method,'matched_locales':matched_locales,'field_matches':field_matches}
         (matches if method else unresolved).append(rec)
     for slug in sorted({x['slug'] for x in db}):
         d=[x for x in db if x['slug']==slug]; m=[x for x in matches if x['slug']==slug]; u=[x for x in unresolved if x['slug']==slug]
