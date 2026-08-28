@@ -1,0 +1,118 @@
+name: Phase15 Runtime Smoke
+
+on:
+  push:
+    branches:
+      - sf6dna-v2
+    paths:
+      - "v2-web/**"
+      - ".github/workflows/phase15-runtime-smoke.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  NEXT_PUBLIC_SUPABASE_URL: https://wnuxaxbrpudyypzdbdho.supabase.co
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: sb_publishable_TCdyNFnbYzAGAN6Zlic0yA_YYPZfnTq
+
+jobs:
+  runtime-smoke:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: v2-web
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: v2-web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Start app
+        run: |
+          npm start -- -H 127.0.0.1 -p 3000 > /tmp/sf6dna-next.log 2>&1 &
+          echo $! > /tmp/sf6dna-next.pid
+          for i in {1..30}; do
+            if curl --silent --fail http://127.0.0.1:3000/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/sf6dna-next.log
+          exit 1
+
+      - name: Public route smoke
+        shell: bash
+        run: |
+          set -euo pipefail
+          routes=(
+            "/"
+            "/characters"
+            "/characters/aki"
+            "/players"
+            "/players/blaz"
+            "/videos"
+            "/videos/jp-ray-20260318-combo-oki"
+            "/search?q=jp"
+            "/diagnosis"
+            "/diagnosis/character-fit-check"
+            "/coach"
+            "/auth"
+            "/admin"
+          )
+
+          for route in "${routes[@]}"; do
+            code=$(curl --silent --show-error --output /tmp/response.html --write-out "%{http_code}" "http://127.0.0.1:3000${route}")
+            printf '%-48s HTTP %s\n' "$route" "$code"
+            test "$code" = "200"
+          done
+
+      - name: AI Coach safe retrieval smoke
+        run: |
+          response=$(curl --silent --show-error --fail \
+            -H 'content-type: application/json' \
+            -d '{"question":"JPの対空"}' \
+            http://127.0.0.1:3000/api/coach/retrieve)
+          echo "$response" > /tmp/coach.json
+          node -e '
+            const fs=require("fs");
+            const data=JSON.parse(fs.readFileSync("/tmp/coach.json","utf8"));
+            if (data.generationEnabled !== false) throw new Error("AI generation unexpectedly enabled");
+            if (!("ready" in data)) throw new Error("ready flag missing");
+            if (!("currentPatch" in data)) throw new Error("currentPatch missing");
+            if (!Array.isArray(data.evidence)) throw new Error("evidence must be an array");
+            console.log(JSON.stringify({ready:data.ready,generationEnabled:data.generationEnabled,evidenceCount:data.evidence.length,currentPatch:data.currentPatch},null,2));
+          '
+
+      - name: Response timing sample
+        shell: bash
+        run: |
+          set -euo pipefail
+          for route in / /characters /players /diagnosis /coach; do
+            curl --silent --output /dev/null \
+              --write-out "$route status=%{http_code} ttfb=%{time_starttransfer}s total=%{time_total}s\n" \
+              "http://127.0.0.1:3000$route"
+          done
+
+      - name: Print server log on failure
+        if: failure()
+        run: cat /tmp/sf6dna-next.log || true
+
+      - name: Stop app
+        if: always()
+        run: |
+          if [ -f /tmp/sf6dna-next.pid ]; then
+            kill "$(cat /tmp/sf6dna-next.pid)" || true
+          fi
