@@ -1,4 +1,5 @@
 import { getSupabaseServerClient } from "@/lib/supabase/server";
+import { isMovePublicReady } from "@/lib/public-move-gate";
 import type { CharacterSectionKey } from "@/types/character";
 
 export type CharacterSectionItem = {
@@ -19,26 +20,31 @@ export async function listCharacterSectionItems(
   if (section === "moves") {
     const { data, error } = await supabase
       .from("moves")
-      .select("id, slug, name_ja, move_type, usage_summary, move_frame_data(startup, on_block, damage, valid_to_patch_id)")
+      .select("id, slug, name_ja, move_type, usage_summary, move_frame_data(startup, on_block, damage, valid_to_patch_id, verification_status)")
       .eq("character_id", characterId)
       .eq("status", "published")
       .order("display_order", { ascending: true });
     if (error) return fail(section, error.message);
-    return (data ?? []).map((row) => {
+
+    const rows = data ?? [];
+    const readiness = await Promise.all(rows.map((row) => isMovePublicReady(String(row.slug))));
+
+    return rows.flatMap((row, index) => {
+      if (!readiness[index]) return [];
       const frames = Array.isArray(row.move_frame_data) ? row.move_frame_data : [];
-      const currentFrame = frames.find((frame) => frame.valid_to_patch_id === null) ?? frames[0];
+      const currentFrame = frames.find((frame) => frame.valid_to_patch_id === null && frame.verification_status === "verified");
       const metaParts = [
         currentFrame?.startup ? `発生 ${currentFrame.startup}` : null,
         currentFrame?.on_block ? `G ${currentFrame.on_block}` : null,
         typeof currentFrame?.damage === "number" ? `${currentFrame.damage} dmg` : null,
       ].filter(Boolean);
-      return {
+      return [{
         id: String(row.id),
         title: String(row.name_ja),
         subtitle: typeof row.usage_summary === "string" ? row.usage_summary : null,
         href: `/moves/${row.slug}`,
         meta: [row.move_type, ...metaParts].filter(Boolean).join(" / ") || null,
-      };
+      }];
     });
   }
 
