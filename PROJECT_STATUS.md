@@ -6,9 +6,9 @@
 
 SF6DNA v2は、Phase13のCharacter Content Verification & Expansionを完了し、Phase14のApplication Integration / Public Data Gating / Demo Release Readinessも完了した。
 
-現在は**Phase15準備完了 / 未着手**。
+現在は**Phase15進行中**。
 
-Phase15の実作業はユーザーから開始の明示指示を受けてから行う。
+2026-08-28、ユーザーの明示指示によりPhase15を開始した。Phase14はやり直さず、`docs/PHASE15_IMPLEMENTATION_PLAN.md` に従ってAcceptance Evidence回収を進める。
 
 ## 正本
 
@@ -22,6 +22,7 @@ Phase15の実作業はユーザーから開始の明示指示を受けてから�
 - Phase15 Plan: `docs/PHASE15_IMPLEMENTATION_PLAN.md`
 - Release Gate: `docs/V2_RELEASE_READINESS.md`
 - Completion Dashboard: `docs/PROJECT_COMPLETION_DASHBOARD.md`
+- Phase15 PC Device Test: `docs/PHASE15_PC_DEVICE_TEST_CHECKLIST.md`
 
 ## v2 Phase管理
 
@@ -30,7 +31,7 @@ Phase15の実作業はユーザーから開始の明示指示を受けてから�
 | Phase1〜12 | 完了または各Phase定義どおり終了 |
 | Phase13 | **完了** |
 | Phase14 | **完了** |
-| Phase15 | **準備完了 / 未着手** |
+| Phase15 | **進行中** |
 
 Phase14は19タスク中14件をPhase14内で完了し、Preview/実環境依存の5件をユーザー承認のうえPhase15へ正式に再分類した。
 
@@ -42,12 +43,53 @@ Phase14は19タスク中14件をPhase14内で完了し、Preview/実環境依存
 
 **再分類 ≠ 検証済み**。
 
+## Phase15進捗
+
+### P15-00 Preview Environment / Deployment
+
+状態: **外部ブロック / 未完了**
+
+- 接続Vercel TeamのProject: 0件
+- Vercel Preview: 未成立
+- Production deployment: 未実施
+- 接続ツール上で、新規ProjectをGitHub repoへ紐付け、Preview targetを安全に明示して作成する操作が利用できないため、Production誤Deployを避けて停止
+- Production deployで回避しない
+
+### P15-01 Preview Runtime / Public Demo Gate Smoke
+
+状態: **Preview待ち**
+
+- Runtime smokeはP15-00完了後に実施
+- Preview不要のPublic Gate静的監査・既存CI Evidenceは維持
+
+### P15-02 Auth / Admin E2E
+
+状態: **安全なE2E環境待ち**
+
+- 実セッションCRUDはPreviewまたは同等の安全な環境成立後に実施
+- 本番攻略データをテスト目的で不要に変更しない
+
+### P15-04 Device / Responsive / Accessibility Runtime Verification
+
+状態: **PC実機確認待ち**
+
+- ユーザーは帰宅後、自宅PCで実機テストを実施予定
+- Phase14のStatic responsive/accessibility reviewは完了済み
+- PC実機結果は `docs/PHASE15_PC_DEVICE_TEST_CHECKLIST.md` のAcceptance Evidenceへ反映する
+
+### P15-03 Performance Measurement / Advisor Review
+
+状態: **部分監査実施 / 実測待ち**
+
+2026-08-28 read-only再確認:
+- Security Advisor: lint 0
+- Performance Advisor: `unused_index` INFO / `multiple_permissive_policies` WARN継続
+- Lighthouse / runtime response / mobile perceived performanceはPreview未成立のため未計測
+- index削除やRLS policy統合は実測前に行わない
+
 ## GitHub / CI
 
-Phase14終了監査開始時HEAD:
-- `583bab045d112394a85fff757efa4218946a5736`
-
-最新のsource code変更を含むcommit:
+Phase14終了時の最新source code変更commit:
 - `2fe0b90c6ff2e642f3028df0a5edc9ccaeb5b60e`
 
 GitHub Actions run `33130148956`:
@@ -57,7 +99,7 @@ GitHub Actions run `33130148956`:
 - Build: success
 - check: success
 
-以降のPhase14終了処理はdocumentationのみ。
+Phase15開始時点のbranch HEADはPhase14終了文書commit `f2b2f8916d5e3fce9aeeff0788d240b92bae537a` から開始した。
 
 ## Supabase実DB
 
@@ -75,14 +117,11 @@ Phase14 Public Gate migration適用確認:
 - `phase14_public_verification_gate`
 - `phase14_public_command_source_gate`
 
-Security Advisor:
-- lint **0**
+2026-08-28 Phase15開始後Advisor再確認:
+- Security Advisor: lint **0**
+- Performance Advisor: `unused_index` INFO / `multiple_permissive_policies` WARN
 
-Performance Advisor:
-- `unused_index` INFO
-- `multiple_permissive_policies` WARN
-
-Performance警告はPhase15で実測後に評価し、未計測のままindex/policyを変更しない。
+Performance警告は実測後に評価し、未計測のままindex/policyを変更しない。
 
 ## Public Data Policy
 
@@ -101,30 +140,29 @@ Performance警告はPhase15で実測後に評価し、未計測のままindex/po
 
 ## Release Readiness
 
-Phase14完了はRelease Readyを意味しない。
+Phase15進行中だがRelease Readyではない。
 
 現時点:
 - Vercel Project: **0**
 - Vercel Preview: 未成立
 - Production deployment: 未実施
 - Authenticated Admin E2E: 未実施
-- Actual device確認: 未実施
+- Actual PC device確認: 帰宅後実施予定 / 未検証
 - Preview Performance計測: 未実施
 - Release Ready Move / Strategy / Recommendation: 0
 
-これらはPhase15以降でEvidenceを取得する。
+これらを推測・自動昇格・Production deployで解消しない。
 
-## Phase15開始時の最初の順序
+## Phase15実施順
 
-ユーザーからPhase15開始指示を受けたら、`docs/PHASE15_IMPLEMENTATION_PLAN.md`を読み、以下から開始する。
+1. **P15-00** Preview環境成立
+2. **P15-01** Preview Runtime / Public Gate Smoke
+3. **P15-02** Auth / Admin E2E
+4. **P15-04** Responsive / Accessibility Runtime Verification
+5. **P15-03** Performance実測 / Advisor Review
+6. Acceptance Evidenceをまとめる
 
-1. P15-00 Preview環境成立
-2. P15-01 Preview Runtime / Public Gate Smoke
-3. P15-02 Auth / Admin E2E
-4. P15-04 Responsive / Accessibility Runtime Verification
-5. P15-03 Performance実測 / Advisor Review
-
-ユーザーが現在実機確認できない場合でも、実機確認を検証済みにせず後段へ残し、可能なPreview/static/read-only監査を先に進める。
+P15-00が外部要因でブロック中でも、Preview不要の静的監査・DB read-only監査・テスト準備は進める。
 
 ## 禁止事項
 
@@ -138,5 +176,6 @@ Phase14完了はRelease Readyを意味しない。
 - Evidence不足でのAI Coach Generation有効化
 - Auth全面再設計
 - Phase15要件確定前の新機能追加
+- ユーザー指示なしのPhase16移行
 
 新要素が必要な場合は実装せず、提案としてユーザーへ報告する。
