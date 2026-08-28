@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import "./tools.css";
 
 function getMetadataBase() {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/videos">動画</Link>
               <Link href="/training">トレーニング</Link>
               <Link href="/coach">AIコーチ</Link>
+              <Link href="/tools">マイ機能</Link>
             </nav>
           </div>
         </header>
