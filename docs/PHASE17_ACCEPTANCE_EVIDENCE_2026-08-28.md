@@ -2,7 +2,7 @@
 
 最終更新: 2026-08-28 JST
 
-状態: **BLOCKED / Phase17未完了**
+状態: **外部確認待ち / Phase17未完了**
 
 ## Phase17
 
@@ -29,7 +29,7 @@
 
 ## P17-01 Vercel Preview Environment
 
-状態: **BLOCKED**
+状態: **外部確認待ち / BLOCKED**
 
 2026-08-28 JST時点のVercel状態:
 - Connected Team Project: 0
@@ -52,6 +52,7 @@
 - `target=production` を推測して実行していない。
 - `v2-web`以外を誤Deployしていない。
 - Production deploymentは発生していない。
+- ユーザー方針により、Vercel Project作成はactual device確認と同じタイミングで実施する。
 
 ## P17-02 Preview Runtime Acceptance
 
@@ -69,14 +70,25 @@ Phase16までの代替Evidence:
 
 ## P17-03 Real Auth / Admin E2E
 
-状態: **未完了**
+状態: **一部監査完了 / 実セッション待ち**
 
-Preview環境と実認証セッションが必要。
+2026-08-28 JSTの実DB確認:
+- `public.profiles`: **0件**
+- 既存Admin profile: 0
+- 既存non-admin profile: 0
+
+このため、既存実アカウントを使ったAdmin/non-admin session E2Eは現状実施できない。
+
+安全ルール:
+- Phase完了目的でAuth userを勝手に作成しない。
+- `auth.users`へ直接SQLでテストユーザーを作らない。
+- 実ユーザー作成またはユーザー承認済みテストアカウント準備後に実施する。
 
 自動確認済み:
 - unauthenticated Admin block
 - safe internal auth return path
 - admin server action protection static audit
+- RLS/Admin policy static audit
 
 未確認:
 - real admin session
@@ -84,13 +96,31 @@ Preview環境と実認証セッションが必要。
 - limited Create/Edit
 - save/re-fetch
 - cleanup
-- Audit Log acceptance
+- Public Gate unaffected after authenticated mutation
+
+### Audit Log要件整理
+
+`docs/V2_RELEASE_READINESS.md`を再確認した結果、正式Release Gate Bに必要なのは以下であり、Audit Logは必須項目として定義されていない。
+
+- RLS
+- `requireAdmin()` + RLS二重ガード
+- 実AdminでCreate/Edit/Publish/Archive E2E
+- Clientへのsecret露出防止
+- Security Advisor重大項目0
+
+Audit LogはPhase15 P15-02の追加確認項目として記載されたが、同文書自身が「監査機能を勝手に新設せず、要件差分として扱う」としている。
+
+Phase17判定:
+- Audit Log未実装だけを理由にRelease Gate失敗へしない。
+- Audit機能は新機能として勝手に追加しない。
+- 将来必要なら別途承認を受けて設計する。
 
 ## P17-04 Real Device / Browser Acceptance
 
-状態: **未完了**
+状態: **未完了 / ユーザー実機確認待ち**
 
-ユーザーactual PC/browser Evidenceが必要。
+ユーザー方針:
+- Vercel Project作成・Preview確認と同タイミングでactual PC/browser確認を行う。
 
 自動Evidenceはactual-device完了として扱わない。
 
@@ -100,25 +130,59 @@ Preview環境と実認証セッションが必要。
 
 Preview Project/Deploymentが存在しないためVercel runtime logsおよびPublic network performanceを取得できない。
 
+既存CI LighthouseをPreview performanceへ昇格しない。
+
 ## P17-06 Production Readiness Final Audit
 
-状態: **未判定**
+状態: **Pre-audit完了 / 最終判定待ち**
 
-P17-01〜05未完了のためProduction Ready判定を行わない。
+内部確認済み:
+- Phase16 Release Acceptance: PASS
+- Runtime Smoke: PASS
+- Browser Acceptance: PASS
+- Lighthouse: PASS
+- Supabase Security Advisor（2026-08-28再確認）: **0 lints**
+- Public Gateを弱める変更なし
+- AI Coach Generation OFF
+- Production deployなし
+- main変更なし
 
-現状はPhase16の **Conditional Go** を維持する。
+最終判定に残る必須Evidence:
+1. Vercel Preview成立
+2. Preview Runtime / Logs
+3. 実Admin session E2E
+4. 実PC/browser acceptance
+5. Preview network performance
 
-## Stop Reason
+したがって現時点ではProduction Readyへ昇格せず、Phase16の **Conditional Go** を維持する。
 
-Phase17中核作業P17-01で、Vercel connectorの公開スキーマと内部必須引数が不一致となりPreview deploymentを作成できない。
+## P17-07 Closure / Handoff
 
-ユーザー指示の終了報告条件「予期せぬエラーにより作業が中止」に該当するため、Phase17はこの地点で停止する。
+状態: **未完了**
+
+P17-01〜05の外部Evidence回収後にFinal Auditを作成する。
+
+## Current Stop / Resume Point
+
+Phase17でChatGPT単独で安全に実施できる内部監査は現時点で完了。
+
+次回actual device確認タイミングで以下を連続実施する:
+1. Vercel Project作成
+2. Preview deployment
+3. Preview runtime/log確認
+4. actual PC/browser確認
+5. Preview performance確認
+6. 認証テスト用アカウントが安全に準備できる場合、Real Auth/Admin E2E
+7. P17-06最終判定
+8. P17-07 Final Audit / Closure
 
 ## Safety Confirmation
 
 - main変更なし
 - Production deployなし
 - Supabase content status/verification変更なし
+- Auth test user無断作成なし
 - 推測publish/verifyなし
 - AI Coach Generation OFF維持
+- Audit機能新設なし
 - 新機能追加なし
