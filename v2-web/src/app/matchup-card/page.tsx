@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getMatchupCardData } from "@/lib/matchup-card";
-import { listCharacters } from "@/lib/repositories/app-repository";
+import { listCharacters } from "@/lib/characters";
 
 export const metadata = {
   title: "対面ナレッジカード | SF6DNA",
@@ -14,7 +14,7 @@ export default async function MatchupCardPage({ searchParams }: { searchParams: 
   const opponent = characters.find((item) => item.slug === params.opponent) ?? characters.find((item) => item.id !== own?.id) ?? characters[0];
 
   if (!own || !opponent) {
-    return <div className="site-shell"><section className="empty-state"><h1>キャラクターデータを読み込めません</h1></section></div>;
+    return <div className="site-shell"><section className="empty-state"><h1>キャラクターデータを読み込めません</h1><p>公開済みキャラクターデータを取得できません。</p></section></div>;
   }
 
   const card = await getMatchupCardData(own.id, opponent.id);
