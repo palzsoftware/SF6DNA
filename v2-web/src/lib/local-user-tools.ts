@@ -11,9 +11,19 @@ export type RankRecord = {
   createdAt: string;
 };
 
+export type DiagnosisHistoryRecord = {
+  id: string;
+  diagnosisSlug: string;
+  diagnosisTitle: string;
+  diagnosisType: string;
+  topResults: Array<{ key: string; label: string; score: number }>;
+  completedAt: string;
+};
+
 const FAVORITES_KEY = "sf6dna_v2_favorite_characters";
 const CHARACTER_STATUS_KEY = "sf6dna_v2_character_status";
 const RANK_HISTORY_KEY = "sf6dna_v2_rank_history";
+const DIAGNOSIS_HISTORY_KEY = "sf6dna_v2_diagnosis_history";
 
 function readJson<T>(key: string, fallback: T): T {
   if (typeof window === "undefined") return fallback;
@@ -69,4 +79,19 @@ export function saveRankRecord(record: RankRecord) {
 
 export function deleteRankRecord(id: string) {
   writeJson(RANK_HISTORY_KEY, getRankHistory().filter((record) => record.id !== id));
+}
+
+export function getDiagnosisHistory() {
+  return readJson<DiagnosisHistoryRecord[]>(DIAGNOSIS_HISTORY_KEY, [])
+    .filter((record) => record && typeof record.id === "string" && typeof record.diagnosisSlug === "string")
+    .sort((a, b) => b.completedAt.localeCompare(a.completedAt));
+}
+
+export function saveDiagnosisHistory(record: DiagnosisHistoryRecord) {
+  const current = getDiagnosisHistory();
+  writeJson(DIAGNOSIS_HISTORY_KEY, [record, ...current].slice(0, 50));
+}
+
+export function deleteDiagnosisHistory(id: string) {
+  writeJson(DIAGNOSIS_HISTORY_KEY, getDiagnosisHistory().filter((record) => record.id !== id));
 }
