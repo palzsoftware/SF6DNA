@@ -22,10 +22,16 @@
 .tool-form__wide { grid-column: span 3; }
 .tool-summary-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .tool-summary-grid h2 { margin-bottom: 0; font-size: 2rem; }
+.history-list { display: grid; gap: 14px; }
+.site-footer { border-top: 1px solid var(--border); background: var(--surface); }
+.site-footer__inner { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--muted); }
+.site-footer__inner nav { display: flex; flex-wrap: wrap; gap: 16px; }
+.site-footer__inner a:hover, .site-footer__inner a:focus-visible { color: var(--text); }
 @media (max-width: 800px) {
   .tool-card-grid, .user-character-grid, .compare-selectors, .tool-summary-grid { grid-template-columns: 1fr; }
   .tool-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tool-form__wide { grid-column: 1 / -1; }
+  .site-footer__inner { align-items: flex-start; flex-direction: column; padding-block: 22px; }
 }
 @media (max-width: 520px) {
   .tool-form { grid-template-columns: 1fr; }
