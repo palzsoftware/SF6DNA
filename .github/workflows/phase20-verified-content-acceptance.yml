@@ -1,0 +1,71 @@
+name: Phase20 Verified Content Acceptance
+
+on:
+  push:
+    branches: [sf6dna-v2]
+    paths:
+      - "v2-web/**"
+      - "scripts/phase20-promote-direct-official-frames.sql"
+      - "docs/PHASE20_*"
+      - ".github/workflows/phase20-verified-content-acceptance.yml"
+  workflow_dispatch:
+
+jobs:
+  verified-content-acceptance:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: v2-web
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Policy tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Phase20 verification policy static acceptance
+        working-directory: .
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+
+          const sql = fs.readFileSync('scripts/phase20-promote-direct-official-frames.sql', 'utf8');
+          const report = fs.readFileSync('docs/PHASE20_VERIFIED_CONTENT_COVERAGE_REPORT_2026-08-28.md', 'utf8');
+          const moveGate = fs.readFileSync('v2-web/src/lib/public-move-gate.ts', 'utf8');
+
+          for (const required of [
+            "mf.verification_status = 'reviewed'",
+            "s.reliability_level = 'official'",
+            "s.source_type = 'official_frame_data'",
+            "es.relationship in ('official', 'primary')",
+            "mf.valid_to_patch_id is null",
+          ]) {
+            assert.ok(sql.includes(required), `Phase20 frame promotion rule missing: ${required}`);
+          }
+
+          assert.ok(!sql.includes("status = 'published'"), 'Phase20 frame verification must not auto-publish content');
+          assert.ok(report.includes('reviewed ≠ verified'), 'Phase20 report must preserve verification rule');
+          assert.ok(report.includes('verified after Phase20: **808 / 2065'), 'Phase20 report must record final frame coverage');
+          assert.ok(moveGate.includes('.eq("verification_status", "verified")'), 'Public Move Gate must still require verified frame data');
+          assert.ok(moveGate.includes('entity_sources'), 'Public Move Gate must still require evidence');
+
+          console.log('Phase20 verification policy static acceptance: PASS');
+          NODE
