@@ -4,20 +4,23 @@
 
 ## SF6DNA v2 現在状態
 
-Phase13、Phase14、Phase16、Phase17、Phase18、Phase19は完了済み。
+Phase13、Phase14、Phase16、Phase17、Phase18、Phase19、Phase20は完了済み。
 Phase15の外部Acceptance残件はFinal Phaseへ移管済み。
 
 Phase19後、旧版独自機能のうちv2と重複せず安全に移植可能なものとして、Favorites / My Characters / Character Compare / Rank Tracker / Diagnosis History / About / FAQ / Sources / Changelogを追加した。
 
 ユーザー方針により、従来Phase20に予定していたManual / External Acceptanceを**Phase23**へ移動し、Phase20〜22を追加開発Phaseとして再定義した。
 
+Phase20 `Verified Content Expansion` はPriority Sの4項目を全件監査し、CAPCOM公式Frame Dataへdirect Evidenceを持つCurrent Frame 501件だけを`reviewed -> verified`へ昇格した。Strategy / Guide / TraitはEvidence不足のため推測昇格せず現状維持した。
+
 現在のDemo Release Decisionは **CONDITIONAL GO**。
 
 - Automated / Internal Readiness: **PASS**
 - Data Gate Readiness: **PASS**
 - Internal Integrity / Hardening: **PASS**
+- Phase20 Verified Content Expansion: **PASS / COMPLETE**
 - Production Ready: **未判定 / Phase23依存**
-- Phase20: **未開始 / Priority S**
+- Phase20: **完了**
 - Phase21: **未開始 / Priority A**
 - Phase22: **未開始 / Improvement Features**
 - Phase23: **未開始 / Final Manual & External Acceptance**
@@ -45,6 +48,8 @@ Phase19後、旧版独自機能のうちv2と重複せず安全に移植可能�
 - Legacy Parity Audit: `docs/PRE_PHASE20_LEGACY_PARITY_AUDIT_2026-08-28.md`
 - Priority / Feature Backlog: `docs/PRE_PHASE20_PRIORITY_BACKLOG_AND_FEATURE_IDEAS_2026-08-28.md`
 - Phase20 Plan: `docs/PHASE20_VERIFIED_CONTENT_EXPANSION_PLAN.md`
+- Phase20 Coverage: `docs/PHASE20_VERIFIED_CONTENT_COVERAGE_REPORT_2026-08-28.md`
+- Phase20 Final Audit: `docs/PHASE20_FINAL_AUDIT_2026-08-28.md`
 - Phase21 Plan: `docs/PHASE21_PRIORITY_A_PLAN.md`
 - Phase22 Plan: `docs/PHASE22_IMPROVEMENT_FEATURES_PLAN.md`
 - Phase23 Final Manual Acceptance Plan: `docs/PHASE23_FINAL_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md`
@@ -63,30 +68,64 @@ Phase19後、旧版独自機能のうちv2と重複せず安全に移植可能�
 | Phase17 | **完了 / Automated & Internal PASS** | Internal Acceptance |
 | Phase18 | **完了 / Data Gate PASS** | Verified Content Coverage準備 |
 | Phase19 | **完了 / Internal Integrity & Hardening PASS** | DB / Gate / CI総監査 |
-| Phase20 | **未開始** | Priority S / Verified Content Expansion |
+| Phase20 | **完了 / PASS** | Priority S / Verified Content Expansion |
 | Phase21 | **未開始** | Priority A / Modern Command & Integration |
 | Phase22 | **未開始** | Player Improvement Loop & Advanced Utility Features |
 | Phase23 | **未開始 / Final Phase** | Manual / External Acceptance & Production Decision |
 
-## Phase20 — Priority S
+## Phase20 Final Results
 
-1. Strategy verified攻略データ拡大
-   - Combo
-   - Setup
-   - Sequence
-   - Counter
-   - Training
-2. Current Patch Frame verification拡大
-3. Character Guide verification
-4. Character Trait Score verification
-5. Coverage Report / CI / Final Audit
+### Strategy
+- Combo: 341 / verified 1 / reviewed 76 / unverified 264
+- Setup: 186 / verified 0 / reviewed 20 / unverified 166
+- Sequence: 186 / verified 0 / reviewed 17 / unverified 169
+- Counter: 1122 / verified 0 / reviewed 67 / unverified 1055
+- Training: 1477 / verified 0 / reviewed 8 / unverified 1469
 
-ルール:
-- 件数目的のbulk verify禁止
-- Source不足の昇格禁止
-- reviewed ≠ verified
+全件Current Patch + Source linkedだが、新規direct strong Evidenceは0件。Source存在だけでverifiedにしていない。
+
+### Current Patch Frame
+- total: 2065
+- verified before Phase20: 307
+- newly verified: **501**
+- verified after Phase20: **808 (39.1%)**
+- reviewed remaining: 1251
+- unverified remaining: 6
+- strict direct-official eligible remaining: 0
+
+昇格条件:
+- Current Patch
+- open current frame
+- reviewed
+- `reliability_level=official`
+- `source_type=official_frame_data`
+- Evidence relationship=`official` or `primary`
+
+### Character Guide
+- 278/278 audited
+- Source linked: 278
+- official Sourceを含む: 143
+- direct strong Evidence: 0
+- verified: 0 / reviewed維持278
+
+### Character Trait Score
+- 372/372 audited
+- Source linked: 372
+- official/primary: 0
+- secondary: 336
+- community: 36
+- verified: 0 / reviewed維持372
+
+### Public Exposure
+- Move total: 2065
+- Move published: 0
+- Public-ready Move: 0
+
+Frame verification拡大だけではPublic公開されない。Public Gateは維持。
 
 ## Phase21 — Priority A
+
+次Phase。
 
 1. Modern Command不足622件のSource付き収集
 2. Legacy parity追加機能をPhase23 Acceptanceへ追加
@@ -128,27 +167,6 @@ Phase23をFinal Phaseとする。
 
 人力・外部確認が可能になるまでPhase23を開始しない。
 
-## Phase19 Integrity Results
-
-重大内部blockerは検出されていない。
-
-- Current Patch record: 1
-- FK constraints: validated
-- duplicate/blank critical slug groups: 0
-- Move without Classic Command: 0
-- Move without open Current Frame: 0
-- multiple open Current Frame: 0
-- Patch validity reversal: 0
-- invalid polymorphic Source target: 0
-- duplicate entity_source relation: 0
-- exact duplicate Alias/Strategy/Guide groups: 0
-
-Source metadata:
-- total 329
-- blank title/url/source_type/reliability: 0
-- blank publisher: 30（nullable / non-blocking / 推測補完なし）
-- normalized duplicate URL candidate: 8 groups（異なるEvidence contextのため自動統合なし）
-
 ## Public Data Gate — Current Internal State
 
 ### Strategy
@@ -179,29 +197,6 @@ Public MoveはApp + RLSで以下を要求:
 - Current Patch取得
 - input boundaryあり
 - Generation OFF
-
-## Phase18/19 Data Snapshot
-
-- playable + published Character: 31
-- Move: 2065
-- Classic Command: 2065
-- Modern Command: 1443
-- Modern missing: 622
-- Current Patch Frame: 2065
-- Current Patch verified Frame: 307
-- Combo: 341 / verified 1 / published 0
-- Setup: 186 / verified 0 / published 0
-- Sequence: 186 / verified 0 / published 0
-- Counter: 1122 / verified 0 / published 0
-- Training: 1477 / verified 0 / published 0
-- Character Guide: 278 / published 0 / verified 0
-- Character Trait Score: 372 / published 0 / verified 0
-- published Diagnosis: 4
-- published Diagnosis Question: 52
-- Player: 91 / published 41
-- Video: 13 / published 5
-
-件数を理由にstatus / verificationを昇格しない。
 
 ## Legacy Parity追加済み機能
 
