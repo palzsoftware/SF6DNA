@@ -36,5 +36,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: phase20-frame-crosscheck-v2
-          path: artifacts/phase20-frame-crosscheck-v2
+          path: |
+            artifacts/phase20-frame-crosscheck-v2
+            artifacts/phase20-official-frame-snapshots-ja-jp
+            artifacts/phase20-official-frame-snapshots-en-uk
           retention-days: 7
