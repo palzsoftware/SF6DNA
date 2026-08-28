@@ -70,7 +70,7 @@ Phase16までの代替Evidence:
 
 ## P17-03 Real Auth / Admin E2E
 
-状態: **一部監査完了 / 実セッション待ち**
+状態: **内部監査完了 / 実セッション待ち**
 
 2026-08-28 JSTの実DB確認:
 - `public.profiles`: **0件**
@@ -83,6 +83,21 @@ Phase16までの代替Evidence:
 - Phase完了目的でAuth userを勝手に作成しない。
 - `auth.users`へ直接SQLでテストユーザーを作らない。
 - 実ユーザー作成またはユーザー承認済みテストアカウント準備後に実施する。
+
+### 2026-08-28 static release audit
+
+確認した主要実装:
+- `v2-web/src/lib/admin.ts`
+- `v2-web/src/app/admin/page.tsx`
+- `v2-web/src/app/admin/characters/actions.ts`
+- `v2-web/src/app/auth/page.tsx`
+
+確認結果:
+- `requireAdmin()` は未認証ユーザーを `/auth?next=/admin` へredirectする。
+- 認証済み非Adminは `/admin` へ戻され、管理トップで「権限がありません」を表示する設計。
+- CharacterのCreate / Update / Archive Server Actionは処理冒頭で `requireAdmin()` を必ず実行する。
+- Auth `next` は `/` 始まりのみ許可し、`//...` を拒否するためprotocol-relative external redirectを防止する。
+- Auth/Admin static auditで新たなRelease blockerは検出しなかった。
 
 自動確認済み:
 - unauthenticated Admin block
@@ -117,20 +132,33 @@ Phase17判定:
 
 ## P17-04 Real Device / Browser Acceptance
 
-状態: **未完了 / ユーザー実機確認待ち**
+状態: **準備完了 / ユーザー実機確認待ち**
 
 ユーザー方針:
 - Vercel Project作成・Preview確認と同タイミングでactual PC/browser確認を行う。
+
+外部確認時の手順を統合したチェックリストを作成:
+- `docs/PHASE17_EXTERNAL_ACCEPTANCE_CHECKLIST_2026-08-28.md`
+
+チェックリストには以下を統合した。
+- Vercel Project / Preview
+- Preview Runtime
+- Auth/Admin E2E
+- actual PC/browser
+- Vercel Logs / Performance
+- Final Decision
 
 自動Evidenceはactual-device完了として扱わない。
 
 ## P17-05 Preview Performance / Runtime Logs
 
-状態: **未開始 / P17-01依存**
+状態: **準備完了 / P17-01依存**
 
 Preview Project/Deploymentが存在しないためVercel runtime logsおよびPublic network performanceを取得できない。
 
 既存CI LighthouseをPreview performanceへ昇格しない。
+
+外部AcceptanceチェックリストへTop / Character detailの最低実測対象、runtime error、500系、Supabase-backed route確認を定義済み。
 
 ## P17-06 Production Readiness Final Audit
 
@@ -142,6 +170,7 @@ Preview Project/Deploymentが存在しないためVercel runtime logsおよびPu
 - Browser Acceptance: PASS
 - Lighthouse: PASS
 - Supabase Security Advisor（2026-08-28再確認）: **0 lints**
+- Auth/Admin static release audit: blockerなし
 - Public Gateを弱める変更なし
 - AI Coach Generation OFF
 - Production deployなし
@@ -164,9 +193,9 @@ P17-01〜05の外部Evidence回収後にFinal Auditを作成する。
 
 ## Current Stop / Resume Point
 
-Phase17でChatGPT単独で安全に実施できる内部監査は現時点で完了。
+Phase17でChatGPT単独で安全に実施できる内部監査と外部確認準備は現時点で完了。
 
-次回actual device確認タイミングで以下を連続実施する:
+次回actual device確認タイミングで `docs/PHASE17_EXTERNAL_ACCEPTANCE_CHECKLIST_2026-08-28.md` に従い以下を連続実施する:
 1. Vercel Project作成
 2. Preview deployment
 3. Preview runtime/log確認
