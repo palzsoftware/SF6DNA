@@ -2,7 +2,7 @@
 
 最終更新: 2026-08-28 JST
 
-状態: **進行中**
+状態: **完了 / Internal Hardening PASS**
 
 ## Phase19名称
 
@@ -34,6 +34,8 @@ Phase18で完了したVerified Content Coverage / Public Gate hardeningを基準
 - Current Patch: `2026.08.03`
 - Phase18 Final Audit: `docs/PHASE18_FINAL_AUDIT_2026-08-28.md`
 - Phase18 Data Quality: `docs/PHASE18_DATA_QUALITY_REPORT_2026-08-28.md`
+- Phase19 Integrity Audit: `docs/PHASE19_INTERNAL_INTEGRITY_AUDIT_2026-08-28.md`
+- Phase19 Final Audit: `docs/PHASE19_FINAL_AUDIT_2026-08-28.md`
 - Release Gate: `docs/V2_RELEASE_READINESS.md`
 
 ## 絶対ルール
@@ -51,142 +53,33 @@ Phase18で完了したVerified Content Coverage / Public Gate hardeningを基準
 - AI Coach Generationを有効化しない
 - 外部Acceptanceを内部テストで「完了扱い」にしない
 
-## Phase19 Backlog
+## Phase19 Backlog — Final
 
-### P19-00 Baseline / Scope Freeze
-- Phase18完了HEAD固定
-- main未変更確認
-- Current Patch一意性確認
-- Phase20移管対象を固定
+| Task | Status |
+|---|---|
+| P19-00 Baseline / Scope Freeze | **完了** |
+| P19-01 Referential Integrity Audit | **完了** |
+| P19-02 Identifier / Uniqueness / Required Field Audit | **完了** |
+| P19-03 Patch Lifecycle Integrity Audit | **完了** |
+| P19-04 Public Gate Matrix Audit | **完了 / hardening実施** |
+| P19-05 Source Integrity & Evidence Classification | **完了** |
+| P19-06 Duplicate / Near-Duplicate Content Audit | **完了** |
+| P19-07 Internal Runtime / Failure-mode Hardening | **完了** |
+| P19-08 CI / Regression Expansion | **完了 / PASS** |
+| P19-09 Security / Performance Advisor Triage | **完了** |
+| P19-10 Release Documentation Consistency Audit | **完了** |
+| P19-11 Final Audit / Closure | **完了** |
 
-### P19-01 Referential Integrity Audit
-Supabase実DBで以下を監査する。
-- orphan Character relation
-- orphan Move / Frame / Command relation
-- orphan Source relation
-- orphan Player / Video / Strategy relation
-- Patch FK整合性
-- entity_sourcesのentity_type / entity_id対応妥当性
-- duplicate relation / duplicate source association
+## Phase19で実施した主なHardening
 
-安全に修正可能な明白な構造不整合のみ修正し、内容判断が必要なデータは変更しない。
+1. legacy `entity_sources.entity_type='guide_section'` 16件を、実在target確認・競合0確認後に`character_guide_section`へ構造正規化。
+2. Move Public GateのApp/RLS差異を解消。
+3. Public Moveを`published + official Classic evidence + official Move source + Current Patch verified Frame + official Frame source`へ統一。
+4. `V2_RELEASE_READINESS.md`と実装条件を同期。
+5. Phase19専用CI `.github/workflows/phase19-internal-hardening.yml` を追加。
+6. Source / slug / duplicate / patch lifecycle / relation整合性を実DBで監査。
 
-### P19-02 Identifier / Uniqueness / Required Field Audit
-- slug重複
-- null / blank slug
-- blank title/name
-- display_order異常
-- Classic Command欠損
-- Current Patch Frame欠損
-- duplicate current frame
-- duplicate current patch association
-- published Entityの必須参照不足
-
-推測値は補完しない。
-
-### P19-03 Patch Lifecycle Integrity Audit
-- `is_current=true` Patchの一意性
-- valid_from / valid_to整合性
-- Current Patch参照の妥当性
-- future / stale patch relation
-- Current Patchと公開Gate条件の不一致
-- 期間逆転や重複期間の検出
-
-### P19-04 Public Gate Matrix Audit
-対象:
-- Character
-- Move
-- Frame
-- Move Command
-- Character Guide
-- Combo
-- Setup
-- Sequence
-- Counter
-- Training
-- Trait Score
-- Player
-- Video
-- Search
-- Recommendation
-- AI Coach Retrieval
-
-アプリQuery、RPC、RLSの3層で公開条件を比較し、経路ごとの差異・漏洩余地を検出する。
-
-### P19-05 Source Integrity & Evidence Classification
-- Source URL / title / publisher / reliability_levelの欠損監査
-- EntityごとのSource coverage
-- Source relationのentity_type妥当性
-- official / supporting等のEvidence分類監査
-- Current Patch Evidenceとして使用可能かの機械分類
-
-Sourceありだけでverifiedへ昇格しない。
-
-### P19-06 Duplicate / Near-Duplicate Content Audit
-対象:
-- Move aliases
-- Character aliases
-- Player aliases
-- Combo
-- Setup
-- Sequence
-- Counter
-- Training
-- Guide sections
-
-完全重複・機械的に高確度な重複候補を抽出する。
-
-自動削除・統合は行わず、明白なduplicate relationのみ安全に整理可能とする。
-
-### P19-07 Internal Runtime / Failure-mode Hardening
-ローカル/CIで再現可能な範囲のみ対象。
-- malformed slug
-- notFound / empty state
-- Supabase未設定時
-- DB query error時
-- AI Coach入力境界
-- Search empty / malformed query
-- metadata / robots / sitemap
-- Admin unauth redirect static behavior
-
-外部Previewや実ブラウザを必要とするAcceptanceはPhase20へ残す。
-
-### P19-08 CI / Regression Expansion
-Phase19専用Acceptanceを追加する。
-最低限:
-- typecheck
-- lint
-- policy tests
-- build
-- Public Gate static regression
-- Patch integrity assumptions
-- release-critical query invariants
-
-DB実値監査はFinal AuditにEvidenceとして記録する。
-
-### P19-09 Security / Performance Advisor Triage
-- Supabase Security Advisor再確認
-- Performance Advisor再確認
-- 新規Critical / Error有無を分類
-- unused_index / multiple_permissive_policiesは実測なしでblind fixしない
-- 安全に確定できる設定不備だけ修正対象
-
-### P19-10 Release Documentation Consistency Audit
-以下の相互矛盾を解消する。
-- PROJECT_STATUS
-- V2_RELEASE_READINESS
-- Phase15〜19 Evidence / Final Audit
-- migration履歴
-- Public Data Policy
-- Phase20 Final Acceptance handoff
-
-### P19-11 Final Audit / Closure
-- Phase19 Final Audit作成
-- Automated/Internal PASS or blocker判定
-- Phase20へ渡すHEAD / DB baseline固定
-- Phase20は自動開始しない
-
-## Phase19でやらない作業
+## Phase19でやらなかった作業
 
 以下はFinal Phase（Phase20）へ移管する。
 
@@ -201,12 +94,13 @@ DB実値監査はFinal AuditにEvidenceとして記録する。
 9. Production Readiness最終判定
 10. Production deploy（明示許可がある場合のみ）
 
-## Exit Criteria
+## Exit Criteria Result
 
-Phase19完了条件:
-- P19-00〜P19-11完了
-- 重大な内部整合性blockerなし、または明示的にPhase20/将来作業へ分類済み
-- CI PASS
-- Supabase Security Advisorに新規Release blockerなし
-- Public Gate matrixに既知の漏洩経路なし
-- Final Phase handoffが固定済み
+- P19-00〜P19-11: **完了**
+- 重大な内部整合性blocker: **なし**
+- Phase19 CI: **PASS**
+- Supabase Security Advisor: **0 lints**
+- Public Gate既知漏洩経路: **なし**
+- Phase20 handoff: **固定済み**
+
+Phase19は完了。Phase20はユーザー明示指示まで開始しない。
