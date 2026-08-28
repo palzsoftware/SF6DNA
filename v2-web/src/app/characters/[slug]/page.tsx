@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { CharacterPreferenceActions } from "@/components/character-preference-actions";
 import { CharacterTabs } from "@/components/character-tabs";
 import { getCharacterBySlug } from "@/lib/characters";
 
@@ -35,6 +36,7 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
             {character.difficulty ? <span className="chip">難易度 {character.difficulty}/5</span> : null}
             {character.releaseDate ? <span className="chip">参戦日 {character.releaseDate}</span> : null}
           </div>
+          <CharacterPreferenceActions slug={character.slug} />
         </div>
         {character.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
