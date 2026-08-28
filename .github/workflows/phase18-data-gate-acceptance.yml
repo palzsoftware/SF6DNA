@@ -1,0 +1,93 @@
+name: Phase18 Data Gate Acceptance
+
+on:
+  push:
+    branches: [sf6dna-v2]
+    paths:
+      - "v2-web/**"
+      - "supabase/migrations/**"
+      - ".github/workflows/phase18-data-gate-acceptance.yml"
+  workflow_dispatch:
+
+jobs:
+  data-gate-acceptance:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: v2-web
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Policy tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Phase18 public data gate static acceptance
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+
+          const read = (path) => fs.readFileSync(path, 'utf8');
+          const moveGate = read('src/lib/public-move-gate.ts');
+          const movePage = read('src/app/moves/[slug]/page.tsx');
+          const characterSections = read('src/lib/character-sections.ts');
+          const search = read('src/lib/search.ts');
+          const characters = read('src/lib/characters.ts');
+          const knowledge = read('src/lib/knowledge.ts');
+          const recommendations = read('src/lib/character-recommendations.ts');
+
+          for (const required of [
+            '.eq("status", "published")',
+            '.eq("control_scheme", "classic")',
+            '.eq("is_current", true)',
+            '.eq("verification_status", "verified")',
+            'entity_sources',
+            '["frame", "move_frame_data"]',
+          ]) {
+            assert.ok(moveGate.includes(required), `move gate missing: ${required}`);
+          }
+
+          assert.ok(movePage.includes('isMovePublicReady'), 'move detail route must enforce public move gate');
+          assert.ok(characterSections.includes('isMovePublicReady'), 'character move section must enforce public move gate');
+          assert.ok(search.includes('isMovePublicReady'), 'unified search must enforce public move gate');
+
+          assert.ok(
+            characters.includes('.from("character_guide_sections")') &&
+            characters.includes('.eq("verification_status", "verified")'),
+            'character guide must require verified status',
+          );
+
+          const strategyTables = ['combos', 'setups', 'sequences', 'counters', 'trainings'];
+          for (const table of strategyTables) {
+            const tablePos = knowledge.indexOf(`.from("${table}")`);
+            assert.notEqual(tablePos, -1, `knowledge missing ${table}`);
+            const window = knowledge.slice(tablePos, tablePos + 700);
+            assert.ok(window.includes('.eq("status", "published")'), `${table} missing published gate`);
+            assert.ok(window.includes('.eq("verification_status", "verified")'), `${table} missing verified gate`);
+          }
+
+          assert.ok(recommendations.includes('.from("character_trait_scores")'), 'recommendation score query missing');
+          assert.ok(recommendations.includes('.eq("status", "published")'), 'recommendations must require published scores');
+          assert.ok(recommendations.includes('.eq("verification_status", "verified")'), 'recommendations must require verified scores');
+          assert.ok(recommendations.includes('.eq("entity_type", "character_trait_score")'), 'recommendations must require score sources');
+
+          console.log('Phase18 public data gate static acceptance: PASS');
+          NODE
