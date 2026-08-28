@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/phase20-frame-crosscheck.yml"
       - "scripts/phase20-crosscheck-official-frames.py"
+      - "scripts/phase20-crosscheck-official-frames-v2.py"
       - "scripts/phase20-fetch-official-frame-snapshots.mjs"
   workflow_dispatch:
 
@@ -15,20 +16,25 @@ jobs:
     env:
       SUPABASE_URL: https://wnuxaxbrpudyypzdbdho.supabase.co
       SUPABASE_PUBLISHABLE_KEY: sb_publishable_TCdyNFnbYzAGAN6Zlic0yA_YYPZfnTq
-      FRAME_LOCALE: ja-jp
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - name: Fetch CAPCOM Japanese frame snapshots
+        env:
+          FRAME_LOCALE: ja-jp
+        run: node scripts/phase20-fetch-official-frame-snapshots.mjs
+      - name: Fetch CAPCOM English frame snapshots
+        env:
+          FRAME_LOCALE: en-uk
         run: node scripts/phase20-fetch-official-frame-snapshots.mjs
       - name: Crosscheck DB fingerprints against CAPCOM current data
-        run: python scripts/phase20-crosscheck-official-frames.py
+        run: python scripts/phase20-crosscheck-official-frames-v2.py
       - name: Upload crosscheck evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: phase20-frame-crosscheck
-          path: artifacts/phase20-frame-crosscheck
+          name: phase20-frame-crosscheck-v2
+          path: artifacts/phase20-frame-crosscheck-v2
           retention-days: 7
