@@ -1,6 +1,6 @@
 import { CoachRetrievalDemo } from "@/components/coach-retrieval-demo";
 
-export const metadata = { title: "AIコーチ | SF6DNA" };
+export const metadata = { title: "AIコーチ" };
 
 export default async function CoachPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   const params = await searchParams;
