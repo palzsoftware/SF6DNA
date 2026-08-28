@@ -196,13 +196,13 @@ P0〜P2の19タスクを完了、またはユーザー確認のうえPhase15以�
 # P2 — 5件
 
 ## P2-01 Modern Command Coverage Improvement
-- 状態: **進行中（公式候補41件照合・1件改善、重複Move整理完了、一次情報/実機検証継続）**
-- 目的: Modern 1,442/Active Move 2,064の不足を検証可能な範囲で改善する。
+- 状態: **進行中（公式候補41件とJP未登録5件を照合・計2件改善、重複Move整理完了、一次情報/実機検証継続）**
+- 目的: Modern 1,443/Active Move 2,064の不足を検証可能な範囲で改善する。
 - 対象ファイル: ingest/admin/docs
 - 対象DB: `move_commands`, Source relation
 - 依存関係: 一次情報または実機確認
 - 完了条件: 推測補完0でcoverage向上
-- テスト方法: 公式Source relationあり41件をCAPCOM公式Modern一覧と照合。直接確認できたフライングパーティー`M>M`のみ追加。ダルシム重複Moveは既存Modern `3+H`をcanonicalへ移し、重複Moveをarchive。Modern 1,442/Active Move 2,064、未登録622、重複Modern 0、Move draft / Frame reviewed維持を実DB確認
+- テスト方法: 公式Source relationあり41件とJP未登録5件をCAPCOM公式Modern/Frame一覧で照合。フライングパーティー`M>M`とJPしゃがみ中P`2M`だけを追加。ダルシム重複Moveは既存Modern `3+H`をcanonicalへ移し、重複Moveをarchive。Modern 1,443/Active Move 2,064、未登録621、重複Modern 0、Move draft / Frame reviewed維持を実DB確認
 - リスク: 旧Patch情報の誤転記
 
 ## P2-02 Automated Test Expansion

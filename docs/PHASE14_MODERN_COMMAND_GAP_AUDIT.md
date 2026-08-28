@@ -14,8 +14,8 @@
 
 - Active Move: 2,064（重複1件archive）
 - Active Classic Commandあり: 2,064
-- Active Modern Commandあり: 1,442（69.9%）
-- Modern行なし: 622
+- Active Modern Commandあり: 1,443（69.9%）
+- Modern行なし: 621
 - Modern行なしのうち公式Move Sourceあり: 39
 - Modern行なしのうち公式Source付きClassic Commandあり: 39
 
@@ -45,7 +45,7 @@ seedを2回実行し、Modern行1件・当該Modern Source relation 1件・全�
 |---|---:|---:|---:|---:|
 | A.K.I. | 52 | 23 | 29 | 44.2% |
 | C.ヴァイパー | 72 | 67 | 5 | 93.1% |
-| JP | 59 | 54 | 5 | 91.5% |
+| JP | 59 | 55 | 4 | 93.2% |
 | アレックス | 76 | 15 | 61 | 19.7% |
 | イングリッド | 83 | 32 | 51 | 38.6% |
 | エド | 49 | 18 | 31 | 36.7% |
@@ -81,4 +81,14 @@ seedを2回実行し、Modern行1件・当該Modern Source relation 1件・全�
 2. 残る公式Modern一覧非掲載26件は、実機確認なしに補完しない。
 3. 公式Source relationなしの残件は、現行一次情報または実機確認が可能な小単位だけ継続する。
 
-P2-01は一次情報による1件のcoverage向上と重複Move整理まで前進した。ただし未登録622件が残り、実機確認が必要な項目もあるため完了扱いにしない。
+## JP未登録5件の追加監査
+
+CAPCOM公式JP Command List / Frame DataのModern表示を2026-08-28に確認した。
+
+- しゃがみ中P: Modern Frame Dataで中攻撃表示を直接確認し、`2M`を追加。
+- 立ち弱K / しゃがみ強K: Modern Frame Dataに当該行がないため追加しない。
+- 中 / 強ストリボーグ: Frame行はあるが、簡易入力`↓ + SP`との強度対応を直接特定できないため追加しない。
+
+詳細は`docs/PHASE14_JP_MODERN_COMMAND_AUDIT.md`に記録した。
+
+P2-01は一次情報による2件のcoverage向上と重複Move整理まで前進した。ただし未登録621件が残り、実機確認が必要な項目もあるため完了扱いにしない。

@@ -18,6 +18,10 @@ const dhalsimCanonicalSeed = readFileSync(
   new URL("../../supabase/seeds/20260828_phase14_dhalsim_long_slide_canonicalization.sql", import.meta.url),
   "utf8",
 );
+const jpCrouchingMpSeed = readFileSync(
+  new URL("../../supabase/seeds/20260828_phase14_jp_crouching_mp_modern.sql", import.meta.url),
+  "utf8",
+);
 const executableSql = sql
   .replace(/--.*$/gm, "")
   .replace(/\/\*[\s\S]*?\*\//g, "");
@@ -104,4 +108,16 @@ test("Dhalsim duplicate consolidation is narrow, reversible, and preserves verif
   assert.match(dhalsimCanonicalSeed, /set status = 'archived'/);
   assert.match(dhalsimCanonicalSeed, /on conflict \(move_id, normalized_alias\) do nothing/);
   assert.doesNotMatch(dhalsimCanonicalSeed, /\bdelete\b|verification_status\s*=|status\s*=\s*'published'/i);
+});
+
+test("verified JP crouching MP Modern seed stays narrow, sourced, and idempotent", () => {
+  const executable = jpCrouchingMpSeed.replace(/--.*$/gm, "").replace(/\/\*[\s\S]*?\*\//g, "");
+  assert.match(jpCrouchingMpSeed, /m\.slug = 'jp-crouching-mp'/);
+  assert.match(jpCrouchingMpSeed, /'↓ \+ 中攻撃'/);
+  assert.match(jpCrouchingMpSeed, /'2M'/);
+  assert.match(jpCrouchingMpSeed, /character\/jp\/frame/);
+  assert.match(jpCrouchingMpSeed, /reliability_level = 'official'/);
+  assert.match(jpCrouchingMpSeed, /where existing\.move_id = m\.id[\s\S]*existing\.control_scheme = 'modern'/);
+  assert.match(jpCrouchingMpSeed, /on conflict \(entity_type, entity_id, source_id\) do nothing/);
+  assert.doesNotMatch(executable, /\b(update|delete|merge|alter|drop|truncate)\b|status\s*=\s*'published'/i);
 });

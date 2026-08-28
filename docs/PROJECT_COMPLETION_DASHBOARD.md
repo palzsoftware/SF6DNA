@@ -1,6 +1,6 @@
 # SF6DNA Project Completion Dashboard
 
-最終更新: 2026-08-28 09:14 JST
+最終更新: 2026-08-28 09:30 JST
 
 ## 現在Phase
 
@@ -85,8 +85,8 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
   - reviewed **1,751**
   - unverified **6**
 - Active Classic Command: **2,064**
-- Active Modern Command: **1,442**（Classic比69.9%）
-- Modern Command未登録: **622**（うち公式Move Source relationあり39、公式Source付きClassic Commandあり39）
+- Active Modern Command: **1,443**（Classic比69.9%）
+- Modern Command未登録: **621**（うち公式Move Source relationあり39、公式Source付きClassic Commandあり39）
 - 公式Source relationあり41件を公式Modern一覧と照合し、直接確認できたディージェイ「フライングパーティー」1件のみ追加。Moveはdraft、packageはreviewを維持
 - Active Move Alias: **3,553**
 - Combo: archived/unverified 40、draft/reviewed 76、draft/unverified 224、draft/verified 1
@@ -103,11 +103,11 @@ Phase13までに構築したDB・API・UI・検索・診断・推薦・AI Coach 
 - Video Source relation: **0**（Video自体のURLは保持）
 - Release Ready Strategy: **0**
 - Recommendation Ready Candidate: **0**
-- AI Coach Source Evidence Entity: **9,871**
+- AI Coach Source Evidence Entity: **9,872**
 - Diagnosis: published **4**
 - Diagnosis Question: published **52**
-- Source: **328**（official 84 / primary 2 / secondary 137 / community 104 / internal_candidate 1）
-- Entity Source relation: **16,717**
+- Source: **329**（official 85 / primary 2 / secondary 137 / community 104 / internal_candidate 1）
+- Entity Source relation: **16,720**
 - Current Patch: `2026.08.03`
 - public schema: **38 tables / RLS 38/38 enabled**
 - Vercel接続チーム: **Project 0件**
@@ -155,7 +155,7 @@ GitHub Actions run `33128860163`:
 | 7 | Move | データ不足 | Active 2,064件あるが全件draft、重複1件archive済み |
 | 8 | Frame | 検証待ち | Active verified 307 / reviewed 1,751 / unverified 6 |
 | 9 | Classic Command | 検証待ち | Active 2,064件、公開時official Source条件あり |
-| 10 | Modern Command | データ不足 | 1,442 / 2,064。公式Modern一覧照合で根拠確認できた1件のみ改善 |
+| 10 | Modern Command | データ不足 | 1,443 / 2,064。公式Modern/Frame一覧で直接確認できた2件のみ改善 |
 | 11 | Alias | 部分完成 | Active Move alias 3,553ほか構造あり |
 | 12 | Combo | データ不足 | published 0 |
 | 13 | Setup | データ不足 | published 0 |
@@ -165,7 +165,7 @@ GitHub Actions run `33128860163`:
 | 17 | Player | 部分完成 | published 41 / draft 50 |
 | 18 | Video | 部分完成 | published 5 / draft 8 |
 | 19 | Character Trait Score | データ不足 | 372 draft/reviewed、published+verified 0 |
-| 20 | Source | 部分完成 | 328 Source / 16,717 relation、Entity別coverage残り |
+| 20 | Source | 部分完成 | 329 Source / 16,720 relation、Entity別coverage残り |
 | 21 | Patch | 完成 | Current Patch 2026.08.03 |
 | 22 | Verification | 検証待ち | Phase13 carryoverあり |
 | 23 | Character UI | 部分完成 | list/detail/sections/Sequence導線あり、公開攻略データ不足 |
@@ -257,7 +257,7 @@ GitHub Actions run `33128860163`:
 
 計5件。完了2、残り**3**。
 
-- P2-01 Modern Command Coverage Improvement — **公式候補41件照合・1件改善、残りは一次情報/実機検証待ち**
+- P2-01 Modern Command Coverage Improvement — **公式候補41件とJP未登録5件を照合・計2件改善、残りは一次情報/実機検証待ち**
 - P2-02 Automated Test Expansion — **完了**
 - P2-03 Performance Measurement / Optimization — Preview依存
 - P2-04 Responsive / Accessibility Polish — **Static Review完了、最終確認Preview依存**
@@ -295,8 +295,9 @@ Phase14完成率の母数外。
 - Static Accessibility回帰テスト5件を含む全Tests **26 / 26 success**
 - P2-01: 公式Source relationあり41件をCAPCOM公式Modern一覧と照合
 - ディージェイ「フライングパーティー」`M>M`だけを追加し、公式Movelist Source relationを付与
-- Modern 1,442 / Active Move 2,064、未登録622。draft / reviewを維持し、推測補完なし
+- Modern 1,443 / Active Move 2,064、未登録621。draft / reviewを維持し、推測補完なし
 - ダルシム「ロングスライディング」は既存Modern `3+H`をcanonical Moveへ移し、検索Aliasを追加、重複Moveを削除せずarchive。Frame/Classic/Source履歴とreviewed状態を維持
+- JP未登録5件をCAPCOM公式Command List / Frame DataのModern表示と照合し、しゃがみ中P `2M`だけを追加。Move draft / Frame reviewedを維持し、公式Sourceを付与
 - archive済みMoveをMove/Frame/Command/AliasのActive品質集計から除外し、26 Policy testsで回帰確認
 - P2-02: Public Release Gate 13要件を18 Policy testsへ拡張
 - 失敗していたAI Coach readinessテストを現行実装へ整合
