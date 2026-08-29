@@ -51,6 +51,7 @@ jobs:
           const strategyActions = read('src/app/admin/content/[kind]/actions.ts');
           const diagnosisActions = read('src/app/admin/diagnoses/actions.ts');
           const traitActions = read('src/app/admin/character-traits/actions.ts');
+          const sourceActions = read('src/app/admin/sources/actions.ts');
           const search = read('src/lib/search.ts');
           const knowledge = read('src/lib/knowledge.ts');
           const characters = read('src/lib/characters.ts');
@@ -63,6 +64,7 @@ jobs:
           const strategyRls = compactSql(read('../supabase/migrations/20260828_phase18_strategy_source_public_gate.sql'));
           const sourceNormalization = compactSql(read('../supabase/migrations/20260828_phase19_normalize_guide_section_source_type.sql'));
           const phase23PublicationGates = compactSql(read('../supabase/migrations/20260829_phase23_publication_gate_hardening.sql'));
+          const atomicPatchSwitch = compactSql(read('../supabase/migrations/20260829_phase23_atomic_current_patch_switch.sql'));
 
           for (const required of [
             '.eq("status", "published")',
@@ -115,6 +117,13 @@ jobs:
           assert.ok(phase23PublicationGates.includes("es.entity_type = 'character_trait_score'"), 'Trait Score DB Source relation gate missing');
           assert.ok(phase23PublicationGates.includes("c.status = 'published'"), 'Trait Score parent Character gate missing');
           assert.ok(phase23PublicationGates.includes("t.status = 'published'"), 'Trait Score parent Trait gate missing');
+
+          assert.ok(sourceActions.includes('rpc("set_current_patch"'), 'Admin current patch switch must use atomic RPC');
+          assert.ok(sourceActions.includes('is_current: false'), 'New patch must be inserted non-current before atomic switch');
+          assert.ok(!sourceActions.includes('update({ is_current: false }).eq("is_current", true)'), 'Admin must not clear current patch outside atomic RPC');
+          assert.ok(atomicPatchSwitch.includes('create or replace function public.set_current_patch'), 'Atomic current patch RPC migration missing');
+          assert.ok(atomicPatchSwitch.includes('if not private.is_admin()'), 'Atomic current patch RPC must require admin');
+          assert.ok(atomicPatchSwitch.includes('grant execute on function public.set_current_patch(uuid) to authenticated'), 'Atomic current patch RPC grant missing');
 
           assert.match(sourceNormalization, /entity_type\s*=\s*'guide_section'/);
           assert.match(sourceNormalization, /entity_type\s*=\s*'character_guide_section'/);
