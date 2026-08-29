@@ -7,149 +7,111 @@ Branch: `sf6dna-v2`
 
 **AUTOMATED BASELINE FROZEN / FINAL MANUAL RC NOT YET FROZEN**
 
-この文書は、人の操作・判断が必要な最終stageへ入る前の自動監査baselineを固定する。
+人の判断・実ログイン・人物同定・PC/iPhone実機Acceptanceへ入る前の自動監査baselineを固定する。Machine Gate PASSはPublication approvalではない。
 
-Publication approval、実Auth/Admin E2E、人物確認、PC/iPhone実機テストは含まない。
+## Baseline heads
 
-## Application baseline
+- Application implementation: `3c702ca0dad54ab2f73a2a940d1cc17e6511d3f1`
+- DB hardening follow-up: `5c46de5f0a81e4c9996b5ff30f7896aa7cdf651e`
+- CI invariant follow-up: `4c3dedad21fff648a2c887a7a66ba9b68bb05b23`
 
-Public / Adminアプリ実装の自動Gate済みcommit:
+Application headの8 Gate:
 
-`6b5a4b8e1974f677691e655e274da9626bdb18b5`
+- Phase16 Release Acceptance — PASS `33240366996`
+- Phase15 Runtime Smoke — PASS `33240366991`
+- Phase15 Browser Acceptance — PASS `33240367023`
+- Phase15 Lighthouse Audit — PASS `33240366981`
+- Phase19 Internal Hardening — PASS `33240367007`
+- Phase20 Verified Content Acceptance — PASS `33240367003`
+- SF6DNA v2 Web Check — PASS `33240366993`
+- Phase18 Data Gate Acceptance — PASS `33240367041`
 
-CI invariantのみのfollow-up:
+DB follow-up `5c46de5f...` のPhase19 — PASS `33240529766`。
 
-`22af783bc8fb947be138cfcdd56279a053d8f713`
+## Release hardening included
 
-このbaselineで確認済み:
+- Public Move Gateのpolymorphic Evidence照合修正
+- Move / Classic Command / Current verified Frameそれぞれにofficial Evidence必須
+- Admin Move publish条件をPublic Gateへ整合
+- Move新規公開をdraft→Evidence→strict gate→publishedへ変更
+- Strategy 5種をdraft→Source relation→publishedへ変更
+- Diagnosis公開complete gateをAdmin/RLS両方へ追加
+- Character Trait ScoreのSource relationとPublic GateをAdmin/RLS両方へ整合
+- Current Patch切替をatomic RPC化
+- Current Patch RPCを`SECURITY INVOKER`化
+- relation RLS/実データ横断監査
+- Security Advisor: **0 lints**
 
-- Phase16 Release Acceptance — PASS (`33239446677`)
-- Phase15 Runtime Smoke — PASS (`33239446690`)
-- Phase15 Browser Acceptance — PASS (`33239446655`)
-- Phase15 Lighthouse Audit — PASS (`33239446718`)
-- Phase19 Internal Hardening — PASS (`33239510750`)
-- Phase20 Verified Content Acceptance — PASS (`33239446647`)
-- SF6DNA v2 Web Check — PASS (`33239446717`)
-- Phase18 Data Gate Acceptance — PASS (`33239446644`)
-
-Phase19は旧Public Gate実装文字列を要求するstatic invariantが一度FAILしたが、Typecheck / Lint / Policy / BuildはPASSしていた。新しいpolymorphic Evidence実装にinvariantを合わせた後、run `33239510750` で完全PASSした。
-
-## Auth / Admin hardening included in this baseline
-
-Real Auth E2E前の追加監査で以下を修正済み。
-
-1. `entity_sources.entity_id`がpolymorphicでFKを持たないため、Public Move GateからPostgREST inferred join依存を除去
-2. Move / Classic Command / Current verified FrameのEvidenceをentity_type / entity_idで明示照合
-3. 3対象すべてにofficial Sourceを要求
-4. Admin publish条件をPublic Move Gate同等へ強化
-5. Admin UIでMove / Command / FrameへEvidence Sourceを個別付与可能に変更
-6. 新規published Moveはdraft→Command/Frame/Evidence→strict gate→publishedの順で昇格
-7. Phase19 / Phase20 CIでこの仕様を固定
-
-詳細:
-
-`docs/PHASE23_AUTH_ADMIN_READINESS_2026-08-29.md`
-
-## Performance baseline
-
-画像最適化後の既存計測:
-
-### Home
-
-- Performance: 0.91
-- Accessibility: 1.00
-- Best Practices: 0.96
-- SEO: 1.00
-- FCP: 約0.80s
-- LCP: 約3.39s
-- TBT: 約65ms
-- CLS: 0
-
-### Character detail
-
-- Performance: 0.93
-- Accessibility: 1.00
-- Best Practices: 0.96
-- SEO: 1.00
-- FCP: 約0.77s
-- LCP: 約3.11s
-- TBT: 約109ms
-- CLS: 0
-
-最新Phase15 Lighthouse workflowもPASS。
+詳細: `docs/PHASE23_AUTH_ADMIN_READINESS_2026-08-29.md`
 
 ## Vercel
 
-CI follow-up head `22af783bc8fb947be138cfcdd56279a053d8f713` Preview:
+DB follow-up head `5c46de5f...`:
 
-- Deployment: `dpl_CHHhrT5RgaXP9LGGHMm7mPSE2PgT`
-- READY
+- Deployment: `dpl_8sdQJbKXF3EYmGgeQbsRMnk1jM74`
+- State: READY
 - target: Preview
+- v2 Production deploy: 未実施
+
+CI follow-up Preview `4c3dedad...`:
+
+- Deployment: `dpl_9iFYnQTxXuCUyJ3cJmTGxbMSm6Rt`
+- READY
 - Build error: 0
 - runtime error / fatal: 0
 
-Production deployは実施していない。
-
-## Supabase / Security baseline
+## Supabase / Security
 
 - Project: `SF6DNAPro`
 - Project ID: `wnuxaxbrpudyypzdbdho`
-- Current Patch: `2026.08.03`
-- RLS: 38 / 38
+- Current Patch: `2026.08.03`（1件）
 - Security Advisor: 0 lints
-- Player relation orphan: 0
 - Public Move Gate: enforced
 - Public Strategy Gate: enforced
-- `auth.users`: **0**
+- Diagnosis completeness Gate: enforced
+- Character Trait Score Gate: enforced
+- `auth.users`: 0
 
-新規Auth userはDB triggerで`profiles.role='user'`として作成され、一般ユーザーが自身をadminへ自己昇格できないRLSを確認済み。
+## Current public content
 
-## Content baseline
+- playable + published Character: 31
+- published Diagnosis: 4
+- published Move: 0
+- published Combo / Setup / Sequence / Counter / Training: 0
+- published Character Trait Score: 0
 
-### Public
+## Move draft gate snapshot
 
-- Character: 31
-- Diagnosis: 4
-- Move: **0**
-- Combo / Setup / Sequence / Counter / Training: **0**
+実DBの`private.is_move_public_ready(m.id)`で再集計:
 
-Auth/Admin readiness作業後にもread-only再確認し、公開statusに変化なし。
-
-### Move draft
-
-- total: 2052
-- strict machine-gate-ready: 701
+- draft Move: 2052
+- strict machine-gate-ready: **701**
 - not ready: 1351
 - ready Characters: 12 / 31
-- ready候補Modernあり: 662
-- ready候補Modernなし: 39
+- Modernあり: 662
+- Modernなし: 39
 
-Current DB functionによるready内訳:
+| Character | Ready | Modern | No Modern |
+|---|---:|---:|---:|
+| Dee Jay | 105 | 102 | 3 |
+| Jamie | 93 | 91 | 2 |
+| Blanka | 91 | 83 | 8 |
+| Dhalsim | 88 | 77 | 11 |
+| Kimberly | 76 | 74 | 2 |
+| E. Honda | 70 | 65 | 5 |
+| Guile | 70 | 66 | 4 |
+| Chun-Li | 68 | 64 | 4 |
+| Yasmine | 19 | 19 | 0 |
+| Mai Shiranui | 10 | 10 | 0 |
+| C. Viper | 7 | 7 | 0 |
+| Elena | 4 | 4 | 0 |
+| **Total** | **701** | **662** | **39** |
 
-- Dee Jay 105
-- Jamie 93
-- Blanka 91
-- Dhalsim 88
-- Kimberly 76
-- E. Honda 70
-- Guile 70
-- Chun-Li 68
-- Yasmine 19
-- Mai 10
-- C. Viper 7
-- Elena 4
+701件は必須のMove / Classic Command / Current verified Frame official Evidenceを満たすが、全件draftのまま維持する。
 
-701候補の必須Evidence:
+## Strategy snapshot
 
-- Move official Evidence: 701 / 701
-- Classic Command official Evidence: 701 / 701
-- Current verified Frame official Evidence: 701 / 701
-
-Machine Gate PASSはPublication approvalではないためstatusは変更していない。
-
-### Strategy
-
-`draft + verified + Source`:
+`draft + verified + Source relation`:
 
 - Combo: 1
 - Setup: 0
@@ -159,61 +121,78 @@ Machine Gate PASSはPublication approvalではないためstatusは変更して�
 
 自動publishしない。
 
-## Official frame external audit
+## Diagnosis / Trait snapshot
 
-- fix commit: `ac4ed232d0f73c619ac2681565ab55c289022967`
-- Workflow: `Phase20 Official Frame Snapshot`
+Published Diagnosis 4件:
+
+- published Question数: 12 / 10 / 10 / 20
+- Optionなしpublished Question: 0
+- 全4件release-ready
+
+Character Trait Score:
+
+- total: 372
+- published: 0
+- public-ready: 0
+
+## External / image evidence
+
+CAPCOM Official Frame Snapshot:
+
 - Run: `33228209058`
-- Result: PASS
-- CAPCOM Japanese frame pages: 31 / 31 success
-- HTTP 200 for all 31
+- 31 / 31 pages HTTP 200
 - Artifact: `phase20-official-frame-snapshots-ja-jp`
 - Artifact ID: `9707625771`
 
-## Image baseline
-
-### Character
-
-- DB image_url: 0 / 31
-- existing fallbackを使用
-- Next.js Image Optimization適用済み
-
-### Player
+Player:
 
 - published: 41
 - DB image_url: 0 / 41
 - safety-confirmed fallback: 17
-- published Player alias追加情報: 0
+- remaining images: manual identity check only
 
-残りは人物同定が必要なため自動接続しない。
+## Performance baseline
+
+Home:
+- Performance 0.91
+- Accessibility 1.00
+- SEO 1.00
+- LCP 約3.39s
+- CLS 0
+
+Character detail:
+- Performance 0.93
+- Accessibility 1.00
+- SEO 1.00
+- LCP 約3.11s
+- CLS 0
+
+最新Lighthouse workflowもPASS。
 
 ## Remaining gates — human/manual only
 
 1. Content Publication approval
 2. 正式なAuth user準備
-3. Real Auth / Admin E2E with actual Admin / non-admin sessions
-4. Player remaining-image identity confirmation if required
-5. Manual変更後のFinal RC freeze
-6. PC real-device acceptance
-7. iPhone real-device acceptance
+3. Real Auth / Admin E2E
+4. 必要ならPlayer画像人物確認
+5. manual変更後のFinal RC freeze
+6. PC actual-device acceptance
+7. iPhone actual-device acceptance
 8. Production Readiness decision
-9. Production deploy only after explicit user permission
+9. Production deploy（ユーザー明示許可時のみ）
 
 ## Final RC rule
 
-このAutomated RC baselineをFinal RCとは呼ばない。
-
-manual stageでDB status / Auth test data / code / assetsが変更された場合は、その変更後に必要なCI / Preview regressionを実行してFinal RC HEADを固定する。
+このAutomated baselineをFinal RCとは呼ばない。manual stageでDB / code / assetsが変わった場合は、その変更後に必要な回帰テストを実行してFinal RC HEADを固定する。
 
 ## Non-negotiable rules
 
 - `reviewed ≠ verified`
 - `draft ≠ published`
 - Sourceあり ≠ verified
-- Machine Gate PASS ≠ publish approval
+- Machine Gate PASS ≠ Publication approval
 - Missing Modernを推測しない
-- `auth.users`へSQLで偽ユーザーを直接投入しない
+- 偽Auth userをSQL投入しない
 - actual-device Evidenceをemulationで代用しない
-- manual Auth Evidenceをstatic testで代用しない
 - `main`変更禁止
 - Production deployは明示許可時のみ
