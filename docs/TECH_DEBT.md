@@ -1,81 +1,88 @@
-# TECH_DEBT.md
+# SF6DNA v2 Technical Debt
 
-SF6DNAプロジェクトのコード調査(2026年7月時点、GitHubリポジトリ `sf6lab/SF6DNA` の実装を対象)に基づく、技術的負債・改善候補の一覧です。
+最終更新: 2026-08-29 JST
+対象: `sf6dna-v2` / `v2-web`
 
-このファイルは調査結果のドキュメントであり、記載内容に基づくコード修正はまだ行っていません。
+過去の静的版調査記録ではなく、現行Next.js / Supabase版を基準に整理する。
 
----
+## 1. 画像配信
 
-## 1. バグ
+### 1-1. Character image fallback
 
-### 1-1. character-data.jsの選手参照切れ(20件、うち1件は修正済み)
-`pros` / `streamers` / `vtubers` フィールドが、実際には存在しない選手IDを参照している。`Noble`→`noble`(大文字小文字の表記ゆれ)は修正済み。残り20件の詳細は [DATA_ISSUES.md](./DATA_ISSUES.md) を参照。
+公開31キャラクターのSupabase `image_url` は現在未登録で、`v2-web/src/lib/legacy-character-images.ts` からGitHub raw assetへfallbackしている。
 
-### 1-2. pro.js内の選手ID重複(未対応)
-`itabashizangief` というIDが `assets/js/pro.js` 内に **2回定義**されている(716行目・2515行目)。JavaScriptのオブジェクトリテラルでは後勝ち(上書き)になるため、片方のデータが実質的に無効化されている可能性が高い。対応状況は [DATA_ISSUES.md](./DATA_ISSUES.md) で管理している。
+利点:
 
-> 補足: 過去の開発セッションでは「itabashizangiefの重複を統合した」という記録が残っているが、今回GitHub上のコードを確認したところ重複が現存していた。ローカルでの修正がリポジトリへ反映されていなかった可能性がある。
+- 31キャラクターの既存画像を安全に再利用できる
+- DBへ推測URLを書き込まずに表示できる
 
-### 1-3. 動画検索にリトライ機構がなかった(本チャットで対応済み)
-`team-detail.js` / `player.js` / `characters.js` / `compare.js` の動画検索が単一クエリのみで、0件時のリトライがなかった。→ `assets/js/video-search.js` の共通関数による複数クエリリトライを実装済み(本チャットの対応内容)。
+負債:
 
----
+- branch上のraw GitHub assetに依存する
+- 一部source画像が数MBあり、画像転送量が大きくなる可能性がある
+- Next Image最適化へ完全移行していない
 
-## 2. 設計上の問題
+Phase23のPublic Network Performanceで影響を計測し、必要なら画像圧縮・CDN / Storage移行・Next Image化を別変更として実施する。
 
-### 2-1. character-data.jsのフォーマットの不統一
-同じ種類のフィールドでも、ファイル内で書き方が統一されていない。
-- インデント: 4スペース/8スペース/スペース無しが混在
-- 配列の書き方: `pros: [\n    "a",\n    "b"\n]` のような複数行と `pros:["a","b"]` のような1行がキャラクターごとに混在
-- 「基本情報」のようなセクション見出しコメントが付いているキャラクターと付いていないキャラクターが混在(6キャラのみに存在)
+### 1-2. Player image ownership
 
-このため、機械的な解析(スクリプトによる一括置換・検証)が難しく、今回の調査でも複数回アプローチを変える必要があった。
+公開PlayerのDB `image_url` は未登録。
 
-### 2-2. `VIDEO_API_BASE_URL` の重複定義
-同じ値(`"https://sf6dna-backend.onrender.com"`)が `team-detail.js` / `player.js` / `characters.js` / `compare.js` の4ファイルにそれぞれ個別に定義されている。値を変更する際は4箇所すべての修正が必要で、修正漏れのリスクがある。
+Pre-device polishでは、現在のPlayer slugとlegacy画像ファイル名が**完全一致したものだけ**fallback対象にした。表記変換や人物同定が必要な画像は推測接続しない。
 
-> 改善案: 将来的には `video-search.js`(または新しい設定ファイル)に一元化することを検討できるが、今回は「既存機能を壊さない」ことを優先し、各ファイルの定義はそのまま残した。
+将来的には確認済み画像をSupabase Storage等へ移し、DB `image_url` を正本化する方が保守しやすい。
 
-### 2-3. 直下の `css/` ・ `js/` ディレクトリが未使用
-どのHTMLからも参照されていないレガシーディレクトリ。実装の混乱を招く可能性がある。
+## 2. Legacy static implementation
 
-### 2-4. バックエンド(sf6dna-backend)のコードがこのリポジトリに含まれない
-動画検索APIの実装(Node.js/Expressと推測)が別リポジトリにあり、今回はアクセスできていない。フロントエンド側の修正だけでは検証しきれない箇所がある(例: APIのレスポンス仕様が変わっていないかなど)。
+リポジトリ直下には旧HTML / CSS / JavaScript版が残っている。
 
----
+- v2 Runtimeの正本ではない
+- 画像素材や履歴参照には現在も一部利用価値がある
+- 旧 `character-data.js` / `pro.js` 等のデータ問題をv2 DB問題と混同しない必要がある
 
-## 3. データ不整合
+削除はRelease前必須ではない。素材移行完了後にLegacy archive / cleanupとして別途判断する。
 
-character-data.jsの選手参照切れについては、[docs/DATA_ISSUES.md](./DATA_ISSUES.md)で管理しています。
+## 3. Release documentation drift
 
-- 大文字小文字の表記ゆれなど「確実に修正できるもの」は都度コード修正済みです(例: `Noble`→`noble`)
-- 候補IDはあるが同一人物と断定できないもの、参照先データ自体が未登録のものは、コードを変更せずDATA_ISSUES.mdに一覧化し、対応状況(未確認/保留/追加予定)を管理しています
-- 今後の再発防止のため、[scripts/check-data-integrity.js](../scripts/check-data-integrity.js)で参照切れ・ID重複を自動検出できるようにしました(`node scripts/check-data-integrity.js`で実行)
+過去に `PROJECT_STATUS.md` / `NEXT_PROMPT.md` / READMEが実装状態より古くなる問題が発生した。
 
----
+2026-08-29のPre-device polishで主要文書はPhase23へ同期した。
 
-## 4. 未使用コード
+今後はPhase完了・Release Candidate固定・Production判定のタイミングで同時更新する。
 
-| ファイル | 状態 |
-|---|---|
-| `assets/js/result-data_old.js` | **0バイト(中身が空)**。どのHTMLからも参照されていない |
-| `assets/js/diagnosis_old.js` | 7KB程度のコードが残っているが、どのHTMLからも参照されていない |
-| 直下の `css/` ディレクトリ(14ファイル) | どのHTMLからも参照されていない |
-| 直下の `js/` ディレクトリ(30ファイル) | どのHTMLからも参照されていない |
+## 4. Local-only personal data
 
-いずれも削除しても現行サイトの動作には影響しないと考えられるが、削除前にGit履歴として残っている意図(あえて残してあるのか、消し忘れなのか)が不明なため、断定はできない。
+Favorites / My Characters / Rank Tracker / Diagnosis History / Diagnosis draft / Improvement battle log / Replay reviewはブラウザlocalStorageを使用する。
 
----
+これは現リリース仕様だが、端末間同期はしない。将来アカウント同期を実装する場合はmigration / privacy / conflict handlingが必要になる。
 
-## 5. 改善候補
+## 5. AI Coach generation
 
-- **FEATURES.md記載の未実装機能**(AIリプレイ分析・コンボ検索・フレーム検索・練習メニュー生成・大会カレンダー・コーチングAI)は、コード上に着手の痕跡が見当たらない。優先順位を決めて着手する必要がある。
-- **README.mdが空**。リポジトリを初めて見る人向けの説明が無いため、最低限のセットアップ手順・技術スタックの記載があるとよい。
-- **選手データベースの拡充**: 今回発見した21件の未解決参照のうち、多くは「streamer.js/vtuber.jsに未登録の人物」である可能性が高い(既存の登録数がstreamer.jsは5件、vtuber.jsは15件と少ない)。登録漏れの可能性がある。
-- **CLAUDE.md/PROJECT_STATUS.mdとリポジトリの乖離が過去に発生した実績**があるため、今後は変更のたびにこれらのドキュメントを更新する運用を徹底することを推奨する。
+Source-backed retrieval基盤はあるが、自由生成による攻略回答はEvidence条件が十分になるまでOFF。
 
----
+これは欠陥ではなく品質Gate。Generationを有効化する場合はEvidence不足時の停止、Source表示、Patch境界、verified優先を維持する。
 
-## 備考
+## 6. Modern Command coverage
 
-本ドキュメントはコード調査に基づく客観的な記録であり、憶測を含む箇所は「推測」「可能性がある」等の表現で明記している。断定できない事項について、プロジェクトオーナーへの確認を推奨する。
+Phase21監査後も611件が未入力。
+
+公式情報から安全に取得できないため推測しない。これはデータ欠陥を隠すための空欄ではなく、品質ルールに従った意図的な未入力。
+
+## 7. Actual-device evidence
+
+静的テスト・Browser E2E・Vercel Previewだけでは、実PC / iPhoneの表示・操作・localStorage挙動を完全には代替できない。
+
+Release Candidate固定後にPhase23実機チェックリストを実行するまでProduction Readyは最終判定しない。
+
+## 8. 今後の改善候補
+
+Release blockerではない候補:
+
+- 画像最適化 / Storage移行
+- Legacy static site archive
+- 個人データのアカウント同期
+- AI Replay映像解析
+- AI Coach generation段階解禁
+- Team Directory / Roster Historyのv2再構築
+
+新機能はRelease polishと混ぜず、Production Ready判定後の別スコープで扱う。

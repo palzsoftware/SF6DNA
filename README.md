@@ -1,151 +1,143 @@
 # SF6DNA
 
-Street Fighter 6(スト6)のプレイヤー向け総合支援サイトです。
+Street Fighter 6プレイヤー向けの総合支援プラットフォームです。
 
-公開URL: https://sf6lab.github.io/SF6DNA/
+現在のリリース候補は **`v2-web`** を正とします。リポジトリ直下の旧HTML/CSS/JavaScript版は履歴・素材参照用のレガシー実装です。
 
----
+## 現在の状態
 
-## 概要
+- Phase1〜22: 完了
+- Phase23: Pre-device polish進行中
+- PC / iPhone実機テスト: Release Candidate固定後の最終Acceptanceとして保留
+- v2 Production deploy: 未実施
 
-SF6DNAは、スト6をプレイする人が「自分に合ったキャラクター」「参考にすべきプロ選手・配信者」を見つけたり、キャラクターやチーム、選手について調べたりできる情報サイトです。診断・図鑑・比較・ランク管理など、対戦格闘ゲームを続けていく上で役立つ機能を1つのサイトにまとめています。
+詳細は [PROJECT_STATUS.md](./PROJECT_STATUS.md) を参照してください。
 
-## プロジェクトの目的
+## 主な機能
 
-- プレイヤー診断: 質問に答えることで、自分のプレイスタイルに合ったキャラクターや参考にすべきプロ選手・配信者を提示する
-- プレイヤー図鑑: プロ選手・配信者・VTuber・YouTuberの情報をまとめて閲覧できるようにする
-- キャラクター図鑑: 全キャラクターの特徴・強み弱み・コンボ動画・対策キャラなどを整理する
-- チーム図鑑: eスポーツチームの所属選手・年代別ロスターをまとめる
-- 成長支援: ランク推移の記録、キャラクター比較などを通じて上達をサポートする
-- (今後)AIリプレイ分析: プレイ内容をAIで分析し、改善点をフィードバックする機能を追加予定
+- 診断: プレイ傾向・課題・キャラクター候補を短時間診断で整理
+- キャラクター辞典: 技、Command、Frame、Combo、Setup、Sequence、Counter、Training
+- プレイヤー情報: プロ・競技プレイヤー・参考プレイヤー情報
+- 動画: 公開済み動画データ
+- 横断検索
+- AIコーチ: SF6DNA内で出典を確認できる情報の検索・提示を中心とした安全な支援
+- お気に入り / マイキャラ / キャラクター比較
+- MR / LPランク記録
+- 診断履歴
+- 対戦後30秒ログ / 直近10戦振り返り / リプレイ復習
+- 対面ナレッジカード
+- Admin / Data Quality管理
 
----
+機能一覧は [FEATURES.md](./FEATURES.md) を参照してください。
 
-## 現在実装済みの機能
+## データ品質方針
 
-| 機能 | 概要 |
-|---|---|
-| ホーム | サイトの入り口。各機能への導線 |
-| プレイヤー診断 | 通常モード・上級モードの2種類。質問に回答してタイプ診断を行う(`diagnosis.html`、`?mode=advanced`で上級モードに切替) |
-| 診断結果 | 8軸のスコアに基づき、おすすめキャラクター・参考プロ選手を動的に提示(`result.html`) |
-| プレイヤー図鑑 | プロ選手・配信者・VTuber・YouTuberの一覧・詳細(`players.html`、`player.html`) |
-| プロ選手名鑑 | 一部選手向けの詳細ページ(`pro-player.html`) |
-| キャラクター図鑑 | 全キャラクターの詳細情報・コンボ動画(`characters.html`、`character.html`) |
-| キャラクター比較選択 | 比較したいキャラクターを選ぶ画面(`character-select.html`) |
-| チーム図鑑 | チーム一覧・詳細・年代別ロスター(`team.html`、`team-detail.html`) |
-| 比較機能 | 選手・キャラクターを比較(`compare.html`) |
-| お気に入り | 診断結果やキャラクターをブラウザに保存(`favorites.html`) |
-| ランク管理 | MR(マスターレート)の手動記録・推移グラフ・Actカレンダー(`rank-tracker.html`) |
-| About関連 | サイト概要・お問い合わせ・FAQ・更新履歴・情報源(`about.html`ほか) |
-| 動画API連携 | バックエンドAPI経由でYouTube動画を検索・表示。0件時は複数クエリで自動リトライ |
+SF6DNAでは件数より誤情報を出さないことを優先します。
 
-## 今後実装予定の機能
+- `reviewed ≠ verified`
+- `draft ≠ published`
+- Sourceがあるだけではverifiedへ昇格しない
+- 推測Modern Commandを登録しない
+- SourceなしFrameを確定登録しない
+- 旧Patch情報をCurrentとして扱わない
+- Strategyは公開条件を満たした情報だけをPublic UIへ表示する
+- AI Coachは根拠不足の攻略内容を自由生成で補わない
 
-（[FEATURES.md](./FEATURES.md) より）
-
-- AIリプレイ分析
-- コンボ検索
-- フレーム検索
-- 練習メニュー生成
-- 大会カレンダー
-- コーチングAI
-
-現時点では上記のコード実装は未着手です。詳細な進捗は [PROJECT_STATUS.md](./PROJECT_STATUS.md) を参照してください。
-
----
+現行Patch baselineは `2026.08.03` 以降です。
 
 ## 技術スタック
 
-- **フロントエンド**: HTML / CSS / JavaScript(素の実装。フレームワーク・ビルドツールは使用していません)
-- **ホスティング**: GitHub Pages
-- **バックエンド**: 動画検索用の外部API(`https://sf6dna-backend.onrender.com`、Node.js/Expressと推測。**このリポジトリには含まれておらず、別リポジトリで管理されています**)
-- **データ保存**: ブラウザの`localStorage`(サーバー側のデータベースは使用していません)
+### v2
 
----
+- Next.js 16
+- React 19
+- TypeScript 5
+- Supabase
+- Vercel
+- Browser localStorage（個人向けローカル保存機能）
 
-## ディレクトリ構成
+### Legacy
 
-```
+リポジトリ直下には旧静的サイトのHTML / CSS / JavaScriptと画像素材が残っています。v2のRuntime正本ではありません。
+
+## ディレクトリ
+
+```text
 SF6DNA/
-├── index.html, diagnosis.html, result.html,          # トップ・診断関連
-│   character.html, character-select.html, characters.html,  # キャラクター関連
-│   player.html, players.html, pro-player.html,       # 選手関連
-│   team.html, team-detail.html,                      # チーム関連
-│   compare.html, favorites.html, rank-tracker.html,  # 比較・お気に入り・ランク管理
-│   about.html, contact.html, faq.html,
-│   changelog.html, sources.html, design-system.html
-│
-├── assets/
-│   ├── css/    ← 使用中のCSS
-│   ├── js/     ← 使用中のJS(データファイル + ページ別ロジック)
-│   └── images/ (characters, players, thumbnails)
-│
-├── docs/
-│   ├── ARCHITECTURE.md ← システム構成の詳細
-│   ├── TECH_DEBT.md    ← 既知の技術的負債・改善候補
-│   └── DATA_ISSUES.md  ← 選手データの参照切れ・重複の管理台帳
-│
-├── css/, js/   ← 【未使用のレガシーディレクトリ】どのHTMLからも参照されていません
-│
-└── players/*.png ← 選手アイコン画像
+├── v2-web/                 # 現行Next.jsアプリ
+│   ├── src/app/            # Routes / UI
+│   ├── src/components/     # Components
+│   ├── src/lib/            # Supabase access / public gates / helpers
+│   └── tests/              # Policy / release / regression tests
+├── supabase/               # migrations / DB related files
+├── docs/                   # Phase audit / requirements / release docs
+├── assets/images/          # 旧版由来の画像素材。v2 fallbackでも一部利用
+├── scripts/                # audit / migration utilities
+└── *.html, assets/js, ...  # Legacy static implementation
 ```
 
-各ファイルの詳しい役割は [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) を参照してください。
-
----
-
-## ローカルでの起動方法
-
-このプロジェクトはビルド不要の静的サイトです。以下のいずれかの方法で確認できます。
-
-### 方法1: 簡易HTTPサーバーを使う(推奨)
+## ローカル起動
 
 ```bash
-# リポジトリのルートで実行
-python3 -m http.server 8000
+cd v2-web
+npm install
+npm run dev
 ```
 
-ブラウザで `http://localhost:8000/index.html` を開いてください。
+標準では `http://localhost:3000` を開きます。
 
-> **注意**: `index.html`をブラウザで直接ダブルクリックして開く(`file://`で開く)と、動画検索APIへのリクエストが正しく動作しない場合があります。可能な限り上記のような簡易サーバー経由で確認してください。
+### 必要な環境変数
 
-### 方法2: VS CodeのLive Server拡張機能などを使う
+最低限、Supabase-backed routeを確認する場合は次を設定します。
 
-同様に、ローカルサーバー経由でアクセスしてください。
+```text
+NEXT_PUBLIC_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY
+```
 
----
+公開URLを明示する環境では必要に応じて次も設定します。
 
-## GitHub Pagesへの公開方法
+```text
+NEXT_PUBLIC_SITE_URL
+```
 
-このリポジトリはGitHub Pagesで公開されています(`https://sf6lab.github.io/SF6DNA/`)。
+秘密鍵・service role keyをClientへ公開しないでください。
 
-一般的なGitHub Pagesの公開手順は以下の通りです（**リポジトリのSettings画面の実際の設定は未確認のため、参考情報としてご確認ください**）。
+## 品質確認
 
-1. `main`ブランチに変更をpushする
-2. GitHubリポジトリの **Settings → Pages** で、公開元ブランチ(例: `main` / `root`)が設定されていることを確認する
-3. 数分後、公開URLに変更が反映される
+`v2-web` で以下を実行できます。
 
----
+```bash
+npm run typecheck
+npm run lint
+npm test
+npm run build
+```
 
-## 開発ルール
+GitHub ActionsにはBrowser / Runtime / Lighthouse / Release / Data Gate系のAcceptance workflowもあります。
 
-開発時のルールは [CLAUDE.md](./CLAUDE.md) にまとめています。主なポイント:
+## Deployment
 
-- 可読性・保守性を優先する
-- 不要なライブラリを追加しない
-- 実装前に変更内容・影響範囲を説明する
-- 実装後に変更ファイル・確認方法・今後の改善案を報告する
-- 仕様が曖昧な場合は質問する
-- 既存機能を壊さない
-- 大規模変更は小さな単位に分ける
+- 作業ブランチ: `sf6dna-v2`
+- Preview: Vercel Previewを使用
+- `main`: ユーザーの明示許可まで変更しない
+- v2 Production deploy: ユーザーの明示許可がある場合のみ実行
 
----
+Previewは検索エンジン向けにクロールを許可しない設定です。
 
-## 今後のロードマップ
+## Release前の残作業
 
-1. **ドキュメント整備**(完了): README・ARCHITECTURE・TECH_DEBT・DATA_ISSUESの整備による保守性向上
-2. **データ整合性の段階的な修正**(対応中): 確実に修正できるもの(表記ゆれ等)から順に対応。判断が必要なもの・未登録データは [docs/DATA_ISSUES.md](./docs/DATA_ISSUES.md) で管理し、`node scripts/check-data-integrity.js` で継続的に検証
-3. **未実装機能の着手**: FEATURES.mdの実装予定機能から優先順位を決めて着手
-4. **技術的負債の解消**: [docs/TECH_DEBT.md](./docs/TECH_DEBT.md) に記載の項目(レガシーディレクトリの削除、選手ID重複の解消など)
+実機テスト前にUI・画像・文言・SEO・Preview・Auth/Admin・Public Gate・Release docs・CI・Performanceを完了し、Release Candidate HEADを固定します。
 
-進捗状況は随時 [PROJECT_STATUS.md](./PROJECT_STATUS.md) に反映します。
+その後、[Phase23 Real-Device Test Checklist](./docs/PHASE23_REAL_DEVICE_TEST_CHECKLIST_2026-08-29.md) を使ってPC / iPhone実機テストを行い、Production Readinessを最終判定します。
+
+## 関連文書
+
+- [PROJECT_STATUS.md](./PROJECT_STATUS.md)
+- [FEATURES.md](./FEATURES.md)
+- [docs/V2_REQUIREMENTS.md](./docs/V2_REQUIREMENTS.md)
+- [docs/V2_RELEASE_READINESS.md](./docs/V2_RELEASE_READINESS.md)
+- [docs/KNOWN_ISSUES.md](./docs/KNOWN_ISSUES.md)
+- [docs/TECH_DEBT.md](./docs/TECH_DEBT.md)
+- [docs/PHASE22_FINAL_AUDIT_2026-08-29.md](./docs/PHASE22_FINAL_AUDIT_2026-08-29.md)
+- [docs/PHASE23_FINAL_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md](./docs/PHASE23_FINAL_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md)
