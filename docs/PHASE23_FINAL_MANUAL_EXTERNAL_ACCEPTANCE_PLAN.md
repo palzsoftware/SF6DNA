@@ -1,188 +1,181 @@
 # SF6DNA Phase23 Final Manual / External Acceptance Plan
 
 最終更新: 2026-08-29 JST
-状態: **Non-human work完了 / Final Manual Stage待ち**
+状態: **全safe non-human work完了 / Final Manual Stage待ち**
 
 ## Phase23名称
 
 **Final Manual / External Acceptance & Production Decision**
 
-## 現在位置
+## Current automated baseline
 
-ユーザー指示により、実機・実ログイン・人物同定・Publication approvalなど人の操作または判断が必要な作業を最後にまとめて実施する。
+- Application implementation: `3c702ca0dad54ab2f73a2a940d1cc17e6511d3f1`
+- DB hardening follow-up: `5c46de5f0a81e4c9996b5ff30f7896aa7cdf651e`
+- CI invariant follow-up: `4c3dedad21fff648a2c887a7a66ba9b68bb05b23`
+- Current Patch: `2026.08.03`
+- `main`: 未変更
+- v2 Production: 未公開
 
-Non-human Pre-device workは完了済み。
-
-Automated application baseline:
-
-`634845b9ffedacac0ba706186852f295c2204755`
-
-詳細:
-
-- `docs/PHASE23_PRE_DEVICE_POLISH_AUDIT_2026-08-29.md`
-- `docs/PHASE23_PUBLICATION_READINESS_2026-08-29.md`
-- `docs/PHASE23_AUTOMATED_RC_BASELINE_2026-08-29.md`
+このbaselineはFinal RCではない。Publication/Auth/人物確認などmanual変更後に必要なら再固定する。
 
 ## Completed before manual stage
 
-- UI / copy最終監査・調整
-- Character / Player画像監査
-- Image Optimization / responsive最適化
-- metadata / robots / sitemap / OGP / SEO
+- UI / copy / responsive / SEO / metadata最終監査
+- Character / Player画像機械監査と安全な17 Player fallback
+- Next.js Image Optimization
 - Vercel Preview / build / runtime監査
-- Static Auth/Admin boundary監査
-- Public Move / Strategy Gate最終監査
-- `KNOWN_ISSUES` / `TECH_DEBT` / `DATA_ISSUES` 現行v2再監査
-- Release文書同期
-- Application CI全Gate PASS
-- Lighthouse / Performance再計測
-- Move候補701件の構造 / Source監査
-- Player画像の追加機械照合監査
-- CAPCOM Official Frame Snapshot監査ツール修正
 - CAPCOM日本語Frame Snapshot 31 / 31 PASS
-- Automated RC baseline固定
+- Public Move / Strategy Gate監査
+- Move / Command / Frame official Evidence Gate整合
+- Move Admin publish順序hardening
+- Strategy 5種 publish順序hardening
+- Diagnosis completeness Admin/RLS Gate
+- Character Trait Score Source/Admin/RLS Gate
+- Current Patch atomic switch RPC
+- RPC Security INVOKER化
+- relation RLS/実データ監査
+- Security Advisor 0 lints
+- Application 8 CI Gate PASS
+- current machine-ready Move 701件の再集計
 
 ## P23-00 Automated Baseline — COMPLETE
 
-- Application tested head: `634845b9ffedacac0ba706186852f295c2204755`
-- `main`未変更
-- Current Patch: `2026.08.03`
-- v2 Production未公開
-- RLS 38 / 38
-- Security Advisor 0
-- Application 8 CI Gate PASS
+Application head `3c702ca0...` の8 workflowは全PASS:
 
-Final RC HEADはmanual stageでDB / code / asset変更が発生した場合、その変更後に固定する。
+- Phase16 Release Acceptance `33240366996`
+- Phase15 Runtime Smoke `33240366991`
+- Phase15 Browser Acceptance `33240367023`
+- Phase15 Lighthouse Audit `33240366981`
+- Phase19 Internal Hardening `33240367007`
+- Phase20 Verified Content Acceptance `33240367003`
+- SF6DNA v2 Web Check `33240366993`
+- Phase18 Data Gate Acceptance `33240367041`
 
-## P23-01 Vercel Project / Preview — COMPLETE for automated stage
+DB follow-up `5c46de5f...` のPhase19もPASS `33240529766`。
 
-- Vercel Project: `sf-6-dna`
-- Project ID: `prj_UwgkJ3pXqGBWhaH6qn6pY8TTZMpR`
-- GitHub `palzsoftware/SF6DNA`接続済み
-- `sf6dna-v2` Preview成立済み
-- Preview READY確認済み
+## P23-01 Vercel Preview — COMPLETE for automated stage
+
+Latest DB follow-up Preview:
+
+- Deployment: `dpl_8sdQJbKXF3EYmGgeQbsRMnk1jM74`
+- READY
+- Previewのみ
+
+CI follow-up Preview:
+
+- Deployment: `dpl_9iFYnQTxXuCUyJ3cJmTGxbMSm6Rt`
+- READY
 - Build error 0
 - runtime error / fatal 0
-- v2 Production deploy未実施
 
-manual stageでアプリ変更が発生した場合のみ、変更後Previewを再確認する。
+Production deployは未実施。
 
-## P23-02 Preview Runtime / Automated Browser — COMPLETE
+## P23-02 Data / Security — COMPLETE for automated stage
 
-自動 / static確認済み対象:
+Current public:
 
-- Top
-- Characters list/detail
-- Moves
-- Combos / Setups / Sequences / Counters / Training
-- Players list/detail
-- Videos list/detail
-- Search
-- Diagnosis
-- AI Coach safe behavior
-- `/tools`
-- `/favorites`
-- `/my-characters`
-- `/compare`
-- `/rank-tracker`
-- `/diagnosis/history`
-- `/about`
-- `/faq`
-- `/sources`
-- `/changelog`
-- `/improve`
-- `/matchup-card`
-- robots / sitemap / metadata
-- safe empty / 404
-- build/runtime logs
+- Character: 31
+- Diagnosis: 4
+- Move: 0
+- Combo / Setup / Sequence / Counter / Training: 0
+- Character Trait Score: 0
+- `auth.users`: 0
 
-Phase15 Browser Acceptance / Runtime Smoke等の自動GateはPASS。
+Current Move draft:
+
+- total 2052
+- strict machine-ready 701
+- not ready 1351
+- ready Character 12 / 31
+- Modernあり / なし: 662 / 39
+
+701件の現在DB内訳:
+
+- Dee Jay 105
+- Jamie 93
+- Blanka 91
+- Dhalsim 88
+- Kimberly 76
+- E. Honda 70
+- Guile 70
+- Chun-Li 68
+- Yasmine 19
+- Mai Shiranui 10
+- C. Viper 7
+- Elena 4
+
+Machine Gate PASSはPublication approvalではない。
 
 ## P23-03 Content Publication Approval — MANUAL HOLD
 
-現在:
+人が初回公開範囲を決定する。
 
-- published Character: 31
-- published Diagnosis: 4
-- published Move: 0
-- published Strategy: 0
-- strict machine-gate-ready draft Move: 701 / 2052
-- ready Character: 12 / 31
-- 701中Modernあり / なし: 662 / 39
-- `draft + verified + Source` Strategy: Combo 1件
-
-701候補は追加構造 / Source監査済みだが、Machine Gate PASSはpublish approvalではない。
-
-人が以下を決定する:
-
-- Safe minimal release
-- または701候補から個別承認したMoveのみpublish
+- Safe minimal release（Move/Strategyは未承認ならempty state）
+- または701候補から内容を個別確認し承認したMoveのみpublish
 
 件数目的のbulk publishは禁止。
 
 ## P23-04 Real Auth / Admin E2E — MANUAL HOLD
 
-安全に準備された実またはテストアカウントを使用する。
+現在`auth.users=0`。正式な実またはテストアカウントを通常Authフローから準備して実ブラウザで確認する。
 
-確認:
-
-- unauthenticated block
-- authenticated non-admin write block
-- admin access
-- limited Create / Edit / Publish / Archive
-- save / re-fetch
-- cleanup
-- Public Gate unaffected
+1. unauthenticated block
+2. non-admin write block
+3. admin access
+4. limited draft Create
+5. Edit / save / re-fetch
+6. Evidence attachment
+7. incomplete publish rejection
+8. approved test Publish success
+9. public read
+10. Archive
+11. cleanup
+12. Public Gate unaffected
 
 禁止:
 
 - `auth.users`への直接SQL投入
-- 本番攻略データの不要な破壊的変更
-
-Static Auth boundary / RLS / Security Advisorは確認済みだが、実セッションEvidenceの代替にはしない。
+- static testを実ログインEvidence扱い
 
 ## P23-05 Player remaining-image identity check — MANUAL HOLD
 
 - published Player: 41
 - safety-confirmed fallback: 17
-- DB `image_url`: 未登録
-- published Player alias追加情報: 0
+- DB `image_url`: 0 / 41
 
-残画像をファイル名類似だけで機械接続しない。必要な人物同定はmanualで行う。
+残りは人物同定が必要な場合だけmanual確認する。ファイル名類似で自動接続しない。
 
-## P23-06 Final RC Freeze — MANUAL CHANGES後
+## P23-06 Final RC Freeze
 
-P23-03〜05でDB / code / assetsに変更が発生した場合:
+P23-03〜05でDB / code / assetsが変わった場合:
 
 1. 必要なTypecheck / Lint / Policy / Build / Browser / Data Gateを再実行
-2. Preview READYを確認
-3. Build/runtime error 0を確認
-4. Final RC HEADを固定
+2. Preview READY確認
+3. Build/runtime error 0確認
+4. Final RC HEAD固定
 
-変更がなければAutomated application baseline `634845b9...` をFinal RC候補として扱う。
+変更がなければ現在Automated baselineをFinal RC候補として再評価する。
 
-## P23-07 Actual Device / Browser — 最終Acceptance
+## P23-07 Actual Device Acceptance — 最後に実施
 
-Final RC固定後に実施する。
+Final RC固定後のみ:
 
-- user PC actual browser
-- actual iPhone
-- responsive layout
-- horizontal overflow
-- overlap
-- keyboard/focus
+1. PC actual browser
+2. iPhone actual device
+
+確認:
+
+- responsive / horizontal overflow / overlap
+- keyboard / focus
 - form/button reachability
-- back navigation
+- navigation / back behavior
 - perceived performance
-- localStorage系個人機能の操作確認
+- localStorage系個人機能
 
 正本チェックリスト:
+`docs/PHASE23_REAL_DEVICE_TEST_CHECKLIST_2026-08-29.md`
 
-- `docs/PHASE23_REAL_DEVICE_TEST_CHECKLIST_2026-08-29.md`
-
-actual-device Evidenceをemulationだけで代用しない。
-
-## P23-08 Production Readiness Final Decision
+## P23-08 Production Readiness
 
 manual Acceptance完了後に判定:
 
@@ -192,64 +185,37 @@ manual Acceptance完了後に判定:
 
 ## P23-09 Production Deployment
 
-ユーザーから明示的なProduction deploy許可がある場合のみ実行対象とする。
+ユーザーが明示的に許可した場合のみ実行する。許可がなければReadiness判定までで停止する。
 
-許可がない場合、Release Ready判定までで停止する。
-
-## Completed Performance Evidence
-
-Automated baseline `634845b9`:
-
-### Home
-
-- Performance 0.91
-- LCP 約3.39s
-- Accessibility 1.00
-- SEO 1.00
-- CLS 0
-
-### Character detail
-
-- Performance 0.93
-- LCP 約3.11s
-- Accessibility 1.00
-- SEO 1.00
-- CLS 0
-
-## Completed Official External Evidence
+## External evidence
 
 CAPCOM Official Frame Snapshot:
 
-- Workflow Run: `33228209058`
-- Result: PASS
+- Run `33228209058`
 - 31 / 31 Character pages HTTP 200
-- all attempt 1
-- Artifact ID: `9707625771`
-
-このEvidenceはread-onlyであり、DB status変更を自動化しない。
+- Artifact ID `9707625771`
 
 ## Exit Criteria
 
-- Non-human Pre-device work: **完了済み**
+- safe non-human work: 完了
 - Publication approval: manual
 - Real Auth/Admin E2E: manual
 - 必要なPlayer人物確認: manual
 - Final RC固定
 - PC / iPhone actual-device Acceptance
 - Production Readiness判定
-- Release blockerが0、またはNo-Go理由が明文化済み
-- Production deployはユーザー明示許可に従う
+- Production deployは明示許可時のみ
 
 ## 絶対ルール
 
-- `main`は明示許可まで変更禁止
-- v2 Production deployは明示許可まで禁止
+- `main`変更禁止
+- Production deploy禁止（明示許可まで）
 - `reviewed ≠ verified`
 - `draft ≠ published`
 - Sourceありだけでverifiedへ昇格しない
-- Machine Gate PASSだけでpublishしない
+- Machine Gateだけでpublishしない
 - 推測Modern Command禁止
 - SourceなしFrame確定禁止
-- 件数目的のbulk verify / publish禁止
-- actual device Evidenceをemulationだけで代用しない
+- bulk verify / publish禁止
+- actual-device Evidenceをemulationで代用しない
 - manual Auth Evidenceをstatic testで代用しない
