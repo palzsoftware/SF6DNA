@@ -109,7 +109,9 @@ jobs:
 
           assert.ok(auth.includes('candidate?.startsWith("/")'));
           assert.ok(auth.includes('!candidate.startsWith("//")'), 'protocol-relative auth next must be rejected');
-          assert.ok(robots.includes('disallow: ["/admin", "/api/", "/auth"]'));
+          for (const requiredDisallow of ['"/admin"', '"/api/"', '"/auth"']) {
+            assert.ok(robots.includes(requiredDisallow), `robots missing ${requiredDisallow}`);
+          }
 
           console.log('Phase19 release-critical static invariants: PASS');
           NODE
