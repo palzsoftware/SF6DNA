@@ -5,12 +5,14 @@
 ## 現在状態
 
 - Phase1〜22: **完了**
-- Phase23: **進行中**
-- Pre-device automated/static polish: **完了**
+- Phase23: **最終manual stage待ち**
+- Non-human Pre-device work: **完了**
 - Application tested head: `634845b9ffedacac0ba706186852f295c2204755`
-- PC / iPhone実機テスト: **Release Candidate固定後の最後の確認としてHOLD**
-- Production Readiness: **未判定**
+- PC / iPhone実機テスト: **最後のmanual stageとしてHOLD**
+- Production Readiness: **未判定 / manual stage後**
 - v2 Production deploy: **未実施**
+
+ユーザー指示により、実機・実ログイン・人物同定・Publication approval等、人の操作または判断を必要とする作業は最後まで保留する。
 
 ## 正本
 
@@ -22,24 +24,29 @@
 - Project ID: `wnuxaxbrpudyypzdbdho`
 - Current Patch baseline: `2026.08.03`
 
-## 完了したPre-device作業
+## 完了したNon-human Pre-device作業
 
 - 全主要ページUI / copy再監査
 - 公開画面の内部管理用語整理
 - Character / Player画像監査
-- exact-match Player画像17件の安全なfallback接続
+- 安全確認済みPlayer画像17件のfallback接続
+- Player alias機械監査（published 41名に追加aliasなし）
 - Next.js Image Optimization導入
 - Home / Character / Player画像のresponsive最適化
 - metadata / robots / sitemap / OGP整理
 - Preview検索クロール禁止
 - Release docs更新
-- KNOWN_ISSUES / TECH_DEBTのv2再分類
+- `KNOWN_ISSUES.md` / `TECH_DEBT.md` / `DATA_ISSUES.md` のv2再分類
+- Supabase参照整合性監査
 - Supabase RLS 38 / 38確認
 - Security Advisor 0 lints確認
 - Public Move / Strategy Gate再確認
-- 全8 CI workflow再実行 / PASS
+- Move候補701件の構造 / Source再監査
+- CAPCOM公式Frame Snapshotスクリプト修正
+- CAPCOM日本語Frame Snapshot **31 / 31取得PASS**
+- 全8 application CI workflow再実行 / PASS
 - Lighthouse再計測
-- 最新Vercel Preview READY / Build error 0 / runtime error-fatal 0
+- Vercel Preview READY / Build error 0 / runtime error-fatal 0
 
 詳細: `docs/PHASE23_PRE_DEVICE_POLISH_AUDIT_2026-08-29.md`
 
@@ -73,8 +80,13 @@
 
 Move:
 
-- draft 2052
-- machine Public Gate ready draft: 701
+- draft: 2052
+- strict machine Public Gate ready draft: **701**
+- gate not ready: 1351
+- ready Character: 12 / 31
+- ready候補のModernあり / なし: 662 / 39
+
+701候補について、blank slug/name/Classic Command、duplicate slug、Current Frame cardinality、Classic Command cardinality、Startup/Recovery/Damage欠損などの構造異常は検出していない。Move / Classic Command / Current Frameのrequired official EvidenceもCAPCOM Source relationで確認済み。
 
 Strategy candidate (`draft + verified + Source`):
 
@@ -85,15 +97,32 @@ Strategy candidate (`draft + verified + Source`):
 
 詳細: `docs/PHASE23_PUBLICATION_READINESS_2026-08-29.md`
 
-## 残作業 — 実機テスト前
+## CAPCOM Official Snapshot
 
-### 1. 攻略データ公開方針決定
+- Audit script fix: `ac4ed232d0f73c619ac2681565ab55c289022967`
+- Workflow: `Phase20 Official Frame Snapshot`
+- Run: `33228209058`
+- Result: **PASS**
+- CAPCOM Japanese frame pages: **31 / 31 HTTP 200**
+- Artifact: `phase20-official-frame-snapshots-ja-jp`
+- Artifact ID: `9707625771`
 
-現在の安全なempty state中心で初回Releaseするか、701 Move候補等を個別監査して公開範囲を増やしてからReleaseするかを決定する。
+このSnapshot取得はEvidence監査用であり、DB statusを変更しない。
+
+## 残作業 — Human / manual stageのみ
+
+### 1. 攻略データPublication approval
+
+人による公開範囲の判断。
+
+- Safe empty state中心のminimal release
+- または701 Move候補から個別承認したもののみpublish
+
+Machine Gateだけを根拠にbulk publishしない。
 
 ### 2. Real Auth / Admin E2E
 
-実ログイン済みAdmin / non-adminセッションで次を確認する。
+実ログイン済みAdmin / non-adminセッションで確認する。
 
 - unauthenticated block
 - non-admin write block
@@ -105,18 +134,33 @@ Strategy candidate (`draft + verified + Source`):
 
 静的Auth境界、RLS、Security Advisorは確認済みだが、実セッションE2Eを推測完了扱いしない。
 
-### 3. Release Candidate固定
+### 3. Player残画像の人物確認
 
-上記でコード / DB変更が発生した場合に必要な回帰テストを行い、Release Candidate HEADを固定する。
+機械的に安全確定できない画像だけmanual確認する。
 
-## 最後の作業
+### 4. 最終Release Candidate固定
 
-Release Candidate固定後:
+manual stageでPublication status等の変更が発生した場合、その変更後に必要な回帰テストを実施して最終RC HEADを固定する。
 
-1. PC実機テスト
-2. iPhone実機テスト
-3. Production Readiness最終判定
-4. Production deploy（ユーザー明示許可がある場合のみ）
+### 5. PC / iPhone実機テスト
+
+最終RCに対して実施する。
+
+### 6. Production Readiness判定
+
+実機Acceptance完了後に最終判定する。
+
+### 7. Production deploy
+
+ユーザーが明示的に許可した場合のみ実施する。
+
+## Automated RC baseline
+
+Publicアプリ実装の自動Gate済みbaseline:
+
+`634845b9ffedacac0ba706186852f295c2204755`
+
+このcommit以降の現時点の変更は監査ツール / 文書更新で、Publicアプリ実装の動作変更はない。
 
 ## Data quality rules
 
