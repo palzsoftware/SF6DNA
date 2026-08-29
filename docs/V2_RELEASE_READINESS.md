@@ -1,181 +1,181 @@
 # SF6DNA v2 Release Readiness
 
-## 目的
+最終更新: 2026-08-29 JST
 
-コード完成と公開可能状態を分離して判定する。公開は「画面が動く」だけでなく、データ品質・認証・検索・SEO・実機確認まで満たした段階で行う。
+## Current decision
 
-## Gate A: Build / Runtime
+**NOT YET RELEASE READY**
 
-- GitHub Actions: install / typecheck / lint / build が成功
-- 主要Routeで500エラーがない
-- Supabase未設定時に安全なfallback表示になる
-- Backend API障害時にページ全体が落ちない
+Pre-device automated/static polishは完了したが、Release Candidate固定前に以下が残る。
 
-## Gate B: Security / Admin
+1. 攻略データ公開範囲の決定
+2. Real Auth / Admin E2E
+3. Release Candidate固定
+4. PC / iPhone実機Acceptance
+5. Production Readiness最終判定
 
-- Supabase RLSが全管理対象テーブルで有効
-- Admin writeは `requireAdmin()` + RLS の二重ガード
-- 実AdminアカウントでCreate / Edit / Publish / ArchiveのE2E確認
-- API key / service role keyをClientへ露出しない
-- Security Advisorの重大項目0
+Production deployはユーザー明示許可がある場合のみ実施する。
 
-## Gate C: Data quality
+## Gate A — Build / Runtime: PASS
 
-公開攻略データは以下を満たす。
+Application tested head:
+`634845b9ffedacac0ba706186852f295c2204755`
 
-- `status = published`
-- `verification_status = verified`
-- Sourceあり
-- Patch依存データはvalid-from Patchあり
-- 旧Patch情報を現行扱いしない
-- Move公開時はCommand + Frame Dataを必須とする
-- AI生成のみを根拠にframe / punish / true blockstring等を確定しない
+PASS:
 
-## Gate D: Character encyclopedia
+- Phase16 Release Acceptance
+- Phase15 Runtime Smoke
+- Phase15 Browser Acceptance
+- Phase19 Internal Hardening
+- Phase20 Verified Content Acceptance
+- Phase18 Data Gate Acceptance
+- SF6DNA v2 Web Check
+- Build / Typecheck / Lint / Policy tests
 
-31プレイアブルキャラクターについて、公開開始時点の最低条件を次とする。
+Vercel Preview:
 
-- 基本Characterレコードと公式Source
-- Character Alias
-- 主要Move / Command / Frameのverified投入
-- 最低限の基本Combo
-- 代表的なCounter / Training導線
+- READY
+- Build error 0
+- runtime error / fatal 0（確認時直近24h）
 
-全てを100%埋めるまで公開を止めるのではなく、未投入領域を明示し、誤情報を公開しないことを優先する。
+## Gate B — Security / Admin: CONDITIONAL
 
-## Gate E: Diagnosis
+PASS:
 
-- 上達課題診断
-- プレイスタイル診断
-- キャラクター適性診断
-- 総合簡易診断
+- public RLS 38 / 38
+- Supabase Security Advisor 0 lints
+- unauthenticated / non-admin / admin境界のstatic code確認
+- `requireAdmin()` + RLS構成確認
 
-各診断で質問数・選択肢数・結果表示・やり直し・検索導線を確認する。
+Pending:
 
-キャラクター直接推薦は `character_trait_scores` のverified + publishedマッピングが十分に揃うまで解禁しない。
+- 実Admin / non-adminブラウザセッションによるCreate / Edit / Publish / Archive E2E
 
-## Gate F: AI Coach
+実セッション確認なしに完了扱いしない。
 
-生成回答を有効化する前に以下を満たす。
+## Gate C — Data quality: PASS for protection / publication decision pending
 
-- Current Patch取得
-- Evidence取得
-- Evidence Source表示
-- verifiedデータ優先
-- Evidence不足時に「情報不足」と返せる
-- DBにない攻略知識を断定しない
+維持する原則:
 
-初回リリースではEvidence表示のみでも可。生成回答は後から段階解禁する。
+- `reviewed ≠ verified`
+- `draft ≠ published`
+- Sourceありだけでverifiedにしない
+- Modern CommandをClassicから推測しない
+- SourceなしFrameを確定しない
+- Current Patchを外れた値をCurrentとして扱わない
 
-## Gate G: Deployment / UX
+Public Gate漏れは確認されていない。
 
-- Vercel Preview成功
-- Supabase環境変数設定
-- PCブラウザ確認
-- iPhone幅確認
-- ナビゲーション・検索・診断の実機確認
-- 主要ページのmetadata / OGP / sitemap / robots確認
-- 画像・動画の遅延読み込みとモバイル表示確認
+## Gate D — Character encyclopedia: CONTENT SCOPE PENDING
 
-## Gate H: Launch decision
+現在:
 
-正式公開前に `/admin/data-quality` を確認し、以下の3種類を明確に区別する。
+- playable + published Character: 31
+- published Move: 0
+- published Combo / Setup / Sequence / Counter / Training: 0
 
-1. 実装済み
-2. データ投入済み
-3. verified + published済み
+Move draft 2052件中701件はPublic Move Gateの機械条件を満たすが、draftのため公開承認ではない。
 
-「実装済み」を「コンテンツ完成」と扱わない。
+初回Releaseをsafe empty state中心にするか、個別公開監査を行うかをRelease Candidate固定前に決定する。
 
----
+詳細:
+`docs/PHASE23_PUBLICATION_READINESS_2026-08-29.md`
 
-## Phase14 Safe Demo Release Gate — 2026-08-27
+## Gate E — Diagnosis: INTERNAL PASS / final device pending
 
-Phase14では上記Gateをデモ公開判定へ具体化する。件数確保のための自動publishは行わない。
+- published Diagnosis: 4
+- Diagnosis runner実装済み
+- 端末内draft answer resume実装済み
+- Diagnosis History実装済み
+- Browser / policy tests PASS
 
-### Public Strategy Gate
+最終PC / iPhone操作確認はPhase23実機Acceptanceで行う。
 
-Combo / Setup / Sequence / Counter / Training はPublic UI・Unified Search・AI Coach Retrievalの全経路で、最低限次を同時に満たすこと。
+## Gate F — AI Coach: SAFE MODE PASS
 
-1. `status = published`
-2. `verification_status = verified`
-3. Source relationが存在する
-4. Patch依存データは現行または明示した有効Patchを持つ
-5. `draft / reviewed / unverified` は確定攻略情報としてPublicへ出さない
+- Source-backed retrieval中心
+- Evidence不足を自由生成で補うGenerationはOFF
+- input boundaryあり
+- sourced evidence優先
 
-Phase14 P0-02でRLSと`search_sf6dna`へ `published + verified` を強制した。Web側もKnowledge list / Character section / Detailで同条件を明示する。
-Phase18ではStrategy Public RLSをさらに`published + verified + Source relation`へ強化した。
+自由生成の全面解禁は初回Release必須ではない。
 
-### Public Move Gate
+## Gate G — Deployment / UX: PRE-DEVICE PASS
 
-Moveには独立した`verification_status`列がないため、Moveの`status=published`だけを品質判定に使わない。
+完了:
 
-デモ公開候補Moveは最低限次を満たすこと。
+- Vercel Preview
+- Preview build/runtime log
+- metadata / robots / sitemap / OGP
+- Preview no-index
+- Browser Acceptance
+- Lighthouse
+- Image Optimization
 
-1. Characterがplayable + published
-2. Moveが公開候補としてレビュー済み
-3. Current Frameが存在する
-4. Current Frameが `verification_status = verified`
-5. Current Frameの`valid_from_patch_id`がCurrent Patchと一致する
-6. Classic Commandが存在する
-7. Frameにofficial Sourceが存在する
-8. Moveにofficial Sourceが存在する
-9. Classic Commandにofficial Sourceが存在する
-10. Modern Commandは存在する場合のみ表示し、欠損を推測補完しない
+Lighthouse after optimization:
 
-2026-08-27の実DB監査では、この機械条件を満たすdraft Move候補は **307件 / 4キャラ**。
+### Home
 
-- ジェイミー: 93
-- キンバリー: 76
-- ガイル: 70
-- 春麗: 68
-- 307件中Modern Commandあり: 295
-- Modern Commandなし: 12
+- Performance 0.91
+- Accessibility 1.00
+- Best Practices 0.96
+- SEO 1.00
+- LCP 約3.39s
+- CLS 0
 
-2026-08-28 Phase19で307候補すべてについて、Move / Current Frame / Classic Commandのofficial Evidenceを再確認した。App GateとMove RLSも同条件へ統一した。
+### Character detail
 
-これは**公開承認件数ではない**。Move本体は全件draftのため、候補抽出と表示基盤を先に整え、Source/名称/Command/Frameの最終公開チェックを通過したものだけを個別にpublish対象とする。
+- Performance 0.93
+- Accessibility 1.00
+- Best Practices 0.96
+- SEO 1.00
+- LCP 約3.11s
+- CLS 0
 
-### Strategy candidate snapshot
+Pending:
 
-2026-08-27時点で `verification_status=verified` のStrategyは、キンバリーのCombo 1件のみ確認済み。
+- PC actual browser
+- iPhone actual browser
+- actual localStorage操作
 
-- `kimberly-20260803-modern-assist2`
-- `Modern アシストコンボ2（2026.08.03）`
-- Patch: `2026.08.03`
-- Source relation: 2
-- Status: `draft`
+これらはRelease Candidate固定後の最後の作業として実施する。
 
-Phase13クリーンアップ方針どおりdraftを維持し、監査だけを理由にpublishへ戻さない。
+## Gate H — Launch decision: PENDING
 
-### Safe empty state
+Production Readinessは実機Acceptance終了後に次から判定する。
 
-条件を満たすPublicデータが0件の場合、画面は未検証データを代替表示せず「公開済みデータはまだありません」等のempty stateを表示する。
+- Release Ready
+- Conditional Go
+- No-Go
 
-### Release decision rule
+## Public Move Gate
 
-- 機械Gate通過 ≠ 自動publish
-- Sourceあり ≠ verified
-- reviewed ≠ verified
-- draft ≠ published
-- 検証できない値をデモ都合で埋めない
-- Production公開はユーザーの明示許可なしに実行しない
+Moveは最低限以下を要求する。
 
----
+1. Character published
+2. Move published
+3. Classic Command
+4. Classic Command official Source
+5. Move official Source
+6. Current Patch Frame
+7. Frame verified
+8. Frame official Source
+9. Modern Commandは存在する場合だけ表示し、欠損を推測しない
 
-## Phase19 Internal Hardening — 2026-08-28
+## Public Strategy Gate
 
-Phase19では外部AcceptanceをPhase20へ分離したまま、内部Release Gateを横断監査した。
+Combo / Setup / Sequence / Counter / Trainingは最低限:
 
-- PostgreSQL FK: validated
-- Current Patch: 1件
-- duplicate / blank slug重大問題: 0
-- Current Frame duplicate: 0
-- Patch validity reversal: 0
-- polymorphic Source invalid target: 0（legacy type 16件を構造正規化後）
-- Supabase Security Advisor: 0 lints
-- Public Move Gate: App + RLSをCurrent Patch verified Frame + official Move/Frame/Classic Evidenceへ統一
-- Strategy Public RLS: published + verified + Source
-- AI Coach Generation: OFF維持
+1. published
+2. verified
+3. Source relation
 
-Phase19の内部PASSは、Gate GのVercel Preview・実機・実認証E2Eを代替しない。Production Ready最終判定はPhase20で行う。
+を要求する。
+
+Publicデータ0件の場合、reviewed / unverified / draftを代替表示せずsafe empty stateを出す。
+
+## Production rule
+
+- `main`はユーザー明示許可まで変更しない
+- v2 Production deployはユーザー明示許可まで行わない
+- 件数確保を理由にverification / publicationルールを緩めない
