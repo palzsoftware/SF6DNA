@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { listCharacters } from "@/lib/characters";
 
@@ -64,8 +65,13 @@ export default async function HomePage() {
               key={character.id}
               aria-label={`${character.name}の情報を見る`}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={character.imageUrl ?? ""} alt={character.name} width={760} height={760} />
+              <Image
+                src={character.imageUrl ?? ""}
+                alt={character.name}
+                fill
+                sizes="(max-width: 720px) 58vw, (max-width: 980px) 42vw, 28vw"
+                priority={index === 0}
+              />
             </Link>
           ))}
         </div>
