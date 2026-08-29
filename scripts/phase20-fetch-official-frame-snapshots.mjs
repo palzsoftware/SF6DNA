@@ -14,7 +14,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function fetchOne([projectSlug, officialSlug]) {
   const sourceUrl = `https://www.streetfighter.com/6/${locale}/character/${officialSlug}/frame`;
-  const mirrorUrl = `https://r.jina.ai/http://${sourceUrl}`;
+  const mirrorUrl = `https://r.jina.ai/${sourceUrl}`;
   let last = { status: 0, text: '', error: null };
   for (let attempt = 1; attempt <= 6; attempt += 1) {
     try {
