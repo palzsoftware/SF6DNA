@@ -95,6 +95,18 @@ export type DevicePreviewMoveCommand = {
   sortOrder: number | null;
 };
 
+export type DevicePreviewMoveMotionMedia = {
+  id: string;
+  moveId: string;
+  mediaType: "gif" | "video";
+  mediaUrl: string;
+  posterUrl: string | null;
+  sourceUrl: string | null;
+  sourceLabel: string | null;
+  status: string;
+  displayOrder: number | null;
+};
+
 export function normalizeDevicePreviewToken(value: string | string[] | undefined): string | null {
   const token = Array.isArray(value) ? value[0] : value;
   if (!token || token.length < 20 || token.length > 200) return null;
@@ -145,6 +157,27 @@ export async function getDevicePreviewMoveCommands(
 
   if (!Array.isArray(data)) return [];
   return data as unknown as DevicePreviewMoveCommand[];
+}
+
+export async function getDevicePreviewMoveMotionMedia(
+  characterId: string,
+  previewToken: string | null | undefined
+): Promise<DevicePreviewMoveMotionMedia[]> {
+  if (!isDevicePreviewRequest(previewToken)) return [];
+
+  const supabase = getSupabaseServerClient();
+  const { data, error } = await supabase.rpc("get_phase23_move_motion_media_preview", {
+    target_character_id: characterId,
+    preview_token: previewToken,
+  });
+
+  if (error) {
+    console.error("[device-preview] move motion media preview failed", error.message);
+    return [];
+  }
+
+  if (!Array.isArray(data)) return [];
+  return data as unknown as DevicePreviewMoveMotionMedia[];
 }
 
 export function appendDevicePreviewToken(href: string, previewToken: string | null | undefined) {
