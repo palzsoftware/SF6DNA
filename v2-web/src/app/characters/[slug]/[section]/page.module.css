@@ -34,9 +34,8 @@
   transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
 }
 
-.dataCard:hover,
-.dataCard:focus-visible {
-  border-color: var(--accent);
+.dataCard:hover {
+  border-color: color-mix(in srgb, var(--accent) 65%, var(--border));
   background: var(--surface-strong);
   transform: translateY(-1px);
 }
@@ -140,6 +139,88 @@
   font-size: 0.72rem;
 }
 
+.modernUnavailable {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 86, 86, 0.55);
+  border-radius: 10px;
+  background: rgba(255, 70, 70, 0.08);
+  color: #ff8a8a;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.modernUnavailable strong {
+  flex: 0 0 auto;
+  color: #ff6565;
+}
+
+.motionBlock {
+  display: grid;
+  gap: 8px;
+}
+
+.motionLabel {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.motionMedia {
+  display: block;
+  width: 100%;
+  max-height: 260px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #090c10;
+  object-fit: contain;
+}
+
+.motionSource {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.motionSource a,
+.motionFallback a {
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.motionFallback {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px dashed var(--border);
+  border-radius: 11px;
+  background: color-mix(in srgb, var(--bg) 88%, var(--surface-strong) 12%);
+}
+
+.motionFallback > span {
+  display: grid;
+  gap: 1px;
+}
+
+.motionFallback strong {
+  color: var(--text);
+  font-size: 0.78rem;
+}
+
+.motionFallback small {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
 .summary {
   margin: 0;
   color: var(--muted);
@@ -211,6 +292,15 @@
   font-weight: 800;
 }
 
+.more:hover,
+.more:focus-visible,
+.motionSource a:hover,
+.motionSource a:focus-visible,
+.motionFallback a:hover,
+.motionFallback a:focus-visible {
+  color: var(--text);
+}
+
 @media (max-width: 900px) {
   .dataGrid {
     grid-template-columns: 1fr;
@@ -220,7 +310,10 @@
 @media (max-width: 560px) {
   .previewNotice,
   .cardTop,
-  .cardFooter {
+  .cardFooter,
+  .motionSource,
+  .motionFallback,
+  .modernUnavailable {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -243,5 +336,9 @@
 
   .previewBadge {
     align-self: flex-start;
+  }
+
+  .motionMedia {
+    max-height: 220px;
   }
 }
