@@ -2,6 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CharacterTabs } from "@/components/character-tabs";
 import { listCharacterSectionItems } from "@/lib/character-sections";
+import {
+  appendDevicePreviewToken,
+  isDevicePreviewRequest,
+  normalizeDevicePreviewToken,
+} from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
 import {
   CHARACTER_SECTION_KEYS,
@@ -58,15 +63,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function CharacterSectionPage({ params }: { params: Promise<{ slug: string; section: string }> }) {
-  const { slug, section } = await params;
+export default async function CharacterSectionPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ slug: string; section: string }>;
+  searchParams: Promise<{ preview?: string | string[] }>;
+}) {
+  const [{ slug, section }, query] = await Promise.all([params, searchParams]);
   if (!isSection(section)) notFound();
 
-  const character = await getCharacterBySlug(slug);
+  const previewToken = normalizeDevicePreviewToken(query.preview);
+  const character = await getCharacterBySlug(slug, previewToken);
   if (!character) notFound();
 
   const meta = sectionMeta[section];
-  const items = await listCharacterSectionItems(character.id, section);
+  const items = await listCharacterSectionItems(character.id, section, previewToken);
+  const previewActive = isDevicePreviewRequest(previewToken);
 
   return (
     <div className="site-shell page-stack">
@@ -76,12 +89,23 @@ export default async function CharacterSectionPage({ params }: { params: Promise
         <p>{meta.description}</p>
       </section>
 
-      <CharacterTabs slug={character.slug} active={section} />
+      {previewActive ? (
+        <section className="empty-state">
+          <h2>Phase23 実機確認プレビュー</h2>
+          <p>「未公開プレビュー」と表示される項目は draft / reviewed を含む確認用データです。DBの公開ステータスは変更していません。</p>
+        </section>
+      ) : null}
+
+      <CharacterTabs slug={character.slug} active={section} previewToken={previewToken} />
 
       {items.length ? (
         <section className="search-result-list">
           {items.map((item) => (
-            <Link className="search-result" href={item.href} key={item.id}>
+            <Link
+              className="search-result"
+              href={appendDevicePreviewToken(item.href, previewToken)}
+              key={item.id}
+            >
               {item.meta ? <span className="search-result__type">{item.meta}</span> : null}
               <strong>{item.title}</strong>
               {item.subtitle ? <span>{item.subtitle}</span> : null}
