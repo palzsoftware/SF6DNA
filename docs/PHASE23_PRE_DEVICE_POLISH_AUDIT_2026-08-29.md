@@ -6,16 +6,11 @@ Branch: `sf6dna-v2`
 
 ## Decision
 
-**PRE-DEVICE AUTOMATED / STATIC POLISH COMPLETE**
+**NON-HUMAN PRE-DEVICE WORK COMPLETE**
 
-実機テスト前にChatGPT / GitHub / Supabase / Vercelで安全に完了できるUI・画像・文言・SEO・Public Gate・CI・Performance監査を完了した。
+実機・実ログイン・人物同定・公開承認など人の判断または操作を必要とする項目を除き、GitHub / Supabase / Vercelで安全に完了できるUI・画像・文言・SEO・Public Gate・CI・Performance・Source・Release文書監査を完了した。
 
-ただし、Release Candidate固定前に次の外部または公開判断項目が残る。
-
-1. 実認証セッションによるAdmin Create / Edit / Publish / Archive E2E
-2. 攻略データの公開方針決定
-3. 上記完了後のRelease Candidate固定
-4. PC / iPhone実機テスト
+人の手が必要な作業はユーザー指示どおり最後のmanual stageへ保留する。
 
 `main`変更・v2 Production deployは行っていない。
 
@@ -57,8 +52,9 @@ v2は既存Character画像fallbackを利用する。
 
 - published Player: 41
 - DB `image_url`: 41件すべて未登録
+- published 41名の `player_aliases`: 追加alias 0
 
-旧画像と現在のPlayer slugが完全一致した17件だけfallback接続した。
+旧画像と現在のPlayer slugが安全に一致すると既に確認済みの17件だけfallback接続した。
 
 対象:
 
@@ -80,7 +76,7 @@ v2は既存Character画像fallbackを利用する。
 - tokido
 - yamaguchi
 
-表記変換・人物同定が必要な残画像は推測接続しない。
+残画像について、ハイフン除去・大文字小文字・類似文字列だけで人物同定することはしない。追加aliasもないため、これ以上の機械的な安全接続はできない。人物確認はmanual stageへ保留する。
 
 ## 3. SEO / metadata
 
@@ -108,6 +104,11 @@ Project:
 - RLS enabled: 38 / 38
 - Security Advisor: 0 lints
 - Current Patch: 1件
+- `player_characters -> players` orphan: 0
+- `player_characters -> characters` orphan: 0
+- `player_aliases -> players` orphan: 0
+
+旧静的版 `DATA_ISSUES.md` のPlayer ID参照切れは現行v2 Blockerではないことを再確認し、文書を現行Supabase基準へ更新した。
 
 Performance Advisorにはunused index / multiple permissive policy等の最適化候補が存在する。
 
@@ -133,7 +134,7 @@ Strategy public readinessは以下を維持:
 
 Public Gate漏れを示すDB / static test上の問題は検出しなかった。
 
-## 6. Content publication snapshot
+## 6. Content publication snapshot — corrected re-audit
 
 2026-08-29実DB:
 
@@ -147,23 +148,50 @@ Public Gate漏れを示すDB / static test上の問題は検出しなかった�
 Move:
 
 - draft: 2052
-- Public Move Gateの機械条件を満たすdraft候補: 701
-- 条件未達draft: 1351
+- strict machine gateを満たすdraft候補: **701**
+- 条件未達draft: **1351**
+- gate-ready Character: **12 / 31**
 
-701候補は12キャラクターに分布する。
+正しいCharacter別内訳:
 
-- C. Viper 7
-- E. Honda 70
-- Elena 4
-- Guile 70
-- Kimberly 76
 - Jamie 93
-- Dhalsim 88
-- Dee Jay 105
-- Blanka 91
-- Yasmine 19
-- Mai 10
+- Kimberly 76
+- Guile 70
+- Elena 68
 - Chun-Li 68
+- C. Viper 67
+- Blanka 63
+- E. Honda 60
+- Dee Jay 52
+- Dhalsim 43
+- Mai 39
+- Yasmine 2
+
+Modern:
+
+- 701候補中Modernあり: 662
+- 701候補中Modernなし: 39
+
+701候補の追加構造監査:
+
+- blank slug: 0
+- blank name: 0
+- duplicate slug group: 0
+- blank Classic Command: 0
+- Current verified Frame cardinality異常: 0
+- duplicate Current verified Frame: 0
+- Classic Command missing / duplicate: 0 / 0
+- null Startup / Recovery / Damage: 0 / 0 / 0
+
+701候補のofficial Source:
+
+- CAPCOM official Source records: 12
+- blank URL: 0
+- non-CAPCOM publisher: 0
+- accessed_at欠損: 0
+- Source origin: `streetfighter.com`
+
+残り19キャラの多くはCurrent Patch verified Frame + official Frame Sourceは存在するが、Move本体 / Classic Commandへのofficial Source relationが不足する。Phase13の既存監査にSupporting Sourceを使ったCharacterもあるため、provenance確認なしに公式relationを一括追加しない。
 
 Strategyで `draft + verified + Source` まで満たす候補:
 
@@ -178,11 +206,30 @@ Strategyで `draft + verified + Source` まで満たす候補:
 - 機械Gate通過 ≠ publish承認
 - `draft ≠ published`
 - 件数目的のbulk publishは禁止
+- Modern欠損を推測補完しない
 - 現状態で攻略系Publicページは安全なempty stateが中心になる
 
-したがって、初回Releaseを「キャラクター基本情報・診断・個人ツール中心の安全な公開」にするか、701 Move候補等を個別公開監査してからReleaseするかを、Release Candidate固定前に決定する。
+Publication approvalは人の判断を要するため最後のmanual stageへ保留する。自動監査だけを理由にstatus変更しない。
 
-## 7. CI final rerun
+詳細: `docs/PHASE23_PUBLICATION_READINESS_2026-08-29.md`
+
+## 7. CAPCOM Official Frame Snapshot
+
+既存 `scripts/phase20-fetch-official-frame-snapshots.mjs` のReader URL組み立てに誤りを発見し修正した。
+
+- 修正commit: `ac4ed232d0f73c619ac2681565ab55c289022967`
+- Workflow: `Phase20 Official Frame Snapshot`
+- Run: `33228209058`
+- Result: **PASS**
+- Current CAPCOM Japanese frame snapshots: **31 / 31 success**
+- 全31キャラ: HTTP 200 / attempt 1
+- Artifact: `phase20-official-frame-snapshots-ja-jp`
+- Artifact files: 32（31 Character + manifest）
+- Artifact ID: `9707625771`
+
+この監査はCAPCOMページの現在取得可能性を確認するものであり、DBのdraftを自動publish / verified化する処理ではない。
+
+## 8. CI final rerun
 
 Application head `634845b9ffedacac0ba706186852f295c2204755` で確認:
 
@@ -197,7 +244,9 @@ Application head `634845b9ffedacac0ba706186852f295c2204755` で確認:
 
 Typecheck / Lint / Policy tests / Build / Browser E2E / Data GateはGREEN。
 
-## 8. Lighthouse improvement
+Application head以降の変更は監査スクリプト・Release文書のみであり、Publicアプリ実装には変更していない。
+
+## 9. Lighthouse improvement
 
 画像最適化前の基準:
 
@@ -245,46 +294,41 @@ Typecheck / Lint / Policy tests / Build / Browser E2E / Data GateはGREEN。
 
 Homeの重大な画像LCP問題は大幅改善した。
 
-## 9. Vercel Preview
+## 10. Vercel Preview
 
-Application head `634845b9` deployment:
+最新監査・文書更新前のApplication head `634845b9` PreviewはREADY / Build error 0 / runtime error・fatal 0。
 
-- Deployment: `dpl_3D1HCB6Azx6P3rv5XoAQPHJJC3tH`
-- State: READY
-- target: Preview
-- Build error: 0
-- Preview runtime error / fatal（直近24h）: 0
+監査ツール・文書更新後のPreviewについても随時READY / Build error 0 / runtime error・fatal 0を確認しており、アプリ実装の変更はない。
 
 PreviewはVercel SSO保護下にあるため、外部fetchだけで実ユーザー操作を代替しない。
 
-## 10. Auth / Admin
+## 11. Human / manual stage — intentionally held
 
-Static / DB boundary確認済み:
+以下は人の操作・判断を必要とするため、ユーザー指示どおり最後まで実行しない。
 
-- unauthenticated admin accessはAuth導線へ送る
-- non-admin roleをAdminとして扱わない
-- Admin writeは `requireAdmin()` とRLS境界を使用
-- RLS 38 / 38
-- Security Advisor 0
+1. 攻略データPublication approval
+   - Safe minimal releaseにするか
+   - 701候補から個別承認して公開するか
+2. 実ログイン済みAdmin / non-adminセッションによるE2E
+   - unauth / non-admin boundary
+   - Create / Edit / Publish / Archive / re-fetch / cleanup
+3. Player残画像の人物同定が必要な確認
+4. PC実機テスト
+5. iPhone実機テスト
+6. Production Readiness最終判定
+7. Production deploy（ユーザー明示許可時のみ）
 
-未完了:
+## 12. Release Candidate baseline
 
-- 実ログイン済みAdmin / non-adminブラウザセッションによるCreate / Edit / Publish / ArchiveのE2E
+Publicアプリ実装の自動Gate済みbaseline:
 
-この項目は実認証セッションなしに「完了」と推測しない。
+`634845b9ffedacac0ba706186852f295c2204755`
 
-## 11. Release Candidate freeze condition
+その後のbranch commitは監査ツール / 文書の更新のみ。
 
-次を満たすまでRC固定しない。
+manual stageでPublication status等を変更した場合は、その変更後に改めて最終RC HEADを固定し、PC / iPhone実機テストを行う。
 
-- 攻略データ公開方針決定
-- 必要な場合は公開候補の個別監査 / publish
-- 実Auth / Admin E2E
-- その変更後の必要な回帰テスト
-
-完了後、Release Candidate HEADを固定してPC / iPhone実機テストへ進む。
-
-## 12. Production
+## 13. Production
 
 - `main`: 変更していない
 - v2 Production deployment: 実施していない
