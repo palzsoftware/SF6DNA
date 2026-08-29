@@ -201,8 +201,10 @@ function renderMotion(media: MoveMotionMedia, title: string) {
       <img
         alt={`${title}のモーション`}
         className={styles.motionMedia}
+        height={360}
         loading="lazy"
         src={media.mediaUrl}
+        width={640}
       />
     );
   }
@@ -350,7 +352,7 @@ export default async function CharacterSectionPage({
                         <div className={styles.motionSource}>
                           <span>{primaryMotion.sourceLabel ?? "モーション出典"}</span>
                           {primaryMotion.sourceUrl ? (
-                            <a href={primaryMotion.sourceUrl} rel="noreferrer" target="_blank">出典を開く ↗</a>
+                            <a href={primaryMotion.sourceUrl} rel="noopener noreferrer" target="_blank">出典を開く ↗</a>
                           ) : null}
                         </div>
                       ) : null}
@@ -362,7 +364,7 @@ export default async function CharacterSectionPage({
                         <small>GIF / 短尺動画は準備中です。</small>
                       </span>
                       {officialMovelistUrl ? (
-                        <a href={officialMovelistUrl} rel="noreferrer" target="_blank">CAPCOM公式で動きを確認 ↗</a>
+                        <a href={officialMovelistUrl} rel="noopener noreferrer" target="_blank">CAPCOM公式で動きを確認 ↗</a>
                       ) : null}
                     </div>
                   )
