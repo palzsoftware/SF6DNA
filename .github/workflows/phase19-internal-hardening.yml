@@ -66,9 +66,11 @@ jobs:
             '.eq("is_current", true)',
             '.eq("verification_status", "verified")',
             'entity_sources',
+            '["move_command"]',
             '["frame", "move_frame_data"]',
-            '.eq("sources.reliability_level", "official")',
+            '.eq("reliability_level", "official")',
           ]) assert.ok(moveGate.includes(required), `move gate missing ${required}`);
+          assert.ok(!moveGate.includes('entity_sources!inner'), 'polymorphic evidence must not use inferred PostgREST joins');
 
           assert.ok(search.includes('isMovePublicReady'), 'search must post-filter move readiness');
           assert.ok(moveRlsPolicy.includes('private.is_move_public_ready'), 'Move RLS helper missing');
