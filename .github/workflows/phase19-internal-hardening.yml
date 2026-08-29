@@ -49,6 +49,7 @@ jobs:
           const compactSql = (value) => value.replace(/\s+/g, ' ');
           const moveGate = read('src/lib/public-move-gate.ts');
           const strategyActions = read('src/app/admin/content/[kind]/actions.ts');
+          const diagnosisActions = read('src/app/admin/diagnoses/actions.ts');
           const search = read('src/lib/search.ts');
           const knowledge = read('src/lib/knowledge.ts');
           const characters = read('src/lib/characters.ts');
@@ -91,6 +92,13 @@ jobs:
           assert.ok(strategyActions.includes('requestedStatus === "published"'), 'Strategy publish transition guard missing');
           assert.ok(strategyActions.includes('{ ...payload, status: "draft" }'), 'New published Strategy must be created as draft first');
           assert.ok(strategyActions.includes('update({ status: "published" })'), 'Strategy must promote only after Source relation exists');
+
+          assert.ok(diagnosisActions.includes('ensureDiagnosisPublishable'), 'Diagnosis publish completeness gate missing');
+          assert.ok(diagnosisActions.includes('新規診断はdraftで作成し'), 'New Diagnosis must not publish before questions exist');
+          assert.ok(diagnosisActions.includes('新規質問はdraftで作成し'), 'New Diagnosis Question must not publish before options exist');
+          assert.ok(diagnosisActions.includes('ensureQuestionHasOptions'), 'Published Diagnosis Question must require options');
+          assert.ok(diagnosisActions.includes('最後の選択肢は削除できません'), 'Published question must retain at least one option');
+          assert.ok(diagnosisActions.includes('diagnosis.status === "published"'), 'Published Diagnosis question_count must follow published questions');
 
           assert.match(sourceNormalization, /entity_type\s*=\s*'guide_section'/);
           assert.match(sourceNormalization, /entity_type\s*=\s*'character_guide_section'/);
