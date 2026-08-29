@@ -29,6 +29,6 @@ test('matchup card preserves publication, verification and source gates', () => 
   assert.match(matchup, /\.eq\("status", "published"\)/);
   assert.match(matchup, /\.eq\("verification_status", "verified"\)/);
   assert.match(matchup, /entity_sources/);
-  assert.match(matchupPage, /Public Gate/);
-  assert.match(matchupPage, /未検証情報は補完表示しません/);
+  assert.match(matchupPage, /公開条件を満たした技情報/);
+  assert.match(matchupPage, /未確認の情報を推測で補うことはしません/);
 });
