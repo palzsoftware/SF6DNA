@@ -28,7 +28,7 @@ export default async function VideosPage() {
       ) : (
         <section className="empty-state">
           <h2>公開済み動画はまだありません</h2>
-          <p>draft動画は公開画面へ表示しません。</p>
+          <p>公開前・確認中の動画は公開画面に表示しません。</p>
         </section>
       )}
     </div>

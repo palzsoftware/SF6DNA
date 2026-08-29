@@ -37,7 +37,7 @@ export default async function DiagnosisPage() {
               </Link>
             ))}
           </div>
-        ) : <div className="empty-state"><p>公開済み診断はまだありません。診断エンジン自体はDB駆動で準備済みです。</p></div>}
+        ) : <div className="empty-state"><p>現在利用できる診断はありません。公開準備が整った診断から順に表示します。</p></div>}
       </section>
     </div>
   );

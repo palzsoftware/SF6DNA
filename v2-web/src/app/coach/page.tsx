@@ -12,8 +12,8 @@ export default async function CoachPage({ searchParams }: { searchParams: Promis
         <p className="eyebrow">AI COACH</p>
         <h1>AIコーチ</h1>
         <p>
-          SF6DNAの構造化データを先に検索し、根拠となる情報だけをAIへ渡す設計です。
-          現段階では安全のため生成回答を有効化せず、検索・根拠取得まで実装しています。
+          SF6DNA内で出典を確認できる情報を先に検索し、回答の根拠として使う設計です。
+          現在は安全性を優先し、根拠が不足している攻略内容をAIが自由に補って断定しない形で提供しています。
         </p>
       </section>
       <CoachRetrievalDemo initialQuestion={initialQuestion} />

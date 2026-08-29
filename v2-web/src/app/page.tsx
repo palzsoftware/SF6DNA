@@ -23,7 +23,7 @@ const pillars = [
   {
     icon: "04",
     title: "AIコーチ",
-    description: "SF6DNAの構造化データを根拠に、課題と次の練習を整理する。",
+    description: "SF6DNA内の確認済みデータを根拠に、課題と次の練習を整理する。",
     href: "/coach",
   },
 ];
@@ -83,8 +83,8 @@ export default async function HomePage() {
           <h2 id="main-content-title">4大メインコンテンツ</h2>
           <p>
             {characters.length
-              ? `プレイアブル${characters.length}キャラクターを収録。公開画面では検証条件を通過したデータだけを表示します。`
-              : "攻略データは出典とパッチを確認したものから順次公開します。"}
+              ? `プレイアブル${characters.length}キャラクターを収録。公開画面では確認条件を満たしたデータだけを表示します。`
+              : "攻略データは出典と対象パッチを確認したものから順次公開します。"}
           </p>
         </div>
         <div className="card-grid">

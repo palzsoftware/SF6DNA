@@ -3,8 +3,8 @@ import { getMatchupCardData } from "@/lib/matchup-card";
 import { listCharacters } from "@/lib/characters";
 
 export const metadata = {
-  title: "対面ナレッジカード | SF6DNA",
-  description: "検証済み・Source付きデータだけで、自キャラ対相手キャラの確認事項を1画面にまとめます。",
+  title: "対面ナレッジカード",
+  description: "確認済みの技情報と出典を確認できる対策だけで、自キャラ対相手キャラの確認事項を1画面にまとめます。",
 };
 
 export default async function MatchupCardPage({ searchParams }: { searchParams: Promise<{ own?: string; opponent?: string }> }) {
@@ -24,7 +24,7 @@ export default async function MatchupCardPage({ searchParams }: { searchParams: 
       <section className="hero compact-hero">
         <p className="eyebrow">MATCHUP CARD</p>
         <h1>{own.name} vs {opponent.name}</h1>
-        <p>Public Gateを通過した技情報と、published + verified + Source付き対策だけを表示します。</p>
+        <p>公開条件を満たした技情報と、出典まで確認できる対策だけを表示します。未確認の情報を推測で補うことはしません。</p>
       </section>
 
       <form className="search-form" action="/matchup-card">
@@ -53,11 +53,11 @@ export default async function MatchupCardPage({ searchParams }: { searchParams: 
               </Link>
             ))}
           </div>
-        ) : <div className="empty-state"><p>現在のPublic Gateを通過した技データはありません。</p></div>}
+        ) : <div className="empty-state"><p>現在公開できる技データはありません。</p></div>}
       </section>
 
       <section className="info-panel">
-        <h2>{own.name}側の検証済み対策</h2>
+        <h2>{own.name}側の確認済み対策</h2>
         {card.counters.length ? (
           <div className="search-result-list">
             {card.counters.map((item) => (
@@ -68,14 +68,14 @@ export default async function MatchupCardPage({ searchParams }: { searchParams: 
               </Link>
             ))}
           </div>
-        ) : <div className="empty-state"><p>この組み合わせで公開可能なverified + Source付き対策はまだありません。未検証情報は補完表示しません。</p></div>}
+        ) : <div className="empty-state"><p>この組み合わせで、出典まで確認できる公開済み対策はまだありません。未確認の情報は表示しません。</p></div>}
       </section>
 
       <section className="info-panel">
         <h2>次に確認する</h2>
-        <p><Link href={`/characters/${own.slug}/training`}>{own.name}のTraining</Link></p>
+        <p><Link href={`/characters/${own.slug}/training`}>{own.name}のトレーニング</Link></p>
         <p><Link href={`/characters/${opponent.slug}/moves`}>{opponent.name}の全公開技</Link></p>
-        <p><Link href="/improve">対戦ログ・Replay復習へ戻る</Link></p>
+        <p><Link href="/improve">対戦ログ・リプレイ復習へ戻る</Link></p>
       </section>
     </div>
   );

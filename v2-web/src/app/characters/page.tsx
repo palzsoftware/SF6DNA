@@ -22,10 +22,8 @@ export default async function CharactersPage() {
 
       {sourceStatus === "unconfigured" ? (
         <section className="data-notice" aria-live="polite">
-          <strong>データベース接続待ち</strong>
-          <p>
-            v2の画面・データ取得基盤は実装済みです。Supabase接続後、検証済みキャラクターデータだけを表示します。
-          </p>
+          <strong>キャラクターデータを取得できません</strong>
+          <p>現在データを読み込めません。接続状態を確認して、時間をおいて再読み込みしてください。</p>
         </section>
       ) : null}
 
@@ -44,9 +42,7 @@ export default async function CharactersPage() {
       ) : (
         <section className="empty-state">
           <h2>公開データはまだありません</h2>
-          <p>
-            旧版の静的データをそのまま表示せず、出典・パッチ・検証状態を確認したものからv2データベースへ移行します。
-          </p>
+          <p>出典・対象パッチ・確認状態を確認できた情報から順に公開します。</p>
         </section>
       )}
     </div>

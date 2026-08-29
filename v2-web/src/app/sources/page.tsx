@@ -5,6 +5,11 @@ export const metadata = {
   description: "SF6DNAで使用する公式・一次情報源の一覧です。",
 };
 
+const RELIABILITY_LABELS: Record<string, string> = {
+  official: "公式情報",
+  primary: "一次情報",
+};
+
 export default async function SourcesPage() {
   const sources = await listPublicSources();
   return (
@@ -12,20 +17,20 @@ export default async function SourcesPage() {
       <section className="hero">
         <p className="eyebrow">SOURCES</p>
         <h1>情報源</h1>
-        <p>Public向け一覧ではofficial / primaryに分類した情報源を表示します。攻略ページ個別の補助Sourceは各コンテンツ側で確認できます。</p>
+        <p>SF6DNAで参照している公式情報・一次情報を一覧で確認できます。各攻略ページで使用した補助情報は、それぞれのページから確認できます。</p>
       </section>
       {sources.length ? (
         <section className="search-result-list">
           {sources.map((source) => (
             <a className="search-result" href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}>
-              <span className="search-result__type">{source.reliabilityLevel.toUpperCase()} / {source.sourceType}</span>
+              <span className="search-result__type">{RELIABILITY_LABELS[source.reliabilityLevel] ?? "確認済み情報源"}</span>
               <strong>{source.title}</strong>
-              <span>{source.publisher ?? "Publisher未設定"}</span>
+              <span>{source.publisher ?? "提供元情報なし"}</span>
             </a>
           ))}
         </section>
       ) : (
-        <section className="empty-state"><h2>公開できる情報源がありません</h2><p>Supabase未接続時、またはofficial / primary Sourceがない場合は一覧を表示しません。</p></section>
+        <section className="empty-state"><h2>表示できる情報源がありません</h2><p>情報源を取得できない場合は、未確認の情報源を代わりに表示しません。</p></section>
       )}
     </div>
   );
