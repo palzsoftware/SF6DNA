@@ -58,7 +58,7 @@ export async function createMove(formData: FormData) {
       description: nullable(formData, "description"),
       usage_summary: nullable(formData, "usage_summary"),
       display_order: nullableNumber(formData, "display_order") ?? 0,
-      status: requestedStatus,
+      status: requestedStatus === "published" ? "draft" : requestedStatus,
     })
     .select("id")
     .single();
@@ -81,9 +81,16 @@ export async function createMove(formData: FormData) {
     if (frame) await insertEntitySource(supabase, "move_frame_data", frame.id, sourceId, note);
   }
 
+  if (requestedStatus === "published") {
+    await ensureExistingMovePublishable(supabase, move.id);
+    const { error: publishError } = await supabase.from("moves").update({ status: "published" }).eq("id", move.id);
+    if (publishError) throw new Error(publishError.message);
+  }
+
   revalidatePath("/admin/moves");
   revalidatePath("/admin/data-quality");
   revalidatePath("/characters");
+  revalidatePath(`/moves/${slug}`);
   redirect("/admin/moves");
 }
 
