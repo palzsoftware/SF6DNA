@@ -2,17 +2,33 @@
 
 Date: 2026-08-29 JST
 Target branch: `sf6dna-v2`
+Status: **HOLD — Release Candidate固定後に実施**
+
+## Execution timing
+
+このチェックリストは、以下が完了するまで実行しない。
+
+- UI最終調整
+- 画像最終調整
+- ユーザー向け文言調整
+- SEO / metadata / robots / sitemap確認
+- Preview / Auth / Public Gate / Release docs確認
+- CI再実行
+- Performance確認
+- Release Candidate HEAD固定
+
+実機テスト開始後に不具合修正でコードを変更した場合は、影響範囲を再テストする。
 
 ## Purpose
 
-Phase20-22までの内部実装・データGate・CIを通過したv2を、実際のPC/スマートフォン環境で確認する。
+Phase20-22までの内部実装・データGate・CIとPre-device polishを通過したRelease Candidateを、実際のPC/スマートフォン環境で確認する。
 
 このPhaseでは、見た目・操作・保存・遷移・実データ表示の実機差を確認する。
 
 ## Test rules
 
 - `main`へmergeしない
-- Productionへ公開しない
+- v2をProductionへ公開しない
 - 不具合を見つけてもverified / publishedデータを推測修正しない
 - データ内容の誤りとUI不具合を分けて記録する
 - 再現手順がある場合は端末・ブラウザ・URL・操作順を残す
@@ -344,7 +360,7 @@ Notes:
 
 ## Result
 
-- [ ] PASS — 実機テスト完了、次Phaseへ進行可能
+- [ ] PASS — 実機テスト完了、Production Readiness判定へ進行可能
 - [ ] CONDITIONAL PASS — 軽微修正後に再確認
 - [ ] FAIL — Blocker修正が必要
 

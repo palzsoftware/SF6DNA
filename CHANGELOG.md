@@ -1,48 +1,52 @@
-# CHANGELOG.md
+# SF6DNA Changelog
 
-SF6DNAの開発マイルストーンを記録するドキュメントです。Gitタグに相当する区切りとして、フェーズ単位で記録します。
+SF6DNAの主要な開発マイルストーンを記録する。
 
----
+## 2026-08-29 — Pre-release polish
 
-## Phase1 Final — 2026-07-30
+- Phase22完了後のUI仕上げを開始
+- キャラクター画像を使ったホーム / カードデザインへ更新
+- 診断一覧カードの情報量・視認性を改善
+- ユーザー画面に残っていた内部管理用語を一般向け表現へ整理
+- Release文書をPhase23の現在状態へ同期
+- 実機テストをRelease Candidate固定後の最後のAcceptanceとして再配置
 
-**ステータス: 確定・凍結(Freeze)**
+## 2026-08-29 — Phase22 complete
 
-以降、重大なバグ修正を除き、ホームページの仕様変更は行わない。ホームページを変更する場合は、必ずPhase2以降の内容との整合性を確認した上で行うこと。
+- `/improve` 対戦後30秒ログ
+- 直近10戦の弱点整理と練習導線
+- 診断回答の端末内保存 / 再開
+- `/matchup-card` 対面ナレッジカード
+- リプレイ手動振り返りワークフロー
+- マイ機能への統合
+- Phase22内部CI / Policy Gate PASS
 
-### 概要
+## 2026-08-29 — Phase21 complete
 
-「診断サイト」から「毎日開きたくなるSF6総合プラットフォーム」への第一歩として、ホームページを基準デザインとして全面リデザインした。
+- Current Move 2052件を対象にModern Commandを監査
+- Classic Command 2052 / 2052
+- Modern Command 1441 / 2052
+- 公式情報から安全に確認できない611件は推測せず未入力を維持
 
-### 主な変更内容
+## 2026-08-28 — Phase20 complete
 
-- **ドキュメント整備**: README / ARCHITECTURE / TECH_DEBT / DATA_ISSUES の整備
-- **デザインコンセプトの検討・確定**: Riot Games風をベースに、eスポーツ大会風のライブ感を取り入れた方向性を採用
-- **SF6DNA Design System策定**: `docs/DESIGN_SYSTEM.md`としてColor/Typography/Spacing/Border/Shadow/Animation/Icon/Card/Button/Navigationのルールを定義
-- **ホームページの全面リデザイン**:
-  - パーソナライズドダッシュボード(未診断/診断済みでの出し分け)
-  - レベル・XP・実績バッジ・成長記録
-  - 「今日のあなたへ」(日替わりコンテンツ、将来のAPI/AI差し替えを想定した構造)
-  - Coming Soon表示(ランキング・大会情報・AIリプレイ分析)
-- **プレイヤー画像の追加・整備**: 49名分の画像を追加、命名規則を統一、データとの紐付けを検証
-- **データ整備の一部着手**: 大文字小文字の表記ゆれ修正(`Noble`→`noble`)、活動終了選手(ホロスターズ2名)のデータ削除
-- **品質確認・バグ修正**:
-  - 診断未実施でresult.htmlに直接アクセスした際のエラーを修正
-  - ホーム再構築に伴う未使用コード(`main.js`)を削除
-- **データ整合性チェックスクリプトの追加**: `scripts/check-data-integrity.js`
+- Current PatchのMove / Frame / CommandをCAPCOM公式情報と追加照合
+- Current Frame 2052 / 2052
+- verified Frame 2020 / 2052
+- 重大なPhase1〜20 implementation gap 0
+- temporary audit RPC削除
+- Supabase Security Advisor 0 lints
 
-### 既知の課題
+## 2026-08-27〜28 — Phase13〜19
 
-`docs/KNOWN_ISSUES.md`を参照。
+- 全31キャラクター共通データモデル整備
+- Application Integration / Public Data Gate
+- Runtime / Browser / Lighthouse / Release Candidate hardening
+- Data Integrity / Source / Patch lifecycle / RLS / Security監査
+- お気に入り、マイキャラ、比較、ランク記録、診断履歴などをv2へ統合
 
-### 対象ファイル(主な変更範囲)
+## 2026-07-30 — Legacy Phase1 Final
 
-`index.html` / `assets/css/index.css` / `assets/js/home.js` / `assets/js/daily-tips-data.js` / `assets/js/main.js` / `assets/js/result.js`(バグ修正のみ) / `assets/js/pro.js` / `assets/js/streamer.js` / `assets/js/vtuber.js` / `assets/js/team-data.js` / `assets/js/pro-player-directory.js` / `assets/images/players/*` / `assets/css/variables.css`(トークン追記) / `docs/*`
+旧静的版でホームページ、デザインシステム、プレイヤー画像、データ整合性チェック等を整備した。
 
----
-
-## 今後の予定
-
-- **Phase2**: 診断ページ・診断結果・練習メニューのリデザイン
-- **Phase3**: キャラクター・プレイヤー・チーム・比較ページへの展開
-- **Phase4**: 共通CSSの責務分離・不要コードの整理
+現在の公開候補は`v2-web`を正とし、旧静的版の記録は履歴として保持する。

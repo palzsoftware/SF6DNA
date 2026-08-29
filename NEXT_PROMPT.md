@@ -1,29 +1,19 @@
-# SF6DNA 次回開始指示 — Phase15
+# SF6DNA 次回開始指示 — Phase23 Pre-device Polish
 
-最終更新: 2026-08-28 JST
+最終更新: 2026-08-29 JST
 
-この文書は、Phase15を新しいチャットで開始する場合の引き継ぎ用です。
+SF6DNAの開発をPhase22完了・Phase23開始済み状態から引き継いでください。
 
-## 開始文
+## 現在位置
 
-SF6DNAの開発をPhase14完了状態から引き継いでください。
+- Phase1〜22: 完了
+- Phase23: 開始済み
+- 現在: **Pre-device polish**
+- PC / iPhone実機テスト: **Release Candidate固定後の最後の作業として保留**
 
-現在の状態は:
-- Phase13完了
-- Phase14完了
-- Phase15準備完了 / 未着手
+Phase23を最初からやり直さないでください。
 
-Phase14をやり直さず、Phase15の開始監査から進めてください。
-
-最初に必ず以下を現在のGitHub / Supabase実状態と照合してください。
-
-1. `PROJECT_STATUS.md`
-2. `docs/PHASE14_FINAL_AUDIT_2026-08-28.md`
-3. `docs/PHASE15_IMPLEMENTATION_PLAN.md`
-4. `docs/PROJECT_COMPLETION_DASHBOARD.md`
-5. `docs/V2_RELEASE_READINESS.md`
-
-## 最重要ルール
+## 正本
 
 GitHub:
 - Repository: `palzsoftware/SF6DNA`
@@ -33,98 +23,51 @@ GitHub:
 Supabase:
 - Project: `SF6DNAPro`
 - Project ID: `wnuxaxbrpudyypzdbdho`
-- Supabase実DBを正本とする
+- 実DBを正本とする
 
 SF6 Current Patch:
 - `2026.08.03`以降
 
-品質ルール:
+Vercel:
+- Project: `sf-6-dna`
+- Project ID: `prj_UwgkJ3pXqGBWhaH6qn6pY8TTZMpR`
+- `sf6dna-v2` Previewを使用
+- v2 Production deployは禁止
+
+## 品質ルール
+
 - `reviewed ≠ verified`
 - `draft ≠ published`
 - Sourceありだけでverifiedへ昇格しない
 - 推測Modern Commandを登録しない
-- SourceなしFrame値を確定登録しない
-- Release件数目的で自動publishしない
-- AI Coach GenerationをEvidence不足のまま有効化しない
+- SourceなしFrameを確定しない
+- 件数目的でpublishしない
+- AI CoachがEvidence不足を自由生成で補わない
 
-禁止:
-- Production deployment
-- main merge
-- 不可逆DB変更
-- bulk delete
-- Auth全面再設計
-- Phase15要件確定前の新機能追加
+## 続ける作業
 
-## Phase14からPhase15へ正式に繰り越した5項目
+以下を上から順に、実機テスト前に完了する。
 
-1. `P15-00` Preview Environment / Deployment
-   - Phase14 P0-06由来
-   - Vercel Project 0件のため未検証
+1. UI最終監査・調整
+2. 画像参照 / fallback / トリミング / OGP監査
+3. ユーザー向け文言監査
+4. metadata / robots / sitemap / SEO監査
+5. Preview build / runtime / 主要route確認
+6. Real Auth / Admin E2E
+7. Public Gate最終監査
+8. KNOWN_ISSUES / TECH_DEBT現行v2再監査
+9. Release docs同期
+10. CI全Gate再実行
+11. Lighthouse / Performance確認
+12. Release Candidate HEAD固定
+13. PC実機テスト
+14. iPhone実機テスト
+15. Production Readiness判定
 
-2. `P15-01` Preview Runtime / Public Demo Gate Smoke
-   - Phase14 P0-07由来
+Production deployは、ユーザーが明示的に許可した場合のみ行う。
 
-3. `P15-02` Auth / Admin E2E
-   - Phase14 P1-06由来
+## 実機テスト
 
-4. `P15-03` Performance Measurement / Advisor Review
-   - Phase14 P2-03由来
+`docs/PHASE23_REAL_DEVICE_TEST_CHECKLIST_2026-08-29.md` を使用する。
 
-5. `P15-04` Device / Responsive / Accessibility Runtime Verification
-   - Phase14 P2-04のruntime部分
-   - Static ReviewはPhase14で完了
-
-重要:
-- 再分類しただけであり、これらを検証済み扱いしない。
-- 実機確認はユーザーが確認可能になった時点で行う。
-- 実機確認ができない間も、可能なPreview/static/read-only監査を進める。
-
-## Phase15開始順
-
-Phase15開始後は原則として:
-
-1. P15-00 Preview環境成立
-2. P15-01 Preview Runtime / Public Gate Smoke
-3. P15-02 Auth / Admin E2E
-4. P15-04 Responsive / Accessibility Runtime確認
-5. P15-03 Performance実測 / Advisor Review
-
-の順に進める。
-
-P15-00が外部要因でブロックされた場合はProduction deployで回避せず、進められるread-only監査・静的検証・テストのみ先行する。
-
-## Phase14終了時Evidence
-
-Source code側の最新成功CI対象commit:
-- `2fe0b90c6ff2e642f3028df0a5edc9ccaeb5b60e`
-
-GitHub Actions run:
-- `33130148956`
-- Typecheck success
-- Lint success
-- Tests 27 / 27 success
-- Build success
-
-Supabase:
-- public tables 38
-- RLS 38 / 38
-- playable + published Character 31
-- published Move 0
-- verified Frame 307
-- published Diagnosis 4
-- published Diagnosis Question 52
-- Security Advisor lint 0
-- Current Patch `2026.08.03`
-
-Vercel:
-- Project 0
-- Preview未成立
-- Production未公開
-
-## 開始時の指示
-
-過去会話の推測ではなく、現在のGitHub branch / CI / Supabase / Vercel状態を再取得してください。
-
-Phase15の既存計画と現在状態の差分を確認した後、P15-00から実作業を開始してください。
-
-ユーザー指示なしでPhase16へ進めないでください。
+ただし現在は実行せず、Pre-device polishとRelease Candidate固定が完了した後に開始する。

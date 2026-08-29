@@ -1,224 +1,111 @@
-# PROJECT_STATUS.md
+# SF6DNA v2 Project Status
 
-最終更新: 2026-08-28 JST
+最終更新: 2026-08-29 JST
 
-## SF6DNA v2 現在状態
+## 現在状態
 
-Phase1〜20のautomated/internal scopeは完了済み。
-Phase20 `Verified Content Expansion` はCAPCOM公式Frame Dataとの追加照合とPhase1〜20横断Gap監査まで完了した。
+- Phase1〜22: **完了**
+- Phase23: **開始済み / Pre-device polish進行中**
+- PC / iPhone実機テスト: **リリース前の最後の確認として保留**
+- Production Readiness: **未判定 / 最終実機テスト後に判定**
+- v2 Production deploy: **未実施**
 
-- Phase20: **COMPLETE / PASS**
-- Phase21: **未開始**
-- Phase22: **未開始**
-- Phase23: **未開始 / Final Manual & External Acceptance**
-- Demo Release Decision: **CONDITIONAL GO**
-- Production Ready: **未判定 / Phase23依存**
-
-ユーザーの明示許可なしにPhase21へ進まない。
+現在は、実機テストを最後に行えるように、UI・画像・文言・SEO・Preview・Auth/Admin・Public Gate・Release文書・CI・Performanceの仕上げを先に進める。
 
 ## 正本
 
 - Repository: `palzsoftware/SF6DNA`
 - Work branch: `sf6dna-v2`
 - `main`: ユーザー明示許可まで変更禁止
-- main baseline SHA: `b9a2a8f638a3d4a98bfa042d56470664fe225ba7`
+- main baseline: `b9a2a8f638a3d4a98bfa042d56470664fe225ba7`
 - Supabase: `SF6DNAPro`
 - Project ID: `wnuxaxbrpudyypzdbdho`
-- Current Patch: `2026.08.03`
+- Current Patch baseline: `2026.08.03`
 
-## Phase管理
+## Phase状態
 
-| Phase | 状態 | 内容 |
+| Phase | 状態 | 概要 |
 |---|---|---|
-| Phase1〜12 | **定義どおり完了** | Foundation / Architecture / Data Model / Next.js / Character / Search / Diagnosis / Player / Strategy / Admin / AI Retrieval / Replay Research |
-| Phase13 | **完了** | Character Content Verification & Expansion |
-| Phase14 | **完了** | Application Integration / Public Data Gate |
-| Phase15 | Internal acceptance実施 / external残件移管 | Runtime / Browser / Lighthouse / Auth static acceptance |
-| Phase16 | **完了 / Conditional Go** | Release Candidate hardening |
-| Phase17 | **完了** | Automated/Internal closure |
-| Phase18 | **完了** | Verified Content / Public Gate hardening |
-| Phase19 | **完了** | Internal Data Integrity & Release Hardening |
-| Phase20 | **完了 / PASS** | Verified Content Expansion + Phase1〜20 final gap audit |
-| Phase21 | **未開始** | Modern Command Coverage & Pre-Release Integration |
-| Phase22 | **未開始** | Improvement Features |
-| Phase23 | **未開始** | Final Manual / External Acceptance & Production Decision |
+| Phase1〜12 | 完了 | Foundation / Architecture / Data Model / Next.js / Character / Search / Diagnosis / Player / Strategy / Admin / AI Retrieval / Replay Research |
+| Phase13 | 完了 | Character Content Verification & Expansion |
+| Phase14 | 完了 | Application Integration / Public Data Gate |
+| Phase15 | 完了 | Runtime / Browser / Lighthouse / Auth static acceptance |
+| Phase16 | 完了 | Release Candidate hardening |
+| Phase17 | 完了 | Automated/Internal closure |
+| Phase18 | 完了 | Verified Content / Public Gate hardening |
+| Phase19 | 完了 | Internal Data Integrity & Release Hardening |
+| Phase20 | 完了 / PASS | Verified Content Expansion + Phase1〜20 gap audit |
+| Phase21 | 完了 | Modern Command audit / pre-release integration |
+| Phase22 | 完了 | Improvement Loop / diagnosis resume / matchup card / replay review |
+| Phase23 | 進行中 | Pre-device polish → final real-device acceptance → release decision |
 
-## Phase20 Final Results
+## Phase22完了時の内部Gate
 
-### Current Move / Frame
+Phase22 final auditで以下を確認済み:
 
-Phase20開始時:
-- Current Frame: 2065
-- verified: 307
-- reviewed: 1752
-- unverified: 6
+- Typecheck: PASS
+- Lint: PASS
+- Policy tests: PASS
+- Build: PASS
+- Phase20 Verified Content Acceptance: PASS
+- Phase15 Browser Acceptance: PASS
+- Phase15 Lighthouse Audit: PASS
+- Supabase Security Advisor: 0 lints
 
-Phase20最終active set:
-- active Move: **2052**
-- Current Frame: **2052**
-- verified: **2020 / 2052 (98.4%)**
-- reviewed: **32**
-- unverified: **0**
-- verified rows with official CAPCOM `official_frame_data` Source: **2020 / 2020**
-- active Move without Current Frame: **0**
-- active Move with multiple Current Frames: **0**
+Phase22完了後にUI調整コミットが追加されているため、最終Release Candidate固定前にCIを再実行する。
 
-残32件:
-- Taunt 31
-- Alex `Exit Prowler Stance` 1
+## 現在のPre-device polish
 
-これらはsecondary Evidenceのみで、CAPCOM公式Character Frame Dataに直接対応する独立行を確認できないためreviewed維持。
-100%表示のための推測verified化は行わない。
+実機テスト前に完了する対象:
 
-### Strategy
+1. 全ページUI最終確認・調整
+2. キャラクター / プレイヤー / OGP等の画像監査
+3. ユーザー向け文言の最終調整
+4. metadata / robots / sitemap / SEO確認
+5. Vercel Preview / runtime logs確認
+6. Real Auth / Admin E2E
+7. Public Gate最終監査
+8. `KNOWN_ISSUES.md` / `TECH_DEBT.md`の現行v2再監査
+9. Release文書同期
+10. 全CI再実行
+11. Public Network Performance / Lighthouse
+12. Release Candidate HEAD固定
+13. PC実機テスト
+14. iPhone実機テスト
+15. Production Readiness最終判定
+16. Production deploy（ユーザー明示許可がある場合のみ）
 
-- Combo: 341 / verified 1
-- Setup: 186 / verified 0
-- Sequence: 186 / verified 0
-- Counter: 1122 / verified 0
-- Training: 1477 / verified 0
+## Vercel
 
-Source存在だけでは攻略手順自体を証明しないため、新規bulk verificationなし。
+- Project: `sf-6-dna`
+- Project ID: `prj_UwgkJ3pXqGBWhaH6qn6pY8TTZMpR`
+- `sf6dna-v2` Preview deployment運用中
+- v2のProduction deployは未実施
+- 旧`main` baselineのProduction deploymentは既存だが、v2とは別扱い
 
-### Character Guide
+## Data quality rules
 
-- total: 278
-- Source linked: 278
-- verified: 0
+- `reviewed ≠ verified`
+- `draft ≠ published`
+- Sourceが存在するだけではverifiedへ昇格しない
+- 推測Modern Commandを登録しない
+- SourceなしFrameを確定登録しない
+- 件数目的でbulk verify / publishしない
+- AI CoachはEvidence不足を自由生成で補わない
 
-### Character Trait Score
+## Modern Command
 
-- total: 372
-- Source linked: 372
-- verified: 0
+Phase21からの既知の非Blocker:
 
-## Phase20 Final Cleanup
+- Current Move: 2052
+- Classic: 2052 / 2052
+- Modern: 1441 / 2052
+- Missing Modern: 611
 
-完了:
-- CAPCOM ja-jp / en-uk Frame snapshot crosscheck
-- exact / semantic / bilingual / field-only / strength-group照合
-- CAPCOM parser hardening
-- 明確なDB値差の訂正
-- legacy/duplicate Frameの履歴化
-- obsolete Moveの`archived`化
-- temporary audit RPC削除
-- temporary Frame Crosscheck workflow退役
-- Supabase Security Advisor **0 lints**
-- Phase1〜20 retrospective implementation gap audit
+公式情報から安全に取得できない611件は未入力を維持し、推測補完しない。
 
-Phase20中に使用した一時RPC:
-- `public._phase20_frame_audit_fingerprints()`
+## 次の作業
 
-は削除済み。
+Phase23を最初からやり直さず、**Pre-device polishの残作業を継続する**。
 
-Repository migration:
-- `supabase/migrations/20260828_phase20_remove_temporary_audit_rpc.sql`
-
-## Phase1〜20 Implementation Gap Audit
-
-正本:
-- `docs/PHASE20_PHASE1_TO_20_RETROSPECTIVE_GAP_AUDIT_2026-08-28.md`
-
-判定:
-- Phase1〜20 automated/internal completion gateに対する重大な未実装: **0**
-- 後続Phaseで吸収済みの初期Backlogは実装済みとして確認
-- 将来機能（Replay映像解析等）は未実装欠陥扱いにしない
-- AI Coach GenerationはEvidence条件成立まで**OFFが仕様**
-- Vercel / real Auth / actual device / public network performanceはPhase23 Manual / External Acceptance
-- Audit LogはPhase17でRelease Gate必須ではないと正式判定済み
-
-## Public Data Gate
-
-維持:
-
-### Move
-1. Move published
-2. Classic Commandあり
-3. Classic Command official Evidence
-4. Move official Source
-5. Current Patch Frame
-6. Frame verified
-7. Current Frame official Source
-8. Modern Commandは任意 / 推測禁止
-
-### Strategy
-- published
-- verified
-- Source relationあり
-
-### Character Guide
-- published + verified
-
-### Recommendation
-- published + verified + Source付きTrait Score
-
-### AI Coach
-- Source付きEvidence
-- Current Patch
-- input boundary
-- Generation **OFF**
-
-## Legacy Parity追加済み機能
-
-- `/tools`
-- `/favorites`
-- `/my-characters`
-- `/compare`
-- `/rank-tracker`
-- `/diagnosis/history`
-- `/about`
-- `/faq`
-- `/sources`
-- `/changelog`
-
-## Phase21 — 未開始
-
-正本:
-- `docs/PHASE21_PRIORITY_A_PLAN.md`
-
-主対象:
-- Modern Command不足分のSource付き収集
-- Legacy parity Acceptance対象化
-- Release docs同期
-- Regression
-
-これはPhase21の正式Backlogであり、Phase20の実装漏れとして先行実装しない。
-
-## Phase23 — Final Manual / External Acceptance
-
-外部・人力依存:
-1. Vercel Project / Preview
-2. Preview runtime / logs
-3. real Admin / non-admin authenticated E2E
-4. actual PC / iPhone / device browser
-5. public network performance
-6. Phase20〜22追加機能の実画面Acceptance
-7. Production Readiness final decision
-8. Production deploy（ユーザー明示許可がある場合のみ）
-
-## 主要文書
-
-- `docs/V2_REQUIREMENTS.md`
-- `docs/V2_ARCHITECTURE.md`
-- `docs/PHASE14_FINAL_AUDIT_2026-08-28.md`
-- `docs/PHASE16_RELEASE_CANDIDATE_AUDIT_2026-08-28.md`
-- `docs/PHASE17_FINAL_AUDIT_2026-08-28.md`
-- `docs/PHASE18_FINAL_AUDIT_2026-08-28.md`
-- `docs/PHASE19_FINAL_AUDIT_2026-08-28.md`
-- `docs/PHASE20_VERIFIED_CONTENT_EXPANSION_PLAN.md`
-- `docs/PHASE20_VERIFIED_CONTENT_COVERAGE_REPORT_2026-08-28.md`
-- `docs/PHASE20_PHASE1_TO_20_RETROSPECTIVE_GAP_AUDIT_2026-08-28.md`
-- `docs/PHASE20_FINAL_AUDIT_2026-08-28.md`
-- `docs/PHASE21_PRIORITY_A_PLAN.md`
-- `docs/PHASE22_IMPROVEMENT_FEATURES_PLAN.md`
-- `docs/PHASE23_FINAL_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md`
-
-## 禁止事項
-
-- main変更
-- Production deploy
-- status / verification_statusの推測昇格
-- 推測Modern Command
-- SourceなしFrame
-- Evidence不足でAI Coach Generationを有効化
-- ユーザー指示なしの次Phase開始
+実機テストはRelease Candidate固定後の最後のAcceptanceとして実施する。
