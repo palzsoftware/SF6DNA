@@ -1,3 +1,4 @@
+import { legacyPlayerImageUrl } from "@/lib/legacy-player-images";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type { PlayerDetail, PlayerSummary } from "@/types/player";
 
@@ -6,14 +7,18 @@ function isConfigured() {
 }
 
 function toSummary(row: Record<string, unknown>): PlayerSummary {
+  const slug = String(row.slug);
   return {
     id: String(row.id),
-    slug: String(row.slug),
+    slug,
     displayName: String(row.display_name),
     playerType: typeof row.player_type === "string" ? row.player_type : null,
     teamName: typeof row.team_name === "string" ? row.team_name : null,
     countryCode: typeof row.country_code === "string" ? row.country_code : null,
-    imageUrl: typeof row.image_url === "string" ? row.image_url : null,
+    imageUrl:
+      typeof row.image_url === "string" && row.image_url.trim()
+        ? row.image_url
+        : legacyPlayerImageUrl(slug),
   };
 }
 

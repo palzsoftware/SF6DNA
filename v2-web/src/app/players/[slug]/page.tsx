@@ -1,11 +1,15 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { playerRoleLabel, playerTypeLabel } from "@/lib/player-labels";
 import { getPlayerBySlug } from "@/lib/players";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const player = await getPlayerBySlug(slug);
-  return { title: player ? `${player.displayName} | プレイヤー情報` : "プレイヤー情報" };
+  return {
+    title: player ? `${player.displayName} | プレイヤー情報` : "プレイヤー情報",
+    description: player ? `${player.displayName}の使用キャラクター、プロフィール、参考情報を確認できます。` : undefined,
+  };
 }
 
 export default async function PlayerDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -26,15 +30,14 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ s
         <div>
           <p className="eyebrow">PLAYER</p>
           <h1>{player.displayName}</h1>
-          <p>{player.bio ?? "プレイヤー情報を準備中です。"}</p>
+          <p>{player.bio ?? "公開できるプロフィール情報を準備中です。"}</p>
           <div className="chip-row">
-            {player.playerType ? <span className="chip">{player.playerType}</span> : null}
+            <span className="chip">{playerTypeLabel(player.playerType)}</span>
             {player.teamName ? <span className="chip">{player.teamName}</span> : null}
             {player.region ? <span className="chip">{player.region}</span> : null}
           </div>
         </div>
         {player.imageUrl ? (
-          // Player images are admin-managed arbitrary URLs; fixed dimensions prevent layout shift without broadening Next Image hosts.
           // eslint-disable-next-line @next/next/no-img-element
           <img className="character-hero__image" src={player.imageUrl} alt={player.displayName} width={760} height={760} />
         ) : null}
@@ -44,8 +47,8 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ s
         <article className="info-panel">
           <h2>使用キャラクター</h2>
           {player.characters.length ? (
-            <ul>{player.characters.map((item) => <li key={`${item.characterId}:${item.role}`}><Link href={`/characters/${item.characterSlug}`}>{item.characterName}</Link> <small>({item.role})</small></li>)}</ul>
-          ) : <p>登録情報はまだありません。</p>}
+            <ul>{player.characters.map((item) => <li key={`${item.characterId}:${item.role}`}><Link href={`/characters/${item.characterSlug}`}>{item.characterName}</Link> <small>（{playerRoleLabel(item.role)}）</small></li>)}</ul>
+          ) : <p>公開済みの登録情報はまだありません。</p>}
         </article>
         <article className="info-panel">
           <h2>外部リンク</h2>
@@ -54,14 +57,13 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ s
       </section>
 
       <section className="info-panel">
-        <h2>Sources</h2>
+        <h2>出典</h2>
         {player.sources.length ? (
           <ul>
             {player.sources.map((source) => (
               <li key={`${source.id}:${source.relationship}`}>
                 <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>
                 {source.publisher ? ` / ${source.publisher}` : ""}
-                {` / ${source.sourceType} / ${source.relationship}`}
               </li>
             ))}
           </ul>

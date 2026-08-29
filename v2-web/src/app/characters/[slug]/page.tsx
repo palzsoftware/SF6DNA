@@ -29,7 +29,7 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
           <p className="eyebrow">CHARACTER</p>
           <h1>{character.name}</h1>
           {character.nameEn ? <p className="character-subtitle">{character.nameEn}</p> : null}
-          <p>{character.shortDescription ?? "概要情報を準備中です。"}</p>
+          <p>{character.shortDescription ?? "公開できる概要情報を準備中です。"}</p>
           <div className="chip-row">
             {character.archetypeLabel ? <span className="chip">{character.archetypeLabel}</span> : null}
             {character.rangeLabel ? <span className="chip">{character.rangeLabel}</span> : null}
@@ -49,18 +49,18 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
       <section className="character-columns">
         <article className="info-panel">
           <h2>強み</h2>
-          <p className="preline">{character.strengthsSummary ?? "検証済みデータを準備中です。"}</p>
+          <p className="preline">{character.strengthsSummary ?? "公開できる情報を準備中です。"}</p>
         </article>
         <article className="info-panel">
           <h2>弱み</h2>
-          <p className="preline">{character.weaknessesSummary ?? "検証済みデータを準備中です。"}</p>
+          <p className="preline">{character.weaknessesSummary ?? "公開できる情報を準備中です。"}</p>
         </article>
       </section>
 
       <section>
         <div className="section-heading">
           <h2>立ち回り・考え方</h2>
-          <p>攻略本文はパッチと出典を確認した上で公開します。</p>
+          <p>攻略本文は対象パッチと出典を確認した上で公開します。</p>
         </div>
         <div className="guide-stack">
           {character.guideSections.length ? (
@@ -71,7 +71,7 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
               </article>
             ))
           ) : (
-            <div className="empty-state"><p>公開済み攻略セクションはまだありません。</p></div>
+            <div className="empty-state"><p>現在公開できる攻略セクションはありません。</p></div>
           )}
         </div>
       </section>
@@ -79,15 +79,14 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
       <section>
         <div className="section-heading">
           <h2>出典</h2>
-          <p>SF6DNAでは、基本情報・客観データと攻略評価を区別して管理します。</p>
+          <p>基本情報や客観データの確認に使用した情報源を表示します。</p>
         </div>
         {character.sources.length ? (
           <div className="search-result-list">
             {character.sources.map((source) => (
               <a className="search-result" href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}>
-                <span className="search-result__type">{source.publisher ?? source.sourceType}</span>
+                <span className="search-result__type">{source.publisher ?? "情報源"}</span>
                 <strong>{source.title}</strong>
-                <span>{source.relationship}</span>
               </a>
             ))}
           </div>
