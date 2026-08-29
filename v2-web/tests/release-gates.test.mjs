@@ -39,6 +39,9 @@ test("strategy detail getters require published + verified", () => {
 
 test("character strategy sections require published + verified", () => {
   const source = readProjectFile("src/lib/character-sections.ts");
+  const publicMovesStart = source.lastIndexOf('if (section === "moves")');
+  assert.notEqual(publicMovesStart, -1, "public character section loader missing");
+  const publicSource = source.slice(publicMovesStart);
   const sections = [
     ["combos", "setups"],
     ["setups", "sequences"],
@@ -49,7 +52,7 @@ test("character strategy sections require published + verified", () => {
 
   for (const [name, next] of sections) {
     assertPublishedVerified(
-      segment(source, `if (section === "${name}")`, `if (section === "${next}")`),
+      segment(publicSource, `if (section === "${name}")`, `if (section === "${next}")`),
       `character section ${name}`,
     );
   }
