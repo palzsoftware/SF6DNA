@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CharacterPreferenceActions } from "@/components/character-preference-actions";
 import { CharacterTabs } from "@/components/character-tabs";
@@ -39,8 +40,15 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
           <CharacterPreferenceActions slug={character.slug} />
         </div>
         {character.imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img className="character-hero__image" src={character.imageUrl} alt={character.name} width={760} height={760} />
+          <Image
+            className="character-hero__image"
+            src={character.imageUrl}
+            alt={character.name}
+            width={760}
+            height={760}
+            sizes="(max-width: 720px) 100vw, 42vw"
+            priority
+          />
         ) : null}
       </section>
 
