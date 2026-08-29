@@ -21,9 +21,9 @@ Patch baseline: `2026.08.03`
 
 Public攻略Routeは、公開条件を満たす情報が0件の場合に未確認データを代替表示せずsafe empty stateを表示する。
 
-## Move candidate snapshot — 2026-08-29 re-audit
+## Move candidate snapshot — current DB re-audit
 
-現行Public Move Gateと同等の条件を実DBで再計算した。
+実DBの`private.is_move_public_ready(id)`をdraft Moveへ適用し再集計した。
 
 - total draft Move: 2052
 - strict machine gate ready: **701**
@@ -34,18 +34,18 @@ Gate-ready draftのCharacter別件数:
 
 | Character | Count | Modernあり | Modernなし |
 |---|---:|---:|---:|
-| Jamie | 93 | 90 | 3 |
-| Kimberly | 76 | 70 | 6 |
-| Guile | 70 | 65 | 5 |
-| Elena | 68 | 67 | 1 |
+| Dee Jay | 105 | 102 | 3 |
+| Jamie | 93 | 91 | 2 |
+| Blanka | 91 | 83 | 8 |
+| Dhalsim | 88 | 77 | 11 |
+| Kimberly | 76 | 74 | 2 |
+| E. Honda | 70 | 65 | 5 |
+| Guile | 70 | 66 | 4 |
 | Chun-Li | 68 | 64 | 4 |
-| C. Viper | 67 | 64 | 3 |
-| Blanka | 63 | 62 | 1 |
-| E. Honda | 60 | 55 | 5 |
-| Dee Jay | 52 | 50 | 2 |
-| Dhalsim | 43 | 39 | 4 |
-| Mai | 39 | 34 | 5 |
-| Yasmine | 2 | 2 | 0 |
+| Yasmine | 19 | 19 | 0 |
+| Mai | 10 | 10 | 0 |
+| C. Viper | 7 | 7 | 0 |
+| Elena | 4 | 4 | 0 |
 | **Total** | **701** | **662** | **39** |
 
 Gate-readyは次を満たす機械条件であり、公開承認そのものではない。
@@ -77,14 +77,24 @@ Gate-readyは次を満たす機械条件であり、公開承認そのもので�
 
 ### Official Source audit
 
-701候補のMove / Classic Command / Current Frameに使われるofficial Evidenceを再集計した。
+701候補のMove / Classic Command / Current Frameを再集計した。
 
-- CAPCOM公式Source records: 12
+必須Evidence:
+
+- Move official Evidence: **701 / 701**
+- Classic Command official Evidence: **701 / 701**
+- Current verified Frame official Evidence: **701 / 701**
+- 上記3対象すべてにCAPCOM / Street Fighter公式Evidenceあり: **701 / 701**
+
+関連するdistinct Source record全体:
+
+- total: 36
+- official: 12
+- supplemental / non-official: 24
 - blank Source URL: 0
-- non-CAPCOM publisher: 0
-- missing `accessed_at`: 0
-- accessed_at range: 2026-08-26〜2026-08-27
-- Source origin: `streetfighter.com`
+- accessed_at range: 2026-08-26〜2026-08-27 UTC
+
+補助Sourceが併記されていても、701候補の必須3対象には別途official Evidenceが存在する。補助Sourceをofficialへ昇格したわけではない。
 
 Move本体はdraftのままなので、Phase20方針に従って自動publishしない。
 
@@ -175,6 +185,26 @@ published Player: 41。
 - 701件を機械Gateだけで一括publishしてはいけない
 - 12キャラに偏る
 - Strategy不足は別問題として残る
+
+## Admin publication path readiness
+
+Phase23 Auth/Admin readiness監査で、Admin publish条件とPublic Move Gateの差分を修正した。
+
+Application code head:
+
+`6b5a4b8e1974f677691e655e274da9626bdb18b5`
+
+現在はAdmin側でもpublishedへ昇格する前に以下を要求する。
+
+- Classic Command
+- Current Patch verified Frame
+- Move official Source
+- Classic Command official Source
+- Current Frame official Source
+
+新規Moveはpublished指定でも一旦draft作成し、Evidence登録後の厳格Gateを通過した場合だけpublishedへ昇格する。
+
+詳細: `docs/PHASE23_AUTH_ADMIN_READINESS_2026-08-29.md`
 
 ## Decision rule
 
