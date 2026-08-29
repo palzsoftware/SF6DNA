@@ -101,6 +101,7 @@ export function AdminMoveForm({
 
           <section className="info-panel">
             <h2>根拠Source</h2>
+            <p>ここで選択したSourceは、新規登録するMove本体・入力済みCommand・FrameのEvidenceとして紐付けます。publishedで登録する場合はofficial Source、Classic Command、Current Patchのverified Frameが必須です。</p>
             <div className="admin-form__grid">
               <Select label="Source" name="source_id" options={sources} />
             </div>
