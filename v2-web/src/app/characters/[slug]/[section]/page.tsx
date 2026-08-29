@@ -11,6 +11,10 @@ import {
 } from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
 import {
+  listMoveMotionMediaForCharacter,
+  type MoveMotionMedia,
+} from "@/lib/move-motion-media";
+import {
   CHARACTER_SECTION_KEYS,
   type CharacterSectionKey,
 } from "@/types/character";
@@ -19,7 +23,7 @@ import styles from "./page.module.css";
 const sectionMeta: Record<Exclude<CharacterSectionKey, "overview">, { title: string; description: string }> = {
   moves: {
     title: "技・フレーム",
-    description: "技名・コマンド・重要フレームを一覧で確認し、必要なときだけ詳細を開けます。",
+    description: "技名・コマンド・モーション・重要フレームを一覧で確認し、必要なときだけ詳細を開けます。",
   },
   combos: {
     title: "コンボ",
@@ -83,6 +87,10 @@ const stateLabels: Record<string, string> = {
 const commandSchemeLabels: Record<string, string> = {
   classic: "Classic",
   modern: "Modern",
+};
+
+const officialMovelistUrls: Record<string, string> = {
+  ryu: "https://www.streetfighter.com/6/ja-jp/character/ryu/movelist",
 };
 
 type DisplayMeta = {
@@ -187,6 +195,34 @@ function isSection(value: string): value is Exclude<CharacterSectionKey, "overvi
   return value !== "overview" && CHARACTER_SECTION_KEYS.includes(value as CharacterSectionKey);
 }
 
+function renderMotion(media: MoveMotionMedia, title: string) {
+  if (media.mediaType === "gif") {
+    return (
+      <img
+        alt={`${title}のモーション`}
+        className={styles.motionMedia}
+        loading="lazy"
+        src={media.mediaUrl}
+      />
+    );
+  }
+
+  return (
+    <video
+      className={styles.motionMedia}
+      controls
+      loop
+      muted
+      playsInline
+      poster={media.posterUrl ?? undefined}
+      preload="none"
+    >
+      <source src={media.mediaUrl} />
+      このブラウザでは動画を再生できません。
+    </video>
+  );
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; section: string }> }) {
   const { slug, section } = await params;
   if (!isSection(section)) return {};
@@ -214,11 +250,14 @@ export default async function CharacterSectionPage({
 
   const meta = sectionMeta[section];
   const previewActive = isDevicePreviewRequest(previewToken);
-  const [items, previewCommands] = await Promise.all([
+  const [items, previewCommands, motionMedia] = await Promise.all([
     listCharacterSectionItems(character.id, section, previewToken),
     section === "moves" && previewActive
       ? getDevicePreviewMoveCommands(character.id, previewToken)
       : Promise.resolve([] as DevicePreviewMoveCommand[]),
+    section === "moves"
+      ? listMoveMotionMediaForCharacter(character.id, previewToken)
+      : Promise.resolve([] as MoveMotionMedia[]),
   ]);
 
   const commandsByMove = new Map<string, DevicePreviewMoveCommand[]>();
@@ -227,6 +266,15 @@ export default async function CharacterSectionPage({
     list.push(command);
     commandsByMove.set(command.moveId, list);
   }
+
+  const mediaByMove = new Map<string, MoveMotionMedia[]>();
+  for (const media of motionMedia) {
+    const list = mediaByMove.get(media.moveId) ?? [];
+    list.push(media);
+    mediaByMove.set(media.moveId, list);
+  }
+
+  const officialMovelistUrl = officialMovelistUrls[character.slug] ?? null;
 
   return (
     <div className="site-shell page-stack">
@@ -251,12 +299,13 @@ export default async function CharacterSectionPage({
             const display = parseMeta(item.meta);
             const subtitle = displaySubtitle(item.subtitle, previewActive);
             const commands = section === "moves" ? (commandsByMove.get(item.id) ?? []) : [];
+            const moveMedia = section === "moves" ? (mediaByMove.get(item.id) ?? []) : [];
+            const primaryMotion = moveMedia[0] ?? null;
+            const hasClassic = commands.some((command) => command.scheme === "classic");
+            const hasModern = commands.some((command) => command.scheme === "modern");
+
             return (
-              <Link
-                className={styles.dataCard}
-                href={appendDevicePreviewToken(item.href, previewToken)}
-                key={item.id}
-              >
+              <article className={styles.dataCard} key={item.id}>
                 <div className={styles.cardTop}>
                   <div className={styles.cardTitleBlock}>
                     {display.kind ? <span className={styles.kind}>{display.kind}</span> : null}
@@ -285,6 +334,40 @@ export default async function CharacterSectionPage({
                   </div>
                 ) : null}
 
+                {section === "moves" && hasClassic && !hasModern ? (
+                  <div className={styles.modernUnavailable} role="note">
+                    <strong>注意</strong>
+                    <span>モダン操作ではこの技を使用できません。</span>
+                  </div>
+                ) : null}
+
+                {section === "moves" ? (
+                  primaryMotion ? (
+                    <div className={styles.motionBlock}>
+                      <span className={styles.motionLabel}>技モーション</span>
+                      {renderMotion(primaryMotion, item.title)}
+                      {(primaryMotion.sourceUrl || primaryMotion.sourceLabel) ? (
+                        <div className={styles.motionSource}>
+                          <span>{primaryMotion.sourceLabel ?? "モーション出典"}</span>
+                          {primaryMotion.sourceUrl ? (
+                            <a href={primaryMotion.sourceUrl} rel="noreferrer" target="_blank">出典を開く ↗</a>
+                          ) : null}
+                        </div>
+                      ) : null}
+                    </div>
+                  ) : (
+                    <div className={styles.motionFallback}>
+                      <span>
+                        <strong>技モーション</strong>
+                        <small>GIF / 短尺動画は準備中です。</small>
+                      </span>
+                      {officialMovelistUrl ? (
+                        <a href={officialMovelistUrl} rel="noreferrer" target="_blank">CAPCOM公式で動きを確認 ↗</a>
+                      ) : null}
+                    </div>
+                  )
+                ) : null}
+
                 {subtitle ? <p className={styles.summary}>{subtitle}</p> : null}
 
                 {display.stats.length ? (
@@ -308,9 +391,9 @@ export default async function CharacterSectionPage({
                   {previewActive && display.internal.length ? (
                     <span className={styles.internalState}>確認状態: {display.internal.join("・")}</span>
                   ) : <span />}
-                  <span className={styles.more}>詳細を見る →</span>
+                  <Link className={styles.more} href={appendDevicePreviewToken(item.href, previewToken)}>詳細を見る →</Link>
                 </div>
-              </Link>
+              </article>
             );
           })}
         </section>
