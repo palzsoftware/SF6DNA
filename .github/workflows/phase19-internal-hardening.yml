@@ -48,6 +48,7 @@ jobs:
           const read = (path) => fs.readFileSync(path, 'utf8');
           const compactSql = (value) => value.replace(/\s+/g, ' ');
           const moveGate = read('src/lib/public-move-gate.ts');
+          const strategyActions = read('src/app/admin/content/[kind]/actions.ts');
           const search = read('src/lib/search.ts');
           const knowledge = read('src/lib/knowledge.ts');
           const characters = read('src/lib/characters.ts');
@@ -84,6 +85,12 @@ jobs:
           for (const entity of ['combo', 'setup', 'sequence', 'counter', 'training']) {
             assert.match(strategyRls, new RegExp(`es\\.entity_type\\s*=\\s*'${entity}'`), `${entity} source RLS missing`);
           }
+
+          assert.ok(strategyActions.includes('payload.verification_status !== "verified"'), 'Strategy publish must require verified status');
+          assert.ok(strategyActions.includes('hasSourceRelation'), 'Strategy publish must require Source relation');
+          assert.ok(strategyActions.includes('requestedStatus === "published"'), 'Strategy publish transition guard missing');
+          assert.ok(strategyActions.includes('{ ...payload, status: "draft" }'), 'New published Strategy must be created as draft first');
+          assert.ok(strategyActions.includes('update({ status: "published" })'), 'Strategy must promote only after Source relation exists');
 
           assert.match(sourceNormalization, /entity_type\s*=\s*'guide_section'/);
           assert.match(sourceNormalization, /entity_type\s*=\s*'character_guide_section'/);
