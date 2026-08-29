@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { playerRoleLabel, playerTypeLabel } from "@/lib/player-labels";
@@ -38,8 +39,15 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ s
           </div>
         </div>
         {player.imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img className="character-hero__image" src={player.imageUrl} alt={player.displayName} width={760} height={760} />
+          <Image
+            className="character-hero__image"
+            src={player.imageUrl}
+            alt={player.displayName}
+            width={760}
+            height={760}
+            sizes="(max-width: 720px) 100vw, 42vw"
+            priority
+          />
         ) : null}
       </section>
 
