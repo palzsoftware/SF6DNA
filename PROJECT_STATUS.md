@@ -5,16 +5,14 @@
 ## 現在状態
 
 - Phase1〜22: **完了**
-- Phase23: **最終manual stage待ち**
-- Non-human Pre-device work: **完了**
+- Phase23: **Final Manual Stage待ち**
+- Safe non-human / pre-device work: **完了**
 - Auth / Admin non-human readiness: **完了**
-- Application automated baseline: `6b5a4b8e1974f677691e655e274da9626bdb18b5`
-- CI invariant follow-up: `22af783bc8fb947be138cfcdd56279a053d8f713`
 - PC / iPhone実機テスト: **最後のmanual stageとしてHOLD**
 - Production Readiness: **未判定 / manual stage後**
 - v2 Production deploy: **未実施**
 
-ユーザー指示により、実機・実ログイン・人物同定・Publication approval等、人の操作または判断を必要とする作業は最後まで保留する。
+ユーザー指示により、実ログイン・人物同定・Publication approval・PC/iPhone実機操作など人の手または判断を必要とする工程は最後にまとめて実施する。
 
 ## 正本
 
@@ -24,100 +22,76 @@
 - main baseline: `b9a2a8f638a3d4a98bfa042d56470664fe225ba7`
 - Supabase: `SF6DNAPro`
 - Project ID: `wnuxaxbrpudyypzdbdho`
-- Current Patch baseline: `2026.08.03`
+- Vercel project: `sf-6-dna`
+- Vercel project ID: `prj_UwgkJ3pXqGBWhaH6qn6pY8TTZMpR`
+- Current Patch: `2026.08.03`
 
-## 完了したNon-human Pre-device作業
+## Current automated baseline
 
-- 全主要ページUI / copy再監査
-- 公開画面の内部管理用語整理
-- Character / Player画像監査
-- 安全確認済みPlayer画像17件のfallback接続
-- Player alias機械監査（published 41名に追加aliasなし）
-- Next.js Image Optimization導入
-- Home / Character / Player画像のresponsive最適化
-- metadata / robots / sitemap / OGP整理
-- Preview検索クロール禁止
-- Release docs更新
-- `KNOWN_ISSUES.md` / `TECH_DEBT.md` / `DATA_ISSUES.md` のv2再分類
-- Supabase参照整合性監査
-- Supabase RLS 38 / 38確認
-- Security Advisor 0 lints確認
-- Public Move / Strategy Gate再確認
-- Move候補701件の構造 / Source再監査
-- CAPCOM公式Frame Snapshotスクリプト修正
-- CAPCOM日本語Frame Snapshot **31 / 31取得PASS**
-- Lighthouse再計測
-- Vercel Preview READY / Build error 0 / runtime error-fatal 0
+- Application implementation: `3c702ca0dad54ab2f73a2a940d1cc17e6511d3f1`
+- DB hardening follow-up: `5c46de5f0a81e4c9996b5ff30f7896aa7cdf651e`
+- CI invariant follow-up: `4c3dedad21fff648a2c887a7a66ba9b68bb05b23`
 
-詳細: `docs/PHASE23_PRE_DEVICE_POLISH_AUDIT_2026-08-29.md`
+Application head `3c702ca0...` の8 workflowは全PASS:
 
-## Auth / Admin readiness追加監査
+- Phase16 Release Acceptance — `33240366996`
+- Phase15 Runtime Smoke — `33240366991`
+- Phase15 Browser Acceptance — `33240367023`
+- Phase15 Lighthouse Audit — `33240366981`
+- Phase19 Internal Hardening — `33240367007`
+- Phase20 Verified Content Acceptance — `33240367003`
+- SF6DNA v2 Web Check — `33240366993`
+- Phase18 Data Gate Acceptance — `33240367041`
 
-2026-08-29にReal Auth E2E前の境界を追加監査した。
+DB follow-up `5c46de5f...`:
+
+- Phase19 Internal Hardening — PASS `33240529766`
+- Phase18 Data Gate Acceptance — PASS
+
+## Latest Preview / Security
+
+DB follow-up Preview:
+
+- Deployment: `dpl_8sdQJbKXF3EYmGgeQbsRMnk1jM74`
+- READY
+- Previewのみ
+
+CI follow-up Preview `dpl_9iFYnQTxXuCUyJ3cJmTGxbMSm6Rt`:
+
+- READY
+- Build error 0
+- runtime error / fatal 0
 
 Supabase:
 
-- `auth.users`: **0**
-- 新規Auth userはtriggerで`profiles.role='user'`として作成
-- 一般ユーザーが自身のroleをadminへ自己昇格できないRLSを確認
-- `private.is_admin()`によるAdmin判定を確認
+- Security Advisor: **0 lints**
+- Current Patch: `2026.08.03`が1件
+- Auth user: 0
 
-実ユーザー0件のため、Real Admin / non-admin browser E2Eはmanual stageまで保留する。偽Auth userをSQL投入して代用しない。
+## 完了したPhase23 non-human hardening
 
-監査中にMove Admin / Public Gateのリリース前不具合を検出・修正:
+- UI / copy / responsive / SEO / metadata監査
+- Character / Player画像監査
+- safety-confirmed Player fallback 17名
+- Next.js Image Optimization
+- Vercel build/runtime監査
+- CAPCOM公式Frame Snapshot 31 / 31 PASS
+- Public Move / Strategy Gate監査
+- Move / Classic Command / Current verified Frameのofficial Evidence Gate整合
+- Move Admin publishをdraft→Evidence→strict gate→publishedへ変更
+- Strategy 5種をdraft→Source relation→publishedへ変更
+- Diagnosis completeness GateをAdmin/RLSへ追加
+- Character Trait ScoreのSource relation / Public GateをAdmin/RLSへ整合
+- Current Patch切替をatomic RPC化
+- RPCを`SECURITY INVOKER`化
+- relation RLS/実データ横断監査
+- Security Advisor再監査 0 lints
 
-1. polymorphic `entity_sources`に対するPostgREST inferred join依存を除去
-2. Admin publish条件をPublic Move Gateと同等へ強化
-3. Move / Command / FrameへEvidence Sourceを個別付与できるAdmin UIを追加
-4. 新規published Moveはdraft作成→Evidence登録→厳格Gate再確認→published昇格へ変更
-5. Phase19 / Phase20 CIへ再発防止invariant追加
+詳細:
 
-詳細: `docs/PHASE23_AUTH_ADMIN_READINESS_2026-08-29.md`
-
-## Automated regression — current baseline
-
-Application code head `6b5a4b8e1974f677691e655e274da9626bdb18b5` とCI-only follow-up `22af783bc8fb947be138cfcdd56279a053d8f713` で確認:
-
-- Phase16 Release Acceptance — PASS (`33239446677`)
-- Phase15 Runtime Smoke — PASS (`33239446690`)
-- Phase15 Browser Acceptance — PASS (`33239446655`)
-- Phase15 Lighthouse Audit — PASS (`33239446718`)
-- Phase19 Internal Hardening — PASS (`33239510750`)
-- Phase20 Verified Content Acceptance — PASS (`33239446647`)
-- SF6DNA v2 Web Check — PASS (`33239446717`)
-- Phase18 Data Gate Acceptance — PASS (`33239446644`)
-
-最新CI follow-up Preview:
-
-- SHA: `22af783bc8fb947be138cfcdd56279a053d8f713`
-- Deployment: `dpl_CHHhrT5RgaXP9LGGHMm7mPSE2PgT`
-- READY
-- target: Preview
-- Build error: 0
-- runtime error / fatal: 0
-
-## Performance baseline
-
-画像最適化後の既存計測:
-
-### Home
-
-- Performance: **0.91**
-- LCP: **約3.39s**
-- TBT: **約65ms**
-- CLS: 0
-- Accessibility: 1.00
-- SEO: 1.00
-
-### Character detail
-
-- Performance: **0.93**
-- LCP: **約3.11s**
-- CLS: 0
-- Accessibility: 1.00
-- SEO: 1.00
-
-最新Lighthouse workflowもPASSしている。
+- `docs/PHASE23_PRE_DEVICE_POLISH_AUDIT_2026-08-29.md`
+- `docs/PHASE23_AUTH_ADMIN_READINESS_2026-08-29.md`
+- `docs/PHASE23_AUTOMATED_RC_BASELINE_2026-08-29.md`
 
 ## Current Public Content
 
@@ -125,21 +99,24 @@ Application code head `6b5a4b8e1974f677691e655e274da9626bdb18b5` とCI-only foll
 
 - playable + published Character: 31
 - published Diagnosis: 4
-- published Move: **0**
-- published Combo / Setup / Sequence / Counter / Training: **0**
-- `auth.users`: **0**
+- published Move: 0
+- published Combo / Setup / Sequence / Counter / Training: 0
+- published Character Trait Score: 0
+- `auth.users`: 0
 
-今回のAuth/Admin readiness作業では実ユーザー・攻略コンテンツstatusを変更していない。
+今回のhardeningでは攻略コンテンツのPublication statusやAuth userを変更していない。
 
-Move:
+## Move machine-gate snapshot
 
-- draft: 2052
-- strict machine Public Gate ready draft: **701**
-- gate not ready: 1351
-- ready Character: 12 / 31
-- ready候補Modernあり / なし: 662 / 39
+実DBの`private.is_move_public_ready(m.id)`で再集計:
 
-現DB関数による正しいCharacter別内訳:
+- draft Move: 2052
+- strict machine-ready: **701**
+- not ready: 1351
+- ready Characters: 12 / 31
+- Modernあり / なし: **662 / 39**
+
+Character別:
 
 - Dee Jay 105
 - Jamie 93
@@ -150,63 +127,90 @@ Move:
 - Guile 70
 - Chun-Li 68
 - Yasmine 19
-- Mai 10
+- Mai Shiranui 10
 - C. Viper 7
 - Elena 4
 
-701候補はMove / Classic Command / Current verified Frameのrequired official Evidenceを701 / 701で確認済み。ただしMachine Gate PASSはpublish承認ではないため自動publishしない。
+701件はMove / Classic Command / Current verified Frameのrequired official Evidenceを満たすが、Machine Gate PASSはPublication approvalではないためdraftを維持する。
 
 詳細: `docs/PHASE23_PUBLICATION_READINESS_2026-08-29.md`
 
+## Strategy / Diagnosis / Trait state
+
+Strategy `draft + verified + Source relation`:
+
+- Combo 1
+- Setup 0
+- Sequence 0
+- Counter 0
+- Training 0
+
+Published Diagnosis 4件:
+
+- published Question数 12 / 10 / 10 / 20
+- Optionなしpublished Question 0
+- 全4件release-ready
+
+Character Trait Score:
+
+- total 372
+- published 0
+- public-ready 0
+
+## Performance baseline
+
+Home:
+- Performance 0.91
+- Accessibility 1.00
+- SEO 1.00
+- LCP 約3.39s
+- CLS 0
+
+Character detail:
+- Performance 0.93
+- Accessibility 1.00
+- SEO 1.00
+- LCP 約3.11s
+- CLS 0
+
+最新Lighthouse workflowもPASS。
+
 ## CAPCOM Official Snapshot
 
-- Audit script fix: `ac4ed232d0f73c619ac2681565ab55c289022967`
-- Workflow: `Phase20 Official Frame Snapshot`
 - Run: `33228209058`
-- Result: **PASS**
-- CAPCOM Japanese frame pages: **31 / 31 HTTP 200**
+- Result: PASS
+- CAPCOM Japanese frame pages: 31 / 31 HTTP 200
 - Artifact: `phase20-official-frame-snapshots-ja-jp`
 - Artifact ID: `9707625771`
 
 ## 残作業 — Human / manual stageのみ
 
-### 1. 攻略データPublication approval
+### 1. Content Publication approval
 
-人による公開範囲の判断。
+- Safe minimal release
+- または701 Move候補から内容を個別承認したもののみpublish
 
-- Safe empty state中心のminimal release
-- または701 Move候補から個別承認したもののみpublish
-
-Machine Gateだけを根拠にbulk publishしない。
+bulk publish禁止。
 
 ### 2. Real Auth / Admin E2E
 
-現在Auth user 0件。正式な実またはテストアカウントをAuthフローから準備し、実ブラウザセッションで確認する。
-
-- unauthenticated block
-- non-admin write block
-- admin access
-- limited Create / Edit / Evidence attach / Publish / Archive
-- incomplete Evidence publish rejection
-- save / re-fetch
-- cleanup
-- Public Gate unaffected
+正式な実またはテストアカウントを通常Authフローで準備し、実ブラウザでunauthenticated / non-admin / admin / Create / Edit / Evidence / Publish rejection-success / Archive / cleanupを確認する。
 
 ### 3. Player残画像の人物確認
 
-機械的に安全確定できない画像だけmanual確認する。
+必要な場合だけmanual確認。ファイル名類似で接続しない。
 
-### 4. 最終Release Candidate固定
+### 4. Final RC freeze
 
-manual stageでPublication status / test data / code等の変更が発生した場合、その変更後に必要な回帰テストを実施して最終RC HEADを固定する。
+manual stageでDB / code / assetsが変われば、その変更後に回帰テストを実施してFinal RC HEADを固定する。
 
 ### 5. PC / iPhone実機テスト
 
-最終RCに対して最後に実施する。
+Final RCに対して最後に実施する。
 
 ### 6. Production Readiness判定
 
-実機Acceptance完了後に最終判定する。
+実機Acceptance後にRelease Ready / Conditional Go / No-Goを判定する。
 
 ### 7. Production deploy
 
@@ -217,9 +221,9 @@ manual stageでPublication status / test data / code等の変更が発生した�
 - `reviewed ≠ verified`
 - `draft ≠ published`
 - Sourceありだけでverifiedへ昇格しない
-- 推測Modern Commandを登録しない
-- SourceなしFrameを確定登録しない
-- 件数目的でbulk verify / publishしない
+- 推測Modern Command禁止
+- SourceなしFrame確定禁止
+- 件数目的のbulk verify / publish禁止
 - AI CoachはEvidence不足を自由生成で補わない
 
 ## Modern Command
@@ -229,4 +233,4 @@ manual stageでPublication status / test data / code等の変更が発生した�
 - Modern: 1441 / 2052
 - Missing Modern: 611
 
-公式情報から安全に取得できない611件は未入力を維持する。
+公式情報から安全に取得できないModernは未入力を維持する。
