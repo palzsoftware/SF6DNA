@@ -65,7 +65,7 @@ export default async function HomePage() {
               aria-label={`${character.name}の情報を見る`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={character.imageUrl ?? ""} alt={character.name} />
+              <img src={character.imageUrl ?? ""} alt={character.name} width={760} height={760} />
             </Link>
           ))}
         </div>
