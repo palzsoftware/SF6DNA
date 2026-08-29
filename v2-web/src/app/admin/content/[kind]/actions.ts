@@ -23,6 +23,8 @@ const nullableBoolean = (fd: FormData, key: string) => {
   return null;
 };
 
+type AdminSupabase = Awaited<ReturnType<typeof requireAdmin>>["supabase"];
+
 function assertKind(kind: string): asserts kind is StrategyKind {
   if (!isStrategyKind(kind)) throw new Error("Unsupported content kind");
 }
@@ -143,27 +145,52 @@ function validate(kind: StrategyKind, payload: Record<string, unknown>) {
   if (kind === "trainings" && (!payload.name || !payload.training_type || !payload.purpose || !payload.method)) throw new Error("name, training_type, purpose and method are required");
 }
 
-async function ensurePublishable(
-  supabase: Awaited<ReturnType<typeof requireAdmin>>["supabase"],
-  kind: StrategyKind,
-  id: string | null,
+async function validatePublishRequest(
+  supabase: AdminSupabase,
   payload: Record<string, unknown>,
   sourceId: string,
+  hasExistingSource: boolean,
 ) {
   if (payload.status !== "published") return;
   if (payload.verification_status !== "verified") {
     throw new Error("publishedにするにはverification_status=verifiedが必要です");
   }
-  if (sourceId) return;
-  if (!id) throw new Error("publishedにするにはSourceが必要です");
+  if (!sourceId && !hasExistingSource) {
+    throw new Error("publishedにするには既存Sourceまたは新しいSource指定が必要です");
+  }
+  if (sourceId) {
+    const { data, error } = await supabase.from("sources").select("id").eq("id", sourceId).maybeSingle();
+    if (error) throw new Error(error.message);
+    if (!data) throw new Error("指定Sourceが存在しません");
+  }
+}
 
+async function hasSourceRelation(supabase: AdminSupabase, kind: StrategyKind, entityId: string) {
   const { count, error } = await supabase
     .from("entity_sources")
     .select("id", { count: "exact", head: true })
     .eq("entity_type", entityTypeFor(kind))
-    .eq("entity_id", id);
+    .eq("entity_id", entityId);
   if (error) throw new Error(error.message);
-  if (!count) throw new Error("publishedにするには既存Sourceまたは新しいSource指定が必要です");
+  return Boolean(count);
+}
+
+async function attachStrategySource(
+  supabase: AdminSupabase,
+  kind: StrategyKind,
+  entityId: string,
+  sourceId: string,
+  formData: FormData,
+) {
+  if (!sourceId) return;
+  const { error } = await supabase.from("entity_sources").insert({
+    entity_type: entityTypeFor(kind),
+    entity_id: entityId,
+    source_id: sourceId,
+    relationship: text(formData, "source_relationship") || "primary",
+    note: nullable(formData, "source_note"),
+  });
+  if (error && !error.message.toLowerCase().includes("duplicate")) throw new Error(error.message);
 }
 
 export async function saveStrategyContent(kindValue: string, id: string | null, formData: FormData) {
@@ -174,27 +201,40 @@ export async function saveStrategyContent(kindValue: string, id: string | null, 
   validate(kind, payload);
   const table = STRATEGY_META[kind].table;
   const sourceId = text(formData, "source_id");
-  await ensurePublishable(supabase, kind, id, payload, sourceId);
+  const requestedStatus = String(payload.status ?? "draft");
+  const existingHasSource = id ? await hasSourceRelation(supabase, kind, id) : false;
+
+  await validatePublishRequest(supabase, payload, sourceId, existingHasSource);
 
   let entityId = id;
   if (id) {
+    if (requestedStatus === "published" && sourceId) {
+      await attachStrategySource(supabase, kind, id, sourceId, formData);
+    }
+
     const { error } = await supabase.from(table).update(payload).eq("id", id);
     if (error) throw new Error(error.message);
   } else {
-    const { data, error } = await supabase.from(table).insert(payload).select("id").single();
+    const createPayload = requestedStatus === "published"
+      ? { ...payload, status: "draft" }
+      : payload;
+    const { data, error } = await supabase.from(table).insert(createPayload).select("id").single();
     if (error) throw new Error(error.message);
     entityId = String(data.id);
   }
 
-  if (sourceId && entityId) {
-    const { error } = await supabase.from("entity_sources").insert({
-      entity_type: entityTypeFor(kind),
-      entity_id: entityId,
-      source_id: sourceId,
-      relationship: text(formData, "source_relationship") || "primary",
-      note: nullable(formData, "source_note"),
-    });
-    if (error && !error.message.toLowerCase().includes("duplicate")) throw new Error(error.message);
+  if (sourceId && entityId && !(id && requestedStatus === "published")) {
+    await attachStrategySource(supabase, kind, entityId, sourceId, formData);
+  }
+
+  if (requestedStatus === "published" && entityId) {
+    const ready = await hasSourceRelation(supabase, kind, entityId);
+    if (!ready) throw new Error("publishedにするにはSource relationが必要です");
+
+    if (!id) {
+      const { error: publishError } = await supabase.from(table).update({ status: "published" }).eq("id", entityId);
+      if (publishError) throw new Error(publishError.message);
+    }
   }
 
   revalidatePath(`/admin/content/${kind}`);
