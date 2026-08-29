@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { AdminMoveForm } from "@/components/admin-move-form";
 import { requireAdmin } from "@/lib/admin";
 import { addFrameVersion, attachMoveEvidenceSource, updateMove } from "../actions";
+import { addMoveMotionMedia, archiveMoveMotionMedia } from "./motion-actions";
 
 export default async function EditMovePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -13,6 +14,7 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
     { data: frames, error: frameError },
     { data: patches, error: patchError },
     { data: sources, error: sourceError },
+    { data: motionMedia, error: motionMediaError },
   ] = await Promise.all([
     supabase.from("moves").select("id, character_id, slug, name_ja, name_en, move_type, strength_variant, description, usage_summary, display_order, status").eq("id", id).maybeSingle(),
     supabase.from("characters").select("id, name_ja").neq("status", "archived").order("display_order"),
@@ -20,6 +22,7 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
     supabase.from("move_frame_data").select("id, startup, active, recovery, on_hit, on_block, damage, drive_damage, super_gain, hit_level, cancel_type, invincibility, notes, valid_from_patch_id, valid_to_patch_id, verification_status, created_at").eq("move_id", id).order("created_at", { ascending: false }),
     supabase.from("patches").select("id, version_label, name, released_at, is_current").order("released_at", { ascending: false, nullsFirst: false }),
     supabase.from("sources").select("id, title, publisher, url, reliability_level").order("published_at", { ascending: false, nullsFirst: false }).limit(200),
+    supabase.from("move_motion_media").select("id, media_type, media_url, poster_url, source_url, source_label, status, display_order, created_at").eq("move_id", id).neq("status", "archived").order("display_order").order("created_at"),
   ]);
   if (moveError) throw new Error(moveError.message);
   if (characterError) throw new Error(characterError.message);
@@ -27,6 +30,7 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
   if (frameError) throw new Error(frameError.message);
   if (patchError) throw new Error(patchError.message);
   if (sourceError) throw new Error(sourceError.message);
+  if (motionMediaError) throw new Error(motionMediaError.message);
   if (!move) notFound();
 
   const patchMap = new Map((patches ?? []).map((patch) => [patch.id, patch]));
@@ -61,7 +65,7 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
       <section className="hero compact-hero">
         <p className="eyebrow">ADMIN / MOVES</p>
         <h1>{move.name_ja}を編集</h1>
-        <p>基本情報と、履歴として保持するFrame / Patch / Sourceを分けて管理します。</p>
+        <p>基本情報と、履歴として保持するFrame / Patch / Source / Motion Mediaを分けて管理します。</p>
       </section>
 
       <AdminMoveForm
@@ -84,6 +88,44 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
             </table>
           </div>
         ) : <p>コマンド未登録です。</p>}
+      </section>
+
+      <section className="info-panel">
+        <h2>技モーション / GIF・短尺動画</h2>
+        <p>確認用素材はdraft / reviewedで登録できます。publishedにする場合はMove本体の公開と、素材のSource URL / Source Labelが必須です。</p>
+        {motionMedia?.length ? (
+          <div className="admin-table-wrap admin-table-wrap--nested">
+            <table className="admin-table">
+              <thead><tr><th>Type</th><th>Status</th><th>Media</th><th>Source</th><th>Order</th><th>Action</th></tr></thead>
+              <tbody>
+                {motionMedia.map((media) => (
+                  <tr key={media.id}>
+                    <td>{media.media_type}</td>
+                    <td>{media.status}</td>
+                    <td><a className="text-link" href={media.media_url} target="_blank" rel="noopener noreferrer">素材を開く</a></td>
+                    <td>{media.source_url ? <a className="text-link" href={media.source_url} target="_blank" rel="noopener noreferrer">{media.source_label ?? "Source"}</a> : "-"}</td>
+                    <td>{media.display_order}</td>
+                    <td><form action={archiveMoveMotionMedia.bind(null, id, media.id)}><button className="button-secondary" type="submit">Archive</button></form></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : <p>Motion Mediaはまだ登録されていません。</p>}
+
+        <h3>Motion Mediaを追加</h3>
+        <form action={addMoveMotionMedia.bind(null, id)} className="admin-form">
+          <div className="admin-form__grid">
+            <label className="admin-field"><span>Media Type</span><select name="media_type" defaultValue="video"><option value="video">video</option><option value="gif">gif</option></select></label>
+            <label className="admin-field"><span>Status</span><select name="status" defaultValue="reviewed"><option value="draft">draft</option><option value="reviewed">reviewed</option><option value="published">published</option></select></label>
+            <label className="admin-field"><span>Display Order</span><input name="display_order" type="number" defaultValue="0" /></label>
+            <label className="admin-field"><span>Source Label</span><input name="source_label" placeholder="例: 自前実機キャプチャ / CAPCOM公式" /></label>
+          </div>
+          <label className="admin-field admin-field--wide"><span>Media URL</span><input name="media_url" type="url" inputMode="url" placeholder="https://..." required /></label>
+          <label className="admin-field admin-field--wide"><span>Poster URL（動画のみ・任意）</span><input name="poster_url" type="url" inputMode="url" placeholder="https://..." /></label>
+          <label className="admin-field admin-field--wide"><span>Source URL</span><input name="source_url" type="url" inputMode="url" placeholder="https://..." /></label>
+          <div className="admin-actions"><button className="button-primary" type="submit">Motion Mediaを追加</button></div>
+        </form>
       </section>
 
       <section className="info-panel">
