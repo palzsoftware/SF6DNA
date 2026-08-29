@@ -85,6 +85,16 @@ export type DevicePreviewBundle = {
   }>;
 };
 
+export type DevicePreviewMoveCommand = {
+  moveId: string;
+  scheme: string;
+  commandText: string | null;
+  numericNotation: string | null;
+  buttonNotation: string | null;
+  conditionText: string | null;
+  sortOrder: number | null;
+};
+
 export function normalizeDevicePreviewToken(value: string | string[] | undefined): string | null {
   const token = Array.isArray(value) ? value[0] : value;
   if (!token || token.length < 20 || token.length > 200) return null;
@@ -114,6 +124,27 @@ export async function getDevicePreviewBundle(
 
   if (!data || typeof data !== "object" || Array.isArray(data)) return null;
   return data as unknown as DevicePreviewBundle;
+}
+
+export async function getDevicePreviewMoveCommands(
+  characterId: string,
+  previewToken: string | null | undefined
+): Promise<DevicePreviewMoveCommand[]> {
+  if (!isDevicePreviewRequest(previewToken)) return [];
+
+  const supabase = getSupabaseServerClient();
+  const { data, error } = await supabase.rpc("get_phase23_move_commands_preview", {
+    target_character_id: characterId,
+    preview_token: previewToken,
+  });
+
+  if (error) {
+    console.error("[device-preview] move command preview failed", error.message);
+    return [];
+  }
+
+  if (!Array.isArray(data)) return [];
+  return data as unknown as DevicePreviewMoveCommand[];
 }
 
 export function appendDevicePreviewToken(href: string, previewToken: string | null | undefined) {
