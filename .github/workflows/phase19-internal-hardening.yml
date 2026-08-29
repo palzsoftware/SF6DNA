@@ -62,6 +62,7 @@ jobs:
           const moveRlsEvidence = compactSql(read('../supabase/migrations/20260828_phase19_require_official_move_and_frame_sources.sql'));
           const strategyRls = compactSql(read('../supabase/migrations/20260828_phase18_strategy_source_public_gate.sql'));
           const sourceNormalization = compactSql(read('../supabase/migrations/20260828_phase19_normalize_guide_section_source_type.sql'));
+          const phase23PublicationGates = compactSql(read('../supabase/migrations/20260829_phase23_publication_gate_hardening.sql'));
 
           for (const required of [
             '.eq("status", "published")',
@@ -105,6 +106,15 @@ jobs:
           assert.ok(traitActions.includes('entity_type: "character_trait_score"'), 'Character Trait Score entity type mismatch');
           assert.ok(traitActions.includes('requestedStatus === "published" ? "draft"'), 'New published Trait Score must be created as draft first');
           assert.ok(traitActions.includes('verificationStatus !== "verified" || !sourceId'), 'Published Trait Score must require verified status and Source');
+
+          assert.ok(phase23PublicationGates.includes('private.is_diagnosis_public_ready'), 'Diagnosis DB public readiness helper missing');
+          assert.ok(phase23PublicationGates.includes('public read release-ready diagnoses'), 'Diagnosis release-ready RLS missing');
+          assert.ok(phase23PublicationGates.includes('public read release-ready diagnosis questions'), 'Diagnosis Question parent gate missing');
+          assert.ok(phase23PublicationGates.includes('public read release-ready diagnosis options'), 'Diagnosis Option parent gate missing');
+          assert.ok(phase23PublicationGates.includes('private.is_character_trait_score_public_ready'), 'Trait Score DB public readiness helper missing');
+          assert.ok(phase23PublicationGates.includes("es.entity_type = 'character_trait_score'"), 'Trait Score DB Source relation gate missing');
+          assert.ok(phase23PublicationGates.includes("c.status = 'published'"), 'Trait Score parent Character gate missing');
+          assert.ok(phase23PublicationGates.includes("t.status = 'published'"), 'Trait Score parent Trait gate missing');
 
           assert.match(sourceNormalization, /entity_type\s*=\s*'guide_section'/);
           assert.match(sourceNormalization, /entity_type\s*=\s*'character_guide_section'/);
