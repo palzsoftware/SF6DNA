@@ -1,72 +1,83 @@
-# DATA_ISSUES.md
+# SF6DNA Data Issues
 
-character-data.jsが参照している選手ID(pros/streamers/vtubers/youtubers)のうち、
-実際の選手データファイル(pro.js/streamer.js/vtuber.js/youtuber.js)に存在しないものを一覧化したドキュメントです。
+最終更新: 2026-08-29 JST
 
-**このファイルに記載された項目は、まだコードを修正していません。** 判断が必要なもの、または新規登録が必要なものです。
+## 対象
 
-このドキュメントは `node scripts/check-data-integrity.js` の実行結果をもとに更新してください。新しく選手データを追加した際や、character-data.jsを編集した際は、このスクリプトを再実行し、本ドキュメントの内容を最新化することを推奨します。
+この文書は、現行 `sf6dna-v2` / Supabase と旧静的版データを分離して扱う。
 
-最終更新時点の検出結果: 参照切れ 20件 / ID重複 1件(2026年7月時点)
+Release判定の正本は以下。
 
----
+- GitHub: `palzsoftware/SF6DNA`
+- Branch: `sf6dna-v2`
+- Supabase: `SF6DNAPro`
+- Project ID: `wnuxaxbrpudyypzdbdho`
+- Patch baseline: `2026.08.03`
 
-## ② 判断が必要なもの(候補IDあり)
+## 現行v2の参照整合性
 
-候補となるIDは存在するものの、別人の可能性を否定できないため、コードは修正していません。
+2026-08-29の実DB read-only監査:
 
-| 参照元キャラクター | 現在のID | 候補ID | 理由 | 対応状況 |
-|---|---|---|---|---|
-| ザンギエフ(zangief) | junior | jr(pro.js内に実在、name:"Jr.") | 「Noble→noble」のような表記ゆれとは異なり、文字列として全く別のIDである。同一人物が略称で登録されている可能性はあるが、別人の可能性も否定できず、100%同一人物と判断できる根拠が無い | 未確認 |
+- `player_characters -> players` orphan: **0**
+- `player_characters -> characters` orphan: **0**
+- `player_aliases -> players` orphan: **0**
 
----
+したがって、旧 `character-data.js` / `pro.js` / `streamer.js` / `vtuber.js` / `youtuber.js` の文字列ID参照切れは、現行v2のPlayer参照整合性Blockerとして扱わない。
 
-## ③ 未登録データ(参照先IDが存在しない)
+## 現行v2で残るデータ課題
 
-以下19件は、`pro.js`・`streamer.js`・`vtuber.js`のいずれにも該当するIDが見つかりませんでした。表記ミスではなく、**単純に選手データベースへの登録が漏れている可能性が高い**と考えられます(特に`streamer.js`は5件、`vtuber.js`は15件しか登録が無く、登録数自体が少ないため)。
+### 1. Public攻略データ
 
-| 参照元キャラクター | 現在のID | 候補ID | 理由 | 対応状況 |
-|---|---|---|---|---|
-| ルーク(luke) | yoshinama | なし | streamer.jsに該当ID無し | 未確認 |
-| ジェイミー(jamie) | tantanmen | なし | pro.jsに該当ID無し | 未確認 |
-| ジェイミー(jamie) | uryo | なし | pro.jsに該当ID無し | 未確認 |
-| ジェイミー(jamie) | naruo | なし | streamer.jsに該当ID無し | 未確認 |
-| ジェイミー(jamie) | kaminariqpi | なし | vtuber.jsに該当ID無し | 未確認 |
-| キンバリー(kimberly) | tako | なし | pro.jsに該当ID無し | 未確認 |
-| キンバリー(kimberly) | suzukinoriaki | なし | streamer.jsに該当ID無し | 未確認 |
-| マノン(manon) | saikiittetsu | なし | vtuber.jsに該当ID無し | 未確認 |
-| ザンギエフ(zangief) | tensihn | なし | vtuber.jsに該当ID無し | 未確認 |
-| ディージェイ(deejay) | ohsuakira | なし | streamer.jsに該当ID無し | 未確認 |
-| キャミィ(cammy) | sorahoshikirame | なし | vtuber.jsに該当ID無し | 未確認 |
-| キャミィ(cammy) | uchiwa | なし | vtuber.jsに該当ID無し | 未確認 |
-| ジュリ(juri) | betty | なし | streamer.jsに該当ID無し | 未確認 |
-| ジュリ(juri) | ibrahim | なし | vtuber.jsに該当ID無し | 未確認 |
-| ジュリ(juri) | amakipururu | なし | vtuber.jsに該当ID無し | 未確認 |
-| ダルシム(dhalsim) | kibakibaru | なし | vtuber.jsに該当ID無し | 未確認 |
-| ダルシム(dhalsim) | hoshino | なし | vtuber.jsに該当ID無し | 未確認 |
-| A.K.I.(aki) | yukikiriyuki | なし | vtuber.jsに該当ID無し | 未確認 |
-| C.ヴァイパー(cviper) | inaba | なし | pro.jsに該当ID無し | 未確認 |
+現時点では次の公開statusは0件。
 
-**対応状況の選択肢について**:
-- `未確認` — まだ方針を決めていない(初期状態)
-- `保留` — 対応しないと決めた、または当面は様子見と決めた
-- `追加予定` — 選手データベースへの新規登録を予定している
+- Move
+- Combo
+- Setup
+- Sequence
+- Counter
+- Training
 
-このドキュメントを更新する際は、上記いずれかに書き換えてください。
+未確認データを公開する代わりにsafe empty stateを使用する。
 
----
+Moveは2052件のdraftのうち701件が現行Public Move Gateの機械条件を満たすが、`Machine Gate PASS != publish approval` のため自動publishしない。
 
-## その他の既知の不整合(参考)
+### 2. Modern Command
 
-character-data.jsからの参照切れとは別の問題として、`pro.js`内で以下のIDが重複して定義されています。JavaScriptのオブジェクトリテラルの仕様上、後に書かれた方でデータが上書きされるため、片方のデータが実質的に無効化されています。
+- Current Move: 2052
+- Classic Command: 2052 / 2052
+- Modern Command: 1441 / 2052
+- Missing Modern: 611
 
-| ファイル | 重複ID | 対応状況 |
-|---|---|---|
-| assets/js/pro.js | itabashizangief | 未確認 |
+611件は公式情報から安全に取得できないものを含む。Classicから推測補完しない。
 
----
+### 3. Player image
 
-## 関連ドキュメント
+published Playerは41名。DB `image_url` は未登録。
 
-- [scripts/check-data-integrity.js](../scripts/check-data-integrity.js) — このドキュメントの元になっている自動チェックスクリプト
-- [TECH_DEBT.md](./TECH_DEBT.md) — その他の技術的負債の一覧
+旧画像と現行Player slugが完全一致する17名のみv2 fallbackで接続済み。残りは人物同定を推測しない。
+
+## Legacy static-site issues
+
+以下は2026年7月時点の旧静的版監査で検出された履歴であり、v2 Release Gateとは分離する。
+
+- `character-data.js` の選手ID参照切れ: 20件
+- `assets/js/pro.js` の `itabashizangief` 重複
+- 旧JSオブジェクトIDと画像名の不一致
+
+旧版を保守する場合のみ `scripts/check-data-integrity.js` で再監査する。
+
+## Releaseルール
+
+- `reviewed != verified`
+- `draft != published`
+- Sourceありだけでverifiedへ昇格しない
+- SourceなしFrameを確定扱いしない
+- 推測Modern Commandを登録しない
+- 件数目的でbulk publishしない
+
+関連:
+
+- `docs/PHASE23_PUBLICATION_READINESS_2026-08-29.md`
+- `docs/PHASE23_PRE_DEVICE_POLISH_AUDIT_2026-08-29.md`
+- `docs/KNOWN_ISSUES.md`
+- `docs/TECH_DEBT.md`
