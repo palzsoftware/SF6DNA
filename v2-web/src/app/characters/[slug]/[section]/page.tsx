@@ -12,41 +12,159 @@ import {
   CHARACTER_SECTION_KEYS,
   type CharacterSectionKey,
 } from "@/types/character";
+import styles from "./page.module.css";
 
 const sectionMeta: Record<Exclude<CharacterSectionKey, "overview">, { title: string; description: string }> = {
   moves: {
     title: "技・フレーム",
-    description: "通常技・特殊技・必殺技・SAとフレーム、Classic / Modernコマンドを扱います。",
+    description: "技名と重要なフレームを先に確認し、必要なときだけ詳細を開けます。",
   },
   combos: {
     title: "コンボ",
-    description: "基本・中央・画面端・確反・SA・リーサルなど目的別のコンボを扱います。",
+    description: "基本・中央・画面端・確反・SA・リーサルなど目的別のコンボを確認できます。",
   },
   setups: {
     title: "セットプレイ",
-    description: "起き攻め、セットプレイと条件・対処方法を扱います。",
+    description: "起き攻め、セットプレイと条件・対処方法を確認できます。",
   },
   sequences: {
     title: "連携",
-    description: "攻め継続、連携手順、割り込み・投げ・シミーなどの対応関係を扱います。",
+    description: "攻め継続、連携手順、割り込み・投げ・シミーなどの対応関係を確認できます。",
   },
   matchups: {
     title: "対策",
-    description: "キャラ対策、技対策、連携対策と自キャラ別の回答を扱います。",
+    description: "キャラ対策、技対策、連携対策と自キャラ側の回答を確認できます。",
   },
   training: {
     title: "トレーニング",
-    description: "トレモのレコード設定、練習手順、成功条件まで扱います。",
+    description: "トレモの設定、練習手順、成功条件を確認できます。",
   },
   players: {
     title: "参考プレイヤー",
-    description: "このキャラクターを使用するプロ、強豪、専門プレイヤーを扱います。",
+    description: "このキャラクターを使用するプロ、強豪、専門プレイヤーを確認できます。",
   },
   videos: {
     title: "関連動画",
-    description: "攻略、コンボ、対策、大会試合などキャラクターに紐づく動画を扱います。",
+    description: "攻略、コンボ、対策、大会試合など関連動画を確認できます。",
   },
 };
+
+const tokenLabels: Record<string, string> = {
+  normal: "通常技",
+  unique: "特殊技",
+  special: "必殺技",
+  super: "スーパーアーツ",
+  throw: "投げ",
+  command_throw: "コマンド投げ",
+  basic: "基本",
+  punish: "確定反撃",
+  anti_air: "対空",
+  corner: "画面端",
+  midscreen: "中央",
+  mid_screen: "中央",
+  offense: "攻め",
+  defense: "守り",
+  matchup: "対策",
+  beginner: "初心者向け",
+  intermediate: "中級者向け",
+  advanced: "上級者向け",
+};
+
+const stateLabels: Record<string, string> = {
+  draft: "下書き",
+  reviewed: "レビュー済み",
+  verified: "検証済み",
+  unverified: "未検証",
+  published: "公開済み",
+};
+
+type DisplayMeta = {
+  preview: boolean;
+  kind: string | null;
+  stats: Array<{ label: string; value: string }>;
+  chips: string[];
+  internal: string[];
+};
+
+function withFrame(value: string) {
+  return /F$/i.test(value) ? value : `${value}F`;
+}
+
+function parseMeta(meta: string | null): DisplayMeta {
+  const result: DisplayMeta = { preview: false, kind: null, stats: [], chips: [], internal: [] };
+  if (!meta) return result;
+
+  for (const rawPart of meta.split(" / ").map((part) => part.trim()).filter(Boolean)) {
+    if (rawPart === "未公開プレビュー") {
+      result.preview = true;
+      continue;
+    }
+
+    if (stateLabels[rawPart]) {
+      result.internal.push(stateLabels[rawPart]);
+      continue;
+    }
+
+    const startup = rawPart.match(/^発生\s+(.+)$/);
+    if (startup) {
+      result.stats.push({ label: "発生", value: withFrame(startup[1]) });
+      continue;
+    }
+
+    const guard = rawPart.match(/^G\s+(.+)$/);
+    if (guard) {
+      result.stats.push({ label: "ガード", value: withFrame(guard[1]) });
+      continue;
+    }
+
+    const damage = rawPart.match(/^(\d+)\s*dmg$/i);
+    if (damage) {
+      result.stats.push({ label: "ダメージ", value: damage[1] });
+      continue;
+    }
+
+    const drive = rawPart.match(/^D\s+(.+)$/);
+    if (drive) {
+      result.stats.push({ label: "Dゲージ", value: drive[1] });
+      continue;
+    }
+
+    const sa = rawPart.match(/^SA\s+(.+)$/);
+    if (sa) {
+      result.stats.push({ label: "SAゲージ", value: sa[1] });
+      continue;
+    }
+
+    const difficulty = rawPart.match(/^難易度\s+(.+)$/);
+    if (difficulty) {
+      result.stats.push({ label: "難易度", value: difficulty[1] });
+      continue;
+    }
+
+    if (/^\d+分$/.test(rawPart)) {
+      result.stats.push({ label: "目安", value: rawPart });
+      continue;
+    }
+
+    const localized = tokenLabels[rawPart] ?? null;
+    if (localized && !result.kind) {
+      result.kind = localized;
+      continue;
+    }
+
+    result.chips.push(localized ?? rawPart.replaceAll("_", " "));
+  }
+
+  return result;
+}
+
+function displaySubtitle(subtitle: string | null, previewActive: boolean) {
+  if (!subtitle) return null;
+  if (previewActive && subtitle.trim() === "Awaiting official/game verification before publication.") {
+    return null;
+  }
+  return subtitle;
+}
 
 function isSection(value: string): value is Exclude<CharacterSectionKey, "overview"> {
   return value !== "overview" && CHARACTER_SECTION_KEYS.includes(value as CharacterSectionKey);
@@ -90,32 +208,66 @@ export default async function CharacterSectionPage({
       </section>
 
       {previewActive ? (
-        <section className="empty-state">
-          <h2>Phase23 実機確認プレビュー</h2>
-          <p>「未公開プレビュー」と表示される項目は draft / reviewed を含む確認用データです。DBの公開ステータスは変更していません。</p>
-        </section>
+        <aside className={styles.previewNotice}>
+          <strong>実機確認プレビュー</strong>
+          <span>未公開データを確認用に表示しています。DBの公開状態は変更していません。</span>
+        </aside>
       ) : null}
 
       <CharacterTabs slug={character.slug} active={section} previewToken={previewToken} />
 
       {items.length ? (
-        <section className="search-result-list">
-          {items.map((item) => (
-            <Link
-              className="search-result"
-              href={appendDevicePreviewToken(item.href, previewToken)}
-              key={item.id}
-            >
-              {item.meta ? <span className="search-result__type">{item.meta}</span> : null}
-              <strong>{item.title}</strong>
-              {item.subtitle ? <span>{item.subtitle}</span> : null}
-            </Link>
-          ))}
+        <section className={styles.dataGrid} aria-label={`${character.name} ${meta.title}`}>
+          {items.map((item) => {
+            const display = parseMeta(item.meta);
+            const subtitle = displaySubtitle(item.subtitle, previewActive);
+            return (
+              <Link
+                className={styles.dataCard}
+                href={appendDevicePreviewToken(item.href, previewToken)}
+                key={item.id}
+              >
+                <div className={styles.cardTop}>
+                  <div className={styles.cardTitleBlock}>
+                    {display.kind ? <span className={styles.kind}>{display.kind}</span> : null}
+                    <strong className={styles.title}>{item.title}</strong>
+                  </div>
+                  {display.preview ? <span className={styles.previewBadge}>未公開・確認用</span> : null}
+                </div>
+
+                {subtitle ? <p className={styles.summary}>{subtitle}</p> : null}
+
+                {display.stats.length ? (
+                  <div className={styles.stats}>
+                    {display.stats.map((stat) => (
+                      <span className={styles.stat} key={`${stat.label}-${stat.value}`}>
+                        <span className={styles.statLabel}>{stat.label}</span>
+                        <span className={styles.statValue}>{stat.value}</span>
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+
+                {display.chips.length ? (
+                  <div className={styles.chips}>
+                    {display.chips.map((chip) => <span className={styles.chip} key={chip}>{chip}</span>)}
+                  </div>
+                ) : null}
+
+                <div className={styles.cardFooter}>
+                  {previewActive && display.internal.length ? (
+                    <span className={styles.internalState}>確認状態: {display.internal.join("・")}</span>
+                  ) : <span />}
+                  <span className={styles.more}>詳細を見る →</span>
+                </div>
+              </Link>
+            );
+          })}
         </section>
       ) : (
         <section className="empty-state">
           <h2>公開済みデータはまだありません</h2>
-          <p>旧版の未検証情報は自動移植せず、出典・パッチ・検証状態を確認したデータから公開します。</p>
+          <p>出典・パッチ・検証状態を確認できたデータから公開します。</p>
         </section>
       )}
     </div>
