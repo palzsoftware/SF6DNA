@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { CharacterSummary } from "@/types/character";
 
@@ -6,8 +7,12 @@ export function CharacterCard({ character }: { character: CharacterSummary }) {
     <Link className="character-card" href={`/characters/${character.slug}`}>
       <div className="character-card__media" aria-hidden="true">
         {character.imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={character.imageUrl} alt="" width={720} height={480} loading="lazy" />
+          <Image
+            src={character.imageUrl}
+            alt=""
+            fill
+            sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"
+          />
         ) : (
           <span>{character.name.slice(0, 1)}</span>
         )}
