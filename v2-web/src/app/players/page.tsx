@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { playerTypeLabel } from "@/lib/player-labels";
 import { listPlayers } from "@/lib/players";
@@ -24,8 +25,12 @@ export default async function PlayersPage() {
             <Link className="character-card" href={`/players/${player.slug}`} key={player.id}>
               <div className="character-card__media" aria-hidden="true">
                 {player.imageUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={player.imageUrl} alt="" width={720} height={480} loading="lazy" />
+                  <Image
+                    src={player.imageUrl}
+                    alt=""
+                    fill
+                    sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                  />
                 ) : (
                   <span>{player.displayName.slice(0, 1)}</span>
                 )}
