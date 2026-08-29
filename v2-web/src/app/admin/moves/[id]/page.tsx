@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { AdminMoveForm } from "@/components/admin-move-form";
 import { requireAdmin } from "@/lib/admin";
-import { addFrameVersion, attachMoveSource, updateMove } from "../actions";
+import { addFrameVersion, attachMoveEvidenceSource, updateMove } from "../actions";
 
 export default async function EditMovePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -13,7 +13,6 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
     { data: frames, error: frameError },
     { data: patches, error: patchError },
     { data: sources, error: sourceError },
-    { data: sourceLinks, error: sourceLinkError },
   ] = await Promise.all([
     supabase.from("moves").select("id, character_id, slug, name_ja, name_en, move_type, strength_variant, description, usage_summary, display_order, status").eq("id", id).maybeSingle(),
     supabase.from("characters").select("id, name_ja").neq("status", "archived").order("display_order"),
@@ -21,7 +20,6 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
     supabase.from("move_frame_data").select("id, startup, active, recovery, on_hit, on_block, damage, drive_damage, super_gain, hit_level, cancel_type, invincibility, notes, valid_from_patch_id, valid_to_patch_id, verification_status, created_at").eq("move_id", id).order("created_at", { ascending: false }),
     supabase.from("patches").select("id, version_label, name, released_at, is_current").order("released_at", { ascending: false, nullsFirst: false }),
     supabase.from("sources").select("id, title, publisher, url, reliability_level").order("published_at", { ascending: false, nullsFirst: false }).limit(200),
-    supabase.from("entity_sources").select("id, source_id, relationship, note").eq("entity_type", "move").eq("entity_id", id),
   ]);
   if (moveError) throw new Error(moveError.message);
   if (characterError) throw new Error(characterError.message);
@@ -29,11 +27,34 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
   if (frameError) throw new Error(frameError.message);
   if (patchError) throw new Error(patchError.message);
   if (sourceError) throw new Error(sourceError.message);
-  if (sourceLinkError) throw new Error(sourceLinkError.message);
   if (!move) notFound();
 
   const patchMap = new Map((patches ?? []).map((patch) => [patch.id, patch]));
   const sourceMap = new Map((sources ?? []).map((source) => [source.id, source]));
+  const evidenceTargets = [
+    { value: `move:${id}`, label: `Move本体: ${move.name_ja}` },
+    ...(commands ?? []).map((command) => ({
+      value: `move_command:${command.id}`,
+      label: `${command.control_scheme === "classic" ? "Classic" : "Modern"} Command: ${command.command_text}`,
+    })),
+    ...(frames ?? []).map((frame) => {
+      const patch = frame.valid_from_patch_id ? patchMap.get(frame.valid_from_patch_id) : null;
+      return {
+        value: `move_frame_data:${frame.id}`,
+        label: `Frame: ${patch?.version_label ?? "Patch未指定"} / ${frame.verification_status}`,
+      };
+    }),
+  ];
+  const targetLabelMap = new Map(evidenceTargets.map((target) => [target.value, target.label]));
+  const evidenceIds = evidenceTargets.map((target) => target.value.slice(target.value.indexOf(":") + 1));
+  const { data: evidenceLinks, error: evidenceLinkError } = evidenceIds.length
+    ? await supabase
+      .from("entity_sources")
+      .select("id, entity_type, entity_id, source_id, relationship, note")
+      .in("entity_type", ["move", "move_command", "frame", "move_frame_data"])
+      .in("entity_id", evidenceIds)
+    : { data: [], error: null };
+  if (evidenceLinkError) throw new Error(evidenceLinkError.message);
 
   return (
     <div className="site-shell page-stack">
@@ -95,7 +116,7 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
             <Input name="hit_level" label="判定" />
             <Input name="cancel_type" label="Cancel" />
             <Input name="invincibility" label="無敵" />
-            <label className="admin-field"><span>有効Patch</span><select name="valid_from_patch_id" defaultValue=""> <option value="">未指定</option>{(patches ?? []).map((patch) => <option key={patch.id} value={patch.id}>{patch.version_label}{patch.is_current ? " / CURRENT" : ""}</option>)}</select></label>
+            <label className="admin-field"><span>有効Patch</span><select name="valid_from_patch_id" defaultValue=""><option value="">未指定</option>{(patches ?? []).map((patch) => <option key={patch.id} value={patch.id}>{patch.version_label}{patch.is_current ? " / CURRENT" : ""}</option>)}</select></label>
             <label className="admin-field"><span>検証状態</span><select name="verification_status" defaultValue="unverified"><option value="unverified">unverified</option><option value="official">official</option><option value="verified">verified</option></select></label>
           </div>
           <label className="admin-field admin-field--wide"><span>補足</span><textarea name="frame_notes" rows={3} /></label>
@@ -104,22 +125,31 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
       </section>
 
       <section className="info-panel">
-        <h2>Source</h2>
-        {sourceLinks?.length ? (
+        <h2>Evidence Source</h2>
+        <p>Move本体・Classic/Modern Command・各FrameにSourceを個別に紐付けます。公開にはMove本体、Classic Command、Current verified Frameそれぞれのofficial Sourceが必要です。</p>
+        {evidenceLinks?.length ? (
           <ul className="admin-source-list">
-            {sourceLinks.map((link) => {
+            {evidenceLinks.map((link) => {
+              const normalizedType = link.entity_type === "frame" ? "move_frame_data" : link.entity_type;
+              const targetLabel = targetLabelMap.get(`${normalizedType}:${link.entity_id}`) ?? `${link.entity_type}:${link.entity_id}`;
               const source = sourceMap.get(link.source_id);
-              return <li key={link.id}><strong>{source?.publisher ?? "Source"}</strong> — {source ? <a className="text-link" href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a> : link.source_id}{link.note ? <span> / {link.note}</span> : null}</li>;
+              return (
+                <li key={link.id}>
+                  <strong>{targetLabel}</strong> — {source ? <a className="text-link" href={source.url} target="_blank" rel="noopener noreferrer">[{source.reliability_level}] {source.publisher ? `${source.publisher} / ` : ""}{source.title}</a> : link.source_id}
+                  {link.note ? <span> / {link.note}</span> : null}
+                </li>
+              );
             })}
           </ul>
-        ) : <p>Source未登録です。</p>}
+        ) : <p>Evidence Source未登録です。</p>}
 
-        <form action={attachMoveSource.bind(null, id)} className="admin-form">
+        <form action={attachMoveEvidenceSource.bind(null, id)} className="admin-form">
           <div className="admin-form__grid">
-            <label className="admin-field"><span>Source</span><select name="source_id" defaultValue="" required><option value="" disabled>選択</option>{(sources ?? []).map((source) => <option key={source.id} value={source.id}>{source.publisher ? `${source.publisher} / ` : ""}{source.title}</option>)}</select></label>
+            <label className="admin-field"><span>Evidence対象</span><select name="evidence_target" defaultValue="" required><option value="" disabled>選択</option>{evidenceTargets.map((target) => <option key={target.value} value={target.value}>{target.label}</option>)}</select></label>
+            <label className="admin-field"><span>Source</span><select name="source_id" defaultValue="" required><option value="" disabled>選択</option>{(sources ?? []).map((source) => <option key={source.id} value={source.id}>[{source.reliability_level}] {source.publisher ? `${source.publisher} / ` : ""}{source.title}</option>)}</select></label>
           </div>
           <label className="admin-field admin-field--wide"><span>Sourceメモ</span><textarea name="source_note" rows={2} /></label>
-          <div className="admin-actions"><button className="button-secondary" type="submit">Sourceを追加</button></div>
+          <div className="admin-actions"><button className="button-secondary" type="submit">Evidence Sourceを追加</button></div>
         </form>
       </section>
     </div>
