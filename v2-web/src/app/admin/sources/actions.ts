@@ -38,29 +38,33 @@ export async function createPatch(formData: FormData) {
   if (!versionLabel) throw new Error("version_label is required");
   const makeCurrent = formData.get("is_current") === "on";
 
+  const { data: patch, error } = await supabase
+    .from("patches")
+    .insert({
+      version_label: versionLabel,
+      name: nullable(formData, "name"),
+      released_at: nullable(formData, "released_at"),
+      official_url: nullable(formData, "official_url"),
+      notes: nullable(formData, "notes"),
+      is_current: false,
+    })
+    .select("id")
+    .single();
+  if (error) throw new Error(error.message);
+
   if (makeCurrent) {
-    const { error: resetError } = await supabase.from("patches").update({ is_current: false }).eq("is_current", true);
-    if (resetError) throw new Error(resetError.message);
+    const { error: switchError } = await supabase.rpc("set_current_patch", { target_patch_id: patch.id });
+    if (switchError) throw new Error(switchError.message);
   }
 
-  const { error } = await supabase.from("patches").insert({
-    version_label: versionLabel,
-    name: nullable(formData, "name"),
-    released_at: nullable(formData, "released_at"),
-    official_url: nullable(formData, "official_url"),
-    notes: nullable(formData, "notes"),
-    is_current: makeCurrent,
-  });
-  if (error) throw new Error(error.message);
   revalidatePath("/admin/sources");
+  revalidatePath("/coach");
   redirect("/admin/sources");
 }
 
 export async function setCurrentPatch(id: string) {
   const { supabase } = await requireAdmin();
-  const { error: resetError } = await supabase.from("patches").update({ is_current: false }).eq("is_current", true);
-  if (resetError) throw new Error(resetError.message);
-  const { error } = await supabase.from("patches").update({ is_current: true }).eq("id", id);
+  const { error } = await supabase.rpc("set_current_patch", { target_patch_id: id });
   if (error) throw new Error(error.message);
   revalidatePath("/admin/sources");
   revalidatePath("/coach");
