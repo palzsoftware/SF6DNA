@@ -13,24 +13,46 @@ Publication approval、実Auth/Admin E2E、人物確認、PC/iPhone実機テス�
 
 ## Application baseline
 
-Publicアプリ実装の自動Gate済みcommit:
+Public / Adminアプリ実装の自動Gate済みcommit:
 
-`634845b9ffedacac0ba706186852f295c2204755`
+`6b5a4b8e1974f677691e655e274da9626bdb18b5`
 
-このcommitで:
+CI invariantのみのfollow-up:
 
-- Phase16 Release Acceptance — PASS
-- Phase15 Runtime Smoke — PASS
-- Phase15 Browser Acceptance — PASS
-- Phase15 Lighthouse Audit — PASS
-- Phase19 Internal Hardening — PASS
-- Phase20 Verified Content Acceptance — PASS
-- SF6DNA v2 Web Check — PASS
-- Phase18 Data Gate Acceptance — PASS
+`22af783bc8fb947be138cfcdd56279a053d8f713`
 
-を確認済み。
+このbaselineで確認済み:
+
+- Phase16 Release Acceptance — PASS (`33239446677`)
+- Phase15 Runtime Smoke — PASS (`33239446690`)
+- Phase15 Browser Acceptance — PASS (`33239446655`)
+- Phase15 Lighthouse Audit — PASS (`33239446718`)
+- Phase19 Internal Hardening — PASS (`33239510750`)
+- Phase20 Verified Content Acceptance — PASS (`33239446647`)
+- SF6DNA v2 Web Check — PASS (`33239446717`)
+- Phase18 Data Gate Acceptance — PASS (`33239446644`)
+
+Phase19は旧Public Gate実装文字列を要求するstatic invariantが一度FAILしたが、Typecheck / Lint / Policy / BuildはPASSしていた。新しいpolymorphic Evidence実装にinvariantを合わせた後、run `33239510750` で完全PASSした。
+
+## Auth / Admin hardening included in this baseline
+
+Real Auth E2E前の追加監査で以下を修正済み。
+
+1. `entity_sources.entity_id`がpolymorphicでFKを持たないため、Public Move GateからPostgREST inferred join依存を除去
+2. Move / Classic Command / Current verified FrameのEvidenceをentity_type / entity_idで明示照合
+3. 3対象すべてにofficial Sourceを要求
+4. Admin publish条件をPublic Move Gate同等へ強化
+5. Admin UIでMove / Command / FrameへEvidence Sourceを個別付与可能に変更
+6. 新規published Moveはdraft→Command/Frame/Evidence→strict gate→publishedの順で昇格
+7. Phase19 / Phase20 CIでこの仕様を固定
+
+詳細:
+
+`docs/PHASE23_AUTH_ADMIN_READINESS_2026-08-29.md`
 
 ## Performance baseline
+
+画像最適化後の既存計測:
 
 ### Home
 
@@ -54,10 +76,13 @@ Publicアプリ実装の自動Gate済みcommit:
 - TBT: 約109ms
 - CLS: 0
 
+最新Phase15 Lighthouse workflowもPASS。
+
 ## Vercel
 
-`sf6dna-v2` Previewで次を継続確認済み:
+CI follow-up head `22af783bc8fb947be138cfcdd56279a053d8f713` Preview:
 
+- Deployment: `dpl_CHHhrT5RgaXP9LGGHMm7mPSE2PgT`
 - READY
 - target: Preview
 - Build error: 0
@@ -75,6 +100,9 @@ Production deployは実施していない。
 - Player relation orphan: 0
 - Public Move Gate: enforced
 - Public Strategy Gate: enforced
+- `auth.users`: **0**
+
+新規Auth userはDB triggerで`profiles.role='user'`として作成され、一般ユーザーが自身をadminへ自己昇格できないRLSを確認済み。
 
 ## Content baseline
 
@@ -82,8 +110,10 @@ Production deployは実施していない。
 
 - Character: 31
 - Diagnosis: 4
-- Move: 0
-- Combo / Setup / Sequence / Counter / Training: 0
+- Move: **0**
+- Combo / Setup / Sequence / Counter / Training: **0**
+
+Auth/Admin readiness作業後にもread-only再確認し、公開statusに変化なし。
 
 ### Move draft
 
@@ -94,7 +124,26 @@ Production deployは実施していない。
 - ready候補Modernあり: 662
 - ready候補Modernなし: 39
 
-701候補の構造監査ではRelease Blockerとなるblank / duplicate / Current Frame cardinality / Classic Command cardinality異常を検出していない。
+Current DB functionによるready内訳:
+
+- Dee Jay 105
+- Jamie 93
+- Blanka 91
+- Dhalsim 88
+- Kimberly 76
+- E. Honda 70
+- Guile 70
+- Chun-Li 68
+- Yasmine 19
+- Mai 10
+- C. Viper 7
+- Elena 4
+
+701候補の必須Evidence:
+
+- Move official Evidence: 701 / 701
+- Classic Command official Evidence: 701 / 701
+- Current verified Frame official Evidence: 701 / 701
 
 Machine Gate PASSはPublication approvalではないためstatusは変更していない。
 
@@ -112,22 +161,14 @@ Machine Gate PASSはPublication approvalではないためstatusは変更して�
 
 ## Official frame external audit
 
-Official snapshot audit toolのReader URL不具合を修正:
-
-- commit: `ac4ed232d0f73c619ac2681565ab55c289022967`
-
-GitHub Actions:
-
+- fix commit: `ac4ed232d0f73c619ac2681565ab55c289022967`
 - Workflow: `Phase20 Official Frame Snapshot`
 - Run: `33228209058`
 - Result: PASS
 - CAPCOM Japanese frame pages: 31 / 31 success
-- HTTP: 200 for all 31
-- attempts: 1 for all 31
+- HTTP 200 for all 31
 - Artifact: `phase20-official-frame-snapshots-ja-jp`
 - Artifact ID: `9707625771`
-
-Snapshotはread-only EvidenceでありDB status変更には使用していない。
 
 ## Image baseline
 
@@ -146,39 +187,23 @@ Snapshotはread-only EvidenceでありDB status変更には使用していない
 
 残りは人物同定が必要なため自動接続しない。
 
-## Documentation baseline
-
-現行v2基準へ再同期済み:
-
-- `PROJECT_STATUS.md`
-- `NEXT_PROMPT.md`
-- `README.md`
-- `CHANGELOG.md`
-- `docs/V2_RELEASE_READINESS.md`
-- `docs/KNOWN_ISSUES.md`
-- `docs/TECH_DEBT.md`
-- `docs/DATA_ISSUES.md`
-- `docs/PHASE23_PUBLICATION_READINESS_2026-08-29.md`
-- `docs/PHASE23_PRE_DEVICE_POLISH_AUDIT_2026-08-29.md`
-
-旧静的版課題を現行v2 Release Blockerと混同しない。
-
 ## Remaining gates — human/manual only
 
 1. Content Publication approval
-2. Real Auth / Admin E2E with actual sessions
-3. Player remaining-image identity confirmation if required
-4. Manual changes後のfinal RC freeze
-5. PC real-device acceptance
-6. iPhone real-device acceptance
-7. Production Readiness decision
-8. Production deploy only after explicit user permission
+2. 正式なAuth user準備
+3. Real Auth / Admin E2E with actual Admin / non-admin sessions
+4. Player remaining-image identity confirmation if required
+5. Manual変更後のFinal RC freeze
+6. PC real-device acceptance
+7. iPhone real-device acceptance
+8. Production Readiness decision
+9. Production deploy only after explicit user permission
 
 ## Final RC rule
 
 このAutomated RC baselineをFinal RCとは呼ばない。
 
-manual stageでDB status / code / assetsが変更された場合は、その変更後に必要なCI / Preview regressionを実行してFinal RC HEADを固定する。
+manual stageでDB status / Auth test data / code / assetsが変更された場合は、その変更後に必要なCI / Preview regressionを実行してFinal RC HEADを固定する。
 
 ## Non-negotiable rules
 
@@ -187,6 +212,7 @@ manual stageでDB status / code / assetsが変更された場合は、その変�
 - Sourceあり ≠ verified
 - Machine Gate PASS ≠ publish approval
 - Missing Modernを推測しない
+- `auth.users`へSQLで偽ユーザーを直接投入しない
 - actual-device Evidenceをemulationで代用しない
 - manual Auth Evidenceをstatic testで代用しない
 - `main`変更禁止
