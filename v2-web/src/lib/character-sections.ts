@@ -1,3 +1,4 @@
+import { getDevicePreviewBundle } from "@/lib/device-preview";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import { isMovePublicReady } from "@/lib/public-move-gate";
 import type { CharacterSectionKey } from "@/types/character";
@@ -10,12 +11,114 @@ export type CharacterSectionItem = {
   meta: string | null;
 };
 
+function previewMeta(
+  status: string | null | undefined,
+  verificationStatus: string | null | undefined,
+  parts: Array<string | number | null | undefined>
+) {
+  return [
+    "未公開プレビュー",
+    status ?? null,
+    verificationStatus ?? null,
+    ...parts,
+  ].filter((value) => value !== null && value !== undefined && value !== "").join(" / ");
+}
+
 export async function listCharacterSectionItems(
   characterId: string,
-  section: Exclude<CharacterSectionKey, "overview">
+  section: Exclude<CharacterSectionKey, "overview">,
+  previewToken?: string | null
 ): Promise<CharacterSectionItem[]> {
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) return [];
   const supabase = getSupabaseServerClient();
+  const previewBundle = await getDevicePreviewBundle(characterId, previewToken);
+
+  if (previewBundle) {
+    if (section === "moves") {
+      return previewBundle.moves.map((row) => {
+        const frame = row.frame;
+        return {
+          id: row.id,
+          title: row.name,
+          subtitle: row.usageSummary,
+          href: `/moves/${row.slug}`,
+          meta: previewMeta(row.status, frame?.verificationStatus, [
+            row.moveType,
+            frame?.startup ? `発生 ${frame.startup}` : null,
+            frame?.onBlock ? `G ${frame.onBlock}` : null,
+            typeof frame?.damage === "number" ? `${frame.damage} dmg` : null,
+          ]),
+        };
+      });
+    }
+
+    if (section === "combos") {
+      return previewBundle.combos.map((row) => ({
+        id: row.id,
+        title: row.name,
+        subtitle: row.purpose,
+        href: `/combos/${row.slug}`,
+        meta: previewMeta(row.status, row.verificationStatus, [
+          typeof row.damage === "number" ? `${row.damage} dmg` : null,
+          row.driveCost !== null ? `D ${row.driveCost}` : null,
+          row.saCost !== null ? `SA ${row.saCost}` : null,
+          row.difficulty ? `難易度 ${row.difficulty}` : null,
+        ]),
+      }));
+    }
+
+    if (section === "setups") {
+      return previewBundle.setups.map((row) => ({
+        id: row.id,
+        title: row.name,
+        subtitle: row.description,
+        href: `/setups/${row.slug}`,
+        meta: previewMeta(row.status, row.verificationStatus, [
+          row.setupType,
+          row.frameAdvantage,
+          row.position,
+        ]),
+      }));
+    }
+
+    if (section === "sequences") {
+      return previewBundle.sequences.map((row) => ({
+        id: row.id,
+        title: row.name,
+        subtitle: row.notes ?? row.sequenceText,
+        href: `/sequences/${row.slug}`,
+        meta: previewMeta(row.status, row.verificationStatus, [row.sequenceType]),
+      }));
+    }
+
+    if (section === "matchups") {
+      return previewBundle.matchups.map((row) => ({
+        id: row.id,
+        title: row.title,
+        subtitle: row.summary,
+        href: `/counters/${row.slug}`,
+        meta: previewMeta(row.status, row.verificationStatus, [
+          row.counterType,
+          row.defenderCharacterId === characterId ? "自キャラ側" : "相手側",
+          row.difficulty ? `難易度 ${row.difficulty}` : null,
+        ]),
+      }));
+    }
+
+    if (section === "training") {
+      return previewBundle.training.map((row) => ({
+        id: row.id,
+        title: row.name,
+        subtitle: row.purpose,
+        href: `/training/${row.slug}`,
+        meta: previewMeta(row.status, row.verificationStatus, [
+          row.trainingType,
+          row.level,
+          row.durationMinutes ? `${row.durationMinutes}分` : null,
+        ]),
+      }));
+    }
+  }
 
   if (section === "moves") {
     const { data, error } = await supabase
