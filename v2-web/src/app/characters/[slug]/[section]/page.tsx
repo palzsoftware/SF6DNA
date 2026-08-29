@@ -4,8 +4,10 @@ import { CharacterTabs } from "@/components/character-tabs";
 import { listCharacterSectionItems } from "@/lib/character-sections";
 import {
   appendDevicePreviewToken,
+  getDevicePreviewMoveCommands,
   isDevicePreviewRequest,
   normalizeDevicePreviewToken,
+  type DevicePreviewMoveCommand,
 } from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
 import {
@@ -17,7 +19,7 @@ import styles from "./page.module.css";
 const sectionMeta: Record<Exclude<CharacterSectionKey, "overview">, { title: string; description: string }> = {
   moves: {
     title: "技・フレーム",
-    description: "技名と重要なフレームを先に確認し、必要なときだけ詳細を開けます。",
+    description: "技名・コマンド・重要フレームを一覧で確認し、必要なときだけ詳細を開けます。",
   },
   combos: {
     title: "コンボ",
@@ -76,6 +78,11 @@ const stateLabels: Record<string, string> = {
   verified: "検証済み",
   unverified: "未検証",
   published: "公開済み",
+};
+
+const commandSchemeLabels: Record<string, string> = {
+  classic: "Classic",
+  modern: "Modern",
 };
 
 type DisplayMeta = {
@@ -166,6 +173,16 @@ function displaySubtitle(subtitle: string | null, previewActive: boolean) {
   return subtitle;
 }
 
+function commandPrimary(command: DevicePreviewMoveCommand) {
+  return command.commandText ?? command.numericNotation ?? command.buttonNotation ?? null;
+}
+
+function commandSecondary(command: DevicePreviewMoveCommand) {
+  if (!command.numericNotation) return null;
+  if (command.commandText?.trim() === command.numericNotation.trim()) return null;
+  return command.numericNotation;
+}
+
 function isSection(value: string): value is Exclude<CharacterSectionKey, "overview"> {
   return value !== "overview" && CHARACTER_SECTION_KEYS.includes(value as CharacterSectionKey);
 }
@@ -196,8 +213,20 @@ export default async function CharacterSectionPage({
   if (!character) notFound();
 
   const meta = sectionMeta[section];
-  const items = await listCharacterSectionItems(character.id, section, previewToken);
   const previewActive = isDevicePreviewRequest(previewToken);
+  const [items, previewCommands] = await Promise.all([
+    listCharacterSectionItems(character.id, section, previewToken),
+    section === "moves" && previewActive
+      ? getDevicePreviewMoveCommands(character.id, previewToken)
+      : Promise.resolve([] as DevicePreviewMoveCommand[]),
+  ]);
+
+  const commandsByMove = new Map<string, DevicePreviewMoveCommand[]>();
+  for (const command of previewCommands) {
+    const list = commandsByMove.get(command.moveId) ?? [];
+    list.push(command);
+    commandsByMove.set(command.moveId, list);
+  }
 
   return (
     <div className="site-shell page-stack">
@@ -221,6 +250,7 @@ export default async function CharacterSectionPage({
           {items.map((item) => {
             const display = parseMeta(item.meta);
             const subtitle = displaySubtitle(item.subtitle, previewActive);
+            const commands = section === "moves" ? (commandsByMove.get(item.id) ?? []) : [];
             return (
               <Link
                 className={styles.dataCard}
@@ -234,6 +264,26 @@ export default async function CharacterSectionPage({
                   </div>
                   {display.preview ? <span className={styles.previewBadge}>未公開・確認用</span> : null}
                 </div>
+
+                {commands.length ? (
+                  <div className={styles.commands} aria-label={`${item.title} コマンド`}>
+                    {commands.map((command, index) => {
+                      const primary = commandPrimary(command);
+                      const secondary = commandSecondary(command);
+                      if (!primary) return null;
+                      return (
+                        <div className={styles.commandRow} key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}>
+                          <span className={styles.commandScheme}>{commandSchemeLabels[command.scheme] ?? command.scheme}</span>
+                          <span className={styles.commandContent}>
+                            <strong className={styles.commandText}>{primary}</strong>
+                            {secondary ? <code className={styles.numericNotation}>{secondary}</code> : null}
+                            {command.conditionText ? <small className={styles.commandCondition}>{command.conditionText}</small> : null}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : null}
 
                 {subtitle ? <p className={styles.summary}>{subtitle}</p> : null}
 
