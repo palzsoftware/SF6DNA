@@ -8,8 +8,8 @@ export default async function NewMovePage() {
   const { supabase } = await requireAdmin();
   const [{ data: characters, error: characterError }, { data: patches, error: patchError }, { data: sources, error: sourceError }] = await Promise.all([
     supabase.from("characters").select("id, name_ja").neq("status", "archived").order("display_order"),
-    supabase.from("patches").select("id, version_label, name").order("released_at", { ascending: false, nullsFirst: false }),
-    supabase.from("sources").select("id, title, publisher").order("published_at", { ascending: false, nullsFirst: false }).limit(200),
+    supabase.from("patches").select("id, version_label, name, is_current").order("released_at", { ascending: false, nullsFirst: false }),
+    supabase.from("sources").select("id, title, publisher, reliability_level").order("published_at", { ascending: false, nullsFirst: false }).limit(200),
   ]);
   if (characterError) throw new Error(characterError.message);
   if (patchError) throw new Error(patchError.message);
@@ -22,8 +22,8 @@ export default async function NewMovePage() {
         action={createMove}
         submitLabel="技を登録"
         characters={(characters ?? []).map((item) => ({ id: item.id, label: item.name_ja }))}
-        patches={(patches ?? []).map((item) => ({ id: item.id, label: `${item.version_label}${item.name ? ` / ${item.name}` : ""}` }))}
-        sources={(sources ?? []).map((item) => ({ id: item.id, label: `${item.publisher ? `${item.publisher} / ` : ""}${item.title}` }))}
+        patches={(patches ?? []).map((item) => ({ id: item.id, label: `${item.version_label}${item.is_current ? " / CURRENT" : ""}${item.name ? ` / ${item.name}` : ""}` }))}
+        sources={(sources ?? []).map((item) => ({ id: item.id, label: `[${item.reliability_level}] ${item.publisher ? `${item.publisher} / ` : ""}${item.title}` }))}
       />
     </div>
   );
