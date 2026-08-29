@@ -13,6 +13,8 @@ function supabaseConfigured() {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  if (process.env.VERCEL_ENV && process.env.VERCEL_ENV !== "production") return [];
+
   const siteUrl = getSiteUrl();
   if (!siteUrl) return [];
 
@@ -21,10 +23,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/search",
     "/diagnosis",
     "/characters",
+    "/moves",
+    "/combos",
+    "/setups",
+    "/sequences",
+    "/counters",
+    "/training",
     "/players",
     "/videos",
-    "/training",
     "/coach",
+    "/tools",
+    "/compare",
+    "/improve",
+    "/matchup-card",
+    "/about",
+    "/faq",
+    "/sources",
+    "/changelog",
   ];
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((path) => ({
