@@ -1,4 +1,5 @@
 import { legacyCharacterImageUrl } from "@/lib/legacy-character-images";
+import { getDevicePreviewBundle } from "@/lib/device-preview";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type {
   CharacterDetail,
@@ -55,7 +56,10 @@ export async function listCharacters(): Promise<CharacterSummary[]> {
   return (data ?? []).map((row) => toSummary(row));
 }
 
-export async function getCharacterBySlug(slug: string): Promise<CharacterDetail | null> {
+export async function getCharacterBySlug(
+  slug: string,
+  previewToken?: string | null
+): Promise<CharacterDetail | null> {
   if (!isSupabaseConfigured()) return null;
 
   const supabase = getSupabaseServerClient();
@@ -74,32 +78,44 @@ export async function getCharacterBySlug(slug: string): Promise<CharacterDetail 
     return null;
   }
 
-  const [{ data: sections, error: sectionError }, { data: sourceLinks, error: sourceError }] =
-    await Promise.all([
-      supabase
-        .from("character_guide_sections")
-        .select("id, section_type, title, body, display_order")
-        .eq("character_id", character.id)
-        .eq("status", "published")
-        .eq("verification_status", "verified")
-        .order("display_order", { ascending: true }),
-      supabase
-        .from("entity_sources")
-        .select("relationship, sources!inner(id, title, url, publisher, source_type)")
-        .eq("entity_type", "character")
-        .eq("entity_id", character.id),
-    ]);
+  const [
+    { data: sections, error: sectionError },
+    { data: sourceLinks, error: sourceError },
+    previewBundle,
+  ] = await Promise.all([
+    supabase
+      .from("character_guide_sections")
+      .select("id, section_type, title, body, display_order")
+      .eq("character_id", character.id)
+      .eq("status", "published")
+      .eq("verification_status", "verified")
+      .order("display_order", { ascending: true }),
+    supabase
+      .from("entity_sources")
+      .select("relationship, sources!inner(id, title, url, publisher, source_type)")
+      .eq("entity_type", "character")
+      .eq("entity_id", character.id),
+    getDevicePreviewBundle(String(character.id), previewToken),
+  ]);
 
   if (sectionError) console.error("[characters] guide sections failed", sectionError.message);
   if (sourceError) console.error("[characters] sources failed", sourceError.message);
 
-  const guideSections: CharacterGuideSection[] = (sections ?? []).map((row) => ({
-    id: String(row.id),
-    sectionKey: String(row.section_type),
-    title: String(row.title),
-    body: String(row.body),
-    sortOrder: Number(row.display_order ?? 0),
-  }));
+  const guideSections: CharacterGuideSection[] = previewBundle
+    ? previewBundle.guideSections.map((row) => ({
+        id: String(row.id),
+        sectionKey: String(row.sectionType),
+        title: String(row.title),
+        body: String(row.body),
+        sortOrder: Number(row.displayOrder ?? 0),
+      }))
+    : (sections ?? []).map((row) => ({
+        id: String(row.id),
+        sectionKey: String(row.section_type),
+        title: String(row.title),
+        body: String(row.body),
+        sortOrder: Number(row.display_order ?? 0),
+      }));
 
   const sources: SourceReference[] = (sourceLinks ?? []).flatMap((row) => {
     const source = row.sources as unknown as {
@@ -120,8 +136,14 @@ export async function getCharacterBySlug(slug: string): Promise<CharacterDetail 
     }];
   });
 
+  const base = toSummary(character);
+  const previewOverview = previewBundle?.guideSections.find(
+    (section) => section.sectionType === "overview"
+  );
+
   return {
-    ...toSummary(character),
+    ...base,
+    shortDescription: base.shortDescription ?? previewOverview?.summary ?? null,
     strengthsSummary:
       typeof character.strengths_summary === "string" ? character.strengths_summary : null,
     weaknessesSummary:
