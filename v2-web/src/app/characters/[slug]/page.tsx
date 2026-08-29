@@ -2,6 +2,10 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CharacterPreferenceActions } from "@/components/character-preference-actions";
 import { CharacterTabs } from "@/components/character-tabs";
+import {
+  isDevicePreviewRequest,
+  normalizeDevicePreviewToken,
+} from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -17,11 +21,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function CharacterPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const character = await getCharacterBySlug(slug);
+export default async function CharacterPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ preview?: string | string[] }>;
+}) {
+  const [{ slug }, query] = await Promise.all([params, searchParams]);
+  const previewToken = normalizeDevicePreviewToken(query.preview);
+  const character = await getCharacterBySlug(slug, previewToken);
 
   if (!character) notFound();
+
+  const previewActive = isDevicePreviewRequest(previewToken);
 
   return (
     <div className="site-shell page-stack">
@@ -52,7 +65,14 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
         ) : null}
       </section>
 
-      <CharacterTabs slug={character.slug} active="overview" />
+      {previewActive ? (
+        <section className="empty-state">
+          <h2>Phase23 実機確認プレビュー</h2>
+          <p>このPreviewでは未公開の draft / reviewed データを確認用に表示しています。DBの公開ステータスは変更していません。</p>
+        </section>
+      ) : null}
+
+      <CharacterTabs slug={character.slug} active="overview" previewToken={previewToken} />
 
       <section className="character-columns">
         <article className="info-panel">
@@ -68,7 +88,7 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
       <section>
         <div className="section-heading">
           <h2>立ち回り・考え方</h2>
-          <p>攻略本文は対象パッチと出典を確認した上で公開します。</p>
+          <p>{previewActive ? "未公開候補を実機確認用に表示しています。" : "攻略本文は対象パッチと出典を確認した上で公開します。"}</p>
         </div>
         <div className="guide-stack">
           {character.guideSections.length ? (
