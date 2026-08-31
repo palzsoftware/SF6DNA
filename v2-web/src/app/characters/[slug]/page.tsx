@@ -12,19 +12,13 @@ import { getCharacterBySlug } from "@/lib/characters";
 import type { CharacterGuideSection } from "@/types/character";
 
 const quickActions = [
-  ["技・フレーム", "コマンドと重要数値を見る", "/moves"],
-  ["対策", "対戦前に要点を確認する", "/matchups"],
-  ["トレーニング", "トレモ項目へ移動する", "/training"],
-  ["プレイヤー", "参考プレイヤーを探す", "/players"],
+  ["技・フレーム", "コマンドと重要数値", "/moves", "MOVE"],
+  ["対策", "対戦前に要点を確認", "/matchups", "VS"],
+  ["トレーニング", "トレモ項目を選ぶ", "/training", "TR"],
+  ["プレイヤー", "参考プレイヤーを探す", "/players", "PRO"],
 ] as const;
 
 const guideGroups = [
-  {
-    key: "matchup",
-    title: "対戦前に見る",
-    description: "短時間で確認したい対戦要点。",
-    sectionKeys: ["matchup_card"],
-  },
   {
     key: "core",
     title: "基本方針",
@@ -70,7 +64,9 @@ function groupedGuideSections(sections: CharacterGuideSection[]): GuideGroupResu
       : [];
   });
 
-  const remaining = sections.filter((section) => !used.has(section.id));
+  const remaining = sections.filter(
+    (section) => section.sectionKey !== "matchup_card" && !used.has(section.id)
+  );
   if (remaining.length) {
     groups.push({
       key: "other",
@@ -80,6 +76,10 @@ function groupedGuideSections(sections: CharacterGuideSection[]): GuideGroupResu
     });
   }
   return groups;
+}
+
+function sectionHref(slug: string, path: string, previewToken: string | null) {
+  return appendDevicePreviewToken(`/characters/${slug}${path}`, previewToken);
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -109,18 +109,26 @@ export default async function CharacterPage({
   if (!character) notFound();
 
   const previewActive = isDevicePreviewRequest(previewToken);
+  const matchupCard = character.guideSections.find((section) => section.sectionKey === "matchup_card") ?? null;
   const groups = groupedGuideSections(character.guideSections);
   const hasStrengthProfile = Boolean(character.strengthsSummary || character.weaknessesSummary);
 
   return (
-    <div className="site-shell page-stack">
-      <section className="character-hero">
-        <div>
+    <div className="site-shell page-stack character-overview-page">
+      <section className="character-hero character-hero--overview">
+        <div className="character-hero__copy">
           <p className="eyebrow">CHARACTER</p>
-          <h1>{character.name}</h1>
-          {character.nameEn ? <p className="character-subtitle">{character.nameEn}</p> : null}
-          <p>{character.shortDescription ?? "技・対策・練習データをキャラクター単位で確認できます。"}</p>
-          <div className="chip-row">
+          <div className="character-hero__title-row">
+            <div>
+              <h1>{character.name}</h1>
+              {character.nameEn ? <p className="character-subtitle">{character.nameEn}</p> : null}
+            </div>
+            <span className="character-ready-badge">攻略ハブ</span>
+          </div>
+          <p className="character-hero__lead">
+            {character.shortDescription ?? "技・対策・練習データをキャラクター単位で確認できます。"}
+          </p>
+          <div className="chip-row character-hero__chips">
             {character.archetypeLabel ? <span className="chip">{character.archetypeLabel}</span> : null}
             {character.rangeLabel ? <span className="chip">{character.rangeLabel}</span> : null}
             {character.difficulty ? <span className="chip">難易度 {character.difficulty}/5</span> : null}
@@ -129,54 +137,91 @@ export default async function CharacterPage({
           <CharacterPreferenceActions slug={character.slug} />
         </div>
         {character.imageUrl ? (
-          <Image
-            className="character-hero__image"
-            src={character.imageUrl}
-            alt={character.name}
-            width={760}
-            height={760}
-            sizes="(max-width: 720px) 100vw, 42vw"
-            priority
-          />
+          <div className="character-hero__visual-wrap">
+            <Image
+              className="character-hero__image"
+              src={character.imageUrl}
+              alt={character.name}
+              width={760}
+              height={760}
+              sizes="(max-width: 720px) 100vw, 42vw"
+              priority
+            />
+          </div>
         ) : null}
       </section>
 
       {previewActive ? (
-        <section className="data-notice">
+        <section className="data-notice character-preview-notice">
           <strong>実機確認プレビュー</strong>
           <p>未公開の draft / reviewed データを確認用に表示しています。DBの公開ステータスは変更していません。</p>
         </section>
       ) : null}
 
-      <section className="character-home-actions" aria-label={`${character.name}のよく使う情報`}>
-        {quickActions.map(([label, description, path]) => (
+      <section className="character-home-actions character-home-actions--primary" aria-label={`${character.name}のよく使う情報`}>
+        {quickActions.map(([label, description, path, code]) => (
           <Link
             className="character-home-action"
-            href={appendDevicePreviewToken(`/characters/${character.slug}${path}`, previewToken)}
+            href={sectionHref(character.slug, path, previewToken)}
             key={path}
           >
+            <span className="character-home-action__code">{code}</span>
             <strong>{label}</strong>
             <span>{description}</span>
+            <span className="character-home-action__arrow">開く →</span>
           </Link>
         ))}
       </section>
 
       <CharacterTabs slug={character.slug} active="overview" previewToken={previewToken} />
 
+      <nav className="character-overview-index" aria-label="概要ページ内ナビゲーション">
+        {matchupCard ? <a href="#before-match">対戦前30秒</a> : null}
+        {hasStrengthProfile ? <a href="#profile">強み・弱み</a> : null}
+        {groups.map((group) => <a href={`#guide-${group.key}`} key={group.key}>{group.title}</a>)}
+        <a href="#sources">出典</a>
+      </nav>
+
+      {matchupCard ? (
+        <section className="matchup-spotlight" id="before-match">
+          <div className="matchup-spotlight__head">
+            <div>
+              <p className="eyebrow">BEFORE MATCH</p>
+              <h2>対戦前30秒</h2>
+            </div>
+            <Link className="section-action-link" href={sectionHref(character.slug, "/matchups", previewToken)}>
+              対策をすべて見る →
+            </Link>
+          </div>
+          <article className="matchup-spotlight__card">
+            <h3>{matchupCard.title}</h3>
+            <p className="preline">{matchupCard.body}</p>
+          </article>
+        </section>
+      ) : null}
+
       {hasStrengthProfile ? (
-        <section className="character-columns">
-          {character.strengthsSummary ? (
-            <article className="info-panel">
-              <h2>強み</h2>
-              <p className="preline">{character.strengthsSummary}</p>
-            </article>
-          ) : null}
-          {character.weaknessesSummary ? (
-            <article className="info-panel">
-              <h2>弱み</h2>
-              <p className="preline">{character.weaknessesSummary}</p>
-            </article>
-          ) : null}
+        <section className="character-profile-section" id="profile">
+          <div className="section-heading">
+            <h2>キャラクターの特徴</h2>
+            <p>強い場面と注意点を先に把握してから、詳細な攻略へ進めます。</p>
+          </div>
+          <div className="character-columns character-profile-grid">
+            {character.strengthsSummary ? (
+              <article className="info-panel character-profile-card character-profile-card--strength">
+                <span className="character-profile-card__label">STRENGTH</span>
+                <h3>強み</h3>
+                <p className="preline">{character.strengthsSummary}</p>
+              </article>
+            ) : null}
+            {character.weaknessesSummary ? (
+              <article className="info-panel character-profile-card character-profile-card--weakness">
+                <span className="character-profile-card__label">CAUTION</span>
+                <h3>弱み</h3>
+                <p className="preline">{character.weaknessesSummary}</p>
+              </article>
+            ) : null}
+          </div>
         </section>
       ) : null}
 
@@ -186,19 +231,24 @@ export default async function CharacterPage({
           <p>{previewActive ? "未公開候補を用途別に整理して確認できます。" : "攻略本文は対象パッチと出典を確認した上で公開します。"}</p>
         </div>
         {groups.length ? (
-          <div className="guide-groups">
+          <div className="guide-groups character-guide-groups">
             {groups.map((group) => (
-              <section className="guide-group" key={group.key}>
+              <section className="guide-group" id={`guide-${group.key}`} key={group.key}>
                 <div className="guide-group__heading">
                   <h2>{group.title}</h2>
                   <p>{group.description}</p>
                 </div>
-                <div className="guide-group__grid">
-                  {group.items.map((section) => (
-                    <article className="info-panel" key={section.id}>
-                      <h3>{section.title}</h3>
-                      <p className="preline">{section.body}</p>
-                    </article>
+                <div className="guide-accordion-list">
+                  {group.items.map((section, index) => (
+                    <details className="guide-accordion" key={section.id} open={group.key === "core" && index === 0}>
+                      <summary>
+                        <span>{section.title}</span>
+                        <span className="guide-accordion__hint">開く</span>
+                      </summary>
+                      <div className="guide-accordion__body">
+                        <p className="preline">{section.body}</p>
+                      </div>
+                    </details>
                   ))}
                 </div>
               </section>
@@ -209,17 +259,18 @@ export default async function CharacterPage({
         )}
       </section>
 
-      <section>
+      <section id="sources">
         <div className="section-heading">
           <h2>出典</h2>
-          <p>基本情報や客観データの確認に使用した情報源を表示します。</p>
+          <p>基本情報や客観データの確認に使用した情報源です。攻略を読む流れを邪魔しないよう最下部にまとめています。</p>
         </div>
         {character.sources.length ? (
-          <div className="search-result-list">
+          <div className="source-compact-grid">
             {character.sources.map((source) => (
-              <a className="search-result" href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}>
-                <span className="search-result__type">{source.publisher ?? "情報源"}</span>
+              <a className="source-compact-card" href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}>
+                <span>{source.publisher ?? "情報源"}</span>
                 <strong>{source.title}</strong>
+                <small>出典を開く ↗</small>
               </a>
             ))}
           </div>
