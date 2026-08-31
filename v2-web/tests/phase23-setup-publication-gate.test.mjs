@@ -19,3 +19,18 @@ test("Phase23 Setup gate quarantines verification placeholders and requires rele
   assert.doesNotMatch(sql, /verification_status\s*=\s*'verified'\s*,/i, "migration must not promote verification");
   assert.doesNotMatch(sql, /status\s*=\s*'published'/i, "migration must not publish Setup content");
 });
+
+test("Phase23 Setup gate quarantines replicated generic templates", () => {
+  const sql = read("../supabase/migrations/20260831_phase23_setup_generic_template_quarantine.sql");
+
+  assert.match(sql, /private\.is_generic_setup_template/i, "generic Setup classifier missing");
+  assert.match(sql, /update public\.setups/i, "generic Setup quarantine missing");
+  assert.match(sql, /verification_status = 'unverified'/i, "generic quarantine must only target unverified Setup");
+  assert.match(sql, /status = 'archived'/i, "generic Setup templates must be archived");
+  assert.match(sql, /生DR → 後ろ歩き \/ 打撃 \/ 投げ/i, "generic DR shimmy template guard missing");
+  assert.match(sql, /フレーム消費 → 前ジャンプ攻撃/i, "generic safe-jump template guard missing");
+  assert.match(sql, /not private\.is_generic_setup_template/i, "public-ready helper must reject generic Setup templates");
+  assert.match(sql, /generic Setup template cannot be published/i, "publish trigger must reject generic Setup templates");
+  assert.doesNotMatch(sql, /verification_status\s*=\s*'verified'\s*,/i, "migration must not promote verification");
+  assert.doesNotMatch(sql, /status\s*=\s*'published'/i, "migration must not publish Setup content");
+});
