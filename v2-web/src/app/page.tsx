@@ -73,15 +73,15 @@ export default async function HomePage() {
     <div className="site-shell page-stack">
       <section className="home-hero">
         <div className="home-hero__copy">
-          <p className="eyebrow">SF6 TOTAL PLATFORM</p>
-          <h1>SF6で困ったら<span>SF6DNA</span></h1>
+          <p className="eyebrow">STREET FIGHTER 6 / PLAYER TOOLKIT</p>
+          <h1>調べる。練習する。<span>次の1戦を変える。</span></h1>
           <p>
-            対戦前の確認、練習、対戦後の振り返りまでを1か所に。
-            必要な情報へ迷わず辿り着けるStreet Fighter 6総合プラットフォームです。
+            対戦前の確認、トレモ、対戦後の振り返りを1か所に。
+            SF6DNAは「今やりたいこと」から迷わず使えるSF6総合プラットフォームです。
           </p>
           <div className="home-hero__actions">
-            <Link className="button-primary" href="/characters">キャラクターを調べる</Link>
-            <Link className="button-secondary" href="/diagnosis">診断を始める</Link>
+            <Link className="button-primary" href="/characters">キャラクターから調べる</Link>
+            <Link className="button-secondary" href="/training">今日の練習を開く</Link>
           </div>
         </div>
         <div className="home-hero__visual" aria-label="SF6キャラクター">
@@ -104,17 +104,41 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section aria-label="SF6DNA横断検索">
-        <form className="search-form" action="/search">
-          <input name="q" placeholder="キャラ・技・別名・コンボ・対策を検索" aria-label="SF6DNAを検索" />
-          <button type="submit">検索</button>
-        </form>
+      <section className="home-command-center" aria-label="すぐ使う">
+        <div className="home-command-search">
+          <strong>知りたいことを直接検索</strong>
+          <form className="search-form" action="/search">
+            <input name="q" placeholder="キャラ・技・別名・コンボ・対策" aria-label="SF6DNAを検索" />
+            <button type="submit">検索</button>
+          </form>
+        </div>
+        <Link className="home-command-card" href="/counters">
+          <small>BEFORE MATCH</small>
+          <strong>対戦前30秒</strong>
+          <span>相手キャラの注意点を確認 →</span>
+        </Link>
+        <Link className="home-command-card" href="/training">
+          <small>PRACTICE</small>
+          <strong>トレモを始める</strong>
+          <span>目的別の練習へ移動 →</span>
+        </Link>
+        <Link className="home-command-card" href="/tools">
+          <small>AFTER MATCH</small>
+          <strong>試合を振り返る</strong>
+          <span>課題を整理して次へ →</span>
+        </Link>
+      </section>
+
+      <section className="home-metric-strip" aria-label="SF6DNA収録状況">
+        <div className="home-metric"><strong>{characters.length}キャラ</strong><span>プレイアブルキャラクター</span></div>
+        <div className="home-metric"><strong>1か所</strong><span>技・対策・練習・振り返りを横断</span></div>
+        <div className="home-metric"><strong>毎日</strong><span>対戦前後とトレモで使える導線</span></div>
       </section>
 
       <section className="daily-section" aria-labelledby="daily-title">
         <div className="section-heading">
-          <h2 id="daily-title">今すぐ使う</h2>
-          <p>プレイのタイミングから、必要なページへ直接移動できます。</p>
+          <h2 id="daily-title">プレイの流れから選ぶ</h2>
+          <p>「何を見るか」ではなく「今何をしたいか」からページを選べます。</p>
         </div>
         <div className="daily-grid">
           {dailyActions.map((action) => (
