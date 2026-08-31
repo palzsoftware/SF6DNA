@@ -4,12 +4,12 @@ import { CharacterTabs } from "@/components/character-tabs";
 import { listCharacterSectionItems } from "@/lib/character-sections";
 import {
   appendDevicePreviewToken,
-  getDevicePreviewMoveCommands,
   isDevicePreviewRequest,
   normalizeDevicePreviewToken,
   type DevicePreviewMoveCommand,
 } from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
+import { listMoveCommandsForCharacter } from "@/lib/move-commands";
 import {
   listMoveMotionMediaForCharacter,
   type MoveMotionMedia,
@@ -19,6 +19,7 @@ import {
   type CharacterSectionKey,
 } from "@/types/character";
 import styles from "./page.module.css";
+import moveStyles from "./move-list.module.css";
 
 const sectionMeta: Record<Exclude<CharacterSectionKey, "overview">, { title: string; description: string }> = {
   moves: {
@@ -76,6 +77,17 @@ const tokenLabels: Record<string, string> = {
   advanced: "上級者向け",
 };
 
+const moveKindOrder = ["normal", "unique", "special", "command_throw", "throw", "super", "other"] as const;
+const moveKindLabels: Record<string, string> = {
+  normal: "通常技",
+  unique: "特殊技",
+  special: "必殺技",
+  command_throw: "コマンド投げ",
+  throw: "投げ",
+  super: "スーパーアーツ",
+  other: "その他",
+};
+
 const stateLabels: Record<string, string> = {
   draft: "下書き",
   reviewed: "レビュー済み",
@@ -95,6 +107,17 @@ type DisplayMeta = {
   stats: Array<{ label: string; value: string }>;
   chips: string[];
   internal: string[];
+};
+
+type PreparedMove = {
+  item: Awaited<ReturnType<typeof listCharacterSectionItems>>[number];
+  display: DisplayMeta;
+  subtitle: string | null;
+  commands: DevicePreviewMoveCommand[];
+  media: MoveMotionMedia | null;
+  hasClassic: boolean;
+  hasModern: boolean;
+  kindKey: string;
 };
 
 function withFrame(value: string) {
@@ -169,6 +192,15 @@ function parseMeta(meta: string | null): DisplayMeta {
   return result;
 }
 
+function rawMoveKind(meta: string | null) {
+  if (!meta) return "other";
+  const parts = meta.split(" / ").map((part) => part.trim());
+  for (const key of moveKindOrder) {
+    if (key !== "other" && parts.includes(key)) return key;
+  }
+  return "other";
+}
+
 function displaySubtitle(subtitle: string | null, previewActive: boolean) {
   if (!subtitle) return null;
   if (previewActive && subtitle.trim() === "Awaiting official/game verification before publication.") {
@@ -187,16 +219,27 @@ function commandSecondary(command: DevicePreviewMoveCommand) {
   return command.numericNotation;
 }
 
+function normalizeSearch(value: string | string[] | undefined) {
+  const raw = Array.isArray(value) ? value[0] : value;
+  return raw?.trim().slice(0, 80) ?? "";
+}
+
+function normalizeKind(value: string | string[] | undefined) {
+  const raw = Array.isArray(value) ? value[0] : value;
+  return raw && moveKindOrder.includes(raw as (typeof moveKindOrder)[number]) ? raw : "all";
+}
+
 function isSection(value: string): value is Exclude<CharacterSectionKey, "overview"> {
   return value !== "overview" && CHARACTER_SECTION_KEYS.includes(value as CharacterSectionKey);
 }
 
-function renderMotion(media: MoveMotionMedia, title: string) {
+function renderMotion(media: MoveMotionMedia, title: string, compact = false) {
+  const mediaClass = compact ? `${styles.motionMedia} ${moveStyles.motionMediaCompact}` : styles.motionMedia;
   if (media.mediaType === "gif") {
     return (
       <img
         alt={`${title}のモーション`}
-        className={styles.motionMedia}
+        className={mediaClass}
         height={360}
         loading="lazy"
         src={media.mediaUrl}
@@ -207,7 +250,7 @@ function renderMotion(media: MoveMotionMedia, title: string) {
 
   return (
     <video
-      className={styles.motionMedia}
+      className={mediaClass}
       controls
       loop
       muted
@@ -219,6 +262,20 @@ function renderMotion(media: MoveMotionMedia, title: string) {
       このブラウザでは動画を再生できません。
     </video>
   );
+}
+
+function buildMoveFilterHref(
+  slug: string,
+  previewToken: string | null,
+  query: string,
+  kind: string
+) {
+  const params = new URLSearchParams();
+  if (previewToken) params.set("preview", previewToken);
+  if (query) params.set("q", query);
+  if (kind !== "all") params.set("kind", kind);
+  const suffix = params.toString();
+  return `/characters/${slug}/moves${suffix ? `?${suffix}` : ""}`;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; section: string }> }) {
@@ -237,7 +294,11 @@ export default async function CharacterSectionPage({
   searchParams,
 }: {
   params: Promise<{ slug: string; section: string }>;
-  searchParams: Promise<{ preview?: string | string[] }>;
+  searchParams: Promise<{
+    preview?: string | string[];
+    q?: string | string[];
+    kind?: string | string[];
+  }>;
 }) {
   const [{ slug, section }, query] = await Promise.all([params, searchParams]);
   if (!isSection(section)) notFound();
@@ -248,10 +309,13 @@ export default async function CharacterSectionPage({
 
   const meta = sectionMeta[section];
   const previewActive = isDevicePreviewRequest(previewToken);
-  const [items, previewCommands, motionMedia] = await Promise.all([
+  const searchQuery = section === "moves" ? normalizeSearch(query.q) : "";
+  const selectedKind = section === "moves" ? normalizeKind(query.kind) : "all";
+
+  const [items, moveCommands, motionMedia] = await Promise.all([
     listCharacterSectionItems(character.id, section, previewToken),
-    section === "moves" && previewActive
-      ? getDevicePreviewMoveCommands(character.id, previewToken)
+    section === "moves"
+      ? listMoveCommandsForCharacter(character.id, previewToken)
       : Promise.resolve([] as DevicePreviewMoveCommand[]),
     section === "moves"
       ? listMoveMotionMediaForCharacter(character.id, previewToken)
@@ -259,7 +323,7 @@ export default async function CharacterSectionPage({
   ]);
 
   const commandsByMove = new Map<string, DevicePreviewMoveCommand[]>();
-  for (const command of previewCommands) {
+  for (const command of moveCommands) {
     const list = commandsByMove.get(command.moveId) ?? [];
     list.push(command);
     commandsByMove.set(command.moveId, list);
@@ -275,6 +339,54 @@ export default async function CharacterSectionPage({
   const officialMovelistUrl = character.sources.find(
     (source) => source.sourceType === "official_movelist"
   )?.url ?? null;
+
+  const preparedMoves: PreparedMove[] = section === "moves"
+    ? items.map((item) => {
+        const display = parseMeta(item.meta);
+        const commands = commandsByMove.get(item.id) ?? [];
+        const media = (mediaByMove.get(item.id) ?? [])[0] ?? null;
+        return {
+          item,
+          display,
+          subtitle: displaySubtitle(item.subtitle, previewActive),
+          commands,
+          media,
+          hasClassic: commands.some((command) => command.scheme === "classic"),
+          hasModern: commands.some((command) => command.scheme === "modern"),
+          kindKey: rawMoveKind(item.meta),
+        };
+      })
+    : [];
+
+  const normalizedQuery = searchQuery.toLocaleLowerCase("ja");
+  const filteredMoves = preparedMoves.filter((move) => {
+    if (selectedKind !== "all" && move.kindKey !== selectedKind) return false;
+    if (!normalizedQuery) return true;
+    const searchable = [
+      move.item.title,
+      move.subtitle,
+      ...move.commands.flatMap((command) => [
+        command.commandText,
+        command.numericNotation,
+        command.buttonNotation,
+        command.conditionText,
+      ]),
+    ]
+      .filter((value): value is string => Boolean(value))
+      .join(" ")
+      .toLocaleLowerCase("ja");
+    return searchable.includes(normalizedQuery);
+  });
+
+  const kindCounts = new Map<string, number>();
+  for (const move of preparedMoves) {
+    kindCounts.set(move.kindKey, (kindCounts.get(move.kindKey) ?? 0) + 1);
+  }
+
+  const groupedMoves = moveKindOrder.flatMap((kind) => {
+    const groupItems = filteredMoves.filter((move) => move.kindKey === kind);
+    return groupItems.length ? [{ kind, label: moveKindLabels[kind], items: groupItems }] : [];
+  });
 
   return (
     <div className="site-shell page-stack">
@@ -300,16 +412,134 @@ export default async function CharacterSectionPage({
 
       <CharacterTabs slug={character.slug} active={section} previewToken={previewToken} />
 
-      {items.length ? (
+      {section === "moves" && preparedMoves.length ? (
+        <>
+          <section className={moveStyles.moveToolbar} aria-label="技の検索と絞り込み">
+            <form className={moveStyles.moveSearch} action={`/characters/${character.slug}/moves`}>
+              {previewToken ? <input type="hidden" name="preview" value={previewToken} /> : null}
+              {selectedKind !== "all" ? <input type="hidden" name="kind" value={selectedKind} /> : null}
+              <input
+                aria-label="技名またはコマンドで検索"
+                defaultValue={searchQuery}
+                name="q"
+                placeholder="技名・コマンドで検索 例: 波動拳 / 236P"
+              />
+              <button type="submit">検索</button>
+            </form>
+            <div className={moveStyles.kindFilters} aria-label="技種別で絞り込む">
+              <Link
+                className={selectedKind === "all" ? moveStyles.kindFilterActive : moveStyles.kindFilter}
+                href={buildMoveFilterHref(character.slug, previewToken, searchQuery, "all")}
+              >
+                すべて <span>{preparedMoves.length}</span>
+              </Link>
+              {moveKindOrder.map((kind) => {
+                const count = kindCounts.get(kind) ?? 0;
+                if (!count) return null;
+                return (
+                  <Link
+                    className={selectedKind === kind ? moveStyles.kindFilterActive : moveStyles.kindFilter}
+                    href={buildMoveFilterHref(character.slug, previewToken, searchQuery, kind)}
+                    key={kind}
+                  >
+                    {moveKindLabels[kind]} <span>{count}</span>
+                  </Link>
+                );
+              })}
+            </div>
+            <p className={moveStyles.resultSummary}>
+              {searchQuery || selectedKind !== "all"
+                ? `${filteredMoves.length} / ${preparedMoves.length}件を表示`
+                : `${preparedMoves.length}件の技データ`}
+            </p>
+          </section>
+
+          {filteredMoves.length ? (
+            <div className={moveStyles.moveGroups}>
+              {groupedMoves.map((group) => (
+                <section className={moveStyles.moveGroup} key={group.kind}>
+                  <div className={moveStyles.moveGroupHeading}>
+                    <h2>{group.label}</h2>
+                    <span>{group.items.length}件</span>
+                  </div>
+                  <div className={moveStyles.moveList}>
+                    {group.items.map((move) => (
+                      <article className={moveStyles.moveRow} key={move.item.id}>
+                        <div className={moveStyles.moveIdentity}>
+                          <div className={moveStyles.moveTitleRow}>
+                            <strong>{move.item.title}</strong>
+                            {move.display.preview ? <span className={moveStyles.previewDot}>確認用</span> : null}
+                          </div>
+                          {move.subtitle ? <p>{move.subtitle}</p> : null}
+                          {previewActive && move.display.internal.length ? (
+                            <small>確認状態: {move.display.internal.join("・")}</small>
+                          ) : null}
+                        </div>
+
+                        <div className={moveStyles.moveCommandArea} aria-label={`${move.item.title} コマンド`}>
+                          {move.commands.length ? move.commands.map((command, index) => {
+                            const primary = commandPrimary(command);
+                            const secondary = commandSecondary(command);
+                            if (!primary) return null;
+                            return (
+                              <div className={moveStyles.moveCommand} key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}>
+                                <span>{commandSchemeLabels[command.scheme] ?? command.scheme}</span>
+                                <div>
+                                  <strong>{primary}</strong>
+                                  {secondary ? <code>{secondary}</code> : null}
+                                  {command.conditionText ? <small>{command.conditionText}</small> : null}
+                                </div>
+                              </div>
+                            );
+                          }) : <span className={moveStyles.commandPending}>コマンド確認中</span>}
+                          {move.hasClassic && !move.hasModern ? (
+                            <div className={moveStyles.modernUnavailable} role="note">
+                              モダン操作では使用できません
+                            </div>
+                          ) : null}
+                        </div>
+
+                        <div className={moveStyles.moveStats}>
+                          {move.display.stats.length ? move.display.stats.map((stat) => (
+                            <span key={`${stat.label}-${stat.value}`}>
+                              <small>{stat.label}</small>
+                              <strong>{stat.value}</strong>
+                            </span>
+                          )) : <small className={moveStyles.statPending}>フレーム確認中</small>}
+                        </div>
+
+                        {move.media ? (
+                          <div className={moveStyles.moveMotion}>
+                            {renderMotion(move.media, move.item.title, true)}
+                          </div>
+                        ) : null}
+
+                        <Link
+                          className={moveStyles.moveMore}
+                          href={appendDevicePreviewToken(move.item.href, previewToken)}
+                          aria-label={`${move.item.title}の詳細を見る`}
+                        >
+                          詳細 →
+                        </Link>
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
+          ) : (
+            <section className="empty-state">
+              <h2>条件に合う技がありません</h2>
+              <p>技名やコマンドを短くするか、種別を「すべて」に戻してください。</p>
+              <Link className="inline-button button-secondary" href={buildMoveFilterHref(character.slug, previewToken, "", "all")}>絞り込みを解除</Link>
+            </section>
+          )}
+        </>
+      ) : items.length ? (
         <section className={styles.dataGrid} aria-label={`${character.name} ${meta.title}`}>
           {items.map((item) => {
             const display = parseMeta(item.meta);
             const subtitle = displaySubtitle(item.subtitle, previewActive);
-            const commands = section === "moves" ? (commandsByMove.get(item.id) ?? []) : [];
-            const moveMedia = section === "moves" ? (mediaByMove.get(item.id) ?? []) : [];
-            const primaryMotion = moveMedia[0] ?? null;
-            const hasClassic = commands.some((command) => command.scheme === "classic");
-            const hasModern = commands.some((command) => command.scheme === "modern");
 
             return (
               <article className={styles.dataCard} key={item.id}>
@@ -320,48 +550,6 @@ export default async function CharacterSectionPage({
                   </div>
                   {display.preview ? <span className={styles.previewBadge}>未公開・確認用</span> : null}
                 </div>
-
-                {commands.length ? (
-                  <div className={styles.commands} aria-label={`${item.title} コマンド`}>
-                    {commands.map((command, index) => {
-                      const primary = commandPrimary(command);
-                      const secondary = commandSecondary(command);
-                      if (!primary) return null;
-                      return (
-                        <div className={styles.commandRow} key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}>
-                          <span className={styles.commandScheme}>{commandSchemeLabels[command.scheme] ?? command.scheme}</span>
-                          <span className={styles.commandContent}>
-                            <strong className={styles.commandText}>{primary}</strong>
-                            {secondary ? <code className={styles.numericNotation}>{secondary}</code> : null}
-                            {command.conditionText ? <small className={styles.commandCondition}>{command.conditionText}</small> : null}
-                          </span>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ) : null}
-
-                {section === "moves" && hasClassic && !hasModern ? (
-                  <div className={styles.modernUnavailable} role="note">
-                    <strong>注意</strong>
-                    <span>モダン操作ではこの技を使用できません。</span>
-                  </div>
-                ) : null}
-
-                {section === "moves" && primaryMotion ? (
-                  <div className={styles.motionBlock}>
-                    <span className={styles.motionLabel}>技モーション</span>
-                    {renderMotion(primaryMotion, item.title)}
-                    {(primaryMotion.sourceUrl || primaryMotion.sourceLabel) ? (
-                      <div className={styles.motionSource}>
-                        <span>{primaryMotion.sourceLabel ?? "モーション出典"}</span>
-                        {primaryMotion.sourceUrl ? (
-                          <a href={primaryMotion.sourceUrl} rel="noopener noreferrer" target="_blank">出典を開く ↗</a>
-                        ) : null}
-                      </div>
-                    ) : null}
-                  </div>
-                ) : null}
 
                 {subtitle ? <p className={styles.summary}>{subtitle}</p> : null}
 
