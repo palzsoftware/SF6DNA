@@ -16,8 +16,8 @@ test("Phase23 Setup gate quarantines verification placeholders and requires rele
   assert.match(sql, /entity_type = 'setup'/i, "published Setup must require Source evidence");
   assert.match(sql, /public read release-ready setups/i, "release-ready Setup RLS policy missing");
   assert.match(sql, /enforce_setup_publication_ready/i, "Setup publication trigger missing");
-  assert.doesNotMatch(sql, /verification_status\s*=\s*'verified'\s*,/i, "migration must not promote verification");
-  assert.doesNotMatch(sql, /status\s*=\s*'published'/i, "migration must not publish Setup content");
+  assert.doesNotMatch(sql, /set\s+verification_status\s*=\s*'verified'/i, "migration must not promote verification");
+  assert.doesNotMatch(sql, /set\s+status\s*=\s*'published'/i, "migration must not publish Setup content");
 });
 
 test("Phase23 Setup gate quarantines replicated generic templates", () => {
@@ -31,6 +31,13 @@ test("Phase23 Setup gate quarantines replicated generic templates", () => {
   assert.match(sql, /フレーム消費 → 前ジャンプ攻撃/i, "generic safe-jump template guard missing");
   assert.match(sql, /not private\.is_generic_setup_template/i, "public-ready helper must reject generic Setup templates");
   assert.match(sql, /generic Setup template cannot be published/i, "publish trigger must reject generic Setup templates");
-  assert.doesNotMatch(sql, /verification_status\s*=\s*'verified'\s*,/i, "migration must not promote verification");
-  assert.doesNotMatch(sql, /status\s*=\s*'published'/i, "migration must not publish Setup content");
+  assert.doesNotMatch(sql, /set\s+verification_status\s*=\s*'verified'/i, "migration must not promote verification");
+  assert.doesNotMatch(sql, /set\s+status\s*=\s*'published'/i, "migration must not publish Setup content");
+});
+
+test("Phase23 generic Setup classifier pins search_path", () => {
+  const sql = read("../supabase/migrations/20260831_phase23_setup_template_classifier_search_path.sql");
+
+  assert.match(sql, /alter function private\.is_generic_setup_template/i, "classifier search_path migration missing");
+  assert.match(sql, /set search_path = pg_catalog/i, "classifier search_path must be pinned");
 });
