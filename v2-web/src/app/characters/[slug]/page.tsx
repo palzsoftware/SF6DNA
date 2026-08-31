@@ -51,14 +51,23 @@ const guideGroups = [
   },
 ] as const;
 
-function groupedGuideSections(sections: CharacterGuideSection[]) {
+type GuideGroupResult = {
+  key: string;
+  title: string;
+  description: string;
+  items: CharacterGuideSection[];
+};
+
+function groupedGuideSections(sections: CharacterGuideSection[]): GuideGroupResult[] {
   const used = new Set<string>();
-  const groups = guideGroups.flatMap((group) => {
+  const groups: GuideGroupResult[] = guideGroups.flatMap((group) => {
     const items = group.sectionKeys.flatMap((key) =>
       sections.filter((section) => section.sectionKey === key)
     );
     items.forEach((item) => used.add(item.id));
-    return items.length ? [{ ...group, items }] : [];
+    return items.length
+      ? [{ key: group.key, title: group.title, description: group.description, items }]
+      : [];
   });
 
   const remaining = sections.filter((section) => !used.has(section.id));
@@ -67,7 +76,6 @@ function groupedGuideSections(sections: CharacterGuideSection[]) {
       key: "other",
       title: "その他",
       description: "追加の確認項目。",
-      sectionKeys: [] as unknown as readonly ["overview"],
       items: remaining,
     });
   }
