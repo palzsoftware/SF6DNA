@@ -4,6 +4,7 @@ import "./globals.css";
 import "./tools.css";
 import "./visual-refresh.css";
 import "./image-performance.css";
+import "./ux-refresh.css";
 
 function getMetadataBase() {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -51,11 +52,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <Link className="site-brand" href="/">SF6DNA</Link>
             <nav className="site-nav" aria-label="主要ナビゲーション">
               <Link href="/search">検索</Link>
-              <Link href="/diagnosis">診断</Link>
               <Link href="/characters">キャラクター</Link>
-              <Link href="/players">プレイヤー</Link>
-              <Link href="/videos">動画</Link>
+              <Link href="/counters">対策</Link>
               <Link href="/training">トレーニング</Link>
+              <Link href="/diagnosis">診断</Link>
               <Link href="/coach">AIコーチ</Link>
               <Link href="/tools">マイ機能</Link>
             </nav>
@@ -66,6 +66,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <div className="site-shell site-footer__inner">
             <p>SF6DNA</p>
             <nav aria-label="補助ナビゲーション">
+              <Link href="/players">プレイヤー</Link>
+              <Link href="/videos">動画</Link>
               <Link href="/about">About</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/sources">情報源</Link>
