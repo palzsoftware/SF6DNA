@@ -24,15 +24,20 @@ export function CharacterCard({ character }: { character: CharacterSummary }) {
         </div>
       </div>
       <div className="character-card__body">
-        <p>
-          {character.shortDescription ??
-            "技・フレーム・コンボ・対策など、公開済みの検証データを確認できます。"}
-        </p>
+        {character.shortDescription ? (
+          <p>{character.shortDescription}</p>
+        ) : (
+          <div className="character-card__topics" aria-label="収録カテゴリ">
+            <span>技・フレーム</span>
+            <span>対策</span>
+            <span>トレーニング</span>
+          </div>
+        )}
         <div className="chip-row">
           {character.archetypeLabel ? <span className="chip">{character.archetypeLabel}</span> : null}
           {character.rangeLabel ? <span className="chip">{character.rangeLabel}</span> : null}
           {character.difficulty ? <span className="chip">難易度 {character.difficulty}/5</span> : null}
-          <span className="chip chip--accent">DATA →</span>
+          <span className="chip chip--accent">データを見る →</span>
         </div>
       </div>
     </Link>
