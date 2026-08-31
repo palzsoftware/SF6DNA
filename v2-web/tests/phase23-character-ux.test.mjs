@@ -36,3 +36,27 @@ test("character UX keeps existing routes and hides empty profile panels", () => 
   assert.ok(detail.includes("guide-groups"), "guide sections should be grouped for scanning");
   assert.ok(layout.includes("./ux-refresh.css"), "UX refresh stylesheet missing");
 });
+
+test("daily-use character sections have dedicated searchable surfaces", () => {
+  const matchups = read("src/app/characters/[slug]/matchups/page.tsx");
+  const training = read("src/app/characters/[slug]/training/page.tsx");
+  const combos = read("src/app/characters/[slug]/combos/page.tsx");
+  const movePage = read("src/app/characters/[slug]/[section]/page.tsx");
+
+  assert.ok(matchups.includes('section="matchups"'), "matchup explorer missing");
+  assert.ok(training.includes('section="training"'), "training explorer missing");
+  assert.ok(combos.includes("ComboExplorer"), "combo explorer missing");
+  assert.ok(movePage.includes("技名・コマンドで検索"), "Move search missing");
+  assert.ok(movePage.includes("モダン操作では使用できません"), "Modern-unavailable warning missing");
+});
+
+test("search and mobile navigation prioritize fast repeat use", () => {
+  const search = read("src/app/search/page.tsx");
+  const layout = read("src/app/layout.tsx");
+  const mobileCss = read("src/app/mobile-refresh.css");
+
+  assert.ok(search.includes("必要な情報へ、最短で。"), "search landing should be task-oriented");
+  assert.ok(search.includes("typeFilters"), "search type filters missing");
+  assert.ok(layout.includes("mobile-dock"), "mobile quick dock missing");
+  assert.ok(mobileCss.includes("safe-area-inset-bottom"), "mobile dock must account for iPhone safe area");
+});
