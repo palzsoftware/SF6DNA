@@ -279,6 +279,22 @@ body {
   padding: 16px 18px 18px;
 }
 
+.character-card__topics {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.character-card__topics span {
+  padding: 5px 8px;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  color: var(--text-soft);
+  font-size: .72rem;
+  font-weight: 700;
+}
+
 .character-hero {
   position: relative;
   overflow: hidden;
