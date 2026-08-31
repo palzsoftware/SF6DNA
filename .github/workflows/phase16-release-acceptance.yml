@@ -95,7 +95,7 @@ jobs:
           const search = await fetch(base + '/search?q=__phase16_no_result_expected__');
           assert.equal(search.status, 200);
           const searchHtml = await search.text();
-          assert.ok(searchHtml.includes('公開済みデータから一致する情報が見つかりませんでした。'), 'safe empty search message missing');
+          assert.ok(searchHtml.includes('一致する公開データが見つかりません'), 'safe empty search message missing');
 
           const shortQuestion = await fetch(base + '/api/coach/retrieve', {
             method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ question: 'a' }),
