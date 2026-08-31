@@ -1,0 +1,247 @@
+.explorer {
+  display: grid;
+  gap: 18px;
+}
+
+.toolbar {
+  position: sticky;
+  top: 132px;
+  z-index: 10;
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--line, var(--border));
+  border-radius: 15px;
+  background: rgba(9, 13, 18, .92);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, .18);
+}
+
+.search {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+.search input {
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 13px;
+  border: 1px solid var(--line-strong, var(--border));
+  border-radius: 11px;
+  background: rgba(5, 9, 13, .82);
+  color: var(--text);
+}
+
+.search input:focus {
+  outline: 2px solid rgba(83, 216, 255, .26);
+  border-color: rgba(83, 216, 255, .45);
+}
+
+.search button {
+  padding: 9px 15px;
+  border: 1px solid rgba(255, 122, 26, .38);
+  border-radius: 11px;
+  background: rgba(255, 122, 26, .12);
+  color: #ffd2b2;
+  font-weight: 800;
+}
+
+.filterBlock {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+}
+
+.filterLabel {
+  padding-top: 7px;
+  color: #7e8a98;
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+}
+
+.filters {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filters::-webkit-scrollbar { display: none; }
+
+.filter,
+.filterActive {
+  display: inline-flex;
+  min-height: 34px;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 6px 9px;
+  border: 1px solid var(--line, var(--border));
+  border-radius: 999px;
+  color: #aeb8c4;
+  font-size: .74rem;
+  font-weight: 750;
+}
+
+.filter:hover,
+.filter:focus-visible {
+  border-color: rgba(83, 216, 255, .28);
+  color: #fff;
+}
+
+.filterActive {
+  border-color: rgba(83, 216, 255, .3);
+  background: rgba(83, 216, 255, .08);
+  color: #c8f2ff;
+}
+
+.resultCount {
+  margin: 0;
+  color: #7f8b98;
+  font-size: .72rem;
+  text-align: right;
+}
+
+.list {
+  display: grid;
+  gap: 8px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 17px;
+  border: 1px solid var(--line, var(--border));
+  border-radius: 14px;
+  background: rgba(17, 23, 31, .74);
+  transition: border-color 150ms ease, background 150ms ease, transform 150ms ease;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(83, 216, 255, .2);
+  background: rgba(22, 30, 40, .9);
+}
+
+.cardMain {
+  min-width: 0;
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.typeBadge,
+.infoBadge,
+.warningBadge,
+.timeBadge,
+.previewBadge {
+  display: inline-flex;
+  min-height: 23px;
+  align-items: center;
+  padding: 3px 7px;
+  border: 1px solid var(--line, var(--border));
+  border-radius: 999px;
+  font-size: .64rem;
+  font-weight: 780;
+}
+
+.typeBadge {
+  border-color: rgba(83, 216, 255, .24);
+  color: #bfefff;
+}
+
+.infoBadge {
+  color: #acb8c5;
+}
+
+.warningBadge {
+  border-color: rgba(255, 122, 26, .28);
+  color: #ffb27a;
+}
+
+.timeBadge {
+  border-color: rgba(109, 226, 151, .22);
+  color: #a9e8c0;
+}
+
+.previewBadge {
+  border-color: rgba(255, 122, 26, .28);
+  color: #ffad73;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.card p {
+  display: -webkit-box;
+  margin: 7px 0 0;
+  overflow: hidden;
+  color: var(--copy-muted, var(--muted));
+  font-size: .82rem;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.more {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 122, 26, .22);
+  border-radius: 9px;
+  color: #ffae73;
+  font-size: .74rem;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.more:hover,
+.more:focus-visible {
+  border-color: rgba(255, 122, 26, .42);
+  background: rgba(255, 122, 26, .08);
+  color: #ffd2b2;
+}
+
+@media (max-width: 860px) {
+  .toolbar { top: 120px; }
+}
+
+@media (max-width: 560px) {
+  .toolbar {
+    top: 116px;
+    padding: 10px;
+  }
+
+  .search {
+    grid-template-columns: 1fr;
+  }
+
+  .search button { width: 100%; }
+  .filterBlock { grid-template-columns: 1fr; gap: 3px; }
+  .filterLabel { padding-top: 0; }
+  .resultCount { text-align: left; }
+
+  .card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .more {
+    justify-self: end;
+    min-height: 34px;
+  }
+}
