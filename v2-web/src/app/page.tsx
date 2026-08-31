@@ -2,6 +2,33 @@ import Image from "next/image";
 import Link from "next/link";
 import { listCharacters } from "@/lib/characters";
 
+const dailyActions = [
+  {
+    phase: "BEFORE MATCH",
+    title: "対戦前に対策を確認",
+    description: "苦手キャラや要注意行動を短時間で見直す。",
+    href: "/counters",
+  },
+  {
+    phase: "PRACTICE",
+    title: "今日の練習を決める",
+    description: "対空・確反・端防御など、トレモ項目へすぐ移動する。",
+    href: "/training",
+  },
+  {
+    phase: "AFTER MATCH",
+    title: "対戦後に振り返る",
+    description: "自分用ツールで試合の課題と次の練習を整理する。",
+    href: "/tools",
+  },
+  {
+    phase: "STUDY",
+    title: "キャラクターを研究",
+    description: "技・フレーム・コンボ・対策をキャラ単位で横断する。",
+    href: "/characters",
+  },
+] as const;
+
 const pillars = [
   {
     icon: "01",
@@ -49,12 +76,12 @@ export default async function HomePage() {
           <p className="eyebrow">SF6 TOTAL PLATFORM</p>
           <h1>SF6で困ったら<span>SF6DNA</span></h1>
           <p>
-            自分を知る、キャラクターを知る、相手を知る。
-            初心者から上級者まで、対戦前・練習中・対戦後を1つにつなぐStreet Fighter 6総合プラットフォームです。
+            対戦前の確認、練習、対戦後の振り返りまでを1か所に。
+            必要な情報へ迷わず辿り着けるStreet Fighter 6総合プラットフォームです。
           </p>
           <div className="home-hero__actions">
-            <Link className="button-primary" href="/diagnosis">診断を始める</Link>
-            <Link className="button-secondary" href="/characters">キャラクターを調べる</Link>
+            <Link className="button-primary" href="/characters">キャラクターを調べる</Link>
+            <Link className="button-secondary" href="/diagnosis">診断を始める</Link>
           </div>
         </div>
         <div className="home-hero__visual" aria-label="SF6キャラクター">
@@ -84,9 +111,26 @@ export default async function HomePage() {
         </form>
       </section>
 
+      <section className="daily-section" aria-labelledby="daily-title">
+        <div className="section-heading">
+          <h2 id="daily-title">今すぐ使う</h2>
+          <p>プレイのタイミングから、必要なページへ直接移動できます。</p>
+        </div>
+        <div className="daily-grid">
+          {dailyActions.map((action) => (
+            <Link className="daily-card" href={action.href} key={action.phase}>
+              <span className="daily-card__phase">{action.phase}</span>
+              <strong>{action.title}</strong>
+              <p>{action.description}</p>
+              <span className="daily-card__arrow">開く →</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section aria-labelledby="main-content-title">
         <div className="section-heading">
-          <h2 id="main-content-title">4大メインコンテンツ</h2>
+          <h2 id="main-content-title">SF6DNAの中核</h2>
           <p>
             {characters.length
               ? `プレイアブル${characters.length}キャラクターを収録。公開画面では確認条件を満たしたデータだけを表示します。`
@@ -104,7 +148,7 @@ export default async function HomePage() {
       </section>
 
       <section>
-        <div className="section-heading"><h2>攻略・練習データ</h2><p>必要な情報へ直接アクセスできます。</p></div>
+        <div className="section-heading"><h2>攻略データから探す</h2><p>目的が決まっている場合は直接開けます。</p></div>
         <div className="card-grid">
           {subTools.map(([icon, title, href]) => (
             <Link className="feature-card" data-icon={icon} href={href} key={href}>
