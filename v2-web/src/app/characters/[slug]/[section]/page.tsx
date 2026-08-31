@@ -23,7 +23,7 @@ import styles from "./page.module.css";
 const sectionMeta: Record<Exclude<CharacterSectionKey, "overview">, { title: string; description: string }> = {
   moves: {
     title: "技・フレーム",
-    description: "技名・コマンド・モーション・重要フレームを一覧で確認し、必要なときだけ詳細を開けます。",
+    description: "技名・コマンド・重要フレームを一覧で確認し、必要なときだけ詳細を開けます。",
   },
   combos: {
     title: "コンボ",
@@ -87,10 +87,6 @@ const stateLabels: Record<string, string> = {
 const commandSchemeLabels: Record<string, string> = {
   classic: "Classic",
   modern: "Modern",
-};
-
-const officialMovelistUrls: Record<string, string> = {
-  ryu: "https://www.streetfighter.com/6/ja-jp/character/ryu/movelist",
 };
 
 type DisplayMeta = {
@@ -276,7 +272,9 @@ export default async function CharacterSectionPage({
     mediaByMove.set(media.moveId, list);
   }
 
-  const officialMovelistUrl = officialMovelistUrls[character.slug] ?? null;
+  const officialMovelistUrl = character.sources.find(
+    (source) => source.sourceType === "official_movelist"
+  )?.url ?? null;
 
   return (
     <div className="site-shell page-stack">
@@ -284,6 +282,13 @@ export default async function CharacterSectionPage({
         <p className="eyebrow">{character.name}</p>
         <h1>{meta.title}</h1>
         <p>{meta.description}</p>
+        {section === "moves" && officialMovelistUrl ? (
+          <div className="section-actions">
+            <a className="section-action-link" href={officialMovelistUrl} rel="noopener noreferrer" target="_blank">
+              CAPCOM公式ムーブリスト ↗
+            </a>
+          </div>
+        ) : null}
       </section>
 
       {previewActive ? (
@@ -343,31 +348,19 @@ export default async function CharacterSectionPage({
                   </div>
                 ) : null}
 
-                {section === "moves" ? (
-                  primaryMotion ? (
-                    <div className={styles.motionBlock}>
-                      <span className={styles.motionLabel}>技モーション</span>
-                      {renderMotion(primaryMotion, item.title)}
-                      {(primaryMotion.sourceUrl || primaryMotion.sourceLabel) ? (
-                        <div className={styles.motionSource}>
-                          <span>{primaryMotion.sourceLabel ?? "モーション出典"}</span>
-                          {primaryMotion.sourceUrl ? (
-                            <a href={primaryMotion.sourceUrl} rel="noopener noreferrer" target="_blank">出典を開く ↗</a>
-                          ) : null}
-                        </div>
-                      ) : null}
-                    </div>
-                  ) : (
-                    <div className={styles.motionFallback}>
-                      <span>
-                        <strong>技モーション</strong>
-                        <small>GIF / 短尺動画は準備中です。</small>
-                      </span>
-                      {officialMovelistUrl ? (
-                        <a href={officialMovelistUrl} rel="noopener noreferrer" target="_blank">CAPCOM公式で動きを確認 ↗</a>
-                      ) : null}
-                    </div>
-                  )
+                {section === "moves" && primaryMotion ? (
+                  <div className={styles.motionBlock}>
+                    <span className={styles.motionLabel}>技モーション</span>
+                    {renderMotion(primaryMotion, item.title)}
+                    {(primaryMotion.sourceUrl || primaryMotion.sourceLabel) ? (
+                      <div className={styles.motionSource}>
+                        <span>{primaryMotion.sourceLabel ?? "モーション出典"}</span>
+                        {primaryMotion.sourceUrl ? (
+                          <a href={primaryMotion.sourceUrl} rel="noopener noreferrer" target="_blank">出典を開く ↗</a>
+                        ) : null}
+                      </div>
+                    ) : null}
+                  </div>
                 ) : null}
 
                 {subtitle ? <p className={styles.summary}>{subtitle}</p> : null}
