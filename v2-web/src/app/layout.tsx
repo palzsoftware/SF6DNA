@@ -7,6 +7,7 @@ import "./image-performance.css";
 import "./ux-refresh.css";
 import "./product-refresh.css";
 import "./character-overview-refresh.css";
+import "./mobile-refresh.css";
 
 function getMetadataBase() {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -77,6 +78,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             </nav>
           </div>
         </footer>
+        <nav className="mobile-dock" aria-label="スマートフォン用クイックナビゲーション">
+          <Link href="/characters">キャラ</Link>
+          <Link href="/counters">対策</Link>
+          <Link href="/training">練習</Link>
+          <Link href="/search">検索</Link>
+        </nav>
       </body>
     </html>
   );
