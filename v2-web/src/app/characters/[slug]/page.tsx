@@ -1,12 +1,78 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CharacterPreferenceActions } from "@/components/character-preference-actions";
 import { CharacterTabs } from "@/components/character-tabs";
 import {
+  appendDevicePreviewToken,
   isDevicePreviewRequest,
   normalizeDevicePreviewToken,
 } from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
+import type { CharacterGuideSection } from "@/types/character";
+
+const quickActions = [
+  ["技・フレーム", "コマンドと重要数値を見る", "/moves"],
+  ["対策", "対戦前に要点を確認する", "/matchups"],
+  ["トレーニング", "トレモ項目へ移動する", "/training"],
+  ["プレイヤー", "参考プレイヤーを探す", "/players"],
+] as const;
+
+const guideGroups = [
+  {
+    key: "matchup",
+    title: "対戦前に見る",
+    description: "短時間で確認したい対戦要点。",
+    sectionKeys: ["matchup_card"],
+  },
+  {
+    key: "core",
+    title: "基本方針",
+    description: "キャラクターの勝ち筋と軸になる考え方。",
+    sectionKeys: ["overview"],
+  },
+  {
+    key: "level",
+    title: "レベル別の優先事項",
+    description: "習熟度に応じて覚える内容を絞り込みます。",
+    sectionKeys: ["beginner", "intermediate", "advanced", "mr1700"],
+  },
+  {
+    key: "decision",
+    title: "実戦判断",
+    description: "防御とゲージ管理など、試合中の判断基準。",
+    sectionKeys: ["defense", "meter"],
+  },
+  {
+    key: "practice",
+    title: "練習",
+    description: "実戦へつなげるための反復項目。",
+    sectionKeys: ["training"],
+  },
+] as const;
+
+function groupedGuideSections(sections: CharacterGuideSection[]) {
+  const used = new Set<string>();
+  const groups = guideGroups.flatMap((group) => {
+    const items = group.sectionKeys.flatMap((key) =>
+      sections.filter((section) => section.sectionKey === key)
+    );
+    items.forEach((item) => used.add(item.id));
+    return items.length ? [{ ...group, items }] : [];
+  });
+
+  const remaining = sections.filter((section) => !used.has(section.id));
+  if (remaining.length) {
+    groups.push({
+      key: "other",
+      title: "その他",
+      description: "追加の確認項目。",
+      sectionKeys: [] as unknown as readonly ["overview"],
+      items: remaining,
+    });
+  }
+  return groups;
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -35,6 +101,8 @@ export default async function CharacterPage({
   if (!character) notFound();
 
   const previewActive = isDevicePreviewRequest(previewToken);
+  const groups = groupedGuideSections(character.guideSections);
+  const hasStrengthProfile = Boolean(character.strengthsSummary || character.weaknessesSummary);
 
   return (
     <div className="site-shell page-stack">
@@ -43,7 +111,7 @@ export default async function CharacterPage({
           <p className="eyebrow">CHARACTER</p>
           <h1>{character.name}</h1>
           {character.nameEn ? <p className="character-subtitle">{character.nameEn}</p> : null}
-          <p>{character.shortDescription ?? "公開できる概要情報を準備中です。"}</p>
+          <p>{character.shortDescription ?? "技・対策・練習データをキャラクター単位で確認できます。"}</p>
           <div className="chip-row">
             {character.archetypeLabel ? <span className="chip">{character.archetypeLabel}</span> : null}
             {character.rangeLabel ? <span className="chip">{character.rangeLabel}</span> : null}
@@ -66,42 +134,71 @@ export default async function CharacterPage({
       </section>
 
       {previewActive ? (
-        <section className="empty-state">
-          <h2>Phase23 実機確認プレビュー</h2>
-          <p>このPreviewでは未公開の draft / reviewed データを確認用に表示しています。DBの公開ステータスは変更していません。</p>
+        <section className="data-notice">
+          <strong>実機確認プレビュー</strong>
+          <p>未公開の draft / reviewed データを確認用に表示しています。DBの公開ステータスは変更していません。</p>
         </section>
       ) : null}
 
+      <section className="character-home-actions" aria-label={`${character.name}のよく使う情報`}>
+        {quickActions.map(([label, description, path]) => (
+          <Link
+            className="character-home-action"
+            href={appendDevicePreviewToken(`/characters/${character.slug}${path}`, previewToken)}
+            key={path}
+          >
+            <strong>{label}</strong>
+            <span>{description}</span>
+          </Link>
+        ))}
+      </section>
+
       <CharacterTabs slug={character.slug} active="overview" previewToken={previewToken} />
 
-      <section className="character-columns">
-        <article className="info-panel">
-          <h2>強み</h2>
-          <p className="preline">{character.strengthsSummary ?? "公開できる情報を準備中です。"}</p>
-        </article>
-        <article className="info-panel">
-          <h2>弱み</h2>
-          <p className="preline">{character.weaknessesSummary ?? "公開できる情報を準備中です。"}</p>
-        </article>
-      </section>
+      {hasStrengthProfile ? (
+        <section className="character-columns">
+          {character.strengthsSummary ? (
+            <article className="info-panel">
+              <h2>強み</h2>
+              <p className="preline">{character.strengthsSummary}</p>
+            </article>
+          ) : null}
+          {character.weaknessesSummary ? (
+            <article className="info-panel">
+              <h2>弱み</h2>
+              <p className="preline">{character.weaknessesSummary}</p>
+            </article>
+          ) : null}
+        </section>
+      ) : null}
 
       <section>
         <div className="section-heading">
           <h2>立ち回り・考え方</h2>
-          <p>{previewActive ? "未公開候補を実機確認用に表示しています。" : "攻略本文は対象パッチと出典を確認した上で公開します。"}</p>
+          <p>{previewActive ? "未公開候補を用途別に整理して確認できます。" : "攻略本文は対象パッチと出典を確認した上で公開します。"}</p>
         </div>
-        <div className="guide-stack">
-          {character.guideSections.length ? (
-            character.guideSections.map((section) => (
-              <article className="info-panel" key={section.id}>
-                <h3>{section.title}</h3>
-                <p className="preline">{section.body}</p>
-              </article>
-            ))
-          ) : (
-            <div className="empty-state"><p>現在公開できる攻略セクションはありません。</p></div>
-          )}
-        </div>
+        {groups.length ? (
+          <div className="guide-groups">
+            {groups.map((group) => (
+              <section className="guide-group" key={group.key}>
+                <div className="guide-group__heading">
+                  <h2>{group.title}</h2>
+                  <p>{group.description}</p>
+                </div>
+                <div className="guide-group__grid">
+                  {group.items.map((section) => (
+                    <article className="info-panel" key={section.id}>
+                      <h3>{section.title}</h3>
+                      <p className="preline">{section.body}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+        ) : (
+          <div className="empty-state"><p>現在公開できる攻略セクションはありません。</p></div>
+        )}
       </section>
 
       <section>
