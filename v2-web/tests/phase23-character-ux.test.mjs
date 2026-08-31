@@ -19,7 +19,7 @@ test("character Move pages avoid repeated empty motion placeholders", () => {
   const page = read("src/app/characters/[slug]/[section]/page.tsx");
 
   assert.ok(page.includes('source.sourceType === "official_movelist"'), "official movelist must come from Character Sources");
-  assert.ok(page.includes('section === "moves" && primaryMotion'), "motion should render only when media exists");
+  assert.ok(page.includes("move.media ?"), "motion should render only when media exists");
   assert.ok(!page.includes("GIF / 短尺動画は準備中です。"), "empty motion placeholder must not repeat for every Move");
   assert.ok(!page.includes("officialMovelistUrls"), "movelist URLs must not be hard-coded per Character");
 });
