@@ -16,5 +16,6 @@ test("Phase23 Sequence gate quarantines generic work queues and requires release
   assert.match(sql, /entity_type = 'sequence'/i, "published Sequence must require Source evidence");
   assert.match(sql, /public read release-ready sequences/i, "release-ready Sequence RLS policy missing");
   assert.match(sql, /enforce_sequence_publication_ready/i, "Sequence publication trigger missing");
-  assert.doesNotMatch(sql, /status\s*=\s*'published'/i, "migration must not publish Sequence content");
+  assert.doesNotMatch(sql, /set\s+verification_status\s*=\s*'verified'/i, "migration must not promote Sequence verification");
+  assert.doesNotMatch(sql, /set\s+status\s*=\s*'published'/i, "migration must not publish Sequence content");
 });
