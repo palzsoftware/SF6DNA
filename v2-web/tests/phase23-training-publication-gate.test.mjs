@@ -17,3 +17,14 @@ test("Phase23 Training gate quarantines generic verification-only matchup templa
   assert.match(sql, /public read release-ready trainings/i, "release-ready Training RLS policy missing");
   assert.match(sql, /enforce_training_publication_ready/i, "Training publication trigger missing");
 });
+
+test("Phase23 remaining matchup QA work queues cannot leak into public Training", () => {
+  const sql = read("../supabase/migrations/20260831_phase23_training_matchup_template_quarantine.sql");
+
+  assert.match(sql, /training_type = 'matchup'/i, "matchup QA selector missing");
+  assert.match(sql, /verification_status = 'unverified'/i, "only unverified matchup QA rows should be archived");
+  assert.match(sql, /next_step ilike '%Counter%昇格%'/i, "internal Counter-promotion work queue selector missing");
+  assert.match(sql, /status = 'archived'/i, "internal matchup QA rows must be archived");
+  assert.match(sql, /not ilike '%Counter%昇格%'/i, "public readiness must reject internal Counter-promotion work queues");
+  assert.match(sql, /internal Counter-verification training cannot be published/i, "publication trigger rejection missing");
+});
