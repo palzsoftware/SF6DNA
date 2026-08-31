@@ -6,6 +6,7 @@ import "./visual-refresh.css";
 import "./image-performance.css";
 import "./ux-refresh.css";
 import "./product-refresh.css";
+import "./character-overview-refresh.css";
 
 function getMetadataBase() {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
