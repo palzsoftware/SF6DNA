@@ -1,0 +1,79 @@
+.mobile-dock { display: none; }
+
+@media (max-width: 720px) {
+  body { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
+
+  .site-header {
+    backdrop-filter: blur(18px);
+  }
+
+  .site-header__inner {
+    width: min(calc(100% - 20px), var(--max-width));
+  }
+
+  .site-nav {
+    mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent 100%);
+  }
+
+  .mobile-dock {
+    position: fixed;
+    z-index: 40;
+    left: 10px;
+    right: 10px;
+    bottom: max(8px, env(safe-area-inset-bottom));
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    padding: 6px;
+    border: 1px solid rgba(255,255,255,.11);
+    border-radius: 17px;
+    background: rgba(8, 12, 17, .94);
+    box-shadow: 0 16px 45px rgba(0,0,0,.42);
+    backdrop-filter: blur(18px);
+  }
+
+  .mobile-dock a {
+    display: grid;
+    min-height: 49px;
+    place-items: center;
+    align-content: center;
+    gap: 1px;
+    border-radius: 11px;
+    color: #aeb9c6;
+    font-size: .72rem;
+    font-weight: 760;
+  }
+
+  .mobile-dock a::before {
+    color: #6f7d8c;
+    font-size: .57rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+  }
+
+  .mobile-dock a:nth-child(1)::before { content: "CHAR"; }
+  .mobile-dock a:nth-child(2)::before { content: "VS"; }
+  .mobile-dock a:nth-child(3)::before { content: "TRAIN"; }
+  .mobile-dock a:nth-child(4)::before { content: "SEARCH"; }
+
+  .mobile-dock a:hover,
+  .mobile-dock a:focus-visible {
+    background: rgba(83,216,255,.07);
+    color: #eef7fb;
+  }
+
+  .mobile-dock a:active {
+    background: rgba(255,122,26,.1);
+    color: #ffd1af;
+  }
+
+  .site-footer {
+    padding-bottom: 18px;
+  }
+}
+
+@media (max-width: 390px) {
+  .mobile-dock { left: 7px; right: 7px; }
+  .mobile-dock a { font-size: .68rem; }
+}
