@@ -57,7 +57,7 @@ updated as (
     result_notes = concat_ws(
       E'\n',
       nullif(cb.result_notes, ''),
-      to_char(now() at time zone 'Asia/Tokyo', 'YYYY-MM-DD HH24:MI JST')
+      to_char(now() at time zone 'Asia/Tokyo', 'YYYY-MM-DD HH24:MI') || ' JST'
         || ' [' || m.outcome || '] ' || m.result_note
     ),
     updated_at = now()
