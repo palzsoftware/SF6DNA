@@ -1,6 +1,6 @@
 # SF6DNA Phase23 Content Publication Readiness
 
-Date: 2026-08-29 JST
+Last re-audit: 2026-09-01 JST
 Supabase: `SF6DNAPro` (`wnuxaxbrpudyypzdbdho`)
 Patch baseline: `2026.08.03`
 
@@ -125,6 +125,21 @@ Modern欠損をClassicから推測補完しない。
 - Training 0
 
 SourceがあるだけでStrategy内容の正しさを証明したことにはならないため、自動publishしない。
+
+31キャラの文言・画像Source収集完了後の全Active Strategy:
+
+| Entity | Active | Unverified | Reviewed | Verified | Published | Source欠損 |
+|---|---:|---:|---:|---:|---:|---:|
+| Combo | 1213 | 1078 | 134 | 1 | 0 | 0 |
+| Setup | 792 | 703 | 89 | 0 | 0 | 0 |
+| Sequence | 475 | 439 | 36 | 0 | 0 | 0 |
+
+- 全2480件にTraining relationあり
+- 全2480件にpending captureあり
+- Combo notation重複group 0
+- 撮影待ち詳細は`capture_backlog`で非公開管理
+
+したがって、収集完了と公開準備完了は別である。実機確認前の一括verified化・一括publishは禁止する。
 
 ## Diagnosis / Trait snapshot
 

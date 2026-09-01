@@ -1,14 +1,13 @@
 # SF6DNA Project Completion Dashboard
 
-最終更新: 2026-08-28 JST
+最終更新: 2026-09-01 JST
 
 ## 現在Phase
 
-- Phase1〜20 automated/internal scope: **完了**
-- Phase20 `Verified Content Expansion`: **COMPLETE / PASS**
-- Phase21: **未開始**
-- Phase22: **未開始**
-- Phase23: **未開始 / Final Manual & External Acceptance**
+- Phase1〜22 automated/internal scope: **完了**
+- Phase23 automated/pre-device scope: **完了**
+- 31キャラ攻略データ（文言・画像Source）収集: **31 / 31完了**
+- Phase23 Final Manual & External Acceptance: **HOLD**
 - 作業ブランチ: `sf6dna-v2`
 - `main`: ユーザー明示許可まで変更禁止
 - Supabase正本: `SF6DNAPro` (`wnuxaxbrpudyypzdbdho`)
@@ -44,6 +43,28 @@ CAPCOM公式Character Frame Dataに直接比較可能な独立行が無いため
 - temporary Frame Crosscheck workflow退役
 - Supabase Security Advisor: **0 lints**
 - Phase1〜20 retrospective implementation gap audit: **PASS**
+
+## 31-character strategy collection
+
+2026-09-01 Supabase実DB監査:
+
+| Item | Active | Draft | Published | Source欠損 |
+|---|---:|---:|---:|---:|
+| Combo | 1213 | 1213 | 0 | 0 |
+| Setup | 792 | 792 | 0 | 0 |
+| Sequence | 475 | 475 | 0 | 0 |
+| Training | 2974 | 2974 | 0 | - |
+
+- Character Content Package: **31 / 31 complete**
+- Active Strategy: **2480**
+- Training relation coverage: **2480 / 2480**
+- Pending capture coverage: **2480 / 2480**
+- Pending capture全体: **2553**
+- Combo notation重複group: **0**
+- capture_backlog参照整合エラー: **0**
+- Security Advisor: **0 lints**
+
+撮影待ち詳細はDBで保持し、ユーザーが撮影可能と明示した時点でキャラ別・優先度順に提示する。
 
 ## Phase1〜20 Implementation Gap
 
@@ -82,9 +103,10 @@ CAPCOM公式Character Frame Dataに直接比較可能な独立行が無いため
 | Phase18 | 完了 / Data Gate PASS |
 | Phase19 | 完了 / Integrity & Hardening PASS |
 | Phase20 | **完了 / Verification Expansion PASS** |
-| Phase21 | **未開始** |
-| Phase22 | **未開始** |
-| Phase23 | **未開始 / Manual & External Final Phase** |
+| Phase21 | **完了** |
+| Phase22 | **完了** |
+| Phase23 automated/pre-device | **完了** |
+| Phase23 manual/external | **HOLD** |
 
 ## Current Release Decision
 
@@ -95,10 +117,14 @@ CAPCOM公式Character Frame Dataに直接比較可能な独立行が無いため
 - Production Ready: **未判定 / Phase23依存**
 - Production deploy: **未実施**
 
-## Phase21 Entry
+## Remaining manual gates
 
-Phase21はユーザー明示指示まで開始しない。
-正本:
-- `docs/PHASE21_PRIORITY_A_PLAN.md`
+- Content Publication approval
+- Real Auth / Admin E2E（現在`auth.users=0`）
+- Player残画像の人物確認
+- Final RC freeze
+- PC / iPhone実機Acceptance
+- Production readiness判定
+- Production deploy（ユーザー明示許可時のみ）
 
-Phase21のModern Command不足対応などをPhase20の実装漏れとして先行実施しない。
+攻略データは収集完了であり、成立確認・verified化・公開承認は未完了として分離する。
