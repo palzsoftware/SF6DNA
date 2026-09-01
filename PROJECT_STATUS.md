@@ -95,6 +95,8 @@ Supabase:
 
 詳細: `docs/PHASE33_31_CHARACTER_STRATEGY_AUDIT_2026-09-01.md`
 
+再開用チェックポイント: `docs/SF6DNA_WORK_CHECKPOINT_2026-09-01.md`
+
 ## 完了したPhase23 non-human hardening
 
 - UI / copy / responsive / SEO / metadata監査
