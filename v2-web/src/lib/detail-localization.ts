@@ -318,6 +318,85 @@ export type TrainingDetailField =
   | "success_criteria"
   | "next_step";
 
+const moveTypeLabels: Record<string, string> = {
+  normal: "通常技",
+  unique: "特殊技",
+  special: "必殺技",
+  super: "スーパーアーツ",
+  drive: "ドライブシステム",
+  throw: "投げ",
+  target_combo: "ターゲットコンボ",
+  taunt: "アピール",
+};
+
+const moveStrengthLabels: Record<string, string> = {
+  light: "弱",
+  medium: "中",
+  heavy: "強",
+  od: "OD",
+  normal: "通常版",
+  sa1: "SA1",
+  sa2: "SA2",
+  sa3: "SA3",
+  ca: "CA",
+  od_followup: "OD追撃",
+  quick_dash: "クイックダッシュ",
+  od_light: "OD弱",
+  od_medium: "OD中",
+  od_heavy: "OD強",
+  denjin: "電刃",
+  denjin_od: "電刃OD",
+  follow_l: "弱追撃",
+  follow_m: "中追撃",
+  follow_h: "強追撃",
+  follow_od: "OD追撃",
+  od_lm: "OD（弱＋中）",
+  od_lh: "OD（弱＋強）",
+  od_mh: "OD（中＋強）",
+};
+
+const moveHitLevelLabels: Record<string, string> = {
+  high: "上段",
+  low: "下段",
+  mid: "中段",
+  overhead: "中段",
+  throw: "投げ",
+  air_throw: "空中投げ",
+  projectile: "飛び道具",
+  high_projectile: "上段・飛び道具",
+  parry: "パリィ",
+  movement: "移動",
+  none: "攻撃判定なし",
+  mixed: "複合",
+  unblockable: "ガード不能",
+  mid_high: "中段・上段",
+};
+
+const moveTextLabels: Record<string, string> = {
+  "awaiting current official/in-game verification.": "現行版の公式情報または実機での確認待ちです。",
+  "awaiting direct capcom/game verification.": "CAPCOM公式情報または実機での直接確認待ちです。",
+  "awaiting direct official/game verification before publication.": "公開前に、公式情報または実機での直接確認が必要です。",
+  "awaiting official or in-game verification.": "公式情報または実機での確認待ちです。",
+  "secondary-source reviewed candidate. direct capcom verification pending.": "二次資料で内容を確認した候補です。CAPCOM公式情報との照合待ちです。",
+  "awaiting direct official/game verification.": "公式情報または実機での直接確認待ちです。",
+  "2026-08-03 baseline; secondary-current reference, publication gated.": "2026.08.03版を基準にした二次資料の情報です。公開条件の確認待ちです。",
+  "awaiting official/game verification before publication.": "公開前に、公式情報または実機での確認が必要です。",
+  "awaiting direct capcom verification before publication.": "公開前に、CAPCOM公式情報との直接照合が必要です。",
+  "publication blocked until official/in-game cross-check.": "公式情報または実機との照合が完了するまで公開しません。",
+  "exact unresolved fields remain verification backlog.": "正確な数値が未確定の項目は、確認待ちとして残しています。",
+  "air normal candidate. awaiting direct capcom or in-game verification before publication.": "空中通常技の候補です。公開前にCAPCOM公式情報または実機での直接確認が必要です。",
+  "awaiting direct current official/in-game verification.": "現行版の公式情報または実機での直接確認待ちです。",
+  "exact values sourced from current ufd; no automatic verified promotion.": "正確な数値は現行UFDを参照しています。自動的に検証済みへは変更しません。",
+  "source-confirmed current move; no automatic verified promotion.": "現行版の資料で確認した技です。自動的に検証済みへは変更しません。",
+  "cross-up": "めくり攻撃",
+  "imported from current search-index candidate data.": "現行検索結果の候補データから取り込んでいます。",
+  "august 2026 current move restored during phase13 content audit.": "Phase 13の監査で、2026年8月時点の現行技として復元しました。",
+  "august 2026 current move restored during content audit.": "コンテンツ監査で、2026年8月時点の現行技として復元しました。",
+  "spends the bayani mode enhancement": "バヤニ・モードの強化状態を消費します。",
+  "puts yasmine into bayani mode": "ヤスミンがバヤニ・モードへ移行します。",
+  "chains into 5lp/2lp/2lk": "立ち弱P／しゃがみ弱P／しゃがみ弱Kへ連打キャンセルできます。",
+};
+
 const setupTypeLabels: Record<string, string> = {
   approach: "接近手段",
   bait: "様子見・誘い",
@@ -715,6 +794,182 @@ export function localizeComboText(value: string | number | null, glossary: MoveG
     .trim();
 
   return result;
+}
+
+export function localizeMoveType(value: string | number | null) {
+  if (value === null || typeof value === "number") return value;
+  const source = value.trim();
+  return moveTypeLabels[source.toLowerCase()] ?? source.replaceAll("_", " ");
+}
+
+export function localizeMoveStrength(value: string | number | null) {
+  if (value === null || typeof value === "number") return value;
+  const source = value.trim();
+  return moveStrengthLabels[source.toLowerCase()] ?? String(localizeComboText(source));
+}
+
+export function localizeMoveCancelType(value: string | number | null) {
+  if (value === null || typeof value === "number") return value;
+  const source = value.trim();
+  if (!source || source === "-") return null;
+
+  const parts = source.split(",").map((part) => part.trim()).filter(Boolean);
+  const localized = parts.map((part) => {
+    const note = part.includes("※");
+    const base = part.replaceAll("※", "").trim();
+    let label: string;
+    if (/^SA[123]?$/i.test(base)) label = `${base.toUpperCase()}キャンセル`;
+    else {
+      label = ({
+        C: "キャンセル可（詳細は補足参照）",
+        TC: "ターゲットコンボ派生",
+        special: "必殺技キャンセル",
+        super: "SAキャンセル",
+        chain: "連打キャンセル",
+        target_combo: "ターゲットコンボ派生",
+        dash: "ダッシュキャンセル",
+        hj: "ハイジャンプキャンセル",
+        feint: "フェイントキャンセル",
+        ps: "固有キャンセル（PS）",
+      } as Record<string, string>)[base] ?? base.replaceAll("_", " ");
+    }
+    return note ? `${label}（注記あり）` : label;
+  });
+
+  return localized.join("・");
+}
+
+export function localizeMoveHitLevel(value: string | number | null) {
+  if (value === null || typeof value === "number") return value;
+  const source = value.trim();
+  if (!source) return null;
+  if (moveHitLevelLabels[source.toLowerCase()]) return moveHitLevelLabels[source.toLowerCase()];
+
+  return source
+    .split(/([,/])/)
+    .map((part) => {
+      if (part === ",") return "・";
+      if (part === "/") return "／";
+      return moveHitLevelLabels[part.trim().toLowerCase()] ?? part.trim();
+    })
+    .join("")
+    .replace(/^上中$/, "上段・中段");
+}
+
+export function localizeMoveInvincibility(value: string | number | null) {
+  if (value === null || typeof value === "number") return value;
+  const source = value.trim();
+  if (!source) return null;
+
+  return source
+    .replace(/Fully invincible|full invuln|Full/gi, "完全無敵")
+    .replace(/Anti-air invincible|AA invuln/gi, "対空無敵")
+    .replace(/Strike\/Throw|Strike\/throw|strike\+throw/gi, "打撃・投げ無敵")
+    .replace(/Strike\/Projectile/gi, "打撃・飛び道具無敵")
+    .replace(/projectile invincible|projectile invuln|\bProj\b|Projectile/gi, "飛び道具無敵")
+    .replace(/\bAir\b/gi, "対空無敵")
+    .replace(/Upper Body/gi, "上半身")
+    .replace(/Lower Body/gi, "下半身")
+    .replace(/\bleg\b/gi, "脚部")
+    .replace(/armor break/gi, "アーマーブレイク")
+    .replace(/after Perfect Parry/gi, "ジャストパリィ後")
+    .replace(/\bAttack\b/gi, "攻撃")
+    .replace(/(\d+)-(\d+)/g, "$1～$2F")
+    .replace(/(\d+)-\?/g, "$1F～終了未確認")
+    .replace(/\s*;\s*/g, "／")
+    .replace(/\s*,\s*/g, "、")
+    .replace(/\(/g, "（")
+    .replace(/\)/g, "）")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+export function localizeMoveText(
+  value: string | number | null,
+  glossary: MoveGlossaryEntry[] = []
+) {
+  if (value === null || typeof value === "number") return value;
+  const source = value.trim();
+  if (!source) return null;
+
+  const exact = moveTextLabels[source.toLowerCase()];
+  if (exact) return exact;
+
+  let result = source
+    .replace(/\[\[[^|\]]+\|([^\]]+)\]\]/g, "$1")
+    .replace(/CAPCOM official current frame table; reviewed 2026-08-27\./gi, "CAPCOM公式フレーム表を2026年8月27日に確認。")
+    .replace(/Current August 2026 UFD\/Year4 audit\./gi, "2026年8月のUFD／Year 4資料で確認。")
+    .replace(/Current August 2026 UFD\/official frame audit\./gi, "2026年8月のUFD／公式フレーム資料で確認。")
+    .replace(/UFD August 2026 reviewed\./gi, "2026年8月のUFDを確認済み。")
+    .replace(/August 2026 UFD normalized\./gi, "2026年8月のUFD表記に統一。")
+    .replace(/direct official\/game verification (?:still )?required/gi, "公式情報または実機での直接確認が必要")
+    .replace(/direct official\/game verification pending/gi, "公式情報または実機での直接確認待ち")
+    .replace(/not in-game verified/gi, "実機未確認")
+    .replace(/do not publish until direct verification/gi, "直接確認が完了するまで公開しません")
+    .replace(/publication blocked pending official\/in-game cross-check/gi, "公式情報または実機との照合が完了するまで公開しません")
+    .replace(/NULL\/conditional fields remain intentionally unresolved/gi, "未入力項目と条件付き項目は、確認待ちとして残しています")
+    .replace(/Cross-referenced against Ultimate Frame Data current page/gi, "現行のUltimate Frame Dataと照合済み")
+    .replace(/Cross-referenced with Ultimate Frame Data/gi, "Ultimate Frame Dataと照合済み")
+    .replace(/Secondary source only/gi, "二次資料のみ")
+    .replace(/secondary-current reference/gi, "現行版の二次資料")
+    .replace(/publication gated/gi, "公開条件の確認待ち")
+    .replace(/reviewed/gi, "内容確認済み")
+    .replace(/unverified/gi, "未検証")
+    .replace(/verified/gi, "検証済み")
+    .replace(/\bDrive Gauge damage\b/gi, "Dゲージダメージ")
+    .replace(/\bDrive Gauge\b/gi, "Dゲージ")
+    .replace(/\bSuper Gauge\b/gi, "SAゲージ")
+    .replace(/\bFrame data\b/gi, "フレームデータ")
+    .replace(/\bframe-search\b/gi, "frame-search")
+    .replace(/\bUFD\b/g, "UFD");
+
+  result = String(localizeComboText(result, glossary))
+    .replace(/Dリバ/g, "ドライブリバーサル")
+    .replace(/Dゲージ\s+(?=\d+本)/g, "Dゲージ")
+    .replace(/\bPerfect Parr(?:y|ying)\b/gi, "ジャストパリィ")
+    .replace(/\bPunish Counter\b/gi, "パニッシュカウンター")
+    .replace(/\bCounter-hit\b/gi, "カウンターヒット")
+    .replace(/\bCross-up\b/gi, "めくり")
+    .replace(/\bDrive Impact\b/gi, "ドライブインパクト")
+    .replace(/\bDrive Parry\b/gi, "ドライブパリィ")
+    .replace(/\bDrive Reversal\b/gi, "ドライブリバーサル");
+
+  return result;
+}
+
+export function localizeCharacterGuideText(
+  value: string | number | null,
+  glossary: MoveGlossaryEntry[] = []
+) {
+  if (value === null || typeof value === "number") return value;
+  const source = value.trim();
+  if (!source) return null;
+
+  const exact: Record<string, string> = {
+    "Training": "トレーニング",
+    "Training進行": "トレーニングの進め方",
+    "Drive・SA管理": "Dゲージ・SA管理",
+    "Drive / SA管理": "Dゲージ・SA管理",
+    "Drive / SA / 固有リソース管理": "Dゲージ・SA・固有リソース管理",
+    "現行2026.08.03を基準に、主力技・距離・リソースを整理。確定フレームはFrameデータを参照し、戦略文はreviewed扱い。": "2026.08.03版を基準に、主力技・得意な間合い・固有リソースを整理しています。確定フレームはフレームデータを参照し、攻略文は内容確認済みとして掲載しています。",
+  };
+  if (exact[source]) return exact[source];
+
+  const normalized = source
+    .replace(/\bDrive Gauge\b/gi, "Dゲージ")
+    .replace(/\bDrive\s*(?=\d+本)/gi, "Dゲージ")
+    .replace(/\bDrive\b/gi, "Dゲージ")
+    .replace(/Frameデータ/gi, "フレームデータ")
+    .replace(/reviewed扱い/gi, "内容確認済みとして扱います")
+    .replace(/verified/gi, "検証済み")
+    .replace(/Training/gi, "トレーニング")
+    .replace(/Modern\/Classic/gi, "モダン／クラシック")
+    .replace(/Classic\/Modern/gi, "クラシック／モダン");
+
+  return String(localizeComboText(normalized, glossary))
+    .replace(/Dリバ/g, "ドライブリバーサル")
+    .replace(/Dゲージ\s+(?=\d+本)/g, "Dゲージ")
+    .trim();
 }
 
 export function localizeSequenceDetail(
