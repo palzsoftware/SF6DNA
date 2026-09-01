@@ -46,6 +46,8 @@ Active Strategy合計は2480件。
 - Active StrategyのSource 2件以上: 2469 / 2480
 - 公式変更ページのみの変更点固有候補: 11
 - キャラ別2026.08.03公式変更ページ接続: 2480 / 2480
+- Active TrainingのSource欠損: 0
+- Active TrainingのSource 2件以上: 2950 / 2974
 - Active StrategyのTraining relation欠損: 0
 - Active Strategyのpending capture欠損: 0
 - Combo notation重複group: 0
@@ -107,6 +109,8 @@ Active Strategy合計は2480件。
 - `docs/PHASE36_STRATEGY_SOURCE_QUALITY_AUDIT_2026-09-01.md`
 - `supabase/migrations/20260901_phase36_strategy_patch_context_backfill.sql`
 - `supabase/migrations/20260901_phase37_repair_missing_written_source_links.sql`
+- `docs/PHASE38_TRAINING_SOURCE_QUALITY_AUDIT_2026-09-01.md`
+- `supabase/migrations/20260901_phase38_training_patch_context_backfill.sql`
 - `scripts/export-pending-capture-queue.sql`
 - `scripts/process-capture-results.sql`
 - `docs/PHASE23_FINAL_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md`

@@ -8,6 +8,7 @@ SF6DNAの主要な開発マイルストーンを記録する。
 - 31キャラの2026.08.03公式変更ページを全Active Strategyと対応Trainingへpatch contextとして接続
 - 収集時に関係登録が空振りしていた文章Source 9件、Strategy 18件、Training 18件を修復
 - Source 2件以上を1,406件から2,469件へ改善
+- キャラ固有Training 313件へ公式変更ページのpatch contextを補完
 - 公式変更ページのみの11件は未確認・撮影待ちを維持
 - verified / publishedは変更せず、Security Advisor 0、Web tests 55 / 55 PASS
 
