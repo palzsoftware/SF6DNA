@@ -1,6 +1,6 @@
 -- Record the first user-provided Ryu capture batch without promoting any item
 -- to confirmed. A single successful clip does not satisfy the 10-repetition
--- success criteria, and two of the clips still require a targeted retake.
+-- success criteria. Failed and suboptimal routes remain unresolved.
 
 with capture_result(backlog_id, evidence_key, result_note) as (
   values
@@ -11,8 +11,18 @@ with capture_result(backlog_id, evidence_key, result_note) as (
     ),
     (
       '66ea79b8-a49a-4144-b680-98432f33d7be'::uuid,
+      'report:R04-not-connecting'::text,
+      'ユーザー実機報告。RYU-04「立ち強Pパニッシュカウンター中央最大候補」はつながらない可能性が高い。どの技間で途切れるかは未確認のため、不成立確定にはせず未解決。'::text
+    ),
+    (
+      'd31a2735-9e82-4f81-a997-a526d1eb0bb3'::uuid,
       'libfile_ebfffadf8f488191a5542e86678815b9'::text,
-      'RYU-04を動画から特定。Evidence=ChatGPT Library libfile_ebfffadf8f488191a5542e86678815b9 / b1dea875-47a4-48b5-aa8b-14d5dec81779.MP4。2560x1440、実映像約23秒（ファイル継続時間150.525秒、後半は実質静止）。クラシック・片側で、立ち強P(PC)→強波掌撃→ドライブラッシュ引き強K→中竜巻→Cラッシュ引き強K→Cラッシュ引き強K→強昇龍拳→SA3が連続成立。最終表示は17ヒット・4437ダメージ、Drive全消費、SA3本→0、ハードノックダウン。開始位置が画面端寄りのため「中央」の確認には数えず、10回反復、反対向き、距離差・キャラ差も未確認のまま未解決。'::text
+      'RYU-05としてEvidence=ChatGPT Library libfile_ebfffadf8f488191a5542e86678815b9 / b1dea875-47a4-48b5-aa8b-14d5dec81779.MP4を確認。2560x1440、実映像約23秒。画面端・クラシック・片側で、旋風脚→OD竜巻→強昇龍拳→SA3が連続成立。最終表示は17ヒット・4437ダメージ、Drive2本、SA3本、ハードノックダウン。ユーザー実機報告では、強昇龍拳を省いた旋風脚→OD竜巻→SA3は5200ダメージ。強昇龍拳ありは成立するがダメージ面で下位候補。反復・反対向き・キャラ差は未確認のため未解決。'::text
+    ),
+    (
+      'ca96f642-2499-42b6-847f-51b28ac1ea3c'::uuid,
+      'report:R06-not-connecting'::text,
+      'ユーザー実機報告。RYU-06「端・立ち強K→立ち強P→OD電刃波掌撃→溜めSA2→旋風脚→OD竜巻→SA1」は最後まで入らない。どの技間で途切れるか、SA2の溜め段階、SA1入力時のゲージ・高度は未確認。現時点では不成立候補として未解決。'::text
     ),
     (
       'e5b3147e-a5df-489c-b0ec-e1c1bbbcb340'::uuid,
@@ -49,6 +59,8 @@ begin
     where id in (
       '70591aff-a85a-4354-b9e3-c9934324a07f'::uuid,
       '66ea79b8-a49a-4144-b680-98432f33d7be'::uuid,
+      'd31a2735-9e82-4f81-a997-a526d1eb0bb3'::uuid,
+      'ca96f642-2499-42b6-847f-51b28ac1ea3c'::uuid,
       'e5b3147e-a5df-489c-b0ec-e1c1bbbcb340'::uuid
     )
       and capture_status <> 'provided'
@@ -62,6 +74,8 @@ begin
     where id in (
       '70591aff-a85a-4354-b9e3-c9934324a07f'::uuid,
       '66ea79b8-a49a-4144-b680-98432f33d7be'::uuid,
+      'd31a2735-9e82-4f81-a997-a526d1eb0bb3'::uuid,
+      'ca96f642-2499-42b6-847f-51b28ac1ea3c'::uuid,
       'e5b3147e-a5df-489c-b0ec-e1c1bbbcb340'::uuid
     )
       and resolved_at is not null
