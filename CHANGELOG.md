@@ -2,6 +2,15 @@
 
 SF6DNAの主要な開発マイルストーンを記録する。
 
+## 2026-09-01 — Strategy Source quality audit
+
+- Active Combo / Setup / Sequence 2,480件を再監査
+- 31キャラの2026.08.03公式変更ページを全Active Strategyと対応Trainingへpatch contextとして接続
+- 収集時に関係登録が空振りしていた文章Source 9件、Strategy 18件、Training 18件を修復
+- Source 2件以上を1,406件から2,469件へ改善
+- 公式変更ページのみの11件は未確認・撮影待ちを維持
+- verified / publishedは変更せず、Security Advisor 0、Web tests 55 / 55 PASS
+
 ## 2026-08-29 — Pre-release polish
 
 - Phase22完了後のUI仕上げを開始

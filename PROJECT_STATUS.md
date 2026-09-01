@@ -90,10 +90,15 @@ Supabase:
 - capture_backlog参照切れ / Character不一致: **0**
 - Pending capture: **2553**（詳細は撮影開始時に提示）
 - キャラ別Active Strategy範囲: **64〜168件**
+- キャラ別2026.08.03公式変更ページ接続: **2480 / 2480**
+- Source 2件以上: **2469 / 2480**
+- 公式変更ページのみの変更点固有候補: **11**（未確認・撮影待ちを維持）
 
 これらは収集完了を示すが、実機成立確認またはPublication approvalを示さない。全Strategyを`draft`のまま維持する。
 
 詳細: `docs/PHASE33_31_CHARACTER_STRATEGY_AUDIT_2026-09-01.md`
+
+Source品質監査: `docs/PHASE36_STRATEGY_SOURCE_QUALITY_AUDIT_2026-09-01.md`
 
 再開用チェックポイント: `docs/SF6DNA_WORK_CHECKPOINT_2026-09-01.md`
 
