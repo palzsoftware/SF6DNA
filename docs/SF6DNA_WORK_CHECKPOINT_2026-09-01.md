@@ -13,7 +13,14 @@
 - Production: 未デプロイ
 - ローカル固有の未追跡物: `supabase/.temp/`のみ。作業対象外
 
-チェックポイント作成直前、ローカル`sf6dna-v2`は追跡中の`origin/sf6dna-v2`より36コミット先行していた。この記録コミットを含めると37コミット相当になる。通常のHTTPS pushは認証情報がないため失敗しており、GitHub同期を別経路で完了させる必要がある。
+チェックポイント作成直前、ローカル`sf6dna-v2`は古い追跡情報より36コミット先行していた。GitHub実ブランチには別系統のリュウ関連7コミットが存在したため、同一ファイルを照合した上で履歴を保持し、接続済みGitHub経由で内容を統合した。
+
+- GitHub strategy collection snapshot: `063ea35dd245f09259ccc03cc8b4bc6d9ad9384a`
+- GitHub capture queue operations snapshot: `b163f6009c6244d22761688c95fcc50b191ff1c3`
+- GitHub / local tree equality after reconciliation: PASS
+- force update: 未使用
+
+通常のHTTPS push認証は引き続き利用できないが、GitHub `sf6dna-v2`への内容保存は完了している。ローカル側は詳細なコミット履歴を保持しているためahead表示が残るが、記録時点のファイル内容に差分はない。
 
 ## Supabase source-of-truth snapshot
 
