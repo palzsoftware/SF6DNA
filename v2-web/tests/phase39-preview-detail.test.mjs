@@ -155,6 +155,8 @@ test("field-specific localization returns natural Japanese for representative st
   );
   assert.equal(localization.localizeSetupDetail("meter_condition", "Drive 1+"), "Dゲージ1本以上");
   assert.equal(localization.localizeComboText("slight hold"), "少し溜める");
+  assert.equal(localization.localizeSourceType("community_frame_database"), "コミュニティフレームデータ");
+  assert.equal(localization.localizeSourceRelationship("corroborating"), "裏付け資料");
 });
 
 test("Counter detail Preview remains token-gated and keeps draft data unpublished", () => {

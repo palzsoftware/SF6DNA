@@ -8,9 +8,9 @@ type DetailPageProps = {
   searchParams: Promise<{ preview?: string | string[] }>;
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const detail = await getCounterBySlug(slug);
+export async function generateMetadata({ params, searchParams }: DetailPageProps) {
+  const [{ slug }, query] = await Promise.all([params, searchParams]);
+  const detail = await getCounterBySlug(slug, normalizeDevicePreviewToken(query.preview));
   return { title: detail?.title ?? "対策", description: detail?.summary ?? undefined };
 }
 

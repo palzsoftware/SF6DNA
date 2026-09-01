@@ -495,27 +495,27 @@ const sequenceFieldLabels: Record<SequenceDetailField, Record<string, string>> =
     "guard/feint branch": "ガード、またはフェイントで様子を見る",
   },
   jump_option: {
-    "jump check": "ジャンプで逃げられるか確認が必要",
-    "jump escape check": "ジャンプで逃げられるか確認が必要",
+    "jump check": "ジャンプで逃げられるか未確認",
+    "jump escape check": "ジャンプで逃げられるか未確認",
     "record jump escape": "ジャンプで逃げられるか撮影して確認する",
     "record jump timing": "ジャンプで逃げられるタイミングを撮影して確認する",
   },
   parry_option: {
-    "parry check": "パリィで対応できるか確認が必要",
+    "parry check": "パリィで対応できるか未確認",
     "record parry answer": "パリィへの対応を撮影して確認する",
     "record parry and perfect-parry timing": "パリィとジャストパリィのタイミングを撮影して確認する",
     "parry loses to throw": "パリィには投げが有効",
   },
   drive_reversal_option: {
-    "d-reversal check": "ドライブリバーサルで割り込めるか確認が必要",
+    "d-reversal check": "ドライブリバーサルで割り込めるか未確認",
     "record d-reversal": "ドライブリバーサルで割り込めるか撮影して確認する",
     "record d-reversal timing": "ドライブリバーサルのタイミングを撮影して確認する",
   },
   invincible_option: {
-    "reversal check": "無敵技で割り込めるか確認が必要",
-    "invincible check": "無敵技で割り込めるか確認が必要",
-    "invincible reversal check": "無敵技で割り込めるか確認が必要",
-    "od/sa reversal check": "OD／SA無敵技で割り込めるか確認が必要",
+    "reversal check": "無敵技で割り込めるか未確認",
+    "invincible check": "無敵技で割り込めるか未確認",
+    "invincible reversal check": "無敵技で割り込めるか未確認",
+    "od/sa reversal check": "OD／SA無敵技で割り込めるか未確認",
     "record reversal": "無敵技で割り込めるか撮影して確認する",
     "record od/sa reversal timing": "OD／SA無敵技のタイミングを撮影して確認する",
     "reversal bait": "無敵技をガードして反撃を狙う",
@@ -767,9 +767,11 @@ export function localizeCounterText(value: string | number | null, glossary: Mov
     .replace(/\bverified\b/gi, "検証済み")
     .replace(/\bpublished\b/gi, "公開済み")
     .replace(/\bTraining\b/g, "トレーニングモード")
+    .replace(/トレモ/g, "トレーニングモード")
     .replace(/2026\.08\.03基準。距離と実機再現を確認。/g, "2026.08.03版を基準に、距離と実機での再現性を確認します。")
     .replace(/実機確認前は検証済み・公開済みへ昇格しない。/g, "実機確認が終わるまでは、検証済み・公開済みとして扱いません。")
     .replace(/(.+?)戦の対面固有判断を、旧共通テンプレートではなく再現可能な項目として残せる。/g, "$1戦で必要な判断を、状況ごとに練習できます。")
+    .replace(/(.+?)戦の対戦前確認からトレーニングモード再検証までを一つの親対面として辿れる。/g, "$1戦で確認したいポイントと、トレーニングモードでの再確認項目を一つのページで確認できます。")
     .replace(/相手カードの勝ち筋・距離別行動を別スロットに録画し、JP側回答を確定\/相打ち\/読み\/不成立へ分類する。/g, "相手の主な勝ち筋と距離別の行動を分けて録画し、JP側の対応を「確定」「相打ち」「読み合い」「不成立」に分類します。")
     .replace(/別スロットに?録画/g, "行動ごとに分けて録画")
     .replace(/【候補・2026\.08\.03再監査】保存済み初版攻略を移植。/g, "2026.08.03版以降で再確認が必要です。")
@@ -783,7 +785,7 @@ export function localizeCounterText(value: string | number | null, glossary: Mov
     .replace(/一つの親対面として辿れる。/g, "一つの対面ページから確認できます。")
     .replace(/確定・相打ち・読み・不成立を区別する。/g, "確定・相打ち・読み合い・不成立を区別します。")
     .replace(/接近阻止・確反候補・対空\/特殊軌道・画面端防御・弾\/設置の5項目へ分解した。/g, "接近阻止、確定反撃候補、対空・特殊軌道、画面端防御、飛び道具・設置技の5項目に分けています。")
-    .replace(/距離、連携間隔、DI、弾相互作用、ODアムネジア後状況など実機依存項目は内容確認済みのまま扱う。/g, "距離、連携の間隔、ドライブインパクト、飛び道具同士の相互作用、ODアムネジア後の状況など、実機確認が必要な項目は「内容確認済み」のまま管理します。");
+    .replace(/距離、連携間隔、DI、弾相互作用、ODアムネジア後状況など実機依存項目は内容確認済みのまま扱う。/g, "距離、連携の間隔、ドライブインパクト、飛び道具同士の相互作用、ODアムネジア後の状況は、実機確認が終わるまで検証済みとは扱いません。");
 
   result = String(localizeComboText(result, glossary));
   return result.replace(/\s+vs\s+/gi, "対");
@@ -796,19 +798,46 @@ export function localizeDifficulty(value: string | number | null) {
 
 export function localizeSourceType(value: string) {
   return ({
+    article: "記事",
+    character_guide: "キャラクター攻略",
+    community: "コミュニティ情報",
+    community_aggregator: "コミュニティ集約情報",
+    community_article: "コミュニティ記事",
+    community_discussion: "コミュニティ投稿",
+    community_frame_database: "コミュニティフレームデータ",
     official_patch: "公式パッチノート",
+    official_patch_notes: "公式パッチノート",
+    official: "公式情報",
+    official_frame_data: "公式フレームデータ",
     official_movelist: "公式技表",
     official_guide: "公式ガイド",
     community_guide: "攻略記事",
+    community_video: "コミュニティ動画",
+    community_wiki: "コミュニティWiki",
+    frame_data: "フレームデータ",
+    frame_database: "フレームデータベース",
+    guide: "攻略記事",
     note: "攻略記事",
+    player_database: "プレイヤーデータベース",
+    strategy: "攻略情報",
     video: "動画",
+    video_guide: "解説動画",
     social_post: "SNS投稿",
   } as Record<string, string>)[value] ?? value;
 }
 
 export function localizeSourceRelationship(value: string) {
   return ({
+    baseline: "基準資料",
+    candidate: "候補資料",
+    candidate_basis: "候補の根拠",
+    contradicting: "相反する情報",
+    corroborating: "裏付け資料",
+    current_patch_context: "現行パッチ情報",
+    derived: "算出根拠",
+    patch_baseline: "パッチ基準",
     primary: "主要根拠",
+    reference: "参考資料",
     supporting: "補足根拠",
     verification: "検証根拠",
     patch_context: "パッチ情報",
