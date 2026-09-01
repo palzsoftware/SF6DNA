@@ -107,12 +107,13 @@ export type DevicePreviewMoveMotionMedia = {
   displayOrder: number | null;
 };
 
-export type DevicePreviewContentType = "combo" | "setup" | "sequence" | "training";
+export type DevicePreviewContentType = "combo" | "setup" | "sequence" | "counter" | "training";
 
 export type DevicePreviewContentDetail = {
   entityType: DevicePreviewContentType;
   record: Record<string, unknown>;
   characterName: string | null;
+  opponentCharacterName?: string | null;
   dummyCharacterName?: string | null;
   patchLabel: string | null;
   moveGlossary?: Array<{
@@ -210,6 +211,21 @@ export async function getDevicePreviewContentDetail(
   if (!isDevicePreviewRequest(previewToken)) return null;
 
   const supabase = getSupabaseServerClient();
+  if (entityType === "counter") {
+    const { data, error } = await supabase.rpc("get_phase42_counter_detail_preview", {
+      target_counter_slug: slug,
+      preview_token: previewToken,
+    });
+    if (error) {
+      console.error("[device-preview] counter detail preview failed", error.message);
+      return null;
+    }
+    if (!data || typeof data !== "object" || Array.isArray(data)) return null;
+    const detail = data as unknown as Partial<DevicePreviewContentDetail>;
+    if (detail.entityType !== "counter" || !detail.record || Array.isArray(detail.record)) return null;
+    return detail as DevicePreviewContentDetail;
+  }
+
   const [detailResult, glossaryResult] = await Promise.all([
     supabase.rpc("get_phase39_content_detail_preview", {
       target_entity_type: entityType,

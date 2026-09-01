@@ -1,4 +1,11 @@
 import { getDevicePreviewBundle } from "@/lib/device-preview";
+import {
+  localizeComboText,
+  localizeCounterText,
+  localizeSetupDetail,
+  localizeSetupType,
+  localizeSequenceType,
+} from "@/lib/detail-localization";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import { isMovePublicReady } from "@/lib/public-move-gate";
 import type { CharacterSectionKey } from "@/types/character";
@@ -70,13 +77,13 @@ export async function listCharacterSectionItems(
     if (section === "setups") {
       return previewBundle.setups.map((row) => ({
         id: row.id,
-        title: row.name,
-        subtitle: row.description,
+        title: String(localizeComboText(row.name)),
+        subtitle: localizeSetupDetail("description", row.description) as string | null,
         href: `/setups/${row.slug}`,
         meta: previewMeta(row.status, row.verificationStatus, [
-          row.setupType,
-          row.frameAdvantage,
-          row.position,
+          localizeSetupType(row.setupType),
+          localizeSetupDetail("frame_advantage", row.frameAdvantage),
+          localizeSetupDetail("position", row.position),
         ]),
       }));
     }
@@ -84,18 +91,18 @@ export async function listCharacterSectionItems(
     if (section === "sequences") {
       return previewBundle.sequences.map((row) => ({
         id: row.id,
-        title: row.name,
-        subtitle: row.notes ?? row.sequenceText,
+        title: String(localizeComboText(row.name)),
+        subtitle: localizeComboText(row.notes ?? row.sequenceText) as string | null,
         href: `/sequences/${row.slug}`,
-        meta: previewMeta(row.status, row.verificationStatus, [row.sequenceType]),
+        meta: previewMeta(row.status, row.verificationStatus, [localizeSequenceType(row.sequenceType)]),
       }));
     }
 
     if (section === "matchups") {
       return previewBundle.matchups.map((row) => ({
         id: row.id,
-        title: row.title,
-        subtitle: row.summary,
+        title: String(localizeCounterText(row.title)),
+        subtitle: localizeCounterText(row.summary) as string | null,
         href: `/counters/${row.slug}`,
         meta: previewMeta(row.status, row.verificationStatus, [
           row.counterType,
@@ -176,8 +183,8 @@ export async function listCharacterSectionItems(
       .limit(100);
     if (error) return fail(section, error.message);
     return (data ?? []).map((row) => ({
-      id: String(row.id), title: String(row.name), subtitle: row.description ?? null, href: `/setups/${row.slug}`,
-      meta: [row.setup_type, row.frame_advantage, row.position].filter(Boolean).join(" / ") || null,
+      id: String(row.id), title: String(localizeComboText(row.name)), subtitle: localizeSetupDetail("description", row.description ?? null) as string | null, href: `/setups/${row.slug}`,
+      meta: [localizeSetupType(row.setup_type), localizeSetupDetail("frame_advantage", row.frame_advantage), localizeSetupDetail("position", row.position)].filter(Boolean).join(" / ") || null,
     }));
   }
 
@@ -192,10 +199,10 @@ export async function listCharacterSectionItems(
     if (error) return fail(section, error.message);
     return (data ?? []).map((row) => ({
       id: String(row.id),
-      title: String(row.name),
-      subtitle: row.notes ?? row.sequence_text ?? null,
+      title: String(localizeComboText(row.name)),
+      subtitle: localizeComboText(row.notes ?? row.sequence_text ?? null) as string | null,
       href: `/sequences/${row.slug}`,
-      meta: row.sequence_type ?? null,
+      meta: localizeSequenceType(row.sequence_type) as string | null,
     }));
   }
 

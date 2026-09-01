@@ -86,6 +86,20 @@ const exactLabels: Record<string, string> = {
   safe_jump_pressure: "詐欺飛びからの攻め継続",
   anti_air_setup: "対空セットプレイ",
   counter_sequence: "対策連携",
+  anti_air: "対空",
+  punish: "確定反撃",
+  approach: "接近への対応",
+  matchup_overview: "対面概要",
+  matchup_plan: "対面プラン",
+  reaction: "見てから対応",
+  drive_rush: "ドライブラッシュ対策",
+  projectile: "飛び道具対策",
+  drive_impact: "ドライブインパクト対策",
+  adaptation: "相手の動きへの対応",
+  system: "システム対策",
+  neutral_check: "立ち回り確認",
+  patch_specific: "現行パッチ限定",
+  whiff_punish: "差し返し",
   none: "ゲージ不要",
   drive: "Dゲージ使用",
   drive_sa: "Dゲージ／SA使用",
@@ -127,10 +141,12 @@ const exactLabels: Record<string, string> = {
   "scaling and missing normals.": "補正と不足している通常技を確認してください。",
   "simple-input scaling separate.": "簡易入力補正は別項目で確認してください。",
   "knockdown with raw dr reach": "生ドライブラッシュが届くダウン後",
+  "slight hold": "少し溜める",
   "block advantage claim": "ガード時有利フレームの資料記載値",
   "written spacing rule; every branch needs current capture before verification.": "文章資料に記載された間合い別ルールです。各択は検証前に現行版の実機撮影が必要です。",
-  "gap by strength": "強度別の隙間",
-  "typhoon after plus": "有利状況からタイフーン",
+  "gap by strength": "技の強度によって割り込める箇所が変わる",
+  "typhoon after plus": "有利な状況からメキシカンタイフーンを狙う",
+  "raw guillotine>l spire / dr guillotine>m spire / two guarded guillotines>h spire / lightx3>od only / lightx2>m / 2mk>h": "生ギロチン → 弱コンドルスパイア\nドライブラッシュ → ギロチン → 中コンドルスパイア\nギロチンを2回ガードさせた後 → 強コンドルスパイア\n小技×3 → ODコンドルスパイアのみ\n小技×2 → 中コンドルスパイア\nしゃがみ中K → 強コンドルスパイア",
 };
 
 const phraseLabels: Array<[string, string]> = [
@@ -164,10 +180,12 @@ const phraseLabels: Array<[string, string]> = [
   ["safe jump", "詐欺飛び"],
   ["meaty", "持続重ね"],
   ["forward jump attack", "前ジャンプ攻撃"],
+  ["two guarded Guillotines", "ギロチンを2回ガードさせた後"],
+  ["two guarded", "2回ガードさせた後の"],
   ["Guillotines", "ギロチン"],
   ["Guillotine", "ギロチン"],
   ["Typhoon", "タイフーン"],
-  ["two guarded", "2回ガードした"],
+  ["OD only", "OD版のみ"],
   ["guarded", "ガード後の"],
   ["blocked", "ガードした"],
   ["forward throw", "前投げ"],
@@ -272,6 +290,238 @@ const phraseLabels: Array<[string, string]> = [
   ["required", "必須"],
 ];
 
+export type SequenceDetailField =
+  | "mash_point"
+  | "throw_point"
+  | "shimmy_point"
+  | "jump_option"
+  | "parry_option"
+  | "drive_reversal_option"
+  | "invincible_option";
+
+export type SetupDetailField =
+  | "starter_condition"
+  | "sequence_text"
+  | "frame_advantage"
+  | "position"
+  | "meter_condition"
+  | "description"
+  | "counter_notes";
+
+const setupTypeLabels: Record<string, string> = {
+  approach: "接近手段",
+  bait: "様子見・誘い",
+  burnout: "バーンアウト中",
+  charge_oki: "溜めを維持した起き攻め",
+  command_throw: "コマンド投げ",
+  corner_oki: "画面端の起き攻め",
+  corner_setplay: "画面端セットプレイ",
+  doll: "人形設置",
+  fireball: "飛び道具重ね",
+  float: "浮遊セットプレイ",
+  frame_kill: "フレーム消費",
+  impact: "ドライブインパクト",
+  impact_setup: "ドライブインパクトを使うセットプレイ",
+  legacy: "旧バージョン",
+  legacy_candidate: "旧バージョン候補",
+  meaty: "持続重ね",
+  meaty_projectile: "飛び道具の持続重ね",
+  mixup: "崩し",
+  mobility_mixup: "移動を使った崩し",
+  modern_frame_kill: "モダン専用フレーム消費",
+  modern_oki: "モダン専用起き攻め",
+  modern_only: "モダン専用",
+  modern_throw_oki: "モダン専用の投げ後起き攻め",
+  oki: "起き攻め",
+  overhead: "中段重ね",
+  positioning: "位置調整",
+  pressure: "攻め継続",
+  pressure_oki: "攻め継続重視の起き攻め",
+  projectile_oki: "飛び道具を重ねる起き攻め",
+  projectile_setup: "飛び道具セットプレイ",
+  resource_oki: "リソースを使う起き攻め",
+  resource_pressure: "リソースを使った攻め継続",
+  run_oki: "走りを使った起き攻め",
+  sa2_oki: "SA2後の起き攻め",
+  safe_jump: "詐欺飛び",
+  safe_meaty: "安全重ね",
+  safejump: "詐欺飛び",
+  safejump_candidate: "詐欺飛び候補",
+  setplay: "セットプレイ",
+  setup: "セットプレイ",
+  shimmy: "シミー",
+  side_switch: "位置入れ替え",
+  spacing: "間合い調整",
+  spray: "スプレー設置",
+  stance_oki: "構えを使った起き攻め",
+  super_setup: "SAセットプレイ",
+  teleport: "テレポート",
+  throw_oki: "投げ後の起き攻め",
+  trade_setup: "相打ちセットプレイ",
+  written_candidate: "文章資料候補",
+};
+
+const sequenceTypeLabels: Record<string, string> = {
+  anti_air_setup: "対空後の攻め",
+  burnout: "バーンアウト中の連携",
+  burnout_pressure: "バーンアウト中の攻め継続",
+  corner_pressure: "画面端の攻め継続",
+  counter_sequence: "対策連携",
+  defense: "防御連携",
+  drive_rush: "ドライブラッシュ連携",
+  frame_trap: "暴れ潰し",
+  jump_escape_punish: "ジャンプ逃げ狩り",
+  legacy_reset: "旧バージョンの補正切り",
+  mixup: "崩し",
+  mobility_mixup: "移動を使った崩し",
+  modern_pressure: "モダン専用の攻め継続",
+  neutral_pressure: "立ち回りからの攻め継続",
+  oki_pressure: "起き攻め継続",
+  oki_sequence: "起き攻め連携",
+  pressure: "攻め継続",
+  projectile_pressure: "飛び道具からの攻め継続",
+  reset: "補正切り",
+  resource: "リソース管理",
+  resource_management: "リソース管理",
+  resource_pressure: "リソースを使った攻め継続",
+  resource_sequence: "リソース管理連携",
+  run_pressure: "走りを使った攻め継続",
+  sa_pressure: "SAを使った攻め継続",
+  sa2_pressure: "SA2を使った攻め継続",
+  sa2_sequence: "SA2連携",
+  safe_jump_candidate: "詐欺飛び候補",
+  safe_jump_pressure: "詐欺飛びからの攻め継続",
+  safejump_mix: "詐欺飛びを絡めた崩し",
+  setplay_pressure: "セットプレイからの攻め継続",
+  setup_pressure: "セットプレイからの攻め継続",
+  stance_pressure: "構えを使った攻め継続",
+  stun_sequence: "スタン時の連携",
+  throw_sequence: "投げを狙う連携",
+  throw_setup: "投げを絡めたセットプレイ",
+  trade_sequence: "相打ち連携",
+  whiff_punish_sequence: "差し返し連携",
+  zoning: "遠距離戦",
+};
+
+const counterTypeLabels: Record<string, string> = {
+  anti_air: "対空",
+  defense: "守り",
+  punish: "確定反撃",
+  approach: "接近への対応",
+  zoning: "遠距離戦",
+  matchup_overview: "対面概要",
+  matchup_plan: "対面プラン",
+  reaction: "見てから対応",
+  drive_rush: "ドライブラッシュ対策",
+  projectile: "飛び道具対策",
+  drive_impact: "ドライブインパクト対策",
+  adaptation: "相手の動きへの対応",
+  system: "システム対策",
+  counter: "対策",
+  neutral_check: "立ち回り確認",
+  patch_specific: "現行パッチ限定",
+  whiff_punish: "差し返し",
+};
+
+const setupFieldLabels: Partial<Record<SetupDetailField, Record<string, string>>> = {
+  frame_advantage: {
+    unknown: "未確認",
+    "source-described": "資料に記載あり（数値は未確認）",
+    "source timing claim": "資料記載のタイミング",
+    "route-specific": "ルートによって変化",
+    "branch-specific": "派生によって変化",
+    "manual timing": "手動でのタイミング調整が必要",
+    "projectile cover": "飛び道具を重ねる状況",
+    "safe-jump claim": "詐欺飛び成立候補（資料記載）",
+    "meaty claim": "持続重ね候補（資料記載）",
+    "range-dependent": "距離によって変化",
+    "distance-dependent": "距離によって変化",
+    "rise-dependent": "受け身によって変化",
+    "rise-specific": "受け身によって変化",
+    "position-dependent": "画面位置によって変化",
+    "position-specific": "画面位置によって変化",
+    "frame-specific": "フレーム状況によって変化",
+    "ender-specific": "締め方によって変化",
+    "sa-specific": "使用するSAによって変化",
+    "sa1-specific": "SA1使用時のみ",
+    "sa2-specific": "SA2使用時のみ",
+    "sa3/ca-specific": "SA3／CA使用時のみ",
+  },
+  position: {
+    any: "画面中央・画面端共通",
+    midscreen: "画面中央",
+    mid: "画面中央",
+    corner: "画面端",
+    "near corner": "画面端付近",
+    own_corner: "自分が画面端",
+  },
+  meter_condition: {
+    "drive gaugeあり": "Dゲージが必要",
+    "drive rush使用可": "ドライブラッシュを使用可能",
+    "相手drive 0": "相手のDゲージが0本",
+  },
+};
+
+const sequenceFieldLabels: Record<SequenceDetailField, Record<string, string>> = {
+  mash_point: {
+    "gap by strength": "技の強度によって割り込める箇所が変わる",
+    "record 4f gaps": "4F技で割り込める箇所を撮影して確認する",
+    "4f check": "4F技で割り込めるか未確認",
+    "4f interrupt check": "4F技で割り込めるか未確認",
+    "record 4f response": "4F技での割り込み結果を撮影して確認する",
+    "gap要確認": "割り込める箇所の確認が必要",
+    "strike branch": "打撃択",
+  },
+  throw_point: {
+    "typhoon after plus": "有利時はメキシカンタイフーンを狙う",
+    "record throw point": "投げを狙える箇所を撮影して確認する",
+    "throw branch": "投げを狙う",
+    "command/normal throw branch": "コマンド投げと通常投げを使い分ける",
+    "throw/command throw branch": "通常投げとコマンド投げを使い分ける",
+    "n/a": "投げ択なし",
+    "なし": "投げ択なし",
+  },
+  shimmy_point: {
+    stop: "その場で様子を見る",
+    block: "ガードして様子を見る",
+    "ground wait": "地上で様子を見る",
+    "dr stop": "ドライブラッシュ後にその場で様子を見る",
+    "cdr stop": "キャンセルドライブラッシュ後にその場で様子を見る",
+    "backwalk branch": "後ろ歩きで投げ抜けを誘う",
+    "walk-back branch": "後ろ歩きで投げ抜けを誘う",
+    "backwalk or stop branch": "後ろ歩き、またはその場で様子を見る",
+    "record shimmy spacing": "シミーが成立する間合いを撮影して確認する",
+    "record back-walk branch": "後ろ歩きで投げ抜けを誘えるか撮影して確認する",
+    "guard/feint branch": "ガード、またはフェイントで様子を見る",
+  },
+  jump_option: {
+    "jump check": "ジャンプで逃げられるか確認が必要",
+    "jump escape check": "ジャンプで逃げられるか確認が必要",
+    "record jump escape": "ジャンプで逃げられるか撮影して確認する",
+    "record jump timing": "ジャンプで逃げられるタイミングを撮影して確認する",
+  },
+  parry_option: {
+    "parry check": "パリィで対応できるか確認が必要",
+    "record parry answer": "パリィへの対応を撮影して確認する",
+    "record parry and perfect-parry timing": "パリィとジャストパリィのタイミングを撮影して確認する",
+    "parry loses to throw": "パリィには投げが有効",
+  },
+  drive_reversal_option: {
+    "d-reversal check": "ドライブリバーサルで割り込めるか確認が必要",
+    "record d-reversal": "ドライブリバーサルで割り込めるか撮影して確認する",
+    "record d-reversal timing": "ドライブリバーサルのタイミングを撮影して確認する",
+  },
+  invincible_option: {
+    "reversal check": "無敵技で割り込めるか確認が必要",
+    "invincible check": "無敵技で割り込めるか確認が必要",
+    "invincible reversal check": "無敵技で割り込めるか確認が必要",
+    "od/sa reversal check": "OD／SA無敵技で割り込めるか確認が必要",
+    "record reversal": "無敵技で割り込めるか撮影して確認する",
+    "record od/sa reversal timing": "OD／SA無敵技のタイミングを撮影して確認する",
+    "reversal bait": "無敵技をガードして反撃を狙う",
+  },
+};
+
 const directionLabels: Record<string, string> = {
   "1": "後ろ斜め下",
   "2": "しゃがみ",
@@ -288,6 +538,12 @@ const strengthLabels: Record<string, string> = { L: "弱", M: "中", H: "強" };
 
 function escapeRegExp(value: string) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function safeLiteralPattern(value: string) {
+  const left = /^[A-Za-z0-9]/.test(value) ? "(?<![A-Za-z0-9])" : "";
+  const right = /[A-Za-z0-9]$/.test(value) ? "(?![A-Za-z0-9])" : "";
+  return `${left}${escapeRegExp(value)}${right}`;
 }
 
 function derivedGlossary(glossary: MoveGlossaryEntry[]) {
@@ -340,13 +596,14 @@ export function localizeComboText(value: string | number | null, glossary: MoveG
 
   let result = value;
   for (const [english, japanese] of derivedGlossary(glossary)) {
-    result = result.replace(new RegExp(escapeRegExp(english), "gi"), japanese);
+    result = result.replace(new RegExp(safeLiteralPattern(english), "gi"), japanese);
   }
   for (const [english, japanese] of phraseLabels) {
-    result = result.replace(new RegExp(escapeRegExp(english), "gi"), japanese);
+    result = result.replace(new RegExp(safeLiteralPattern(english), "gi"), japanese);
   }
 
   result = result
+    .replace(/\blights?\s*x(\d+)/gi, "弱攻撃×$1")
     .replace(/\bj\.([LMH])([PK])\b/gi, (_, strength: string, button: string) => `ジャンプ${strengthLabels[strength.toUpperCase()]}${button.toUpperCase()}`)
     .replace(/\b([1-9])([LMH])([PK])\b/g, (_, direction: string, strength: string, button: string) => `${directionLabels[direction]}${strengthLabels[strength]}${button}`)
     .replace(/\b([LMH])DP\b/g, (_, strength: string) => `${strengthLabels[strength]}昇龍系必殺技`)
@@ -370,10 +627,166 @@ export function localizeComboText(value: string | number | null, glossary: MoveG
     .replace(/\s*x(\d+)/gi, "×$1")
     .replace(/\(/g, "（")
     .replace(/\)/g, "）")
+    .replace(/(弱|中|強|OD) (?=[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}])/gu, "$1")
+    .replace(/生 (?=[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}])/gu, "生")
     .replace(/\s{2,}/g, " ")
     .trim();
 
   return result;
+}
+
+export function localizeSequenceDetail(
+  field: SequenceDetailField,
+  value: string | number | null,
+  glossary: MoveGlossaryEntry[] = []
+) {
+  if (value === null || typeof value === "number") return value;
+  const natural = sequenceFieldLabels[field][value.trim().toLowerCase()];
+  return natural ?? localizeComboText(value, glossary);
+}
+
+export function localizeSetupType(value: string | number | null) {
+  if (value === null || typeof value === "number") return value;
+  return setupTypeLabels[value.trim().toLowerCase()] ?? localizeComboText(value);
+}
+
+export function localizeSequenceType(value: string | number | null) {
+  if (value === null || typeof value === "number") return value;
+  return sequenceTypeLabels[value.trim().toLowerCase()] ?? localizeComboText(value);
+}
+
+export function localizeCounterType(value: string | number | null) {
+  if (value === null || typeof value === "number") return value;
+  return counterTypeLabels[value.trim().toLowerCase()] ?? localizeComboText(value);
+}
+
+export function localizeSetupDetail(
+  field: SetupDetailField,
+  value: string | number | null,
+  glossary: MoveGlossaryEntry[] = []
+) {
+  if (value === null || typeof value === "number") return value;
+  const source = value.trim();
+  const natural = setupFieldLabels[field]?.[source.toLowerCase()];
+  if (natural) return natural;
+
+  if (field === "frame_advantage") {
+    const claim = source.match(/^([+-]\d+)\s*F?\s+claim$/i);
+    if (claim) return `${claim[1]}F（資料記載）`;
+
+    const sourceClaim = source.match(/^Source\s+([+-]\d+)(?:\s+claim)?$/i);
+    if (sourceClaim) return `${sourceClaim[1]}F（資料記載）`;
+
+    const blockClaim = source.match(/^(?:Source\s+)?(?:guard|block)\s+([+-]\d+)\s+claim$/i);
+    if (blockClaim) return `ガード時${blockClaim[1]}F（資料記載）`;
+
+    const trailingBlockClaim = source.match(/^([+-]\d+)\s+block\s+claim$/i);
+    if (trailingBlockClaim) return `ガード時${trailingBlockClaim[1]}F（資料記載）`;
+
+    const guardHitClaim = source.match(/^Source\s+guard\s+([+-]?\d+)\s+hit\s+([+-]?\d+)\s+claim$/i);
+    if (guardHitClaim) {
+      const guard = guardHitClaim[1] === "0" ? "±0" : guardHitClaim[1];
+      const hit = guardHitClaim[2] === "0" ? "±0" : guardHitClaim[2];
+      return `ガード時${guard}F／ヒット時${hit}F（資料記載）`;
+    }
+
+    const hitGuardClaim = source.match(/^hit\s+([+-]?\d+)\s*\/\s*guard\s+([+-]?\d+)\s+claim$/i);
+    if (hitGuardClaim) {
+      const hit = hitGuardClaim[1] === "0" ? "±0" : hitGuardClaim[1];
+      const guard = hitGuardClaim[2] === "0" ? "±0" : hitGuardClaim[2];
+      return `ヒット時${hit}F／ガード時${guard}F（資料記載）`;
+    }
+
+    const rangeClaim = source.match(/^([+-]\d+)\s+to\s+([+-]\d+)\s+claims?$/i);
+    if (rangeClaim) return `${rangeClaim[1]}～${rangeClaim[2]}F（資料記載）`;
+
+    const approximateGuardClaim = source.match(/^guard\s+approximately\s+([+-]?\d+)\s+claim$/i);
+    if (approximateGuardClaim) {
+      const guard = approximateGuardClaim[1] === "0" ? "±0" : approximateGuardClaim[1];
+      return `ガード時およそ${guard}F（資料記載）`;
+    }
+
+    const safeJumpClaim = source.match(/^(\d+)F\s+safe-jump\s+claim$/i);
+    if (safeJumpClaim) return `${safeJumpClaim[1]}F詐欺飛び成立候補（資料記載）`;
+
+    if (/^\+42\s+family$/i.test(source)) return "+42F系統（資料記載）";
+    if (/^\+42\s+safe-jump$/i.test(source)) return "+42Fの詐欺飛び";
+    if (/^oki\s+claim$/i.test(source)) return "起き攻め可能（資料記載）";
+    if (/^frame-kill\s+claim$/i.test(source)) return "フレーム消費成立候補（資料記載）";
+    if (/^not a true throw meaty$/i.test(source)) return "投げは最速で重ならない";
+    if (/^DI return possible claim$/i.test(source)) return "ドライブインパクト返しが可能（資料記載）";
+  }
+
+  if (field === "meter_condition") {
+    const driveMinimum = source.match(/^Drive\s+(\d+)\+$/i);
+    if (driveMinimum) return `Dゲージ${driveMinimum[1]}本以上`;
+
+    const driveGaugeMinimum = source.match(/^Drive\s+Gauge\s+(\d+)本以上$/i);
+    if (driveGaugeMinimum) return `Dゲージ${driveGaugeMinimum[1]}本以上`;
+  }
+
+  return localizeComboText(value, glossary);
+}
+
+export function localizeBlockstring(value: boolean | null) {
+  if (value === true) return "連続ガードになる";
+  if (value === false) return "連続ガードではない";
+  return null;
+}
+
+export function localizeCounterText(value: string | number | null, glossary: MoveGlossaryEntry[] = []) {
+  if (value === null || typeof value === "number") return value;
+
+  const counterType = counterTypeLabels[value.trim().toLowerCase()];
+  if (counterType) return counterType;
+
+  if (value.trim().toLowerCase() === "drive impact") return "ドライブインパクト";
+  if (value.trim().toLowerCase() === "exact distance/gap remains training dependent.") {
+    return "正確な距離と連携の隙間は、トレーニングモードで確認が必要です。";
+  }
+  if (value === "verified Frameは入口としてのみ使用し、4F技・中距離反撃・SA候補を実距離で再現する。") {
+    return "検証済みのフレーム情報を目安に、4F技・中距離からの反撃・SAを実際の間合いで確認します。";
+  }
+  if (value === "mine-dependent variantsは現行DBでも一部review backlog。未確認の爆発連携を確定扱いしない。") {
+    return "地雷の有無で変わる派生は、一部が実機確認待ちです。未確認の爆発連携は確定情報として扱いません。";
+  }
+
+  const matchupTitle = value.trim().match(/^(.+?)\s+vs\s+(.+?)\s+対面対策$/i);
+  if (matchupTitle) return `${matchupTitle[1]}使用時の${matchupTitle[2]}対策`;
+
+  let result = value
+    .replace(/current verified Frame/gi, "現行版の検証済みフレーム情報")
+    .replace(/verified Frame/gi, "検証済みのフレーム情報")
+    .replace(/mine-dependent variants/gi, "地雷の有無で変わる派生")
+    .replace(/review backlog/gi, "実機確認待ち")
+    .replace(/\b[a-z0-9-]+-approach\s*\/\s*punish\s*\/\s*air\s*\/\s*corner\s*\/\s*zoning\b/gi, "接近阻止・確定反撃・対空・画面端・遠距離戦の各項目")
+    .replace(/子Counter(\d+)件を参照/gi, "関連する$1件の対策を確認します")
+    .replace(/子Counter(\d+)件/gi, "関連する対策$1件")
+    .replace(/verified\s*\/\s*published/gi, "検証済み・公開済み")
+    .replace(/\breviewed\b/gi, "内容確認済み")
+    .replace(/\bverified\b/gi, "検証済み")
+    .replace(/\bpublished\b/gi, "公開済み")
+    .replace(/\bTraining\b/g, "トレーニングモード")
+    .replace(/2026\.08\.03基準。距離と実機再現を確認。/g, "2026.08.03版を基準に、距離と実機での再現性を確認します。")
+    .replace(/実機確認前は検証済み・公開済みへ昇格しない。/g, "実機確認が終わるまでは、検証済み・公開済みとして扱いません。")
+    .replace(/(.+?)戦の対面固有判断を、旧共通テンプレートではなく再現可能な項目として残せる。/g, "$1戦で必要な判断を、状況ごとに練習できます。")
+    .replace(/相手カードの勝ち筋・距離別行動を別スロットに録画し、JP側回答を確定\/相打ち\/読み\/不成立へ分類する。/g, "相手の主な勝ち筋と距離別の行動を分けて録画し、JP側の対応を「確定」「相打ち」「読み合い」「不成立」に分類します。")
+    .replace(/別スロットに?録画/g, "行動ごとに分けて録画")
+    .replace(/【候補・2026\.08\.03再監査】保存済み初版攻略を移植。/g, "2026.08.03版以降で再確認が必要です。")
+    .replace(/保存済み初版攻略を移植。/g, "過去資料の内容を現行版向けに再確認します。")
+    .replace(/最優先再監査:/g, "優先確認項目：")
+    .replace(/再監査/g, "再確認")
+    .replace(/現行トレモ確認前に確定しない。/g, "現行版のトレーニングモードで確認するまでは確定情報として扱いません。")
+    .replace(/JP対面では/g, "JP戦では")
+    .replace(/接近手段を最低4スロットへ分け/g, "接近手段を4種類以上に分けて録画し")
+    .replace(/各項目\s+を/g, "各項目を")
+    .replace(/一つの親対面として辿れる。/g, "一つの対面ページから確認できます。")
+    .replace(/確定・相打ち・読み・不成立を区別する。/g, "確定・相打ち・読み合い・不成立を区別します。")
+    .replace(/接近阻止・確反候補・対空\/特殊軌道・画面端防御・弾\/設置の5項目へ分解した。/g, "接近阻止、確定反撃候補、対空・特殊軌道、画面端防御、飛び道具・設置技の5項目に分けています。")
+    .replace(/距離、連携間隔、DI、弾相互作用、ODアムネジア後状況など実機依存項目は内容確認済みのまま扱う。/g, "距離、連携の間隔、ドライブインパクト、飛び道具同士の相互作用、ODアムネジア後の状況など、実機確認が必要な項目は「内容確認済み」のまま管理します。");
+
+  result = String(localizeComboText(result, glossary));
+  return result.replace(/\s+vs\s+/gi, "対");
 }
 
 export function localizeDifficulty(value: string | number | null) {
