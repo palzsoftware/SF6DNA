@@ -61,8 +61,11 @@ const tokenLabels: Record<string, string> = {
   unique: "特殊技",
   special: "必殺技",
   super: "スーパーアーツ",
+  drive: "ドライブシステム",
   throw: "投げ",
   command_throw: "コマンド投げ",
+  target_combo: "ターゲットコンボ",
+  taunt: "アピール",
   basic: "基本",
   punish: "確定反撃",
   anti_air: "対空",
@@ -77,7 +80,18 @@ const tokenLabels: Record<string, string> = {
   advanced: "上級者向け",
 };
 
-const moveKindOrder = ["normal", "unique", "special", "command_throw", "throw", "super", "other"] as const;
+const moveKindOrder = [
+  "normal",
+  "unique",
+  "target_combo",
+  "special",
+  "command_throw",
+  "throw",
+  "super",
+  "drive",
+  "taunt",
+  "other",
+] as const;
 const moveKindLabels: Record<string, string> = {
   normal: "通常技",
   unique: "特殊技",
@@ -85,20 +99,23 @@ const moveKindLabels: Record<string, string> = {
   command_throw: "コマンド投げ",
   throw: "投げ",
   super: "スーパーアーツ",
+  drive: "ドライブシステム",
+  target_combo: "ターゲットコンボ",
+  taunt: "アピール",
   other: "その他",
 };
 
 const stateLabels: Record<string, string> = {
   draft: "下書き",
-  reviewed: "レビュー済み",
+  reviewed: "内容確認済み",
   verified: "検証済み",
   unverified: "未検証",
   published: "公開済み",
 };
 
 const commandSchemeLabels: Record<string, string> = {
-  classic: "Classic",
-  modern: "Modern",
+  classic: "クラシック",
+  modern: "モダン",
 };
 
 type DisplayMeta = {

@@ -10,6 +10,12 @@ import {
   localizeCounterType,
   localizeCounterText,
   localizeDifficulty,
+  localizeMoveCancelType,
+  localizeMoveHitLevel,
+  localizeMoveInvincibility,
+  localizeMoveStrength,
+  localizeMoveText,
+  localizeMoveType,
   localizeSetupDetail,
   localizeSetupType,
   localizeSequenceDetail,
@@ -147,8 +153,61 @@ async function getReleaseMetadata(
   };
 }
 
-export async function getMoveBySlug(slug: string): Promise<SimpleDetail | null> {
+export async function getMoveBySlug(
+  slug: string,
+  previewToken?: string | null
+): Promise<SimpleDetail | null> {
   if (!configured()) return null;
+  const preview = await getDevicePreviewContentDetail("move", slug, previewToken);
+  if (preview) {
+    const data = preview.record;
+    const frame = preview.frame ?? null;
+    const commands = preview.commands ?? [];
+    const classicCommands = commands
+      .filter((command) => command.scheme === "classic")
+      .map((command) => command.commandText ?? command.numericNotation ?? command.buttonNotation)
+      .filter((value): value is string => Boolean(value));
+    const modernCommands = commands
+      .filter((command) => command.scheme === "modern")
+      .map((command) => command.commandText ?? command.numericNotation ?? command.buttonNotation)
+      .filter((value): value is string => Boolean(value));
+    const frameStatus = previewValue(frame ?? {}, "verification_status");
+
+    return {
+      id: String(data.id),
+      slug: String(data.slug),
+      title: String(data.name_ja),
+      summary: localizeMoveText(
+        previewValue(data, "usage_summary") ?? previewValue(data, "description")
+      ) as string | null,
+      body: [
+        ["キャラクター", preview.characterName],
+        ["公開状態", localizeComboText(previewValue(data, "status"))],
+        ["フレーム検証状態", localizeComboText(frameStatus)],
+        ["実機確認", frameStatus === "verified" ? "確認済み" : "実機確認待ち"],
+        ["対応バージョン", preview.patchLabel],
+        ["公式英語名", previewValue(data, "name_en")],
+        ["技種別", localizeMoveType(previewValue(data, "move_type"))],
+        ["強度", localizeMoveStrength(previewValue(data, "strength_variant"))],
+        ["クラシック入力", classicCommands.length ? classicCommands.join(" / ") : null],
+        ["モダン入力", modernCommands.length ? modernCommands.join(" / ") : null],
+        ["発生", previewValue(frame ?? {}, "startup")],
+        ["持続", previewValue(frame ?? {}, "active")],
+        ["硬直", previewValue(frame ?? {}, "recovery")],
+        ["ヒット時", previewValue(frame ?? {}, "on_hit")],
+        ["ガード時", previewValue(frame ?? {}, "on_block")],
+        ["ダメージ", previewValue(frame ?? {}, "damage")],
+        ["Dゲージダメージ", previewValue(frame ?? {}, "drive_damage")],
+        ["SAゲージ増加", previewValue(frame ?? {}, "super_gain")],
+        ["キャンセル", localizeMoveCancelType(previewValue(frame ?? {}, "cancel_type"))],
+        ["攻撃判定", localizeMoveHitLevel(previewValue(frame ?? {}, "hit_level"))],
+        ["無敵", localizeMoveInvincibility(previewValue(frame ?? {}, "invincibility"))],
+        ["フレーム補足", localizeMoveText(previewValue(frame ?? {}, "notes"))],
+      ],
+      sources: dedupeSources(preview.sources),
+    };
+  }
+
   const supabase = getSupabaseServerClient();
   const { data, error } = await supabase
     .from("moves")
@@ -219,28 +278,28 @@ export async function getMoveBySlug(slug: string): Promise<SimpleDetail | null> 
     id: String(data.id),
     slug: String(data.slug),
     title: String(data.name_ja),
-    summary: data.usage_summary ?? data.description ?? null,
+    summary: localizeMoveText(data.usage_summary ?? data.description ?? null) as string | null,
     body: [
       ["キャラクター", c?.name_ja ?? null],
       ["英語名", data.name_en ?? null],
-      ["技種別", data.move_type ?? null],
-      ["強度", data.strength_variant ?? null],
-      ["Classic Command", classicCommands.length ? classicCommands.join(" / ") : null],
-      ["Modern Command", modernCommands.length ? modernCommands.join(" / ") : null],
-      ["Frame Verification", frame?.verification_status ?? null],
-      ["Patch", patch?.version_label ? `${patch.version_label}${patch.name ? ` / ${patch.name}` : ""}` : null],
+      ["技種別", localizeMoveType(data.move_type ?? null)],
+      ["強度", localizeMoveStrength(data.strength_variant ?? null)],
+      ["クラシック入力", classicCommands.length ? classicCommands.join(" / ") : null],
+      ["モダン入力", modernCommands.length ? modernCommands.join(" / ") : null],
+      ["フレーム検証状態", localizeComboText(frame?.verification_status ?? null)],
+      ["対応バージョン", patch?.version_label ? `${patch.version_label}${patch.name ? ` / ${patch.name}` : ""}` : null],
       ["発生", frame?.startup ?? null],
       ["持続", frame?.active ?? null],
       ["硬直", frame?.recovery ?? null],
-      ["ヒット", frame?.on_hit ?? null],
-      ["ガード", frame?.on_block ?? null],
+      ["ヒット時", frame?.on_hit ?? null],
+      ["ガード時", frame?.on_block ?? null],
       ["ダメージ", frame?.damage ?? null],
       ["Dゲージダメージ", frame?.drive_damage ?? null],
       ["SAゲージ増加", frame?.super_gain ?? null],
-      ["キャンセル", frame?.cancel_type ?? null],
-      ["判定", frame?.hit_level ?? null],
-      ["無敵", frame?.invincibility ?? null],
-      ["Frame補足", frame?.notes ?? null],
+      ["キャンセル", localizeMoveCancelType(frame?.cancel_type ?? null)],
+      ["攻撃判定", localizeMoveHitLevel(frame?.hit_level ?? null)],
+      ["無敵", localizeMoveInvincibility(frame?.invincibility ?? null)],
+      ["フレーム補足", localizeMoveText(frame?.notes ?? null)],
     ],
     sources: dedupeSources([
       ...toSources(moveSourceLinks as unknown[] | null),

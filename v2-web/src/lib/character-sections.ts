@@ -2,10 +2,13 @@ import { getDevicePreviewBundle, getDevicePreviewCharacterMoveGlossary } from "@
 import {
   localizeComboText,
   localizeCounterText,
+  localizeMoveText,
   localizeSetupDetail,
   localizeSetupType,
   localizeSequenceType,
+  localizeTrainingLevel,
   localizeTrainingText,
+  localizeTrainingType,
 } from "@/lib/detail-localization";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import { isMovePublicReady } from "@/lib/public-move-gate";
@@ -51,7 +54,7 @@ export async function listCharacterSectionItems(
         return {
           id: row.id,
           title: row.name,
-          subtitle: row.usageSummary,
+          subtitle: localizeMoveText(row.usageSummary) as string | null,
           href: `/moves/${row.slug}`,
           meta: previewMeta(row.status, frame?.verificationStatus, [
             row.moveType,
@@ -123,8 +126,8 @@ export async function listCharacterSectionItems(
         subtitle: localizeTrainingText("purpose", row.purpose, trainingGlossary) as string | null,
         href: `/training/${row.slug}`,
         meta: previewMeta(row.status, row.verificationStatus, [
-          row.trainingType,
-          row.level,
+          localizeTrainingType(row.trainingType),
+          localizeTrainingLevel(row.level),
           row.durationMinutes ? `${row.durationMinutes}分` : null,
         ]),
       }));
@@ -155,7 +158,9 @@ export async function listCharacterSectionItems(
       return [{
         id: String(row.id),
         title: String(row.name_ja),
-        subtitle: typeof row.usage_summary === "string" ? row.usage_summary : null,
+        subtitle: typeof row.usage_summary === "string"
+          ? String(localizeMoveText(row.usage_summary))
+          : null,
         href: `/moves/${row.slug}`,
         meta: [row.move_type, ...metaParts].filter(Boolean).join(" / ") || null,
       }];
@@ -236,7 +241,7 @@ export async function listCharacterSectionItems(
     if (error) return fail(section, error.message);
     return (data ?? []).map((row) => ({
       id: String(row.id), title: String(localizeTrainingText("name", row.name)), subtitle: localizeTrainingText("purpose", row.purpose ?? null) as string | null, href: `/training/${row.slug}`,
-      meta: [row.training_type, row.level, row.duration_minutes ? `${row.duration_minutes}分` : null].filter(Boolean).join(" / ") || null,
+      meta: [localizeTrainingType(row.training_type), localizeTrainingLevel(row.level), row.duration_minutes ? `${row.duration_minutes}分` : null].filter(Boolean).join(" / ") || null,
     }));
   }
 

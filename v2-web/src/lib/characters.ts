@@ -1,5 +1,9 @@
 import { legacyCharacterImageUrl } from "@/lib/legacy-character-images";
-import { getDevicePreviewBundle } from "@/lib/device-preview";
+import {
+  getDevicePreviewBundle,
+  getDevicePreviewCharacterMoveGlossary,
+} from "@/lib/device-preview";
+import { localizeCharacterGuideText } from "@/lib/detail-localization";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type {
   CharacterDetail,
@@ -21,7 +25,9 @@ function toSummary(row: Record<string, unknown>): CharacterSummary {
     slug,
     name: String(row.name_ja),
     nameEn: typeof row.name_en === "string" ? row.name_en : null,
-    shortDescription: typeof row.summary === "string" ? row.summary : null,
+    shortDescription: typeof row.summary === "string"
+      ? String(localizeCharacterGuideText(row.summary))
+      : null,
     imageUrl:
       typeof row.image_url === "string" && row.image_url.trim()
         ? row.image_url
@@ -82,6 +88,7 @@ export async function getCharacterBySlug(
     { data: sections, error: sectionError },
     { data: sourceLinks, error: sourceError },
     previewBundle,
+    moveGlossary,
   ] = await Promise.all([
     supabase
       .from("character_guide_sections")
@@ -96,6 +103,7 @@ export async function getCharacterBySlug(
       .eq("entity_type", "character")
       .eq("entity_id", character.id),
     getDevicePreviewBundle(String(character.id), previewToken),
+    getDevicePreviewCharacterMoveGlossary(String(character.id), previewToken),
   ]);
 
   if (sectionError) console.error("[characters] guide sections failed", sectionError.message);
@@ -105,15 +113,15 @@ export async function getCharacterBySlug(
     ? previewBundle.guideSections.map((row) => ({
         id: String(row.id),
         sectionKey: String(row.sectionType),
-        title: String(row.title),
-        body: String(row.body),
+        title: String(localizeCharacterGuideText(row.title, moveGlossary)),
+        body: String(localizeCharacterGuideText(row.body, moveGlossary)),
         sortOrder: Number(row.displayOrder ?? 0),
       }))
     : (sections ?? []).map((row) => ({
         id: String(row.id),
         sectionKey: String(row.section_type),
-        title: String(row.title),
-        body: String(row.body),
+        title: String(localizeCharacterGuideText(row.title)),
+        body: String(localizeCharacterGuideText(row.body)),
         sortOrder: Number(row.display_order ?? 0),
       }));
 
@@ -143,11 +151,18 @@ export async function getCharacterBySlug(
 
   return {
     ...base,
-    shortDescription: base.shortDescription ?? previewOverview?.summary ?? null,
+    shortDescription: base.shortDescription
+      ?? (previewOverview?.summary
+        ? String(localizeCharacterGuideText(previewOverview.summary, moveGlossary))
+        : null),
     strengthsSummary:
-      typeof character.strengths_summary === "string" ? character.strengths_summary : null,
+      typeof character.strengths_summary === "string"
+        ? String(localizeCharacterGuideText(character.strengths_summary, moveGlossary))
+        : null,
     weaknessesSummary:
-      typeof character.weaknesses_summary === "string" ? character.weaknesses_summary : null,
+      typeof character.weaknesses_summary === "string"
+        ? String(localizeCharacterGuideText(character.weaknesses_summary, moveGlossary))
+        : null,
     guideSections,
     sources,
   };

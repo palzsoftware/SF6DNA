@@ -107,7 +107,7 @@ export type DevicePreviewMoveMotionMedia = {
   displayOrder: number | null;
 };
 
-export type DevicePreviewContentType = "combo" | "setup" | "sequence" | "counter" | "training";
+export type DevicePreviewContentType = "move" | "combo" | "setup" | "sequence" | "counter" | "training";
 
 export type DevicePreviewContentDetail = {
   entityType: DevicePreviewContentType;
@@ -116,6 +116,15 @@ export type DevicePreviewContentDetail = {
   opponentCharacterName?: string | null;
   dummyCharacterName?: string | null;
   patchLabel: string | null;
+  commands?: Array<{
+    scheme: string;
+    commandText: string | null;
+    numericNotation: string | null;
+    buttonNotation: string | null;
+    conditionText: string | null;
+    sortOrder: number | null;
+  }>;
+  frame?: Record<string, unknown> | null;
   moveGlossary?: Array<{
     english: string;
     japanese: string;
@@ -237,6 +246,21 @@ export async function getDevicePreviewContentDetail(
   if (!isDevicePreviewRequest(previewToken)) return null;
 
   const supabase = getSupabaseServerClient();
+  if (entityType === "move") {
+    const { data, error } = await supabase.rpc("get_phase44_move_detail_preview", {
+      target_move_slug: slug,
+      preview_token: previewToken,
+    });
+    if (error) {
+      console.error("[device-preview] move detail preview failed", error.message);
+      return null;
+    }
+    if (!data || typeof data !== "object" || Array.isArray(data)) return null;
+    const detail = data as unknown as Partial<DevicePreviewContentDetail>;
+    if (detail.entityType !== "move" || !detail.record || Array.isArray(detail.record)) return null;
+    return detail as DevicePreviewContentDetail;
+  }
+
   if (entityType === "counter") {
     const { data, error } = await supabase.rpc("get_phase42_counter_detail_preview", {
       target_counter_slug: slug,
