@@ -1,18 +1,21 @@
 # SF6DNA v2 Project Status
 
-最終更新: 2026-08-29 JST
+最終更新: 2026-09-01 JST
 
 ## 現在状態
 
 - Phase1〜22: **完了**
 - Phase23: **Final Manual Stage待ち**
-- Safe non-human / pre-device work: **完了**
+- 31キャラ攻略データ（文言・画像Source）収集: **31 / 31完了**
+- Safe non-human / pre-device work: **完了（2026-09-01再監査）**
 - Auth / Admin non-human readiness: **完了**
 - PC / iPhone実機テスト: **最後のmanual stageとしてHOLD**
 - Production Readiness: **未判定 / manual stage後**
 - v2 Production deploy: **未実施**
 
 ユーザー指示により、実ログイン・人物同定・Publication approval・PC/iPhone実機操作など人の手または判断を必要とする工程は最後にまとめて実施する。
+
+撮影待ちの詳細は`capture_backlog`で保持する。ユーザーが撮影可能と明示した時点で、キャラ別・優先度順に提示する。
 
 ## 正本
 
@@ -67,6 +70,30 @@ Supabase:
 - Security Advisor: **0 lints**
 - Current Patch: `2026.08.03`が1件
 - Auth user: 0
+
+## 31-character strategy collection snapshot
+
+2026-09-01実DB再監査:
+
+| Entity | Active | Draft | Unverified | Reviewed | Verified | Published | Source欠損 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Combo | 1213 | 1213 | 1078 | 134 | 1 | 0 | 0 |
+| Setup | 792 | 792 | 703 | 89 | 0 | 0 | 0 |
+| Sequence | 475 | 475 | 439 | 36 | 0 | 0 | 0 |
+| Training | 2974 | 2974 | 2481 | 493 | 0 | 0 | - |
+
+- Character Content Package: **31 / 31 complete**
+- Active Strategy: **2480**
+- Training relationなし: **0**
+- Pending captureなし: **0**
+- Combo notation重複group: **0**
+- capture_backlog参照切れ / Character不一致: **0**
+- Pending capture: **2553**（詳細は撮影開始時に提示）
+- キャラ別Active Strategy範囲: **64〜168件**
+
+これらは収集完了を示すが、実機成立確認またはPublication approvalを示さない。全Strategyを`draft`のまま維持する。
+
+詳細: `docs/PHASE33_31_CHARACTER_STRATEGY_AUDIT_2026-09-01.md`
 
 ## 完了したPhase23 non-human hardening
 
@@ -144,6 +171,8 @@ Strategy `draft + verified + Source relation`:
 - Sequence 0
 - Counter 0
 - Training 0
+
+収集済みStrategy全体は上記31-character snapshotを参照。`Sourceあり ≠ verified`のため、未確認データを自動昇格しない。
 
 Published Diagnosis 4件:
 
