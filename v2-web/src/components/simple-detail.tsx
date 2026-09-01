@@ -1,4 +1,5 @@
 import type { SimpleDetail } from "@/lib/content-detail";
+import { localizeSourceRelationship, localizeSourceType } from "@/lib/detail-localization";
 
 export function SimpleDetailView({
   detail,
@@ -32,13 +33,13 @@ export function SimpleDetailView({
       </section>
       {detail.sources?.length ? (
         <section className="info-panel">
-          <h2>Sources</h2>
+          <h2>情報源</h2>
           <ul>
             {detail.sources.map((source) => (
               <li key={`${source.id}-${source.relationship}`}>
                 <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>
                 {source.publisher ? ` / ${source.publisher}` : ""}
-                {` / ${source.sourceType} / ${source.relationship}`}
+                {` / ${localizeSourceType(source.sourceType)} / ${localizeSourceRelationship(source.relationship)}`}
               </li>
             ))}
           </ul>
