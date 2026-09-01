@@ -19,5 +19,5 @@ export default async function SetupPage({ params, searchParams }: DetailPageProp
   const previewToken = normalizeDevicePreviewToken(query.preview);
   const detail = await getSetupBySlug(slug, previewToken);
   if (!detail) notFound();
-  return <SimpleDetailView detail={detail} eyebrow="SETUP" preview={isDevicePreviewRequest(previewToken)} />;
+  return <SimpleDetailView detail={detail} eyebrow="セットプレイ" preview={isDevicePreviewRequest(previewToken)} />;
 }

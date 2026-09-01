@@ -300,21 +300,22 @@ export async function getSetupBySlug(slug: string, previewToken?: string | null)
   const preview = await getDevicePreviewContentDetail("setup", slug, previewToken);
   if (preview) {
     const data = preview.record;
+    const glossary = preview.moveGlossary ?? [];
     return {
       id: String(data.id),
       slug: String(data.slug),
-      title: String(data.name),
-      summary: previewValue(data, "description") as string | null,
+      title: localizeComboText(String(data.name), glossary) as string,
+      summary: localizeComboText(previewValue(data, "description"), glossary) as string | null,
       body: [
         ["キャラクター", preview.characterName],
         ...previewReleaseRows(preview),
-        ["種類", previewValue(data, "setup_type")],
-        ["始動条件", previewValue(data, "starter_condition")],
-        ["手順", previewValue(data, "sequence_text")],
+        ["種類", localizeComboText(previewValue(data, "setup_type"), glossary)],
+        ["始動条件", localizeComboText(previewValue(data, "starter_condition"), glossary)],
+        ["手順", localizeComboText(previewValue(data, "sequence_text"), glossary)],
         ["有利F", previewValue(data, "frame_advantage")],
-        ["位置", previewValue(data, "position")],
-        ["ゲージ条件", previewValue(data, "meter_condition")],
-        ["対策メモ", previewValue(data, "counter_notes")],
+        ["位置", localizeComboText(previewValue(data, "position"), glossary)],
+        ["ゲージ条件", localizeComboText(previewValue(data, "meter_condition"), glossary)],
+        ["対策メモ", localizeComboText(previewValue(data, "counter_notes"), glossary)],
       ],
       sources: preview.sources,
     };
@@ -355,26 +356,27 @@ export async function getSequenceBySlug(slug: string, previewToken?: string | nu
   const preview = await getDevicePreviewContentDetail("sequence", slug, previewToken);
   if (preview) {
     const data = preview.record;
+    const glossary = preview.moveGlossary ?? [];
     const trueBlockstring = previewBoolean(data, "is_true_blockstring");
     return {
       id: String(data.id),
       slug: String(data.slug),
-      title: String(data.name),
-      summary: previewValue(data, "notes") as string | null,
+      title: localizeComboText(String(data.name), glossary) as string,
+      summary: localizeComboText(previewValue(data, "notes"), glossary) as string | null,
       body: [
         ["キャラクター", preview.characterName],
         ...previewReleaseRows(preview),
-        ["種類", previewValue(data, "sequence_type")],
-        ["連携", previewValue(data, "sequence_text")],
+        ["種類", localizeComboText(previewValue(data, "sequence_type"), glossary)],
+        ["連携", localizeComboText(previewValue(data, "sequence_text"), glossary)],
         ["連続ガード", trueBlockstring === true ? "はい" : trueBlockstring === false ? "いいえ" : null],
-        ["暴れどころ", previewValue(data, "mash_point")],
-        ["投げ択", previewValue(data, "throw_point")],
-        ["シミー", previewValue(data, "shimmy_point")],
-        ["ジャンプ", previewValue(data, "jump_option")],
-        ["パリィ", previewValue(data, "parry_option")],
-        ["Dリバーサル", previewValue(data, "drive_reversal_option")],
-        ["無敵技", previewValue(data, "invincible_option")],
-        ["補足", previewValue(data, "notes")],
+        ["暴れどころ", localizeComboText(previewValue(data, "mash_point"), glossary)],
+        ["投げ択", localizeComboText(previewValue(data, "throw_point"), glossary)],
+        ["シミー", localizeComboText(previewValue(data, "shimmy_point"), glossary)],
+        ["ジャンプ", localizeComboText(previewValue(data, "jump_option"), glossary)],
+        ["パリィ", localizeComboText(previewValue(data, "parry_option"), glossary)],
+        ["Dリバーサル", localizeComboText(previewValue(data, "drive_reversal_option"), glossary)],
+        ["無敵技", localizeComboText(previewValue(data, "invincible_option"), glossary)],
+        ["補足", localizeComboText(previewValue(data, "notes"), glossary)],
       ],
       sources: preview.sources,
     };
