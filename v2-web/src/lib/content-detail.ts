@@ -1,5 +1,6 @@
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import {
+  getDevicePreviewCharacterMoveGlossary,
   getDevicePreviewContentDetail,
   type DevicePreviewContentDetail,
 } from "@/lib/device-preview";
@@ -13,6 +14,9 @@ import {
   localizeSetupType,
   localizeSequenceDetail,
   localizeSequenceType,
+  localizeTrainingLevel,
+  localizeTrainingText,
+  localizeTrainingType,
 } from "@/lib/detail-localization";
 
 function configured() {
@@ -484,25 +488,29 @@ export async function getTrainingBySlug(slug: string, previewToken?: string | nu
   const preview = await getDevicePreviewContentDetail("training", slug, previewToken);
   if (preview) {
     const data = preview.record;
+    const glossary = await getDevicePreviewCharacterMoveGlossary(
+      typeof data.player_character_id === "string" ? data.player_character_id : null,
+      previewToken
+    );
     return {
       id: String(data.id),
       slug: String(data.slug),
-      title: String(data.name),
-      summary: previewValue(data, "purpose") as string | null,
+      title: String(localizeTrainingText("name", String(data.name), glossary)),
+      summary: localizeTrainingText("purpose", previewValue(data, "purpose"), glossary) as string | null,
       body: [
         ["操作キャラクター", preview.characterName],
         ["ダミー", preview.dummyCharacterName ?? null],
         ...previewReleaseRows(preview),
-        ["種類", previewValue(data, "training_type")],
-        ["レベル", previewValue(data, "level")],
-        ["目安時間", previewValue(data, "duration_minutes")],
-        ["録画", previewValue(data, "recording_instructions")],
-        ["再生設定", previewValue(data, "playback_settings")],
-        ["CPU設定", previewValue(data, "cpu_settings")],
-        ["方法", previewValue(data, "method")],
-        ["成功条件", previewValue(data, "success_criteria")],
-        ["回数", previewValue(data, "recommended_reps")],
-        ["次の練習", previewValue(data, "next_step")],
+        ["練習内容", localizeTrainingType(previewValue(data, "training_type"))],
+        ["対象レベル", localizeTrainingLevel(previewValue(data, "level"))],
+        ["目安時間", typeof data.duration_minutes === "number" ? `${data.duration_minutes}分` : null],
+        ["準備・録画設定", localizeTrainingText("recording_instructions", previewValue(data, "recording_instructions"), glossary)],
+        ["再生設定", localizeTrainingText("playback_settings", previewValue(data, "playback_settings"), glossary)],
+        ["CPU設定", localizeTrainingText("cpu_settings", previewValue(data, "cpu_settings"), glossary)],
+        ["練習方法", localizeTrainingText("method", previewValue(data, "method"), glossary)],
+        ["成功の目安", localizeTrainingText("success_criteria", previewValue(data, "success_criteria"), glossary)],
+        ["推奨回数", typeof data.recommended_reps === "number" ? `${data.recommended_reps}回` : null],
+        ["次に進む練習", localizeTrainingText("next_step", previewValue(data, "next_step"), glossary)],
       ],
       sources: preview.sources,
     };
@@ -520,20 +528,20 @@ export async function getTrainingBySlug(slug: string, previewToken?: string | nu
   return {
     id: String(data.id),
     slug: String(data.slug),
-    title: String(data.name),
-    summary: data.purpose ?? null,
+    title: String(localizeTrainingText("name", data.name)),
+    summary: localizeTrainingText("purpose", data.purpose ?? null) as string | null,
     body: [
       ...release.body,
-      ["種類", data.training_type ?? null],
-      ["レベル", data.level ?? null],
-      ["目安時間", data.duration_minutes ?? null],
-      ["録画", data.recording_instructions ?? null],
-      ["再生設定", data.playback_settings ?? null],
-      ["CPU設定", data.cpu_settings ?? null],
-      ["方法", data.method ?? null],
-      ["成功条件", data.success_criteria ?? null],
-      ["回数", data.recommended_reps ?? null],
-      ["次の練習", data.next_step ?? null],
+      ["練習内容", localizeTrainingType(data.training_type ?? null)],
+      ["対象レベル", localizeTrainingLevel(data.level ?? null)],
+      ["目安時間", typeof data.duration_minutes === "number" ? `${data.duration_minutes}分` : null],
+      ["準備・録画設定", localizeTrainingText("recording_instructions", data.recording_instructions ?? null)],
+      ["再生設定", localizeTrainingText("playback_settings", data.playback_settings ?? null)],
+      ["CPU設定", localizeTrainingText("cpu_settings", data.cpu_settings ?? null)],
+      ["練習方法", localizeTrainingText("method", data.method ?? null)],
+      ["成功の目安", localizeTrainingText("success_criteria", data.success_criteria ?? null)],
+      ["推奨回数", typeof data.recommended_reps === "number" ? `${data.recommended_reps}回` : null],
+      ["次に進む練習", localizeTrainingText("next_step", data.next_step ?? null)],
     ],
     sources: release.sources,
   };

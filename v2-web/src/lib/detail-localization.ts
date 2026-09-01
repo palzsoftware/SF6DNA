@@ -308,6 +308,16 @@ export type SetupDetailField =
   | "description"
   | "counter_notes";
 
+export type TrainingDetailField =
+  | "name"
+  | "purpose"
+  | "recording_instructions"
+  | "playback_settings"
+  | "cpu_settings"
+  | "method"
+  | "success_criteria"
+  | "next_step";
+
 const setupTypeLabels: Record<string, string> = {
   approach: "接近手段",
   bait: "様子見・誘い",
@@ -421,6 +431,78 @@ const counterTypeLabels: Record<string, string> = {
   neutral_check: "立ち回り確認",
   patch_specific: "現行パッチ限定",
   whiff_punish: "差し返し",
+};
+
+const trainingTypeLabels: Record<string, string> = {
+  air_approach: "空中からの接近",
+  anti_air: "対空",
+  anti_air_conversion: "対空からの追撃",
+  approach: "接近",
+  charge_execution: "溜め入力",
+  charge_pressure: "溜め技からの攻め継続",
+  combo: "コンボ",
+  combo_discovery: "コンボ検証",
+  combo_retest: "コンボの実機確認",
+  command_throw_mix: "コマンド投げを使った崩し",
+  confirm: "ヒット確認",
+  corner_combo: "画面端コンボ",
+  corner_escape: "画面端からの脱出",
+  decision: "状況判断",
+  decision_combo: "コンボ選択",
+  decision_mixed: "複合的な状況判断",
+  decision_oki: "起き攻めの判断",
+  decision_resource: "リソースの使い分け",
+  defense: "守り",
+  defense_corner: "画面端の守り",
+  defense_throw: "投げへの守り",
+  doll_setup: "ブランカちゃん人形セットプレイ",
+  escape: "脱出",
+  execution: "操作練習",
+  execution_timing: "入力タイミング",
+  footsies: "地上戦",
+  hit_confirm: "ヒット確認",
+  instructional_media: "初心者向け解説素材",
+  mixup: "崩し",
+  neutral: "立ち回り",
+  offense: "攻め",
+  oki: "起き攻め",
+  oki_command_throw: "起き攻めのコマンド投げ",
+  oki_meaty: "持続重ね",
+  oki_mix: "起き攻めの崩し",
+  oki_retest: "起き攻めの実機確認",
+  pressure: "攻め継続",
+  pressure_retest: "連携の実機確認",
+  projectile_charge: "溜め飛び道具",
+  projectile_pressure: "飛び道具からの攻め継続",
+  projectile_response: "飛び道具への対応",
+  projectile_setup: "飛び道具セットプレイ",
+  punish: "確定反撃",
+  punish_oki: "確定反撃後の起き攻め",
+  reaction: "見てから対応",
+  reaction_di: "ドライブインパクトへの反応",
+  reaction_dr: "ドライブラッシュへの反応",
+  resource: "リソース管理",
+  resource_command_throw: "リソースを使うコマンド投げ",
+  resource_management: "リソース管理",
+  resource_oki: "リソースを使う起き攻め",
+  resource_projectile: "リソースを使う飛び道具",
+  resource_setup: "リソースを使うセットプレイ",
+  sa2_pressure: "SA2を使った攻め継続",
+  safe_jump: "詐欺飛び",
+  setup: "セットプレイ",
+  spacing: "間合い管理",
+  super: "SA活用",
+  super_decision: "SAの使い分け",
+  video_candidate_retest: "動画由来候補の実機確認",
+  whiff_punish: "差し返し",
+  zoning: "遠距離戦",
+  zoning_anti_air: "飛び道具と対空",
+};
+
+const trainingLevelLabels: Record<string, string> = {
+  beginner: "初心者向け",
+  intermediate: "中級者向け",
+  advanced: "上級者向け",
 };
 
 const setupFieldLabels: Partial<Record<SetupDetailField, Record<string, string>>> = {
@@ -789,6 +871,73 @@ export function localizeCounterText(value: string | number | null, glossary: Mov
 
   result = String(localizeComboText(result, glossary));
   return result.replace(/\s+vs\s+/gi, "対");
+}
+
+export function localizeTrainingType(value: string | number | null) {
+  if (value === null || typeof value === "number") return value;
+  return trainingTypeLabels[value.trim().toLowerCase()] ?? localizeComboText(value);
+}
+
+export function localizeTrainingLevel(value: string | number | null) {
+  if (value === null || typeof value === "number") return value;
+  return trainingLevelLabels[value.trim().toLowerCase()] ?? localizeComboText(value);
+}
+
+export function localizeTrainingText(
+  field: TrainingDetailField,
+  value: string | number | null,
+  glossary: MoveGlossaryEntry[] = []
+) {
+  if (value === null || typeof value === "number") return value;
+
+  let result = String(localizeComboText(value, glossary))
+    .replace(/\bClassic\b/gi, "クラシック")
+    .replace(/\bAssist\b/gi, "アシスト")
+    .replace(/\bBnB\b/gi, "基本コンボ")
+    .replace(/\bCPU操作\s*[:：]\s*OFF\b/gi, "CPU操作：オフ")
+    .replace(/\bCPU\s*OFF\b/gi, "CPU操作：オフ")
+    .replace(/\bFrame\s*Meter\s*ON\b/gi, "フレームメーター：オン")
+    .replace(/フレーム表示\s*ON\b/gi, "フレームメーター：オン")
+    .replace(/入力履歴・ダメージ表示\s*ON\b/gi, "入力履歴とダメージ表示：オン")
+    .replace(/入力履歴\s*ON\b/gi, "入力履歴：オン")
+    .replace(/ガード\s*OFF\b/gi, "ガード：オフ")
+    .replace(/\bGuard\s*OFF\b/gi, "ガード：オフ")
+    .replace(/\b(?:Guard\s*Random|Random\s*Guard)\b/gi, "ランダムガード")
+    .replace(/\bON\b/g, "オン")
+    .replace(/\bOFF\b/g, "オフ")
+    .replace(/\bverified候補/gi, "検証候補")
+    .replace(/\breviewed候補/gi, "内容確認候補")
+    .replace(/\breviewed\b/gi, "内容確認済み")
+    .replace(/\bverified\b/gi, "検証済み")
+    .replace(/\bunverified\b/gi, "未検証")
+    .replace(/\brejected\b/gi, "不成立")
+    .replace(/\barchived\b/gi, "アーカイブ")
+    .replace(/\bPlayback\b/gi, "再生")
+    .replace(/\bTraining\b/gi, "トレーニング")
+    .replace(/\bSource\b/gi, "出典")
+    .replace(/\bDamage\b/gi, "ダメージ")
+    .replace(/\bJ([弱中強])([PK])\b/g, "ジャンプ$1$2")
+    .replace(/\b2([弱中強])([PK])\b/g, "しゃがみ$1$2")
+    .replace(/\b5([弱中強])([PK])\b/g, "立ち$1$2")
+    .replace(/\b6([弱中強])([PK])\b/g, "前$1$2")
+    .replace(/\b4([弱中強])([PK])\b/g, "後ろ$1$2")
+    .replace(/\b1P\s*／\s*2P\b/g, "1P側／2P側")
+    .replace(/ヒット\s*／\s*ガード/g, "ヒット時／ガード時")
+    .replace(/成立なら検証候補。不成立ならアーカイブ。/g, "成立した場合は検証候補にし、不成立ならアーカイブします。")
+    .replace(/成立なら内容確認済み、非成立ならアーカイブへ。/g, "成立した場合は内容確認済みに更新し、不成立ならアーカイブします。")
+    .replace(/現行版での実機確認待ちへ進む。/g, "現行版で実機確認します。")
+    .replace(/短尺ループと説明クリップへ分割。/g, "短いループ動画と説明用クリップに分けます。")
+    .replace(/必要な動作だけ個別再生。/g, "必要な動作だけを個別に再生します。")
+    .replace(/左右各(\d+)回で成立、/g, "左右各$1回試し、成立可否、")
+    .replace(/CPU操作：オフ。/g, "CPU操作：オフ。")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+
+  if (field === "recording_instructions") {
+    result = result.replace(/^ダミー立ち、/g, "ダミーを立ち状態にし、");
+  }
+
+  return result;
 }
 
 export function localizeDifficulty(value: string | number | null) {
