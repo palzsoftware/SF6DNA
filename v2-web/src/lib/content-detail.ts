@@ -3,6 +3,7 @@ import {
   getDevicePreviewContentDetail,
   type DevicePreviewContentDetail,
 } from "@/lib/device-preview";
+import { localizeComboText, localizeDifficulty } from "@/lib/detail-localization";
 
 function configured() {
   return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
@@ -43,10 +44,10 @@ function previewVerificationLabel(record: Record<string, unknown>) {
 
 function previewReleaseRows(detail: DevicePreviewContentDetail): Array<[string, string | number | null]> {
   return [
-    ["公開状態", previewValue(detail.record, "status")],
-    ["検証状態", previewValue(detail.record, "verification_status")],
+    ["公開状態", localizeComboText(previewValue(detail.record, "status"))],
+    ["検証状態", localizeComboText(previewValue(detail.record, "verification_status"))],
     ["実機確認", previewVerificationLabel(detail.record)],
-    ["Patch", detail.patchLabel],
+    ["対応バージョン", detail.patchLabel],
   ];
 }
 
@@ -239,23 +240,24 @@ export async function getComboBySlug(slug: string, previewToken?: string | null)
   const preview = await getDevicePreviewContentDetail("combo", slug, previewToken);
   if (preview) {
     const data = preview.record;
+    const glossary = preview.moveGlossary ?? [];
     return {
       id: String(data.id),
       slug: String(data.slug),
       title: String(data.name),
-      summary: previewValue(data, "purpose") as string | null,
+      summary: localizeComboText(previewValue(data, "purpose"), glossary) as string | null,
       body: [
         ["キャラクター", preview.characterName],
         ...previewReleaseRows(preview),
-        ["入力", previewValue(data, "notation")],
-        ["始動", previewValue(data, "starter_text")],
+        ["入力", localizeComboText(previewValue(data, "notation"), glossary)],
+        ["始動", localizeComboText(previewValue(data, "starter_text"), glossary)],
         ["ダメージ", previewValue(data, "damage")],
         ["Dゲージ", previewValue(data, "drive_cost")],
         ["SA", previewValue(data, "sa_cost")],
-        ["位置", previewValue(data, "position")],
-        ["難易度", previewValue(data, "difficulty")],
-        ["条件", previewValue(data, "conditions")],
-        ["補足", previewValue(data, "notes")],
+        ["位置", localizeComboText(previewValue(data, "position"), glossary)],
+        ["難易度", localizeDifficulty(previewValue(data, "difficulty"))],
+        ["条件", localizeComboText(previewValue(data, "conditions"), glossary)],
+        ["補足", localizeComboText(previewValue(data, "notes"), glossary)],
       ],
       sources: preview.sources,
     };

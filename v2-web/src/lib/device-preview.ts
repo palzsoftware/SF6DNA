@@ -115,6 +115,10 @@ export type DevicePreviewContentDetail = {
   characterName: string | null;
   dummyCharacterName?: string | null;
   patchLabel: string | null;
+  moveGlossary?: Array<{
+    english: string;
+    japanese: string;
+  }>;
   sources: Array<{
     id: string;
     title: string;
@@ -206,11 +210,21 @@ export async function getDevicePreviewContentDetail(
   if (!isDevicePreviewRequest(previewToken)) return null;
 
   const supabase = getSupabaseServerClient();
-  const { data, error } = await supabase.rpc("get_phase39_content_detail_preview", {
-    target_entity_type: entityType,
-    target_entity_slug: slug,
-    preview_token: previewToken,
-  });
+  const [detailResult, glossaryResult] = await Promise.all([
+    supabase.rpc("get_phase39_content_detail_preview", {
+      target_entity_type: entityType,
+      target_entity_slug: slug,
+      preview_token: previewToken,
+    }),
+    entityType === "combo"
+      ? supabase.rpc("get_phase40_combo_move_glossary_preview", {
+          target_combo_slug: slug,
+          preview_token: previewToken,
+        })
+      : Promise.resolve({ data: null, error: null }),
+  ]);
+
+  const { data, error } = detailResult;
 
   if (error) {
     console.error("[device-preview] content detail preview failed", error.message);
@@ -220,6 +234,9 @@ export async function getDevicePreviewContentDetail(
   if (!data || typeof data !== "object" || Array.isArray(data)) return null;
   const detail = data as unknown as Partial<DevicePreviewContentDetail>;
   if (detail.entityType !== entityType || !detail.record || Array.isArray(detail.record)) return null;
+  if (!glossaryResult.error && Array.isArray(glossaryResult.data)) {
+    detail.moveGlossary = glossaryResult.data as unknown as DevicePreviewContentDetail["moveGlossary"];
+  }
   return detail as DevicePreviewContentDetail;
 }
 

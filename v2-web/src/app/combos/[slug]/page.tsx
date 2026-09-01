@@ -19,5 +19,5 @@ export default async function ComboPage({ params, searchParams }: DetailPageProp
   const previewToken = normalizeDevicePreviewToken(query.preview);
   const detail = await getComboBySlug(slug, previewToken);
   if (!detail) notFound();
-  return <SimpleDetailView detail={detail} eyebrow="COMBO" preview={isDevicePreviewRequest(previewToken)} />;
+  return <SimpleDetailView detail={detail} eyebrow="コンボ" preview={isDevicePreviewRequest(previewToken)} />;
 }

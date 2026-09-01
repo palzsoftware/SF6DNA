@@ -49,3 +49,22 @@ test("server refuses Preview RPCs outside Vercel Preview deployments", () => {
   assert.match(source, /process\.env\.VERCEL_ENV === "preview"/);
   assert.match(source, /get_phase39_content_detail_preview/);
 });
+
+test("Combo Preview localizes English display text from the official Move glossary", () => {
+  const localization = read("src/lib/detail-localization.ts");
+  const preview = read("src/lib/device-preview.ts");
+  const detail = read("src/lib/content-detail.ts");
+  const sql = read("../supabase/migrations/20260901_phase40_combo_japanese_glossary_preview.sql");
+
+  assert.match(sql, /security invoker/i);
+  assert.match(sql, /private\.is_phase23_device_preview\(\)/);
+  assert.match(sql, /join public\.moves/);
+  assert.match(sql, /join public\.move_aliases/);
+  assert.doesNotMatch(sql, /\binsert\s+into\b|\bupdate\s+public\.|\bdelete\s+from\b/i);
+  assert.match(preview, /get_phase40_combo_move_glossary_preview/);
+  assert.match(localization, /立ち/);
+  assert.match(localization, /しゃがみ/);
+  assert.match(localization, /ドライブラッシュ/);
+  assert.match(localization, /パニッシュカウンター/);
+  assert.match(detail, /localizeComboText\(previewValue\(data, "notation"\), glossary\)/);
+});
