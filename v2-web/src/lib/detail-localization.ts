@@ -126,6 +126,11 @@ const exactLabels: Record<string, string> = {
   "reversal and projectile interaction.": "無敵技と飛び道具の相互作用を確認してください。",
   "scaling and missing normals.": "補正と不足している通常技を確認してください。",
   "simple-input scaling separate.": "簡易入力補正は別項目で確認してください。",
+  "knockdown with raw dr reach": "生ドライブラッシュが届くダウン後",
+  "block advantage claim": "ガード時有利フレームの資料記載値",
+  "written spacing rule; every branch needs current capture before verification.": "文章資料に記載された間合い別ルールです。各択は検証前に現行版の実機撮影が必要です。",
+  "gap by strength": "強度別の隙間",
+  "typhoon after plus": "有利状況からタイフーン",
 };
 
 const phraseLabels: Array<[string, string]> = [
@@ -159,6 +164,9 @@ const phraseLabels: Array<[string, string]> = [
   ["safe jump", "詐欺飛び"],
   ["meaty", "持続重ね"],
   ["forward jump attack", "前ジャンプ攻撃"],
+  ["Guillotines", "ギロチン"],
+  ["Guillotine", "ギロチン"],
+  ["Typhoon", "タイフーン"],
   ["two guarded", "2回ガードした"],
   ["guarded", "ガード後の"],
   ["blocked", "ガードした"],
@@ -341,6 +349,7 @@ export function localizeComboText(value: string | number | null, glossary: MoveG
   result = result
     .replace(/\bj\.([LMH])([PK])\b/gi, (_, strength: string, button: string) => `ジャンプ${strengthLabels[strength.toUpperCase()]}${button.toUpperCase()}`)
     .replace(/\b([1-9])([LMH])([PK])\b/g, (_, direction: string, strength: string, button: string) => `${directionLabels[direction]}${strengthLabels[strength]}${button}`)
+    .replace(/\b([LMH])DP\b/g, (_, strength: string) => `${strengthLabels[strength]}昇龍系必殺技`)
     .replace(/\b([LMH])([PK])\b/g, (_, strength: string, button: string) => `${strengthLabels[strength]}${button}`)
     .replace(/\b([1-9])([LMH])\b/g, (_, direction: string, strength: string) => `${directionLabels[direction]}${strengthLabels[strength]}攻撃`)
     .replace(/\bAssist ([LMH])\b/gi, (_, strength: string) => `アシスト${strengthLabels[strength.toUpperCase()]}`)
