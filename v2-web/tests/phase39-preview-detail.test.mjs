@@ -217,4 +217,12 @@ test("Training Preview localizes internal codes and English settings without cha
     localization.localizeTrainingText("next_step", "成立ならverified候補。不成立ならarchived。"),
     "成立した場合は検証候補にし、不成立ならアーカイブします。"
   );
+  assert.equal(
+    localization.localizeTrainingText("purpose", "文章・画像から収集した攻略の2026-08-03版成立を確定する。"),
+    "文章・画像で確認した内容が、2026.08.03版でも成立するか確認します。"
+  );
+  assert.equal(
+    localization.localizeTrainingText("playback_settings", "4F、ジャンプ、バクステ、パリィ、Dリバ、DI、無敵を必要時に録画。"),
+    "4F技、ジャンプ、バックステップ、パリィ、ドライブリバーサル、ドライブインパクト、無敵技を必要に応じて録画します。"
+  );
 });
