@@ -67,6 +67,14 @@ test("Move Preview detail remains token-gated, invoker-only, and read-only", () 
   assert.doesNotMatch(sql, /\binsert\s+into\b|\bupdate\s+public\.|\bdelete\s+from\b/i);
 });
 
+test("Move motion media Preview can evaluate its public RLS helper", () => {
+  const sql = read("../supabase/migrations/20260901_phase44_move_motion_media_preview_permission.sql");
+
+  assert.match(sql, /grant execute on function private\.is_move_motion_media_public_ready\(uuid\)/i);
+  assert.match(sql, /to anon, authenticated, service_role/i);
+  assert.doesNotMatch(sql, /\binsert\s+into\b|\bupdate\s+public\.|\bdelete\s+from\b/i);
+});
+
 test("Move detail route forwards Preview token without weakening the public gate", () => {
   const page = read("src/app/moves/[slug]/page.tsx");
   const preview = read("src/lib/device-preview.ts");
