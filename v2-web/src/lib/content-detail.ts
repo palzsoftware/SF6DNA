@@ -312,7 +312,7 @@ export async function getSetupBySlug(slug: string, previewToken?: string | null)
         ["種類", localizeComboText(previewValue(data, "setup_type"), glossary)],
         ["始動条件", localizeComboText(previewValue(data, "starter_condition"), glossary)],
         ["手順", localizeComboText(previewValue(data, "sequence_text"), glossary)],
-        ["有利F", previewValue(data, "frame_advantage")],
+        ["有利F", localizeComboText(previewValue(data, "frame_advantage"), glossary)],
         ["位置", localizeComboText(previewValue(data, "position"), glossary)],
         ["ゲージ条件", localizeComboText(previewValue(data, "meter_condition"), glossary)],
         ["対策メモ", localizeComboText(previewValue(data, "counter_notes"), glossary)],

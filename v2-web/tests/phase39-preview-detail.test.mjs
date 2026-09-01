@@ -83,6 +83,7 @@ test("Setup and Sequence Preview reuse the guarded Japanese Move glossary", () =
   assert.doesNotMatch(sql, /\binsert\s+into\b|\bupdate\s+public\.|\bdelete\s+from\b/i);
   assert.match(preview, /get_phase41_strategy_move_glossary_preview/);
   assert.match(detail, /localizeComboText\(previewValue\(data, "starter_condition"\), glossary\)/);
+  assert.match(detail, /localizeComboText\(previewValue\(data, "frame_advantage"\), glossary\)/);
   assert.match(detail, /localizeComboText\(previewValue\(data, "sequence_text"\), glossary\)/);
   assert.match(detail, /localizeComboText\(previewValue\(data, "mash_point"\), glossary\)/);
   assert.match(setupPage, /eyebrow="セットプレイ"/);
