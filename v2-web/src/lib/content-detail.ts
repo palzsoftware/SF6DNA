@@ -1,4 +1,8 @@
 import { getSupabaseServerClient } from "@/lib/supabase/server";
+import {
+  getDevicePreviewContentDetail,
+  type DevicePreviewContentDetail,
+} from "@/lib/device-preview";
 
 function configured() {
   return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
@@ -21,6 +25,30 @@ export type SimpleDetail = {
   body: Array<[string, string | number | null]>;
   sources?: DetailSource[];
 };
+
+function previewValue(record: Record<string, unknown>, key: string): string | number | null {
+  const value = record[key];
+  if (typeof value === "string" || typeof value === "number") return value;
+  return null;
+}
+
+function previewBoolean(record: Record<string, unknown>, key: string): boolean | null {
+  const value = record[key];
+  return typeof value === "boolean" ? value : null;
+}
+
+function previewVerificationLabel(record: Record<string, unknown>) {
+  return previewValue(record, "verification_status") === "verified" ? "確認済み" : "撮影・実機確認待ち";
+}
+
+function previewReleaseRows(detail: DevicePreviewContentDetail): Array<[string, string | number | null]> {
+  return [
+    ["公開状態", previewValue(detail.record, "status")],
+    ["検証状態", previewValue(detail.record, "verification_status")],
+    ["実機確認", previewVerificationLabel(detail.record)],
+    ["Patch", detail.patchLabel],
+  ];
+}
 
 type SourceLinkRow = {
   relationship?: string | null;
@@ -206,8 +234,32 @@ export async function getMoveBySlug(slug: string): Promise<SimpleDetail | null> 
   };
 }
 
-export async function getComboBySlug(slug: string): Promise<SimpleDetail | null> {
+export async function getComboBySlug(slug: string, previewToken?: string | null): Promise<SimpleDetail | null> {
   if (!configured()) return null;
+  const preview = await getDevicePreviewContentDetail("combo", slug, previewToken);
+  if (preview) {
+    const data = preview.record;
+    return {
+      id: String(data.id),
+      slug: String(data.slug),
+      title: String(data.name),
+      summary: previewValue(data, "purpose") as string | null,
+      body: [
+        ["キャラクター", preview.characterName],
+        ...previewReleaseRows(preview),
+        ["入力", previewValue(data, "notation")],
+        ["始動", previewValue(data, "starter_text")],
+        ["ダメージ", previewValue(data, "damage")],
+        ["Dゲージ", previewValue(data, "drive_cost")],
+        ["SA", previewValue(data, "sa_cost")],
+        ["位置", previewValue(data, "position")],
+        ["難易度", previewValue(data, "difficulty")],
+        ["条件", previewValue(data, "conditions")],
+        ["補足", previewValue(data, "notes")],
+      ],
+      sources: preview.sources,
+    };
+  }
   const supabase = getSupabaseServerClient();
   const { data, error } = await supabase
     .from("combos")
@@ -241,8 +293,30 @@ export async function getComboBySlug(slug: string): Promise<SimpleDetail | null>
   };
 }
 
-export async function getSetupBySlug(slug: string): Promise<SimpleDetail | null> {
+export async function getSetupBySlug(slug: string, previewToken?: string | null): Promise<SimpleDetail | null> {
   if (!configured()) return null;
+  const preview = await getDevicePreviewContentDetail("setup", slug, previewToken);
+  if (preview) {
+    const data = preview.record;
+    return {
+      id: String(data.id),
+      slug: String(data.slug),
+      title: String(data.name),
+      summary: previewValue(data, "description") as string | null,
+      body: [
+        ["キャラクター", preview.characterName],
+        ...previewReleaseRows(preview),
+        ["種類", previewValue(data, "setup_type")],
+        ["始動条件", previewValue(data, "starter_condition")],
+        ["手順", previewValue(data, "sequence_text")],
+        ["有利F", previewValue(data, "frame_advantage")],
+        ["位置", previewValue(data, "position")],
+        ["ゲージ条件", previewValue(data, "meter_condition")],
+        ["対策メモ", previewValue(data, "counter_notes")],
+      ],
+      sources: preview.sources,
+    };
+  }
   const supabase = getSupabaseServerClient();
   const { data, error } = await supabase
     .from("setups")
@@ -274,8 +348,35 @@ export async function getSetupBySlug(slug: string): Promise<SimpleDetail | null>
   };
 }
 
-export async function getSequenceBySlug(slug: string): Promise<SimpleDetail | null> {
+export async function getSequenceBySlug(slug: string, previewToken?: string | null): Promise<SimpleDetail | null> {
   if (!configured()) return null;
+  const preview = await getDevicePreviewContentDetail("sequence", slug, previewToken);
+  if (preview) {
+    const data = preview.record;
+    const trueBlockstring = previewBoolean(data, "is_true_blockstring");
+    return {
+      id: String(data.id),
+      slug: String(data.slug),
+      title: String(data.name),
+      summary: previewValue(data, "notes") as string | null,
+      body: [
+        ["キャラクター", preview.characterName],
+        ...previewReleaseRows(preview),
+        ["種類", previewValue(data, "sequence_type")],
+        ["連携", previewValue(data, "sequence_text")],
+        ["連続ガード", trueBlockstring === true ? "はい" : trueBlockstring === false ? "いいえ" : null],
+        ["暴れどころ", previewValue(data, "mash_point")],
+        ["投げ択", previewValue(data, "throw_point")],
+        ["シミー", previewValue(data, "shimmy_point")],
+        ["ジャンプ", previewValue(data, "jump_option")],
+        ["パリィ", previewValue(data, "parry_option")],
+        ["Dリバーサル", previewValue(data, "drive_reversal_option")],
+        ["無敵技", previewValue(data, "invincible_option")],
+        ["補足", previewValue(data, "notes")],
+      ],
+      sources: preview.sources,
+    };
+  }
   const supabase = getSupabaseServerClient();
   const { data, error } = await supabase
     .from("sequences")
@@ -341,8 +442,34 @@ export async function getCounterBySlug(slug: string): Promise<SimpleDetail | nul
   };
 }
 
-export async function getTrainingBySlug(slug: string): Promise<SimpleDetail | null> {
+export async function getTrainingBySlug(slug: string, previewToken?: string | null): Promise<SimpleDetail | null> {
   if (!configured()) return null;
+  const preview = await getDevicePreviewContentDetail("training", slug, previewToken);
+  if (preview) {
+    const data = preview.record;
+    return {
+      id: String(data.id),
+      slug: String(data.slug),
+      title: String(data.name),
+      summary: previewValue(data, "purpose") as string | null,
+      body: [
+        ["操作キャラクター", preview.characterName],
+        ["ダミー", preview.dummyCharacterName ?? null],
+        ...previewReleaseRows(preview),
+        ["種類", previewValue(data, "training_type")],
+        ["レベル", previewValue(data, "level")],
+        ["目安時間", previewValue(data, "duration_minutes")],
+        ["録画", previewValue(data, "recording_instructions")],
+        ["再生設定", previewValue(data, "playback_settings")],
+        ["CPU設定", previewValue(data, "cpu_settings")],
+        ["方法", previewValue(data, "method")],
+        ["成功条件", previewValue(data, "success_criteria")],
+        ["回数", previewValue(data, "recommended_reps")],
+        ["次の練習", previewValue(data, "next_step")],
+      ],
+      sources: preview.sources,
+    };
+  }
   const supabase = getSupabaseServerClient();
   const { data, error } = await supabase
     .from("trainings")

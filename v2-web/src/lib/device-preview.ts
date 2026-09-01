@@ -107,6 +107,24 @@ export type DevicePreviewMoveMotionMedia = {
   displayOrder: number | null;
 };
 
+export type DevicePreviewContentType = "combo" | "setup" | "sequence" | "training";
+
+export type DevicePreviewContentDetail = {
+  entityType: DevicePreviewContentType;
+  record: Record<string, unknown>;
+  characterName: string | null;
+  dummyCharacterName?: string | null;
+  patchLabel: string | null;
+  sources: Array<{
+    id: string;
+    title: string;
+    url: string;
+    publisher: string | null;
+    sourceType: string;
+    relationship: string;
+  }>;
+};
+
 export function normalizeDevicePreviewToken(value: string | string[] | undefined): string | null {
   const token = Array.isArray(value) ? value[0] : value;
   if (!token || token.length < 20 || token.length > 200) return null;
@@ -178,6 +196,31 @@ export async function getDevicePreviewMoveMotionMedia(
 
   if (!Array.isArray(data)) return [];
   return data as unknown as DevicePreviewMoveMotionMedia[];
+}
+
+export async function getDevicePreviewContentDetail(
+  entityType: DevicePreviewContentType,
+  slug: string,
+  previewToken: string | null | undefined
+): Promise<DevicePreviewContentDetail | null> {
+  if (!isDevicePreviewRequest(previewToken)) return null;
+
+  const supabase = getSupabaseServerClient();
+  const { data, error } = await supabase.rpc("get_phase39_content_detail_preview", {
+    target_entity_type: entityType,
+    target_entity_slug: slug,
+    preview_token: previewToken,
+  });
+
+  if (error) {
+    console.error("[device-preview] content detail preview failed", error.message);
+    return null;
+  }
+
+  if (!data || typeof data !== "object" || Array.isArray(data)) return null;
+  const detail = data as unknown as Partial<DevicePreviewContentDetail>;
+  if (detail.entityType !== entityType || !detail.record || Array.isArray(detail.record)) return null;
+  return detail as DevicePreviewContentDetail;
 }
 
 export function appendDevicePreviewToken(href: string, previewToken: string | null | undefined) {
