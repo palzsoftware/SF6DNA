@@ -179,3 +179,42 @@ test("Counter detail Preview remains token-gated and keeps draft data unpublishe
   assert.match(page, /eyebrow="キャラ対策"/);
   assert.match(page, /preview=\{isDevicePreviewRequest\(previewToken\)\}/);
 });
+
+test("Training Preview localizes internal codes and English settings without changing source rows", () => {
+  const sql = read("../supabase/migrations/20260901_phase43_training_japanese_preview.sql");
+  const preview = read("src/lib/device-preview.ts");
+  const detail = read("src/lib/content-detail.ts");
+  const sections = read("src/lib/character-sections.ts");
+  const localization = loadLocalizationModule();
+
+  assert.match(sql, /private\.is_phase23_device_preview\(\)/);
+  assert.match(sql, /security invoker/i);
+  assert.match(sql, /c\.status = 'published'/);
+  assert.match(sql, /c\.is_playable = true/);
+  assert.match(sql, /revoke all on function[\s\S]*from public/i);
+  assert.match(sql, /revoke all on function[\s\S]*from authenticated/i);
+  assert.match(sql, /grant execute on function[\s\S]*to anon/i);
+  assert.doesNotMatch(sql, /\binsert\s+into\b|\bupdate\s+public\.|\bdelete\s+from\b/i);
+  assert.match(preview, /get_phase43_character_move_glossary_preview/);
+  assert.match(detail, /localizeTrainingType/);
+  assert.match(detail, /localizeTrainingLevel/);
+  assert.match(detail, /localizeTrainingText/);
+  assert.match(sections, /localizeTrainingText/);
+
+  assert.equal(localization.localizeTrainingType("combo_retest"), "コンボの実機確認");
+  assert.equal(localization.localizeTrainingType("pressure_retest"), "連携の実機確認");
+  assert.equal(localization.localizeTrainingType("instructional_media"), "初心者向け解説素材");
+  assert.equal(localization.localizeTrainingLevel("advanced"), "上級者向け");
+  assert.equal(
+    localization.localizeTrainingText("playback_settings", "Frame Meter ON。"),
+    "フレームメーター：オン。"
+  );
+  assert.equal(
+    localization.localizeTrainingText("recording_instructions", "ダミー立ち、Guard OFF。"),
+    "ダミーを立ち状態にし、ガード：オフ。"
+  );
+  assert.equal(
+    localization.localizeTrainingText("next_step", "成立ならverified候補。不成立ならarchived。"),
+    "成立した場合は検証候補にし、不成立ならアーカイブします。"
+  );
+});

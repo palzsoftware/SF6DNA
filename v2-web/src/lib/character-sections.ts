@@ -1,10 +1,11 @@
-import { getDevicePreviewBundle } from "@/lib/device-preview";
+import { getDevicePreviewBundle, getDevicePreviewCharacterMoveGlossary } from "@/lib/device-preview";
 import {
   localizeComboText,
   localizeCounterText,
   localizeSetupDetail,
   localizeSetupType,
   localizeSequenceType,
+  localizeTrainingText,
 } from "@/lib/detail-localization";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import { isMovePublicReady } from "@/lib/public-move-gate";
@@ -39,6 +40,9 @@ export async function listCharacterSectionItems(
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) return [];
   const supabase = getSupabaseServerClient();
   const previewBundle = await getDevicePreviewBundle(characterId, previewToken);
+  const trainingGlossary = previewBundle && section === "training"
+    ? await getDevicePreviewCharacterMoveGlossary(characterId, previewToken)
+    : [];
 
   if (previewBundle) {
     if (section === "moves") {
@@ -115,8 +119,8 @@ export async function listCharacterSectionItems(
     if (section === "training") {
       return previewBundle.training.map((row) => ({
         id: row.id,
-        title: row.name,
-        subtitle: row.purpose,
+        title: String(localizeTrainingText("name", row.name, trainingGlossary)),
+        subtitle: localizeTrainingText("purpose", row.purpose, trainingGlossary) as string | null,
         href: `/training/${row.slug}`,
         meta: previewMeta(row.status, row.verificationStatus, [
           row.trainingType,
@@ -231,7 +235,7 @@ export async function listCharacterSectionItems(
       .limit(100);
     if (error) return fail(section, error.message);
     return (data ?? []).map((row) => ({
-      id: String(row.id), title: String(row.name), subtitle: row.purpose ?? null, href: `/training/${row.slug}`,
+      id: String(row.id), title: String(localizeTrainingText("name", row.name)), subtitle: localizeTrainingText("purpose", row.purpose ?? null) as string | null, href: `/training/${row.slug}`,
       meta: [row.training_type, row.level, row.duration_minutes ? `${row.duration_minutes}分` : null].filter(Boolean).join(" / ") || null,
     }));
   }

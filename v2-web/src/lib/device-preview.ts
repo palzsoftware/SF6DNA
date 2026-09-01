@@ -130,6 +130,11 @@ export type DevicePreviewContentDetail = {
   }>;
 };
 
+export type DevicePreviewMoveGlossaryEntry = {
+  english: string;
+  japanese: string;
+};
+
 export function normalizeDevicePreviewToken(value: string | string[] | undefined): string | null {
   const token = Array.isArray(value) ? value[0] : value;
   if (!token || token.length < 20 || token.length > 200) return null;
@@ -159,6 +164,27 @@ export async function getDevicePreviewBundle(
 
   if (!data || typeof data !== "object" || Array.isArray(data)) return null;
   return data as unknown as DevicePreviewBundle;
+}
+
+export async function getDevicePreviewCharacterMoveGlossary(
+  characterId: string | null | undefined,
+  previewToken: string | null | undefined
+): Promise<DevicePreviewMoveGlossaryEntry[]> {
+  if (!characterId || !isDevicePreviewRequest(previewToken)) return [];
+
+  const supabase = getSupabaseServerClient();
+  const { data, error } = await supabase.rpc("get_phase43_character_move_glossary_preview", {
+    target_character_id: characterId,
+    preview_token: previewToken,
+  });
+
+  if (error) {
+    console.error("[device-preview] character move glossary failed", error.message);
+    return [];
+  }
+
+  if (!Array.isArray(data)) return [];
+  return data as unknown as DevicePreviewMoveGlossaryEntry[];
 }
 
 export async function getDevicePreviewMoveCommands(

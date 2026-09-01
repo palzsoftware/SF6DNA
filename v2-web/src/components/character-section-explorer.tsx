@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { localizeTrainingType } from "@/lib/detail-localization";
 import { appendDevicePreviewToken } from "@/lib/device-preview";
 import type { CharacterSectionItem } from "@/lib/character-sections";
 import styles from "./character-section-explorer.module.css";
@@ -95,7 +96,10 @@ function difficulty(item: CharacterSectionItem) {
 
 function localizedType(section: ExplorerSection, type: string) {
   const source = section === "matchups" ? counterTypes : trainingTypes;
-  return source.find(([key]) => key === type)?.[1] ?? type.replaceAll("_", " ");
+  const listed = source.find(([key]) => key === type)?.[1];
+  if (listed) return listed;
+  if (section === "training") return String(localizeTrainingType(type));
+  return type.replaceAll("_", " ");
 }
 
 function localizedLevel(level: string) {
