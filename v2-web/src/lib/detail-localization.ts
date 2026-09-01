@@ -58,6 +58,7 @@ const exactLabels: Record<string, string> = {
 const phraseLabels: Array<[string, string]> = [
   ["Written/image-only collection; current capture required.", "文章・画像から収集。現行版での撮影確認が必要です。"],
   ["PCラッシュ", "パニッシュカウンター・ラッシュ"],
+  ["M DI", "モダン ドライブインパクト"],
   ["blocked Drive Reversal", "ドライブリバーサルをガード"],
   ["Drive Reversal punish", "ドライブリバーサルへの確定反撃"],
   ["diagonal jump/air special", "斜めジャンプ／空中必殺技"],
@@ -200,6 +201,7 @@ export function localizeComboText(value: string | number | null, glossary: MoveG
     .replace(/\bCH\b/g, "カウンターヒット")
     .replace(/\bModern\b/gi, "モダン")
     .replace(/^M(?=[^\sA-Za-z])/, "モダン")
+    .replace(/\b([LMH])\b/g, (_, strength: string) => strengthLabels[strength])
     .replace(/\b([LMH]) (?=[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}])/gu, (_, strength: string) => `${strengthLabels[strength]} `)
     .replace(/\s*>\s*/g, " → ")
     .replace(/\s*\/\s*/g, "／")
