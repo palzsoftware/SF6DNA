@@ -1,6 +1,14 @@
 import type { SimpleDetail } from "@/lib/content-detail";
 
-export function SimpleDetailView({ detail, eyebrow }: { detail: SimpleDetail; eyebrow: string }) {
+export function SimpleDetailView({
+  detail,
+  eyebrow,
+  preview = false,
+}: {
+  detail: SimpleDetail;
+  eyebrow: string;
+  preview?: boolean;
+}) {
   const rows = detail.body.filter(([, value]) => value !== null && value !== "");
   return (
     <div className="site-shell page-stack">
@@ -9,6 +17,12 @@ export function SimpleDetailView({ detail, eyebrow }: { detail: SimpleDetail; ey
         <h1>{detail.title}</h1>
         {detail.summary ? <p>{detail.summary}</p> : null}
       </section>
+      {preview ? (
+        <section className="data-notice character-preview-notice">
+          <strong>実機確認プレビュー</strong>
+          <p>未公開データの確認画面です。表示している項目は公開済みとは限らず、DBの公開状態も変更していません。</p>
+        </section>
+      ) : null}
       <section className="info-panel">
         <dl className="detail-list">
           {rows.map(([label, value]) => (

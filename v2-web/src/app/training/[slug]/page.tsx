@@ -1,6 +1,12 @@
 import { notFound } from "next/navigation";
 import { SimpleDetailView } from "@/components/simple-detail";
 import { getTrainingBySlug } from "@/lib/content-detail";
+import { isDevicePreviewRequest, normalizeDevicePreviewToken } from "@/lib/device-preview";
+
+type DetailPageProps = {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ preview?: string | string[] }>;
+};
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -8,9 +14,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return { title: detail?.title ?? "トレーニング", description: detail?.summary ?? undefined };
 }
 
-export default async function TrainingDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const detail = await getTrainingBySlug(slug);
+export default async function TrainingDetailPage({ params, searchParams }: DetailPageProps) {
+  const [{ slug }, query] = await Promise.all([params, searchParams]);
+  const previewToken = normalizeDevicePreviewToken(query.preview);
+  const detail = await getTrainingBySlug(slug, previewToken);
   if (!detail) notFound();
-  return <SimpleDetailView detail={detail} eyebrow="TRAINING" />;
+  return <SimpleDetailView detail={detail} eyebrow="TRAINING" preview={isDevicePreviewRequest(previewToken)} />;
 }
