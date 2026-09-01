@@ -19,5 +19,5 @@ export default async function SequencePage({ params, searchParams }: DetailPageP
   const previewToken = normalizeDevicePreviewToken(query.preview);
   const detail = await getSequenceBySlug(slug, previewToken);
   if (!detail) notFound();
-  return <SimpleDetailView detail={detail} eyebrow="SEQUENCE" preview={isDevicePreviewRequest(previewToken)} />;
+  return <SimpleDetailView detail={detail} eyebrow="連携" preview={isDevicePreviewRequest(previewToken)} />;
 }

@@ -61,11 +61,30 @@ test("Combo Preview localizes English display text from the official Move glossa
   assert.match(sql, /join public\.moves/);
   assert.match(sql, /join public\.move_aliases/);
   assert.doesNotMatch(sql, /\binsert\s+into\b|\bupdate\s+public\.|\bdelete\s+from\b/i);
-  assert.match(preview, /get_phase40_combo_move_glossary_preview/);
+  assert.match(preview, /get_phase41_strategy_move_glossary_preview/);
   assert.match(localization, /立ち/);
   assert.match(localization, /しゃがみ/);
   assert.match(localization, /ドライブラッシュ/);
   assert.match(localization, /パニッシュカウンター/);
   assert.match(detail, /localizeComboText\(previewValue\(data, "notation"\), glossary\)/);
   assert.match(detail, /title: localizeComboText\(String\(data\.name\), glossary\)/);
+});
+
+test("Setup and Sequence Preview reuse the guarded Japanese Move glossary", () => {
+  const preview = read("src/lib/device-preview.ts");
+  const detail = read("src/lib/content-detail.ts");
+  const setupPage = read("src/app/setups/[slug]/page.tsx");
+  const sequencePage = read("src/app/sequences/[slug]/page.tsx");
+  const sql = read("../supabase/migrations/20260901_phase41_strategy_japanese_glossary_preview.sql");
+
+  assert.match(sql, /security invoker/i);
+  assert.match(sql, /private\.is_phase23_device_preview\(\)/);
+  assert.match(sql, /target_entity_type not in \('combo', 'setup', 'sequence'\)/);
+  assert.doesNotMatch(sql, /\binsert\s+into\b|\bupdate\s+public\.|\bdelete\s+from\b/i);
+  assert.match(preview, /get_phase41_strategy_move_glossary_preview/);
+  assert.match(detail, /localizeComboText\(previewValue\(data, "starter_condition"\), glossary\)/);
+  assert.match(detail, /localizeComboText\(previewValue\(data, "sequence_text"\), glossary\)/);
+  assert.match(detail, /localizeComboText\(previewValue\(data, "mash_point"\), glossary\)/);
+  assert.match(setupPage, /eyebrow="セットプレイ"/);
+  assert.match(sequencePage, /eyebrow="連携"/);
 });

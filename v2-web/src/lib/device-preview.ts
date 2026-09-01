@@ -216,9 +216,10 @@ export async function getDevicePreviewContentDetail(
       target_entity_slug: slug,
       preview_token: previewToken,
     }),
-    entityType === "combo"
-      ? supabase.rpc("get_phase40_combo_move_glossary_preview", {
-          target_combo_slug: slug,
+    entityType === "combo" || entityType === "setup" || entityType === "sequence"
+      ? supabase.rpc("get_phase41_strategy_move_glossary_preview", {
+          target_entity_type: entityType,
+          target_entity_slug: slug,
           preview_token: previewToken,
         })
       : Promise.resolve({ data: null, error: null }),
