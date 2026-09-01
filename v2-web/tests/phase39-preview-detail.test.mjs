@@ -67,4 +67,5 @@ test("Combo Preview localizes English display text from the official Move glossa
   assert.match(localization, /ドライブラッシュ/);
   assert.match(localization, /パニッシュカウンター/);
   assert.match(detail, /localizeComboText\(previewValue\(data, "notation"\), glossary\)/);
+  assert.match(detail, /title: localizeComboText\(String\(data\.name\), glossary\)/);
 });

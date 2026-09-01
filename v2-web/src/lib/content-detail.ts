@@ -244,7 +244,7 @@ export async function getComboBySlug(slug: string, previewToken?: string | null)
     return {
       id: String(data.id),
       slug: String(data.slug),
-      title: String(data.name),
+      title: localizeComboText(String(data.name), glossary) as string,
       summary: localizeComboText(previewValue(data, "purpose"), glossary) as string | null,
       body: [
         ["キャラクター", preview.characterName],
