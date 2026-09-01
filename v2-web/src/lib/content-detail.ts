@@ -3,7 +3,17 @@ import {
   getDevicePreviewContentDetail,
   type DevicePreviewContentDetail,
 } from "@/lib/device-preview";
-import { localizeComboText, localizeDifficulty } from "@/lib/detail-localization";
+import {
+  localizeBlockstring,
+  localizeComboText,
+  localizeCounterType,
+  localizeCounterText,
+  localizeDifficulty,
+  localizeSetupDetail,
+  localizeSetupType,
+  localizeSequenceDetail,
+  localizeSequenceType,
+} from "@/lib/detail-localization";
 
 function configured() {
   return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
@@ -305,17 +315,17 @@ export async function getSetupBySlug(slug: string, previewToken?: string | null)
       id: String(data.id),
       slug: String(data.slug),
       title: localizeComboText(String(data.name), glossary) as string,
-      summary: localizeComboText(previewValue(data, "description"), glossary) as string | null,
+      summary: localizeSetupDetail("description", previewValue(data, "description"), glossary) as string | null,
       body: [
         ["キャラクター", preview.characterName],
         ...previewReleaseRows(preview),
-        ["種類", localizeComboText(previewValue(data, "setup_type"), glossary)],
-        ["始動条件", localizeComboText(previewValue(data, "starter_condition"), glossary)],
-        ["手順", localizeComboText(previewValue(data, "sequence_text"), glossary)],
-        ["有利F", localizeComboText(previewValue(data, "frame_advantage"), glossary)],
-        ["位置", localizeComboText(previewValue(data, "position"), glossary)],
-        ["ゲージ条件", localizeComboText(previewValue(data, "meter_condition"), glossary)],
-        ["対策メモ", localizeComboText(previewValue(data, "counter_notes"), glossary)],
+        ["種類", localizeSetupType(previewValue(data, "setup_type"))],
+        ["始動条件", localizeSetupDetail("starter_condition", previewValue(data, "starter_condition"), glossary)],
+        ["手順", localizeSetupDetail("sequence_text", previewValue(data, "sequence_text"), glossary)],
+        ["フレーム状況", localizeSetupDetail("frame_advantage", previewValue(data, "frame_advantage"), glossary)],
+        ["位置", localizeSetupDetail("position", previewValue(data, "position"), glossary)],
+        ["ゲージ条件", localizeSetupDetail("meter_condition", previewValue(data, "meter_condition"), glossary)],
+        ["対策メモ", localizeSetupDetail("counter_notes", previewValue(data, "counter_notes"), glossary)],
       ],
       sources: preview.sources,
     };
@@ -334,18 +344,18 @@ export async function getSetupBySlug(slug: string, previewToken?: string | null)
   return {
     id: String(data.id),
     slug: String(data.slug),
-    title: String(data.name),
-    summary: data.description ?? null,
+    title: localizeComboText(String(data.name)) as string,
+    summary: localizeSetupDetail("description", data.description ?? null) as string | null,
     body: [
       ["キャラクター", c?.name_ja ?? null],
       ...release.body,
-      ["種類", data.setup_type ?? null],
-      ["始動条件", data.starter_condition ?? null],
-      ["手順", data.sequence_text ?? null],
-      ["有利F", data.frame_advantage ?? null],
-      ["位置", data.position ?? null],
-      ["ゲージ条件", data.meter_condition ?? null],
-      ["対策メモ", data.counter_notes ?? null],
+      ["種類", localizeSetupType(data.setup_type ?? null)],
+      ["始動条件", localizeSetupDetail("starter_condition", data.starter_condition ?? null)],
+      ["手順", localizeSetupDetail("sequence_text", data.sequence_text ?? null)],
+      ["フレーム状況", localizeSetupDetail("frame_advantage", data.frame_advantage ?? null)],
+      ["位置", localizeSetupDetail("position", data.position ?? null)],
+      ["ゲージ条件", localizeSetupDetail("meter_condition", data.meter_condition ?? null)],
+      ["対策メモ", localizeSetupDetail("counter_notes", data.counter_notes ?? null)],
     ],
     sources: release.sources,
   };
@@ -366,17 +376,16 @@ export async function getSequenceBySlug(slug: string, previewToken?: string | nu
       body: [
         ["キャラクター", preview.characterName],
         ...previewReleaseRows(preview),
-        ["種類", localizeComboText(previewValue(data, "sequence_type"), glossary)],
+        ["種類", localizeSequenceType(previewValue(data, "sequence_type"))],
         ["連携", localizeComboText(previewValue(data, "sequence_text"), glossary)],
-        ["連続ガード", trueBlockstring === true ? "はい" : trueBlockstring === false ? "いいえ" : null],
-        ["暴れどころ", localizeComboText(previewValue(data, "mash_point"), glossary)],
-        ["投げ択", localizeComboText(previewValue(data, "throw_point"), glossary)],
-        ["シミー", localizeComboText(previewValue(data, "shimmy_point"), glossary)],
-        ["ジャンプ", localizeComboText(previewValue(data, "jump_option"), glossary)],
-        ["パリィ", localizeComboText(previewValue(data, "parry_option"), glossary)],
-        ["Dリバーサル", localizeComboText(previewValue(data, "drive_reversal_option"), glossary)],
-        ["無敵技", localizeComboText(previewValue(data, "invincible_option"), glossary)],
-        ["補足", localizeComboText(previewValue(data, "notes"), glossary)],
+        ["ガード時の状態", localizeBlockstring(trueBlockstring)],
+        ["割り込み", localizeSequenceDetail("mash_point", previewValue(data, "mash_point"), glossary)],
+        ["投げ択", localizeSequenceDetail("throw_point", previewValue(data, "throw_point"), glossary)],
+        ["シミー／様子見", localizeSequenceDetail("shimmy_point", previewValue(data, "shimmy_point"), glossary)],
+        ["ジャンプへの対応", localizeSequenceDetail("jump_option", previewValue(data, "jump_option"), glossary)],
+        ["パリィへの対応", localizeSequenceDetail("parry_option", previewValue(data, "parry_option"), glossary)],
+        ["ドライブリバーサルへの対応", localizeSequenceDetail("drive_reversal_option", previewValue(data, "drive_reversal_option"), glossary)],
+        ["無敵技への対応", localizeSequenceDetail("invincible_option", previewValue(data, "invincible_option"), glossary)],
       ],
       sources: preview.sources,
     };
@@ -395,33 +404,56 @@ export async function getSequenceBySlug(slug: string, previewToken?: string | nu
   return {
     id: String(data.id),
     slug: String(data.slug),
-    title: String(data.name),
-    summary: data.notes ?? null,
+    title: localizeComboText(String(data.name)) as string,
+    summary: localizeComboText(data.notes ?? null) as string | null,
     body: [
       ["キャラクター", c?.name_ja ?? null],
       ...release.body,
-      ["種類", data.sequence_type ?? null],
-      ["連携", data.sequence_text ?? null],
-      ["連続ガード", data.is_true_blockstring === true ? "はい" : data.is_true_blockstring === false ? "いいえ" : null],
-      ["暴れどころ", data.mash_point ?? null],
-      ["投げ択", data.throw_point ?? null],
-      ["シミー", data.shimmy_point ?? null],
-      ["ジャンプ", data.jump_option ?? null],
-      ["パリィ", data.parry_option ?? null],
-      ["Dリバーサル", data.drive_reversal_option ?? null],
-      ["無敵技", data.invincible_option ?? null],
-      ["補足", data.notes ?? null],
+      ["種類", localizeSequenceType(data.sequence_type ?? null)],
+      ["連携", localizeComboText(data.sequence_text ?? null)],
+      ["ガード時の状態", localizeBlockstring(data.is_true_blockstring)],
+      ["割り込み", localizeSequenceDetail("mash_point", data.mash_point ?? null)],
+      ["投げ択", localizeSequenceDetail("throw_point", data.throw_point ?? null)],
+      ["シミー／様子見", localizeSequenceDetail("shimmy_point", data.shimmy_point ?? null)],
+      ["ジャンプへの対応", localizeSequenceDetail("jump_option", data.jump_option ?? null)],
+      ["パリィへの対応", localizeSequenceDetail("parry_option", data.parry_option ?? null)],
+      ["ドライブリバーサルへの対応", localizeSequenceDetail("drive_reversal_option", data.drive_reversal_option ?? null)],
+      ["無敵技への対応", localizeSequenceDetail("invincible_option", data.invincible_option ?? null)],
     ],
     sources: release.sources,
   };
 }
 
-export async function getCounterBySlug(slug: string): Promise<SimpleDetail | null> {
+export async function getCounterBySlug(slug: string, previewToken?: string | null): Promise<SimpleDetail | null> {
   if (!configured()) return null;
+  const preview = await getDevicePreviewContentDetail("counter", slug, previewToken);
+  if (preview) {
+    const data = preview.record;
+    const glossary = preview.moveGlossary ?? [];
+    return {
+      id: String(data.id),
+      slug: String(data.slug),
+      title: localizeCounterText(String(data.title), glossary) as string,
+      summary: localizeCounterText(previewValue(data, "summary"), glossary) as string | null,
+      body: [
+        ["使用キャラクター", preview.characterName],
+        ["対戦相手", preview.opponentCharacterName ?? null],
+        ...previewReleaseRows(preview),
+        ["種類", localizeCounterType(previewValue(data, "counter_type"))],
+        ["状況", localizeCounterText(previewValue(data, "situation"), glossary)],
+        ["対策", localizeCounterText(previewValue(data, "method"), glossary)],
+        ["狙い", localizeCounterText(previewValue(data, "benefit"), glossary)],
+        ["注意点", localizeCounterText(previewValue(data, "risk"), glossary)],
+        ["難易度", localizeDifficulty(previewValue(data, "difficulty"))],
+        ["条件", localizeCounterText(previewValue(data, "conditions"), glossary)],
+      ],
+      sources: preview.sources,
+    };
+  }
   const supabase = getSupabaseServerClient();
   const { data, error } = await supabase
     .from("counters")
-    .select("id, slug, title, summary, method, benefit, risk, difficulty, conditions, situation, valid_from_patch_id, verification_status")
+    .select("id, slug, title, summary, counter_type, method, benefit, risk, difficulty, conditions, situation, valid_from_patch_id, verification_status")
     .eq("slug", slug)
     .eq("status", "published")
     .eq("verification_status", "verified")
@@ -431,16 +463,17 @@ export async function getCounterBySlug(slug: string): Promise<SimpleDetail | nul
   return {
     id: String(data.id),
     slug: String(data.slug),
-    title: String(data.title),
-    summary: data.summary ?? null,
+    title: localizeCounterText(String(data.title)) as string,
+    summary: localizeCounterText(data.summary ?? null) as string | null,
     body: [
       ...release.body,
-      ["状況", data.situation ?? null],
-      ["方法", data.method ?? null],
-      ["利点", data.benefit ?? null],
-      ["リスク", data.risk ?? null],
-      ["難易度", data.difficulty ?? null],
-      ["条件", data.conditions ?? null],
+      ["種類", localizeCounterType(data.counter_type ?? null)],
+      ["状況", localizeCounterText(data.situation ?? null)],
+      ["対策", localizeCounterText(data.method ?? null)],
+      ["狙い", localizeCounterText(data.benefit ?? null)],
+      ["注意点", localizeCounterText(data.risk ?? null)],
+      ["難易度", localizeDifficulty(data.difficulty ?? null)],
+      ["条件", localizeCounterText(data.conditions ?? null)],
     ],
     sources: release.sources,
   };

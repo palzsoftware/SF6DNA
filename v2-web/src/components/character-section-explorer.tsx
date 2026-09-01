@@ -25,6 +25,16 @@ const counterTypes = [
   ["defense", "守り"],
   ["anti_air", "対空"],
   ["reaction", "反応"],
+  ["approach", "接近への対応"],
+  ["zoning", "遠距離戦"],
+  ["drive_rush", "ドライブラッシュ対策"],
+  ["projectile", "飛び道具"],
+  ["drive_impact", "ドライブインパクト"],
+  ["adaptation", "相手の動きへの対応"],
+  ["counter", "対策"],
+  ["neutral_check", "立ち回り確認"],
+  ["patch_specific", "現行パッチ限定"],
+  ["whiff_punish", "差し返し"],
   ["other", "その他"],
 ] as const;
 
