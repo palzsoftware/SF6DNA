@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { saveDiagnosisHistory } from "@/lib/local-user-tools";
+import { getSupabaseBrowserClient } from "@/lib/supabase/client";
 import type { DiagnosisDefinition } from "@/types/diagnosis";
 
 type Recommendation = {
@@ -13,6 +14,13 @@ type Recommendation = {
   mappedTraits: number;
   activeTraits: number;
   reasons: Array<{ key: string; label: string; userWeight: number; characterScore: number }>;
+};
+
+type DatabaseSaveStatus = "idle" | "saving" | "saved" | "failed";
+
+type PendingDiagnosisSave = {
+  requestId: string;
+  fingerprint: string;
 };
 
 const AXIS_LABELS: Record<string, string> = {
@@ -31,6 +39,27 @@ const IMPROVEMENT_AXES = new Set([
 
 function axisLabel(key: string) { return AXIS_LABELS[key] ?? key; }
 function draftKey(slug: string) { return `sf6dna_v2_diagnosis_answers:${slug}`; }
+function saveRequestKey(slug: string) { return `sf6dna_v2_diagnosis_save_request:${slug}`; }
+
+function createRequestId() {
+  if (typeof crypto === "undefined" || !("randomUUID" in crypto)) {
+    throw new Error("このブラウザでは安全な保存IDを生成できません。");
+  }
+  return crypto.randomUUID();
+}
+
+function readPendingSave(key: string): PendingDiagnosisSave | null {
+  try {
+    const raw = window.localStorage.getItem(key);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as Partial<PendingDiagnosisSave>;
+    if (typeof parsed.requestId !== "string" || typeof parsed.fingerprint !== "string") return null;
+    if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(parsed.requestId)) return null;
+    return { requestId: parsed.requestId, fingerprint: parsed.fingerprint };
+  } catch {
+    return null;
+  }
+}
 
 function calculateTotals(diagnosis: DiagnosisDefinition, answers: Record<string, string>) {
   const totals: Record<string, number> = {};
@@ -57,7 +86,11 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
   const [recommendations, setRecommendations] = useState<Recommendation[]>([]);
   const [recommendationMessage, setRecommendationMessage] = useState<string | null>(null);
   const [recommendationLoading, setRecommendationLoading] = useState(false);
+  const [databaseSaveStatus, setDatabaseSaveStatus] = useState<DatabaseSaveStatus>("idle");
+  const [databaseSaveMessage, setDatabaseSaveMessage] = useState<string | null>(null);
   const historySaved = useRef(false);
+  const databaseSaveStarted = useRef(false);
+  const databaseSaveInFlight = useRef(false);
   const question = diagnosis.questions[index];
   const completed = diagnosis.questions.length > 0 && index >= diagnosis.questions.length;
 
@@ -118,9 +151,74 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
     } finally { setRecommendationLoading(false); }
   }
 
+  const saveCompletedDiagnosis = useCallback(async () => {
+    if (!completed || databaseSaveInFlight.current) return;
+    databaseSaveInFlight.current = true;
+
+    try {
+      const supabase = getSupabaseBrowserClient();
+      const { data: authData, error: authError } = await supabase.auth.getUser();
+      if (authError) throw authError;
+      if (!authData.user) {
+        setDatabaseSaveStatus("idle");
+        setDatabaseSaveMessage(null);
+        return;
+      }
+
+      const answerPayload = diagnosis.questions.map((item) => ({
+        question_id: item.id,
+        option_id: answers[item.id],
+      }));
+      const resultPayload = {
+        diagnosis_type: diagnosis.diagnosisType,
+        scores: totals,
+        top_results: result.filter(([, score]) => score > 0).map(([key, score]) => ({ key, score })),
+      };
+      const fingerprint = JSON.stringify({ diagnosisId: diagnosis.id, resultPayload, answerPayload });
+      const storageKey = saveRequestKey(diagnosis.slug);
+      const stored = readPendingSave(storageKey);
+      const pending = stored?.fingerprint === fingerprint
+        ? stored
+        : { requestId: createRequestId(), fingerprint };
+
+      window.localStorage.setItem(storageKey, JSON.stringify(pending));
+      setDatabaseSaveStatus("saving");
+      setDatabaseSaveMessage(null);
+
+      const { data, error } = await supabase.rpc("save_diagnosis_result_with_answers", {
+        p_diagnosis_id: diagnosis.id,
+        p_result_payload: resultPayload,
+        p_answers: answerPayload,
+        p_request_id: pending.requestId,
+      });
+      if (error) throw error;
+
+      if (typeof data !== "string") throw new Error("診断結果IDを確認できませんでした。");
+      window.localStorage.removeItem(storageKey);
+      setDatabaseSaveStatus("saved");
+      setDatabaseSaveMessage(null);
+    } catch (error) {
+      console.error("[diagnosis] result save failed", error);
+      setDatabaseSaveStatus("failed");
+      setDatabaseSaveMessage("診断結果をアカウントへ保存できませんでした。同じ保存IDで再試行できます。");
+    } finally {
+      databaseSaveInFlight.current = false;
+    }
+  }, [answers, completed, diagnosis, result, totals]);
+
+  useEffect(() => {
+    if (!completed || databaseSaveStarted.current) return;
+    databaseSaveStarted.current = true;
+    void saveCompletedDiagnosis();
+  }, [completed, saveCompletedDiagnosis]);
+
   function reset() {
     historySaved.current = false;
+    databaseSaveStarted.current = false;
+    databaseSaveInFlight.current = false;
     window.localStorage.removeItem(draftKey(diagnosis.slug));
+    window.localStorage.removeItem(saveRequestKey(diagnosis.slug));
+    setDatabaseSaveStatus("idle"); setDatabaseSaveMessage(null);
     setIndex(0); setAnswers({}); setResumedCount(0); setRecommendations([]); setRecommendationMessage(null);
   }
 
@@ -132,12 +230,12 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
       const improvement = result.filter(([key, score]) => IMPROVEMENT_AXES.has(key) && score > 0).slice(0, 3);
       const style = result.filter(([key, score]) => !IMPROVEMENT_AXES.has(key) && score > 0).slice(0, 3);
       const topQuery = [...improvement, ...style].map(([key]) => axisLabel(key)).join(" ");
-      return <section className="info-panel diagnosis-result"><p className="eyebrow">RESULT</p><h2>総合診断結果</h2>{resumedCount ? <p className="data-notice">この結果には、この端末に保存されていた明示的な前回答 {resumedCount}件を再利用しています。</p> : null}<div className="character-columns"><div><h3>改善優先度</h3><ResultList rows={improvement} label="優先度" /></div><div><h3>プレイスタイル傾向</h3><ResultList rows={style} label="傾向" /></div></div><RecommendationBlock loading={recommendationLoading} recommendations={recommendations} message={recommendationMessage} /><div className="diagnosis-actions">{topQuery ? <Link className="button-primary" href={`/search?q=${encodeURIComponent(topQuery)}`}>関連情報を横断検索</Link> : null}{topQuery ? <Link className="button-secondary" href={`/coach?q=${encodeURIComponent(topQuery)}`}>AIコーチ用Evidenceを見る</Link> : null}<ResetButton onReset={reset} /></div></section>;
+      return <section className="info-panel diagnosis-result"><p className="eyebrow">RESULT</p><h2>総合診断結果</h2>{resumedCount ? <p className="data-notice">この結果には、この端末に保存されていた明示的な前回答 {resumedCount}件を再利用しています。</p> : null}<DatabaseSaveNotice status={databaseSaveStatus} message={databaseSaveMessage} onRetry={() => void saveCompletedDiagnosis()} /><div className="character-columns"><div><h3>改善優先度</h3><ResultList rows={improvement} label="優先度" /></div><div><h3>プレイスタイル傾向</h3><ResultList rows={style} label="傾向" /></div></div><RecommendationBlock loading={recommendationLoading} recommendations={recommendations} message={recommendationMessage} /><div className="diagnosis-actions">{topQuery ? <Link className="button-primary" href={`/search?q=${encodeURIComponent(topQuery)}`}>関連情報を横断検索</Link> : null}{topQuery ? <Link className="button-secondary" href={`/coach?q=${encodeURIComponent(topQuery)}`}>AIコーチ用Evidenceを見る</Link> : null}<ResetButton onReset={reset} /></div></section>;
     }
     const copy = resultCopy(diagnosis.diagnosisType);
     const priorities = result.filter(([, score]) => score > 0).slice(0, 3);
     const topQuery = priorities.map(([key]) => axisLabel(key)).join(" ");
-    return <section className="info-panel diagnosis-result"><p className="eyebrow">RESULT</p><h2>{copy.title}</h2>{resumedCount ? <p className="data-notice">この結果には、この端末に保存されていた明示的な前回答 {resumedCount}件を再利用しています。</p> : null}<p>{copy.body}</p><ResultList rows={priorities} label={copy.scoreLabel} />{diagnosis.diagnosisType === "character_fit" ? <RecommendationBlock loading={recommendationLoading} recommendations={recommendations} message={recommendationMessage} /> : null}<div className="diagnosis-actions">{topQuery ? <Link className="button-primary" href={`/search?q=${encodeURIComponent(topQuery)}`}>{copy.searchLabel}</Link> : null}{topQuery ? <Link className="button-secondary" href={`/coach?q=${encodeURIComponent(topQuery)}`}>AIコーチ用Evidenceを見る</Link> : null}<ResetButton onReset={reset} /></div></section>;
+    return <section className="info-panel diagnosis-result"><p className="eyebrow">RESULT</p><h2>{copy.title}</h2>{resumedCount ? <p className="data-notice">この結果には、この端末に保存されていた明示的な前回答 {resumedCount}件を再利用しています。</p> : null}<DatabaseSaveNotice status={databaseSaveStatus} message={databaseSaveMessage} onRetry={() => void saveCompletedDiagnosis()} /><p>{copy.body}</p><ResultList rows={priorities} label={copy.scoreLabel} />{diagnosis.diagnosisType === "character_fit" ? <RecommendationBlock loading={recommendationLoading} recommendations={recommendations} message={recommendationMessage} /> : null}<div className="diagnosis-actions">{topQuery ? <Link className="button-primary" href={`/search?q=${encodeURIComponent(topQuery)}`}>{copy.searchLabel}</Link> : null}{topQuery ? <Link className="button-secondary" href={`/coach?q=${encodeURIComponent(topQuery)}`}>AIコーチ用Evidenceを見る</Link> : null}<ResetButton onReset={reset} /></div></section>;
   }
 
   const progress = Math.round(((index + 1) / diagnosis.questions.length) * 100);
@@ -146,5 +244,6 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
 }
 
 function ResultList({ rows, label }: { rows: Array<[string, number]>; label: string }) { if (!rows.length) return <p>はっきりした傾向が出ませんでした。</p>; return <ol>{rows.map(([key, score]) => <li key={key}><strong>{axisLabel(key)}</strong>：{label} {score}</li>)}</ol>; }
+function DatabaseSaveNotice({ status, message, onRetry }: { status: DatabaseSaveStatus; message: string | null; onRetry: () => void }) { if (status === "idle") return null; if (status === "saving") return <div className="data-notice"><p>診断結果をアカウントへ保存しています…</p></div>; if (status === "saved") return <div className="data-notice"><p>診断結果をアカウントへ保存しました。</p></div>; return <div className="data-notice"><p>{message ?? "診断結果を保存できませんでした。"}</p><button className="button-secondary" type="button" onClick={onRetry}>保存を再試行</button></div>; }
 function RecommendationBlock({ loading, recommendations, message }: { loading: boolean; recommendations: Recommendation[]; message: string | null }) { return <div className="data-notice"><h3>キャラクター推薦</h3>{loading ? <p>検証済みTraitデータから推薦を計算しています…</p> : null}{!loading && recommendations.length ? <ol>{recommendations.map((item) => <li key={item.characterId}><Link href={`/characters/${item.slug}`}><strong>{item.name}</strong></Link>：一致度 {item.matchPercent}% <span className="muted">（{item.mappedTraits}/{item.activeTraits}特性を照合）</span>{item.reasons.length ? <div className="muted">主な一致: {item.reasons.map((reason) => reason.label).join(" / ")}</div> : null}</li>)}</ol> : null}{!loading && !recommendations.length ? <p>{message ?? "推薦用の検証済みキャラクターデータがまだ不足しています。"}</p> : null}</div>; }
 function ResetButton({ onReset }: { onReset: () => void }) { return <button className="button-secondary" type="button" onClick={onReset}>最初からやり直す</button>; }
