@@ -101,3 +101,46 @@ test("Character overview and Move list apply Japanese display localization", () 
   assert.match(page, /classic: "クラシック"/);
   assert.match(page, /target_combo: "ターゲットコンボ"/);
 });
+
+test("Phase46 adds all character overviews without changing publication state", () => {
+  const sql = read("../supabase/migrations/20260902_phase46_character_overview_and_japanese_copy.sql");
+  assert.equal((sql.match(/^    \('/gm) ?? []).length, 31);
+  assert.match(sql, /update public\.characters/);
+  assert.match(sql, /strengths_summary/);
+  assert.match(sql, /weaknesses_summary/);
+  assert.doesNotMatch(sql, /set[\s\S]{0,100}status\s*=/i);
+});
+
+test("Phase47 keeps imported notes and supplies Japanese Move copy", () => {
+  const sql = read("../supabase/migrations/20260902_phase47_move_japanese_explanations.sql");
+  const detail = read("src/lib/content-detail.ts");
+  const form = read("src/components/admin-move-form.tsx");
+  assert.match(sql, /add column if not exists description_ja/);
+  assert.match(sql, /add column if not exists usage_summary_ja/);
+  assert.match(sql, /get_phase47_move_japanese_preview/);
+  assert.doesNotMatch(sql, /update\s+public\.moves[\s\S]{0,120}set\s+status\s*=/i);
+  assert.match(detail, /usage_summary_ja \?\? data\.description_ja/);
+  assert.match(detail, /\["技の説明", data\.description_ja/);
+  assert.match(form, /技の説明（日本語・画面表示用）/);
+});
+
+test("Move GIF storage is admin-only for writes and optional on detail pages", () => {
+  const sql = read("../supabase/migrations/20260902_phase48_move_motion_storage.sql");
+  const action = read("src/app/admin/moves/[id]/motion-actions.ts");
+  const detail = read("src/components/simple-detail.tsx");
+  assert.match(sql, /'move-motion-media'/);
+  assert.match(sql, /array\['image\/gif', 'video\/mp4', 'video\/webm'\]/);
+  assert.match(sql, /private\.is_admin\(\)/);
+  assert.match(action, /maxUploadBytes = 25 \* 1024 \* 1024/);
+  assert.match(action, /status.*draft.*reviewed/s);
+  assert.match(detail, /detail\.media\?\.length/);
+  assert.match(detail, /<h2>技の動き<\/h2>/);
+});
+
+test("Phase49 removes mechanical spacing and type-inappropriate guidance", () => {
+  const sql = read("../supabase/migrations/20260902_phase49_move_japanese_copy_polish.sql");
+  assert.match(sql, /move_type = 'throw'/);
+  assert.match(sql, /move_type = 'taunt'/);
+  assert.match(sql, /replace\(usage_summary_ja, '。 ', '。'\)/);
+  assert.doesNotMatch(sql, /set\s+status\s*=/i);
+});

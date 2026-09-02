@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { AdminMoveForm } from "@/components/admin-move-form";
 import { requireAdmin } from "@/lib/admin";
 import { addFrameVersion, attachMoveEvidenceSource, updateMove } from "../actions";
-import { addMoveMotionMedia, archiveMoveMotionMedia } from "./motion-actions";
+import { addMoveMotionMedia, archiveMoveMotionMedia, uploadMoveMotionMedia } from "./motion-actions";
 
 export default async function EditMovePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -16,13 +16,13 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
     { data: sources, error: sourceError },
     { data: motionMedia, error: motionMediaError },
   ] = await Promise.all([
-    supabase.from("moves").select("id, character_id, slug, name_ja, name_en, move_type, strength_variant, description, usage_summary, display_order, status").eq("id", id).maybeSingle(),
+    supabase.from("moves").select("id, character_id, slug, name_ja, name_en, move_type, strength_variant, description_ja, usage_summary_ja, description, usage_summary, display_order, status").eq("id", id).maybeSingle(),
     supabase.from("characters").select("id, name_ja").neq("status", "archived").order("display_order"),
     supabase.from("move_commands").select("id, control_scheme, command_text, numeric_notation, button_notation, condition_text, sort_order").eq("move_id", id).order("sort_order"),
     supabase.from("move_frame_data").select("id, startup, active, recovery, on_hit, on_block, damage, drive_damage, super_gain, hit_level, cancel_type, invincibility, notes, valid_from_patch_id, valid_to_patch_id, verification_status, created_at").eq("move_id", id).order("created_at", { ascending: false }),
     supabase.from("patches").select("id, version_label, name, released_at, is_current").order("released_at", { ascending: false, nullsFirst: false }),
     supabase.from("sources").select("id, title, publisher, url, reliability_level").order("published_at", { ascending: false, nullsFirst: false }).limit(200),
-    supabase.from("move_motion_media").select("id, media_type, media_url, poster_url, source_url, source_label, status, display_order, created_at").eq("move_id", id).neq("status", "archived").order("display_order").order("created_at"),
+    supabase.from("move_motion_media").select("id, media_type, media_url, poster_url, source_url, source_label, storage_path, status, display_order, created_at").eq("move_id", id).neq("status", "archived").order("display_order").order("created_at"),
   ]);
   if (moveError) throw new Error(moveError.message);
   if (characterError) throw new Error(characterError.message);
@@ -65,7 +65,7 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
       <section className="hero compact-hero">
         <p className="eyebrow">ADMIN / MOVES</p>
         <h1>{move.name_ja}を編集</h1>
-        <p>基本情報と、履歴として保持するFrame / Patch / Source / Motion Mediaを分けて管理します。</p>
+        <p>基本情報と、履歴として保持するフレーム、バージョン、情報源、技の映像を分けて管理します。</p>
       </section>
 
       <AdminMoveForm
@@ -91,40 +91,53 @@ export default async function EditMovePage({ params }: { params: Promise<{ id: s
       </section>
 
       <section className="info-panel">
-        <h2>技モーション / GIF・短尺動画</h2>
-        <p>確認用素材はdraft / reviewedで登録できます。publishedにする場合はMove本体の公開と、素材のSource URL / Source Labelが必須です。</p>
+        <h2>技のGIF・短尺動画</h2>
+        <p>確認用素材は「下書き」または「確認中」で登録します。公開する場合は技本体の公開と、素材の情報源が必要です。</p>
         {motionMedia?.length ? (
           <div className="admin-table-wrap admin-table-wrap--nested">
             <table className="admin-table">
-              <thead><tr><th>Type</th><th>Status</th><th>Media</th><th>Source</th><th>Order</th><th>Action</th></tr></thead>
+              <thead><tr><th>形式</th><th>状態</th><th>素材</th><th>情報源</th><th>表示順</th><th>操作</th></tr></thead>
               <tbody>
                 {motionMedia.map((media) => (
                   <tr key={media.id}>
-                    <td>{media.media_type}</td>
-                    <td>{media.status}</td>
+                    <td>{media.media_type === "gif" ? "GIF" : "動画"}</td>
+                    <td>{media.status === "draft" ? "下書き" : media.status === "reviewed" ? "確認中" : "公開"}</td>
                     <td><a className="text-link" href={media.media_url} target="_blank" rel="noopener noreferrer">素材を開く</a></td>
-                    <td>{media.source_url ? <a className="text-link" href={media.source_url} target="_blank" rel="noopener noreferrer">{media.source_label ?? "Source"}</a> : "-"}</td>
+                    <td>{media.source_url ? <a className="text-link" href={media.source_url} target="_blank" rel="noopener noreferrer">{media.source_label ?? "情報源"}</a> : media.source_label ?? "-"}</td>
                     <td>{media.display_order}</td>
-                    <td><form action={archiveMoveMotionMedia.bind(null, id, media.id)}><button className="button-secondary" type="submit">Archive</button></form></td>
+                    <td><form action={archiveMoveMotionMedia.bind(null, id, media.id)}><button className="button-secondary" type="submit">アーカイブ</button></form></td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-        ) : <p>Motion Mediaはまだ登録されていません。</p>}
+        ) : <p>GIF・短尺動画はまだ登録されていません。</p>}
 
-        <h3>Motion Mediaを追加</h3>
+        <h3>ファイルをアップロード</h3>
+        <p>将来撮影する技GIFや短尺動画は、ここから技ごとに登録できます。対応形式はGIF、MP4、WebM、上限は25MBです。</p>
+        <form action={uploadMoveMotionMedia.bind(null, id)} className="admin-form">
+          <div className="admin-form__grid">
+            <label className="admin-field"><span>GIF・短尺動画</span><input name="media_file" type="file" accept="image/gif,video/mp4,video/webm" required /></label>
+            <label className="admin-field"><span>状態</span><select name="status" defaultValue="reviewed"><option value="draft">下書き</option><option value="reviewed">確認中</option></select></label>
+            <label className="admin-field"><span>表示順</span><input name="display_order" type="number" defaultValue="0" /></label>
+            <label className="admin-field"><span>情報源の名称</span><input name="source_label" defaultValue="自前実機キャプチャ" /></label>
+          </div>
+          <label className="admin-field admin-field--wide"><span>情報源URL（任意）</span><input name="source_url" type="url" inputMode="url" placeholder="https://..." /></label>
+          <div className="admin-actions"><button className="button-primary" type="submit">ファイルを登録</button></div>
+        </form>
+
+        <h3>外部URLから登録</h3>
         <form action={addMoveMotionMedia.bind(null, id)} className="admin-form">
           <div className="admin-form__grid">
-            <label className="admin-field"><span>Media Type</span><select name="media_type" defaultValue="video"><option value="video">video</option><option value="gif">gif</option></select></label>
-            <label className="admin-field"><span>Status</span><select name="status" defaultValue="reviewed"><option value="draft">draft</option><option value="reviewed">reviewed</option><option value="published">published</option></select></label>
-            <label className="admin-field"><span>Display Order</span><input name="display_order" type="number" defaultValue="0" /></label>
-            <label className="admin-field"><span>Source Label</span><input name="source_label" placeholder="例: 自前実機キャプチャ / CAPCOM公式" /></label>
+            <label className="admin-field"><span>形式</span><select name="media_type" defaultValue="video"><option value="video">動画</option><option value="gif">GIF</option></select></label>
+            <label className="admin-field"><span>状態</span><select name="status" defaultValue="reviewed"><option value="draft">下書き</option><option value="reviewed">確認中</option><option value="published">公開</option></select></label>
+            <label className="admin-field"><span>表示順</span><input name="display_order" type="number" defaultValue="0" /></label>
+            <label className="admin-field"><span>情報源の名称</span><input name="source_label" placeholder="例: 自前実機キャプチャ / CAPCOM公式" /></label>
           </div>
-          <label className="admin-field admin-field--wide"><span>Media URL</span><input name="media_url" type="url" inputMode="url" placeholder="https://..." required /></label>
-          <label className="admin-field admin-field--wide"><span>Poster URL（動画のみ・任意）</span><input name="poster_url" type="url" inputMode="url" placeholder="https://..." /></label>
-          <label className="admin-field admin-field--wide"><span>Source URL</span><input name="source_url" type="url" inputMode="url" placeholder="https://..." /></label>
-          <div className="admin-actions"><button className="button-primary" type="submit">Motion Mediaを追加</button></div>
+          <label className="admin-field admin-field--wide"><span>素材URL</span><input name="media_url" type="url" inputMode="url" placeholder="https://..." required /></label>
+          <label className="admin-field admin-field--wide"><span>サムネイルURL（動画のみ・任意）</span><input name="poster_url" type="url" inputMode="url" placeholder="https://..." /></label>
+          <label className="admin-field admin-field--wide"><span>情報源URL</span><input name="source_url" type="url" inputMode="url" placeholder="https://..." /></label>
+          <div className="admin-actions"><button className="button-primary" type="submit">外部素材を登録</button></div>
         </form>
       </section>
 

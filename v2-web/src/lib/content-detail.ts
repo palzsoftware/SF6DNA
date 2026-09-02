@@ -2,6 +2,7 @@ import { getSupabaseServerClient } from "@/lib/supabase/server";
 import {
   getDevicePreviewCharacterMoveGlossary,
   getDevicePreviewContentDetail,
+  getDevicePreviewMoveMotionMedia,
   type DevicePreviewContentDetail,
 } from "@/lib/device-preview";
 import {
@@ -45,6 +46,16 @@ export type SimpleDetail = {
   summary: string | null;
   body: Array<[string, string | number | null]>;
   sources?: DetailSource[];
+  media?: DetailMedia[];
+};
+
+export type DetailMedia = {
+  id: string;
+  mediaType: "gif" | "video";
+  mediaUrl: string;
+  posterUrl: string | null;
+  sourceUrl: string | null;
+  sourceLabel: string | null;
 };
 
 function previewValue(record: Record<string, unknown>, key: string): string | number | null {
@@ -146,8 +157,8 @@ async function getReleaseMetadata(
 
   return {
     body: [
-      ["Verification", verificationStatus],
-      ["Patch", patchLabel],
+      ["検証状態", localizeComboText(verificationStatus) as string | null],
+      ["対応バージョン", patchLabel],
     ],
     sources: dedupeSources(toSources(sourceResult.data as unknown[] | null)),
   };
@@ -172,13 +183,20 @@ export async function getMoveBySlug(
       .map((command) => command.commandText ?? command.numericNotation ?? command.buttonNotation)
       .filter((value): value is string => Boolean(value));
     const frameStatus = previewValue(frame ?? {}, "verification_status");
+    const characterId = previewValue(data, "character_id");
+    const motionMedia = typeof characterId === "string"
+      ? await getDevicePreviewMoveMotionMedia(characterId, previewToken)
+      : [];
 
     return {
       id: String(data.id),
       slug: String(data.slug),
       title: String(data.name_ja),
       summary: localizeMoveText(
-        previewValue(data, "usage_summary") ?? previewValue(data, "description")
+        previewValue(data, "usage_summary_ja")
+          ?? previewValue(data, "description_ja")
+          ?? previewValue(data, "usage_summary")
+          ?? previewValue(data, "description")
       ) as string | null,
       body: [
         ["キャラクター", preview.characterName],
@@ -189,6 +207,7 @@ export async function getMoveBySlug(
         ["公式英語名", previewValue(data, "name_en")],
         ["技種別", localizeMoveType(previewValue(data, "move_type"))],
         ["強度", localizeMoveStrength(previewValue(data, "strength_variant"))],
+        ["技の説明", previewValue(data, "description_ja")],
         ["クラシック入力", classicCommands.length ? classicCommands.join(" / ") : null],
         ["モダン入力", modernCommands.length ? modernCommands.join(" / ") : null],
         ["発生", previewValue(frame ?? {}, "startup")],
@@ -205,19 +224,34 @@ export async function getMoveBySlug(
         ["フレーム補足", localizeMoveText(previewValue(frame ?? {}, "notes"))],
       ],
       sources: dedupeSources(preview.sources),
+      media: motionMedia
+        .filter((item) => item.moveId === String(data.id))
+        .map((item) => ({
+          id: item.id,
+          mediaType: item.mediaType,
+          mediaUrl: item.mediaUrl,
+          posterUrl: item.posterUrl,
+          sourceUrl: item.sourceUrl,
+          sourceLabel: item.sourceLabel,
+        })),
     };
   }
 
   const supabase = getSupabaseServerClient();
   const { data, error } = await supabase
     .from("moves")
-    .select("id, slug, name_ja, name_en, move_type, strength_variant, description, usage_summary, characters(name_ja)")
+    .select("id, slug, name_ja, name_en, move_type, strength_variant, description_ja, usage_summary_ja, description, usage_summary, characters(name_ja)")
     .eq("slug", slug)
     .eq("status", "published")
     .maybeSingle();
   if (error || !data) return null;
 
-  const [{ data: commands, error: commandError }, { data: frame, error: frameError }, { data: moveSourceLinks, error: moveSourceError }] = await Promise.all([
+  const [
+    { data: commands, error: commandError },
+    { data: frame, error: frameError },
+    { data: moveSourceLinks, error: moveSourceError },
+    { data: motionMedia, error: motionMediaError },
+  ] = await Promise.all([
     supabase
       .from("move_commands")
       .select("id, control_scheme, command_text, numeric_notation, button_notation, condition_text, sort_order")
@@ -236,11 +270,18 @@ export async function getMoveBySlug(
       .select("relationship, sources!inner(id, title, url, publisher, source_type)")
       .eq("entity_type", "move")
       .eq("entity_id", data.id),
+    supabase
+      .from("move_motion_media")
+      .select("id, media_type, media_url, poster_url, source_url, source_label")
+      .eq("move_id", data.id)
+      .eq("status", "published")
+      .order("display_order", { ascending: true }),
   ]);
 
   if (commandError) console.error("[content-detail] move commands failed", commandError.message);
   if (frameError) console.error("[content-detail] move frame failed", frameError.message);
   if (moveSourceError) console.error("[content-detail] move sources failed", moveSourceError.message);
+  if (motionMediaError) console.error("[content-detail] move motion media failed", motionMediaError.message);
 
   let patch: { version_label?: string; name?: string | null } | null = null;
   let frameSources: DetailSource[] = [];
@@ -278,12 +319,13 @@ export async function getMoveBySlug(
     id: String(data.id),
     slug: String(data.slug),
     title: String(data.name_ja),
-    summary: localizeMoveText(data.usage_summary ?? data.description ?? null) as string | null,
+    summary: localizeMoveText(data.usage_summary_ja ?? data.description_ja ?? data.usage_summary ?? data.description ?? null) as string | null,
     body: [
       ["キャラクター", c?.name_ja ?? null],
       ["英語名", data.name_en ?? null],
       ["技種別", localizeMoveType(data.move_type ?? null)],
       ["強度", localizeMoveStrength(data.strength_variant ?? null)],
+      ["技の説明", data.description_ja ?? null],
       ["クラシック入力", classicCommands.length ? classicCommands.join(" / ") : null],
       ["モダン入力", modernCommands.length ? modernCommands.join(" / ") : null],
       ["フレーム検証状態", localizeComboText(frame?.verification_status ?? null)],
@@ -305,6 +347,14 @@ export async function getMoveBySlug(
       ...toSources(moveSourceLinks as unknown[] | null),
       ...frameSources,
     ]),
+    media: (motionMedia ?? []).map((item) => ({
+      id: String(item.id),
+      mediaType: item.media_type === "gif" ? "gif" : "video",
+      mediaUrl: String(item.media_url),
+      posterUrl: typeof item.poster_url === "string" ? item.poster_url : null,
+      sourceUrl: typeof item.source_url === "string" ? item.source_url : null,
+      sourceLabel: typeof item.source_label === "string" ? item.source_label : null,
+    })),
   };
 }
 

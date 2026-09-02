@@ -137,7 +137,7 @@ export async function listCharacterSectionItems(
   if (section === "moves") {
     const { data, error } = await supabase
       .from("moves")
-      .select("id, slug, name_ja, move_type, usage_summary, move_frame_data(startup, on_block, damage, valid_to_patch_id, verification_status)")
+      .select("id, slug, name_ja, move_type, usage_summary_ja, usage_summary, move_frame_data(startup, on_block, damage, valid_to_patch_id, verification_status)")
       .eq("character_id", characterId)
       .eq("status", "published")
       .order("display_order", { ascending: true });
@@ -158,8 +158,8 @@ export async function listCharacterSectionItems(
       return [{
         id: String(row.id),
         title: String(row.name_ja),
-        subtitle: typeof row.usage_summary === "string"
-          ? String(localizeMoveText(row.usage_summary))
+        subtitle: typeof (row.usage_summary_ja ?? row.usage_summary) === "string"
+          ? String(localizeMoveText(row.usage_summary_ja ?? row.usage_summary))
           : null,
         href: `/moves/${row.slug}`,
         meta: [row.move_type, ...metaParts].filter(Boolean).join(" / ") || null,

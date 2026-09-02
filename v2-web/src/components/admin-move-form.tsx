@@ -9,6 +9,8 @@ type MoveValue = {
   strength_variant?: string | null;
   description?: string | null;
   usage_summary?: string | null;
+  description_ja?: string | null;
+  usage_summary_ja?: string | null;
   display_order?: number | null;
   status?: string | null;
 };
@@ -55,8 +57,10 @@ export function AdminMoveForm({
             { id: "archived", label: "archived" },
           ]} />
         </div>
-        <Textarea label="説明" name="description" defaultValue={value.description} />
-        <Textarea label="用途要約" name="usage_summary" defaultValue={value.usage_summary} />
+        <Textarea label="技の説明（日本語・画面表示用）" name="description_ja" defaultValue={value.description_ja} />
+        <Textarea label="使いどころ（日本語・画面表示用）" name="usage_summary_ja" defaultValue={value.usage_summary_ja} />
+        <Textarea label="取り込み元の説明・検証メモ" name="description" defaultValue={value.description} />
+        <Textarea label="取り込み元の用途メモ" name="usage_summary" defaultValue={value.usage_summary} />
       </section>
 
       {includeEvidence ? (

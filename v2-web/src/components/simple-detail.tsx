@@ -24,6 +24,27 @@ export function SimpleDetailView({
           <p>未公開データの確認画面です。表示している項目は公開済みとは限らず、DBの公開状態も変更していません。</p>
         </section>
       ) : null}
+      {detail.media?.length ? (
+        <section className="info-panel move-motion-panel">
+          <h2>技の動き</h2>
+          <div className="move-motion-grid">
+            {detail.media.map((media) => (
+              <figure className="move-motion-item" key={media.id}>
+                {media.mediaType === "gif" ? (
+                  // External motion assets are validated and registered by an administrator.
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={media.mediaUrl} alt={`${detail.title}の動き`} width={640} height={360} loading="lazy" />
+                ) : (
+                  <video src={media.mediaUrl} poster={media.posterUrl ?? undefined} controls loop muted playsInline preload="metadata" />
+                )}
+                {media.sourceUrl ? (
+                  <figcaption><a href={media.sourceUrl} target="_blank" rel="noopener noreferrer">{media.sourceLabel ?? "素材の情報源"}</a></figcaption>
+                ) : null}
+              </figure>
+            ))}
+          </div>
+        </section>
+      ) : null}
       <section className="info-panel">
         <dl className="detail-list">
           {rows.map(([label, value]) => (

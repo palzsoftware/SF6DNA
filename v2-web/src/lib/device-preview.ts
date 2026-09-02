@@ -17,6 +17,8 @@ export type DevicePreviewBundle = {
     name: string;
     moveType: string | null;
     usageSummary: string | null;
+    descriptionJa?: string | null;
+    usageSummaryJa?: string | null;
     status: string;
     frame: {
       startup: string | null;
@@ -161,18 +163,47 @@ export async function getDevicePreviewBundle(
   if (!isDevicePreviewRequest(previewToken)) return null;
 
   const supabase = getSupabaseServerClient();
-  const { data, error } = await supabase.rpc("get_phase23_character_preview", {
-    target_character_id: characterId,
-    preview_token: previewToken,
-  });
+  const [{ data, error }, { data: japaneseCopy, error: japaneseCopyError }] = await Promise.all([
+    supabase.rpc("get_phase23_character_preview", {
+      target_character_id: characterId,
+      preview_token: previewToken,
+    }),
+    supabase.rpc("get_phase47_move_japanese_preview", {
+      target_character_id: characterId,
+      preview_token: previewToken,
+    }),
+  ]);
 
   if (error) {
     console.error("[device-preview] character preview failed", error.message);
     return null;
   }
 
+  if (japaneseCopyError) {
+    console.error("[device-preview] move Japanese copy failed", japaneseCopyError.message);
+  }
+
   if (!data || typeof data !== "object" || Array.isArray(data)) return null;
-  return data as unknown as DevicePreviewBundle;
+  const bundle = data as unknown as DevicePreviewBundle;
+  const copyMap = new Map(
+    (Array.isArray(japaneseCopy) ? japaneseCopy : []).map((row) => {
+      const copy = row as { id?: unknown; descriptionJa?: unknown; usageSummaryJa?: unknown };
+      return [String(copy.id ?? ""), copy] as const;
+    })
+  );
+
+  bundle.moves = bundle.moves.map((move) => {
+    const copy = copyMap.get(move.id);
+    const descriptionJa = typeof copy?.descriptionJa === "string" ? copy.descriptionJa : null;
+    const usageSummaryJa = typeof copy?.usageSummaryJa === "string" ? copy.usageSummaryJa : null;
+    return {
+      ...move,
+      descriptionJa,
+      usageSummaryJa,
+      usageSummary: usageSummaryJa ?? move.usageSummary,
+    };
+  });
+  return bundle;
 }
 
 export async function getDevicePreviewCharacterMoveGlossary(

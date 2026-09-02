@@ -57,6 +57,8 @@ export async function createMove(formData: FormData) {
       strength_variant: nullable(formData, "strength_variant"),
       description: nullable(formData, "description"),
       usage_summary: nullable(formData, "usage_summary"),
+      description_ja: nullable(formData, "description_ja"),
+      usage_summary_ja: nullable(formData, "usage_summary_ja"),
       display_order: nullableNumber(formData, "display_order") ?? 0,
       status: requestedStatus === "published" ? "draft" : requestedStatus,
     })
@@ -112,6 +114,8 @@ export async function updateMove(id: string, formData: FormData) {
     strength_variant: nullable(formData, "strength_variant"),
     description: nullable(formData, "description"),
     usage_summary: nullable(formData, "usage_summary"),
+    description_ja: nullable(formData, "description_ja"),
+    usage_summary_ja: nullable(formData, "usage_summary_ja"),
     display_order: nullableNumber(formData, "display_order") ?? 0,
     status: text(formData, "status") || "draft",
   }).eq("id", id);
