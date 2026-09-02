@@ -157,6 +157,19 @@ test("field-specific localization returns natural Japanese for representative st
   assert.equal(localization.localizeComboText("slight hold"), "少し溜める");
   assert.equal(localization.localizeSourceType("community_frame_database"), "コミュニティフレームデータ");
   assert.equal(localization.localizeSourceRelationship("corroborating"), "裏付け資料");
+  assert.equal(localization.localizeCounterText("JP vs ケン 対面対策"), "JP使用時のケン対策");
+
+  const matchupMethod = localization.localizeCounterText(
+    "jp-vs-ken-approach / punish / air / corner / zoning をTrainingで再現し、確定・相打ち・読み・不成立を区別する。"
+  );
+  assert.doesNotMatch(matchupMethod, /jp-vs-ken|Training|読み・不成立/);
+  assert.match(matchupMethod, /接近阻止・確定反撃・対空・画面端・遠距離戦/);
+
+  const matchupCondition = localization.localizeCounterText(
+    "2026.08.03以降。子Counter5件を参照。実機確認前はverified\/publishedへ昇格しない。"
+  );
+  assert.doesNotMatch(matchupCondition, /子Counter|verified|published|昇格/);
+  assert.match(matchupCondition, /関連する5件の対策/);
 });
 
 test("Counter detail Preview remains token-gated and keeps draft data unpublished", () => {
@@ -224,5 +237,13 @@ test("Training Preview localizes internal codes and English settings without cha
   assert.equal(
     localization.localizeTrainingText("playback_settings", "4F、ジャンプ、バクステ、パリィ、Dリバ、DI、無敵を必要時に録画。"),
     "4F技、ジャンプ、バックステップ、パリィ、ドライブリバーサル、ドライブインパクト、無敵技を必要に応じて録画します。"
+  );
+  assert.equal(
+    localization.localizeTrainingText("purpose", "中足Cラッシュから生DRとDIの使い分けを覚える"),
+    "中足キャンセルラッシュから生ドライブラッシュとドライブインパクトの使い分けを覚える"
+  );
+  assert.equal(
+    localization.localizeTrainingText("method", "立ち強P PC時としゃがみ中P CH時を交互に確認する。"),
+    "立ち強P パニッシュカウンター時としゃがみ中P カウンターヒット時を交互に確認する。"
   );
 });
