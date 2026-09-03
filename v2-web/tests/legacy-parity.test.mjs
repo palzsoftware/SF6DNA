@@ -34,6 +34,6 @@ test("diagnosis completion stores history without changing recommendation gates"
 
 test("public source directory excludes internal candidate evidence", () => {
   const sources = read("src/lib/public-sources.ts");
-  assert.ok(sources.includes('["official", "primary"]'));
+  assert.ok(sources.includes("list_public_sources"));
   assert.ok(!sources.includes('"internal_candidate"'));
 });

@@ -62,7 +62,7 @@ test("recommendation requires verified sourced trait scores", () => {
   const source = readProjectFile("src/lib/character-recommendations.ts");
   assert.match(source, /\.from\("character_trait_scores"\)/);
   assertPublishedVerified(source, "character recommendation");
-  assert.match(source, /\.eq\("entity_type",\s*"character_trait_score"\)/, "trait score source gate missing");
+  assert.match(source, /getPublicEntitySources/, "trait score source gate missing");
   assert.match(source, /sourcedScoreIds\.has\(String\(row\.id\)\)/, "sourced score filter missing");
   assert.match(source, /Math\.ceil\(activeEntries\.length \* 0\.75\)/, "75% coverage gate missing");
 });

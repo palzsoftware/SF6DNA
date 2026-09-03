@@ -28,7 +28,7 @@ test('diagnosis resume reuses only explicit stored answers', () => {
 test('matchup card preserves publication, verification and source gates', () => {
   assert.match(matchup, /\.eq\("status", "published"\)/);
   assert.match(matchup, /\.eq\("verification_status", "verified"\)/);
-  assert.match(matchup, /entity_sources/);
+  assert.match(matchup, /getPublicEntitySources/);
   assert.match(matchupPage, /公開条件を満たした技情報/);
   assert.match(matchupPage, /未確認の情報を推測で補うことはしません/);
 });

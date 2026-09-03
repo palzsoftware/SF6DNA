@@ -55,7 +55,7 @@ test("Move and character guidance hides internal English review prose", () => {
 });
 
 test("Move Preview detail remains token-gated, invoker-only, and read-only", () => {
-  const sql = read("../supabase/migrations/20260901_phase44_move_japanese_preview.sql");
+  const sql = read("../supabase/migrations/20260903220227_phase44_move_japanese_preview.sql");
 
   assert.match(sql, /private\.is_phase23_device_preview\(\)/);
   assert.match(sql, /security invoker/i);
@@ -68,7 +68,7 @@ test("Move Preview detail remains token-gated, invoker-only, and read-only", () 
 });
 
 test("Move motion media Preview can evaluate its public RLS helper", () => {
-  const sql = read("../supabase/migrations/20260901_phase44_move_motion_media_preview_permission.sql");
+  const sql = read("../supabase/migrations/20260903220228_phase44_move_motion_media_preview_permission.sql");
 
   assert.match(sql, /grant execute on function private\.is_move_motion_media_public_ready\(uuid\)/i);
   assert.match(sql, /to anon, authenticated, service_role/i);
@@ -95,7 +95,7 @@ test("Character overview and Move list apply Japanese display localization", () 
   const sections = read("src/lib/character-sections.ts");
   const page = read("src/app/characters/[slug]/[section]/page.tsx");
 
-  assert.match(characters, /localizeCharacterGuideText\(row\.body, moveGlossary\)/);
+  assert.match(characters, /localizeCharacterGuideText\(\s*row\.body,\s*moveGlossary,\s*\)/);
   assert.match(sections, /localizeMoveText\(row\.usageSummary\)/);
   assert.match(sections, /localizeTrainingType\(row\.trainingType\)/);
   assert.match(page, /classic: "クラシック"/);
@@ -103,7 +103,7 @@ test("Character overview and Move list apply Japanese display localization", () 
 });
 
 test("Phase46 adds all character overviews without changing publication state", () => {
-  const sql = read("../supabase/migrations/20260902_phase46_character_overview_and_japanese_copy.sql");
+  const sql = read("../supabase/migrations/20260902004628_phase46_character_overview_and_japanese_copy.sql");
   assert.equal((sql.match(/^    \('/gm) ?? []).length, 31);
   assert.match(sql, /update public\.characters/);
   assert.match(sql, /strengths_summary/);
@@ -112,7 +112,7 @@ test("Phase46 adds all character overviews without changing publication state", 
 });
 
 test("Phase47 keeps imported notes and supplies Japanese Move copy", () => {
-  const sql = read("../supabase/migrations/20260902_phase47_move_japanese_explanations.sql");
+  const sql = read("../supabase/migrations/20260902004632_phase47_move_japanese_explanations.sql");
   const detail = read("src/lib/content-detail.ts");
   const form = read("src/components/admin-move-form.tsx");
   assert.match(sql, /add column if not exists description_ja/);
@@ -125,7 +125,7 @@ test("Phase47 keeps imported notes and supplies Japanese Move copy", () => {
 });
 
 test("Move GIF storage is admin-only for writes and optional on detail pages", () => {
-  const sql = read("../supabase/migrations/20260902_phase48_move_motion_storage.sql");
+  const sql = read("../supabase/migrations/20260902004635_phase48_move_motion_storage.sql");
   const action = read("src/app/admin/moves/[id]/motion-actions.ts");
   const detail = read("src/components/simple-detail.tsx");
   assert.match(sql, /'move-motion-media'/);
@@ -138,7 +138,7 @@ test("Move GIF storage is admin-only for writes and optional on detail pages", (
 });
 
 test("Phase49 removes mechanical spacing and type-inappropriate guidance", () => {
-  const sql = read("../supabase/migrations/20260902_phase49_move_japanese_copy_polish.sql");
+  const sql = read("../supabase/migrations/20260902004745_phase49_move_japanese_copy_polish.sql");
   assert.match(sql, /move_type = 'throw'/);
   assert.match(sql, /move_type = 'taunt'/);
   assert.match(sql, /replace\(usage_summary_ja, '。 ', '。'\)/);

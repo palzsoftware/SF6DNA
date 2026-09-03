@@ -1,3 +1,4 @@
+import { getPublicEntitySources } from "@/lib/public-source-links";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import {
   getDevicePreviewCharacterMoveGlossary,
@@ -82,33 +83,6 @@ function previewReleaseRows(detail: DevicePreviewContentDetail): Array<[string, 
   ];
 }
 
-type SourceLinkRow = {
-  relationship?: string | null;
-  sources?: {
-    id?: string;
-    title?: string;
-    url?: string;
-    publisher?: string | null;
-    source_type?: string;
-  } | null;
-};
-
-function toSources(rows: unknown[] | null | undefined): DetailSource[] {
-  return (rows ?? []).flatMap((raw) => {
-    const row = raw as SourceLinkRow;
-    const source = row.sources;
-    if (!source?.id || !source.title || !source.url || !source.source_type) return [];
-    return [{
-      id: source.id,
-      title: source.title,
-      url: source.url,
-      publisher: source.publisher ?? null,
-      sourceType: source.source_type,
-      relationship: String(row.relationship ?? "supporting"),
-    }];
-  });
-}
-
 function dedupeSources(sources: DetailSource[]): DetailSource[] {
   const map = new Map<string, DetailSource>();
   for (const source of sources) {
@@ -136,19 +110,17 @@ async function getReleaseMetadata(
   verificationStatus: string | null
 ): Promise<{ body: Array<[string, string | null]>; sources: DetailSource[] }> {
   const supabase = getSupabaseServerClient();
-  const [patchResult, sourceResult] = await Promise.all([
+  const [patchResult, sourceRows] = await Promise.all([
     patchId
       ? supabase.from("patches").select("version_label, name").eq("id", patchId).maybeSingle()
       : Promise.resolve({ data: null, error: null }),
-    supabase
-      .from("entity_sources")
-      .select("relationship, sources!inner(id, title, url, publisher, source_type)")
-      .eq("entity_type", entityType)
-      .eq("entity_id", entityId),
+    getPublicEntitySources(
+      [entityType],
+      [entityId],
+    ),
   ]);
 
   if (patchResult.error) console.error(`[content-detail] ${entityType} patch failed`, patchResult.error.message);
-  if (sourceResult.error) console.error(`[content-detail] ${entityType} sources failed`, sourceResult.error.message);
 
   const patch = patchResult.data as { version_label?: string; name?: string | null } | null;
   const patchLabel = patch?.version_label
@@ -160,7 +132,16 @@ async function getReleaseMetadata(
       ["検証状態", localizeComboText(verificationStatus) as string | null],
       ["対応バージョン", patchLabel],
     ],
-    sources: dedupeSources(toSources(sourceResult.data as unknown[] | null)),
+    sources: dedupeSources(
+      sourceRows.map((row) => ({
+        id: row.sourceId,
+        title: row.title,
+        url: row.url,
+        publisher: row.publisher,
+        sourceType: row.sourceType,
+        relationship: row.relationship,
+      })),
+    ),
   };
 }
 
@@ -249,7 +230,7 @@ export async function getMoveBySlug(
   const [
     { data: commands, error: commandError },
     { data: frame, error: frameError },
-    { data: moveSourceLinks, error: moveSourceError },
+    moveSourceLinks,
     { data: motionMedia, error: motionMediaError },
   ] = await Promise.all([
     supabase
@@ -265,11 +246,10 @@ export async function getMoveBySlug(
       .is("valid_to_patch_id", null)
       .limit(1)
       .maybeSingle(),
-    supabase
-      .from("entity_sources")
-      .select("relationship, sources!inner(id, title, url, publisher, source_type)")
-      .eq("entity_type", "move")
-      .eq("entity_id", data.id),
+    getPublicEntitySources(
+      ["move"],
+      [String(data.id)],
+    ),
     supabase
       .from("move_motion_media")
       .select("id, media_type, media_url, poster_url, source_url, source_label")
@@ -280,7 +260,6 @@ export async function getMoveBySlug(
 
   if (commandError) console.error("[content-detail] move commands failed", commandError.message);
   if (frameError) console.error("[content-detail] move frame failed", frameError.message);
-  if (moveSourceError) console.error("[content-detail] move sources failed", moveSourceError.message);
   if (motionMediaError) console.error("[content-detail] move motion media failed", motionMediaError.message);
 
   let patch: { version_label?: string; name?: string | null } | null = null;
@@ -291,18 +270,23 @@ export async function getMoveBySlug(
       frame.valid_from_patch_id
         ? supabase.from("patches").select("version_label, name").eq("id", frame.valid_from_patch_id).maybeSingle()
         : Promise.resolve({ data: null, error: null }),
-      supabase
-        .from("entity_sources")
-        .select("relationship, sources!inner(id, title, url, publisher, source_type)")
-        .in("entity_type", ["frame", "move_frame_data"])
-        .eq("entity_id", frame.id),
+      getPublicEntitySources(
+        ["frame", "move_frame_data"],
+        [String(frame.id)],
+      ),
     ]);
 
-    const [patchResult, frameSourceResult] = frameQueries;
+    const [patchResult, frameSourceRows] = frameQueries;
     if (patchResult.error) console.error("[content-detail] move patch failed", patchResult.error.message);
-    if (frameSourceResult.error) console.error("[content-detail] move frame sources failed", frameSourceResult.error.message);
     patch = patchResult.data;
-    frameSources = toSources(frameSourceResult.data as unknown[] | null);
+    frameSources = frameSourceRows.map((row) => ({
+      id: row.sourceId,
+      title: row.title,
+      url: row.url,
+      publisher: row.publisher,
+      sourceType: row.sourceType,
+      relationship: row.relationship,
+    }));
   }
 
   const classicCommands = (commands ?? [])
@@ -344,7 +328,14 @@ export async function getMoveBySlug(
       ["フレーム補足", localizeMoveText(frame?.notes ?? null)],
     ],
     sources: dedupeSources([
-      ...toSources(moveSourceLinks as unknown[] | null),
+      ...moveSourceLinks.map((row) => ({
+        id: row.sourceId,
+        title: row.title,
+        url: row.url,
+        publisher: row.publisher,
+        sourceType: row.sourceType,
+        relationship: row.relationship,
+      })),
       ...frameSources,
     ]),
     media: (motionMedia ?? []).map((item) => ({
@@ -436,7 +427,7 @@ export async function getSetupBySlug(slug: string, previewToken?: string | null)
         ["始動条件", localizeSetupDetail("starter_condition", previewValue(data, "starter_condition"), glossary)],
         ["手順", localizeSetupDetail("sequence_text", previewValue(data, "sequence_text"), glossary)],
         ["フレーム状況", localizeSetupDetail("frame_advantage", previewValue(data, "frame_advantage"), glossary)],
-        ["位置", localizeSetupDetail("position", previewValue(data, "position"), glossary)],
+        ["菴咲ｽｮ", localizeSetupDetail("position", previewValue(data, "position"), glossary)],
         ["ゲージ条件", localizeSetupDetail("meter_condition", previewValue(data, "meter_condition"), glossary)],
         ["対策メモ", localizeSetupDetail("counter_notes", previewValue(data, "counter_notes"), glossary)],
       ],
@@ -466,7 +457,7 @@ export async function getSetupBySlug(slug: string, previewToken?: string | null)
       ["始動条件", localizeSetupDetail("starter_condition", data.starter_condition ?? null)],
       ["手順", localizeSetupDetail("sequence_text", data.sequence_text ?? null)],
       ["フレーム状況", localizeSetupDetail("frame_advantage", data.frame_advantage ?? null)],
-      ["位置", localizeSetupDetail("position", data.position ?? null)],
+      ["菴咲ｽｮ", localizeSetupDetail("position", data.position ?? null)],
       ["ゲージ条件", localizeSetupDetail("meter_condition", data.meter_condition ?? null)],
       ["対策メモ", localizeSetupDetail("counter_notes", data.counter_notes ?? null)],
     ],

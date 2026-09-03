@@ -9,7 +9,7 @@ function readProjectFile(path) {
 test("strategy details expose patch, verification, and source metadata", () => {
   const source = readProjectFile("src/lib/content-detail.ts");
   assert.match(source, /function getReleaseMetadata/);
-  assert.match(source, /\.from\("entity_sources"\)/, "strategy source lookup missing");
+  assert.match(source, /getPublicEntitySources/, "strategy source lookup missing");
   assert.match(source, /\.from\("patches"\)/, "strategy patch lookup missing");
   assert.match(source, /\["検証状態",\s*localizeComboText\(verificationStatus\)/, "verification display metadata missing");
   assert.match(source, /\["対応バージョン",/, "patch display metadata missing");

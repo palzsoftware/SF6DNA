@@ -1,3 +1,4 @@
+import { getPublicEntitySources } from "@/lib/public-source-links";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type { SearchResultItem } from "@/types/search";
 
@@ -14,78 +15,98 @@ export type CoachEvidence = SearchResultItem & {
 };
 
 function isConfigured() {
-  return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+  return Boolean(
+    process.env.NEXT_PUBLIC_SUPABASE_URL &&
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+  );
 }
 
-export async function attachSourcesToEvidence(items: SearchResultItem[]): Promise<CoachEvidence[]> {
-  if (!items.length || !isConfigured()) return items.map((item) => ({ ...item, sources: [] }));
-
-  const supabase = getSupabaseServerClient();
-  const ids = Array.from(new Set(items.map((item) => item.id)));
-
-  const { data, error } = await supabase
-    .from("entity_sources")
-    .select("entity_type, entity_id, relationship, sources(title, url, source_type, publisher, reliability_level)")
-    .in("entity_id", ids);
-
-  if (error) {
-    console.error("[coach] source lookup failed", error.message);
-    return items.map((item) => ({ ...item, sources: [] }));
+export async function attachSourcesToEvidence(
+  items: SearchResultItem[],
+): Promise<CoachEvidence[]> {
+  if (!items.length || !isConfigured()) {
+    return items.map((item) => ({
+      ...item,
+      sources: [],
+    }));
   }
+
+  const ids = Array.from(
+    new Set(items.map((item) => item.id)),
+  );
+
+  const entityTypes = Array.from(
+    new Set(items.map((item) => item.type)),
+  );
+
+  const rows = await getPublicEntitySources(
+    entityTypes,
+    ids,
+  );
 
   const sourceMap = new Map<string, CoachSource[]>();
 
-  for (const row of data ?? []) {
-    const entityType = String(row.entity_type ?? "");
-    const entityId = String(row.entity_id ?? "");
-    const rawSource = row.sources as unknown as {
-      title?: string;
-      url?: string;
-      source_type?: string;
-      publisher?: string | null;
-      reliability_level?: string | null;
-    } | null;
-
-    if (!rawSource?.title || !rawSource.url) continue;
-
-    const key = `${entityType}:${entityId}`;
+  for (const row of rows) {
+    const key = `${row.entityType}:${row.entityId}`;
     const list = sourceMap.get(key) ?? [];
-    if (!list.some((source) => source.url === rawSource.url)) {
+
+    if (!list.some((source) => source.url === row.url)) {
       list.push({
-        title: rawSource.title,
-        url: rawSource.url,
-        sourceType: rawSource.source_type ?? "unknown",
-        publisher: rawSource.publisher ?? null,
-        reliabilityLevel: rawSource.reliability_level ?? null,
+        title: row.title,
+        url: row.url,
+        sourceType: row.sourceType,
+        publisher: row.publisher,
+        reliabilityLevel: row.reliabilityLevel,
       });
+
       sourceMap.set(key, list);
     }
   }
 
   return items.map((item) => ({
     ...item,
-    sources: sourceMap.get(`${item.type}:${item.id}`) ?? [],
+    sources:
+      sourceMap.get(`${item.type}:${item.id}`) ?? [],
   }));
 }
 
 export async function getCurrentPatch() {
   if (!isConfigured()) return null;
+
   const supabase = getSupabaseServerClient();
+
   const { data, error } = await supabase
     .from("patches")
-    .select("version_label, name, released_at, official_url")
+    .select(
+      "version_label, name, released_at, official_url",
+    )
     .eq("is_current", true)
     .maybeSingle();
 
   if (error || !data) {
-    if (error) console.error("[coach] current patch lookup failed", error.message);
+    if (error) {
+      console.error(
+        "[coach] current patch lookup failed",
+        error.message,
+      );
+    }
+
     return null;
   }
 
   return {
     versionLabel: String(data.version_label),
-    name: typeof data.name === "string" ? data.name : null,
-    releasedAt: typeof data.released_at === "string" ? data.released_at : null,
-    officialUrl: typeof data.official_url === "string" ? data.official_url : null,
+    name:
+      typeof data.name === "string"
+        ? data.name
+        : null,
+    releasedAt:
+      typeof data.released_at === "string"
+        ? data.released_at
+        : null,
+    officialUrl:
+      typeof data.official_url === "string"
+        ? data.official_url
+        : null,
   };
 }

@@ -1,4 +1,8 @@
-import { listCharacterSectionItems, type CharacterSectionItem } from "@/lib/character-sections";
+import {
+  listCharacterSectionItems,
+  type CharacterSectionItem,
+} from "@/lib/character-sections";
+import { getPublicEntitySources } from "@/lib/public-source-links";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 
 export type MatchupCounterItem = {
@@ -14,50 +18,103 @@ export type MatchupCardData = {
   counters: MatchupCounterItem[];
 };
 
-export async function getMatchupCardData(ownCharacterId: string, opponentCharacterId: string): Promise<MatchupCardData> {
-  const opponentMoves = (await listCharacterSectionItems(opponentCharacterId, "moves")).slice(0, 12);
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
-    return { opponentMoves, counters: [] };
+export async function getMatchupCardData(
+  ownCharacterId: string,
+  opponentCharacterId: string,
+): Promise<MatchupCardData> {
+  const opponentMoves = (
+    await listCharacterSectionItems(
+      opponentCharacterId,
+      "moves",
+    )
+  ).slice(0, 12);
+
+  if (
+    !process.env.NEXT_PUBLIC_SUPABASE_URL ||
+    !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  ) {
+    return {
+      opponentMoves,
+      counters: [],
+    };
   }
 
   const supabase = getSupabaseServerClient();
+
   const { data, error } = await supabase
     .from("counters")
-    .select("id, slug, title, summary, counter_type, difficulty")
-    .eq("defender_character_id", ownCharacterId)
-    .eq("opponent_character_id", opponentCharacterId)
+    .select(
+      "id, slug, title, summary, counter_type, difficulty",
+    )
+    .eq(
+      "defender_character_id",
+      ownCharacterId,
+    )
+    .eq(
+      "opponent_character_id",
+      opponentCharacterId,
+    )
     .eq("status", "published")
     .eq("verification_status", "verified")
     .limit(30);
 
   if (error) {
-    console.error("[matchup-card] counters failed", error.message);
-    return { opponentMoves, counters: [] };
+    console.error(
+      "[matchup-card] counters failed",
+      error.message,
+    );
+
+    return {
+      opponentMoves,
+      counters: [],
+    };
   }
 
   const rows = data ?? [];
-  if (!rows.length) return { opponentMoves, counters: [] };
 
-  const ids = rows.map((row) => String(row.id));
-  const { data: sourceLinks, error: sourceError } = await supabase
-    .from("entity_sources")
-    .select("entity_id")
-    .eq("entity_type", "counter")
-    .in("entity_id", ids);
-
-  if (sourceError) {
-    console.error("[matchup-card] counter sources failed", sourceError.message);
-    return { opponentMoves, counters: [] };
+  if (!rows.length) {
+    return {
+      opponentMoves,
+      counters: [],
+    };
   }
 
-  const sourced = new Set((sourceLinks ?? []).map((row) => String(row.entity_id)));
-  const counters = rows.flatMap((row) => sourced.has(String(row.id)) ? [{
-    id: String(row.id),
-    title: String(row.title),
-    summary: typeof row.summary === "string" ? row.summary : null,
-    href: `/counters/${row.slug}`,
-    meta: [row.counter_type, row.difficulty ? `難易度 ${row.difficulty}` : null].filter(Boolean).join(" / ") || null,
-  }] : []);
+  const ids = rows.map((row) => String(row.id));
 
-  return { opponentMoves, counters };
+  const sourceLinks = await getPublicEntitySources(
+    ["counter"],
+    ids,
+  );
+
+  const sourced = new Set(
+    sourceLinks.map((row) => row.entityId),
+  );
+
+  const counters = rows.flatMap((row) =>
+    sourced.has(String(row.id))
+      ? [{
+          id: String(row.id),
+          title: String(row.title),
+          summary:
+            typeof row.summary === "string"
+              ? row.summary
+              : null,
+          href: `/counters/${row.slug}`,
+          meta:
+            [
+              row.counter_type,
+              row.difficulty
+                ? `難易度 ${row.difficulty}`
+                : null,
+            ]
+              .filter(Boolean)
+              .join(" / ") || null,
+        }]
+      : [],
+  );
+
+  return {
+    opponentMoves,
+    counters,
+  };
 }

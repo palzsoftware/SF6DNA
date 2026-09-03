@@ -1,3 +1,4 @@
+import { getPublicEntitySources } from "@/lib/public-source-links";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 
 export type CharacterRecommendation = {
@@ -60,18 +61,14 @@ export async function recommendCharacters(
   }
 
   const scoreIds = rows.map((row) => String(row.id));
-  const { data: sourceLinks, error: sourceError } = await supabase
-    .from("entity_sources")
-    .select("entity_id")
-    .eq("entity_type", "character_trait_score")
-    .in("entity_id", scoreIds);
+  const sourceLinks = await getPublicEntitySources(
+    ["character_trait_score"],
+    scoreIds,
+  );
 
-  if (sourceError) {
-    console.error("[recommendations] source lookup failed", sourceError.message);
-    return [];
-  }
-
-  const sourcedScoreIds = new Set((sourceLinks ?? []).map((row) => String(row.entity_id)));
+  const sourcedScoreIds = new Set(
+    sourceLinks.map((row) => row.entityId),
+  );
   if (!sourcedScoreIds.size) return [];
 
   const inputMap = new Map(activeEntries);
