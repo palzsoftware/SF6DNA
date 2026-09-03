@@ -1,0 +1,8 @@
+-- Historical migration marker retained for Local/Remote version alignment.
+-- The original Remote migration created or changed a temporary SECURITY DEFINER
+-- frame-audit RPC. That RPC was removed by the later
+-- phase20_remove_temporary_audit_rpc migration.
+--
+-- This file is intentionally a no-op: replaying the retired audit endpoint would
+-- briefly expose it during a fresh migration run, and the first migration also
+-- contained a one-time access token that must not be committed to Git.
