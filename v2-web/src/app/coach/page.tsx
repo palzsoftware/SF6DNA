@@ -1,4 +1,6 @@
+import { notFound } from "next/navigation";
 import { CoachRetrievalDemo } from "@/components/coach-retrieval-demo";
+import { releaseFeatures } from "@/lib/release-features";
 
 export const metadata = { title: "AIコーチ" };
 

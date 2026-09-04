@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { listTrainingLibrary } from "@/lib/knowledge";
+import { releaseFeatures } from "@/lib/release-features";
 import type { TrainingListItem } from "@/types/knowledge";
 import styles from "./page.module.css";
 
@@ -65,6 +67,7 @@ function TrainingCard({ item }: { item: TrainingListItem }) {
 }
 
 export default async function TrainingPage() {
+  if (!releaseFeatures.training) notFound();
   const items = await listTrainingLibrary();
   const common = items.filter((item) => !item.characterSlug);
   const characterSpecific = items.filter((item) => item.characterSlug);

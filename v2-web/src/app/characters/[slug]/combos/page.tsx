@@ -4,9 +4,11 @@ import { CharacterTabs } from "@/components/character-tabs";
 import { listCharacterSectionItems } from "@/lib/character-sections";
 import { isDevicePreviewRequest, normalizeDevicePreviewToken } from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
+import { releaseFeatures } from "@/lib/release-features";
 import styles from "../[section]/page.module.css";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  if (!releaseFeatures.publicStrategyContent) return {};
   const { slug } = await params;
   const character = await getCharacterBySlug(slug);
   if (!character) return {};
@@ -28,6 +30,7 @@ export default async function CharacterCombosPage({
     resource?: string | string[];
   }>;
 }) {
+  if (!releaseFeatures.publicStrategyContent) notFound();
   const [{ slug }, query] = await Promise.all([params, searchParams]);
   const previewToken = normalizeDevicePreviewToken(query.preview);
   const character = await getCharacterBySlug(slug, previewToken);

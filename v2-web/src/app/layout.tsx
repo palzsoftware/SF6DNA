@@ -55,12 +55,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <Link className="site-brand" href="/">SF6DNA</Link>
             <nav className="site-nav" aria-label="主要ナビゲーション">
               <Link href="/characters">キャラクター</Link>
-              <Link href="/counters">対策</Link>
-              <Link href="/training">練習</Link>
-              <Link href="/search">検索</Link>
               <Link href="/diagnosis">診断</Link>
-              <Link href="/coach">AIコーチ</Link>
-              <Link href="/tools">マイ機能</Link>
+              <Link href="/search">検索</Link>
+              <Link href="/players">プレイヤー</Link>
+              <Link href="/videos">動画</Link>
             </nav>
           </div>
         </header>
@@ -75,14 +73,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/faq">FAQ</Link>
               <Link href="/sources">情報源</Link>
               <Link href="/changelog">更新履歴</Link>
+              <Link href="/privacy">プライバシー</Link>
+              <Link href="/terms">利用規約</Link>
+              <Link href="/disclaimer">免責事項</Link>
+              <Link href="/contact">お問い合わせ</Link>
             </nav>
           </div>
         </footer>
         <nav className="mobile-dock" aria-label="スマートフォン用クイックナビゲーション">
           <Link href="/characters">キャラ</Link>
-          <Link href="/counters">対策</Link>
-          <Link href="/training">練習</Link>
+          <Link href="/diagnosis">診断</Link>
           <Link href="/search">検索</Link>
+          <Link href="/players">選手</Link>
         </nav>
       </body>
     </html>

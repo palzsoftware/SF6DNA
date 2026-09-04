@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { attachSourcesToEvidence, getCurrentPatch } from "@/lib/coach-evidence";
+import { releaseFeatures } from "@/lib/release-features";
 import { searchAcrossContent } from "@/lib/search";
 
 function bestSourceRank(sources: Array<{ reliabilityLevel: string | null }>) {

@@ -7,37 +7,20 @@ export const metadata = { title: "検索" };
 
 const TYPE_LABELS: Record<string, string> = {
   character: "キャラクター",
-  move: "技",
-  combo: "コンボ",
-  setup: "セットプレイ",
-  sequence: "連携",
-  counter: "対策",
-  training: "トレーニング",
   player: "プレイヤー",
-  tournament: "大会",
   video: "動画",
-  glossary: "用語",
 };
 
 const TYPE_ORDER = [
   "character",
-  "move",
-  "counter",
-  "training",
-  "combo",
-  "setup",
-  "sequence",
   "player",
   "video",
-  "glossary",
-  "tournament",
 ] as const;
 
 const QUICK_START = [
-  ["CHARACTER", "キャラクターから探す", "技・対策・練習をキャラ単位で確認", "/characters"],
-  ["VS", "対策を探す", "困っている技や状況への回答を確認", "/counters"],
-  ["TRAINING", "練習を探す", "今日やるトレモ項目を選ぶ", "/training"],
-  ["PLAYER", "参考プレイヤーを探す", "キャラ職人・プロから学ぶ", "/players"],
+  ["CHARACTER", "キャラクターから探す", "キャラクターの基本情報を確認", "/characters"],
+  ["PLAYER", "プレイヤーから探す", "使用キャラクターや選手情報を確認", "/players"],
+  ["VIDEO", "動画から探す", "関連動画を確認", "/videos"],
 ] as const;
 
 function one(value: string | string[] | undefined) {
@@ -76,14 +59,14 @@ export default async function SearchPage({
       <section className={styles.searchHero}>
         <p className="eyebrow">SEARCH</p>
         <h1>必要な情報へ、最短で。</h1>
-        <p>キャラクター名、技名、通称、コンボ、対策、練習、プレイヤーを横断して検索します。</p>
+        <p>キャラクター、プレイヤー、動画の公開情報を横断して検索します。</p>
       </section>
 
       <form className={styles.searchBox} action="/search">
         <input
           name="q"
           defaultValue={q}
-          placeholder="例: コパ / 足刀 / 波動拳 / JP / Nemo"
+          placeholder="例: JP / Ryu / Nemo"
           aria-label="検索キーワード"
           autoComplete="off"
         />
@@ -168,7 +151,7 @@ export default async function SearchPage({
             <section className={`empty-state ${styles.emptyHelp}`}>
               <h2>{results.length ? "この種類では一致する情報がありません" : "一致する公開データが見つかりません"}</h2>
               <ul>
-                <li>技の正式名称ではなく、短い語句でも検索できます。</li>
+                <li>キャラクター名やプレイヤー名の一部でも検索できます。</li>
                 <li>キャラクター名だけで検索してから詳細ページへ進む方法もあります。</li>
                 <li>未公開データは通常検索には表示されません。</li>
               </ul>

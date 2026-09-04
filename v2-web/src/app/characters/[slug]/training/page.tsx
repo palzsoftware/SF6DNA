@@ -7,9 +7,11 @@ import {
   normalizeDevicePreviewToken,
 } from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
+import { releaseFeatures } from "@/lib/release-features";
 import styles from "../[section]/page.module.css";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  if (!releaseFeatures.training) return {};
   const { slug } = await params;
   const character = await getCharacterBySlug(slug);
   if (!character) return {};
@@ -31,6 +33,7 @@ export default async function CharacterTrainingPage({
     level?: string | string[];
   }>;
 }) {
+  if (!releaseFeatures.training) notFound();
   const [{ slug }, query] = await Promise.all([params, searchParams]);
   const previewToken = normalizeDevicePreviewToken(query.preview);
   const character = await getCharacterBySlug(slug, previewToken);

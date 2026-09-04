@@ -9,6 +9,7 @@ import {
   type DevicePreviewMoveCommand,
 } from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
+import { releaseFeatures } from "@/lib/release-features";
 import { listMoveCommandsForCharacter } from "@/lib/move-commands";
 import {
   listMoveMotionMediaForCharacter,
@@ -250,6 +251,24 @@ function isSection(value: string): value is Exclude<CharacterSectionKey, "overvi
   return value !== "overview" && CHARACTER_SECTION_KEYS.includes(value as CharacterSectionKey);
 }
 
+function isReleaseSectionEnabled(
+  section: Exclude<CharacterSectionKey, "overview">
+) {
+  if (section === "training") return releaseFeatures.training;
+
+  if (
+    section === "moves" ||
+    section === "combos" ||
+    section === "setups" ||
+    section === "sequences" ||
+    section === "matchups"
+  ) {
+    return releaseFeatures.publicStrategyContent;
+  }
+
+  return true;
+}
+
 function renderMotion(media: MoveMotionMedia, title: string, compact = false) {
   const mediaClass = compact ? `${styles.motionMedia} ${moveStyles.motionMediaCompact}` : styles.motionMedia;
   if (media.mediaType === "gif") {
@@ -298,6 +317,7 @@ function buildMoveFilterHref(
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; section: string }> }) {
   const { slug, section } = await params;
   if (!isSection(section)) return {};
+  if (!isReleaseSectionEnabled(section)) return {};
   const character = await getCharacterBySlug(slug);
   if (!character) return {};
   return {
@@ -319,6 +339,7 @@ export default async function CharacterSectionPage({
 }) {
   const [{ slug, section }, query] = await Promise.all([params, searchParams]);
   if (!isSection(section)) notFound();
+  if (!isReleaseSectionEnabled(section)) notFound();
 
   const previewToken = normalizeDevicePreviewToken(query.preview);
   const character = await getCharacterBySlug(slug, previewToken);

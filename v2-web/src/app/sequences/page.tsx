@@ -1,9 +1,12 @@
 import { KnowledgeList } from "@/components/knowledge-list";
+import { notFound } from "next/navigation";
 import { listKnowledge } from "@/lib/knowledge";
+import { releaseFeatures } from "@/lib/release-features";
 
 export const metadata = { title: "連携" };
 
 export default async function SequencesPage() {
+  if (!releaseFeatures.publicStrategyContent) notFound();
   const items = await listKnowledge("sequence");
   return (
     <div className="site-shell page-stack">

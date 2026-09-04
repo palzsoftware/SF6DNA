@@ -6,8 +6,10 @@ import {
   normalizeDevicePreviewToken,
 } from "@/lib/device-preview";
 import { isMovePublicReady } from "@/lib/public-move-gate";
+import { releaseFeatures } from "@/lib/release-features";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  if (!releaseFeatures.publicStrategyContent) return {};
   const { slug } = await params;
   if (!(await isMovePublicReady(slug))) return { title: "技情報" };
   const detail = await getMoveBySlug(slug);
@@ -21,6 +23,7 @@ export default async function MovePage({
   params: Promise<{ slug: string }>;
   searchParams: Promise<{ preview?: string | string[] }>;
 }) {
+  if (!releaseFeatures.publicStrategyContent) notFound();
   const [{ slug }, query] = await Promise.all([params, searchParams]);
   const previewToken = normalizeDevicePreviewToken(query.preview);
   const previewActive = isDevicePreviewRequest(previewToken);

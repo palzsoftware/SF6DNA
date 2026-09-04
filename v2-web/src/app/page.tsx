@@ -4,28 +4,28 @@ import { listCharacters } from "@/lib/characters";
 
 const dailyActions = [
   {
-    phase: "BEFORE MATCH",
-    title: "対戦前に対策を確認",
-    description: "苦手キャラや要注意行動を短時間で見直す。",
-    href: "/counters",
+    phase: "DISCOVER",
+    title: "キャラクターを調べる",
+    description: "各キャラクターの基本情報や関連プレイヤー・動画を確認する。",
+    href: "/characters",
   },
   {
-    phase: "PRACTICE",
-    title: "今日の練習を決める",
-    description: "対空・確反・端防御など、トレモ項目へすぐ移動する。",
-    href: "/training",
+    phase: "DIAGNOSIS",
+    title: "診断から自分を知る",
+    description: "プレイ傾向やキャラクター適性を診断する。",
+    href: "/diagnosis",
   },
   {
-    phase: "AFTER MATCH",
-    title: "対戦後に振り返る",
-    description: "自分用ツールで試合の課題と次の練習を整理する。",
-    href: "/tools",
+    phase: "SEARCH",
+    title: "公開情報を検索",
+    description: "キャラクター・プレイヤー・動画を横断して探す。",
+    href: "/search",
   },
   {
     phase: "STUDY",
-    title: "キャラクターを研究",
-    description: "技・フレーム・コンボ・対策をキャラ単位で横断する。",
-    href: "/characters",
+    title: "プレイヤーや動画を見る",
+    description: "参考になるプレイヤーや公開動画から情報を探す。",
+    href: "/players",
   },
 ] as const;
 
@@ -33,34 +33,34 @@ const pillars = [
   {
     icon: "01",
     title: "診断",
-    description: "短時間でプレイ傾向・課題・相性の良いキャラクター候補を確認する。",
+    description: "プレイ傾向やキャラクター適性を確認する。",
     href: "/diagnosis",
   },
   {
     icon: "02",
     title: "キャラクター情報",
-    description: "技・フレーム・コンボ・セットプレイ・立ち回り・対策を横断して調べる。",
+    description: "プレイアブルキャラクターの基本情報を確認する。",
     href: "/characters",
   },
   {
     icon: "03",
     title: "プレイヤー情報",
-    description: "プロ・強豪・キャラ職人・配信者から、参考になるプレイヤーを探す。",
+    description: "プロ・強豪・キャラクター職人などの公開情報を確認する。",
     href: "/players",
   },
   {
     icon: "04",
-    title: "AIコーチ",
-    description: "SF6DNA内の確認済みデータを根拠に、課題と次の練習を整理する。",
-    href: "/coach",
+    title: "動画",
+    description: "キャラクターやプレイヤーに関連する公開動画を確認する。",
+    href: "/videos",
   },
 ];
 
 const subTools = [
-  ["CB", "コンボ", "/combos"],
-  ["VS", "対策", "/counters"],
-  ["OK", "セットプレイ", "/setups"],
-  ["TR", "トレーニング", "/training"],
+  ["CH", "キャラクター", "/characters"],
+  ["DG", "診断", "/diagnosis"],
+  ["PL", "プレイヤー", "/players"],
+  ["VD", "動画", "/videos"],
 ] as const;
 
 export default async function HomePage() {
@@ -74,14 +74,14 @@ export default async function HomePage() {
       <section className="home-hero">
         <div className="home-hero__copy">
           <p className="eyebrow">STREET FIGHTER 6 / PLAYER TOOLKIT</p>
-          <h1>調べる。練習する。<span>次の1戦を変える。</span></h1>
+          <h1>自分を知る。情報を探す。<span>SF6をもっと深く知る。</span></h1>
           <p>
             対戦前の確認、トレモ、対戦後の振り返りを1か所に。
             SF6DNAは「今やりたいこと」から迷わず使えるSF6総合プラットフォームです。
           </p>
           <div className="home-hero__actions">
             <Link className="button-primary" href="/characters">キャラクターから調べる</Link>
-            <Link className="button-secondary" href="/training">今日の練習を開く</Link>
+            <Link className="button-secondary" href="/diagnosis">診断を始める</Link>
           </div>
         </div>
         <div className="home-hero__visual" aria-label="SF6キャラクター">
@@ -108,37 +108,22 @@ export default async function HomePage() {
         <div className="home-command-search">
           <strong>知りたいことを直接検索</strong>
           <form className="search-form" action="/search">
-            <input name="q" placeholder="キャラ・技・別名・コンボ・対策" aria-label="SF6DNAを検索" />
+            <input name="q" placeholder="キャラクター・プレイヤー・動画" aria-label="SF6DNAを検索" />
             <button type="submit">検索</button>
           </form>
         </div>
-        <Link className="home-command-card" href="/counters">
-          <small>BEFORE MATCH</small>
-          <strong>対戦前30秒</strong>
-          <span>相手キャラの注意点を確認 →</span>
-        </Link>
-        <Link className="home-command-card" href="/training">
-          <small>PRACTICE</small>
-          <strong>トレモを始める</strong>
-          <span>目的別の練習へ移動 →</span>
-        </Link>
-        <Link className="home-command-card" href="/tools">
-          <small>AFTER MATCH</small>
-          <strong>試合を振り返る</strong>
-          <span>課題を整理して次へ →</span>
-        </Link>
       </section>
 
       <section className="home-metric-strip" aria-label="SF6DNA収録状況">
         <div className="home-metric"><strong>{characters.length}キャラ</strong><span>プレイアブルキャラクター</span></div>
-        <div className="home-metric"><strong>1か所</strong><span>技・対策・練習・振り返りを横断</span></div>
-        <div className="home-metric"><strong>毎日</strong><span>対戦前後とトレモで使える導線</span></div>
+        <div className="home-metric"><strong>1か所</strong><span>キャラクター・診断・プレイヤー・動画を横断</span></div>
+        <div className="home-metric"><strong>公開情報</strong><span>確認条件を満たしたデータを表示</span></div>
       </section>
 
       <section className="daily-section" aria-labelledby="daily-title">
         <div className="section-heading">
-          <h2 id="daily-title">プレイの流れから選ぶ</h2>
-          <p>「何を見るか」ではなく「今何をしたいか」からページを選べます。</p>
+          <h2 id="daily-title">目的から選ぶ</h2>
+          <p>知りたい内容に合わせて公開中の機能から選べます。</p>
         </div>
         <div className="daily-grid">
           {dailyActions.map((action) => (
@@ -172,7 +157,7 @@ export default async function HomePage() {
       </section>
 
       <section>
-        <div className="section-heading"><h2>攻略データから探す</h2><p>目的が決まっている場合は直接開けます。</p></div>
+        <div className="section-heading"><h2>公開コンテンツから探す</h2><p>目的が決まっている場合は直接開けます。</p></div>
         <div className="card-grid">
           {subTools.map(([icon, title, href]) => (
             <Link className="feature-card" data-icon={icon} href={href} key={href}>

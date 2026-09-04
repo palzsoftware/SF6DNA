@@ -85,16 +85,60 @@ test("player and video public loaders require published status", () => {
   assert.match(sections, /video\.status\s*!==\s*"published"/, "draft related videos must not leak through character pages");
 });
 
-test("sitemap only includes verified strategy entities", () => {
+test("prerelease sitemap excludes disabled strategy, training, and coach routes", () => {
   const source = readProjectFile("src/app/sitemap.ts");
-  for (const table of ["combos", "setups", "sequences", "counters", "trainings"]) {
-    const tableStart = source.indexOf(`.from("${table}")`);
-    assert.notEqual(tableStart, -1, `sitemap missing ${table}`);
-    const query = source.slice(tableStart, tableStart + 220);
-    assert.match(query, /\.eq\("status",\s*"published"\)/, `${table}: sitemap published gate missing`);
-    assert.match(query, /\.eq\("verification_status",\s*"verified"\)/, `${table}: sitemap verified gate missing`);
+
+  for (const route of [
+    "/moves",
+    "/combos",
+    "/setups",
+    "/sequences",
+    "/counters",
+    "/training",
+    "/coach",
+    "/tools",
+    "/compare",
+    "/improve",
+    "/matchup-card",
+  ]) {
+    assert.doesNotMatch(
+      source,
+      new RegExp(`["']${route.replace("/", "\\/")}["']`),
+      `disabled prerelease route leaked into sitemap: ${route}`,
+    );
   }
-  assert.doesNotMatch(source, /sf6dna\.(com|net|jp)/i, "sitemap must not guess a production domain");
+
+  for (const table of [
+    "characters",
+    "players",
+    "videos",
+    "diagnoses",
+  ]) {
+    assert.match(
+      source,
+      new RegExp(`\\.from\\("${table}"\\)`),
+      `public sitemap table missing: ${table}`,
+    );
+  }
+
+  for (const route of [
+    "/privacy",
+    "/terms",
+    "/disclaimer",
+    "/contact",
+  ]) {
+    assert.match(
+      source,
+      new RegExp(`["']${route.replace("/", "\\/")}["']`),
+      `legal prerelease route missing from sitemap: ${route}`,
+    );
+  }
+
+  assert.doesNotMatch(
+    source,
+    /sf6dna\.(com|net|jp)/i,
+    "sitemap must not guess a production domain",
+  );
 });
 
 test("latest search RPC keeps strategy published + verified gate", () => {
