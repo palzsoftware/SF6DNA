@@ -125,7 +125,7 @@ Phase16監査で、`character_guide_sections` のPublic SELECTが `status='publi
   `status = 'published' AND verification_status = 'verified'`
 
 Repository:
-- `supabase/migrations/20260828_phase16_character_guide_verification_gate.sql`
+- `supabase/migrations/20260828043915_phase16_character_guide_verification_gate.sql`
 - `v2-web/src/lib/characters.ts` でも `published + verified` を要求
 
 データ行のstatus/verification変更は行っていない。

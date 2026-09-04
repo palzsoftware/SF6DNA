@@ -61,7 +61,7 @@ Public schemaのForeign Keyは全てvalidated。
 
 Migration:
 - Supabase: `phase19_normalize_guide_section_source_type`
-- Repo: `supabase/migrations/20260828_phase19_normalize_guide_section_source_type.sql`
+- Repo: `supabase/migrations/20260828060550_phase19_normalize_guide_section_source_type.sql`
 
 修正後:
 - legacy type: 0
@@ -147,8 +147,8 @@ Migrations:
 - `phase19_require_official_move_and_frame_sources`
 
 Repo:
-- `supabase/migrations/20260828_phase19_strict_public_move_rls.sql`
-- `supabase/migrations/20260828_phase19_require_official_move_and_frame_sources.sql`
+- `supabase/migrations/20260828060858_phase19_strict_public_move_rls.sql`
+- `supabase/migrations/20260828061405_phase19_require_official_move_and_frame_sources.sql`
 
 App:
 - `v2-web/src/lib/public-move-gate.ts`

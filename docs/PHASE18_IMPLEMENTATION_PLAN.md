@@ -83,7 +83,7 @@ Combo / Setup / Sequence / Counter / TrainingのPublic RLSを、
 の3条件へ強化した。
 
 Migration:
-`supabase/migrations/20260828_phase18_strategy_source_public_gate.sql`
+`supabase/migrations/20260828055010_phase18_strategy_source_public_gate.sql`
 
 ## Automated Acceptance
 

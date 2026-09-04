@@ -23,7 +23,7 @@ function loadLocalizationModule() {
 }
 
 test("unpublished content detail RPC remains token-gated, invoker-only, and read-only", () => {
-  const sql = read("../supabase/migrations/20260901_phase39_strategy_detail_device_preview.sql");
+  const sql = read("../supabase/migrations/20260901073043_phase39_strategy_detail_device_preview.sql");
 
   assert.match(sql, /private\.is_phase23_device_preview\(\)/);
   assert.match(sql, /security invoker/i);
@@ -37,7 +37,7 @@ test("unpublished content detail RPC remains token-gated, invoker-only, and read
 });
 
 test("detail preview exposes evidence and explicit review state", () => {
-  const sql = read("../supabase/migrations/20260901_phase39_strategy_detail_device_preview.sql");
+  const sql = read("../supabase/migrations/20260901073043_phase39_strategy_detail_device_preview.sql");
   const detail = read("src/lib/content-detail.ts");
 
   for (const field of ["patchLabel", "sources", "sourceType", "relationship"]) {
@@ -73,7 +73,7 @@ test("Combo Preview localizes English display text from the official Move glossa
   const localization = read("src/lib/detail-localization.ts");
   const preview = read("src/lib/device-preview.ts");
   const detail = read("src/lib/content-detail.ts");
-  const sql = read("../supabase/migrations/20260901_phase40_combo_japanese_glossary_preview.sql");
+  const sql = read("../supabase/migrations/20260901075352_phase40_combo_japanese_glossary_preview.sql");
 
   assert.match(sql, /security invoker/i);
   assert.match(sql, /private\.is_phase23_device_preview\(\)/);
@@ -94,7 +94,7 @@ test("Setup and Sequence Preview reuse the guarded Japanese Move glossary", () =
   const detail = read("src/lib/content-detail.ts");
   const setupPage = read("src/app/setups/[slug]/page.tsx");
   const sequencePage = read("src/app/sequences/[slug]/page.tsx");
-  const sql = read("../supabase/migrations/20260901_phase41_strategy_japanese_glossary_preview.sql");
+  const sql = read("../supabase/migrations/20260901081622_phase41_strategy_japanese_glossary_preview.sql");
 
   assert.match(sql, /security invoker/i);
   assert.match(sql, /private\.is_phase23_device_preview\(\)/);
@@ -173,7 +173,7 @@ test("field-specific localization returns natural Japanese for representative st
 });
 
 test("Counter detail Preview remains token-gated and keeps draft data unpublished", () => {
-  const sql = read("../supabase/migrations/20260901_phase42_counter_japanese_detail_preview.sql");
+  const sql = read("../supabase/migrations/20260901084304_phase42_counter_japanese_detail_preview.sql");
   const preview = read("src/lib/device-preview.ts");
   const detail = read("src/lib/content-detail.ts");
   const page = read("src/app/counters/[slug]/page.tsx");
@@ -194,7 +194,7 @@ test("Counter detail Preview remains token-gated and keeps draft data unpublishe
 });
 
 test("Training Preview localizes internal codes and English settings without changing source rows", () => {
-  const sql = read("../supabase/migrations/20260901_phase43_training_japanese_preview.sql");
+  const sql = read("../supabase/migrations/20260901122858_phase43_training_japanese_preview.sql");
   const preview = read("src/lib/device-preview.ts");
   const detail = read("src/lib/content-detail.ts");
   const sections = read("src/lib/character-sections.ts");

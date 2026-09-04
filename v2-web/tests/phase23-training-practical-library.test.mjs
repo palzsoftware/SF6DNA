@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
-const sql = read("../supabase/migrations/20260831_phase23_training_practical_foundations.sql");
+const sql = read("../supabase/migrations/20260831044222_phase23_training_practical_foundations.sql");
 
 test("Phase23 practical Training separates internal work queues from end-user drills", () => {
   assert.match(sql, /verification_status = 'unverified'/i, "archive selector must stay limited to unverified Training");

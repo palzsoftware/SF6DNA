@@ -21,7 +21,7 @@ Source欠損1件は`guile-capture-stun-max-current`であり、文章からレ�
 
 ## Change
 
-`20260901_phase38_training_patch_context_backfill.sql`で、現在のパッチに属するキャラ固有Trainingへ、完全一致で特定した各キャラ公式変更ページを追加する。
+`20260901071246_phase38_training_patch_context_backfill.sql`で、現在のパッチに属するキャラ固有Trainingへ、完全一致で特定した各キャラ公式変更ページを追加する。
 
 - relationship: `patch_context`
 - 追加対象: 313件

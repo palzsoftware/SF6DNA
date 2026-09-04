@@ -5,7 +5,7 @@ import { readFileSync } from "node:fs";
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
 test("Phase23 Setup gate quarantines verification placeholders and requires release-ready data", () => {
-  const sql = read("../supabase/migrations/20260831_phase23_setup_publication_hardening.sql");
+  const sql = read("../supabase/migrations/20260831032214_phase23_setup_publication_hardening.sql");
 
   assert.match(sql, /update public\.setups/i, "Setup placeholder quarantine missing");
   assert.match(sql, /verification_status = 'unverified'/i, "quarantine must only target unverified Setup rows");
@@ -21,7 +21,7 @@ test("Phase23 Setup gate quarantines verification placeholders and requires rele
 });
 
 test("Phase23 Setup gate quarantines replicated generic templates", () => {
-  const sql = read("../supabase/migrations/20260831_phase23_setup_generic_template_quarantine.sql");
+  const sql = read("../supabase/migrations/20260831040728_phase23_setup_generic_template_quarantine.sql");
 
   assert.match(sql, /private\.is_generic_setup_template/i, "generic Setup classifier missing");
   assert.match(sql, /update public\.setups/i, "generic Setup quarantine missing");
@@ -36,7 +36,7 @@ test("Phase23 Setup gate quarantines replicated generic templates", () => {
 });
 
 test("Phase23 generic Setup classifier pins search_path", () => {
-  const sql = read("../supabase/migrations/20260831_phase23_setup_template_classifier_search_path.sql");
+  const sql = read("../supabase/migrations/20260831040834_phase23_setup_template_classifier_search_path.sql");
 
   assert.match(sql, /alter function private\.is_generic_setup_template/i, "classifier search_path migration missing");
   assert.match(sql, /set search_path = pg_catalog/i, "classifier search_path must be pinned");

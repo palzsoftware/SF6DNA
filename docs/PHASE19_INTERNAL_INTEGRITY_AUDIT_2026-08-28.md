@@ -32,7 +32,7 @@ Supabase実DB `SF6DNAPro` を正本とし、人力・Vercel・実デバイス・
 
 - `guide_section` -> `character_guide_section`
 - Supabase migration: `phase19_normalize_guide_section_source_type`
-- repo migration: `supabase/migrations/20260828_phase19_normalize_guide_section_source_type.sql`
+- repo migration: `supabase/migrations/20260828060550_phase19_normalize_guide_section_source_type.sql`
 
 修正後:
 - legacy guide_section type: 0
@@ -172,8 +172,8 @@ Supabase migrations:
 - `phase19_require_official_move_and_frame_sources`
 
 Repo:
-- `supabase/migrations/20260828_phase19_strict_public_move_rls.sql`
-- `supabase/migrations/20260828_phase19_require_official_move_and_frame_sources.sql`
+- `supabase/migrations/20260828060858_phase19_strict_public_move_rls.sql`
+- `supabase/migrations/20260828061405_phase19_require_official_move_and_frame_sources.sql`
 
 Public Moveは以下を要求する。
 

@@ -160,7 +160,7 @@ Supabase migration:
 - `phase18_strategy_source_public_gate`
 
 Repository migration:
-- `supabase/migrations/20260828_phase18_strategy_source_public_gate.sql`
+- `supabase/migrations/20260828055010_phase18_strategy_source_public_gate.sql`
 
 対象:
 - combos

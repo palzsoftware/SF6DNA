@@ -107,10 +107,10 @@ Active Strategy合計は2480件。
 - `docs/PHASE34_CAPTURE_QUEUE_OPERATIONAL_AUDIT_2026-09-01.md`
 - `docs/PHASE35_CAPTURE_RESULT_INTAKE_READINESS_2026-09-01.md`
 - `docs/PHASE36_STRATEGY_SOURCE_QUALITY_AUDIT_2026-09-01.md`
-- `supabase/migrations/20260901_phase36_strategy_patch_context_backfill.sql`
-- `supabase/migrations/20260901_phase37_repair_missing_written_source_links.sql`
+- `supabase/migrations/20260901070756_phase36_strategy_patch_context_backfill.sql`
+- `supabase/migrations/20260901070758_phase37_repair_missing_written_source_links.sql`
 - `docs/PHASE38_TRAINING_SOURCE_QUALITY_AUDIT_2026-09-01.md`
-- `supabase/migrations/20260901_phase38_training_patch_context_backfill.sql`
+- `supabase/migrations/20260901071246_phase38_training_patch_context_backfill.sql`
 - `scripts/export-pending-capture-queue.sql`
 - `scripts/process-capture-results.sql`
 - `docs/PHASE23_FINAL_MANUAL_EXTERNAL_ACCEPTANCE_PLAN.md`

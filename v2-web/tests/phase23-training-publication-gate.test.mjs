@@ -5,7 +5,7 @@ import { readFileSync } from "node:fs";
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
 test("Phase23 Training gate quarantines generic verification-only matchup templates", () => {
-  const sql = read("../supabase/migrations/20260831_phase23_training_publication_hardening.sql");
+  const sql = read("../supabase/migrations/20260831031639_phase23_training_publication_hardening.sql");
 
   assert.match(sql, /update public\.trainings/i, "Training template quarantine missing");
   assert.match(sql, /verification_status = 'unverified'/i, "quarantine must only target unverified Training");
@@ -19,7 +19,7 @@ test("Phase23 Training gate quarantines generic verification-only matchup templa
 });
 
 test("Phase23 remaining matchup QA work queues cannot leak into public Training", () => {
-  const sql = read("../supabase/migrations/20260831_phase23_training_matchup_template_quarantine.sql");
+  const sql = read("../supabase/migrations/20260831031803_phase23_training_matchup_template_quarantine.sql");
 
   assert.match(sql, /training_type = 'matchup'/i, "matchup QA selector missing");
   assert.match(sql, /verification_status = 'unverified'/i, "only unverified matchup QA rows should be archived");

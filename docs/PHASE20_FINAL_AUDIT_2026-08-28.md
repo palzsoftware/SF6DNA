@@ -187,7 +187,7 @@ DB migration:
 - `phase20_remove_temporary_audit_rpc`
 
 Repository:
-- `supabase/migrations/20260828_phase20_remove_temporary_audit_rpc.sql`
+- `supabase/migrations/20260828141745_phase20_remove_temporary_audit_rpc.sql`
 
 最終Security Advisor:
 - **0 lints**

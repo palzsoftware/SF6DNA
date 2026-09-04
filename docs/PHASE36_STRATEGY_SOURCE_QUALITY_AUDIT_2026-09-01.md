@@ -15,7 +15,7 @@
 
 ## Change
 
-`20260901_phase36_strategy_patch_context_backfill.sql`で、現在の2026.08.03パッチに属するActive Strategyと対応Trainingへ、各キャラの公式変更ページを追加する。
+`20260901070756_phase36_strategy_patch_context_backfill.sql`で、現在の2026.08.03パッチに属するActive Strategyと対応Trainingへ、各キャラの公式変更ページを追加する。
 
 - relationship: `patch_context`
 - 既存Source関係: 上書きしない
@@ -39,7 +39,7 @@
 
 残存29件を登録元マイグレーションまで追跡した結果、A.K.I. 9件とラシード9件は、収集時の一時表に文章Source URLが記録されていた一方、そのURLが`sources`へ作成されておらず、`entity_sources`登録が空振りしていた。
 
-9ページの本文と該当記載を再確認し、`20260901_phase37_repair_missing_written_source_links.sql`で次を修復する。
+9ページの本文と該当記載を再確認し、`20260901070758_phase37_repair_missing_written_source_links.sql`で次を修復する。
 
 - Source: 9件
 - Strategy relationship: 18件

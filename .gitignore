@@ -1,0 +1,7 @@
+# Local dependencies and generated build output
+node_modules/
+.next/
+*.tsbuildinfo
+
+# Supabase CLI local state
+supabase/.temp/

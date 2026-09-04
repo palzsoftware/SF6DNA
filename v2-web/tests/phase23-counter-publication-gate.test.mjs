@@ -5,7 +5,7 @@ import { readFileSync } from "node:fs";
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
 test("Phase23 Counter gate archives generic matchup templates and requires release-ready data", () => {
-  const sql = read("../supabase/migrations/20260831_phase23_counter_publication_hardening.sql");
+  const sql = read("../supabase/migrations/20260831031346_phase23_counter_publication_hardening.sql");
 
   assert.match(sql, /update public\.counters/i, "Counter placeholder quarantine missing");
   assert.match(sql, /matchup_plan.*matchup_overview.*matchup_baseline/is, "generic matchup types must be quarantined");
@@ -18,7 +18,7 @@ test("Phase23 Counter gate archives generic matchup templates and requires relea
 });
 
 test("Phase23 generic system Counter templates remain quarantined", () => {
-  const sql = read("../supabase/migrations/20260831_phase23_counter_generic_system_quarantine.sql");
+  const sql = read("../supabase/migrations/20260831031448_phase23_counter_generic_system_quarantine.sql");
 
   assert.match(sql, /verification_status = 'unverified'/i, "only unverified system templates should be quarantined");
   assert.match(sql, /counter_type = 'system'/i, "system-template selector missing");

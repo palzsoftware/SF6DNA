@@ -78,12 +78,12 @@ DB/RLS側:
 
 修正:
 
-- migration: `20260829_phase23_atomic_current_patch_switch.sql`
+- migration: `20260829071404_phase23_atomic_current_patch_switch.sql`
 - RPC: `public.set_current_patch(uuid)`
 - Adminは新Patchを`is_current=false`で作成し、必要時だけRPCでCurrentへ切替
 - 切替はDB transaction内で実施
 - admin checkを維持
-- Security Advisor指摘を受け、follow-up `20260829_phase23_current_patch_rpc_security_invoker.sql` でRPCを`SECURITY INVOKER`へ変更
+- Security Advisor指摘を受け、follow-up `20260829071836_phase23_current_patch_rpc_security_invoker.sql` でRPCを`SECURITY INVOKER`へ変更
 - 最新Security Advisor: **0 lints**
 - Current Patchは`2026.08.03`が1件のまま
 

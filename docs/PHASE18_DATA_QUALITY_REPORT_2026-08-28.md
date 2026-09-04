@@ -122,7 +122,7 @@ Phase18でStrategyのPublic RLSを再監査した結果、従来は`published + 
 
 適用Migration:
 - Supabase: `phase18_strategy_source_public_gate`
-- Repository: `supabase/migrations/20260828_phase18_strategy_source_public_gate.sql`
+- Repository: `supabase/migrations/20260828055010_phase18_strategy_source_public_gate.sql`
 
 実DBの`pg_policies`再確認でも5テーブルすべてに`entity_sources`存在条件が入っていることを確認済み。
 

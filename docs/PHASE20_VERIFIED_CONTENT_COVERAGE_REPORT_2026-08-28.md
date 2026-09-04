@@ -167,7 +167,7 @@ Strategy / Character Guide / Recommendation Gateも弱めていない。
 Phase20中のみ使用した`public._phase20_frame_audit_fingerprints()`は最終照合後に削除した。
 
 Repository migration:
-- `supabase/migrations/20260828_phase20_remove_temporary_audit_rpc.sql`
+- `supabase/migrations/20260828141745_phase20_remove_temporary_audit_rpc.sql`
 
 一時Crosscheck workflowもPhase20終了時に退役した。
 

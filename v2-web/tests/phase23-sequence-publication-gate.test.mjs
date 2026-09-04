@@ -5,7 +5,7 @@ import { readFileSync } from "node:fs";
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
 test("Phase23 Sequence gate quarantines generic work queues and requires release-ready data", () => {
-  const sql = read("../supabase/migrations/20260831_phase23_sequence_publication_hardening.sql");
+  const sql = read("../supabase/migrations/20260831032355_phase23_sequence_publication_hardening.sql");
 
   assert.match(sql, /update public\.sequences/i, "Sequence placeholder quarantine missing");
   assert.match(sql, /verification_status = 'unverified'/i, "quarantine must only target unverified Sequence rows");

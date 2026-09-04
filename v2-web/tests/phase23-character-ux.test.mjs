@@ -5,7 +5,7 @@ import { readFileSync } from "node:fs";
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
 test("Phase23 device preview stays token-gated while covering every playable character", () => {
-  const sql = read("../supabase/migrations/20260831_phase23_expand_device_preview_all_characters.sql");
+  const sql = read("../supabase/migrations/20260831014245_phase23_expand_device_preview_all_characters.sql");
 
   assert.ok(sql.includes("private.is_phase23_device_preview()"), "preview token/expiry gate missing");
   assert.ok(sql.includes("c.status = 'published'"), "preview target must remain a published Character shell");
