@@ -76,8 +76,8 @@ export default async function HomePage() {
           <p className="eyebrow">STREET FIGHTER 6 / PLAYER TOOLKIT</p>
           <h1>自分を知る。情報を探す。<span>SF6をもっと深く知る。</span></h1>
           <p>
-            対戦前の確認、トレモ、対戦後の振り返りを1か所に。
-            SF6DNAは「今やりたいこと」から迷わず使えるSF6総合プラットフォームです。
+            キャラクター、診断、プレイヤー、動画の公開情報を1か所に。
+            SF6DNAは確認条件を満たした情報を整理して確認できるSF6上達支援サイトです。
           </p>
           <div className="home-hero__actions">
             <Link className="button-primary" href="/characters">キャラクターから調べる</Link>
