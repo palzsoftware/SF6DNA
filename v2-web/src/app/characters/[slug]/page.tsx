@@ -9,13 +9,12 @@ import {
   normalizeDevicePreviewToken,
 } from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
+import { releaseFeatures } from "@/lib/release-features";
 import type { CharacterGuideSection } from "@/types/character";
 
 const quickActions = [
-  ["技・フレーム", "コマンドと重要数値", "/moves", "MOVE"],
-  ["対策", "対戦前に要点を確認", "/matchups", "VS"],
-  ["トレーニング", "トレモ項目を選ぶ", "/training", "TR"],
   ["プレイヤー", "参考プレイヤーを探す", "/players", "PRO"],
+  ["動画", "関連動画を確認する", "/videos", "VIDEO"],
 ] as const;
 
 const guideGroups = [
@@ -91,7 +90,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${character.name} | キャラクター情報`,
     description:
-      character.shortDescription ?? `${character.name}の攻略・技・コンボ・対策情報をまとめています。`,
+      character.shortDescription ?? `${character.name}の基本情報・関連プレイヤー・動画を確認できます。`,
   };
 }
 
@@ -109,8 +108,12 @@ export default async function CharacterPage({
   if (!character) notFound();
 
   const previewActive = isDevicePreviewRequest(previewToken);
-  const matchupCard = character.guideSections.find((section) => section.sectionKey === "matchup_card") ?? null;
-  const groups = groupedGuideSections(character.guideSections);
+  const matchupCard = releaseFeatures.publicStrategyContent
+    ? character.guideSections.find((section) => section.sectionKey === "matchup_card") ?? null
+    : null;
+  const groups = releaseFeatures.publicStrategyContent
+    ? groupedGuideSections(character.guideSections)
+    : [];
   const hasStrengthProfile = Boolean(character.strengthsSummary || character.weaknessesSummary);
 
   return (
@@ -126,7 +129,7 @@ export default async function CharacterPage({
             <span className="character-ready-badge">攻略ハブ</span>
           </div>
           <p className="character-hero__lead">
-            {character.shortDescription ?? "技・対策・練習データをキャラクター単位で確認できます。"}
+            {character.shortDescription ?? "基本情報・関連プレイヤー・動画をキャラクター単位で確認できます。"}
           </p>
           <div className="chip-row character-hero__chips">
             {character.archetypeLabel ? <span className="chip">{character.archetypeLabel}</span> : null}
@@ -204,7 +207,7 @@ export default async function CharacterPage({
         <section className="character-profile-section" id="profile">
           <div className="section-heading">
             <h2>キャラクターの特徴</h2>
-            <p>強い場面と注意点を先に把握してから、詳細な攻略へ進めます。</p>
+            <p>キャラクターの強みと注意点を確認できます。</p>
           </div>
           <div className="character-columns character-profile-grid">
             {character.strengthsSummary ? (
@@ -225,44 +228,44 @@ export default async function CharacterPage({
         </section>
       ) : null}
 
-      <section>
-        <div className="section-heading">
-          <h2>立ち回り・考え方</h2>
-          <p>{previewActive ? "未公開候補を用途別に整理して確認できます。" : "攻略本文は対象パッチと出典を確認した上で公開します。"}</p>
-        </div>
-        {groups.length ? (
-          <div className="guide-groups character-guide-groups">
-            {groups.map((group) => (
-              <section className="guide-group" id={`guide-${group.key}`} key={group.key}>
-                <div className="guide-group__heading">
-                  <h2>{group.title}</h2>
-                  <p>{group.description}</p>
-                </div>
-                <div className="guide-accordion-list">
-                  {group.items.map((section, index) => (
-                    <details className="guide-accordion" key={section.id} open={group.key === "core" && index === 0}>
-                      <summary>
-                        <span>{section.title}</span>
-                        <span className="guide-accordion__hint">開く</span>
-                      </summary>
-                      <div className="guide-accordion__body">
-                        <p className="preline">{section.body}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
-              </section>
-            ))}
+      {releaseFeatures.publicStrategyContent ? (
+        <section>
+          <div className="section-heading">
+            <h2>立ち回り・考え方</h2>
+            <p>{previewActive ? "未公開候補を用途別に整理して確認できます。" : "攻略本文は対象パッチと出典を確認した上で公開します。"}</p>
           </div>
-        ) : (
-          <div className="empty-state"><p>現在公開できる攻略セクションはありません。</p></div>
-        )}
-      </section>
+          {groups.length ? (
+            <div className="guide-groups character-guide-groups">
+              {groups.map((group) => (
+                <section className="guide-group" id={`guide-${group.key}`} key={group.key}>
+                  <div className="guide-group__heading">
+                    <h2>{group.title}</h2>
+                    <p>{group.description}</p>
+                  </div>
+                  <div className="guide-accordion-list">
+                    {group.items.map((section, index) => (
+                      <details className="guide-accordion" key={section.id} open={group.key === "core" && index === 0}>
+                        <summary>
+                          <span>{section.title}</span>
+                          <span className="guide-accordion__hint">開く</span>
+                        </summary>
+                        <div className="guide-accordion__body">
+                          <p className="preline">{section.body}</p>
+                        </div>
+                      </details>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
+          ) : null}
+        </section>
+      ) : null}
 
       <section id="sources">
         <div className="section-heading">
           <h2>出典</h2>
-          <p>基本情報や客観データの確認に使用した情報源です。攻略を読む流れを邪魔しないよう最下部にまとめています。</p>
+          <p>基本情報や客観データの確認に使用した情報源です。</p>
         </div>
         {character.sources.length ? (
           <div className="source-compact-grid">
