@@ -187,3 +187,51 @@ test("all five strategy detail loaders expose release evidence", () => {
     assert.match(block, /sources:\s*release\.sources/, `${getter}: sources missing`);
   }
 });
+
+test("disabled coach page fails closed before search params", () => {
+  const source = readProjectFile("src/app/coach/page.tsx");
+
+  assert.match(source, /releaseFeatures\.aiCoach/);
+  assert.match(source, /notFound\(\)/);
+
+  const gate = source.indexOf("releaseFeatures.aiCoach");
+  const params = source.indexOf("await searchParams");
+
+  assert.ok(gate >= 0, "coach page release gate missing");
+  assert.ok(params < 0 || gate < params, "coach page gate must run before searchParams");
+});
+
+test("disabled coach API fails closed before parsing and retrieval", () => {
+  const source = readProjectFile("src/app/api/coach/retrieve/route.ts");
+
+  assert.match(source, /releaseFeatures\.aiCoach/);
+  assert.match(source, /feature_disabled/);
+  assert.match(source, /status:\s*404/);
+
+  const gate = source.indexOf("releaseFeatures.aiCoach");
+  const body = source.indexOf("request.json");
+  const search = source.indexOf("await searchAcrossContent");
+  const patch = source.indexOf("getCurrentPatch()");
+  const sources = source.indexOf("attachSourcesToEvidence(searchResults)");
+
+  assert.ok(gate >= 0, "coach API release gate missing");
+  assert.ok(body < 0 || gate < body, "coach API gate must run before request.json");
+  assert.ok(search < 0 || gate < search, "coach API gate must run before search retrieval");
+  assert.ok(patch < 0 || gate < patch, "coach API gate must run before current patch retrieval");
+  assert.ok(sources < 0 || gate < sources, "coach API gate must run before source attachment");
+});
+
+test("diagnosis coach CTAs are gated by aiCoach release flag", () => {
+  const source = readProjectFile("src/components/diagnosis-runner.tsx");
+
+  assert.match(source, /releaseFeatures/);
+
+  const guarded =
+    source.match(/releaseFeatures\.aiCoach\s*&&\s*topQuery/g) ?? [];
+
+  assert.equal(
+    guarded.length,
+    2,
+    "both diagnosis coach CTAs must be gated",
+  );
+});

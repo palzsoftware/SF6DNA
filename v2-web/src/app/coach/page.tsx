@@ -5,6 +5,9 @@ import { releaseFeatures } from "@/lib/release-features";
 export const metadata = { title: "AIコーチ" };
 
 export default async function CoachPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
+  if (!releaseFeatures.aiCoach) {
+    notFound();
+  }
   const params = await searchParams;
   const initialQuestion = typeof params.q === "string" ? params.q.trim().slice(0, 500) : "";
 

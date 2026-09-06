@@ -18,7 +18,13 @@ function bestSourceRank(sources: Array<{ reliabilityLevel: string | null }>) {
 }
 
 export async function POST(request: Request) {
-  let body: unknown;
+  if (!releaseFeatures.aiCoach) {
+    return NextResponse.json(
+      { error: "feature_disabled" },
+      { status: 404 },
+    );
+  }
+let body: unknown;
   try {
     body = await request.json();
   } catch {
