@@ -38,7 +38,7 @@ export function CharacterCard({ character }: { character: CharacterSummary }) {
           {character.rangeLabel ? <span className="chip">{character.rangeLabel}</span> : null}
           {character.difficulty ? <span className="chip">難易度 {character.difficulty}/5</span> : null}
         </div>
-        <span className="character-card__cta">データを見る <span aria-hidden="true">→</span></span>
+        <span className="character-card__cta">キャラクターを見る <span aria-hidden="true">→</span></span>
       </div>
     </Link>
   );

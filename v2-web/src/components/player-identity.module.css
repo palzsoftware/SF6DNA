@@ -1,7 +1,10 @@
- .card { position: relative; min-width: 0; width: 100%; aspect-ratio: 1; border: 1px solid currentColor; border-radius: 1rem; background: #17232d; color: #f4f7fa; overflow: hidden; }
+.card { position: relative; min-width: 0; width: 100%; border: 1px solid currentColor; border-radius: 1rem; background: #17232d; color: #f4f7fa; overflow: hidden; }
+.withPhoto { aspect-ratio: 1; }
+.withoutPhoto { min-height: 0; align-self: stretch; }
 .summary { padding: clamp(1rem, 4vw, 2rem); overflow-wrap: anywhere; }
 .initial { display: inline-grid; place-items: center; width: 3rem; height: 3rem; border-radius: .75rem; background: #284355; font-size: 1.75rem; }
 .name { font-size: clamp(1.25rem, 4vw, 2rem); font-weight: 700; }
 .photo { object-fit: cover; opacity: 0; }
 .loaded { opacity: 1; }
-@media (max-width: 720px) { .card { aspect-ratio: auto; min-height: 15rem; } }
+.mediaNote { margin-top: 1.5rem; color: #b8c4ce; font-size: .9rem; }
+@media (max-width: 720px) { .withPhoto { aspect-ratio: auto; min-height: 15rem; } }

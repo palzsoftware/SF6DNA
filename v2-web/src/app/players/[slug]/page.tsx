@@ -31,7 +31,7 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ s
         <div>
           <p className="eyebrow">PLAYER</p>
           <h1>{player.displayName}</h1>
-          <p>{player.bio ?? "公開できるプロフィール情報を準備中です。"}</p>
+          {player.bio ? <p>{player.bio}</p> : null}
           <div className="chip-row">
             <span className="chip">{playerTypeLabel(player.playerType)}</span>
             {player.teamName ? <span className="chip">{player.teamName}</span> : null}

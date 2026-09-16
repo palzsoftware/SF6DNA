@@ -12,6 +12,7 @@ import { getCharacterBySlug } from "@/lib/characters";
 import { listCharacterSectionItems } from "@/lib/character-sections";
 import { CharacterRelatedSection } from "@/components/character-related-section";
 import { releaseFeatures } from "@/lib/release-features";
+import { presentSource } from "@/lib/source-presentation";
 import type { CharacterGuideSection } from "@/types/character";
 
 const quickActions = [
@@ -291,13 +292,17 @@ export default async function CharacterPage({
         </div>
         {character.sources.length ? (
           <div className="source-compact-grid">
-            {character.sources.map((source) => (
-              <a className="source-compact-card" href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}>
-                <span>{source.publisher ?? "情報源"}</span>
-                <strong>{source.title}</strong>
-                <small>出典を開く ↗</small>
-              </a>
-            ))}
+            {character.sources.map((source) => {
+              const presentation = presentSource(source.sourceType, source.publisher, source.url);
+              return (
+                <a className="source-compact-card" href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}>
+                  <span>{presentation.badge}</span>
+                  <strong>{source.title}</strong>
+                  {source.publisher ? <small>{source.publisher}</small> : null}
+                  <small>{presentation.cta} ↗</small>
+                </a>
+              );
+            })}
           </div>
         ) : (
           <div className="empty-state"><p>公開済みの出典情報はまだありません。</p></div>
