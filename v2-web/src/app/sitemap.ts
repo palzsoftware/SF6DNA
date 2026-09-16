@@ -62,7 +62,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     supabase
       .from("characters")
       .select("slug")
-      .eq("status", "published"),
+      .eq("status", "published")
+      .eq("is_playable", true),
 
     supabase
       .from("players")
