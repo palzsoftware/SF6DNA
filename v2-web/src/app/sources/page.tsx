@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { listPublicSources } from "@/lib/public-sources";
 
 export const metadata = {
