@@ -1,5 +1,6 @@
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import { isMovePublicReady } from "@/lib/public-move-gate";
+import { releaseFeatures } from "@/lib/release-features";
 import type { SearchEntityType, SearchResultItem } from "@/types/search";
 
 function isConfigured() {
@@ -72,6 +73,8 @@ export async function searchAcrossContent(rawQuery: string): Promise<SearchResul
     if (!SEARCH_ENTITY_TYPES.has(rawType as SearchEntityType)) return [];
 
     const type = rawType as SearchEntityType;
+    if (type === "training" && !releaseFeatures.training) return [];
+    if (["move", "combo", "setup", "sequence", "counter"].includes(type) && !releaseFeatures.publicStrategyContent) return [];
     const slug = row.slug ?? "";
     const id = row.entity_id ?? "";
     const title = row.title ?? "";
