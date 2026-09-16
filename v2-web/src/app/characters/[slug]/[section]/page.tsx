@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CharacterTabs } from "@/components/character-tabs";
+import { MoveMotionMedia } from "@/components/move-motion-media";
 import { listCharacterSectionItems } from "@/lib/character-sections";
 import {
   appendDevicePreviewToken,
@@ -13,7 +14,7 @@ import { releaseFeatures } from "@/lib/release-features";
 import { listMoveCommandsForCharacter } from "@/lib/move-commands";
 import {
   listMoveMotionMediaForCharacter,
-  type MoveMotionMedia,
+  type MoveMotionMedia as MoveMotionMediaRecord,
 } from "@/lib/move-motion-media";
 import {
   CHARACTER_SECTION_KEYS,
@@ -132,7 +133,7 @@ type PreparedMove = {
   display: DisplayMeta;
   subtitle: string | null;
   commands: DevicePreviewMoveCommand[];
-  media: MoveMotionMedia | null;
+  media: MoveMotionMediaRecord | null;
   hasClassic: boolean;
   hasModern: boolean;
   kindKey: string;
@@ -269,37 +270,6 @@ function isReleaseSectionEnabled(
   return true;
 }
 
-function renderMotion(media: MoveMotionMedia, title: string, compact = false) {
-  const mediaClass = compact ? `${styles.motionMedia} ${moveStyles.motionMediaCompact}` : styles.motionMedia;
-  if (media.mediaType === "gif") {
-    return (
-      <img
-        alt={`${title}のモーション`}
-        className={mediaClass}
-        height={360}
-        loading="lazy"
-        src={media.mediaUrl}
-        width={640}
-      />
-    );
-  }
-
-  return (
-    <video
-      className={mediaClass}
-      controls
-      loop
-      muted
-      playsInline
-      poster={media.posterUrl ?? undefined}
-      preload="none"
-    >
-      <source src={media.mediaUrl} />
-      このブラウザでは動画を再生できません。
-    </video>
-  );
-}
-
 function buildMoveFilterHref(
   slug: string,
   previewToken: string | null,
@@ -339,14 +309,14 @@ export default async function CharacterSectionPage({
 }) {
   const [{ slug, section }, query] = await Promise.all([params, searchParams]);
   if (!isSection(section)) notFound();
-  if (!isReleaseSectionEnabled(section)) notFound();
 
   const previewToken = normalizeDevicePreviewToken(query.preview);
+  const previewActive = isDevicePreviewRequest(previewToken);
+  if (!isReleaseSectionEnabled(section) && !previewActive) notFound();
   const character = await getCharacterBySlug(slug, previewToken);
   if (!character) notFound();
 
   const meta = sectionMeta[section];
-  const previewActive = isDevicePreviewRequest(previewToken);
   const searchQuery = section === "moves" ? normalizeSearch(query.q) : "";
   const selectedKind = section === "moves" ? normalizeKind(query.kind) : "all";
 
@@ -357,7 +327,7 @@ export default async function CharacterSectionPage({
       : Promise.resolve([] as DevicePreviewMoveCommand[]),
     section === "moves"
       ? listMoveMotionMediaForCharacter(character.id, previewToken)
-      : Promise.resolve([] as MoveMotionMedia[]),
+      : Promise.resolve([] as MoveMotionMediaRecord[]),
   ]);
 
   const commandsByMove = new Map<string, DevicePreviewMoveCommand[]>();
@@ -367,7 +337,7 @@ export default async function CharacterSectionPage({
     commandsByMove.set(command.moveId, list);
   }
 
-  const mediaByMove = new Map<string, MoveMotionMedia[]>();
+  const mediaByMove = new Map<string, MoveMotionMediaRecord[]>();
   for (const media of motionMedia) {
     const list = mediaByMove.get(media.moveId) ?? [];
     list.push(media);
@@ -548,7 +518,11 @@ export default async function CharacterSectionPage({
 
                         {move.media ? (
                           <div className={moveStyles.moveMotion}>
-                            {renderMotion(move.media, move.item.title, true)}
+                            <MoveMotionMedia
+                              className={`${styles.motionMedia} ${moveStyles.motionMediaCompact}`}
+                              media={move.media}
+                              title={move.item.title}
+                            />
                           </div>
                         ) : null}
 

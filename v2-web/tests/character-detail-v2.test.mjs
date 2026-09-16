@@ -1,0 +1,39 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+
+const tabs = readFileSync(new URL("../src/components/character-tabs.tsx", import.meta.url), "utf8");
+const sectionPage = readFileSync(new URL("../src/app/characters/[slug]/[section]/page.tsx", import.meta.url), "utf8");
+const motion = readFileSync(new URL("../src/components/move-motion-media.tsx", import.meta.url), "utf8");
+
+test("public character navigation keeps strategy sections behind the existing boundary", () => {
+  const publicBlock = tabs.match(/const publicTabs:[\s\S]*?\n\];/)?.[0] ?? "";
+  assert.match(publicBlock, /overview/);
+  assert.match(publicBlock, /players/);
+  assert.match(publicBlock, /videos/);
+  assert.doesNotMatch(publicBlock, /moves|combos|setups|sequences|matchups|training/);
+});
+
+test("device preview navigation exposes the shared character-detail information architecture", () => {
+  const previewBlock = tabs.match(/const previewTabs:[\s\S]*?\n\];/)?.[0] ?? "";
+  for (const key of ["overview", "moves", "combos", "setups", "sequences", "matchups", "training", "players", "videos"]) {
+    assert.match(previewBlock, new RegExp(`key: "${key}"`));
+  }
+  assert.match(tabs, /#sources/);
+  assert.match(tabs, /aria-current/);
+});
+
+test("disabled strategy routes remain unavailable publicly and open only in Vercel device preview", () => {
+  assert.match(sectionPage, /!isReleaseSectionEnabled\(section\) && !previewActive/);
+  assert.match(sectionPage, /publicStrategyContent/);
+});
+
+test("motion media renders only when a record exists and supports accessible GIF or video output", () => {
+  assert.match(sectionPage, /move\.media \? \(/);
+  assert.match(sectionPage, /<MoveMotionMedia/);
+  assert.match(motion, /media\.mediaType === "gif"/);
+  assert.match(motion, /<video/);
+  assert.match(motion, /aria-label=\{`\$\{title\}のモーション`\}/);
+  assert.match(motion, /showSource && media\.sourceUrl/);
+  assert.doesNotMatch(motion, /GIF準備中/);
+});
