@@ -9,6 +9,8 @@ import {
   normalizeDevicePreviewToken,
 } from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
+import { listCharacterSectionItems } from "@/lib/character-sections";
+import { CharacterRelatedSection } from "@/components/character-related-section";
 import { releaseFeatures } from "@/lib/release-features";
 import type { CharacterGuideSection } from "@/types/character";
 
@@ -107,6 +109,10 @@ export default async function CharacterPage({
 
   if (!character) notFound();
 
+  const [relatedPlayers, relatedVideos] = await Promise.all([
+    listCharacterSectionItems(character.id, "players"),
+    listCharacterSectionItems(character.id, "videos"),
+  ]);
   const previewActive = isDevicePreviewRequest(previewToken);
   const matchupCard = releaseFeatures.publicStrategyContent
     ? character.guideSections.find((section) => section.sectionKey === "matchup_card") ?? null
@@ -126,7 +132,7 @@ export default async function CharacterPage({
               <h1>{character.name}</h1>
               {character.nameEn ? <p className="character-subtitle">{character.nameEn}</p> : null}
             </div>
-            <span className="character-ready-badge">攻略ハブ</span>
+            <span className="character-ready-badge">キャラクター情報</span>
           </div>
           <p className="character-hero__lead">
             {character.shortDescription ?? "基本情報・関連プレイヤー・動画をキャラクター単位で確認できます。"}
@@ -180,9 +186,11 @@ export default async function CharacterPage({
 
       <nav className="character-overview-index" aria-label="概要ページ内ナビゲーション">
         {matchupCard ? <a href="#before-match">対戦前30秒</a> : null}
-        {hasStrengthProfile ? <a href="#profile">強み・弱み</a> : null}
+        {hasStrengthProfile ? <a href="#profile">強み・注意点</a> : null}
         {groups.map((group) => <a href={`#guide-${group.key}`} key={group.key}>{group.title}</a>)}
-        <a href="#sources">出典</a>
+        <a href="#related-players">関連プレイヤー</a>
+        <a href="#related-videos">関連動画</a>
+        <a href="#sources">情報源</a>
       </nav>
 
       {matchupCard ? (
@@ -206,8 +214,7 @@ export default async function CharacterPage({
       {hasStrengthProfile ? (
         <section className="character-profile-section" id="profile">
           <div className="section-heading">
-            <h2>キャラクターの特徴</h2>
-            <p>キャラクターの強みと注意点を確認できます。</p>
+            <h2>強みと注意点</h2>
           </div>
           <div className="character-columns character-profile-grid">
             {character.strengthsSummary ? (
@@ -220,7 +227,7 @@ export default async function CharacterPage({
             {character.weaknessesSummary ? (
               <article className="info-panel character-profile-card character-profile-card--weakness">
                 <span className="character-profile-card__label">CAUTION</span>
-                <h3>弱み</h3>
+                <h3>注意点</h3>
                 <p className="preline">{character.weaknessesSummary}</p>
               </article>
             ) : null}
@@ -262,10 +269,25 @@ export default async function CharacterPage({
         </section>
       ) : null}
 
+      <CharacterRelatedSection
+        id="related-players"
+        title="関連プレイヤー"
+        emptyText="表示できる関連プレイヤーはありません。"
+        href={`/characters/${character.slug}/players`}
+        items={relatedPlayers}
+      />
+      <CharacterRelatedSection
+        id="related-videos"
+        title="関連動画"
+        emptyText="表示できる関連動画はありません。"
+        href={`/characters/${character.slug}/videos`}
+        items={relatedVideos}
+      />
+
       <section id="sources">
         <div className="section-heading">
-          <h2>出典</h2>
-          <p>基本情報や客観データの確認に使用した情報源です。</p>
+          <h2>情報源</h2>
+          <p>キャラクター情報の参照先です。</p>
         </div>
         {character.sources.length ? (
           <div className="source-compact-grid">

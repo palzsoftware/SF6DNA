@@ -1,0 +1,17 @@
+.section { min-width: 0; scroll-margin-top: 180px; }
+.list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; list-style: none; padding: 0; }
+.list li { min-width: 0; }
+.item { display: grid; gap: 8px; height: 100%; padding: 16px; border: 1px solid var(--line); border-radius: 13px; background: var(--panel-solid); color: var(--copy); overflow-wrap: anywhere; }
+.item span, .empty { color: var(--copy-muted); }
+.more { display: inline-flex; align-items: center; min-height: 44px; color: var(--cyan); }
+.item:focus-visible, .more:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+@media (max-width: 720px) { .list { grid-template-columns: 1fr; } }
+
+/* Local reading polish: no global selectors or animation. */
+.section h2 { margin: 0 0 16px; font-size: 1.25rem; line-height: 1.5; }
+.list { margin: 0; }
+.item { align-content: start; min-height: 88px; line-height: 1.75; }
+.item strong, .item span { font-size: 1rem; }
+.item:hover { background: var(--panel-hover); }
+.empty { margin: 0; line-height: 1.75; }
+.more { margin-top: 12px; }

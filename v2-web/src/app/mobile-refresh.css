@@ -53,9 +53,9 @@
   }
 
   .mobile-dock a:nth-child(1)::before { content: "CHAR"; }
-  .mobile-dock a:nth-child(2)::before { content: "VS"; }
-  .mobile-dock a:nth-child(3)::before { content: "TRAIN"; }
-  .mobile-dock a:nth-child(4)::before { content: "SEARCH"; }
+  .mobile-dock a:nth-child(2)::before { content: "DIAG"; }
+  .mobile-dock a:nth-child(3)::before { content: "SEARCH"; }
+  .mobile-dock a:nth-child(4)::before { content: "PLAYER"; }
 
   .mobile-dock a:hover,
   .mobile-dock a:focus-visible {

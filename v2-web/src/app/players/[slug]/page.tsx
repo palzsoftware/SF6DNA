@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { PlayerIdentity } from "@/components/player-identity";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { playerRoleLabel, playerTypeLabel } from "@/lib/player-labels";
@@ -38,17 +38,9 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ s
             {player.region ? <span className="chip">{player.region}</span> : null}
           </div>
         </div>
-        {player.imageUrl ? (
-          <Image
-            className="character-hero__image"
-            src={player.imageUrl}
-            alt={player.displayName}
-            width={760}
-            height={760}
-            sizes="(max-width: 720px) 100vw, 42vw"
-            priority
-          />
-        ) : null}
+        <PlayerIdentity name={player.displayName} imageUrl={player.imageUrl}
+          team={player.teamName} region={player.region}
+          characters={player.characters.map((item) => item.characterName)} />
       </section>
 
       <section className="character-columns">

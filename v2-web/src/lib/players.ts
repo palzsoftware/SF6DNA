@@ -1,4 +1,4 @@
-import { legacyPlayerImageUrl } from "@/lib/legacy-player-images";
+import { approvedPlayerImage } from "@/lib/approved-player-images";
 import { getPublicEntitySources } from "@/lib/public-source-links";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type { PlayerDetail, PlayerSummary } from "@/types/player";
@@ -31,11 +31,7 @@ function toSummary(
       typeof row.country_code === "string"
         ? row.country_code
         : null,
-    imageUrl:
-      typeof row.image_url === "string" &&
-      row.image_url.trim()
-        ? row.image_url
-        : legacyPlayerImageUrl(slug),
+    imageUrl: approvedPlayerImage(slug, row.image_url),
   };
 }
 

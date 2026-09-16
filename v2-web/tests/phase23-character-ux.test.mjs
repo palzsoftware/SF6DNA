@@ -29,8 +29,11 @@ test("character UX keeps existing routes and hides empty profile panels", () => 
   const detail = read("src/app/characters/[slug]/page.tsx");
   const layout = read("src/app/layout.tsx");
 
-  for (const route of ["/favorites", "/compare", "/counters", "/training"]) {
+  for (const route of ["/favorites", "/compare"]) {
     assert.ok(directory.includes(route), `character directory quick route missing: ${route}`);
+  }
+  for (const route of ["/counters", "/training"]) {
+    assert.ok(!directory.includes(`href="${route}"`), `unavailable public route exposed: ${route}`);
   }
   assert.ok(detail.includes("hasStrengthProfile"), "empty strength/weakness panels should be suppressed");
   assert.ok(detail.includes("guide-groups"), "guide sections should be grouped for scanning");

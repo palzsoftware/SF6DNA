@@ -74,14 +74,15 @@ export default async function HomePage() {
       <section className="home-hero">
         <div className="home-hero__copy">
           <p className="eyebrow">STREET FIGHTER 6 / PLAYER TOOLKIT</p>
-          <h1>自分を知る。情報を探す。<span>SF6をもっと深く知る。</span></h1>
+          <h1>自分を知る。課題を見つける。<span>今日の練習につなげる。</span></h1>
           <p>
-            キャラクター、診断、プレイヤー、動画の公開情報を1か所に。
-            SF6DNAは確認条件を満たした情報を整理して確認できるSF6上達支援サイトです。
+            診断でプレイの傾向や課題を知り、今日の15分練習へ。
+            キャラクターの基本情報や、参考になるプレイヤー・動画も探せます。
           </p>
           <div className="home-hero__actions">
-            <Link className="button-primary" href="/characters">キャラクターから調べる</Link>
-            <Link className="button-secondary" href="/diagnosis">診断を始める</Link>
+            <Link className="button-primary" href="/diagnosis">診断を始める</Link>
+            <Link className="button-secondary" href="/characters">キャラクターを見る</Link>
+            <Link className="button-secondary" href="/me/training">今日の15分練習を見る</Link>
           </div>
         </div>
         <div className="home-hero__visual" aria-label="SF6キャラクター">
@@ -117,7 +118,7 @@ export default async function HomePage() {
       <section className="home-metric-strip" aria-label="SF6DNA収録状況">
         <div className="home-metric"><strong>{characters.length}キャラ</strong><span>プレイアブルキャラクター</span></div>
         <div className="home-metric"><strong>1か所</strong><span>キャラクター・診断・プレイヤー・動画を横断</span></div>
-        <div className="home-metric"><strong>公開情報</strong><span>確認条件を満たしたデータを表示</span></div>
+        <div className="home-metric"><strong>公開情報</strong><span>キャラクター・プレイヤー・動画</span></div>
       </section>
 
       <section className="daily-section" aria-labelledby="daily-title">
@@ -142,8 +143,8 @@ export default async function HomePage() {
           <h2 id="main-content-title">SF6DNAの中核</h2>
           <p>
             {characters.length
-              ? `プレイアブル${characters.length}キャラクターを収録。公開画面では確認条件を満たしたデータだけを表示します。`
-              : "攻略データは出典と対象パッチを確認したものから順次公開します。"}
+              ? `プレイアブル${characters.length}キャラクターを収録。基本情報や関連情報を探せます。`
+              : "キャラクターの基本情報やプレイヤー・動画を探せます。"}
           </p>
         </div>
         <div className="card-grid">

@@ -4,7 +4,7 @@ import type { CharacterSummary } from "@/types/character";
 
 export function CharacterCard({ character }: { character: CharacterSummary }) {
   return (
-    <Link className="character-card" href={`/characters/${character.slug}`}>
+    <Link className="character-card" href={`/characters/${character.slug}`} aria-label={`${character.name}の詳細を見る`}>
       <div className="character-card__media" aria-hidden="true">
         {character.imageUrl ? (
           <Image
@@ -28,9 +28,9 @@ export function CharacterCard({ character }: { character: CharacterSummary }) {
           <p>{character.shortDescription}</p>
         ) : (
           <div className="character-card__topics" aria-label="収録カテゴリ">
-            <span>技・フレーム</span>
-            <span>対策</span>
-            <span>トレーニング</span>
+            <span>基本情報</span>
+            <span>関連プレイヤー</span>
+            <span>関連動画</span>
           </div>
         )}
         <div className="chip-row">

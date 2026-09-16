@@ -4,7 +4,7 @@ import { characterDataSourceStatus, listCharacters } from "@/lib/characters";
 
 export const metadata = {
   title: "キャラクター情報",
-  description: "SF6のキャラクター情報を、技・フレーム・コンボ・セットプレイ・対策・トレーニングまで横断して確認できる辞典です。",
+  description: "SF6のキャラクターの特徴と、関連プレイヤー・動画を紹介します。",
 };
 
 function normalizeQuery(value: string | string[] | undefined) {
@@ -37,7 +37,7 @@ export default async function CharactersPage({
         <p className="eyebrow">CHARACTERS</p>
         <h1>キャラクター辞典</h1>
         <p>
-          キャラクターを起点に、技・フレーム・コンボ・セットプレイ・対策・トレーニング・参考プレイヤーまで横断できます。
+          キャラクターの特徴や、関連プレイヤー・動画を探せます。
         </p>
       </section>
 
@@ -54,8 +54,6 @@ export default async function CharactersPage({
         <div className="character-tool-links">
           <Link className="character-tool-link" href="/favorites">お気に入り</Link>
           <Link className="character-tool-link" href="/compare">キャラ比較</Link>
-          <Link className="character-tool-link" href="/counters">対策</Link>
-          <Link className="character-tool-link" href="/training">トレーニング</Link>
         </div>
       </section>
 
