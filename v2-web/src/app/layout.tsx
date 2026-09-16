@@ -77,6 +77,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/terms">利用規約</Link>
               <Link href="/disclaimer">免責事項</Link>
               <Link href="/contact">お問い合わせ</Link>
+              <Link href="/auth">アカウント</Link>
             </nav>
           </div>
         </footer>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LogoutButton } from "@/components/logout-button";
 import { AuthForm } from "@/components/auth-form";
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default async function AuthPage({
       </section>
       <section className="info-panel auth-panel">
         <AuthForm nextPath={nextPath} />
+        <LogoutButton />
       </section>
     </div>
   );
