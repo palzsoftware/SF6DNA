@@ -235,3 +235,25 @@ test("diagnosis coach CTAs are gated by aiCoach release flag", () => {
     "both diagnosis coach CTAs must be gated",
   );
 });
+
+test("daily training is separated from disabled strategy and training-library surfaces", () => {
+  const flags = readProjectFile("src/lib/release-features.ts");
+  for (const feature of ["aiCoach", "training", "publicStrategyContent"]) {
+    assert.match(flags, new RegExp(`${feature}:\\s*false`));
+  }
+  const page = readProjectFile("src/app/me/training/page.tsx");
+  const loader = readProjectFile("src/lib/daily-training-data.ts");
+  assert.match(page, /dynamic\s*=\s*"force-dynamic"/);
+  assert.match(page, /index:\s*false/);
+  assert.doesNotMatch(page, /releaseFeatures\.training|releaseFeatures\.publicStrategyContent/);
+  assert.doesNotMatch(loader, /listTrainingLibrary|\.from\(\s*"trainings"\s*\)|service[_-]?role/);
+  assert.doesNotMatch(loader, /\.insert\(|\.update\(|\.upsert\(|\.delete\(/);
+  assert.doesNotMatch(readProjectFile("src/app/sitemap.ts"), /\/me\/training/);
+});
+
+test("both completed diagnosis result views offer daily training without changing coach guards", () => {
+  const source = readProjectFile("src/components/diagnosis-runner.tsx");
+  assert.equal((source.match(/buildDailyTrainingHref\(diagnosis\.diagnosisType, result\)/g) ?? []).length, 2);
+  assert.equal((source.match(/今日の練習を決める/g) ?? []).length, 2);
+  assert.equal((source.match(/releaseFeatures\.aiCoach\s*&&\s*topQuery/g) ?? []).length, 2);
+});
