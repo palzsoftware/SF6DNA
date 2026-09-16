@@ -160,6 +160,11 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
     try {
       const supabase = getSupabaseBrowserClient();
       const { data: authData, error: authError } = await supabase.auth.getUser();
+      if (authError?.name === "AuthSessionMissingError") {
+        setDatabaseSaveStatus("idle");
+        setDatabaseSaveMessage(null);
+        return;
+      }
       if (authError) throw authError;
       if (!authData.user) {
         setDatabaseSaveStatus("idle");

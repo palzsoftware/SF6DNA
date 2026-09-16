@@ -4,7 +4,7 @@ import type { CharacterSummary } from "@/types/character";
 
 export function CharacterCard({ character }: { character: CharacterSummary }) {
   return (
-    <Link className="character-card" href={`/characters/${character.slug}`} aria-label={`${character.name}の詳細を見る`}>
+    <Link className={`character-card${character.imageUrl ? "" : " character-card--no-image"}`} href={`/characters/${character.slug}`} aria-label={`${character.name}の詳細を見る`}>
       <div className="character-card__media" aria-hidden="true">
         {character.imageUrl ? (
           <Image
@@ -33,12 +33,12 @@ export function CharacterCard({ character }: { character: CharacterSummary }) {
             <span>関連動画</span>
           </div>
         )}
-        <div className="chip-row">
+        <div className="chip-row character-card__meta">
           {character.archetypeLabel ? <span className="chip">{character.archetypeLabel}</span> : null}
           {character.rangeLabel ? <span className="chip">{character.rangeLabel}</span> : null}
           {character.difficulty ? <span className="chip">難易度 {character.difficulty}/5</span> : null}
-          <span className="chip chip--accent">データを見る →</span>
         </div>
+        <span className="character-card__cta">データを見る <span aria-hidden="true">→</span></span>
       </div>
     </Link>
   );

@@ -48,6 +48,10 @@ export type SimpleDetail = {
   body: Array<[string, string | number | null]>;
   sources?: DetailSource[];
   media?: DetailMedia[];
+  externalLink?: {
+    href: string;
+    label: string;
+  };
 };
 
 export type DetailMedia = {

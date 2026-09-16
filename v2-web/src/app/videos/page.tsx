@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
-import { listVideos } from "@/lib/event-media";
+import { formatVideoPublishedDate, listVideos } from "@/lib/event-media";
 
 export const metadata = { title: "動画" };
 
@@ -23,7 +23,7 @@ export default async function VideosPage() {
               <span className="search-result__type">{[video.platform, video.videoType].filter(Boolean).join(" / ") || "VIDEO"}</span>
               <strong>{video.title}</strong>
               {video.description ? <span>{video.description}</span> : null}
-              {video.publishedAt ? <small>{video.publishedAt}</small> : null}
+              {video.publishedAt ? <small>{formatVideoPublishedDate(video.publishedAt)}</small> : null}
             </Link>
           ))}
         </section>

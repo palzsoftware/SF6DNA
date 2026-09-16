@@ -34,3 +34,19 @@ test("the diagnosis client persists one request id before the RPC and clears it 
   assert.ok(rpcIndex < clearIndex);
   assert.match(runner, /onRetry=\{\(\) => void saveCompletedDiagnosis\(\)\}/);
 });
+
+test("guest diagnosis keeps browser history without attempting an account RPC", () => {
+  assert.match(runner, /saveDiagnosisHistory\(\{/);
+  const guestIndex = runner.indexOf('authError?.name === "AuthSessionMissingError"');
+  const rpcIndex = runner.indexOf('supabase.rpc("save_diagnosis_result_with_answers"');
+  assert.ok(guestIndex >= 0 && guestIndex < rpcIndex);
+  assert.match(runner.slice(guestIndex, rpcIndex), /setDatabaseSaveStatus\("idle"\)[\s\S]*?return;/);
+});
+
+test("authenticated diagnosis saves through the account RPC and keeps failures visible", () => {
+  assert.match(runner, /if \(!authData\.user\)[\s\S]*?return;/);
+  assert.match(runner, /supabase\.rpc\("save_diagnosis_result_with_answers"/);
+  assert.match(runner, /setDatabaseSaveStatus\("failed"\)/);
+  assert.match(runner, /診断結果をアカウントへ保存できませんでした/);
+  assert.match(runner, /保存を再試行/);
+});

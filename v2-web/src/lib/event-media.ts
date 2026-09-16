@@ -19,6 +19,18 @@ export type VideoSummary = {
   description: string | null;
 };
 
+export function formatVideoPublishedDate(value: string | null): string | null {
+  if (!value) return null;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return null;
+  return new Intl.DateTimeFormat("ja-JP", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(date);
+}
+
 export async function listVideos(): Promise<VideoSummary[]> {
   if (!configured()) return [];
 
@@ -221,8 +233,11 @@ export async function getVideoBySlug(
           ? relatedCharacters.join(" / ")
           : null,
       ],
-      ["URL", data.url ?? null],
     ],
     sources,
+    externalLink:
+      typeof data.url === "string" && /^https:\/\//i.test(data.url)
+        ? { href: data.url, label: "YouTubeで見る" }
+        : undefined,
   };
 }

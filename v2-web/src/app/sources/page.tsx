@@ -1,6 +1,7 @@
 export const dynamic = "force-dynamic";
 
 import { listPublicSources } from "@/lib/public-sources";
+import { localizeSourceType } from "@/lib/detail-localization";
 
 export const metadata = {
   title: "情報源",
@@ -11,6 +12,19 @@ const RELIABILITY_LABELS: Record<string, string> = {
   official: "公式情報",
   primary: "一次情報",
 };
+
+function sourceKindLabel(reliabilityLevel: string, sourceType: string) {
+  return RELIABILITY_LABELS[reliabilityLevel] ?? localizeSourceType(sourceType);
+}
+
+function sourceProviderLabel(publisher: string | null, url: string) {
+  if (publisher?.trim()) return publisher.trim();
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return "提供元情報なし";
+  }
+}
 
 export default async function SourcesPage() {
   const sources = await listPublicSources();
@@ -25,9 +39,9 @@ export default async function SourcesPage() {
         <section className="search-result-list">
           {sources.map((source) => (
             <a className="search-result" href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}>
-              <span className="search-result__type">{RELIABILITY_LABELS[source.reliabilityLevel] ?? "確認済み情報源"}</span>
+              <span className="search-result__type">{sourceKindLabel(source.reliabilityLevel, source.sourceType)}</span>
               <strong>{source.title}</strong>
-              <span>{source.publisher ?? "提供元情報なし"}</span>
+              <span>{sourceProviderLabel(source.publisher, source.url)}</span>
             </a>
           ))}
         </section>

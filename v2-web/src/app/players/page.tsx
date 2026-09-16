@@ -24,7 +24,7 @@ export default async function PlayersPage() {
       {players.length ? (
         <div className="character-grid">
           {players.map((player) => (
-            <Link className="character-card" href={`/players/${player.slug}`} key={player.id}>
+            <Link className={`character-card${player.imageUrl ? "" : " character-card--no-image"}`} href={`/players/${player.slug}`} key={player.id}>
               <div className="character-card__media" aria-hidden="true">
                 {player.imageUrl ? (
                   <Image
@@ -44,7 +44,7 @@ export default async function PlayersPage() {
               </div>
               <div className="character-card__body">
                 <p>{[player.teamName, player.countryCode].filter(Boolean).join(" / ") || "プロフィールを見る"}</p>
-                <div className="chip-row"><span className="chip chip--accent">PROFILE →</span></div>
+                <span className="character-card__cta">プロフィールを見る <span aria-hidden="true">→</span></span>
               </div>
             </Link>
           ))}

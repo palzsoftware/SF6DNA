@@ -17,6 +17,13 @@ export function SimpleDetailView({
         <p className="eyebrow">{eyebrow}</p>
         <h1>{detail.title}</h1>
         {detail.summary ? <p>{detail.summary}</p> : null}
+        {detail.externalLink ? (
+          <p className="detail-primary-action">
+            <a className="button-primary" href={detail.externalLink.href} target="_blank" rel="noopener noreferrer">
+              {detail.externalLink.label}
+            </a>
+          </p>
+        ) : null}
       </section>
       {preview ? (
         <section className="data-notice character-preview-notice">
