@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 
-import { formatVideoPublishedDate, listVideos } from "@/lib/event-media";
-import { VideoCard } from "@/components/video-card";
+import { listVideos } from "@/lib/event-media";
+import { VideoLibrary } from "@/components/video-library";
 
 export const metadata = { title: "動画" };
 
@@ -17,11 +17,7 @@ export default async function VideosPage() {
       </section>
 
       {videos.length ? (
-        <section className="video-card-grid">
-          {videos.map((video) => (
-            <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />
-          ))}
-        </section>
+        <VideoLibrary videos={videos} />
       ) : (
         <section className="empty-state">
           <h2>公開済み動画はまだありません</h2>

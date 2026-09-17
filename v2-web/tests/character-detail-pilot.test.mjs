@@ -39,12 +39,12 @@ test("pilot supports motion media without an empty media placeholder", () => {
   assert.doesNotMatch(source, /準備中|NO SIGNAL|画像なし/);
 });
 
-test("pilot uses safe player fallback and existing video UX", () => {
+test("pilot uses safe player fallback and reusable video library", () => {
   const source = readProjectFile("src/components/character-detail-pilot.tsx");
   const page = readProjectFile("src/app/characters/[slug]/page.tsx");
 
   assert.match(source, /選手ビジュアルは今後のアップデートで追加予定です/);
-  assert.match(source, /<VideoCard/);
+  assert.match(source, /<VideoLibrary videos=\{videos\} lockedCharacter=\{characterName\}/);
   assert.match(page, /getDevicePreviewBundle/);
   assert.doesNotMatch(source, /NO SIGNAL|画像なし|近日アップデート/);
 });

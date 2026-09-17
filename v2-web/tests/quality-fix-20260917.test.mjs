@@ -39,13 +39,14 @@ test("FAQ and Auth copy match currently released behavior", () => {
 
 test("video cards expose YouTube, share and reversible local watched state", () => {
   const card = read("src/components/video-card.tsx");
+  const preferences = read("src/lib/video-preferences.ts");
   const loader = read("src/lib/event-media.ts");
   const page = read("src/app/videos/page.tsx");
   assert.match(card, /navigator\.share/);
   assert.match(card, /navigator\.clipboard\.writeText/);
-  assert.match(card, /sf6dna:watched-videos:v1/);
+  assert.match(preferences, /sf6dna:watched-videos:v1/);
   assert.match(card, /aria-pressed=\{watched\}/);
   assert.match(loader, /youtubeThumbnail/);
   assert.match(loader, /entity_videos/);
-  assert.match(page, /<VideoCard/);
+  assert.match(page, /<VideoLibrary/);
 });

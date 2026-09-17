@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PilotComboCard } from "@/components/pilot-combo-card";
-import { VideoCard } from "@/components/video-card";
+import { VideoLibrary } from "@/components/video-library";
 import { appendDevicePreviewToken, type DevicePreviewBundle } from "@/lib/device-preview";
-import { formatVideoPublishedDate, type VideoSummary } from "@/lib/event-media";
+import type { VideoSummary } from "@/lib/event-media";
 import type { PlayerDetail } from "@/types/player";
 import styles from "./character-detail-pilot.module.css";
 
@@ -175,11 +175,7 @@ export function CharacterDetailPilot({
           <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/videos`, previewToken)}>一覧を見る →</Link>
         </div>
         {videos.length ? (
-          <div className={styles.videoGrid}>
-            {videos.map((video) => (
-              <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />
-            ))}
-          </div>
+          <VideoLibrary videos={videos} lockedCharacter={characterName} />
         ) : (
           <div className="empty-state"><p>表示できる関連動画はありません。</p></div>
         )}

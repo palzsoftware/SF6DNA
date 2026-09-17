@@ -19,6 +19,11 @@ export type VideoSummary = {
   description: string | null;
   url: string;
   thumbnailUrl: string | null;
+  channelName: string | null;
+  durationSeconds: number | null;
+  language: "ja" | "en" | "other" | null;
+  controlTypes: Array<"classic" | "modern">;
+  events: string[];
   characters: string[];
   players: string[];
 };
@@ -81,15 +86,51 @@ export async function listVideos(): Promise<VideoSummary[]> {
 
   const characterIds = Array.from(new Set((relationRows ?? []).filter((row) => row.entity_type === "character").map((row) => String(row.entity_id))));
   const playerIds = Array.from(new Set((relationRows ?? []).filter((row) => row.entity_type === "player").map((row) => String(row.entity_id))));
-  const [{ data: characterRows }, { data: playerRows }] = await Promise.all([
+  const [{ data: characterRows }, { data: playerRows }, { data: matchRows, error: matchError }] = await Promise.all([
     characterIds.length ? supabase.from("characters").select("id, name_ja").in("id", characterIds).eq("status", "published") : Promise.resolve({ data: [] }),
     playerIds.length ? supabase.from("players").select("id, display_name").in("id", playerIds).eq("status", "published") : Promise.resolve({ data: [] }),
+    videoIds.length
+      ? supabase
+          .from("matches")
+          .select("id, video_id, tournament_id")
+          .in("video_id", videoIds)
+          .eq("status", "published")
+      : Promise.resolve({ data: [], error: null }),
+  ]);
+  if (matchError) console.error("[event-media] match metadata failed", matchError.message);
+
+  const matchIds = (matchRows ?? []).map((row) => String(row.id));
+  const tournamentIds = Array.from(new Set((matchRows ?? []).flatMap((row) => row.tournament_id ? [String(row.tournament_id)] : [])));
+  const [{ data: participantRows, error: participantError }, { data: tournamentRows, error: tournamentError }] = await Promise.all([
+    matchIds.length
+      ? supabase.from("match_participants").select("match_id, player_id, character_id").in("match_id", matchIds)
+      : Promise.resolve({ data: [], error: null }),
+    tournamentIds.length
+      ? supabase.from("tournaments").select("id, name").in("id", tournamentIds).eq("status", "published")
+      : Promise.resolve({ data: [], error: null }),
+  ]);
+  if (participantError) console.error("[event-media] match participant metadata failed", participantError.message);
+  if (tournamentError) console.error("[event-media] tournament metadata failed", tournamentError.message);
+
+  const matchCharacterIds = Array.from(new Set((participantRows ?? []).flatMap((row) => row.character_id ? [String(row.character_id)] : [])));
+  const matchPlayerIds = Array.from(new Set((participantRows ?? []).flatMap((row) => row.player_id ? [String(row.player_id)] : [])));
+  const missingCharacterIds = matchCharacterIds.filter((id) => !characterIds.includes(id));
+  const missingPlayerIds = matchPlayerIds.filter((id) => !playerIds.includes(id));
+  const [{ data: matchCharacterRows }, { data: matchPlayerRows }] = await Promise.all([
+    missingCharacterIds.length ? supabase.from("characters").select("id, name_ja").in("id", missingCharacterIds).eq("status", "published") : Promise.resolve({ data: [] }),
+    missingPlayerIds.length ? supabase.from("players").select("id, display_name").in("id", missingPlayerIds).eq("status", "published") : Promise.resolve({ data: [] }),
   ]);
   const characterNames = new Map((characterRows ?? []).map((row) => [String(row.id), String(row.name_ja)]));
   const playerNames = new Map((playerRows ?? []).map((row) => [String(row.id), String(row.display_name)]));
+  for (const row of matchCharacterRows ?? []) characterNames.set(String(row.id), String(row.name_ja));
+  for (const row of matchPlayerRows ?? []) playerNames.set(String(row.id), String(row.display_name));
+  const tournamentNames = new Map((tournamentRows ?? []).map((row) => [String(row.id), String(row.name)]));
 
   return (data ?? []).map((row) => {
     const related = (relationRows ?? []).filter((relation) => String(relation.video_id) === String(row.id));
+    const relatedMatches = (matchRows ?? []).filter((match) => String(match.video_id) === String(row.id));
+    const relatedMatchIds = new Set(relatedMatches.map((match) => String(match.id)));
+    const relatedParticipants = (participantRows ?? []).filter((participant) => relatedMatchIds.has(String(participant.match_id)));
     const url = String(row.url);
     return {
     id: String(row.id),
@@ -116,8 +157,21 @@ export async function listVideos(): Promise<VideoSummary[]> {
       typeof row.thumbnail_url === "string" && row.thumbnail_url.startsWith("https://")
         ? row.thumbnail_url
         : youtubeThumbnail(url, typeof row.external_id === "string" ? row.external_id : null),
-    characters: related.flatMap((relation) => relation.entity_type === "character" ? [characterNames.get(String(relation.entity_id))].filter((name): name is string => Boolean(name)) : []),
-    players: related.flatMap((relation) => relation.entity_type === "player" ? [playerNames.get(String(relation.entity_id))].filter((name): name is string => Boolean(name)) : []),
+    // These fields are intentionally null/empty until approved metadata columns exist.
+    // Do not infer language, control type, duration, or publisher from title/URL.
+    channelName: null,
+    durationSeconds: null,
+    language: null,
+    controlTypes: [],
+    events: Array.from(new Set(relatedMatches.flatMap((match) => match.tournament_id ? [tournamentNames.get(String(match.tournament_id))].filter((name): name is string => Boolean(name)) : []))),
+    characters: Array.from(new Set([
+      ...related.flatMap((relation) => relation.entity_type === "character" ? [characterNames.get(String(relation.entity_id))].filter((name): name is string => Boolean(name)) : []),
+      ...relatedParticipants.flatMap((participant) => participant.character_id ? [characterNames.get(String(participant.character_id))].filter((name): name is string => Boolean(name)) : []),
+    ])),
+    players: Array.from(new Set([
+      ...related.flatMap((relation) => relation.entity_type === "player" ? [playerNames.get(String(relation.entity_id))].filter((name): name is string => Boolean(name)) : []),
+      ...relatedParticipants.flatMap((participant) => participant.player_id ? [playerNames.get(String(participant.player_id))].filter((name): name is string => Boolean(name)) : []),
+    ])),
   };
   });
 }

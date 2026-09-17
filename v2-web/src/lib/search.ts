@@ -2,6 +2,7 @@ import { getSupabaseServerClient } from "@/lib/supabase/server";
 import { isMovePublicReady } from "@/lib/public-move-gate";
 import { releaseFeatures } from "@/lib/release-features";
 import type { SearchEntityType, SearchResultItem } from "@/types/search";
+import type { SearchSuggestionCandidate } from "@/lib/search-suggestions";
 
 function isConfigured() {
   return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
@@ -104,4 +105,51 @@ export async function searchAcrossContent(rawQuery: string): Promise<SearchResul
   );
 
   return mapped.filter((_, index) => readiness[index]);
+}
+
+export async function getPublicSearchSuggestionCandidates(): Promise<SearchSuggestionCandidate[]> {
+  if (!isConfigured()) return [];
+  const supabase = getSupabaseServerClient();
+  const [charactersResult, characterAliasesResult, playersResult, playerAliasesResult, tournamentsResult, videosResult] = await Promise.all([
+    supabase.from("characters").select("id, name_ja, name_en, short_name").eq("status", "published"),
+    supabase.from("character_aliases").select("character_id, alias"),
+    supabase.from("players").select("id, display_name, real_name").eq("status", "published"),
+    supabase.from("player_aliases").select("player_id, alias"),
+    supabase.from("tournaments").select("name, series_name").eq("status", "published"),
+    supabase.from("videos").select("title, video_type").eq("status", "published"),
+  ]);
+  for (const result of [charactersResult, characterAliasesResult, playersResult, playerAliasesResult, tournamentsResult, videosResult]) {
+    if (result.error) console.error("[search] suggestion corpus failed", result.error.message);
+  }
+
+  const characterAliases = new Map<string, string[]>();
+  for (const row of characterAliasesResult.data ?? []) {
+    const values = characterAliases.get(String(row.character_id)) ?? [];
+    if (typeof row.alias === "string") values.push(row.alias);
+    characterAliases.set(String(row.character_id), values);
+  }
+  const playerAliases = new Map<string, string[]>();
+  for (const row of playerAliasesResult.data ?? []) {
+    const values = playerAliases.get(String(row.player_id)) ?? [];
+    if (typeof row.alias === "string") values.push(row.alias);
+    playerAliases.set(String(row.player_id), values);
+  }
+
+  return [
+    ...(charactersResult.data ?? []).map((row) => ({
+      label: String(row.name_ja), value: String(row.name_ja), type: "キャラクター",
+      aliases: [row.name_en, row.short_name, ...(characterAliases.get(String(row.id)) ?? [])].filter((value): value is string => typeof value === "string" && Boolean(value.trim())),
+    })),
+    ...(playersResult.data ?? []).map((row) => ({
+      label: String(row.display_name), value: String(row.display_name), type: "プレイヤー",
+      aliases: [row.real_name, ...(playerAliases.get(String(row.id)) ?? [])].filter((value): value is string => typeof value === "string" && Boolean(value.trim())),
+    })),
+    ...(tournamentsResult.data ?? []).map((row) => ({
+      label: String(row.name), value: String(row.name), type: "大会",
+      aliases: [row.series_name].filter((value): value is string => typeof value === "string" && Boolean(value.trim())),
+    })),
+    ...(videosResult.data ?? []).flatMap((row) => typeof row.video_type === "string" && row.video_type.trim() ? [{
+      label: row.video_type, value: row.video_type, type: "カテゴリ", aliases: [] as string[],
+    }] : []),
+  ];
 }

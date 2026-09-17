@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { searchAcrossContent } from "@/lib/search";
+import { getPublicSearchSuggestionCandidates, searchAcrossContent } from "@/lib/search";
+import { suggestSearchTerms } from "@/lib/search-suggestions";
 import type { SearchResultItem } from "@/types/search";
 import styles from "./search.module.css";
 
@@ -8,12 +9,14 @@ export const metadata = { title: "検索" };
 const TYPE_LABELS: Record<string, string> = {
   character: "キャラクター",
   player: "プレイヤー",
+  tournament: "大会",
   video: "動画",
 };
 
 const TYPE_ORDER = [
   "character",
   "player",
+  "tournament",
   "video",
 ] as const;
 
@@ -48,7 +51,10 @@ export default async function SearchPage({
   const params = await searchParams;
   const q = one(params.q).slice(0, 100);
   const selectedType = one(params.type) || "all";
-  const results = q ? await searchAcrossContent(q) : [];
+  const [results, suggestionCandidates] = q
+    ? await Promise.all([searchAcrossContent(q), getPublicSearchSuggestionCandidates()])
+    : [[], []];
+  const suggestions = q ? suggestSearchTerms(q, suggestionCandidates) : [];
   const counts = new Map<string, number>();
   for (const result of results) counts.set(result.type, (counts.get(result.type) ?? 0) + 1);
   const visibleResults = selectedType === "all" ? results : results.filter((item) => item.type === selectedType);
@@ -72,6 +78,19 @@ export default async function SearchPage({
         />
         <button type="submit">検索</button>
       </form>
+
+      {q && suggestions.length ? (
+        <nav className={styles.suggestions} aria-label="検索候補">
+          <strong>もしかして</strong>
+          <div>
+            {suggestions.map((suggestion) => (
+              <Link href={typeHref(suggestion.value, "all")} key={`${suggestion.type}:${suggestion.value}`}>
+                {suggestion.label}<small>{suggestion.type}</small>
+              </Link>
+            ))}
+          </div>
+        </nav>
+      ) : null}
 
       {!q ? (
         <section className={styles.quickStart}>

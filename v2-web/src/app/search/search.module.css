@@ -6,6 +6,12 @@
 .searchBox input { min-width: 0; min-height: 48px; padding: 11px 14px; border: 1px solid var(--line-strong, var(--border)); border-radius: 11px; background: rgba(5,9,13,.86); color: var(--text); font-size: 1rem; }
 .searchBox input:focus { outline: 2px solid rgba(83,216,255,.27); border-color: rgba(83,216,255,.45); }
 .searchBox button { padding: 10px 18px; border: 1px solid rgba(255,122,26,.4); border-radius: 11px; background: #ff7a1a; color: #0b0d10; font-weight: 900; }
+.suggestions { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid rgba(83,216,255,.2); border-radius: 12px; background: rgba(83,216,255,.05); }
+.suggestions > strong { flex: 0 0 auto; color: #c8f2ff; font-size: .78rem; }
+.suggestions > div { display: flex; flex-wrap: wrap; gap: 6px; }
+.suggestions a { display: inline-flex; min-height: 38px; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--line-strong, var(--border)); border-radius: 999px; background: rgba(9,13,18,.72); font-weight: 800; }
+.suggestions a:hover, .suggestions a:focus-visible { border-color: rgba(83,216,255,.5); outline: none; }
+.suggestions small { color: var(--copy-muted, var(--muted)); font-size: .64rem; }
 .quickStart { display: grid; gap: 12px; }
 .quickGrid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 9px; }
 .quickCard { display: grid; gap: 5px; min-height: 112px; padding: 15px; border: 1px solid var(--line, var(--border)); border-radius: 13px; background: rgba(17,23,31,.72); transition: border-color 150ms ease, transform 150ms ease, background 150ms ease; }
@@ -39,4 +45,4 @@
 .emptyHelp { display: grid; gap: 14px; }
 .emptyHelp ul { margin: 0; padding-left: 20px; color: var(--copy-muted, var(--muted)); }
 @media (max-width: 820px) { .quickGrid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
-@media (max-width: 560px) { .searchPage { width: min(calc(100% - 20px), var(--max-width)); } .searchBox { top: 66px; grid-template-columns: 1fr; } .searchBox button { width: 100%; } .quickGrid { gap: 7px; } .quickCard { min-height: 98px; padding: 12px; } .result { grid-template-columns: 1fr; } .open { justify-self: end; } .resultHead { align-items: flex-start; flex-direction: column; gap: 4px; } }
+@media (max-width: 560px) { .searchPage { width: min(calc(100% - 20px), var(--max-width)); } .searchBox { top: 66px; grid-template-columns: 1fr; } .searchBox button { width: 100%; } .suggestions { align-items: flex-start; flex-direction: column; } .quickGrid { gap: 7px; } .quickCard { min-height: 98px; padding: 12px; } .result { grid-template-columns: 1fr; } .open { justify-self: end; } .resultHead { align-items: flex-start; flex-direction: column; gap: 4px; } }

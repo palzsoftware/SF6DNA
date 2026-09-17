@@ -9,7 +9,7 @@ function read(path) {
 test("video detail exposes a safe external YouTube action and list dates are localized", () => {
   const detail = read("src/lib/event-media.ts");
   const view = read("src/components/simple-detail.tsx");
-  const list = read("src/app/videos/page.tsx");
+  const list = read("src/components/video-library.tsx");
   assert.match(detail, /\? \{ href: data\.url, label: "YouTubeで見る" \}/);
   assert.match(view, /target="_blank" rel="noopener noreferrer"/);
   assert.match(list, /formatVideoPublishedDate\(video\.publishedAt\)/);
