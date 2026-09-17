@@ -1974,4 +1974,3 @@ export const jpMoveReviewFixture: DevicePreviewBundle["moves"] = [
     ]
   }
 ];
-
