@@ -96,11 +96,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const character = await getCharacterBySlug(slug);
 
   if (!character) return { title: "キャラクター情報" };
+  const pilotProfile = isCharacterDetailV2Route(character.slug)
+    ? getCharacterDetailV21Profile(character.slug)
+    : null;
 
   return {
     title: `${character.name} | キャラクター情報`,
     description:
-      character.shortDescription ?? `${character.name}の基本情報・関連プレイヤー・動画を確認できます。`,
+      pilotProfile?.tagline ?? character.shortDescription ?? `${character.name}の基本情報・関連プレイヤー・動画を確認できます。`,
   };
 }
 

@@ -24,6 +24,7 @@ test("ordinary Ryu and JP routes select the V2 shared template in RC Preview", (
 
   const page = read("src/app/characters/[slug]/page.tsx");
   assert.match(page, /isCharacterDetailV2Route\(character\.slug\)/);
+  assert.match(page, /pilotProfile\?\.tagline \?\? character\.shortDescription/);
   assert.match(page, /\{pilotBundle \? \(/);
   assert.doesNotMatch(page, /pilotBundle && previewToken/);
 });
