@@ -71,6 +71,19 @@ test("did-you-mean is clickable, thresholded and does not auto-replace", async (
   assert.doesNotMatch(page, /router\.replace|redirect\(/);
 });
 
+test("Ryu, JP, player handles and video category aliases are part of the public suggestion corpus", async () => {
+  const [search, helper] = await Promise.all([
+    read("src/lib/search.ts"),
+    read("src/lib/search-suggestions.ts"),
+  ]);
+  assert.match(search, /ryu: \["りゅう"\]/);
+  assert.match(search, /jp: \["じぇいぴー"\]/);
+  assert.match(search, /tokido: \["Tokido"\]/);
+  assert.match(search, /official_guide: \{ label: "公式ガイド"/);
+  assert.match(search, /setplay: \{ label: "セットプレイ"/);
+  assert.match(helper, /query\.toLowerCase\(\) === candidate\.label\.toLowerCase\(\)/);
+});
+
 test("29-character rollout and public strategy flag remain closed", async () => {
   const [page, flags] = await Promise.all([
     read("src/app/characters/[slug]/page.tsx"),

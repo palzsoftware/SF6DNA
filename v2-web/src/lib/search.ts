@@ -4,6 +4,31 @@ import { releaseFeatures } from "@/lib/release-features";
 import type { SearchEntityType, SearchResultItem } from "@/types/search";
 import type { SearchSuggestionCandidate } from "@/lib/search-suggestions";
 
+const CHARACTER_SUGGESTION_ALIASES: Record<string, string[]> = {
+  jp: ["じぇいぴー"],
+  ryu: ["りゅう"],
+};
+
+const PLAYER_SUGGESTION_ALIASES: Record<string, string[]> = {
+  dogura: ["どぐら"],
+  higuchi: ["ひぐち"],
+  ryusei: ["Ryusei"],
+  tokido: ["Tokido"],
+};
+
+const VIDEO_CATEGORY_SUGGESTIONS: Record<string, { label: string; aliases: string[] }> = {
+  combo: { label: "コンボ", aliases: ["combo"] },
+  counter: { label: "対策", aliases: ["counter"] },
+  guide: { label: "ガイド", aliases: ["guide", "攻略"] },
+  match: { label: "対戦", aliases: ["match"] },
+  neutral: { label: "立ち回り", aliases: ["neutral"] },
+  official_guide: { label: "公式ガイド", aliases: ["official guide"] },
+  setplay: { label: "セットプレイ", aliases: ["setplay", "起き攻め"] },
+  setup: { label: "セットプレイ", aliases: ["setup", "起き攻め"] },
+  tournament: { label: "大会", aliases: ["tournament"] },
+  torikore: { label: "トリコレ", aliases: ["とりこれ"] },
+};
+
 function isConfigured() {
   return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 }
@@ -111,9 +136,9 @@ export async function getPublicSearchSuggestionCandidates(): Promise<SearchSugge
   if (!isConfigured()) return [];
   const supabase = getSupabaseServerClient();
   const [charactersResult, characterAliasesResult, playersResult, playerAliasesResult, tournamentsResult, videosResult] = await Promise.all([
-    supabase.from("characters").select("id, name_ja, name_en, short_name").eq("status", "published"),
+    supabase.from("characters").select("id, slug, name_ja, name_en, short_name").eq("status", "published"),
     supabase.from("character_aliases").select("character_id, alias"),
-    supabase.from("players").select("id, display_name, real_name").eq("status", "published"),
+    supabase.from("players").select("id, slug, display_name, real_name").eq("status", "published"),
     supabase.from("player_aliases").select("player_id, alias"),
     supabase.from("tournaments").select("name, series_name").eq("status", "published"),
     supabase.from("videos").select("title, video_type").eq("status", "published"),
@@ -138,18 +163,25 @@ export async function getPublicSearchSuggestionCandidates(): Promise<SearchSugge
   return [
     ...(charactersResult.data ?? []).map((row) => ({
       label: String(row.name_ja), value: String(row.name_ja), type: "キャラクター",
-      aliases: [row.name_en, row.short_name, ...(characterAliases.get(String(row.id)) ?? [])].filter((value): value is string => typeof value === "string" && Boolean(value.trim())),
+      aliases: [row.name_en, row.short_name, ...(typeof row.slug === "string" ? CHARACTER_SUGGESTION_ALIASES[row.slug] ?? [] : []), ...(characterAliases.get(String(row.id)) ?? [])].filter((value): value is string => typeof value === "string" && Boolean(value.trim())),
     })),
     ...(playersResult.data ?? []).map((row) => ({
       label: String(row.display_name), value: String(row.display_name), type: "プレイヤー",
-      aliases: [row.real_name, ...(playerAliases.get(String(row.id)) ?? [])].filter((value): value is string => typeof value === "string" && Boolean(value.trim())),
+      aliases: [row.real_name, ...(typeof row.slug === "string" ? PLAYER_SUGGESTION_ALIASES[row.slug] ?? [] : []), ...(playerAliases.get(String(row.id)) ?? [])].filter((value): value is string => typeof value === "string" && Boolean(value.trim())),
     })),
     ...(tournamentsResult.data ?? []).map((row) => ({
       label: String(row.name), value: String(row.name), type: "大会",
       aliases: [row.series_name].filter((value): value is string => typeof value === "string" && Boolean(value.trim())),
     })),
-    ...(videosResult.data ?? []).flatMap((row) => typeof row.video_type === "string" && row.video_type.trim() ? [{
-      label: row.video_type, value: row.video_type, type: "カテゴリ", aliases: [] as string[],
-    }] : []),
+    ...(videosResult.data ?? []).flatMap((row) => {
+      if (typeof row.video_type !== "string" || !row.video_type.trim()) return [];
+      const category = VIDEO_CATEGORY_SUGGESTIONS[row.video_type];
+      return [{
+        label: category?.label ?? row.video_type,
+        value: row.video_type,
+        type: "カテゴリ",
+        aliases: category?.aliases ?? [],
+      }];
+    }),
   ];
 }

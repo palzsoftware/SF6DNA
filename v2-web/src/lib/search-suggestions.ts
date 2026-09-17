@@ -50,7 +50,7 @@ export function suggestSearchTerms(rawQuery: string, candidates: SearchSuggestio
   for (const candidate of candidates) {
     const normalizedValue = normalizeSuggestionText(candidate.value);
     const normalizedLabel = normalizeSuggestionText(candidate.label);
-    if (query === candidate.value || normalizedQuery === normalizedValue || normalizedQuery === normalizedLabel) continue;
+    if (query.toLowerCase() === candidate.value.toLowerCase() || query.toLowerCase() === candidate.label.toLowerCase()) continue;
 
     const aliases = candidate.aliases.map(normalizeSuggestionText).filter(Boolean);
     let suggestion: SearchSuggestion | null = null;
