@@ -7,6 +7,7 @@ import { CharacterDetailPilot } from "@/components/character-detail-pilot";
 import {
   appendDevicePreviewToken,
   getDevicePreviewBundle,
+  getDevicePreviewMoveMotionMedia,
   isDevicePreviewRequest,
   normalizeDevicePreviewToken,
 } from "@/lib/device-preview";
@@ -127,10 +128,14 @@ export default async function CharacterPage({
   const previewActive = isDevicePreviewRequest(previewToken);
   const pilotRequested = isCharacterDetailV2Route(character.slug);
   const pilotProfile = pilotRequested ? getCharacterDetailV21Profile(character.slug) : null;
-  const [remotePilotBundle, allVideos] = pilotRequested
-    ? await Promise.all([getDevicePreviewBundle(character.id, previewToken), listVideos()])
-    : [null, []];
+  const [remotePilotBundle, allVideos, moveMedia] = pilotRequested
+    ? await Promise.all([getDevicePreviewBundle(character.id, previewToken), listVideos(), getDevicePreviewMoveMotionMedia(character.id, previewToken)])
+    : [null, [], []];
   const pilotBundle = remotePilotBundle ?? (pilotRequested ? getCharacterDetailV21Fixture(character.slug) : null);
+  if (pilotBundle && moveMedia.length) {
+    const mediaByMove = new Map(moveMedia.map((media) => [media.moveId, media]));
+    pilotBundle.moves = pilotBundle.moves.map((move) => ({ ...move, media: mediaByMove.get(move.id) ?? null }));
+  }
   const pilotPlayers = pilotBundle
     ? (await Promise.all(
         relatedPlayers.map((item) => getPlayerBySlug(item.href.split("/").filter(Boolean).at(-1) ?? ""))

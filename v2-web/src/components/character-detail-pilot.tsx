@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PilotComboCard } from "@/components/pilot-combo-card";
 import { VideoCard } from "@/components/video-card";
+import { MoveMotionMedia } from "@/components/move-motion-media";
 import { getCharacterDetailV21Profile } from "@/lib/character-detail-v21";
 import { appendDevicePreviewToken, type DevicePreviewBundle } from "@/lib/device-preview";
 import { formatVideoPublishedDate, type VideoSummary } from "@/lib/event-media";
@@ -35,6 +36,14 @@ function setupSteps(description: string | null) {
 
 function valueOrUnknown(value: string | number | null | undefined, fallback = "未確認") {
   return value === null || value === undefined || value === "" ? fallback : String(value);
+}
+
+function publicMoveSummary(value: string | null) {
+  if (!value) return null;
+  if (value.trim() === "Awaiting official/game verification before publication.") {
+    return "使い方の詳細は、公式情報または実機での確認後に掲載します。";
+  }
+  return value;
 }
 
 function sourceLink(label: string | null | undefined, url: string | null | undefined) {
@@ -135,7 +144,10 @@ export function CharacterDetailPilot({
                   <div className={styles.moveIdentity} role="cell">
                     <span>{verificationLabel(move.frame?.verificationStatus ?? null)}</span>
                     <h3>{move.name}</h3>
-                    {move.usageSummary ? <p>{move.usageSummary}</p> : null}
+                    {publicMoveSummary(move.usageSummary) ? <p>{publicMoveSummary(move.usageSummary)}</p> : null}
+                  </div>
+                  <div className={styles.moveMedia} role="cell">
+                    {move.media ? <MoveMotionMedia media={move.media} title={move.name} className={styles.moveMediaAsset} /> : <span aria-label={`${move.name}の動作メディアは未登録`} />}
                   </div>
                   <div className={styles.moveCommands} role="cell" aria-label={`${move.name}のコマンド`}>
                     {move.commands?.length ? move.commands.map((command, index) => {

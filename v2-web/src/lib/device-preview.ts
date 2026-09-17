@@ -27,6 +27,7 @@ export type DevicePreviewBundle = {
       verificationStatus: string | null;
     } | null;
     commands?: DevicePreviewMoveCommand[];
+    media?: DevicePreviewMoveMotionMedia | null;
   }>;
   combos: Array<{
     id: string;

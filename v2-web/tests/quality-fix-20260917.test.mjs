@@ -11,7 +11,7 @@ test("character source actions use metadata-grounded presentation and retain a g
   const presentation = read("src/lib/source-presentation.ts");
   assert.match(page, /presentSource\(source\.sourceType, source\.publisher, source\.url\)/);
   assert.doesNotMatch(page, /出典を開く/);
-  assert.match(presentation, /YouTubeで見る/);
+  assert.match(presentation, /関連動画を見る/);
   assert.match(presentation, /公式情報を見る/);
   assert.match(presentation, /フレームデータを見る/);
   assert.match(presentation, /プロフィールを見る/);
