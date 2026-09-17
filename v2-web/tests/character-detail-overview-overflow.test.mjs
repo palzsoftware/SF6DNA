@@ -9,16 +9,24 @@ function rule(selector) {
   return css.match(new RegExp(`${escaped}\\s*\\{([^}]*)\\}`))?.[1] ?? "";
 }
 
-test("overview facts use an intrinsic four-column desktop grid without a scroll container", () => {
+test("overview facts use a readable two-column desktop grid without a scroll container", () => {
   const quickFacts = rule(".quickFacts");
-  assert.match(quickFacts, /grid-template-columns:\s*repeat\(4,minmax\(0,1fr\)\)/);
+  assert.match(quickFacts, /grid-template-columns:\s*repeat\(2,minmax\(0,1fr\)\)/);
   assert.doesNotMatch(quickFacts, /overflow-x|grid-auto-flow|grid-auto-columns|scroll-snap/);
 });
 
-test("overview facts wrap at tablet and mobile widths", () => {
-  assert.ok(css.includes("@media (max-width: 1080px) { .quickFacts { grid-template-columns: repeat(2,minmax(0,1fr)); }"));
+test("overview stacks at tablet width and facts wrap at mobile width", () => {
+  assert.ok(css.includes("@media (max-width: 1080px) { .overview { grid-template-columns: 1fr; }"));
   assert.ok(css.includes("@media (max-width: 420px) { .pilot"));
-  assert.ok(css.includes(".quickFacts { grid-template-columns: 1fr; }"));
+  assert.match(css, /@media \(max-width: 420px\)[\s\S]*?\.quickFacts \{ grid-template-columns: 1fr;/);
+});
+
+test("hero title and fact cards use relaxed readability contracts", () => {
+  assert.match(rule(".overviewLead h2"), /font-size:\s*clamp\(1\.5rem,2\.45vw,2\.3rem\)/);
+  assert.match(rule(".overviewLead h2"), /line-height:\s*1\.48/);
+  assert.match(rule(".overviewLead h2"), /text-wrap:\s*balance/);
+  assert.match(rule(".quickFacts > div"), /padding:\s*18px/);
+  assert.match(rule(".quickFacts dd"), /line-height:\s*1\.72/);
 });
 
 test("overview fact children and long values can shrink and wrap", () => {
