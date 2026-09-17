@@ -86,11 +86,14 @@ test("Ryu, JP, player handles and video category aliases are part of the public 
 });
 
 test("29-character rollout and public strategy flag remain closed", async () => {
-  const [page, flags] = await Promise.all([
+  const [page, route, flags] = await Promise.all([
     read("src/app/characters/[slug]/page.tsx"),
+    read("src/lib/character-detail-route.ts"),
     read("src/lib/release-features.ts"),
   ]);
-  assert.match(page, /character\.slug === "ryu" \|\| character\.slug === "jp"/);
+  assert.match(page, /isCharacterDetailV2Route\(character\.slug\)/);
+  assert.match(route, /\["ryu", "jp"\]/);
+  assert.match(route, /VERCEL_ENV === "preview"/);
   assert.match(flags, /publicStrategyContent:\s*false/);
   assert.doesNotMatch(flags, /publicStrategyContent:\s*true/);
 });

@@ -393,6 +393,8 @@ export async function getDevicePreviewContentDetail(
 
 export function appendDevicePreviewToken(href: string, previewToken: string | null | undefined) {
   if (!previewToken) return href;
-  const separator = href.includes("?") ? "&" : "?";
-  return `${href}${separator}preview=${encodeURIComponent(previewToken)}`;
+  const [pathAndQuery, hash] = href.split("#", 2);
+  const separator = pathAndQuery.includes("?") ? "&" : "?";
+  const withToken = `${pathAndQuery}${separator}preview=${encodeURIComponent(previewToken)}`;
+  return hash ? `${withToken}#${hash}` : withToken;
 }

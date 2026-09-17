@@ -6,12 +6,15 @@ function readProjectFile(path) {
   return readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 }
 
-test("Ryu and JP pilot is limited to the established preview gate", () => {
+test("Ryu and JP shared template is enabled on ordinary RC Preview routes only", () => {
   const page = readProjectFile("src/app/characters/[slug]/page.tsx");
   const combos = readProjectFile("src/app/characters/[slug]/combos/page.tsx");
   const flags = readProjectFile("src/lib/release-features.ts");
+  const route = readProjectFile("src/lib/character-detail-route.ts");
 
-  assert.match(page, /previewActive\s*&&\s*\(character\.slug === "ryu" \|\| character\.slug === "jp"\)/);
+  assert.match(page, /isCharacterDetailV2Route\(character\.slug\)/);
+  assert.match(route, /process\.env\.VERCEL_ENV === "preview"/);
+  assert.match(route, /\["ryu", "jp"\]/);
   assert.match(combos, /!releaseFeatures\.publicStrategyContent && !previewActive/);
   assert.match(flags, /publicStrategyContent:\s*false/);
   assert.doesNotMatch(flags, /publicStrategyContent:\s*true/);
@@ -101,13 +104,13 @@ test("Ryu and JP V2.1 removes duplicate navigation and exposes concrete page str
   assert.doesNotMatch(copy, /空中に置く技|地面からの攻撃|相手を困らせる技/);
 });
 
-test("V2.1 keeps strategy copy preview-only and sources use classified CTAs", () => {
+test("V2.1 keeps strategy copy RC Preview-only and sources use classified CTAs", () => {
   const source = readProjectFile("src/components/character-detail-pilot.tsx");
   const tabs = readProjectFile("src/components/character-tabs.tsx");
 
   assert.match(source, /presentSource\(source\.sourceType, source\.publisher, source\.url\)/);
-  assert.match(source, /Preview限定/);
-  assert.match(tabs, /previewActive && \(slug === "ryu" \|\| slug === "jp"\)/);
+  assert.match(source, /RC Previewで表示確認中/);
+  assert.match(tabs, /isCharacterDetailV2Route\(slug\)/);
   assert.match(tabs, /!pilotV21 \? <Link href=\{`\/characters\/\$\{slug\}#sources`\}>情報源<\/Link> : null/);
 });
 

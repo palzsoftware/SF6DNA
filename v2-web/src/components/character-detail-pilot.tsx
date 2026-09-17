@@ -62,7 +62,7 @@ export function CharacterDetailPilot({
 }: {
   characterName: string;
   characterSlug: string;
-  previewToken: string;
+  previewToken: string | null;
   bundle: DevicePreviewBundle;
   players: PlayerDetail[];
   videos: VideoSummary[];
@@ -90,7 +90,7 @@ export function CharacterDetailPilot({
           <p className="eyebrow">HOW TO PLAY</p>
           <h2>{profile.tagline}</h2>
           <p>{profile.winPath}</p>
-          <div className={styles.previewNote}>Preview限定・攻略候補の公開ステータスは変更していません</div>
+          <div className={styles.previewNote}>RC Previewで表示確認中・攻略候補の公開ステータスは変更していません</div>
         </div>
         <dl className={styles.quickFacts} aria-label="クイックファクト">
           <div><dt>得意距離</dt><dd>{rangeLabel ?? "確認中"}</dd></div>

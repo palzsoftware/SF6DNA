@@ -18,6 +18,7 @@ import { getPlayerBySlug } from "@/lib/players";
 import { releaseFeatures } from "@/lib/release-features";
 import { getCharacterDetailV21Profile } from "@/lib/character-detail-v21";
 import { getCharacterDetailV21Fixture } from "@/lib/character-detail-v21-fixture";
+import { isCharacterDetailV2Route } from "@/lib/character-detail-route";
 import { presentSource } from "@/lib/source-presentation";
 import type { CharacterGuideSection } from "@/types/character";
 
@@ -121,7 +122,7 @@ export default async function CharacterPage({
     listCharacterSectionItems(character.id, "videos"),
   ]);
   const previewActive = isDevicePreviewRequest(previewToken);
-  const pilotRequested = previewActive && (character.slug === "ryu" || character.slug === "jp");
+  const pilotRequested = isCharacterDetailV2Route(character.slug);
   const pilotProfile = pilotRequested ? getCharacterDetailV21Profile(character.slug) : null;
   const [remotePilotBundle, allVideos] = pilotRequested
     ? await Promise.all([getDevicePreviewBundle(character.id, previewToken), listVideos()])
@@ -293,7 +294,7 @@ export default async function CharacterPage({
         </section>
       ) : null}
 
-      {pilotBundle && previewToken ? (
+      {pilotBundle ? (
         <CharacterDetailPilot
           characterName={character.name}
           characterSlug={character.slug}

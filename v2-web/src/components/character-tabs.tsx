@@ -3,6 +3,7 @@ import {
   appendDevicePreviewToken,
   isDevicePreviewRequest,
 } from "@/lib/device-preview";
+import { isCharacterDetailV2Route } from "@/lib/character-detail-route";
 import type { CharacterSectionKey } from "@/types/character";
 
 const publicTabs: Array<{ key: CharacterSectionKey; label: string; path: string }> = [
@@ -32,6 +33,15 @@ const pilotV21Tabs: Array<{ key: CharacterSectionKey; label: string; path: strin
   { key: "videos", label: "動画", path: "/videos" },
 ];
 
+const pilotOverviewAnchors: Partial<Record<CharacterSectionKey, string>> = {
+  overview: "#pilot-overview",
+  moves: "#pilot-moves",
+  combos: "#pilot-combos",
+  setups: "#pilot-setplay",
+  sequences: "#pilot-sequences",
+  videos: "#related-videos",
+};
+
 export function CharacterTabs({
   slug,
   active,
@@ -42,7 +52,7 @@ export function CharacterTabs({
   previewToken?: string | null;
 }) {
   const previewActive = isDevicePreviewRequest(previewToken);
-  const pilotV21 = previewActive && (slug === "ryu" || slug === "jp");
+  const pilotV21 = isCharacterDetailV2Route(slug);
   const tabs = pilotV21 ? pilotV21Tabs : previewActive ? previewTabs : publicTabs;
 
   return (
@@ -50,7 +60,12 @@ export function CharacterTabs({
       {tabs.map((tab) => (
         <Link
           key={tab.key}
-          href={appendDevicePreviewToken(`/characters/${slug}${tab.path}`, previewToken)}
+          href={appendDevicePreviewToken(
+            pilotV21 && active === "overview"
+              ? `/characters/${slug}${pilotOverviewAnchors[tab.key] ?? "#pilot-overview"}`
+              : `/characters/${slug}${tab.path}`,
+            previewToken
+          )}
           className={tab.key === active ? "is-active" : undefined}
           aria-current={tab.key === active ? "page" : undefined}
         >
