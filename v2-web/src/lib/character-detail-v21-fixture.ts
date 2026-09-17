@@ -1,5 +1,6 @@
 import type { DevicePreviewBundle } from "@/lib/device-preview";
 import { jpMoveReviewFixture } from "@/lib/jp-move-review-fixture";
+import { ryuMoveReviewFixture } from "@/lib/ryu-move-review-fixture";
 
 const sharedEmpty: Pick<DevicePreviewBundle, "guideSections" | "moves" | "matchups" | "training"> = {
   guideSections: [],
@@ -11,6 +12,7 @@ const sharedEmpty: Pick<DevicePreviewBundle, "guideSections" | "moves" | "matchu
 const fixtures: Record<"ryu" | "jp", DevicePreviewBundle> = {
   ryu: {
     ...sharedEmpty,
+    moves: ryuMoveReviewFixture,
     combos: [
       { id: "1ca819b0-3ec0-48e6-8f9a-7b69a7a84d42", slug: "ryu-corner-od-tatsu-sa1", name: "端OD竜巻・SA1ルート", purpose: "画面端でSA1へつなぐ火力候補", category: "sa", command: "小技×3 ＞ OD竜巻旋風脚 ＞ ドライブラッシュ立ち中P ＞ キャンセルラッシュしゃがみ強P ＞ 強上段足刀蹴り ＞ SA1", startCondition: "小技始動", endCondition: "Drive GaugeとSA1を使用", position: "画面端", patch: "2026.08.03", sourceLabel: "記事を読む", sourceUrl: "https://sf6-genten.com/character/ryu/category/combo", damage: null, driveCost: null, saCost: null, difficulty: "4", status: "draft", verificationStatus: "reviewed" },
       { id: "599e4a07-7573-4814-a52a-a4686dd09b49", slug: "ryu-basic-light-shoryu", name: "小技始動・強昇龍拳締め", purpose: "近距離の小技確認からダウンを取る基本候補", category: "basic", command: "しゃがみ弱K ＞ 立ち弱P ＞ 立ち弱P ＞ 強昇龍拳", startCondition: "近距離でしゃがみ弱Kがヒット", endCondition: "強昇龍拳でダウン", position: "中央 / 画面端", patch: "2026.08.03", sourceLabel: "記事を読む", sourceUrl: "https://sf6-genten.com/character/ryu/category/combo", damage: null, driveCost: null, saCost: null, difficulty: "1", status: "draft", verificationStatus: "reviewed" },
