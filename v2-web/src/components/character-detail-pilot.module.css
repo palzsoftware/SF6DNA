@@ -1,0 +1,30 @@
+.pilot { display: grid; gap: 26px; padding: clamp(18px,3vw,30px); border: 1px solid rgba(83,216,255,.2); border-radius: 22px; background: linear-gradient(150deg,rgba(11,25,34,.92),rgba(13,17,23,.94)); }
+.heading, .subheading { display: flex; justify-content: space-between; gap: 18px; align-items: end; }
+.heading h2, .subheading h3, .mediaPolicy h3 { margin: 3px 0 0; }
+.heading > span { padding: 5px 9px; border: 1px solid rgba(255,122,26,.3); border-radius: 999px; color: #ffb17b; font-size: .7rem; font-weight: 800; }
+.lead { max-width: 76ch; margin: -12px 0 0; color: var(--copy-muted,var(--muted)); line-height: 1.75; }
+.sectionGrid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 10px; }
+.sectionCard { display: grid; min-height: 170px; gap: 8px; align-content: start; padding: 15px; border: 1px solid var(--line,var(--border)); border-radius: 14px; background: rgba(17,23,31,.78); }
+.sectionCard > span { color: #53d8ff; font-size: .68rem; font-weight: 850; letter-spacing: .08em; }
+.sectionCard > strong { font-size: .94rem; line-height: 1.45; }
+.sectionCard > small { color: var(--copy-muted,var(--muted)); line-height: 1.55; }
+.sectionCard > b { margin-top: auto; color: #ffae73; font-size: .72rem; }
+.comboSection, .playerGrid, .videoGrid { display: grid; gap: 12px; }
+.subheading a { color: #ffae73; font-size: .78rem; font-weight: 800; }
+.comboList { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+.mediaPolicy { display: grid; grid-template-columns: minmax(180px,.35fr) minmax(0,1fr); gap: 20px; align-items: center; padding: 18px; border: 1px dashed rgba(83,216,255,.24); border-radius: 14px; }
+.mediaPolicy p { margin: 0; color: var(--copy-muted,var(--muted)); line-height: 1.7; }
+.playerGrid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.playerCard { display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 13px; padding: 14px; border: 1px solid var(--line,var(--border)); border-radius: 14px; background: rgba(17,23,31,.78); }
+.playerCard img { width: 88px; height: 88px; border-radius: 11px; object-fit: cover; }
+.playerFallback { display: grid; width: 88px; min-height: 112px; gap: 5px; place-items: center; padding: 8px; border: 1px solid var(--line,var(--border)); border-radius: 11px; background: rgba(5,9,13,.58); text-align: center; }
+.playerFallback > span { color: #53d8ff; font-size: 1.6rem; font-weight: 900; }
+.playerFallback small { color: #82909e; font-size: .58rem; line-height: 1.4; }
+.playerBody h4 { margin: 2px 0 6px; }
+.playerBody p { margin: 0; color: var(--copy-muted,var(--muted)); font-size: .76rem; line-height: 1.5; }
+.socials { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.socials a { color: #bfefff; font-size: .68rem; font-weight: 750; }
+.videoGrid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+@media (max-width: 1080px) { .sectionGrid { grid-template-columns: repeat(3,minmax(0,1fr)); } .comboList { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .sectionGrid, .playerGrid, .videoGrid { grid-template-columns: 1fr; } .sectionCard { min-height: 145px; } .mediaPolicy { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .pilot { padding: 15px; border-radius: 16px; } .heading, .subheading { align-items: start; flex-direction: column; } .playerCard { grid-template-columns: 74px minmax(0,1fr); } .playerCard img, .playerFallback { width: 74px; } }

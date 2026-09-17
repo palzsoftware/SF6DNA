@@ -3,14 +3,18 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CharacterPreferenceActions } from "@/components/character-preference-actions";
 import { CharacterTabs } from "@/components/character-tabs";
+import { CharacterDetailPilot } from "@/components/character-detail-pilot";
 import {
   appendDevicePreviewToken,
+  getDevicePreviewBundle,
   isDevicePreviewRequest,
   normalizeDevicePreviewToken,
 } from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
 import { listCharacterSectionItems } from "@/lib/character-sections";
 import { CharacterRelatedSection } from "@/components/character-related-section";
+import { listVideos } from "@/lib/event-media";
+import { getPlayerBySlug } from "@/lib/players";
 import { releaseFeatures } from "@/lib/release-features";
 import { presentSource } from "@/lib/source-presentation";
 import type { CharacterGuideSection } from "@/types/character";
@@ -115,6 +119,18 @@ export default async function CharacterPage({
     listCharacterSectionItems(character.id, "videos"),
   ]);
   const previewActive = isDevicePreviewRequest(previewToken);
+  const pilotRequested = previewActive && (character.slug === "ryu" || character.slug === "jp");
+  const [pilotBundle, allVideos] = pilotRequested
+    ? await Promise.all([getDevicePreviewBundle(character.id, previewToken), listVideos()])
+    : [null, []];
+  const pilotPlayers = pilotBundle
+    ? (await Promise.all(
+        relatedPlayers.map((item) => getPlayerBySlug(item.href.split("/").filter(Boolean).at(-1) ?? ""))
+      )).filter((player) => player !== null)
+    : [];
+  const pilotVideos = pilotBundle
+    ? allVideos.filter((video) => video.characters.includes(character.name))
+    : [];
   const matchupCard = releaseFeatures.publicStrategyContent
     ? character.guideSections.find((section) => section.sectionKey === "matchup_card") ?? null
     : null;
@@ -189,6 +205,9 @@ export default async function CharacterPage({
         {matchupCard ? <a href="#before-match">対戦前30秒</a> : null}
         {hasStrengthProfile ? <a href="#profile">強み・注意点</a> : null}
         {groups.map((group) => <a href={`#guide-${group.key}`} key={group.key}>{group.title}</a>)}
+        {pilotBundle ? <a href="#pilot-combos">コンボカード</a> : null}
+        {pilotBundle ? <a href="#pilot-neutral-defense">立ち回り / 防御</a> : null}
+        {pilotBundle ? <a href="#pilot-motion-media">動作メディア</a> : null}
         <a href="#related-players">関連プレイヤー</a>
         <a href="#related-videos">関連動画</a>
         <a href="#sources">情報源</a>
@@ -270,20 +289,33 @@ export default async function CharacterPage({
         </section>
       ) : null}
 
-      <CharacterRelatedSection
-        id="related-players"
-        title="関連プレイヤー"
-        emptyText="表示できる関連プレイヤーはありません。"
-        href={`/characters/${character.slug}/players`}
-        items={relatedPlayers}
-      />
-      <CharacterRelatedSection
-        id="related-videos"
-        title="関連動画"
-        emptyText="表示できる関連動画はありません。"
-        href={`/characters/${character.slug}/videos`}
-        items={relatedVideos}
-      />
+      {pilotBundle && previewToken ? (
+        <CharacterDetailPilot
+          characterName={character.name}
+          characterSlug={character.slug}
+          previewToken={previewToken}
+          bundle={pilotBundle}
+          players={pilotPlayers}
+          videos={pilotVideos}
+        />
+      ) : (
+        <>
+          <CharacterRelatedSection
+            id="related-players"
+            title="関連プレイヤー"
+            emptyText="表示できる関連プレイヤーはありません。"
+            href={`/characters/${character.slug}/players`}
+            items={relatedPlayers}
+          />
+          <CharacterRelatedSection
+            id="related-videos"
+            title="関連動画"
+            emptyText="表示できる関連動画はありません。"
+            href={`/characters/${character.slug}/videos`}
+            items={relatedVideos}
+          />
+        </>
+      )}
 
       <section id="sources">
         <div className="section-heading">

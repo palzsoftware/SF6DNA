@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { appendDevicePreviewToken } from "@/lib/device-preview";
+import { PilotComboCard } from "@/components/pilot-combo-card";
 import type { CharacterSectionItem } from "@/lib/character-sections";
 import styles from "./combo-explorer.module.css";
 
@@ -18,6 +20,7 @@ type ComboMeta = {
   drive: number | null;
   sa: number | null;
   difficulty: number | null;
+  verificationStatus: string | null;
 };
 
 function one(value: string | string[] | undefined) {
@@ -25,9 +28,10 @@ function one(value: string | string[] | undefined) {
 }
 
 function parseMeta(meta: string | null): ComboMeta {
-  const result: ComboMeta = { preview: false, damage: null, drive: null, sa: null, difficulty: null };
+  const result: ComboMeta = { preview: false, damage: null, drive: null, sa: null, difficulty: null, verificationStatus: null };
   for (const part of (meta ?? "").split(" / ").map((value) => value.trim()).filter(Boolean)) {
     if (part === "未公開プレビュー") result.preview = true;
+    if (["verified", "unverified", "reviewed", "pending"].includes(part)) result.verificationStatus = part;
     const damage = part.match(/^(\d+)\s*dmg$/i);
     if (damage) result.damage = Number(damage[1]);
     const drive = part.match(/^D\s+(-?\d+(?:\.\d+)?)$/i);
@@ -145,28 +149,22 @@ export function ComboExplorer({
       {filtered.length ? (
         <section className={styles.list}>
           {filtered.map(({ item, meta }) => (
-            <article className={styles.card} key={item.id}>
-              <div className={styles.main}>
-                <div className={styles.badges}>
-                  {meta.difficulty !== null ? <span className={styles.difficulty}>難易度 {meta.difficulty}/5</span> : null}
-                  {(meta.drive ?? 0) === 0 && (meta.sa ?? 0) === 0 ? <span>ノーゲージ</span> : null}
-                  {(meta.drive ?? 0) > 0 ? <span>D {meta.drive}</span> : null}
-                  {(meta.sa ?? 0) > 0 ? <span>SA {meta.sa}</span> : null}
-                  {meta.preview ? <span className={styles.preview}>確認用</span> : null}
-                </div>
-                <h2>{item.title}</h2>
-                {item.subtitle ? <p>{item.subtitle}</p> : null}
-              </div>
-
-              <div className={styles.damage}>
-                <small>ダメージ</small>
-                <strong>{meta.damage ?? "—"}</strong>
-              </div>
-
-              <Link className={styles.more} href={appendDevicePreviewToken(item.href, previewToken)}>
-                詳細を見る →
-              </Link>
-            </article>
+            <PilotComboCard
+              key={item.id}
+              previewToken={previewToken}
+              combo={{
+                id: item.id,
+                href: item.href,
+                name: item.title,
+                purpose: item.subtitle,
+                damage: meta.damage,
+                drive: meta.drive,
+                sa: meta.sa,
+                difficulty: meta.difficulty,
+                verificationStatus: meta.verificationStatus,
+                preview: meta.preview,
+              }}
+            />
           ))}
         </section>
       ) : (

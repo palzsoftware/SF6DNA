@@ -30,13 +30,13 @@ export default async function CharacterCombosPage({
     resource?: string | string[];
   }>;
 }) {
-  if (!releaseFeatures.publicStrategyContent) notFound();
   const [{ slug }, query] = await Promise.all([params, searchParams]);
   const previewToken = normalizeDevicePreviewToken(query.preview);
+  const previewActive = isDevicePreviewRequest(previewToken);
+  if (!releaseFeatures.publicStrategyContent && !previewActive) notFound();
   const character = await getCharacterBySlug(slug, previewToken);
   if (!character) notFound();
 
-  const previewActive = isDevicePreviewRequest(previewToken);
   const items = await listCharacterSectionItems(character.id, "combos", previewToken);
 
   return (
