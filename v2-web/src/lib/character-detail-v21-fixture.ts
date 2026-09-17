@@ -1,4 +1,5 @@
 import type { DevicePreviewBundle } from "@/lib/device-preview";
+import { jpMoveReviewFixture } from "@/lib/jp-move-review-fixture";
 
 const sharedEmpty: Pick<DevicePreviewBundle, "guideSections" | "moves" | "matchups" | "training"> = {
   guideSections: [],
@@ -26,6 +27,7 @@ const fixtures: Record<"ryu" | "jp", DevicePreviewBundle> = {
   },
   jp: {
     ...sharedEmpty,
+    moves: jpMoveReviewFixture,
     combos: [
       { id: "f4b028b9-3137-459a-9339-003bde34c9ed", slug: "jp-basic-light-sa3", name: "小技始動 SA3基本", purpose: "近距離の小技確認からSA3へつなぐ候補", category: "confirm", command: "5LP ＞ 5LP ＞ 5LP ＞ 弱ストリボーグ ＞ SA3 ザプリェット", startCondition: "5LPがヒット", endCondition: "SA3を使用", position: "中央 / 画面端", patch: "2026.08.03", sourceLabel: "記事を読む", sourceUrl: "https://pachi-mea.com/sf6-wiki/10259/", damage: null, driveCost: 0, saCost: 3, difficulty: "1", status: "draft", verificationStatus: "reviewed" },
       { id: "31a791ff-97a2-4160-89b2-3dd78fcb9d68", slug: "jp-light-cdr-sa1", name: "小技CDRからSA1", purpose: "小技からキャンセルラッシュを使い、SA1まで運ぶ候補", category: "confirm", command: "5LP ＞ 5LP ＞ 5LP ＞ CDR ＞ 5LP ＞ 5MP ＞ 派生MP ＞ SA1 チェルノボーグ", startCondition: "5LPがヒット", endCondition: "Drive Gauge 3本とSA1を使用", position: "中央 / 画面端", patch: "2026.08.03", sourceLabel: "記事を読む", sourceUrl: "https://pachi-mea.com/sf6-wiki/10259/", damage: null, driveCost: 3, saCost: 1, difficulty: "3", status: "draft", verificationStatus: "reviewed" },

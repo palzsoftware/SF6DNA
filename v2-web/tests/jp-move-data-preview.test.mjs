@@ -14,6 +14,16 @@ test("JP Preview joins commands into the existing token-gated move bundle", () =
   assert.match(loader, /isDevicePreviewRequest/);
 });
 
+test("JP Preview keeps all 59 reviewed moves available when the protected RPC is unavailable", () => {
+  const fixture = read("src/lib/jp-move-review-fixture.ts");
+  const bundle = read("src/lib/character-detail-v21-fixture.ts");
+
+  assert.equal((fixture.match(/\"id\":/g) ?? []).length, 59);
+  assert.match(bundle, /moves: jpMoveReviewFixture/);
+  assert.match(fixture, /status: "draft"|\"status\": "draft"/);
+  assert.doesNotMatch(fixture, /status: "published"|\"status\": "published"/);
+});
+
 test("JP move review renders Classic and Modern separately with safe missing values", () => {
   const pilot = read("src/components/character-detail-pilot.tsx");
 
