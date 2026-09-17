@@ -38,6 +38,14 @@ export type DevicePreviewBundle = {
     difficulty: string | null;
     status: string;
     verificationStatus: string | null;
+    category?: string | null;
+    command?: string | null;
+    startCondition?: string | null;
+    endCondition?: string | null;
+    position?: string | null;
+    patch?: string | null;
+    sourceLabel?: string | null;
+    sourceUrl?: string | null;
   }>;
   setups: Array<{
     id: string;
@@ -49,6 +57,18 @@ export type DevicePreviewBundle = {
     position: string | null;
     status: string;
     verificationStatus: string | null;
+    command?: string | null;
+    startCondition?: string | null;
+    successCondition?: string | null;
+    opponentOptions?: string | null;
+    failureCondition?: string | null;
+    damage?: number | null;
+    driveCost?: number | null;
+    saCost?: number | null;
+    difficulty?: number | null;
+    patch?: string | null;
+    sourceLabel?: string | null;
+    sourceUrl?: string | null;
   }>;
   sequences: Array<{
     id: string;
@@ -59,6 +79,19 @@ export type DevicePreviewBundle = {
     notes: string | null;
     status: string;
     verificationStatus: string | null;
+    purpose?: string | null;
+    gap?: string | null;
+    throwOption?: string | null;
+    strikeOption?: string | null;
+    driveImpactOption?: string | null;
+    punishability?: string | null;
+    condition?: string | null;
+    damage?: number | null;
+    driveCost?: number | null;
+    saCost?: number | null;
+    patch?: string | null;
+    sourceLabel?: string | null;
+    sourceUrl?: string | null;
   }>;
   matchups: Array<{
     id: string;

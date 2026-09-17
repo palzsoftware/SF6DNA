@@ -29,12 +29,13 @@ test("pilot combo cards keep local preferences independent and accessible", () =
   assert.match(source, /verified && combo\.difficulty !== null/);
 });
 
-test("pilot supports motion media without an empty media placeholder", () => {
+test("pilot supports motion media with a compact missing-media fallback", () => {
   const source = readProjectFile("src/components/pilot-combo-card.tsx");
   const css = readProjectFile("src/components/pilot-combo-card.module.css");
 
   assert.match(source, /"gif" \| "webp" \| "video"/);
   assert.match(source, /poster=\{combo\.media\.posterUrl/);
+  assert.match(source, /動作メディア未登録/);
   assert.match(css, /prefers-reduced-motion/);
   assert.doesNotMatch(source, /準備中|NO SIGNAL|画像なし/);
 });
@@ -45,9 +46,38 @@ test("pilot uses safe player fallback and reusable video library", () => {
 
   assert.match(source, /選手ビジュアルは今後のアップデートで追加予定です/);
   assert.match(source, /videos\.slice\(0, 6\)/);
-  assert.match(source, /YouTubeで見る/);
+  assert.match(source, /<VideoCard/);
   assert.match(page, /getDevicePreviewBundle/);
   assert.doesNotMatch(source, /NO SIGNAL|画像なし|近日アップデート/);
+});
+
+test("V2.2 exposes complete comparison fields and explicit unknown values", () => {
+  const pilot = readProjectFile("src/components/character-detail-pilot.tsx");
+  const combo = readProjectFile("src/components/pilot-combo-card.tsx");
+  const fixture = readProjectFile("src/lib/character-detail-v21-fixture.ts");
+
+  for (const label of ["コマンド", "ダメージ", "Drive Gauge使用量", "SA Gauge使用量", "開始条件", "終了状況", "位置", "用途", "運び", "使用頻度", "Patch", "Source"]) {
+    assert.match(combo, new RegExp(label));
+  }
+  assert.match(combo, /コマンド未確認/);
+  assert.match(combo, /動作メディア未登録/);
+  assert.match(pilot, /Damage \{valueOrUnknown\(setup\.damage\)\}/);
+  assert.match(pilot, /Damage \{valueOrUnknown\(sequence\.damage\)\}/);
+  assert.match(fixture, /command:\s*"小技×3/);
+  assert.match(fixture, /damage:\s*null/);
+  assert.match(fixture, /patch:\s*"2026\.08\.03"/);
+});
+
+test("V2.2 uses horizontal rails for dense related content", () => {
+  const source = readProjectFile("src/components/character-detail-pilot.tsx");
+  const css = readProjectFile("src/components/character-detail-pilot.module.css");
+
+  assert.match(source, /関連プレイヤー（横スクロール）/);
+  assert.match(source, /おすすめ動画（横スクロール）/);
+  assert.match(source, /基本方針の情報源（横スクロール）/);
+  assert.match(css, /overflow-x:\s*auto/);
+  assert.match(css, /scroll-snap-type:\s*x proximity/);
+  assert.match(css, /84%/);
 });
 
 test("Ryu and JP V2.1 removes duplicate navigation and exposes concrete page structures", () => {

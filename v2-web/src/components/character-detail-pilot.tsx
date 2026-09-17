@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PilotComboCard } from "@/components/pilot-combo-card";
+import { VideoCard } from "@/components/video-card";
 import { getCharacterDetailV21Profile } from "@/lib/character-detail-v21";
 import { appendDevicePreviewToken, type DevicePreviewBundle } from "@/lib/device-preview";
-import type { VideoSummary } from "@/lib/event-media";
+import { formatVideoPublishedDate, type VideoSummary } from "@/lib/event-media";
 import { presentSource } from "@/lib/source-presentation";
 import type { SourceReference } from "@/types/character";
 import type { PlayerDetail } from "@/types/player";
@@ -32,6 +33,14 @@ function setupSteps(description: string | null) {
     .map((step) => step.replace(/^\s*\d+[.)、]\s*/, "").trim()).filter(Boolean).slice(0, 5);
 }
 
+function valueOrUnknown(value: string | number | null | undefined, fallback = "未確認") {
+  return value === null || value === undefined || value === "" ? fallback : String(value);
+}
+
+function sourceLink(label: string | null | undefined, url: string | null | undefined) {
+  return label && url ? <a href={url} target="_blank" rel="noopener noreferrer">{label} ↗</a> : <span>情報源未確認</span>;
+}
+
 export function CharacterDetailPilot({
   characterName, characterSlug, previewToken, bundle, players, videos,
   archetypeLabel, rangeLabel, difficulty, sources,
@@ -52,10 +61,10 @@ export function CharacterDetailPilot({
   const comboSamples = bundle.combos.slice(0, 3);
   const setupSamples = bundle.setups.slice(0, 3);
   const sequenceSamples = bundle.sequences.slice(0, 3);
-  const sourceSamples = sources.slice(0, 3);
+  const sourceSamples = sources.slice(0, 8);
 
   return (
-    <section className={styles.pilot} aria-label={`${characterName} Character Detail V2.1`}>
+    <section className={styles.pilot} aria-label={`${characterName} Character Detail V2.2`}>
       <section className={styles.overview} id="pilot-overview">
         <div className={styles.overviewLead}>
           <p className="eyebrow">HOW TO PLAY</p>
@@ -82,7 +91,7 @@ export function CharacterDetailPilot({
         <ol className={styles.gameplanSteps}>
           {profile.gameplan.map((step) => <li key={step.label}><span>{step.label}</span><div><h3>{step.title}</h3><p>{step.body}</p><small>{step.caution}</small></div></li>)}
         </ol>
-        {sourceSamples.length ? <div className={styles.inlineSources} aria-label="基本方針の情報源">{sourceSamples.map((source) => {
+        {sourceSamples.length ? <div className={styles.inlineSources} tabIndex={0} aria-label="基本方針の情報源（横スクロール）">{sourceSamples.map((source) => {
           const presentation = presentSource(source.sourceType, source.publisher, source.url);
           return <a href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}><span>{presentation.badge}</span>{presentation.cta} ↗</a>;
         })}</div> : null}
@@ -90,7 +99,7 @@ export function CharacterDetailPilot({
 
       <section className={styles.comboSection} id="pilot-combos" aria-labelledby="pilot-combos-heading">
         <div className={styles.subheading}><div><p className="eyebrow">COMBO</p><h2 id="pilot-combos-heading">まず確認するコンボ</h2><p>用途と消費ゲージを一覧で比べ、詳細をその場で展開できます。</p></div><Link href={appendDevicePreviewToken(`/characters/${characterSlug}/combos`, previewToken)}>すべて確認する →</Link></div>
-        {comboSamples.length ? <div className={styles.comboList}>{comboSamples.map((combo) => <PilotComboCard key={combo.id} previewToken={previewToken} combo={{ id: combo.id, href: `/combos/${combo.slug}`, name: combo.name, purpose: combo.purpose, damage: combo.damage, drive: combo.driveCost, sa: combo.saCost, difficulty: numericDifficulty(combo.difficulty), verificationStatus: combo.verificationStatus, preview: true }} />)}</div> : <div className="empty-state"><p>確認対象のコンボ候補はありません。</p></div>}
+        {comboSamples.length ? <div className={styles.comboList}>{comboSamples.map((combo) => <PilotComboCard key={combo.id} previewToken={previewToken} combo={{ id: combo.id, href: `/combos/${combo.slug}`, name: combo.name, category: combo.category, purpose: combo.purpose, damage: combo.damage, drive: combo.driveCost, sa: combo.saCost, difficulty: numericDifficulty(combo.difficulty), verificationStatus: combo.verificationStatus, preview: true, command: combo.command, startCondition: combo.startCondition, endCondition: combo.endCondition, position: combo.position, patch: combo.patch, sourceLabel: combo.sourceLabel, sourceUrl: combo.sourceUrl }} />)}</div> : <div className="empty-state"><p>確認対象のコンボ候補はありません。</p></div>}
       </section>
 
       <section className={styles.strategySplit}>
@@ -98,13 +107,13 @@ export function CharacterDetailPilot({
           <div className={styles.subheading}><div><p className="eyebrow">SETPLAY</p><h2>セットプレイ</h2><p>文章ではなく、起点からの手順で確認します。</p></div><Link href={appendDevicePreviewToken(`/characters/${characterSlug}/setups`, previewToken)}>一覧 →</Link></div>
           <div className={styles.timelineList}>{setupSamples.map((setup) => {
             const steps = setupSteps(setup.description);
-            return <details key={setup.id} open={setup === setupSamples[0]}><summary><span>{verificationLabel(setup.verificationStatus)}</span><strong>{setup.name}</strong></summary><div>{steps.length ? <ol>{steps.map((step, index) => <li key={`${setup.id}-${index}`}>{step}</li>)}</ol> : <p>手順データは個別画面で確認してください。</p>}<dl><div><dt>位置</dt><dd>{setup.position ?? "未記録"}</dd></div><div><dt>有利状況</dt><dd>{setup.frameAdvantage ?? "未記録"}</dd></div></dl></div></details>;
+            return <details key={setup.id} open={setup === setupSamples[0]}><summary><span>{verificationLabel(setup.verificationStatus)}</span><strong>{setup.name}</strong><small>Damage {valueOrUnknown(setup.damage)}</small><small>Drive {valueOrUnknown(setup.driveCost)}</small></summary><div>{steps.length ? <ol>{steps.map((step, index) => <li key={`${setup.id}-${index}`}>{step}</li>)}</ol> : <p>手順は未確認です。</p>}<dl><div><dt>コマンド</dt><dd>{valueOrUnknown(setup.command, "コマンド未確認")}</dd></div><div><dt>開始条件</dt><dd>{valueOrUnknown(setup.startCondition)}</dd></div><div><dt>成功条件</dt><dd>{valueOrUnknown(setup.successCondition)}</dd></div><div><dt>相手の選択肢</dt><dd>{valueOrUnknown(setup.opponentOptions)}</dd></div><div><dt>失敗条件</dt><dd>{valueOrUnknown(setup.failureCondition)}</dd></div><div><dt>位置</dt><dd>{valueOrUnknown(setup.position)}</dd></div><div><dt>有利状況</dt><dd>{valueOrUnknown(setup.frameAdvantage)}</dd></div><div><dt>ダメージ</dt><dd>{valueOrUnknown(setup.damage)}</dd></div><div><dt>Drive Gauge使用量</dt><dd>{valueOrUnknown(setup.driveCost)}</dd></div><div><dt>SA Gauge使用量</dt><dd>{valueOrUnknown(setup.saCost)}</dd></div><div><dt>Patch</dt><dd>{valueOrUnknown(setup.patch)}</dd></div><div><dt>Source</dt><dd>{sourceLink(setup.sourceLabel, setup.sourceUrl)}</dd></div></dl></div></details>;
           })}{!setupSamples.length ? <div className="empty-state"><p>確認対象のセットプレイ候補はありません。</p></div> : null}</div>
         </div>
 
         <div id="pilot-sequences">
           <div className={styles.subheading}><div><p className="eyebrow">PRESSURE</p><h2>連携・対策</h2><p>入力、目的、注意点を一つずつ展開します。</p></div><Link href={appendDevicePreviewToken(`/characters/${characterSlug}/sequences`, previewToken)}>一覧 →</Link></div>
-          <div className={styles.sequenceList}>{sequenceSamples.map((sequence) => <details key={sequence.id} open={sequence === sequenceSamples[0]}><summary><span>{verificationLabel(sequence.verificationStatus)}</span><strong>{sequence.name}</strong></summary><div><p className={styles.command}>{sequence.sequenceText ?? "入力は個別画面で確認"}</p>{sequence.notes ? <p>{sequence.notes}</p> : null}<small>{sequence.sequenceType ?? "連携"}</small></div></details>)}{!sequenceSamples.length ? <div className="empty-state"><p>確認対象の連携候補はありません。</p></div> : null}</div>
+          <div className={styles.sequenceList}>{sequenceSamples.map((sequence) => <details key={sequence.id} open={sequence === sequenceSamples[0]}><summary><span>{verificationLabel(sequence.verificationStatus)}</span><strong>{sequence.name}</strong><small>Damage {valueOrUnknown(sequence.damage)}</small><small>Drive {valueOrUnknown(sequence.driveCost)}</small></summary><div><p className={styles.command}>{valueOrUnknown(sequence.sequenceText, "コマンド未確認")}</p>{sequence.purpose ? <p>{sequence.purpose}</p> : null}{sequence.notes ? <p>{sequence.notes}</p> : null}<dl><div><dt>連係の隙間</dt><dd>{valueOrUnknown(sequence.gap)}</dd></div><div><dt>投げ</dt><dd>{valueOrUnknown(sequence.throwOption)}</dd></div><div><dt>打撃</dt><dd>{valueOrUnknown(sequence.strikeOption)}</dd></div><div><dt>DIへの対応</dt><dd>{valueOrUnknown(sequence.driveImpactOption)}</dd></div><div><dt>反撃可否</dt><dd>{valueOrUnknown(sequence.punishability)}</dd></div><div><dt>成立条件</dt><dd>{valueOrUnknown(sequence.condition)}</dd></div><div><dt>ダメージ</dt><dd>{valueOrUnknown(sequence.damage)}</dd></div><div><dt>Drive Gauge使用量</dt><dd>{valueOrUnknown(sequence.driveCost)}</dd></div><div><dt>SA Gauge使用量</dt><dd>{valueOrUnknown(sequence.saCost)}</dd></div><div><dt>Patch</dt><dd>{valueOrUnknown(sequence.patch)}</dd></div><div><dt>Source</dt><dd>{sourceLink(sequence.sourceLabel, sequence.sourceUrl)}</dd></div></dl></div></details>)}{!sequenceSamples.length ? <div className="empty-state"><p>確認対象の連携候補はありません。</p></div> : null}</div>
         </div>
       </section>
 
@@ -115,12 +124,12 @@ export function CharacterDetailPilot({
 
       <section className={styles.related} id="related-players">
         <div className={styles.subheading}><div><p className="eyebrow">PLAYERS</p><h2>関連プレイヤー</h2></div></div>
-        {players.length ? <div className={styles.playerGrid}>{players.slice(0, 6).map((player) => <article className={styles.playerCard} key={player.id}>{player.imageUrl ? <Image src={player.imageUrl} alt={player.displayName} width={96} height={96} sizes="64px" /> : <div className={styles.playerFallback}><span aria-hidden="true">{player.displayName.slice(0, 1)}</span><small>選手ビジュアルは今後のアップデートで追加予定です</small></div>}<div><h3><Link href={`/players/${player.slug}`}>{player.displayName}</Link></h3><p>{[player.teamName, player.region ?? player.countryCode].filter(Boolean).join(" / ") || "公開プロフィール"}</p>{socialLinks(player).length ? <div className={styles.socials}>{socialLinks(player).map(([label, url]) => <a href={url} target="_blank" rel="noopener noreferrer" key={label}>{label} ↗</a>)}</div> : null}</div></article>)}</div> : <div className="empty-state"><p>表示できる関連プレイヤーはありません。</p></div>}
+        {players.length ? <div className={styles.playerGrid} tabIndex={0} aria-label="関連プレイヤー（横スクロール）">{players.slice(0, 6).map((player) => <article className={styles.playerCard} key={player.id}>{player.imageUrl ? <Image src={player.imageUrl} alt={player.displayName} width={96} height={96} sizes="64px" /> : <div className={styles.playerFallback}><span aria-hidden="true">{player.displayName.slice(0, 1)}</span><small>選手ビジュアルは今後のアップデートで追加予定です</small></div>}<div><h3><Link href={`/players/${player.slug}`}>{player.displayName}</Link></h3><dl><div><dt>Team</dt><dd>{player.teamName ?? "未登録"}</dd></div><div><dt>Main Character</dt><dd>{player.characters.find((item) => item.role === "main")?.characterName ?? player.characters[0]?.characterName ?? characterName}</dd></div><div><dt>Region</dt><dd>{player.region ?? player.countryCode ?? "未登録"}</dd></div></dl>{socialLinks(player).length ? <div className={styles.socials}>{socialLinks(player).map(([label, url]) => <a href={url} target="_blank" rel="noopener noreferrer" key={label}>{label} ↗</a>)}</div> : null}</div></article>)}</div> : <div className="empty-state"><p>表示できる関連プレイヤーはありません。</p></div>}
       </section>
 
       <section className={styles.related} id="related-videos">
         <div className={styles.subheading}><div><p className="eyebrow">VIDEOS</p><h2>おすすめ動画</h2></div><Link href={appendDevicePreviewToken(`/characters/${characterSlug}/videos`, previewToken)}>動画一覧 →</Link></div>
-        {videos.length ? <div className={styles.videoList}>{videos.slice(0, 6).map((video) => <a href={video.url} target="_blank" rel="noopener noreferrer" key={video.id}><span>YouTube</span><strong>{video.title}</strong><small>{video.channelName ?? "公開動画"}</small><b>YouTubeで見る ↗</b></a>)}</div> : <div className="empty-state"><p>表示できる関連動画はありません。</p></div>}
+        {videos.length ? <div className={styles.videoList} tabIndex={0} aria-label="おすすめ動画（横スクロール）">{videos.slice(0, 6).map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />)}</div> : <div className="empty-state"><p>表示できる関連動画はありません。</p></div>}
       </section>
     </section>
   );

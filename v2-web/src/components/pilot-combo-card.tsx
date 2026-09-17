@@ -19,6 +19,7 @@ export type PilotComboCardData = {
   difficulty: number | null;
   verificationStatus: string | null;
   preview: boolean;
+  category?: string | null;
   command?: string | null;
   startCondition?: string | null;
   endCondition?: string | null;
@@ -31,6 +32,17 @@ export type PilotComboCardData = {
     url: string;
     posterUrl?: string | null;
   } | null;
+};
+
+function displayValue(value: string | number | null | undefined, fallback = "未確認") {
+  return value === null || value === undefined || value === "" ? fallback : String(value);
+}
+
+const categoryLabels: Record<string, string> = {
+  basic: "基本",
+  confirm: "ヒット確認",
+  neutral: "立ち回り始動",
+  sa: "SA使用",
 };
 
 function readIds(key: string) {
@@ -72,16 +84,19 @@ export function PilotComboCard({
   }, [combo.id]);
 
   const expandedFacts = [
-    ["コマンド", combo.command],
-    ["ダメージ", combo.damage],
-    ["Drive Gauge", combo.drive],
-    ["SA Gauge", combo.sa],
-    ["開始条件", combo.startCondition],
-    ["終了状況", combo.endCondition],
-    ["位置", combo.position],
-    ["用途", combo.purpose],
-    ["Patch", combo.patch],
-  ].filter((entry) => entry[1] !== null && entry[1] !== undefined && entry[1] !== "");
+    ["コマンド", displayValue(combo.command, "コマンド未確認")],
+    ["ダメージ", displayValue(combo.damage)],
+    ["Drive Gauge使用量", displayValue(combo.drive)],
+    ["SA Gauge使用量", displayValue(combo.sa)],
+    ["開始条件", displayValue(combo.startCondition)],
+    ["終了状況", displayValue(combo.endCondition)],
+    ["位置", displayValue(combo.position)],
+    ["用途", displayValue(combo.purpose)],
+    ["運び", "未確認"],
+    ["使用頻度", "未確認"],
+    ["Patch", displayValue(combo.patch)],
+    ["Source", combo.sourceLabel ?? "未確認"],
+  ];
 
   return (
     <article className={styles.card}>
@@ -96,29 +111,25 @@ export function PilotComboCard({
             <img src={combo.media.url} alt={`${combo.name}の動作確認`} width="960" height="540" loading="lazy" />
           )}
         </div>
-      ) : null}
+      ) : <div className={styles.mediaPlaceholder}><span>MOTION MEDIA</span><small>動作メディア未登録</small></div>}
 
       <div className={styles.summaryRow}>
         <div className={styles.main}>
           <div className={styles.badges}>
-            {verified && combo.difficulty !== null ? (
-              <span className={styles.difficulty}>難易度 {combo.difficulty}/5</span>
-            ) : null}
-            {(combo.drive ?? 0) === 0 && (combo.sa ?? 0) === 0 ? <span>ノーゲージ</span> : null}
-            {(combo.drive ?? 0) > 0 ? <span>D {combo.drive}</span> : null}
-            {(combo.sa ?? 0) > 0 ? <span>SA {combo.sa}</span> : null}
+            <span>{combo.category ? categoryLabels[combo.category] ?? combo.category : "カテゴリ未確認"}</span>
+            <span className={styles.difficulty}>{verified && combo.difficulty !== null ? `難易度 ${combo.difficulty}/5` : "難易度 未確認"}</span>
+            <span>Drive {displayValue(combo.drive)}</span>
+            <span>SA {displayValue(combo.sa)}</span>
             {combo.preview ? <span className={styles.preview}>確認用</span> : null}
           </div>
           <h2>{combo.name}</h2>
           {combo.purpose ? <p>{combo.purpose}</p> : null}
         </div>
 
-        {combo.damage !== null ? (
-          <div className={styles.damage}>
-            <small>ダメージ</small>
-            <strong>{combo.damage}</strong>
-          </div>
-        ) : null}
+        <div className={styles.damage}>
+          <small>ダメージ</small>
+          <strong>{displayValue(combo.damage)}</strong>
+        </div>
       </div>
 
       <div className={styles.actions}>
@@ -143,16 +154,14 @@ export function PilotComboCard({
       <details className={styles.details}>
         <summary>詳細を開く</summary>
         <div className={styles.detailBody}>
-          {expandedFacts.length ? (
-            <dl>
-              {expandedFacts.map(([label, value]) => (
-                <div key={String(label)}>
-                  <dt>{label}</dt>
-                  <dd>{String(value)}</dd>
-                </div>
-              ))}
-            </dl>
-          ) : null}
+          <dl>
+            {expandedFacts.map(([label, value]) => (
+              <div key={String(label)}>
+                <dt>{label}</dt>
+                <dd>{String(value)}</dd>
+              </div>
+            ))}
+          </dl>
           {combo.sourceUrl && combo.sourceLabel ? (
             <a href={combo.sourceUrl} target="_blank" rel="noopener noreferrer">
               {combo.sourceLabel} ↗

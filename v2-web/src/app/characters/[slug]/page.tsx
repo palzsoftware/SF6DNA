@@ -325,7 +325,7 @@ export default async function CharacterPage({
         </>
       )}
 
-      <section id="sources">
+      {!pilotRequested ? <section id="sources">
         <div className="section-heading">
           <h2>情報源</h2>
           <p>キャラクター情報の参照先です。</p>
@@ -347,7 +347,7 @@ export default async function CharacterPage({
         ) : (
           <div className="empty-state"><p>公開済みの出典情報はまだありません。</p></div>
         )}
-      </section>
+      </section> : null}
     </div>
   );
 }
