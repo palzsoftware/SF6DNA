@@ -3,12 +3,12 @@
 .overviewLead h2 { max-width: 24ch; margin: 8px 0 18px; font-size: clamp(1.55rem,3vw,2.65rem); line-height: 1.35; letter-spacing: -.035em; }
 .overviewLead > p:last-of-type { max-width: 68ch; color: var(--copy-muted,var(--muted)); line-height: 1.85; }
 .previewNote { width: fit-content; margin-top: 20px; padding: 8px 12px; border-left: 3px solid #ff7a1a; background: rgba(255,122,26,.08); color: #ffc49a; font-size: .72rem; font-weight: 760; }
-.quickFacts { display: grid; grid-template-columns: repeat(4,minmax(150px,1fr)); margin: 0; overflow-x: auto; border-top: 1px solid rgba(83,216,255,.32); scroll-snap-type: x proximity; }
-.quickFacts > div { display: grid; gap: 7px; padding: 17px 14px; border-bottom: 1px solid var(--line,var(--border)); }
-.quickFacts > div { border-right: 1px solid var(--line,var(--border)); scroll-snap-align: start; }
+.quickFacts { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); margin: 0; border-top: 1px solid rgba(83,216,255,.32); }
+.quickFacts > div { display: grid; min-width: 0; gap: 7px; padding: 17px 14px; border-bottom: 1px solid var(--line,var(--border)); }
+.quickFacts > div { border-right: 1px solid var(--line,var(--border)); }
 .quickFacts > div:last-child { border-right: 0; }
 .quickFacts dt { color: #7f8f9f; font-size: .68rem; font-weight: 850; letter-spacing: .08em; }
-.quickFacts dd { margin: 0; color: #eef5fa; line-height: 1.6; }
+.quickFacts dd { min-width: 0; margin: 0; overflow-wrap: anywhere; color: #eef5fa; line-height: 1.6; }
 .comparison { display: grid; grid-template-columns: minmax(180px,.45fr) repeat(2,minmax(0,1fr)); gap: 18px; align-items: stretch; }
 .sectionTitle h2, .subheading h2 { margin: 4px 0 0; }
 .sectionTitle > p:last-child, .subheading p { color: var(--copy-muted,var(--muted)); line-height: 1.7; }
@@ -104,8 +104,8 @@
 .videoList { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(300px,32%); gap: 10px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x proximity; }
 .videoList > :global(.video-card) { height: 100%; scroll-snap-align: start; }
 .inlineSources:focus-visible, .playerGrid:focus-visible, .videoList:focus-visible { outline: 2px solid #53d8ff; outline-offset: 3px; }
-@media (max-width: 1080px) { .comparison { grid-template-columns: 1fr 1fr; } .comparison .sectionTitle { grid-column: 1 / -1; } .rangeSection { grid-template-columns: 1fr; } .playerGrid, .videoList { grid-auto-columns: minmax(280px,48%); } }
+@media (max-width: 1080px) { .quickFacts { grid-template-columns: repeat(2,minmax(0,1fr)); } .quickFacts > div:nth-child(2n) { border-right: 0; } .comparison { grid-template-columns: 1fr 1fr; } .comparison .sectionTitle { grid-column: 1 / -1; } .rangeSection { grid-template-columns: 1fr; } .playerGrid, .videoList { grid-auto-columns: minmax(280px,48%); } }
 @media (max-width: 1080px) { .moveRow { grid-template-columns: minmax(220px,1fr) minmax(150px,.7fr) minmax(220px,1fr); } .moveFrame, .moveDetailLink { grid-column: auto; } .moveDetailLink { justify-self: start; } }
 @media (max-width: 760px) { .overview, .gameplan, .strategySplit { grid-template-columns: 1fr; } .inlineSources { grid-column: 1; } .comboList { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(280px,84%); } .playerGrid, .videoList { grid-auto-columns: minmax(280px,84%); } .rangeTable > div { grid-template-columns: 78px minmax(0,1fr); } .rangeTable p { grid-column: 2; } .timelineList summary, .sequenceList summary { grid-template-columns: 88px minmax(0,1fr); } .timelineList summary small, .sequenceList summary small { justify-self: start; } }
-@media (max-width: 420px) { .pilot { gap: 38px; } .overview { padding-top: 8px; } .overviewLead h2 { font-size: 1.45rem; } .quickFacts { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(150px,46%); } .comparison { grid-template-columns: 1fr; } .comparison .sectionTitle { grid-column: auto; } .subheading { align-items: start; flex-direction: column; } .gameplanSteps li { grid-template-columns: 1fr; gap: 8px; } .timelineList details > div, .sequenceList details > div { padding-left: 0; } .timelineList dl, .sequenceList dl { grid-template-columns: 1fr; } .rangeTable > div { grid-template-columns: 1fr; gap: 8px; } .rangeTable p { grid-column: 1; } }
+@media (max-width: 420px) { .pilot { gap: 38px; } .overview { padding-top: 8px; } .overviewLead h2 { font-size: 1.45rem; } .quickFacts { grid-template-columns: 1fr; } .quickFacts > div { border-right: 0; } .comparison { grid-template-columns: 1fr; } .comparison .sectionTitle { grid-column: auto; } .subheading { align-items: start; flex-direction: column; } .gameplanSteps li { grid-template-columns: 1fr; gap: 8px; } .timelineList details > div, .sequenceList details > div { padding-left: 0; } .timelineList dl, .sequenceList dl { grid-template-columns: 1fr; } .rangeTable > div { grid-template-columns: 1fr; gap: 8px; } .rangeTable p { grid-column: 1; } }
 @media (max-width: 760px) { .moveRow { grid-template-columns: 1fr; gap: 12px; padding: 14px; } .moveMedia { width: min(100%,240px); } .moveFrame { grid-template-columns: repeat(3,minmax(0,1fr)); } }
