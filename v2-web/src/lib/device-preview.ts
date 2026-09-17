@@ -26,6 +26,7 @@ export type DevicePreviewBundle = {
       damage: number | null;
       verificationStatus: string | null;
     } | null;
+    commands?: DevicePreviewMoveCommand[];
   }>;
   combos: Array<{
     id: string;
@@ -196,12 +197,20 @@ export async function getDevicePreviewBundle(
   if (!isDevicePreviewRequest(previewToken)) return null;
 
   const supabase = getSupabaseServerClient();
-  const [{ data, error }, { data: japaneseCopy, error: japaneseCopyError }] = await Promise.all([
+  const [
+    { data, error },
+    { data: japaneseCopy, error: japaneseCopyError },
+    { data: moveCommands, error: moveCommandsError },
+  ] = await Promise.all([
     supabase.rpc("get_phase23_character_preview", {
       target_character_id: characterId,
       preview_token: previewToken,
     }),
     supabase.rpc("get_phase47_move_japanese_preview", {
+      target_character_id: characterId,
+      preview_token: previewToken,
+    }),
+    supabase.rpc("get_phase23_move_commands_preview", {
       target_character_id: characterId,
       preview_token: previewToken,
     }),
@@ -216,6 +225,10 @@ export async function getDevicePreviewBundle(
     console.error("[device-preview] move Japanese copy failed", japaneseCopyError.message);
   }
 
+  if (moveCommandsError) {
+    console.error("[device-preview] move command preview failed", moveCommandsError.message);
+  }
+
   if (!data || typeof data !== "object" || Array.isArray(data)) return null;
   const bundle = data as unknown as DevicePreviewBundle;
   const copyMap = new Map(
@@ -224,6 +237,12 @@ export async function getDevicePreviewBundle(
       return [String(copy.id ?? ""), copy] as const;
     })
   );
+  const commandMap = new Map<string, DevicePreviewMoveCommand[]>();
+  for (const command of Array.isArray(moveCommands) ? moveCommands as DevicePreviewMoveCommand[] : []) {
+    const commands = commandMap.get(command.moveId) ?? [];
+    commands.push(command);
+    commandMap.set(command.moveId, commands);
+  }
 
   bundle.moves = bundle.moves.map((move) => {
     const copy = copyMap.get(move.id);
@@ -234,6 +253,7 @@ export async function getDevicePreviewBundle(
       descriptionJa,
       usageSummaryJa,
       usageSummary: usageSummaryJa ?? move.usageSummary,
+      commands: commandMap.get(move.id) ?? [],
     };
   });
   return bundle;

@@ -41,6 +41,21 @@ function sourceLink(label: string | null | undefined, url: string | null | undef
   return label && url ? <a href={url} target="_blank" rel="noopener noreferrer">{label} ↗</a> : <span>情報源未確認</span>;
 }
 
+const moveTypeLabels: Record<string, string> = {
+  normal: "通常技",
+  unique: "特殊技",
+  special: "必殺技",
+  super: "スーパーアーツ",
+  throw: "投げ",
+  system: "共通システム",
+};
+
+function commandLabel(command: NonNullable<DevicePreviewBundle["moves"][number]["commands"]>[number]) {
+  const scheme = command.scheme === "classic" ? "Classic" : command.scheme === "modern" ? "Modern" : command.scheme;
+  const input = command.commandText ?? command.numericNotation ?? command.buttonNotation;
+  return { scheme, input: input || "コマンドを確認中" };
+}
+
 export function CharacterDetailPilot({
   characterName, characterSlug, previewToken, bundle, players, videos,
   archetypeLabel, rangeLabel, difficulty, sources,
@@ -62,6 +77,11 @@ export function CharacterDetailPilot({
   const setupSamples = bundle.setups.slice(0, 3);
   const sequenceSamples = bundle.sequences.slice(0, 3);
   const sourceSamples = sources.slice(0, 8);
+  const moveGroups = Object.entries(bundle.moves.reduce<Record<string, DevicePreviewBundle["moves"]>>((groups, move) => {
+    const type = move.moveType ?? "other";
+    (groups[type] ??= []).push(move);
+    return groups;
+  }, {}));
 
   return (
     <section className={styles.pilot} aria-label={`${characterName} Character Detail V2.2`}>
@@ -95,6 +115,45 @@ export function CharacterDetailPilot({
           const presentation = presentSource(source.sourceType, source.publisher, source.url);
           return <a href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}><span>{presentation.badge}</span>{presentation.cta} ↗</a>;
         })}</div> : null}
+      </section>
+
+      <section className={styles.moveSection} id="pilot-moves" aria-labelledby="pilot-moves-heading">
+        <div className={styles.subheading}>
+          <div>
+            <p className="eyebrow">MOVE DATA</p>
+            <h2 id="pilot-moves-heading">技一覧・コマンド・主要フレーム</h2>
+            <p>ClassicとModernを分け、確認済みの発生・ガード時・ダメージを表示します。空欄は推測せず「確認中」としています。</p>
+          </div>
+          {characterSlug === "jp" ? <a href="https://www.streetfighter.com/6/ja-jp/character/jp/frame" target="_blank" rel="noopener noreferrer">CAPCOM公式フレームを見る ↗</a> : null}
+        </div>
+        {moveGroups.length ? <div className={styles.moveGroups}>{moveGroups.map(([type, moves], groupIndex) => (
+          <details className={styles.moveGroup} key={type} open={groupIndex === 0}>
+            <summary><strong>{moveTypeLabels[type] ?? "その他"}</strong><span>{moves.length}技</span></summary>
+            <div className={styles.moveTable} role="table" aria-label={`${moveTypeLabels[type] ?? "その他"}の技データ`}>
+              {moves.map((move) => (
+                <article className={styles.moveRow} role="row" key={move.id}>
+                  <div className={styles.moveIdentity} role="cell">
+                    <span>{verificationLabel(move.frame?.verificationStatus ?? null)}</span>
+                    <h3>{move.name}</h3>
+                    {move.usageSummary ? <p>{move.usageSummary}</p> : null}
+                  </div>
+                  <div className={styles.moveCommands} role="cell" aria-label={`${move.name}のコマンド`}>
+                    {move.commands?.length ? move.commands.map((command, index) => {
+                      const label = commandLabel(command);
+                      return <div key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}><span>{label.scheme}</span><code>{label.input}</code>{command.conditionText ? <small>{command.conditionText}</small> : null}</div>;
+                    }) : <span className={styles.movePending}>コマンドを確認中</span>}
+                  </div>
+                  <dl className={styles.moveFrame} role="cell">
+                    <div><dt>発生</dt><dd>{valueOrUnknown(move.frame?.startup, "確認中")}</dd></div>
+                    <div><dt>ガード時</dt><dd>{valueOrUnknown(move.frame?.onBlock, "確認中")}</dd></div>
+                    <div><dt>ダメージ</dt><dd>{valueOrUnknown(move.frame?.damage, "確認中")}</dd></div>
+                  </dl>
+                  <Link className={styles.moveDetailLink} href={appendDevicePreviewToken(`/moves/${move.slug}`, previewToken)}>詳細を確認 →</Link>
+                </article>
+              ))}
+            </div>
+          </details>
+        ))}</div> : <div className="empty-state"><p>表示できる技データはありません。</p></div>}
       </section>
 
       <section className={styles.comboSection} id="pilot-combos" aria-labelledby="pilot-combos-heading">
