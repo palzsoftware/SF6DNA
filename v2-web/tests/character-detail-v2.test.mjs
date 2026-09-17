@@ -5,6 +5,9 @@ import { readFileSync } from "node:fs";
 const tabs = readFileSync(new URL("../src/components/character-tabs.tsx", import.meta.url), "utf8");
 const sectionPage = readFileSync(new URL("../src/app/characters/[slug]/[section]/page.tsx", import.meta.url), "utf8");
 const motion = readFileSync(new URL("../src/components/move-motion-media.tsx", import.meta.url), "utf8");
+const page = readFileSync(new URL("../src/app/characters/[slug]/page.tsx", import.meta.url), "utf8");
+const fixture = readFileSync(new URL("../src/lib/character-detail-v21-fixture.ts", import.meta.url), "utf8");
+const pilot = readFileSync(new URL("../src/components/character-detail-pilot.tsx", import.meta.url), "utf8");
 
 test("public character navigation keeps strategy sections behind the existing boundary", () => {
   const publicBlock = tabs.match(/const publicTabs:[\s\S]*?\n\];/)?.[0] ?? "";
@@ -37,4 +40,12 @@ test("motion media renders only when a record exists and supports accessible GIF
   assert.match(motion, /aria-label=\{`\$\{title\}のモーション`\}/);
   assert.match(motion, /showSource && media\.sourceUrl/);
   assert.doesNotMatch(motion, /GIF準備中/);
+});
+
+test("Ryu and JP use a protected Preview-only fixture when the legacy RPC gate is unavailable", () => {
+  assert.match(page, /remotePilotBundle \?\? \(pilotRequested \? getCharacterDetailV21Fixture/);
+  assert.match(fixture, /status: "draft"/);
+  assert.match(fixture, /verificationStatus: "unverified"/);
+  assert.doesNotMatch(fixture, /verificationStatus: "verified"/);
+  assert.match(pilot, /未検証・確認用候補/);
 });

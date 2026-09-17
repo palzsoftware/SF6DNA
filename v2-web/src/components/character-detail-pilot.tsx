@@ -21,7 +21,9 @@ function numericDifficulty(value: string | null) {
 }
 
 function verificationLabel(value: string | null) {
-  return value === "verified" ? "確認済み" : "確認用候補";
+  if (value === "verified") return "確認済み";
+  if (value === "reviewed") return "レビュー済み候補";
+  return "未検証・確認用候補";
 }
 
 function setupSteps(description: string | null) {

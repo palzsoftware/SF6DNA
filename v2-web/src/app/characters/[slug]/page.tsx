@@ -17,6 +17,7 @@ import { listVideos } from "@/lib/event-media";
 import { getPlayerBySlug } from "@/lib/players";
 import { releaseFeatures } from "@/lib/release-features";
 import { getCharacterDetailV21Profile } from "@/lib/character-detail-v21";
+import { getCharacterDetailV21Fixture } from "@/lib/character-detail-v21-fixture";
 import { presentSource } from "@/lib/source-presentation";
 import type { CharacterGuideSection } from "@/types/character";
 
@@ -122,9 +123,10 @@ export default async function CharacterPage({
   const previewActive = isDevicePreviewRequest(previewToken);
   const pilotRequested = previewActive && (character.slug === "ryu" || character.slug === "jp");
   const pilotProfile = pilotRequested ? getCharacterDetailV21Profile(character.slug) : null;
-  const [pilotBundle, allVideos] = pilotRequested
+  const [remotePilotBundle, allVideos] = pilotRequested
     ? await Promise.all([getDevicePreviewBundle(character.id, previewToken), listVideos()])
     : [null, []];
+  const pilotBundle = remotePilotBundle ?? (pilotRequested ? getCharacterDetailV21Fixture(character.slug) : null);
   const pilotPlayers = pilotBundle
     ? (await Promise.all(
         relatedPlayers.map((item) => getPlayerBySlug(item.href.split("/").filter(Boolean).at(-1) ?? ""))
