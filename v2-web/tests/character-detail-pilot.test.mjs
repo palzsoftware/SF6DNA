@@ -47,6 +47,8 @@ test("pilot uses safe player fallback and reusable video library", () => {
   assert.match(source, /選手ビジュアルは今後のアップデートで追加予定です/);
   assert.match(source, /videos\.slice\(0, 6\)/);
   assert.match(source, /<VideoCard/);
+  assert.match(source, /item\.role === "main"\)\?\.characterName \?\? "未登録"/);
+  assert.doesNotMatch(source, /player\.characters\[0\]\?\.characterName \?\? characterName/);
   assert.match(page, /getDevicePreviewBundle/);
   assert.doesNotMatch(source, /NO SIGNAL|画像なし|近日アップデート/);
 });
