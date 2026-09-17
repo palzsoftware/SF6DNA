@@ -23,6 +23,15 @@ const previewTabs: Array<{ key: CharacterSectionKey; label: string; path: string
   { key: "videos", label: "動画", path: "/videos" },
 ];
 
+const pilotV21Tabs: Array<{ key: CharacterSectionKey; label: string; path: string }> = [
+  { key: "overview", label: "概要", path: "" },
+  { key: "moves", label: "技", path: "/moves" },
+  { key: "combos", label: "コンボ", path: "/combos" },
+  { key: "setups", label: "セットプレイ", path: "/setups" },
+  { key: "sequences", label: "連携・対策", path: "/sequences" },
+  { key: "videos", label: "動画", path: "/videos" },
+];
+
 export function CharacterTabs({
   slug,
   active,
@@ -32,9 +41,9 @@ export function CharacterTabs({
   active: CharacterSectionKey;
   previewToken?: string | null;
 }) {
-  const tabs = isDevicePreviewRequest(previewToken)
-    ? previewTabs
-    : publicTabs;
+  const previewActive = isDevicePreviewRequest(previewToken);
+  const pilotV21 = previewActive && (slug === "ryu" || slug === "jp");
+  const tabs = pilotV21 ? pilotV21Tabs : previewActive ? previewTabs : publicTabs;
 
   return (
     <nav className="character-tabs" aria-label="キャラクター情報">
@@ -48,7 +57,7 @@ export function CharacterTabs({
           {tab.label}
         </Link>
       ))}
-      <Link href={`/characters/${slug}#sources`}>情報源</Link>
+      {!pilotV21 ? <Link href={`/characters/${slug}#sources`}>情報源</Link> : null}
     </nav>
   );
 }

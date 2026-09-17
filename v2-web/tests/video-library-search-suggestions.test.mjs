@@ -27,7 +27,7 @@ test("video library supports scalable display, AND groups, OR values and request
   assert.match(logic, /\.some\(Boolean\)/);
 });
 
-test("video preferences are local, reversible, accessible and shared by both surfaces", async () => {
+test("video preferences stay local and reversible while Character V2.1 links to the preserved library", async () => {
   const [card, preferences, globalPage, pilot] = await Promise.all([
     read("src/components/video-card.tsx"),
     read("src/lib/video-preferences.ts"),
@@ -41,7 +41,8 @@ test("video preferences are local, reversible, accessible and shared by both sur
   assert.match(card, /navigator\.share/);
   assert.match(card, /navigator\.clipboard\.writeText/);
   assert.match(globalPage, /<VideoLibrary videos=\{videos\}/);
-  assert.match(pilot, /lockedCharacter=\{characterName\}/);
+  assert.match(pilot, /videos\.slice\(0, 6\)/);
+  assert.match(pilot, /`\/characters\/\$\{characterSlug\}\/videos`/);
 });
 
 test("missing video metadata is not inferred from titles or URLs", async () => {

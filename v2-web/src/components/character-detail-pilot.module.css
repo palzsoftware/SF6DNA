@@ -1,30 +1,78 @@
-.pilot { display: grid; gap: 26px; padding: clamp(18px,3vw,30px); border: 1px solid rgba(83,216,255,.2); border-radius: 22px; background: linear-gradient(150deg,rgba(11,25,34,.92),rgba(13,17,23,.94)); }
-.heading, .subheading { display: flex; justify-content: space-between; gap: 18px; align-items: end; }
-.heading h2, .subheading h3, .mediaPolicy h3 { margin: 3px 0 0; }
-.heading > span { padding: 5px 9px; border: 1px solid rgba(255,122,26,.3); border-radius: 999px; color: #ffb17b; font-size: .7rem; font-weight: 800; }
-.lead { max-width: 76ch; margin: -12px 0 0; color: var(--copy-muted,var(--muted)); line-height: 1.75; }
-.sectionGrid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 10px; }
-.sectionCard { display: grid; min-height: 170px; gap: 8px; align-content: start; padding: 15px; border: 1px solid var(--line,var(--border)); border-radius: 14px; background: rgba(17,23,31,.78); }
-.sectionCard > span { color: #53d8ff; font-size: .68rem; font-weight: 850; letter-spacing: .08em; }
-.sectionCard > strong { font-size: .94rem; line-height: 1.45; }
-.sectionCard > small { color: var(--copy-muted,var(--muted)); line-height: 1.55; }
-.sectionCard > b { margin-top: auto; color: #ffae73; font-size: .72rem; }
-.comboSection, .playerGrid, .videoGrid { display: grid; gap: 12px; }
-.subheading a { color: #ffae73; font-size: .78rem; font-weight: 800; }
-.comboList { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
-.mediaPolicy { display: grid; grid-template-columns: minmax(180px,.35fr) minmax(0,1fr); gap: 20px; align-items: center; padding: 18px; border: 1px dashed rgba(83,216,255,.24); border-radius: 14px; }
-.mediaPolicy p { margin: 0; color: var(--copy-muted,var(--muted)); line-height: 1.7; }
-.playerGrid { grid-template-columns: repeat(3,minmax(0,1fr)); }
-.playerCard { display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 13px; padding: 14px; border: 1px solid var(--line,var(--border)); border-radius: 14px; background: rgba(17,23,31,.78); }
-.playerCard img { width: 88px; height: 88px; border-radius: 11px; object-fit: cover; }
-.playerFallback { display: grid; width: 88px; min-height: 112px; gap: 5px; place-items: center; padding: 8px; border: 1px solid var(--line,var(--border)); border-radius: 11px; background: rgba(5,9,13,.58); text-align: center; }
-.playerFallback > span { color: #53d8ff; font-size: 1.6rem; font-weight: 900; }
-.playerFallback small { color: #82909e; font-size: .58rem; line-height: 1.4; }
-.playerBody h4 { margin: 2px 0 6px; }
-.playerBody p { margin: 0; color: var(--copy-muted,var(--muted)); font-size: .76rem; line-height: 1.5; }
-.socials { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-.socials a { color: #bfefff; font-size: .68rem; font-weight: 750; }
-.videoGrid { grid-template-columns: repeat(2,minmax(0,1fr)); }
-@media (max-width: 1080px) { .sectionGrid { grid-template-columns: repeat(3,minmax(0,1fr)); } .comboList { grid-template-columns: 1fr; } }
-@media (max-width: 760px) { .sectionGrid, .playerGrid, .videoGrid { grid-template-columns: 1fr; } .sectionCard { min-height: 145px; } .mediaPolicy { grid-template-columns: 1fr; } }
-@media (max-width: 420px) { .pilot { padding: 15px; border-radius: 16px; } .heading, .subheading { align-items: start; flex-direction: column; } .playerCard { grid-template-columns: 74px minmax(0,1fr); } .playerCard img, .playerFallback { width: 74px; } }
+.pilot { display: grid; gap: clamp(36px,6vw,72px); }
+.overview { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(280px,.85fr); gap: clamp(24px,5vw,64px); align-items: start; padding: clamp(24px,4vw,48px) 0; border-bottom: 1px solid var(--line,var(--border)); }
+.overviewLead h2 { max-width: 24ch; margin: 8px 0 18px; font-size: clamp(1.55rem,3vw,2.65rem); line-height: 1.35; letter-spacing: -.035em; }
+.overviewLead > p:last-of-type { max-width: 68ch; color: var(--copy-muted,var(--muted)); line-height: 1.85; }
+.previewNote { width: fit-content; margin-top: 20px; padding: 8px 12px; border-left: 3px solid #ff7a1a; background: rgba(255,122,26,.08); color: #ffc49a; font-size: .72rem; font-weight: 760; }
+.quickFacts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); margin: 0; border-top: 1px solid rgba(83,216,255,.32); }
+.quickFacts > div { display: grid; gap: 7px; padding: 17px 14px; border-bottom: 1px solid var(--line,var(--border)); }
+.quickFacts > div:nth-child(odd) { border-right: 1px solid var(--line,var(--border)); }
+.quickFacts > div:last-child { grid-column: 1 / -1; border-right: 0; }
+.quickFacts dt { color: #7f8f9f; font-size: .68rem; font-weight: 850; letter-spacing: .08em; }
+.quickFacts dd { margin: 0; color: #eef5fa; line-height: 1.6; }
+.comparison { display: grid; grid-template-columns: minmax(180px,.45fr) repeat(2,minmax(0,1fr)); gap: 18px; align-items: stretch; }
+.sectionTitle h2, .subheading h2 { margin: 4px 0 0; }
+.sectionTitle > p:last-child, .subheading p { color: var(--copy-muted,var(--muted)); line-height: 1.7; }
+.strength, .weakness { padding: 22px; border-radius: 2px 18px 18px 2px; }
+.strength { border-left: 3px solid #53d8ff; background: linear-gradient(120deg,rgba(83,216,255,.1),rgba(10,18,24,.3)); }
+.weakness { border-left: 3px solid #ff9a55; background: linear-gradient(120deg,rgba(255,122,26,.1),rgba(10,18,24,.3)); }
+.strength > span, .weakness > span { font-size: .66rem; font-weight: 900; letter-spacing: .12em; }
+.strength > span { color: #73e0ff; }
+.weakness > span { color: #ffad73; }
+.strength h3, .weakness h3 { margin: 10px 0 8px; }
+.strength p, .weakness p { margin: 0; color: var(--copy-muted,var(--muted)); line-height: 1.75; }
+.gameplan { display: grid; grid-template-columns: minmax(180px,.36fr) minmax(0,1fr); gap: 28px; }
+.gameplanSteps { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line,var(--border)); }
+.gameplanSteps li { display: grid; grid-template-columns: 112px minmax(0,1fr); gap: 22px; padding: 22px 0; border-bottom: 1px solid var(--line,var(--border)); }
+.gameplanSteps li > span { color: #53d8ff; font-size: .68rem; font-weight: 900; letter-spacing: .08em; }
+.gameplanSteps h3 { margin: 0 0 8px; }
+.gameplanSteps p { margin: 0; color: #c3ced8; line-height: 1.75; }
+.gameplanSteps small { display: block; margin-top: 10px; color: #ffb27e; line-height: 1.6; }
+.inlineSources { grid-column: 2; display: flex; flex-wrap: wrap; gap: 8px; }
+.inlineSources a { display: inline-flex; min-height: 44px; gap: 8px; align-items: center; padding: 8px 12px; border: 1px solid var(--line,var(--border)); border-radius: 999px; color: #e6eef4; font-size: .74rem; font-weight: 760; }
+.inlineSources span { color: #53d8ff; }
+.comboSection, .related { display: grid; gap: 18px; }
+.subheading { display: flex; justify-content: space-between; gap: 20px; align-items: end; padding-bottom: 14px; border-bottom: 1px solid var(--line,var(--border)); }
+.subheading p { margin: 8px 0 0; }
+.subheading > a { min-height: 44px; display: inline-flex; align-items: center; color: #ffae73; font-size: .78rem; font-weight: 850; }
+.comboList { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.strategySplit { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(24px,4vw,52px); }
+.strategySplit > div { min-width: 0; }
+.timelineList, .sequenceList { display: grid; gap: 10px; margin-top: 14px; }
+.timelineList details, .sequenceList details { border-bottom: 1px solid var(--line,var(--border)); }
+.timelineList summary, .sequenceList summary { display: grid; min-height: 58px; grid-template-columns: 92px minmax(0,1fr); gap: 10px; align-items: center; cursor: pointer; list-style: none; }
+.timelineList summary::-webkit-details-marker, .sequenceList summary::-webkit-details-marker { display: none; }
+.timelineList summary span, .sequenceList summary span { color: #ffad73; font-size: .66rem; font-weight: 800; }
+.timelineList details > div, .sequenceList details > div { padding: 0 0 18px 102px; }
+.timelineList ol { display: grid; gap: 10px; margin: 0; padding-left: 22px; }
+.timelineList li, .sequenceList p { color: #c3ced8; line-height: 1.65; }
+.timelineList dl { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin: 14px 0 0; }
+.timelineList dl > div { padding: 9px; background: rgba(17,23,31,.7); }
+.timelineList dt { color: #7f8b98; font-size: .66rem; }
+.timelineList dd { margin: 4px 0 0; font-size: .8rem; }
+.command { overflow-wrap: anywhere; font-family: var(--font-geist-mono),monospace; color: #bfefff !important; }
+.sequenceList small { color: #83909e; }
+.rangeSection { display: grid; grid-template-columns: minmax(200px,.32fr) minmax(0,1fr); gap: 30px; }
+.rangeTable { display: grid; border-top: 1px solid var(--line,var(--border)); }
+.rangeTable > div { display: grid; grid-template-columns: 90px repeat(3,minmax(0,1fr)); gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line,var(--border)); align-items: start; }
+.rangeTable strong { color: #53d8ff; }
+.rangeTable p { margin: 0; color: #c6d0d9; font-size: .8rem; line-height: 1.55; }
+.rangeTable p span { display: block; margin-bottom: 4px; color: #778491; font-size: .62rem; font-weight: 800; }
+.playerGrid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+.playerCard { display: grid; grid-template-columns: 64px minmax(0,1fr); gap: 12px; align-items: center; padding: 12px; border-bottom: 1px solid var(--line,var(--border)); }
+.playerCard img, .playerFallback { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
+.playerFallback { display: grid; place-items: center; background: rgba(83,216,255,.08); text-align: center; }
+.playerFallback > span { color: #53d8ff; font-size: 1.35rem; font-weight: 900; }
+.playerFallback small { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+.playerCard h3 { margin: 0; font-size: .95rem; }
+.playerCard p { margin: 5px 0 0; color: #8794a0; font-size: .72rem; }
+.socials { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 7px; }
+.socials a { color: #bfefff; font-size: .65rem; }
+.videoList { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+.videoList > a { display: grid; gap: 7px; min-height: 156px; padding: 16px; border-top: 2px solid rgba(255,122,26,.55); background: rgba(17,23,31,.55); }
+.videoList span { color: #ff9d5b; font-size: .65rem; font-weight: 900; letter-spacing: .08em; }
+.videoList strong { line-height: 1.5; }
+.videoList small { color: #82909e; }
+.videoList b { align-self: end; color: #ffae73; font-size: .72rem; }
+@media (max-width: 1080px) { .comboList, .playerGrid, .videoList { grid-template-columns: 1fr 1fr; } .comparison { grid-template-columns: 1fr 1fr; } .comparison .sectionTitle { grid-column: 1 / -1; } .rangeSection { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .overview, .gameplan, .strategySplit { grid-template-columns: 1fr; } .inlineSources { grid-column: 1; } .comboList, .playerGrid, .videoList { grid-template-columns: 1fr; } .rangeTable > div { grid-template-columns: 78px minmax(0,1fr); } .rangeTable p { grid-column: 2; } }
+@media (max-width: 420px) { .pilot { gap: 38px; } .overview { padding-top: 8px; } .overviewLead h2 { font-size: 1.45rem; } .quickFacts { grid-template-columns: 1fr; } .quickFacts > div:nth-child(odd), .quickFacts > div:last-child { grid-column: auto; border-right: 0; } .comparison { grid-template-columns: 1fr; } .comparison .sectionTitle { grid-column: auto; } .subheading { align-items: start; flex-direction: column; } .gameplanSteps li { grid-template-columns: 1fr; gap: 8px; } .timelineList summary, .sequenceList summary { grid-template-columns: 82px minmax(0,1fr); } .timelineList details > div, .sequenceList details > div { padding-left: 0; } .timelineList dl { grid-template-columns: 1fr; } .rangeTable > div { grid-template-columns: 1fr; gap: 8px; } .rangeTable p { grid-column: 1; } }

@@ -16,6 +16,7 @@ import { CharacterRelatedSection } from "@/components/character-related-section"
 import { listVideos } from "@/lib/event-media";
 import { getPlayerBySlug } from "@/lib/players";
 import { releaseFeatures } from "@/lib/release-features";
+import { getCharacterDetailV21Profile } from "@/lib/character-detail-v21";
 import { presentSource } from "@/lib/source-presentation";
 import type { CharacterGuideSection } from "@/types/character";
 
@@ -120,6 +121,7 @@ export default async function CharacterPage({
   ]);
   const previewActive = isDevicePreviewRequest(previewToken);
   const pilotRequested = previewActive && (character.slug === "ryu" || character.slug === "jp");
+  const pilotProfile = pilotRequested ? getCharacterDetailV21Profile(character.slug) : null;
   const [pilotBundle, allVideos] = pilotRequested
     ? await Promise.all([getDevicePreviewBundle(character.id, previewToken), listVideos()])
     : [null, []];
@@ -152,7 +154,7 @@ export default async function CharacterPage({
             <span className="character-ready-badge">キャラクター情報</span>
           </div>
           <p className="character-hero__lead">
-            {character.shortDescription ?? "基本情報・関連プレイヤー・動画をキャラクター単位で確認できます。"}
+            {pilotProfile?.tagline ?? character.shortDescription ?? "基本情報・関連プレイヤー・動画をキャラクター単位で確認できます。"}
           </p>
           <div className="chip-row character-hero__chips">
             {character.archetypeLabel ? <span className="chip">{character.archetypeLabel}</span> : null}
@@ -184,7 +186,7 @@ export default async function CharacterPage({
         </section>
       ) : null}
 
-      <section className="character-home-actions character-home-actions--primary" aria-label={`${character.name}のよく使う情報`}>
+      {!pilotRequested ? <section className="character-home-actions character-home-actions--primary" aria-label={`${character.name}のよく使う情報`}>
         {quickActions.map(([label, description, path, code]) => (
           <Link
             className="character-home-action"
@@ -197,11 +199,11 @@ export default async function CharacterPage({
             <span className="character-home-action__arrow">開く →</span>
           </Link>
         ))}
-      </section>
+      </section> : null}
 
       <CharacterTabs slug={character.slug} active="overview" previewToken={previewToken} />
 
-      <nav className="character-overview-index" aria-label="概要ページ内ナビゲーション">
+      {!pilotRequested ? <nav className="character-overview-index" aria-label="概要ページ内ナビゲーション">
         {matchupCard ? <a href="#before-match">対戦前30秒</a> : null}
         {hasStrengthProfile ? <a href="#profile">強み・注意点</a> : null}
         {groups.map((group) => <a href={`#guide-${group.key}`} key={group.key}>{group.title}</a>)}
@@ -211,7 +213,7 @@ export default async function CharacterPage({
         <a href="#related-players">関連プレイヤー</a>
         <a href="#related-videos">関連動画</a>
         <a href="#sources">情報源</a>
-      </nav>
+      </nav> : null}
 
       {matchupCard ? (
         <section className="matchup-spotlight" id="before-match">
@@ -231,7 +233,7 @@ export default async function CharacterPage({
         </section>
       ) : null}
 
-      {hasStrengthProfile ? (
+      {hasStrengthProfile && !pilotRequested ? (
         <section className="character-profile-section" id="profile">
           <div className="section-heading">
             <h2>強みと注意点</h2>
@@ -297,6 +299,10 @@ export default async function CharacterPage({
           bundle={pilotBundle}
           players={pilotPlayers}
           videos={pilotVideos}
+          archetypeLabel={character.archetypeLabel}
+          rangeLabel={character.rangeLabel}
+          difficulty={character.difficulty}
+          sources={character.sources}
         />
       ) : (
         <>

@@ -15,11 +15,12 @@ test("public character navigation keeps strategy sections behind the existing bo
 });
 
 test("device preview navigation exposes the shared character-detail information architecture", () => {
-  const previewBlock = tabs.match(/const previewTabs:[\s\S]*?\n\];/)?.[0] ?? "";
-  for (const key of ["overview", "moves", "combos", "setups", "sequences", "matchups", "training", "players", "videos"]) {
-    assert.match(previewBlock, new RegExp(`key: "${key}"`));
+  const pilotBlock = tabs.match(/const pilotV21Tabs:[\s\S]*?\n\];/)?.[0] ?? "";
+  for (const key of ["overview", "moves", "combos", "setups", "sequences", "videos"]) {
+    assert.match(pilotBlock, new RegExp(`key: "${key}"`));
   }
-  assert.match(tabs, /#sources/);
+  assert.doesNotMatch(pilotBlock, /players|training|情報源/);
+  assert.match(tabs, /!pilotV21/);
   assert.match(tabs, /aria-current/);
 });
 

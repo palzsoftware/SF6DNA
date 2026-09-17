@@ -44,9 +44,39 @@ test("pilot uses safe player fallback and reusable video library", () => {
   const page = readProjectFile("src/app/characters/[slug]/page.tsx");
 
   assert.match(source, /選手ビジュアルは今後のアップデートで追加予定です/);
-  assert.match(source, /<VideoLibrary videos=\{videos\} lockedCharacter=\{characterName\}/);
+  assert.match(source, /videos\.slice\(0, 6\)/);
+  assert.match(source, /YouTubeで見る/);
   assert.match(page, /getDevicePreviewBundle/);
   assert.doesNotMatch(source, /NO SIGNAL|画像なし|近日アップデート/);
+});
+
+test("Ryu and JP V2.1 removes duplicate navigation and exposes concrete page structures", () => {
+  const source = readProjectFile("src/components/character-detail-pilot.tsx");
+  const copy = readProjectFile("src/lib/character-detail-v21.ts");
+  const page = readProjectFile("src/app/characters/[slug]/page.tsx");
+
+  for (const marker of ["基本の勝ち筋", "まず確認するコンボ", "セットプレイ", "連携・対策", "距離別の立ち回り", "関連プレイヤー", "おすすめ動画"]) {
+    assert.match(source, new RegExp(marker));
+  }
+  assert.match(page, /!pilotRequested \? <nav/);
+  assert.match(page, /!pilotRequested \? <section className="character-home-actions/);
+  assert.match(copy, /波動拳/);
+  assert.match(copy, /昇龍拳/);
+  assert.match(copy, /トルバラン/);
+  assert.match(copy, /トリグラフ/);
+  assert.match(copy, /ヴィーハト/);
+  assert.match(copy, /ラヴーシュカ/);
+  assert.doesNotMatch(copy, /空中に置く技|地面からの攻撃|相手を困らせる技/);
+});
+
+test("V2.1 keeps strategy copy preview-only and sources use classified CTAs", () => {
+  const source = readProjectFile("src/components/character-detail-pilot.tsx");
+  const tabs = readProjectFile("src/components/character-tabs.tsx");
+
+  assert.match(source, /presentSource\(source\.sourceType, source\.publisher, source\.url\)/);
+  assert.match(source, /Preview限定/);
+  assert.match(tabs, /previewActive && \(slug === "ryu" \|\| slug === "jp"\)/);
+  assert.match(tabs, /!pilotV21 \? <Link href=\{`\/characters\/\$\{slug\}#sources`\}>情報源<\/Link> : null/);
 });
 
 test("pilot does not add Year 4 names or change public data contracts", () => {
