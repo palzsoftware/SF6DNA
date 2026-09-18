@@ -16,14 +16,19 @@ function loadRouteGate(environment) {
   return compiled.exports.isCharacterDetailV2Route;
 }
 
-test("pilot and representative routes select the V2 shared template in RC Preview", () => {
+const allCharacterSlugs = [
+  "ryu", "jp", "zangief", "chun-li", "dhalsim", "kimberly", "luke",
+  "jamie", "guile", "juri", "ken", "blanka", "e-honda", "dee-jay",
+  "manon", "marisa", "lily", "cammy", "rashid", "aki", "ed", "akuma",
+  "m-bison", "terry", "mai", "elena", "sagat", "c-viper", "alex", "ingrid", "yasmine",
+];
+
+test("all 31 character routes select the V2 shared template in RC Preview", () => {
   const enabled = loadRouteGate("preview");
-  assert.equal(enabled("ryu"), true);
-  assert.equal(enabled("jp"), true);
-  for (const slug of ["zangief", "chun-li", "dhalsim", "kimberly", "luke"]) {
+  for (const slug of allCharacterSlugs) {
     assert.equal(enabled(slug), true);
   }
-  assert.equal(enabled("ken"), false);
+  assert.equal(enabled("not-a-character"), false);
 
   const page = read("src/app/characters/[slug]/page.tsx");
   assert.match(page, /isCharacterDetailV2Route\(character\.slug\)/);
@@ -32,11 +37,11 @@ test("pilot and representative routes select the V2 shared template in RC Previe
   assert.doesNotMatch(page, /pilotBundle && previewToken/);
 });
 
-test("Production boundary and remaining 24-character rollout remain closed", () => {
+test("Production boundary remains closed for all 31 characters", () => {
   const enabled = loadRouteGate("production");
-  assert.equal(enabled("ryu"), false);
-  assert.equal(enabled("jp"), false);
-  assert.equal(enabled("ken"), false);
+  for (const slug of allCharacterSlugs) {
+    assert.equal(enabled(slug), false);
+  }
 });
 
 test("shared overview navigation exposes all approved sections without legacy source tab", () => {

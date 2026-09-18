@@ -6,10 +6,34 @@ const PILOT_CHARACTER_SLUGS = new Set([
   "dhalsim",
   "kimberly",
   "luke",
+  "jamie",
+  "guile",
+  "juri",
+  "ken",
+  "blanka",
+  "e-honda",
+  "dee-jay",
+  "manon",
+  "marisa",
+  "lily",
+  "cammy",
+  "rashid",
+  "aki",
+  "ed",
+  "akuma",
+  "m-bison",
+  "terry",
+  "mai",
+  "elena",
+  "sagat",
+  "c-viper",
+  "alex",
+  "ingrid",
+  "yasmine",
 ]);
 
 /**
- * Exposes the approved pilot and representative staged rollout on ordinary
+ * Exposes the approved staged rollout on ordinary
  * URLs in RC Preview only.
  * Production keeps its current release boundary until device re-QA is approved.
  */

@@ -4,9 +4,16 @@ import { readFileSync } from "node:fs";
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
-test("representative fixtures use empty section data instead of Ryu or JP gameplay data", () => {
+const overviewOnlySlugs = [
+  "zangief", "chun-li", "dhalsim", "kimberly", "luke",
+  "jamie", "guile", "juri", "ken", "blanka", "e-honda", "dee-jay",
+  "manon", "marisa", "lily", "cammy", "rashid", "aki", "ed", "akuma",
+  "m-bison", "terry", "mai", "elena", "sagat", "c-viper", "alex", "ingrid", "yasmine",
+];
+
+test("29 overview-only fixtures use empty section data instead of Ryu or JP gameplay data", () => {
   const fixture = read("src/lib/character-detail-v21-fixture.ts");
-  for (const slug of ["zangief", "chun-li", "dhalsim", "kimberly", "luke"]) {
+  for (const slug of overviewOnlySlugs) {
     assert.match(fixture, new RegExp(`"${slug}"`));
   }
   assert.match(fixture, /return \{ \.\.\.sharedEmpty, combos: \[\], setups: \[\], sequences: \[\] \}/);
@@ -32,7 +39,7 @@ test("shared component receives the adapted profile and renders natural section 
   assert.doesNotMatch(shared, /NO SIGNAL|developer/i);
 });
 
-test("representative rollout does not enable production or public strategy content", () => {
+test("31-character rollout does not enable production or public strategy content", () => {
   const route = read("src/lib/character-detail-route.ts");
   const flags = read("src/lib/release-features.ts");
   assert.match(route, /VERCEL_ENV === "preview"/);

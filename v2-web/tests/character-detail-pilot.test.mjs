@@ -14,7 +14,12 @@ test("approved character shared template is enabled on ordinary RC Preview route
 
   assert.match(page, /isCharacterDetailV2Route\(character\.slug\)/);
   assert.match(route, /process\.env\.VERCEL_ENV === "preview"/);
-  for (const slug of ["ryu", "jp", "zangief", "chun-li", "dhalsim", "kimberly", "luke"]) {
+  for (const slug of [
+    "ryu", "jp", "zangief", "chun-li", "dhalsim", "kimberly", "luke",
+    "jamie", "guile", "juri", "ken", "blanka", "e-honda", "dee-jay",
+    "manon", "marisa", "lily", "cammy", "rashid", "aki", "ed", "akuma",
+    "m-bison", "terry", "mai", "elena", "sagat", "c-viper", "alex", "ingrid", "yasmine",
+  ]) {
     assert.match(route, new RegExp(`"${slug}"`));
   }
   assert.match(combos, /!releaseFeatures\.publicStrategyContent && !previewActive/);
