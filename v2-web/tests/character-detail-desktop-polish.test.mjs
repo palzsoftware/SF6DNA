@@ -35,7 +35,8 @@ test("video cards align clamped titles and bottom actions", () => {
   assert.match(globalCss, /\.video-card__actions[^}]*margin-top:\s*auto/);
 });
 
-test("public move fallback is Japanese and does not contradict frame verification", () => {
-  assert.match(pilot, /使い方の詳細は、公式情報または実機での確認後に掲載します。/);
+test("public move fallback hides internal publication notes", () => {
+  assert.match(pilot, /isInternalMoveNote/);
+  assert.match(pilot, /if \(isInternalMoveNote\(value\)\) return null/);
   assert.doesNotMatch(pilot, />Awaiting official\/game verification before publication\.</);
 });

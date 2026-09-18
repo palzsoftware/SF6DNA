@@ -86,16 +86,16 @@ export function PilotComboCard({
   const expandedFacts = [
     ["コマンド", displayValue(combo.command, "コマンド未確認")],
     ["ダメージ", displayValue(combo.damage)],
-    ["Drive Gauge使用量", displayValue(combo.drive)],
-    ["SA Gauge使用量", displayValue(combo.sa)],
+    ["ドライブゲージ使用量", displayValue(combo.drive)],
+    ["SAゲージ使用量", displayValue(combo.sa)],
     ["開始条件", displayValue(combo.startCondition)],
     ["終了状況", displayValue(combo.endCondition)],
     ["位置", displayValue(combo.position)],
     ["用途", displayValue(combo.purpose)],
     ["運び", "未確認"],
     ["使用頻度", "未確認"],
-    ["Patch", displayValue(combo.patch)],
-    ["Source", combo.sourceLabel ?? "未確認"],
+    ["対応バージョン", displayValue(combo.patch)],
+    ["情報源", combo.sourceLabel ?? "参考リンクなし"],
   ];
 
   return (
@@ -111,14 +111,14 @@ export function PilotComboCard({
             <img src={combo.media.url} alt={`${combo.name}の動作確認`} width="960" height="540" loading="lazy" />
           )}
         </div>
-      ) : <div className={styles.mediaPlaceholder}><span>MOTION MEDIA</span><small>動作メディア未登録</small></div>}
+      ) : <div className={styles.mediaPlaceholder}><span>動作メディア</span><small>動作メディア未登録</small></div>}
 
       <div className={styles.summaryRow}>
         <div className={styles.main}>
           <div className={styles.badges}>
             <span>{combo.category ? categoryLabels[combo.category] ?? combo.category : "カテゴリ未確認"}</span>
             <span className={styles.difficulty}>{verified && combo.difficulty !== null ? `難易度 ${combo.difficulty}/5` : "難易度 未確認"}</span>
-            <span>Drive {displayValue(combo.drive)}</span>
+            <span>ドライブ {displayValue(combo.drive)}</span>
             <span>SA {displayValue(combo.sa)}</span>
             {combo.preview ? <span className={styles.preview}>確認用</span> : null}
           </div>

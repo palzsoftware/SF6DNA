@@ -68,13 +68,13 @@ test("V2.2 exposes complete comparison fields and explicit unknown values", () =
   const combo = readProjectFile("src/components/pilot-combo-card.tsx");
   const fixture = readProjectFile("src/lib/character-detail-v21-fixture.ts");
 
-  for (const label of ["コマンド", "ダメージ", "Drive Gauge使用量", "SA Gauge使用量", "開始条件", "終了状況", "位置", "用途", "運び", "使用頻度", "Patch", "Source"]) {
+  for (const label of ["コマンド", "ダメージ", "ドライブゲージ使用量", "SAゲージ使用量", "開始条件", "終了状況", "位置", "用途", "運び", "使用頻度", "対応バージョン", "情報源"]) {
     assert.match(combo, new RegExp(label));
   }
   assert.match(combo, /コマンド未確認/);
   assert.match(combo, /動作メディア未登録/);
-  assert.match(pilot, /Damage \{valueOrUnknown\(setup\.damage\)\}/);
-  assert.match(pilot, /Damage \{valueOrUnknown\(sequence\.damage\)\}/);
+  assert.match(pilot, /ダメージ \{valueOrUnknown\(setup\.damage\)\}/);
+  assert.match(pilot, /ダメージ \{valueOrUnknown\(sequence\.damage\)\}/);
   assert.match(fixture, /command:\s*"小技×3/);
   assert.match(fixture, /damage:\s*null/);
   assert.match(fixture, /patch:\s*"2026\.08\.03"/);
@@ -116,7 +116,7 @@ test("V2.1 keeps strategy copy RC Preview-only and sources use classified CTAs",
   const tabs = readProjectFile("src/components/character-tabs.tsx");
 
   assert.match(source, /presentSource\(source\.sourceType, source\.publisher, source\.url\)/);
-  assert.match(source, /RC Previewで表示確認中/);
+  assert.match(source, /RCプレビューで表示を確認しています/);
   assert.match(tabs, /isCharacterDetailV2Route\(slug\)/);
   assert.match(tabs, /!pilotV21 \? <Link href=\{`\/characters\/\$\{slug\}#sources`\}>情報源<\/Link> : null/);
 });

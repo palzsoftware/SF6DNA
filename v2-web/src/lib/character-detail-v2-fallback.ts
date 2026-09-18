@@ -8,13 +8,13 @@ export type CharacterDetailV2FallbackSection =
   | "sources";
 
 const fallbackCopy: Record<CharacterDetailV2FallbackSection, string> = {
-  moves: "表示できる技データはありません。",
-  combos: "確認対象のコンボはありません。",
-  setups: "確認対象のセットプレイはありません。",
-  sequences: "確認対象の連携・対策はありません。",
-  videos: "表示できる関連動画はありません。",
-  players: "表示できる関連プレイヤーはありません。",
-  sources: "表示できる情報源はありません。",
+  moves: "技データは未掲載です。",
+  combos: "コンボは未掲載です。",
+  setups: "セットプレイは未掲載です。",
+  sequences: "連携・対策は未掲載です。",
+  videos: "関連動画は未掲載です。",
+  players: "関連プレイヤーは未掲載です。",
+  sources: "参考リンクは未掲載です。",
 };
 
 export function getCharacterDetailV2Fallback(section: CharacterDetailV2FallbackSection) {

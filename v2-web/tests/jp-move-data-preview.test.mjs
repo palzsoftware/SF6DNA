@@ -24,10 +24,10 @@ test("JP Preview keeps all 59 reviewed moves available when the protected RPC is
   assert.doesNotMatch(fixture, /status: "published"|\"status\": "published"/);
 });
 
-test("JP move review renders Classic and Modern separately with safe missing values", () => {
+test("JP move review renders classic and modern controls separately with safe missing values", () => {
   const pilot = read("src/components/character-detail-pilot.tsx");
 
-  for (const label of ["技一覧・コマンド・主要フレーム", "Classic", "Modern", "発生", "ガード時", "ダメージ", "確認中"]) {
+  for (const label of ["技一覧・コマンド・主要フレーム", "クラシック", "モダン", "発生", "ガード時", "ダメージ", "確認中"]) {
     assert.match(pilot, new RegExp(label));
   }
   assert.match(pilot, /CAPCOM公式フレームを見る/);

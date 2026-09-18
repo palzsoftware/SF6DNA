@@ -165,7 +165,7 @@ export default async function CharacterPage({
     <div className="site-shell page-stack character-overview-page">
       <section className="character-hero character-hero--overview">
         <div className="character-hero__copy">
-          <p className="eyebrow">CHARACTER</p>
+          <p className="eyebrow">キャラクター</p>
           <div className="character-hero__title-row">
             <div>
               <h1>{character.name}</h1>

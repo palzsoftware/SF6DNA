@@ -26,8 +26,8 @@ test("Ryu and JP remain on the guarded Character Detail move template", () => {
   assert.match(routeGate, /"jp"/);
   assert.match(routeGate, /process\.env\.VERCEL_ENV === "preview"/);
   assert.match(pilot, /技一覧・コマンド・主要フレーム/);
-  assert.match(pilot, /Classic/);
-  assert.match(pilot, /Modern/);
+  assert.match(pilot, /クラシック/);
+  assert.match(pilot, /モダン/);
   assert.match(pilot, /確認中/);
   assert.match(pilot, /CAPCOM公式フレームを見る/);
 });

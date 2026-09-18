@@ -111,8 +111,8 @@ export function adaptCharacterDetailV2Profile({
     dedicatedProfile: null,
     profile: {
       tagline: shell.heroTitle as string,
-      winPath: "基本情報を確認し、技・コンボ・セットプレイは確認できる項目だけを表示します。",
-      firstLesson: "確認できる練習内容はありません。",
+      winPath: "基本情報を確認できます。技・コンボ・セットプレイは、内容を確認できた項目だけ掲載します。",
+      firstLesson: "最初の練習メニューは未掲載です。",
       strength: shell.strength as string,
       weakness: shell.weakness as string,
       gameplan: [],

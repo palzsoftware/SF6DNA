@@ -46,7 +46,7 @@ test("common adapter maps only existing Character fields and opens a safe shell"
   assert.equal(result.shell.firstTraining, null);
   assert.deepEqual(Array.from(result.missingFields), ["firstTraining", "gameplan", "rangeActions"]);
   assert.equal(result.profile.tagline, result.shell.heroTitle);
-  assert.equal(result.profile.firstLesson, "確認できる練習内容はありません。");
+  assert.equal(result.profile.firstLesson, "最初の練習メニューは未掲載です。");
   assert.deepEqual(Array.from(result.profile.gameplan), []);
   assert.deepEqual(Array.from(result.profile.ranges), []);
 });

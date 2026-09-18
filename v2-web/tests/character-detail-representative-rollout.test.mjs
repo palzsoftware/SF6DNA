@@ -26,13 +26,13 @@ test("shared component receives the adapted profile and renders natural section 
   assert.match(page, /profile=\{pilotProfile\}/);
   for (const text of [
     "表示できる基本方針はありません。",
-    "表示できる技データはありません。",
-    "確認対象のコンボ候補はありません。",
-    "確認対象のセットプレイ候補はありません。",
-    "確認対象の連携候補はありません。",
-    "表示できる距離別の攻略情報はありません。",
-    "表示できる関連プレイヤーはありません。",
-    "表示できる関連動画はありません。",
+    "技データは未掲載です。",
+    "コンボは未掲載です。",
+    "セットプレイは未掲載です。",
+    "連携・対策は未掲載です。",
+    "距離別の攻略情報は未掲載です。",
+    "関連プレイヤーは未掲載です。",
+    "関連動画は未掲載です。",
   ]) {
     assert.match(shared, new RegExp(text));
   }
