@@ -1,0 +1,8 @@
+issue_id,area,route,viewport,classification,status,evidence,owner,next_action
+QA-PENDING-CHARACTER,Character,/characters/[slug],375_and_desktop,P1_FUNCTIONAL,PENDING_DEVICE_QA,,USER,"Report PASS or URL+operation+time+screenshot"
+QA-PENDING-PLAYER,Player,/players_and_detail,375_and_desktop,P1_FUNCTIONAL,PENDING_DEVICE_QA,,USER,"Search/filter/detail/cross-navigation"
+QA-PENDING-VIDEO,Video,/videos,375_and_desktop,P1_FUNCTIONAL,PENDING_DEVICE_QA,,USER,"Search/filter/favorite/watched/share/external"
+QA-PENDING-SEARCH,Global_Search,/search,375_and_desktop,P1_FUNCTIONAL,PENDING_DEVICE_QA,,USER,"Japanese terms and empty state"
+QA-PENDING-DAILY,Diagnosis_Daily,/diagnoses_to_daily,375_and_desktop,P0_FUNCTIONAL,PENDING_DEVICE_QA,,USER,"Guest and authenticated flow"
+QA-PENDING-AUTH,Auth,/account,375_and_desktop,P0_FUNCTIONAL,PENDING_DEVICE_QA,,USER,"Login/save/reload/history/logout"
+QA-PENDING-LEGAL,Legal,/privacy_terms_disclaimer_contact,375_and_desktop,P1_FUNCTIONAL,PENDING_DEVICE_QA,,USER,"Route and copy smoke"

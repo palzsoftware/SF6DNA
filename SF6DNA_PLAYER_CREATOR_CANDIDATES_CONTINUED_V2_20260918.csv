@@ -1,0 +1,6 @@
+scope,total,state,primary_source_level,db_state,notes
+existing_and_researched,28,REVIEW_LEDGER_READY,MIXED,NOT_APPLIED,"18 prior + 10 official SFL roster research candidates"
+kakeru,1,READY_FOR_REVIEW,CAPCOM_PRIMARY,NOT_APPLIED,"Winner/JP confirmed; team/social gaps remain"
+kisaragi-ren,1,READY_FOR_REVIEW,AGENCY_AND_SELF_PRIMARY,NOT_APPLIED,"Agency/channels/SF6 play confirmed; rank/character/result held"
+official_sfl_expansion,10,SOURCE_CONFIRMED_CANDIDATE,SFL_PRIMARY,NOT_APPLIED,"Identity/competition only; links/bio/main character remain"
+creator_source_required,3,SOURCE_REQUIRED,PUBLIC_CHANNEL_ONLY,NOT_APPLIED,"Do not promote history/category without primary cross-check"

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sf6dna.local/schemas/motion-media-manifest-20260918.json",
+  "title": "SF6DNA Motion Media Manifest",
+  "type": "object",
+  "required": ["manifest_version", "character_slug", "source_owner", "captured_patch", "capture_date", "source_files", "clips"],
+  "properties": {
+    "manifest_version": { "const": "1.0" },
+    "character_slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "source_owner": { "const": "user_capture" },
+    "captured_patch": { "type": "string", "minLength": 1 },
+    "capture_date": { "type": "string", "format": "date" },
+    "source_files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["category", "filename", "sha256"],
+        "properties": {
+          "category": { "enum": ["normals", "unique_attacks", "specials", "super_arts", "command_normals", "stance", "install", "throws", "movement", "character_system"] },
+          "filename": { "type": "string", "minLength": 1 },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "clips": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["move_id", "move_slug", "category", "variant", "media_url", "media_type", "verification_status", "loop_start_ms", "loop_end_ms", "duration_ms", "width", "height", "fps", "filesize_bytes"],
+        "properties": {
+          "move_id": { "type": "string", "minLength": 1 },
+          "move_slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "category": { "type": "string", "minLength": 1 },
+          "variant": { "type": "string", "minLength": 1 },
+          "media_url": { "type": "string", "minLength": 1 },
+          "media_type": { "enum": ["video", "gif"] },
+          "poster_url": { "type": ["string", "null"] },
+          "verification_status": { "enum": ["capture_received", "cut_reviewed", "game_verified_candidate", "approved_for_preview", "rejected"] },
+          "loop_start_ms": { "type": "integer", "minimum": 0 },
+          "loop_end_ms": { "type": "integer", "minimum": 1 },
+          "duration_ms": { "type": "integer", "minimum": 1 },
+          "width": { "type": "integer", "minimum": 1 },
+          "height": { "type": "integer", "minimum": 1 },
+          "fps": { "type": "number", "exclusiveMinimum": 0 },
+          "filesize_bytes": { "type": "integer", "minimum": 1 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

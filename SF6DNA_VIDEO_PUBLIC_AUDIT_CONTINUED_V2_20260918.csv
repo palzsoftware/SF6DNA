@@ -1,0 +1,6 @@
+scope,total,public_confirmed,needs_reprobe,hard_excluded,strategy_verified,state,source_ledger
+exact_id_priority_set,18,12,6,0,0,CONTINUED_NO_COUNT_INFLATION,SF6DNA_VIDEO_PUBLIC_AUDIT_PRE_1800_20260918.csv
+JP_priority,13,9,4,0,0,PARTIAL,"Exact rows remain in source ledger"
+Ryu_priority,5,3,2,0,0,PARTIAL,"Exact rows remain in source ledger"
+replay_archive,4,0,4,0,0,NOT_AUDITED_IN_THIS_BATCH,"Do not infer availability"
+research_candidates,263,0,263,0,0,NOT_AUDITED_IN_THIS_BATCH,"Candidate count is not public-confirmed count"

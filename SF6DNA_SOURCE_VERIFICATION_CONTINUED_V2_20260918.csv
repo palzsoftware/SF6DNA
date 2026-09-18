@@ -1,0 +1,7 @@
+queue,claim_count,status,web_resolution,game_action,notes
+source_routes,28,PARTIAL_SUPPORT,ROUTES_EXIST,CLAIM_REVIEW_REMAINS,"Route coverage is not claim verification"
+jp_public_vague_copy,2,SOURCE_RESOLVED,YES,NONE,"Concrete move names in V2"
+jp_legacy_copy,1,CROSSCHECK_REQUIRED,PARTIAL,DB_APPROVAL_ONLY,"Migration history unchanged"
+patch_direct,29,GAME_VERIFICATION_REQUIRED,NO,8_SESSIONS,"Combo/damage/drive/setup/timing/gap/meaty/punishability"
+generic_gameplay,85,GAME_VERIFICATION_REQUIRED,UNKNOWN,WAIT_CLAIM_LEDGER,"Do not reduce aggregate without authoritative IDs"
+claimed_source_queue,47,CROSSCHECK_REQUIRED,UNKNOWN,WAIT_AUTHORITATIVE_LEDGER,"Claim-level source file absent; no fabricated reduction"

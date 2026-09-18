@@ -1,0 +1,7 @@
+relation_type,ready,crosscheck,blocked,duplicate,stale,db_state,notes
+player_video,12,2,2,0,0,NOT_APPLIED,"Exact-ID ready rows require final public reprobe"
+player_tournament,2,1,0,0,0,NOT_APPLIED,"Participation-only rows are not placements"
+player_source,2,1,0,0,0,NOT_APPLIED,"Primary official links separated from secondary"
+character_video,0,12,6,0,0,NOT_APPLIED,"Public suitability is separate from strategy verification"
+character_player,0,28,0,0,0,NOT_APPLIED,"Candidate identity does not prove main character"
+move_media,0,0,31,0,0,NOT_APPLIED,"Blocked until user-captured source videos arrive"
