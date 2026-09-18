@@ -65,19 +65,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main id="main-content" tabIndex={-1}>{children}</main>
         <footer className="site-footer">
           <div className="site-shell site-footer__inner">
-            <p>SF6DNA</p>
-            <nav aria-label="補助ナビゲーション">
-              <Link href="/players">プレイヤー</Link>
-              <Link href="/videos">動画</Link>
-              <Link href="/about">About</Link>
-              <Link href="/faq">FAQ</Link>
-              <Link href="/sources">情報源</Link>
-              <Link href="/changelog">更新履歴</Link>
-              <Link href="/privacy">プライバシー</Link>
-              <Link href="/terms">利用規約</Link>
-              <Link href="/disclaimer">免責事項</Link>
-              <Link href="/contact">お問い合わせ</Link>
-              <Link href="/auth">アカウント</Link>
+            <div className="site-footer__brand"><strong>SF6DNA</strong><p>SF6の情報を、根拠と一緒に。</p></div>
+            <nav className="site-footer__nav" aria-label="補助ナビゲーション">
+              <div><strong>ガイド</strong><Link href="/about">SF6DNAについて</Link><Link href="/faq">よくある質問</Link><Link href="/feedback">フィードバック</Link></div>
+              <div><strong>コンテンツ</strong><Link href="/characters">キャラクター</Link><Link href="/players">プレイヤー</Link><Link href="/videos">動画</Link><Link href="/diagnosis">診断</Link></div>
+              <div><strong>情報と方針</strong><Link href="/sources">情報源</Link><Link href="/privacy">プライバシー</Link><Link href="/terms">利用規約</Link><Link href="/disclaimer">免責事項</Link></div>
+              <div><strong>その他</strong><Link href="/changelog">更新履歴</Link><Link href="/contact">お問い合わせ</Link><Link href="/auth">アカウント</Link></div>
             </nav>
           </div>
         </footer>

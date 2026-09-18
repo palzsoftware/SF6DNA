@@ -35,6 +35,12 @@ export default async function SourcesPage() {
         <h1>情報源</h1>
         <p>SF6DNAで参照している公式情報・一次情報を一覧で確認できます。各攻略ページで使用した補助情報は、それぞれのページから確認できます。</p>
       </section>
+      <section className="card-grid" aria-label="情報の公開方針">
+        <article className="info-panel"><h2>公式情報・一次情報</h2><p>公開条件を満たした情報は、参照先を確認できる形で掲載します。</p></article>
+        <article className="info-panel"><h2>ゲーム内確認待ち</h2><p>実機での確認が必要な内容は、確認が終わるまで確定情報として補いません。</p></article>
+        <article className="info-panel"><h2>更新確認中</h2><p>パッチによる変更が疑われる情報は、現在の値として扱う前に対象期間と内容を確認します。</p></article>
+        <article className="info-panel"><h2>外部リンク</h2><p>情報源を開くと外部サイトへ移動します。リンク先の利用条件やプライバシー方針も確認してください。</p></article>
+      </section>
       {sources.length ? (
         <section className="search-result-list">
           {sources.map((source) => (
