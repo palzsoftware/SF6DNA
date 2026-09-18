@@ -1,0 +1,11 @@
+field,current_missing,confirmed_candidate_reduction,post_approval_min_missing,state,notes
+team_or_agency,28,1,27,APPROVAL_REQUIRED,"如月れん=ぶいすぽっ！ official-profile candidate"
+region,15,1,14,APPROVAL_REQUIRED,"Kakeru Japan candidate; exact display wording review"
+bio,24,2,22,APPROVAL_REQUIRED,"Kakeru and 如月れん candidate copy; no copied source prose"
+x,30,0,30,NEEDS_CROSSCHECK,"No handle promoted without exact primary profile"
+youtube,37,1,36,APPROVAL_REQUIRED,"如月れん本人channel"
+twitch,33,1,32,APPROVAL_REQUIRED,"如月れん本人channel"
+website,38,1,37,APPROVAL_REQUIRED,"如月れん official agency profile"
+tournament_result,41,2,39,APPROVAL_REQUIRED,"Kakeru primary and Tokido primary candidates"
+video_relation,41,10,31,APPROVAL_REQUIRED,"10 exact-ID ready candidates; public audit required at write time"
+aliases,41,28,13,APPROVAL_REQUIRED,"Reviewed queue only; HOLD excluded"

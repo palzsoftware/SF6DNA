@@ -1,0 +1,12 @@
+queue_id,queue_type,claim_count,execution_unit,classification,source_only_resolution,weekend_action,notes
+PATCH-S01,PATCH_DIRECT,UNKNOWN,session_1,GAME_VERIFICATION_REQUIRED,NO,USE_EXISTING_RUNBOOK,"Existing session IDs/setup must remain authoritative"
+PATCH-S02,PATCH_DIRECT,UNKNOWN,session_2,GAME_VERIFICATION_REQUIRED,NO,USE_EXISTING_RUNBOOK,"Do not renumber without claim-level source"
+PATCH-S03,PATCH_DIRECT,UNKNOWN,session_3,GAME_VERIFICATION_REQUIRED,NO,USE_EXISTING_RUNBOOK,"Current patch reproduction required"
+PATCH-S04,PATCH_DIRECT,UNKNOWN,session_4,GAME_VERIFICATION_REQUIRED,NO,USE_EXISTING_RUNBOOK,"Current patch reproduction required"
+PATCH-S05,PATCH_DIRECT,UNKNOWN,session_5,GAME_VERIFICATION_REQUIRED,NO,USE_EXISTING_RUNBOOK,"Current patch reproduction required"
+PATCH-S06,PATCH_DIRECT,UNKNOWN,session_6,GAME_VERIFICATION_REQUIRED,NO,USE_EXISTING_RUNBOOK,"Current patch reproduction required"
+PATCH-S07,PATCH_DIRECT,UNKNOWN,session_7,GAME_VERIFICATION_REQUIRED,NO,USE_EXISTING_RUNBOOK,"Current patch reproduction required"
+PATCH-S08,PATCH_DIRECT,UNKNOWN,session_8,GAME_VERIFICATION_REQUIRED,NO,USE_EXISTING_RUNBOOK,"29 direct claims total across S01-S08"
+GENERIC-IMPORT,GENERIC,85,claim_level_import,GAME_VERIFICATION_REQUIRED,NO,IMPORT_AUTHORITATIVE_QUEUE,"Do not invent per-claim IDs from aggregate count"
+JP-COPY-PUBLIC,SOURCE,2,web_code_regression,SOURCE_RESOLVED,YES,NO_DEVICE_GAME_CHECK,"Concrete move names present in V2"
+JP-COPY-LEGACY,SOURCE,1,db_copy_candidate,NEEDS_CROSSCHECK,NO,DB_APPROVAL_ONLY,"Historic migration is not edited"
