@@ -1,0 +1,6 @@
+entity,classification,public_route_or_search,verification_provenance,patch_provenance,source_provenance,v1_1_action
+Move,SAFE_METADATA_ONLY,GATED_WHILE_publicStrategyContent_false,"Composite published Move + Classic Command + verified Frame","patches.is_current=true + current verified Frame","Exact public RPC relation; official evidence for Move/Command/Frame","Batch adapter implemented; activation HOLD"
+Combo,GATED_BY_PUBLIC_STRATEGY,BLOCKED,Not consumed while gate is false,Not consumed while gate is false,Not consumed while gate is false,HOLD
+Setup,GATED_BY_PUBLIC_STRATEGY,BLOCKED,Not consumed while gate is false,Not consumed while gate is false,Not consumed while gate is false,HOLD
+Sequence,GATED_BY_PUBLIC_STRATEGY,BLOCKED,Not consumed while gate is false,Not consumed while gate is false,Not consumed while gate is false,HOLD
+Counter,GATED_BY_PUBLIC_STRATEGY,BLOCKED,Not consumed while gate is false,Not consumed while gate is false,Not consumed while gate is false,HOLD

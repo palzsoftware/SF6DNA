@@ -7,6 +7,7 @@ import {
   normalizeTrustedRetrievalItems,
   sanitizeRetrievalText,
 } from "@/lib/coach-trusted-retrieval";
+import { enrichRetrievalItemsWithPublicEntityMetadata } from "@/lib/public-entity-enrichment";
 
 function bestSourceRank(sources: Array<{ reliabilityLevel: string | null }>) {
   const rank: Record<string, number> = {
@@ -76,12 +77,14 @@ let body: unknown;
     .sort((a, b) => bestSourceRank(a.sources) - bestSourceRank(b.sources));
 
   const normalizedRetrieval = normalizeTrustedRetrievalItems(evidence);
-  const retrievalBundle = buildRetrievalEvidenceList(normalizedRetrieval, currentPatch, {
+  const enrichedRetrieval = await enrichRetrievalItemsWithPublicEntityMetadata(normalizedRetrieval);
+  const retrievalBundle = buildRetrievalEvidenceList(enrichedRetrieval.items, currentPatch, {
     publicStrategyContent: releaseFeatures.publicStrategyContent,
     training: releaseFeatures.training,
     exactCharacterId,
     exactPlayerId,
   });
+  retrievalBundle.uncertainty.unshift(...enrichedRetrieval.uncertainty);
   if (sanitizedRetrievalQuery.omittedSensitiveInput) {
     retrievalBundle.uncertainty.unshift("検索語から識別子・秘密値候補を除外しました。");
   }

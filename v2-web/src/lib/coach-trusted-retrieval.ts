@@ -37,7 +37,10 @@ export type TrustedRetrievalItem = {
   sourceType: string | null;
   reliabilityLevel: string | null;
   patch: string | null;
+  patchId: string | null;
+  patchName: string | null;
   verificationStatus: TrustedRetrievalVerificationStatus;
+  verificationSource: "public_move_gate" | null;
   publicationStatus: TrustedRetrievalPublicationStatus;
   reviewedAt: string | null;
   verifiedAt: string | null;
@@ -150,7 +153,10 @@ export function normalizeTrustedRetrievalItems(items: RetrievalSearchItem[]): Tr
         sourceType: cleanText(source.sourceType, 100),
         reliabilityLevel: cleanText(source.reliabilityLevel, 100),
         patch: null,
+        patchId: null,
+        patchName: null,
         verificationStatus: "unknown",
+        verificationSource: null,
         publicationStatus: "published",
         reviewedAt: null,
         verifiedAt: null,
@@ -286,11 +292,11 @@ export function buildRetrievalEvidenceList(items: TrustedRetrievalItem[], curren
 }
 
 const SENSITIVE_PATTERNS = [
+  /\b(?:request[_-]?id|user[_-]?id|auth[_-]?token)\s*[:=]\s*\S+/gi,
   /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi,
   /\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b/gi,
   /\b\d{8,}\b/g,
   /\b(?:eyJ|sk-|sb_secret_)[A-Za-z0-9._-]{12,}\b/g,
-  /\b(?:request[_-]?id|user[_-]?id|auth[_-]?token)\s*[:=]\s*\S+/gi,
 ];
 
 export function sanitizeRetrievalText(value: string): { text: string; omittedSensitiveInput: boolean } {
