@@ -1,0 +1,13 @@
+queue,scope,claim_count,status,evidence,action
+source_route,28_route_groups,28,PARTIAL_SUPPORT,route_coverage_audit,"retain per-claim CTA review"
+jp_public_copy,vague_public_copy,2,SOURCE_RESOLVED,current_V2_copy,"no game verification required for removed vague wording"
+jp_legacy_db,legacy_copy_candidate,1,CROSSCHECK_REQUIRED,current_DB_snapshot_and_V2_copy,"include only in approved DB transaction"
+patch_direct,8_sessions,29,GAME_VERIFICATION_REQUIRED,pre_weekend_queue,"verify combo/damage/drive/setup/timing/gap/meaty/punishability"
+generic_gameplay,generic_queue,85,GAME_VERIFICATION_REQUIRED,aggregate_queue_only,"import claim-level IDs before execution; do not collapse claims"
+video_public,exact_video_ids,12,SOURCE_RESOLVED,public_exact_ID_results,"public availability only; strategy not verified"
+video_reprobe,exact_video_ids,6,CROSSCHECK_REQUIRED,no_independent_exact_ID_result,"reprobe before relation/write"
+player_identity,current_and_new_candidates,28,PARTIAL_SUPPORT,official_or_public_sources,"primary source gaps remain per candidate ledger"
+tournament_results,primary_confirmed_results,2,SOURCE_RESOLVED,official_tournament_sources,"DB approval still required"
+tournament_participation,participation_only,2,PARTIAL_SUPPORT,official_or_public_brackets,"do not convert participation to placement"
+tournament_secondary,secondary_crosscheck,1,CROSSCHECK_REQUIRED,secondary_source,"primary source required"
+source_queue,claimed_47_item_queue,47,CROSSCHECK_REQUIRED,claim_level_source_file_not_present_in_RC,"do not fabricate IDs or resolution count; require authoritative claim ledger"
