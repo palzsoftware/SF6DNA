@@ -25,6 +25,23 @@ test("player directory has result count, zero-result state, and accessible input
   for (const marker of ["aria-live=\"polite\"", "条件に一致するプレイヤーはいません", "検索をクリア", "htmlFor=\"player-search\""]) assert.match(source, new RegExp(marker));
 });
 
+test("player directory V2 combines category and character groups with AND", () => {
+  const source = read("src/components/player-directory.tsx");
+  assert.match(source, /playerMatchesFilters/);
+  assert.match(source, /categoryMatch && characterMatch/);
+  assert.match(source, /type="checkbox"/);
+  assert.match(source, /選択中のフィルター/);
+  assert.match(source, /setCategories\(\[\]\)/);
+  assert.match(source, /setCharacters\(\[\]\)/);
+});
+
+test("player directory exposes a source-dated unknown rank state", () => {
+  const source = read("src/components/player-directory.tsx");
+  assert.match(source, />ランク</);
+  assert.match(source, /確認日つきデータの連携後に利用できます/);
+  assert.doesNotMatch(source, /current_rank\s*=/);
+});
+
 test("player search retains responsive 375px-safe layout", () => {
   const css = read("src/app/players/players.module.css");
   assert.match(css, /grid-template-columns: minmax\(0, 1fr\)/);
