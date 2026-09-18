@@ -1,0 +1,6 @@
+priority,player_slug,player_name,event,date_or_year,placement,character,source_url,source_type,confidence,classification,notes
+P0,kakeru,Kakeru,CAPCOM CUP 11,2025,1,JP,https://sf.esports.capcom.com/,official_capcom,CONFIRMED_PRIMARY,CONFIRMED_PRIMARY,"CAPCOM公式RECAPでKakeru・JP・優勝を確認。旧Sho未解決を解消"
+P0,tokido,ときど,CEO 2026,2026,1,JP,https://prtimes.jp/main/html/rd/p/000005930.000013450.html,official_esports_release,CONFIRMED_PRIMARY,CONFIRMED_PRIMARY,"既存DB Sourceにも登録済み"
+P1,shuto,Shuto,Street Fighter League Pro-JP,2021-2026,,リュウ,https://sf.esports.capcom.com/news/49869/,official_capcom,CONFIRMED_PRIMARY,PRIMARY_PARTICIPATION_ONLY,"参加歴は確認できるが単一大会順位ではない"
+P1,kisaragi-ren,如月れん,VTuber最協決定戦 Ver. STREET FIGHTER 6 第一幕,2026,1,,https://kakuge-checker.com/player/view/kisaragiren/,community,CONFIRMED_SECONDARY,SECONDARY_NEEDS_CROSSCHECK,"大会公式Primaryで順位・使用Character照合前のためpublish不可"
+P1,ryusei,りゅうせい,Street Fighter League Pro-JP,2026,,,https://sf.esports.capcom.com/,official_capcom,PRIMARY_PARTICIPATION_ONLY,PRIMARY_PARTICIPATION_ONLY,"SCARZ所属候補と大会参加のSource。個人成績・順位は推測しない"

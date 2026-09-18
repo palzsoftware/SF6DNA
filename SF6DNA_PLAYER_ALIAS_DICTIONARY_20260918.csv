@@ -1,0 +1,30 @@
+player_slug,display_name,alias,alias_type,confidence,db_action
+tokido,ときど,Tokido,romanization,CONFIRMED,APPROVAL_QUEUE
+ryusei,りゅうせい,Ryusei,romanization,CONFIRMED,APPROVAL_QUEUE
+tantanmen,タンタンメン,Tantanmen,romanization,CONFIRMED,APPROVAL_QUEUE
+john-takeuchi,John Takeuchi,竹内ジョン,japanese_name,CONFIRMED_SECONDARY,APPROVAL_QUEUE
+dogura,Dogura,どぐら,japanese_handle,CONFIRMED,APPROVAL_QUEUE
+higuchi,Higuchi,ひぐち,japanese_handle,CONFIRMED,APPROVAL_QUEUE
+shuto,Shuto,シュート,katakana,CONFIRMED,APPROVAL_QUEUE
+tachikawa,Tachikawa,立川,japanese_handle,CONFIRMED,APPROVAL_QUEUE
+go1,GO1,ごーいち,japanese_reading,CONFIRMED,APPROVAL_QUEUE
+nemo,Nemo,ネモ,katakana,CONFIRMED,APPROVAL_QUEUE
+sako,sako,サコ,katakana,CONFIRMED,APPROVAL_QUEUE
+naruo,Naruo,なるお,japanese_handle,CONFIRMED,APPROVAL_QUEUE
+takepi,takepi,たけぴー,japanese_handle,CONFIRMED_SECONDARY,APPROVAL_QUEUE
+yamaguchi,Yamaguchi,山口,japanese_handle,CONFIRMED,APPROVAL_QUEUE
+hinao,Hinao,ひなお,japanese_handle,CONFIRMED_SECONDARY,APPROVAL_QUEUE
+inaba,inaba,稲葉,japanese_handle,NEEDS_CROSSCHECK,HOLD
+endingwalker,EndingWalker,Ending Walker,spacing,CONFIRMED,APPROVAL_QUEUE
+chris-wong,Chris Wong,ChrisWong,spacing,CONFIRMED,APPROVAL_QUEUE
+mister-crimson,Mister Crimson,MisterCrimson,spacing,CONFIRMED,APPROVAL_QUEUE
+noahtheprodigy,NoahTheProdigy,Noah The Prodigy,spacing,CONFIRMED,APPROVAL_QUEUE
+grustle-grindset,Grustle Grindset,GrustleGrindset,spacing,CONFIRMED,APPROVAL_QUEUE
+raihan-yasmine,lllRaihanlll,Raihan,common_abbreviation,CONFIRMED_SECONDARY,APPROVAL_QUEUE
+kakeru,Kakeru,翔,japanese_handle,CONFIRMED_PRIMARY,APPROVAL_QUEUE
+kakeru,Kakeru,Sho,romanization_variant,CONFIRMED_PRIMARY,APPROVAL_QUEUE
+kakeru,Kakeru,Kakerugo,social_handle,LIKELY_NEEDS_CROSSCHECK,APPROVAL_QUEUE
+kakeru,Kakeru,Uzura,former_handle,CONFIRMED_SECONDARY,APPROVAL_QUEUE
+kisaragi-ren,如月れん,Ren Kisaragi,romanization,CONFIRMED,APPROVAL_QUEUE
+kisaragi-ren,如月れん,Kisaragi Ren,romanization,CONFIRMED,APPROVAL_QUEUE
+kisaragi-ren,如月れん,ren_kisaragi__,social_handle,CONFIRMED,APPROVAL_QUEUE

@@ -1,0 +1,14 @@
+player_slug,player_name,platform,url,ownership_evidence,status,action
+tokido,ときど,X,https://x.com/tokidoki77,current_DB_and_official_profile,CONFIRMED,RETAIN
+tokido,ときど,Website,https://varrel.jp/team/street-fighter,team_official,CONFIRMED,RETAIN
+ryusei,りゅうせい,X,https://x.com/ryusei_carl,current_DB_player_link,CONFIRMED,RETAIN
+ryusei,りゅうせい,Twitch,https://www.twitch.tv/ryusei_ftg,current_DB_player_link,CONFIRMED,RETAIN
+shuto,Shuto,X,https://x.com/Shuto_fgc,current_DB_and_team_context,CONFIRMED,RETAIN
+shuto,Shuto,YouTube,https://www.youtube.com/channel/UCVpiMbxV0dfkINwtUlqU1bg,current_DB_player_link,CONFIRMED,RETAIN
+shuto,Shuto,Twitch,https://www.twitch.tv/shuto_fgc,current_DB_player_link,CONFIRMED,RETAIN
+shuto,Shuto,Website,https://crazyraccoon.jp/,team_official,CONFIRMED,RETAIN
+kakeru,Kakeru,X,https://x.com/Kakerugo,search_handle_and_player_context,LIKELY_NEEDS_CROSSCHECK,APPROVAL_QUEUE
+kakeru,Kakeru,Twitch,https://www.twitch.tv/kakeru_fgc,stream_index_secondary,LIKELY_NEEDS_CROSSCHECK,APPROVAL_QUEUE
+kisaragi-ren,如月れん,YouTube,https://www.youtube.com/@ren_kisaragi__,official_channel_name_and_affiliation,CONFIRMED,APPROVAL_QUEUE
+kisaragi-ren,如月れん,Twitch,https://www.twitch.tv/ren_kisaragi__,public_profile_exact_handle,CONFIRMED,APPROVAL_QUEUE
+kisaragi-ren,如月れん,Website,https://store.vspo.jp/pages/kisaragi-ren,official_vspo_profile,CONFIRMED,APPROVAL_QUEUE

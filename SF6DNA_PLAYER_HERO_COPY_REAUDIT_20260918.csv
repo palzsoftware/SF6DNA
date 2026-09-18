@@ -1,0 +1,10 @@
+player_slug,display_name,current_state,result,recommended_action
+tokido,ときど,JP競技投入の参照候補,CONSISTENT,RETAIN
+ryusei,りゅうせい,JP専門プレイヤー,CONSISTENT,RETAIN
+shuto,Shuto,公開プロフィールでRyuとの関係,CONSISTENT,RETAIN
+kakeru,Kakeru,no_record,SOURCE_READY,"承認後にCAPCOM CUP 11優勝・JP使用をPrimary根拠で記載"
+kisaragi-ren,如月れん,no_record,SOURCE_REQUIRED,"人物・所属・配信導線のみ記載しCharacter・優勝は保留"
+dogura,Dogura,公開大会・プロフィールとElena,CONSISTENT,RETAIN
+endingwalker,EndingWalker,公開大会・プロフィールとRyu,SOURCE_REQUIRED,"一次Source cross-checkまで強い大会表現を避ける"
+craime,Craime,FGC Top Players Ryu参照,COPY_TOO_STRONG,"secondary snapshotであることを維持"
+takepi,takepi,JP使用若手競技プレイヤー,CONSISTENT,RETAIN
