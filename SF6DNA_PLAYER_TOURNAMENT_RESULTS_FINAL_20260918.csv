@@ -1,0 +1,6 @@
+priority,player_slug,player_name,event,year,placement,character,source_url,classification,notes
+P0,kakeru,Kakeru,CAPCOM CUP 11,2025,1,JP,https://sf.esports.capcom.com/,CONFIRMED_PRIMARY,"DB approval required"
+P0,tokido,ときど,CEO 2026,2026,1,JP,https://prtimes.jp/main/html/rd/p/000005930.000013450.html,CONFIRMED_PRIMARY,"Existing source candidate"
+P1,shuto,Shuto,Street Fighter League Pro-JP,2021-2026,,Ryu,https://sf.esports.capcom.com/news/49869/,PRIMARY_PARTICIPATION_ONLY,"No placement inferred"
+P1,ryusei,りゅうせい,Street Fighter League Pro-JP,2026,,,https://sf.esports.capcom.com/,PRIMARY_PARTICIPATION_ONLY,"No individual result inferred"
+P1,kisaragi-ren,如月れん,VTuber最協決定戦 Ver. STREET FIGHTER 6 第一幕,2026,1,,https://kakuge-checker.com/player/view/kisaragiren/,SECONDARY_NEEDS_CROSSCHECK,"Official primary result required"

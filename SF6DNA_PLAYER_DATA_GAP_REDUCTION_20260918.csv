@@ -1,0 +1,11 @@
+field,current_missing,confirmed_candidate_reduction,post_approval_min_missing,state,notes
+team_or_agency,28,1,27,APPROVAL_REQUIRED,"如月れん agency candidate; DB unchanged"
+region,15,1,14,APPROVAL_REQUIRED,"Kakeru Japan candidate"
+bio,24,2,22,APPROVAL_REQUIRED,"Kakeru and 如月れん candidate copy"
+x,30,0,30,NEEDS_CROSSCHECK,"Kakeru handle not counted as confirmed"
+youtube,37,1,36,APPROVAL_REQUIRED,"如月れん本人channel"
+twitch,33,1,32,APPROVAL_REQUIRED,"如月れん本人channel; Kakeru excluded"
+website,38,1,37,APPROVAL_REQUIRED,"如月れん official profile"
+tournament_result,41,2,39,APPROVAL_REQUIRED,"Kakeru and Tokido result-ready"
+video_relation,41,10,31,APPROVAL_REQUIRED,"Final relation queue; re-probe before write"
+aliases,41,28,13,APPROVAL_REQUIRED,"Only reviewed approval queue; HOLD excluded"
