@@ -19,6 +19,12 @@ import {
   type CoachInputContext,
 } from "@/lib/coach-shared-analysis";
 import type { SearchResultItem } from "@/types/search";
+import {
+  buildRetrievalQuery,
+  retrievalEvidenceStatusLabel,
+  retrievalPatchStatusLabel,
+} from "@/lib/coach-trusted-retrieval";
+import type { CoachEvidenceItem } from "@/lib/coach-foundation";
 
 type SourceItem = {
   title: string;
@@ -65,7 +71,7 @@ function AnalysisSection({ section, response }: { section: CoachResponseSection;
   }
   if (section === "evidence") {
     if (!response.evidence.length) return null;
-    return <section className="info-panel"><h3>Evidence</h3><ul>{response.evidence.map((item) => <li key={item.id}><strong>{coachEvidenceKindLabel(item.kind)}</strong><p>{item.statement}</p>{item.sourceUrl ? <a className="text-link" href={item.sourceUrl} target="_blank" rel="noopener noreferrer">情報源を見る ↗</a> : null}{item.patch ? <p className="muted">Patch: {item.patch}</p> : null}</li>)}</ul></section>;
+    return <section className="info-panel"><h3>Evidence</h3><ul>{response.evidence.map((item) => <li key={item.id}><strong>{coachEvidenceKindLabel(item.kind)}</strong><p className="muted">{retrievalEvidenceStatusLabel(item)}</p><p>{item.statement}</p>{item.sourceUrl ? <a className="text-link" href={item.sourceUrl} target="_blank" rel="noopener noreferrer">情報源を見る ↗</a> : null}{item.patch ? <p className="muted">Patch: {item.patch}</p> : null}{item.patchStatus ? <p className="muted">{retrievalPatchStatusLabel(item.patchStatus)}</p> : null}{response.persona.id === "research" && (item.sourceType || item.sourceReliability) ? <p className="muted">Source: {item.sourceType ?? "不明"} / reliability: {item.sourceReliability ?? "不明"}</p> : null}</li>)}</ul></section>;
   }
   if (section === "uncertainty") {
     if (!response.uncertainty.length) return null;
@@ -101,17 +107,29 @@ export function CoachRetrievalDemo({
     setCurrentPatch(null);
 
     const userMessage = adaptUserText(question);
-    setAnalysisResult(analyzeCoachContext({
+    const requestContext: CoachInputContext = {
       ...baseContext,
       requestedPersona: personaId,
       ...(userMessage ? { userMessage } : {}),
+    };
+    const retrievalPlan = buildRetrievalQuery(requestContext);
+    setAnalysisResult(analyzeCoachContext({
+      ...requestContext,
+      retrievalUncertainty: retrievalPlan.uncertainty,
     }));
 
     try {
       const response = await fetch("/api/coach/retrieve", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question }),
+        body: JSON.stringify({
+          question,
+          retrievalQuery: retrievalPlan.query || question,
+          scope: {
+            characterId: retrievalPlan.exactCharacterId,
+            playerId: retrievalPlan.exactPlayerId,
+          },
+        }),
       });
       const data = await response.json();
       if (!response.ok) {
@@ -120,6 +138,15 @@ export function CoachRetrievalDemo({
       }
       setRetrievalEvidence(Array.isArray(data.evidence) ? data.evidence : []);
       setCurrentPatch(data.currentPatch ?? null);
+      const normalizedRetrievalEvidence = Array.isArray(data.retrievalEvidence) ? data.retrievalEvidence as CoachEvidenceItem[] : [];
+      const retrievalUncertainty = Array.isArray(data.retrievalUncertainty)
+        ? data.retrievalUncertainty.filter((item: unknown): item is string => typeof item === "string")
+        : [];
+      setAnalysisResult(analyzeCoachContext({
+        ...requestContext,
+        retrievalEvidence: normalizedRetrievalEvidence,
+        retrievalUncertainty: [...retrievalPlan.uncertainty, ...retrievalUncertainty],
+      }));
       setMessage(
         typeof data.message === "string"
           ? data.message

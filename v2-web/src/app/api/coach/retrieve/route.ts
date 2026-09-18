@@ -2,6 +2,11 @@ import { NextResponse } from "next/server";
 import { attachSourcesToEvidence, getCurrentPatch } from "@/lib/coach-evidence";
 import { releaseFeatures } from "@/lib/release-features";
 import { searchAcrossContent } from "@/lib/search";
+import {
+  buildRetrievalEvidenceList,
+  normalizeTrustedRetrievalItems,
+  sanitizeRetrievalText,
+} from "@/lib/coach-trusted-retrieval";
 
 function bestSourceRank(sources: Array<{ reliabilityLevel: string | null }>) {
   const rank: Record<string, number> = {
@@ -44,7 +49,23 @@ let body: unknown;
     return NextResponse.json({ error: "question_too_long" }, { status: 400 });
   }
 
-  const searchResults = (await searchAcrossContent(question)).slice(0, 12);
+  const requestedRetrievalQuery =
+    body && typeof body === "object" && "retrievalQuery" in body
+      ? String((body as { retrievalQuery?: unknown }).retrievalQuery ?? "")
+      : question;
+  const sanitizedRetrievalQuery = sanitizeRetrievalText(requestedRetrievalQuery || question);
+  const retrievalQuery = sanitizedRetrievalQuery.text;
+
+  const scope =
+    body && typeof body === "object" && "scope" in body && (body as { scope?: unknown }).scope && typeof (body as { scope?: unknown }).scope === "object"
+      ? (body as { scope: { characterId?: unknown; playerId?: unknown } }).scope
+      : null;
+  const safeEntityId = (value: unknown) =>
+    typeof value === "string" && /^[A-Za-z0-9_-]{1,100}$/.test(value) ? value : null;
+  const exactCharacterId = safeEntityId(scope?.characterId);
+  const exactPlayerId = safeEntityId(scope?.playerId);
+
+  const searchResults = (await searchAcrossContent(retrievalQuery)).slice(0, 12);
   const [rawEvidence, currentPatch] = await Promise.all([
     attachSourcesToEvidence(searchResults),
     getCurrentPatch(),
@@ -54,12 +75,26 @@ let body: unknown;
     .filter((item) => item.sources.length > 0)
     .sort((a, b) => bestSourceRank(a.sources) - bestSourceRank(b.sources));
 
+  const normalizedRetrieval = normalizeTrustedRetrievalItems(evidence);
+  const retrievalBundle = buildRetrievalEvidenceList(normalizedRetrieval, currentPatch, {
+    publicStrategyContent: releaseFeatures.publicStrategyContent,
+    training: releaseFeatures.training,
+    exactCharacterId,
+    exactPlayerId,
+  });
+  if (sanitizedRetrievalQuery.omittedSensitiveInput) {
+    retrievalBundle.uncertainty.unshift("検索語から識別子・秘密値候補を除外しました。");
+  }
+
   const ready = Boolean(currentPatch && evidence.length);
 
   return NextResponse.json({
     question,
     currentPatch,
     evidence,
+    retrievalEvidence: retrievalBundle.evidence,
+    retrievalUncertainty: retrievalBundle.uncertainty,
+    retrievalExcludedCount: retrievalBundle.excludedIds.length,
     ready,
     message: !currentPatch
       ? "現行Patchを確認できないため、攻略根拠としての回答生成は行いません。"

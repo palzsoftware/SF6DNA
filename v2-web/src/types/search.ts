@@ -18,4 +18,5 @@ export type SearchResultItem = {
   subtitle?: string | null;
   href: string;
   matchedBy: "name" | "alias" | "content";
+  relevanceScore?: number | null;
 };

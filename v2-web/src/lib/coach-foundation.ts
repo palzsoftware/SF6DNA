@@ -23,6 +23,13 @@ export type CoachEvidenceItem = {
   characterSlug: string | null;
   playerId: string | null;
   createdAt: string | null;
+  sourceType?: string | null;
+  sourceReliability?: string | null;
+  patchStatus?: "PATCH_MATCH" | "PATCH_COMPATIBLE" | "PATCH_UNKNOWN" | "PATCH_STALE" | "PATCH_NOT_APPLICABLE" | null;
+  availabilityStatus?: "public" | "unknown" | "inaccessible" | "restricted" | "private" | "internal" | null;
+  sourcePublishedAt?: string | null;
+  sourceAccessedAt?: string | null;
+  relevanceScore?: number | null;
 };
 
 export type CoachFinding = {

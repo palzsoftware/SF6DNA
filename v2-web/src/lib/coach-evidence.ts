@@ -3,11 +3,14 @@ import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type { SearchResultItem } from "@/types/search";
 
 export type CoachSource = {
+  sourceId: string;
   title: string;
   url: string;
   sourceType: string;
   publisher: string | null;
   reliabilityLevel: string | null;
+  publishedAt: string | null;
+  accessedAt: string | null;
 };
 
 export type CoachEvidence = SearchResultItem & {
@@ -52,11 +55,14 @@ export async function attachSourcesToEvidence(
 
     if (!list.some((source) => source.url === row.url)) {
       list.push({
+        sourceId: row.sourceId,
         title: row.title,
         url: row.url,
         sourceType: row.sourceType,
         publisher: row.publisher,
         reliabilityLevel: row.reliabilityLevel,
+        publishedAt: row.publishedAt,
+        accessedAt: row.accessedAt,
       });
 
       sourceMap.set(key, list);

@@ -87,6 +87,8 @@ export type CoachInputContext = {
   characterContext?: CharacterCoachContext;
   playerContext?: PlayerCoachContext;
   accountContext?: CoachAccountContext;
+  retrievalEvidence?: CoachEvidenceItem[];
+  retrievalUncertainty?: string[];
   locale: string;
   requestedPersona: CoachPersonaId;
 };
@@ -294,6 +296,7 @@ export function buildCoachEvidence(context: CoachInputContext): CoachEvidenceIte
     ...(context.userMessage ? buildUserStatementEvidence(context.userMessage) : []),
     ...(context.characterContext ? buildCharacterEvidence(context.characterContext) : []),
     ...(context.playerContext ? buildPlayerEvidence(context.playerContext) : []),
+    ...(context.retrievalEvidence ?? []),
   ];
 }
 
@@ -308,6 +311,7 @@ function analysisSummary(context: CoachInputContext): string {
   if (context.userMessage) parts.push("あなたの入力");
   if (context.characterContext) parts.push("キャラクター情報");
   if (context.playerContext) parts.push("プレイヤー情報");
+  if (context.retrievalEvidence?.length) parts.push("検索Evidence");
   if (!parts.length) return "分析に使える文脈がまだありません。";
   return `${parts.join("・")}を、確認できる範囲のEvidenceだけで整理しました。`;
 }
@@ -330,7 +334,7 @@ export function analyzeCoachContext(context: CoachInputContext): CoachAnalysisRe
     evidenceIds: [`daily:${context.dailyTraining?.trainingDate}:${item.id}`],
   }));
 
-  const uncertainty: string[] = [];
+  const uncertainty: string[] = [...(context.retrievalUncertainty ?? [])];
   if (!evidence.length) uncertainty.push("分析に使えるEvidenceがまだありません。入力・診断・Daily・公開Sourceのいずれかが必要です。");
   if (context.userMessage?.requiresVerification) uncertainty.push("ユーザー入力に含まれるゲーム事実は未検証です。PLAYER_STATEMENTのまま保持し、別Sourceなしでゲーム事実へ昇格しません。");
   if (context.diagnosisResult && !context.diagnosisResult.primaryIssues.length && !context.diagnosisResult.secondaryIssues.length) {

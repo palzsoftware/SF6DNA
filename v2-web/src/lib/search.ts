@@ -120,6 +120,7 @@ export async function searchAcrossContent(rawQuery: string): Promise<SearchResul
       subtitle: row.subtitle,
       href: hrefFor(type, slug),
       matchedBy,
+      relevanceScore: typeof row.score === "number" && Number.isFinite(row.score) ? row.score : null,
     }];
   });
 
