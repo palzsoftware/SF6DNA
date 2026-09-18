@@ -6,7 +6,9 @@ const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf
 
 test("player list exposes team, main character, region, and detail route", () => {
   const page = read("src/app/players/page.tsx");
-  for (const marker of ["チーム", "主なキャラクター", "地域", "/players/${player.slug}"]) assert.match(page, new RegExp(marker.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  const directory = read("src/components/player-directory.tsx");
+  assert.match(page, /<PlayerDirectory players=\{players\}/);
+  for (const marker of ["チーム", "主なキャラクター", "地域", "/players/${player.slug}"]) assert.match(directory, new RegExp(marker.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
 });
 
 test("player detail covers release QA sections and natural empty states", () => {

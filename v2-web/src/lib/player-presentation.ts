@@ -19,7 +19,11 @@ export function playerSourceCta(source: PlayerSource) {
 export function safePlayerBio(bio: string | null) {
   if (!bio) return null;
   const japanese = bio
-    .replace(/^Current (.+?) reference player on FGC Top Players \(2026 snapshot\)\.$/, "$1の大会データで使用実績を確認できるプレイヤーです。")
-    .replace(/^Ryu reference player listed (?:at the top of|on) the current FGC Top Players Ryu page \(2026-08-26 snapshot\)\.$/, "公開大会データでリュウの使用実績を確認できるプレイヤーです。");
+    .replace(/^Current (.+?) reference player on FGC Top Players \(2026 snapshot\)\.$/, "公開プロフィールで$1との関係を確認できるプレイヤーです。")
+    .replace(/^Ryu reference player listed (?:at the top of|on) the current FGC Top Players Ryu page \(2026-08-26 snapshot\)\.$/, "公開プロフィールでリュウとの関係を確認できるプレイヤーです。")
+    .replace(/^(.+?)選手。公開大会・プロフィールで(.+?)の使用関係を確認しています。関連動画と公式リンクから活動情報を確認できます。$/, "公開プロフィールで$2との関係を確認できる$1選手です。")
+    .replace(/^JPを使用する若手競技プレイヤー。$/, "公開情報でJPとの関係を確認できる競技プレイヤーです。")
+    .replace(/^2026年8月時点でJPを競技投入しているトッププロの参照候補。$/, "公開情報でJPとの関係を確認できるプロプレイヤーです。")
+    .replace(/^JP専門プレイヤーとして参照する競技プレイヤー。$/, "公開プロフィールでJPとの関係を確認できる競技プレイヤーです。");
   return japanese;
 }

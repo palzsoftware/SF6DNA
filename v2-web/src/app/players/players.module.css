@@ -1,5 +1,16 @@
 .playerPage { min-width: 0; }
 .listHero { max-width: 52rem; }
+.directory { min-width: 0; display: grid; gap: 1rem; }
+.searchPanel { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(18rem, 32rem) auto; align-items: end; gap: 1rem; padding: 1rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); }
+.searchPanel h2, .searchPanel p { margin: 0; }
+.searchPanel > div:first-child p { margin-top: .35rem; color: var(--muted); }
+.searchControl { min-width: 0; display: grid; gap: .4rem; }
+.searchControl label { font-size: .8rem; font-weight: 700; }
+.searchRow { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem; }
+.searchRow input { min-width: 0; width: 100%; min-height: 2.75rem; padding: .7rem .8rem; border: 1px solid var(--border); border-radius: .65rem; background: var(--background); color: inherit; font: inherit; }
+.searchRow button { min-height: 2.75rem; padding: .6rem .85rem; border: 1px solid var(--border); border-radius: .65rem; background: transparent; color: inherit; font: inherit; font-weight: 700; cursor: pointer; }
+.searchRow input:focus-visible, .searchRow button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.resultCount { white-space: nowrap; font-weight: 800; }
 .playerGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .playerCard { min-width: 0; display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1rem; padding: 1rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); color: inherit; text-decoration: none; }
 .playerMark { display: grid; place-items: center; width: 4.5rem; height: 4.5rem; border-radius: 1rem; background: #17232d; color: #f4f7fa; font-size: 2rem; font-weight: 800; }
@@ -31,6 +42,6 @@
 .sectionHead { display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
 .sectionHead h2 { margin-top: 0; }
 .videoRail { min-width: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(18rem, 30rem); gap: 1rem; overflow-x: auto; overscroll-behavior-inline: contain; padding: .25rem .1rem 1rem; }
-@media (max-width: 1100px) { .playerGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 720px) { .playerGrid, .detailGrid, .facts { grid-template-columns: 1fr; } .playerCard { grid-template-columns: 3.5rem minmax(0, 1fr); } .playerMark { width: 3.5rem; height: 3.5rem; } .sectionHead { align-items: start; flex-direction: column; } .videoRail { grid-auto-columns: min(86vw, 24rem); } }
-@media (max-width: 420px) { .playerCard { padding: .85rem; gap: .75rem; } .cardBody dl div { grid-template-columns: 1fr; gap: .15rem; } }
+@media (max-width: 1100px) { .searchPanel { grid-template-columns: minmax(0, 1fr) minmax(18rem, 1fr); } .resultCount { grid-column: 1 / -1; } .playerGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .searchPanel { grid-template-columns: 1fr; align-items: stretch; } .resultCount { grid-column: auto; } .playerGrid, .detailGrid, .facts { grid-template-columns: 1fr; } .playerCard { grid-template-columns: 3.5rem minmax(0, 1fr); } .playerMark { width: 3.5rem; height: 3.5rem; } .sectionHead { align-items: start; flex-direction: column; } .videoRail { grid-auto-columns: min(86vw, 24rem); } }
+@media (max-width: 420px) { .searchRow { grid-template-columns: 1fr; } .playerCard { padding: .85rem; gap: .75rem; } .cardBody dl div { grid-template-columns: 1fr; gap: .15rem; } }

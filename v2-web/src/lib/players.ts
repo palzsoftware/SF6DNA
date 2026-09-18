@@ -31,7 +31,12 @@ function toSummary(
       typeof row.country_code === "string"
         ? row.country_code
         : null,
+    region:
+      typeof row.region === "string"
+        ? row.region
+        : null,
     imageUrl: approvedPlayerImage(slug, row.image_url),
+    aliases: [],
     characters: [],
   };
 }
@@ -46,7 +51,7 @@ export async function listPlayers(): Promise<
   const { data, error } = await supabase
     .from("players")
     .select(
-      "id, slug, display_name, player_type, team_name, country_code, image_url",
+      "id, slug, display_name, player_type, team_name, country_code, region, image_url",
     )
     .eq("status", "published")
     .order("display_name", { ascending: true });
@@ -63,11 +68,21 @@ export async function listPlayers(): Promise<
   const playerIds = summaries.map((player) => player.id);
   if (!playerIds.length) return summaries;
 
-  const { data: links, error: linkError } = await supabase
-    .from("player_characters")
-    .select("player_id, character_id, role, characters!inner(slug, name_ja, status)")
-    .in("player_id", playerIds);
+  const [
+    { data: links, error: linkError },
+    { data: aliasRows, error: aliasError },
+  ] = await Promise.all([
+    supabase
+      .from("player_characters")
+      .select("player_id, character_id, role, characters!inner(slug, name_ja, status)")
+      .in("player_id", playerIds),
+    supabase
+      .from("player_aliases")
+      .select("player_id, alias")
+      .in("player_id", playerIds),
+  ]);
   if (linkError) console.error("[players] list character links failed", linkError.message);
+  if (aliasError) console.error("[players] list aliases failed", aliasError.message);
 
   for (const row of links ?? []) {
     const player = summaries.find((item) => item.id === String(row.player_id));
@@ -79,6 +94,10 @@ export async function listPlayers(): Promise<
       characterName: character.name_ja,
       role: String(row.role ?? "main"),
     });
+  }
+  for (const row of aliasRows ?? []) {
+    const player = summaries.find((item) => item.id === String(row.player_id));
+    if (player && typeof row.alias === "string") player.aliases.push(row.alias);
   }
   return summaries;
 }
@@ -147,11 +166,6 @@ export async function getPlayerBySlug(
     realName:
       typeof player.real_name === "string"
         ? player.real_name
-        : null,
-
-    region:
-      typeof player.region === "string"
-        ? player.region
         : null,
 
     bio:

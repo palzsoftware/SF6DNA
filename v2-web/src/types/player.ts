@@ -5,7 +5,9 @@ export type PlayerSummary = {
   playerType: string | null;
   teamName: string | null;
   countryCode: string | null;
+  region: string | null;
   imageUrl: string | null;
+  aliases: string[];
   characters: PlayerCharacter[];
 };
 
@@ -35,7 +37,6 @@ export type PlayerTournamentResult = {
 
 export type PlayerDetail = PlayerSummary & {
   realName: string | null;
-  region: string | null;
   bio: string | null;
   youtubeUrl: string | null;
   twitchUrl: string | null;

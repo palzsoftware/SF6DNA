@@ -1,0 +1,6 @@
+priority,player_slug,player_name,video_title,url,provider_public,player_confirmed,character_confirmed,event_or_category,duplicate_check,confidence,decision,notes
+P1,tokido,ときど,CEO 2026 Day3 Part2 CAPCOM Pro Tour 2026 Premier,https://youtube.com/live/6-LsC5hynes,YES,YES,YES,CEO 2026,NO_EXISTING_RELATION,CONFIRMED_PRIMARY,CANDIDATE_READY,"既存published Video。CAPCOM公式優勝発表と既存Sourceで、ときど・JP・CEO 2026を照合。DB publish/writeは未実施"
+P1,ryusei,りゅうせい,,,,,,,NO_EXISTING_RELATION,SOURCE_INSUFFICIENT,QUEUE,"既存published Video内に本人とCharacterを同時確認できる候補なし"
+P1,shuto,Shuto,,,,,,,NO_EXISTING_RELATION,SOURCE_INSUFFICIENT,QUEUE,"既存published Video内に本人とCharacterを同時確認できる候補なし"
+P1,sho,Sho / 翔,,,,,,,NO_PLAYER_RECORD,SOURCE_INSUFFICIENT,BLOCKED,"公開Player record未解決"
+P1,kisaragi-ren,如月れん,,,,,,,NO_PLAYER_RECORD,SOURCE_INSUFFICIENT,BLOCKED,"公開Player record未作成。配信者・大会参加記録と競技Player正規化を分離して判断する必要あり"
