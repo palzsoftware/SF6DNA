@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getDiagnosisHistory } from "@/lib/local-user-tools";
+import { releaseFeatures } from "@/lib/release-features";
 import { buildDailyTrainingPlan, getLatestLocalDiagnosisFocus, resolveDailyTrainingSelection, type DailyTrainingItem, type DailyTrainingRequest, type ImprovementFocus } from "@/lib/daily-training";
 import type { DailyTrainingContext } from "@/lib/daily-training-data";
 import styles from "./daily-training-planner.module.css";
@@ -11,6 +12,12 @@ const detailSections = [
   ["setup", "トレモ／リプレイの準備"], ["minute01", "0〜1分"], ["minute13", "1〜3分"], ["minute35", "3〜5分"],
   ["successCondition", "クリア条件"], ["commonFailure", "よくあるつまずき"], ["adjustment", "難しいときの調整"], ["matchFocus", "対戦で意識すること"],
 ] as const;
+
+function buildDailyCoachHref(theme: string, focus: string | null) {
+  const params = new URLSearchParams({ daily: "1", q: theme });
+  if (focus) params.set("focus", focus);
+  return `/coach?${params.toString()}`;
+}
 
 function TrainingCard({ item, index, expanded, complete, onToggle, onComplete }: { item: DailyTrainingItem; index: number; expanded: boolean; complete: boolean; onToggle: () => void; onComplete: () => void }) {
   const panelId = `training-detail-${index}`;
@@ -46,6 +53,7 @@ export function DailyTrainingPlanner({ dateKey, request, context }: { dateKey: s
 
   const selection = resolveDailyTrainingSelection({ request, localFocus: local.focus, primaryIssue: context.primaryIssue });
   const plan = buildDailyTrainingPlan({ dateKey, selection });
+  const coachHref = buildDailyCoachHref(plan.theme, selection.focus);
   const [expandedId, setExpandedId] = useState<string | null>(plan.items[0]?.id ?? null);
   const [completedIds, setCompletedIds] = useState<Set<string>>(() => new Set());
   const activeExpandedId = plan.items.some((item) => item.id === expandedId) ? expandedId : plan.items[0]?.id ?? null;
@@ -71,7 +79,7 @@ export function DailyTrainingPlanner({ dateKey, request, context }: { dateKey: s
     {completed ? <section className={styles.completion} aria-live="polite"><p className={styles.sectionLabel}>15 / 15分</p><h2>今日のメニュー完了</h2><p>おつかれさまでした。次の対戦では、まず1つだけ試してみましょう。</p>{completionFocus ? <p><strong>実戦テーマ：</strong>{completionFocus}</p> : null}</section> : null}
     <section className="info-panel"><p>メニューは日本時間の日付と課題に合わせて選びます。日付が変わった場合や新しく診断した場合は、ページを開き直してください。</p>
       <p className="muted">完了状態はこのページ内だけで使い、保存しません。未確認のキャラクター固有技・コンボ・確定状況は表示しません。</p>
-      <div className="diagnosis-actions"><Link className="button-primary" href="/diagnosis/improvement-check">上達課題を診断する</Link><Link className="button-secondary" href="/diagnosis/history">診断履歴を見る</Link></div>
+      <div className="diagnosis-actions"><Link className="button-primary" href="/diagnosis/improvement-check">上達課題を診断する</Link><Link className="button-secondary" href="/diagnosis/history">診断履歴を見る</Link>{releaseFeatures.aiCoach ? <Link className="button-secondary" href={coachHref}>この練習をAIコーチに相談</Link> : null}</div>
     </section>
   </div>;
 }
