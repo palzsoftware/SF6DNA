@@ -6,7 +6,7 @@ function readProjectFile(path) {
   return readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 }
 
-test("Ryu and JP shared template is enabled on ordinary RC Preview routes only", () => {
+test("approved character shared template is enabled on ordinary RC Preview routes only", () => {
   const page = readProjectFile("src/app/characters/[slug]/page.tsx");
   const combos = readProjectFile("src/app/characters/[slug]/combos/page.tsx");
   const flags = readProjectFile("src/lib/release-features.ts");
@@ -14,7 +14,9 @@ test("Ryu and JP shared template is enabled on ordinary RC Preview routes only",
 
   assert.match(page, /isCharacterDetailV2Route\(character\.slug\)/);
   assert.match(route, /process\.env\.VERCEL_ENV === "preview"/);
-  assert.match(route, /\["ryu", "jp"\]/);
+  for (const slug of ["ryu", "jp", "zangief", "chun-li", "dhalsim", "kimberly", "luke"]) {
+    assert.match(route, new RegExp(`"${slug}"`));
+  }
   assert.match(combos, /!releaseFeatures\.publicStrategyContent && !previewActive/);
   assert.match(flags, /publicStrategyContent:\s*false/);
   assert.doesNotMatch(flags, /publicStrategyContent:\s*true/);

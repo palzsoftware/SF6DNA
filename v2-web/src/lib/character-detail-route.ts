@@ -1,7 +1,16 @@
-const PILOT_CHARACTER_SLUGS = new Set(["ryu", "jp"]);
+const PILOT_CHARACTER_SLUGS = new Set([
+  "ryu",
+  "jp",
+  "zangief",
+  "chun-li",
+  "dhalsim",
+  "kimberly",
+  "luke",
+]);
 
 /**
- * Exposes the Ryu / JP shared template on ordinary URLs in RC Preview only.
+ * Exposes the approved pilot and representative staged rollout on ordinary
+ * URLs in RC Preview only.
  * Production keeps its current release boundary until device re-QA is approved.
  */
 export function isCharacterDetailV2Route(slug: string) {

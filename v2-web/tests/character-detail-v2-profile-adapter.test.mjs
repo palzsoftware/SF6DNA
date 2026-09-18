@@ -37,14 +37,18 @@ function character(overrides = {}) {
   };
 }
 
-test("common adapter maps only existing Character fields and keeps the route closed", () => {
+test("common adapter maps only existing Character fields and opens a safe shell", () => {
   const { adaptCharacterDetailV2Profile } = loadModule("src/lib/character-detail-v2-profile-adapter.ts");
   const result = adaptCharacterDetailV2Profile({ character: character() });
   assert.equal(result.readiness, "SOURCE_REQUIRED");
-  assert.equal(result.canRenderV2, false);
+  assert.equal(result.canRenderV2, true);
   assert.equal(result.shell.characterName, "ザンギエフ");
   assert.equal(result.shell.firstTraining, null);
   assert.deepEqual(Array.from(result.missingFields), ["firstTraining", "gameplan", "rangeActions"]);
+  assert.equal(result.profile.tagline, result.shell.heroTitle);
+  assert.equal(result.profile.firstLesson, "確認できる練習内容はありません。");
+  assert.deepEqual(Array.from(result.profile.gameplan), []);
+  assert.deepEqual(Array.from(result.profile.ranges), []);
 });
 
 test("missing overview blocks V2 instead of inventing Hero copy", () => {
@@ -83,5 +87,7 @@ test("section fallback uses natural Japanese and never falls back to the legacy 
   assert.equal(hasRenderableCharacterDetailV2Data(null), false);
   assert.equal(hasRenderableCharacterDetailV2Data([{}]), true);
   const route = read("src/lib/character-detail-route.ts");
-  assert.match(route, /new Set\(\["ryu", "jp"\]\)/);
+  for (const slug of ["ryu", "jp", "zangief", "chun-li", "dhalsim", "kimberly", "luke"]) {
+    assert.match(route, new RegExp(`"${slug}"`));
+  }
 });

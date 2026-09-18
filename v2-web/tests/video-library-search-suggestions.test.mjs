@@ -85,14 +85,17 @@ test("Ryu, JP, player handles and video category aliases are part of the public 
   assert.match(helper, /query\.toLowerCase\(\) === candidate\.label\.toLowerCase\(\)/);
 });
 
-test("29-character rollout and public strategy flag remain closed", async () => {
+test("representative rollout is allowlisted while the remaining rollout and public strategy flag stay closed", async () => {
   const [page, route, flags] = await Promise.all([
     read("src/app/characters/[slug]/page.tsx"),
     read("src/lib/character-detail-route.ts"),
     read("src/lib/release-features.ts"),
   ]);
   assert.match(page, /isCharacterDetailV2Route\(character\.slug\)/);
-  assert.match(route, /\["ryu", "jp"\]/);
+  for (const slug of ["ryu", "jp", "zangief", "chun-li", "dhalsim", "kimberly", "luke"]) {
+    assert.match(route, new RegExp(`"${slug}"`));
+  }
+  assert.doesNotMatch(route, /"ken"/);
   assert.match(route, /VERCEL_ENV === "preview"/);
   assert.match(flags, /publicStrategyContent:\s*false/);
   assert.doesNotMatch(flags, /publicStrategyContent:\s*true/);

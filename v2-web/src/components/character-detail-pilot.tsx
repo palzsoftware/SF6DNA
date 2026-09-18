@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PilotComboCard } from "@/components/pilot-combo-card";
 import { VideoCard } from "@/components/video-card";
 import { MoveMotionMedia } from "@/components/move-motion-media";
-import { getCharacterDetailV21Profile } from "@/lib/character-detail-v21";
+import type { CharacterDetailV21Profile } from "@/lib/character-detail-v21";
 import { appendDevicePreviewToken, type DevicePreviewBundle } from "@/lib/device-preview";
 import { formatVideoPublishedDate, type VideoSummary } from "@/lib/event-media";
 import { presentSource } from "@/lib/source-presentation";
@@ -67,7 +67,7 @@ function commandLabel(command: NonNullable<DevicePreviewBundle["moves"][number][
 
 export function CharacterDetailPilot({
   characterName, characterSlug, previewToken, bundle, players, videos,
-  archetypeLabel, rangeLabel, difficulty, sources,
+  archetypeLabel, rangeLabel, difficulty, sources, profile,
 }: {
   characterName: string;
   characterSlug: string;
@@ -79,9 +79,8 @@ export function CharacterDetailPilot({
   rangeLabel: string | null;
   difficulty: number | null;
   sources: SourceReference[];
+  profile: CharacterDetailV21Profile;
 }) {
-  const profile = getCharacterDetailV21Profile(characterSlug);
-  if (!profile) return null;
   const comboSamples = bundle.combos.slice(0, 3);
   const setupSamples = bundle.setups.slice(0, 3);
   const sequenceSamples = bundle.sequences.slice(0, 3);
@@ -117,9 +116,9 @@ export function CharacterDetailPilot({
 
       <section className={styles.gameplan} aria-labelledby="pilot-gameplan-heading">
         <div className={styles.sectionTitle}><p className="eyebrow">BASIC GAMEPLAN</p><h2 id="pilot-gameplan-heading">基本の勝ち筋</h2><p>何を使うか、どの距離で使うか、何に注意するかを順番に確認します。</p></div>
-        <ol className={styles.gameplanSteps}>
+        {profile.gameplan.length ? <ol className={styles.gameplanSteps}>
           {profile.gameplan.map((step) => <li key={step.label}><span>{step.label}</span><div><h3>{step.title}</h3><p>{step.body}</p><small>{step.caution}</small></div></li>)}
-        </ol>
+        </ol> : <div className="empty-state"><p>表示できる基本方針はありません。</p></div>}
         {sourceSamples.length ? <div className={styles.inlineSources} tabIndex={0} aria-label="基本方針の情報源（横スクロール）">{sourceSamples.map((source) => {
           const presentation = presentSource(source.sourceType, source.publisher, source.url);
           return <a href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}><span>{presentation.badge}</span>{presentation.cta} ↗</a>;
@@ -190,7 +189,7 @@ export function CharacterDetailPilot({
 
       <section className={styles.rangeSection} id="pilot-neutral-defense" aria-labelledby="pilot-range-heading">
         <div className={styles.sectionTitle}><p className="eyebrow">NEUTRAL / DEFENSE</p><h2 id="pilot-range-heading">距離別の立ち回り</h2><p>相手視点の対策ではなく、まず自分が選ぶ行動を距離ごとに整理しています。</p></div>
-        <div className={styles.rangeTable} role="table" aria-label={`${characterName}の距離別行動`}>{profile.ranges.map((row) => <div role="row" key={row.range}><strong role="rowheader">{row.range}</strong><p role="cell"><span>主に使う技</span>{row.actions}</p><p role="cell"><span>目的</span>{row.purpose}</p><p role="cell"><span>注意点</span>{row.caution}</p></div>)}</div>
+        {profile.ranges.length ? <div className={styles.rangeTable} role="table" aria-label={`${characterName}の距離別行動`}>{profile.ranges.map((row) => <div role="row" key={row.range}><strong role="rowheader">{row.range}</strong><p role="cell"><span>主に使う技</span>{row.actions}</p><p role="cell"><span>目的</span>{row.purpose}</p><p role="cell"><span>注意点</span>{row.caution}</p></div>)}</div> : <div className="empty-state"><p>表示できる距離別の攻略情報はありません。</p></div>}
       </section>
 
       <section className={styles.related} id="related-players">

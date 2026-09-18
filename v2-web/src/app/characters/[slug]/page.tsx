@@ -20,6 +20,7 @@ import { releaseFeatures } from "@/lib/release-features";
 import { getCharacterDetailV21Profile } from "@/lib/character-detail-v21";
 import { getCharacterDetailV21Fixture } from "@/lib/character-detail-v21-fixture";
 import { isCharacterDetailV2Route } from "@/lib/character-detail-route";
+import { adaptCharacterDetailV2Profile } from "@/lib/character-detail-v2-profile-adapter";
 import { presentSource } from "@/lib/source-presentation";
 import type { CharacterGuideSection } from "@/types/character";
 
@@ -98,7 +99,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!character) return { title: "キャラクター情報" };
   const pilotProfile = isCharacterDetailV2Route(character.slug)
-    ? getCharacterDetailV21Profile(character.slug)
+    ? adaptCharacterDetailV2Profile({
+        character,
+        dedicatedProfile: getCharacterDetailV21Profile(character.slug),
+      }).profile
     : null;
 
   return {
@@ -127,7 +131,12 @@ export default async function CharacterPage({
   ]);
   const previewActive = isDevicePreviewRequest(previewToken);
   const pilotRequested = isCharacterDetailV2Route(character.slug);
-  const pilotProfile = pilotRequested ? getCharacterDetailV21Profile(character.slug) : null;
+  const pilotProfile = pilotRequested
+    ? adaptCharacterDetailV2Profile({
+        character,
+        dedicatedProfile: getCharacterDetailV21Profile(character.slug),
+      }).profile
+    : null;
   const [remotePilotBundle, allVideos, moveMedia] = pilotRequested
     ? await Promise.all([getDevicePreviewBundle(character.id, previewToken), listVideos(), getDevicePreviewMoveMotionMedia(character.id, previewToken)])
     : [null, [], []];
@@ -302,7 +311,7 @@ export default async function CharacterPage({
         </section>
       ) : null}
 
-      {pilotBundle ? (
+      {pilotBundle && pilotProfile ? (
         <CharacterDetailPilot
           characterName={character.name}
           characterSlug={character.slug}
@@ -314,6 +323,7 @@ export default async function CharacterPage({
           rangeLabel={character.rangeLabel}
           difficulty={character.difficulty}
           sources={character.sources}
+          profile={pilotProfile}
         />
       ) : (
         <>

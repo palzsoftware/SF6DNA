@@ -16,20 +16,23 @@ function loadRouteGate(environment) {
   return compiled.exports.isCharacterDetailV2Route;
 }
 
-test("ordinary Ryu and JP routes select the V2 shared template in RC Preview", () => {
+test("pilot and representative routes select the V2 shared template in RC Preview", () => {
   const enabled = loadRouteGate("preview");
   assert.equal(enabled("ryu"), true);
   assert.equal(enabled("jp"), true);
+  for (const slug of ["zangief", "chun-li", "dhalsim", "kimberly", "luke"]) {
+    assert.equal(enabled(slug), true);
+  }
   assert.equal(enabled("ken"), false);
 
   const page = read("src/app/characters/[slug]/page.tsx");
   assert.match(page, /isCharacterDetailV2Route\(character\.slug\)/);
   assert.match(page, /pilotProfile\?\.tagline \?\? character\.shortDescription/);
-  assert.match(page, /\{pilotBundle \? \(/);
+  assert.match(page, /\{pilotBundle && pilotProfile \? \(/);
   assert.doesNotMatch(page, /pilotBundle && previewToken/);
 });
 
-test("Production boundary and 29-character rollout remain closed", () => {
+test("Production boundary and remaining 24-character rollout remain closed", () => {
   const enabled = loadRouteGate("production");
   assert.equal(enabled("ryu"), false);
   assert.equal(enabled("jp"), false);

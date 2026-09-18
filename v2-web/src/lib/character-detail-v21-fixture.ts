@@ -9,6 +9,8 @@ const sharedEmpty: Pick<DevicePreviewBundle, "guideSections" | "moves" | "matchu
   training: [],
 };
 
+const representativeSlugs = new Set(["zangief", "chun-li", "dhalsim", "kimberly", "luke"]);
+
 const fixtures: Record<"ryu" | "jp", DevicePreviewBundle> = {
   ryu: {
     ...sharedEmpty,
@@ -47,5 +49,9 @@ const fixtures: Record<"ryu" | "jp", DevicePreviewBundle> = {
 };
 
 export function getCharacterDetailV21Fixture(slug: string): DevicePreviewBundle | null {
-  return slug === "ryu" || slug === "jp" ? fixtures[slug] : null;
+  if (slug === "ryu" || slug === "jp") return fixtures[slug];
+  if (representativeSlugs.has(slug)) {
+    return { ...sharedEmpty, combos: [], setups: [], sequences: [] };
+  }
+  return null;
 }

@@ -25,6 +25,7 @@ export type CharacterDetailV2ProfileAdapterResult = {
   canRenderV2: boolean;
   shell: CharacterDetailV2ProfileShell;
   dedicatedProfile: CharacterDetailV21Profile | null;
+  profile: CharacterDetailV21Profile | null;
   missingFields: string[];
   reason: string;
 };
@@ -73,6 +74,7 @@ export function adaptCharacterDetailV2Profile({
       canRenderV2: true,
       shell,
       dedicatedProfile,
+      profile: dedicatedProfile,
       missingFields,
       reason: "Source-reviewed dedicated V2 profile is available.",
     };
@@ -84,6 +86,7 @@ export function adaptCharacterDetailV2Profile({
       canRenderV2: false,
       shell,
       dedicatedProfile: null,
+      profile: null,
       missingFields,
       reason: "Character overview copy is unavailable; do not expose an empty Hero.",
     };
@@ -95,6 +98,7 @@ export function adaptCharacterDetailV2Profile({
       canRenderV2: false,
       shell,
       dedicatedProfile: null,
+      profile: null,
       missingFields,
       reason: "Existing public Character fields are incomplete.",
     };
@@ -102,10 +106,19 @@ export function adaptCharacterDetailV2Profile({
 
   return {
     readiness: "SOURCE_REQUIRED",
-    canRenderV2: false,
+    canRenderV2: true,
     shell,
     dedicatedProfile: null,
+    profile: {
+      tagline: shell.heroTitle as string,
+      winPath: "基本情報を確認し、技・コンボ・セットプレイは確認できる項目だけを表示します。",
+      firstLesson: "確認できる練習内容はありません。",
+      strength: shell.strength as string,
+      weakness: shell.weakness as string,
+      gameplan: [],
+      ranges: [],
+    },
     missingFields: ["firstTraining", "gameplan", "rangeActions"],
-    reason: "The safe shell is complete, but gameplay guidance requires source review before route enablement.",
+    reason: "The safe overview shell can render; unreviewed gameplay guidance remains withheld.",
   };
 }

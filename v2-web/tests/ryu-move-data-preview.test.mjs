@@ -16,13 +16,15 @@ test("Ryu Preview keeps the Fresh 57-move review isolated from publication state
   assert.doesNotMatch(fixture, /"status": "published"/);
 });
 
-test("Ryu and JP use the same guarded Character Detail move template", () => {
+test("Ryu and JP remain on the guarded Character Detail move template", () => {
   const route = read("src/app/characters/[slug]/page.tsx");
   const routeGate = read("src/lib/character-detail-route.ts");
   const pilot = read("src/components/character-detail-pilot.tsx");
 
   assert.match(route, /isCharacterDetailV2Route\(character\.slug\)/);
-  assert.match(routeGate, /\["ryu", "jp"\]/);
+  assert.match(routeGate, /"ryu"/);
+  assert.match(routeGate, /"jp"/);
+  assert.match(routeGate, /process\.env\.VERCEL_ENV === "preview"/);
   assert.match(pilot, /技一覧・コマンド・主要フレーム/);
   assert.match(pilot, /Classic/);
   assert.match(pilot, /Modern/);
