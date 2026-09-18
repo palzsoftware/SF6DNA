@@ -1,0 +1,22 @@
+source,label,target,route_exists,build_result,notes
+header,キャラクター,/characters,YES,PASS,dynamic
+header,診断,/diagnosis,YES,PASS,static entry
+header,検索,/search,YES,PASS,dynamic
+header,プレイヤー,/players,YES,PASS,dynamic
+header,動画,/videos,YES,PASS,dynamic
+footer,SF6DNAについて,/about,YES,PASS,static
+footer,よくある質問,/faq,YES,PASS,static interactive client island
+footer,フィードバック,/feedback,YES,PASS,no submission backend
+footer,情報源,/sources,YES,PASS,dynamic read-only
+footer,プライバシー,/privacy,YES,PASS,owner review pending
+footer,利用規約,/terms,YES,PASS,owner review pending
+footer,免責事項,/disclaimer,YES,PASS,owner review pending
+footer,更新履歴,/changelog,YES,PASS,static
+footer,お問い合わせ,/contact,YES,PASS,value pending
+footer,アカウント,/auth,YES,PASS,real device QA pending
+feedback,お問い合わせ案内を見る,/contact,YES,PASS,no data submission
+mobile-dock,キャラ,/characters,YES,PASS,existing
+mobile-dock,診断,/diagnosis,YES,PASS,existing
+mobile-dock,検索,/search,YES,PASS,existing
+mobile-dock,選手,/players,YES,PASS,existing
+

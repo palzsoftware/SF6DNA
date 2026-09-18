@@ -1,0 +1,8 @@
+issue_id,classification,scope,status,owner,release_blocker,detail
+QA-001,USER_DEVICE_ONLY,Representative visual routes,OPEN,USER,YES,"375px and desktop visual/interaction acceptance on final Preview"
+QA-002,SOURCE_REQUIRED,GIF pipeline,OPEN,USER,NO,"Capture source gameplay video beginning with Ryu and JP"
+QA-003,GAME_VERIFICATION_REQUIRED,Gameplay claims,OPEN,USER,YES,"Complete 8 game verification sessions"
+QA-004,APPROVAL_REQUIRED,Contact,OPEN,USER,YES,"Decide and provide the real contact value"
+QA-005,APPROVAL_REQUIRED,Production,OPEN,USER,YES,"Final Production approval and environment value confirmation"
+QA-006,P2_POLISH,Cloud browser evidence,DEFERRED,WORK,NO,"Browser executable unavailable in Work runtime; static/responsive/Preview evidence completed"
+
