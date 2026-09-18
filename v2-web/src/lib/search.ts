@@ -135,15 +135,16 @@ export async function searchAcrossContent(rawQuery: string): Promise<SearchResul
 export async function getPublicSearchSuggestionCandidates(): Promise<SearchSuggestionCandidate[]> {
   if (!isConfigured()) return [];
   const supabase = getSupabaseServerClient();
-  const [charactersResult, characterAliasesResult, playersResult, playerAliasesResult, tournamentsResult, videosResult] = await Promise.all([
+  const [charactersResult, characterAliasesResult, playersResult, playerAliasesResult, playerCharactersResult, tournamentsResult, videosResult] = await Promise.all([
     supabase.from("characters").select("id, slug, name_ja, name_en, short_name").eq("status", "published"),
     supabase.from("character_aliases").select("character_id, alias"),
-    supabase.from("players").select("id, slug, display_name, real_name").eq("status", "published"),
+    supabase.from("players").select("id, slug, display_name, real_name, team_name").eq("status", "published"),
     supabase.from("player_aliases").select("player_id, alias"),
+    supabase.from("player_characters").select("player_id, characters!inner(name_ja, name_en, status)"),
     supabase.from("tournaments").select("name, series_name").eq("status", "published"),
     supabase.from("videos").select("title, video_type").eq("status", "published"),
   ]);
-  for (const result of [charactersResult, characterAliasesResult, playersResult, playerAliasesResult, tournamentsResult, videosResult]) {
+  for (const result of [charactersResult, characterAliasesResult, playersResult, playerAliasesResult, playerCharactersResult, tournamentsResult, videosResult]) {
     if (result.error) console.error("[search] suggestion corpus failed", result.error.message);
   }
 
@@ -159,6 +160,15 @@ export async function getPublicSearchSuggestionCandidates(): Promise<SearchSugge
     if (typeof row.alias === "string") values.push(row.alias);
     playerAliases.set(String(row.player_id), values);
   }
+  const playerCharacters = new Map<string, string[]>();
+  for (const row of playerCharactersResult.data ?? []) {
+    const character = row.characters as unknown as { name_ja: string; name_en: string | null; status: string } | null;
+    if (!character || character.status !== "published") continue;
+    const values = playerCharacters.get(String(row.player_id)) ?? [];
+    values.push(character.name_ja);
+    if (character.name_en) values.push(character.name_en);
+    playerCharacters.set(String(row.player_id), values);
+  }
 
   return [
     ...(charactersResult.data ?? []).map((row) => ({
@@ -167,7 +177,7 @@ export async function getPublicSearchSuggestionCandidates(): Promise<SearchSugge
     })),
     ...(playersResult.data ?? []).map((row) => ({
       label: String(row.display_name), value: String(row.display_name), type: "プレイヤー",
-      aliases: [row.real_name, ...(typeof row.slug === "string" ? PLAYER_SUGGESTION_ALIASES[row.slug] ?? [] : []), ...(playerAliases.get(String(row.id)) ?? [])].filter((value): value is string => typeof value === "string" && Boolean(value.trim())),
+      aliases: [row.real_name, row.team_name, ...(typeof row.slug === "string" ? PLAYER_SUGGESTION_ALIASES[row.slug] ?? [] : []), ...(playerAliases.get(String(row.id)) ?? []), ...(playerCharacters.get(String(row.id)) ?? [])].filter((value): value is string => typeof value === "string" && Boolean(value.trim())),
     })),
     ...(tournamentsResult.data ?? []).map((row) => ({
       label: String(row.name), value: String(row.name), type: "大会",

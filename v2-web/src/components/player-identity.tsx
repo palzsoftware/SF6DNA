@@ -16,7 +16,7 @@ export function PlayerIdentity({ name, imageUrl, team, region, characters }: Pro
       {team ? <p>{team}</p> : null}
       {region ? <p>{region}</p> : null}
       {characters.length ? <p>使用キャラクター：{characters.join(" / ")}</p> : null}
-      {!imageUrl ? <p className={styles.mediaNote}>選手ビジュアルは今後のアップデートで追加予定です</p> : null}
+      {!imageUrl || failed === imageUrl ? <p className={styles.mediaNote}>選手ビジュアルは今後のアップデートで追加予定です</p> : null}
     </div>
     {imageUrl && failed !== imageUrl ? <Image src={imageUrl} alt={name} fill
       className={`${styles.photo} ${visible ? styles.loaded : ""}`}

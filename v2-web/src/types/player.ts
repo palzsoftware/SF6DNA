@@ -6,6 +6,7 @@ export type PlayerSummary = {
   teamName: string | null;
   countryCode: string | null;
   imageUrl: string | null;
+  characters: PlayerCharacter[];
 };
 
 export type PlayerCharacter = {
@@ -24,6 +25,14 @@ export type PlayerSource = {
   relationship: string;
 };
 
+export type PlayerTournamentResult = {
+  tournamentId: string;
+  tournamentSlug: string;
+  tournamentName: string;
+  placement: number | null;
+  note: string | null;
+};
+
 export type PlayerDetail = PlayerSummary & {
   realName: string | null;
   region: string | null;
@@ -32,6 +41,6 @@ export type PlayerDetail = PlayerSummary & {
   twitchUrl: string | null;
   xUrl: string | null;
   websiteUrl: string | null;
-  characters: PlayerCharacter[];
   sources: PlayerSource[];
+  tournamentResults: PlayerTournamentResult[];
 };

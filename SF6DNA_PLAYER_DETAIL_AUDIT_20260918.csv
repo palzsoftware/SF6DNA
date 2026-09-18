@@ -1,0 +1,13 @@
+scope,count,result,notes
+published_player_routes,41,PASS,all published records have stable slug and detail route
+character_relation,41/41,PASS,all published players have at least one published Character relation
+source_relation,41/41,PASS,all published players have at least one public Source
+approved_player_image,0/41,PASS,common fallback is intentionally used
+bio,17/41,PARTIAL,missing values use natural empty copy; no inference
+team,13/41,PARTIAL,missing values are explicit; no inference
+region_or_country,26/41,PARTIAL,missing values are explicit; no inference
+external_link,15/41,PARTIAL,only stored verified-looking URLs are rendered
+tournament_result,0/41,PARTIAL,section and loader implemented; current table has no rows
+related_video,0/41,PARTIAL,VideoCard integration implemented; current relation table has no published player links
+source_cta,41/41,PASS,CTA is classified by source metadata with generic fallback only when unknown
+image_fallback,41/41,PASS,approved allowlist is empty and no external photo is rendered

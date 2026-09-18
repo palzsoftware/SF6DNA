@@ -32,6 +32,7 @@ function toSummary(
         ? row.country_code
         : null,
     imageUrl: approvedPlayerImage(slug, row.image_url),
+    characters: [],
   };
 }
 
@@ -58,7 +59,28 @@ export async function listPlayers(): Promise<
     return [];
   }
 
-  return (data ?? []).map((row) => toSummary(row));
+  const summaries = (data ?? []).map((row) => toSummary(row));
+  const playerIds = summaries.map((player) => player.id);
+  if (!playerIds.length) return summaries;
+
+  const { data: links, error: linkError } = await supabase
+    .from("player_characters")
+    .select("player_id, character_id, role, characters!inner(slug, name_ja, status)")
+    .in("player_id", playerIds);
+  if (linkError) console.error("[players] list character links failed", linkError.message);
+
+  for (const row of links ?? []) {
+    const player = summaries.find((item) => item.id === String(row.player_id));
+    const character = row.characters as unknown as { slug: string; name_ja: string; status: string } | null;
+    if (!player || !character || character.status !== "published") continue;
+    player.characters.push({
+      characterId: String(row.character_id),
+      characterSlug: character.slug,
+      characterName: character.name_ja,
+      role: String(row.role ?? "main"),
+    });
+  }
+  return summaries;
 }
 
 export async function getPlayerBySlug(
@@ -90,6 +112,7 @@ export async function getPlayerBySlug(
 
   const [
     { data: links, error: linkError },
+    { data: resultRows, error: resultError },
     sourceLinks,
   ] = await Promise.all([
     supabase
@@ -97,6 +120,11 @@ export async function getPlayerBySlug(
       .select(
         "character_id, role, characters!inner(slug, name_ja, status)",
       )
+      .eq("player_id", player.id),
+
+    supabase
+      .from("tournament_results")
+      .select("tournament_id, placement, note, tournaments!inner(slug, name, status)")
       .eq("player_id", player.id),
 
     getPublicEntitySources(
@@ -111,6 +139,7 @@ export async function getPlayerBySlug(
       linkError.message,
     );
   }
+  if (resultError) console.error("[players] tournament results failed", resultError.message);
 
   return {
     ...toSummary(player),
@@ -180,5 +209,16 @@ export async function getPlayerBySlug(
       sourceType: row.sourceType,
       relationship: row.relationship,
     })),
+    tournamentResults: (resultRows ?? []).flatMap((row) => {
+      const tournament = row.tournaments as unknown as { slug: string; name: string; status: string } | null;
+      if (!tournament || tournament.status !== "published") return [];
+      return [{
+        tournamentId: String(row.tournament_id),
+        tournamentSlug: tournament.slug,
+        tournamentName: tournament.name,
+        placement: typeof row.placement === "number" ? row.placement : null,
+        note: typeof row.note === "string" ? row.note : null,
+      }];
+    }),
   };
 }

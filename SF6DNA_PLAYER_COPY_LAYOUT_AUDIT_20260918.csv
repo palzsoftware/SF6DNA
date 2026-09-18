@@ -1,0 +1,16 @@
+scope,viewport_or_rule,result,notes
+player_list,375,PASS_STATIC,one column cards; long names and values wrap
+player_list,768,PASS_STATIC,two column grid; minmax(0 1fr)
+player_list,1366,PASS_STATIC,three column grid
+player_list,1920,PASS_STATIC,bounded site shell and three column grid
+player_detail,375,PASS_STATIC,hero and fact cards stack; no page overflow masking
+player_detail,768,PASS_STATIC,detail panels stack under existing global contract
+player_detail,1366,PASS_STATIC,two-column hero and detail panels
+player_detail,1920,PASS_STATIC,bounded readable width
+long_player_name,all,PASS,overflow-wrap anywhere and shrinkable columns
+long_team_name,all,PASS,definition values can shrink and wrap
+long_source_label,all,PASS,source CTA and title wrap inside card
+related_video_rail,all,PASS,isolated horizontal rail with bounded card width
+image_fallback,all,PASS,common profile card; no unauthorized image
+public_copy,all,PASS,Japanese labels and natural missing-data sentences
+device_browser,all,PARTIAL,final device QA required

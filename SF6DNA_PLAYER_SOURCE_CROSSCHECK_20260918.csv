@@ -1,0 +1,9 @@
+player_or_scope,db_source_state,fresh_crosscheck,result,next_action
+ときど,official+secondary,VARREL official profile and CAPCOM SFL 2026 team page,CONFIRMED_PRIMARY,retain current team and public links
+りゅうせい,community player database,secondary source only in current evidence,CONFIRMED_SECONDARY,cross-check SCARZ or player official before fact changes
+Sho / 翔,no published record,no unambiguous current record established,UNRESOLVED,do not add automatically
+Ren Kisaragi / 如月れん,no published record,no unambiguous current record established,UNRESOLVED,do not add automatically
+remaining_39_published_players,FGC Top Players or community source,not individually primary-crosschecked in this batch,NEEDS_CROSSCHECK,prioritize visible gaps and high-relation players
+fgamers.jp,new reference registry,accepted as research starting point,CONFIRMED_SECONDARY,never verify from this source alone
+kakuge-checker.com,new reference registry,accepted as research starting point,CONFIRMED_SECONDARY,never verify from this source alone
+sf6wiki.com,new reference registry,accepted as research starting point,NEEDS_CROSSCHECK,never verify from this source alone

@@ -1,0 +1,13 @@
+relation,checked,valid,missing,duplicate_or_wrong,result
+Player_to_published_Character,41,41,0,0,PASS
+Character_to_published_Player,41,41,0,0,PASS
+Player_to_public_Source,41,41,0,0,PASS
+Player_to_published_Video,41,0,41,0,PARTIAL
+Player_to_Tournament_Result,41,0,41,0,PARTIAL
+Priority_Ryu_players,3,3,0,0,PASS
+Priority_JP_players,3,3,0,0,PASS
+Priority_Zangief_players,0,0,0,0,OUT_OF_PUBLISHED_SCOPE
+Priority_ChunLi_players,3,3,0,0,PASS
+Priority_Dhalsim_players,0,0,0,0,OUT_OF_PUBLISHED_SCOPE
+Priority_Yasmine_players,3,3,0,0,PASS
+Priority_CViper_players,3,3,0,0,PASS

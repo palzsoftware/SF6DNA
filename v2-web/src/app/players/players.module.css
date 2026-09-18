@@ -1,0 +1,36 @@
+.playerPage { min-width: 0; }
+.listHero { max-width: 52rem; }
+.playerGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.playerCard { min-width: 0; display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1rem; padding: 1rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); color: inherit; text-decoration: none; }
+.playerMark { display: grid; place-items: center; width: 4.5rem; height: 4.5rem; border-radius: 1rem; background: #17232d; color: #f4f7fa; font-size: 2rem; font-weight: 800; }
+.cardBody { min-width: 0; }
+.cardBody h2 { margin: .15rem 0 .75rem; overflow-wrap: anywhere; }
+.cardBody dl, .facts { display: grid; gap: .55rem; margin: 0 0 1rem; }
+.cardBody dl div, .facts div { min-width: 0; display: grid; grid-template-columns: minmax(5.5rem, auto) minmax(0, 1fr); gap: .75rem; }
+.cardBody dt, .facts dt { color: var(--muted); font-size: .8rem; }
+.cardBody dd, .facts dd { min-width: 0; margin: 0; overflow-wrap: anywhere; }
+.cardBody > span { font-weight: 700; }
+.hero { align-items: stretch; }
+.heroCopy { min-width: 0; }
+.heroCopy > p { max-width: 52rem; overflow-wrap: anywhere; }
+.realName { color: var(--muted); }
+.facts { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1.5rem; }
+.facts div { display: block; padding: .85rem; border: 1px solid var(--border); border-radius: .75rem; }
+.facts dd { margin-top: .25rem; font-weight: 700; }
+.detailGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.characterLinks, .actionLinks { display: flex; flex-wrap: wrap; gap: .75rem; }
+.characterLinks a, .actionLinks a { min-width: 0; padding: .75rem 1rem; border: 1px solid var(--border); border-radius: .75rem; overflow-wrap: anywhere; }
+.characterLinks a { display: grid; text-decoration: none; }
+.characterLinks small { color: var(--muted); }
+.resultList, .sourceList { display: grid; gap: .75rem; padding: 0; list-style: none; }
+.resultList li { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
+.resultList small { flex-basis: 100%; color: var(--muted); }
+.sourceList a { display: grid; gap: .2rem; padding: .8rem; border: 1px solid var(--border); border-radius: .75rem; text-decoration: none; overflow-wrap: anywhere; }
+.sourceList span { color: var(--muted); font-size: .9rem; }
+.section { min-width: 0; }
+.sectionHead { display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
+.sectionHead h2 { margin-top: 0; }
+.videoRail { min-width: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(18rem, 30rem); gap: 1rem; overflow-x: auto; overscroll-behavior-inline: contain; padding: .25rem .1rem 1rem; }
+@media (max-width: 1100px) { .playerGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .playerGrid, .detailGrid, .facts { grid-template-columns: 1fr; } .playerCard { grid-template-columns: 3.5rem minmax(0, 1fr); } .playerMark { width: 3.5rem; height: 3.5rem; } .sectionHead { align-items: start; flex-direction: column; } .videoRail { grid-auto-columns: min(86vw, 24rem); } }
+@media (max-width: 420px) { .playerCard { padding: .85rem; gap: .75rem; } .cardBody dl div { grid-template-columns: 1fr; gap: .15rem; } }
