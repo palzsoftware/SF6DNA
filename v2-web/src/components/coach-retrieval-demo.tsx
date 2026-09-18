@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import {
+  COACH_PERSONAS,
+  DEFAULT_COACH_PERSONA_ID,
+  getCoachPersona,
+  type CoachPersonaId,
+} from "@/lib/coach-foundation";
 import type { SearchResultItem } from "@/types/search";
 
 type SourceItem = {
@@ -23,10 +29,12 @@ type CurrentPatch = {
 
 export function CoachRetrievalDemo({ initialQuestion = "" }: { initialQuestion?: string }) {
   const [question, setQuestion] = useState(initialQuestion.slice(0, 500));
+  const [personaId, setPersonaId] = useState<CoachPersonaId>(DEFAULT_COACH_PERSONA_ID);
   const [loading, setLoading] = useState(false);
   const [evidence, setEvidence] = useState<EvidenceItem[]>([]);
   const [currentPatch, setCurrentPatch] = useState<CurrentPatch | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const selectedPersona = getCoachPersona(personaId);
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -61,7 +69,35 @@ export function CoachRetrievalDemo({ initialQuestion = "" }: { initialQuestion?:
   }
 
   return (
-    <section>
+    <section className="page-stack">
+      <section className="info-panel" aria-labelledby="coach-persona-heading">
+        <p className="eyebrow">COACH ROLE</p>
+        <h2 id="coach-persona-heading">コーチを選ぶ</h2>
+        <p>
+          コーチごとに説明の順番や詳しさを変えます。根拠、Patch、Source、検証状態は同じ分析結果を共有します。
+        </p>
+        <div className="character-columns" role="group" aria-label="AIコーチの役割">
+          {COACH_PERSONAS.map((persona) => (
+            <button
+              className={persona.id === personaId ? "button-primary" : "button-secondary"}
+              type="button"
+              aria-pressed={persona.id === personaId}
+              key={persona.id}
+              onClick={() => setPersonaId(persona.id)}
+            >
+              {persona.displayName}
+            </button>
+          ))}
+        </div>
+        <div className="data-notice">
+          <strong>{selectedPersona.displayName}</strong>
+          <p>{selectedPersona.description}</p>
+          <p className="muted">
+            コーチを切り替えても、verified fact・Source URL・Patch・キャラクター・プレイヤー・Evidence種別は書き換えません。
+          </p>
+        </div>
+      </section>
+
       <form className="coach-form" onSubmit={submit}>
         <label htmlFor="coach-question"><strong>質問</strong></label>
         <textarea
@@ -86,9 +122,22 @@ export function CoachRetrievalDemo({ initialQuestion = "" }: { initialQuestion?:
         </div>
       ) : null}
 
-      {message ? <p className="muted" role="status" aria-live="polite">{message}</p> : null}
+      {message ? (
+        <section className="info-panel" aria-live="polite">
+          <p className="eyebrow">COACH RESPONSE SHELL</p>
+          <h2>{selectedPersona.displayName}</h2>
+          <h3>今回の要点</h3>
+          <p>{message}</p>
+          {evidence.length ? (
+            <p className="muted">根拠として確認できた項目を下に表示します。生成回答はまだ無効です。</p>
+          ) : (
+            <p className="muted">根拠が不足しているため、推測でゲーム事実を補いません。</p>
+          )}
+        </section>
+      ) : null}
+
       {evidence.length ? (
-        <div className="search-result-list">
+        <div className="search-result-list" aria-label="AIコーチの根拠">
           {evidence.map((item) => (
             <article className="search-result" key={`${item.type}:${item.id}`}>
               <span className="search-result__type">{item.type}</span>
