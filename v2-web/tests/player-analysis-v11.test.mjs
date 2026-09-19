@@ -37,11 +37,19 @@ function item(kind, overrides = {}) {
   };
 }
 
-test("player analysis exposes only four attribution evidence kinds", () => {
+test("player analysis exposes only the five approved evidence kinds", () => {
   assert.deepEqual(
     mod.PLAYER_ANALYSIS_EVIDENCE_KINDS,
-    ["PLAYER_STATEMENT", "OBSERVED_BEHAVIOR", "OBSERVED_PATTERN", "AI_INFERENCE"],
+    ["PLAYER_STATEMENT", "OBSERVED_BEHAVIOR", "OBSERVED_PATTERN", "AI_INFERENCE", "SOURCE_BACKED_FACT"],
   );
+});
+
+test("source-backed facts stay reviewed and sourced", () => {
+  const candidate = item("SOURCE_BACKED_FACT");
+  assert.deepEqual(mod.validatePlayerAnalysisItem(candidate), []);
+  candidate.evidence[0].verificationStatus = "verified";
+  assert.ok(mod.validatePlayerAnalysisItem(candidate).some((x) => x.includes("cannot be presented as verified")));
+  assert.equal(mod.playerAnalysisEvidenceLabel("SOURCE_BACKED_FACT"), "出典確認済み情報");
 });
 
 test("source-backed player statement and observations require provenance", () => {

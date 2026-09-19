@@ -16,6 +16,7 @@ export const PLAYER_ANALYSIS_EVIDENCE_KINDS = [
   "OBSERVED_BEHAVIOR",
   "OBSERVED_PATTERN",
   "AI_INFERENCE",
+  "SOURCE_BACKED_FACT",
 ] as const satisfies readonly CoachEvidenceKind[];
 
 export type PlayerAnalysisItem = {
@@ -44,11 +45,12 @@ export function playerAnalysisEvidenceLabel(kind: CoachEvidenceKind): string {
     OBSERVED_BEHAVIOR: "試合から確認できる行動",
     OBSERVED_PATTERN: "複数試合で見られる傾向",
     AI_INFERENCE: "AIによる分析",
+    SOURCE_BACKED_FACT: "出典確認済み情報",
   };
   return labels[kind] ?? "Player分析には使用しないEvidence";
 }
 
-function hasSource(evidence: CoachEvidenceItem): boolean {
+function playerAnalysisHasSource(evidence: CoachEvidenceItem): boolean {
   return Boolean(evidence.sourceId?.trim() || evidence.sourceUrl?.trim());
 }
 
@@ -72,7 +74,11 @@ export function validatePlayerAnalysisItem(item: PlayerAnalysisItem): string[] {
       continue;
     }
 
-    if (!hasSource(evidence)) {
+    if (evidence.kind === "SOURCE_BACKED_FACT" && evidence.verificationStatus === "verified") {
+      errors.push(`${item.id || "player analysis"}: SOURCE_BACKED_FACT cannot be presented as verified`);
+    }
+
+    if (!playerAnalysisHasSource(evidence)) {
       errors.push(`${item.id || "player analysis"}: ${evidence.kind} requires a source reference`);
     }
   }

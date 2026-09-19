@@ -4,9 +4,11 @@ import { readFileSync } from "node:fs";
 import ts from "typescript";
 
 const foundation = readFileSync(new URL("../src/lib/coach-foundation.ts", import.meta.url), "utf8");
+const quality = readFileSync(new URL("../src/lib/coach-response-quality.ts", import.meta.url), "utf8")
+  .replace(/import(?:\s+type)?\s*\{[\s\S]*?\}\s*from\s*"[^\"]+";\n/g, "");
 const composer = readFileSync(new URL("../src/lib/coach-answer-composer.ts", import.meta.url), "utf8")
-  .replace(/import \{[\s\S]*?\} from "@\/lib\/coach-foundation";\n/, "");
-const js = ts.transpileModule(`${foundation}\n${composer}`, {
+  .replace(/import(?:\s+type)?\s*\{[\s\S]*?\}\s*from\s*"[^\"]+";\n/g, "");
+const js = ts.transpileModule(`${foundation}\n${quality}\n${composer}`, {
   compilerOptions: { module: ts.ModuleKind.ES2022, target: ts.ScriptTarget.ES2022 },
 }).outputText;
 const mod = await import(`data:text/javascript;base64,${Buffer.from(js).toString("base64")}`);

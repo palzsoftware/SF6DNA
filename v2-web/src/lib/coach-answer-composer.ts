@@ -10,6 +10,7 @@ import {
   type CoachPersonaId,
   type CoachResponseSection,
 } from "@/lib/coach-foundation";
+import { validateCoachResponseQuality } from "@/lib/coach-response-quality";
 
 export type CoachAnswerItem = {
   id: string;
@@ -167,6 +168,7 @@ export function composeCoachAnswer({ result, personaId = DEFAULT_COACH_PERSONA_I
     referencedEvidenceIds: [...new Set([...result.strengths, ...result.priorityIssues, ...result.drills].flatMap((item) => item.evidenceIds).concat(result.evidence.map((item) => item.id)))],
   };
   const errors = validateCoachComposedAnswer(answer, result.evidence);
+  errors.push(...validateCoachResponseQuality(answer, result.evidence));
   if (errors.length) throw new Error(`Invalid CoachComposedAnswer: ${errors.join("; ")}`);
   return answer;
 }
