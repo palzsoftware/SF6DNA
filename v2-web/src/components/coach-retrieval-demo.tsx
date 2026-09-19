@@ -5,13 +5,10 @@ import Link from "next/link";
 import {
   COACH_PERSONAS,
   DEFAULT_COACH_PERSONA_ID,
-  coachEvidenceKindLabel,
-  formatCoachAnalysis,
   type CoachAnalysisResult,
-  type CoachFormattedResponse,
   type CoachPersonaId,
-  type CoachResponseSection,
 } from "@/lib/coach-foundation";
+import { composeCoachAnswer, type CoachAnswerSection, type CoachComposedAnswer } from "@/lib/coach-answer-composer";
 import {
   adaptUserText,
   analyzeCoachContext,
@@ -21,7 +18,6 @@ import {
 import type { SearchResultItem } from "@/types/search";
 import {
   buildRetrievalQuery,
-  retrievalEvidenceStatusLabel,
   retrievalPatchStatusLabel,
 } from "@/lib/coach-trusted-retrieval";
 import type { CoachEvidenceItem } from "@/lib/coach-foundation";
@@ -53,32 +49,18 @@ function contextChips(context: CoachInputContext): string[] {
   return chips;
 }
 
-function AnalysisSection({ section, response }: { section: CoachResponseSection; response: CoachFormattedResponse }) {
-  if (section === "summary") {
-    return <section className="info-panel"><h3>今回の要点</h3><p>{response.lead}</p><p>{response.summary}</p></section>;
-  }
-  if (section === "strengths") {
-    if (!response.strengths.length) return null;
-    return <section className="info-panel"><h3>確認できた強み</h3><ul>{response.strengths.map((item) => <li key={item.id}><strong>{item.title}</strong> — {item.detail}</li>)}</ul></section>;
-  }
-  if (section === "priorityIssues") {
-    if (!response.priorityIssues.length) return null;
-    return <section className="info-panel"><h3>優先して確認する課題</h3><ol>{response.priorityIssues.map((item) => <li key={item.id}><strong>{item.title}</strong><p>{item.detail}</p></li>)}</ol></section>;
-  }
-  if (section === "drills") {
-    if (!response.drills.length) return null;
-    return <section className="info-panel"><h3>練習候補</h3>{response.drills.map((item) => <article key={item.id}><strong>{item.title}</strong><p>{item.purpose}</p><ul>{item.steps.map((step) => <li key={step}>{step}</li>)}</ul><p><strong>成功条件:</strong> {item.successCondition}</p></article>)}</section>;
-  }
-  if (section === "evidence") {
-    if (!response.evidence.length) return null;
-    return <section className="info-panel"><h3>Evidence</h3><ul>{response.evidence.map((item) => <li key={item.id}><strong>{coachEvidenceKindLabel(item.kind)}</strong><p className="muted">{retrievalEvidenceStatusLabel(item)}</p><p>{item.statement}</p>{item.sourceUrl ? <a className="text-link" href={item.sourceUrl} target="_blank" rel="noopener noreferrer">情報源を見る ↗</a> : null}{item.patch ? <p className="muted">Patch: {item.patch}</p> : null}{item.patchStatus ? <p className="muted">{retrievalPatchStatusLabel(item.patchStatus)}</p> : null}{response.persona.id === "research" && (item.sourceType || item.sourceReliability) ? <p className="muted">Source: {item.sourceType ?? "不明"} / reliability: {item.sourceReliability ?? "不明"}</p> : null}</li>)}</ul></section>;
-  }
-  if (section === "uncertainty") {
-    if (!response.uncertainty.length) return null;
-    return <section className="info-panel"><h3>未確認・注意点</h3><ul>{response.uncertainty.map((item) => <li key={item}>{item}</li>)}</ul></section>;
-  }
-  if (!response.nextActions.length) return null;
-  return <section className="info-panel"><h3>次に行うこと</h3><ol>{response.nextActions.map((item) => <li key={item}>{item}</li>)}</ol></section>;
+function AnswerSection({ section, answer }: { section: CoachAnswerSection; answer: CoachComposedAnswer }) {
+  const evidence = new Map(answer.evidenceSummary.map((item) => [item.evidenceId, item]));
+  return <section className="info-panel"><h3>{section.title}</h3>
+    {section.id === "summary" ? <p>{answer.lead}</p> : null}
+    <ul>{section.items.map((item) => <li key={item.id}>{item.title ? <strong>{item.title}</strong> : null}<p>{item.text}</p>
+      {item.details.length ? <ul>{item.details.map((detail) => <li key={detail}>{detail}</li>)}</ul> : null}
+      {section.id === "evidence" ? item.evidenceIds.map((id) => {
+        const summary = evidence.get(id);
+        return summary ? <div key={id}>{summary.patchStatus ? <p className="muted">{retrievalPatchStatusLabel(summary.patchStatus)}</p> : null}{summary.sourceReference ? <a className="text-link" href={summary.sourceReference.url} target="_blank" rel="noopener noreferrer">{summary.sourceReference.label} ↗</a> : null}{answer.persona.id === "research" && summary.sourceReference ? <p className="muted">Source: {summary.sourceReference.sourceType ?? "不明"} / reliability: {summary.sourceReference.sourceReliability ?? "不明"}</p> : null}</div> : null;
+      }) : null}
+    </li>)}</ul>
+  </section>;
 }
 
 export function CoachRetrievalDemo({
@@ -96,7 +78,7 @@ export function CoachRetrievalDemo({
   const [currentPatch, setCurrentPatch] = useState<CurrentPatch | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [analysisResult, setAnalysisResult] = useState<CoachAnalysisResult>(() => analyzeCoachContext(baseContext));
-  const formatted = useMemo(() => formatCoachAnalysis(analysisResult, personaId), [analysisResult, personaId]);
+  const composedAnswer = useMemo(() => composeCoachAnswer({ result: analysisResult, personaId }), [analysisResult, personaId]);
   const chips = useMemo(() => contextChips(baseContext), [baseContext]);
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
@@ -180,7 +162,7 @@ export function CoachRetrievalDemo({
         {chips.length ? <div className="character-columns">{chips.map((chip) => <span className="data-notice" key={chip}>{chip}</span>)}</div> : <p>診断結果や今日の練習などのContextはまだありません。質問だけでも本人発言として安全に扱えます。</p>}
       </section>
 
-      {formatted.sectionOrder.map((section) => <AnalysisSection key={section} section={section} response={formatted} />)}
+      {composedAnswer.sections.map((section) => <AnswerSection key={section.id} section={section} answer={composedAnswer} />)}
 
       <form className="coach-form" onSubmit={submit}>
         <label htmlFor="coach-question"><strong>質問</strong></label>

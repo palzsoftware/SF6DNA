@@ -128,7 +128,8 @@ test("client uses three-card plan, safe explanatory text, and existing design cl
   assert.match(clientSource, /今日の15分練習/);
   assert.match(clientSource, /5分 × 3課題/);
   assert.match(clientSource, /plan\.items\.map/);
-  assert.doesNotMatch(clientSource, /<table|dangerouslySetInnerHTML|user_id|AIコーチ|listTrainingLibrary/);
+  assert.doesNotMatch(clientSource, /<table|dangerouslySetInnerHTML|user_id|listTrainingLibrary/);
+  assert.match(clientSource, /releaseFeatures\.aiCoach\s*\?\s*<Link[^>]+href=\{coachHref\}>この練習をAIコーチに相談/);
   assert.match(clientSource, /完了状態はこのページ内だけで使い、保存しません/);
 });
 

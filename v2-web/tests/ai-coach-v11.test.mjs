@@ -90,5 +90,6 @@ test("persona selector is wired to the safe shared config", () => {
   assert.match(ui, /COACH_PERSONAS\.map/);
   assert.match(ui, /aria-pressed/);
   assert.match(ui, /DEFAULT_COACH_PERSONA_ID/);
-  assert.match(ui, /生成回答はまだ無効/);
+  assert.match(ui, /composeCoachAnswer/);
+  assert.match(ui, /composedAnswer\.sections\.map/);
 });
