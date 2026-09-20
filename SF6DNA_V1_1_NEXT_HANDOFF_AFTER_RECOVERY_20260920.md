@@ -9,6 +9,7 @@ Date: 2026-09-20
 - Privacy/legal/FAQ delta.
 - Player Analysis public gate and UI shell.
 - Related Video public contract.
+- Vercel Preview READY at `https://sf-6-94p21ajlk-somas11620-9368.vercel.app` for functional SHA `e8e6149c02ddcf576a4dee65d95b37397fcd4b0f`.
 
 ## HOLD / approval required
 
@@ -17,5 +18,6 @@ Date: 2026-09-20
 3. Real Player Analysis publication until each Player has exact, sufficient public evidence.
 4. Related Video DB schema/migration and availability backfill.
 5. Production enablement and any Ver.1.0 boundary change.
+6. Authenticated remote-browser visual QA of `/coach`; Vercel Authentication returned HTTP 302 in the available fetch path.
 
 `aiCoach=false`, `training=false`, and `publicStrategyContent=false` remain the default public boundary.

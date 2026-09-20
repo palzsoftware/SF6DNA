@@ -15,6 +15,10 @@ Date: 2026-09-20
 | Production build | PASS |
 | Preview-equivalent build | PASS |
 | Preview-equivalent page/API smoke | 200 / 200 PASS |
+| Vercel deployment | READY |
+| Functional Preview SHA match | PASS (`e8e6149c...`) |
+| Remote root smoke | HTTP 200 PASS |
+| Remote `/coach` browser smoke | BLOCKED — Vercel Authentication HTTP 302 |
 | `git diff --check` | PASS |
 
 The previous 340-test count was a historical reference. The fresh suite contains 344 tests; no test was deleted, skipped, or added merely to match a count.

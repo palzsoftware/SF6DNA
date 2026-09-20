@@ -7,7 +7,8 @@ LOST_COMMIT = 935f58667b5e9c3def2a5b4fcb63fc37276feaee
 LOST_COMMIT_RECOVERED_EXACTLY = NO
 FUNCTIONAL_REBUILD = YES
 REMOTE_BASE = 6cae16f3f3b3d2ff1e44e08328c1622f3fcb60cb
-NEW_REMOTE_SHA = COMMIT_CONTAINING_THIS_EVIDENCE
+FUNCTIONAL_REBUILD_SHA = e8e6149c02ddcf576a4dee65d95b37397fcd4b0f
+FINAL_EVIDENCE_SHA = COMMIT_CONTAINING_THIS_EVIDENCE
 ```
 
 The lost Git object was not recreated. Its functional scope was rebuilt from a fresh checkout of the remote base with the current Phase 1–7 contracts as the source of truth.
@@ -29,5 +30,15 @@ The lost Git object was not recreated. Its functional scope was rebuilt from a f
 - Provider: `deterministic`, `completed`, no fallback.
 - External generation remains `generationEnabled=false`.
 - Default release flags remain literal `false`.
+
+## Vercel Preview
+
+- Deployment: `dpl_8cwSRYbrvuR4h62RnngnoVuFsyXH`.
+- URL: `https://sf-6-94p21ajlk-somas11620-9368.vercel.app`.
+- Status: READY.
+- Deployment commit SHA: `e8e6149c02ddcf576a4dee65d95b37397fcd4b0f` (matches the functional rebuild Remote SHA).
+- Root smoke: HTTP 200.
+- `/coach` remote browser smoke: BLOCKED by Vercel Authentication (HTTP 302 after temporary-access retry).
+- Alternative verification: identical Preview-environment build served locally; `/coach` and `/api/coach/retrieve` both HTTP 200.
 
 No DB write, migration, RLS, RPC, GRANT, Production, `main`, `sf6dna-v2`, or Ver.1.0 RC change was made.
