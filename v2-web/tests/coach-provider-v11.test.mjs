@@ -92,3 +92,20 @@ test("audit event contains metadata only, never raw prompt content", async () =>
   assert.deepEqual(Object.keys(event), ["providerId", "model", "latencyMs", "success", "fallback", "errorCategory", "evidenceCount", "persona"]);
   assert.doesNotMatch(JSON.stringify(event), /対空|通常の質問/);
 });
+
+test("local execution guard rejects duplicates and excess concurrency", () => {
+  const guard = new mod.LocalProviderExecutionGuard();
+  assert.equal(guard.enter("first", 1), null);
+  assert.equal(guard.enter("first", 2), "duplicate");
+  assert.equal(guard.enter("second", 2), null);
+  assert.equal(guard.enter("third", 2), "concurrency");
+  guard.leave();
+  guard.leave();
+});
+
+test("provider unit estimate is derived from bounded prompt input", () => {
+  const fixture = GOLDEN_COACH_FIXTURES[0].result;
+  const input = inputFor(fixture);
+  assert.ok(mod.estimateProviderUnits(input) > 0);
+  assert.ok(mod.estimateProviderUnits(input) <= mod.DEFAULT_PROVIDER_POLICY.maxEstimatedUnitsPerRequest);
+});

@@ -36,6 +36,14 @@ export default function DisclaimerPage() {
       </section>
 
       <section>
+        <h2>AIコーチ・プレイヤー分析</h2>
+        <p>
+          AIによる回答や分析は、公開情報と入力内容を整理する補助機能です。誤りや解釈の違いが含まれる可能性があります。
+          AIによる推論は本人の発言ではなく、根拠が不足する内容を確認済みの事実として保証するものではありません。
+        </p>
+      </section>
+
+      <section>
         <h2>権利表記</h2>
         <p>
           Street Fighter、Street Fighter 6および関連する名称・画像・商標等の権利は、

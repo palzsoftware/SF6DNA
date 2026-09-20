@@ -26,10 +26,13 @@ export type VideoSummary = {
   events: string[];
   characters: string[];
   players: string[];
+  playerIds: string[];
   categories: string[];
   level: "beginner" | "intermediate" | "advanced" | "unknown";
   viewCount: number | null;
   viewCountCheckedAt: string | null;
+  availability: "UNKNOWN";
+  availabilityCheckedAt: null;
 };
 
 function youtubeThumbnail(url: string, externalId: string | null): string | null {
@@ -176,10 +179,16 @@ export async function listVideos(): Promise<VideoSummary[]> {
       ...related.flatMap((relation) => relation.entity_type === "player" ? [playerNames.get(String(relation.entity_id))].filter((name): name is string => Boolean(name)) : []),
       ...relatedParticipants.flatMap((participant) => participant.player_id ? [playerNames.get(String(participant.player_id))].filter((name): name is string => Boolean(name)) : []),
     ])),
+    playerIds: Array.from(new Set([
+      ...related.flatMap((relation) => relation.entity_type === "player" ? [String(relation.entity_id)] : []),
+      ...relatedParticipants.flatMap((participant) => participant.player_id ? [String(participant.player_id)] : []),
+    ])),
     categories: typeof row.video_type === "string" ? [row.video_type] : [],
     level: "unknown",
     viewCount: null,
     viewCountCheckedAt: null,
+    availability: "UNKNOWN",
+    availabilityCheckedAt: null,
   };
   });
 }

@@ -3,16 +3,37 @@ import type { CoachEvidenceItem } from "@/lib/coach-foundation";
 
 export type CoachProviderUsage = { inputUnits: number; outputUnits: number };
 export type CoachProviderResult = { draft: CoachProviderDraft; providerId: string; model: string | null; latencyMs: number; usage: CoachProviderUsage | null; finishReason: "completed" | "fallback"; fallbackReason: CoachProviderErrorCategory | null };
-export type CoachProviderErrorCategory = "timeout" | "provider_error" | "invalid_schema" | "post_validation" | "rate_limit" | "cost_guard";
+export type CoachProviderErrorCategory = "timeout" | "provider_error" | "invalid_schema" | "post_validation" | "rate_limit" | "cost_guard" | "duplicate" | "concurrency";
 export interface CoachProvider { readonly id: string; generate(input: CoachPromptInput, signal?: AbortSignal): Promise<CoachProviderDraft>; }
 
-export const DEFAULT_PROVIDER_POLICY = { timeoutMs: 4_000, maxRetries: 0, requestsPerMinute: 6, requestsPerDay: 60, maxEstimatedUnitsPerRequest: 8_000 } as const;
+export const DEFAULT_PROVIDER_POLICY = { timeoutMs: 4_000, maxRetries: 0, requestsPerMinute: 6, requestsPerDay: 60, maxEstimatedUnitsPerRequest: 8_000, maxConcurrent: 2, duplicateWindowMs: 10_000 } as const;
 export type ProviderBudgetState = { requestsLastMinute: number; requestsToday: number; estimatedUnits: number };
 
 export function evaluateProviderBudget(state: ProviderBudgetState): { allowed: boolean; reason: "rate_limit" | "cost_guard" | null } {
   if (state.requestsLastMinute >= DEFAULT_PROVIDER_POLICY.requestsPerMinute || state.requestsToday >= DEFAULT_PROVIDER_POLICY.requestsPerDay) return { allowed: false, reason: "rate_limit" };
   if (state.estimatedUnits > DEFAULT_PROVIDER_POLICY.maxEstimatedUnitsPerRequest) return { allowed: false, reason: "cost_guard" };
   return { allowed: true, reason: null };
+}
+
+export function estimateProviderUnits(input: CoachPromptInput): number {
+  const text = JSON.stringify(input);
+  return Math.ceil(text.length / 4);
+}
+
+export class LocalProviderExecutionGuard {
+  private active = 0;
+  private readonly recent = new Map<string, number>();
+
+  enter(requestKey: string, now = Date.now()): "duplicate" | "concurrency" | null {
+    for (const [key, timestamp] of this.recent) if (now - timestamp > DEFAULT_PROVIDER_POLICY.duplicateWindowMs) this.recent.delete(key);
+    if (this.active >= DEFAULT_PROVIDER_POLICY.maxConcurrent) return "concurrency";
+    if (this.recent.has(requestKey)) return "duplicate";
+    this.active += 1;
+    this.recent.set(requestKey, now);
+    return null;
+  }
+
+  leave() { this.active = Math.max(0, this.active - 1); }
 }
 
 function deterministicDraft(input: CoachPromptInput): CoachProviderDraft {
@@ -51,12 +72,14 @@ function timeout<T>(promise: Promise<T>, timeoutMs: number, onTimeout: () => voi
   return new Promise((resolve, reject) => { const timer = setTimeout(() => { onTimeout(); reject(new Error("provider timeout")); }, timeoutMs); promise.then((value) => { clearTimeout(timer); resolve(value); }, (error) => { clearTimeout(timer); reject(error); }); });
 }
 
-export async function runCoachProvider({ provider, input, evidence, timeoutMs = DEFAULT_PROVIDER_POLICY.timeoutMs, budgetState = { requestsLastMinute: 0, requestsToday: 0, estimatedUnits: 0 } }: { provider: CoachProvider; input: CoachPromptInput; evidence: CoachEvidenceItem[]; timeoutMs?: number; budgetState?: ProviderBudgetState }): Promise<CoachProviderResult> {
+export async function runCoachProvider({ provider, input, evidence, timeoutMs = DEFAULT_PROVIDER_POLICY.timeoutMs, budgetState, guard, requestKey }: { provider: CoachProvider; input: CoachPromptInput; evidence: CoachEvidenceItem[]; timeoutMs?: number; budgetState?: ProviderBudgetState; guard?: LocalProviderExecutionGuard; requestKey?: string }): Promise<CoachProviderResult> {
   const started = Date.now();
-  const budget = evaluateProviderBudget(budgetState);
+  const budget = evaluateProviderBudget(budgetState ?? { requestsLastMinute: 0, requestsToday: 0, estimatedUnits: estimateProviderUnits(input) });
   let fallbackReason: CoachProviderErrorCategory | null = budget.reason;
   let draft: CoachProviderDraft | null = null;
-  if (budget.allowed) {
+  const guardReason = budget.allowed && guard && requestKey ? guard.enter(requestKey) : null;
+  if (guardReason) fallbackReason = guardReason;
+  if (budget.allowed && !guardReason) {
     try {
       const controller = new AbortController();
       const generated = await timeout(provider.generate(input, controller.signal), timeoutMs, () => controller.abort());
@@ -66,6 +89,7 @@ export async function runCoachProvider({ provider, input, evidence, timeoutMs = 
         else draft = repairProviderDraft(generated, evidence);
       }
     } catch (error) { fallbackReason = error instanceof Error && error.message === "provider timeout" ? "timeout" : "provider_error"; }
+    finally { if (guard && requestKey) guard.leave(); }
   }
   if (!draft) draft = deterministicDraft(input);
   return { draft, providerId: draft && !fallbackReason ? provider.id : "deterministic", model: null, latencyMs: Math.max(0, Date.now() - started), usage: null, finishReason: fallbackReason ? "fallback" : "completed", fallbackReason };

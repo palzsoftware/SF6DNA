@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import { attachSourcesToEvidence, getCurrentPatch } from "@/lib/coach-evidence";
 import { releaseFeatures } from "@/lib/release-features";
+import { isCoachSurfaceEnabled } from "@/lib/coach-preview-activation";
+import { runDeterministicCoachPreviewE2E } from "@/lib/coach-preview-e2e";
+import { COACH_PERSONAS, DEFAULT_COACH_PERSONA_ID, type CoachPersonaId } from "@/lib/coach-foundation";
+import { adaptUserText, analyzeCoachContext, emptyCoachInputContext } from "@/lib/coach-shared-analysis";
 import { searchAcrossContent } from "@/lib/search";
 import {
   buildRetrievalEvidenceList,
@@ -24,13 +28,13 @@ function bestSourceRank(sources: Array<{ reliabilityLevel: string | null }>) {
 }
 
 export async function POST(request: Request) {
-  if (!releaseFeatures.aiCoach) {
+  if (!isCoachSurfaceEnabled(releaseFeatures.aiCoach)) {
     return NextResponse.json(
       { error: "feature_disabled" },
       { status: 404 },
     );
   }
-let body: unknown;
+  let body: unknown;
   try {
     body = await request.json();
   } catch {
@@ -49,6 +53,13 @@ let body: unknown;
   if (question.length > 500) {
     return NextResponse.json({ error: "question_too_long" }, { status: 400 });
   }
+
+  const requestedPersona = body && typeof body === "object" && "personaId" in body
+    ? String((body as { personaId?: unknown }).personaId ?? "")
+    : DEFAULT_COACH_PERSONA_ID;
+  const personaId: CoachPersonaId = COACH_PERSONAS.some((persona) => persona.id === requestedPersona)
+    ? requestedPersona as CoachPersonaId
+    : DEFAULT_COACH_PERSONA_ID;
 
   const requestedRetrievalQuery =
     body && typeof body === "object" && "retrievalQuery" in body
@@ -90,6 +101,14 @@ let body: unknown;
   }
 
   const ready = Boolean(currentPatch && evidence.length);
+  const userMessage = adaptUserText(question);
+  const analysis = analyzeCoachContext({
+    ...emptyCoachInputContext(personaId),
+    ...(userMessage ? { userMessage } : {}),
+    retrievalEvidence: retrievalBundle.evidence,
+    retrievalUncertainty: retrievalBundle.uncertainty,
+  });
+  const previewE2E = await runDeterministicCoachPreviewE2E(analysis, personaId);
 
   return NextResponse.json({
     question,
@@ -105,6 +124,13 @@ let body: unknown;
         ? "公開品質ゲートを通過し、Sourceが紐付いた根拠データが見つかりませんでした。"
         : "Current PatchとSourceを確認できるSF6DNA内部データのみを根拠候補として返しています。",
     generationEnabled: false,
+    deterministicPreviewEnabled: true,
+    providerDraft: previewE2E.provider.draft,
+    providerMeta: {
+      providerId: previewE2E.provider.providerId,
+      finishReason: previewE2E.provider.finishReason,
+      fallbackReason: previewE2E.provider.fallbackReason,
+    },
     note: "Trusted retrieval is active. Generative answers remain disabled until verified gameplay data is sufficiently populated and the backend AI contract is finalized.",
   });
 }

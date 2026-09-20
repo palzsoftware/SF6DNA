@@ -336,7 +336,7 @@ export function analyzeCoachContext(context: CoachInputContext): CoachAnalysisRe
 
   const uncertainty: string[] = [...(context.retrievalUncertainty ?? [])];
   if (!evidence.length) uncertainty.push("分析に使えるEvidenceがまだありません。入力・診断・Daily・公開Sourceのいずれかが必要です。");
-  if (context.userMessage?.requiresVerification) uncertainty.push("ユーザー入力に含まれるゲーム事実は未検証です。PLAYER_STATEMENTのまま保持し、別Sourceなしでゲーム事実へ昇格しません。");
+  if (context.userMessage?.requiresVerification) uncertainty.push("ユーザー入力に含まれるゲーム事実は未検証です。本人の入力として保持し、別の情報源なしではゲーム事実として断定しません。");
   if (context.diagnosisResult && !context.diagnosisResult.primaryIssues.length && !context.diagnosisResult.secondaryIssues.length) {
     uncertainty.push("この診断Contextは改善課題として解釈していません。診断種別の意味を変えずに保持しています。");
   }

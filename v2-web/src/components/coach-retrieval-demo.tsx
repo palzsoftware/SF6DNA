@@ -21,6 +21,7 @@ import {
   retrievalPatchStatusLabel,
 } from "@/lib/coach-trusted-retrieval";
 import type { CoachEvidenceItem } from "@/lib/coach-foundation";
+import type { CoachProviderDraft } from "@/lib/coach-prompt-contract";
 
 type SourceItem = {
   title: string;
@@ -77,6 +78,7 @@ export function CoachRetrievalDemo({
   const [retrievalEvidence, setRetrievalEvidence] = useState<EvidenceItem[]>([]);
   const [currentPatch, setCurrentPatch] = useState<CurrentPatch | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const [providerDraft, setProviderDraft] = useState<CoachProviderDraft | null>(null);
   const [analysisResult, setAnalysisResult] = useState<CoachAnalysisResult>(() => analyzeCoachContext(baseContext));
   const composedAnswer = useMemo(() => composeCoachAnswer({ result: analysisResult, personaId }), [analysisResult, personaId]);
   const chips = useMemo(() => contextChips(baseContext), [baseContext]);
@@ -87,6 +89,7 @@ export function CoachRetrievalDemo({
     setMessage(null);
     setRetrievalEvidence([]);
     setCurrentPatch(null);
+    setProviderDraft(null);
 
     const userMessage = adaptUserText(question);
     const requestContext: CoachInputContext = {
@@ -111,6 +114,7 @@ export function CoachRetrievalDemo({
             characterId: retrievalPlan.exactCharacterId,
             playerId: retrievalPlan.exactPlayerId,
           },
+          personaId,
         }),
       });
       const data = await response.json();
@@ -120,6 +124,7 @@ export function CoachRetrievalDemo({
       }
       setRetrievalEvidence(Array.isArray(data.evidence) ? data.evidence : []);
       setCurrentPatch(data.currentPatch ?? null);
+      setProviderDraft(data.providerDraft && typeof data.providerDraft.headline === "string" ? data.providerDraft as CoachProviderDraft : null);
       const normalizedRetrievalEvidence = Array.isArray(data.retrievalEvidence) ? data.retrievalEvidence as CoachEvidenceItem[] : [];
       const retrievalUncertainty = Array.isArray(data.retrievalUncertainty)
         ? data.retrievalUncertainty.filter((item: unknown): item is string => typeof item === "string")
@@ -163,6 +168,8 @@ export function CoachRetrievalDemo({
       </section>
 
       {composedAnswer.sections.map((section) => <AnswerSection key={section.id} section={section} answer={composedAnswer} />)}
+
+      {providerDraft ? <section className="info-panel" aria-labelledby="coach-provider-answer"><p className="eyebrow">PREVIEW ANSWER</p><h2 id="coach-provider-answer">{providerDraft.headline}</h2>{providerDraft.sections.map((section, index) => <div key={`${section.title}:${index}`}><h3>{section.title}</h3><p>{section.body}</p></div>)}</section> : null}
 
       <form className="coach-form" onSubmit={submit}>
         <label htmlFor="coach-question"><strong>質問</strong></label>
