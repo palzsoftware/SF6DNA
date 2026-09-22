@@ -13,8 +13,8 @@ Implemented:
 - Account email prefill from server-validated user
 - In-page validation, pending, success, and error states
 - Input preservation on failure
-- `/api/contact` fail-closed contract (`503 delivery_not_configured`)
-- Explicit notice that data is not sent or stored
+- `/api/contact` delivery contract through the validated Supabase RPC
+- Explicit notice describing stored fields and retention
 - Existing mailto fallback
 
 Implemented after approval:

@@ -13,7 +13,7 @@
 1. Push the exact tested tree to the RC branch.
 2. Confirm Vercel READY and commit SHA match.
 3. Run protected Preview fetch/smoke.
-4. After backend approval, connect Contact delivery and update Privacy/Terms to the actual provider/retention contract.
+4. Contact delivery, Privacy/Terms alignment and 180-day retention are complete; run Guest/Auth device QA only.
 
 ## User-only actions
 
