@@ -33,8 +33,8 @@ test("FAQ and Auth copy match currently released behavior", () => {
   const faq = read("src/app/faq/page.tsx");
   const auth = read("src/app/auth/page.tsx");
   assert.match(faq, /AIコーチは現在公開していません/);
-  assert.match(auth, /完了した診断結果をアカウントに保存できます/);
-  assert.match(auth, /この端末のブラウザに保存され、別の端末には自動で引き継がれません/);
+  assert.match(auth, /診断結果をアカウントに保存できます/);
+  assert.match(auth, /この端末のブラウザに保存されるため、別の端末には自動で引き継がれません/);
 });
 
 test("video cards expose YouTube, share and reversible local watched state", () => {

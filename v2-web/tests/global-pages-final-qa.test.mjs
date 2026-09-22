@@ -26,8 +26,9 @@ test("footer groups global links and includes feedback", async () => {
 
 test("feedback routes users to the Contact form", async () => {
   const page = await read("src/app/feedback/page.tsx");
-  assert.match(page, /お問い合わせページの案内に沿って/);
+  assert.match(page, /お問い合わせフォームから送信できます/);
   assert.match(page, /href="\/contact"/);
+  assert.match(page, /問い合わせフォームへ/);
 });
 
 test("public contact is centralized and used consistently across contact and legal pages", async () => {

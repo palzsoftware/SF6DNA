@@ -26,7 +26,7 @@ import type { CharacterGuideSection } from "@/types/character";
 
 const quickActions = [
   ["プレイヤー", "参考プレイヤーを探す", "/players", "PRO"],
-  ["動画", "関連動画を確認する", "/videos", "VIDEO"],
+  ["動画", "関連動画を見る", "/videos", "VIDEO"],
 ] as const;
 
 const guideGroups = [
@@ -216,7 +216,7 @@ export default async function CharacterPage({
             <span className="character-home-action__code">{code}</span>
             <strong>{label}</strong>
             <span>{description}</span>
-            <span className="character-home-action__arrow">開く →</span>
+            <span className="character-home-action__arrow">{label}を見る →</span>
           </Link>
         ))}
       </section> : null}

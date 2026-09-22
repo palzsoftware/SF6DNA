@@ -35,7 +35,7 @@ export function ContactForm({ defaultEmail = "" }: { defaultEmail?: string }) {
       }
       setMessage("");
       setTargetUrl("");
-      setStatus("お問い合わせを受け付けました。入力内容はこの画面に再表示されません。");
+      setStatus("お問い合わせを受け付けました。");
     } catch {
       setStatus("送信できませんでした。入力内容を残したまま、通信環境を確認してもう一度お試しください。");
     } finally {
@@ -50,7 +50,7 @@ export function ContactForm({ defaultEmail = "" }: { defaultEmail?: string }) {
       <label><span>返信先メールアドレス</span><input required type="email" autoComplete="email" value={email} onChange={(event) => setEmail(event.target.value)} /></label>
       <label><span>対象ページのURL（任意）</span><input type="url" inputMode="url" value={targetUrl} onChange={(event) => setTargetUrl(event.target.value)} placeholder="https://..." /></label>
       <label className="contact-form__honeypot" aria-hidden="true"><span>ウェブサイト</span><input name="website" tabIndex={-1} autoComplete="off" value={website} onChange={(event) => setWebsite(event.target.value)} /></label>
-      <button className="button-primary inline-button" type="submit" disabled={sending}>{sending ? "送信中…" : "サイト内で送信"}</button>
+      <button className="button-primary inline-button" type="submit" disabled={sending}>{sending ? "送信中…" : "問い合わせを送信"}</button>
       {status ? <p className="data-notice" role="status" aria-live="polite">{status}</p> : null}
     </form>
   );

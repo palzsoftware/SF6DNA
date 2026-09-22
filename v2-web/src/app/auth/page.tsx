@@ -41,7 +41,7 @@ export default async function AuthPage({
       <section className="hero compact-hero">
         <p className="eyebrow">ACCOUNT</p>
         <h1>ログイン</h1>
-        <p>ログインすると、完了した診断結果をアカウントに保存できます。お気に入りやランク記録は、この端末のブラウザに保存され、別の端末には自動で引き継がれません。</p>
+        <p>ログインすると、診断結果をアカウントに保存できます。お気に入りやランク記録は、この端末のブラウザに保存されるため、別の端末には自動で引き継がれません。</p>
       </section>
       <section className="info-panel auth-panel">
         {accountEmail ? (

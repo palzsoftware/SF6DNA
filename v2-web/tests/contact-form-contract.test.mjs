@@ -25,6 +25,7 @@ test("Contact rejects blank, invalid, overlong and bot payloads", () => {
 test("Contact server contract submits only through the validated Supabase RPC", () => {
   const route = readFileSync(new URL("../src/app/api/contact/route.ts", import.meta.url), "utf8");
   const page = readFileSync(new URL("../src/app/contact/page.tsx", import.meta.url), "utf8");
+  const form = readFileSync(new URL("../src/components/contact-form.tsx", import.meta.url), "utf8");
   assert.match(route, /getSupabaseAuthServerClient/);
   assert.match(route, /\.rpc\("submit_contact"/);
   assert.match(route, /status: 429/);
@@ -32,6 +33,9 @@ test("Contact server contract submits only through the validated Supabase RPC", 
   assert.match(route, /MAX_REQUEST_BYTES/);
   assert.match(page, /180日以内に削除/);
   assert.match(page, /PUBLIC_CONTACT_MAILTO/);
+  assert.match(page, /フォームが利用できない場合/);
+  assert.match(page, /メールで直接問い合わせる/);
+  assert.match(form, /問い合わせを送信/);
 });
 
 test("Contact migration denies direct public rows and exposes only the submission RPC", () => {

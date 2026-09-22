@@ -32,9 +32,9 @@ export default function FeedbackPage() {
 
       <section className="data-notice">
         <h2>送信先</h2>
-        <p>お問い合わせページの案内に沿ってお送りください。</p>
-        <a className="button-primary inline-button" href={PUBLIC_CONTACT_MAILTO}>{PUBLIC_CONTACT_EMAIL}</a>
-        <Link className="button-secondary inline-button" href="/contact">お問い合わせページへ</Link>
+        <p>お問い合わせフォームから送信できます。フォームを利用できない場合は、メールをご利用ください。</p>
+        <Link className="button-primary inline-button" href="/contact">問い合わせフォームへ</Link>
+        <a className="button-secondary inline-button" href={PUBLIC_CONTACT_MAILTO}>メールで直接問い合わせる（{PUBLIC_CONTACT_EMAIL}）</a>
       </section>
     </div>
   );

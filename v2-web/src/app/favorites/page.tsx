@@ -10,7 +10,7 @@ export default async function FavoritesPage() {
       <section className="hero">
         <p className="eyebrow">FAVORITES</p>
         <h1>お気に入り</h1>
-        <p>よく確認するキャラクターを端末内に保存します。</p>
+        <p>よく見るキャラクターをこの端末に保存します。</p>
       </section>
       <MyCharacterManager characters={characters} favoritesOnly />
     </div>

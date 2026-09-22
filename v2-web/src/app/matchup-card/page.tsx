@@ -72,7 +72,7 @@ export default async function MatchupCardPage({ searchParams }: { searchParams: 
       </section>
 
       <section className="info-panel">
-        <h2>次に確認する</h2>
+        <h2>次に見る</h2>
         <p><Link href={`/characters/${own.slug}/training`}>{own.name}のトレーニング</Link></p>
         <p><Link href={`/characters/${opponent.slug}/moves`}>{opponent.name}の全公開技</Link></p>
         <p><Link href="/improve">対戦ログ・リプレイ復習へ戻る</Link></p>

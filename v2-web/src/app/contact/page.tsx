@@ -27,18 +27,18 @@ export default async function ContactPage() {
 
       <section className="info-panel">
         <h2>サイト内お問い合わせフォーム</h2>
-        <p className="data-notice">返信先メールアドレスとお問い合わせ内容を保存します。ログイン中はアカウントIDも紐づきます。迷惑送信対策用の識別情報はIPアドレスを復元できない形で保存し、すべて180日以内に削除します。</p>
+        <p className="data-notice">お問い合わせへの返信に必要なメールアドレスと内容を保存します。ログイン中の場合は、アカウント情報と関連付けて管理します。迷惑行為対策用の情報を含め、保存したデータは180日以内に削除します。</p>
         <ContactForm defaultEmail={accountEmail} />
       </section>
 
       <section className="info-panel">
-        <h2>メールで問い合わせる</h2>
+        <h2>フォームが利用できない場合</h2>
         <p>フォームを利用できない場合は、メールでも受け付けています。</p>
-        <a className="button-secondary inline-button" href={PUBLIC_CONTACT_MAILTO}>{PUBLIC_CONTACT_EMAIL}</a>
+        <a className="button-secondary inline-button" href={PUBLIC_CONTACT_MAILTO}>メールで直接問い合わせる（{PUBLIC_CONTACT_EMAIL}）</a>
       </section>
 
       <section>
-        <h2>不具合についてご連絡いただく場合</h2>
+        <h2>不具合を報告する場合</h2>
         <p>問題が起きたページのURL、使っていた端末・ブラウザ、直前に行った操作が分かると調査しやすくなります。</p>
       </section>
     </div>

@@ -31,7 +31,7 @@ export default async function DiagnosisPage() {
                 <div>
                   <p className="diagnosis-card__index">DIAGNOSIS {String(index + 1).padStart(2, "0")}</p>
                   <h3>{diagnosis.title}</h3>
-                  <p>{diagnosis.description ?? "診断内容を確認する"}</p>
+                  <p>{diagnosis.description ?? "この診断で分かることを見る"}</p>
                 </div>
                 <span>{diagnosis.questionCount || "少数"}問で診断 →</span>
               </Link>

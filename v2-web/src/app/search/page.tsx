@@ -162,7 +162,7 @@ export default async function SearchPage({
                           </div>
                           {item.subtitle ? <p>{item.subtitle}</p> : null}
                         </div>
-                        <span className={styles.open}>開く →</span>
+                        <span className={styles.open}>詳しく見る →</span>
                       </Link>
                     ))}
                   </div>
