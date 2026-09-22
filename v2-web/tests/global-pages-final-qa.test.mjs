@@ -24,10 +24,9 @@ test("footer groups global links and includes feedback", async () => {
   }
 });
 
-test("feedback V1 is guidance-only and does not collect submissions", async () => {
+test("feedback routes users to the Contact form", async () => {
   const page = await read("src/app/feedback/page.tsx");
-  assert.match(page, /このページに入力フォームや公開掲示板はありません/);
-  assert.doesNotMatch(page, /<form/);
+  assert.match(page, /お問い合わせページの案内に沿って/);
   assert.match(page, /href="\/contact"/);
 });
 
@@ -48,6 +47,8 @@ test("public contact is centralized and used consistently across contact and leg
     assert.match(page, /PUBLIC_CONTACT_MAILTO/);
     assert.match(page, /PUBLIC_CONTACT_EMAIL/);
   }
+  assert.match(contact, /<ContactForm/);
+  assert.match(contact, /サイト内送信は接続準備中/);
   assert.match(faq, /PUBLIC_CONTACT_EMAIL/);
   for (const source of [contact, feedback, faq]) {
     assert.doesNotMatch(source, /受付先は、公開準備が整い次第|お問い合わせ窓口を準備|連絡先の準備状況/);
@@ -59,5 +60,5 @@ test("public contact is centralized and used consistently across contact and leg
 
 test("sources page explains publication states", async () => {
   const page = await read("src/app/sources/page.tsx");
-  for (const label of ["公式情報・一次情報", "ゲーム内確認待ち", "更新確認中", "外部リンク"]) assert.match(page, new RegExp(label));
+  for (const label of ["公式情報・一次情報", "ゲーム内での確認", "アップデート後の確認", "外部リンク"]) assert.match(page, new RegExp(label));
 });

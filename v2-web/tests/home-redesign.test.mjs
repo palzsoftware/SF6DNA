@@ -5,19 +5,17 @@ import test from "node:test";
 const pageSource = await readFile(new URL("../src/app/page.tsx", import.meta.url), "utf8");
 const cssSource = await readFile(new URL("../src/app/product-refresh.css", import.meta.url), "utf8");
 
-test("Home uses the confirmed legacy hero copy and only the existing three hero characters", () => {
+test("Home uses natural hero copy and selects three characters from the public pool", () => {
   assert.match(pageSource, /あなたのSF6を、/);
   assert.match(pageSource, /次のレベルへ/);
-  assert.match(pageSource, /診断・図鑑・練習メニューがひとつになった、成長のためのプラットフォーム/);
-  assert.match(pageSource, /\["ryu", "jp", "mai"\]/);
-  assert.match(pageSource, /requestHeaders\.get\("x-vercel-id"\)/);
-  assert.match(pageSource, /getStableHeroOffset\(heroSeed, heroCharacters\.length\)/);
-  assert.doesNotMatch(pageSource, /Math\.random/);
+  assert.match(pageSource, /診断で課題を見つけ、キャラクター情報を調べ/);
+  assert.match(pageSource, /pickRandomHeroCharacters\(characters\)/);
+  assert.doesNotMatch(pageSource, /\["ryu", "jp", "mai"\]/);
 });
 
 test("Home search and metrics describe their public scope", () => {
   assert.match(pageSource, /キャラクター・プレイヤー・動画を検索/);
-  assert.match(pageSource, /収録キャラクター/);
+  assert.match(pageSource, /<strong>キャラクター<\/strong>/);
   assert.match(pageSource, /\{characters\.length\}キャラを掲載/);
   assert.match(pageSource, /横断検索/);
   assert.doesNotMatch(pageSource, />1か所</);

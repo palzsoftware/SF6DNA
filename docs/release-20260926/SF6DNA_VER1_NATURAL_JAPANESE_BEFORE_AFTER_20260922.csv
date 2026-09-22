@@ -1,0 +1,24 @@
+route,before,after,issue_type,fact_change
+/,公開情報を検索,SF6の情報を探す,VAGUE_CTA,NO
+/,診断・図鑑・練習メニューがひとつになった、成長のためのプラットフォーム,診断で課題を見つけ、キャラクター情報を調べ、そのまま今日の練習へ進めます。,TOO_ABSTRACT,NO
+/,公開コンテンツ,SF6DNAで見られる情報,TOO_FORMAL,NO
+/,プレイアブル31キャラクターを収録。基本情報や関連情報を探せます。,31キャラクターの基本情報や、関連するプレイヤー・動画を探せます。,TRANSLATION_LIKE,NO
+/auth,端末内保存の機能は別の端末へ自動同期されません。,お気に入りやランク記録は、この端末のブラウザに保存され、別の端末には自動で引き継がれません。,USER_STATE_UNCLEAR,NO
+/auth,このブラウザーからログアウト,ログアウト,UNNATURAL_JAPANESE,NO
+/feedback,"URL、端末、ブラウザ、画面幅、発生した操作を控えてください。","不具合が起きたページのURL、使っていた端末・ブラウザ、直前に行った操作が分かると調査しやすくなります。",TOO_FORMAL,NO
+/feedback,"正しいと考える内容、確認できる公式・一次情報を控えてください。","修正してほしい箇所と内容、確認できる公式情報があれば一緒にお知らせください。",TOO_FORMAL,NO
+/faq,正式な同期機能として案内されていないデータは、端末間で復元できません。,この端末のブラウザにだけ保存されているデータは、別の端末には自動で引き継がれません。,DEVELOPER_TERM,NO
+/videos,公開済みの動画データを確認できます。,攻略・対戦・大会などの動画を探せます。,TOO_FORMAL,NO
+/videos,該当する公開metadataはありません,この条件で選べる項目はまだありません。,INTERNAL_TERM,NO
+/videos,大会relationの公開metadata待ち,大会・イベント情報は順次追加予定です。,INTERNAL_TERM,NO
+/videos,Classic / Modern metadata待ち,クラシック・モダンの情報は順次追加予定です。,INTERNAL_TERM,NO
+/videos,初心者 / 中級者 / 上級者 metadata待ち,難易度別の絞り込みは順次追加予定です。,INTERNAL_TERM,NO
+/search,キャラクター、プレイヤー、動画の公開情報を横断して検索します。,キャラクター・プレイヤー・動画をまとめて検索できます。,TOO_FORMAL,NO
+/search,一致する公開データが見つかりません,一致する情報が見つかりません,DEVELOPER_TERM,NO
+/players,使用キャラクター、チーム、地域、公開プロフィールを確認できます。,使用キャラクターやチーム、地域からプレイヤーを探せます。,TOO_FORMAL,NO
+/about,データ方針,情報の掲載方針,TOO_ABSTRACT,NO
+/sources,ゲーム内確認待ち,ゲーム内での確認,TOO_FORMAL,NO
+/sources,更新確認中,アップデート後の確認,TOO_FORMAL,NO
+/diagnosis/[slug],検証済みTraitデータから推薦を計算しています…,確認済みのキャラクター特性から候補を探しています…,INTERNAL_TERM,NO
+/diagnosis/[slug],AIコーチ用Evidenceを見る,AIコーチの根拠情報を見る,INTERNAL_TERM,NO
+404,公開対象ではないデータの可能性があります。,ページがまだ掲載されていない可能性があります。,DEVELOPER_TERM,NO

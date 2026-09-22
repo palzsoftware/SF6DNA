@@ -64,8 +64,8 @@ button:disabled { cursor: not-allowed; opacity: 0.5; }
 .guide-stack { display: grid; gap: 14px; }
 .preline { white-space: pre-line; }
 .search-form { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
-.search-form input, .coach-form textarea, .auth-form input { width: 100%; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text); padding: 13px 14px; }
-.search-form input:focus, .coach-form textarea:focus, .auth-form input:focus { outline: 2px solid color-mix(in srgb, var(--accent) 60%, transparent); border-color: var(--accent); }
+.search-form input, .coach-form textarea, .auth-form input, .contact-form input, .contact-form textarea, .contact-form select { width: 100%; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text); padding: 13px 14px; }
+.search-form input:focus, .coach-form textarea:focus, .auth-form input:focus, .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { outline: 2px solid color-mix(in srgb, var(--accent) 60%, transparent); border-color: var(--accent); }
 .search-form button, .button-primary, .button-secondary { border: 1px solid var(--border); border-radius: 12px; padding: 11px 16px; color: var(--text); }
 .search-form button, .button-primary { background: var(--accent); border-color: var(--accent); color: #111; font-weight: 800; }
 .button-secondary { background: var(--surface); }
@@ -93,6 +93,11 @@ button:disabled { cursor: not-allowed; opacity: 0.5; }
 .auth-form { display: grid; gap: 18px; }
 .auth-form label { display: grid; gap: 6px; }
 .auth-form label > span { color: var(--muted); font-size: 0.9rem; font-weight: 700; }
+.contact-form { display: grid; gap: 18px; margin-top: 20px; }
+.contact-form label { display: grid; gap: 6px; }
+.contact-form label > span { color: var(--muted); font-size: 0.9rem; font-weight: 700; }
+.contact-form textarea { min-height: 180px; resize: vertical; }
+.contact-form__honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .detail-list { display: grid; gap: 0; margin: 0; }
 .detail-list > div { display: grid; grid-template-columns: minmax(100px, 180px) 1fr; gap: 18px; padding-block: 12px; border-bottom: 1px solid var(--border); }
 .detail-list > div:last-child { border-bottom: 0; }

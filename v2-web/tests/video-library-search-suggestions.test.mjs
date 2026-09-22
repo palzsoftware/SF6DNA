@@ -54,7 +54,8 @@ test("missing video metadata is not inferred from titles or URLs", async () => {
   assert.match(loader, /channelName: null/);
   assert.match(loader, /durationSeconds: null/);
   assert.match(loader, /language: null/);
-  assert.match(component, /metadata待ち/);
+  assert.match(component, /情報は順次追加予定です/);
+  assert.doesNotMatch(component, /metadata待ち/);
 });
 
 test("did-you-mean is clickable, thresholded and does not auto-replace", async () => {

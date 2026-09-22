@@ -1,33 +1,46 @@
+import { ContactForm } from "@/components/contact-form";
+import { PUBLIC_CONTACT_EMAIL, PUBLIC_CONTACT_MAILTO } from "@/lib/contact";
+import { getSupabaseAuthServerClient } from "@/lib/supabase/auth-server";
+
 export const metadata = {
   title: "お問い合わせ",
   description: "SF6DNAへのお問い合わせについてご案内します。",
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  let accountEmail = "";
+  try {
+    const supabase = await getSupabaseAuthServerClient();
+    const { data, error } = await supabase.auth.getUser();
+    if (!error) accountEmail = data.user?.email ?? "";
+  } catch {
+    // The form remains available without an account email.
+  }
+
   return (
     <div className="site-shell page-stack">
       <section className="hero compact-hero">
         <p className="eyebrow">CONTACT</p>
         <h1>お問い合わせ</h1>
-        <p>SF6DNAへのご意見・不具合報告・掲載情報に関するお問い合わせ窓口です。</p>
+        <p>不具合や掲載情報、権利・プライバシーに関するご連絡を受け付けています。</p>
       </section>
 
       <section className="info-panel">
-        <h2>メールでお問い合わせ</h2>
-        <p>次のメールアドレスで受け付けています。</p>
-        <a className="button-primary inline-button" href={PUBLIC_CONTACT_MAILTO}>
-          {PUBLIC_CONTACT_EMAIL}
-        </a>
+        <h2>サイト内お問い合わせフォーム</h2>
+        <p className="data-notice">サイト内送信は接続準備中です。入力内容は送信・保存されません。現在は下記メールアドレスをご利用ください。</p>
+        <ContactForm defaultEmail={accountEmail} />
+      </section>
+
+      <section className="info-panel">
+        <h2>メールで問い合わせる</h2>
+        <p>サイト内送信の接続が完了するまでは、メールで受け付けています。</p>
+        <a className="button-secondary inline-button" href={PUBLIC_CONTACT_MAILTO}>{PUBLIC_CONTACT_EMAIL}</a>
       </section>
 
       <section>
-        <h2>お問い合わせ対象</h2>
-        <p>
-          掲載情報の誤り、不具合、権利に関するご連絡、その他SF6DNAに関するお問い合わせを受け付けています。
-        </p>
-        <p>不具合をご連絡いただく場合は、対象URL、端末、ブラウザ、発生した操作を添えてください。</p>
+        <h2>不具合についてご連絡いただく場合</h2>
+        <p>問題が起きたページのURL、使っていた端末・ブラウザ、直前に行った操作が分かると調査しやすくなります。</p>
       </section>
     </div>
   );
 }
-import { PUBLIC_CONTACT_EMAIL, PUBLIC_CONTACT_MAILTO } from "@/lib/contact";

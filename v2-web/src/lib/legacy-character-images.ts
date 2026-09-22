@@ -32,6 +32,10 @@ const LEGACY_CHARACTER_FILES: Record<string, string> = {
   yasmine: "yasmine.jpg",
 };
 
+export const LEGACY_CHARACTER_IMAGE_SLUGS = Object.freeze(
+  Object.keys(LEGACY_CHARACTER_FILES),
+);
+
 const RAW_CHARACTER_ASSET_BASE =
   "https://raw.githubusercontent.com/palzsoftware/SF6DNA/sf6dna-v2/assets/images/characters";
 

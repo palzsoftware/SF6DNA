@@ -34,7 +34,7 @@ test("FAQ and Auth copy match currently released behavior", () => {
   const auth = read("src/app/auth/page.tsx");
   assert.match(faq, /AIコーチは現在公開していません/);
   assert.match(auth, /完了した診断結果をアカウントに保存できます/);
-  assert.match(auth, /端末内保存の機能は別の端末へ自動同期されません/);
+  assert.match(auth, /この端末のブラウザに保存され、別の端末には自動で引き継がれません/);
 });
 
 test("video cards expose YouTube, share and reversible local watched state", () => {

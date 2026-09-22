@@ -31,9 +31,9 @@ export function LogoutButton() {
 
   return (
     <div className="auth-form">
-      <p className="muted">アカウントを切り替える場合は、このブラウザーからログアウトしてください。</p>
+      <p className="muted">アカウントを切り替える場合は、このブラウザからログアウトしてください。</p>
       <button className="button-secondary" type="button" disabled={loading} onClick={logout}>
-        {loading ? "ログアウト中…" : "このブラウザーからログアウト"}
+        {loading ? "ログアウト中…" : "ログアウト"}
       </button>
       {message ? <p role="status" aria-live="polite">{message}</p> : null}
     </div>

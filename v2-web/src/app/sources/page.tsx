@@ -33,12 +33,12 @@ export default async function SourcesPage() {
       <section className="hero">
         <p className="eyebrow">SOURCES</p>
         <h1>情報源</h1>
-        <p>SF6DNAで参照している公式情報・一次情報を一覧で確認できます。各攻略ページで使用した補助情報は、それぞれのページから確認できます。</p>
+        <p>SF6DNAが参照している公式情報・一次情報をまとめています。攻略ページで参照した情報は、それぞれのページからも開けます。</p>
       </section>
       <section className="card-grid" aria-label="情報の公開方針">
-        <article className="info-panel"><h2>公式情報・一次情報</h2><p>公開条件を満たした情報は、参照先を確認できる形で掲載します。</p></article>
-        <article className="info-panel"><h2>ゲーム内確認待ち</h2><p>実機での確認が必要な内容は、確認が終わるまで確定情報として補いません。</p></article>
-        <article className="info-panel"><h2>更新確認中</h2><p>パッチによる変更が疑われる情報は、現在の値として扱う前に対象期間と内容を確認します。</p></article>
+        <article className="info-panel"><h2>公式情報・一次情報</h2><p>掲載する情報には、できる限り参照先を添えます。</p></article>
+        <article className="info-panel"><h2>ゲーム内での確認</h2><p>実機での確認が必要な内容は、確認が終わるまで推測で補いません。</p></article>
+        <article className="info-panel"><h2>アップデート後の確認</h2><p>パッチで変わった可能性がある情報は、対象期間と内容を確かめてから掲載します。</p></article>
         <article className="info-panel"><h2>外部リンク</h2><p>情報源を開くと外部サイトへ移動します。リンク先の利用条件やプライバシー方針も確認してください。</p></article>
       </section>
       {sources.length ? (
@@ -52,7 +52,7 @@ export default async function SourcesPage() {
           ))}
         </section>
       ) : (
-        <section className="empty-state"><h2>表示できる情報源がありません</h2><p>情報源を取得できない場合は、未確認の情報源を代わりに表示しません。</p></section>
+        <section className="empty-state"><h2>情報源を表示できません</h2><p>時間をおいて、もう一度ページを開いてください。</p></section>
       )}
     </div>
   );

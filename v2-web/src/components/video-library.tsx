@@ -51,7 +51,7 @@ function FilterGroup({ title, values, selected, labels, unavailable, onToggle }:
             </label>
           ))}
         </div>
-      ) : <p className={styles.unavailable}>{unavailable ?? "該当する公開metadataはありません"}</p>}
+      ) : <p className={styles.unavailable}>{unavailable ?? "この条件で選べる項目はまだありません。"}</p>}
     </fieldset>
   );
 }
@@ -118,16 +118,16 @@ export function VideoLibrary({ videos, lockedCharacter }: { videos: VideoSummary
           </select></label>
         </div>
         <div className={styles.filters}>
-          <FilterGroup title="大会・イベント" values={options.events} selected={filters.events} onToggle={(value) => toggle("events", value)} unavailable="大会relationの公開metadata待ち" />
+          <FilterGroup title="大会・イベント" values={options.events} selected={filters.events} onToggle={(value) => toggle("events", value)} unavailable="大会・イベント情報は順次追加予定です。" />
           <FilterGroup title="プレイヤー（1P / 2P）" values={options.players} selected={filters.players} onToggle={(value) => toggle("players", value)} />
           {lockedCharacter ? (
             <fieldset className={styles.filter}><legend>キャラクター</legend><p className={styles.unavailable}>{lockedCharacter}で自動絞り込み中</p></fieldset>
           ) : <FilterGroup title="キャラクター（1P / 2P）" values={options.characters} selected={filters.characters} onToggle={(value) => toggle("characters", value)} />}
-          <FilterGroup title="操作タイプ" values={options.controls} selected={filters.controls} labels={VIDEO_CONTROL_LABELS} onToggle={(value) => toggle("controls", value)} unavailable="Classic / Modern metadata待ち" />
+          <FilterGroup title="操作タイプ" values={options.controls} selected={filters.controls} labels={VIDEO_CONTROL_LABELS} onToggle={(value) => toggle("controls", value)} unavailable="クラシック・モダンの情報は順次追加予定です。" />
           <FilterGroup title="カテゴリ" values={options.categories} selected={filters.categories} labels={VIDEO_CATEGORY_LABELS} onToggle={(value) => toggle("categories", value)} />
-          <FilterGroup title="習熟度" values={options.levels} selected={filters.levels} labels={VIDEO_LEVEL_LABELS} onToggle={(value) => toggle("levels", value)} unavailable="初心者 / 中級者 / 上級者 metadata待ち" />
+          <FilterGroup title="習熟度" values={options.levels} selected={filters.levels} labels={VIDEO_LEVEL_LABELS} onToggle={(value) => toggle("levels", value)} unavailable="難易度別の絞り込みは順次追加予定です。" />
           <FilterGroup title="ガイド / 対戦" values={options.modes} selected={filters.modes} labels={{ guide: "ガイド", match: "対戦" }} onToggle={(value) => toggle("modes", value)} />
-          <FilterGroup title="言語" values={options.languages} selected={filters.languages} labels={VIDEO_LANGUAGE_LABELS} onToggle={(value) => toggle("languages", value)} unavailable="日本語 / 英語 / その他 metadata待ち" />
+          <FilterGroup title="言語" values={options.languages} selected={filters.languages} labels={VIDEO_LANGUAGE_LABELS} onToggle={(value) => toggle("languages", value)} unavailable="言語別の絞り込みは順次追加予定です。" />
           <FilterGroup title="ライブラリ" values={["favorite", "watched", "unwatched"]} selected={filters.preference} labels={{ favorite: "お気に入り", watched: "視聴済み", unwatched: "未視聴" }} onToggle={(value) => toggle("preference", value)} />
         </div>
         <div className={styles.summary}>
