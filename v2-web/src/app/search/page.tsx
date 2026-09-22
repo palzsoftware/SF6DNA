@@ -55,6 +55,9 @@ export default async function SearchPage({
     ? await Promise.all([searchAcrossContent(q), getPublicSearchSuggestionCandidates()])
     : [[], []];
   const suggestions = q ? suggestSearchTerms(q, suggestionCandidates) : [];
+  const suggestionHeading = suggestions.some((suggestion) => suggestion.matchedBy === "typo")
+    ? "もしかして"
+    : "関連候補";
   const counts = new Map<string, number>();
   for (const result of results) counts.set(result.type, (counts.get(result.type) ?? 0) + 1);
   const visibleResults = selectedType === "all" ? results : results.filter((item) => item.type === selectedType);
@@ -81,7 +84,7 @@ export default async function SearchPage({
 
       {q && suggestions.length ? (
         <nav className={styles.suggestions} aria-label="検索候補">
-          <strong>もしかして</strong>
+          <strong>{suggestionHeading}</strong>
           <div>
             {suggestions.map((suggestion) => (
               <Link href={typeHref(suggestion.value, "all")} key={`${suggestion.type}:${suggestion.value}`}>

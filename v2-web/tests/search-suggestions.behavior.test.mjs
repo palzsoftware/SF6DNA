@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { suggestSearchTerms } from "../src/lib/search-suggestions.ts";
+import { readFileSync } from "node:fs";
 
 const candidates = [
   { label: "リュウ", value: "リュウ", type: "キャラクター", aliases: ["Ryu", "りゅう"] },
@@ -25,4 +26,12 @@ test("exact labels, one-character queries and unrelated words are suppressed", (
   assert.deepEqual(suggestSearchTerms("リュウ", candidates), []);
   assert.deepEqual(suggestSearchTerms("J", candidates), []);
   assert.deepEqual(suggestSearchTerms("今日", candidates), []);
+});
+
+test("search page distinguishes typo suggestions from related candidates", () => {
+  const page = readFileSync(new URL("../src/app/search/page.tsx", import.meta.url), "utf8");
+  assert.match(page, /suggestion\.matchedBy === "typo"/);
+  assert.match(page, /\? "もしかして"/);
+  assert.match(page, /: "関連候補"/);
+  assert.match(page, /<strong>\{suggestionHeading\}<\/strong>/);
 });

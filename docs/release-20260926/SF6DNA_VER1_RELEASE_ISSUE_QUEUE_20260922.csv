@@ -1,0 +1,6 @@
+id,class,scope,status,required_for_release,summary,resolution_or_owner
+REL-001,P1_COPY,Search,RESOLVED,YES,"完全一致検索でも関連Player候補を『もしかして』と表示","typo時のみ『もしかして』、それ以外は『関連候補』へ修正・回帰テスト追加"
+REL-002,APPROVAL_REQUIRED,Contact,OPEN,YES,"正式なContact実値が未提供","USER: 運営管理のURLまたはemailを提供。推測禁止"
+REL-003,APPROVAL_REQUIRED,Auth Security,OPEN_REVIEW,NO,"Supabase leaked-password protectionがOFF","USER/OWNER: Production前に有効化可否を判断。DB schema変更なし"
+REL-004,USER_DEVICE_ONLY,Auth,OPEN,YES,"本人credentialでLogin→Save→History→Reload→Logout未確認","USER: 最終実機QAで実施"
+REL-005,APPROVAL_REQUIRED,Production env,OPEN,YES,"Production origin/env key presenceとscopeの最終照合","USER: Vercel管理画面で承認時に確認・必要変更は別承認"
