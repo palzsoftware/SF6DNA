@@ -1,6 +1,8 @@
 # Contact internal form implementation result
 
-`CONTACT_INTERNAL_FORM = APPROVAL_REQUIRED_WITH_FRONTEND_READY`
+`CONTACT_INTERNAL_FORM = PASS`
+
+The Supabase inbox backend was approved and implemented on 2026-09-22. See `SF6DNA_VER1_CONTACT_SUPABASE_INBOX_IMPLEMENTATION_RESULT_20260922.md` for the applied schema, access contract and verification.
 
 Implemented:
 
@@ -15,8 +17,9 @@ Implemented:
 - Explicit notice that data is not sent or stored
 - Existing mailto fallback
 
-Not implemented without approval:
+Implemented after approval:
 
-- Delivery provider / key
-- DB table, RLS, RPC, retention policy
-- Production-grade rate limiting and spam handling
+- Private Supabase inbox table
+- Guest/Auth submission RPC with no public row access
+- RLS, minimum grants, 180-day retention
+- Layered validation, honeypot, request-size, same-origin and rate controls

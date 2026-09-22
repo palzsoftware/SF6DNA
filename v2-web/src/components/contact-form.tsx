@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { CONTACT_CATEGORIES, validateContactPayload } from "@/lib/contact-form";
 
-export function ContactForm({ defaultEmail = "", deliveryEnabled = false }: { defaultEmail?: string; deliveryEnabled?: boolean }) {
+export function ContactForm({ defaultEmail = "" }: { defaultEmail?: string }) {
   const [category, setCategory] = useState(CONTACT_CATEGORIES[0]);
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState(defaultEmail);
@@ -20,11 +20,6 @@ export function ContactForm({ defaultEmail = "", deliveryEnabled = false }: { de
       setStatus(validation.message);
       return;
     }
-    if (!deliveryEnabled) {
-      setStatus("サイト内送信は現在接続準備中です。入力内容は送信されていません。メールでお問い合わせください。");
-      return;
-    }
-
     setSending(true);
     setStatus(null);
     try {

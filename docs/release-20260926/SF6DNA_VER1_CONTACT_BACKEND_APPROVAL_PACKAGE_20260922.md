@@ -1,5 +1,7 @@
 # Contact backend approval package
 
+Status: `APPROVED_AND_IMPLEMENTED_SUPABASE_INBOX` on 2026-09-22.
+
 ## Approval required
 
 Choose and authorize exactly one delivery contract:
@@ -18,4 +20,4 @@ Choose and authorize exactly one delivery contract:
 - Privacy/Terms text matches actual collected fields and retention
 - Success confirmed in Preview and inbox
 
-Until then, keep `deliveryEnabled=false`, the API fail-closed, and mailto available.
+The approved Supabase inbox implementation is recorded in `SF6DNA_VER1_CONTACT_SUPABASE_INBOX_IMPLEMENTATION_RESULT_20260922.md`. Mailto remains available as a fallback.

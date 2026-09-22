@@ -15,8 +15,8 @@ test("all current Remote history versions have unique 14-digit Local markers", (
   const remoteAligned = migrationFiles.filter((name) => /^\d{14}_/.test(name));
   const versions = remoteAligned.map((name) => name.slice(0, 14));
 
-  assert.equal(remoteAligned.length, 194);
-  assert.equal(new Set(versions).size, 194);
+  assert.equal(remoteAligned.length, 195);
+  assert.equal(new Set(versions).size, 195);
 });
 
 test("retired Phase20 audit endpoints are represented by safe no-op markers", () => {

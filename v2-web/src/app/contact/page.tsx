@@ -27,13 +27,13 @@ export default async function ContactPage() {
 
       <section className="info-panel">
         <h2>サイト内お問い合わせフォーム</h2>
-        <p className="data-notice">サイト内送信は接続準備中です。入力内容は送信・保存されません。現在は下記メールアドレスをご利用ください。</p>
+        <p className="data-notice">返信先メールアドレスとお問い合わせ内容を保存します。ログイン中はアカウントIDも紐づきます。迷惑送信対策用の識別情報はIPアドレスを復元できない形で保存し、すべて180日以内に削除します。</p>
         <ContactForm defaultEmail={accountEmail} />
       </section>
 
       <section className="info-panel">
         <h2>メールで問い合わせる</h2>
-        <p>サイト内送信の接続が完了するまでは、メールで受け付けています。</p>
+        <p>フォームを利用できない場合は、メールでも受け付けています。</p>
         <a className="button-secondary inline-button" href={PUBLIC_CONTACT_MAILTO}>{PUBLIC_CONTACT_EMAIL}</a>
       </section>
 

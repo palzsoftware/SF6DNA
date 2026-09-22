@@ -48,7 +48,7 @@ test("public contact is centralized and used consistently across contact and leg
     assert.match(page, /PUBLIC_CONTACT_EMAIL/);
   }
   assert.match(contact, /<ContactForm/);
-  assert.match(contact, /サイト内送信は接続準備中/);
+  assert.match(contact, /180日以内に削除/);
   assert.match(faq, /PUBLIC_CONTACT_EMAIL/);
   for (const source of [contact, feedback, faq]) {
     assert.doesNotMatch(source, /受付先は、公開準備が整い次第|お問い合わせ窓口を準備|連絡先の準備状況/);
