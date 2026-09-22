@@ -51,7 +51,13 @@ export default function PrivacyPage() {
         </p>
       </section>
 
+      <section>
+        <h2>プライバシーに関するお問い合わせ</h2>
+        <p><a className="text-link" href={PUBLIC_CONTACT_MAILTO}>{PUBLIC_CONTACT_EMAIL}</a> へご連絡ください。</p>
+      </section>
+
       <p>制定日: 2026年9月4日</p>
     </div>
   );
 }
+import { PUBLIC_CONTACT_EMAIL, PUBLIC_CONTACT_MAILTO } from "@/lib/contact";

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PUBLIC_CONTACT_EMAIL, PUBLIC_CONTACT_MAILTO } from "@/lib/contact";
 
 export const metadata = {
   title: "フィードバック",
@@ -17,7 +18,7 @@ export default function FeedbackPage() {
       <section className="hero compact-hero">
         <p className="eyebrow">FEEDBACK</p>
         <h1>フィードバック</h1>
-        <p>不具合・掲載情報・使い方に関する内容を、正式な受付先の公開前に安全に整理するための案内です。</p>
+        <p>不具合・掲載情報・使い方に関するご連絡を送る前に、必要な内容を整理するための案内です。</p>
       </section>
 
       <section className="card-grid" aria-label="フィードバックの種類">
@@ -30,8 +31,9 @@ export default function FeedbackPage() {
       </section>
 
       <section className="data-notice">
-        <h2>現在の受付状況</h2>
-        <p>プレリリース期間中のため、このページから送信・公開されるフォームや掲示板はありません。連絡先の準備状況はお問い合わせページで確認できます。</p>
+        <h2>送信先</h2>
+        <p>このページに入力フォームや公開掲示板はありません。整理した内容は、次の受付先へお送りください。</p>
+        <a className="button-primary inline-button" href={PUBLIC_CONTACT_MAILTO}>{PUBLIC_CONTACT_EMAIL}</a>
         <Link className="button-secondary inline-button" href="/contact">お問い合わせ案内を見る</Link>
       </section>
     </div>

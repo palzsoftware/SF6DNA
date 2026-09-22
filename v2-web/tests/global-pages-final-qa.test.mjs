@@ -26,9 +26,35 @@ test("footer groups global links and includes feedback", async () => {
 
 test("feedback V1 is guidance-only and does not collect submissions", async () => {
   const page = await read("src/app/feedback/page.tsx");
-  assert.match(page, /このページから送信・公開されるフォームや掲示板はありません/);
+  assert.match(page, /このページに入力フォームや公開掲示板はありません/);
   assert.doesNotMatch(page, /<form/);
   assert.match(page, /href="\/contact"/);
+});
+
+test("public contact is centralized and used consistently across contact and legal pages", async () => {
+  const [contact, feedback, privacy, terms, disclaimer, faq, shared, flags] = await Promise.all([
+    read("src/app/contact/page.tsx"),
+    read("src/app/feedback/page.tsx"),
+    read("src/app/privacy/page.tsx"),
+    read("src/app/terms/page.tsx"),
+    read("src/app/disclaimer/page.tsx"),
+    read("src/app/faq/page.tsx"),
+    read("src/lib/contact.ts"),
+    read("src/lib/release-features.ts"),
+  ]);
+  assert.match(shared, /pal2software\.support@gmail\.com/);
+  assert.match(shared, /mailto:\$\{PUBLIC_CONTACT_EMAIL\}/);
+  for (const page of [contact, feedback, privacy, terms, disclaimer]) {
+    assert.match(page, /PUBLIC_CONTACT_MAILTO/);
+    assert.match(page, /PUBLIC_CONTACT_EMAIL/);
+  }
+  assert.match(faq, /PUBLIC_CONTACT_EMAIL/);
+  for (const source of [contact, feedback, faq]) {
+    assert.doesNotMatch(source, /受付先は、公開準備が整い次第|お問い合わせ窓口を準備|連絡先の準備状況/);
+  }
+  assert.match(flags, /aiCoach:\s*false/);
+  assert.match(flags, /training:\s*false/);
+  assert.match(flags, /publicStrategyContent:\s*false/);
 });
 
 test("sources page explains publication states", async () => {
