@@ -2,7 +2,9 @@ name: SF6DNA v2 Web Check
 
 on:
   push:
-    branches: [sf6dna-v2]
+    branches:
+      - sf6dna-v2
+      - sf6dna-v2-chatgpt-rc-20260916
     paths:
       - "v2-web/**"
       - "supabase/migrations/**"
