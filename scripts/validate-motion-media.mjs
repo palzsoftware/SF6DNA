@@ -10,6 +10,7 @@ const ALLOWED_STATUSES = new Set([
   'cut_reviewed',
   'game_verified_candidate',
   'approved_for_preview',
+  'mapping_hold',
   'rejected',
 ]);
 const SHA256_RE = /^[a-f0-9]{64}$/;
