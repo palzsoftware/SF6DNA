@@ -11,6 +11,6 @@
 | Native controls absent | PASS |
 | Reduced-motion pauses and resets | PASS |
 | 375px media width constrained by existing responsive container | PASS (contract) |
-| Browser network/runtime verification | Pending new Preview |
+| Browser network/runtime verification | PASS (7/7 ready, no page runtime error) |
 
 Rollout beyond JP remains blocked until Preview/device QA and a hosting strategy for 31 characters are approved.
