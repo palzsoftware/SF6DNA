@@ -46,6 +46,13 @@ test('accepts a valid manifest and matching files', async () => {
   assert.equal(result.stats.mediaBytes, 4);
 });
 
+test('accepts mapping_hold for an ambiguous clip without publishing it', () => {
+  const manifest = validManifest();
+  manifest.clips[0].verification_status = 'mapping_hold';
+  const result = validateMotionMediaManifest(manifest, { checkFiles: false });
+  assert.deepEqual(result.errors, []);
+});
+
 test('rejects duplicate move variant mapping', () => {
   const manifest = validManifest();
   manifest.clips.push({ ...manifest.clips[0], media_url: '/media/moves/jp/other.mp4' });
