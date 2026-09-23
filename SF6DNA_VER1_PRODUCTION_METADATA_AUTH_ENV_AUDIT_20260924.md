@@ -1,103 +1,177 @@
 # SF6DNA Ver.1.0 — Production Metadata / Auth Redirect / Env Read-only Audit
 
 Date: 2026-09-24
+Scope: Release-candidate branch only. No Production deploy/alias/env changes and no DB writes.
 
-## Scope
+## 1. Fresh baseline
 
-Release-candidate branch only. No Production alias/deploy/env changes and no DB writes.
+```text
+RC_APPLICATION_SHA = 95ad9718ec27ce937a1ffc59deae1a4bc48c13eb
+PREVIEW_DEPLOYMENT = dpl_3Vuj32UB1Y1vC52cL3tCTZrb4TMx
+PREVIEW_STATE = READY
+PREVIEW_TARGET = preview
+PRODUCTION_DEPLOYMENT = dpl_3T4VAzUWb57vwaN6HphfNGucDPVL
+PRODUCTION_SHA = b9a2a8f638a3d4a98bfa042d56470664fe225ba7
+PRODUCTION_STATE = READY
+```
 
-Fresh base before this audit: `19f0003aa0c758411e12b7bac0d054d0eb343252`.
-
-## Metadata / site URL
+## 2. Metadata base contract
 
 `v2-web/src/app/layout.tsx` resolves `metadataBase` in this order:
 
 1. `NEXT_PUBLIC_SITE_URL`
-2. `VERCEL_URL` as `https://<VERCEL_URL>`
-3. undefined if neither is available or the result is invalid
+2. `VERCEL_URL` converted to `https://<VERCEL_URL>`
+3. undefined when neither resolves to a valid URL
 
-`robots.ts` and `sitemap.ts` use the same explicit-site-URL-first / Vercel-URL-fallback policy. Preview deployments are excluded from sitemap indexing and Vercel also returns `x-robots-tag: noindex` on the protected Preview.
+`robots.ts` and `sitemap.ts` use the same explicit-site-URL-first / `VERCEL_URL` fallback policy. Both use `VERCEL_ENV` to distinguish Preview from Production behavior.
 
-Fresh RC Preview `19f0003aa0c758411e12b7bac0d054d0eb343252` rendered absolute Open Graph / Twitter image URLs against the RC branch alias, so `metadataBase` is resolving to an absolute Preview URL in the current Preview environment.
+Vercel documentation confirms:
 
-### Canonical
+- `VERCEL_URL` is a system environment variable containing the deployment domain without scheme;
+- `VERCEL_ENV` identifies `production`, `preview`, or `development`;
+- `VERCEL_PROJECT_PRODUCTION_URL` also exists, but the current SF6DNA code does not depend on it.
 
-No explicit `alternates.canonical` contract was found in the root metadata, and the fetched RC home HTML did not contain a `rel="canonical"` link.
+No code change was made during this audit because the current behavior is working and release freeze should avoid nonessential metadata refactors.
 
-Status: `NOT_RELEASE_BLOCKING / SEO_FOLLOW_UP`.
+## 3. Fresh Preview runtime verification
 
-Reason: adding a root-level canonical without a per-route contract could incorrectly canonicalize child pages. Do not guess a Production domain or add a global canonical during the release freeze.
+Authenticated read of the exact-SHA Preview home returned HTTP 200.
 
-## Auth return path audit
+Rendered metadata contains absolute URLs such as:
 
-The `/auth` page accepts a local `next` destination and passes it to the client login form after server-side validation.
+```text
+https://sf-6-dna-git-sf6dna-v2-chatgpt-rc-20260916-somas11620-9368.vercel.app/opengraph-image?... 
+https://sf-6-dna-git-sf6dna-v2-chatgpt-rc-20260916-somas11620-9368.vercel.app/twitter-image?...
+```
 
-The previous validation rejected `//host` but only used string-prefix checks. WHATWG URL parsing treats a value such as `/\\evil.example` as a cross-origin URL, so the old check was not sufficiently strict for an attacker-supplied return path.
+This verifies that `metadataBase` resolves to an absolute Preview HTTPS base in the current Vercel environment.
 
-Release fix applied:
+The same response contains:
 
-- parse the candidate against a fixed dummy origin;
-- require the parsed origin to remain equal to that dummy origin;
-- pass only parsed pathname + search + hash to the client router;
-- malformed or cross-origin candidates fall back to `/`.
+```text
+x-robots-tag: noindex
+```
 
-Commits:
+Authenticated `/robots.txt` returned:
 
-- `ce5f111c4d50b9ba7b875fb25a37db1cb01a1be6` — auth return-path hardening
-- `aff8f00f935ec2eadf9966dd248651478f4071e6` — static regression contract
+```text
+User-Agent: *
+Disallow: /
+```
 
-Targeted verification:
+Therefore Preview indexing suppression is working in runtime, not only in static code review.
 
-- `auth-session-ui.test.mjs`: 3/3 PASS in isolated local replay of the committed source/test contents
-- redirect behavior cases: 5/5 PASS (`/characters/...`, `//evil`, `/\\evil`, absolute external URL, missing value)
+Direct authenticated retrieval of `/sitemap.xml` through the current connector remains constrained by Vercel SSO handling on that path. Static code review confirms `sitemap()` returns an empty list whenever `VERCEL_ENV` exists and is not `production`. Do not claim a direct runtime sitemap body PASS from this connector limitation.
 
-Full suite was not re-run in this connector-only run. Vercel Preview build is the build/type integration gate for the pushed RC commits.
+## 4. Canonical
 
-## Environment variable contract
-
-Repository contract (`v2-web/.env.example` and runtime code):
-
-- `NEXT_PUBLIC_SUPABASE_URL` — public browser/server Supabase project URL
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY` — public browser/server anon key
-- `NEXT_PUBLIC_SITE_URL` — explicit public site base URL for metadata / robots / sitemap
-- `SF6DNA_BACKEND_URL` — backend endpoint, with the current Render URL as code fallback
-- `VERCEL_URL` / `VERCEL_ENV` — Vercel system environment values used for deployment-aware URL/indexing behavior
-
-The available Vercel read-only connector does not expose project environment-variable keys/scopes, so the exact Production/Preview scope assignment cannot be independently verified in this run without changing settings or using unsupported APIs.
+No explicit `alternates.canonical` contract is present in root metadata and the fetched Preview home does not expose a `rel="canonical"` link.
 
 Status:
 
-- code contract: `VERIFIED`
-- current Preview URL resolution: `VERIFIED`
-- actual Vercel Production env key/scope assignment: `UNVERIFIED_BY_AVAILABLE_READ_ONLY_TOOL`
+```text
+EXPLICIT_CANONICAL = NOT_RELEASE_BLOCKING / SEO_FOLLOW_UP
+```
 
-Do not infer secret values and do not change Production env during this audit.
+Do not add a root-level global canonical during release freeze because that could incorrectly canonicalize child routes.
 
-## Current Preview / Production boundary
+## 5. Auth return path
 
-Fresh Preview before the auth fix:
+The release-hardened `/auth?next=...` validator:
 
-- RC SHA: `19f0003aa0c758411e12b7bac0d054d0eb343252`
-- Deployment: `dpl_CM138ndifdkp7D2qVxsqhzKnsGsD`
-- State: `READY`
-- Target: Preview (`target=null`)
+- parses against a fixed dummy origin;
+- requires the parsed origin to stay equal to the dummy origin;
+- returns only pathname + search + hash;
+- falls back to `/` for malformed or cross-origin input.
 
-Current Production alias remains on the pre-Ver.1 Next/legacy deployment:
+Current exact-SHA full regression includes the hardened Auth behavior and completed successfully.
 
-- Alias: `sf-6-dna.vercel.app`
-- Deployment: `dpl_3T4VAzUWb57vwaN6HphfNGucDPVL`
-- Production SHA: `b9a2a8f638a3d4a98bfa042d56470664fe225ba7`
-- State: `READY`
+Classification:
 
-No Production alias or deployment was changed.
+```text
+AUTH_RETURN_PATH = FIXED / REGRESSION_PASS
+```
 
-## Release status
+## 6. Fresh full regression
 
-- New P0 blocker: `NONE`
-- P1 fixed in RC: `AUTH_NEXT_RETURN_PATH_HARDENING`
-- SEO follow-up: `EXPLICIT_PER_ROUTE_CANONICAL_CONTRACT`
-- USER_ACTION / release approval: verify intended Production env assignment before final Production promotion if Vercel UI access is available; no values need to be shared.
+GitHub Actions exact-SHA run:
 
-## Next ChatGPT-only batch
+```text
+WORKFLOW = SF6DNA v2 Web Check
+RUN_ID = 35926383201
+JOB_ID = 107402354050
+HEAD_SHA = 95ad9718ec27ce937a1ffc59deae1a4bc48c13eb
+STATUS = completed
+CONCLUSION = success
+```
 
-After the auth-fix Preview reaches READY, perform Preview smoke for `/auth` and continue Release Evidence / rollback / Production Smoke Runbook preparation. Keep Motion Media device-only checks separated as USER_ACTION.
+All required workflow steps completed successfully:
+
+- Typecheck: PASS
+- Lint: PASS
+- Policy tests: PASS
+- Build: PASS
+
+```text
+FRESH_FULL_REGRESSION = PASS / CLOSED
+```
+
+## 7. Environment variable contract
+
+Repository contract (`v2-web/.env.example` and runtime code):
+
+```text
+NEXT_PUBLIC_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY
+NEXT_PUBLIC_SITE_URL
+SF6DNA_BACKEND_URL
+VERCEL_URL
+VERCEL_ENV
+```
+
+Fresh conclusions:
+
+```text
+CODE_ENV_CONTRACT = VERIFIED
+VERCEL_SYSTEM_ENV_CONTRACT = VERIFIED_FROM_VERCEL_DOCS
+PREVIEW_METADATA_RESOLUTION = VERIFIED_AT_RUNTIME
+PREVIEW_NOINDEX = VERIFIED_AT_RUNTIME
+PRODUCTION_PROJECT_ENV_SCOPE = UNVERIFIED_BY_AVAILABLE_READ_ONLY_TOOL
+```
+
+The available Vercel deployment/project read tools expose deployments, aliases, target environment, runtime logs, and deployment metadata, but not the configured project environment-variable key/scope listing. Therefore do not infer that user-configured Production variables are present merely because Preview works.
+
+Before Production promotion, confirm the intended Production key/scope assignments in Vercel UI or another supported source. Secret values do not need to be copied or shared.
+
+## 8. Production boundary / rollback
+
+Production remains unchanged:
+
+```text
+ALIAS = sf-6-dna.vercel.app
+DEPLOYMENT = dpl_3T4VAzUWb57vwaN6HphfNGucDPVL
+SHA = b9a2a8f638a3d4a98bfa042d56470664fe225ba7
+STATE = READY
+```
+
+Fresh project runtime-error query over the checked 24-hour window returned no grouped runtime errors.
+
+No Production alias, deployment, or environment setting was changed.
+
+## 9. Release status
+
+```text
+NEW_P0_BLOCKER = NONE
+AUTH_REDIRECT_GATE = CLOSED
+FRESH_REGRESSION_GATE = CLOSED
+METADATA_BASE_PREVIEW = PASS
+PREVIEW_NOINDEX = PASS
+PRODUCTION_ENV_ASSIGNMENT = USER_ACTION / PENDING
+CANONICAL = SEO_FOLLOW_UP
+```
+
+The remaining environment gate is about confirming Production assignment, not discovering a current Preview defect.
+
+## 10. Next ChatGPT-only action
+
+Keep application code frozen. Continue read-only release evidence consolidation only. Production env confirmation, device acceptance, Character Detail human acceptance, and Production promotion approval remain USER_ACTION gates.
