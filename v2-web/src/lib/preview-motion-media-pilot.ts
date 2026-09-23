@@ -21,5 +21,7 @@ function toPreviewRecord(clip: PilotClip, displayOrder: number): DevicePreviewMo
 
 export function getPreviewPilotMotionMedia(characterId: string): DevicePreviewMoveMotionMedia[] {
   if (characterId !== JP_CHARACTER_ID || manifest.character_slug !== "jp") return [];
-  return manifest.clips.map((clip, index) => toPreviewRecord(clip, index));
+  return manifest.clips
+    .filter((clip) => clip.verification_status === "approved_for_preview")
+    .map((clip, index) => toPreviewRecord(clip, index));
 }
