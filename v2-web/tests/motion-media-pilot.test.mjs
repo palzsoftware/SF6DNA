@@ -39,7 +39,8 @@ test("pilot is JP-only and remains behind the device Preview request path", () =
   assert.match(loader, /JP_CHARACTER_ID/);
   assert.match(loader, /characterId !== JP_CHARACTER_ID/);
   assert.doesNotMatch(loader, /RYU_CHARACTER_ID|character_slug !== "ryu"/);
-  assert.match(preview, /if \(!isDevicePreviewRequest\(previewToken\)\) return \[\]/);
+  assert.match(preview, /process\.env\.VERCEL_ENV !== "preview"/);
+  assert.match(preview, /if \(!isDevicePreviewRequest\(previewToken\)\) return pilotMedia/);
   assert.match(preview, /getPreviewPilotMotionMedia/);
 });
 

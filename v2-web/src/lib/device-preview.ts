@@ -306,10 +306,11 @@ export async function getDevicePreviewMoveMotionMedia(
   characterId: string,
   previewToken: string | null | undefined
 ): Promise<DevicePreviewMoveMotionMedia[]> {
-  if (!isDevicePreviewRequest(previewToken)) return [];
+  if (process.env.VERCEL_ENV !== "preview") return [];
 
   const { getPreviewPilotMotionMedia } = await import("@/lib/preview-motion-media-pilot");
   const pilotMedia = getPreviewPilotMotionMedia(characterId);
+  if (!isDevicePreviewRequest(previewToken)) return pilotMedia;
 
   const supabase = getSupabaseServerClient();
   const { data, error } = await supabase.rpc("get_phase23_move_motion_media_preview", {
