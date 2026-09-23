@@ -10,7 +10,16 @@ export const metadata: Metadata = {
 
 function getSafeNextPath(next: string | string[] | undefined) {
   const candidate = Array.isArray(next) ? next[0] : next;
-  return candidate?.startsWith("/") && !candidate.startsWith("//") ? candidate : "/";
+  if (!candidate?.startsWith("/")) return "/";
+
+  try {
+    const safeOrigin = "https://sf6dna.invalid";
+    const parsed = new URL(candidate, safeOrigin);
+    if (parsed.origin !== safeOrigin) return "/";
+    return `${parsed.pathname}${parsed.search}${parsed.hash}`;
+  } catch {
+    return "/";
+  }
 }
 
 function isMissingSessionError(error: { name?: string; message?: string } | null) {
