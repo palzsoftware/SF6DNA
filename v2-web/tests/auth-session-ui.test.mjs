@@ -18,3 +18,11 @@ test("Auth handles missing sessions as guests and exposes a safe check error", (
   assert.match(page, /AuthSessionMissingError/);
   assert.match(page, /ログイン状態を確認できませんでした/);
 });
+
+test("Auth return paths are constrained to the local origin", () => {
+  assert.match(page, /candidate\?\.startsWith\("\/"\)/);
+  assert.match(page, /const safeOrigin = "https:\/\/sf6dna\.invalid"/);
+  assert.match(page, /new URL\(candidate, safeOrigin\)/);
+  assert.match(page, /parsed\.origin !== safeOrigin/);
+  assert.match(page, /parsed\.pathname/);
+});
