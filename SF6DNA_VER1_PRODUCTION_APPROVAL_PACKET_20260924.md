@@ -7,32 +7,48 @@ This packet consolidates the current release candidate and outstanding approval 
 
 ## 1. Candidate baseline
 
-Freshly rechecked before creating this packet.
+Freshly rechecked after the JP Motion Media mapping-hold safety fix.
 
 ```text
 RC_BRANCH = sf6dna-v2-chatgpt-rc-20260916
-RC_SOURCE_HEAD = 8e87978211abd00bfeabaa2f1301d329fd291df6
-RC_PREVIEW_DEPLOYMENT = dpl_Exm1JQbcYP9Zn8fqijCmjEuQwP2L
-RC_PREVIEW_STATE = READY
-RC_PREVIEW_TARGET = preview
+RC_APPLICATION_HEAD = fc572ad9c95ed834414df6ebe26737bd4c0ba38b
+RC_APPLICATION_PREVIEW_DEPLOYMENT = dpl_5QoVTnMf67cJVeHds5NRgnRK9nYp
+RC_APPLICATION_PREVIEW_STATE = READY
+RC_APPLICATION_PREVIEW_TARGET = preview
+LATEST_DOCS_ONLY_HEAD_BEFORE_PACKET_REFRESH = 068eabc34bac24537981ec55f3e64ce889b68e37
 ```
 
-The current RC head is an evidence/documentation commit. The latest application-code security delta in the lineage is the Auth return-path hardening.
+The latest application-code delta after Auth hardening is limited to Motion Media pilot safety:
 
-## 2. Fresh CI / security evidence
+- allow `mapping_hold` as a valid manifest state;
+- test the held-state contract;
+- filter held clips out of Preview rendering;
+- test the Preview filter contract;
+- move the confirmed ambiguous JP Zilant mapping from `approved_for_preview` to `mapping_hold`.
 
-For current RC SHA `8e87978211abd00bfeabaa2f1301d329fd291df6`:
+The Motion Media pilot remains outside the core Production release boundary.
+
+## 2. Fresh Preview / runtime evidence
+
+For application SHA `fc572ad9c95ed834414df6ebe26737bd4c0ba38b`:
 
 ```text
-CODEQL_RUN_ID = 22195512950
-CODEQL_EVENT = push
-CODEQL_STATUS = completed
-CODEQL_CONCLUSION = success
+VERCEL_COMBINED_STATUS = success
+PREVIEW_STATE = READY
+PREVIEW_DEPLOYMENT = dpl_5QoVTnMf67cJVeHds5NRgnRK9nYp
+PREVIEW_RUNTIME_ERROR_FATAL_LAST_6H = 0 observed
+GITHUB_ACTIONS_RUNS_FOR_EXACT_SHA = 0
 ```
 
-A fresh full `SF6DNA v2 Web Check` run is **not** present for this exact RC SHA. The older 255/255 full-suite and 14/14 release-gate results remain historical evidence only because they predate the latest Auth hardening change.
+The Preview build succeeding confirms that the current code builds on Vercel. It is **not** a substitute for the full test suite.
 
-`.github/workflows/v2-web-check.yml` supports `workflow_dispatch`, but the currently available GitHub connector does not expose an action to start a new workflow dispatch. It can inspect/retry existing runs only. Therefore this packet does not claim a fresh full regression that did not occur.
+## 3. Fresh CI / regression evidence
+
+A fresh full `SF6DNA v2 Web Check` run is **not** present for the exact current application SHA. The older 255/255 full-suite and 14/14 release-gate results remain historical evidence only because they predate later Auth and Motion Media safety changes.
+
+The repository contains targeted tests for the latest Motion Media safety behavior, but this packet does not mark them as executed merely because the test files exist.
+
+`.github/workflows/v2-web-check.yml` supports `workflow_dispatch`, but the currently available GitHub connector does not expose an action to start a new workflow dispatch. It can inspect/retry existing runs only.
 
 Current classification:
 
@@ -43,13 +59,13 @@ FULL_CURRENT_RC_REGRESSION = PENDING_OR_NEEDS_ACCEPTED_NARROW_EVIDENCE
 Acceptable release paths are:
 
 1. run the full Web Check against the frozen final RC and require Typecheck + Lint + Tests + Build PASS; or
-2. explicitly accept the narrower current evidence consisting of targeted Auth regression + successful Preview build + current CodeQL success.
+2. explicitly accept the narrower current evidence consisting of the previously targeted Auth regression, current Vercel Preview build success, exact-SHA runtime error check, and reviewed Motion Media safety delta.
 
 Do not reinterpret the older 255/255 result as a fresh current-RC result.
 
-## 3. Production rollback anchor
+## 4. Production rollback anchor
 
-Production was freshly confirmed unchanged during this release-preparation pass.
+Production remains intentionally unchanged during release preparation.
 
 ```text
 PRODUCTION_ALIAS = sf-6-dna.vercel.app
@@ -62,7 +78,7 @@ This remains the pre-release rollback anchor. Do not mutate it during preparatio
 
 Use `SF6DNA_VER1_PRODUCTION_SMOKE_ROLLBACK_RUNBOOK_20260924.md` after any explicitly approved promotion.
 
-## 4. Production environment gate
+## 5. Production environment gate
 
 Code-level environment contracts were reviewed earlier, but the currently available read-only Vercel project/deployment connector does not expose a Production/Preview environment-variable key/scope listing.
 
@@ -76,25 +92,45 @@ Before final promotion, confirm through Vercel UI or another supported source th
 
 This is a final GO gate because a wrong backend/project assignment can make an otherwise successful build unsafe to promote.
 
-## 5. Motion Media release boundary
+## 6. Motion Media release boundary
 
 Motion Media remains outside the core Ver.1.0 Production gate unless separately completed and explicitly included.
 
 ```text
-JP_MEDIA = PREVIEW_ONLY
-RYU_MEDIA = TEMPLATE_TARGET / SOURCE_TRANSFER_PENDING
+JP_MEDIA = PREVIEW_ONLY / HELD_MAPPING_FILTER_ACTIVE
+RYU_MEDIA = TEMPLATE_TARGET / SOURCE_LOCATED / RAW_TRANSFER_HELD
 OTHER_29 = VIDEO_WAITING / TEMPLATE_TARGET
 ```
 
-Known JP items remain:
+### JP
+
+The confirmed ambiguous `jp-zilant` mapping is now `mapping_hold` and is filtered from Preview output. This closes the immediate risk of knowingly showing the wrong clip under that move name.
+
+Still pending:
 
 - spacing-walk sections require re-cut review;
-- remaining ambiguous move mappings must stay `MAPPING_HOLD` rather than being guessed;
+- any additional ambiguous move mapping must stay `MAPPING_HOLD` rather than be guessed;
 - 375px/reduced-motion media QA remains pending.
 
-These are not reasons to block the core release while Motion Media remains excluded from Production.
+### Ryu
 
-## 6. USER_ACTION gates
+The four source masters were freshly located in ChatGPT Library under `/SF6DNA/`:
+
+```text
+ryu_normals_20260923_take02.mp4
+ryu_unique_attacks_20260923_take01.mp4
+ryu_specials_20260923_take01.mp4
+ryu_super_arts_20260923_take01.mp4
+TOTAL_BYTES = 964002738
+```
+
+A single direct raw-byte materialization attempt was made and failed because these Project files do not expose an authorized raw-byte materialization path to the current Work runtime. This is not source loss and does not require re-recording or immediate re-upload.
+
+See `SF6DNA_VER1_RYU_TRANSFER_OPTIONS_20260924.md` for the exact transfer state and provider-neutral fallback design.
+
+These Motion Media items are not reasons to block the core release while Motion Media remains excluded from Production.
+
+## 7. USER_ACTION gates
 
 The following cannot be closed by ChatGPT-only work and remain explicit user-side gates:
 
@@ -108,7 +144,7 @@ The following cannot be closed by ChatGPT-only work and remain explicit user-sid
 
 Game recording and 8 Game Verification remain USER_ACTION but do not become core release blockers unless the release scope is changed to include unfinished Motion Media/game-verification-dependent content.
 
-## 7. Current release decision
+## 8. Current release decision
 
 ```text
 FINAL_GO = NO, NOT YET
@@ -123,7 +159,7 @@ VER1_1_CHANGED = NO
 
 The current candidate has no newly confirmed P0 from the latest ChatGPT-only checks. Final GO is still withheld because final device acceptance, Production environment assignment, and explicit Production approval are unresolved, and current-RC full regression is either still pending or must be explicitly accepted as narrower evidence.
 
-## 8. Freeze checklist
+## 9. Freeze checklist
 
 Before changing `FINAL_GO` to `GO`, require all of the following:
 
@@ -142,7 +178,7 @@ If any application-code change is added after RC freeze, reopen the regression d
 
 Documentation-only evidence updates may continue, but avoid unnecessary commits once the final candidate is ready to freeze.
 
-## 9. Approval record template
+## 10. Approval record template
 
 Complete only when the user explicitly approves Production promotion.
 
@@ -160,6 +196,6 @@ PROMOTION_APPROVAL = EXPLICIT
 
 Until this record is valid, Production promotion remains unauthorized.
 
-## 10. Next ChatGPT-only action
+## 11. Next ChatGPT-only action
 
-Keep application code frozen unless a release-critical defect is found. Verify the Preview generated from this documentation-only packet commit, recheck that Production remains on the recorded rollback anchor, and continue evidence consolidation without reopening nonessential feature work.
+Keep core application code frozen unless a release-critical defect is found. Do not retry the same Ryu raw-materialization path. Continue read-only release evidence checks and provider-neutral Motion Media ingest design without reopening nonessential features.
