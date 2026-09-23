@@ -13,10 +13,14 @@ test("JP pilot manifest has unique, canonical move mappings and valid assets", (
   assert.equal(manifest.source_owner, "user_capture");
   assert.equal(manifest.clips.length, 7);
 
+  const allowedStatuses = new Set(["approved_for_preview", "mapping_hold"]);
   const moveIds = new Set();
   const mediaUrls = new Set();
   for (const clip of manifest.clips) {
-    assert.equal(clip.verification_status, "approved_for_preview");
+    assert.ok(allowedStatuses.has(clip.verification_status), `unexpected status ${clip.verification_status}`);
+    if (clip.verification_status === "mapping_hold") {
+      assert.equal(clip.move_slug, "jp-zilant", "only the confirmed ambiguous Zilant mapping may be held in this pilot");
+    }
     assert.equal(clip.media_type, "video");
     assert.equal(clip.width, 640);
     assert.equal(clip.height, 360);
@@ -35,10 +39,11 @@ test("JP pilot manifest has unique, canonical move mappings and valid assets", (
   }
 });
 
-test("pilot is JP-only and remains behind the device Preview request path", () => {
+test("pilot is JP-only, filters held clips, and remains behind the device Preview request path", () => {
   assert.match(loader, /JP_CHARACTER_ID/);
   assert.match(loader, /characterId !== JP_CHARACTER_ID/);
   assert.doesNotMatch(loader, /RYU_CHARACTER_ID|character_slug !== "ryu"/);
+  assert.match(loader, /verification_status === "approved_for_preview"/);
   assert.match(preview, /process\.env\.VERCEL_ENV !== "preview"/);
   assert.match(preview, /if \(!isDevicePreviewRequest\(previewToken\)\) return pilotMedia/);
   assert.match(preview, /getPreviewPilotMotionMedia/);
