@@ -73,7 +73,10 @@ test("auth preserves a safe internal return path after login", () => {
   const page = readProjectFile("src/app/auth/page.tsx");
   const form = readProjectFile("src/components/auth-form.tsx");
   assert.match(page, /candidate\?\.startsWith\("\/"\)/, "internal return-path check missing");
-  assert.match(page, /!candidate\.startsWith\("\/\/"\)/, "protocol-relative redirect must be rejected");
+  assert.match(page, /const safeOrigin = "https:\/\/sf6dna\.invalid"/, "fixed validation origin missing");
+  assert.match(page, /new URL\(candidate, safeOrigin\)/, "return path must be parsed as a URL");
+  assert.match(page, /parsed\.origin !== safeOrigin/, "external or protocol-relative redirect must be rejected");
+  assert.match(page, /return `\$\{parsed\.pathname\}\$\{parsed\.search\}\$\{parsed\.hash\}`/, "validated local path must preserve path, query and hash");
   assert.match(page, /<AuthForm nextPath=\{nextPath\}/, "safe return path is not passed to auth form");
   assert.match(form, /router\.replace\(nextPath\)/, "login does not return to requested internal path");
 });
