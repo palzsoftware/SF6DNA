@@ -47,6 +47,6 @@ test("authenticated diagnosis saves through the account RPC and keeps failures v
   assert.match(runner, /if \(!authData\.user\)[\s\S]*?return;/);
   assert.match(runner, /supabase\.rpc\("save_diagnosis_result_with_answers"/);
   assert.match(runner, /setDatabaseSaveStatus\("failed"\)/);
-  assert.match(runner, /診断結果をアカウントへ保存できませんでした/);
+  assert.match(runner, /診断結果をアカウントに保存できませんでした。下のボタンからもう一度お試しください/);
   assert.match(runner, /保存を再試行/);
 });

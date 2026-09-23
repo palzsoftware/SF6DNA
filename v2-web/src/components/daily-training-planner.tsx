@@ -70,7 +70,7 @@ export function DailyTrainingPlanner({ dateKey, request, context }: { dateKey: s
       onToggle={() => setExpandedId(activeExpandedId === item.id ? null : item.id)} onComplete={() => setCompletedIds((current) => { const next = new Set(current); if (next.has(item.id)) next.delete(item.id); else next.add(item.id); return next; })} />)}</section>
     {completed ? <section className={styles.completion} aria-live="polite"><p className={styles.sectionLabel}>15 / 15分</p><h2>今日のメニュー完了</h2><p>おつかれさまでした。次の対戦では、まず1つだけ試してみましょう。</p>{completionFocus ? <p><strong>実戦テーマ：</strong>{completionFocus}</p> : null}</section> : null}
     <section className="info-panel"><p>メニューは日本時間の日付と課題に合わせて選びます。日付が変わった場合や新しく診断した場合は、ページを開き直してください。</p>
-      <p className="muted">完了状態はこのページ内だけで使い、保存しません。未確認のキャラクター固有技・コンボ・確定状況は表示しません。</p>
+      <p className="muted">練習の完了状態は保存されず、ページを開き直すと消えます。技やコンボなど、確認が済んでいない情報は表示しません。</p>
       <div className="diagnosis-actions"><Link className="button-primary" href="/diagnosis/improvement-check">上達課題を診断する</Link><Link className="button-secondary" href="/diagnosis/history">診断履歴を見る</Link></div>
     </section>
   </div>;

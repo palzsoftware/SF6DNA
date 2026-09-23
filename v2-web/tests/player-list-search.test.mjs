@@ -38,7 +38,7 @@ test("player directory V2 combines category and character groups with AND", () =
 test("player directory exposes a source-dated unknown rank state", () => {
   const source = read("src/components/player-directory.tsx");
   assert.match(source, />ランク</);
-  assert.match(source, /確認日つきデータの連携後に利用できます/);
+  assert.match(source, /ランクでの絞り込みは現在利用できません/);
   assert.doesNotMatch(source, /current_rank\s*=/);
 });
 

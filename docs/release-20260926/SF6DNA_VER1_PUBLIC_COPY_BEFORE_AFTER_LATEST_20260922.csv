@@ -14,3 +14,6 @@ route_or_ui,item,before,after,reason
 /diagnosis,Fallback description,診断内容を確認する,この診断で分かることを見る,利用価値を具体化
 /matchup-card,Related heading,次に確認する,次に見る,確認するの連発を回避
 /characters/[slug],Shared quick actions,関連動画を確認する / 開く →,関連動画を見る / プレイヤーを見る・動画を見る →,遷移先を具体化
+/diagnosis/[slug],Save failure,診断結果をアカウントへ保存できませんでした。同じ保存IDで再試行できます。,診断結果をアカウントに保存できませんでした。下のボタンからもう一度お試しください。,保存の内部識別子を利用者向けの再操作に置換
+/players,Rank filter unavailable,確認日つきデータの連携後に利用できます,ランクでの絞り込みは現在利用できません,未提供機能の現在の状態を推測や時期の約束なしに説明
+/me/training,Completion and verification notice,完了状態はこのページ内だけで使い、保存しません。未確認のキャラクター固有技・コンボ・確定状況は表示しません。,練習の完了状態は保存されず、ページを開き直すと消えます。技やコンボなど、確認が済んでいない情報は表示しません。,保存範囲と掲載基準を利用者の行動に沿って明確化

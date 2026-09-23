@@ -207,7 +207,7 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
     } catch (error) {
       console.error("[diagnosis] result save failed", error);
       setDatabaseSaveStatus("failed");
-      setDatabaseSaveMessage("診断結果をアカウントへ保存できませんでした。同じ保存IDで再試行できます。");
+      setDatabaseSaveMessage("診断結果をアカウントに保存できませんでした。下のボタンからもう一度お試しください。");
     } finally {
       databaseSaveInFlight.current = false;
     }

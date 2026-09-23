@@ -129,7 +129,7 @@ test("client uses three-card plan, safe explanatory text, and existing design cl
   assert.match(clientSource, /5分 × 3課題/);
   assert.match(clientSource, /plan\.items\.map/);
   assert.doesNotMatch(clientSource, /<table|dangerouslySetInnerHTML|user_id|AIコーチ|listTrainingLibrary/);
-  assert.match(clientSource, /完了状態はこのページ内だけで使い、保存しません/);
+  assert.match(clientSource, /練習の完了状態は保存されず、ページを開き直すと消えます/);
 });
 
 test("client exposes accessible accordion and page-only fifteen-minute progress", () => {

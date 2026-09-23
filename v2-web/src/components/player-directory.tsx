@@ -102,7 +102,7 @@ export function PlayerDirectory({ players }: { players: PlayerSummary[] }) {
           <span>{character.name}</span>
         </label>)}</div>
       </fieldset>
-      <div className={styles.rankState}><strong>ランク</strong><span>確認日つきデータの連携後に利用できます</span></div>
+      <div className={styles.rankState}><strong>ランク</strong><span>ランクでの絞り込みは現在利用できません</span></div>
       {(categories.length || characters.length) ? <div className={styles.filterChips} aria-label="選択中のフィルター">
         {categories.map((category) => <button type="button" key={category} onClick={() => toggle(category, categories, setCategories)}>{playerTypeLabel(category)} ×</button>)}
         {characters.map((slug) => <button type="button" key={slug} onClick={() => toggle(slug, characters, setCharacters)}>{characterOptions.find((item) => item.slug === slug)?.name ?? slug} ×</button>)}
