@@ -7,14 +7,19 @@ This is a release decision draft. It does not authorize Production promotion, al
 
 ## Fresh release baseline
 
+Freshly rechecked on 2026-09-24 during the overnight release-preparation pass.
+
 - RC branch: `sf6dna-v2-chatgpt-rc-20260916`
-- RC code/evidence baseline before this draft: `d032ab45a51db36c436077bf2d7233b9b8011d79`
+- RC HEAD before this evidence-only refresh: `143925ed88c06a776f51da330feb4f522f3fcb0f`
 - Last application-code security fix: `ce5f111c4d50b9ba7b875fb25a37db1cb01a1be6`
 - Auth regression contract: `aff8f00f935ec2eadf9966dd248651478f4071e6`
-- Latest verified application/evidence Preview before this draft: `dpl_BrAxweXaYhTHhZzeaTnK2QCAeVaC` for SHA `5037ed8ef275e06794c210d1b0d96411b63712f9`, `READY`
-- GitHub/Vercel combined status for `5037ed8...`: `success`
-- Latest checked Preview root: HTTP `200`
-- Latest checked Preview error/fatal runtime query: no matching logs in the checked 6-hour window
+- Fresh RC Preview deployment: `dpl_H51SiJxu9Q2gbPbCCmyoRCpBMFo9`
+- Fresh RC Preview URL: `sf-6-vtawhp6g0-somas11620-9368.vercel.app`
+- Fresh RC Preview commit: `143925ed88c06a776f51da330feb4f522f3fcb0f`
+- Fresh RC Preview state: `READY`
+- GitHub/Vercel combined status for `143925ed...`: `success`
+- Fresh Preview runtime `error` / `fatal` query: no matching logs in the checked 6-hour window
+- Preview remains Vercel-protected/noindex; an unauthenticated direct fetch can therefore return the Vercel SSO redirect instead of the application response and must not be misclassified as an application failure.
 
 Current Production is still unchanged:
 
@@ -33,7 +38,7 @@ PRODUCTION_CHANGED = NO
 DB_CHANGED = NO
 ```
 
-Reason: the RC has no newly confirmed P0 in the latest ChatGPT-only audits, but final user/device acceptance and Production environment confirmation are still outstanding. The most recent application-code change also has targeted regression evidence and a successful Vercel build, but the older 255/255 full-suite baseline predates that auth hardening change.
+Reason: the RC has no newly confirmed P0 in the latest ChatGPT-only audits, but final user/device acceptance and Production environment confirmation are still outstanding. The most recent application-code change has targeted regression evidence and a successful Vercel build, but the older 255/255 full-suite baseline predates that auth hardening change.
 
 ## Evidence that currently supports GO
 
@@ -58,7 +63,35 @@ Targeted evidence:
 - auth UI targeted tests: 3/3 PASS in the recorded isolated replay
 - redirect behavior cases: 5/5 PASS
 - malicious protocol-relative / absolute-external / backslash-host-like values fall back safely
-- Vercel Preview build for the auth-fix commit: READY
+- Vercel Preview build for the auth-fix lineage: READY
+
+### Fresh RC deployment evidence
+
+The current candidate lineage was rechecked after the GO/NO-GO draft was created:
+
+```text
+RC_SOURCE_HEAD = 143925ed88c06a776f51da330feb4f522f3fcb0f
+PREVIEW_DEPLOYMENT = dpl_H51SiJxu9Q2gbPbCCmyoRCpBMFo9
+PREVIEW_STATE = READY
+VERCEL_COMMIT_STATUS = success
+PREVIEW_ERROR_FATAL_6H = NONE_FOUND
+```
+
+The commits after the auth application change are release-evidence/documentation commits, not application-code changes.
+
+### Full regression execution path
+
+`.github/workflows/v2-web-check.yml` was freshly inspected. It includes `workflow_dispatch` and runs:
+
+1. `npm ci`
+2. `npm run typecheck`
+3. `npm run lint`
+4. `npm test`
+5. `npm run build`
+
+Its automatic `push` trigger is limited to `sf6dna-v2`, but the workflow itself is manually dispatchable. The currently available GitHub connector can read workflow state/jobs/logs and retry existing jobs, but it does not expose a new workflow-dispatch action. The container runner also cannot reach GitHub to clone the repository. Therefore a fresh full run was **not silently claimed** in this pass.
+
+This is a tooling-execution limitation, not a discovered application defect.
 
 ### Public DB/security boundary
 
@@ -99,8 +132,9 @@ The last fresh full-suite baseline (255/255) predates the auth return-path harde
 
 Preferred final-release path:
 
-1. run the repository's full `v2-web` test/typecheck/lint/build/release-gate set against the final RC SHA if an approved runner is available;
-2. if a runner remains unavailable, explicitly record acceptance of the narrower targeted + Vercel-build evidence before final GO rather than silently treating the old full-suite result as fresh.
+1. manually dispatch `SF6DNA v2 Web Check` against the final RC branch, or run the equivalent approved repository runner;
+2. require Typecheck + Lint + Policy tests + Build to pass;
+3. if no approved runner can be executed before release, explicitly record acceptance of the narrower targeted + Vercel-build evidence rather than treating the older 255/255 result as fresh.
 
 ### Gate C — User final device acceptance
 
@@ -112,7 +146,7 @@ At minimum verify the release-critical public routes on the intended PC/mobile d
 
 Status: `USER_ACTION / PENDING`
 
-The code contract is verified, but the available read-only connector cannot enumerate actual Vercel Production/Preview environment key scopes.
+The code contract is verified, but the available read-only Vercel connector does not expose the required Production/Preview environment-variable key scope listing through the currently available project/deployment tools.
 
 Before final promotion, confirm in Vercel UI or another supported source that the intended Production assignments exist for the required release variables. Secret values do not need to be shared.
 
@@ -165,7 +199,7 @@ Keep `NO-GO` if any of these is true at release time:
 
 ## Next ChatGPT-only action
 
-Continue read-only/fresh release evidence on the final RC candidate, avoid nonessential application changes, and prepare the exact final-freeze snapshot. Do not spend the core release window on JP/Ryu media completion while Motion Media remains Preview-only.
+Keep the RC application code frozen unless a release-critical defect is discovered. On the next pass, first verify that this evidence-only commit receives a READY Preview and that the production rollback anchor remains unchanged; then continue release-evidence consolidation rather than reopening Motion Media or nonessential feature work.
 
 ## Safety record
 
