@@ -54,6 +54,6 @@ DB変更なし。Production変更なし。`main` / `sf6dna-v2`変更なし。診
 - 変更なし: Contact/Privacyの180日保持・保存対象、Loginの診断結果と端末内保存の区別、Character Detail固有攻略本文、診断質問・採点・推薦契約。Preview確認用の内部表示は通常Public UIに出ないため維持。
 - 用語再検索: `ブラウザー`、`出典を開く`、`metadata待ち`、`relation未登録`、旧`保存IDで再試行`は、対象Public UIコードで0件。Character Detailのアコーディオン「開く」は開閉操作を示すため維持。
 - テスト: 277/277 PASS、typecheck PASS、lint PASS、release-gates 14/14 PASS、build PASS、diff-check PASS。ビルドによる `next-env.d.ts` / `tsconfig.json` の自動変更は対象外として戻した。
-- Preview: Vercel Authentication保護により、クラウドブラウザではアプリ画面へ到達できず。新規修正の実ブラウザ表示は未確認。Vercel側のREADY/SHA整合および保護付きHTML取得を別途確認する。
+- Preview: `dpl_4y2kmbwZhuYrHuJsc7dVmRMVeEq5` はREADY、SHA `978e2a99888cd87736ac26c7c2f74fa5f8a95650` と一致。URL `https://sf-6-bm067naxk-somas11620-9368.vercel.app/`。Vercel Authentication保護によりクラウドブラウザ・保護付きURL取得とも認証画面/302へ転送され、新規修正の実画面表示は未確認。
 - 判定: `NON_CHARACTER_PUBLIC_COPY = CODE_REVIEW_PASS`、`BROWSER_COPY_QA = NOT_RUN_AUTH_PROTECTED`。Production承認・公開判定とは独立。
 - 次回: 2026-09-25 Final RC候補の最終読み直し。以後、P0/P1相当の文言のみ修正。

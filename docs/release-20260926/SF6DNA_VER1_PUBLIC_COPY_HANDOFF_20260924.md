@@ -17,10 +17,12 @@
 - ビルドが自動変更した `next-env.d.ts` / `tsconfig.json` はcommit対象から除外。
 - 実ブラウザPreview: Vercel Authenticationのログイン画面に転送され、Public UIを確認できず。`BROWSER_COPY_QA = NOT_RUN_AUTH_PROTECTED`。
 - Local HTTP実行: 実行環境のネットワークインターフェース取得エラーで起動不可。ビルドと静的検証で代替したが、実表示PASSとは扱わない。
+- RC反映: non-forceで `978e2a99888cd87736ac26c7c2f74fa5f8a95650`。Preview `dpl_4y2kmbwZhuYrHuJsc7dVmRMVeEq5` はREADYかつSHA一致。URL: `https://sf-6-bm067naxk-somas11620-9368.vercel.app/`。
+- 保護付きURL取得: `/players`、`/me/training`、`/contact` などは認証への302。修正文言のPreview本文照合は未完了。
 
 ## 引継ぎ
 
-1. RC push後に新PreviewのREADYとGit SHA一致を確認。可能なら保護付きURLのHTMLからPublic Copyを照合。
+1. 2026-09-25に認証済みPreviewで新規3文言の実表示を確認できる場合は照合。できない場合は `BROWSER_COPY_QA = NOT_RUN_AUTH_PROTECTED` を維持。
 2. 2026-09-25はFinal RC候補の文言を最終確認。以後はP0/P1のみ修正。
 3. 2026-09-26はProductionの明示承認前ならread-only deploy前監査のみ。承認後に指定されたProduction copy smokeを実施。
 
