@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import type { MoveMotionMedia as MoveMotionMediaRecord } from "@/lib/move-motion-media";
 
 export function MoveMotionMedia({
@@ -12,6 +15,29 @@ export function MoveMotionMedia({
   className?: string;
   showSource?: boolean;
 }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncPlayback = () => {
+      if (reducedMotion.matches) {
+        video.pause();
+        video.currentTime = 0;
+        return;
+      }
+      void video.play().catch(() => {
+        // Autoplay can still be blocked by a browser-level policy; the poster remains visible.
+      });
+    };
+
+    syncPlayback();
+    reducedMotion.addEventListener("change", syncPlayback);
+    return () => reducedMotion.removeEventListener("change", syncPlayback);
+  }, []);
+
   const motion = media.mediaType === "gif" ? (
     <Image
       alt={`${title}のモーション`}
@@ -24,12 +50,13 @@ export function MoveMotionMedia({
   ) : (
     <video
       aria-label={`${title}のモーション`}
+      autoPlay
       className={className}
-      controls
       loop
       muted
       playsInline
       poster={media.posterUrl ?? undefined}
+      ref={videoRef}
       preload="none"
     >
       <source src={media.mediaUrl} />

@@ -1,0 +1,12 @@
+character,source_file,source_start_sec,source_end_sec,move_id,move_slug,move_name,move_type,classic_command,status,note
+JP,jp_unique_attacks_20260923_take01.mp4,2.8,5.0,610e39c3-8fef-4a72-b85b-15c3a8fedd71,jp-guillotine,ギリオチーナ,unique,→ + 中K,APPROVED_FOR_PREVIEW,command-list order and motion reviewed
+JP,jp_unique_attacks_20260923_take01.mp4,5.8,8.0,290c6317-4a8a-4241-84cb-fc6774db1a98,jp-shalosti,シャーロスチ,unique,→ + 強P,APPROVED_FOR_PREVIEW,command-list order and motion reviewed
+JP,jp_unique_attacks_20260923_take01.mp4,9.0,11.3,3ed94fcd-3820-4ad6-91ea-7405360afac0,jp-forward-hk,前強K（Bylina）,unique,→ + 強K,APPROVED_FOR_PREVIEW,command-list order and motion reviewed
+JP,jp_unique_attacks_20260923_take01.mp4,11.5,17.0,fb460c24-5453-48e4-bc72-dc3dffcfc81c,jp-grom-strelka,グローム・ストレルカ,target_combo,← + 中P > 中P,APPROVED_FOR_PREVIEW,command-list order and full sequence reviewed
+JP,jp_unique_attacks_20260923_take01.mp4,17.0,20.7,0cc4dbc5-1dfc-4225-b050-a6ad29b92c0e,jp-zilant,ジラント,target_combo,強K > 強P,APPROVED_FOR_PREVIEW,command-list order and full sequence reviewed
+JP,jp_unique_attacks_20260923_take01.mp4,20.5,26.1,1e3cc0be-14ef-4c39-9392-d8b88196fc46,jp-zilant-mid,ジラント・ミドル,target_combo,強K > 強P > 強P,APPROVED_FOR_PREVIEW,command-list order and full sequence reviewed
+JP,jp_amnesia_counter_20260923_take01.mp4,1.3,9.5,f262b667-3ec4-4b75-a7f1-df1748df2ba3,jp-amnesia-od,OD アムネジア / Amnesia,special,↓ ↓ + KK,APPROVED_FOR_PREVIEW,OD visual effect and successful counter sequence reviewed
+JP,jp_normals_20260923_take01.mp4,,,,,,,MAPPING_HOLD,source contains multiple unlabeled moves; no inferred mapping
+JP,jp_specials_20260923_take01.mp4,,,,,,,MAPPING_HOLD,source contains menu transitions and multiple variants
+JP,jp_super_arts_20260923_take01.mp4,,,,,,,MAPPING_HOLD,long source contains mixed demonstrations; no inferred mapping
+Ryu,all provided Ryu sources,,,,,,,USER_DEFERRED,user skipped Ryu because source volume is large

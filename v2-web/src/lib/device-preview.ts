@@ -308,6 +308,9 @@ export async function getDevicePreviewMoveMotionMedia(
 ): Promise<DevicePreviewMoveMotionMedia[]> {
   if (!isDevicePreviewRequest(previewToken)) return [];
 
+  const { getPreviewPilotMotionMedia } = await import("@/lib/preview-motion-media-pilot");
+  const pilotMedia = getPreviewPilotMotionMedia(characterId);
+
   const supabase = getSupabaseServerClient();
   const { data, error } = await supabase.rpc("get_phase23_move_motion_media_preview", {
     target_character_id: characterId,
@@ -316,11 +319,12 @@ export async function getDevicePreviewMoveMotionMedia(
 
   if (error) {
     console.error("[device-preview] move motion media preview failed", error.message);
-    return [];
+    return pilotMedia;
   }
 
-  if (!Array.isArray(data)) return [];
-  return data as unknown as DevicePreviewMoveMotionMedia[];
+  const databaseMedia = Array.isArray(data) ? (data as unknown as DevicePreviewMoveMotionMedia[]) : [];
+  const pilotMoveIds = new Set(pilotMedia.map((item) => item.moveId));
+  return [...databaseMedia.filter((item) => !pilotMoveIds.has(item.moveId)), ...pilotMedia];
 }
 
 export async function getDevicePreviewContentDetail(
