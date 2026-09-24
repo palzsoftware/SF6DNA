@@ -156,6 +156,14 @@ test("field-specific localization returns natural Japanese for representative st
   assert.equal(localization.localizeSetupDetail("meter_condition", "Drive 1+"), "Dゲージ1本以上");
   assert.equal(localization.localizeComboText("slight hold"), "少し溜める");
   assert.equal(localization.localizeSourceType("community_frame_database"), "コミュニティフレームデータ");
+  assert.equal(localization.localizeSourceType("community_combo_database"), "コミュニティコンボデータ");
+  assert.equal(localization.localizeSourceType("community_structured_data"), "コミュニティ攻略データ");
+  assert.equal(localization.localizeSourceType("player_reference"), "プレイヤー資料");
+  assert.equal(localization.localizeSourceType("strategy_guide"), "攻略ガイド");
+  assert.equal(localization.localizeSourceType("structured_dataset"), "データ集");
+  assert.equal(localization.localizeSourceType("tournament_report"), "大会レポート");
+  assert.equal(localization.localizeSourceType("video_playlist"), "動画プレイリスト");
+  assert.equal(localization.localizeSourceType("future_internal_enum"), "情報源");
   assert.equal(localization.localizeSourceRelationship("corroborating"), "裏付け資料");
   assert.equal(localization.localizeCounterText("JP vs ケン 対面対策"), "JP使用時のケン対策");
 

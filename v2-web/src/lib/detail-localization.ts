@@ -1224,7 +1224,9 @@ export function localizeSourceType(value: string) {
     community_aggregator: "コミュニティ集約情報",
     community_article: "コミュニティ記事",
     community_discussion: "コミュニティ投稿",
+    community_combo_database: "コミュニティコンボデータ",
     community_frame_database: "コミュニティフレームデータ",
+    community_structured_data: "コミュニティ攻略データ",
     official_patch: "公式パッチノート",
     official_patch_notes: "公式パッチノート",
     official: "公式情報",
@@ -1239,11 +1241,16 @@ export function localizeSourceType(value: string) {
     guide: "攻略記事",
     note: "攻略記事",
     player_database: "プレイヤーデータベース",
+    player_reference: "プレイヤー資料",
     strategy: "攻略情報",
+    strategy_guide: "攻略ガイド",
+    structured_dataset: "データ集",
+    tournament_report: "大会レポート",
     video: "動画",
     video_guide: "解説動画",
+    video_playlist: "動画プレイリスト",
     social_post: "SNS投稿",
-  } as Record<string, string>)[value] ?? value;
+  } as Record<string, string>)[value] ?? "情報源";
 }
 
 export function localizeSourceRelationship(value: string) {
