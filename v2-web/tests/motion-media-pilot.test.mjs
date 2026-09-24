@@ -1,8 +1,10 @@
 import assert from "node:assert/strict";
 import { existsSync, readFileSync, statSync } from "node:fs";
 import test from "node:test";
+import { validateMotionMediaManifest } from "../../scripts/validate-motion-media.mjs";
 
 const manifest = JSON.parse(readFileSync(new URL("../src/data/SF6DNA_VER1_RYU_JP_MEDIA_MANIFEST_20260923.json", import.meta.url), "utf8"));
+const ryuManifest = JSON.parse(readFileSync(new URL("../src/data/SF6DNA_VER1_RYU_MEDIA_MANIFEST_20260924.json", import.meta.url), "utf8"));
 const component = readFileSync(new URL("../src/components/move-motion-media.tsx", import.meta.url), "utf8");
 const loader = readFileSync(new URL("../src/lib/preview-motion-media-pilot.ts", import.meta.url), "utf8");
 const preview = readFileSync(new URL("../src/lib/device-preview.ts", import.meta.url), "utf8");
@@ -46,10 +48,22 @@ test("unverified Amnesia counter is held and excluded from Preview", () => {
   assert.equal(manifest.clips.filter((clip) => clip.category === "specials" && clip.verification_status === "approved_for_preview").length, 0);
 });
 
-test("pilot is JP-only, filters held clips, and remains behind the device Preview request path", () => {
+test("Ryu pilot keeps only the two reviewed normal moves and validates their media", () => {
+  assert.equal(ryuManifest.character_slug, "ryu");
+  assert.equal(ryuManifest.clips.length, 2);
+  assert.deepEqual(new Map(ryuManifest.clips.map((clip) => [clip.move_slug, clip.move_id])), new Map([
+    ["ryu-standing-hk", "b2362378-1411-45ae-a0f0-014e898042e0"],
+    ["ryu-crouching-hk", "06cb478c-ed44-47f7-99ec-1a2dbe45e8b5"],
+  ]));
+  assert.ok(ryuManifest.clips.every((clip) => clip.category === "normals" && clip.verification_status === "approved_for_preview"));
+  assert.equal(ryuManifest.clips.filter((clip) => clip.category === "unique_attacks").length, 0);
+  assert.deepEqual(validateMotionMediaManifest(ryuManifest, { publicRoot: new URL("../public/", import.meta.url).pathname }).errors, []);
+});
+
+test("pilot maps JP and Ryu separately, filters held clips, and remains Preview-only", () => {
   assert.match(loader, /JP_CHARACTER_ID/);
-  assert.match(loader, /characterId !== JP_CHARACTER_ID/);
-  assert.doesNotMatch(loader, /RYU_CHARACTER_ID|character_slug !== "ryu"/);
+  assert.match(loader, /RYU_CHARACTER_ID/);
+  assert.match(loader, /characterId === RYU_CHARACTER_ID && ryuManifest.character_slug === "ryu"/);
   assert.match(loader, /verification_status === "approved_for_preview"/);
   assert.match(preview, /process\.env\.VERCEL_ENV !== "preview"/);
   assert.match(preview, /if \(!isDevicePreviewRequest\(previewToken\)\) return pilotMedia/);

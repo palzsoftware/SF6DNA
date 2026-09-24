@@ -1,0 +1,65 @@
+{
+  "manifest_version": "1.0",
+  "character_slug": "ryu",
+  "source_owner": "user_capture",
+  "captured_patch": "2026.08.03",
+  "capture_date": "2026-09-23",
+  "source_files": [
+    {
+      "category": "normals",
+      "filename": "ryu_normals_20260923_take02.mp4",
+      "sha256": "632ac70f8a3ad7223909bf8ded5c6377b1a860e2646a4ab96a252d70900d034f"
+    },
+    {
+      "category": "unique_attacks",
+      "filename": "ryu_unique_attacks_20260923_take01.mp4",
+      "sha256": "7ca846fa8ea16e4756cc0883b4b75e8cc3066a957d59ae79c79886ebb3ffe52e"
+    }
+  ],
+  "clips": [
+    {
+      "move_id": "b2362378-1411-45ae-a0f0-014e898042e0",
+      "move_slug": "ryu-standing-hk",
+      "category": "normals",
+      "variant": "default",
+      "media_url": "/media/moves/ryu/ryu-standing-hk.mp4",
+      "media_type": "video",
+      "poster_url": "/media/moves/ryu/ryu-standing-hk.webp",
+      "verification_status": "approved_for_preview",
+      "loop_start_ms": 0,
+      "loop_end_ms": 1067,
+      "duration_ms": 1067,
+      "width": 640,
+      "height": 360,
+      "fps": 60,
+      "filesize_bytes": 87667,
+      "source_file": "ryu_normals_20260923_take02.mp4",
+      "source_start_ms": 36520,
+      "source_end_ms": 37580,
+      "cut_review_status": "CUT_REVIEW_PASS",
+      "mapping_evidence": "Ryu remains standing and makes one high roundhouse kick, then returns to stance; no adjacent action in the selected cut."
+    },
+    {
+      "move_id": "06cb478c-ed44-47f7-99ec-1a2dbe45e8b5",
+      "move_slug": "ryu-crouching-hk",
+      "category": "normals",
+      "variant": "default",
+      "media_url": "/media/moves/ryu/ryu-crouching-hk.mp4",
+      "media_type": "video",
+      "poster_url": "/media/moves/ryu/ryu-crouching-hk.webp",
+      "verification_status": "approved_for_preview",
+      "loop_start_ms": 0,
+      "loop_end_ms": 1033,
+      "duration_ms": 1033,
+      "width": 640,
+      "height": 360,
+      "fps": 60,
+      "filesize_bytes": 86955,
+      "source_file": "ryu_normals_20260923_take02.mp4",
+      "source_start_ms": 52980,
+      "source_end_ms": 54020,
+      "cut_review_status": "CUT_REVIEW_PASS",
+      "mapping_evidence": "Ryu performs a low sweeping kick from crouch and recovers; distinct from crouching mid kick and no adjacent action in the selected cut."
+    }
+  ]
+}

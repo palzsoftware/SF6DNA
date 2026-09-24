@@ -1,13 +1,15 @@
-import manifest from "@/data/SF6DNA_VER1_RYU_JP_MEDIA_MANIFEST_20260923.json";
+import jpManifest from "@/data/SF6DNA_VER1_RYU_JP_MEDIA_MANIFEST_20260923.json";
+import ryuManifest from "@/data/SF6DNA_VER1_RYU_MEDIA_MANIFEST_20260924.json";
 import type { DevicePreviewMoveMotionMedia } from "@/lib/device-preview";
 
 const JP_CHARACTER_ID = "87077ba6-e9da-48b7-b3bd-2499ea4f6d86";
+const RYU_CHARACTER_ID = "9c3a7aaa-e090-40a6-b598-f63afb761b77";
 
-type PilotClip = (typeof manifest.clips)[number];
+type PilotClip = (typeof jpManifest.clips)[number] | (typeof ryuManifest.clips)[number];
 
-function toPreviewRecord(clip: PilotClip, displayOrder: number): DevicePreviewMoveMotionMedia {
+function toPreviewRecord(clip: PilotClip, displayOrder: number, characterSlug: string): DevicePreviewMoveMotionMedia {
   return {
-    id: `jp-motion-pilot-${clip.move_slug}-${clip.variant}`,
+    id: `${characterSlug}-motion-pilot-${clip.move_slug}-${clip.variant}`,
     moveId: clip.move_id,
     mediaType: clip.media_type === "gif" ? "gif" : "video",
     mediaUrl: clip.media_url,
@@ -20,8 +22,11 @@ function toPreviewRecord(clip: PilotClip, displayOrder: number): DevicePreviewMo
 }
 
 export function getPreviewPilotMotionMedia(characterId: string): DevicePreviewMoveMotionMedia[] {
-  if (characterId !== JP_CHARACTER_ID || manifest.character_slug !== "jp") return [];
+  const manifest = characterId === JP_CHARACTER_ID && jpManifest.character_slug === "jp" ? jpManifest
+    : characterId === RYU_CHARACTER_ID && ryuManifest.character_slug === "ryu" ? ryuManifest
+    : null;
+  if (!manifest) return [];
   return manifest.clips
     .filter((clip) => clip.verification_status === "approved_for_preview")
-    .map((clip, index) => toPreviewRecord(clip, index));
+    .map((clip, index) => toPreviewRecord(clip, index, manifest.character_slug));
 }
