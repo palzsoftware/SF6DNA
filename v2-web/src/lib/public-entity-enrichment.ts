@@ -10,8 +10,7 @@ type PublicMoveMetadata = {
   patchName: string | null;
   patchVersion: string;
   verifiedAt: string | null;
-  publicSourceIds: Set<string>;
-  publicSourceUrls: Set<string>;
+  publicSources: Array<{ sourceId: string; url: string; sourceType: string }>;
 };
 
 export type PublicEntityEnrichmentResult = {
@@ -20,10 +19,10 @@ export type PublicEntityEnrichmentResult = {
 };
 
 function sourceMatches(item: TrustedRetrievalItem, metadata: PublicMoveMetadata) {
-  return Boolean(
-    (item.sourceId && metadata.publicSourceIds.has(item.sourceId)) ||
-      (item.sourceUrl && metadata.publicSourceUrls.has(item.sourceUrl)),
-  );
+  // Match one relation, never an ID from one row and a URL from another.
+  return Boolean(item.sourceId && item.sourceUrl && metadata.publicSources.some(
+    (source) => source.sourceId === item.sourceId && source.url === item.sourceUrl && source.sourceType === item.sourceType,
+  ));
 }
 
 export function mergePublicMoveMetadata(
@@ -39,8 +38,22 @@ export function mergePublicMoveMetadata(
       uncertainty.push(`「${item.title}」は公開Moveの検証メタデータを確認できませんでした。`);
       return item;
     }
-    if (!item.slug || item.slug !== metadata.slug) {
+    if (metadata.entityId !== item.entityId || !item.slug || item.slug !== metadata.slug ||
+        !metadata.characterSlug || (item.characterSlug && item.characterSlug !== metadata.characterSlug)) {
       uncertainty.push(`「${item.title}」はMove IDとslugが一致しないため、メタデータを統合しませんでした。`);
+      return item;
+    }
+    if (item.publicationStatus !== "published" || item.verificationStatus === "draft" ||
+        ["inaccessible", "restricted", "private", "internal"].includes(item.availabilityStatus) ||
+        ["internal", "private", "qa", "internal_audit", "internal_candidate"].includes(item.sourceType ?? "") ||
+        ["internal", "internal_candidate"].includes(item.reliabilityLevel ?? "")) {
+      uncertainty.push(`「${item.title}」は公開条件を満たさないため、メタデータを統合しませんでした。`);
+      return item;
+    }
+    if (!metadata.patchId || !metadata.patchVersion ||
+        (item.patchId && item.patchId !== metadata.patchId) ||
+        (item.patch && item.patch !== metadata.patchVersion)) {
+      uncertainty.push(`「${item.title}」はPatchが不明または一致しないため、メタデータを統合しませんでした。`);
       return item;
     }
     if (!sourceMatches(item, metadata)) {
@@ -57,7 +70,9 @@ export function mergePublicMoveMetadata(
       verificationStatus: "verified" as const,
       verificationSource: "public_move_gate" as const,
       verifiedAt: metadata.verifiedAt,
-      availabilityStatus: "public" as const,
+      // The public RPC proves disclosure eligibility, not URL availability.
+      // Keep unknown/confirmed availability distinct.
+      availabilityStatus: item.availabilityStatus,
     };
   });
 
@@ -65,6 +80,16 @@ export function mergePublicMoveMetadata(
 }
 
 export async function enrichRetrievalItemsWithPublicEntityMetadata(
+  items: TrustedRetrievalItem[],
+): Promise<PublicEntityEnrichmentResult> {
+  try {
+    return await loadPublicEntityMetadata(items);
+  } catch {
+    return { items, uncertainty: ["公開Moveのメタデータ取得に失敗したため、既存の検証状態を維持しました。"] };
+  }
+}
+
+async function loadPublicEntityMetadata(
   items: TrustedRetrievalItem[],
 ): Promise<PublicEntityEnrichmentResult> {
   const moveIds = [...new Set(items.filter((item) => item.entityType === "move").map((item) => item.entityId))];
@@ -118,7 +143,8 @@ export async function enrichRetrievalItemsWithPublicEntityMetadata(
     const moveHasOfficial = officialKeys.has(`move:${id}`);
     const commandHasOfficial = classic.some((row) => officialKeys.has(`move_command:${row.id}`));
     const frameHasOfficial = verifiedFrames.some((row) => officialKeys.has(`frame:${row.id}`) || officialKeys.has(`move_frame_data:${row.id}`));
-    if (!classic.length || !verifiedFrames.length || !moveHasOfficial || !commandHasOfficial || !frameHasOfficial) continue;
+    // Multiple active frames cannot identify which fact the search result means.
+    if (!classic.length || verifiedFrames.length !== 1 || !moveHasOfficial || !commandHasOfficial || !frameHasOfficial) continue;
 
     const directSources = publicMoveSources.get(id) ?? [];
     const characters = move.characters as unknown as { slug?: unknown } | Array<{ slug?: unknown }> | null;
@@ -132,8 +158,7 @@ export async function enrichRetrievalItemsWithPublicEntityMetadata(
       patchVersion: String(currentPatch.version_label),
       // The current schema has no verified_at column. Do not substitute updated_at.
       verifiedAt: null,
-      publicSourceIds: new Set(directSources.map((source) => source.sourceId)),
-      publicSourceUrls: new Set(directSources.map((source) => source.url)),
+      publicSources: directSources.map((source) => ({ sourceId: source.sourceId, url: source.url, sourceType: source.sourceType })),
     });
   }
 

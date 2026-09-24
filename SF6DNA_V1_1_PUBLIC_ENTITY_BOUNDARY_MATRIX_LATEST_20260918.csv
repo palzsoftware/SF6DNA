@@ -1,6 +1,6 @@
-entity,classification,public_route_or_search,verification_provenance,patch_provenance,source_provenance,v1_1_action
-Move,SAFE_METADATA_ONLY,GATED_WHILE_publicStrategyContent_false,"Composite published Move + Classic Command + verified Frame","patches.is_current=true + current verified Frame","Exact public RPC relation; official evidence for Move/Command/Frame","Batch adapter implemented; activation HOLD"
-Combo,GATED_BY_PUBLIC_STRATEGY,BLOCKED,Not consumed while gate is false,Not consumed while gate is false,Not consumed while gate is false,HOLD
-Setup,GATED_BY_PUBLIC_STRATEGY,BLOCKED,Not consumed while gate is false,Not consumed while gate is false,Not consumed while gate is false,HOLD
-Sequence,GATED_BY_PUBLIC_STRATEGY,BLOCKED,Not consumed while gate is false,Not consumed while gate is false,Not consumed while gate is false,HOLD
-Counter,GATED_BY_PUBLIC_STRATEGY,BLOCKED,Not consumed while gate is false,Not consumed while gate is false,Not consumed while gate is false,HOLD
+entity,classification,public_exposure,verification_provenance,patch_provenance,source_provenance,availability,action,checked_at,base_sha
+Move,SAFE_METADATA_ONLY,GATED_WHILE_publicStrategyContent_false,Composite published Move and Classic Command and single verified Frame,Dynamic current Patch exact match,Exact source ID URL type relation,UNKNOWN_NOT_PROMOTED,Boundary hardening implemented activation HOLD,2026-09-24,aa8bcaa58f2db1c83f1c4913b124b889f658612e
+Combo,GATED_BY_PUBLIC_STRATEGY,BLOCKED,Not consumed,Not consumed,Not consumed,Not consumed,HOLD,2026-09-24,aa8bcaa58f2db1c83f1c4913b124b889f658612e
+Setup,GATED_BY_PUBLIC_STRATEGY,BLOCKED,Not consumed,Not consumed,Not consumed,Not consumed,HOLD,2026-09-24,aa8bcaa58f2db1c83f1c4913b124b889f658612e
+Sequence,GATED_BY_PUBLIC_STRATEGY,BLOCKED,Not consumed,Not consumed,Not consumed,Not consumed,HOLD,2026-09-24,aa8bcaa58f2db1c83f1c4913b124b889f658612e
+Counter,GATED_BY_PUBLIC_STRATEGY,BLOCKED,Not consumed,Not consumed,Not consumed,Not consumed,HOLD,2026-09-24,aa8bcaa58f2db1c83f1c4913b124b889f658612e
