@@ -38,7 +38,7 @@ test("JP move review renders classic and modern controls separately with safe mi
 test("JP move table remains usable at 375px without fixed-width overflow", () => {
   const css = read("src/components/character-detail-pilot.module.css");
 
-  assert.match(css, /@media \(max-width: 760px\) \{ \.moveRow \{ grid-template-columns: 1fr/);
+  assert.match(css, /@media \(max-width: 760px\)[\s\S]*?\.moveRow\s*\{\s*grid-template-columns:\s*minmax\(0,1fr\)/);
   assert.match(css, /overflow-wrap: anywhere/);
   assert.match(css, /min-height: 44px/);
 });

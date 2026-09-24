@@ -35,7 +35,7 @@ test("Ryu and JP remain on the guarded Character Detail move template", () => {
 test("Ryu move fallback preserves the 375px accessibility contract", () => {
   const css = read("src/components/character-detail-pilot.module.css");
 
-  assert.match(css, /@media \(max-width: 760px\) \{ \.moveRow \{ grid-template-columns: 1fr/);
+  assert.match(css, /@media \(max-width: 760px\)[\s\S]*?\.moveRow\s*\{\s*grid-template-columns:\s*minmax\(0,1fr\)/);
   assert.match(css, /overflow-wrap: anywhere/);
   assert.match(css, /min-height: 44px/);
 });
