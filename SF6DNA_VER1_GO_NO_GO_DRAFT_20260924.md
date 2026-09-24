@@ -9,14 +9,17 @@ This is the current release decision draft. It does not authorize Production pro
 
 ```text
 RC_BRANCH = sf6dna-v2-chatgpt-rc-20260916
-FINAL_RC_APPLICATION_SHA = 95ad9718ec27ce937a1ffc59deae1a4bc48c13eb
-FINAL_RC_PREVIEW_DEPLOYMENT = dpl_3Vuj32UB1Y1vC52cL3tCTZrb4TMx
+FINAL_RC_APPLICATION_SHA = 978e2a99888cd87736ac26c7c2f74fa5f8a95650
+FINAL_RC_PREVIEW_DEPLOYMENT = dpl_4y2kmbwZhuYrHuJsc7dVmRMVeEq5
+FINAL_RC_PREVIEW_URL = sf-6-bm067naxk-somas11620-9368.vercel.app
 FINAL_RC_PREVIEW_STATE = READY
 FINAL_RC_PREVIEW_TARGET = preview
 CURRENT_PRODUCTION_DEPLOYMENT = dpl_3T4VAzUWb57vwaN6HphfNGucDPVL
 CURRENT_PRODUCTION_SHA = b9a2a8f638a3d4a98bfa042d56470664fe225ba7
 CURRENT_PRODUCTION_STATE = READY
 ```
+
+`95ad9718ec27ce937a1ffc59deae1a4bc48c13eb` is now a superseded regression baseline. The current frozen application candidate is `978e2a99888cd87736ac26c7c2f74fa5f8a95650`, which contains only the final safe non-Character Public Copy cleanup plus matching assertions after that baseline.
 
 Application code should remain frozen unless a release-critical defect is discovered.
 
@@ -31,16 +34,17 @@ PRODUCTION_CHANGED = NO
 DB_CHANGED = NO
 ```
 
-The fresh regression blocker is closed. Final GO is still withheld because device acceptance, Production environment assignment, and explicit Production promotion approval are pending.
+The fresh regression blocker is closed for the current exact application SHA. Final GO is still withheld because device/human visual acceptance, Production environment assignment, and explicit Production promotion approval are pending.
 
 ## Evidence supporting GO
 
 ### Exact-SHA full regression
 
-GitHub Actions run `35926383201` executed against exact application SHA `95ad9718ec27ce937a1ffc59deae1a4bc48c13eb` and completed successfully.
+GitHub Actions run `35932977363` executed against exact application SHA `978e2a99888cd87736ac26c7c2f74fa5f8a95650` and completed successfully.
 
-Required steps:
+Job `107423587106` confirms:
 
+- Install dependencies: PASS
 - Typecheck: PASS
 - Lint: PASS
 - Policy tests: PASS
@@ -52,22 +56,36 @@ Classification:
 FINAL_REGRESSION = PASS
 ```
 
-The older 255/255 result remains historical evidence only; it is no longer being used as a substitute for the final RC regression gate.
+The older exact-SHA run for `95ad9718...` remains historical evidence only and is no longer used as the current final RC regression evidence.
 
 ### Preview / runtime evidence
 
-For exact application SHA `95ad9718...`:
+For exact application SHA `978e2a998...`:
 
-- Vercel Preview is `READY`.
+- Vercel Preview deployment `dpl_4y2kmbwZhuYrHuJsc7dVmRMVeEq5` is `READY` and SHA-matched.
 - Home fetch returned HTTP 200.
 - Checked Preview runtime `error` / `fatal` logs: none found in the 6-hour query window.
 - Home response carries `x-robots-tag: noindex`.
 - Open Graph / Twitter image URLs are absolute HTTPS URLs against the RC branch alias.
-- Authenticated `/robots.txt` returns `Disallow: /` for all user agents.
+- Protected route-level fetches such as `/players` continue to redirect to Vercel SSO in the available read-only fetch path; do not infer browser visual acceptance from CI/static evidence.
+
+### Final Public Copy delta
+
+The application delta after `95ad9718...` is limited to final safe non-Character Public Copy cleanup and matching policy assertions:
+
+- Diagnosis save failure now tells the user how to retry instead of exposing the internal save-ID concept.
+- Players rank-filter unavailable state now explains only the current state and avoids speculative timing/data language.
+- Daily / Training now clearly states that completion state is not persisted and unverified move/combo information is not shown.
+
+```text
+NON_CHARACTER_PUBLIC_COPY = CODE_REVIEW_PASS
+PROTECTED_ROUTE_BROWSER_COPY_QA = USER_ACTION / PENDING
+CHARACTER_DETAIL_BODY_COPY = USER_ACTION / HOLD
+```
 
 ### Auth/security delta
 
-The hardened `/auth?next=...` validator remains in the exact-SHA regression run. It parses against a fixed origin, requires same-origin output, and returns only local pathname/search/hash. External, protocol-relative, malformed, and backslash-host-like values fall back safely.
+The hardened `/auth?next=...` validator remains in the current exact-SHA regression run. It parses against a fixed origin, requires same-origin output, and returns only local pathname/search/hash. External, protocol-relative, malformed, and backslash-host-like values fall back safely.
 
 ### Public DB/security boundary
 
@@ -93,7 +111,7 @@ VERCEL_URL
 VERCEL_ENV
 ```
 
-Vercel documentation confirms `VERCEL_URL` and `VERCEL_ENV` are deployment system variables. Current Preview behavior verifies deployment-aware metadata and Preview noindex behavior.
+Current Preview behavior verifies deployment-aware metadata and Preview noindex behavior.
 
 However, the available read-only Vercel connector does not expose the project's configured environment-variable key/scope listing. Therefore the actual user-configured **Production** assignment remains unverified here.
 
@@ -121,13 +139,13 @@ JP spacing-walk re-cut, remaining mapping review, 375px media QA, reduced-motion
 
 Status: `PASS / FROZEN_CANDIDATE`
 
-`95ad9718ec27ce937a1ffc59deae1a4bc48c13eb` is the current frozen application candidate. Documentation-only evidence commits may continue. Any application-code change reopens the regression gate.
+`978e2a99888cd87736ac26c7c2f74fa5f8a95650` is the current frozen application candidate. Documentation-only evidence commits may continue. Any application-code change reopens the regression gate.
 
 ### Gate B — Fresh regression
 
 Status: `PASS / CLOSED`
 
-Exact-SHA full Web Check completed successfully.
+Exact-SHA full Web Check completed successfully for the current application candidate.
 
 ### Gate C — User final device acceptance
 
@@ -147,7 +165,13 @@ Status: `USER_ACTION / PENDING`
 
 Character Detail body copy requiring human judgment remains explicitly outside ChatGPT-only completion.
 
-### Gate F — Explicit Production approval
+### Gate F — Protected route-level Public Copy visual acceptance
+
+Status: `USER_ACTION / PENDING`
+
+Confirm the final three copy changes in an authenticated Preview where Vercel protection allows the page to render interactively.
+
+### Gate G — Explicit Production approval
 
 Status: `USER_ACTION / PENDING`
 
@@ -159,6 +183,7 @@ No Production deploy/alias/env change may occur until explicit approval names th
 |---|---|---|
 | Auth return-path edge case | `FIXED / REGRESSION_PASS` | Closed |
 | Fresh full regression | `PASS` | Closed |
+| Final non-Character Public Copy | `CODE_REVIEW_PASS / VISUAL_PENDING` | User visual gate only |
 | Explicit per-route canonical | `SEO_FOLLOW_UP` | Not core blocker |
 | Exact Vercel Production env scopes | `UNVERIFIED` | Final GO gate |
 | Supabase leaked-password protection warning | `CONFIG_REVIEW_NEEDED` | Carry risk; no unapproved freeze-time config change |
@@ -172,11 +197,12 @@ No Production deploy/alias/env change may occur until explicit approval names th
 Final status may change to `GO` only when all are true:
 
 ```text
-FINAL_RC_APPLICATION_SHA = 95ad9718ec27ce937a1ffc59deae1a4bc48c13eb
+FINAL_RC_APPLICATION_SHA = 978e2a99888cd87736ac26c7c2f74fa5f8a95650
 CONFIRMED_P0 = 0
 FINAL_REGRESSION = PASS
 USER_DEVICE_ACCEPTANCE = PASS
 CHARACTER_DETAIL_HUMAN_ACCEPTANCE = PASS
+PROTECTED_ROUTE_COPY_ACCEPTANCE = PASS
 PRODUCTION_ENV_ASSIGNMENT = CONFIRMED
 PRODUCTION_PROMOTION_APPROVAL = EXPLICIT
 ROLLBACK_ANCHOR = RECORDED
@@ -193,6 +219,7 @@ Keep NO-GO if any of these is true at release time:
 - required Production environment assignment is missing or points to the wrong backend/project;
 - device acceptance finds a release-critical render/navigation/auth failure;
 - Character Detail human acceptance finds release-critical public wording/data issues;
+- protected route-level Public Copy acceptance finds a release-critical wording/render issue;
 - application code changes without a new exact-SHA regression pass;
 - rollback anchor is unknown;
 - Production promotion has not been explicitly approved.
@@ -209,4 +236,4 @@ VER1_1_CHANGED = NO
 
 ## Next ChatGPT-only action
 
-Keep the application candidate frozen. Continue read-only release evidence checks only; do not reopen nonessential features or retry failed media-transfer paths without a new supported route.
+Keep application code frozen at `978e2a99888cd87736ac26c7c2f74fa5f8a95650`. Continue read-only release evidence checks only; do not reopen nonessential features or retry failed media-transfer paths without a new supported route.
