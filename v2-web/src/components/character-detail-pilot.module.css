@@ -1,4 +1,4 @@
-.pilot { display: grid; min-width: 0; gap: clamp(36px,6vw,72px); }
+.pilot { display: grid; grid-template-columns: minmax(0,1fr); min-width: 0; gap: clamp(36px,6vw,72px); }
 .overview { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(380px,.75fr); gap: clamp(32px,5vw,72px); align-items: start; padding: clamp(28px,4vw,52px) 0; border-bottom: 1px solid var(--line,var(--border)); }
 .overviewLead { min-width: 0; }
 .overviewLead h2 { max-width: 22ch; margin: 10px 0 22px; font-size: clamp(1.5rem,2.45vw,2.3rem); line-height: 1.48; letter-spacing: -.025em; text-wrap: balance; }

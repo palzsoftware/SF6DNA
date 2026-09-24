@@ -1,6 +1,9 @@
 .character-overview-page {
   scroll-behavior: smooth;
+  grid-template-columns: minmax(0, 1fr);
 }
+
+.character-overview-page > * { min-width: 0; }
 
 .character-hero--overview {
   min-height: 360px;
