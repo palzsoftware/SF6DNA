@@ -11,7 +11,7 @@ import styles from "../players.module.css";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const player = await getPlayerBySlug(slug);
-  return { title: player ? `${player.displayName} | プレイヤー情報` : "プレイヤー情報", description: player ? `${player.displayName}の使用キャラクター、プロフィール、参考情報を確認できます。` : undefined };
+  return { title: player ? `${player.displayName} | プレイヤー情報` : "プレイヤー情報", description: player ? `${player.displayName}の使用キャラクターやプロフィールを紹介します。` : undefined };
 }
 
 export default async function PlayerDetailPage({ params }: { params: Promise<{ slug: string }> }) {

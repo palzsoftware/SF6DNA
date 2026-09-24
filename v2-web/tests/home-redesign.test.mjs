@@ -6,9 +6,9 @@ const pageSource = await readFile(new URL("../src/app/page.tsx", import.meta.url
 const cssSource = await readFile(new URL("../src/app/product-refresh.css", import.meta.url), "utf8");
 
 test("Home uses natural hero copy and selects three characters from the public pool", () => {
-  assert.match(pageSource, /あなたのSF6を、/);
-  assert.match(pageSource, /次のレベルへ/);
-  assert.match(pageSource, /診断で課題を見つけ、キャラクター情報を調べ/);
+  assert.match(pageSource, /次の対戦で、/);
+  assert.match(pageSource, /何を試そう？/);
+  assert.match(pageSource, /プレイの課題を診断で整理して、今日の15分練習につなげましょう/);
   assert.match(pageSource, /pickRandomHeroCharacters\(characters\)/);
   assert.doesNotMatch(pageSource, /\["ryu", "jp", "mai"\]/);
 });

@@ -83,8 +83,8 @@ export default async function HomePage() {
       <section className="home-hero">
         <div className="home-hero__copy">
           <p className="eyebrow">STREET FIGHTER 6 / PLAYER TOOLKIT</p>
-          <h1>あなたのSF6を、<span>次のレベルへ</span></h1>
-          <p>診断で課題を見つけ、キャラクター情報を調べ、そのまま今日の練習へ進めます。</p>
+          <h1>次の対戦で、<span>何を試そう？</span></h1>
+          <p>プレイの課題を診断で整理して、今日の15分練習につなげましょう。キャラクターや動画も探せます。</p>
           <div className="home-hero__actions">
             <Link className="button-primary" href="/diagnosis">診断を始める</Link>
             <Link className="button-secondary" href="/characters">キャラクターを見る</Link>

@@ -58,7 +58,7 @@ test("search and mobile navigation prioritize fast repeat use", () => {
   const layout = read("src/app/layout.tsx");
   const mobileCss = read("src/app/mobile-refresh.css");
 
-  assert.ok(search.includes("必要な情報へ、最短で。"), "search landing should be task-oriented");
+  assert.ok(search.includes("キャラクターや動画を探す"), "search landing should name the destination");
   assert.ok(search.includes("typeFilters"), "search type filters missing");
   assert.ok(layout.includes("mobile-dock"), "mobile quick dock missing");
   assert.ok(mobileCss.includes("safe-area-inset-bottom"), "mobile dock must account for iPhone safe area");

@@ -67,8 +67,8 @@ export default async function SearchPage({
     <div className={`site-shell page-stack ${styles.searchPage}`}>
       <section className={styles.searchHero}>
         <p className="eyebrow">SEARCH</p>
-        <h1>必要な情報へ、最短で。</h1>
-        <p>キャラクター・プレイヤー・動画をまとめて検索できます。</p>
+        <h1>キャラクターや動画を探す</h1>
+        <p>キャラクター、プレイヤー、大会、動画を名前やキーワードで探せます。</p>
       </section>
 
       <form className={styles.searchBox} action="/search">
@@ -99,7 +99,7 @@ export default async function SearchPage({
         <section className={styles.quickStart}>
           <div className="section-heading">
             <h2>目的から開く</h2>
-            <p>検索語が決まっていない場合は、やりたいことから選べます。</p>
+            <p>何を調べるか迷ったら、入口を選んでください。</p>
           </div>
           <div className={styles.quickGrid}>
             {QUICK_START.map(([code, title, description, href]) => (
@@ -117,7 +117,7 @@ export default async function SearchPage({
             <div className={styles.resultHead}>
               <div>
                 <h2>「{q}」</h2>
-                <p>{results.length}件見つかりました</p>
+                <p>{results.length}件の結果</p>
               </div>
               {selectedType !== "all" ? <Link className="text-link" href={typeHref(q, "all")}>すべて表示</Link> : null}
             </div>
@@ -174,7 +174,7 @@ export default async function SearchPage({
               <h2>{results.length ? "この種類では一致する情報がありません" : "一致する情報が見つかりません"}</h2>
               <ul>
                 <li>キャラクター名やプレイヤー名の一部でも検索できます。</li>
-                <li>キャラクター名だけで検索してから詳細ページへ進む方法もあります。</li>
+                <li>つづりが不明なときは、短い名前でも試せます。</li>
                 <li>掲載前の情報は検索結果に表示されません。</li>
               </ul>
               {results.length ? <Link className="inline-button button-secondary" href={typeHref(q, "all")}>すべての種類を見る</Link> : null}
