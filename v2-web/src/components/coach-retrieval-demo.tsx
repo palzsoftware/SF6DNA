@@ -78,6 +78,7 @@ export function CoachRetrievalDemo({
   const [retrievalEvidence, setRetrievalEvidence] = useState<EvidenceItem[]>([]);
   const [currentPatch, setCurrentPatch] = useState<CurrentPatch | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const [requestState, setRequestState] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [providerDraft, setProviderDraft] = useState<CoachProviderDraft | null>(null);
   const [analysisResult, setAnalysisResult] = useState<CoachAnalysisResult>(() => analyzeCoachContext(baseContext));
   const composedAnswer = useMemo(() => composeCoachAnswer({ result: analysisResult, personaId }), [analysisResult, personaId]);
@@ -85,11 +86,14 @@ export function CoachRetrievalDemo({
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (loading) return;
     setLoading(true);
+    setRequestState("loading");
     setMessage(null);
     setRetrievalEvidence([]);
     setCurrentPatch(null);
     setProviderDraft(null);
+    setAnalysisResult(analyzeCoachContext(baseContext));
 
     const userMessage = adaptUserText(question);
     const requestContext: CoachInputContext = {
@@ -98,11 +102,6 @@ export function CoachRetrievalDemo({
       ...(userMessage ? { userMessage } : {}),
     };
     const retrievalPlan = buildRetrievalQuery(requestContext);
-    setAnalysisResult(analyzeCoachContext({
-      ...requestContext,
-      retrievalUncertainty: retrievalPlan.uncertainty,
-    }));
-
     try {
       const response = await fetch("/api/coach/retrieve", {
         method: "POST",
@@ -119,28 +118,32 @@ export function CoachRetrievalDemo({
       });
       const data = await response.json();
       if (!response.ok) {
-        setMessage("質問を確認してください。");
+        setRequestState("error");
+        setMessage(response.status === 400 ? "質問は2〜500文字で入力してください。" : "回答を取得できませんでした。時間をおいて再度お試しください。");
         return;
       }
-      setRetrievalEvidence(Array.isArray(data.evidence) ? data.evidence : []);
-      setCurrentPatch(data.currentPatch ?? null);
-      setProviderDraft(data.providerDraft && typeof data.providerDraft.headline === "string" ? data.providerDraft as CoachProviderDraft : null);
       const normalizedRetrievalEvidence = Array.isArray(data.retrievalEvidence) ? data.retrievalEvidence as CoachEvidenceItem[] : [];
       const retrievalUncertainty = Array.isArray(data.retrievalUncertainty)
         ? data.retrievalUncertainty.filter((item: unknown): item is string => typeof item === "string")
         : [];
-      setAnalysisResult(analyzeCoachContext({
+      const nextAnalysis = analyzeCoachContext({
         ...requestContext,
         retrievalEvidence: normalizedRetrievalEvidence,
         retrievalUncertainty: [...retrievalPlan.uncertainty, ...retrievalUncertainty],
-      }));
+      });
+      setAnalysisResult(nextAnalysis);
+      setRetrievalEvidence(Array.isArray(data.evidence) ? data.evidence : []);
+      setCurrentPatch(data.currentPatch ?? null);
+      setProviderDraft(data.providerDraft && typeof data.providerDraft.headline === "string" ? data.providerDraft as CoachProviderDraft : null);
+      setRequestState("success");
       setMessage(
         typeof data.message === "string"
           ? data.message
-          : "公開品質ゲートを通過した根拠データを確認できませんでした。",
+          : "参照できる情報を確認しました。",
       );
     } catch {
-      setMessage("検索処理に失敗しました。");
+      setRequestState("error");
+      setMessage("回答を取得できませんでした。通信状態を確認して、もう一度お試しください。");
     } finally {
       setLoading(false);
     }
@@ -149,12 +152,12 @@ export function CoachRetrievalDemo({
   return (
     <section className="page-stack">
       <section className="info-panel" aria-labelledby="coach-persona-heading">
-        <p className="eyebrow">COACH ROLE</p>
+        <p className="eyebrow">回答のスタイル</p>
         <h2 id="coach-persona-heading">コーチを選ぶ</h2>
-        <p>コーチごとに説明の順番や詳しさを変えます。根拠、Patch、Source、検証状態は同じ分析結果を共有します。</p>
+        <p>コーチごとに説明の順番や詳しさを変えます。使う情報と検証状態は共通です。</p>
         <div className="character-columns" role="group" aria-label="AIコーチの役割">
           {COACH_PERSONAS.map((persona) => (
-            <button className={persona.id === personaId ? "button-primary" : "button-secondary"} type="button" aria-pressed={persona.id === personaId} key={persona.id} onClick={() => setPersonaId(persona.id)}>
+            <button className={persona.id === personaId ? "button-primary" : "button-secondary"} type="button" aria-pressed={persona.id === personaId} disabled={loading} key={persona.id} onClick={() => setPersonaId(persona.id)}>
               {persona.displayName}
             </button>
           ))}
@@ -162,26 +165,32 @@ export function CoachRetrievalDemo({
       </section>
 
       <section className="info-panel">
-        <p className="eyebrow">AVAILABLE CONTEXT</p>
-        <h2>分析に使うContext</h2>
-        {chips.length ? <div className="character-columns">{chips.map((chip) => <span className="data-notice" key={chip}>{chip}</span>)}</div> : <p>診断結果や今日の練習などのContextはまだありません。質問だけでも本人発言として安全に扱えます。</p>}
+        <p className="eyebrow">参考にする情報</p>
+        <h2>回答に使う情報</h2>
+        {chips.length ? <div className="character-columns">{chips.map((chip) => <span className="data-notice" key={chip}>{chip}</span>)}</div> : <p>診断結果や今日の練習はまだありません。質問だけでも相談できます。</p>}
       </section>
-
-      {composedAnswer.sections.map((section) => <AnswerSection key={section.id} section={section} answer={composedAnswer} />)}
-
-      {providerDraft ? <section className="info-panel" aria-labelledby="coach-provider-answer"><p className="eyebrow">PREVIEW ANSWER</p><h2 id="coach-provider-answer">{providerDraft.headline}</h2>{providerDraft.sections.map((section, index) => <div key={`${section.title}:${index}`}><h3>{section.title}</h3><p>{section.body}</p></div>)}</section> : null}
 
       <form className="coach-form" onSubmit={submit}>
         <label htmlFor="coach-question"><strong>質問</strong></label>
-        <textarea id="coach-question" maxLength={500} minLength={2} placeholder="例: JPで舞の画面端を守る時、何を優先すればいい？" value={question} onChange={(event) => setQuestion(event.target.value)} />
-        <button className="button-primary" type="submit" disabled={loading || question.trim().length < 2}>{loading ? "検索中…" : "SF6DNA内を検索"}</button>
+        <textarea id="coach-question" maxLength={500} minLength={2} disabled={loading} placeholder="例: JPで舞の画面端を守る時、何を優先すればいい？" value={question} onChange={(event) => setQuestion(event.target.value)} />
+        <button className="button-primary" type="submit" disabled={loading || question.trim().length < 2}>{loading ? "回答を準備しています…" : requestState === "error" ? "もう一度試す" : "相談する"}</button>
       </form>
 
-      {currentPatch ? <div className="info-panel"><p className="eyebrow">CURRENT PATCH</p><strong>{currentPatch.name ?? currentPatch.versionLabel}</strong><p className="muted">Version: {currentPatch.versionLabel}</p>{currentPatch.officialUrl ? <a className="text-link" href={currentPatch.officialUrl} target="_blank" rel="noopener noreferrer">公式変更リスト ↗</a> : null}</div> : null}
-      {message ? <p className="muted" role="status" aria-live="polite">{message}</p> : null}
+      {requestState === "idle" ? <p className="muted">質問を入力して「相談する」を押すと、回答と参照情報が表示されます。</p> : null}
+      {requestState === "loading" ? <p className="muted" role="status" aria-live="polite">情報と出典を確認しています…</p> : null}
+      {message ? <p className="muted" role={requestState === "error" ? "alert" : "status"} aria-live="polite">{message}</p> : null}
+      {requestState === "success" ? <>
+        <section aria-label="コーチの回答" className="page-stack">
+          {composedAnswer.sections.map((section) => <AnswerSection key={section.id} section={section} answer={composedAnswer} />)}
+        </section>
+        {providerDraft ? <section className="info-panel" aria-labelledby="coach-provider-answer"><p className="eyebrow">プレビューの回答例</p><h2 id="coach-provider-answer">{providerDraft.headline}</h2>{providerDraft.sections.map((section, index) => <div key={`${section.title}:${index}`}><h3>{section.title}</h3><p>{section.body}</p></div>)}<p className="muted">この回答例は定型処理で作成しています。外部AIによる回答生成は有効にしていません。</p></section> : null}
+      </> : null}
+
+      {currentPatch ? <div className="info-panel"><p className="eyebrow">対象の更新版</p><strong>{currentPatch.name ?? currentPatch.versionLabel}</strong><p className="muted">バージョン: {currentPatch.versionLabel}</p>{currentPatch.officialUrl ? <a className="text-link" href={currentPatch.officialUrl} target="_blank" rel="noopener noreferrer">公式変更リスト ↗</a> : null}</div> : null}
 
       {retrievalEvidence.length ? (
-        <div className="search-result-list" aria-label="AIコーチの検索根拠">
+        <div className="search-result-list" aria-label="検索で見つかった情報の候補">
+          <p className="muted">以下は検索で見つかった候補です。出典があるだけでは、内容の検証済みを意味しません。</p>
           {retrievalEvidence.map((item) => (
             <article className="search-result" key={`${item.type}:${item.id}`}>
               <span className="search-result__type">{item.type}</span>

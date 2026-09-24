@@ -20,10 +20,10 @@ export default async function CoachPage({ searchParams }: { searchParams: Promis
         <p className="eyebrow">AI COACH</p>
         <h1>AIコーチ</h1>
         <p>
-          SF6DNAの診断・今日の練習・公開情報を共通Contextへ整理し、Evidenceにないゲーム事実を補わずにコーチング材料を組み立てます。
-          Personaは説明の順番や詳しさだけを変え、根拠・Patch・検証状態は変更しません。
+          質問と診断結果などをもとに、練習で試せることを整理します。
+          コーチを切り替えても、参照する情報と検証状態は変わりません。
         </p>
-        <p className="muted">AIによる回答には誤りが含まれる可能性があります。表示された根拠・情報源・対象Patchを確認し、根拠が不足する内容は断定しません。</p>
+        <p className="muted">現在はプレビューです。回答例は定型処理で作成し、外部AIによる回答生成は行いません。表示された情報源と対象の更新版も確認してください。</p>
       </section>
       <CoachRetrievalDemo initialQuestion={initialQuestion} initialContext={context} />
     </div>
