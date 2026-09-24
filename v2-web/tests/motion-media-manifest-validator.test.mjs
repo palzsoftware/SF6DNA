@@ -60,6 +60,18 @@ test('rejects duplicate move variant mapping', () => {
   assert.ok(result.errors.some((error) => error.includes('duplicate move_id + variant')));
 });
 
+test('allows distinct variants for one canonical move', () => {
+  const manifest = validManifest();
+  manifest.clips.push({
+    ...manifest.clips[0],
+    variant: 'counter',
+    media_url: '/media/moves/jp/jp-test-counter.mp4',
+    poster_url: '/media/moves/jp/jp-test-counter.webp',
+  });
+  const result = validateMotionMediaManifest(manifest, { checkFiles: false });
+  assert.deepEqual(result.errors, []);
+});
+
 test('rejects unsafe asset paths and loop beyond duration', () => {
   const manifest = validManifest();
   manifest.clips[0].media_url = '/../escape.mp4';
