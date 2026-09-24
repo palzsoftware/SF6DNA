@@ -1,0 +1,17 @@
+[
+ {"slug":"jp-standing-lp","source":"normals","start":3.30,"end":4.22,"poster":0.34},
+ {"slug":"jp-standing-mp","source":"normals","start":4.88,"end":6.12,"poster":0.44},
+ {"slug":"jp-standing-hp","source":"normals","start":6.87,"end":8.30,"poster":0.36},
+ {"slug":"jp-crouching-lp","source":"normals","start":9.70,"end":10.62,"poster":0.29},
+ {"slug":"jp-crouching-mp","source":"normals","start":11.51,"end":12.65,"poster":0.31},
+ {"slug":"jp-crouching-hp","source":"normals","start":13.35,"end":14.58,"poster":0.45},
+ {"slug":"jp-standing-lk","source":"normals","start":15.67,"end":16.68,"poster":0.32},
+ {"slug":"jp-standing-mk","source":"normals","start":17.52,"end":18.76,"poster":0.31},
+ {"slug":"jp-standing-hk","source":"normals","start":19.33,"end":20.74,"poster":0.49},
+ {"slug":"jp-jump-lp","source":"normals","start":23.92,"end":25.59,"poster":0.89},
+ {"slug":"jp-jump-mp","source":"normals","start":26.13,"end":27.65,"poster":0.83},
+ {"slug":"jp-jump-hp","source":"normals","start":28.34,"end":29.99,"poster":0.90},
+ {"slug":"jp-jump-lk","source":"normals","start":31.22,"end":32.90,"poster":0.77},
+ {"slug":"jp-jump-mk","source":"normals","start":33.55,"end":35.11,"poster":0.71},
+ {"slug":"jp-jump-hk","source":"normals","start":35.77,"end":37.40,"poster":0.76}
+]
