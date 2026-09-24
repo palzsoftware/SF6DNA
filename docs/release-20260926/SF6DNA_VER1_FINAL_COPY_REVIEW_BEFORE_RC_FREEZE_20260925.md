@@ -4,7 +4,7 @@
 
 - 監査基点: `372859c76071db44ad1b64dcca9c3394ddefe063`
 - P1修正commit: `9cf4002703aa7ea7e85696800cb50459f9a7e05f`
-- 判定: `PASS_AFTER_P1_SOURCE_LABEL_FIX`
+- 判定: `PASS_BEFORE_PRODUCTION`
 - 2026-09-25以降の新規修正: P0/P1のみ
 
 ## 実施内容
@@ -37,6 +37,8 @@
 - Release gates: 14 / 14 PASS
 - Build: PASS
 - Diff check: PASS
+- Preview: `dpl_5DfTwsCZBtiunxTm4kKfgUt2V2t4` READY、SHA `5b225ea0fddff1cb39310eff3e6dd332fd8736a8` 一致。
+- Preview render: `/sources` のsource type分類に英語enum 0件。日本語7分類の表示を確認。
 - Build警告: `metadataBase` 未設定が継続。Public Copy修正の対象外であり、本監査では変更していない。
 
 ## 変更しなかった項目
@@ -72,5 +74,5 @@ PRODUCTION_CHANGED =
 NO
 
 FINAL_COPY_REVIEW =
-PASS_AFTER_PREVIEW_REDEPLOYMENT_CONFIRMATION
+PASS_BEFORE_PRODUCTION
 ```

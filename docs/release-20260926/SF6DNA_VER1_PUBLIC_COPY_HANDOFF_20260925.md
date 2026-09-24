@@ -6,6 +6,8 @@
 - P1修正: `9cf4002703aa7ea7e85696800cb50459f9a7e05f`
 - 修正内容: Sourcesのsource type enum 7種を日本語化し、未知値を「情報源」へfail-closed。
 - テスト: Targeted 17/17、Full 286/286、typecheck、lint、release-gates 14/14、build、diff-check PASS。
+- Preview: `dpl_5DfTwsCZBtiunxTm4kKfgUt2V2t4` READY、SHA `5b225ea0fddff1cb39310eff3e6dd332fd8736a8` 一致。
+- Render: `/sources` の英語enum 0件、日本語7分類を確認。
 
 ## 境界
 
@@ -16,7 +18,5 @@
 
 ## 次回
 
-1. P1修正を含む最新RC PreviewがREADYかつSHA一致することを確認する。
-2. `/sources` の分類ラベルを実表示し、英語enumが0件であることを確認する。
-3. RCが更新された場合は変更Routeだけ差分再監査する。
-4. 2026-09-26はProduction明示承認がなければread-only deploy前監査に限定する。
+1. RCが更新された場合は変更Routeだけ差分再監査する。
+2. 2026-09-26はProduction明示承認がなければread-only deploy前監査に限定する。

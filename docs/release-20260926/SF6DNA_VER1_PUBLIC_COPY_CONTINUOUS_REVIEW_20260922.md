@@ -64,5 +64,6 @@ DB変更なし。Production変更なし。`main` / `sf6dna-v2`変更なし。診
 - 認証済みPreviewで主要15画面を表示確認。Home / Search / FAQ / Contact / Auth / Daily15 / Privacy / Terms / Disclaimer / Players / Characters / Diagnosis / Videos / 404はPublic Copy P0/P1なし。
 - Sourcesでsource type enum 7種がそのまま表示されるP1を確認。既知値を日本語化し、未知値は「情報源」に閉じる修正を `9cf4002703aa7ea7e85696800cb50459f9a7e05f` へcommit。
 - Targeted 17/17、Full 286/286、typecheck、lint、release-gates 14/14、build、diff-checkはPASS。
+- Preview `dpl_5DfTwsCZBtiunxTm4kKfgUt2V2t4` はREADY、SHA `5b225ea0fddff1cb39310eff3e6dd332fd8736a8` と一致。`/sources` の分類表示を再確認し、英語enum 0件、日本語7分類の表示を確認。
 - Character Detail固有本文、診断契約、DB、Production、main、sf6dna-v2、Ver.1.1は変更なし。
 - 以後はP0/P1だけを修正する。次回はRC更新時の差分再監査、または2026-09-26の承認状態に応じた監査。
