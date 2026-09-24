@@ -16,7 +16,7 @@ test("character source actions use metadata-grounded presentation and retain a g
   assert.match(presentation, /フレームデータを見る/);
   assert.match(presentation, /プロフィールを見る/);
   assert.match(presentation, /記事を読む/);
-  assert.match(presentation, /情報源を見る/);
+  assert.match(presentation, /参照先のサイトを見る/);
 });
 
 test("player detail avoids developer-style empty copy and large no-image cards", () => {

@@ -11,13 +11,13 @@ export default async function DiagnosisPage() {
       <section className="hero">
         <p className="eyebrow">DIAGNOSIS</p>
         <h1>診断</h1>
-        <p>短時間でプレイ傾向・課題・キャラクター候補を整理し、そのまま攻略・練習データへつなげます。</p>
+        <p>プレイ傾向や課題を知り、今日の練習を決めましょう。キャラクター選びに役立つ診断もあります。</p>
       </section>
 
       <section>
         <div className="section-heading">
           <h2>診断を選ぶ</h2>
-          <p>長大な100問診断ではなく、目的ごとに10〜20問前後へ分けた短時間診断を基本にしています。</p>
+          <p>知りたいことに合わせて、短い診断を選べます。</p>
         </div>
         {diagnoses.length ? (
           <div className="card-grid diagnosis-grid">
@@ -31,7 +31,7 @@ export default async function DiagnosisPage() {
                 <div>
                   <p className="diagnosis-card__index">DIAGNOSIS {String(index + 1).padStart(2, "0")}</p>
                   <h3>{diagnosis.title}</h3>
-                  <p>{diagnosis.description ?? "この診断で分かることを見る"}</p>
+                  <p>{diagnosis.description ?? "回答からプレイ傾向を振り返れます"}</p>
                 </div>
                 <span>{diagnosis.questionCount || "少数"}問で診断 →</span>
               </Link>

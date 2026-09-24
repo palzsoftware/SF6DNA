@@ -56,5 +56,5 @@ export function presentSource(sourceType: string, _publisher: string | null, url
     return { badge: "記事", cta: "記事を読む" };
   }
 
-  return { badge: "情報源", cta: "情報源を見る" };
+  return { badge: "情報源", cta: "参照先のサイトを見る" };
 }

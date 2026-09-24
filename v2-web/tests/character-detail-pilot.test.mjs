@@ -116,7 +116,7 @@ test("V2.1 keeps strategy copy RC Preview-only and sources use classified CTAs",
   const tabs = readProjectFile("src/components/character-tabs.tsx");
 
   assert.match(source, /presentSource\(source\.sourceType, source\.publisher, source\.url\)/);
-  assert.match(source, /RCプレビューで表示を確認しています/);
+  assert.match(source, /この攻略情報は掲載前の確認用です/);
   assert.match(tabs, /isCharacterDetailV2Route\(slug\)/);
   assert.match(tabs, /!pilotV21 \? <Link href=\{`\/characters\/\$\{slug\}#sources`\}>情報源<\/Link> : null/);
 });

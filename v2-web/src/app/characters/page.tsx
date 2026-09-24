@@ -93,7 +93,7 @@ export default async function CharactersPage({
       ) : (
         <section className="empty-state">
           <h2>公開データはまだありません</h2>
-          <p>出典・対象パッチ・確認状態を確認できた情報から順に公開します。</p>
+          <p>情報を確認できたキャラクターから順に掲載します。</p>
         </section>
       )}
     </div>

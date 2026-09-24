@@ -414,7 +414,7 @@ export default async function CharacterSectionPage({
       {previewActive ? (
         <aside className={styles.previewNotice}>
           <strong>実機確認プレビュー</strong>
-          <span>未公開データを確認用に表示しています。DBの公開状態は変更していません。</span>
+          <span>掲載前の情報を確認用に表示しています。</span>
         </aside>
       ) : null}
 

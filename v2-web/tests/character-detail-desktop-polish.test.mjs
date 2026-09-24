@@ -10,7 +10,7 @@ const sources = read("src/lib/source-presentation.ts");
 const page = read("src/app/characters/[slug]/page.tsx");
 
 test("source CTAs describe destinations when the URL or metadata is conclusive", () => {
-  for (const label of ["公式プロフィールを見る", "公式フレームデータを見る", "バトル調整内容を見る", "公式技表を見る", "関連動画を見る", "情報源を見る"]) assert.match(sources, new RegExp(label));
+  for (const label of ["公式プロフィールを見る", "公式フレームデータを見る", "バトル調整内容を見る", "公式技表を見る", "関連動画を見る", "参照先のサイトを見る"]) assert.match(sources, new RegExp(label));
   assert.match(sources, /battle_change/);
 });
 

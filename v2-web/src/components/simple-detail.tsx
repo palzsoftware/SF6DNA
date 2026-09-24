@@ -28,7 +28,7 @@ export function SimpleDetailView({
       {preview ? (
         <section className="data-notice character-preview-notice">
           <strong>実機確認プレビュー</strong>
-          <p>未公開データの確認画面です。表示している項目は公開済みとは限らず、DBの公開状態も変更していません。</p>
+          <p>掲載前の情報を確認する画面です。表示内容は一般公開されていません。</p>
         </section>
       ) : null}
       {detail.media?.length ? (

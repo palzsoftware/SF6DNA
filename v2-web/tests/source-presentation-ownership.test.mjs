@@ -10,7 +10,7 @@ test("official source labels require an actual CAPCOM domain", () => {
   assert.deepEqual(mirror, { badge: "フレームデータ", cta: "フレームデータを見る" });
 
   const deceptiveHost = presentSource("official", "CAPCOM", "https://capcom.com.example.org/guide");
-  assert.deepEqual(deceptiveHost, { badge: "情報源", cta: "情報源を見る" });
+  assert.deepEqual(deceptiveHost, { badge: "情報源", cta: "参照先のサイトを見る" });
 
   const video = presentSource("official", "CAPCOM", "https://www.youtube.com/watch?v=example");
   assert.deepEqual(video, { badge: "YouTube", cta: "関連動画を見る" });

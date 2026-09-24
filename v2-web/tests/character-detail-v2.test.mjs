@@ -47,5 +47,5 @@ test("Ryu and JP use a protected Preview-only fixture when the legacy RPC gate i
   assert.match(fixture, /status: "draft"/);
   assert.match(fixture, /verificationStatus: "unverified"/);
   assert.doesNotMatch(fixture, /verificationStatus: "verified"/);
-  assert.match(pilot, /未検証・確認用候補/);
+  assert.match(pilot, /内容を確認中・実戦検証前/);
 });

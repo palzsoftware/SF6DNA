@@ -130,7 +130,7 @@ export default async function HomePage() {
       <section className="daily-section" aria-labelledby="daily-title">
         <div className="section-heading">
           <h2 id="daily-title">目的から選ぶ</h2>
-          <p>知りたい内容に合わせて公開中の機能から選べます。</p>
+          <p>今日やりたいことから選んでください。</p>
         </div>
         <div className="daily-grid">
           {dailyActions.map((action) => (
@@ -147,7 +147,7 @@ export default async function HomePage() {
 
       <section aria-labelledby="main-content-title">
         <div className="section-heading">
-          <h2 id="main-content-title">SF6DNAの中核</h2>
+          <h2 id="main-content-title">SF6DNAでできること</h2>
           <p>
             {characters.length
               ? `${characters.length}キャラクターの基本情報や、関連するプレイヤー・動画を探せます。`

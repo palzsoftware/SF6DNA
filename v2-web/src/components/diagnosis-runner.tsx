@@ -149,7 +149,7 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
       setRecommendations(Array.isArray(payload.recommendations) ? payload.recommendations : []);
       setRecommendationMessage(typeof payload.message === "string" ? payload.message : null);
     } catch {
-      setRecommendations([]); setRecommendationMessage("キャラクター推薦を取得できませんでした。診断結果自体は利用できます。");
+      setRecommendations([]); setRecommendationMessage("おすすめのキャラクターを読み込めませんでした。診断結果はこのまま見られます。");
     } finally { setRecommendationLoading(false); }
   }
 
