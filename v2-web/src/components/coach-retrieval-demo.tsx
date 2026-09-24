@@ -78,7 +78,7 @@ export function CoachRetrievalDemo({
   const [retrievalEvidence, setRetrievalEvidence] = useState<EvidenceItem[]>([]);
   const [currentPatch, setCurrentPatch] = useState<CurrentPatch | null>(null);
   const [message, setMessage] = useState<string | null>(null);
-  const [requestState, setRequestState] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [requestState, setRequestState] = useState<"idle" | "loading" | "success" | "unavailable" | "error">("idle");
   const [providerDraft, setProviderDraft] = useState<CoachProviderDraft | null>(null);
   const [analysisResult, setAnalysisResult] = useState<CoachAnalysisResult>(() => analyzeCoachContext(baseContext));
   const composedAnswer = useMemo(() => composeCoachAnswer({ result: analysisResult, personaId }), [analysisResult, personaId]);
@@ -120,6 +120,12 @@ export function CoachRetrievalDemo({
       if (!response.ok) {
         setRequestState("error");
         setMessage(response.status === 400 ? "質問は2〜500文字で入力してください。" : "回答を取得できませんでした。時間をおいて再度お試しください。");
+        return;
+      }
+      if (data.ready !== true) {
+        setCurrentPatch(data.currentPatch ?? null);
+        setRequestState("unavailable");
+        setMessage(typeof data.message === "string" ? data.message : "回答に使える情報を確認できませんでした。別の質問をお試しください。");
         return;
       }
       const normalizedRetrievalEvidence = Array.isArray(data.retrievalEvidence) ? data.retrievalEvidence as CoachEvidenceItem[] : [];
@@ -173,14 +179,14 @@ export function CoachRetrievalDemo({
       <form className="coach-form" onSubmit={submit}>
         <label htmlFor="coach-question"><strong>質問</strong></label>
         <textarea id="coach-question" maxLength={500} minLength={2} disabled={loading} placeholder="例: JPで舞の画面端を守る時、何を優先すればいい？" value={question} onChange={(event) => setQuestion(event.target.value)} />
-        <button className="button-primary" type="submit" disabled={loading || question.trim().length < 2}>{loading ? "回答を準備しています…" : requestState === "error" ? "もう一度試す" : "相談する"}</button>
+        <button className="button-primary" type="submit" disabled={loading || question.trim().length < 2}>{loading ? "回答を準備しています…" : requestState === "error" ? "もう一度試す" : requestState === "unavailable" ? "別の質問を試す" : "相談する"}</button>
       </form>
 
       {requestState === "idle" ? <p className="muted">質問を入力して「相談する」を押すと、回答と参照情報が表示されます。</p> : null}
       {requestState === "loading" ? <p className="muted" role="status" aria-live="polite">情報と出典を確認しています…</p> : null}
       {message ? <p className="muted" role={requestState === "error" ? "alert" : "status"} aria-live="polite">{message}</p> : null}
       {requestState === "success" ? <>
-        <section aria-label="コーチの回答" className="page-stack">
+        <section aria-label="コーチの回答" className="page-stack coach-answer">
           {composedAnswer.sections.map((section) => <AnswerSection key={section.id} section={section} answer={composedAnswer} />)}
         </section>
         {providerDraft ? <section className="info-panel" aria-labelledby="coach-provider-answer"><p className="eyebrow">プレビューの回答例</p><h2 id="coach-provider-answer">{providerDraft.headline}</h2>{providerDraft.sections.map((section, index) => <div key={`${section.title}:${index}`}><h3>{section.title}</h3><p>{section.body}</p></div>)}<p className="muted">この回答例は定型処理で作成しています。外部AIによる回答生成は有効にしていません。</p></section> : null}

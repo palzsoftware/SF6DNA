@@ -70,7 +70,8 @@ test("recommendation requires verified sourced trait scores", () => {
 test("coach retrieval only returns sourced evidence and keeps generation disabled", () => {
   const source = readProjectFile("src/app/api/coach/retrieve/route.ts");
   assert.match(source, /filter\(\(item\) => item\.sources\.length > 0\)/, "sourceless evidence filter missing");
-  assert.match(source, /Boolean\(currentPatch && evidence\.length\)/, "current patch readiness gate missing");
+  assert.match(source, /Boolean\(currentPatch && retrievalBundle\.evidence\.length\)/, "current patch and trusted evidence readiness gate missing");
+  assert.match(source, /providerDraft: previewE2E\?\.provider\.draft \?\? null/, "unready responses must not expose an answer draft");
   assert.match(source, /generationEnabled:\s*false/, "generation must remain disabled");
 });
 

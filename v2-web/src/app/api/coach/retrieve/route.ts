@@ -100,7 +100,8 @@ export async function POST(request: Request) {
     retrievalBundle.uncertainty.unshift("検索語から識別子・秘密値候補を除外しました。");
   }
 
-  const ready = Boolean(currentPatch && evidence.length);
+  // Only evidence that passed the trusted retrieval gate can support an answer.
+  const ready = Boolean(currentPatch && retrievalBundle.evidence.length);
   const userMessage = adaptUserText(question);
   const analysis = analyzeCoachContext({
     ...emptyCoachInputContext(personaId),
@@ -108,7 +109,7 @@ export async function POST(request: Request) {
     retrievalEvidence: retrievalBundle.evidence,
     retrievalUncertainty: retrievalBundle.uncertainty,
   });
-  const previewE2E = await runDeterministicCoachPreviewE2E(analysis, personaId);
+  const previewE2E = ready ? await runDeterministicCoachPreviewE2E(analysis, personaId) : null;
 
   return NextResponse.json({
     question,
@@ -120,17 +121,17 @@ export async function POST(request: Request) {
     ready,
     message: !currentPatch
       ? "現行Patchを確認できないため、攻略根拠としての回答生成は行いません。"
-      : !evidence.length
-        ? "公開品質ゲートを通過し、Sourceが紐付いた根拠データが見つかりませんでした。"
+      : !retrievalBundle.evidence.length
+        ? "この質問に使える根拠を確認できませんでした。別の質問を試すか、情報源を追加してからご利用ください。"
         : "Current PatchとSourceを確認できるSF6DNA内部データのみを根拠候補として返しています。",
     generationEnabled: false,
     deterministicPreviewEnabled: true,
-    providerDraft: previewE2E.provider.draft,
-    providerMeta: {
+    providerDraft: previewE2E?.provider.draft ?? null,
+    providerMeta: previewE2E ? {
       providerId: previewE2E.provider.providerId,
       finishReason: previewE2E.provider.finishReason,
       fallbackReason: previewE2E.provider.fallbackReason,
-    },
+    } : null,
     note: "Trusted retrieval is active. Generative answers remain disabled until verified gameplay data is sufficiently populated and the backend AI contract is finalized.",
   });
 }
