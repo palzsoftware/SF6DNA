@@ -48,16 +48,24 @@ test("unverified Amnesia counter is held and excluded from Preview", () => {
   assert.equal(manifest.clips.filter((clip) => clip.category === "specials" && clip.verification_status === "approved_for_preview").length, 0);
 });
 
-test("Ryu pilot keeps only the two reviewed normal moves and validates their media", () => {
+test("Ryu pilot maps the reviewed normals and two distinguishable specials", () => {
   assert.equal(ryuManifest.character_slug, "ryu");
-  assert.equal(ryuManifest.clips.length, 2);
+  assert.equal(ryuManifest.clips.length, 4);
   assert.deepEqual(new Map(ryuManifest.clips.map((clip) => [clip.move_slug, clip.move_id])), new Map([
     ["ryu-standing-hk", "b2362378-1411-45ae-a0f0-014e898042e0"],
     ["ryu-crouching-hk", "06cb478c-ed44-47f7-99ec-1a2dbe45e8b5"],
+    ["ryu-denjin-charge", "db46db6f-26dd-4638-8397-d235750929b9"],
+    ["ryu-od-high-blade-kick", "1aefba80-f15b-4bf2-b96c-a06155070371"],
   ]));
-  assert.ok(ryuManifest.clips.every((clip) => clip.category === "normals" && clip.verification_status === "approved_for_preview"));
+  assert.equal(ryuManifest.clips.filter((clip) => clip.category === "normals").length, 2);
+  assert.equal(ryuManifest.clips.filter((clip) => clip.category === "specials").length, 2);
+  assert.ok(ryuManifest.clips.every((clip) => clip.variant === "default" && clip.verification_status === "approved_for_preview"));
+  assert.equal(ryuManifest.clips.filter((clip) => clip.verification_status === "mapping_hold").length, 0);
   assert.equal(ryuManifest.clips.filter((clip) => clip.category === "unique_attacks").length, 0);
-  assert.deepEqual(validateMotionMediaManifest(ryuManifest, { publicRoot: new URL("../public/", import.meta.url).pathname }).errors, []);
+  const publicRoot = new URL("../public/", import.meta.url).pathname;
+  assert.deepEqual(validateMotionMediaManifest(ryuManifest, { publicRoot }).errors, []);
+  const duplicate = { ...ryuManifest, clips: [...ryuManifest.clips, { ...ryuManifest.clips.at(-1) }] };
+  assert.ok(validateMotionMediaManifest(duplicate, { publicRoot }).errors.some((error) => error.includes("duplicate move_id + variant")));
 });
 
 test("pilot maps JP and Ryu separately, filters held clips, and remains Preview-only", () => {

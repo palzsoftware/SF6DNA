@@ -14,6 +14,11 @@
       "category": "unique_attacks",
       "filename": "ryu_unique_attacks_20260923_take01.mp4",
       "sha256": "7ca846fa8ea16e4756cc0883b4b75e8cc3066a957d59ae79c79886ebb3ffe52e"
+    },
+    {
+      "category": "specials",
+      "filename": "ryu_specials_20260923_take01.mp4",
+      "sha256": "08895022376dee7d999ebe8b36a2f923db7deec8f568f984a58fed7ea037146b"
     }
   ],
   "clips": [
@@ -60,6 +65,50 @@
       "source_end_ms": 54020,
       "cut_review_status": "CUT_REVIEW_PASS",
       "mapping_evidence": "Ryu performs a low sweeping kick from crouch and recovers; distinct from crouching mid kick and no adjacent action in the selected cut."
+    },
+    {
+      "move_id": "db46db6f-26dd-4638-8397-d235750929b9",
+      "move_slug": "ryu-denjin-charge",
+      "category": "specials",
+      "variant": "default",
+      "media_url": "/media/moves/ryu/ryu-denjin-charge.mp4",
+      "media_type": "video",
+      "poster_url": "/media/moves/ryu/ryu-denjin-charge.webp",
+      "verification_status": "approved_for_preview",
+      "loop_start_ms": 0,
+      "loop_end_ms": 1600,
+      "duration_ms": 1600,
+      "width": 640,
+      "height": 360,
+      "fps": 60,
+      "filesize_bytes": 206751,
+      "source_file": "ryu_specials_20260923_take01.mp4",
+      "source_start_ms": 30350,
+      "source_end_ms": 31950,
+      "cut_review_status": "CUT_REVIEW_PASS",
+      "mapping_evidence": "Electrical charge builds around Ryu and persists as the Denjin state indicator; the charge itself is isolated. Input HUD is absent; current Move command is ↓↓ + P."
+    },
+    {
+      "move_id": "1aefba80-f15b-4bf2-b96c-a06155070371",
+      "move_slug": "ryu-od-high-blade-kick",
+      "category": "specials",
+      "variant": "default",
+      "media_url": "/media/moves/ryu/ryu-od-high-blade-kick.mp4",
+      "media_type": "video",
+      "poster_url": "/media/moves/ryu/ryu-od-high-blade-kick.webp",
+      "verification_status": "approved_for_preview",
+      "loop_start_ms": 0,
+      "loop_end_ms": 1500,
+      "duration_ms": 1500,
+      "width": 640,
+      "height": 360,
+      "fps": 60,
+      "filesize_bytes": 178371,
+      "source_file": "ryu_specials_20260923_take01.mp4",
+      "source_start_ms": 65150,
+      "source_end_ms": 66650,
+      "cut_review_status": "CUT_REVIEW_PASS",
+      "mapping_evidence": "OD gauge drops on activation, Ryu glows gold and extends a single straight blade kick before returning to stance. OD is a distinct Move row; DB strength_variant is null and manifest variant is default. Input HUD is absent."
     }
   ]
 }
