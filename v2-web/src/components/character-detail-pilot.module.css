@@ -1,4 +1,4 @@
-.pilot { display: grid; gap: clamp(36px,6vw,72px); }
+.pilot { display: grid; min-width: 0; gap: clamp(36px,6vw,72px); }
 .overview { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(380px,.75fr); gap: clamp(32px,5vw,72px); align-items: start; padding: clamp(28px,4vw,52px) 0; border-bottom: 1px solid var(--line,var(--border)); }
 .overviewLead { min-width: 0; }
 .overviewLead h2 { max-width: 22ch; margin: 10px 0 22px; font-size: clamp(1.5rem,2.45vw,2.3rem); line-height: 1.48; letter-spacing: -.025em; text-wrap: balance; }
@@ -30,15 +30,15 @@
 .inlineSources a { display: inline-flex; min-width: max-content; min-height: 44px; gap: 8px; align-items: center; padding: 8px 12px; border: 1px solid var(--line,var(--border)); border-radius: 999px; color: #e6eef4; font-size: .74rem; font-weight: 760; scroll-snap-align: start; }
 .inlineSources span { color: #53d8ff; }
 .comboSection, .related { display: grid; gap: 18px; }
-.moveSection { display: grid; gap: 18px; width: min(100%,1180px); margin-inline: auto; }
-.moveGroups { display: grid; gap: 10px; }
-.moveGroup { border-top: 1px solid var(--line,var(--border)); border-bottom: 1px solid var(--line,var(--border)); }
+.moveSection { display: grid; min-width: 0; gap: 18px; width: min(100%,1180px); margin-inline: auto; }
+.moveGroups { display: grid; min-width: 0; gap: 10px; }
+.moveGroup { min-width: 0; border-top: 1px solid var(--line,var(--border)); border-bottom: 1px solid var(--line,var(--border)); }
 .moveGroup > summary { display: flex; min-height: 58px; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; list-style: none; }
 .moveGroup > summary::-webkit-details-marker { display: none; }
 .moveGroup > summary strong { font-size: 1rem; }
 .moveGroup > summary span { color: #53d8ff; font-size: .72rem; font-weight: 850; }
-.moveTable { display: grid; gap: 10px; padding-bottom: 12px; }
-.moveRow { display: grid; grid-template-columns: minmax(190px,1.05fr) minmax(150px,.72fr) minmax(190px,1fr) minmax(190px,.82fr) auto; gap: 16px; align-items: center; padding: 16px; border: 1px solid rgba(125,145,160,.24); border-radius: 12px; background: rgba(12,18,25,.62); }
+.moveTable { display: grid; min-width: 0; gap: 10px; padding-bottom: 12px; }
+.moveRow { display: grid; min-width: 0; grid-template-columns: minmax(190px,1.05fr) minmax(150px,.72fr) minmax(190px,1fr) minmax(190px,.82fr) auto; gap: 16px; align-items: center; padding: 16px; border: 1px solid rgba(125,145,160,.24); border-radius: 12px; background: rgba(12,18,25,.62); }
 .moveRow:hover, .moveRow:focus-within { border-color: rgba(83,216,255,.4); background: rgba(15,24,32,.78); }
 .moveIdentity { min-width: 0; }
 .moveIdentity > span { color: #ffad73; font-size: .64rem; font-weight: 850; }
@@ -107,4 +107,4 @@
 @media (max-width: 1080px) { .moveRow { grid-template-columns: minmax(220px,1fr) minmax(150px,.7fr) minmax(220px,1fr); } .moveFrame, .moveDetailLink { grid-column: auto; } .moveDetailLink { justify-self: start; } }
 @media (max-width: 760px) { .overview, .gameplan, .strategySplit { grid-template-columns: 1fr; } .inlineSources { grid-column: 1; } .comboList { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(280px,84%); } .playerGrid, .videoList { grid-auto-columns: minmax(280px,84%); } .rangeTable > div { grid-template-columns: 78px minmax(0,1fr); } .rangeTable p { grid-column: 2; } .timelineList summary, .sequenceList summary { grid-template-columns: 88px minmax(0,1fr); } .timelineList summary small, .sequenceList summary small { justify-self: start; } }
 @media (max-width: 420px) { .pilot { gap: 38px; } .overview { gap: 24px; padding-top: 8px; } .overviewLead h2 { font-size: 1.42rem; line-height: 1.5; } .quickFacts { grid-template-columns: 1fr; gap: 10px; } .quickFacts > div { padding: 16px; } .comparison { grid-template-columns: 1fr; } .comparison .sectionTitle { grid-column: auto; } .subheading { align-items: start; flex-direction: column; } .gameplanSteps li { grid-template-columns: 1fr; gap: 8px; } .timelineList details > div, .sequenceList details > div { padding-left: 0; } .timelineList dl, .sequenceList dl { grid-template-columns: 1fr; } .rangeTable > div { grid-template-columns: 1fr; gap: 8px; } .rangeTable p { grid-column: 1; } }
-@media (max-width: 760px) { .moveRow { grid-template-columns: 1fr; gap: 12px; padding: 14px; } .moveMedia { width: min(100%,240px); } .moveFrame { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media (max-width: 760px) { .moveTable { grid-template-columns: minmax(0,1fr); } .moveRow { grid-template-columns: minmax(0,1fr); gap: 12px; padding: 14px; } .moveRow > * { min-width: 0; } .moveMedia { width: min(100%,240px); } .moveFrame { grid-template-columns: repeat(3,minmax(0,1fr)); } }
