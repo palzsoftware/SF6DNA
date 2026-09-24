@@ -5,13 +5,13 @@ import { readFileSync } from "node:fs";
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
 const overviewOnlySlugs = [
-  "zangief", "chun-li", "dhalsim", "kimberly", "luke",
+  "zangief", "chun-li", "dhalsim", "kimberly",
   "jamie", "guile", "juri", "ken", "blanka", "e-honda", "dee-jay",
   "manon", "marisa", "lily", "cammy", "rashid", "aki", "ed", "akuma",
   "m-bison", "terry", "mai", "elena", "sagat", "c-viper", "alex", "ingrid", "yasmine",
 ];
 
-test("29 overview-only fixtures use empty section data instead of Ryu or JP gameplay data", () => {
+test("28 overview-only fixtures use empty section data instead of reviewed gameplay data", () => {
   const fixture = read("src/lib/character-detail-v21-fixture.ts");
   for (const slug of overviewOnlySlugs) {
     assert.match(fixture, new RegExp(`"${slug}"`));

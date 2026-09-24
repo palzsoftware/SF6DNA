@@ -14,7 +14,6 @@ const overviewOnlySlugs = new Set([
   "chun-li",
   "dhalsim",
   "kimberly",
-  "luke",
   "jamie",
   "guile",
   "juri",
@@ -41,7 +40,29 @@ const overviewOnlySlugs = new Set([
   "yasmine",
 ]);
 
-const fixtures: Record<"ryu" | "jp", DevicePreviewBundle> = {
+const fixtures: Record<"ryu" | "jp" | "luke", DevicePreviewBundle> = {
+  luke: {
+    ...sharedEmpty,
+    moves: [{
+      id: "aab86b9c-f501-4928-8818-114f5fc0574a",
+      slug: "luke-nose-breaker",
+      name: "ノーズブレイカー",
+      moveType: "target_combo",
+      usageSummary: null,
+      status: "draft",
+      frame: null,
+      commands: [{
+        moveId: "aab86b9c-f501-4928-8818-114f5fc0574a",
+        scheme: "classic",
+        commandText: "↓ + 中K ＞ ↓ + 強P",
+        numericNotation: null,
+        buttonNotation: null,
+        conditionText: null,
+        sortOrder: 0,
+      }],
+    }],
+    combos: [], setups: [], sequences: [],
+  },
   ryu: {
     ...sharedEmpty,
     moves: ryuMoveReviewFixture,
@@ -79,7 +100,7 @@ const fixtures: Record<"ryu" | "jp", DevicePreviewBundle> = {
 };
 
 export function getCharacterDetailV21Fixture(slug: string): DevicePreviewBundle | null {
-  if (slug === "ryu" || slug === "jp") return fixtures[slug];
+  if (slug === "ryu" || slug === "jp" || slug === "luke") return fixtures[slug];
   if (overviewOnlySlugs.has(slug)) {
     return { ...sharedEmpty, combos: [], setups: [], sequences: [] };
   }

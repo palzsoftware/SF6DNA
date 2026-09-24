@@ -1,0 +1,48 @@
+{
+  "manifest_version": "1.0",
+  "character_slug": "luke",
+  "source_owner": "user_capture",
+  "captured_patch": "2026.08.03",
+  "capture_date": "2026-09-24",
+  "source_files": [
+    {
+      "category": "normals",
+      "filename": "luke_1(1).mp4",
+      "sha256": "a0d537e364b0eea25ca482e590b36625facbb06d4f5aec54aae4f4f2a97b5f9c"
+    },
+    {
+      "category": "unique_attacks_and_target_combos",
+      "filename": "luke_2(1).mp4",
+      "sha256": "4b113ed8a5022f003c477cf44d2a2dfb7dfacbde4bf14a2cf5fcb43d8b9c538b"
+    },
+    {
+      "category": "throws_and_target_combos",
+      "filename": "luke_3(1).mp4",
+      "sha256": "46802aaff1ccf671de4cd7555e7d49a949b0688fe0a69cb6a628b1f37182d670"
+    }
+  ],
+  "clips": [
+    {
+      "move_id": "aab86b9c-f501-4928-8818-114f5fc0574a",
+      "move_slug": "luke-nose-breaker",
+      "category": "target_combos",
+      "variant": "default",
+      "media_url": "/media/moves/luke/luke-nose-breaker.mp4",
+      "media_type": "video",
+      "poster_url": "/media/moves/luke/luke-nose-breaker.webp",
+      "verification_status": "approved_for_preview",
+      "loop_start_ms": 0,
+      "loop_end_ms": 3167,
+      "duration_ms": 3167,
+      "width": 640,
+      "height": 360,
+      "fps": 60,
+      "filesize_bytes": 312240,
+      "source_file": "luke_2(1).mp4",
+      "source_start_ms": 45200,
+      "source_end_ms": 48350,
+      "cut_review_status": "CUT_REVIEW_PASS",
+      "mapping_evidence": "The immediately preceding in-game move list selects ノーズブレイカー; the isolated action performs crouching medium kick into crouching heavy punch, displays two hits, and returns to neutral. The current Luke Move has the same Japanese name and classic command."
+    }
+  ]
+}
