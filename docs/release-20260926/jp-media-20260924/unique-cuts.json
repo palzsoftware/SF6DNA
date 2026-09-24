@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "jp-guillotine",
+    "source": "unique_attacks",
+    "start": 3.85,
+    "end": 4.82,
+    "poster": 0.5,
+    "evidence": "Original capture visually reviewed: Distinct unique attack animation with recovery."
+  },
+  {
+    "slug": "jp-shalosti",
+    "source": "unique_attacks",
+    "start": 6.12,
+    "end": 7.35,
+    "poster": 0.54,
+    "evidence": "Original capture visually reviewed: Distinct unique attack animation with recovery."
+  },
+  {
+    "slug": "jp-forward-hk",
+    "source": "unique_attacks",
+    "start": 9.3,
+    "end": 10.83,
+    "poster": 0.85,
+    "evidence": "Original capture visually reviewed: Distinct unique attack animation with recovery."
+  },
+  {
+    "slug": "jp-zilant",
+    "source": "unique_attacks",
+    "start": 14.4,
+    "end": 16.65,
+    "poster": 0.95,
+    "evidence": "Original capture visually reviewed: HK then HP, two hits only; no third follow-up."
+  },
+  {
+    "slug": "jp-zilant-mid",
+    "source": "unique_attacks",
+    "start": 17.66,
+    "end": 20.22,
+    "poster": 1.5,
+    "evidence": "Original capture visually reviewed: HK, HP, overhead third cane strike."
+  },
+  {
+    "slug": "jp-zilant-low",
+    "source": "unique_attacks",
+    "start": 20.9,
+    "end": 23.35,
+    "poster": 1.6,
+    "evidence": "Original capture visually reviewed: HK, HP, low third strike."
+  },
+  {
+    "slug": "jp-grom-strelka",
+    "source": "unique_attacks",
+    "start": 23.94,
+    "end": 25.87,
+    "poster": 0.7,
+    "evidence": "Original capture visually reviewed: Back MP elbow/cane then MP palm, two hits."
+  }
+]
