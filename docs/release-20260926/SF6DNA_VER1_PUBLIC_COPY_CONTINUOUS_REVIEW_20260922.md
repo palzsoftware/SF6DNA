@@ -57,3 +57,12 @@ DB変更なし。Production変更なし。`main` / `sf6dna-v2`変更なし。診
 - Preview: `dpl_4y2kmbwZhuYrHuJsc7dVmRMVeEq5` はREADY、SHA `978e2a99888cd87736ac26c7c2f74fa5f8a95650` と一致。URL `https://sf-6-bm067naxk-somas11620-9368.vercel.app/`。Vercel Authentication保護によりクラウドブラウザ・保護付きURL取得とも認証画面/302へ転送され、新規修正の実画面表示は未確認。
 - 判定: `NON_CHARACTER_PUBLIC_COPY = CODE_REVIEW_PASS`、`BROWSER_COPY_QA = NOT_RUN_AUTH_PROTECTED`。Production承認・公開判定とは独立。
 - 次回: 2026-09-25 Final RC候補の最終読み直し。以後、P0/P1相当の文言のみ修正。
+
+## 2026-09-25 Final RC候補レビュー
+
+- 監査基点: RC `372859c76071db44ad1b64dcca9c3394ddefe063`。2026-09-24監査済みSHAから13 commit進行。
+- 認証済みPreviewで主要15画面を表示確認。Home / Search / FAQ / Contact / Auth / Daily15 / Privacy / Terms / Disclaimer / Players / Characters / Diagnosis / Videos / 404はPublic Copy P0/P1なし。
+- Sourcesでsource type enum 7種がそのまま表示されるP1を確認。既知値を日本語化し、未知値は「情報源」に閉じる修正を `9cf4002703aa7ea7e85696800cb50459f9a7e05f` へcommit。
+- Targeted 17/17、Full 286/286、typecheck、lint、release-gates 14/14、build、diff-checkはPASS。
+- Character Detail固有本文、診断契約、DB、Production、main、sf6dna-v2、Ver.1.1は変更なし。
+- 以後はP0/P1だけを修正する。次回はRC更新時の差分再監査、または2026-09-26の承認状態に応じた監査。

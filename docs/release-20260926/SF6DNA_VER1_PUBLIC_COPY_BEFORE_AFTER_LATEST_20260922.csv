@@ -17,3 +17,4 @@ route_or_ui,item,before,after,reason
 /diagnosis/[slug],Save failure,診断結果をアカウントへ保存できませんでした。同じ保存IDで再試行できます。,診断結果をアカウントに保存できませんでした。下のボタンからもう一度お試しください。,保存の内部識別子を利用者向けの再操作に置換
 /players,Rank filter unavailable,確認日つきデータの連携後に利用できます,ランクでの絞り込みは現在利用できません,未提供機能の現在の状態を推測や時期の約束なしに説明
 /me/training,Completion and verification notice,完了状態はこのページ内だけで使い、保存しません。未確認のキャラクター固有技・コンボ・確定状況は表示しません。,練習の完了状態は保存されず、ページを開き直すと消えます。技やコンボなど、確認が済んでいない情報は表示しません。,保存範囲と掲載基準を利用者の行動に沿って明確化
+/sources,Source type labels,"community_combo_database / community_structured_data / player_reference / strategy_guide / structured_dataset / tournament_report / video_playlist / 未知の内部値","コミュニティコンボデータ / コミュニティ攻略データ / プレイヤー資料 / 攻略ガイド / データ集 / 大会レポート / 動画プレイリスト / 情報源",公開画面へのenum漏れを防ぎ未知値も安全な一般表記へ変換
