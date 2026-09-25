@@ -66,7 +66,7 @@ test("V2 render contains combo, setplay, sequence-counter and video sections", (
     "まず確認するコンボ",
     "セットプレイ",
     "連携・対策",
-    "おすすめ動画",
+    "関連動画",
   ]) {
     assert.match(shared, new RegExp(marker));
   }

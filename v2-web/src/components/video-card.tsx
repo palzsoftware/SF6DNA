@@ -45,9 +45,10 @@ export function VideoCard({ video, publishedDate, onPreferenceChange }: { video:
   const relations = [...video.events, ...video.characters, ...video.players];
   const duration = formatVideoDuration(video.durationSeconds);
   const category = video.videoType ? VIDEO_CATEGORY_LABELS[video.videoType] ?? video.videoType : null;
+  const watchLabel = video.platform?.toLowerCase() === "youtube" ? "YouTubeで再生 ↗" : "外部サイトで再生 ↗";
   return (
     <article className={`video-card${watched ? " video-card--watched" : ""}`}>
-      <a className="video-card__thumbnail" href={video.url} target="_blank" rel="noopener noreferrer" aria-label={`${video.title}をYouTubeで見る`}>
+      <a className="video-card__thumbnail" href={video.url} target="_blank" rel="noopener noreferrer" aria-label={`${video.title}を外部サイトで再生`}>
         {video.thumbnailUrl ? <span style={{ backgroundImage: `url(${video.thumbnailUrl})` }} /> : <strong>YOUTUBE</strong>}
       </a>
       <div className="video-card__body">
@@ -57,6 +58,7 @@ export function VideoCard({ video, publishedDate, onPreferenceChange }: { video:
         {relations.length ? <p>{relations.join(" / ")}</p> : null}
         {publishedDate || duration ? <small>{[publishedDate, duration].filter(Boolean).join(" / ")}</small> : null}
         <div className="video-card__actions">
+          <a className="video-card__watch" href={video.url} target="_blank" rel="noopener noreferrer">{watchLabel}</a>
           <button className="button-secondary" type="button" onClick={toggleFavorite} aria-pressed={favorite} aria-label={`${video.title}を${favorite ? "お気に入りから外す" : "お気に入りに追加"}`}>{favorite ? "★ お気に入り" : "☆ お気に入り"}</button>
           <button className="button-secondary" type="button" onClick={() => void share()} aria-label={`${video.title}を共有`}>共有</button>
           <button className="button-secondary" type="button" onClick={toggleWatched} aria-pressed={watched}>{watched ? "視聴済みを解除" : "視聴済みにする"}</button>

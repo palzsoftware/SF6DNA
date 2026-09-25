@@ -85,7 +85,7 @@ test("V2.2 uses horizontal rails for dense related content", () => {
   const css = readProjectFile("src/components/character-detail-pilot.module.css");
 
   assert.match(source, /関連プレイヤー（横スクロール）/);
-  assert.match(source, /おすすめ動画（横スクロール）/);
+  assert.match(source, /関連動画（横スクロール）/);
   assert.match(source, /基本方針の情報源（横スクロール）/);
   assert.match(css, /overflow-x:\s*auto/);
   assert.match(css, /scroll-snap-type:\s*x proximity/);
@@ -97,7 +97,7 @@ test("Ryu and JP V2.1 removes duplicate navigation and exposes concrete page str
   const copy = readProjectFile("src/lib/character-detail-v21.ts");
   const page = readProjectFile("src/app/characters/[slug]/page.tsx");
 
-  for (const marker of ["基本の勝ち筋", "まず確認するコンボ", "セットプレイ", "連携・対策", "距離別の立ち回り", "関連プレイヤー", "おすすめ動画"]) {
+  for (const marker of ["基本の勝ち筋", "まず確認するコンボ", "セットプレイ", "連携・対策", "距離別の立ち回り", "関連プレイヤー", "関連動画"]) {
     assert.match(source, new RegExp(marker));
   }
   assert.match(page, /!pilotRequested \? <nav/);

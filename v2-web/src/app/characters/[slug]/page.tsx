@@ -108,7 +108,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${character.name} | キャラクター情報`,
     description:
-      pilotProfile?.tagline ?? character.shortDescription ?? `${character.name}の基本情報・関連プレイヤー・動画を確認できます。`,
+      pilotProfile?.tagline ?? character.shortDescription ?? `${character.name}の特徴、使用プレイヤー、関連動画。`,
   };
 }
 
@@ -174,7 +174,7 @@ export default async function CharacterPage({
             <span className="character-ready-badge">キャラクター情報</span>
           </div>
           <p className="character-hero__lead">
-            {pilotProfile?.tagline ?? character.shortDescription ?? "基本情報・関連プレイヤー・動画をキャラクター単位で確認できます。"}
+            {pilotProfile?.tagline ?? character.shortDescription ?? "特徴、使用プレイヤー、関連動画をまとめています。"}
           </p>
           <div className="chip-row character-hero__chips">
             {character.archetypeLabel ? <span className="chip">{character.archetypeLabel}</span> : null}
@@ -202,7 +202,7 @@ export default async function CharacterPage({
       {previewActive ? (
         <section className="data-notice character-preview-notice">
           <strong>実機確認プレビュー</strong>
-          <p>未公開の draft / reviewed データを確認用に表示しています。DBの公開ステータスは変更していません。</p>
+          <p>この画面には掲載前の情報も含まれます。掲載前の内容は一般公開には反映されていません。</p>
         </section>
       ) : null}
 

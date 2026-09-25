@@ -437,6 +437,8 @@ body {
 .video-card__body h2 { display: -webkit-box; min-height: calc(1.45em * 2); overflow: hidden; font-size: 1rem; line-height: 1.45; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .video-card__body p, .video-card__body small { color: var(--muted); }
 .video-card__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.video-card__watch { display: inline-flex; width: 100%; min-height: 44px; align-items: center; justify-content: center; border: 1px solid rgba(83,216,255,.45); color: #bfefff; font-size: .83rem; font-weight: 800; }
+.video-card__watch:hover, .video-card__watch:focus-visible { border-color: #53d8ff; background: rgba(83,216,255,.1); }
 .video-card__actions button { min-height: 44px; flex: 1 1 120px; padding: 9px 12px; font-size: .78rem; }
 .video-card__status { min-height: 1.5em; color: var(--muted); font-size: .8rem; }
 

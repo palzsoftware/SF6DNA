@@ -129,7 +129,7 @@ export function CharacterDetailPilot({
           <div>
             <p className="eyebrow">技データ</p>
             <h2 id="pilot-moves-heading">技一覧・コマンド・主要フレーム</h2>
-            <p>クラシックとモダンのコマンド、確認済みの発生・ガード時・ダメージを見られます。数値が未確認の項目は「確認中」と表示します。</p>
+            <p>コマンドと主要フレームを技ごとに掲載。数値の「確認中」は未確定の項目です。</p>
           </div>
           {characterSlug === "jp" ? <a href="https://www.streetfighter.com/6/ja-jp/character/jp/frame" target="_blank" rel="noopener noreferrer">CAPCOM公式フレームを見る ↗</a> : null}
         </div>
@@ -145,7 +145,7 @@ export function CharacterDetailPilot({
                     {publicMoveSummary(move.usageSummary) ? <p>{publicMoveSummary(move.usageSummary)}</p> : null}
                   </div>
                   <div className={styles.moveMedia} role="cell">
-                    {move.media ? <MoveMotionMedia media={move.media} title={move.name} className={styles.moveMediaAsset} /> : <span aria-label={`${move.name}の動作メディアは未登録`} />}
+                    {move.media ? <MoveMotionMedia media={move.media} title={move.name} className={styles.moveMediaAsset} /> : <span className={styles.moveMediaFallback} aria-label={`${move.name}の動作メディアは未登録`}>動作映像は未掲載</span>}
                   </div>
                   <div className={styles.moveCommands} role="cell" aria-label={`${move.name}のコマンド`}>
                     {move.commands?.length ? move.commands.map((command, index) => {
@@ -197,8 +197,8 @@ export function CharacterDetailPilot({
       </section>
 
       <section className={styles.related} id="related-videos">
-        <div className={styles.subheading}><div><p className="eyebrow">動画</p><h2>おすすめ動画</h2></div><Link href={appendDevicePreviewToken(`/characters/${characterSlug}/videos`, previewToken)}>動画一覧 →</Link></div>
-        {videos.length ? <div className={styles.videoList} tabIndex={0} aria-label="おすすめ動画（横スクロール）">{videos.slice(0, 6).map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />)}</div> : <div className="empty-state"><p>関連動画は未掲載です。</p></div>}
+        <div className={styles.subheading}><div><p className="eyebrow">動画</p><h2>関連動画</h2></div><Link href={appendDevicePreviewToken(`/characters/${characterSlug}/videos`, previewToken)}>このキャラの動画を探す →</Link></div>
+        {videos.length ? <div className={styles.videoList} tabIndex={0} aria-label="関連動画（横スクロール）">{videos.slice(0, 6).map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />)}</div> : <div className="empty-state"><p>関連動画は未掲載です。</p></div>}
       </section>
     </section>
   );

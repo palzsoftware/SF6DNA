@@ -12,8 +12,8 @@
 .sectionTitle h2, .subheading h2 { margin: 4px 0 0; }
 .sectionTitle > p:last-child, .subheading p { color: var(--copy-muted,var(--muted)); line-height: 1.7; }
 .strength, .weakness { padding: 22px; border-radius: 2px 18px 18px 2px; }
-.strength { border-left: 3px solid #53d8ff; background: linear-gradient(120deg,rgba(83,216,255,.1),rgba(10,18,24,.3)); }
-.weakness { border-left: 3px solid #ff9a55; background: linear-gradient(120deg,rgba(255,122,26,.1),rgba(10,18,24,.3)); }
+.strength { border-left: 3px solid #53d8ff; background: rgba(12,21,27,.76); }
+.weakness { border-left: 3px solid #ff9a55; background: rgba(25,18,17,.76); }
 .strength > span, .weakness > span { font-size: .66rem; font-weight: 900; letter-spacing: .12em; }
 .strength > span { color: #73e0ff; }
 .weakness > span { color: #ffad73; }
@@ -38,25 +38,25 @@
 .moveGroup > summary strong { font-size: 1rem; }
 .moveGroup > summary span { color: #53d8ff; font-size: .72rem; font-weight: 850; }
 .moveTable { display: grid; min-width: 0; gap: 10px; padding-bottom: 12px; }
-.moveRow { display: grid; min-width: 0; grid-template-columns: minmax(190px,1.05fr) minmax(150px,.72fr) minmax(190px,1fr) minmax(190px,.82fr) auto; gap: 16px; align-items: center; padding: 16px; border: 1px solid rgba(125,145,160,.24); border-radius: 12px; background: rgba(12,18,25,.62); }
+.moveRow { display: grid; min-width: 0; grid-template-columns: minmax(190px,1.05fr) minmax(150px,.72fr) minmax(190px,1fr) minmax(190px,.82fr) auto; gap: 16px; align-items: center; padding: 16px; border: 1px solid rgba(125,145,160,.24); border-radius: 4px; background: rgba(12,18,25,.62); }
 .moveRow:hover, .moveRow:focus-within { border-color: rgba(83,216,255,.4); background: rgba(15,24,32,.78); }
 .moveIdentity { min-width: 0; }
 .moveIdentity > span { color: #ffad73; font-size: .64rem; font-weight: 850; }
 .moveIdentity h3 { margin: 5px 0 0; font-size: .96rem; line-height: 1.5; }
 .moveIdentity p { margin: 7px 0 0; color: #9eabb7; font-size: .72rem; line-height: 1.55; }
-.moveMedia { display: grid; width: min(100%,190px); aspect-ratio: 16 / 9; place-items: center; overflow: hidden; border: 1px solid rgba(83,216,255,.18); border-radius: 9px; background: radial-gradient(circle at 50% 45%,rgba(83,216,255,.1),transparent 58%),rgba(5,9,13,.72); }
-.moveMedia > span { width: 38%; height: 2px; border-radius: 999px; background: rgba(83,216,255,.24); }
+.moveMedia { display: grid; width: min(100%,190px); aspect-ratio: 16 / 9; place-items: center; overflow: hidden; border: 1px solid rgba(83,216,255,.18); border-radius: 4px; background: rgba(5,9,13,.72); }
+.moveMediaFallback { padding: 8px; color: #9cadba; font-size: .7rem; text-align: center; }
 .moveMediaAsset { display: block; width: 100%; height: 100%; object-fit: contain; }
 .moveCommands { display: grid; gap: 6px; min-width: 0; }
 .moveCommands > div { display: grid; grid-template-columns: 58px minmax(0,1fr); gap: 8px; align-items: baseline; }
 .moveCommands span, .moveCommands small { color: #81909c; font-size: .62rem; font-weight: 800; }
-.moveCommands code { overflow-wrap: anywhere; color: #bfefff; font-size: .75rem; }
+.moveCommands code { overflow-wrap: anywhere; color: #bfefff; font-size: .82rem; font-weight: 750; }
 .moveCommands small { grid-column: 2; line-height: 1.45; }
 .movePending { color: #93a0ab !important; font-weight: 650 !important; }
 .moveFrame { display: grid; grid-template-columns: repeat(3,minmax(62px,1fr)); gap: 7px; margin: 0; }
 .moveFrame > div { padding: 8px; background: rgba(17,23,31,.7); }
 .moveFrame dt { color: #778491; font-size: .6rem; }
-.moveFrame dd { margin: 3px 0 0; color: #eef5fa; font-size: .76rem; font-weight: 800; }
+.moveFrame dd { margin: 3px 0 0; color: #eef5fa; font-size: .86rem; font-weight: 800; }
 .moveDetailLink { display: inline-flex; min-height: 44px; align-items: center; color: #ffae73; font-size: .72rem; font-weight: 850; white-space: nowrap; }
 .subheading { display: flex; justify-content: space-between; gap: 20px; align-items: end; padding-bottom: 14px; border-bottom: 1px solid var(--line,var(--border)); }
 .subheading p { margin: 8px 0 0; }
@@ -107,4 +107,4 @@
 @media (max-width: 1080px) { .moveRow { grid-template-columns: minmax(220px,1fr) minmax(150px,.7fr) minmax(220px,1fr); } .moveFrame, .moveDetailLink { grid-column: auto; } .moveDetailLink { justify-self: start; } }
 @media (max-width: 760px) { .overview, .gameplan, .strategySplit { grid-template-columns: 1fr; } .inlineSources { grid-column: 1; } .comboList { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(280px,84%); } .playerGrid, .videoList { grid-auto-columns: minmax(280px,84%); } .rangeTable > div { grid-template-columns: 78px minmax(0,1fr); } .rangeTable p { grid-column: 2; } .timelineList summary, .sequenceList summary { grid-template-columns: 88px minmax(0,1fr); } .timelineList summary small, .sequenceList summary small { justify-self: start; } }
 @media (max-width: 420px) { .pilot { gap: 38px; } .overview { gap: 24px; padding-top: 8px; } .overviewLead h2 { font-size: 1.42rem; line-height: 1.5; } .quickFacts { grid-template-columns: 1fr; gap: 10px; } .quickFacts > div { padding: 16px; } .comparison { grid-template-columns: 1fr; } .comparison .sectionTitle { grid-column: auto; } .subheading { align-items: start; flex-direction: column; } .gameplanSteps li { grid-template-columns: 1fr; gap: 8px; } .timelineList details > div, .sequenceList details > div { padding-left: 0; } .timelineList dl, .sequenceList dl { grid-template-columns: 1fr; } .rangeTable > div { grid-template-columns: 1fr; gap: 8px; } .rangeTable p { grid-column: 1; } }
-@media (max-width: 760px) { .moveTable { grid-template-columns: minmax(0,1fr); } .moveRow { grid-template-columns: minmax(0,1fr); gap: 12px; padding: 14px; } .moveRow > * { min-width: 0; } .moveMedia { width: min(100%,240px); } .moveFrame { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media (max-width: 760px) { .moveTable { grid-template-columns: minmax(0,1fr); } .moveRow { grid-template-columns: minmax(0,1fr) minmax(100px,34%); gap: 10px; padding: 12px; } .moveRow > * { min-width: 0; } .moveMedia { width: 100%; } .moveCommands, .moveFrame, .moveDetailLink { grid-column: 1 / -1; } .moveFrame { grid-template-columns: repeat(3,minmax(0,1fr)); } }
