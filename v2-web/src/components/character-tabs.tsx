@@ -54,6 +54,7 @@ export function CharacterTabs({
   const previewActive = isDevicePreviewRequest(previewToken);
   const pilotV21 = isCharacterDetailV2Route(slug);
   const tabs = pilotV21 ? pilotV21Tabs : previewActive ? previewTabs : publicTabs;
+  const gatedPilotSections = new Set<CharacterSectionKey>(["moves", "combos", "setups", "sequences"]);
 
   return (
     <nav className="character-tabs" aria-label="キャラクター情報">
@@ -61,7 +62,7 @@ export function CharacterTabs({
         <Link
           key={tab.key}
           href={appendDevicePreviewToken(
-            pilotV21 && active === "overview"
+            pilotV21 && (active === "overview" || (!previewActive && gatedPilotSections.has(tab.key)))
               ? `/characters/${slug}${pilotOverviewAnchors[tab.key] ?? "#pilot-overview"}`
               : `/characters/${slug}${tab.path}`,
             previewToken

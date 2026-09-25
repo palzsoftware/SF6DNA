@@ -101,12 +101,14 @@ test("RC detail does not link to strategy pages hidden by release gates", () => 
   const pilot = readProjectFile("src/components/character-detail-pilot.tsx");
   const combo = readProjectFile("src/components/pilot-combo-card.tsx");
   const movePage = readProjectFile("src/app/moves/[slug]/page.tsx");
+  const tabs = readProjectFile("src/components/character-tabs.tsx");
   assert.match(movePage, /!releaseFeatures\.publicStrategyContent\) notFound\(\)/);
   assert.match(pilot, /releaseFeatures\.publicStrategyContent \? <Link className=\{styles\.moveDetailLink\}/);
   for (const section of ["combos", "setups", "sequences"]) {
     assert.ok(pilot.includes(`strategyListAvailable ? <Link href={appendDevicePreviewToken(\`/characters/\${characterSlug}/${section}\``));
   }
   assert.match(combo, /releaseFeatures\.publicStrategyContent \? <Link href=\{appendDevicePreviewToken\(combo\.href/);
+  assert.match(tabs, /!previewActive && gatedPilotSections\.has\(tab\.key\)/);
 });
 
 test("Ryu and JP V2.1 removes duplicate navigation and exposes concrete page structures", () => {
