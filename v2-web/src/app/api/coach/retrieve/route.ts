@@ -6,6 +6,7 @@ import { runDeterministicCoachPreviewE2E } from "@/lib/coach-preview-e2e";
 import { COACH_PERSONAS, DEFAULT_COACH_PERSONA_ID, type CoachPersonaId } from "@/lib/coach-foundation";
 import { adaptUserText, analyzeCoachContext, emptyCoachInputContext } from "@/lib/coach-shared-analysis";
 import { searchAcrossContent } from "@/lib/search";
+import { isTopicResultMatch, planCoachSearch } from "@/lib/coach-query-terms";
 import {
   buildRetrievalEvidenceList,
   normalizeTrustedRetrievalItems,
@@ -77,7 +78,11 @@ export async function POST(request: Request) {
   const exactCharacterId = safeEntityId(scope?.characterId);
   const exactPlayerId = safeEntityId(scope?.playerId);
 
-  const searchResults = (await searchAcrossContent(retrievalQuery)).slice(0, 12);
+  const searchPlan = planCoachSearch(retrievalQuery);
+  const searchBatches = await Promise.all(searchPlan.terms.slice(0, 8).map((term) => searchAcrossContent(term)));
+  const searchResults = [...new Map(searchBatches.flatMap((batch, index) => batch
+    .filter((item) => isTopicResultMatch(item.title, item.subtitle ?? null, searchPlan.terms[index] ?? ""))
+    .map((item) => [`${item.type}:${item.id}`, item] as const))).values()].slice(0, 12);
   const [rawEvidence, currentPatch] = await Promise.all([
     attachSourcesToEvidence(searchResults),
     getCurrentPatch(),
@@ -101,7 +106,7 @@ export async function POST(request: Request) {
   }
 
   // Only evidence that passed the trusted retrieval gate can support an answer.
-  const ready = Boolean(currentPatch && retrievalBundle.evidence.length);
+  const ready = Boolean(currentPatch && retrievalBundle.evidence.some((item) => item.kind === "VERIFIED_GAME_FACT"));
   const userMessage = adaptUserText(question);
   const analysis = analyzeCoachContext({
     ...emptyCoachInputContext(personaId),
@@ -118,10 +123,11 @@ export async function POST(request: Request) {
     retrievalEvidence: retrievalBundle.evidence,
     retrievalUncertainty: retrievalBundle.uncertainty,
     retrievalExcludedCount: retrievalBundle.excludedIds.length,
+    searchTerms: searchPlan.terms,
     ready,
     message: !currentPatch
       ? "現行Patchを確認できないため、攻略根拠としての回答生成は行いません。"
-      : !retrievalBundle.evidence.length
+      : !ready
         ? "この質問に使える根拠を確認できませんでした。別の質問を試すか、情報源を追加してからご利用ください。"
         : "Current PatchとSourceを確認できるSF6DNA内部データのみを根拠候補として返しています。",
     generationEnabled: false,

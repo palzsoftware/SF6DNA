@@ -65,7 +65,7 @@ test("AI coach remains retrieval-only and refuses unsourced evidence", () => {
   const source = readProjectFile("src/app/api/coach/retrieve/route.ts");
   assert.match(source, /filter\(\(item\) => item\.sources\.length > 0\)/, "unsourced coach evidence filter missing");
   assert.match(source, /generationEnabled:\s*false/, "AI generation must remain disabled");
-  assert.match(source, /const ready = Boolean\(currentPatch && retrievalBundle\.evidence\.length\)/, "coach readiness requires patch and trusted evidence");
+  assert.match(source, /const ready = Boolean\(currentPatch && retrievalBundle\.evidence\.some\(\(item\) => item\.kind === "VERIFIED_GAME_FACT"\)\)/, "coach readiness requires patch and verified gameplay evidence");
   assert.match(source, /\bready,/, "computed readiness must be returned");
 });
 
