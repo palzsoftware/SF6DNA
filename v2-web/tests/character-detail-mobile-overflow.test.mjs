@@ -13,12 +13,13 @@ test("JP page and detail grids can shrink inside a 375px viewport", () => {
   assert.match(pilotCss, /@media \(max-width: 760px\)[\s\S]*?\.moveRow\s*\{\s*grid-template-columns:\s*minmax\(0,1fr\)/);
   assert.match(pilotCss, /\.moveMediaAsset\s*\{[^}]*width:\s*100%/);
   assert.match(pilotCss, /\.moveCommands code\s*\{[^}]*overflow-wrap:\s*anywhere/);
+  assert.match(pilotCss, /\.pilot\s*>\s*\*\s*\{[^}]*min-width:\s*0;[^}]*max-width:\s*100%/);
 });
 
 test("horizontal rails remain scrollable within the page", () => {
   assert.match(globalCss, /\.character-tabs\s*\{[^}]*overflow-x:\s*auto/);
   for (const name of ["inlineSources", "comboList", "playerGrid", "videoList"]) {
-    assert.match(pilotCss, new RegExp(`\\.${name}\\s*\\{[^}]*overflow-x:\\s*auto`));
+    assert.match(pilotCss, new RegExp(`\\.${name}\\s*\\{[^}]*max-width:\\s*100%;[^}]*overflow-x:\\s*auto`));
   }
   assert.doesNotMatch(globalCss + pageCss + pilotCss, /(?:html\s*,\s*body|body\s*,\s*html)\s*\{[^}]*overflow-x:\s*(?:hidden|clip)/);
 });

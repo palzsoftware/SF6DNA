@@ -1,4 +1,5 @@
 .pilot { display: grid; grid-template-columns: minmax(0,1fr); min-width: 0; gap: clamp(36px,6vw,72px); }
+.pilot > * { min-width: 0; max-width: 100%; }
 .overview { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(380px,.75fr); gap: clamp(32px,5vw,72px); align-items: start; padding: clamp(28px,4vw,52px) 0; border-bottom: 1px solid var(--line,var(--border)); }
 .overviewLead { min-width: 0; }
 .overviewLead h2 { max-width: 22ch; margin: 10px 0 22px; font-size: clamp(1.5rem,2.45vw,2.3rem); line-height: 1.48; letter-spacing: -.025em; text-wrap: balance; }
@@ -26,7 +27,7 @@
 .gameplanSteps h3 { margin: 0 0 8px; }
 .gameplanSteps p { margin: 0; color: #c3ced8; line-height: 1.75; }
 .gameplanSteps small { display: block; margin-top: 10px; color: #ffb27e; line-height: 1.6; }
-.inlineSources { grid-column: 2; display: flex; gap: 8px; overflow-x: auto; padding: 2px 0 8px; scroll-snap-type: x proximity; scrollbar-width: thin; }
+.inlineSources { grid-column: 2; display: flex; min-width: 0; max-width: 100%; gap: 8px; overflow-x: auto; padding: 2px 0 8px; scroll-snap-type: x proximity; scrollbar-width: thin; }
 .inlineSources a { display: inline-flex; min-width: max-content; min-height: 44px; gap: 8px; align-items: center; padding: 8px 12px; border: 1px solid var(--line,var(--border)); border-radius: 999px; color: #e6eef4; font-size: .74rem; font-weight: 760; scroll-snap-align: start; }
 .inlineSources span { color: #53d8ff; }
 .comboSection, .related { display: grid; gap: 18px; }
@@ -61,7 +62,7 @@
 .subheading { display: flex; justify-content: space-between; gap: 20px; align-items: end; padding-bottom: 14px; border-bottom: 1px solid var(--line,var(--border)); }
 .subheading p { margin: 8px 0 0; }
 .subheading > a { min-height: 44px; display: inline-flex; align-items: center; color: #ffae73; font-size: .78rem; font-weight: 850; }
-.comboList { display: grid; grid-template-columns: repeat(3,minmax(300px,1fr)); gap: 12px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x proximity; }
+.comboList { display: grid; min-width: 0; max-width: 100%; grid-template-columns: repeat(3,minmax(300px,1fr)); gap: 12px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x proximity; }
 .comboList > * { scroll-snap-align: start; }
 .strategySplit { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(24px,4vw,52px); }
 .strategySplit > div { min-width: 0; }
@@ -87,7 +88,7 @@
 .rangeTable strong { color: #53d8ff; }
 .rangeTable p { margin: 0; color: #c6d0d9; font-size: .8rem; line-height: 1.55; }
 .rangeTable p span { display: block; margin-bottom: 4px; color: #778491; font-size: .62rem; font-weight: 800; }
-.playerGrid { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(280px,32%); gap: 10px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x proximity; }
+.playerGrid { display: grid; min-width: 0; max-width: 100%; grid-auto-flow: column; grid-auto-columns: minmax(280px,32%); gap: 10px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x proximity; }
 .playerCard { display: grid; grid-template-columns: 64px minmax(0,1fr); gap: 12px; align-items: start; padding: 12px; border: 1px solid var(--line,var(--border)); border-radius: 12px; background: rgba(17,23,31,.55); scroll-snap-align: start; }
 .playerCard img, .playerFallback { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
 .playerFallback { display: grid; place-items: center; background: rgba(83,216,255,.08); text-align: center; }
@@ -100,7 +101,7 @@
 .playerCard dd { margin: 0; color: #bac6d0; font-size: .7rem; overflow-wrap: anywhere; }
 .socials { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 7px; }
 .socials a { color: #bfefff; font-size: .65rem; }
-.videoList { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(300px,32%); gap: 10px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x proximity; }
+.videoList { display: grid; min-width: 0; max-width: 100%; grid-auto-flow: column; grid-auto-columns: minmax(300px,32%); gap: 10px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x proximity; }
 .videoList > :global(.video-card) { height: 100%; scroll-snap-align: start; }
 .inlineSources:focus-visible, .playerGrid:focus-visible, .videoList:focus-visible { outline: 2px solid #53d8ff; outline-offset: 3px; }
 @media (max-width: 1080px) { .overview { grid-template-columns: 1fr; } .comparison { grid-template-columns: 1fr 1fr; } .comparison .sectionTitle { grid-column: 1 / -1; } .rangeSection { grid-template-columns: 1fr; } .playerGrid, .videoList { grid-auto-columns: minmax(280px,48%); } }
