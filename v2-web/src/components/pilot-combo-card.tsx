@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { appendDevicePreviewToken } from "@/lib/device-preview";
+import { releaseFeatures } from "@/lib/release-features";
 import styles from "./pilot-combo-card.module.css";
 
 const FAVORITE_KEY = "sf6dna:favorite-combos:v1";
@@ -167,7 +168,7 @@ export function PilotComboCard({
               {combo.sourceLabel} ↗
             </a>
           ) : null}
-          <Link href={appendDevicePreviewToken(combo.href, previewToken)}>個別ページを見る →</Link>
+          {releaseFeatures.publicStrategyContent ? <Link href={appendDevicePreviewToken(combo.href, previewToken)}>個別ページを見る →</Link> : null}
         </div>
       </details>
     </article>

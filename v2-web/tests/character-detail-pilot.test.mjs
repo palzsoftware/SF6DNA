@@ -97,6 +97,18 @@ test("Manon target combos receive their own move group label", () => {
   assert.match(source, /target_combo:\s*"ターゲットコンボ"/);
 });
 
+test("RC detail does not link to strategy pages hidden by release gates", () => {
+  const pilot = readProjectFile("src/components/character-detail-pilot.tsx");
+  const combo = readProjectFile("src/components/pilot-combo-card.tsx");
+  const movePage = readProjectFile("src/app/moves/[slug]/page.tsx");
+  assert.match(movePage, /!releaseFeatures\.publicStrategyContent\) notFound\(\)/);
+  assert.match(pilot, /releaseFeatures\.publicStrategyContent \? <Link className=\{styles\.moveDetailLink\}/);
+  for (const section of ["combos", "setups", "sequences"]) {
+    assert.ok(pilot.includes(`strategyListAvailable ? <Link href={appendDevicePreviewToken(\`/characters/\${characterSlug}/${section}\``));
+  }
+  assert.match(combo, /releaseFeatures\.publicStrategyContent \? <Link href=\{appendDevicePreviewToken\(combo\.href/);
+});
+
 test("Ryu and JP V2.1 removes duplicate navigation and exposes concrete page structures", () => {
   const source = readProjectFile("src/components/character-detail-pilot.tsx");
   const copy = readProjectFile("src/lib/character-detail-v21.ts");
