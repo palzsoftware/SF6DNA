@@ -52,6 +52,7 @@ function sourceLink(label: string | null | undefined, url: string | null | undef
 const moveTypeLabels: Record<string, string> = {
   normal: "通常技",
   unique: "特殊技",
+  target_combo: "ターゲットコンボ",
   special: "必殺技",
   super: "スーパーアーツ",
   throw: "投げ",

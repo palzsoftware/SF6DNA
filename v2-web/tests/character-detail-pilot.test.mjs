@@ -92,6 +92,11 @@ test("V2.2 uses horizontal rails for dense related content", () => {
   assert.match(css, /84%/);
 });
 
+test("Manon target combos receive their own move group label", () => {
+  const source = readProjectFile("src/components/character-detail-pilot.tsx");
+  assert.match(source, /target_combo:\s*"ターゲットコンボ"/);
+});
+
 test("Ryu and JP V2.1 removes duplicate navigation and exposes concrete page structures", () => {
   const source = readProjectFile("src/components/character-detail-pilot.tsx");
   const copy = readProjectFile("src/lib/character-detail-v21.ts");
