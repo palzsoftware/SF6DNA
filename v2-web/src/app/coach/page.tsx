@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { CoachRetrievalDemo } from "@/components/coach-retrieval-demo";
+import { CoachLossAnalysisForm } from "@/components/coach-loss-analysis-form";
 import { loadCoachInputFromSearchParams, type CoachSearchParams } from "@/lib/coach-input-loader";
 import { releaseFeatures } from "@/lib/release-features";
 import { isCoachSurfaceEnabled } from "@/lib/coach-preview-activation";
@@ -26,6 +27,7 @@ export default async function CoachPage({ searchParams }: { searchParams: Promis
         <p className="muted">現在はプレビューです。回答例は定型処理で作成し、外部AIによる回答生成は行いません。表示された情報源と対象の更新版も確認してください。</p>
       </section>
       <CoachRetrievalDemo initialQuestion={initialQuestion} initialContext={context} />
+      <CoachLossAnalysisForm />
     </div>
   );
 }
