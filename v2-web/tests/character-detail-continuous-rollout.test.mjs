@@ -22,9 +22,9 @@ test("continuous rollout batches cover all remaining 24 characters", () => {
   }
 });
 
-test("overview-only rollout cannot expose Ryu, JP, or Luke gameplay fixtures", () => {
+test("reviewed Ryu, JP, Luke, and Manon pilots stay separate from overview-only fixtures", () => {
   const fixture = read("src/lib/character-detail-v21-fixture.ts");
-  assert.match(fixture, /if \(slug === "ryu" \|\| slug === "jp" \|\| slug === "luke"\) return fixtures\[slug\]/);
+  assert.match(fixture, /if \(slug === "ryu" \|\| slug === "jp" \|\| slug === "luke" \|\| slug === "manon"\) return fixtures\[slug\]/);
   assert.match(fixture, /if \(overviewOnlySlugs\.has\(slug\)\)/);
   assert.match(fixture, /return \{ \.\.\.sharedEmpty, combos: \[\], setups: \[\], sequences: \[\] \}/);
 });

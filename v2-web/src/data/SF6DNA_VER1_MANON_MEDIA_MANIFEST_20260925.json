@@ -1,0 +1,82 @@
+{
+  "manifest_version": "1.0",
+  "character_slug": "manon",
+  "source_owner": "user_capture",
+  "captured_patch": "2026.08.03",
+  "capture_date": "2026-09-24",
+  "source_files": [
+    {
+      "category": "unique_attacks_and_target_combos",
+      "filename": "clip_1364780_20260924_134059.mp4",
+      "sha256": "e5f3aa18bc08cd8e933a8e3f2f3f124812d245b5df4eaf9c39c37288034e435e"
+    }
+  ],
+  "clips": [
+    {
+      "move_id": "1a11e706-08e7-4a29-a656-84ac942d5a18",
+      "move_slug": "manon-a-terre",
+      "category": "target_combos",
+      "variant": "default",
+      "media_url": "/media/moves/manon/manon-a-terre.mp4",
+      "media_type": "video",
+      "poster_url": "/media/moves/manon/manon-a-terre.webp",
+      "verification_status": "approved_for_preview",
+      "loop_start_ms": 0,
+      "loop_end_ms": 1850,
+      "duration_ms": 1850,
+      "width": 640,
+      "height": 360,
+      "fps": 60,
+      "filesize_bytes": 262986,
+      "source_file": "clip_1364780_20260924_134059.mp4",
+      "source_start_ms": 51500,
+      "source_end_ms": 53350,
+      "cut_review_status": "CUT_REVIEW_PASS",
+      "mapping_evidence": "The in-game 特殊技 list selects ア・テール immediately before the sequence; the isolated standing punch into kick displays two hits, matching the current target_combo Move MP > MK."
+    },
+    {
+      "move_id": "ee465bb0-22b4-41d2-9b26-a2fa733c3d06",
+      "move_slug": "manon-en-haut",
+      "category": "target_combos",
+      "variant": "default",
+      "media_url": "/media/moves/manon/manon-en-haut.mp4",
+      "media_type": "video",
+      "poster_url": "/media/moves/manon/manon-en-haut.webp",
+      "verification_status": "approved_for_preview",
+      "loop_start_ms": 0,
+      "loop_end_ms": 2200,
+      "duration_ms": 2200,
+      "width": 640,
+      "height": 360,
+      "fps": 60,
+      "filesize_bytes": 333992,
+      "source_file": "clip_1364780_20260924_134059.mp4",
+      "source_start_ms": 63400,
+      "source_end_ms": 65600,
+      "cut_review_status": "CUT_REVIEW_PASS",
+      "mapping_evidence": "The in-game 特殊技 list selects アン・オー; the following isolated two-kick sequence hits high and low and returns to neutral, matching the current target_combo Move ←+MK > MK."
+    },
+    {
+      "move_id": "20ab47b8-49bd-4bc0-b54e-ae8cb55aa7b2",
+      "move_slug": "manon-temps-lie-hp",
+      "category": "target_combos",
+      "variant": "default",
+      "media_url": "/media/moves/manon/manon-temps-lie-hp.mp4",
+      "media_type": "video",
+      "poster_url": "/media/moves/manon/manon-temps-lie-hp.webp",
+      "verification_status": "approved_for_preview",
+      "loop_start_ms": 0,
+      "loop_end_ms": 2300,
+      "duration_ms": 2300,
+      "width": 640,
+      "height": 360,
+      "fps": 60,
+      "filesize_bytes": 308435,
+      "source_file": "clip_1364780_20260924_134059.mp4",
+      "source_start_ms": 76300,
+      "source_end_ms": 78600,
+      "cut_review_status": "CUT_REVIEW_PASS",
+      "mapping_evidence": "The in-game 特殊技 list selects タン・リエ with 強P > 強P and no crouch command; the following standing two-punch sequence displays two hits. This distinguishes the current HP > HP Move from its ↓+HP > HP variant."
+    }
+  ]
+}

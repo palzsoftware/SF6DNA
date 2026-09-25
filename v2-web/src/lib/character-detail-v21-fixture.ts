@@ -21,7 +21,6 @@ const overviewOnlySlugs = new Set([
   "blanka",
   "e-honda",
   "dee-jay",
-  "manon",
   "marisa",
   "lily",
   "cammy",
@@ -40,7 +39,19 @@ const overviewOnlySlugs = new Set([
   "yasmine",
 ]);
 
-const fixtures: Record<"ryu" | "jp" | "luke", DevicePreviewBundle> = {
+const fixtures: Record<"ryu" | "jp" | "luke" | "manon", DevicePreviewBundle> = {
+  manon: {
+    ...sharedEmpty,
+    moves: [
+      { id: "1a11e706-08e7-4a29-a656-84ac942d5a18", slug: "manon-a-terre", name: "ア・テール", moveType: "target_combo", usageSummary: null, status: "draft", frame: null,
+        commands: [{ moveId: "1a11e706-08e7-4a29-a656-84ac942d5a18", scheme: "classic", commandText: "MP > MK", numericNotation: null, buttonNotation: null, conditionText: null, sortOrder: 0 }] },
+      { id: "ee465bb0-22b4-41d2-9b26-a2fa733c3d06", slug: "manon-en-haut", name: "アン・オー", moveType: "target_combo", usageSummary: null, status: "draft", frame: null,
+        commands: [{ moveId: "ee465bb0-22b4-41d2-9b26-a2fa733c3d06", scheme: "classic", commandText: "←+MK > MK", numericNotation: null, buttonNotation: null, conditionText: null, sortOrder: 0 }] },
+      { id: "20ab47b8-49bd-4bc0-b54e-ae8cb55aa7b2", slug: "manon-temps-lie-hp", name: "タン・リエ（HP > HP）", moveType: "target_combo", usageSummary: null, status: "draft", frame: null,
+        commands: [{ moveId: "20ab47b8-49bd-4bc0-b54e-ae8cb55aa7b2", scheme: "classic", commandText: "HP > HP", numericNotation: null, buttonNotation: null, conditionText: null, sortOrder: 0 }] },
+    ],
+    combos: [], setups: [], sequences: [],
+  },
   luke: {
     ...sharedEmpty,
     moves: [{
@@ -100,7 +111,7 @@ const fixtures: Record<"ryu" | "jp" | "luke", DevicePreviewBundle> = {
 };
 
 export function getCharacterDetailV21Fixture(slug: string): DevicePreviewBundle | null {
-  if (slug === "ryu" || slug === "jp" || slug === "luke") return fixtures[slug];
+  if (slug === "ryu" || slug === "jp" || slug === "luke" || slug === "manon") return fixtures[slug];
   if (overviewOnlySlugs.has(slug)) {
     return { ...sharedEmpty, combos: [], setups: [], sequences: [] };
   }
