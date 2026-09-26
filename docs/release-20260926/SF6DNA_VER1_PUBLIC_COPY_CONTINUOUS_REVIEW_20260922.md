@@ -67,3 +67,16 @@ DB変更なし。Production変更なし。`main` / `sf6dna-v2`変更なし。診
 - Preview `dpl_5DfTwsCZBtiunxTm4kKfgUt2V2t4` はREADY、SHA `5b225ea0fddff1cb39310eff3e6dd332fd8736a8` と一致。`/sources` の分類表示を再確認し、英語enum 0件、日本語7分類の表示を確認。
 - Character Detail固有本文、診断契約、DB、Production、main、sf6dna-v2、Ver.1.1は変更なし。
 - 以後はP0/P1だけを修正する。次回はRC更新時の差分再監査、または2026-09-26の承認状態に応じた監査。
+
+## 2026-09-26 Production承認確認・deploy前監査
+
+- 監査基点: RC `7787dba220c435347af8459a44ee64eff9591814`。2026-09-25の表示確認済みPreview SHA `5b225ea0fddff1cb39310eff3e6dd332fd8736a8` から7 commit進行。
+- Production承認: 未確認。承認Packetは明示承認待ち、GO / NO-GOは `NO_GO_PENDING_EXTERNAL_GATES` のまま。Production deploy / alias / envは変更していない。
+- 差分監査: Character Detail共通UIのfallback説明、Preview注意文、関連動画見出し、外部動画CTA、ターゲットコンボ分類とレイアウト／導線修正を確認。Character Detail固有攻略本文、診断契約、DB、main、sf6dna-v2、Ver.1.1への変更はなし。Public Copy P0/P1は追加検出なし。
+- 最新Preview: `dpl_7xMJNzrHKP4F8EcxRe8Ku8TLLiVh` はREADY、branch `sf6dna-v2-chatgpt-rc-20260916`、SHA `7787dba220c435347af8459a44ee64eff9591814` と一致、targetはPreview（Productionではない）。
+- Build: Next.js production build、TypeScript、46 page生成、deployment完了。Build error 0。直近6時間のVercel Runtime Error 0。GitHub combined statusはVercel success。
+- Tests: 直近の全テスト実績は2026-09-25の286/286 PASS。最新7 commitにはGitHub workflow runがなく、本監査では再実行していない。追加・更新されたtargeted testコードとVercel build成功は確認済み。
+- Browser copy QA: Vercel Authenticationのログイン画面で本文取得が止まり、最新Previewの画面本文は未確認。コード差分監査はPASS、実表示は `NOT_RUN_AUTH_REQUIRED`。
+- Production現況: `sf-6-dna.vercel.app` は `dpl_3T4VAzUWb57vwaN6HphfNGucDPVL` / `main` / `b9a2a8f638a3d4a98bfa042d56470664fe225ba7` / READY。RCへの切替は行われていない。
+- 判定: `PUBLIC_COPY_DIFF = PASS_NO_P0_P1`、`DEPLOY_PREAUDIT = PASS_WITH_RENDER_HOLD`、`PRODUCTION_COPY_SMOKE = NOT_RUN_NO_APPROVAL`、`OVERALL_RELEASE = NO_GO_PENDING_EXTERNAL_GATES`。
+
