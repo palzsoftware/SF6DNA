@@ -48,6 +48,24 @@ test("unverified Amnesia counter is held and excluded from Preview", () => {
   assert.equal(manifest.clips.filter((clip) => clip.category === "specials" && clip.verification_status === "approved_for_preview").length, 0);
 });
 
+test("JP SA and CA clips match reviewed gauge and health states in the SHA-verified capture", () => {
+  const source = manifest.source_files.find((item) => item.filename === "jp_specials_20260923_take01.mp4");
+  assert.equal(source.sha256, "5b6f89ad9308ea348908e1fb1b7d04dfe710bad23ab2d07c665194dc974bb554");
+  assert.equal(source.category, "super_arts");
+  assert.match(source.content_note, /Filename says specials/);
+  const superClips = manifest.clips.filter((clip) => clip.category === "super_arts");
+  assert.deepEqual(new Map(superClips.map((clip) => [clip.move_slug, clip.move_id])), new Map([
+    ["jp-sa2", "85762bb5-b5ae-4a88-b4ee-55112037774e"],
+    ["jp-sa1", "7817f9e6-8542-4da1-be01-c6bd24294f22"],
+    ["jp-sa3", "1845d4b9-4bac-4e4e-b6fd-3b57accfa973"],
+    ["jp-ca", "2472fe66-f312-4a5d-9c7c-25e0fa2515d7"],
+  ]));
+  assert.ok(superClips.every((clip) => clip.source_file === source.filename && clip.verification_status === "approved_for_preview" && clip.cut_review_status === "CUT_REVIEW_PASS"));
+  assert.match(superClips.find((clip) => clip.move_slug === "jp-ca").mapping_evidence, /CA indicator/);
+  const publicRoot = new URL("../public/", import.meta.url).pathname;
+  assert.deepEqual(validateMotionMediaManifest(manifest, { publicRoot }).errors, []);
+});
+
 test("Ryu pilot maps the reviewed normals and two distinguishable specials", () => {
   assert.equal(ryuManifest.character_slug, "ryu");
   assert.equal(ryuManifest.clips.length, 4);
