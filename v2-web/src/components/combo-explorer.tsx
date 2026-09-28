@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { PilotComboCard } from "@/components/pilot-combo-card";
 import type { CharacterSectionItem } from "@/lib/character-sections";
+import { matchesResource } from "@/lib/combo-resource";
 import styles from "./combo-explorer.module.css";
 
 type ComboExplorerProps = {
@@ -49,17 +50,6 @@ function difficultyBand(value: number | null) {
   if (value <= 2) return "easy";
   if (value === 3) return "standard";
   return "advanced";
-}
-
-function matchesResource(meta: ComboMeta, resource: string) {
-  if (resource === "all") return true;
-  const drive = meta.drive ?? 0;
-  const sa = meta.sa ?? 0;
-  if (resource === "meterless") return drive === 0 && sa === 0;
-  if (resource === "no-sa") return sa === 0;
-  if (resource === "drive") return drive > 0;
-  if (resource === "sa") return sa > 0;
-  return true;
 }
 
 function href(
