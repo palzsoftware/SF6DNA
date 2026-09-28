@@ -101,6 +101,8 @@
 .playerCard dd { margin: 0; color: #bac6d0; font-size: .7rem; overflow-wrap: anywhere; }
 .socials { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 7px; }
 .socials a { color: #bfefff; font-size: .65rem; }
+.videoGroup { display: grid; grid-template-columns: minmax(0,1fr); min-width: 0; max-width: 100%; gap: 10px; }
+.videoGroup h3 { margin: 0; color: #c8d6e0; font-size: .88rem; }
 .videoList { display: grid; min-width: 0; max-width: 100%; grid-auto-flow: column; grid-auto-columns: minmax(300px,32%); gap: 10px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x proximity; }
 .videoList > :global(.video-card) { height: 100%; scroll-snap-align: start; }
 .inlineSources:focus-visible, .playerGrid:focus-visible, .videoList:focus-visible { outline: 2px solid #53d8ff; outline-offset: 3px; }

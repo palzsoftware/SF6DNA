@@ -55,7 +55,8 @@ test("pilot uses safe player fallback and reusable video library", () => {
   const page = readProjectFile("src/app/characters/[slug]/page.tsx");
 
   assert.match(source, /選手ビジュアルは今後のアップデートで追加予定です/);
-  assert.match(source, /videos\.slice\(0, 6\)/);
+  assert.match(source, /videoSamples = videos\.slice\(0, 6\)/);
+  assert.match(source, /classifyCharacterVideo\(video\) === group/);
   assert.match(source, /<VideoCard/);
   assert.match(source, /item\.role === "main"\)\?\.characterName \?\? "未登録"/);
   assert.doesNotMatch(source, /player\.characters\[0\]\?\.characterName \?\? characterName/);
@@ -85,7 +86,7 @@ test("V2.2 uses horizontal rails for dense related content", () => {
   const css = readProjectFile("src/components/character-detail-pilot.module.css");
 
   assert.match(source, /関連プレイヤー（横スクロール）/);
-  assert.match(source, /関連動画（横スクロール）/);
+  assert.match(source, /CHARACTER_VIDEO_GROUP_LABELS\[group\].*横スクロール/);
   assert.match(source, /基本方針の情報源（横スクロール）/);
   assert.match(css, /overflow-x:\s*auto/);
   assert.match(css, /scroll-snap-type:\s*x proximity/);

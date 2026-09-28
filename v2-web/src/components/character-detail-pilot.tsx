@@ -8,6 +8,7 @@ import { appendDevicePreviewToken, isDevicePreviewRequest, type DevicePreviewBun
 import { formatVideoPublishedDate, type VideoSummary } from "@/lib/event-media";
 import { presentSource } from "@/lib/source-presentation";
 import { isInternalMoveNote, normalizePublicCopy } from "@/lib/public-copy";
+import { CHARACTER_VIDEO_GROUP_LABELS, CHARACTER_VIDEO_GROUP_ORDER, classifyCharacterVideo } from "@/lib/character-learning-structure";
 import { releaseFeatures } from "@/lib/release-features";
 import type { SourceReference } from "@/types/character";
 import type { PlayerDetail } from "@/types/player";
@@ -90,6 +91,11 @@ export function CharacterDetailPilot({
   const sequenceSamples = bundle.sequences.filter(canShowStrategy).slice(0, 3);
   const sourceSamples = sources.slice(0, 8);
   const strategyListAvailable = releaseFeatures.publicStrategyContent || previewActive;
+  const videoSamples = videos.slice(0, 6);
+  const videoGroups = CHARACTER_VIDEO_GROUP_ORDER.flatMap((group) => {
+    const items = videoSamples.filter((video) => classifyCharacterVideo(video) === group);
+    return items.length ? [{ group, items }] : [];
+  });
   const moveGroups = Object.entries(bundle.moves.reduce<Record<string, DevicePreviewBundle["moves"]>>((groups, move) => {
     const type = move.moveType ?? "other";
     (groups[type] ??= []).push(move);
@@ -204,7 +210,7 @@ export function CharacterDetailPilot({
 
       <section className={styles.related} id="related-videos">
         <div className={styles.subheading}><div><p className="eyebrow">動画</p><h2>関連動画</h2></div><Link href={appendDevicePreviewToken(`/characters/${characterSlug}/videos`, previewToken)}>このキャラの動画を探す →</Link></div>
-        {videos.length ? <div className={styles.videoList} tabIndex={0} aria-label="関連動画（横スクロール）">{videos.slice(0, 6).map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />)}</div> : <div className="empty-state"><p>関連動画は未掲載です。</p></div>}
+        {videoGroups.length ? videoGroups.map(({ group, items }) => <div className={styles.videoGroup} key={group}><h3>{CHARACTER_VIDEO_GROUP_LABELS[group]}</h3><div className={styles.videoList} tabIndex={0} aria-label={`${CHARACTER_VIDEO_GROUP_LABELS[group]}（横スクロール）`}>{items.map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />)}</div></div>) : <div className="empty-state"><p>関連動画は未掲載です。</p></div>}
       </section>
     </section>
   );
