@@ -56,8 +56,11 @@ function FilterGroup({ title, values, selected, labels, unavailable, onToggle }:
   );
 }
 
-export function VideoLibrary({ videos, lockedCharacter }: { videos: VideoSummary[]; lockedCharacter?: string }) {
-  const [filters, setFilters] = useState<VideoFilters>(EMPTY_FILTERS);
+export function VideoLibrary({ videos, lockedCharacter, initialPlayer }: { videos: VideoSummary[]; lockedCharacter?: string; initialPlayer?: string | null }) {
+  const [filters, setFilters] = useState<VideoFilters>(() => ({
+    ...EMPTY_FILTERS,
+    players: initialPlayer ? new Set([initialPlayer]) : new Set(),
+  }));
   const [sort, setSort] = useState<VideoSort>("recommended");
   const [visible, setVisible] = useState(12);
   const [favorites, setFavorites] = useState<Set<string>>(new Set());

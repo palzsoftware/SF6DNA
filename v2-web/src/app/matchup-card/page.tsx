@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getMatchupCardData } from "@/lib/matchup-card";
 import { listCharacters } from "@/lib/characters";
+import { releaseFeatures } from "@/lib/release-features";
 
 export const metadata = {
   title: "対面ナレッジカード",
@@ -45,13 +46,16 @@ export default async function MatchupCardPage({ searchParams }: { searchParams: 
         <h2>{opponent.name}の公開済み代表技</h2>
         {card.opponentMoves.length ? (
           <div className="search-result-list">
-            {card.opponentMoves.map((item) => (
-              <Link className="search-result" href={item.href} key={item.id}>
+            {card.opponentMoves.map((item) => {
+              const content = <>
                 {item.meta ? <span className="search-result__type">{item.meta}</span> : null}
                 <strong>{item.title}</strong>
                 {item.subtitle ? <span>{item.subtitle}</span> : null}
-              </Link>
-            ))}
+              </>;
+              return releaseFeatures.publicStrategyContent
+                ? <Link className="search-result" href={item.href} key={item.id}>{content}</Link>
+                : <article className="search-result" key={item.id}>{content}</article>;
+            })}
           </div>
         ) : <div className="empty-state"><p>現在公開できる技データはありません。</p></div>}
       </section>
@@ -60,21 +64,24 @@ export default async function MatchupCardPage({ searchParams }: { searchParams: 
         <h2>{own.name}側の確認済み対策</h2>
         {card.counters.length ? (
           <div className="search-result-list">
-            {card.counters.map((item) => (
-              <Link className="search-result" href={item.href} key={item.id}>
+            {card.counters.map((item) => {
+              const content = <>
                 {item.meta ? <span className="search-result__type">{item.meta}</span> : null}
                 <strong>{item.title}</strong>
                 {item.summary ? <span>{item.summary}</span> : null}
-              </Link>
-            ))}
+              </>;
+              return releaseFeatures.publicStrategyContent
+                ? <Link className="search-result" href={item.href} key={item.id}>{content}</Link>
+                : <article className="search-result" key={item.id}>{content}</article>;
+            })}
           </div>
         ) : <div className="empty-state"><p>この組み合わせで、出典まで確認できる公開済み対策はまだありません。未確認の情報は表示しません。</p></div>}
       </section>
 
       <section className="info-panel">
         <h2>次に見る</h2>
-        <p><Link href={`/characters/${own.slug}/training`}>{own.name}のトレーニング</Link></p>
-        <p><Link href={`/characters/${opponent.slug}/moves`}>{opponent.name}の全公開技</Link></p>
+        <p><Link href="/me/training">今日の15分練習を見る</Link></p>
+        <p><Link href={`/characters/${opponent.slug}`}>{opponent.name}の情報を見る</Link></p>
         <p><Link href="/improve">対戦ログ・リプレイ復習へ戻る</Link></p>
       </section>
     </div>

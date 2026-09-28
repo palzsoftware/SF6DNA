@@ -197,9 +197,9 @@ export function ImprovementLoopTool({ characters }: { characters: CharacterSumma
             <p>{trainingSuggestion(weakest.key)}</p>
           </>
         ) : <p>対戦ログを追加すると候補を表示します。</p>}
-        <p>Source付きTraining/Counterを確認して内容を確定してください。未verified攻略をここで断定表示しません。</p>
-        {ownCharacter ? <p><Link href={`/characters/${ownCharacter.slug}/training`}>{ownCharacter.name}のTraining</Link></p> : null}
-        {opponent ? <p><Link href={`/characters/${opponent.slug}/matchups`}>{opponent.name}の対策データ</Link></p> : null}
+        <p>練習内容を決める際は、公開中のキャラクター情報も参考にしてください。</p>
+        {ownCharacter ? <p><Link href={`/characters/${ownCharacter.slug}`}>{ownCharacter.name}の情報を見る</Link></p> : null}
+        {opponent ? <p><Link href={`/characters/${opponent.slug}`}>{opponent.name}の情報を見る</Link></p> : null}
       </section>
 
       <section className="info-panel">
@@ -220,7 +220,7 @@ export function ImprovementLoopTool({ characters }: { characters: CharacterSumma
                 <p>原因: {review.cause || "不明"}</p>
                 <p>採用回答: {review.adoptedAnswer || "未確定"}</p>
                 <p>再練習: {review.retrainingTarget || "未設定"}</p>
-                {ownCharacter ? <p><Link href={`/characters/${ownCharacter.slug}/training`}>Trainingで再確認</Link></p> : null}
+                <p><Link href="/me/training">今日の15分練習を見る</Link></p>
                 <button type="button" onClick={() => setState((current) => ({ ...current, replayReviews: current.replayReviews.filter((item) => item.id !== review.id) }))}>削除</button>
               </article>
             ))}

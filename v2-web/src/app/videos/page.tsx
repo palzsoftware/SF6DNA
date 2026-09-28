@@ -2,10 +2,14 @@ export const dynamic = "force-dynamic";
 
 import { listVideos } from "@/lib/event-media";
 import { VideoLibrary } from "@/components/video-library";
+import { videoPlayerFromQuery } from "@/lib/video-player-filter";
 
 export const metadata = { title: "動画" };
 
-export default async function VideosPage() {
+export default async function VideosPage({ searchParams }: {
+  searchParams: Promise<{ player?: string | string[] }>;
+}) {
+  const player = videoPlayerFromQuery((await searchParams).player);
   const videos = await listVideos();
 
   return (
@@ -17,7 +21,7 @@ export default async function VideosPage() {
       </section>
 
       {videos.length ? (
-        <VideoLibrary videos={videos} />
+        <VideoLibrary videos={videos} initialPlayer={player} key={player ?? "all"} />
       ) : (
         <section className="empty-state">
           <h2>公開済み動画はまだありません</h2>
