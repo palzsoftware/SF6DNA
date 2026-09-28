@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { CharacterPreferenceActions } from "@/components/character-preference-actions";
 import { CharacterTabs } from "@/components/character-tabs";
 import { CharacterDetailPilot } from "@/components/character-detail-pilot";
+import { JpCharacterDetail } from "@/components/jp-character-detail";
 import {
   appendDevicePreviewToken,
   getDevicePreviewBundle,
@@ -160,6 +161,20 @@ export default async function CharacterPage({
     ? groupedGuideSections(character.guideSections)
     : [];
   const hasStrengthProfile = Boolean(character.strengthsSummary || character.weaknessesSummary);
+
+  // Keep the JP Preview layout independent from the shared pilot and its
+  // nested grids. Data, visibility gates and media mapping remain the same.
+  if (character.slug === "jp" && pilotBundle && pilotProfile) {
+    return <JpCharacterDetail
+      character={character}
+      previewToken={previewToken}
+      previewActive={previewActive}
+      bundle={pilotBundle}
+      profile={pilotProfile}
+      players={pilotPlayers}
+      videos={pilotVideos}
+    />;
+  }
 
   return (
     <div className="site-shell page-stack character-overview-page">
