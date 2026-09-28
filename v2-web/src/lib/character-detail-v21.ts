@@ -42,7 +42,7 @@ const profiles: Record<"ryu" | "jp", CharacterDetailV21Profile> = {
         label: "03 / CONVERT",
         title: "触れたら短いコンボでダウンを取る",
         body: "近距離の小技が当たったら、昇龍拳や竜巻旋風脚で締める短いルートを使います。まずは入力を安定させ、次の起き攻めへ進みます。",
-        caution: "下のコンボはPreview確認用です。ダメージや消費量が未確認の項目は実戦判断に使いません。",
+        caution: "ダメージや消費ゲージが未確認のコンボは、実戦で使う前に確認してください。",
       },
       {
         label: "04 / CORNER",
@@ -81,7 +81,7 @@ const profiles: Record<"ryu" | "jp", CharacterDetailV21Profile> = {
         label: "03 / SA2",
         title: "ラヴーシュカで攻めを継続する",
         body: "SA2のラヴーシュカは複数の攻撃を順番に発生させます。相手の守りを動かしながら、本体の打撃や投げで攻めを続けるために使います。",
-        caution: "発動後の入力順と成立条件はPatchごとの確認が必要です。未確認ルートはPublicには出しません。",
+        caution: "発動後の入力順と成立条件は、現在のバージョンで確認してください。",
       },
       {
         label: "04 / RESET",
