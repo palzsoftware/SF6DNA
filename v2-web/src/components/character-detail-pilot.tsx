@@ -82,11 +82,14 @@ export function CharacterDetailPilot({
   sources: SourceReference[];
   profile: CharacterDetailV21Profile;
 }) {
-  const comboSamples = bundle.combos.slice(0, 3);
-  const setupSamples = bundle.setups.slice(0, 3);
-  const sequenceSamples = bundle.sequences.slice(0, 3);
+  const previewActive = isDevicePreviewRequest(previewToken);
+  const canShowStrategy = (item: { status: string; verificationStatus: string | null }) =>
+    previewActive || (releaseFeatures.publicStrategyContent && item.status === "published" && item.verificationStatus === "verified");
+  const comboSamples = bundle.combos.filter(canShowStrategy).slice(0, 3);
+  const setupSamples = bundle.setups.filter(canShowStrategy).slice(0, 3);
+  const sequenceSamples = bundle.sequences.filter(canShowStrategy).slice(0, 3);
   const sourceSamples = sources.slice(0, 8);
-  const strategyListAvailable = releaseFeatures.publicStrategyContent || isDevicePreviewRequest(previewToken);
+  const strategyListAvailable = releaseFeatures.publicStrategyContent || previewActive;
   const moveGroups = Object.entries(bundle.moves.reduce<Record<string, DevicePreviewBundle["moves"]>>((groups, move) => {
     const type = move.moveType ?? "other";
     (groups[type] ??= []).push(move);
@@ -100,7 +103,7 @@ export function CharacterDetailPilot({
           <p className="eyebrow">基本ガイド</p>
           <h2>{normalizePublicCopy(profile.tagline)}</h2>
           <p>{normalizePublicCopy(profile.winPath)}</p>
-          <div className={styles.previewNote}>この攻略情報は掲載前の確認用です。</div>
+          {previewActive ? <div className={styles.previewNote}>この攻略情報は掲載前の確認用です。</div> : null}
         </div>
         <dl className={styles.quickFacts} aria-label="基本情報">
           <div><dt>得意距離</dt><dd>{rangeLabel ?? "確認中"}</dd></div>
@@ -117,7 +120,7 @@ export function CharacterDetailPilot({
       </section>
 
       <section className={styles.gameplan} aria-labelledby="pilot-gameplan-heading">
-        <div className={styles.sectionTitle}><p className="eyebrow">基本方針</p><h2 id="pilot-gameplan-heading">基本の勝ち筋</h2><p>使う技、得意な距離、注意点を順に紹介します。</p></div>
+        <div className={styles.sectionTitle}><p className="eyebrow">基本方針</p><h2 id="pilot-gameplan-heading">基本の勝ち筋</h2>{profile.gameplan.length ? <p>使う技、得意な距離、注意点を順に紹介します。</p> : null}</div>
         {profile.gameplan.length ? <ol className={styles.gameplanSteps}>
           {profile.gameplan.map((step, index) => <li key={step.label}><span>手順 {index + 1}</span><div><h3>{normalizePublicCopy(step.title)}</h3><p>{normalizePublicCopy(step.body)}</p><small>{normalizePublicCopy(step.caution)}</small></div></li>)}
         </ol> : <div className="empty-state"><p>表示できる基本方針はありません。</p></div>}
@@ -170,22 +173,22 @@ export function CharacterDetailPilot({
       </section>
 
       <section className={styles.comboSection} id="pilot-combos" aria-labelledby="pilot-combos-heading">
-        <div className={styles.subheading}><div><p className="eyebrow">コンボ</p><h2 id="pilot-combos-heading">まず確認するコンボ</h2><p>用途と消費ゲージを比べ、気になるコンボの詳細を開けます。</p></div>{strategyListAvailable ? <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/combos`, previewToken)}>コンボ一覧を見る →</Link> : null}</div>
-        {comboSamples.length ? <div className={styles.comboList}>{comboSamples.map((combo) => <PilotComboCard key={combo.id} previewToken={previewToken} combo={{ id: combo.id, href: `/combos/${combo.slug}`, name: combo.name, category: combo.category, purpose: combo.purpose ? normalizePublicCopy(combo.purpose) : null, damage: combo.damage, drive: combo.driveCost, sa: combo.saCost, difficulty: numericDifficulty(combo.difficulty), verificationStatus: combo.verificationStatus, preview: true, command: combo.command ? normalizePublicCopy(combo.command) : null, startCondition: combo.startCondition ? normalizePublicCopy(combo.startCondition) : null, endCondition: combo.endCondition ? normalizePublicCopy(combo.endCondition) : null, position: combo.position, patch: combo.patch, sourceLabel: combo.sourceLabel, sourceUrl: combo.sourceUrl }} />)}</div> : <div className="empty-state"><p>コンボは未掲載です。</p></div>}
+        <div className={styles.subheading}><div><p className="eyebrow">コンボ</p><h2 id="pilot-combos-heading">まず確認するコンボ</h2>{comboSamples.length ? <p>用途と消費ゲージを比べ、気になるコンボの詳細を開けます。</p> : null}</div>{strategyListAvailable ? <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/combos`, previewToken)}>コンボ一覧を見る →</Link> : null}</div>
+        {comboSamples.length ? <div className={styles.comboList}>{comboSamples.map((combo) => <PilotComboCard key={combo.id} previewToken={previewToken} combo={{ id: combo.id, href: `/combos/${combo.slug}`, name: combo.name, category: combo.category, purpose: combo.purpose ? normalizePublicCopy(combo.purpose) : null, damage: combo.damage, drive: combo.driveCost, sa: combo.saCost, difficulty: numericDifficulty(combo.difficulty), verificationStatus: combo.verificationStatus, preview: previewActive, command: combo.command ? normalizePublicCopy(combo.command) : null, startCondition: combo.startCondition ? normalizePublicCopy(combo.startCondition) : null, endCondition: combo.endCondition ? normalizePublicCopy(combo.endCondition) : null, position: combo.position, patch: combo.patch, sourceLabel: combo.sourceLabel, sourceUrl: combo.sourceUrl }} />)}</div> : <div className="empty-state"><p>確認済みのコンボはまだありません。</p></div>}
       </section>
 
       <section className={styles.strategySplit}>
         <div id="pilot-setplay">
-          <div className={styles.subheading}><div><p className="eyebrow">セットプレイ</p><h2>セットプレイ</h2><p>始める状況から順に手順を紹介します。</p></div>{strategyListAvailable ? <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/setups`, previewToken)}>セットプレイ一覧を見る →</Link> : null}</div>
+          <div className={styles.subheading}><div><p className="eyebrow">セットプレイ</p><h2>セットプレイ</h2>{setupSamples.length ? <p>始める状況から順に手順を紹介します。</p> : null}</div>{strategyListAvailable ? <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/setups`, previewToken)}>セットプレイ一覧を見る →</Link> : null}</div>
           <div className={styles.timelineList}>{setupSamples.map((setup) => {
             const steps = setupSteps(setup.description);
             return <details key={setup.id} open={setup === setupSamples[0]}><summary><span>{verificationLabel(setup.verificationStatus)}</span><strong>{setup.name}</strong><small>ダメージ {valueOrUnknown(setup.damage)}</small><small>ドライブ {valueOrUnknown(setup.driveCost)}</small></summary><div>{steps.length ? <ol>{steps.map((step, index) => <li key={`${setup.id}-${index}`}>{normalizePublicCopy(step)}</li>)}</ol> : <p>手順は未確認です。</p>}<dl><div><dt>コマンド</dt><dd>{valueOrUnknown(setup.command, "コマンド未確認")}</dd></div><div><dt>開始条件</dt><dd>{valueOrUnknown(setup.startCondition)}</dd></div><div><dt>成功条件</dt><dd>{valueOrUnknown(setup.successCondition)}</dd></div><div><dt>相手の選択肢</dt><dd>{valueOrUnknown(setup.opponentOptions)}</dd></div><div><dt>失敗条件</dt><dd>{valueOrUnknown(setup.failureCondition)}</dd></div><div><dt>位置</dt><dd>{valueOrUnknown(setup.position)}</dd></div><div><dt>有利状況</dt><dd>{valueOrUnknown(setup.frameAdvantage)}</dd></div><div><dt>ダメージ</dt><dd>{valueOrUnknown(setup.damage)}</dd></div><div><dt>ドライブゲージ使用量</dt><dd>{valueOrUnknown(setup.driveCost)}</dd></div><div><dt>SAゲージ使用量</dt><dd>{valueOrUnknown(setup.saCost)}</dd></div><div><dt>対応バージョン</dt><dd>{valueOrUnknown(setup.patch)}</dd></div><div><dt>情報源</dt><dd>{sourceLink(setup.sourceLabel, setup.sourceUrl)}</dd></div></dl></div></details>;
-          })}{!setupSamples.length ? <div className="empty-state"><p>セットプレイは未掲載です。</p></div> : null}</div>
+          })}{!setupSamples.length ? <div className="empty-state"><p>確認済みのセットプレイはまだありません。</p></div> : null}</div>
         </div>
 
         <div id="pilot-sequences">
-          <div className={styles.subheading}><div><p className="eyebrow">連携</p><h2>連携・対策</h2><p>入力、目的、注意点を項目ごとに開けます。</p></div>{strategyListAvailable ? <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/sequences`, previewToken)}>連携・対策一覧を見る →</Link> : null}</div>
-          <div className={styles.sequenceList}>{sequenceSamples.map((sequence) => <details key={sequence.id} open={sequence === sequenceSamples[0]}><summary><span>{verificationLabel(sequence.verificationStatus)}</span><strong>{sequence.name}</strong><small>ダメージ {valueOrUnknown(sequence.damage)}</small><small>ドライブ {valueOrUnknown(sequence.driveCost)}</small></summary><div><p className={styles.command}>{valueOrUnknown(sequence.sequenceText, "コマンド未確認")}</p>{sequence.purpose ? <p>{normalizePublicCopy(sequence.purpose)}</p> : null}{sequence.notes ? <p>{normalizePublicCopy(sequence.notes)}</p> : null}<dl><div><dt>連係の隙間</dt><dd>{valueOrUnknown(sequence.gap)}</dd></div><div><dt>投げ</dt><dd>{valueOrUnknown(sequence.throwOption)}</dd></div><div><dt>打撃</dt><dd>{valueOrUnknown(sequence.strikeOption)}</dd></div><div><dt>ドライブインパクトへの対応</dt><dd>{valueOrUnknown(sequence.driveImpactOption)}</dd></div><div><dt>反撃可否</dt><dd>{valueOrUnknown(sequence.punishability)}</dd></div><div><dt>成立条件</dt><dd>{valueOrUnknown(sequence.condition)}</dd></div><div><dt>ダメージ</dt><dd>{valueOrUnknown(sequence.damage)}</dd></div><div><dt>ドライブゲージ使用量</dt><dd>{valueOrUnknown(sequence.driveCost)}</dd></div><div><dt>SAゲージ使用量</dt><dd>{valueOrUnknown(sequence.saCost)}</dd></div><div><dt>対応バージョン</dt><dd>{valueOrUnknown(sequence.patch)}</dd></div><div><dt>情報源</dt><dd>{sourceLink(sequence.sourceLabel, sequence.sourceUrl)}</dd></div></dl></div></details>)}{!sequenceSamples.length ? <div className="empty-state"><p>連携・対策は未掲載です。</p></div> : null}</div>
+          <div className={styles.subheading}><div><p className="eyebrow">連携</p><h2>連携・対策</h2>{sequenceSamples.length ? <p>入力、目的、注意点を項目ごとに開けます。</p> : null}</div>{strategyListAvailable ? <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/sequences`, previewToken)}>連携・対策一覧を見る →</Link> : null}</div>
+          <div className={styles.sequenceList}>{sequenceSamples.map((sequence) => <details key={sequence.id} open={sequence === sequenceSamples[0]}><summary><span>{verificationLabel(sequence.verificationStatus)}</span><strong>{sequence.name}</strong><small>ダメージ {valueOrUnknown(sequence.damage)}</small><small>ドライブ {valueOrUnknown(sequence.driveCost)}</small></summary><div><p className={styles.command}>{valueOrUnknown(sequence.sequenceText, "コマンド未確認")}</p>{sequence.purpose ? <p>{normalizePublicCopy(sequence.purpose)}</p> : null}{sequence.notes ? <p>{normalizePublicCopy(sequence.notes)}</p> : null}<dl><div><dt>連係の隙間</dt><dd>{valueOrUnknown(sequence.gap)}</dd></div><div><dt>投げ</dt><dd>{valueOrUnknown(sequence.throwOption)}</dd></div><div><dt>打撃</dt><dd>{valueOrUnknown(sequence.strikeOption)}</dd></div><div><dt>ドライブインパクトへの対応</dt><dd>{valueOrUnknown(sequence.driveImpactOption)}</dd></div><div><dt>反撃可否</dt><dd>{valueOrUnknown(sequence.punishability)}</dd></div><div><dt>成立条件</dt><dd>{valueOrUnknown(sequence.condition)}</dd></div><div><dt>ダメージ</dt><dd>{valueOrUnknown(sequence.damage)}</dd></div><div><dt>ドライブゲージ使用量</dt><dd>{valueOrUnknown(sequence.driveCost)}</dd></div><div><dt>SAゲージ使用量</dt><dd>{valueOrUnknown(sequence.saCost)}</dd></div><div><dt>対応バージョン</dt><dd>{valueOrUnknown(sequence.patch)}</dd></div><div><dt>情報源</dt><dd>{sourceLink(sequence.sourceLabel, sequence.sourceUrl)}</dd></div></dl></div></details>)}{!sequenceSamples.length ? <div className="empty-state"><p>確認済みの連携・対策はまだありません。</p></div> : null}</div>
         </div>
       </section>
 

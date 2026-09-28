@@ -111,6 +111,18 @@ test("RC detail does not link to strategy pages hidden by release gates", () => 
   assert.match(tabs, /!previewActive && gatedPilotSections\.has\(tab\.key\)/);
 });
 
+test("ordinary character detail withholds draft strategy and preview-only notice", () => {
+  const pilot = readProjectFile("src/components/character-detail-pilot.tsx");
+  const flags = readProjectFile("src/lib/release-features.ts");
+  assert.match(flags, /publicStrategyContent:\s*false/);
+  assert.match(pilot, /previewActive \|\| \(releaseFeatures\.publicStrategyContent && item\.status === "published" && item\.verificationStatus === "verified"\)/);
+  for (const section of ["combos", "setups", "sequences"]) {
+    assert.ok(pilot.includes(`bundle.${section}.filter(canShowStrategy)`));
+  }
+  assert.match(pilot, /previewActive \? <div className=\{styles\.previewNote\}>この攻略情報は掲載前の確認用です。<\/div> : null/);
+  assert.match(pilot, /preview: previewActive/);
+});
+
 test("Ryu and JP V2.1 removes duplicate navigation and exposes concrete page structures", () => {
   const source = readProjectFile("src/components/character-detail-pilot.tsx");
   const copy = readProjectFile("src/lib/character-detail-v21.ts");
