@@ -38,6 +38,7 @@ test("video cards align clamped titles and bottom actions", () => {
 test("public move fallback hides internal publication notes", () => {
   assert.match(pilot, /command\.conditionText && !isInternalMoveNote\(command\.conditionText\)/);
   assert.match(read("src/lib/public-copy.ts"), /frame-table row; checked/);
+  assert.match(read("src/lib/public-copy.ts"), /\^Year4:/);
   assert.match(pilot, /isInternalMoveNote/);
   assert.match(pilot, /if \(isInternalMoveNote\(value\)\) return null/);
   assert.doesNotMatch(pilot, />Awaiting official\/game verification before publication\.</);
