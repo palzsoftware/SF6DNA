@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { appendDevicePreviewToken } from "@/lib/device-preview";
 import { releaseFeatures } from "@/lib/release-features";
+import { localizeComboText, localizeSourceType } from "@/lib/detail-localization";
 import styles from "./pilot-combo-card.module.css";
 
 const FAVORITE_KEY = "sf6dna:favorite-combos:v1";
@@ -21,12 +22,14 @@ export type PilotComboCardData = {
   verificationStatus: string | null;
   preview: boolean;
   category?: string | null;
+  starter?: string | null;
   command?: string | null;
   startCondition?: string | null;
   endCondition?: string | null;
   position?: string | null;
   patch?: string | null;
   sourceLabel?: string | null;
+  sourceType?: string | null;
   sourceUrl?: string | null;
   media?: {
     type: "gif" | "webp" | "video";
@@ -37,6 +40,16 @@ export type PilotComboCardData = {
 
 function displayValue(value: string | number | null | undefined, fallback = "未確認") {
   return value === null || value === undefined || value === "" ? fallback : String(value);
+}
+
+function safeExternalUrl(value: string | null | undefined) {
+  if (!value) return null;
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" || url.protocol === "http:" ? url.href : null;
+  } catch {
+    return null;
+  }
 }
 
 const categoryLabels: Record<string, string> = {
@@ -75,6 +88,7 @@ export function PilotComboCard({
   const [favorite, setFavorite] = useState(false);
   const [training, setTraining] = useState(false);
   const verified = combo.verificationStatus === "verified";
+  const sourceUrl = safeExternalUrl(combo.sourceUrl);
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
@@ -96,7 +110,6 @@ export function PilotComboCard({
     ["運び", "未確認"],
     ["使用頻度", "未確認"],
     ["対応バージョン", displayValue(combo.patch)],
-    ["情報源", combo.sourceLabel ?? "参考リンクなし"],
   ];
 
   return (
@@ -104,7 +117,7 @@ export function PilotComboCard({
       {combo.media ? (
         <div className={styles.media}>
           {combo.media.type === "video" ? (
-            <video controls preload="metadata" poster={combo.media.posterUrl ?? undefined}>
+            <video controls preload="none" poster={combo.media.posterUrl ?? undefined}>
               <source src={combo.media.url} />
             </video>
           ) : (
@@ -117,13 +130,14 @@ export function PilotComboCard({
       <div className={styles.summaryRow}>
         <div className={styles.main}>
           <div className={styles.badges}>
-            <span>{combo.category ? categoryLabels[combo.category] ?? combo.category : "カテゴリ未確認"}</span>
+            <span>{combo.category ? categoryLabels[combo.category] ?? localizeComboText(combo.category) : "カテゴリ未確認"}</span>
             <span className={styles.difficulty}>{verified && combo.difficulty !== null ? `難易度 ${combo.difficulty}/5` : "難易度 未確認"}</span>
             <span>ドライブ {displayValue(combo.drive)}</span>
             <span>SA {displayValue(combo.sa)}</span>
             {combo.preview ? <span className={styles.preview}>確認用</span> : null}
           </div>
           <h2>{combo.name}</h2>
+          {combo.starter ? <p>始動: {combo.starter}</p> : null}
           {combo.purpose ? <p>{combo.purpose}</p> : null}
         </div>
 
@@ -163,11 +177,14 @@ export function PilotComboCard({
               </div>
             ))}
           </dl>
-          {combo.sourceUrl && combo.sourceLabel ? (
-            <a href={combo.sourceUrl} target="_blank" rel="noopener noreferrer">
-              {combo.sourceLabel} ↗
-            </a>
-          ) : null}
+          <div className={styles.source}>
+            <span>情報源</span>
+            {sourceUrl && combo.sourceLabel ? (
+              <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
+                {combo.sourceLabel}{combo.sourceType ? ` / ${localizeSourceType(combo.sourceType)}` : ""}（{new URL(sourceUrl).hostname}）↗
+              </a>
+            ) : <span>参考リンクなし</span>}
+          </div>
           {releaseFeatures.publicStrategyContent ? <Link href={appendDevicePreviewToken(combo.href, previewToken)}>個別ページを見る →</Link> : null}
         </div>
       </details>

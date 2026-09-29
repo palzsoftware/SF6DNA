@@ -11,7 +11,9 @@ import {
   localizeTrainingType,
 } from "@/lib/detail-localization";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
+import { getPublicEntitySources } from "@/lib/public-source-links";
 import { isMovePublicReady } from "@/lib/public-move-gate";
+import type { PilotComboCardData } from "@/components/pilot-combo-card";
 import type { CharacterSectionKey } from "@/types/character";
 
 export type CharacterSectionItem = {
@@ -20,6 +22,7 @@ export type CharacterSectionItem = {
   subtitle: string | null;
   href: string;
   meta: string | null;
+  combo?: PilotComboCardData;
 };
 
 function previewMeta(
@@ -78,6 +81,16 @@ export async function listCharacterSectionItems(
           row.saCost !== null ? `SA ${row.saCost}` : null,
           row.difficulty ? `難易度 ${row.difficulty}` : null,
         ]),
+        combo: {
+          id: row.id, href: `/combos/${row.slug}`, name: row.name,
+          purpose: row.purpose, damage: row.damage, drive: row.driveCost,
+          sa: row.saCost, difficulty: row.difficulty ? Number(row.difficulty) || null : null,
+          verificationStatus: row.verificationStatus, preview: true,
+          category: row.category, command: row.command, startCondition: row.startCondition,
+          starter: row.startCondition,
+          endCondition: row.endCondition, position: row.position, patch: row.patch,
+          sourceLabel: row.sourceLabel, sourceUrl: row.sourceUrl,
+        },
       }));
     }
 
@@ -170,16 +183,49 @@ export async function listCharacterSectionItems(
   if (section === "combos") {
     const { data, error } = await supabase
       .from("combos")
-      .select("id, slug, name, purpose, damage, drive_cost, sa_cost, difficulty")
+      .select("id, slug, name, combo_type, notation, starter_text, position, conditions, purpose, damage, drive_cost, sa_cost, difficulty, valid_from_patch_id, valid_to_patch_id, verification_status")
       .eq("character_id", characterId)
       .eq("status", "published")
       .eq("verification_status", "verified")
       .limit(100);
     if (error) return fail(section, error.message);
-    return (data ?? []).map((row) => ({
-      id: String(row.id), title: String(row.name), subtitle: row.purpose ?? null, href: `/combos/${row.slug}`,
-      meta: [`${row.damage ?? "?"} dmg`, row.drive_cost !== null ? `D ${row.drive_cost}` : null, row.sa_cost !== null ? `SA ${row.sa_cost}` : null, row.difficulty ? `難易度 ${row.difficulty}` : null].filter(Boolean).join(" / "),
-    }));
+    const combos = data ?? [];
+    const patchIds = [...new Set(combos.flatMap((row) => row.valid_from_patch_id ? [row.valid_from_patch_id] : []))];
+    const [patchResult, sources] = await Promise.all([
+      patchIds.length
+        ? supabase.from("patches").select("id, version_label, name").in("id", patchIds)
+        : Promise.resolve({ data: [], error: null }),
+      getPublicEntitySources(["combo"], combos.map((row) => String(row.id))),
+    ]);
+    if (patchResult.error) console.error("[character-sections] combo patch lookup failed", patchResult.error.message);
+    const patches = new Map((patchResult.data ?? []).map((patch) => [String(patch.id), patch]));
+    const sourcesById = new Map<string, (typeof sources)[number]>();
+    for (const source of sources) if (!sourcesById.has(source.entityId)) sourcesById.set(source.entityId, source);
+
+    return combos.map((row) => {
+      const id = String(row.id);
+      const patch = row.valid_from_patch_id ? patches.get(String(row.valid_from_patch_id)) : null;
+      const source = sourcesById.get(id);
+      const href = `/combos/${row.slug}`;
+      return {
+        id, title: String(row.name), subtitle: row.purpose ?? null, href,
+        meta: [typeof row.damage === "number" ? `${row.damage} dmg` : null, row.drive_cost !== null ? `D ${row.drive_cost}` : null, row.sa_cost !== null ? `SA ${row.sa_cost}` : null, row.difficulty ? `難易度 ${row.difficulty}` : null].filter(Boolean).join(" / "),
+        combo: {
+          id, href, name: String(row.name), purpose: row.purpose ?? null,
+          category: row.combo_type ?? null, command: row.notation ?? null,
+          starter: row.starter_text ?? null,
+          startCondition: row.conditions ?? row.starter_text ?? null,
+          position: row.position ?? null,
+          damage: row.damage ?? null, drive: row.drive_cost ?? null,
+          sa: row.sa_cost ?? null, difficulty: row.difficulty ?? null,
+          verificationStatus: row.verification_status ?? null, preview: false,
+          patch: row.valid_to_patch_id === null && patch?.version_label
+            ? `${patch.version_label}${patch.name ? ` / ${patch.name}` : ""}` : null,
+          sourceLabel: source?.title ?? null, sourceType: source?.sourceType ?? null,
+          sourceUrl: source?.url ?? null,
+        },
+      };
+    });
   }
 
   if (section === "setups") {

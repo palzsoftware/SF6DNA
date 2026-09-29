@@ -79,7 +79,7 @@ export function ComboExplorer({
   const selectedResource = one(resource) || "all";
   const normalizedQuery = query.toLocaleLowerCase("ja");
 
-  const prepared = items.map((item) => ({ item, meta: parseMeta(item.meta) }));
+  const prepared = items.map((item) => ({ item, meta: item.combo ?? parseMeta(item.meta) }));
   const filtered = prepared.filter(({ item, meta }) => {
     if (selectedDifficulty !== "all" && difficultyBand(meta.difficulty) !== selectedDifficulty) return false;
     if (!matchesResource(meta, selectedResource)) return false;
@@ -143,10 +143,11 @@ export function ComboExplorer({
               key={item.id}
               previewToken={previewToken}
               combo={{
+                ...item.combo,
                 id: item.id,
                 href: item.href,
                 name: item.title,
-                purpose: item.subtitle,
+                purpose: item.combo?.purpose ?? item.subtitle,
                 damage: meta.damage,
                 drive: meta.drive,
                 sa: meta.sa,
