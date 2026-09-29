@@ -26,9 +26,9 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 4px;
     padding: 6px;
-    border: 1px solid rgba(255,255,255,.11);
+    border: 1px solid var(--shell-mobile-border);
     border-radius: 17px;
-    background: rgba(8, 12, 17, .94);
+    background: var(--shell-mobile-bg);
     box-shadow: 0 16px 45px rgba(0,0,0,.42);
     backdrop-filter: blur(18px);
   }
@@ -40,7 +40,7 @@
     align-content: center;
     gap: 1px;
     border-radius: 11px;
-    color: #aeb9c6;
+    color: var(--shell-mobile-text);
     font-size: .72rem;
     font-weight: 760;
   }

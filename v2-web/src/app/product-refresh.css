@@ -12,6 +12,14 @@
   --cyan: #53d8ff;
   --cyan-soft: rgba(83, 216, 255, .10);
   --shadow-lg: 0 26px 70px rgba(0, 0, 0, .32);
+  /* Shared shell roles. Keep their dark values stable while theme variants are audited. */
+  --shell-header-bg: rgba(9, 13, 18, .82);
+  --shell-nav-text: #a8b3c1;
+  --shell-nav-hover-bg: rgba(255, 255, 255, .06);
+  --shell-nav-hover-text: #fff;
+  --shell-mobile-bg: rgba(8, 12, 17, .94);
+  --shell-mobile-text: #aeb9c6;
+  --shell-mobile-border: rgba(255, 255, 255, .11);
 }
 
 body {
@@ -26,7 +34,7 @@ body {
 
 .site-header {
   border-bottom-color: var(--line);
-  background: rgba(9, 13, 18, .82);
+  background: var(--shell-header-bg);
   box-shadow: 0 10px 32px rgba(0, 0, 0, .16);
 }
 
@@ -52,11 +60,11 @@ body {
   font-weight: 900;
 }
 
-.site-nav a { color: #a8b3c1; }
+.site-nav a { color: var(--shell-nav-text); }
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  background: rgba(255,255,255,.06);
-  color: #fff;
+  background: var(--shell-nav-hover-bg);
+  color: var(--shell-nav-hover-text);
 }
 
 .home-hero {
