@@ -215,6 +215,17 @@
   color: #ffd2b2;
 }
 
+:global(html[data-theme="light"]) .toolbar, :global(html[data-theme="light"]) .card { background: var(--surface); }
+:global(html[data-theme="light"]) .search input { background: var(--input-bg); }
+:global(html[data-theme="light"]) .search button { color: var(--link); background: var(--warning-bg); }
+:global(html[data-theme="light"]) .filter, :global(html[data-theme="light"]) .filterLabel, :global(html[data-theme="light"]) .resultCount, :global(html[data-theme="light"]) .infoBadge { color: var(--text-muted); }
+:global(html[data-theme="light"]) .filter:hover, :global(html[data-theme="light"]) .filterActive, :global(html[data-theme="light"]) .typeBadge { color: var(--info); }
+:global(html[data-theme="light"]) .filterActive { background: var(--info-bg); }
+:global(html[data-theme="light"]) .card:hover { background: var(--surface-hover); }
+:global(html[data-theme="light"]) .warningBadge, :global(html[data-theme="light"]) .previewBadge, :global(html[data-theme="light"]) .more { color: var(--warning); }
+:global(html[data-theme="light"]) .timeBadge { color: var(--success); }
+:global(html[data-theme="light"]) .more:hover { color: var(--link-hover); background: var(--warning-bg); }
+
 @media (max-width: 860px) {
   .toolbar { top: 120px; }
 }

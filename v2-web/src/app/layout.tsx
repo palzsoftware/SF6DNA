@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ThemeSelector } from "@/components/theme-selector";
 import "./globals.css";
 import "./tools.css";
 import "./visual-refresh.css";
@@ -8,6 +9,10 @@ import "./ux-refresh.css";
 import "./product-refresh.css";
 import "./character-overview-refresh.css";
 import "./mobile-refresh.css";
+import "./theme.css";
+
+// Runs in the document head before paint. An absent choice keeps the established dark default.
+const themeInit = `(function(){try{var m=localStorage.getItem('sf6dna-color-mode');if(m!=='light'&&m!=='dark'&&m!=='system')m='dark';var d=m==='system'?(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'):m;document.documentElement.dataset.theme=d;document.documentElement.dataset.colorMode=m;}catch(e){document.documentElement.dataset.theme='dark';document.documentElement.dataset.colorMode='dark';}})();`;
 
 function getMetadataBase() {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -47,7 +52,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" suppressHydrationWarning>
+      <head><script dangerouslySetInnerHTML={{ __html: themeInit }} /></head>
       <body>
         <a className="skip-link" href="#main-content">本文へ移動</a>
         <header className="site-header">
@@ -60,6 +66,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/players">プレイヤー</Link>
               <Link href="/videos">動画</Link>
             </nav>
+            <ThemeSelector />
           </div>
         </header>
         <main id="main-content" tabIndex={-1}>{children}</main>
