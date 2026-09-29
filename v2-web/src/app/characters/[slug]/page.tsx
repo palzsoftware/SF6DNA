@@ -165,11 +165,22 @@ export default async function CharacterPage({
   // Keep the JP Preview layout independent from the shared pilot and its
   // nested grids. Data, visibility gates and media mapping remain the same.
   if (character.slug === "jp" && pilotBundle && pilotProfile) {
+    // The local pilot fixture contains reviewed drafts. Never pass those cards
+    // into the ordinary JP page while public strategy remains disabled.
+    const publicJpBundle = previewActive ? pilotBundle : {
+      ...pilotBundle,
+      combos: releaseFeatures.publicStrategyContent
+        ? pilotBundle.combos.filter((item) => item.status === "published" && item.verificationStatus === "verified") : [],
+      setups: releaseFeatures.publicStrategyContent
+        ? pilotBundle.setups.filter((item) => item.status === "published" && item.verificationStatus === "verified") : [],
+      sequences: releaseFeatures.publicStrategyContent
+        ? pilotBundle.sequences.filter((item) => item.status === "published" && item.verificationStatus === "verified") : [],
+    };
     return <JpCharacterDetail
       character={character}
       previewToken={previewToken}
       previewActive={previewActive}
-      bundle={pilotBundle}
+      bundle={publicJpBundle}
       profile={pilotProfile}
       players={pilotPlayers}
       videos={pilotVideos}
