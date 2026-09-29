@@ -19,5 +19,5 @@ export function normalizePublicCopy(value: string) {
 }
 
 export function isInternalMoveNote(value: string) {
-  return /(?:baseline|secondary-current|publication gated|awaiting official\/game verification)/i.test(value);
+  return /(?:baseline|secondary-current|publication gated|awaiting official\/game verification|frame-table row; checked)/i.test(value);
 }

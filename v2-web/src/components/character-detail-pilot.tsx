@@ -162,7 +162,7 @@ export function CharacterDetailPilot({
                   <div className={styles.moveCommands} role="cell" aria-label={`${move.name}のコマンド`}>
                     {move.commands?.length ? move.commands.map((command, index) => {
                       const label = commandLabel(command);
-                      return <div key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}><span>{label.scheme}</span><code>{label.input}</code>{command.conditionText ? <small>{command.conditionText}</small> : null}</div>;
+                      return <div key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}><span>{label.scheme}</span><code>{label.input}</code>{command.conditionText && !isInternalMoveNote(command.conditionText) ? <small>{normalizePublicCopy(command.conditionText)}</small> : null}</div>;
                     }) : <span className={styles.movePending}>コマンドを確認中</span>}
                   </div>
                   <dl className={styles.moveFrame} role="cell">
