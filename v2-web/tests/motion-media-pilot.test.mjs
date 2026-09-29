@@ -96,8 +96,10 @@ test("pilot maps JP and Ryu separately, filters held clips, and remains Preview-
   assert.match(preview, /getPreviewPilotMotionMedia/);
 });
 
-test("video behaves like lightweight motion media without native controls", () => {
-  assert.match(component, /autoPlay/);
+test("video starts only near the viewport and respects reduced motion", () => {
+  assert.match(component, /IntersectionObserver/);
+  assert.match(component, /nearby = entry\.isIntersecting/);
+  assert.doesNotMatch(component, /\sautoPlay\b/);
   assert.match(component, /loop/);
   assert.match(component, /muted/);
   assert.match(component, /playsInline/);

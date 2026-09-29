@@ -29,6 +29,9 @@ function getMetadataBase() {
 
 export const metadata: Metadata = {
   metadataBase: getMetadataBase(),
+  robots: process.env.VERCEL_ENV && process.env.VERCEL_ENV !== "production"
+    ? { index: false, follow: false, noarchive: true }
+    : undefined,
   title: {
     default: "SF6DNA",
     template: "%s | SF6DNA",

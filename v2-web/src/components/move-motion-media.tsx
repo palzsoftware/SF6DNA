@@ -22,10 +22,11 @@ export function MoveMotionMedia({
     if (!video) return;
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let nearby = false;
     const syncPlayback = () => {
-      if (reducedMotion.matches) {
+      if (reducedMotion.matches || !nearby || document.hidden) {
         video.pause();
-        video.currentTime = 0;
+        if (reducedMotion.matches) video.currentTime = 0;
         return;
       }
       void video.play().catch(() => {
@@ -33,9 +34,18 @@ export function MoveMotionMedia({
       });
     };
 
-    syncPlayback();
+    const observer = new IntersectionObserver(([entry]) => {
+      nearby = entry.isIntersecting;
+      syncPlayback();
+    }, { rootMargin: "120px" });
+    observer.observe(video);
     reducedMotion.addEventListener("change", syncPlayback);
-    return () => reducedMotion.removeEventListener("change", syncPlayback);
+    document.addEventListener("visibilitychange", syncPlayback);
+    return () => {
+      observer.disconnect();
+      reducedMotion.removeEventListener("change", syncPlayback);
+      document.removeEventListener("visibilitychange", syncPlayback);
+    };
   }, []);
 
   const motion = media.mediaType === "gif" ? (
@@ -50,7 +60,6 @@ export function MoveMotionMedia({
   ) : (
     <video
       aria-label={`${title}のモーション`}
-      autoPlay
       className={className}
       loop
       muted
