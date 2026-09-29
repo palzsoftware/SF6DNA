@@ -51,7 +51,7 @@ function MoveCard({ move }: { move: Move }) {
         <div key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}>
           <span>{command.scheme === "classic" ? "クラシック" : command.scheme === "modern" ? "モダン" : command.scheme}</span>
           <code>{command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "コマンドを確認中"}</code>
-          {command.conditionText ? <small>{command.conditionText}</small> : null}
+          {command.conditionText && !isInternalMoveNote(command.conditionText) ? <small>{normalizePublicCopy(command.conditionText)}</small> : null}
         </div>) : <p>コマンドを確認中</p>}
     </div>
     <dl className={styles.frames}>

@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 
 const page = readFileSync(new URL("../src/app/characters/[slug]/page.tsx", import.meta.url), "utf8");
 const fixture = readFileSync(new URL("../src/lib/character-detail-v21-fixture.ts", import.meta.url), "utf8");
+const jpDetail = readFileSync(new URL("../src/components/jp-character-detail.tsx", import.meta.url), "utf8");
 
 test("ordinary JP detail never passes draft strategy cards to its public renderer", () => {
   assert.match(fixture, /jp: \{[\s\S]*?combos: \[[\s\S]*?status: "draft"/);
@@ -12,4 +13,8 @@ test("ordinary JP detail never passes draft strategy cards to its public rendere
     assert.match(page, new RegExp(`${kind}: releaseFeatures\\.publicStrategyContent[\\s\\S]*?pilotBundle\\.${kind}\\.filter\\(\\(item\\) => item\\.status === "published" && item\\.verificationStatus === "verified"\\) : \\[\\]`));
   }
   assert.match(page, /<JpCharacterDetail[\s\S]*?bundle=\{publicJpBundle\}/);
+});
+
+test("JP move commands do not print internal verification notes", () => {
+  assert.match(jpDetail, /command\.conditionText && !isInternalMoveNote\(command\.conditionText\)/);
 });
