@@ -56,3 +56,20 @@
 :global(html[data-theme="light"]) .typeFilter, :global(html[data-theme="light"]) .typeFilterActive, :global(html[data-theme="light"]) .typeFilter span, :global(html[data-theme="light"]) .groupHead span { color: var(--text-muted); }
 :global(html[data-theme="light"]) .typeFilter:hover, :global(html[data-theme="light"]) .typeFilterActive, :global(html[data-theme="light"]) .suggestions > strong { color: var(--info); }
 :global(html[data-theme="light"]) .aliasBadge, :global(html[data-theme="light"]) .open { color: var(--link); }
+
+:global(html[data-appearance]:not([data-appearance="standard"])) .searchBox,
+:global(html[data-appearance]:not([data-appearance="standard"])) .suggestions a,
+:global(html[data-appearance]:not([data-appearance="standard"])) .quickCard,
+:global(html[data-appearance]:not([data-appearance="standard"])) .result { background: var(--surface); color: var(--text); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .searchBox input { background: var(--input-bg); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .searchBox button { background: var(--accent); color: var(--accent-contrast); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .quickCard:hover,
+:global(html[data-appearance]:not([data-appearance="standard"])) .result:hover { background: var(--surface-hover); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .typeFilter,
+:global(html[data-appearance]:not([data-appearance="standard"])) .typeFilter span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .groupHead span { color: var(--text-muted); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .suggestions > strong,
+:global(html[data-appearance]:not([data-appearance="standard"])) .typeFilterActive { color: var(--info); background: var(--info-bg); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .aliasBadge,
+:global(html[data-appearance]:not([data-appearance="standard"])) .open { color: var(--link); }
+@media (max-width: 720px) { .searchBox { position: static; } }

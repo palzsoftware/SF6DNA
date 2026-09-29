@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ThemeSelector } from "@/components/theme-selector";
+import { AppearanceSelector, ThemeSelector } from "@/components/theme-selector";
 import "./globals.css";
 import "./tools.css";
 import "./visual-refresh.css";
@@ -12,7 +12,7 @@ import "./mobile-refresh.css";
 import "./theme.css";
 
 // Runs in the document head before paint. An absent choice keeps the established dark default.
-const themeInit = `(function(){try{var m=localStorage.getItem('sf6dna-color-mode');if(m!=='light'&&m!=='dark'&&m!=='system')m='dark';var d=m==='system'?(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'):m;document.documentElement.dataset.theme=d;document.documentElement.dataset.colorMode=m;}catch(e){document.documentElement.dataset.theme='dark';document.documentElement.dataset.colorMode='dark';}})();`;
+const themeInit = `(function(){var m='dark',a='standard';try{m=localStorage.getItem('sf6dna-color-mode')||'dark';a=localStorage.getItem('sf6dna-theme')||'standard';}catch(e){}if(m!=='light'&&m!=='dark'&&m!=='system')m='dark';if(a!=='standard'&&a!=='fighter'&&a!=='cute-pink'&&a!=='monochrome')a='standard';var d=m==='system'?(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'):m;document.documentElement.dataset.theme=d;document.documentElement.dataset.resolvedColorMode=d;document.documentElement.dataset.colorMode=m;document.documentElement.dataset.appearance=a;})();`;
 
 function getMetadataBase() {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -67,6 +67,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/videos">動画</Link>
             </nav>
             <ThemeSelector />
+            <AppearanceSelector />
           </div>
         </header>
         <main id="main-content" tabIndex={-1}>{children}</main>

@@ -24,7 +24,8 @@ test("first paint respects saved mode, system preference, and safe dark fallback
   assert.equal(firstPaint(null, true).theme, "dark");
   assert.equal(firstPaint("light").theme, "light");
   assert.equal(firstPaint("dark", true).theme, "dark");
-  assert.deepEqual(firstPaint("system", true), { theme: "light", colorMode: "system" });
+  assert.equal(firstPaint("system", true).theme, "light");
+  assert.equal(firstPaint("system", true).colorMode, "system");
   assert.equal(firstPaint("system", false).theme, "dark");
   assert.equal(firstPaint("invalid", true).theme, "dark");
   assert.equal(firstPaint("light", true, true).theme, "dark");

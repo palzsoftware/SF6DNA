@@ -407,3 +407,50 @@
     -webkit-line-clamp: 3;
   }
 }
+
+/* Move data remains unchanged; these are presentation-only colors. */
+:global(html[data-theme="light"]) .moveToolbar,
+:global(html[data-theme="light"]) .moveRow,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveToolbar,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveRow { background: var(--surface); color: var(--text); }
+:global(html[data-theme="light"]) .moveRow:hover,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveRow:hover { background: var(--surface-hover); }
+:global(html[data-theme="light"]) .moveSearch input,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveSearch input { background: var(--input-bg); }
+:global(html[data-theme="light"]) .moveSearch button,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveSearch button { background: var(--orange-soft); color: var(--link); }
+:global(html[data-theme="light"]) .kindFilter,
+:global(html[data-theme="light"]) .kindFilter span,
+:global(html[data-theme="light"]) .moveIdentity > small,
+:global(html[data-theme="light"]) .moveCommand > span,
+:global(html[data-theme="light"]) .moveCommand small,
+:global(html[data-theme="light"]) .commandPending,
+:global(html[data-theme="light"]) .statPending,
+:global(html[data-theme="light"]) .moveStats small,
+:global(html[data-appearance]:not([data-appearance="standard"])) .kindFilter,
+:global(html[data-appearance]:not([data-appearance="standard"])) .kindFilter span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveIdentity > small,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveCommand > span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveCommand small,
+:global(html[data-appearance]:not([data-appearance="standard"])) .commandPending,
+:global(html[data-appearance]:not([data-appearance="standard"])) .statPending,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveStats small { color: var(--text-muted); }
+:global(html[data-theme="light"]) .kindFilterActive,
+:global(html[data-appearance]:not([data-appearance="standard"])) .kindFilterActive { color: var(--link); background: var(--orange-soft); }
+:global(html[data-theme="light"]) .moveCommand strong,
+:global(html[data-theme="light"]) .moveStats strong,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveCommand strong,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveStats strong { color: var(--text); }
+:global(html[data-theme="light"]) .moveCommand code,
+:global(html[data-theme="light"]) .moveStats > span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveCommand code,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveStats > span { background: var(--bg-subtle); color: var(--text-secondary); }
+:global(html[data-theme="light"]) .moveMore,
+:global(html[data-theme="light"]) .previewDot,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveMore,
+:global(html[data-appearance]:not([data-appearance="standard"])) .previewDot { color: var(--link); }
+:global(html[data-theme="light"]) .modernUnavailable,
+:global(html[data-appearance]:not([data-appearance="standard"])) .modernUnavailable { color: var(--error); background: var(--error-bg); }
+@media (max-width: 720px) {
+  .moveToolbar { position: static; }
+}

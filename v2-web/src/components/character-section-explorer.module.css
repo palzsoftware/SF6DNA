@@ -226,6 +226,22 @@
 :global(html[data-theme="light"]) .timeBadge { color: var(--success); }
 :global(html[data-theme="light"]) .more:hover { color: var(--link-hover); background: var(--warning-bg); }
 
+:global(html[data-appearance]:not([data-appearance="standard"])) .toolbar,
+:global(html[data-appearance]:not([data-appearance="standard"])) .card { background: var(--surface); color: var(--text); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .search input { background: var(--input-bg); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .search button { background: var(--orange-soft); color: var(--link); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .card:hover { background: var(--surface-hover); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .filter,
+:global(html[data-appearance]:not([data-appearance="standard"])) .filterLabel,
+:global(html[data-appearance]:not([data-appearance="standard"])) .resultCount,
+:global(html[data-appearance]:not([data-appearance="standard"])) .infoBadge { color: var(--text-muted); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .filterActive,
+:global(html[data-appearance]:not([data-appearance="standard"])) .typeBadge { background: var(--cyan-soft); color: var(--info); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .warningBadge,
+:global(html[data-appearance]:not([data-appearance="standard"])) .previewBadge,
+:global(html[data-appearance]:not([data-appearance="standard"])) .more { color: var(--warning); }
+@media (max-width: 720px) { .toolbar { position: static; } }
+
 @media (max-width: 860px) {
   .toolbar { top: 120px; }
 }

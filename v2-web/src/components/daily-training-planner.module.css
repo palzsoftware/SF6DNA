@@ -4,19 +4,19 @@
 .progressCard strong { display: block; margin-top: .3rem; font-size: 1.55rem; }
 .progressTrack { height: 8px; margin-top: .8rem; overflow: hidden; border-radius: 999px; background: var(--border); }
 .progressTrack span { height: 100%; border-radius: inherit; background: var(--accent); transition: width .25s ease; }
-.reason { position: relative; overflow: hidden; border: 1px solid var(--border); border-radius: 20px; padding: 1.4rem 1.55rem; background: linear-gradient(110deg, color-mix(in srgb, var(--surface) 94%, #4f46e5), var(--surface)); }
+.reason { position: relative; overflow: hidden; border: 1px solid var(--border); border-radius: 20px; padding: 1.4rem 1.55rem; background: linear-gradient(110deg, color-mix(in srgb, var(--surface) 94%, var(--info)), var(--surface)); }
 .reason::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--accent); }
 .reason h2, .reason p { margin-top: .45rem; }
 .sectionLabel { margin: 0; color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .cards { display: grid; gap: .9rem; }
-.card { --card-accent: #8b5cf6; overflow: hidden; border: 1px solid var(--border); border-left: 3px solid var(--card-accent); border-radius: 20px; background: var(--surface); transition: border-color .2s ease; }
+.card { --card-accent: var(--link); overflow: hidden; border: 1px solid var(--border); border-left: 3px solid var(--card-accent); border-radius: 20px; background: var(--surface); transition: border-color .2s ease; }
 .card:hover { border-color: color-mix(in srgb, var(--card-accent) 48%, var(--border)); }
-.reaction { --card-accent: #38bdf8; }
+.reaction { --card-accent: var(--info); }
 .execution { --card-accent: var(--accent); }
-.decision { --card-accent: #a78bfa; }
-.complete { --card-accent: #34d399; }
+.decision { --card-accent: var(--link); }
+.complete { --card-accent: var(--success); }
 .cardHeader { width: 100%; display: grid; grid-template-columns: 58px minmax(0, 1fr) auto; gap: 1rem; align-items: center; border: 0; padding: 1.15rem 1.3rem; color: inherit; text-align: left; background: transparent; cursor: pointer; }
-.cardHeader:focus-visible, .completeButton:focus-visible, .undoButton:focus-visible { outline: 3px solid color-mix(in srgb, var(--card-accent) 70%, white); outline-offset: 3px; }
+.cardHeader:focus-visible, .completeButton:focus-visible, .undoButton:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
 .number { color: var(--card-accent); font-size: 1.55rem; font-weight: 800; font-variant-numeric: tabular-nums; }
 .cardTitle { display: grid; gap: .32rem; }
 .cardTitle strong { font-size: clamp(1.05rem, 2vw, 1.3rem); }
@@ -32,9 +32,9 @@
 .detailSection h3 { color: var(--card-accent); font-size: .86rem; }
 .detailSection ul { margin-top: .55rem; padding-left: 1.15rem; color: var(--muted); line-height: 1.65; }
 .completeButton, .undoButton { margin-top: 1rem; border-radius: 12px; padding: .8rem 1.1rem; font: inherit; font-weight: 700; cursor: pointer; }
-.completeButton { border: 1px solid #34d399; color: #07110d; background: #34d399; }
+.completeButton { border: 1px solid var(--success); color: var(--text-inverse); background: var(--success); }
 .undoButton { border: 1px solid var(--border); color: inherit; background: transparent; }
-.completion { border: 1px solid color-mix(in srgb, #34d399 55%, var(--border)); border-radius: 20px; padding: 1.5rem; background: color-mix(in srgb, #34d399 8%, var(--surface)); }
+.completion { border: 1px solid color-mix(in srgb, var(--success) 55%, var(--border)); border-radius: 20px; padding: 1.5rem; background: var(--success-bg); }
 .completion h2 { margin: .4rem 0; }
 @keyframes reveal { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
 @media (max-width: 720px) {

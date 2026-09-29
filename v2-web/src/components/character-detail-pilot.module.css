@@ -124,3 +124,54 @@
 :global(html[data-theme="light"]) .gameplanSteps p, :global(html[data-theme="light"]) .timelineList li, :global(html[data-theme="light"]) .sequenceList p, :global(html[data-theme="light"]) .rangeTable p, :global(html[data-theme="light"]) .playerCard dd, :global(html[data-theme="light"]) .videoGroup h3, :global(html[data-theme="light"]) .inlineSources a { color: var(--text-secondary); }
 :global(html[data-theme="light"]) .strength > span, :global(html[data-theme="light"]) .gameplanSteps li > span, :global(html[data-theme="light"]) .moveGroup > summary span, :global(html[data-theme="light"]) .rangeTable strong, :global(html[data-theme="light"]) .moveCommands code, :global(html[data-theme="light"]) .command, :global(html[data-theme="light"]) .socials a { color: var(--info) !important; }
 :global(html[data-theme="light"]) .weakness > span, :global(html[data-theme="light"]) .gameplanSteps small, :global(html[data-theme="light"]) .moveIdentity > span, :global(html[data-theme="light"]) .moveDetailLink, :global(html[data-theme="light"]) .subheading > a, :global(html[data-theme="light"]) .timelineList summary span, :global(html[data-theme="light"]) .sequenceList summary span, :global(html[data-theme="light"]) .timelineList dd a, :global(html[data-theme="light"]) .sequenceList dd a { color: var(--link); }
+
+/* The dark custom appearances use the same semantic roles as the Light repair. */
+:global(html[data-appearance]:not([data-appearance="standard"])) .previewNote { background: var(--warning-bg); color: var(--warning); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .quickFacts > div,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveRow,
+:global(html[data-appearance]:not([data-appearance="standard"])) .timelineList details,
+:global(html[data-appearance]:not([data-appearance="standard"])) .sequenceList details,
+:global(html[data-appearance]:not([data-appearance="standard"])) .playerCard { background: var(--surface); border-color: var(--border); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveRow:hover { background: var(--surface-hover); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .strength { background: var(--info-bg); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .weakness { background: var(--warning-bg); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveMedia,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveFrame > div,
+:global(html[data-appearance]:not([data-appearance="standard"])) .timelineList dl > div,
+:global(html[data-appearance]:not([data-appearance="standard"])) .sequenceList dl > div { background: var(--bg-subtle); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .quickFacts dd,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveFrame dd { color: var(--text); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .quickFacts dt,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveIdentity p,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveMediaFallback,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveCommands span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveCommands small,
+:global(html[data-appearance]:not([data-appearance="standard"])) .movePending,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveFrame dt,
+:global(html[data-appearance]:not([data-appearance="standard"])) .timelineList dt,
+:global(html[data-appearance]:not([data-appearance="standard"])) .sequenceList dt,
+:global(html[data-appearance]:not([data-appearance="standard"])) .rangeTable p span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .playerCard dt { color: var(--text-muted) !important; }
+:global(html[data-appearance]:not([data-appearance="standard"])) .gameplanSteps p,
+:global(html[data-appearance]:not([data-appearance="standard"])) .timelineList li,
+:global(html[data-appearance]:not([data-appearance="standard"])) .sequenceList p,
+:global(html[data-appearance]:not([data-appearance="standard"])) .rangeTable p,
+:global(html[data-appearance]:not([data-appearance="standard"])) .playerCard dd,
+:global(html[data-appearance]:not([data-appearance="standard"])) .videoGroup h3,
+:global(html[data-appearance]:not([data-appearance="standard"])) .inlineSources a { color: var(--text-secondary); }
+:global(html[data-appearance]:not([data-appearance="standard"])) .strength > span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .gameplanSteps li > span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveGroup > summary span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .rangeTable strong,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveCommands code,
+:global(html[data-appearance]:not([data-appearance="standard"])) .command,
+:global(html[data-appearance]:not([data-appearance="standard"])) .socials a { color: var(--info) !important; }
+:global(html[data-appearance]:not([data-appearance="standard"])) .weakness > span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .gameplanSteps small,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveIdentity > span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .moveDetailLink,
+:global(html[data-appearance]:not([data-appearance="standard"])) .subheading > a,
+:global(html[data-appearance]:not([data-appearance="standard"])) .timelineList summary span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .sequenceList summary span,
+:global(html[data-appearance]:not([data-appearance="standard"])) .timelineList dd a,
+:global(html[data-appearance]:not([data-appearance="standard"])) .sequenceList dd a { color: var(--link); }

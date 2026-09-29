@@ -16,3 +16,18 @@
 .more { justify-self: center; min-height: 44px; padding: 10px 18px; }
 @media (max-width: 900px) { .filters { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 560px) { .topRow { grid-template-columns: 1fr; } .filters { grid-template-columns: 1fr; } .toolbar { padding: 12px; } .summary { align-items: flex-start; flex-direction: column; } }
+
+:global(html[data-theme="light"]) .toolbar,
+:global(html[data-appearance]:not([data-appearance="standard"])) .toolbar { background: var(--surface); }
+:global(html[data-theme="light"]) .topRow input,
+:global(html[data-theme="light"]) .topRow select,
+:global(html[data-appearance]:not([data-appearance="standard"])) .topRow input,
+:global(html[data-appearance]:not([data-appearance="standard"])) .topRow select { background: var(--input-bg); color: var(--text); }
+:global(html[data-theme="light"]) .filter legend,
+:global(html[data-appearance]:not([data-appearance="standard"])) .filter legend { color: var(--text-secondary); }
+:global(html[data-theme="light"]) .option,
+:global(html[data-appearance]:not([data-appearance="standard"])) .option { color: var(--text-secondary); border-color: var(--border); }
+:global(html[data-theme="light"]) .option:has(input:checked),
+:global(html[data-appearance]:not([data-appearance="standard"])) .option:has(input:checked) { color: var(--info); background: var(--info-bg); }
+:global(html[data-theme="light"]) .unavailable,
+:global(html[data-appearance]:not([data-appearance="standard"])) .unavailable { color: var(--text-muted); }

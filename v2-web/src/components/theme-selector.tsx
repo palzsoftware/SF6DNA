@@ -3,7 +3,9 @@
 import { useSyncExternalStore } from "react";
 
 type ColorMode = "system" | "light" | "dark";
+type Appearance = "standard" | "fighter" | "cute-pink" | "monochrome";
 const storageKey = "sf6dna-color-mode";
+const appearanceKey = "sf6dna-theme";
 
 function currentMode(): ColorMode {
   const mode = document.documentElement.dataset.colorMode;
@@ -13,7 +15,17 @@ function currentMode(): ColorMode {
 function applyMode(mode: ColorMode) {
   const light = mode === "system" ? window.matchMedia("(prefers-color-scheme: light)").matches : mode === "light";
   document.documentElement.dataset.theme = light ? "light" : "dark";
+  document.documentElement.dataset.resolvedColorMode = light ? "light" : "dark";
   document.documentElement.dataset.colorMode = mode;
+}
+
+function currentAppearance(): Appearance {
+  const value = document.documentElement.dataset.appearance;
+  return value === "fighter" || value === "cute-pink" || value === "monochrome" ? value : "standard";
+}
+
+function applyAppearance(next: Appearance) {
+  document.documentElement.dataset.appearance = next;
 }
 
 function subscribe(notify: () => void) {
@@ -48,5 +60,30 @@ export function ThemeSelector() {
         </label>
       ))}
     </fieldset>
+  );
+}
+
+export function AppearanceSelector() {
+  const appearance = useSyncExternalStore(subscribe, currentAppearance, () => "standard" as Appearance);
+
+  function choose(next: Appearance) {
+    applyAppearance(next);
+    window.dispatchEvent(new Event("sf6dna-theme-change"));
+    try { localStorage.setItem(appearanceKey, next); } catch { /* Current page remains updated. */ }
+  }
+
+  return (
+    <details className="appearance-selector">
+      <summary>デザイン</summary>
+      <fieldset aria-label="デザインを選択">
+        <legend>デザイン</legend>
+        {([ ["standard", "標準"], ["fighter", "ファイター"], ["cute-pink", "ピンク"], ["monochrome", "モノクロ"] ] as const).map(([value, label]) => (
+          <label key={value}>
+            <input type="radio" name="appearance-theme" value={value} checked={appearance === value} onChange={() => choose(value)} />
+            <span>{label}</span>
+          </label>
+        ))}
+      </fieldset>
+    </details>
   );
 }
