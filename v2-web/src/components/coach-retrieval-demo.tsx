@@ -16,10 +16,7 @@ import {
   type CoachInputContext,
 } from "@/lib/coach-shared-analysis";
 import type { SearchResultItem } from "@/types/search";
-import {
-  buildRetrievalQuery,
-  retrievalPatchStatusLabel,
-} from "@/lib/coach-trusted-retrieval";
+import { buildRetrievalQuery, retrievalPatchStatusLabel } from "@/lib/coach-trusted-retrieval";
 import type { CoachEvidenceItem } from "@/lib/coach-foundation";
 import type { CoachProviderDraft } from "@/lib/coach-prompt-contract";
 
@@ -108,13 +105,13 @@ export function CoachRetrievalDemo({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           question,
-          retrievalQuery: retrievalPlan.query || question,
           scope: {
             characterId: retrievalPlan.exactCharacterId,
             playerId: retrievalPlan.exactPlayerId,
           },
           personaId,
         }),
+        signal: AbortSignal.timeout(15000),
       });
       const data = await response.json();
       if (!response.ok) {
@@ -124,6 +121,7 @@ export function CoachRetrievalDemo({
       }
       if (data.ready !== true) {
         setCurrentPatch(data.currentPatch ?? null);
+        setRetrievalEvidence(Array.isArray(data.evidence) ? data.evidence : []);
         setRequestState("unavailable");
         setMessage(typeof data.message === "string" ? data.message : "回答に使える情報を確認できませんでした。別の質問をお試しください。");
         return;
@@ -147,9 +145,11 @@ export function CoachRetrievalDemo({
           ? data.message
           : "参照できる情報を確認しました。",
       );
-    } catch {
+    } catch (error) {
       setRequestState("error");
-      setMessage("回答を取得できませんでした。通信状態を確認して、もう一度お試しください。");
+      setMessage(error instanceof Error && error.name === "TimeoutError"
+        ? "確認に時間がかかっています。少し待ってから、もう一度お試しください。"
+        : "回答を取得できませんでした。通信状態を確認して、もう一度お試しください。");
     } finally {
       setLoading(false);
     }
@@ -173,7 +173,7 @@ export function CoachRetrievalDemo({
       <section className="info-panel">
         <p className="eyebrow">参考にする情報</p>
         <h2>回答に使う情報</h2>
-        {chips.length ? <div className="character-columns">{chips.map((chip) => <span className="data-notice" key={chip}>{chip}</span>)}</div> : <p>診断結果や今日の練習はまだありません。質問だけでも相談できます。</p>}
+        {chips.length ? <div className="character-columns">{chips.map((chip) => <span className="data-notice" key={chip}>{chip}</span>)}</div> : <p>診断結果や今日の練習はまだありません。質問だけでも根拠候補を探せます。</p>}
       </section>
 
       <form className="coach-form" onSubmit={submit}>
@@ -192,7 +192,7 @@ export function CoachRetrievalDemo({
         {providerDraft ? <section className="info-panel" aria-labelledby="coach-provider-answer"><p className="eyebrow">プレビューの回答例</p><h2 id="coach-provider-answer">{providerDraft.headline}</h2>{providerDraft.sections.map((section, index) => <div key={`${section.title}:${index}`}><h3>{section.title}</h3><p>{section.body}</p></div>)}<p className="muted">この回答例は定型処理で作成しています。外部AIによる回答生成は有効にしていません。</p></section> : null}
       </> : null}
 
-      {currentPatch ? <div className="info-panel"><p className="eyebrow">対象の更新版</p><strong>{currentPatch.name ?? currentPatch.versionLabel}</strong><p className="muted">バージョン: {currentPatch.versionLabel}</p>{currentPatch.officialUrl ? <a className="text-link" href={currentPatch.officialUrl} target="_blank" rel="noopener noreferrer">公式変更リスト ↗</a> : null}</div> : null}
+      {currentPatch ? <div className="info-panel"><p className="eyebrow">対象の更新版</p><strong>{currentPatch.name ?? currentPatch.versionLabel}</strong><p className="muted">バージョン: {currentPatch.versionLabel}</p>{currentPatch.officialUrl && /^https?:\/\//i.test(currentPatch.officialUrl) ? <a className="text-link" href={currentPatch.officialUrl} target="_blank" rel="noopener noreferrer">公式変更リスト ↗</a> : null}</div> : null}
 
       {retrievalEvidence.length ? (
         <div className="search-result-list" aria-label="検索で見つかった情報の候補">
@@ -203,7 +203,7 @@ export function CoachRetrievalDemo({
               <Link href={item.href}><strong>{item.title}</strong></Link>
               {item.subtitle ? <span>{item.subtitle}</span> : null}
               <div className="source-list">
-                {(item.sources ?? []).map((source) => (
+                {(item.sources ?? []).filter((source) => /^https?:\/\//i.test(source.url)).map((source) => (
                   <a href={source.url} target="_blank" rel="noopener noreferrer" key={source.url}>
                     出典: {source.publisher ? `${source.publisher} / ` : ""}{source.title}{source.reliabilityLevel ? ` [${source.reliabilityLevel}]` : ""} ↗
                   </a>

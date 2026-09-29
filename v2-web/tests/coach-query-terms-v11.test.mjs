@@ -28,7 +28,8 @@ test("unknown query retains ordinary lookup and empty query yields no search ter
 
 test("route keeps hold when only unverified profile or video candidates exist", () => {
   const route = readFileSync(new URL("../src/app/api/coach/retrieve/route.ts", import.meta.url), "utf8");
-  assert.match(route, /planCoachSearch\(retrievalQuery\)/);
+  assert.match(route, /sanitizeRetrievalText\(question\)/);
+  assert.doesNotMatch(route, /requestedRetrievalQuery/);
   assert.match(route, /item.kind === "VERIFIED_GAME_FACT"/);
   assert.match(route, /!ready/);
 });

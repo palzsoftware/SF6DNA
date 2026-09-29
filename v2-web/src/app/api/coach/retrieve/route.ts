@@ -42,9 +42,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "invalid_json" }, { status: 400 });
   }
 
-  const question =
-    body && typeof body === "object" && "question" in body
-      ? String((body as { question?: unknown }).question ?? "").trim()
+  const question = body && typeof body === "object" && "question" in body &&
+    typeof (body as { question?: unknown }).question === "string"
+      ? (body as { question: string }).question.trim()
       : "";
 
   if (question.length < 2) {
@@ -62,11 +62,8 @@ export async function POST(request: Request) {
     ? requestedPersona as CoachPersonaId
     : DEFAULT_COACH_PERSONA_ID;
 
-  const requestedRetrievalQuery =
-    body && typeof body === "object" && "retrievalQuery" in body
-      ? String((body as { retrievalQuery?: unknown }).retrievalQuery ?? "")
-      : question;
-  const sanitizedRetrievalQuery = sanitizeRetrievalText(requestedRetrievalQuery || question);
+  // A caller must not be able to attach unrelated search evidence to a question.
+  const sanitizedRetrievalQuery = sanitizeRetrievalText(question);
   const retrievalQuery = sanitizedRetrievalQuery.text;
 
   const scope =
