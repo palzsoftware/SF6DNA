@@ -69,7 +69,7 @@ function commandLabel(command: NonNullable<DevicePreviewBundle["moves"][number][
 
 export function CharacterDetailPilot({
   characterName, characterSlug, previewToken, bundle, players, videos,
-  archetypeLabel, rangeLabel, difficulty, sources, profile,
+  archetypeLabel, rangeLabel, difficulty, sources, profile, preRelease = false,
 }: {
   characterName: string;
   characterSlug: string;
@@ -82,6 +82,7 @@ export function CharacterDetailPilot({
   difficulty: number | null;
   sources: SourceReference[];
   profile: CharacterDetailV21Profile;
+  preRelease?: boolean;
 }) {
   const previewActive = isDevicePreviewRequest(previewToken);
   const canShowStrategy = (item: { status: string; verificationStatus: string | null }) =>
@@ -104,7 +105,7 @@ export function CharacterDetailPilot({
 
   return (
     <section className={styles.pilot} aria-label={`${characterName} Character Detail V2.2`}>
-      <section className={styles.overview} id="pilot-overview">
+      {!preRelease ? <section className={styles.overview} id="pilot-overview">
         <div className={styles.overviewLead}>
           <p className="eyebrow">基本ガイド</p>
           <h2>{normalizePublicCopy(profile.tagline)}</h2>
@@ -117,15 +118,15 @@ export function CharacterDetailPilot({
           <div><dt>難易度</dt><dd>{difficulty ? `${difficulty} / 5` : "未評価"}</dd></div>
           <div><dt>最初の練習</dt><dd>{normalizePublicCopy(profile.firstLesson)}</dd></div>
         </dl>
-      </section>
+      </section> : null}
 
-      <section className={styles.comparison} aria-labelledby="pilot-profile-heading">
+      {!preRelease ? <section className={styles.comparison} aria-labelledby="pilot-profile-heading">
         <div className={styles.sectionTitle}><p className="eyebrow">特徴</p><h2 id="pilot-profile-heading">強みと注意点</h2></div>
         <div className={styles.strength}><span>強み</span><h3>活かしたい強み</h3><p>{normalizePublicCopy(profile.strength)}</p></div>
         <div className={styles.weakness}><span>注意点</span><h3>崩されやすい状況</h3><p>{normalizePublicCopy(profile.weakness)}</p></div>
-      </section>
+      </section> : null}
 
-      <section className={styles.gameplan} aria-labelledby="pilot-gameplan-heading">
+      {!preRelease ? <section className={styles.gameplan} aria-labelledby="pilot-gameplan-heading">
         <div className={styles.sectionTitle}><p className="eyebrow">基本方針</p><h2 id="pilot-gameplan-heading">基本の勝ち筋</h2>{profile.gameplan.length ? <p>使う技、得意な距離、注意点を順に紹介します。</p> : null}</div>
         {profile.gameplan.length ? <ol className={styles.gameplanSteps}>
           {profile.gameplan.map((step, index) => <li key={step.label}><span>手順 {index + 1}</span><div><h3>{normalizePublicCopy(step.title)}</h3><p>{normalizePublicCopy(step.body)}</p><small>{normalizePublicCopy(step.caution)}</small></div></li>)}
@@ -134,14 +135,14 @@ export function CharacterDetailPilot({
           const presentation = presentSource(source.sourceType, source.publisher, source.url);
           return <a href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}><span>{presentation.badge}</span>{presentation.cta} ↗</a>;
         })}</div> : null}
-      </section>
+      </section> : null}
 
       <section className={styles.moveSection} id="pilot-moves" aria-labelledby="pilot-moves-heading">
         <div className={styles.subheading}>
           <div>
             <p className="eyebrow">技データ</p>
             <h2 id="pilot-moves-heading">技一覧・コマンド・主要フレーム</h2>
-            <p>コマンドと主要フレームを技ごとに掲載。数値の「確認中」は未確定の項目です。</p>
+            <p>{preRelease ? "公式発表済みの技名です。入力コマンドとフレームは公式一覧を照合してから掲載します。" : "コマンドと主要フレームを技ごとに掲載。数値の「確認中」は未確定の項目です。"}</p>
           </div>
           {characterSlug === "jp" ? <a href="https://www.streetfighter.com/6/ja-jp/character/jp/frame" target="_blank" rel="noopener noreferrer">CAPCOM公式フレームを見る ↗</a> : null}
         </div>
@@ -170,7 +171,7 @@ export function CharacterDetailPilot({
                     <div><dt>ガード時</dt><dd>{valueOrUnknown(move.frame?.onBlock, "確認中")}</dd></div>
                     <div><dt>ダメージ</dt><dd>{valueOrUnknown(move.frame?.damage, "確認中")}</dd></div>
                   </dl>
-                  {releaseFeatures.publicStrategyContent ? <Link className={styles.moveDetailLink} href={appendDevicePreviewToken(`/moves/${move.slug}`, previewToken)}>技の詳細を見る →</Link> : null}
+                  {!preRelease && releaseFeatures.publicStrategyContent ? <Link className={styles.moveDetailLink} href={appendDevicePreviewToken(`/moves/${move.slug}`, previewToken)}>技の詳細を見る →</Link> : null}
                 </article>
               ))}
             </div>
@@ -178,12 +179,12 @@ export function CharacterDetailPilot({
         ))}</div> : <div className="empty-state"><p>技データは未掲載です。</p></div>}
       </section>
 
-      <section className={styles.comboSection} id="pilot-combos" aria-labelledby="pilot-combos-heading">
+      {!preRelease ? <section className={styles.comboSection} id="pilot-combos" aria-labelledby="pilot-combos-heading">
         <div className={styles.subheading}><div><p className="eyebrow">コンボ</p><h2 id="pilot-combos-heading">まず確認するコンボ</h2>{comboSamples.length ? <p>用途と消費ゲージを比べ、気になるコンボの詳細を開けます。</p> : null}</div>{strategyListAvailable ? <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/combos`, previewToken)}>コンボ一覧を見る →</Link> : null}</div>
         {comboSamples.length ? <div className={styles.comboList}>{comboSamples.map((combo) => <PilotComboCard key={combo.id} previewToken={previewToken} combo={{ id: combo.id, href: `/combos/${combo.slug}`, name: combo.name, category: combo.category, purpose: combo.purpose ? normalizePublicCopy(combo.purpose) : null, damage: combo.damage, drive: combo.driveCost, sa: combo.saCost, difficulty: numericDifficulty(combo.difficulty), verificationStatus: combo.verificationStatus, preview: previewActive, command: combo.command ? normalizePublicCopy(combo.command) : null, startCondition: combo.startCondition ? normalizePublicCopy(combo.startCondition) : null, endCondition: combo.endCondition ? normalizePublicCopy(combo.endCondition) : null, position: combo.position, patch: combo.patch, sourceLabel: combo.sourceLabel, sourceUrl: combo.sourceUrl }} />)}</div> : <div className="empty-state"><p>確認済みのコンボはまだありません。</p></div>}
-      </section>
+      </section> : null}
 
-      <section className={styles.strategySplit}>
+      {!preRelease ? <section className={styles.strategySplit}>
         <div id="pilot-setplay">
           <div className={styles.subheading}><div><p className="eyebrow">セットプレイ</p><h2>セットプレイ</h2>{setupSamples.length ? <p>始める状況から順に手順を紹介します。</p> : null}</div>{strategyListAvailable ? <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/setups`, previewToken)}>セットプレイ一覧を見る →</Link> : null}</div>
           <div className={styles.timelineList}>{setupSamples.map((setup) => {
@@ -196,22 +197,22 @@ export function CharacterDetailPilot({
           <div className={styles.subheading}><div><p className="eyebrow">連携</p><h2>連携・対策</h2>{sequenceSamples.length ? <p>入力、目的、注意点を項目ごとに開けます。</p> : null}</div>{strategyListAvailable ? <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/sequences`, previewToken)}>連携・対策一覧を見る →</Link> : null}</div>
           <div className={styles.sequenceList}>{sequenceSamples.map((sequence) => <details key={sequence.id} open={sequence === sequenceSamples[0]}><summary><span>{verificationLabel(sequence.verificationStatus)}</span><strong>{sequence.name}</strong><small>ダメージ {valueOrUnknown(sequence.damage)}</small><small>ドライブ {valueOrUnknown(sequence.driveCost)}</small></summary><div><p className={styles.command}>{valueOrUnknown(sequence.sequenceText, "コマンド未確認")}</p>{sequence.purpose ? <p>{normalizePublicCopy(sequence.purpose)}</p> : null}{sequence.notes ? <p>{normalizePublicCopy(sequence.notes)}</p> : null}<dl><div><dt>連係の隙間</dt><dd>{valueOrUnknown(sequence.gap)}</dd></div><div><dt>投げ</dt><dd>{valueOrUnknown(sequence.throwOption)}</dd></div><div><dt>打撃</dt><dd>{valueOrUnknown(sequence.strikeOption)}</dd></div><div><dt>ドライブインパクトへの対応</dt><dd>{valueOrUnknown(sequence.driveImpactOption)}</dd></div><div><dt>反撃可否</dt><dd>{valueOrUnknown(sequence.punishability)}</dd></div><div><dt>成立条件</dt><dd>{valueOrUnknown(sequence.condition)}</dd></div><div><dt>ダメージ</dt><dd>{valueOrUnknown(sequence.damage)}</dd></div><div><dt>ドライブゲージ使用量</dt><dd>{valueOrUnknown(sequence.driveCost)}</dd></div><div><dt>SAゲージ使用量</dt><dd>{valueOrUnknown(sequence.saCost)}</dd></div><div><dt>対応バージョン</dt><dd>{valueOrUnknown(sequence.patch)}</dd></div><div><dt>情報源</dt><dd>{sourceLink(sequence.sourceLabel, sequence.sourceUrl)}</dd></div></dl></div></details>)}{!sequenceSamples.length ? <div className="empty-state"><p>確認済みの連携・対策はまだありません。</p></div> : null}</div>
         </div>
-      </section>
+      </section> : null}
 
-      <section className={styles.rangeSection} id="pilot-neutral-defense" aria-labelledby="pilot-range-heading">
+      {!preRelease ? <section className={styles.rangeSection} id="pilot-neutral-defense" aria-labelledby="pilot-range-heading">
         <div className={styles.sectionTitle}><p className="eyebrow">立ち回り・防御</p><h2 id="pilot-range-heading">距離別の立ち回り</h2><p>相手視点の対策ではなく、まず自分が選ぶ行動を距離ごとに整理しています。</p></div>
         {profile.ranges.length ? <div className={styles.rangeTable} role="table" aria-label={`${characterName}の距離別行動`}>{profile.ranges.map((row) => <div role="row" key={row.range}><strong role="rowheader">{row.range}</strong><p role="cell"><span>主に使う技</span>{normalizePublicCopy(row.actions)}</p><p role="cell"><span>目的</span>{normalizePublicCopy(row.purpose)}</p><p role="cell"><span>注意点</span>{normalizePublicCopy(row.caution)}</p></div>)}</div> : <div className="empty-state"><p>距離別の攻略情報は未掲載です。</p></div>}
-      </section>
+      </section> : null}
 
-      <section className={styles.related} id="related-players">
+      {!preRelease ? <section className={styles.related} id="related-players">
         <div className={styles.subheading}><div><p className="eyebrow">プレイヤー</p><h2>関連プレイヤー</h2></div></div>
         {players.length ? <div className={styles.playerGrid} tabIndex={0} aria-label="関連プレイヤー（横スクロール）">{players.slice(0, 6).map((player) => <article className={styles.playerCard} key={player.id}>{player.imageUrl ? <Image src={player.imageUrl} alt={player.displayName} width={96} height={96} sizes="64px" /> : <div className={styles.playerFallback}><span aria-hidden="true">{player.displayName.slice(0, 1)}</span><small>選手ビジュアルは今後のアップデートで追加予定です</small></div>}<div><h3><Link href={`/players/${player.slug}`}>{player.displayName}</Link></h3><dl><div><dt>チーム</dt><dd>{player.teamName ?? "未登録"}</dd></div><div><dt>メインキャラクター</dt><dd>{player.characters.find((item) => item.role === "main")?.characterName ?? "未登録"}</dd></div><div><dt>地域</dt><dd>{player.region ?? player.countryCode ?? "未登録"}</dd></div></dl>{socialLinks(player).length ? <div className={styles.socials}>{socialLinks(player).map(([label, url]) => <a href={url} target="_blank" rel="noopener noreferrer" key={label}>{label} ↗</a>)}</div> : null}</div></article>)}</div> : <div className="empty-state"><p>関連プレイヤーは未掲載です。</p></div>}
-      </section>
+      </section> : null}
 
-      <section className={styles.related} id="related-videos">
+      {!preRelease ? <section className={styles.related} id="related-videos">
         <div className={styles.subheading}><div><p className="eyebrow">動画</p><h2>関連動画</h2></div><Link href={appendDevicePreviewToken(`/characters/${characterSlug}/videos`, previewToken)}>このキャラの動画を探す →</Link></div>
         {videoGroups.length ? videoGroups.map(({ group, items }) => <div className={styles.videoGroup} key={group}><h3>{CHARACTER_VIDEO_GROUP_LABELS[group]}</h3><div className={styles.videoList} tabIndex={0} aria-label={`${CHARACTER_VIDEO_GROUP_LABELS[group]}（横スクロール）`}>{items.map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />)}</div></div>) : <div className="empty-state"><p>関連動画は未掲載です。</p></div>}
-      </section>
+      </section> : null}
     </section>
   );
 }
