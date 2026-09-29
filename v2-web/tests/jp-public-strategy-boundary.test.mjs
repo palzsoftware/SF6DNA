@@ -16,5 +16,5 @@ test("ordinary JP detail never passes draft strategy cards to its public rendere
 });
 
 test("JP move commands do not print internal verification notes", () => {
-  assert.match(jpDetail, /command\.conditionText && !isInternalMoveNote\(command\.conditionText\)/);
+  assert.match(jpDetail, /command\.conditionText && !isInternalMoveNote\(command\.conditionText\) && !\/frame-table row; checked\/i\.test\(command\.conditionText\)/);
 });
