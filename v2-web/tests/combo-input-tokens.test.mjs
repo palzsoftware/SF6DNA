@@ -69,8 +69,8 @@ test('renderer preserves original, uses labels for icons and keeps uncertain tex
   assert.match(component, /type === "TEXT" \|\| token\.type === "AMBIGUOUS"/);
   assert.match(component, /原表記: /);
   assert.match(component, /\{recipe\}/);
-  assert.match(card, /isComboIconPilot\(combo\.id\)/);
-  assert.match(card, /recipe=\{combo\.rawRecipe \?\? combo\.command\}/);
+  assert.doesNotMatch(card, /isComboIconPilot/);
+  assert.match(card, /recipe=\{combo\.rawRecipe \?\? combo\.command \?\? ""\}/);
 });
 
  test('prose digits and right-arrow recipe separators are not directional input', () => {
@@ -103,4 +103,41 @@ test('actual React renderer escapes text and exposes separate DR/CDR/state label
   assert.match(rendered, /原表記: /);
   assert.doesNotMatch(rendered, /<script>/);
   assert.match(rendered, /&lt;script&gt;/);
+});
+
+test('all explicit relative direction names render without silently mapping prose or partial words', () => {
+  const names = ['N', 'UP', 'UP_FORWARD', 'FORWARD', 'DOWN_FORWARD', 'DOWN', 'DOWN_BACK', 'BACK', 'UP_BACK'];
+  assert.deepEqual(typed(names.join(' > ')).map(t => t.value), names);
+  assert.equal(typed('FORWARDNESS UPDATE BACKGROUND DOWNLOADED').length, 0);
+});
+
+test('a nonpilot card uses the shared renderer and byte-for-byte raw recipe instead of normalized copy', async () => {
+  const React = await import('react');
+  const jsx = await import('react/jsx-runtime');
+  const { renderToStaticMarkup } = await import('react-dom/server');
+  const loadComponent = (file, imports) => {
+    const componentModule = { exports: {} };
+    const source = readFileSync(new URL(`../src/components/${file}`, import.meta.url), 'utf8');
+    new Function('module', 'exports', 'require', ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX } }).outputText)(componentModule, componentModule.exports, name => {
+      if (name === 'react') return React;
+      if (name === 'react/jsx-runtime') return jsx;
+      if (name.endsWith('.module.css')) return { default: new Proxy({}, { get: (_, key) => key }), __esModule: true };
+      assert.ok(imports[name], name); return imports[name];
+    });
+    return componentModule.exports;
+  };
+  const recipe = loadComponent('combo-input-recipe.tsx', { '@/lib/combo-input-tokens': testModule.exports });
+  const { PilotComboCard } = loadComponent('pilot-combo-card.tsx', {
+    './combo-input-recipe': recipe,
+    'next/link': { default: props => React.createElement('a', props), __esModule: true },
+    '@/lib/device-preview': { appendDevicePreviewToken: value => value },
+    '@/lib/release-features': { releaseFeatures: { publicStrategyContent: false } },
+    '@/lib/detail-localization': { localizeComboText: value => value, localizeSourceType: value => value },
+  });
+  const raw = '5LP > Drive Rush > DR > DI(PC)';
+  const rendered = renderToStaticMarkup(React.createElement(PilotComboCard, { combo: { id: 'not-a-pilot-id', href:'/combos/example', name:'fixture', command:'正規化済み', rawRecipe:raw, damage:null, drive:null, sa:null, difficulty:null, verificationStatus:'unverified', preview:true } }));
+  assert.match(rendered, /aria-label="ドライブラッシュ"/);
+  assert.match(rendered, /5LP &gt; Drive Rush &gt; DR &gt; DI\(PC\)/);
+  assert.doesNotMatch(rendered, /正規化済み/);
+  assert.match(readFileSync(new URL('../src/components/jp-character-detail.tsx', import.meta.url), 'utf8'), /rawRecipe: combo\.command/);
 });

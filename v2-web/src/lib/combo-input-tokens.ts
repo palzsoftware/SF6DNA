@@ -8,6 +8,8 @@ const directions = {
   "5": ["ニュートラル", "N"], "6": ["右", "→"], "7": ["左上", "↖"], "8": ["上", "↑"], "9": ["右上", "↗"],
   "↑": ["上", "↑"], "↗": ["右上", "↗"], "→": ["右", "→"], "↘": ["右下", "↘"],
   "↓": ["下", "↓"], "↙": ["左下", "↙"], "←": ["左", "←"], "↖": ["左上", "↖"], "N": ["ニュートラル", "N"],
+  UP: ["上", "↑"], UP_FORWARD: ["前上", "↗"], FORWARD: ["前", "→"], DOWN_FORWARD: ["前下", "↘"],
+  DOWN: ["下", "↓"], DOWN_BACK: ["後ろ下", "↙"], BACK: ["後ろ", "←"], UP_BACK: ["後ろ上", "↖"],
 } as const;
 const buttons = {
   LP: "弱パンチ", MP: "中パンチ", HP: "強パンチ", LK: "弱キック", MK: "中キック", HK: "強キック",
@@ -77,7 +79,7 @@ export function tokenizeComboRecipe(raw: string): ComboInputToken[] {
   return tokens;
 }
 
-/** Explicit allowlist: this batch changes 15 pilot cards only. Publication eligibility stays in the existing loader. */
+/** Prior pilot IDs are retained as evidence fixtures only. All eligible cards share the renderer. */
 export const comboIconPilotIds = {
   luke: ["da8dac9f-e65e-4c16-a8f4-637318d73a66", "54185bc2-8bde-4c82-be10-601f69454434", "11337af8-4a19-4688-ac22-826f05ebd11e", "f321891f-45e0-4e35-8e4c-388818b80675", "537e6839-69fd-443d-a87e-be12601311e6"],
   jp: ["f4b028b9-3137-459a-9339-003bde34c9ed", "ad31eb7f-5dc3-4a8a-a02c-887ae2cb869d", "d1126690-13fd-4c6f-a811-540e2acfb188", "797eda8e-1075-4547-830e-11d4037e1d8c", "31a791ff-97a2-4160-89b2-3dd78fcb9d68"],

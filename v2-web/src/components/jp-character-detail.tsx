@@ -152,7 +152,7 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
             drive: combo.driveCost, sa: combo.saCost,
             difficulty: Number.isInteger(Number(combo.difficulty)) && Number(combo.difficulty) >= 1 && Number(combo.difficulty) <= 5 ? Number(combo.difficulty) : null,
             verificationStatus: combo.verificationStatus, preview: true,
-            command: combo.command ? normalizePublicCopy(combo.command) : null,
+            command: combo.command ? normalizePublicCopy(combo.command) : null, rawRecipe: combo.command,
             startCondition: combo.startCondition ? normalizePublicCopy(combo.startCondition) : null,
             endCondition: combo.endCondition ? normalizePublicCopy(combo.endCondition) : null,
             position: combo.position, patch: combo.patch, sourceLabel: combo.sourceLabel, sourceUrl: combo.sourceUrl,

@@ -1,0 +1,26 @@
+{
+  "scope": "Isolated React SSR of all fresh 1478 INTERNAL draft/archive recipe rows + synthetic enums; existing card and recipe CSS; no public scope change; gameplay/publication not verified",
+  "results": [
+    {
+      "theme": "dark",
+      "innerWidth": 375,
+      "scrollWidth": 375,
+      "cards": 1478,
+      "originalRecipes": 1479,
+      "icons": 6977,
+      "unlabeledIcons": 0,
+      "overflows": []
+    },
+    {
+      "theme": "light",
+      "innerWidth": 375,
+      "scrollWidth": 375,
+      "cards": 1478,
+      "originalRecipes": 1479,
+      "icons": 6977,
+      "unlabeledIcons": 0,
+      "overflows": []
+    }
+  ],
+  "pageErrors": []
+}

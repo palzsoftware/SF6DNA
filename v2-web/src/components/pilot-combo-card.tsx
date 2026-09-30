@@ -6,7 +6,6 @@ import { appendDevicePreviewToken } from "@/lib/device-preview";
 import { releaseFeatures } from "@/lib/release-features";
 import { localizeComboText, localizeSourceType } from "@/lib/detail-localization";
 import styles from "./pilot-combo-card.module.css";
-import { isComboIconPilot } from "@/lib/combo-input-tokens";
 import { ComboInputRecipe } from "./combo-input-recipe";
 
 const FAVORITE_KEY = "sf6dna:favorite-combos:v1";
@@ -177,7 +176,7 @@ export function PilotComboCard({
             {expandedFacts.map(([label, value]) => (
               <div key={String(label)}>
                 <dt>{label}</dt>
-                <dd>{label === "コマンド" && combo.command && isComboIconPilot(combo.id) ? <ComboInputRecipe recipe={combo.rawRecipe ?? combo.command} /> : String(value)}</dd>
+                <dd>{label === "コマンド" && (combo.rawRecipe ?? combo.command) ? <ComboInputRecipe recipe={combo.rawRecipe ?? combo.command ?? ""} /> : String(value)}</dd>
               </div>
             ))}
           </dl>
