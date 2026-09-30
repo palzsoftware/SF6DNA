@@ -8,7 +8,7 @@ import styles from "./character-player-card.module.css";
 export function CharacterPlayerCard({ player, characterSlug }: { player: PlayerDetail; characterSlug: string }) {
   const relation = player.characters.find((item) => item.characterSlug === characterSlug);
   const bio = safePlayerBio(player.bio);
-  const links = [["YouTube", player.youtubeUrl], ["Twitch", player.twitchUrl], ["X", player.xUrl], ["公式プロフィール", player.websiteUrl]]
+  const links = [["YouTube", player.youtubeUrl], ["Twitch", player.twitchUrl], ["X", player.xUrl], ["Webサイト", player.websiteUrl]]
     .filter((item): item is [string, string] => typeof item[1] === "string" && item[1].startsWith("https://"));
   return <article className={styles.card}>
     <header className={styles.header}>
