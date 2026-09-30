@@ -1,6 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { PilotComboCard } from "@/components/pilot-combo-card";
+import { CharacterPlayerCard } from "@/components/character-player-card";
+import { CharacterVideoReferenceCard } from "@/components/character-video-reference-card";
+import { characterVideoReferences } from "@/lib/character-video-references";
 import { VideoCard } from "@/components/video-card";
 import { MoveMotionMedia } from "@/components/move-motion-media";
 import type { CharacterDetailV21Profile } from "@/lib/character-detail-v21";
@@ -13,11 +15,6 @@ import { releaseFeatures } from "@/lib/release-features";
 import type { SourceReference } from "@/types/character";
 import type { PlayerDetail } from "@/types/player";
 import styles from "./character-detail-pilot.module.css";
-
-function socialLinks(player: PlayerDetail) {
-  return [["X", player.xUrl], ["YouTube", player.youtubeUrl], ["Twitch", player.twitchUrl], ["Webサイト", player.websiteUrl]]
-    .filter((entry): entry is [string, string] => typeof entry[1] === "string" && entry[1].startsWith("https://"));
-}
 
 function numericDifficulty(value: string | null) {
   if (!value) return null;
@@ -90,9 +87,11 @@ export function CharacterDetailPilot({
   const comboSamples = bundle.combos.filter(canShowStrategy).slice(0, 3);
   const setupSamples = bundle.setups.filter(canShowStrategy).slice(0, 3);
   const sequenceSamples = bundle.sequences.filter(canShowStrategy).slice(0, 3);
-  const sourceSamples = sources.slice(0, 8);
+  const publicSources = sources.filter((source) => source.relationship !== "candidate");
+  const sourceSamples = publicSources.slice(0, 8);
   const strategyListAvailable = releaseFeatures.publicStrategyContent || previewActive;
   const videoSamples = videos.slice(0, 6);
+  const videoReferences = characterVideoReferences(publicSources, videos.map((video) => video.url));
   const videoGroups = CHARACTER_VIDEO_GROUP_ORDER.flatMap((group) => {
     const items = videoSamples.filter((video) => classifyCharacterVideo(video) === group);
     return items.length ? [{ group, items }] : [];
@@ -180,7 +179,7 @@ export function CharacterDetailPilot({
       </section>
 
       {!preRelease ? <section className={styles.comboSection} id="pilot-combos" aria-labelledby="pilot-combos-heading">
-        <div className={styles.subheading}><div><p className="eyebrow">コンボ</p><h2 id="pilot-combos-heading">まず確認するコンボ</h2>{comboSamples.length ? <p>用途と消費ゲージを比べ、気になるコンボの詳細を開けます。</p> : null}</div>{strategyListAvailable ? <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/combos`, previewToken)}>コンボ一覧を見る →</Link> : null}</div>
+        <div className={styles.subheading}><div><p className="eyebrow">コンボ</p><h2 id="pilot-combos-heading">まず確認するコンボ</h2>{comboSamples.length ? <p>用途と消費ゲージを比較。気になるコンボの詳細を確認。</p> : null}</div>{strategyListAvailable ? <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/combos`, previewToken)}>コンボ一覧を見る →</Link> : null}</div>
         {comboSamples.length ? <div className={styles.comboList}>{comboSamples.map((combo) => <PilotComboCard key={combo.id} previewToken={previewToken} combo={{ id: combo.id, href: `/combos/${combo.slug}`, name: combo.name, category: combo.category, purpose: combo.purpose ? normalizePublicCopy(combo.purpose) : null, damage: combo.damage, drive: combo.driveCost, sa: combo.saCost, difficulty: numericDifficulty(combo.difficulty), verificationStatus: combo.verificationStatus, preview: previewActive, command: combo.command ? normalizePublicCopy(combo.command) : null, startCondition: combo.startCondition ? normalizePublicCopy(combo.startCondition) : null, endCondition: combo.endCondition ? normalizePublicCopy(combo.endCondition) : null, position: combo.position, patch: combo.patch, sourceLabel: combo.sourceLabel, sourceUrl: combo.sourceUrl }} />)}</div> : <div className="empty-state"><p>確認済みのコンボはまだありません。</p></div>}
       </section> : null}
 
@@ -200,19 +199,27 @@ export function CharacterDetailPilot({
       </section> : null}
 
       {!preRelease ? <section className={styles.rangeSection} id="pilot-neutral-defense" aria-labelledby="pilot-range-heading">
-        <div className={styles.sectionTitle}><p className="eyebrow">立ち回り・防御</p><h2 id="pilot-range-heading">距離別の立ち回り</h2><p>相手視点の対策ではなく、まず自分が選ぶ行動を距離ごとに整理しています。</p></div>
+        <div className={styles.sectionTitle}><p className="eyebrow">立ち回り・防御</p><h2 id="pilot-range-heading">距離別の立ち回り</h2><p>間合いごとの主力技、狙い、注意点。</p></div>
         {profile.ranges.length ? <div className={styles.rangeTable} role="table" aria-label={`${characterName}の距離別行動`}>{profile.ranges.map((row) => <div role="row" key={row.range}><strong role="rowheader">{row.range}</strong><p role="cell"><span>主に使う技</span>{normalizePublicCopy(row.actions)}</p><p role="cell"><span>目的</span>{normalizePublicCopy(row.purpose)}</p><p role="cell"><span>注意点</span>{normalizePublicCopy(row.caution)}</p></div>)}</div> : <div className="empty-state"><p>距離別の攻略情報は未掲載です。</p></div>}
       </section> : null}
 
       {!preRelease ? <section className={styles.related} id="related-players">
         <div className={styles.subheading}><div><p className="eyebrow">プレイヤー</p><h2>関連プレイヤー</h2></div></div>
-        {players.length ? <div className={styles.playerGrid} tabIndex={0} aria-label="関連プレイヤー（横スクロール）">{players.slice(0, 6).map((player) => <article className={styles.playerCard} key={player.id}>{player.imageUrl ? <Image src={player.imageUrl} alt={player.displayName} width={96} height={96} sizes="64px" /> : <div className={styles.playerFallback}><span aria-hidden="true">{player.displayName.slice(0, 1)}</span><small>選手ビジュアルは今後のアップデートで追加予定です</small></div>}<div><h3><Link href={`/players/${player.slug}`}>{player.displayName}</Link></h3><dl><div><dt>チーム</dt><dd>{player.teamName ?? "未登録"}</dd></div><div><dt>メインキャラクター</dt><dd>{player.characters.find((item) => item.role === "main")?.characterName ?? "未登録"}</dd></div><div><dt>地域</dt><dd>{player.region ?? player.countryCode ?? "未登録"}</dd></div></dl>{socialLinks(player).length ? <div className={styles.socials}>{socialLinks(player).map(([label, url]) => <a href={url} target="_blank" rel="noopener noreferrer" key={label}>{label} ↗</a>)}</div> : null}</div></article>)}</div> : <div className="empty-state"><p>関連プレイヤーは未掲載です。</p></div>}
+        {players.length ? <div className={styles.playerGrid} aria-label="関連プレイヤー">{players.slice(0, 6).map((player) => <CharacterPlayerCard key={player.id} player={player} characterSlug={characterSlug} />)}</div> : <div className="empty-state"><p>関連プレイヤーは未掲載です。</p></div>}
       </section> : null}
 
       {!preRelease ? <section className={styles.related} id="related-videos">
         <div className={styles.subheading}><div><p className="eyebrow">動画</p><h2>関連動画</h2></div><Link href={appendDevicePreviewToken(`/characters/${characterSlug}/videos`, previewToken)}>このキャラの動画を探す →</Link></div>
-        {videoGroups.length ? videoGroups.map(({ group, items }) => <div className={styles.videoGroup} key={group}><h3>{CHARACTER_VIDEO_GROUP_LABELS[group]}</h3><div className={styles.videoList} tabIndex={0} aria-label={`${CHARACTER_VIDEO_GROUP_LABELS[group]}（横スクロール）`}>{items.map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />)}</div></div>) : <div className="empty-state"><p>関連動画は未掲載です。</p></div>}
+        {videoGroups.length ? videoGroups.map(({ group, items }) => <div className={styles.videoGroup} key={group}><h3>{CHARACTER_VIDEO_GROUP_LABELS[group]}</h3><div className={styles.videoList} aria-label={CHARACTER_VIDEO_GROUP_LABELS[group]}>{items.map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />)}</div></div>) : !videoReferences.length ? <div className="empty-state"><p>関連動画は未掲載です。</p></div> : null}
+        {videoReferences.length ? <div className={styles.videoGroup}><h3>動画の参照元</h3><div className={styles.videoList}>{videoReferences.map((source) => <CharacterVideoReferenceCard key={source.id} source={source} characterName={characterName} />)}</div></div> : null}
       </section> : null}
+      <section className={styles.related} id="sources">
+        <div className={styles.subheading}><div><p className="eyebrow">情報源</p><h2>参照した資料</h2></div></div>
+        {publicSources.length ? <ul className={styles.sourceGrid}>{publicSources.map((source) => {
+          const item = presentSource(source.sourceType, source.publisher, source.url);
+          return <li key={source.id}><span>{item.badge}</span><strong>{source.title}</strong>{source.publisher ? <small>{source.publisher}</small> : null}<a href={source.url} target="_blank" rel="noopener noreferrer">{item.cta} ↗</a></li>;
+        })}</ul> : <p>情報源は未掲載です。</p>}
+      </section>
     </section>
   );
 }

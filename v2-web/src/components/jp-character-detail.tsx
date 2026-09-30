@@ -4,6 +4,7 @@ import { CharacterPreferenceActions } from "@/components/character-preference-ac
 import { CharacterTabs } from "@/components/character-tabs";
 import { MoveMotionMedia } from "@/components/move-motion-media";
 import { PilotComboCard } from "@/components/pilot-combo-card";
+import { CharacterPlayerCard } from "@/components/character-player-card";
 import { VideoCard } from "@/components/video-card";
 import { appendDevicePreviewToken, type DevicePreviewBundle } from "@/lib/device-preview";
 import { formatVideoPublishedDate, type VideoSummary } from "@/lib/event-media";
@@ -204,16 +205,13 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
 
       <section id="related-players" className={styles.section}>
         <h2>関連プレイヤー</h2>
-        {players.length ? <div className={styles.rail} tabIndex={0} aria-label="関連プレイヤー（横スクロール）">
-          {players.slice(0, 6).map(player => <Link className={styles.player} key={player.id} href={`/players/${player.slug}`}>
-            {player.imageUrl ? <Image src={player.imageUrl} alt="" width={64} height={64} sizes="64px" /> : null}
-            <strong>{player.displayName}</strong><span>{player.teamName ?? ""}</span>
-          </Link>)}
+        {players.length ? <div className={styles.playerGrid} aria-label="関連プレイヤー">
+          {players.slice(0, 6).map(player => <CharacterPlayerCard key={player.id} player={player} characterSlug="jp" />)}
         </div> : <p>関連プレイヤーは未掲載です。</p>}
       </section>
       <section id="related-videos" className={styles.section}>
         <div className={styles.heading}><h2>関連動画</h2><Link href={localLink("/characters/jp/videos")}>このキャラの動画を探す →</Link></div>
-        {videos.length ? <div className={styles.videoRail} tabIndex={0} aria-label="関連動画（横スクロール）">
+        {videos.length ? <div className={styles.videoRail} aria-label="関連動画">
           {videos.slice(0, 6).map(video => <VideoCard key={video.id} video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} />)}
         </div> : <p>関連動画は未掲載です。</p>}
       </section>

@@ -86,3 +86,6 @@
   .rangeList article { grid-template-columns: minmax(0, 1fr); }
   .rangeList p { grid-column: 1; }
 }
+
+.playerGrid, .videoRail { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; min-width: 0; width: 100%; overflow-x: visible; }
+@media (max-width: 760px) { .playerGrid, .videoRail { grid-template-columns: minmax(0,1fr); } }

@@ -18,7 +18,7 @@ test("JP page and detail grids can shrink inside a 375px viewport", () => {
 
 test("horizontal rails remain scrollable within the page", () => {
   assert.match(globalCss, /\.character-tabs\s*\{[^}]*overflow-x:\s*auto/);
-  for (const name of ["inlineSources", "comboList", "playerGrid", "videoList"]) {
+  for (const name of ["inlineSources", "comboList"]) {
     assert.match(pilotCss, new RegExp(`\\.${name}\\s*\\{[^}]*max-width:\\s*100%;[^}]*overflow-x:\\s*auto`));
   }
   assert.doesNotMatch(globalCss + pageCss + pilotCss, /(?:html\s*,\s*body|body\s*,\s*html)\s*\{[^}]*overflow-x:\s*(?:hidden|clip)/);
