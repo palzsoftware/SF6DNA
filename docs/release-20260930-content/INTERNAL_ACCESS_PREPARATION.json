@@ -1,0 +1,182 @@
+[
+  {
+    "INTERNAL_ROUTE": "/admin/character-traits",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/characters/[id]",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/characters/new",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/characters",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/content/[kind]",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/data-quality",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/data-status",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "inline getUser + profiles.role=admin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/diagnoses/[id]",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/diagnoses/[id]/questions/[questionId]",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/diagnoses",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/moves/[id]",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/moves/new",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/moves",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "inline getUser + profiles.role=admin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/reference/[kind]",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/relations",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/admin/sources",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "existing admin guard, code inspection only; live role tests not repeated",
+    "CURRENT_GUARD": "requireAdmin",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": false,
+    "APPROVAL": "EXISTING_UNCHANGED"
+  },
+  {
+    "INTERNAL_ROUTE": "/internal/character-preview/[slug]",
+    "BASE_SHA": "4e4241f9c3ff65ba31a26410c34f7961993efe51",
+    "CURRENT_ACCESS": "anonymous content 200 confirmed in reused prior Preview; code unchanged",
+    "CURRENT_GUARD": "none",
+    "EXPECTED_ACCESS": "admin only; anonymous login gate; nonadmin denied content",
+    "REQUIRE_ADMIN_APPLICABLE": true,
+    "CHANGE_NEEDED": true,
+    "APPROVAL": "WAITING"
+  }
+]
