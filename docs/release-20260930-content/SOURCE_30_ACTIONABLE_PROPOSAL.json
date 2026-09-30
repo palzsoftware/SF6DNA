@@ -1,0 +1,2165 @@
+{
+  "date": "2026-09-30",
+  "base_rc_sha": "4e4241f9",
+  "workorder": "ReleaseContentClosureLongBatch LaneC63-70",
+  "counts": {
+    "TOTAL": 30,
+    "PUBLIC_OK": 0,
+    "PUBLIC_WITH_ATTRIBUTION": 1,
+    "LINK_ONLY": 29,
+    "INTERNAL_ONLY": 0,
+    "REJECT": 0,
+    "HUMAN_DECISION_REQUIRED": 0
+  },
+  "scope_applied": false,
+  "db_write": false,
+  "method": "Reused30record SQL snapshot from earlier same-day batch; added primary web metadata for8uniqueURLs only. No repeatDB/sourcefullaudit.",
+  "classification_definitions": {
+    "LINK_ONLY": "Creator commentary acceptable as attributed outbound supplementary reference; no content import/no factual adoption claim.",
+    "PUBLIC_WITH_ATTRIBUTION": "Official original guide recommended as attributed outbound guide reference; does not permit independent copying.",
+    "HUMAN_DECISION_REQUIRED": "Not used for ordinary copy/title validation AI can handle. Public-scope approval tracked separately for allproposals."
+  },
+  "public_scope_approval": "WAITING; adopting/filtering/rewriting public sources not performed; workorder131 PublicScopeChange stop.",
+  "remaining_evidence": [
+    "Direct playback8URL unavailable (throttled); metadata index is not browserHTTP200 confirmation.",
+    "Exact publicationdates2URLs unverified; not invented.",
+    "Community facts not validated against current official patch/game footage; use is outbound commentary.",
+    "All30 DBpublisherNULL/current character relationshipcandidate remain."
+  ],
+  "resolved_previous_gaps": [
+    "Exact XfdfD7zH6kE title author date chapters verified primaryindexedYouTube",
+    "Exact officialYasmine StreetFighter verifieduploader/date confirmed",
+    "Mai/Ed/Bison/Terry creator confirmed through primarychannel title; date remainsunknown",
+    "1F6 metadata mismatch isolated to prose; target-character timestamps match6title entries"
+  ],
+  "sources": [
+    {
+      "SOURCE_ID": "7cfc2619-8f21-4bf1-9dca-bf1f2dbd7403",
+      "TITLE": "Season 4 現行変更解説候補 A.K.I.",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Marisa, Guile, Lily and AKI SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "A.K.I.のSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 12:10",
+      "CHAPTER_START": "12:10",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn13youtube1"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "e4f109c5-0438-44bb-9ef9-02d313f33c56",
+      "TITLE": "Season 4 現行変更解説候補 C.ヴァイパー",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Chun-li, Cammy, Manon and C.Viper SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "C.ヴァイパーのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 13:40",
+      "CHAPTER_START": "13:40",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn13youtube0"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "9b03a1a6-c8e9-46ae-aebe-6007f85227ea",
+      "TITLE": "Season 4 現行変更解説候補 アレックス",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Alex, Sagat, Juri and Zangief SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "アレックスのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 0:00",
+      "CHAPTER_START": "0:00",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth",
+        "ExactURL search unverified; directfetch throttled, not removal evidence."
+      ],
+      "EVIDENCE_REFS": [
+        "turn12youtube0"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "b7dcb40f-2745-4bf9-864a-5d95ae8ffa79",
+      "TITLE": "Season 4 現行変更解説候補 イングリッド",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=LbP388dn_D0",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "JP, Elena, Ingrid and Kimberly SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": null,
+      "DATE_EVIDENCE": "Exact day unverified; primary playlist index states about one month ago",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "イングリッドのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Target character appears in primary indexed video title",
+      "CHAPTER_START": null,
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn19search2",
+        "turn19search7"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "aaedce01-af16-47d3-ab3f-08c1bee4d123",
+      "TITLE": "Season 4 現行変更解説候補 エド",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Mai, ED, Bison and Terry SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": null,
+      "DATE_EVIDENCE": "Exact day unverified; do not copy date from neighbouring videos",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "エドのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 7:50",
+      "CHAPTER_START": "7:50",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn19search0",
+        "turn19search9"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "3cbc0e50-20f8-4664-86cd-8924b90f94e9",
+      "TITLE": "Season 4 現行変更解説候補 エドモンド本田",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Deejay, Blanka, Honda, Sim, Rashid and Jamie SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "エドモンド本田のSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 4:55",
+      "CHAPTER_START": "4:55",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth",
+        "Published description prose wrongly lists Alex/Sagat/Juri/Zangief; title and six timestamps agree with actual character mapping. Do not use mismatched prose as factual evidence. Video frames not inspected."
+      ],
+      "EVIDENCE_REFS": [
+        "turn14youtube4"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "0cb873a2-b26e-49fd-bbef-a81a67fba6e1",
+      "TITLE": "Season 4 現行変更解説候補 エレナ",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=LbP388dn_D0",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "JP, Elena, Ingrid and Kimberly SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": null,
+      "DATE_EVIDENCE": "Exact day unverified; primary playlist index states about one month ago",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "エレナのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Target character appears in primary indexed video title",
+      "CHAPTER_START": null,
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn19search2",
+        "turn19search7"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "392671c4-08ef-4de9-bc2a-fc01088c0413",
+      "TITLE": "Season 4 現行変更解説候補 ガイル",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Marisa, Guile, Lily and AKI SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "ガイルのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 9:14",
+      "CHAPTER_START": "9:14",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 19,
+        "supporting": 12
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 6,
+        "training": 12
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn13youtube1"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "1a9658eb-87e0-44b1-a7e1-553c9a3626ae",
+      "TITLE": "Season 4 現行変更解説候補 キャミィ",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Chun-li, Cammy, Manon and C.Viper SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "キャミィのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 19:40",
+      "CHAPTER_START": "19:40",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn13youtube0"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "3afc9ac8-cd02-47b0-bddb-be720dfa6a4e",
+      "TITLE": "Season 4 現行変更解説候補 キンバリー",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=LbP388dn_D0",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "JP, Elena, Ingrid and Kimberly SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": null,
+      "DATE_EVIDENCE": "Exact day unverified; primary playlist index states about one month ago",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "キンバリーのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Target character appears in primary indexed video title",
+      "CHAPTER_START": null,
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 19,
+        "supporting": 12
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 6,
+        "training": 12
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn19search2",
+        "turn19search7"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "0296815f-8599-47e5-ba8f-951b4757b7b4",
+      "TITLE": "Season 4 現行変更解説候補 ケン",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Ryu, Ken, Akuma and Luke SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "ケンのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 0:00",
+      "CHAPTER_START": "0:00",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn14youtube3"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "9fd1440e-09f2-4fb2-86ac-a2889d20662a",
+      "TITLE": "Season 4 現行変更解説候補 サガット",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Alex, Sagat, Juri and Zangief SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "サガットのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 9:40",
+      "CHAPTER_START": "9:40",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth",
+        "ExactURL search unverified; directfetch throttled, not removal evidence."
+      ],
+      "EVIDENCE_REFS": [
+        "turn12youtube0"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "dfba6362-9cce-4ad5-8651-a70fd106e4c5",
+      "TITLE": "Season 4 現行変更解説候補 ザンギエフ",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Alex, Sagat, Juri and Zangief SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "ザンギエフのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 16:40",
+      "CHAPTER_START": "16:40",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth",
+        "ExactURL search unverified; directfetch throttled, not removal evidence."
+      ],
+      "EVIDENCE_REFS": [
+        "turn12youtube0"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "70a8c217-52c3-4cc5-9488-7420376598fc",
+      "TITLE": "Season 4 現行変更解説候補 ジェイミー",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Deejay, Blanka, Honda, Sim, Rashid and Jamie SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "ジェイミーのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 18:30",
+      "CHAPTER_START": "18:30",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 19,
+        "supporting": 12
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 6,
+        "training": 12
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth",
+        "Published description prose wrongly lists Alex/Sagat/Juri/Zangief; title and six timestamps agree with actual character mapping. Do not use mismatched prose as factual evidence. Video frames not inspected."
+      ],
+      "EVIDENCE_REFS": [
+        "turn14youtube4"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "88125317-c149-4718-899c-95ac66f21ea0",
+      "TITLE": "Season 4 現行変更解説候補 ジュリ",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Alex, Sagat, Juri and Zangief SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "ジュリのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 20:27",
+      "CHAPTER_START": "20:27",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth",
+        "ExactURL search unverified; directfetch throttled, not removal evidence."
+      ],
+      "EVIDENCE_REFS": [
+        "turn12youtube0"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "4066ac57-b047-4b85-9b59-b455c8190340",
+      "TITLE": "Season 4 現行変更解説候補 ダルシム",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Deejay, Blanka, Honda, Sim, Rashid and Jamie SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "ダルシムのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 14:00",
+      "CHAPTER_START": "14:00",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth",
+        "Published description prose wrongly lists Alex/Sagat/Juri/Zangief; title and six timestamps agree with actual character mapping. Do not use mismatched prose as factual evidence. Video frames not inspected."
+      ],
+      "EVIDENCE_REFS": [
+        "turn14youtube4"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "5c757419-8e7d-4e99-a235-8c0496644231",
+      "TITLE": "Season 4 現行変更解説候補 ディージェイ",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Deejay, Blanka, Honda, Sim, Rashid and Jamie SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "ディージェイのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 0:00",
+      "CHAPTER_START": "0:00",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth",
+        "Published description prose wrongly lists Alex/Sagat/Juri/Zangief; title and six timestamps agree with actual character mapping. Do not use mismatched prose as factual evidence. Video frames not inspected."
+      ],
+      "EVIDENCE_REFS": [
+        "turn14youtube4"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "987e1547-90ac-4608-8e6c-20760ff83893",
+      "TITLE": "Season 4 現行変更解説候補 テリー",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Mai, ED, Bison and Terry SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": null,
+      "DATE_EVIDENCE": "Exact day unverified; do not copy date from neighbouring videos",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "テリーのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Target character appears in primary indexed video title",
+      "CHAPTER_START": null,
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn19search0",
+        "turn19search9"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "f60ba94d-d8f8-4416-961d-c9ac854083dc",
+      "TITLE": "Season 4 現行変更解説候補 ブランカ",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Deejay, Blanka, Honda, Sim, Rashid and Jamie SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "ブランカのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 9:00",
+      "CHAPTER_START": "9:00",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth",
+        "Published description prose wrongly lists Alex/Sagat/Juri/Zangief; title and six timestamps agree with actual character mapping. Do not use mismatched prose as factual evidence. Video frames not inspected."
+      ],
+      "EVIDENCE_REFS": [
+        "turn14youtube4"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "3d53d4bb-e7cb-4f7a-86b8-e1f6fc388b49",
+      "TITLE": "Season 4 現行変更解説候補 ベガ",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Mai, ED, Bison and Terry SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": null,
+      "DATE_EVIDENCE": "Exact day unverified; do not copy date from neighbouring videos",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "ベガのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 11:50",
+      "CHAPTER_START": "11:50",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn19search0",
+        "turn19search9"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "0f499bfa-9560-4a4d-ba98-563c66fb9206",
+      "TITLE": "Season 4 現行変更解説候補 マノン",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Chun-li, Cammy, Manon and C.Viper SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "マノンのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 6:00",
+      "CHAPTER_START": "6:00",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn13youtube0"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "e4848ec0-e4b4-4fe1-b698-2ba3cbf64f41",
+      "TITLE": "Season 4 現行変更解説候補 マリーザ",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Marisa, Guile, Lily and AKI SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "マリーザのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 0:00",
+      "CHAPTER_START": "0:00",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn13youtube1"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "aca946d5-a62a-471a-b42a-3f97b43294ac",
+      "TITLE": "Season 4 現行変更解説候補 ヤスミン",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=M7NfqAcU7KI",
+      "PUBLISHER": "Street Fighter (CAPCOM official verified channel)",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Street Fighter 6 Character Guide | Yasmine",
+      "PUBLISHED_DATE": "2026-07-23",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "OFFICIAL_VERIFIED_CHANNEL",
+      "PRIMARY_STATUS": "OFFICIAL_ORIGINAL_CHARACTER_GUIDE",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "PUBLIC_WITH_ATTRIBUTION",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "ヤスミン公式キャラクターガイド（Street Fighter）",
+      "CHARACTER_TOPIC_MATCH": "Officialguide title names Yasmine; DB candidate description is inaccurate",
+      "CHAPTER_START": null,
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "Street Fighter (CAPCOM official verified channel) / actual video title / original URL / 2026-07-23",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth",
+        "DBlabel current-change candidate differs from actual official character guide. Treat as official Yasmine guide; no DB rewrite performed."
+      ],
+      "EVIDENCE_REFS": [
+        "turn16youtube26",
+        "turn11search12"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "c4282ff4-66dc-40d0-8f50-c725e01f1383",
+      "TITLE": "Season 4 現行変更解説候補 ラシード",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Deejay, Blanka, Honda, Sim, Rashid and Jamie SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "ラシードのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 16:00",
+      "CHAPTER_START": "16:00",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth",
+        "Published description prose wrongly lists Alex/Sagat/Juri/Zangief; title and six timestamps agree with actual character mapping. Do not use mismatched prose as factual evidence. Video frames not inspected."
+      ],
+      "EVIDENCE_REFS": [
+        "turn14youtube4"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "8cc7dbdc-7503-4ebe-8f0a-7b3897a8df78",
+      "TITLE": "Season 4 現行変更解説候補 リュウ",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Ryu, Ken, Akuma and Luke SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "リュウのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 6:15",
+      "CHAPTER_START": "6:15",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn14youtube3"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "e96cf3d0-6f03-4838-b16a-1fb3877b74e6",
+      "TITLE": "Season 4 現行変更解説候補 リリー",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Marisa, Guile, Lily and AKI SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "リリーのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 7:00",
+      "CHAPTER_START": "7:00",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn13youtube1"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "e885d470-16cd-4b7c-950f-d989ba8a6097",
+      "TITLE": "Season 4 現行変更解説候補 ルーク",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Ryu, Ken, Akuma and Luke SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "ルークのSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 15:06",
+      "CHAPTER_START": "15:06",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn14youtube3"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "b0c2bf68-6c9e-44d1-a350-463a87b9b7c6",
+      "TITLE": "Season 4 現行変更解説候補 不知火舞",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Mai, ED, Bison and Terry SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": null,
+      "DATE_EVIDENCE": "Exact day unverified; do not copy date from neighbouring videos",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "不知火舞のSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 0:00",
+      "CHAPTER_START": "0:00",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn19search0",
+        "turn19search9"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "32adfa13-079f-408b-82b2-593b7f88343d",
+      "TITLE": "Season 4 現行変更解説候補 春麗",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Chun-li, Cammy, Manon and C.Viper SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "春麗のSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 0:00",
+      "CHAPTER_START": "0:00",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 19,
+        "supporting": 12
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 6,
+        "training": 12
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn13youtube0"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    },
+    {
+      "SOURCE_ID": "cff49442-7bba-4807-883d-f51dda19b221",
+      "TITLE": "Season 4 現行変更解説候補 豪鬼",
+      "DOMAIN": "youtube.com",
+      "URL": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+      "PUBLISHER": "MC MuraFGC",
+      "PUBLISHER_IN_DB": null,
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY_LEVEL": "community",
+      "ACTUAL_VIDEO_TITLE": "Ryu, Ken, Akuma and Luke SF6 Season 4 balance changes explained",
+      "PUBLISHED_DATE": "2026-08-03",
+      "DATE_EVIDENCE": "Primary indexed YouTube publication date",
+      "PUBLIC_ACCESS": "PUBLIC_INDEXED; direct watch playback/access check NOT VERIFIED because fetch throttled",
+      "OFFICIAL_STATUS": "COMMUNITY_NOT_OFFICIAL",
+      "PRIMARY_STATUS": "ORIGINAL_CREATOR_COMMENTARY; SECONDARY_FOR_GAME_FACTS",
+      "USAGE": "LINK_ONLY + ATTRIBUTION",
+      "FINAL_RECOMMENDATION": "LINK_ONLY",
+      "RECOMMENDATION_SCOPE": "Editorial proposal for outbound reference only; not actual adoption or current public-scope change",
+      "LINK_TEXT_PROPOSAL": "豪鬼のSeason 4調整解説（MC MuraFGC）",
+      "CHARACTER_TOPIC_MATCH": "Title names target character; chapter 10:00",
+      "CHAPTER_START": "10:00",
+      "TERMS": {
+        "COPY_TEXT_REQUIRED": false,
+        "IMAGE_REQUIRED": false,
+        "TABLE_COPY_REQUIRED": false,
+        "SCRAPING_REQUIRED": false,
+        "LOGIN_REQUIRED": "Not observed in public search indexing; direct playback not tested",
+        "ATTRIBUTION_REQUIRED": "YES by SF6DNA editorial policy for outbound reference; not an assertion of CC licence duty",
+        "PER_VIDEO_LICENSE_REQUIRED_FOR_SIMPLE_LINK": false,
+        "TERMS_RISK": "No download/rehost/independent content copying in proposed use. Reuse outside YouTube requires separate legal basis; no such reuse proposed."
+      },
+      "ATTRIBUTION": "MC MuraFGC / actual video title / original URL / 2026-08-03",
+      "ADOPTION_STATUS": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      },
+      "TRAIT_REFERENCE_COUNT": 0,
+      "RISKS": [
+        "Direct current playback and region/login restrictions unverified",
+        "Do not assert commentary as game-verified or latest patch factual truth"
+      ],
+      "EVIDENCE_REFS": [
+        "turn14youtube3"
+      ],
+      "NEXT_ACTION": "Approve credited outbound-reference scope; preserve source record and relationships; no DB write. Metadata corrections are separate prohibited DB change."
+    }
+  ],
+  "videos": [
+    {
+      "video_id": "T9PW2f1gH0A",
+      "title": "Marisa, Guile, Lily and AKI SF6 Season 4 balance changes explained",
+      "publisher": "MC MuraFGC",
+      "refs": [
+        "turn13youtube1"
+      ],
+      "date": "2026-08-03",
+      "chapters": {
+        "マリーザ": "0:00",
+        "リリー": "7:00",
+        "ガイル": "9:14",
+        "A.K.I.": "12:10"
+      }
+    },
+    {
+      "video_id": "XAWQa1dZCyc",
+      "title": "Chun-li, Cammy, Manon and C.Viper SF6 Season 4 balance changes explained",
+      "publisher": "MC MuraFGC",
+      "refs": [
+        "turn13youtube0"
+      ],
+      "date": "2026-08-03",
+      "chapters": {
+        "春麗": "0:00",
+        "マノン": "6:00",
+        "C.ヴァイパー": "13:40",
+        "キャミィ": "19:40"
+      }
+    },
+    {
+      "video_id": "XfdfD7zH6kE",
+      "title": "Alex, Sagat, Juri and Zangief SF6 Season 4 balance changes explained",
+      "publisher": "MC MuraFGC",
+      "refs": [
+        "turn12youtube0"
+      ],
+      "gap": "ExactURL search unverified; directfetch throttled, not removal evidence.",
+      "date": "2026-08-03",
+      "chapters": {
+        "アレックス": "0:00",
+        "サガット": "9:40",
+        "ザンギエフ": "16:40",
+        "ジュリ": "20:27"
+      }
+    },
+    {
+      "video_id": "LbP388dn_D0",
+      "title": "JP, Elena, Ingrid and Kimberly SF6 Season 4 balance changes explained",
+      "publisher": "MC MuraFGC",
+      "refs": [
+        "turn19search2",
+        "turn19search7"
+      ],
+      "date": null,
+      "date_status": "Exact day unverified; primary playlist index states about one month ago",
+      "chapters": {},
+      "topic_match": "Title directly names JP, Elena, Ingrid and Kimberly"
+    },
+    {
+      "video_id": "eW0Vyv6Pl0M",
+      "title": "Mai, ED, Bison and Terry SF6 Season 4 balance changes explained",
+      "publisher": "MC MuraFGC",
+      "refs": [
+        "turn19search0",
+        "turn19search9"
+      ],
+      "date": null,
+      "date_status": "Exact day unverified; do not copy date from neighbouring videos",
+      "chapters": {
+        "不知火舞": "0:00",
+        "エド": "7:50",
+        "ベガ": "11:50"
+      },
+      "topic_match": "Title directly names Mai, Ed, Bison and Terry"
+    },
+    {
+      "video_id": "1F6pj4PbyXM",
+      "title": "Deejay, Blanka, Honda, Sim, Rashid and Jamie SF6 Season 4 balance changes explained",
+      "publisher": "MC MuraFGC",
+      "refs": [
+        "turn14youtube4"
+      ],
+      "gap": "Published description prose wrongly lists Alex/Sagat/Juri/Zangief; title and six timestamps agree with actual character mapping. Do not use mismatched prose as factual evidence. Video frames not inspected.",
+      "date": "2026-08-03",
+      "chapters": {
+        "ディージェイ": "0:00",
+        "エドモンド本田": "4:55",
+        "ブランカ": "9:00",
+        "ダルシム": "14:00",
+        "ラシード": "16:00",
+        "ジェイミー": "18:30"
+      }
+    },
+    {
+      "video_id": "NQGTS4EB3kM",
+      "title": "Ryu, Ken, Akuma and Luke SF6 Season 4 balance changes explained",
+      "publisher": "MC MuraFGC",
+      "refs": [
+        "turn14youtube3"
+      ],
+      "date": "2026-08-03",
+      "chapters": {
+        "ケン": "0:00",
+        "リュウ": "6:15",
+        "豪鬼": "10:00",
+        "ルーク": "15:06"
+      }
+    },
+    {
+      "video_id": "M7NfqAcU7KI",
+      "title": "Street Fighter 6 Character Guide | Yasmine",
+      "publisher": "Street Fighter (CAPCOM official verified channel)",
+      "refs": [
+        "turn16youtube26",
+        "turn11search12"
+      ],
+      "gap": "DBlabel current-change candidate differs from actual official character guide. Treat as official Yasmine guide; no DB rewrite performed.",
+      "date": "2026-07-23",
+      "chapters": {}
+    }
+  ],
+  "policy_sources": [
+    {
+      "url": "https://www.youtube.com/static?template=terms",
+      "ref": "turn7view0"
+    },
+    {
+      "url": "https://support.google.com/youtube/answer/2797468?hl=en",
+      "ref": "turn7view1"
+    }
+  ],
+  "metadata_update_proposals": [
+    {
+      "source_id": "7cfc2619-8f21-4bf1-9dca-bf1f2dbd7403",
+      "old_title": "Season 4 現行変更解説候補 A.K.I.",
+      "old_publisher": null,
+      "proposed_title": "マリーザ・ガイル・リリー・A.K.I.のSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "e4f109c5-0438-44bb-9ef9-02d313f33c56",
+      "old_title": "Season 4 現行変更解説候補 C.ヴァイパー",
+      "old_publisher": null,
+      "proposed_title": "春麗・キャミィ・マノン・C.ヴァイパーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "9b03a1a6-c8e9-46ae-aebe-6007f85227ea",
+      "old_title": "Season 4 現行変更解説候補 アレックス",
+      "old_publisher": null,
+      "proposed_title": "アレックス・サガット・ジュリ・ザンギエフのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "b7dcb40f-2745-4bf9-864a-5d95ae8ffa79",
+      "old_title": "Season 4 現行変更解説候補 イングリッド",
+      "old_publisher": null,
+      "proposed_title": "JP・エレナ・イングリッド・キンバリーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "aaedce01-af16-47d3-ab3f-08c1bee4d123",
+      "old_title": "Season 4 現行変更解説候補 エド",
+      "old_publisher": null,
+      "proposed_title": "不知火舞・エド・ベガ・テリーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "3cbc0e50-20f8-4664-86cd-8924b90f94e9",
+      "old_title": "Season 4 現行変更解説候補 エドモンド本田",
+      "old_publisher": null,
+      "proposed_title": "ディージェイ・ブランカ・エドモンド本田・ダルシム・ラシード・ジェイミーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "0cb873a2-b26e-49fd-bbef-a81a67fba6e1",
+      "old_title": "Season 4 現行変更解説候補 エレナ",
+      "old_publisher": null,
+      "proposed_title": "JP・エレナ・イングリッド・キンバリーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "392671c4-08ef-4de9-bc2a-fc01088c0413",
+      "old_title": "Season 4 現行変更解説候補 ガイル",
+      "old_publisher": null,
+      "proposed_title": "マリーザ・ガイル・リリー・A.K.I.のSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "1a9658eb-87e0-44b1-a7e1-553c9a3626ae",
+      "old_title": "Season 4 現行変更解説候補 キャミィ",
+      "old_publisher": null,
+      "proposed_title": "春麗・キャミィ・マノン・C.ヴァイパーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "3afc9ac8-cd02-47b0-bddb-be720dfa6a4e",
+      "old_title": "Season 4 現行変更解説候補 キンバリー",
+      "old_publisher": null,
+      "proposed_title": "JP・エレナ・イングリッド・キンバリーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "0296815f-8599-47e5-ba8f-951b4757b7b4",
+      "old_title": "Season 4 現行変更解説候補 ケン",
+      "old_publisher": null,
+      "proposed_title": "リュウ・ケン・豪鬼・ルークのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "9fd1440e-09f2-4fb2-86ac-a2889d20662a",
+      "old_title": "Season 4 現行変更解説候補 サガット",
+      "old_publisher": null,
+      "proposed_title": "アレックス・サガット・ジュリ・ザンギエフのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "dfba6362-9cce-4ad5-8651-a70fd106e4c5",
+      "old_title": "Season 4 現行変更解説候補 ザンギエフ",
+      "old_publisher": null,
+      "proposed_title": "アレックス・サガット・ジュリ・ザンギエフのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "70a8c217-52c3-4cc5-9488-7420376598fc",
+      "old_title": "Season 4 現行変更解説候補 ジェイミー",
+      "old_publisher": null,
+      "proposed_title": "ディージェイ・ブランカ・エドモンド本田・ダルシム・ラシード・ジェイミーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "88125317-c149-4718-899c-95ac66f21ea0",
+      "old_title": "Season 4 現行変更解説候補 ジュリ",
+      "old_publisher": null,
+      "proposed_title": "アレックス・サガット・ジュリ・ザンギエフのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "4066ac57-b047-4b85-9b59-b455c8190340",
+      "old_title": "Season 4 現行変更解説候補 ダルシム",
+      "old_publisher": null,
+      "proposed_title": "ディージェイ・ブランカ・エドモンド本田・ダルシム・ラシード・ジェイミーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "5c757419-8e7d-4e99-a235-8c0496644231",
+      "old_title": "Season 4 現行変更解説候補 ディージェイ",
+      "old_publisher": null,
+      "proposed_title": "ディージェイ・ブランカ・エドモンド本田・ダルシム・ラシード・ジェイミーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "987e1547-90ac-4608-8e6c-20760ff83893",
+      "old_title": "Season 4 現行変更解説候補 テリー",
+      "old_publisher": null,
+      "proposed_title": "不知火舞・エド・ベガ・テリーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "f60ba94d-d8f8-4416-961d-c9ac854083dc",
+      "old_title": "Season 4 現行変更解説候補 ブランカ",
+      "old_publisher": null,
+      "proposed_title": "ディージェイ・ブランカ・エドモンド本田・ダルシム・ラシード・ジェイミーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "3d53d4bb-e7cb-4f7a-86b8-e1f6fc388b49",
+      "old_title": "Season 4 現行変更解説候補 ベガ",
+      "old_publisher": null,
+      "proposed_title": "不知火舞・エド・ベガ・テリーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "0f499bfa-9560-4a4d-ba98-563c66fb9206",
+      "old_title": "Season 4 現行変更解説候補 マノン",
+      "old_publisher": null,
+      "proposed_title": "春麗・キャミィ・マノン・C.ヴァイパーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "e4848ec0-e4b4-4fe1-b698-2ba3cbf64f41",
+      "old_title": "Season 4 現行変更解説候補 マリーザ",
+      "old_publisher": null,
+      "proposed_title": "マリーザ・ガイル・リリー・A.K.I.のSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "aca946d5-a62a-471a-b42a-3f97b43294ac",
+      "old_title": "Season 4 現行変更解説候補 ヤスミン",
+      "old_publisher": null,
+      "proposed_title": "ヤスミン公式キャラクターガイド",
+      "proposed_publisher": "Street Fighter (CAPCOM official verified channel)",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Official original character guide; current-change candidate label inaccurate and community classification requires separate reviewed correction",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "c4282ff4-66dc-40d0-8f50-c725e01f1383",
+      "old_title": "Season 4 現行変更解説候補 ラシード",
+      "old_publisher": null,
+      "proposed_title": "ディージェイ・ブランカ・エドモンド本田・ダルシム・ラシード・ジェイミーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "8cc7dbdc-7503-4ebe-8f0a-7b3897a8df78",
+      "old_title": "Season 4 現行変更解説候補 リュウ",
+      "old_publisher": null,
+      "proposed_title": "リュウ・ケン・豪鬼・ルークのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "e96cf3d0-6f03-4838-b16a-1fb3877b74e6",
+      "old_title": "Season 4 現行変更解説候補 リリー",
+      "old_publisher": null,
+      "proposed_title": "マリーザ・ガイル・リリー・A.K.I.のSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "e885d470-16cd-4b7c-950f-d989ba8a6097",
+      "old_title": "Season 4 現行変更解説候補 ルーク",
+      "old_publisher": null,
+      "proposed_title": "リュウ・ケン・豪鬼・ルークのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "b0c2bf68-6c9e-44d1-a350-463a87b9b7c6",
+      "old_title": "Season 4 現行変更解説候補 不知火舞",
+      "old_publisher": null,
+      "proposed_title": "不知火舞・エド・ベガ・テリーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "32adfa13-079f-408b-82b2-593b7f88343d",
+      "old_title": "Season 4 現行変更解説候補 春麗",
+      "old_publisher": null,
+      "proposed_title": "春麗・キャミィ・マノン・C.ヴァイパーのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    },
+    {
+      "source_id": "cff49442-7bba-4807-883d-f51dda19b221",
+      "old_title": "Season 4 現行変更解説候補 豪鬼",
+      "old_publisher": null,
+      "proposed_title": "リュウ・ケン・豪鬼・ルークのSeason 4調整解説",
+      "proposed_publisher": "MC MuraFGC",
+      "proposed_usage": "LINK_ONLY + ATTRIBUTION",
+      "adoption_status": "CHARACTER_RELATIONSHIP=candidate; editorial adoption unresolved; other relationship names do not prove approval",
+      "metadata_only": true,
+      "db_applied": false,
+      "public_scope_applied": false,
+      "note": "Actual group-video title; retain per-character relevance through relation, do not assert adopted/current/gameverified",
+      "title_policy": "Human-readable Japanese descriptive title based on indexed actual video title; actual English title preserved in review record"
+    }
+  ]
+}

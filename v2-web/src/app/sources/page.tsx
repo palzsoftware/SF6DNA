@@ -5,7 +5,7 @@ import { localizeSourceType } from "@/lib/detail-localization";
 
 export const metadata = {
   title: "情報源",
-  description: "SF6DNAで使用する公式・一次情報源の一覧です。",
+  description: "SF6DNAの掲載情報に関連する公式サイト・記事・動画へのリンクをまとめています。",
 };
 
 const RELIABILITY_LABELS: Record<string, string> = {
@@ -33,7 +33,7 @@ export default async function SourcesPage() {
       <section className="hero">
         <p className="eyebrow">SOURCES</p>
         <h1>情報源</h1>
-        <p>掲載情報の出典を一覧で見られます。各攻略ページからも、該当する出典を開けます。</p>
+        <p>掲載情報に関連するサイト・記事・動画へのリンクをまとめています。</p>
       </section>
       <section className="card-grid" aria-label="情報の公開方針">
         <article className="info-panel"><h2>公式情報・一次情報</h2><p>掲載する情報には、できる限り参照先を添えます。</p></article>
