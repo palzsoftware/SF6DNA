@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ComboInputRecipe } from "@/components/combo-input-recipe";
 import { PilotComboCard } from "@/components/pilot-combo-card";
 import { CharacterPlayerCard } from "@/components/character-player-card";
 import { CharacterVideoReferenceCard } from "@/components/character-video-reference-card";
@@ -162,11 +163,14 @@ export function CharacterDetailPilot({
                   <div className={styles.moveCommands} role="cell" aria-label={`${move.name}のコマンド`}>
                     {move.commands?.length ? move.commands.map((command, index) => {
                       const label = commandLabel(command);
-                      return <div key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}><span>{label.scheme}</span><code>{label.input}</code>{command.conditionText && !isInternalMoveNote(command.conditionText) ? <small>{normalizePublicCopy(command.conditionText)}</small> : null}</div>;
+                      return <div key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}><span>{label.scheme}</span><ComboInputRecipe recipe={label.input} />{command.conditionText && !isInternalMoveNote(command.conditionText) ? <small>{normalizePublicCopy(command.conditionText)}</small> : null}</div>;
                     }) : <span className={styles.movePending}>コマンドを確認中</span>}
                   </div>
                   <dl className={styles.moveFrame} role="cell">
                     <div><dt>発生</dt><dd>{valueOrUnknown(move.frame?.startup, "確認中")}</dd></div>
+                    {move.frame?.active !== null && move.frame?.active !== undefined && move.frame.active !== "" ? <div><dt>持続</dt><dd>{move.frame.active}</dd></div> : null}
+                    {move.frame?.recovery !== null && move.frame?.recovery !== undefined && move.frame.recovery !== "" ? <div><dt>硬直</dt><dd>{move.frame.recovery}</dd></div> : null}
+                    {move.frame?.onHit !== null && move.frame?.onHit !== undefined && move.frame.onHit !== "" ? <div><dt>ヒット時</dt><dd>{move.frame.onHit}</dd></div> : null}
                     <div><dt>ガード時</dt><dd>{valueOrUnknown(move.frame?.onBlock, "確認中")}</dd></div>
                     <div><dt>ダメージ</dt><dd>{valueOrUnknown(move.frame?.damage, "確認中")}</dd></div>
                   </dl>

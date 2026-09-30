@@ -22,6 +22,9 @@ export type DevicePreviewBundle = {
     status: string;
     frame: {
       startup: string | null;
+      active?: string | null;
+      recovery?: string | null;
+      onHit?: string | null;
       onBlock: string | null;
       damage: number | null;
       verificationStatus: string | null;
