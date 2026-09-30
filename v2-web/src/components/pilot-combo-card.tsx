@@ -57,6 +57,7 @@ const categoryLabels: Record<string, string> = {
   confirm: "ヒット確認",
   neutral: "立ち回り始動",
   sa: "SA使用",
+  drive_rush: "ドライブラッシュ使用",
 };
 
 function readIds(key: string) {
