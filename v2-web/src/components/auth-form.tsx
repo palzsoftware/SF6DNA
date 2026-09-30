@@ -14,24 +14,34 @@ export function AuthForm({ nextPath = "/" }: { nextPath?: string }) {
   async function login() {
     setLoading(true);
     setMessage(null);
-    const supabase = getSupabaseBrowserClient();
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-    setLoading(false);
-    if (error) {
-      setMessage("ログインできませんでした。メールアドレスとパスワードを確認してください。");
-      return;
+    try {
+      const supabase = getSupabaseBrowserClient();
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) {
+        setMessage("ログインできませんでした。メールアドレスとパスワードを確認してください。");
+        return;
+      }
+      router.replace(nextPath);
+      router.refresh();
+    } catch {
+      setMessage("ログインできませんでした。接続を確認して、もう一度お試しください。");
+    } finally {
+      setLoading(false);
     }
-    router.replace(nextPath);
-    router.refresh();
   }
 
   async function signup() {
     setLoading(true);
     setMessage(null);
-    const supabase = getSupabaseBrowserClient();
-    const { error } = await supabase.auth.signUp({ email, password });
-    setLoading(false);
-    setMessage(error ? "アカウントを作成できませんでした。" : "登録処理を受け付けました。確認メールが必要な場合はメールを確認してください。");
+    try {
+      const supabase = getSupabaseBrowserClient();
+      const { error } = await supabase.auth.signUp({ email, password });
+      setMessage(error ? "アカウントを作成できませんでした。" : "登録処理を受け付けました。確認メールが必要な場合はメールを確認してください。");
+    } catch {
+      setMessage("アカウントを作成できませんでした。接続を確認して、もう一度お試しください。");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (

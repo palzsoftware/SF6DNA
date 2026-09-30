@@ -1,7 +1,10 @@
 import { MyCharacterManager } from "@/components/my-character-manager";
 import { listCharacters } from "@/lib/characters";
 
-export const metadata = { title: "お気に入り" };
+export const metadata = {
+  title: "お気に入り",
+  robots: { index: false, follow: false, noarchive: true },
+};
 
 export default async function FavoritesPage() {
   const characters = await listCharacters();

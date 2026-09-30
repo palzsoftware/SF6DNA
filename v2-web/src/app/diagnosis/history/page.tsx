@@ -1,6 +1,9 @@
 import { DiagnosisHistoryTool } from "@/components/diagnosis-history-tool";
 
-export const metadata = { title: "診断履歴" };
+export const metadata = {
+  title: "診断履歴",
+  robots: { index: false, follow: false, noarchive: true },
+};
 
 export default function DiagnosisHistoryPage() {
   return (

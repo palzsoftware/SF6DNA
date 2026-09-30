@@ -25,7 +25,7 @@ test("shared component receives the adapted profile and renders natural section 
   assert.match(page, /adaptCharacterDetailV2Profile/);
   assert.match(page, /profile=\{pilotProfile\}/);
   for (const text of [
-    "表示できる基本方針はありません。",
+    "基本方針は未掲載です。",
     "技データは未掲載です。",
     "確認済みのコンボはまだありません。",
     "確認済みのセットプレイはまだありません。",

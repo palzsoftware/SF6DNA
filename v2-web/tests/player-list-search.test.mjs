@@ -52,7 +52,7 @@ test("player search retains responsive 375px-safe layout", () => {
 
 test("public player copy avoids tournament claims when no result is published", () => {
   const source = read("src/lib/player-presentation.ts");
-  assert.match(source, /公開プロフィールでリュウとの関係を確認できる/);
+  assert.match(source, /公開プロフィールにリュウとの関係が記載されています/);
   assert.doesNotMatch(source, /大会データで使用実績を確認できる/);
   for (const phrase of ["参照候補。", "参照する競技プレイヤー。"] ) assert.doesNotMatch(source, new RegExp(`return .*${phrase}`));
 });

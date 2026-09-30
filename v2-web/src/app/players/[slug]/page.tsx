@@ -19,7 +19,7 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ s
   const { slug } = await params;
   const [player, videos] = await Promise.all([getPlayerBySlug(slug), listVideos()]);
   if (!player) notFound();
-  const externalLinks = [["YouTubeチャンネルを見る", player.youtubeUrl], ["Twitchを見る", player.twitchUrl], ["Player本人Xを見る", player.xUrl], ["公式・関連サイトを見る", player.websiteUrl]].filter((item): item is [string, string] => Boolean(item[1]));
+  const externalLinks = [["YouTubeチャンネルを見る", player.youtubeUrl], ["Twitchを見る", player.twitchUrl], ["本人のXを見る", player.xUrl], ["Webサイトを見る", player.websiteUrl]].filter((item): item is [string, string] => Boolean(item[1]));
   const relatedVideos = videos.filter((video) => video.players.includes(player.displayName)).slice(0, 8);
   const bio = safePlayerBio(player.bio);
 

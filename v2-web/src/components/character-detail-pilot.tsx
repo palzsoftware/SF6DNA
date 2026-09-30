@@ -129,7 +129,7 @@ export function CharacterDetailPilot({
         <div className={styles.sectionTitle}><p className="eyebrow">基本方針</p><h2 id="pilot-gameplan-heading">基本の勝ち筋</h2>{profile.gameplan.length ? <p>使う技、得意な距離、注意点を順に紹介します。</p> : null}</div>
         {profile.gameplan.length ? <ol className={styles.gameplanSteps}>
           {profile.gameplan.map((step, index) => <li key={step.label}><span>手順 {index + 1}</span><div><h3>{normalizePublicCopy(step.title)}</h3><p>{normalizePublicCopy(step.body)}</p><small>{normalizePublicCopy(step.caution)}</small></div></li>)}
-        </ol> : <div className="empty-state"><p>表示できる基本方針はありません。</p></div>}
+        </ol> : <div className="empty-state"><p>基本方針は未掲載です。</p></div>}
         {sourceSamples.length ? <div className={styles.inlineSources} tabIndex={0} aria-label="基本方針の情報源（横スクロール）">{sourceSamples.map((source) => {
           const presentation = presentSource(source.sourceType, source.publisher, source.url);
           return <a href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}><span>{presentation.badge}</span>{presentation.cta} ↗</a>;

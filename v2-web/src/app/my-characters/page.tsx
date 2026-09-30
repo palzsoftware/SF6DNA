@@ -1,7 +1,10 @@
 import { MyCharacterManager } from "@/components/my-character-manager";
 import { listCharacters } from "@/lib/characters";
 
-export const metadata = { title: "マイキャラ" };
+export const metadata = {
+  title: "マイキャラ",
+  robots: { index: false, follow: false, noarchive: true },
+};
 
 export default async function MyCharactersPage() {
   const characters = await listCharacters();

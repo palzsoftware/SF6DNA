@@ -1,7 +1,10 @@
 import { RankTrackerTool } from "@/components/rank-tracker-tool";
 import { listCharacters } from "@/lib/characters";
 
-export const metadata = { title: "ランク記録" };
+export const metadata = {
+  title: "ランク記録",
+  robots: { index: false, follow: false, noarchive: true },
+};
 
 export default async function RankTrackerPage() {
   const characters = await listCharacters();

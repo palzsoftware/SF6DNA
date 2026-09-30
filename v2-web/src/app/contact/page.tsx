@@ -1,6 +1,7 @@
 import { ContactForm } from "@/components/contact-form";
 import { PUBLIC_CONTACT_EMAIL, PUBLIC_CONTACT_MAILTO } from "@/lib/contact";
 import { getSupabaseAuthServerClient } from "@/lib/supabase/auth-server";
+import styles from "./contact-link.module.css";
 
 export const metadata = {
   title: "お問い合わせ",
@@ -34,7 +35,7 @@ export default async function ContactPage() {
       <section className="info-panel">
         <h2>フォームが利用できない場合</h2>
         <p>フォームを利用できない場合は、メールでも受け付けています。</p>
-        <a className="button-secondary inline-button" href={PUBLIC_CONTACT_MAILTO}>メールで直接問い合わせる（{PUBLIC_CONTACT_EMAIL}）</a>
+        <a className={`button-secondary inline-button ${styles.emailLink}`} href={PUBLIC_CONTACT_MAILTO}>メールで直接問い合わせる（{PUBLIC_CONTACT_EMAIL}）</a>
       </section>
 
       <section>

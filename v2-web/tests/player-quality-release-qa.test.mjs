@@ -28,7 +28,7 @@ test("player image policy only permits allowlisted images and renders approved f
 
 test("source CTA is specific when its source type is known", () => {
   const presentation = read("src/lib/player-presentation.ts");
-  for (const marker of ["Player本人Xを見る", "YouTubeチャンネルを見る", "Twitchを見る", "大会実績を確認する", "Team公式プロフィールを見る"]) assert.match(presentation, new RegExp(marker));
+  for (const marker of ["本人のXを見る", "YouTubeチャンネルを見る", "Twitchを見る", "大会実績を確認する", "チームの公式プロフィールを見る"]) assert.match(presentation, new RegExp(marker));
 });
 
 test("player relations exclude unpublished characters and support tournament results", () => {

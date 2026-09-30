@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PUBLIC_CONTACT_EMAIL, PUBLIC_CONTACT_MAILTO } from "@/lib/contact";
+import styles from "../contact/contact-link.module.css";
 
 export const metadata = {
   title: "フィードバック",
@@ -34,7 +35,7 @@ export default function FeedbackPage() {
         <h2>送信先</h2>
         <p>お問い合わせフォームから送信できます。フォームを利用できない場合は、メールをご利用ください。</p>
         <Link className="button-primary inline-button" href="/contact">問い合わせフォームへ</Link>
-        <a className="button-secondary inline-button" href={PUBLIC_CONTACT_MAILTO}>メールで直接問い合わせる（{PUBLIC_CONTACT_EMAIL}）</a>
+        <a className={`button-secondary inline-button ${styles.emailLink}`} href={PUBLIC_CONTACT_MAILTO}>メールで直接問い合わせる（{PUBLIC_CONTACT_EMAIL}）</a>
       </section>
     </div>
   );

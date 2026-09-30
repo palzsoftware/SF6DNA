@@ -48,7 +48,7 @@ export function DailyTrainingPlanner({ dateKey, request, context }: { dateKey: s
   const plan = buildDailyTrainingPlan({ dateKey, selection });
   const [expandedId, setExpandedId] = useState<string | null>(plan.items[0]?.id ?? null);
   const [completedIds, setCompletedIds] = useState<Set<string>>(() => new Set());
-  const activeExpandedId = plan.items.some((item) => item.id === expandedId) ? expandedId : plan.items[0]?.id ?? null;
+  const activeExpandedId = expandedId === null || plan.items.some((item) => item.id === expandedId) ? expandedId : plan.items[0]?.id ?? null;
   const activeCompletedIds = new Set(plan.items.filter((item) => completedIds.has(item.id)).map((item) => item.id));
   const completeMinutes = activeCompletedIds.size * 5;
   const completed = completeMinutes === plan.totalMinutes;
