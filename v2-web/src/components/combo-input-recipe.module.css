@@ -1,0 +1,9 @@
+.recipe { display: grid; gap: 8px; }
+.tokens { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; line-height: 1.7; }
+.icon { display: inline-flex; align-items: center; justify-content: center; padding: 2px 6px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface-strong); color: var(--text); font-size: .8rem; font-weight: 800; line-height: 1.6; }
+.icon[data-token-type="BUTTON"] { border-radius: 999px; }
+.icon[data-token-type="SYSTEM_ACTION"] { border-style: double; border-width: 3px; }
+.icon[data-token-type="SUPER"] { border-radius: 2px; }
+.icon[data-token-type="DIRECTION"], .icon[data-token-type="SPECIAL_COMMAND"] { font-size: .9rem; }
+.text, .original { white-space: pre-wrap; overflow-wrap: anywhere; }
+.original { font-size: .75rem; line-height: 1.65; color: var(--copy-muted, var(--muted)); }

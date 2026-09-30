@@ -1,0 +1,759 @@
+{
+  "audit_date": "2026-09-30",
+  "rc_base": "def0ab77",
+  "counts": {
+    "TOTAL": 30,
+    "PUBLIC_OK": 0,
+    "PUBLIC_WITH_ATTRIBUTION": 0,
+    "INTERNAL_REFERENCE_ONLY": 0,
+    "NEEDS_REVIEW": 30,
+    "REJECT": 0
+  },
+  "scope": "Read-only Source30;8 unique URLs; no DB changes",
+  "policy_evidence": [
+    {
+      "url": "https://www.youtube.com/static?template=terms"
+    },
+    {
+      "url": "https://support.google.com/youtube/answer/2797468?hl=en"
+    }
+  ],
+  "sources": [
+    {
+      "SOURCE_ID": "7cfc2619-8f21-4bf1-9dca-bf1f2dbd7403",
+      "TITLE": "Season 4 現行変更解説候補 A.K.I.",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "e4f109c5-0438-44bb-9ef9-02d313f33c56",
+      "TITLE": "Season 4 現行変更解説候補 C.ヴァイパー",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "9b03a1a6-c8e9-46ae-aebe-6007f85227ea",
+      "TITLE": "Season 4 現行変更解説候補 アレックス",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "b7dcb40f-2745-4bf9-864a-5d95ae8ffa79",
+      "TITLE": "Season 4 現行変更解説候補 イングリッド",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=LbP388dn_D0",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "aaedce01-af16-47d3-ab3f-08c1bee4d123",
+      "TITLE": "Season 4 現行変更解説候補 エド",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "3cbc0e50-20f8-4664-86cd-8924b90f94e9",
+      "TITLE": "Season 4 現行変更解説候補 エドモンド本田",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      }
+    },
+    {
+      "SOURCE_ID": "0cb873a2-b26e-49fd-bbef-a81a67fba6e1",
+      "TITLE": "Season 4 現行変更解説候補 エレナ",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=LbP388dn_D0",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "392671c4-08ef-4de9-bc2a-fc01088c0413",
+      "TITLE": "Season 4 現行変更解説候補 ガイル",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 19,
+        "supporting": 12
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 6,
+        "training": 12
+      }
+    },
+    {
+      "SOURCE_ID": "1a9658eb-87e0-44b1-a7e1-553c9a3626ae",
+      "TITLE": "Season 4 現行変更解説候補 キャミィ",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "3afc9ac8-cd02-47b0-bddb-be720dfa6a4e",
+      "TITLE": "Season 4 現行変更解説候補 キンバリー",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=LbP388dn_D0",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 19,
+        "supporting": 12
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 6,
+        "training": 12
+      }
+    },
+    {
+      "SOURCE_ID": "0296815f-8599-47e5-ba8f-951b4757b7b4",
+      "TITLE": "Season 4 現行変更解説候補 ケン",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "9fd1440e-09f2-4fb2-86ac-a2889d20662a",
+      "TITLE": "Season 4 現行変更解説候補 サガット",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "dfba6362-9cce-4ad5-8651-a70fd106e4c5",
+      "TITLE": "Season 4 現行変更解説候補 ザンギエフ",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      }
+    },
+    {
+      "SOURCE_ID": "70a8c217-52c3-4cc5-9488-7420376598fc",
+      "TITLE": "Season 4 現行変更解説候補 ジェイミー",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 19,
+        "supporting": 12
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 6,
+        "training": 12
+      }
+    },
+    {
+      "SOURCE_ID": "88125317-c149-4718-899c-95ac66f21ea0",
+      "TITLE": "Season 4 現行変更解説候補 ジュリ",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "4066ac57-b047-4b85-9b59-b455c8190340",
+      "TITLE": "Season 4 現行変更解説候補 ダルシム",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      }
+    },
+    {
+      "SOURCE_ID": "5c757419-8e7d-4e99-a235-8c0496644231",
+      "TITLE": "Season 4 現行変更解説候補 ディージェイ",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      }
+    },
+    {
+      "SOURCE_ID": "987e1547-90ac-4608-8e6c-20760ff83893",
+      "TITLE": "Season 4 現行変更解説候補 テリー",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "f60ba94d-d8f8-4416-961d-c9ac854083dc",
+      "TITLE": "Season 4 現行変更解説候補 ブランカ",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      }
+    },
+    {
+      "SOURCE_ID": "3d53d4bb-e7cb-4f7a-86b8-e1f6fc388b49",
+      "TITLE": "Season 4 現行変更解説候補 ベガ",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "0f499bfa-9560-4a4d-ba98-563c66fb9206",
+      "TITLE": "Season 4 現行変更解説候補 マノン",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      }
+    },
+    {
+      "SOURCE_ID": "e4848ec0-e4b4-4fe1-b698-2ba3cbf64f41",
+      "TITLE": "Season 4 現行変更解説候補 マリーザ",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      }
+    },
+    {
+      "SOURCE_ID": "aca946d5-a62a-471a-b42a-3f97b43294ac",
+      "TITLE": "Season 4 現行変更解説候補 ヤスミン",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=M7NfqAcU7KI",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "c4282ff4-66dc-40d0-8f50-c725e01f1383",
+      "TITLE": "Season 4 現行変更解説候補 ラシード",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "8cc7dbdc-7503-4ebe-8f0a-7b3897a8df78",
+      "TITLE": "Season 4 現行変更解説候補 リュウ",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "e96cf3d0-6f03-4838-b16a-1fb3877b74e6",
+      "TITLE": "Season 4 現行変更解説候補 リリー",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1,
+        "corroborating": 119,
+        "supporting": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "combo": 10,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 42,
+        "training": 47,
+        "character_guide_section": 9
+      }
+    },
+    {
+      "SOURCE_ID": "e885d470-16cd-4b7c-950f-d989ba8a6097",
+      "TITLE": "Season 4 現行変更解説候補 ルーク",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "b0c2bf68-6c9e-44d1-a350-463a87b9b7c6",
+      "TITLE": "Season 4 現行変更解説候補 不知火舞",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    },
+    {
+      "SOURCE_ID": "32adfa13-079f-408b-82b2-593b7f88343d",
+      "TITLE": "Season 4 現行変更解説候補 春麗",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 19,
+        "supporting": 12
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1,
+        "setup": 6,
+        "sequence": 6,
+        "counter": 6,
+        "training": 12
+      }
+    },
+    {
+      "SOURCE_ID": "cff49442-7bba-4807-883d-f51dda19b221",
+      "TITLE": "Season 4 現行変更解説候補 豪鬼",
+      "PUBLISHER": null,
+      "URL": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+      "SOURCE_TYPE": "community_video",
+      "RELIABILITY": "community",
+      "PUBLIC_USE": "Proposed: credited outbound reference after actual uploader/title/patch relevance confirmed; content copying/download/rehost not authorized.",
+      "ATTRIBUTION": "Actual video title + verified uploader/publisher + original URL. CC BY reuse requires separate actual license evidence, none verified.",
+      "LEGAL_RISK": "Permission for independent content reuse unverified; link publication distinct. No infringement/private leak finding.",
+      "STATUS": "NEEDS_REVIEW",
+      "TRAIT_REFERENCE_COUNT": 0,
+      "CHARACTER_RELATIONSHIP": "candidate",
+      "RELATIONSHIP_COUNTS": {
+        "candidate": 1
+      },
+      "ENTITY_TYPE_COUNTS": {
+        "character": 1
+      }
+    }
+  ],
+  "evidence_by_url": [
+    {
+      "video_id": "T9PW2f1gH0A",
+      "title": "Marisa, Guile, Lily and AKI SF6 Season 4 balance changes explained",
+      "publisher": "MC MuraFGC"
+    },
+    {
+      "video_id": "XAWQa1dZCyc",
+      "title": "Chun-li, Cammy, Manon and C.Viper SF6 Season 4 balance changes explained",
+      "publisher": "MC MuraFGC"
+    },
+    {
+      "video_id": "XfdfD7zH6kE",
+      "title": null,
+      "publisher": null,
+      "gap": "ExactURL search unverified; directfetch throttled, not removal evidence."
+    },
+    {
+      "video_id": "LbP388dn_D0",
+      "title": "JP, Elena, Ingrid and Kimberly SF6 Season 4 balance changes explained",
+      "publisher": "MC MuraFGC"
+    },
+    {
+      "video_id": "eW0Vyv6Pl0M",
+      "title": "Mai, ED, Bison and Terry SF6 Season 4 balance changes explained",
+      "publisher": null
+    },
+    {
+      "video_id": "1F6pj4PbyXM",
+      "title": "Deejay, Blanka, Honda, Sim, Rashid and Jamie SF6 Season 4 balance changes explained",
+      "publisher": "MC MuraFGC inferred by matching channel video title",
+      "gap": "Searchdescription Alex/Sagat/Juri/Zangief conflicts with video title six characters; inspect direct."
+    },
+    {
+      "video_id": "NQGTS4EB3kM",
+      "title": "Ryu, Ken, Akuma and Luke SF6 Season 4 balance changes explained",
+      "publisher": "MC MuraFGC"
+    },
+    {
+      "video_id": "M7NfqAcU7KI",
+      "title": "Street Fighter 6 Character Guide | Yasmine",
+      "publisher": "Official StreetFighter account links exactURL; uploader itself not fetched",
+      "gap": "Characterguide unlike DBlabel change commentary; type/community needs review not autochange."
+    }
+  ],
+  "limitations": [
+    "All30 publisherNULL and all30 character relationships candidate; not enough adoption/attribution evidence to mark release-ready.",
+    "8 records also119corroborating+1supporting,4 otherrecords additional18candidate+12supporting; candidate title doesnot meanunused.",
+    "Watchfetch8 throttled; exactmetadata7 found, not video content inspection.",
+    "No per-video license verified; no copies/downloads/rehosts performed.",
+    "No DB/source/public filter modifications."
+  ]
+}

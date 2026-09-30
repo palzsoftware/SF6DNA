@@ -22,16 +22,16 @@ test("local migrations mirror the applied diagnosis idempotency changes", () => 
   assert.doesNotMatch(aclMigration, /grant\s+update/i);
 });
 
-test("the diagnosis client persists one request id before the RPC and clears it only after success", () => {
+test("the diagnosis client persists one request id before the RPC and retains it until reset", () => {
   assert.match(runner, /crypto\.randomUUID\(\)/);
   assert.match(runner, /stored\?\.fingerprint === fingerprint\s*\? stored\s*:\s*\{ requestId: createRequestId\(\), fingerprint \}/);
   assert.match(runner, /p_request_id: pending\.requestId/);
 
   const persistIndex = runner.indexOf("window.localStorage.setItem(storageKey, JSON.stringify(pending))");
   const rpcIndex = runner.indexOf('supabase.rpc("save_diagnosis_result_with_answers"');
-  const clearIndex = runner.indexOf("window.localStorage.removeItem(storageKey)", rpcIndex);
   assert.ok(persistIndex >= 0 && persistIndex < rpcIndex);
-  assert.ok(rpcIndex < clearIndex);
+  assert.doesNotMatch(runner.slice(rpcIndex, runner.indexOf("function reset()", rpcIndex)), /localStorage\.removeItem\(storageKey\)/);
+  assert.match(runner.slice(runner.indexOf("function reset()")), /localStorage\.removeItem\(saveRequestKey\(diagnosis\.slug\)\)/);
   assert.match(runner, /onRetry=\{\(\) => void saveCompletedDiagnosis\(\)\}/);
 });
 

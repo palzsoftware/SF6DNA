@@ -1,0 +1,294 @@
+[
+  {
+    "PAGE": "/about",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/auth",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/changelog",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/characters/[slug]/[section]",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/characters/[slug]",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [
+      "CharacterDetailPilot / PilotComboCard / ComboInputRecipe"
+    ],
+    "CURRENT_BATCH_QA": "REAUDIT_TARGETED",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/characters",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/compare",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/contact",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/diagnosis/[slug]",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [
+      "DiagnosisRunner save identity"
+    ],
+    "CURRENT_BATCH_QA": "REAUDIT_TARGETED",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/diagnosis/history",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/diagnosis",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/disclaimer",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/faq",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/favorites",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/feedback",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/glossary/[slug]",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/improve",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/matchup-card",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/me/training",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/my-characters",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/players/[slug]",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/players",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/privacy",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/rank-tracker",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/search",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/sources",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/terms",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/tools",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/tournaments/[slug]",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/videos/[slug]",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  },
+  {
+    "PAGE": "/videos",
+    "LAST_AUDITED_SHA": "def0ab77be848b733d7da976e1778232b7c23ab4",
+    "AUDIT_DATE": "2026-09-30",
+    "RESULT": "PREVIOUS_PREVIEW_SMOKE_PASS; DEVICE_PENDING",
+    "AFFECTED_COMPONENTS": [],
+    "CURRENT_BATCH_QA": "REUSED_UNCHANGED_HTTP_DOM_EVIDENCE",
+    "LIMIT": "Previous representative URLs; no new claim of all dynamic instances, gameplay, real auth/save or device PASS"
+  }
+]

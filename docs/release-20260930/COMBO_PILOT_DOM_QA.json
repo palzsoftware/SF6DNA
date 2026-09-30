@@ -1,0 +1,26 @@
+{
+  "scope": "Isolated React SSR of actual 15 recipe snapshots + synthetic enum cases; existing card and recipe CSS; no new application route, gameplay/publication eligibility not verified",
+  "results": [
+    {
+      "theme": "dark",
+      "innerWidth": 375,
+      "scrollWidth": 375,
+      "cards": 15,
+      "originalRecipes": 16,
+      "icons": 171,
+      "unlabeledIcons": 0,
+      "overflows": []
+    },
+    {
+      "theme": "light",
+      "innerWidth": 375,
+      "scrollWidth": 375,
+      "cards": 15,
+      "originalRecipes": 16,
+      "icons": 171,
+      "unlabeledIcons": 0,
+      "overflows": []
+    }
+  ],
+  "pageErrors": []
+}

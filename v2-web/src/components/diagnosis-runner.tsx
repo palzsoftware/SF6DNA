@@ -201,7 +201,8 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
       if (error) throw error;
 
       if (typeof data !== "string") throw new Error("診断結果IDを確認できませんでした。");
-      window.localStorage.removeItem(storageKey);
+      // The completed draft survives reloads. Keep its request identity until
+      // reset or a different payload, so revisiting this result is idempotent.
       setDatabaseSaveStatus("saved");
       setDatabaseSaveMessage(null);
     } catch (error) {

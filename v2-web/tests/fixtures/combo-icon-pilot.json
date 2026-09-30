@@ -1,0 +1,95 @@
+{
+  "provenance": "Existing read-only DB snapshot, 2026-09-30; parser fixtures only, no assertion of combo gameplay or publication eligibility.",
+  "cases": [
+    {
+      "character": "luke",
+      "id": "da8dac9f-e65e-4c16-a8f4-637318d73a66",
+      "recipe": "2MK or 2MP > CDR > 2MP > 2HP > 214LP(Perfect) > 236MP > 623HP",
+      "snapshotVerificationStatus": "reviewed"
+    },
+    {
+      "character": "luke",
+      "id": "54185bc2-8bde-4c82-be10-601f69454434",
+      "recipe": "5HP > 214LP(Perfect) > 236MP > 623HP",
+      "snapshotVerificationStatus": "reviewed"
+    },
+    {
+      "character": "luke",
+      "id": "11337af8-4a19-4688-ac22-826f05ebd11e",
+      "recipe": "DR > 6MP > 2HP > 214MP(Perfect) > 214LP(Perfect) > 236K > P",
+      "snapshotVerificationStatus": "reviewed"
+    },
+    {
+      "character": "luke",
+      "id": "f321891f-45e0-4e35-8e4c-388818b80675",
+      "recipe": "2LK > 2LP > 214PP > 214MP > SA3",
+      "snapshotVerificationStatus": "reviewed"
+    },
+    {
+      "character": "luke",
+      "id": "537e6839-69fd-443d-a87e-be12601311e6",
+      "recipe": "DI(PC) > 2HP > 214MP(Perfect) > 236K > P",
+      "snapshotVerificationStatus": "reviewed"
+    },
+    {
+      "character": "jp",
+      "id": "f4b028b9-3137-459a-9339-003bde34c9ed",
+      "recipe": "5LP > 5LP > 5LP > 弱ストリボーグ > SA3 ザプリェット",
+      "snapshotVerificationStatus": "reviewed"
+    },
+    {
+      "character": "jp",
+      "id": "ad31eb7f-5dc3-4a8a-a02c-887ae2cb869d",
+      "recipe": "5HK(PC) > 6HK > 強ストリボーグ > 微歩き5HP > ODトルバラン > トリグラフ > 弱ストリボーグ > SA3",
+      "snapshotVerificationStatus": "reviewed"
+    },
+    {
+      "character": "jp",
+      "id": "d1126690-13fd-4c6f-a811-540e2acfb188",
+      "recipe": "DI(clean) > 前歩き > 5HP > 強ストリボーグ > 中トルバラン > トリグラフ",
+      "snapshotVerificationStatus": "reviewed"
+    },
+    {
+      "character": "jp",
+      "id": "797eda8e-1075-4547-830e-11d4037e1d8c",
+      "recipe": "DR > 5MK > 5MP > 中ストリボーグ > SA3 ザプリェット",
+      "snapshotVerificationStatus": "reviewed"
+    },
+    {
+      "character": "jp",
+      "id": "31a791ff-97a2-4160-89b2-3dd78fcb9d68",
+      "recipe": "5LP > 5LP > 5LP > CDR > 5LP > 5MP > 派生MP > SA1 チェルノボーグ",
+      "snapshotVerificationStatus": "reviewed"
+    },
+    {
+      "character": "ken",
+      "id": "07ae236f-0095-40df-9a59-c03f87c8c5a6",
+      "recipe": "2L x2 > Assist L > manual H昇龍拳",
+      "snapshotVerificationStatus": "unverified"
+    },
+    {
+      "character": "ken",
+      "id": "be1f206d-1858-4bca-8223-2ff670f77bab",
+      "recipe": "2MK > CDR 2HP > 奮迅急停止 > 2MP > L竜巻旋風脚 > M昇龍拳",
+      "snapshotVerificationStatus": "unverified"
+    },
+    {
+      "character": "ken",
+      "id": "7b0095e2-9e0e-467c-8f7a-5dca178d8568",
+      "recipe": "DI clean hit > 5MP~5HP > 奮迅脚 > 奮迅竜巻旋風脚",
+      "snapshotVerificationStatus": "unverified"
+    },
+    {
+      "character": "ken",
+      "id": "616fbae7-be2c-4d1d-a909-c4035cc9dd26",
+      "recipe": "DI wall splat > 5HP > H迅雷脚 > H派生 > M昇龍拳",
+      "snapshotVerificationStatus": "unverified"
+    },
+    {
+      "character": "ken",
+      "id": "adc25a73-7ed7-40e8-98f0-26f4b1492cd2",
+      "recipe": "DI stun > j.HP > 2HP > CDR 2HP > 5MP~5HP > 奮迅脚 > 奮迅龍尾脚 > SA3",
+      "snapshotVerificationStatus": "unverified"
+    }
+  ]
+}
