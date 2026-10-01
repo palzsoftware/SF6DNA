@@ -24,13 +24,17 @@ function environment() {
   const storage = new Map([[draftKey, JSON.stringify({ q1: "a1" })]]);
   const rows = new Map(); const calls = []; const errors = [];
   let counter = 0; let user = "fixture-user"; let failNext = false; let commitThenFail = false;
+  let authError = null; let authThrow = null;
   const localStorage = {
     getItem: key => storage.get(key) ?? null,
     setItem: (key, value) => storage.set(key, value),
     removeItem: key => storage.delete(key),
   };
   const client = {
-    auth: { getUser: async () => ({ data: { user: user ? { id: user } : null }, error: null }) },
+    auth: { getUser: async () => {
+      if (authThrow) throw authThrow;
+      return { data: { user: user ? { id: user } : null }, error: authError };
+    } },
     rpc: async (name, payload) => {
       assert.equal(name, "save_diagnosis_result_with_answers");
       calls.push({ user, ...payload });
@@ -114,10 +118,13 @@ function environment() {
       chooseFirst: () => findNode(node => node.type === "button" && node.props?.className?.startsWith("diagnosis-option")).props.onClick(),
       finish: () => findNode(node => node.type === "button" && node.props?.children === "結果を見る").props.onClick(),
       getStatus: () => findProp("status"),
+      getMessage: () => findProp("message"),
     };
   }
   return { storage, rows, calls, errors, mount,
     setUser: value => { user = value; },
+    setAuthError: value => { authError = value; },
+    setAuthThrow: value => { authThrow = value; },
     failNext: () => { failNext = true; },
     loseNextResponse: () => { commitThenFail = true; },
   };
@@ -184,4 +191,35 @@ test("account switch keeps uniqueness scoped to each user", async () => {
   env.setUser("second-fixture-user"); await env.mount().settle();
   assert.equal(env.rows.size, 2);
   env.setUser("fixture-user"); await env.mount().settle(); assert.equal(env.rows.size, 2);
+});
+
+test("a missing session is a normal guest without an account save error", async () => {
+  const env = environment(); env.setUser(null);
+  env.setAuthError(Object.assign(Error("missing session fixture"), { name: "AuthSessionMissingError" }));
+  const view = env.mount(); await view.settle();
+  assert.equal(view.getStatus(), "idle");
+  assert.equal(env.calls.length, 0); assert.equal(env.errors.length, 0);
+  assert.equal(env.storage.has(requestKey), false);
+});
+
+test("an unexpected auth error stays visible and does not become a guest", async () => {
+  const env = environment(); env.setUser(null);
+  env.setAuthError(Object.assign(Error("unexpected auth fixture"), { name: "AuthApiError" }));
+  const view = env.mount(); await view.settle();
+  assert.equal(view.getStatus(), "failed");
+  assert.match(view.getMessage(), /アカウントに保存できませんでした/);
+  assert.equal(env.calls.length, 0); assert.equal(env.errors.length, 1);
+  env.setAuthError(null); env.setUser("fixture-user");
+  await view.retry(); await view.settle();
+  assert.equal(view.getStatus(), "saved"); assert.equal(env.rows.size, 1);
+});
+
+test("a network exception during auth check remains retryable without an RPC", async () => {
+  const env = environment(); env.setAuthThrow(TypeError("network fixture"));
+  const view = env.mount(); await view.settle();
+  assert.equal(view.getStatus(), "failed");
+  assert.match(view.getMessage(), /もう一度お試しください/);
+  assert.equal(env.calls.length, 0); assert.equal(env.storage.has(requestKey), false);
+  env.setAuthThrow(null); await view.retry(); await view.settle();
+  assert.equal(view.getStatus(), "saved"); assert.equal(env.rows.size, 1);
 });
