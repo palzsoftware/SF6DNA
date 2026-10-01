@@ -5,73 +5,47 @@ import Link from "next/link";
 import { listCharacters } from "@/lib/characters";
 import { pickRandomHeroCharacters } from "@/lib/home-hero";
 
-const dailyActions = [
+const todayActions = [
   {
-    phase: "DISCOVER",
-    accent: "blue",
-    title: "キャラクターを調べる",
-    description: "各キャラクターの基本情報や、関連するプレイヤー・動画を探す。",
-    href: "/characters",
+    phase: "TRAIN",
+    accent: "orange",
+    title: "今日の15分練習",
+    description: "3つの5分メニューで、今日取り組む課題をすぐ決める。",
+    href: "/me/training",
   },
   {
     phase: "DIAGNOSIS",
     accent: "violet",
-    title: "診断から自分を知る",
-    description: "プレイ傾向やキャラクター適性を診断する。",
+    title: "自分の課題を診断する",
+    description: "プレイ傾向や上達課題を整理して、次の練習につなげる。",
     href: "/diagnosis",
   },
   {
-    phase: "SEARCH",
-    accent: "teal",
-    title: "SF6の情報を探す",
-    description: "キャラクター・プレイヤー・動画を横断して探す。",
-    href: "/search",
-  },
-  {
-    phase: "STUDY",
-    accent: "orange",
-    title: "プレイヤーや動画を見る",
-    description: "参考になるプレイヤーや動画を探す。",
-    href: "/players",
+    phase: "CHARACTER",
+    accent: "blue",
+    title: "キャラクターを調べる",
+    description: "キャラクターの特徴、技、関連プレイヤーや動画を見る。",
+    href: "/characters",
   },
 ] as const;
 
-const pillars = [
-  {
-    icon: "01",
-    title: "診断",
-    description: "プレイ傾向や相性のよいキャラクターを診断する。",
-    href: "/diagnosis",
-    featured: false,
-  },
-  {
-    icon: "02",
-    title: "キャラクター情報",
-    description: "31キャラクターの基本情報を調べる。",
-    href: "/characters",
-    featured: true,
-  },
-  {
-    icon: "03",
-    title: "プレイヤー情報",
-    description: "プロ・強豪・キャラクター職人などを探す。",
-    href: "/players",
-    featured: false,
-  },
-  {
-    icon: "04",
-    title: "動画",
-    description: "キャラクターやプレイヤーに関連する動画を探す。",
-    href: "/videos",
-    featured: false,
-  },
-];
+const resumeLinks = [
+  ["SAVE", "お気に入り", "保存したキャラクターや動画へ戻る", "/favorites"],
+  ["MY", "マイキャラ", "使用キャラクターの設定を見る", "/my-characters"],
+  ["HIST", "診断履歴", "これまでの診断結果を振り返る", "/diagnosis/history"],
+] as const;
 
-const subTools = [
-  ["CH", "キャラクター", "/characters"],
-  ["DG", "診断", "/diagnosis"],
-  ["PL", "プレイヤー", "/players"],
-  ["VD", "動画", "/videos"],
+const browseLinks = [
+  ["SEARCH", "検索", "キャラクター・プレイヤー・動画を横断検索", "/search"],
+  ["PLAYER", "プレイヤー", "参考になるプレイヤーを探す", "/players"],
+  ["VIDEO", "動画", "攻略・対戦動画を探す", "/videos"],
+  ["SOURCE", "情報源", "掲載情報の出典と方針を見る", "/sources"],
+] as const;
+
+const recentUpdates = [
+  ["2026-10-01", "リリース前QAを強化", "Lukeの入力表示と認証エラー経路の回帰確認を追加しました。"],
+  ["2026-10-01", "情報源の表示を整理", "公式技表など、リンク先の内容が分かる案内へ調整しました。"],
+  ["2026-09-30", "コンボ入力表示を改善", "コンボの原文を保持しながら、入力を読み取りやすくする共通表示を整えました。"],
 ] as const;
 
 export default async function HomePage() {
@@ -84,11 +58,11 @@ export default async function HomePage() {
         <div className="home-hero__copy">
           <p className="eyebrow">STREET FIGHTER 6 / PLAYER TOOLKIT</p>
           <h1>次の対戦で、<span>何を試そう？</span></h1>
-          <p>プレイの課題を診断で整理して、今日の15分練習につなげましょう。キャラクターや動画も探せます。</p>
+          <p>課題を整理して、今日やることを決める。必要なキャラクター情報や動画も、そのまま探せます。</p>
           <div className="home-hero__actions">
-            <Link className="button-primary" href="/diagnosis">診断を始める</Link>
+            <Link className="button-primary" href="/me/training">今日の15分練習を始める</Link>
+            <Link className="button-secondary" href="/diagnosis">診断する</Link>
             <Link className="button-secondary" href="/characters">キャラクターを見る</Link>
-            <Link className="button-secondary" href="/me/training">今日の15分練習を見る</Link>
           </div>
         </div>
         <div className="home-hero__visual" aria-label="SF6キャラクター">
@@ -111,29 +85,13 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="home-command-center" aria-label="すぐ使う">
-        <div className="home-command-search">
-          <strong>キャラクター・プレイヤー・動画を検索</strong>
-          <form className="search-form" action="/search">
-            <input name="q" placeholder="名前やキーワードを入力" aria-label="キャラクター・プレイヤー・動画を検索" />
-            <button type="submit">検索</button>
-          </form>
-        </div>
-      </section>
-
-      <section className="home-metric-strip" aria-label="SF6DNAで見られる情報">
-        <div className="home-metric"><strong>キャラクター</strong><span>{characters.length}キャラを掲載</span></div>
-        <div className="home-metric"><strong>横断検索</strong><span>キャラクター・プレイヤー・動画をまとめて検索</span></div>
-        <div className="home-metric"><strong>掲載情報</strong><span>キャラクター・プレイヤー・動画を掲載</span></div>
-      </section>
-
-      <section className="daily-section" aria-labelledby="daily-title">
+      <section className="daily-section" aria-labelledby="today-title">
         <div className="section-heading">
-          <h2 id="daily-title">目的から選ぶ</h2>
-          <p>今日やりたいことから選んでください。</p>
+          <h2 id="today-title">今日やること</h2>
+          <p>迷ったら、ここから1つ選べば始められます。</p>
         </div>
         <div className="daily-grid">
-          {dailyActions.map((action) => (
+          {todayActions.map((action) => (
             <Link className="daily-card home-purpose-card" data-accent={action.accent} href={action.href} key={action.phase}>
               <span className="daily-card__icon-slot" aria-hidden="true">{action.phase.slice(0, 2)}</span>
               <span className="daily-card__phase">{action.phase}</span>
@@ -145,33 +103,60 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="main-content-title">
-        <div className="section-heading">
-          <h2 id="main-content-title">SF6DNAでできること</h2>
-          <p>
-            {characters.length
-              ? `${characters.length}キャラクターの基本情報や、関連するプレイヤー・動画を探せます。`
-              : "キャラクターの基本情報やプレイヤー・動画を探せます。"}
-          </p>
-        </div>
-        <div className="home-core-grid">
-          {pillars.map((pillar) => (
-            <Link className={`home-core-card${pillar.featured ? " home-core-card--featured" : ""}`} data-icon={pillar.icon} href={pillar.href} key={pillar.title}>
-              <div><h3>{pillar.title}</h3><p>{pillar.description}</p></div>
-              <span>{pillar.title}を見る →</span>
-            </Link>
-          ))}
+      <section className="home-command-center" aria-label="SF6DNAを検索">
+        <div className="home-command-search">
+          <strong>キャラクター・プレイヤー・動画を検索</strong>
+          <form className="search-form" action="/search">
+            <input name="q" placeholder="例：JP / 翔 / SA2" aria-label="キャラクター・プレイヤー・動画を検索" />
+            <button type="submit">検索</button>
+          </form>
         </div>
       </section>
 
-      <section>
-        <div className="section-heading"><h2>SF6DNAで見られる情報</h2><p>探したい内容から選べます。</p></div>
-        <nav className="home-public-nav" aria-label="SF6DNAで見られる情報">
-          {subTools.map(([icon, title, href]) => (
+      <section aria-labelledby="resume-title">
+        <div className="section-heading">
+          <h2 id="resume-title">続きから</h2>
+          <p>保存したものや、自分用の情報へすぐ戻れます。</p>
+        </div>
+        <nav className="home-public-nav" aria-label="続きから">
+          {resumeLinks.map(([icon, title, description, href]) => (
             <Link className="home-public-link" href={href} key={href}>
               <span className="home-public-link__icon" aria-hidden="true">{icon}</span>
               <strong>{title}</strong>
-              <span>見る →</span>
+              <span>{description} →</span>
+            </Link>
+          ))}
+        </nav>
+      </section>
+
+      <section aria-labelledby="updates-title">
+        <div className="section-heading">
+          <h2 id="updates-title">最近の更新</h2>
+          <p>リリース前の主な改善を3件だけ表示しています。</p>
+        </div>
+        <div className="guide-stack">
+          {recentUpdates.map(([date, title, body]) => (
+            <article className="info-panel" key={`${date}-${title}`}>
+              <p className="eyebrow">{date}</p>
+              <h3>{title}</h3>
+              <p>{body}</p>
+            </article>
+          ))}
+        </div>
+        <Link className="inline-button button-secondary" href="/changelog">更新履歴をすべて見る</Link>
+      </section>
+
+      <section aria-labelledby="browse-title">
+        <div className="section-heading">
+          <h2 id="browse-title">情報を探す</h2>
+          <p>{characters.length ? `${characters.length}キャラクターの情報や、プレイヤー・動画・情報源を探せます。` : "キャラクター、プレイヤー、動画、情報源を探せます。"}</p>
+        </div>
+        <nav className="home-public-nav" aria-label="情報を探す">
+          {browseLinks.map(([icon, title, description, href]) => (
+            <Link className="home-public-link" href={href} key={href}>
+              <span className="home-public-link__icon" aria-hidden="true">{icon}</span>
+              <strong>{title}</strong>
+              <span>{description} →</span>
             </Link>
           ))}
         </nav>

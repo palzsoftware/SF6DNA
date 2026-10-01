@@ -65,6 +65,7 @@ export function VideoLibrary({ videos, lockedCharacter, initialPlayer }: { video
   const [visible, setVisible] = useState(12);
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
   const [watched, setWatched] = useState<Set<string>>(new Set());
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   function refreshPreferences() {
     setFavorites(readVideoPreference(VIDEO_FAVORITES_KEY));
@@ -97,6 +98,11 @@ export function VideoLibrary({ videos, lockedCharacter, initialPlayer }: { video
     () => sortVideos(filterVideos(videos, effectiveFilters, favorites, watched), sort, favorites, watched),
     [videos, effectiveFilters, favorites, watched, sort],
   );
+  const activeFilterCount = useMemo(() => (
+    filters.events.size + filters.players.size + (lockedCharacter ? 0 : filters.characters.size) +
+    filters.controls.size + filters.categories.size + filters.levels.size +
+    filters.languages.size + filters.modes.size + filters.preference.size
+  ), [filters, lockedCharacter]);
 
   function toggle(group: keyof Pick<VideoFilters, "events" | "players" | "characters" | "controls" | "categories" | "levels" | "languages" | "modes" | "preference">, value: string) {
     setFilters((current) => {
@@ -120,7 +126,21 @@ export function VideoLibrary({ videos, lockedCharacter, initialPlayer }: { video
             <option value="longest" disabled={!videos.some((video) => video.durationSeconds !== null)}>長い順</option>
           </select></label>
         </div>
-        <div className={styles.filters}>
+        <button
+          className={styles.filterToggle}
+          type="button"
+          aria-expanded={filtersOpen}
+          aria-controls="video-filter-panel"
+          onClick={() => setFiltersOpen((open) => !open)}
+        >
+          絞り込み{activeFilterCount ? `（${activeFilterCount}）` : ""}
+          <span aria-hidden="true">{filtersOpen ? "閉じる −" : "開く ＋"}</span>
+        </button>
+        {activeFilterCount ? <div className={styles.activeSummary} aria-live="polite">
+          <span>{activeFilterCount}件の条件を選択中</span>
+          <button type="button" onClick={() => { setFilters(EMPTY_FILTERS); setVisible(12); }}>すべて解除</button>
+        </div> : null}
+        <div className={`${styles.filters} ${filtersOpen ? styles.filtersOpen : ""}`} id="video-filter-panel">
           <FilterGroup title="大会・イベント" values={options.events} selected={filters.events} onToggle={(value) => toggle("events", value)} unavailable="大会・イベント情報は順次追加予定です。" />
           <FilterGroup title="プレイヤー（1P / 2P）" values={options.players} selected={filters.players} onToggle={(value) => toggle("players", value)} />
           {lockedCharacter ? (
