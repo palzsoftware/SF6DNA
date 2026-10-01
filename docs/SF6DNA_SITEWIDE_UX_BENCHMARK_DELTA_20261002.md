@@ -84,8 +84,10 @@ This link does not assert that the Daily15 plan is character-specific. It delega
 - `npm run test:release-gates`: PASS, 14 passed / 0 failed.
 - `npm run build`: PASS. Next.js printed its existing `metadataBase` fallback warning because no production site URL is set in this local build. Next.js also auto-edited `tsconfig.json` and `next-env.d.ts`; those generated edits were discarded after inspection, leaving the project config unchanged.
 - `git diff --check`: PASS.
-- Browser / viewport QA: pending; not represented as passed.
-- GitHub push, Vercel Preview, Deployment SHA alignment and Preview browser QA: pending.
+- GitHub RC push: complete, non-force. Branch: `sf6dna-v2-chatgpt-rc-20260916`; code commit `ddfd927b2d8f03b4daa121fc588728abbef8b825`.
+- Vercel Preview: READY at `https://sf-6-mugctgek9-somas11620-9368.vercel.app/characters/ryu`, Deployment `dpl_H3CKfXjwvKTNwj4SKv2X4NYApgka`, Git SHA matched the code commit above.
+- Preview browser check: Ryu Character Detail rendered; the new 「今日の15分練習を決める」 link opened `/me/training`, and the Daily15 page rendered its plan. This confirms the target route and visible experience at the available browser viewport only.
+- Browser QA at 320 / 375 / 390 / 430 px, Desktop size matrix, keyboard-only tab sequence, contrast per palette and user-device QA: pending; not represented as passed.
 - Production, main, `sf6dna-v2`, V2, database and migrations: unchanged.
 
 ## Fresh source list
