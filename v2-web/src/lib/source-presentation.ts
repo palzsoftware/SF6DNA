@@ -30,6 +30,12 @@ export function presentSource(sourceType: string, _publisher: string | null, url
       : { badge: "フレームデータ", cta: "フレームデータを見る" };
   }
 
+  if (type.includes("command") || type.includes("movelist") || path.includes("/command") || path.includes("/movelist")) {
+    return isCapcomSite
+      ? { badge: "CAPCOM公式", cta: "公式技表を見る" }
+      : { badge: "技表", cta: "技表を見る" };
+  }
+
   if (type.includes("player") || type.includes("profile") || path.includes("/character/")) {
     return isCapcomSite
       ? { badge: "CAPCOM公式", cta: "公式プロフィールを見る" }
@@ -40,12 +46,6 @@ export function presentSource(sourceType: string, _publisher: string | null, url
     return isCapcomSite
       ? { badge: "CAPCOM公式", cta: "バトル調整内容を見る" }
       : { badge: "調整情報", cta: "調整内容を見る" };
-  }
-
-  if (type.includes("command") || type.includes("movelist") || path.includes("/command")) {
-    return isCapcomSite
-      ? { badge: "CAPCOM公式", cta: "公式技表を見る" }
-      : { badge: "技表", cta: "技表を見る" };
   }
 
   if (isCapcomSite) {

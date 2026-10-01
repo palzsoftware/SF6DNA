@@ -140,5 +140,25 @@ test('a nonpilot card keeps a byte-for-byte text recipe instead of enabling icon
   assert.doesNotMatch(rendered, /aria-label="ドライブラッシュ"/);
   assert.match(rendered, /5LP &gt; Drive Rush &gt; DR &gt; DI\(PC\)/);
   assert.doesNotMatch(rendered, /正規化済み/);
+  // Fresh read-only DB notation matched on 2026-10-01; this proves rendering,
+  // not gameplay, responsive layout, or publication approval.
+  const nonLuke = [
+    { id: '0a6262be-cc87-4004-b052-7abcff35a2fc', recipe: '鳩尾砕き(CH) ＞ しゃがみ中K ＞ 中竜巻旋風脚' },
+    { id: '065a1cac-5bbb-48cc-a811-78964c021d92', recipe: '2LP(PC) > 5MK > 中ストリボーグ' },
+    { id: '0018715c-2432-4d17-937e-22b4127bc6cf', recipe: '2MP(CH) > 2MK > 奮迅脚 > 奮迅昇龍拳' },
+    { id: '082251c6-2a53-44ec-8a54-36d0bea1dfc1', recipe: '2L x2 > Mロンポワン' },
+  ];
+  const escaped = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
+  for (const entry of [...fixture.cases.filter(c => c.character === 'luke'), ...nonLuke]) {
+    const combo = { id: entry.id, href: '/combos/example', name: 'fixture', rawRecipe: entry.recipe, command: '正規化済み', purpose: null, damage: null, drive: null, sa: null, difficulty: null, verificationStatus: 'reviewed', preview: true };
+    const before = structuredClone(combo);
+    const html = renderToStaticMarkup(React.createElement(PilotComboCard, { combo }));
+    assert.match(html, new RegExp(escaped(entry.recipe).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), entry.id);
+    assert.doesNotMatch(html, /正規化済み/);
+    assert.deepEqual(combo, before);
+    assert.ok(html.includes('原表記:'), entry.id);
+    assert.equal(html.includes('role="img"'), isComboIconPilot(entry.id), entry.id);
+    if (!isComboIconPilot(entry.id)) assert.doesNotMatch(html, /role="img"/);
+  }
   assert.match(readFileSync(new URL('../src/components/jp-character-detail.tsx', import.meta.url), 'utf8'), /rawRecipe: combo\.command/);
 });

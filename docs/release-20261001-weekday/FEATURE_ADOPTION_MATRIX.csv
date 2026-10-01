@@ -1,0 +1,21 @@
+feature,classification,research_basis_or_limit,difficulty,scope_boundary
+Frame横断検索,BACKLOG_1_0_X,Frame Data Search,中,推薦分類のみ;新機能scope/公開承認ではない
+Punish Finder,BACKLOG_1_0_X,Frame Data Search / Sensei（候補と距離条件の区別）,高,推薦分類のみ;新機能scope/公開承認ではない
+Combo Finder,BACKLOG_1_0_X,SF6ComList / SF6 Lab（条件分類思想）,中,推薦分類のみ;新機能scope/公開承認ではない
+Damage Calculator,BACKLOG_LATER,SF6 Data Lab,高,推薦分類のみ;新機能scope/公開承認ではない
+Pressure Checker,BACKLOG_LATER,SF6 Data Lab,高,推薦分類のみ;新機能scope/公開承認ではない
+Oki / Setplay Finder,BACKLOG_LATER,SF6Frame,高,推薦分類のみ;新機能scope/公開承認ではない
+Beginner Learning Path,ADOPT_FOR_V1_0,SF6 Lab / 既存導線監査のみ,低,推薦分類のみ;新機能scope/公開承認ではない
+Character Progress,BACKLOG_LATER,SF6ComList / Training Toolsの記録思想;専用進捗UI未確認,中,推薦分類のみ;新機能scope/公開承認ではない
+Compact Mobile Table,BACKLOG_1_0_X,Frame Data Search / mobile実測NOT_VERIFIED,中,推薦分類のみ;新機能scope/公開承認ではない
+Row Highlight,BACKLOG_1_0_X,Frame Data Search / 独自実装候補,低,推薦分類のみ;新機能scope/公開承認ではない
+Customizable Table,BACKLOG_LATER,要追加調査;機能実在NOT_VERIFIED,中,推薦分類のみ;新機能scope/公開承認ではない
+Move Search,BACKLOG_1_0_X,Frame Data Search / SF6 Data Lab,中,推薦分類のみ;新機能scope/公開承認ではない
+Source / Attribution,ADOPT_FOR_V1_0,既存出典CTA修正 / Senseiの由来保持思想,低,推薦分類のみ;新機能scope/公開承認ではない
+Update Log,BACKLOG_1_0_X,Frame Data Search / Wiki履歴,中,推薦分類のみ;新機能scope/公開承認ではない
+Learning Flow,ADOPT_FOR_V1_0,SF6 Lab / 既存Diagnosis→Daily15のみ,低,推薦分類のみ;新機能scope/公開承認ではない
+Training Guide,BACKLOG_LATER,SF6 Lab / Training Tools,中,推薦分類のみ;新機能scope/公開承認ではない
+Hitbox / Move Visual,BACKLOG_LATER,Training Tools / 素材コピー不可,高,推薦分類のみ;新機能scope/公開承認ではない
+Video Chapter Link,BACKLOG_1_0_X,SF6 Lab / 具体chapter metadataは未確認,中,推薦分類のみ;新機能scope/公開承認ではない
+Input Icon,PILOT_FOR_V1_0,SF6ComList / 独自Luke5のみ,中,推薦分類のみ;新機能scope/公開承認ではない
+Classic / Modern Notation,PILOT_FOR_V1_0,原文の別系統保持のみ;公式Modern Fresh取得403,中,推薦分類のみ;新機能scope/公開承認ではない

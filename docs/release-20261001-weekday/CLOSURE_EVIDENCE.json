@@ -1,0 +1,939 @@
+{
+  "date": "2026-10-01",
+  "base_rc": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+  "read_only": true,
+  "inventory": [
+    {
+      "entity": "moves",
+      "total": 2065,
+      "published": 0,
+      "latest_update": "2026-09-02 00:47:45.846873+00"
+    },
+    {
+      "entity": "combos",
+      "total": 1478,
+      "published": 0,
+      "latest_update": "2026-09-01 06:18:46.489121+00"
+    },
+    {
+      "entity": "players",
+      "total": 91,
+      "published": 41,
+      "latest_update": "2026-09-16 06:17:20.435199+00"
+    },
+    {
+      "entity": "videos",
+      "total": 90,
+      "published": 3,
+      "latest_update": "2026-09-16 06:19:38.389585+00"
+    },
+    {
+      "entity": "sources",
+      "total": 661,
+      "published": null,
+      "latest_update": "2026-09-02 05:48:02.944304+00"
+    },
+    {
+      "entity": "move_motion_media",
+      "total": 0,
+      "published": null,
+      "latest_update": null
+    }
+  ],
+  "luke5": [
+    {
+      "id": "11337af8-4a19-4688-ac22-826f05ebd11e",
+      "slug": "luke-dr-overhead",
+      "notation": "DR > 6MP > 2HP > 214MP(Perfect) > 214LP(Perfect) > 236K > P",
+      "status": "draft",
+      "verification_status": "reviewed",
+      "character": "luke"
+    },
+    {
+      "id": "537e6839-69fd-443d-a87e-be12601311e6",
+      "slug": "luke-y4-di-pc-hp-mflash-nochaser",
+      "notation": "DI(PC) > 2HP > 214MP(Perfect) > 236K > P",
+      "status": "draft",
+      "verification_status": "reviewed",
+      "character": "luke"
+    },
+    {
+      "id": "54185bc2-8bde-4c82-be10-601f69454434",
+      "slug": "luke-di-wall",
+      "notation": "5HP > 214LP(Perfect) > 236MP > 623HP",
+      "status": "draft",
+      "verification_status": "reviewed",
+      "character": "luke"
+    },
+    {
+      "id": "da8dac9f-e65e-4c16-a8f4-637318d73a66",
+      "slug": "luke-crmk-dr-corner",
+      "notation": "2MK or 2MP > CDR > 2MP > 2HP > 214LP(Perfect) > 236MP > 623HP",
+      "status": "draft",
+      "verification_status": "reviewed",
+      "character": "luke"
+    },
+    {
+      "id": "f321891f-45e0-4e35-8e4c-388818b80675",
+      "slug": "luke-y4-corner-light-odflash-mflash-sa3",
+      "notation": "2LK > 2LP > 214PP > 214MP > SA3",
+      "status": "draft",
+      "verification_status": "reviewed",
+      "character": "luke"
+    }
+  ],
+  "non_luke": [
+    {
+      "id": "065a1cac-5bbb-48cc-a811-78964c021d92",
+      "slug": "jp-canon-2lp-pc-1680",
+      "notation": "2LP(PC) > 5MK > 中ストリボーグ",
+      "status": "draft",
+      "verification_status": "reviewed",
+      "character": "jp"
+    },
+    {
+      "id": "0018715c-2432-4d17-937e-22b4127bc6cf",
+      "slug": "ken-y4-2mp-ch-mk-qdsr",
+      "notation": "2MP(CH) > 2MK > 奮迅脚 > 奮迅昇龍拳",
+      "status": "draft",
+      "verification_status": "reviewed",
+      "character": "ken"
+    },
+    {
+      "id": "082251c6-2a53-44ec-8a54-36d0bea1dfc1",
+      "slug": "manon-modern-light",
+      "notation": "2L x2 > Mロンポワン",
+      "status": "draft",
+      "verification_status": "unverified",
+      "character": "manon"
+    },
+    {
+      "id": "0a6262be-cc87-4004-b052-7abcff35a2fc",
+      "slug": "ryu-y3-gosho-ch-crmk-mtatsu",
+      "notation": "鳩尾砕き(CH) ＞ しゃがみ中K ＞ 中竜巻旋風脚",
+      "status": "draft",
+      "verification_status": "unverified",
+      "character": "ryu"
+    }
+  ],
+  "source_manifest": {
+    "total": 30,
+    "metadata_apply_ready": 30,
+    "execution_blocked": 30,
+    "applied": 0,
+    "metadata_unchanged": true,
+    "relation_identities_unchanged": true,
+    "relations": 1110,
+    "manifest_path": "../release-20260930-publication/SOURCE_APPLICATION_PLAN.json",
+    "evidence": "Fresh SELECT compared exact source IDs, title/publisher/url and source/entity/relation identities; source_type/reliability/publication unchanged. No playback or legal approval inferred.",
+    "execution_blockers": [
+      "DB_WRITE_PROHIBITED",
+      "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+    ],
+    "identity_sha256": "0c683dd73e80af0c49d03cbc29050cdfc47b0fdbb87ee483391216754c19fd82",
+    "rows": [
+      {
+        "source_id": "7cfc2619-8f21-4bf1-9dca-bf1f2dbd7403",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 A.K.I.",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A"
+        },
+        "proposed_state": {
+          "title": "マリーザ・ガイル・リリー・A.K.I.のSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#7cfc2619-8f21-4bf1-9dca-bf1f2dbd7403"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "e4f109c5-0438-44bb-9ef9-02d313f33c56",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 C.ヴァイパー",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc"
+        },
+        "proposed_state": {
+          "title": "春麗・キャミィ・マノン・C.ヴァイパーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#e4f109c5-0438-44bb-9ef9-02d313f33c56"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "9b03a1a6-c8e9-46ae-aebe-6007f85227ea",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 アレックス",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE"
+        },
+        "proposed_state": {
+          "title": "アレックス・サガット・ジュリ・ザンギエフのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#9b03a1a6-c8e9-46ae-aebe-6007f85227ea"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "b7dcb40f-2745-4bf9-864a-5d95ae8ffa79",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 イングリッド",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=LbP388dn_D0"
+        },
+        "proposed_state": {
+          "title": "JP・エレナ・イングリッド・キンバリーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=LbP388dn_D0"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#b7dcb40f-2745-4bf9-864a-5d95ae8ffa79"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "aaedce01-af16-47d3-ab3f-08c1bee4d123",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 エド",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M"
+        },
+        "proposed_state": {
+          "title": "不知火舞・エド・ベガ・テリーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#aaedce01-af16-47d3-ab3f-08c1bee4d123"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "3cbc0e50-20f8-4664-86cd-8924b90f94e9",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 エドモンド本田",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM"
+        },
+        "proposed_state": {
+          "title": "ディージェイ・ブランカ・エドモンド本田・ダルシム・ラシード・ジェイミーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM"
+        },
+        "entities_and_relations": {
+          "count": 121,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#3cbc0e50-20f8-4664-86cd-8924b90f94e9"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "0cb873a2-b26e-49fd-bbef-a81a67fba6e1",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 エレナ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=LbP388dn_D0"
+        },
+        "proposed_state": {
+          "title": "JP・エレナ・イングリッド・キンバリーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=LbP388dn_D0"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#0cb873a2-b26e-49fd-bbef-a81a67fba6e1"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "392671c4-08ef-4de9-bc2a-fc01088c0413",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 ガイル",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A"
+        },
+        "proposed_state": {
+          "title": "マリーザ・ガイル・リリー・A.K.I.のSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A"
+        },
+        "entities_and_relations": {
+          "count": 31,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#392671c4-08ef-4de9-bc2a-fc01088c0413"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "1a9658eb-87e0-44b1-a7e1-553c9a3626ae",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 キャミィ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc"
+        },
+        "proposed_state": {
+          "title": "春麗・キャミィ・マノン・C.ヴァイパーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#1a9658eb-87e0-44b1-a7e1-553c9a3626ae"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "3afc9ac8-cd02-47b0-bddb-be720dfa6a4e",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 キンバリー",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=LbP388dn_D0"
+        },
+        "proposed_state": {
+          "title": "JP・エレナ・イングリッド・キンバリーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=LbP388dn_D0"
+        },
+        "entities_and_relations": {
+          "count": 31,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#3afc9ac8-cd02-47b0-bddb-be720dfa6a4e"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "0296815f-8599-47e5-ba8f-951b4757b7b4",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 ケン",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM"
+        },
+        "proposed_state": {
+          "title": "リュウ・ケン・豪鬼・ルークのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#0296815f-8599-47e5-ba8f-951b4757b7b4"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "9fd1440e-09f2-4fb2-86ac-a2889d20662a",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 サガット",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE"
+        },
+        "proposed_state": {
+          "title": "アレックス・サガット・ジュリ・ザンギエフのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#9fd1440e-09f2-4fb2-86ac-a2889d20662a"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "dfba6362-9cce-4ad5-8651-a70fd106e4c5",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 ザンギエフ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE"
+        },
+        "proposed_state": {
+          "title": "アレックス・サガット・ジュリ・ザンギエフのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE"
+        },
+        "entities_and_relations": {
+          "count": 121,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#dfba6362-9cce-4ad5-8651-a70fd106e4c5"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "70a8c217-52c3-4cc5-9488-7420376598fc",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 ジェイミー",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM"
+        },
+        "proposed_state": {
+          "title": "ディージェイ・ブランカ・エドモンド本田・ダルシム・ラシード・ジェイミーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM"
+        },
+        "entities_and_relations": {
+          "count": 31,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#70a8c217-52c3-4cc5-9488-7420376598fc"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "88125317-c149-4718-899c-95ac66f21ea0",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 ジュリ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE"
+        },
+        "proposed_state": {
+          "title": "アレックス・サガット・ジュリ・ザンギエフのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#88125317-c149-4718-899c-95ac66f21ea0"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "4066ac57-b047-4b85-9b59-b455c8190340",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 ダルシム",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM"
+        },
+        "proposed_state": {
+          "title": "ディージェイ・ブランカ・エドモンド本田・ダルシム・ラシード・ジェイミーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM"
+        },
+        "entities_and_relations": {
+          "count": 121,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#4066ac57-b047-4b85-9b59-b455c8190340"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "5c757419-8e7d-4e99-a235-8c0496644231",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 ディージェイ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM"
+        },
+        "proposed_state": {
+          "title": "ディージェイ・ブランカ・エドモンド本田・ダルシム・ラシード・ジェイミーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM"
+        },
+        "entities_and_relations": {
+          "count": 121,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#5c757419-8e7d-4e99-a235-8c0496644231"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "987e1547-90ac-4608-8e6c-20760ff83893",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 テリー",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M"
+        },
+        "proposed_state": {
+          "title": "不知火舞・エド・ベガ・テリーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#987e1547-90ac-4608-8e6c-20760ff83893"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "f60ba94d-d8f8-4416-961d-c9ac854083dc",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 ブランカ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM"
+        },
+        "proposed_state": {
+          "title": "ディージェイ・ブランカ・エドモンド本田・ダルシム・ラシード・ジェイミーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM"
+        },
+        "entities_and_relations": {
+          "count": 121,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#f60ba94d-d8f8-4416-961d-c9ac854083dc"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "3d53d4bb-e7cb-4f7a-86b8-e1f6fc388b49",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 ベガ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M"
+        },
+        "proposed_state": {
+          "title": "不知火舞・エド・ベガ・テリーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#3d53d4bb-e7cb-4f7a-86b8-e1f6fc388b49"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "0f499bfa-9560-4a4d-ba98-563c66fb9206",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 マノン",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc"
+        },
+        "proposed_state": {
+          "title": "春麗・キャミィ・マノン・C.ヴァイパーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc"
+        },
+        "entities_and_relations": {
+          "count": 121,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#0f499bfa-9560-4a4d-ba98-563c66fb9206"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "e4848ec0-e4b4-4fe1-b698-2ba3cbf64f41",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 マリーザ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A"
+        },
+        "proposed_state": {
+          "title": "マリーザ・ガイル・リリー・A.K.I.のSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A"
+        },
+        "entities_and_relations": {
+          "count": 121,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#e4848ec0-e4b4-4fe1-b698-2ba3cbf64f41"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "aca946d5-a62a-471a-b42a-3f97b43294ac",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 ヤスミン",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=M7NfqAcU7KI"
+        },
+        "proposed_state": {
+          "title": "ヤスミン公式キャラクターガイド",
+          "publisher": "Street Fighter（CAPCOM公式）",
+          "url": "https://www.youtube.com/watch?v=M7NfqAcU7KI"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#aca946d5-a62a-471a-b42a-3f97b43294ac"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "c4282ff4-66dc-40d0-8f50-c725e01f1383",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 ラシード",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM"
+        },
+        "proposed_state": {
+          "title": "ディージェイ・ブランカ・エドモンド本田・ダルシム・ラシード・ジェイミーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#c4282ff4-66dc-40d0-8f50-c725e01f1383"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "8cc7dbdc-7503-4ebe-8f0a-7b3897a8df78",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 リュウ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM"
+        },
+        "proposed_state": {
+          "title": "リュウ・ケン・豪鬼・ルークのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#8cc7dbdc-7503-4ebe-8f0a-7b3897a8df78"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "e96cf3d0-6f03-4838-b16a-1fb3877b74e6",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 リリー",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A"
+        },
+        "proposed_state": {
+          "title": "マリーザ・ガイル・リリー・A.K.I.のSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A"
+        },
+        "entities_and_relations": {
+          "count": 121,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#e96cf3d0-6f03-4838-b16a-1fb3877b74e6"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "e885d470-16cd-4b7c-950f-d989ba8a6097",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 ルーク",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM"
+        },
+        "proposed_state": {
+          "title": "リュウ・ケン・豪鬼・ルークのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#e885d470-16cd-4b7c-950f-d989ba8a6097"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "b0c2bf68-6c9e-44d1-a350-463a87b9b7c6",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 不知火舞",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M"
+        },
+        "proposed_state": {
+          "title": "不知火舞・エド・ベガ・テリーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#b0c2bf68-6c9e-44d1-a350-463a87b9b7c6"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "32adfa13-079f-408b-82b2-593b7f88343d",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 春麗",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc"
+        },
+        "proposed_state": {
+          "title": "春麗・キャミィ・マノン・C.ヴァイパーのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc"
+        },
+        "entities_and_relations": {
+          "count": 31,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#32adfa13-079f-408b-82b2-593b7f88343d"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      },
+      {
+        "source_id": "cff49442-7bba-4807-883d-f51dda19b221",
+        "publication_category": "LINK_ONLY + ATTRIBUTION",
+        "attribution_required": true,
+        "current_state": {
+          "title": "Season 4 現行変更解説候補 豪鬼",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM"
+        },
+        "proposed_state": {
+          "title": "リュウ・ケン・豪鬼・ルークのSeason 4調整解説",
+          "publisher": "MC MuraFGC",
+          "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM"
+        },
+        "entities_and_relations": {
+          "count": 1,
+          "reference": "docs/release-20260930-publication/SOURCE_APPLICATION_PLAN.json#cff49442-7bba-4807-883d-f51dda19b221"
+        },
+        "row_readiness": "READY_TO_APPLY",
+        "execution_status": "BLOCKED",
+        "blockers": [
+          "DB_WRITE_PROHIBITED",
+          "PUBLIC_APPLICATION_APPROVAL_REQUIRED"
+        ]
+      }
+    ]
+  },
+  "game_verification_queue": {
+    "weekend_first": [
+      {
+        "id": "11337af8-4a19-4688-ac22-826f05ebd11e",
+        "slug": "luke-dr-overhead",
+        "priority": "P1",
+        "status": "GAME_VERIFY_REQUIRED",
+        "raw_recipe": "DR > 6MP > 2HP > 214MP(Perfect) > 214LP(Perfect) > 236K > P"
+      },
+      {
+        "id": "537e6839-69fd-443d-a87e-be12601311e6",
+        "slug": "luke-y4-di-pc-hp-mflash-nochaser",
+        "priority": "P1",
+        "status": "GAME_VERIFY_REQUIRED",
+        "raw_recipe": "DI(PC) > 2HP > 214MP(Perfect) > 236K > P"
+      },
+      {
+        "id": "54185bc2-8bde-4c82-be10-601f69454434",
+        "slug": "luke-di-wall",
+        "priority": "P1",
+        "status": "GAME_VERIFY_REQUIRED",
+        "raw_recipe": "5HP > 214LP(Perfect) > 236MP > 623HP"
+      },
+      {
+        "id": "da8dac9f-e65e-4c16-a8f4-637318d73a66",
+        "slug": "luke-crmk-dr-corner",
+        "priority": "P1",
+        "status": "GAME_VERIFY_REQUIRED",
+        "raw_recipe": "2MK or 2MP > CDR > 2MP > 2HP > 214LP(Perfect) > 236MP > 623HP"
+      },
+      {
+        "id": "f321891f-45e0-4e35-8e4c-388818b80675",
+        "slug": "luke-y4-corner-light-odflash-mflash-sa3",
+        "priority": "P1",
+        "status": "GAME_VERIFY_REQUIRED",
+        "raw_recipe": "2LK > 2LP > 214PP > 214MP > SA3"
+      }
+    ],
+    "remaining": "1213-row baseline classification retained offline; no bulk manual handoff",
+    "completion_fields": [
+      "成立",
+      "開始条件",
+      "位置",
+      "ダメージ実測",
+      "Drive/SA実測",
+      "再現手順",
+      "現在Patch",
+      "証拠"
+    ],
+    "no_inferred_values": true
+  },
+  "static_vs_device": "STATIC_PASS != DEVICE_PASS; GAME_READY != GAME_VERIFIED; PREVIEW_READY != RELEASE_READY"
+}

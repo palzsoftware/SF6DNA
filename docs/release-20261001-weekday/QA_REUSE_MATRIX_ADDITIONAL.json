@@ -1,0 +1,421 @@
+{
+  "date": "2026-10-01",
+  "baseline_tree": "3a568fc04b113d5d115f502f3b0f4dde6521a3c8",
+  "pages": [
+    {
+      "PAGE": "/characters/ryu",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/jp",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/zangief",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/chun-li",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/dhalsim",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/kimberly",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/luke",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/jamie",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/guile",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/juri",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/ken",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/blanka",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/e-honda",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/dee-jay",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/manon",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/marisa",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/lily",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/cammy",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/rashid",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/aki",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/ed",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/akuma",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/m-bison",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/terry",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/mai",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/elena",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/sagat",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/c-viper",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/alex",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/ingrid",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    },
+    {
+      "PAGE": "/characters/yasmine",
+      "LAST_AUDITED_SHA": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+      "AUDIT_DATE": "2026-10-01",
+      "RESULT": "DESKTOP_DOCUMENT_WIDTH_PASS",
+      "AFFECTED_COMPONENTS": [
+        "Character Detail",
+        "theme selectors",
+        "Source CTA"
+      ],
+      "MOBILE_RESULT": "NOT_RUN",
+      "candidate_source_cta_fix": "TARGETED_TESTS_PASS_BROWSER_NOT_RUN"
+    }
+  ],
+  "reused_prior_results": [
+    "368 web tests PASS at prior application batch",
+    "14 release gates PASS at prior application batch",
+    "typecheck/lint/build PASS at prior application batch",
+    "publication-preparation read-only evidence unchanged"
+  ],
+  "reaudit_reason": "Latest Preview Desktop DOM and character coverage were missing; source CTA change uses targeted regression only",
+  "remaining": [
+    "Full mobile and accessibility matrix",
+    "Auth/Save real flow",
+    "Weekend game and device QA"
+  ]
+}

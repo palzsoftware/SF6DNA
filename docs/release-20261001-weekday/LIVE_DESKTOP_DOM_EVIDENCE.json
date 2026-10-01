@@ -1,0 +1,739 @@
+{
+  "date": "2026-10-01",
+  "sha": "fec8d09c9aae112e2678e6fff2faecb99c22d2f3",
+  "preview": "https://sf-6-kv4z4j3e3-somas11620-9368.vercel.app/",
+  "deployment": "dpl_3sGDhkX1ajCDdXvxKL3vJqAUTajh",
+  "method": "Live cloud browser, read-only DOM; default collapsed state except JP theme cases",
+  "widths_order": [
+    "innerWidth",
+    "documentElement.clientWidth",
+    "documentElement.scrollWidth",
+    "body.scrollWidth"
+  ],
+  "rows": [
+    {
+      "slug": "ryu",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 57,
+      "related_player_cards": 3,
+      "source_links": 3,
+      "coverage": "PARTIAL_CONTENT"
+    },
+    {
+      "slug": "jp",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 59,
+      "related_player_cards": 3,
+      "source_links": 5,
+      "coverage": "PARTIAL_CONTENT"
+    },
+    {
+      "slug": "zangief",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "chun-li",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 3,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "dhalsim",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "kimberly",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 3,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "luke",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 1,
+      "related_player_cards": 3,
+      "source_links": 5,
+      "coverage": "PARTIAL_CONTENT"
+    },
+    {
+      "slug": "jamie",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 3,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "guile",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 3,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "juri",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "ken",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "blanka",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "e-honda",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "dee-jay",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "manon",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 3,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "PARTIAL_CONTENT"
+    },
+    {
+      "slug": "marisa",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "lily",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "cammy",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "rashid",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "aki",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "ed",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "akuma",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "m-bison",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "terry",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 0,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "mai",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 3,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "elena",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 3,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "sagat",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 3,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "c-viper",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 3,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "alex",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 3,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "ingrid",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 3,
+      "source_links": 3,
+      "coverage": "DATA_GAP"
+    },
+    {
+      "slug": "yasmine",
+      "theme": "dark",
+      "appearance": "standard",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "document_overflow": "PASS",
+      "h1_count": 1,
+      "missing_img_alt": 0,
+      "internal_keywords_found": 0,
+      "move_summary_count": 0,
+      "related_player_cards": 3,
+      "source_links": 4,
+      "coverage": "DATA_GAP"
+    }
+  ],
+  "limits": [
+    "320/375/390/430 NOT_RUN: current browser API exposes no viewport resize; scratch Chromium/agent-browser executable absent",
+    "Desktop is not device PASS",
+    "No image/contrast/tap-target comprehensive visual audit",
+    "Keyword scan is not proof of all publication gates",
+    "Move summary counts describe rendered Preview content, not DB inventory",
+    "Combo/system icons hidden behind publication gate; public pilot rendering NOT_VERIFIED"
+  ],
+  "jp_expanded_themes": [
+    {
+      "appearance": "standard",
+      "theme": "light",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "expanded_move_categories": 6,
+      "result": "PASS"
+    },
+    {
+      "appearance": "standard",
+      "theme": "dark",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "expanded_move_categories": 6,
+      "result": "PASS"
+    },
+    {
+      "appearance": "fighter",
+      "theme": "light",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "expanded_move_categories": 6,
+      "result": "PASS"
+    },
+    {
+      "appearance": "fighter",
+      "theme": "dark",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "expanded_move_categories": 6,
+      "result": "PASS"
+    },
+    {
+      "appearance": "cute-pink",
+      "theme": "light",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "expanded_move_categories": 6,
+      "result": "PASS"
+    },
+    {
+      "appearance": "cute-pink",
+      "theme": "dark",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "expanded_move_categories": 6,
+      "result": "PASS"
+    },
+    {
+      "appearance": "monochrome",
+      "theme": "light",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "expanded_move_categories": 6,
+      "result": "PASS"
+    },
+    {
+      "appearance": "monochrome",
+      "theme": "dark",
+      "widths": [
+        1363,
+        1348,
+        1348,
+        1348
+      ],
+      "expanded_move_categories": 6,
+      "result": "PASS"
+    }
+  ],
+  "jp_offscreen_source_link": {
+    "tag": "A",
+    "left": 1132.96875,
+    "right": 1469.671875,
+    "width": 336.703125,
+    "scrollWidth": 335,
+    "clientWidth": 335,
+    "computed": {
+      "width": "336.703px",
+      "minWidth": "0px",
+      "maxWidth": "none",
+      "margin": "0px",
+      "padding": "7px 12px",
+      "transform": "none",
+      "position": "static",
+      "display": "flex",
+      "gridTemplateColumns": "none",
+      "flex": "0 0 auto",
+      "whiteSpace": "normal"
+    },
+    "classification": "SCOPED_SCROLL_RAIL, not document overflow",
+    "rule": "jp-character-detail.module.css .rail { width:100%; max-width:100%; overflow-x:auto }",
+    "scrollAncestor": {
+      "class": "jp-character-detail-module__a6GDrG__rail",
+      "clientWidth": 1240,
+      "scrollWidth": 1416,
+      "overflowX": "auto"
+    }
+  }
+}
