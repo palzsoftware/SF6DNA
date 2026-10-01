@@ -81,7 +81,7 @@ export function MyCharacterManager({
                 <h2><Link href={`/characters/${character.slug}`}>{character.name}</Link></h2>
                 {character.nameEn ? <p>{character.nameEn}</p> : null}
               </div>
-              <button type="button" className="secondary-button" onClick={() => toggleFavorite(character.slug)} aria-pressed={favorite}>
+              <button type="button" className="secondary-button" onClick={() => toggleFavorite(character.slug)} aria-pressed={favorite} aria-label={`${character.name}をお気に入り${favorite ? "から削除" : "に追加"}`}>
                 {favorite ? "★" : "☆"}
               </button>
             </div>

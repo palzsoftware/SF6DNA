@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const character = await getCharacterBySlug(slug);
   if (!character) return {};
   return {
-    title: `${character.name} コンボ | SF6DNA`,
+    title: `${character.name} コンボ`,
     description: `${character.name}のコンボを始動・用途・難易度・ゲージ条件から確認できます。`,
   };
 }

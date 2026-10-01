@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const character = await getCharacterBySlug(slug);
   if (!character) return {};
   return {
-    title: `${character.name} トレーニング | SF6DNA`,
+    title: `${character.name} トレーニング`,
     description: `${character.name}のトレモ設定、練習手順、成功条件を目的とレベル別に確認できます。`,
   };
 }

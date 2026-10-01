@@ -30,7 +30,7 @@ const todayActions = [
 ] as const;
 
 const resumeLinks = [
-  ["SAVE", "お気に入り", "保存したキャラクターや動画へ戻る", "/favorites"],
+  ["SAVE", "お気に入り", "保存したキャラクターへ戻る", "/favorites"],
   ["MY", "マイキャラ", "使用キャラクターの設定を見る", "/my-characters"],
   ["HIST", "診断履歴", "これまでの診断結果を振り返る", "/diagnosis/history"],
 ] as const;

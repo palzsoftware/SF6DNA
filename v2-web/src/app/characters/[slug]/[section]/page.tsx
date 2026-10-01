@@ -291,7 +291,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const character = await getCharacterBySlug(slug);
   if (!character) return {};
   return {
-    title: `${character.name} ${sectionMeta[section].title} | SF6DNA`,
+    title: `${character.name} ${sectionMeta[section].title}`,
     description: `${character.name}の${sectionMeta[section].description}`,
   };
 }
