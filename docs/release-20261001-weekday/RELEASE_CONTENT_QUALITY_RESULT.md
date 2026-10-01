@@ -7,7 +7,7 @@ Base RC at preflight: `f0ef399143fae7d2ba1d0cfefed65bc88cef5beb`
 ## Fresh state and boundary
 
 - GitHub target branch HEAD: `f0ef399143fae7d2ba1d0cfefed65bc88cef5beb`; local HEAD matched. No remote advancement or unexpected RC changes were found.
-- Latest Vercel deployment: `dpl_EUWWhGFffzfnpjue8Sd5E3mF9TtR`, `READY`, URL `https://sf-6-921ob4y5y-somas11620-9368.vercel.app/`, commit SHA matches RC.
+- Preflight Preview (before this batch integration): `dpl_EUWWhGFffzfnpjue8Sd5E3mF9TtR`, `READY`, URL `https://sf-6-921ob4y5y-somas11620-9368.vercel.app/`, commit SHA matched the preflight RC.
 - Vercel project `sf-6-dna` reports `live=false`; deployment target is Preview (`target=null`). No Production deployment/configuration was changed. Environment-variable assignment inventory is `NOT_VERIFIED`; no values were read.
 - Branch contained the prepared, staged 2026-09-30 offline audit batch. It was retained and included in this batch; it contains preparation/audit tools and evidence, not database/publication writes. The internal guard patch remains unapplied.
 - Production, `main`, `sf6dna-v2`, Ver.1.1, DB, migrations, dependencies, and lockfiles: unchanged. No device operation, game verification, motion recording, login, push, or deployment was performed during weekday QA.
@@ -52,7 +52,7 @@ The reviewed sites are independent/community tools, not endorsements or authorit
 - Lint: **PASS**
 - Build: **PASS** (local `metadataBase` warning explained above)
 - Diff checks: run before integration; build-generated `next-env.d.ts` and `tsconfig.json` changes restored.
-- Automated device/375px recheck against a new Preview after the pilot scope change: **NOT RUN**. No new Preview was created during this batch.
+- New Preview after code integration: **READY**, `https://sf-6-3m0crcp66-somas11620-9368.vercel.app/`, SHA `2114483ad4fe2c19acb71f44b1bec20dd7ac3c80` matches RC. Authorized fetch of `/characters/luke` returned **HTTP 200**. A browser viewport measurement was **NOT RUN**; no unpublished combo appeared because the public publication gate hides them. A new Preview was created as the batch QA unit; an intermediate build was also triggered by correcting an incomplete audit-record upload before final verification.
 
 ## Release decision
 
