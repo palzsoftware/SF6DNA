@@ -1,0 +1,18 @@
+﻿Area,Implementation,Test classification,Evidence kinds,Test files,BROWSER_REQUIRED,DEVICE_REQUIRED,Live DB certification,Gap severity,Remaining gap,Scope SHA
+Home,IMPLEMENTED,SSR_ONLY,UNIT+SSR,home-random-character-hero; character-ux,YES,NO,NO,MEDIUM,Real navigation and random hero hydration,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Characters,IMPLEMENTED,MOCK_ONLY,STATIC+UNIT,character-detail-route-render; character-ux,YES,NO,NO,HIGH,Live loader empty/error branches and DB relation projection,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Character Detail,IMPLEMENTED,SSR_ONLY,UNIT+SSR,character-move-frame-render; character-detail-v2-profile-adapter,YES,YES,NO,HIGH,31 live routes hydrate from intended data source,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Quick Start,IMPLEMENTED,SSR_ONLY,SSR,character-ux,YES,YES,NO,MEDIUM,"Anchor click, scrolling and destination visibility",62330bd76f3af54a3b54871ebd50721aa393f9f8
+Move Search,IMPLEMENTED,TESTED,UNIT,character-ux,YES,NO,NO,MEDIUM,Live input and result updates,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Move Filter,IMPLEMENTED,SSR_ONLY,UNIT+SSR,character-ux,YES,YES,NO,MEDIUM,Combined selection UI and touch state,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Diagnosis,IMPLEMENTED,MOCK_ONLY,UNIT+STATIC+MOCK,diagnosis-save-reload; diagnosis-save-idempotency,YES,NO,NO,RELEASE_CRITICAL,Actual account save/read-back is separate workstream; no re-audit,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Daily15,IMPLEMENTED,MOCK_ONLY,UNIT+MOCK,daily-training; daily-training-route,YES,NO,NO,HIGH,Diagnosis result to live menu including reload,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Search,IMPLEMENTED,MOCK_ONLY,UNIT+STATIC,search-suggestions.behavior; search-release-boundary,YES,NO,NO,HIGH,Live unified-search RPC no-result/error/authorization,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Players,IMPLEMENTED,TESTED,STATIC,player-list-search; player-quality-release-qa,YES,NO,NO,HIGH,Real multi-role relations and selected filters,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Videos,IMPLEMENTED,TESTED,UNIT+STATIC,video-intent-implementation; data-integrity-behavior,YES,NO,NO,MEDIUM,Actual filters and results; optional metadata intentionally unknown,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Favorites,IMPLEMENTED,MOCK_ONLY,UNIT_MEMORY_STORAGE,data-integrity-behavior; legacy-parity,YES,YES,NO,HIGH,"Browser persistence, reload, cross-page sharing, blocked writes",62330bd76f3af54a3b54871ebd50721aa393f9f8
+Auth,IMPLEMENTED,MOCK_ONLY,UNIT+MOCK,core-flow-ui-hardening; auth-session-ui; logout,YES,NO,NO,RELEASE_CRITICAL,Real session lifecycle and account ownership; separate workstream,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Sources,IMPLEMENTED,TESTED,STATIC,source-presentation-ownership; public-integration,YES,NO,NO,HIGH,Role-specific RPC projection with live relation resolution,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Legal,IMPLEMENTED,TESTED,STATIC,global-pages-final-qa; release-gates,YES,NO,NO,HIGH,Production Legal 404 excluded; retain separate owner,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Release Flags,IMPLEMENTED,TESTED,STATIC+UNIT,release-gates; jp-public-strategy-boundary,YES,NO,NO,RELEASE_CRITICAL,Full public boundary separate workstream; static gates do not certify DB,62330bd76f3af54a3b54871ebd50721aa393f9f8
+Media,IMPLEMENTED,SSR_ONLY,UNIT+SSR+STATIC,motion-media-manifest-validator; asset-runtime-hardening,YES,YES,NO,HIGH,"Real image/video decode, lazy load and game mapping; JP mapping excluded",62330bd76f3af54a3b54871ebd50721aa393f9f8

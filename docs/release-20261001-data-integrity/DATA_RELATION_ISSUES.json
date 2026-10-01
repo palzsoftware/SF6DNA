@@ -1,0 +1,171 @@
+{
+  "audit_date": "2026-10-01",
+  "data_evidence_sha": "62330bd76f3af54a3b54871ebd50721aa393f9f8",
+  "captured_at": "2026-10-01T08:25:52.883Z",
+  "security_scope": "Aggregate evidence only; no source/relation IDs, raw URLs, DB rows, schema/RPC definitions, credentials or account data.",
+  "counts": {
+    "characters": 34,
+    "public_characters": 31,
+    "moves": 2065,
+    "public_moves": 0,
+    "players": 91,
+    "public_players": 41,
+    "videos": 90,
+    "public_videos": 3,
+    "sources": 661,
+    "public_source_rpc_candidates": 660,
+    "combos": 1478,
+    "public_combos": 0,
+    "entity_source_relations": 29875,
+    "entity_video_relations": 112
+  },
+  "integrity": {
+    "foreign_key_checks": 28,
+    "broken_references": 0,
+    "duplicate_relations": 0,
+    "slug_conflicts": 0,
+    "source_url_invalid_or_empty": 0,
+    "duplicate_video_url_groups": 0,
+    "wrong_combo_or_setup_character": 0,
+    "command_order_conflicts": 0,
+    "duplicate_current_frames": 0
+  },
+  "issues": [
+    {
+      "id": "D01",
+      "data_priority": "P2_DATA",
+      "kind": "SOURCE_RELATION_TARGET_REVIEW",
+      "count": 80,
+      "confirmed_corruption": false,
+      "action": "Confirm intended entity targets; global source listing can already use these records; no relation writes."
+    },
+    {
+      "id": "D02",
+      "data_priority": "VALID_DIFFERENCE",
+      "kind": "INTENTIONALLY_HIDDEN_SOURCE_WITHOUT_BACKLINK",
+      "count": 1,
+      "action": "Retain publication gate."
+    },
+    {
+      "id": "D03",
+      "data_priority": "P2_DATA",
+      "kind": "EXACT_SOURCE_URL_REUSE_CANDIDATE",
+      "groups": 7,
+      "rows": 29,
+      "confirmed_duplicate_entity": false,
+      "action": "Review provenance before any consolidation; URL reuse can be valid."
+    }
+  ],
+  "move_recovery": {
+    "PUBLICATION_APPROVAL_REQUIRED": 701,
+    "SOURCE_REQUIRED": 1319,
+    "VERIFICATION_REQUIRED": 32,
+    "INTENTIONALLY_HIDDEN": 13,
+    "SAFE_TO_SURFACE_EXISTING": 0
+  },
+  "schema_contract_gaps": [
+    {
+      "id": "S01",
+      "priority": "BACKLOG",
+      "tables": [
+        "entity_sources",
+        "entity_videos"
+      ],
+      "gap": "Polymorphic entity_id has no target-table FK. Source/video endpoint FKs exist, but entity target integrity needs joins.",
+      "observed_broken": 0,
+      "plan": "Plan application validator or deferred trigger after separate approval; no migration."
+    },
+    {
+      "id": "S02",
+      "priority": "BACKLOG",
+      "tables": [
+        "move_commands"
+      ],
+      "gap": "No UNIQUE(move_id,control_scheme,sort_order); command order collisions are possible.",
+      "observed_duplicate": 0,
+      "plan": "First confirm multiple legitimate command variants; only then draft a constraint plan."
+    },
+    {
+      "id": "S03",
+      "priority": "BACKLOG",
+      "tables": [
+        "move_frame_data"
+      ],
+      "gap": "No UNIQUE for current move/patch frame; current multiple rows could make application selection ambiguous.",
+      "observed_duplicate": 0,
+      "plan": "Confirm frame variants and patch lifecycle before planning a partial UNIQUE."
+    },
+    {
+      "id": "S04",
+      "priority": "VALID_DIFFERENCE",
+      "tables": [
+        "player_characters"
+      ],
+      "gap": "PK includes role; more than one role for the same player/character is schema-valid. Application pushes each relation.",
+      "observed_duplicate_pair": 0,
+      "plan": "Add multi-role behavior case if multi-role data is introduced; do not flatten DB."
+    },
+    {
+      "id": "S05",
+      "priority": "VALID_DIFFERENCE",
+      "tables": [
+        "sources"
+      ],
+      "gap": "URL is NOT NULL but not UNIQUE or URL-format CHECK; 7 duplicate URL groups.",
+      "plan": "Audit provenance and relation targets before considering consolidation; exact URL reuse is not automatically invalid."
+    },
+    {
+      "id": "S06",
+      "priority": "VALID_DIFFERENCE",
+      "tables": [
+        "videos",
+        "characters",
+        "move_frame_data"
+      ],
+      "gap": "Optional metadata/frame fields are nullable. Images use fallback; language/control/level are intentionally not inferred; throw frame fields can be inapplicable.",
+      "plan": "Keep null display semantics; no mandatory metadata expansion."
+    }
+  ],
+  "method": {
+    "foreign_keys": "LEFT JOIN on each of 28 FK contracts; count missing referenced entities.",
+    "polymorphic_relations": "Join entity_sources and entity_videos to the target table selected by entity_type; count missing endpoints.",
+    "duplicates": "GROUP BY entity keys, normalized slug, command order, current move/patch and exact URL; distinguish valid reuse.",
+    "source_backlinks": "Check both entity_sources and direct character_trait_scores.source_id references.",
+    "publication": "Apply current status and application predicate separately from verified frame status.",
+    "metadata": "Read PK/FK/UNIQUE/INDEX/NOT NULL/CHECK definitions; retain contract conclusions only."
+  },
+  "evidence_limits": [
+    "Admin SELECT counts and definitions; public-ready predicates are not anonymous HTTP tests.",
+    "No game facts or footage mapping verified. JP media individual audit excluded.",
+    "Optional metadata completeness is not semantic applicability.",
+    "DB reads span multiple snapshots; no DB transaction or row locking performed."
+  ],
+  "integration": {
+    "parent_sha": "d86514c59d9e7380d07b2e36f6e093a5a7ed800d",
+    "remote_drift": true,
+    "baseline_tests": 382,
+    "added_tests": 6,
+    "base_with_added_tests": 388,
+    "remote_added_tests": 4,
+    "integration_tests": 392,
+    "release_gates": 14,
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "new_runtime_changes": false,
+    "safe_integration_security_review": "PASS",
+    "fresh_validation": {
+      "tests_passed": 392,
+      "release_gates_passed": 14,
+      "typecheck": "PASS",
+      "lint": "PASS",
+      "build": "PASS",
+      "diff_check": "PASS"
+    }
+  },
+  "release": {
+    "new_p0": 0,
+    "new_p1": 0,
+    "status": "NO-GO"
+  }
+}

@@ -1,0 +1,100 @@
+﻿Domain,Character,Count,Classification,Reason,Count unit,Action
+Move,aki,52,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,akuma,61,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,alex,69,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,alex,7,VERIFICATION_REQUIRED,Verified current official frame gate missing; reviewed is not verified,distinct move rows,inventory only; no writes
+Move,blanka,91,PUBLICATION_APPROVAL_REQUIRED,Official evidence predicates satisfied; stored draft; no publication authorized,distinct move rows,inventory only; no writes
+Move,c-viper,7,PUBLICATION_APPROVAL_REQUIRED,Official evidence predicates satisfied; stored draft; no publication authorized,distinct move rows,inventory only; no writes
+Move,c-viper,62,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,c-viper,3,VERIFICATION_REQUIRED,Verified current official frame gate missing; reviewed is not verified,distinct move rows,inventory only; no writes
+Move,cammy,53,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,chun-li,68,PUBLICATION_APPROVAL_REQUIRED,Official evidence predicates satisfied; stored draft; no publication authorized,distinct move rows,inventory only; no writes
+Move,dee-jay,105,PUBLICATION_APPROVAL_REQUIRED,Official evidence predicates satisfied; stored draft; no publication authorized,distinct move rows,inventory only; no writes
+Move,dhalsim,1,INTENTIONALLY_HIDDEN,Archived record; retain provenance,distinct move rows,inventory only; no writes
+Move,dhalsim,88,PUBLICATION_APPROVAL_REQUIRED,Official evidence predicates satisfied; stored draft; no publication authorized,distinct move rows,inventory only; no writes
+Move,e-honda,70,PUBLICATION_APPROVAL_REQUIRED,Official evidence predicates satisfied; stored draft; no publication authorized,distinct move rows,inventory only; no writes
+Move,ed,49,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,elena,4,PUBLICATION_APPROVAL_REQUIRED,Official evidence predicates satisfied; stored draft; no publication authorized,distinct move rows,inventory only; no writes
+Move,elena,76,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,elena,6,VERIFICATION_REQUIRED,Verified current official frame gate missing; reviewed is not verified,distinct move rows,inventory only; no writes
+Move,guile,70,PUBLICATION_APPROVAL_REQUIRED,Official evidence predicates satisfied; stored draft; no publication authorized,distinct move rows,inventory only; no writes
+Move,ingrid,11,INTENTIONALLY_HIDDEN,Archived record; retain provenance,distinct move rows,inventory only; no writes
+Move,ingrid,68,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,ingrid,4,VERIFICATION_REQUIRED,Verified current official frame gate missing; reviewed is not verified,distinct move rows,inventory only; no writes
+Move,jamie,93,PUBLICATION_APPROVAL_REQUIRED,Official evidence predicates satisfied; stored draft; no publication authorized,distinct move rows,inventory only; no writes
+Move,jp,59,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,juri,46,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,ken,59,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,kimberly,76,PUBLICATION_APPROVAL_REQUIRED,Official evidence predicates satisfied; stored draft; no publication authorized,distinct move rows,inventory only; no writes
+Move,lily,47,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,luke,50,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,m-bison,47,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,mai,10,PUBLICATION_APPROVAL_REQUIRED,Official evidence predicates satisfied; stored draft; no publication authorized,distinct move rows,inventory only; no writes
+Move,mai,80,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,mai,5,VERIFICATION_REQUIRED,Verified current official frame gate missing; reviewed is not verified,distinct move rows,inventory only; no writes
+Move,manon,49,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,marisa,53,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,rashid,54,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,ryu,57,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,sagat,66,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,sagat,3,VERIFICATION_REQUIRED,Verified current official frame gate missing; reviewed is not verified,distinct move rows,inventory only; no writes
+Move,terry,1,INTENTIONALLY_HIDDEN,Archived record; retain provenance,distinct move rows,inventory only; no writes
+Move,terry,53,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,yasmine,19,PUBLICATION_APPROVAL_REQUIRED,Official evidence predicates satisfied; stored draft; no publication authorized,distinct move rows,inventory only; no writes
+Move,yasmine,62,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Move,yasmine,4,VERIFICATION_REQUIRED,Verified current official frame gate missing; reviewed is not verified,distinct move rows,inventory only; no writes
+Move,zangief,47,SOURCE_REQUIRED,Official move or Classic command Source gate missing; no Source relation edits authorized,distinct move rows,inventory only; no writes
+Player,aki,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,akuma,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,blanka,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,cammy,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,dee-jay,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,dhalsim,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,e-honda,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,ed,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,juri,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,ken,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,lily,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,m-bison,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,manon,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,marisa,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,rashid,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,terry,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Player,zangief,3,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,aki,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,akuma,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,alex,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,blanka,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,c-viper,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,cammy,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,chun-li,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,dee-jay,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,dhalsim,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,e-honda,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,ed,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,elena,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,guile,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,ingrid,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,jamie,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,jp,55,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,juri,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,ken,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,kimberly,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,lily,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,luke,7,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,m-bison,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,mai,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,manon,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,marisa,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,rashid,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,ryu,19,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,sagat,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,terry,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,yasmine,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Video,zangief,1,PUBLICATION_APPROVAL_REQUIRED,Valid character relation exists; stored draft; validate content and approval before publication,distinct entities per character; NOT globally additive,no publication
+Media,luke,1,PUBLICATION_APPROVAL_REQUIRED,approved_for_preview manifest; DB has 0 media; no public readiness or game mapping approval inferred,distinct approved Preview move IDs,JP individual mapping deferred; reuse pipeline
+Media,manon,3,PUBLICATION_APPROVAL_REQUIRED,approved_for_preview manifest; DB has 0 media; no public readiness or game mapping approval inferred,distinct approved Preview move IDs,JP individual mapping deferred; reuse pipeline
+Media,jp,26,PUBLICATION_APPROVAL_REQUIRED,approved_for_preview manifest; DB has 0 media; no public readiness or game mapping approval inferred,distinct approved Preview move IDs,JP individual mapping deferred; reuse pipeline
+Media,ryu,4,PUBLICATION_APPROVAL_REQUIRED,approved_for_preview manifest; DB has 0 media; no public readiness or game mapping approval inferred,distinct approved Preview move IDs,JP individual mapping deferred; reuse pipeline
+Source,,80,RELATION_FIX_REQUIRED,No entity_sources or character_trait_scores backlink; global Source list can already surface this entry; relation candidate is not confirmed corruption,source rows (aggregate; IDs omitted),no relation writes; first confirm intended target
+Source,,1,INTENTIONALLY_HIDDEN,Internal candidate excluded from public source RPC,source rows (aggregate; IDs omitted),no relation writes; first confirm intended target
