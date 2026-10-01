@@ -1,0 +1,10 @@
+.explorer { display: grid; gap: 12px; }
+.controls { display: grid; gap: 10px; }
+.controls label { font-weight: 700; }
+.controls input { box-sizing: border-box; width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font: inherit; }
+.categories { display: flex; flex-wrap: wrap; gap: 8px; }
+.categories button, .result button { min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font: inherit; white-space: normal; overflow-wrap: anywhere; }
+.categories button[aria-pressed="true"] { border-color: var(--accent); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.controls input:focus-visible, .controls button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.result { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.result p { margin: 0; }

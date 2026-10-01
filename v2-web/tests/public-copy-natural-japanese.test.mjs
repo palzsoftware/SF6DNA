@@ -25,14 +25,14 @@ test("reviewed public copy does not contain known stale or internal phrases", ()
 });
 
 test("reviewed routes use concrete destination labels", () => {
-  assert.match(publicCopy, /SF6の情報を探す/);
+  assert.match(publicCopy, /キャラクター・プレイヤー・動画を検索/);
   assert.match(publicCopy, /問い合わせフォームへ/);
   assert.match(publicCopy, /攻略・対戦・大会などの動画を探せます/);
   assert.match(publicCopy, /問い合わせを送信/);
   assert.match(publicCopy, /問い合わせフォームへ/);
-  assert.match(publicCopy, /詳しく見る →/);
+  assert.match(publicCopy, /更新履歴をすべて見る/);
   assert.match(publicCopy, /次の対戦で、/);
-  assert.match(publicCopy, /キャラクターや動画を探す/);
+  assert.match(publicCopy, /キャラクター・プレイヤー・動画を横断検索/);
 });
 
 test("Login and Contact helpers use natural copy without weakening retention disclosure", () => {

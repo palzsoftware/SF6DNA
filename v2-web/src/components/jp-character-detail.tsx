@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CharacterPreferenceActions } from "@/components/character-preference-actions";
+import { CharacterQuickStart } from "@/components/character-quick-start";
+import { CharacterMoveExplorer } from "@/components/character-move-explorer";
 import { CharacterTabs } from "@/components/character-tabs";
 import { MoveMotionMedia } from "@/components/move-motion-media";
 import { PilotComboCard } from "@/components/pilot-combo-card";
@@ -103,6 +105,7 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
     <CharacterTabs slug={character.slug} active="overview" previewToken={previewToken} />
 
     <div className={styles.sections}>
+      <CharacterQuickStart />
       <section id="pilot-overview" className={styles.section}>
         <p className="eyebrow">基本ガイド</p><h2>{normalizePublicCopy(profile.tagline)}</h2>
         <p>{normalizePublicCopy(profile.winPath)}</p>
@@ -110,7 +113,7 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
           <div><strong>得意距離</strong><span>{character.rangeLabel ?? "確認中"}</span></div>
           <div><strong>タイプ</strong><span>{character.archetypeLabel ?? "確認中"}</span></div>
           <div><strong>難易度</strong><span>{character.difficulty ? `${character.difficulty} / 5` : "未評価"}</span></div>
-          <div><strong>最初の練習</strong><span>{normalizePublicCopy(profile.firstLesson)}</span></div>
+          <div id="pilot-first-lesson"><strong>最初の練習</strong><span>{normalizePublicCopy(profile.firstLesson)}</span></div>
         </div>
         <div className={styles.duo}>
           <article><h3>強み</h3><p>{normalizePublicCopy(profile.strength)}</p></article>
@@ -136,10 +139,13 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
           <p>数値の「確認中」は未確定の項目です。</p></div>
           <a href="https://www.streetfighter.com/6/ja-jp/character/jp/frame" target="_blank" rel="noopener noreferrer">CAPCOM公式フレームを見る ↗</a>
         </div>
-        {groups.length ? groups.map(([type, moves], index) => <details className={styles.group} key={type} open={index === 0}>
-          <summary><strong>{moveLabels[type] ?? "その他"}</strong><span>{moves.length}技</span></summary>
-          <div className={styles.moveList}>{moves.map(move => <MoveCard key={move.id} move={move} />)}</div>
-        </details>) : <p>技データは未掲載です。</p>}
+        {groups.length ? <CharacterMoveExplorer groupClassName={styles.group} listClassName={styles.moveList} groups={groups.map(([type, moves]) => ({
+          type, label: moveLabels[type] ?? "その他", items: moves.map(move => ({
+            id: move.id, name: move.name,
+            commands: (move.commands ?? []).map(command => command.commandText ?? command.numericNotation ?? command.buttonNotation ?? ""),
+            content: <MoveCard move={move} />,
+          })),
+        }))} /> : <p>技データは未掲載です。</p>}
       </section>
 
       <section id="pilot-combos" className={styles.section}>

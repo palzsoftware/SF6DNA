@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { CharacterQuickStart } from "@/components/character-quick-start";
+import { CharacterMoveExplorer } from "@/components/character-move-explorer";
 import { ComboInputRecipe } from "@/components/combo-input-recipe";
 import { PilotComboCard } from "@/components/pilot-combo-card";
 import { CharacterPlayerCard } from "@/components/character-player-card";
@@ -105,6 +107,7 @@ export function CharacterDetailPilot({
 
   return (
     <section className={styles.pilot} aria-label={`${characterName} Character Detail V2.2`}>
+      {!preRelease ? <CharacterQuickStart /> : null}
       {!preRelease ? <section className={styles.overview} id="pilot-overview">
         <div className={styles.overviewLead}>
           <p className="eyebrow">基本ガイド</p>
@@ -116,7 +119,7 @@ export function CharacterDetailPilot({
           <div><dt>得意距離</dt><dd>{rangeLabel ?? "確認中"}</dd></div>
           <div><dt>タイプ</dt><dd>{archetypeLabel ?? "確認中"}</dd></div>
           <div><dt>難易度</dt><dd>{difficulty ? `${difficulty} / 5` : "未評価"}</dd></div>
-          <div><dt>最初の練習</dt><dd>{normalizePublicCopy(profile.firstLesson)}</dd></div>
+          <div id="pilot-first-lesson"><dt>最初の練習</dt><dd>{normalizePublicCopy(profile.firstLesson)}</dd></div>
         </dl>
       </section> : null}
 
@@ -146,12 +149,11 @@ export function CharacterDetailPilot({
           </div>
           {characterSlug === "jp" ? <a href="https://www.streetfighter.com/6/ja-jp/character/jp/frame" target="_blank" rel="noopener noreferrer">CAPCOM公式フレームを見る ↗</a> : null}
         </div>
-        {moveGroups.length ? <div className={styles.moveGroups}>{moveGroups.map(([type, moves], groupIndex) => (
-          <details className={styles.moveGroup} key={type} open={groupIndex === 0}>
-            <summary><strong>{moveTypeLabels[type] ?? "その他"}</strong><span>{moves.length}技</span></summary>
-            <div className={styles.moveTable} role="table" aria-label={`${moveTypeLabels[type] ?? "その他"}の技データ`}>
-              {moves.map((move) => (
-                <article className={styles.moveRow} role="row" key={move.id}>
+        {moveGroups.length ? <CharacterMoveExplorer className={styles.moveGroups} groupClassName={styles.moveGroup} listClassName={styles.moveTable} table enabled={!preRelease} groups={moveGroups.map(([type, moves]) => ({
+          type, label: moveTypeLabels[type] ?? "その他", items: moves.map(move => ({
+            id: move.id, name: move.name,
+            commands: (move.commands ?? []).map(command => command.commandText ?? command.numericNotation ?? command.buttonNotation ?? ""),
+            content: <article className={styles.moveRow} role="row" key={move.id}>
                   <div className={styles.moveIdentity} role="cell">
                     <span>{verificationLabel(move.frame?.verificationStatus ?? null)}</span>
                     <h3>{move.name}</h3>
@@ -175,11 +177,9 @@ export function CharacterDetailPilot({
                     <div><dt>ダメージ</dt><dd>{valueOrUnknown(move.frame?.damage, "確認中")}</dd></div>
                   </dl>
                   {!preRelease && releaseFeatures.publicStrategyContent ? <Link className={styles.moveDetailLink} href={appendDevicePreviewToken(`/moves/${move.slug}`, previewToken)}>技の詳細を見る →</Link> : null}
-                </article>
-              ))}
-            </div>
-          </details>
-        ))}</div> : <div className="empty-state"><p>技データは未掲載です。</p></div>}
+                </article>,
+          })),
+        }))} /> : <div className="empty-state"><p>技データは未掲載です。</p></div>}
       </section>
 
       {!preRelease ? <section className={styles.comboSection} id="pilot-combos" aria-labelledby="pilot-combos-heading">

@@ -1,0 +1,9 @@
+.panel { padding: 16px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); }
+.panel h2 { margin: 0 0 12px; font-size: 1.1rem; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 8px; }
+.steps a { display: flex; align-items: center; gap: 10px; padding: 10px; min-height: 44px; height: 100%; color: var(--text); border: 1px solid var(--border); border-radius: 10px; overflow-wrap: anywhere; }
+.steps a:hover { background: var(--bg); }
+.steps a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.steps strong, .steps small { display: block; }
+.steps small { margin-top: 4px; color: var(--muted); }
+.number { font-weight: 700; }
