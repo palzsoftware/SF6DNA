@@ -91,10 +91,12 @@ test('SSR explorer has labelled search, pressed category, preserved raw content 
   assert.doesNotMatch(shell, /type="search"|技のカテゴリ/); assert.match(shell, /236HP 原文/);
 });
 
-test('quick start links only to five existing sections and makes no combo recommendation', () => {
+test('quick start links to five existing sections and the public Daily15 route, without inventing strategy', () => {
   const { CharacterQuickStart } = load('components/character-quick-start.tsx');
   const html = renderToStaticMarkup(React.createElement(CharacterQuickStart));
   assert.deepEqual([...html.matchAll(/href="#([^"]+)"/g)].map(m => m[1]), ['pilot-overview','pilot-moves','pilot-first-lesson','related-players','related-videos']);
+  assert.match(html, /href="\/me\/training"/);
+  assert.match(html, /今日の15分練習を決める/);
   assert.doesNotMatch(html, /おすすめコンボ|まず覚える技/);
 });
 

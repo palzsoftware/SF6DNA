@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./character-quick-start.module.css";
 
 const steps = [
@@ -15,5 +16,8 @@ export function CharacterQuickStart() {
       <li key={id}><a href={`#${id}`}><span className={styles.number}>{String(index + 1).padStart(2, "0")}</span>
         <span><strong>{title}</strong><small>{description}</small></span></a></li>
     )}</ol>
+    <Link className={styles.dailyLink} href="/me/training">
+      今日の15分練習を決める <span aria-hidden="true">→</span>
+    </Link>
   </nav>;
 }
