@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { MoveMotionMedia as MoveMotionMediaRecord } from "@/lib/move-motion-media";
 
 export function MoveMotionMedia({
@@ -16,6 +16,8 @@ export function MoveMotionMedia({
   showSource?: boolean;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [failedUrl, setFailedUrl] = useState<string | null>(null);
+  const failed = failedUrl === media.mediaUrl;
 
   useEffect(() => {
     const video = videoRef.current;
@@ -46,7 +48,16 @@ export function MoveMotionMedia({
       reducedMotion.removeEventListener("change", syncPlayback);
       document.removeEventListener("visibilitychange", syncPlayback);
     };
-  }, []);
+  }, [media.mediaUrl, media.mediaType, failed]);
+
+  if (failed) {
+    return <div className={className} style={{ aspectRatio: "16 / 9", display: "grid", placeItems: "center" }}>
+      <span>動作映像を読み込めませんでした。</span>
+      {showSource && media.sourceUrl ? <a href={media.sourceUrl} rel="noopener noreferrer" target="_blank">
+        {media.sourceLabel ?? "モーションの出典"} ↗
+      </a> : null}
+    </div>;
+  }
 
   const motion = media.mediaType === "gif" ? (
     <Image
@@ -56,9 +67,11 @@ export function MoveMotionMedia({
       src={media.mediaUrl}
       unoptimized
       width={640}
+      onError={() => setFailedUrl(media.mediaUrl)}
     />
   ) : (
     <video
+      key={media.mediaUrl}
       aria-label={`${title}のモーション`}
       className={className}
       loop
@@ -67,6 +80,7 @@ export function MoveMotionMedia({
       poster={media.posterUrl ?? undefined}
       ref={videoRef}
       preload="none"
+      onError={() => setFailedUrl(media.mediaUrl)}
     >
       <source src={media.mediaUrl} />
       このブラウザでは動画を再生できません。

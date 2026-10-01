@@ -11,7 +11,7 @@ export function CharacterCard({ character }: { character: CharacterSummary }) {
             src={character.imageUrl}
             alt=""
             fill
-            sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"
+            sizes="(max-width: 820px) 50vw, (max-width: 1080px) 33vw, 310px"
           />
         ) : (
           <span>{character.name.slice(0, 1)}</span>
