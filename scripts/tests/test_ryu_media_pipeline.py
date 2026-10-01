@@ -101,7 +101,7 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaises(ValueError): pipeline.checklist(bad)
         expected = copy.deepcopy(self.expected)
         expected['moves'].append(expected['moves'][0] | {'move_id': 'second', 'move_slug': 'second', 'order': 2})
-        m = self.reviewed(); m['moves'].append(m['moves'][0] | {'move_id': 'second', 'move_slug': 'second', 'order': 2})
+        m = self.reviewed(); m['moves'].append(m['moves'][0] | {'move_id': 'second', 'move_slug': 'second', 'order': 2, 'recorded_order': 2})
         with self.assertRaisesRegex(ValueError, 'overlapping'): pipeline.validate_mapping(expected, m, self.root)
 
     @unittest.skipUnless(shutil.which('ffmpeg') and shutil.which('ffprobe'), 'ffmpeg tools required')
@@ -122,6 +122,65 @@ class PipelineTests(unittest.TestCase):
         p = pipeline.propose(source)
         self.assertEqual(p['status'], 'REVIEW_REQUIRED_NO_MOVE_IDENTITIES_INFERRED')
         self.assertTrue(all(x['move_id'] is None for x in p['proposals']))
+
+
+class PublicationContractTests(unittest.TestCase):
+    setUp = PipelineTests.setUp
+    tearDown = PipelineTests.tearDown
+    reviewed = PipelineTests.reviewed
+
+    def test_variant_asset_names_never_double_character_prefix(self):
+        self.assertEqual(pipeline.asset_name('ryu', {'move_slug': 'ryu-standing-lp', 'variant': 'normal'}), 'ryu-standing-lp.webp')
+        self.assertEqual(pipeline.asset_name('ryu', {'move_slug': 'standing-lp', 'variant': 'normal'}), 'ryu-standing-lp.webp')
+        self.assertEqual(pipeline.asset_name('ryu', {'move_slug': 'ryu-sa3', 'variant': 'ca'}, True), 'ryu-sa3-ca.webp')
+
+    def test_enriched_categories_and_variant_preserved(self):
+        for category in ('TARGET_COMBO', 'THROW', 'OD', 'OTHER_REQUIRED_VARIANTS'):
+            expected = copy.deepcopy(self.expected)
+            expected['moves'][0].update(category=category, variant='explicit-variant')
+            m = pipeline.checklist(expected)
+            self.assertEqual(m['moves'][0]['variant'], 'explicit-variant')
+            self.assertEqual(m['moves'][0]['category'], category)
+            self.assertFalse(m['moves'][0]['file_reviewed'])
+            self.assertEqual(m['status'], 'ORDER_NOT_VERIFIED')
+
+    def test_explicit_variant_mismatch_rejected(self):
+        expected = copy.deepcopy(self.expected)
+        expected['moves'][0]['variant'] = 'ca'
+        m = self.reviewed()
+        m['moves'][0]['variant'] = 'normal'
+        with self.assertRaisesRegex(ValueError, 'ID/variant'): pipeline.validate_mapping(expected, m, self.root)
+
+    def test_same_canonical_id_supports_two_reviewed_variants(self):
+        expected = copy.deepcopy(self.expected)
+        expected['moves'][0]['variant'] = 'normal'
+        expected['moves'].append(expected['moves'][0] | {'variant': 'explicit-variant', 'order': 2})
+        m = self.reviewed()
+        m['moves'][0]['variant'] = 'normal'
+        m['moves'].append(m['moves'][0] | {'variant': 'explicit-variant', 'order': 2, 'recorded_order': 2, 'start': 1, 'end': 2})
+        self.assertEqual(len(pipeline.validate_mapping(expected, m, self.root)), 2)
+        m['moves'][1]['variant'] = 'normal'
+        with self.assertRaises(ValueError): pipeline.validate_mapping(expected, m, self.root)
+
+    def test_flexible_actual_filename_requires_explicit_review(self):
+        m = self.reviewed()
+        actual = self.root / 'different user filename.mp4'
+        (self.root / 'fixture.mp4').rename(actual)
+        m['moves'][0]['file'] = actual.name
+        with self.assertRaisesRegex(ValueError, 'assignment must be reviewed'): pipeline.validate_mapping(self.expected, m, self.root)
+        m['moves'][0]['file_reviewed'] = True
+        self.assertEqual(pipeline.validate_mapping(self.expected, m, self.root)[0]['file'], actual.name)
+        m['moves'][0]['file'] = '../different user filename.mp4'
+        with self.assertRaises(ValueError): pipeline.validate_mapping(self.expected, m, self.root)
+
+    def test_merged_recording_order_must_be_unique(self):
+        expected = copy.deepcopy(self.expected)
+        expected['moves'].append(expected['moves'][0] | {'move_id': 'second', 'move_slug': 'second', 'expected_file': 'another-plan.mp4'})
+        m = self.reviewed()
+        m['moves'].append(m['moves'][0] | {'move_id': 'second', 'move_slug': 'second', 'expected_file': 'another-plan.mp4', 'file_reviewed': True, 'start': 1, 'end': 2})
+        with self.assertRaisesRegex(ValueError, 'duplicate actual file/order'): pipeline.validate_mapping(expected, m, self.root)
+        m['moves'][1]['recorded_order'] = 2
+        self.assertEqual(len(pipeline.validate_mapping(expected, m, self.root)), 2)
 
 
 if __name__ == '__main__':

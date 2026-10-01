@@ -1,0 +1,1489 @@
+{
+  "snapshot_fetched_at": "2026-09-30T09:33:59.11192+00:00",
+  "db_move_motion_media_count": 0,
+  "prepared_ryu_crosscheck": {
+    "fetched_at": "2026-09-30T09:33:59.11192+00:00",
+    "fresh_count": 57,
+    "prepared_count": 57,
+    "drift_count": 0,
+    "new_ids": [],
+    "result": "MATCH"
+  },
+  "prepared_ryu_drift": [],
+  "db_public_move_count": 0,
+  "manifests": [
+    {
+      "manifest": "v2-web/src/data/SF6DNA_VER1_LUKE_MEDIA_MANIFEST_20260924.json",
+      "character": "luke",
+      "clips": 1,
+      "approved_for_preview": 1,
+      "held": 0,
+      "types": {
+        "video": 1
+      },
+      "clip_rows": [
+        {
+          "move_id": "aab86b9c-f501-4928-8818-114f5fc0574a",
+          "move_slug": "luke-nose-breaker",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/luke/luke-nose-breaker.mp4",
+              "exists": true,
+              "bytes": 312240
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/luke/luke-nose-breaker.webp",
+              "exists": true,
+              "bytes": 26332
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manifest": "v2-web/src/data/SF6DNA_VER1_MANON_MEDIA_MANIFEST_20260925.json",
+      "character": "manon",
+      "clips": 3,
+      "approved_for_preview": 3,
+      "held": 0,
+      "types": {
+        "video": 3
+      },
+      "clip_rows": [
+        {
+          "move_id": "1a11e706-08e7-4a29-a656-84ac942d5a18",
+          "move_slug": "manon-a-terre",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/manon/manon-a-terre.mp4",
+              "exists": true,
+              "bytes": 262986
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/manon/manon-a-terre.webp",
+              "exists": true,
+              "bytes": 18930
+            }
+          ]
+        },
+        {
+          "move_id": "ee465bb0-22b4-41d2-9b26-a2fa733c3d06",
+          "move_slug": "manon-en-haut",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/manon/manon-en-haut.mp4",
+              "exists": true,
+              "bytes": 333992
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/manon/manon-en-haut.webp",
+              "exists": true,
+              "bytes": 20324
+            }
+          ]
+        },
+        {
+          "move_id": "20ab47b8-49bd-4bc0-b54e-ae8cb55aa7b2",
+          "move_slug": "manon-temps-lie-hp",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/manon/manon-temps-lie-hp.mp4",
+              "exists": true,
+              "bytes": 308435
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/manon/manon-temps-lie-hp.webp",
+              "exists": true,
+              "bytes": 20622
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manifest": "v2-web/src/data/SF6DNA_VER1_RYU_JP_MEDIA_MANIFEST_20260923.json",
+      "character": "jp",
+      "clips": 27,
+      "approved_for_preview": 26,
+      "held": 1,
+      "types": {
+        "video": 27
+      },
+      "clip_rows": [
+        {
+          "move_id": "b558b854-1a5b-41a3-89ec-b119abc475ae",
+          "move_slug": "jp-standing-lp",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-standing-lp.mp4",
+              "exists": true,
+              "bytes": 60523
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-standing-lp.webp",
+              "exists": true,
+              "bytes": 23358
+            }
+          ]
+        },
+        {
+          "move_id": "45d7ef0d-2f7c-415d-b433-1e04ad9fe09b",
+          "move_slug": "jp-standing-lk",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-standing-lk.mp4",
+              "exists": true,
+              "bytes": 66471
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-standing-lk.webp",
+              "exists": true,
+              "bytes": 23122
+            }
+          ]
+        },
+        {
+          "move_id": "e4ed90d9-23bf-4089-978a-4f2061e3b94a",
+          "move_slug": "jp-standing-mp",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-standing-mp.mp4",
+              "exists": true,
+              "bytes": 98116
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-standing-mp.webp",
+              "exists": true,
+              "bytes": 24096
+            }
+          ]
+        },
+        {
+          "move_id": "94ad1cb7-1464-432d-b7ee-34e0171541b0",
+          "move_slug": "jp-standing-mk",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-standing-mk.mp4",
+              "exists": true,
+              "bytes": 82431
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-standing-mk.webp",
+              "exists": true,
+              "bytes": 23408
+            }
+          ]
+        },
+        {
+          "move_id": "45863f7d-e112-42d8-ab88-d33839b4873a",
+          "move_slug": "jp-standing-hp",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-standing-hp.mp4",
+              "exists": true,
+              "bytes": 96900
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-standing-hp.webp",
+              "exists": true,
+              "bytes": 23252
+            }
+          ]
+        },
+        {
+          "move_id": "9e959d30-059e-404b-ab0e-279ec4c5a54a",
+          "move_slug": "jp-standing-hk",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-standing-hk.mp4",
+              "exists": true,
+              "bytes": 118436
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-standing-hk.webp",
+              "exists": true,
+              "bytes": 22138
+            }
+          ]
+        },
+        {
+          "move_id": "7c4584fd-fdb5-4fb9-84a2-472c3c03febe",
+          "move_slug": "jp-crouching-lp",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-crouching-lp.mp4",
+              "exists": true,
+              "bytes": 52752
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-crouching-lp.webp",
+              "exists": true,
+              "bytes": 23758
+            }
+          ]
+        },
+        {
+          "move_id": "0afd12fb-5c7a-4799-b222-21daa7ca18f3",
+          "move_slug": "jp-crouching-mp",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-crouching-mp.mp4",
+              "exists": true,
+              "bytes": 70573
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-crouching-mp.webp",
+              "exists": true,
+              "bytes": 23076
+            }
+          ]
+        },
+        {
+          "move_id": "33b785cd-b4e9-4232-be5c-aca9ccef7b0a",
+          "move_slug": "jp-crouching-hp",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-crouching-hp.mp4",
+              "exists": true,
+              "bytes": 89256
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-crouching-hp.webp",
+              "exists": true,
+              "bytes": 23368
+            }
+          ]
+        },
+        {
+          "move_id": "610e39c3-8fef-4a72-b85b-15c3a8fedd71",
+          "move_slug": "jp-guillotine",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-guillotine.mp4",
+              "exists": true,
+              "bytes": 92519
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-guillotine.webp",
+              "exists": true,
+              "bytes": 23216
+            }
+          ]
+        },
+        {
+          "move_id": "290c6317-4a8a-4241-84cb-fc6774db1a98",
+          "move_slug": "jp-shalosti",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-shalosti.mp4",
+              "exists": true,
+              "bytes": 123575
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-shalosti.webp",
+              "exists": true,
+              "bytes": 22268
+            }
+          ]
+        },
+        {
+          "move_id": "3ed94fcd-3820-4ad6-91ea-7405360afac0",
+          "move_slug": "jp-forward-hk",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-forward-hk.mp4",
+              "exists": true,
+              "bytes": 161016
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-forward-hk.webp",
+              "exists": true,
+              "bytes": 22852
+            }
+          ]
+        },
+        {
+          "move_id": "00edfdc1-cf06-4b8c-b836-a213a7028cf6",
+          "move_slug": "jp-jump-lp",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-jump-lp.mp4",
+              "exists": true,
+              "bytes": 155391
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-jump-lp.webp",
+              "exists": true,
+              "bytes": 18160
+            }
+          ]
+        },
+        {
+          "move_id": "fb460c24-5453-48e4-bc72-dc3dffcfc81c",
+          "move_slug": "jp-grom-strelka",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-grom-strelka.mp4",
+              "exists": true,
+              "bytes": 206264
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-grom-strelka.webp",
+              "exists": true,
+              "bytes": 20488
+            }
+          ]
+        },
+        {
+          "move_id": "6cb6065e-9c33-47d1-af2c-00e4b3871182",
+          "move_slug": "jp-jump-lk",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-jump-lk.mp4",
+              "exists": true,
+              "bytes": 156204
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-jump-lk.webp",
+              "exists": true,
+              "bytes": 17296
+            }
+          ]
+        },
+        {
+          "move_id": "3baf3077-05b0-4360-b548-ee16b68f8a37",
+          "move_slug": "jp-jump-mp",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-jump-mp.mp4",
+              "exists": true,
+              "bytes": 153862
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-jump-mp.webp",
+              "exists": true,
+              "bytes": 18628
+            }
+          ]
+        },
+        {
+          "move_id": "0cc4dbc5-1dfc-4225-b050-a6ad29b92c0e",
+          "move_slug": "jp-zilant",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-zilant.mp4",
+              "exists": true,
+              "bytes": 275900
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-zilant.webp",
+              "exists": true,
+              "bytes": 20680
+            }
+          ]
+        },
+        {
+          "move_id": "ce1e365b-8572-44a2-8767-0bce9f20054b",
+          "move_slug": "jp-jump-mk",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-jump-mk.mp4",
+              "exists": true,
+              "bytes": 164118
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-jump-mk.webp",
+              "exists": true,
+              "bytes": 18044
+            }
+          ]
+        },
+        {
+          "move_id": "1e3cc0be-14ef-4c39-9392-d8b88196fc46",
+          "move_slug": "jp-zilant-mid",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-zilant-mid.mp4",
+              "exists": true,
+              "bytes": 361669
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-zilant-mid.webp",
+              "exists": true,
+              "bytes": 19802
+            }
+          ]
+        },
+        {
+          "move_id": "88b7028e-f54a-4b51-a75a-670ccfce75dc",
+          "move_slug": "jp-jump-hp",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-jump-hp.mp4",
+              "exists": true,
+              "bytes": 154404
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-jump-hp.webp",
+              "exists": true,
+              "bytes": 18908
+            }
+          ]
+        },
+        {
+          "move_id": "0b5841d6-8c3d-4da9-af74-0d4e9c2e389c",
+          "move_slug": "jp-zilant-low",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-zilant-low.mp4",
+              "exists": true,
+              "bytes": 343423
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-zilant-low.webp",
+              "exists": true,
+              "bytes": 18930
+            }
+          ]
+        },
+        {
+          "move_id": "61797d46-a331-4638-ba60-3dc3ea0cfd16",
+          "move_slug": "jp-jump-hk",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-jump-hk.mp4",
+              "exists": true,
+              "bytes": 162432
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-jump-hk.webp",
+              "exists": true,
+              "bytes": 17582
+            }
+          ]
+        },
+        {
+          "move_id": "f262b667-3ec4-4b75-a7f1-df1748df2ba3",
+          "move_slug": "jp-amnesia-od",
+          "variant": "counter",
+          "status": "mapping_hold",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-amnesia-od-counter.mp4",
+              "exists": true,
+              "bytes": 616075
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-amnesia-od-counter.webp",
+              "exists": true,
+              "bytes": 34802
+            }
+          ]
+        },
+        {
+          "move_id": "85762bb5-b5ae-4a88-b4ee-55112037774e",
+          "move_slug": "jp-sa2",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-sa2.mp4",
+              "exists": true,
+              "bytes": 852298
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-sa2.webp",
+              "exists": true,
+              "bytes": 23762
+            }
+          ]
+        },
+        {
+          "move_id": "7817f9e6-8542-4da1-be01-c6bd24294f22",
+          "move_slug": "jp-sa1",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-sa1.mp4",
+              "exists": true,
+              "bytes": 1079850
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-sa1.webp",
+              "exists": true,
+              "bytes": 18640
+            }
+          ]
+        },
+        {
+          "move_id": "1845d4b9-4bac-4e4e-b6fd-3b57accfa973",
+          "move_slug": "jp-sa3",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-sa3.mp4",
+              "exists": true,
+              "bytes": 2247481
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-sa3.webp",
+              "exists": true,
+              "bytes": 13796
+            }
+          ]
+        },
+        {
+          "move_id": "2472fe66-f312-4a5d-9c7c-25e0fa2515d7",
+          "move_slug": "jp-ca",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/jp/jp-ca.mp4",
+              "exists": true,
+              "bytes": 2800175
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/jp/jp-ca.webp",
+              "exists": true,
+              "bytes": 16208
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manifest": "v2-web/src/data/SF6DNA_VER1_RYU_MEDIA_MANIFEST_20260924.json",
+      "character": "ryu",
+      "clips": 4,
+      "approved_for_preview": 4,
+      "held": 0,
+      "types": {
+        "video": 4
+      },
+      "clip_rows": [
+        {
+          "move_id": "b2362378-1411-45ae-a0f0-014e898042e0",
+          "move_slug": "ryu-standing-hk",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/ryu/ryu-standing-hk.mp4",
+              "exists": true,
+              "bytes": 87667
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/ryu/ryu-standing-hk.webp",
+              "exists": true,
+              "bytes": 19648
+            }
+          ]
+        },
+        {
+          "move_id": "06cb478c-ed44-47f7-99ec-1a2dbe45e8b5",
+          "move_slug": "ryu-crouching-hk",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/ryu/ryu-crouching-hk.mp4",
+              "exists": true,
+              "bytes": 86955
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/ryu/ryu-crouching-hk.webp",
+              "exists": true,
+              "bytes": 23644
+            }
+          ]
+        },
+        {
+          "move_id": "db46db6f-26dd-4638-8397-d235750929b9",
+          "move_slug": "ryu-denjin-charge",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/ryu/ryu-denjin-charge.mp4",
+              "exists": true,
+              "bytes": 206751
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/ryu/ryu-denjin-charge.webp",
+              "exists": true,
+              "bytes": 20410
+            }
+          ]
+        },
+        {
+          "move_id": "1aefba80-f15b-4bf2-b96c-a06155070371",
+          "move_slug": "ryu-od-high-blade-kick",
+          "variant": "default",
+          "status": "approved_for_preview",
+          "type": "video",
+          "fresh_identity": {
+            "id_present_in_fresh": true,
+            "slug_matches_fresh": true,
+            "character_matches_fresh": true
+          },
+          "files": [
+            {
+              "role": "media_url",
+              "url": "/media/moves/ryu/ryu-od-high-blade-kick.mp4",
+              "exists": true,
+              "bytes": 178371
+            },
+            {
+              "role": "poster_url",
+              "url": "/media/moves/ryu/ryu-od-high-blade-kick.webp",
+              "exists": true,
+              "bytes": 20410
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "manifest_total_clips": 35,
+  "manifest_preview_approved_clips": 34,
+  "manifest_held_clips": 1,
+  "referenced_asset_files": 70,
+  "missing_referenced_assets": [],
+  "identity_mismatches": [],
+  "assets": [
+    {
+      "url": "/media/moves/jp/jp-amnesia-od-counter.mp4",
+      "extension": ".mp4",
+      "bytes": 616075,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-amnesia-od-counter.webp",
+      "extension": ".webp",
+      "bytes": 34802,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-ca.mp4",
+      "extension": ".mp4",
+      "bytes": 2800175,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-ca.webp",
+      "extension": ".webp",
+      "bytes": 16208,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-crouching-hp.mp4",
+      "extension": ".mp4",
+      "bytes": 89256,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-crouching-hp.webp",
+      "extension": ".webp",
+      "bytes": 23368,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-crouching-lp.mp4",
+      "extension": ".mp4",
+      "bytes": 52752,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-crouching-lp.webp",
+      "extension": ".webp",
+      "bytes": 23758,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-crouching-mp.mp4",
+      "extension": ".mp4",
+      "bytes": 70573,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-crouching-mp.webp",
+      "extension": ".webp",
+      "bytes": 23076,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-forward-hk.mp4",
+      "extension": ".mp4",
+      "bytes": 161016,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-forward-hk.webp",
+      "extension": ".webp",
+      "bytes": 22852,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-grom-strelka.mp4",
+      "extension": ".mp4",
+      "bytes": 206264,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-grom-strelka.webp",
+      "extension": ".webp",
+      "bytes": 20488,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-guillotine.mp4",
+      "extension": ".mp4",
+      "bytes": 92519,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-guillotine.webp",
+      "extension": ".webp",
+      "bytes": 23216,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-jump-hk.mp4",
+      "extension": ".mp4",
+      "bytes": 162432,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-jump-hk.webp",
+      "extension": ".webp",
+      "bytes": 17582,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-jump-hp.mp4",
+      "extension": ".mp4",
+      "bytes": 154404,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-jump-hp.webp",
+      "extension": ".webp",
+      "bytes": 18908,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-jump-lk.mp4",
+      "extension": ".mp4",
+      "bytes": 156204,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-jump-lk.webp",
+      "extension": ".webp",
+      "bytes": 17296,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-jump-lp.mp4",
+      "extension": ".mp4",
+      "bytes": 155391,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-jump-lp.webp",
+      "extension": ".webp",
+      "bytes": 18160,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-jump-mk.mp4",
+      "extension": ".mp4",
+      "bytes": 164118,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-jump-mk.webp",
+      "extension": ".webp",
+      "bytes": 18044,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-jump-mp.mp4",
+      "extension": ".mp4",
+      "bytes": 153862,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-jump-mp.webp",
+      "extension": ".webp",
+      "bytes": 18628,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-sa1.mp4",
+      "extension": ".mp4",
+      "bytes": 1079850,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-sa1.webp",
+      "extension": ".webp",
+      "bytes": 18640,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-sa2.mp4",
+      "extension": ".mp4",
+      "bytes": 852298,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-sa2.webp",
+      "extension": ".webp",
+      "bytes": 23762,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-sa3.mp4",
+      "extension": ".mp4",
+      "bytes": 2247481,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-sa3.webp",
+      "extension": ".webp",
+      "bytes": 13796,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-shalosti.mp4",
+      "extension": ".mp4",
+      "bytes": 123575,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-shalosti.webp",
+      "extension": ".webp",
+      "bytes": 22268,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-standing-hk.mp4",
+      "extension": ".mp4",
+      "bytes": 118436,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-standing-hk.webp",
+      "extension": ".webp",
+      "bytes": 22138,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-standing-hp.mp4",
+      "extension": ".mp4",
+      "bytes": 96900,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-standing-hp.webp",
+      "extension": ".webp",
+      "bytes": 23252,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-standing-lk.mp4",
+      "extension": ".mp4",
+      "bytes": 66471,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-standing-lk.webp",
+      "extension": ".webp",
+      "bytes": 23122,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-standing-lp.mp4",
+      "extension": ".mp4",
+      "bytes": 60523,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-standing-lp.webp",
+      "extension": ".webp",
+      "bytes": 23358,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-standing-mk.mp4",
+      "extension": ".mp4",
+      "bytes": 82431,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-standing-mk.webp",
+      "extension": ".webp",
+      "bytes": 23408,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-standing-mp.mp4",
+      "extension": ".mp4",
+      "bytes": 98116,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-standing-mp.webp",
+      "extension": ".webp",
+      "bytes": 24096,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-zilant-low.mp4",
+      "extension": ".mp4",
+      "bytes": 343423,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-zilant-low.webp",
+      "extension": ".webp",
+      "bytes": 18930,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-zilant-mid.mp4",
+      "extension": ".mp4",
+      "bytes": 361669,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-zilant-mid.webp",
+      "extension": ".webp",
+      "bytes": 19802,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-zilant.mp4",
+      "extension": ".mp4",
+      "bytes": 275900,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/jp/jp-zilant.webp",
+      "extension": ".webp",
+      "bytes": 20680,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/luke/luke-nose-breaker.mp4",
+      "extension": ".mp4",
+      "bytes": 312240,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/luke/luke-nose-breaker.webp",
+      "extension": ".webp",
+      "bytes": 26332,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/manon/manon-a-terre.mp4",
+      "extension": ".mp4",
+      "bytes": 262986,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/manon/manon-a-terre.webp",
+      "extension": ".webp",
+      "bytes": 18930,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/manon/manon-en-haut.mp4",
+      "extension": ".mp4",
+      "bytes": 333992,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/manon/manon-en-haut.webp",
+      "extension": ".webp",
+      "bytes": 20324,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/manon/manon-temps-lie-hp.mp4",
+      "extension": ".mp4",
+      "bytes": 308435,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/manon/manon-temps-lie-hp.webp",
+      "extension": ".webp",
+      "bytes": 20622,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/ryu/ryu-crouching-hk.mp4",
+      "extension": ".mp4",
+      "bytes": 86955,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/ryu/ryu-crouching-hk.webp",
+      "extension": ".webp",
+      "bytes": 23644,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/ryu/ryu-denjin-charge.mp4",
+      "extension": ".mp4",
+      "bytes": 206751,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/ryu/ryu-denjin-charge.webp",
+      "extension": ".webp",
+      "bytes": 20410,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/ryu/ryu-od-high-blade-kick.mp4",
+      "extension": ".mp4",
+      "bytes": 178371,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/ryu/ryu-od-high-blade-kick.webp",
+      "extension": ".webp",
+      "bytes": 20410,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/ryu/ryu-standing-hk.mp4",
+      "extension": ".mp4",
+      "bytes": 87667,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    },
+    {
+      "url": "/media/moves/ryu/ryu-standing-hk.webp",
+      "extension": ".webp",
+      "bytes": 19648,
+      "referenced_by_manifest": true,
+      "animated_webp": false
+    }
+  ],
+  "asset_extension_counts": {
+    ".mp4": 35,
+    ".webp": 35
+  },
+  "asset_total_bytes": 13363469,
+  "animated_webp_count": 0,
+  "unreferenced_assets": [],
+  "loader_evidence": {
+    "preview_manifest_loader": "v2-web/src/lib/preview-motion-media-pilot.ts:approved_for_preview only, JP/Ryu/Luke/Manon fixed character identities",
+    "preview_gate": "v2-web/src/lib/device-preview.ts:getDevicePreviewMoveMotionMedia returns [] outside VERCEL_ENV preview; preview without token returns local pilot manifests",
+    "detail_route": "v2-web/src/app/characters/[slug]/page.tsx:pilotRequested loads Preview motion media and overlays by moveId",
+    "normal_public_loader": "v2-web/src/lib/move-motion-media.ts:non-device-preview path selects move_motion_media status published; fresh DB count0",
+    "playback": "v2-web/src/components/move-motion-media.tsx:video viewport/visibility/reduced-motion guard + preload none; gif image unoptimized; static poster WebP is not animation"
+  },
+  "publication_assessment": "REPOSITORY_PREVIEW_MEDIA_EXISTS_BUT_DATABASE_PUBLICATION_EMPTY; no auto-publication or changed loader",
+  "new_zip_received": false,
+  "changed_assets_or_app_code": false
+}

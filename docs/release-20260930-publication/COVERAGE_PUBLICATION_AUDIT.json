@@ -1,0 +1,808 @@
+{
+  "schema_version": 1,
+  "read_only": true,
+  "applied": false,
+  "policy": {
+    "READY": "Existing identity + safe attached source + concrete source support for displayed claims + consistent relations; recommendation only. Optional evidence_assessments are audit annotations, not new DB fields or a publication gate.",
+    "source_relation": "Presence is not claim verification; candidate/supporting labels are not approval.",
+    "images": "Optional, never blocks a text profile.",
+    "video_dimensions": "SOURCE_OK/URL_OK/TITLE_OK/RELATION_OK overlap; do not sum them as partitions.",
+    "current_public": "Current published counts are reported independently; audit does not unpublish."
+  },
+  "summary": {
+    "players": {
+      "total": 91,
+      "published_current": 41,
+      "draft": 50,
+      "all_classification": {
+        "READY": 0,
+        "SOURCE_REQUIRED": 91,
+        "PROFILE_INCOMPLETE": 0,
+        "RELATION_ONLY": 0,
+        "IMAGE_REQUIRED": 0,
+        "HOLD": 0
+      },
+      "draft_classification": {
+        "READY": 0,
+        "SOURCE_REQUIRED": 50,
+        "PROFILE_INCOMPLETE": 0,
+        "RELATION_ONLY": 0,
+        "IMAGE_REQUIRED": 0,
+        "HOLD": 0
+      },
+      "draft_structural_candidates": 50
+    },
+    "videos": {
+      "total": 90,
+      "published_current": 3,
+      "draft": 87,
+      "all_classification": {
+        "READY": 0,
+        "METADATA_INCOMPLETE": 90,
+        "HOLD": 0
+      },
+      "draft_classification": {
+        "READY": 0,
+        "METADATA_INCOMPLETE": 87,
+        "HOLD": 0
+      },
+      "draft_dimensions": {
+        "SOURCE_OK": 0,
+        "URL_OK": 87,
+        "TITLE_OK": 87,
+        "RELATION_OK": 87
+      },
+      "draft_structural_candidates": 0,
+      "existing_source_url_matches_all": 64,
+      "existing_source_url_matches_draft": 62,
+      "draft_source_binding_gaps": 62
+    },
+    "relations": {
+      "player_characters": 93,
+      "entity_videos": 112
+    },
+    "coverage": {
+      "published_characters": 31,
+      "zero_public_player_characters": 17,
+      "zero_player_gaps_with_existing_draft_candidates": 17,
+      "ready_candidate_zero_player_gap_closures": 0
+    }
+  },
+  "snapshot_sha256": "73d8c321dea721c61c07d0dbbfa9eca132366c4ef10cae67cb871a5e47345e5e",
+  "rows": [
+    {
+      "character_id": "1e4e3f57-7ba0-454c-86d7-72b1deeb3713",
+      "slug": "luke",
+      "name": "ルーク",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "15778fa3-31cb-4567-851f-5d443cd2e0ac",
+        "3232647e-9641-41aa-b869-34e25e247d0f",
+        "dca72b60-2ab0-4685-a87e-1b68bbdd17ba"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 7,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "365f5310-b61a-47af-8d10-5aeaacfe2b91",
+        "44794317-c565-46d8-8774-2bd540dacbb1",
+        "61ddae1f-7dd5-4576-9d80-bb338c3e6903",
+        "942256c3-6cc7-4ef3-9798-2946f1486088",
+        "9830e632-931c-4151-9665-69144d242891",
+        "d0c0692e-ce89-40e7-a846-c723d97e2ae4",
+        "fc914467-030c-47aa-8bf3-8528d173ad0a"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "08c200c1-c205-4934-9184-8b85a06bc7e5",
+      "slug": "cammy",
+      "name": "キャミィ",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "20b3b275-e3e0-4e90-a728-6cfc9affa77b",
+        "60a080e8-e127-478b-9672-166289f38d00",
+        "dca58064-9f76-4fee-982d-f624698db658"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "a5a8e3e2-49ba-4e7e-b97b-004382b801d1"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+      "slug": "jp",
+      "name": "JP",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+        "66f1e8db-358c-4cd6-9e00-005162fec7eb",
+        "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 56,
+      "current_public_video_ids": [
+        "99d2e615-279e-4beb-9bcb-18ac87d133d6"
+      ],
+      "draft_video_ids": [
+        "026c089a-f047-4935-9b81-cb5f22736164",
+        "04109309-9d8a-4b39-9ff5-fe85b96c23e6",
+        "0660f0cc-0250-4039-8c20-f1bcddd6459f",
+        "0d698306-001e-41c1-ab2c-d5c0b15af1fe",
+        "0fc3b11c-f07a-487e-98c2-b098c70a1d01",
+        "18141ab7-b11f-4c54-9ae7-16cc8597bcc6",
+        "19ab2796-7d7f-406e-a010-0ff28336d3f2",
+        "241dd06d-ab86-4ada-959e-fd2abacdc656",
+        "28a12d72-c389-468b-befa-1e147d1f1ce7",
+        "33d0aaee-ee45-49cf-a38a-ab8bf4503876",
+        "34bb7cbc-63fa-4e96-8fc0-decccf17e249",
+        "35bbb147-f06c-43c0-a8c8-7a7d0e1bedc7",
+        "3d508952-1dae-4ae4-baa4-94f22ee7c270",
+        "3e1cbbbe-14cb-41bf-8a28-1938b7f99ef7",
+        "3e7caedd-61c0-4ef1-97d1-68046919ff16",
+        "3fbc343c-ed37-44d0-9dce-789f65525384",
+        "40392368-15be-43ae-9144-ad29dcfaefea",
+        "43b43d08-0ed6-46f5-b3ac-4f38b947be24",
+        "43e62707-297f-45c5-934f-454b3b37555a",
+        "46563977-2312-4aa0-80e8-253c8680921b",
+        "4664fedf-8d5f-4046-a714-8aafcf039ae9",
+        "46b54ad2-65c0-4f45-9fe4-9b45a4453998",
+        "47c06f72-d84c-478f-9479-e8ee519a11bc",
+        "4ca1498d-dc88-450d-b178-4bbdf8f1f05a",
+        "6253902f-f784-446f-9d59-bd141cb523da",
+        "676251a3-d11d-475d-9ce0-80fac8827733",
+        "6877ce8d-4e54-42eb-b216-87cd48630c40",
+        "6f0af45a-7c95-4c3f-977d-a5910b3a5d5b",
+        "7e224332-3281-43b2-9a90-7f8c2c0841dd",
+        "86cbc54d-1ac4-40cc-bc22-e60eb388821d",
+        "9bddd459-6754-4cec-9bea-fdc5676e22ec",
+        "9eba15fa-7dcc-48c6-bded-24b9bfacb562",
+        "a8d38801-20ca-4f52-bc9e-037da091ee74",
+        "b882a97a-e7e6-46e1-a105-a4d140d4ddb7",
+        "b93d54b3-1e4c-4c7f-b288-c98bef4f73b4",
+        "b9b5cfeb-fa17-4f0f-af17-9a6f55a6ad2b",
+        "ba723f88-86cc-4573-8909-54dfff126fdf",
+        "beec9f70-b5c5-4215-bdce-a91e30803705",
+        "c234edf7-83f7-4a37-b933-b6ce56125a50",
+        "c503d96b-6629-4d99-8652-4293266b56c2",
+        "ca1a8b19-342c-462f-b2af-68451f586bd6",
+        "cb9ead03-dec8-4458-9350-a5f04dd5911f",
+        "ccd373ba-98cb-4b13-af78-336b65122b6f",
+        "d4acdfcb-37e5-4ea8-98ac-930d34aebfaf",
+        "d839151e-a3d1-433b-92b4-aa2314411c74",
+        "e52067a2-dfb7-41f6-bc71-f8a6cea9ae34",
+        "e5a686d4-9440-48c4-94f2-fbae16cfa5a1",
+        "e6732800-dc0c-480f-8eb4-78773a5b4697",
+        "e765d080-f6eb-4c84-8514-5741786a2593",
+        "e7bfdf03-8b9e-4165-b87b-dd7d2020a7a2",
+        "ecfb4599-bb6a-47e9-b07f-500c53eb5b4e",
+        "ee3d2583-7f1a-4c2e-8014-c9d3fdff49a8",
+        "f8bacc86-0d70-4563-98a4-3bd40e7454c2",
+        "fc4bbf13-5196-4bd3-b874-5c51575a5ca1",
+        "ff52c223-c9f9-4c6a-8351-ff09feec2ec4"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+      "slug": "ryu",
+      "name": "リュウ",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "264c841d-6962-449c-9c50-cacf88f91cc0",
+        "d3277581-4bd8-41a2-8f95-9eac22b10c53",
+        "e3cb3bf2-9ec9-4b40-a89a-e33361211cf4"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 21,
+      "current_public_video_ids": [
+        "583a687e-c1f4-439d-ac6d-5bb3994549f1",
+        "8ca914b4-860d-4a4e-8204-3b8b8c7ef6c1"
+      ],
+      "draft_video_ids": [
+        "2094eaed-606c-405d-a759-bd0df6041c1f",
+        "212a1d88-8234-4ac3-9529-6ee3d6d2b099",
+        "36831690-1630-4e31-996f-980747cfdb09",
+        "3769d2f5-7db1-4b7c-8612-bb5f924eef5f",
+        "44794317-c565-46d8-8774-2bd540dacbb1",
+        "564d9904-9a6a-4b30-876a-b1029d557cf1",
+        "58832f24-df98-4ca5-848f-01c4bc39ec1a",
+        "659bfe86-57de-4211-a499-5a5ccd0e484f",
+        "6b92982d-d908-4d25-8cf7-b71382fc7f32",
+        "701f57d9-ce62-4630-90d2-024c55a12aa8",
+        "733670e6-1ee7-4bd8-b00e-289fe070a53d",
+        "7d18c345-2089-4780-bb00-ae210e23110e",
+        "9065e536-1830-46b3-a19c-1c8b24270f34",
+        "9958194d-5db9-4728-9a9b-775fdcce3246",
+        "a78b8ef4-b93e-4d21-9c6d-6982509981d6",
+        "dbd93aa8-7e58-4e4f-9d78-6c405191821f",
+        "e02af4ab-834d-4a12-8adc-f648a769eb9d",
+        "f25eefdf-1f1f-4e07-9ac3-a0c9bb98211d",
+        "fb654013-ffcd-4025-a62c-455072fd2fa8"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "558f125c-3ddf-472c-9a15-7f9ce20c9580",
+      "slug": "jamie",
+      "name": "ジェイミー",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+        "8ac01b6d-0a18-4da4-a154-4d8274957a6c",
+        "952f2765-bafc-47d0-8be6-af76179a8bfa"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "c653a5d8-40b9-49fd-8953-3f86a6b686d9"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "8c5af70c-2e6a-4b6d-9e26-23c93c04c368",
+      "slug": "chun-li",
+      "name": "春麗",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "210a2651-87f7-436f-ae88-fdee5df4868a",
+        "86378b1d-e655-4c6f-808e-0cd8099a5403",
+        "889c6628-2d4e-4379-87bc-c5545cbc6f49"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "a5a8e3e2-49ba-4e7e-b97b-004382b801d1"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "dd1e6234-2542-4b70-8323-25818c5893cf",
+      "slug": "guile",
+      "name": "ガイル",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "2c6c27df-f35f-4b40-b32a-47ff0e36842f",
+        "670431a1-addb-4c8e-9828-a45652ff976b",
+        "caeb6733-08e8-43e1-85dd-b275a2f38571"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "e7054b08-8859-4677-a74d-d1b3cdc2c1c5"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "f4b6f449-6a81-47ba-be5b-196816c4c7f5",
+      "slug": "kimberly",
+      "name": "キンバリー",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "72f18e74-1239-4d81-9603-3a5e7470a5d8",
+        "7c8377fa-29eb-4015-bf1d-f76a03569725",
+        "b6c02dab-cd27-4dbd-b184-fda9e79d7d7c"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "a21ff8f3-215e-49a1-8db6-3171f5622f29"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "e0b0bea4-b4b2-445f-b273-3a73e1c18827",
+      "slug": "juri",
+      "name": "ジュリ",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "0b1001f0-8f5b-413c-b466-455273239867",
+        "b5b26852-2d50-4573-86d5-672ac4894d07",
+        "bca55f14-5c23-49d8-9af8-a737ecf99764"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "56ebf8fd-54ce-4183-9c0d-f26f91be9348"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "08c7dec3-a3b8-403e-92e0-488fab6afdfb",
+      "slug": "ken",
+      "name": "ケン",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "31c18d40-88d9-4003-b6d3-19c318bc8a7b",
+        "34779c3d-1013-44d4-bd34-dbc49e51d054",
+        "f75a278c-e432-48ff-a06b-277957496d67"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "44794317-c565-46d8-8774-2bd540dacbb1"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "40b89dd5-38ba-4157-8f5f-0c4202c7d6aa",
+      "slug": "blanka",
+      "name": "ブランカ",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "acc4a52c-ee9e-4f9c-ab09-788818789841",
+        "b2aa9518-06eb-45d1-bf37-e39147173072",
+        "d1af91be-de55-4759-bf0b-a8e6555aa3d1"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "c653a5d8-40b9-49fd-8953-3f86a6b686d9"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "0e62ecec-f601-4859-86a6-3b968372a519",
+      "slug": "dhalsim",
+      "name": "ダルシム",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "16ab3ec5-cdb8-43a4-894b-76b65de31849",
+        "90662573-bec5-4155-95dd-e5bfbcde9e8f",
+        "b8639b00-f40b-4273-afea-7a6afe797cc3"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "c653a5d8-40b9-49fd-8953-3f86a6b686d9"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "9e31dc2b-b281-4c39-b9f8-45af62a8117e",
+      "slug": "e-honda",
+      "name": "エドモンド本田",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "66851afa-ee30-4999-9db6-d107ab6a6664",
+        "970da958-9983-4bd1-af07-091febb75646",
+        "a0983770-93ca-42db-8c1c-77e9ab1a013d"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "c653a5d8-40b9-49fd-8953-3f86a6b686d9"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "62679029-3025-45b2-8e3f-a4a6d119485e",
+      "slug": "dee-jay",
+      "name": "ディージェイ",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "21168f5b-2292-4f33-8f84-612075a82733",
+        "6a067aff-3d2f-4949-ad32-8d4540727fc9",
+        "6cfc1e90-8064-4fad-95aa-504556a590de"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "c653a5d8-40b9-49fd-8953-3f86a6b686d9"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "efc5d359-27ec-4660-937c-dc0d84e862f8",
+      "slug": "manon",
+      "name": "マノン",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "5c39b8f5-eb6d-44f6-8841-b0afcae43b6f",
+        "b22cc10c-5633-4970-a689-064ad721fe89",
+        "e8f44361-8ff3-480f-abb8-24cb53f1f9de"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "a5a8e3e2-49ba-4e7e-b97b-004382b801d1"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "e224c371-84b8-4bf4-bde9-3b65d8d8a3b9",
+      "slug": "marisa",
+      "name": "マリーザ",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "624f3ec7-a7a3-4a25-97c5-65646b4c5de2",
+        "7c446d88-98b5-4a3f-bc1a-d7cd327e3d24",
+        "b3849d0e-51f7-46b6-ae6d-049f6a15b6dd"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "e7054b08-8859-4677-a74d-d1b3cdc2c1c5"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "459e874a-1b6e-4a3e-9b9a-86fcb31df559",
+      "slug": "zangief",
+      "name": "ザンギエフ",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+        "942d66dd-0840-433d-be18-81f867799116",
+        "fe1a20d8-4341-408b-b02a-1308c1cafe6f"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "56ebf8fd-54ce-4183-9c0d-f26f91be9348"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "b004c66a-f5ad-483c-a163-21773223024a",
+      "slug": "lily",
+      "name": "リリー",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "013ddba8-c557-4162-8f9f-636ae67568ff",
+        "2cc524b2-9b7e-44cd-9b5c-bb9844adc4f7",
+        "970da958-9983-4bd1-af07-091febb75646"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "e7054b08-8859-4677-a74d-d1b3cdc2c1c5"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "56ed72aa-20ba-4c21-9bfd-c367cc40ca7d",
+      "slug": "rashid",
+      "name": "ラシード",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "174d96f3-9379-435c-bc89-549e98b785d7",
+        "747b1ec4-1a50-4248-ab49-961ed880e003",
+        "ef6c9fa7-27ee-44ae-993a-c4e3d5a407b6"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "c653a5d8-40b9-49fd-8953-3f86a6b686d9"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "92aa12c9-d4b0-4384-9ef8-a6d1d0115989",
+      "slug": "aki",
+      "name": "A.K.I.",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "002a208f-3804-4a01-908a-72d713390998",
+        "8e2e29d4-21dd-4047-9230-ac100b96c61c",
+        "ec550353-56f4-4708-b3b5-f8cb9dbc6828"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "e7054b08-8859-4677-a74d-d1b3cdc2c1c5"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "c11bc1ca-6c91-41de-9700-2ea9de8f719e",
+      "slug": "ed",
+      "name": "エド",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "4398b674-1d5d-4725-a322-ecf5a61fef29",
+        "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+        "98d27414-aaae-4367-95a6-54bb1897d0cb"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "4c01083a-e02a-4ed3-883a-b0f615f3a0bf"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "4b6afb51-f50e-48cf-9115-896b5f4a5042",
+      "slug": "akuma",
+      "name": "豪鬼",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "851f4b0f-5843-4bff-b3fc-fd999835a233",
+        "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+        "fde7c095-b6fc-40ad-a287-6a8f8d3e3444"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "44794317-c565-46d8-8774-2bd540dacbb1"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "2f694c43-640b-43f1-b79a-d00beff0ad2b",
+      "slug": "m-bison",
+      "name": "ベガ",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "19fc9bdb-bd77-443e-b67e-2434731ff758",
+        "1b49dcbf-6848-4cac-bdd8-8a73d660f81c",
+        "6e495ccf-1459-4f7f-af04-c6230b32cd2d"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "4c01083a-e02a-4ed3-883a-b0f615f3a0bf"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "60875143-700c-4734-bfca-0eb3d20764c4",
+      "slug": "terry",
+      "name": "テリー",
+      "player_relation_count": 3,
+      "current_public_player_ids": [],
+      "draft_player_ids": [
+        "92a7f5e5-2399-4756-9a0f-94f30114d1b0",
+        "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+        "f36f019b-34bd-4740-a44e-f3a9e4d4357a"
+      ],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "4c01083a-e02a-4ed3-883a-b0f615f3a0bf"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": true,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "c0bad241-355d-492d-9868-f69e311cac0f",
+      "slug": "mai",
+      "name": "不知火舞",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "626062e4-4300-43ee-a20d-10d4c7672364",
+        "99addbae-9429-4128-9242-b8f2b89365c2",
+        "f7a3ae8e-8692-467b-9ca3-8d31597774d3"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "4c01083a-e02a-4ed3-883a-b0f615f3a0bf"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "f5a76b4e-cd2c-44e6-9b09-d3f1f0e82f9d",
+      "slug": "elena",
+      "name": "エレナ",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+        "524ee9aa-4ca0-4b7b-aecb-6aad8d8d4bfe",
+        "e4424bda-9897-4d10-a316-a91a76333e00"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "a21ff8f3-215e-49a1-8db6-3171f5622f29"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "1d9817cf-beb9-497c-a77f-c08a4a2e9ac2",
+      "slug": "sagat",
+      "name": "サガット",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "830621f4-38aa-49e3-a320-31621e983fb5",
+        "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+        "e5afe19f-e311-4e6f-ab33-781e0263efdf"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "56ebf8fd-54ce-4183-9c0d-f26f91be9348"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "0a82075f-b2c3-4a3d-9267-89f3da1543dd",
+      "slug": "alex",
+      "name": "アレックス",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "c3690c71-080e-4f90-a9de-0f1b35dc2b21",
+        "ce9b7b2f-4b01-406f-be32-e940e59abf5e",
+        "f219456a-9a27-4fae-a874-f52b12c9160d"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "56ebf8fd-54ce-4183-9c0d-f26f91be9348"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "77f7116b-8d7e-4cc0-885b-7b5a3ac27f3b",
+      "slug": "c-viper",
+      "name": "C.ヴァイパー",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "2e98c322-7880-4aec-be51-d2bffc7d3836",
+        "766d1c0b-e823-4d1b-8c18-7f34368e34b8",
+        "ea83d7db-da1a-4fee-b564-140f607d4950"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "a5a8e3e2-49ba-4e7e-b97b-004382b801d1"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "57c3cd53-a5c1-4c3a-a933-6b2efa3b8378",
+      "slug": "ingrid",
+      "name": "イングリッド",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "082e5e11-4622-4df7-9123-969e2812584a",
+        "7d9f9d3d-2206-4ef9-9347-c4bcfcc04a9f",
+        "d2159f7c-5076-46b8-9b6d-b4bef558f91a"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "a21ff8f3-215e-49a1-8db6-3171f5622f29"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    },
+    {
+      "character_id": "a9f61f3f-d6e0-4f98-8f1f-6fb94fae7baa",
+      "slug": "yasmine",
+      "name": "ヤスミン",
+      "player_relation_count": 3,
+      "current_public_player_ids": [
+        "2e98c322-7880-4aec-be51-d2bffc7d3836",
+        "97789718-3277-40a1-b3a9-d7955f35f198",
+        "df248618-ed06-4979-ba86-be2a0b1b3bc6"
+      ],
+      "draft_player_ids": [],
+      "ready_draft_player_ids": [],
+      "video_relation_count": 1,
+      "current_public_video_ids": [],
+      "draft_video_ids": [
+        "b7196583-fcce-41f9-a424-33594d103d5b"
+      ],
+      "ready_draft_video_ids": [],
+      "zero_public_player_gap_has_existing_draft_candidates": false,
+      "zero_public_player_gap_can_close_with_ready_candidates": false
+    }
+  ]
+}

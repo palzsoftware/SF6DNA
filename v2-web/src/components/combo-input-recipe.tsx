@@ -2,8 +2,8 @@ import { tokenizeComboRecipe } from "@/lib/combo-input-tokens";
 import styles from "./combo-input-recipe.module.css";
 
 /** Original text remains available alongside SF6DNA's own text-backed input symbols. */
-export function ComboInputRecipe({ recipe }: { recipe: string }) {
-  const tokens = tokenizeComboRecipe(recipe);
+export function ComboInputRecipe({ recipe, iconPilot = false }: { recipe: string; iconPilot?: boolean }) {
+  const tokens = iconPilot ? tokenizeComboRecipe(recipe) : [{ type: "TEXT" as const, raw: recipe, value: recipe, label: recipe, display: recipe }];
   return (
     <div className={styles.recipe}>
       <div className={styles.tokens} aria-label="入力の見方">

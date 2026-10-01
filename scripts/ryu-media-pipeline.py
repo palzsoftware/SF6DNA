@@ -13,7 +13,7 @@ import subprocess
 import zipfile
 from pathlib import Path, PurePosixPath
 
-CATEGORIES = {'NORMAL', 'UNIQUE', 'SPECIAL', 'SUPER', 'CA'}
+CATEGORIES = {'NORMAL', 'UNIQUE', 'TARGET_COMBO', 'THROW', 'SPECIAL', 'OD', 'SUPER', 'CA', 'OTHER_REQUIRED_VARIANTS'}
 SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
 MAX_FILES = 256
 MAX_FILE_BYTES = 2 * 1024**3
@@ -95,7 +95,7 @@ def expected_moves(data):
     require(SLUG.fullmatch(data.get('character', '')) is not None, 'invalid character slug')
     rows = data.get('moves')
     require(isinstance(rows, list) and rows, 'expected moves must be nonempty')
-    ids, slugs, orders = set(), set(), set()
+    keys, slug_keys, orders = set(), set(), set()
     for row in rows:
         require(isinstance(row.get('move_id'), str) and row['move_id'], 'move_id required')
         require(SLUG.fullmatch(row.get('move_slug', '')) is not None, 'invalid move_slug')
@@ -103,15 +103,18 @@ def expected_moves(data):
         require(row.get('category') in CATEGORIES, 'invalid category')
         require(type(row.get('order')) is int and row['order'] > 0, 'positive order required')
         relative_file(row.get('expected_file'))
-        require(row['move_id'] not in ids and row['move_slug'] not in slugs, 'duplicate move ID or slug')
+        variant = row.get('variant', 'normal')
+        require(isinstance(variant, str) and SLUG.fullmatch(variant) is not None, 'invalid variant')
+        key = (row['move_id'], variant)
+        require(key not in keys and (row['move_slug'], variant) not in slug_keys, 'duplicate move ID/variant or slug/variant')
         require((row['expected_file'], row['order']) not in orders, 'duplicate file/order')
-        ids.add(row['move_id']); slugs.add(row['move_slug']); orders.add((row['expected_file'], row['order']))
+        keys.add(key); slug_keys.add((row['move_slug'], variant)); orders.add((row['expected_file'], row['order']))
     return rows
 
 
 def checklist(data):
     rows = expected_moves(data)
-    return {'character': data['character'], 'status': 'ORDER_NOT_VERIFIED', 'expected_move_count': len(rows), 'moves': [{**r, 'file': r['expected_file'], 'start': None, 'end': None, 'order_reviewed': False, 'cut_reviewed': False, 'mapping_reviewed': False, 'source_sha256': None, 'status': 'RECORDING_NOT_RECEIVED'} for r in rows]}
+    return {'character': data['character'], 'status': 'ORDER_NOT_VERIFIED', 'expected_move_count': len(rows), 'moves': [{**r, 'variant': r.get('variant', 'normal'), 'file': r['expected_file'], 'file_reviewed': False, 'recorded_order': r['order'], 'start': None, 'end': None, 'order_reviewed': False, 'cut_reviewed': False, 'mapping_reviewed': False, 'source_sha256': None, 'status': 'RECORDING_NOT_RECEIVED'} for r in rows]}
 
 
 def probe(path):
@@ -144,17 +147,24 @@ def validate_mapping(expected, manifest, source_root):
     require(manifest.get('character') == expected['character'], 'character mismatch')
     supplied = manifest.get('moves', [])
     require(len(supplied) == len(rows), 'manifest count differs from expected list')
-    lookup = {r['move_id']: r for r in rows}
-    seen = set(); clips = []; file_intervals = {}
+    lookup = {(r['move_id'], r.get('variant', 'normal')): r for r in rows}
+    seen = set(); clips = []; file_intervals = {}; recorded_orders = set()
     root = Path(source_root).resolve()
     for row in supplied:
         ident = row.get('move_id')
-        require(ident in lookup and ident not in seen, 'unknown or duplicate move ID')
-        seen.add(ident)
-        canonical = lookup[ident]
+        key = (ident, row.get('variant', 'normal'))
+        require(key in lookup and key not in seen, 'unknown or duplicate move ID/variant')
+        seen.add(key)
+        canonical = lookup[key]
         for field in ('move_slug', 'move_name', 'category', 'order'):
             require(row.get(field) == canonical[field], f'{ident}: {field} mismatch')
-        require(row.get('file') == canonical['expected_file'], f'{ident}: recording file mismatch')
+        if row.get('file') != canonical['expected_file']:
+            require(row.get('file_reviewed') is True, f'{ident}: actual recording file assignment must be reviewed')
+        recorded_order = row.get('recorded_order', row.get('order'))
+        require(type(recorded_order) is int and recorded_order > 0, f'{ident}: invalid actual recording order')
+        file_order = (row.get('file'), recorded_order)
+        require(file_order not in recorded_orders, f'{ident}: duplicate actual file/order')
+        recorded_orders.add(file_order)
         require(all(row.get(f) is True for f in ('order_reviewed', 'cut_reviewed', 'mapping_reviewed')), f'{ident}: order/cut/mapping review required')
         relative_file(row['file'])
         path = root.joinpath(*PurePosixPath(row['file']).parts)
@@ -169,8 +179,17 @@ def validate_mapping(expected, manifest, source_root):
     return clips
 
 
+def asset_name(character, clip, repeated_slug=False):
+    slug = clip['move_slug']
+    stem = slug if slug.startswith(character + '-') else character + '-' + slug
+    suffix = '-' + clip.get('variant', 'normal') if repeated_slug else ''
+    return stem + suffix + '.webp'
+
+
 def render(expected, manifest, source_root, destination):
     clips = validate_mapping(expected, manifest, source_root)
+    names = [asset_name(expected['character'], c, sum(other['move_slug'] == c['move_slug'] for other in clips) > 1) for c in clips]
+    require(len(set(names)) == len(names), 'variant asset filename collision')
     out = Path(destination)
     require(not out.exists(), 'output must be a new staging directory')
     durations = {c['source_path']: probe(c['source_path']) for c in clips}
@@ -179,7 +198,8 @@ def render(expected, manifest, source_root, destination):
     results = []
     try:
         for clip in clips:
-            asset = out / f"{expected['character']}-{clip['move_slug']}.webp"
+            repeated_slug = sum(c['move_slug'] == clip['move_slug'] for c in clips) > 1
+            asset = out / asset_name(expected['character'], clip, repeated_slug)
             subprocess.run(['ffmpeg', '-nostdin', '-hide_banner', '-loglevel', 'error', '-n', '-threads', '1', '-ss', str(clip['start']), '-t', str(clip['end'] - clip['start']), '-i', clip['source_path'], '-an', '-vf', "fps=15,scale='min(640,iw)':-2", '-c:v', 'libwebp_anim', '-quality', '75', '-loop', '0', '-threads', '1', str(asset)], check=True, timeout=180)
             require(0 < asset.stat().st_size <= 20 * 1024**2, 'encoded WebP outside size limit')
             results.append({k: v for k, v in clip.items() if k != 'source_path'} | {'asset_file': asset.name, 'bytes': asset.stat().st_size, 'sha256': sha256(asset), 'status': 'ENCODED_STAGING_ONLY_VISUAL_QA_REQUIRED'})

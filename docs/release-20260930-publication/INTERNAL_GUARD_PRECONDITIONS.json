@@ -1,0 +1,8 @@
+{
+  "BASE_RC": "f0ef399143fae7d2ba1d0cfefed65bc88cef5beb",
+  "ROUTE": "v2-web/src/app/internal/character-preview/[slug]/page.tsx",
+  "ROUTE_SHA256": "809a8dbcc6c786f5353390a6f4f4d85a59610681be306d275b90b1c88dd5e6f9",
+  "APPROVAL": "NO",
+  "APPLIED": false,
+  "PLAN": "Existing requireAdmin before params and data. Mock tests are preparation only, not real login/device PASS."
+}

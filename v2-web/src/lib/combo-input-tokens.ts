@@ -79,11 +79,9 @@ export function tokenizeComboRecipe(raw: string): ComboInputToken[] {
   return tokens;
 }
 
-/** Prior pilot IDs are retained as evidence fixtures only. All eligible cards share the renderer. */
+/** Luke's first five reviewed recipes are the only active icon pilot. */
 export const comboIconPilotIds = {
   luke: ["da8dac9f-e65e-4c16-a8f4-637318d73a66", "54185bc2-8bde-4c82-be10-601f69454434", "11337af8-4a19-4688-ac22-826f05ebd11e", "f321891f-45e0-4e35-8e4c-388818b80675", "537e6839-69fd-443d-a87e-be12601311e6"],
-  jp: ["f4b028b9-3137-459a-9339-003bde34c9ed", "ad31eb7f-5dc3-4a8a-a02c-887ae2cb869d", "d1126690-13fd-4c6f-a811-540e2acfb188", "797eda8e-1075-4547-830e-11d4037e1d8c", "31a791ff-97a2-4160-89b2-3dd78fcb9d68"],
-  ken: ["07ae236f-0095-40df-9a59-c03f87c8c5a6", "be1f206d-1858-4bca-8223-2ff670f77bab", "7b0095e2-9e0e-467c-8f7a-5dca178d8568", "616fbae7-be2c-4d1d-a909-c4035cc9dd26", "adc25a73-7ed7-40e8-98f0-26f4b1492cd2"],
 } as const;
 const pilotIds = new Set<string>(Object.values(comboIconPilotIds).flat());
 export function isComboIconPilot(id: string): boolean { return pilotIds.has(id); }

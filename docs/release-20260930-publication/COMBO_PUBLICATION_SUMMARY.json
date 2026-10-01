@@ -1,0 +1,59 @@
+{
+  "fetched_at": "2026-09-30T09:33:59.11192+00:00",
+  "classification_kind": "OFFLINE_READINESS_ONLY_NO_PUBLICATION",
+  "source_status": "READ_ONLY_NOT_APPLIED",
+  "TOTAL": 1478,
+  "CURRENT_PUBLISHED": 0,
+  "PUBLISHABLE": 0,
+  "SOURCE_REQUIRED": 0,
+  "GAME_VERIFICATION_REQUIRED": 1213,
+  "DATA_ERROR": 0,
+  "DUPLICATE": 0,
+  "HOLD": 265,
+  "FIRST_SAFE_COHORT": [],
+  "VERIFIED_SOURCE_PARSER_REVIEW_COHORT": [
+    {
+      "id": "271b8a26-7565-4fa5-b69d-e8a542e7b2a6",
+      "slug": "kimberly-20260803-modern-assist2",
+      "character": "kimberly",
+      "classification": "GAME_VERIFICATION_REQUIRED",
+      "remaining": [
+        "CURRENT_GAME_REPRODUCTION_NOT_DOCUMENTED"
+      ]
+    }
+  ],
+  "RAW_MISMATCH": 0,
+  "DUPLICATE_CANDIDATE_ROWS": 202,
+  "CONFIRMED_DUPLICATES": 0,
+  "REASON_COUNTS": {
+    "VERIFICATION_STATUS_NOT_VERIFIED": 1477,
+    "CURRENT_GAME_REPRODUCTION_NOT_DOCUMENTED": 1478,
+    "ARCHIVED_RECORD": 265,
+    "PLACEHOLDER_RECIPE": 264,
+    "NOTES_CONFLICT": 302,
+    "SOURCE_NOT_READY": 224,
+    "DUPLICATE_CANDIDATE_ONLY": 202
+  },
+  "source_snapshot": {
+    "characters": 34,
+    "patches": 1,
+    "sources": 661,
+    "combo_source_relations": 2912
+  },
+  "primary_precedence": [
+    "DATA_ERROR",
+    "DUPLICATE",
+    "HOLD",
+    "SOURCE_REQUIRED",
+    "GAME_VERIFICATION_REQUIRED",
+    "PUBLISHABLE"
+  ],
+  "caveats": [
+    "Primary categories are disjoint; secondary blocker counts overlap.",
+    "verified alone, frame verification, source relations and lossless renderer PASS do not prove current gameplay reproduction.",
+    "No status, DB, feature flag, source adoption or publication change.",
+    "Structured positive reproduction evidence is required for automatic safe cohort; notes conflicts always block.",
+    "NULL optional numerics are unknown, not fabricated or treated as zero.",
+    "Duplicate candidates are not confirmed duplicates."
+  ]
+}

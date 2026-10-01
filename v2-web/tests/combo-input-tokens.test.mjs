@@ -9,15 +9,15 @@ const { tokenizeComboRecipe: parse, isComboIconPilot, comboIconPilotIds } = test
 const typed = raw => parse(raw).filter(t => !['TEXT', 'AMBIGUOUS'].includes(t.type));
 const fixture = JSON.parse(readFileSync(new URL('./fixtures/combo-icon-pilot.json', import.meta.url), 'utf8'));
 
-test('all 15 existing pilot recipes are lossless; gameplay status is not upgraded', () => {
+test('15 parser fixtures stay lossless; only Luke first five are active icon pilot', () => {
   assert.equal(fixture.cases.length, 15);
   for (const character of ['luke', 'jp', 'ken']) assert.equal(fixture.cases.filter(c => c.character === character).length, 5);
   for (const c of fixture.cases) {
     assert.equal(parse(c.recipe).map(t => t.raw).join(''), c.recipe);
-    assert.equal(isComboIconPilot(c.id), true);
+    assert.equal(isComboIconPilot(c.id), c.character === 'luke');
   }
   assert.equal(isComboIconPilot('unrelated-card'), false);
-  assert.equal(Object.values(comboIconPilotIds).flat().length, 15);
+  assert.equal(Object.values(comboIconPilotIds).flat().length, 5);
 });
 
 test('compact classic direction, button, and motion commands are distinct', () => {
@@ -69,7 +69,7 @@ test('renderer preserves original, uses labels for icons and keeps uncertain tex
   assert.match(component, /type === "TEXT" \|\| token\.type === "AMBIGUOUS"/);
   assert.match(component, /原表記: /);
   assert.match(component, /\{recipe\}/);
-  assert.doesNotMatch(card, /isComboIconPilot/);
+  assert.match(card, /iconPilot=\{isComboIconPilot\(combo\.id\)\}/);
   assert.match(card, /recipe=\{combo\.rawRecipe \?\? combo\.command \?\? ""\}/);
 });
 
@@ -95,7 +95,7 @@ test('actual React renderer escapes text and exposes separate DR/CDR/state label
     throw Error(name);
   });
   const raw = '5LP > DR > CDR > DI_GUARD > DI(PC) > <script>alert(1)</script>';
-  const rendered = renderToStaticMarkup(React.createElement(rendererModule.exports.ComboInputRecipe, { recipe: raw }));
+  const rendered = renderToStaticMarkup(React.createElement(rendererModule.exports.ComboInputRecipe, { recipe: raw, iconPilot: true }));
   assert.match(rendered, /aria-label="ドライブラッシュ"/);
   assert.match(rendered, /aria-label="キャンセルドライブラッシュ"/);
   assert.match(rendered, /aria-label="ドライブインパクト・ガード"/);
@@ -111,7 +111,7 @@ test('all explicit relative direction names render without silently mapping pros
   assert.equal(typed('FORWARDNESS UPDATE BACKGROUND DOWNLOADED').length, 0);
 });
 
-test('a nonpilot card uses the shared renderer and byte-for-byte raw recipe instead of normalized copy', async () => {
+test('a nonpilot card keeps a byte-for-byte text recipe instead of enabling icons', async () => {
   const React = await import('react');
   const jsx = await import('react/jsx-runtime');
   const { renderToStaticMarkup } = await import('react-dom/server');
@@ -133,10 +133,11 @@ test('a nonpilot card uses the shared renderer and byte-for-byte raw recipe inst
     '@/lib/device-preview': { appendDevicePreviewToken: value => value },
     '@/lib/release-features': { releaseFeatures: { publicStrategyContent: false } },
     '@/lib/detail-localization': { localizeComboText: value => value, localizeSourceType: value => value },
+    '@/lib/combo-input-tokens': testModule.exports,
   });
   const raw = '5LP > Drive Rush > DR > DI(PC)';
   const rendered = renderToStaticMarkup(React.createElement(PilotComboCard, { combo: { id: 'not-a-pilot-id', href:'/combos/example', name:'fixture', command:'正規化済み', rawRecipe:raw, damage:null, drive:null, sa:null, difficulty:null, verificationStatus:'unverified', preview:true } }));
-  assert.match(rendered, /aria-label="ドライブラッシュ"/);
+  assert.doesNotMatch(rendered, /aria-label="ドライブラッシュ"/);
   assert.match(rendered, /5LP &gt; Drive Rush &gt; DR &gt; DI\(PC\)/);
   assert.doesNotMatch(rendered, /正規化済み/);
   assert.match(readFileSync(new URL('../src/components/jp-character-detail.tsx', import.meta.url), 'utf8'), /rawRecipe: combo\.command/);

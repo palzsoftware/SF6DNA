@@ -1,0 +1,5002 @@
+{
+  "schema_version": 1,
+  "read_only": true,
+  "applied": false,
+  "policy": {
+    "READY": "Existing identity + safe attached source + concrete source support for displayed claims + consistent relations; recommendation only. Optional evidence_assessments are audit annotations, not new DB fields or a publication gate.",
+    "source_relation": "Presence is not claim verification; candidate/supporting labels are not approval.",
+    "images": "Optional, never blocks a text profile.",
+    "video_dimensions": "SOURCE_OK/URL_OK/TITLE_OK/RELATION_OK overlap; do not sum them as partitions.",
+    "current_public": "Current published counts are reported independently; audit does not unpublish."
+  },
+  "summary": {
+    "players": {
+      "total": 91,
+      "published_current": 41,
+      "draft": 50,
+      "all_classification": {
+        "READY": 0,
+        "SOURCE_REQUIRED": 91,
+        "PROFILE_INCOMPLETE": 0,
+        "RELATION_ONLY": 0,
+        "IMAGE_REQUIRED": 0,
+        "HOLD": 0
+      },
+      "draft_classification": {
+        "READY": 0,
+        "SOURCE_REQUIRED": 50,
+        "PROFILE_INCOMPLETE": 0,
+        "RELATION_ONLY": 0,
+        "IMAGE_REQUIRED": 0,
+        "HOLD": 0
+      },
+      "draft_structural_candidates": 50
+    },
+    "videos": {
+      "total": 90,
+      "published_current": 3,
+      "draft": 87,
+      "all_classification": {
+        "READY": 0,
+        "METADATA_INCOMPLETE": 90,
+        "HOLD": 0
+      },
+      "draft_classification": {
+        "READY": 0,
+        "METADATA_INCOMPLETE": 87,
+        "HOLD": 0
+      },
+      "draft_dimensions": {
+        "SOURCE_OK": 0,
+        "URL_OK": 87,
+        "TITLE_OK": 87,
+        "RELATION_OK": 87
+      },
+      "draft_structural_candidates": 0,
+      "existing_source_url_matches_all": 64,
+      "existing_source_url_matches_draft": 62,
+      "draft_source_binding_gaps": 62
+    },
+    "relations": {
+      "player_characters": 93,
+      "entity_videos": 112
+    },
+    "coverage": {
+      "published_characters": 31,
+      "zero_public_player_characters": 17,
+      "zero_player_gaps_with_existing_draft_candidates": 17,
+      "ready_candidate_zero_player_gap_closures": 0
+    }
+  },
+  "snapshot_sha256": "73d8c321dea721c61c07d0dbbfa9eca132366c4ef10cae67cb871a5e47345e5e",
+  "rows": [
+    {
+      "id": "583a687e-c1f4-439d-ac6d-5bb3994549f1",
+      "slug": "official-ryu-character-guide",
+      "title": "Street Fighter 6 Character Guide | Ryu",
+      "url": "https://www.youtube.com/watch?v=iAs1p3LVdAs",
+      "current_status": "published",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "203b3cc1-aa90-461f-a587-a7ff294ca7f1",
+          "note": "Evergreen official overview; do not use for Year4 frame values.",
+          "video_id": "583a687e-c1f4-439d-ac6d-5bb3994549f1",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-26T07:48:38.174873+00:00",
+          "entity_type": "character",
+          "relationship": "official_guide",
+          "display_order": 1
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "793ae89c-4643-4336-9302-e7415f377f38",
+          "title": "Street Fighter 6 Character Guide | Ryu",
+          "publisher": "Street Fighter",
+          "url": "https://www.youtube.com/watch?v=iAs1p3LVdAs",
+          "source_type": "official_video",
+          "reliability_level": "primary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "44794317-c565-46d8-8774-2bd540dacbb1",
+      "slug": "season4-group-ryu-ken-akuma-luke",
+      "title": "Season 4変更解説候補（Ryu/Ken/Akuma/Luke）",
+      "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "0cb0a245-1cea-4a27-9eb3-30f307a69615",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "44794317-c565-46d8-8774-2bd540dacbb1",
+          "entity_id": "4b6afb51-f50e-48cf-9115-896b5f4a5042",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "4da87c0a-dbf7-455b-a317-943dd7c35f30",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "44794317-c565-46d8-8774-2bd540dacbb1",
+          "entity_id": "08c7dec3-a3b8-403e-92e0-488fab6afdfb",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "1af68cd1-02fd-4d10-950e-4e7099b2d874",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "44794317-c565-46d8-8774-2bd540dacbb1",
+          "entity_id": "1e4e3f57-7ba0-454c-86d7-72b1deeb3713",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "1769467b-a195-47f5-9520-3f54f21ccf16",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "44794317-c565-46d8-8774-2bd540dacbb1",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "0296815f-8599-47e5-ba8f-951b4757b7b4",
+          "title": "Season 4 現行変更解説候補 ケン",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "8cc7dbdc-7503-4ebe-8f0a-7b3897a8df78",
+          "title": "Season 4 現行変更解説候補 リュウ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "cff49442-7bba-4807-883d-f51dda19b221",
+          "title": "Season 4 現行変更解説候補 豪鬼",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "e885d470-16cd-4b7c-950f-d989ba8a6097",
+          "title": "Season 4 現行変更解説候補 ルーク",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=NQGTS4EB3kM",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "c653a5d8-40b9-49fd-8953-3f86a6b686d9",
+      "slug": "season4-group-deejay-blanka-honda-dhalsim-rashid-jamie",
+      "title": "Season 4変更解説候補（Dee Jay/Blanka/Honda/Dhalsim/Rashid/Jamie）",
+      "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "cfab1883-aaed-408b-8d27-76d005355be0",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "c653a5d8-40b9-49fd-8953-3f86a6b686d9",
+          "entity_id": "56ed72aa-20ba-4c21-9bfd-c367cc40ca7d",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "7cf85e80-d2ce-4187-aff0-4def10b5229b",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "c653a5d8-40b9-49fd-8953-3f86a6b686d9",
+          "entity_id": "62679029-3025-45b2-8e3f-a4a6d119485e",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "8130e4f3-10a5-47de-b9c7-c0ccbb672f7e",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "c653a5d8-40b9-49fd-8953-3f86a6b686d9",
+          "entity_id": "9e31dc2b-b281-4c39-b9f8-45af62a8117e",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "ed72a307-55b5-4ee0-8747-3cc5bb33270e",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "c653a5d8-40b9-49fd-8953-3f86a6b686d9",
+          "entity_id": "0e62ecec-f601-4859-86a6-3b968372a519",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "f732b1ce-6e58-4fb2-9a08-652aa06f58e2",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "c653a5d8-40b9-49fd-8953-3f86a6b686d9",
+          "entity_id": "40b89dd5-38ba-4157-8f5f-0c4202c7d6aa",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "2d3f5e17-08e5-45f7-a8fe-bc90669ec293",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "c653a5d8-40b9-49fd-8953-3f86a6b686d9",
+          "entity_id": "558f125c-3ddf-472c-9a15-7f9ce20c9580",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "3cbc0e50-20f8-4664-86cd-8924b90f94e9",
+          "title": "Season 4 現行変更解説候補 エドモンド本田",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "4066ac57-b047-4b85-9b59-b455c8190340",
+          "title": "Season 4 現行変更解説候補 ダルシム",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "5c757419-8e7d-4e99-a235-8c0496644231",
+          "title": "Season 4 現行変更解説候補 ディージェイ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "70a8c217-52c3-4cc5-9488-7420376598fc",
+          "title": "Season 4 現行変更解説候補 ジェイミー",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "c4282ff4-66dc-40d0-8f50-c725e01f1383",
+          "title": "Season 4 現行変更解説候補 ラシード",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "f60ba94d-d8f8-4416-961d-c9ac854083dc",
+          "title": "Season 4 現行変更解説候補 ブランカ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=1F6pj4PbyXM",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "a5a8e3e2-49ba-4e7e-b97b-004382b801d1",
+      "slug": "season4-group-chun-cammy-manon-viper",
+      "title": "Season 4変更解説候補（Chun-Li/Cammy/Manon/C. Viper）",
+      "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "c208f4af-7bd2-4a41-a6f4-296de6285ab0",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "a5a8e3e2-49ba-4e7e-b97b-004382b801d1",
+          "entity_id": "77f7116b-8d7e-4cc0-885b-7b5a3ac27f3b",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "86f1435c-6b96-4dd6-ba0b-6a4c63af883c",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "a5a8e3e2-49ba-4e7e-b97b-004382b801d1",
+          "entity_id": "08c200c1-c205-4934-9184-8b85a06bc7e5",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "f6813d9a-1e0d-4b22-8461-b9cf76358dc3",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "a5a8e3e2-49ba-4e7e-b97b-004382b801d1",
+          "entity_id": "efc5d359-27ec-4660-937c-dc0d84e862f8",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "85745d10-4f22-4d3c-852a-087b457b999b",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "a5a8e3e2-49ba-4e7e-b97b-004382b801d1",
+          "entity_id": "8c5af70c-2e6a-4b6d-9e26-23c93c04c368",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "0f499bfa-9560-4a4d-ba98-563c66fb9206",
+          "title": "Season 4 現行変更解説候補 マノン",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "1a9658eb-87e0-44b1-a7e1-553c9a3626ae",
+          "title": "Season 4 現行変更解説候補 キャミィ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "32adfa13-079f-408b-82b2-593b7f88343d",
+          "title": "Season 4 現行変更解説候補 春麗",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "e4f109c5-0438-44bb-9ef9-02d313f33c56",
+          "title": "Season 4 現行変更解説候補 C.ヴァイパー",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XAWQa1dZCyc",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "e7054b08-8859-4677-a74d-d1b3cdc2c1c5",
+      "slug": "season4-group-marisa-guile-lily-aki",
+      "title": "Season 4変更解説候補（Marisa/Guile/Lily/A.K.I.）",
+      "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "17b7a55e-c84e-4318-b754-459e4fa68b98",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "e7054b08-8859-4677-a74d-d1b3cdc2c1c5",
+          "entity_id": "92aa12c9-d4b0-4384-9ef8-a6d1d0115989",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "6aeffec8-5ef4-4038-9226-c1bf276db561",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "e7054b08-8859-4677-a74d-d1b3cdc2c1c5",
+          "entity_id": "b004c66a-f5ad-483c-a163-21773223024a",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "d0c559c3-16ab-45e3-885d-ae0d5938aa61",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "e7054b08-8859-4677-a74d-d1b3cdc2c1c5",
+          "entity_id": "e224c371-84b8-4bf4-bde9-3b65d8d8a3b9",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "fffdb184-ca2a-47ef-bfb4-90a6b91f5615",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "e7054b08-8859-4677-a74d-d1b3cdc2c1c5",
+          "entity_id": "dd1e6234-2542-4b70-8323-25818c5893cf",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "392671c4-08ef-4de9-bc2a-fc01088c0413",
+          "title": "Season 4 現行変更解説候補 ガイル",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "7cfc2619-8f21-4bf1-9dca-bf1f2dbd7403",
+          "title": "Season 4 現行変更解説候補 A.K.I.",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "e4848ec0-e4b4-4fe1-b698-2ba3cbf64f41",
+          "title": "Season 4 現行変更解説候補 マリーザ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "e96cf3d0-6f03-4838-b16a-1fb3877b74e6",
+          "title": "Season 4 現行変更解説候補 リリー",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=T9PW2f1gH0A",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "a21ff8f3-215e-49a1-8db6-3171f5622f29",
+      "slug": "season4-group-jp-elena-ingrid-kimberly",
+      "title": "Season 4変更解説候補（JP/Elena/Ingrid/Kimberly）",
+      "url": "https://www.youtube.com/watch?v=LbP388dn_D0",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "7f9865db-972b-4ccc-bee1-ce174dc421c7",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "a21ff8f3-215e-49a1-8db6-3171f5622f29",
+          "entity_id": "57c3cd53-a5c1-4c3a-a933-6b2efa3b8378",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "7bb536ac-acb1-4260-891a-df39db8dbc1c",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "a21ff8f3-215e-49a1-8db6-3171f5622f29",
+          "entity_id": "f5a76b4e-cd2c-44e6-9b09-d3f1f0e82f9d",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "22ad118a-09aa-42ce-820a-e766d92b0fcd",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "a21ff8f3-215e-49a1-8db6-3171f5622f29",
+          "entity_id": "f4b6f449-6a81-47ba-be5b-196816c4c7f5",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "0cb873a2-b26e-49fd-bbef-a81a67fba6e1",
+          "title": "Season 4 現行変更解説候補 エレナ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=LbP388dn_D0",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "3afc9ac8-cd02-47b0-bddb-be720dfa6a4e",
+          "title": "Season 4 現行変更解説候補 キンバリー",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=LbP388dn_D0",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "b7dcb40f-2745-4bf9-864a-5d95ae8ffa79",
+          "title": "Season 4 現行変更解説候補 イングリッド",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=LbP388dn_D0",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "56ebf8fd-54ce-4183-9c0d-f26f91be9348",
+      "slug": "season4-group-alex-sagat-juri-zangief",
+      "title": "Season 4変更解説候補（Alex/Sagat/Juri/Zangief）",
+      "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "77d67dfe-d891-43df-8179-61d005b3bb80",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "56ebf8fd-54ce-4183-9c0d-f26f91be9348",
+          "entity_id": "0a82075f-b2c3-4a3d-9267-89f3da1543dd",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "5bf3a6b8-6ee5-4567-933e-6bfdbf35aa0a",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "56ebf8fd-54ce-4183-9c0d-f26f91be9348",
+          "entity_id": "1d9817cf-beb9-497c-a77f-c08a4a2e9ac2",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "a057cd85-9cdd-4b72-8099-aadfddc39c0a",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "56ebf8fd-54ce-4183-9c0d-f26f91be9348",
+          "entity_id": "459e874a-1b6e-4a3e-9b9a-86fcb31df559",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "1903de9b-df38-426c-91ad-2684b924f5fc",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "56ebf8fd-54ce-4183-9c0d-f26f91be9348",
+          "entity_id": "e0b0bea4-b4b2-445f-b273-3a73e1c18827",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "88125317-c149-4718-899c-95ac66f21ea0",
+          "title": "Season 4 現行変更解説候補 ジュリ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "9b03a1a6-c8e9-46ae-aebe-6007f85227ea",
+          "title": "Season 4 現行変更解説候補 アレックス",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "9fd1440e-09f2-4fb2-86ac-a2889d20662a",
+          "title": "Season 4 現行変更解説候補 サガット",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "dfba6362-9cce-4ad5-8651-a70fd106e4c5",
+          "title": "Season 4 現行変更解説候補 ザンギエフ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=XfdfD7zH6kE",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "4c01083a-e02a-4ed3-883a-b0f615f3a0bf",
+      "slug": "season4-group-mai-ed-bison-terry",
+      "title": "Season 4変更解説候補（Mai/Ed/Bison/Terry）",
+      "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "227e19f9-0582-4a18-a035-ec2b10183535",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "4c01083a-e02a-4ed3-883a-b0f615f3a0bf",
+          "entity_id": "c0bad241-355d-492d-9868-f69e311cac0f",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "9ba9d86e-3a1c-4dcb-949c-c8e8ed27d42e",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "4c01083a-e02a-4ed3-883a-b0f615f3a0bf",
+          "entity_id": "60875143-700c-4734-bfca-0eb3d20764c4",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "b8060a73-44e8-4891-99df-71fa6e06be4b",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "4c01083a-e02a-4ed3-883a-b0f615f3a0bf",
+          "entity_id": "2f694c43-640b-43f1-b79a-d00beff0ad2b",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        },
+        {
+          "id": "50f45d45-81fa-48ea-973e-dd76f370a2c1",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "4c01083a-e02a-4ed3-883a-b0f615f3a0bf",
+          "entity_id": "c11bc1ca-6c91-41de-9700-2ea9de8f719e",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "3d53d4bb-e7cb-4f7a-86b8-e1f6fc388b49",
+          "title": "Season 4 現行変更解説候補 ベガ",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "987e1547-90ac-4608-8e6c-20760ff83893",
+          "title": "Season 4 現行変更解説候補 テリー",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "aaedce01-af16-47d3-ab3f-08c1bee4d123",
+          "title": "Season 4 現行変更解説候補 エド",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        },
+        {
+          "source_id": "b0c2bf68-6c9e-44d1-a350-463a87b9b7c6",
+          "title": "Season 4 現行変更解説候補 不知火舞",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=eW0Vyv6Pl0M",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "b7196583-fcce-41f9-a424-33594d103d5b",
+      "slug": "yasmine-current-guide",
+      "title": "ヤスミン現行キャラクターガイド候補",
+      "url": "https://www.youtube.com/watch?v=M7NfqAcU7KI",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "156b1a7b-f294-4f9b-a34b-067a12bed367",
+          "note": "Current guide candidate; gameplay claims require verification.",
+          "video_id": "b7196583-fcce-41f9-a424-33594d103d5b",
+          "entity_id": "a9f61f3f-d6e0-4f98-8f1f-6fb94fae7baa",
+          "created_at": "2026-08-26T08:15:58.889157+00:00",
+          "entity_type": "character",
+          "relationship": "guide_candidate",
+          "display_order": 0
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "aca946d5-a62a-471a-b42a-3f97b43294ac",
+          "title": "Season 4 現行変更解説候補 ヤスミン",
+          "publisher": null,
+          "url": "https://www.youtube.com/watch?v=M7NfqAcU7KI",
+          "source_type": "community_video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "659bfe86-57de-4211-a499-5a5ccd0e484f",
+      "slug": "ryu-video-yas-johntakeuchi",
+      "title": "YAS (Ryu) vs JOHNTAKEUCHI (Jamie)",
+      "url": "https://www.youtube.com/watch?v=4n9XY6QU4oI",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "0f3e9d0f-3a5e-43e5-a8e4-72863a7dad7a",
+          "note": "Ryu one-year video audit backlog; do not publish until content/timestamps are reviewed.",
+          "video_id": "659bfe86-57de-4211-a499-5a5ccd0e484f",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "9065e536-1830-46b3-a19c-1c8b24270f34",
+      "slug": "ryu-video-yas-kazunoko-viper",
+      "title": "KAZUNOKO (C.Viper) vs YAS (Ryu)",
+      "url": "https://www.youtube.com/watch?v=h1FhaJKouFw",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "b52df846-786c-4729-9cf5-921d88b80637",
+          "note": "Ryu one-year video audit backlog; do not publish until content/timestamps are reviewed.",
+          "video_id": "9065e536-1830-46b3-a19c-1c8b24270f34",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "58832f24-df98-4ca5-848f-01c4bc39ec1a",
+      "slug": "ryu-video-shuto-cosa",
+      "title": "SHUTO (Ryu) vs COSA (Akuma)",
+      "url": "https://www.youtube.com/watch?v=uXuhCwVCEkU",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "38cc2873-aa14-4345-b7a4-058360f11738",
+          "note": "Ryu one-year video audit backlog; do not publish until content/timestamps are reviewed.",
+          "video_id": "58832f24-df98-4ca5-848f-01c4bc39ec1a",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "3769d2f5-7db1-4b7c-8612-bb5f924eef5f",
+      "slug": "ryu-video-season3-new-combos",
+      "title": "Season 3 NEW Ryu Combos! SF6",
+      "url": "https://www.youtube.com/watch?v=78lXWbSCHDQ",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "411b696f-a7cb-45ee-876f-c5a566ffd7a8",
+          "note": "Ryu one-year video audit backlog; do not publish until content/timestamps are reviewed.",
+          "video_id": "3769d2f5-7db1-4b7c-8612-bb5f924eef5f",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "6b92982d-d908-4d25-8cf7-b71382fc7f32",
+      "slug": "ryu-video-yas-kazunoko-jamie",
+      "title": "KAZUNOKO (Jamie) vs YAS (Ryu)",
+      "url": "https://www.youtube.com/watch?v=ekcjVPEkcHA",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "4691a378-f983-4a19-b224-89325e096eab",
+          "note": "Ryu one-year video audit backlog; do not publish until content/timestamps are reviewed.",
+          "video_id": "6b92982d-d908-4d25-8cf7-b71382fc7f32",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "701f57d9-ce62-4630-90d2-024c55a12aa8",
+      "slug": "ryu-video-yas-cosa-ken",
+      "title": "YAS (Ryu) vs COSA (Ken)",
+      "url": "https://www.youtube.com/watch?v=qyQxzhxZUkM",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "dce28ab5-b975-44ae-819f-4a12c6010c67",
+          "note": "Ryu one-year video audit backlog; do not publish until content/timestamps are reviewed.",
+          "video_id": "701f57d9-ce62-4630-90d2-024c55a12aa8",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "733670e6-1ee7-4bd8-b00e-289fe070a53d",
+      "slug": "ryu-video-craime-yas-cpt",
+      "title": "CRAIME vs YAS - CEO / CPT 2026",
+      "url": "https://www.youtube.com/watch?v=Fm5IPXmNdeQ",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "66106d59-fcb0-4725-87c0-e8581e1e3a5d",
+          "note": "Ryu one-year video audit backlog; do not publish until content/timestamps are reviewed.",
+          "video_id": "733670e6-1ee7-4bd8-b00e-289fe070a53d",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "2094eaed-606c-405d-a759-bd0df6041c1f",
+      "slug": "ryu-video-yas-sahara",
+      "title": "SAHARA (Ken) vs YAS (Ryu)",
+      "url": "https://www.youtube.com/watch?v=sgx-BCsfpuE",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "157c9c4a-66b8-4b0d-8d51-ae38589b3d42",
+          "note": "Ryu one-year video audit backlog; do not publish until content/timestamps are reviewed.",
+          "video_id": "2094eaed-606c-405d-a759-bd0df6041c1f",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "a78b8ef4-b93e-4d21-9c6d-6982509981d6",
+      "slug": "ryu-video-cosa-sfl-eita",
+      "title": "えいた（豪鬼）vs cosa（リュウ）SFL 2026",
+      "url": "https://www.youtube.com/watch?v=CYDJRFwqIWI",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "25c32d7c-24ac-49fa-b504-9d61b99716c1",
+          "note": "Ryu one-year video audit backlog; do not publish until content/timestamps are reviewed.",
+          "video_id": "a78b8ef4-b93e-4d21-9c6d-6982509981d6",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "9958194d-5db9-4728-9a9b-775fdcce3246",
+      "slug": "ryu-video-yas-hikaru-aki",
+      "title": "YAS (Ryu) vs Hikaru (A.K.I.)",
+      "url": "https://www.youtube.com/watch?v=E0pg7TJeCo4",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "1924a685-a6be-4486-a5b3-f3f2fd6368bd",
+          "note": "Ryu one-year video audit backlog; do not publish until content/timestamps are reviewed.",
+          "video_id": "9958194d-5db9-4728-9a9b-775fdcce3246",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "e02af4ab-834d-4a12-8adc-f648a769eb9d",
+      "slug": "ryu-video-yas-daigo",
+      "title": "YAS (Ryu) vs DAIGO (Akuma)",
+      "url": "https://www.youtube.com/watch?v=Cqc3dtDpaXQ",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "5cb73580-e549-46c1-a4fd-75983d73795a",
+          "note": "Ryu one-year video audit backlog; do not publish until content/timestamps are reviewed.",
+          "video_id": "e02af4ab-834d-4a12-8adc-f648a769eb9d",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "564d9904-9a6a-4b30-876a-b1029d557cf1",
+      "slug": "ryu-video-yas-angrybird",
+      "title": "YAS (Ryu) vs ANGRYBIRD (Ryu)",
+      "url": "https://www.youtube.com/watch?v=yNTXGbflDbQ",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "08b3c29b-c60d-44fe-982a-c001fdeef8cc",
+          "note": "Ryu one-year video audit backlog; do not publish until content/timestamps are reviewed.",
+          "video_id": "564d9904-9a6a-4b30-876a-b1029d557cf1",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "fb654013-ffcd-4025-a62c-455072fd2fa8",
+      "slug": "ryu-video-season3-ultimate",
+      "title": "SF6 Season 3 Ryu Ultimate Guide - Combos, Frame Traps, Setups",
+      "url": "https://www.youtube.com/watch?v=2cN27UUF95g",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "399b7519-d6e4-4057-a7ba-0a3b2e3c8a46",
+          "note": "Auto-caption transcript reviewed with timestamps; displayed inputs and current-patch reproduction remain pending.",
+          "video_id": "fb654013-ffcd-4025-a62c-455072fd2fa8",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "content_analyzed",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "dab4b418-3a92-4a33-abc6-496afc0a2946",
+          "title": "SF6 Season 3 Ryu Ultimate Guide - Combos, Frame Traps, Setups",
+          "publisher": "ThisIsAMKIDD",
+          "url": "https://www.youtube.com/watch?v=2cN27UUF95g",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "f25eefdf-1f1f-4e07-9ac3-a0c9bb98211d",
+      "slug": "ryu-video-shuto-setplay",
+      "title": "しゅーと リュウのセットプレイ・コンボ解説",
+      "url": "https://www.youtube.com/watch?v=BpWyb_iiz7k",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "1a82b2b0-f4e7-42e5-99e0-b6123465fca8",
+          "note": "Analyzed from the detailed companion write-up and chapters; video pixels/timestamps still pending.",
+          "video_id": "f25eefdf-1f1f-4e07-9ac3-a0c9bb98211d",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T08:49:40.557612+00:00",
+          "entity_type": "character",
+          "relationship": "content_analyzed",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "7d18c345-2089-4780-bb00-ae210e23110e",
+      "slug": "ryu-video-counter-attack",
+      "title": "リュウ 相手の暴れ・打ち返し行動対策",
+      "url": "https://www.youtube.com/watch?v=c98pgwqOz70",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "afae107b-b9f8-4bc6-ac6b-2d764ad885b0",
+          "note": "Analyzed through a detailed companion text. Do not treat as pixel/timestamp review or verified gameplay.",
+          "video_id": "7d18c345-2089-4780-bb00-ae210e23110e",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T13:19:42.382303+00:00",
+          "entity_type": "character",
+          "relationship": "content_analyzed",
+          "display_order": 90
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "be058c1f-a686-4b74-918e-4ba3eb2fafc9",
+          "title": "リュウ 打ち返し行動対策",
+          "publisher": "ぷにぷにの格ゲー解説ちゃんねる",
+          "url": "https://www.youtube.com/watch?v=c98pgwqOz70",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "36831690-1630-4e31-996f-980747cfdb09",
+      "slug": "ryu-video-year3-19-routes",
+      "title": "YEAR3リュウ 実戦向けコンボとセットプレイ19選",
+      "url": "https://www.youtube.com/watch?v=Webv4hwKRew",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "da7c9f80-c8eb-4824-b996-27f042a0705d",
+          "note": "Analyzed through a detailed companion text. Do not treat as pixel/timestamp review or verified gameplay.",
+          "video_id": "36831690-1630-4e31-996f-980747cfdb09",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T13:19:42.382303+00:00",
+          "entity_type": "character",
+          "relationship": "content_analyzed",
+          "display_order": 90
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "2ef8feb2-a0da-4fd3-bd47-e402bb7381e1",
+          "title": "リュウ YEAR3おすすめコンボまとめ",
+          "publisher": "ぷにぷにの格ゲー解説ちゃんねる",
+          "url": "https://www.youtube.com/watch?v=Webv4hwKRew",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "dbd93aa8-7e58-4e4f-9d78-6c405191821f",
+      "slug": "ryu-video-impact-shimmy",
+      "title": "リュウ インパクト返し後の中央シミーセットプレイ",
+      "url": "https://www.youtube.com/watch?v=L7s0xH48pLs",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "4512e19a-52b2-45f8-93c0-b1b76582287a",
+          "note": "Analyzed through a detailed companion text. Do not treat as pixel/timestamp review or verified gameplay.",
+          "video_id": "dbd93aa8-7e58-4e4f-9d78-6c405191821f",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T13:19:42.382303+00:00",
+          "entity_type": "character",
+          "relationship": "content_analyzed",
+          "display_order": 90
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "81b11ab5-4ed1-4581-bc70-f3bc75efc7a6",
+          "title": "リュウ インパクト返し中央シミー",
+          "publisher": "ぷにぷにの格ゲー解説ちゃんねる",
+          "url": "https://www.youtube.com/watch?v=L7s0xH48pLs",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "212a1d88-8234-4ac3-9529-6ee3d6d2b099",
+      "slug": "ryu-video-year3-torikore",
+      "title": "Evo France準優勝記念 リュウのとりこれコンボ5選",
+      "url": "https://www.youtube.com/watch?v=ZQLuHVVdG-M",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "d98859cc-a605-4fb1-ae8e-bbe4016e7cc6",
+          "note": "Analyzed through a detailed companion text. Do not treat as pixel/timestamp review or verified gameplay.",
+          "video_id": "212a1d88-8234-4ac3-9529-6ee3d6d2b099",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-31T13:19:42.382303+00:00",
+          "entity_type": "character",
+          "relationship": "content_analyzed",
+          "display_order": 90
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "5fb44d49-98ae-4d2e-aeaf-4f8b4009273b",
+          "title": "リュウ とりこれコンボ5選",
+          "publisher": "ぷにぷにの格ゲー解説ちゃんねる",
+          "url": "https://www.youtube.com/watch?v=ZQLuHVVdG-M",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "c503d96b-6629-4d99-8652-4293266b56c2",
+      "slug": "jp-video-amnesia-side-mix",
+      "title": "JP ODアムネジアから完全2択の表裏",
+      "url": "https://www.youtube.com/watch?v=CeomQNcmWv4",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "bd22f829-b749-4d35-a82d-16c211e88ec5",
+          "note": "JP playlist audit. Chapter evidence is not pixel or device verification.",
+          "video_id": "c503d96b-6629-4d99-8652-4293266b56c2",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:13:40.942739+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "d88d6409-3505-4e15-80c0-bb2fbd49bc14",
+          "title": "JP ODアムネジアから完全2択の表裏",
+          "publisher": "りゅうせい",
+          "url": "https://www.youtube.com/watch?v=CeomQNcmWv4",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "6877ce8d-4e54-42eb-b216-87cd48630c40",
+      "slug": "jp-video-year3-combo-setup",
+      "title": "JP Year3コンボ＆セットプレイ完全版",
+      "url": "https://www.youtube.com/watch?v=x5FrEpiVY2c",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "59a88bbe-4b5b-47f5-84da-531904b176c8",
+          "note": "JP playlist audit. Chapter evidence is not pixel or device verification.",
+          "video_id": "6877ce8d-4e54-42eb-b216-87cd48630c40",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:13:40.942739+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "01cddbca-1bb0-495b-834c-993e7e3f3443",
+          "title": "JP Year3コンボ＆セットプレイ完全版",
+          "publisher": "なんでねー",
+          "url": "https://www.youtube.com/watch?v=x5FrEpiVY2c",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "3e7caedd-61c0-4ef1-97d1-68046919ff16",
+      "slug": "jp-video-strong-actions-10",
+      "title": "JP 強行動10選 調整後",
+      "url": "https://www.youtube.com/watch?v=LLmtz9M313g",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "2aaae48d-6b9b-48ec-a785-830b99e9ccbf",
+          "note": "JP playlist audit. Chapter evidence is not pixel or device verification.",
+          "video_id": "3e7caedd-61c0-4ef1-97d1-68046919ff16",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:13:40.942739+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "acf4c920-8b64-4dd9-804e-2966af36cdc2",
+          "title": "JP 強行動10選 調整後",
+          "publisher": "レイ / Ray",
+          "url": "https://www.youtube.com/watch?v=LLmtz9M313g",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "34bb7cbc-63fa-4e96-8fc0-decccf17e249",
+      "slug": "jp-video-small-buffs",
+      "title": "JP 細かい大幅強化点",
+      "url": "https://www.youtube.com/watch?v=iOym8ksu_p4",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "708ccd38-9f0e-4057-b4fe-4f9f66cbd10a",
+          "note": "JP playlist audit. Chapter evidence is not pixel or device verification.",
+          "video_id": "34bb7cbc-63fa-4e96-8fc0-decccf17e249",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:13:40.942739+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "fd21be5e-5b0a-4bb9-a28c-6cf26194bdf2",
+          "title": "JP 細かい大幅強化点",
+          "publisher": "りゅうせい",
+          "url": "https://www.youtube.com/watch?v=iOym8ksu_p4",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "b93d54b3-1e4c-4c7f-b288-c98bef4f73b4",
+      "slug": "jp-video-current-complete-guide",
+      "title": "JP 最新版完全解説・新コンボ",
+      "url": "https://www.youtube.com/watch?v=Dmd_zhtkQzM",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "1b1eb42a-e0f5-41a5-b906-a679a685b79b",
+          "note": "JP playlist audit. Chapter evidence is not pixel or device verification.",
+          "video_id": "b93d54b3-1e4c-4c7f-b288-c98bef4f73b4",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:13:40.942739+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "ca3e174f-af7f-4e9c-905a-7bab65b8a5e6",
+          "title": "JP 最新版完全解説・新コンボ",
+          "publisher": "勇者きょーすけ",
+          "url": "https://www.youtube.com/watch?v=Dmd_zhtkQzM",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "0d698306-001e-41c1-ab2c-d5c0b15af1fe",
+      "slug": "jp-video-lovushka-current",
+      "title": "JP 最新ラヴーシュカ連携",
+      "url": "https://www.youtube.com/watch?v=NZrj9JDx4K4",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "6bec2283-ab78-4c14-aa25-66e6ae8a90db",
+          "note": "JP playlist audit. Chapter evidence is not pixel or device verification.",
+          "video_id": "0d698306-001e-41c1-ab2c-d5c0b15af1fe",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:13:40.942739+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "57a4c86e-bd49-45f9-a5e9-f8531e34fe8e",
+          "title": "JP 最新ラヴーシュカ連携",
+          "publisher": "ACQUA",
+          "url": "https://www.youtube.com/watch?v=NZrj9JDx4K4",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "04109309-9d8a-4b39-9ff5-fe85b96c23e6",
+      "slug": "jp-video-weapon-merchant-tech",
+      "title": "JP 天才武器商人の革命的な新連携",
+      "url": "https://www.youtube.com/watch?v=6fIBrUEaMyQ",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "95018705-0337-4fe1-9f59-603baa2cbbfc",
+          "note": "JP playlist audit. Chapter evidence is not pixel or device verification.",
+          "video_id": "04109309-9d8a-4b39-9ff5-fe85b96c23e6",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:13:40.942739+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 100
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "da1974a4-8b37-4e03-8968-930ac8a2dfc3",
+          "title": "JP 天才武器商人の革命的な新連携",
+          "publisher": "りゅうせい",
+          "url": "https://www.youtube.com/watch?v=6fIBrUEaMyQ",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "f8bacc86-0d70-4563-98a4-3bd40e7454c2",
+      "slug": "jp-video-16-combo-setup",
+      "title": "JP 厳選16コンボとセットプレイ集",
+      "url": "https://www.youtube.com/watch?v=Ab-M1poFHX0",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "cab66907-222f-4c1c-b680-51d078b0d63f",
+          "note": "JP playlist chapter audit; no pixel or device verification.",
+          "video_id": "f8bacc86-0d70-4563-98a4-3bd40e7454c2",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:19:18.241675+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 110
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "cbdedc26-1bc4-4a3a-9f83-7d7156b9c85a",
+          "title": "JP 厳選16コンボとセットプレイ集",
+          "publisher": "ミダ猫のゲーム動画",
+          "url": "https://www.youtube.com/watch?v=Ab-M1poFHX0",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "ccd373ba-98cb-4b13-af78-336b65122b6f",
+      "slug": "jp-video-year3-max-combo",
+      "title": "JP Year3最強コンボ動画",
+      "url": "https://www.youtube.com/watch?v=IkakoZGX8sg",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "2c28b4b3-2ee8-4199-a14a-27fb84393d29",
+          "note": "JP playlist chapter audit; no pixel or device verification.",
+          "video_id": "ccd373ba-98cb-4b13-af78-336b65122b6f",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:19:18.241675+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 110
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "e5cc75d9-734f-4106-b3a0-d20131e0ec07",
+          "title": "JP Year3最強コンボ動画",
+          "publisher": "JP guide creator",
+          "url": "https://www.youtube.com/watch?v=IkakoZGX8sg",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "35bbb147-f06c-43c0-a8c8-7a7d0e1bedc7",
+      "slug": "jp-video-vihhat-usage",
+      "title": "JP 設置の強い使い方",
+      "url": "https://www.youtube.com/watch?v=GCa9lNVWY-M",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "0c1927d0-bfd2-4691-b038-3c3c85282e54",
+          "note": "JP playlist chapter audit; no pixel or device verification.",
+          "video_id": "35bbb147-f06c-43c0-a8c8-7a7d0e1bedc7",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:19:18.241675+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 110
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "1af76e35-6cf2-4a3c-a27f-4bd559c13131",
+          "title": "JP 設置の強い使い方",
+          "publisher": "なんでねー",
+          "url": "https://www.youtube.com/watch?v=GCa9lNVWY-M",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "ecfb4599-bb6a-47e9-b07f-500c53eb5b4e",
+      "slug": "jp-match-kakeru-act13",
+      "title": "翔 (JP) Act.13 set",
+      "url": "https://www.youtube.com/watch?v=mAr9mOLOSlI",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "fd6f931d-2ba2-4e23-b12c-b4398fec2096",
+          "note": "JP match-playlist priority backlog. No captions; do not infer combos/setups/sequences from title.",
+          "video_id": "ecfb4599-bb6a-47e9-b07f-500c53eb5b4e",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:22:18.154202+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 200
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "e6732800-dc0c-480f-8eb4-78773a5b4697",
+      "slug": "jp-match-kakeru-highlight",
+      "title": "翔JP high-level set",
+      "url": "https://www.youtube.com/watch?v=ss38s32Cnh0",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "bf1d0a73-ec35-40e3-983a-87246c753247",
+          "note": "JP match-playlist priority backlog. No captions; do not infer combos/setups/sequences from title.",
+          "video_id": "e6732800-dc0c-480f-8eb4-78773a5b4697",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:22:18.154202+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 200
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "6253902f-f784-446f-9d59-bd141cb523da",
+      "slug": "jp-match-takepi-world1",
+      "title": "世界1位JP takepi",
+      "url": "https://www.youtube.com/watch?v=-U_O_xe8bRI",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "f3a5d151-86fc-4002-bd86-49f524140e3a",
+          "note": "JP match-playlist priority backlog. No captions; do not infer combos/setups/sequences from title.",
+          "video_id": "6253902f-f784-446f-9d59-bd141cb523da",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:22:18.154202+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 200
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "e5a686d4-9440-48c4-94f2-fbae16cfa5a1",
+      "slug": "jp-match-hikaru-takepi",
+      "title": "HIKARU (A.K.I.) vs TAKEPI (JP)",
+      "url": "https://www.youtube.com/watch?v=tj53BGoBdUI",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "9b16fed8-20f3-4666-ad35-e7c7b44523f4",
+          "note": "JP match-playlist priority backlog. No captions; do not infer combos/setups/sequences from title.",
+          "video_id": "e5a686d4-9440-48c4-94f2-fbae16cfa5a1",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:22:18.154202+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 200
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "cb9ead03-dec8-4458-9350-a5f04dd5911f",
+      "slug": "jp-match-takepi-space-control",
+      "title": "takepi JP 空間支配",
+      "url": "https://www.youtube.com/watch?v=fpjzxH8M_hs",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "50a837bd-7e27-44d0-8b9a-faf333edb035",
+          "note": "JP match-playlist priority backlog. No captions; do not infer combos/setups/sequences from title.",
+          "video_id": "cb9ead03-dec8-4458-9350-a5f04dd5911f",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:22:18.154202+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 200
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "676251a3-d11d-475d-9ce0-80fac8827733",
+      "slug": "jp-match-hikaru-taketake",
+      "title": "HIKARU (A.K.I.) vs TAKETAKE-PIANO (JP)",
+      "url": "https://www.youtube.com/watch?v=2_LB6vUVP2M",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "c45289d2-bd86-4cce-b6bc-dfa880cf132e",
+          "note": "JP match-playlist priority backlog. No captions; do not infer combos/setups/sequences from title.",
+          "video_id": "676251a3-d11d-475d-9ce0-80fac8827733",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:22:18.154202+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 200
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "4664fedf-8d5f-4046-a714-8aafcf039ae9",
+      "slug": "jp-match-kakeru-leshar-cc11",
+      "title": "KAKERU (JP) vs LESHAR (Ed) CAPCOM CUP 11",
+      "url": "https://www.youtube.com/watch?v=H6iIVzmBNlI",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "0478bfba-8039-41e0-81e2-f741d727e0f0",
+          "note": "JP match-playlist priority backlog. No captions; do not infer combos/setups/sequences from title.",
+          "video_id": "4664fedf-8d5f-4046-a714-8aafcf039ae9",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:22:18.154202+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 200
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "ba723f88-86cc-4573-8909-54dfff126fdf",
+      "slug": "jp-match-year4-kakeru",
+      "title": "Year4調整後 翔JP",
+      "url": "https://www.youtube.com/watch?v=lAlGhnoK4aI",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "de673edc-6275-4b0d-bdbe-8b4d74a462a3",
+          "note": "JP match-playlist priority backlog. No captions; do not infer combos/setups/sequences from title.",
+          "video_id": "ba723f88-86cc-4573-8909-54dfff126fdf",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:22:18.154202+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 200
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "e52067a2-dfb7-41f6-bc71-f8a6cea9ae34",
+      "slug": "jp-match-hikaru-kakeru",
+      "title": "Hikaru (A.K.I.) vs Kakeru (JP)",
+      "url": "https://www.youtube.com/watch?v=newIPX7T1II",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "1d638270-69e0-4d4b-8ddf-83bbd458631e",
+          "note": "JP match-playlist priority backlog. No captions; do not infer combos/setups/sequences from title.",
+          "video_id": "e52067a2-dfb7-41f6-bc71-f8a6cea9ae34",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:22:18.154202+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 200
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "241dd06d-ab86-4ada-959e-fd2abacdc656",
+      "slug": "jp-match-hikaru-tokido",
+      "title": "HIKARU (A.K.I.) vs TOKIDO (JP)",
+      "url": "https://www.youtube.com/watch?v=OrBW9Oii1PE",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "858033c7-0178-400b-ba97-cece253f417a",
+          "note": "JP match-playlist priority backlog. No captions; do not infer combos/setups/sequences from title.",
+          "video_id": "241dd06d-ab86-4ada-959e-fd2abacdc656",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:22:18.154202+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 200
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "e7bfdf03-8b9e-4165-b87b-dd7d2020a7a2",
+      "slug": "jp-match-takepi-act13-2",
+      "title": "takepi (JP) vs Ed/Juri/Chun-Li",
+      "url": "https://www.youtube.com/watch?v=tQ-mORmXyyU",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "f3ab293a-cd97-4e38-9c81-3e86e2c706da",
+          "note": "JP match-playlist priority backlog. No captions; do not infer combos/setups/sequences from title.",
+          "video_id": "e7bfdf03-8b9e-4165-b87b-dd7d2020a7a2",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:22:18.154202+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 200
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "c234edf7-83f7-4a37-b933-b6ce56125a50",
+      "slug": "jp-match-takepi-act13-1",
+      "title": "takepi (JP) Act.13 set",
+      "url": "https://www.youtube.com/watch?v=9KyFW6VVM1I",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "bfc8d03e-58c7-41d3-89f2-d090aebae9d9",
+          "note": "JP match-playlist priority backlog. No captions; do not infer combos/setups/sequences from title.",
+          "video_id": "c234edf7-83f7-4a37-b933-b6ce56125a50",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:22:18.154202+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 200
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "3fbc343c-ed37-44d0-9dce-789f65525384",
+      "slug": "jp-video-combo-oki-collection",
+      "title": "JPで勝つためのコンボ・起き攻め集",
+      "url": "https://www.youtube.com/watch?v=D0gf1YooclQ",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "d390e11c-0955-422f-95e2-b5e029081230",
+          "note": "JP guide-playlist audit. No pixel or device verification.",
+          "video_id": "3fbc343c-ed37-44d0-9dce-789f65525384",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:38:48.177355+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 120
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "09549884-de36-4b41-850a-f3ee4d55a887",
+          "title": "JPで勝つためのコンボ・起き攻め集",
+          "publisher": "JP攻略動画",
+          "url": "https://www.youtube.com/watch?v=D0gf1YooclQ",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "18141ab7-b11f-4c54-9ae7-16cc8597bcc6",
+      "slug": "jp-video-corner-setplay-3",
+      "title": "JP 画面端セットプレイ3選",
+      "url": "https://www.youtube.com/watch?v=CyTwrrgrbQg",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "6fc22851-f61a-4b23-8f94-ff67d8467c51",
+          "note": "JP guide-playlist audit. No pixel or device verification.",
+          "video_id": "18141ab7-b11f-4c54-9ae7-16cc8597bcc6",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:38:48.177355+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 120
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "783718a4-af87-471a-bcbc-83c6d2407a40",
+          "title": "JP 画面端セットプレイ3選",
+          "publisher": "JP攻略動画",
+          "url": "https://www.youtube.com/watch?v=CyTwrrgrbQg",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "28a12d72-c389-468b-befa-1e147d1f1ce7",
+      "slug": "jp-video-year3-acqua-guide",
+      "title": "JP Year3コンボ・ラヴーシュカ講座",
+      "url": "https://www.youtube.com/watch?v=1CGk90HKR2o",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "95983ec8-b667-4585-9f56-21ba6d4fda7d",
+          "note": "JP guide-playlist audit. No pixel or device verification.",
+          "video_id": "28a12d72-c389-468b-befa-1e147d1f1ce7",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:38:48.177355+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 120
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "eac8404b-7730-4b68-a1f3-6d6155fd1696",
+          "title": "JP Year3コンボ・ラヴーシュカ講座",
+          "publisher": "ACQUA",
+          "url": "https://www.youtube.com/watch?v=1CGk90HKR2o",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "86cbc54d-1ac4-40cc-bc22-e60eb388821d",
+      "slug": "jp-video-lovushka-burnout-tech",
+      "title": "JP ラヴーシュカのバーンアウト技術",
+      "url": "https://www.youtube.com/watch?v=SPul6hrXhNw",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "70304222-8baa-4ec3-8c53-6030314569c6",
+          "note": "JP guide-playlist audit. No pixel or device verification.",
+          "video_id": "86cbc54d-1ac4-40cc-bc22-e60eb388821d",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:38:48.177355+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 120
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "d98bbd98-c485-4616-b2fd-2baec739b37e",
+          "title": "JP ラヴーシュカのバーンアウト技術",
+          "publisher": "レリンch",
+          "url": "https://www.youtube.com/watch?v=SPul6hrXhNw",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "b882a97a-e7e6-46e1-a105-a4d140d4ddb7",
+      "slug": "jp-video-20260317-setplay",
+      "title": "JP 2026年3月17日調整セットプレイ解説",
+      "url": "https://www.youtube.com/watch?v=zpeWJ8ioB_Y",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "a4fc4ca9-c306-44fb-a281-dbf68b2659dd",
+          "note": "JP guide-playlist audit. No pixel or device verification.",
+          "video_id": "b882a97a-e7e6-46e1-a105-a4d140d4ddb7",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:38:48.177355+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 120
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "0592fea8-8424-4c7a-a90d-4c13a9a7ca3c",
+          "title": "JP 2026年3月17日調整セットプレイ解説",
+          "publisher": "JP攻略動画",
+          "url": "https://www.youtube.com/watch?v=zpeWJ8ioB_Y",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "9bddd459-6754-4cec-9bea-fdc5676e22ec",
+      "slug": "jp-video-setplay-counter-3",
+      "title": "JPセットプレイ3種と対応",
+      "url": "https://www.youtube.com/watch?v=KMrV_6C9Huw",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "50199e8b-60ee-41f9-9aa5-79e53b5c1d03",
+          "note": "JP guide-playlist audit. No pixel or device verification.",
+          "video_id": "9bddd459-6754-4cec-9bea-fdc5676e22ec",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:38:48.177355+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 120
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "3c399302-93f2-4345-87c8-b806e6ba9d2d",
+          "title": "JPセットプレイ3種と対応",
+          "publisher": "JP対策動画",
+          "url": "https://www.youtube.com/watch?v=KMrV_6C9Huw",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "ff52c223-c9f9-4c6a-8351-ff09feec2ec4",
+      "slug": "jp-video-vihhat-guide",
+      "title": "JP ヴィーハト講座",
+      "url": "https://www.youtube.com/watch?v=GfRhgq355UE",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "aff57dec-133f-45df-8b09-2f31d611b759",
+          "note": "JP guide-playlist audit. No pixel or device verification.",
+          "video_id": "ff52c223-c9f9-4c6a-8351-ff09feec2ec4",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:38:48.177355+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 120
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "1a86b3e1-1811-4f3b-ae7d-4b487fba83ea",
+          "title": "JP ヴィーハト講座",
+          "publisher": "JP攻略動画",
+          "url": "https://www.youtube.com/watch?v=GfRhgq355UE",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "d4acdfcb-37e5-4ea8-98ac-930d34aebfaf",
+      "slug": "jp-video-infinite-vihhat",
+      "title": "JP 無限設置・ゲージ管理",
+      "url": "https://www.youtube.com/watch?v=rV9OeCyILYA",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "94642546-70ff-4667-9ffa-cbb9fb882d8f",
+          "note": "JP guide-playlist audit. No pixel or device verification.",
+          "video_id": "d4acdfcb-37e5-4ea8-98ac-930d34aebfaf",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:38:48.177355+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 120
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "5787d078-7c22-449c-b170-0c486e00b4ee",
+          "title": "JP 無限設置・ゲージ管理",
+          "publisher": "なんでねー",
+          "url": "https://www.youtube.com/watch?v=rV9OeCyILYA",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "3e1cbbbe-14cb-41bf-8a28-1938b7f99ef7",
+      "slug": "jp-video-burnout-course",
+      "title": "JPバーンアウト講座",
+      "url": "https://www.youtube.com/watch?v=kz-0FC5BJ4A",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "d460c3fa-bf1b-49c2-baf6-9558b560ac07",
+          "note": "JP guide-playlist audit. No pixel or device verification.",
+          "video_id": "3e1cbbbe-14cb-41bf-8a28-1938b7f99ef7",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-31T14:38:48.177355+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 120
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "833d0c95-c5a5-4ca0-96d2-f98b41122041",
+          "title": "JPバーンアウト講座",
+          "publisher": "JP攻略動画",
+          "url": "https://www.youtube.com/watch?v=kz-0FC5BJ4A",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "e765d080-f6eb-4c84-8514-5741786a2593",
+      "slug": "jp-video-merchant-practical-link",
+      "title": "JP 武器商人の実戦連携",
+      "url": "https://www.youtube.com/watch?v=GgrWC9HkRPk",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "5244484d-8eac-4f14-94de-42c208462a5f",
+          "note": "JP specialist-video audit. No pixel or device verification.",
+          "video_id": "e765d080-f6eb-4c84-8514-5741786a2593",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:30:15.505327+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 130
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "74d68eb2-9509-40bf-95de-835de9087f18",
+          "title": "JP 武器商人の実戦連携",
+          "publisher": "りゅうせい",
+          "url": "https://www.youtube.com/watch?v=GgrWC9HkRPk",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "0660f0cc-0250-4039-8c20-f1bcddd6459f",
+      "slug": "jp-video-sa2-reset-5000",
+      "title": "JP SA2補正切り5000ダメージ",
+      "url": "https://www.youtube.com/watch?v=3hHac9ko9nY",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "42e375a4-29b1-4041-808c-258a20cab072",
+          "note": "JP specialist-video audit. No pixel or device verification.",
+          "video_id": "0660f0cc-0250-4039-8c20-f1bcddd6459f",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:30:15.505327+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 130
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "f2f39dbc-0b63-407a-a207-be0af391be22",
+          "title": "JP SA2補正切り5000ダメージ",
+          "publisher": "JP攻略動画",
+          "url": "https://www.youtube.com/watch?v=3hHac9ko9nY",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "43e62707-297f-45c5-934f-454b3b37555a",
+      "slug": "jp-video-sa2-midscreen-carry",
+      "title": "JP SA2中央限定運び・起き攻め",
+      "url": "https://www.youtube.com/watch?v=TppoRqFmaVE",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "1cc25c2d-74ee-4ec4-80c3-7e8390c9c89c",
+          "note": "JP specialist-video audit. No pixel or device verification.",
+          "video_id": "43e62707-297f-45c5-934f-454b3b37555a",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:30:15.505327+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 130
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "0ec9eedb-b18b-48fd-a5a9-7dfaf05ad201",
+          "title": "JP SA2中央限定運び・起き攻め",
+          "publisher": "JP攻略動画",
+          "url": "https://www.youtube.com/watch?v=TppoRqFmaVE",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "19ab2796-7d7f-406e-a010-0ff28336d3f2",
+      "slug": "jp-video-system-setplay-parry",
+      "title": "JP システム対抗セットプレイ・ジャスパ分岐",
+      "url": "https://www.youtube.com/watch?v=RPQg5ZnqTqo",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "e7fb7eb0-e951-4b1a-999d-38d059fdd38b",
+          "note": "JP specialist-video audit. No pixel or device verification.",
+          "video_id": "19ab2796-7d7f-406e-a010-0ff28336d3f2",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:30:15.505327+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 130
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "80ce1e7b-0d4d-4fee-b275-20916b28b5c8",
+          "title": "JP システム対抗セットプレイ・ジャスパ分岐",
+          "publisher": "りゅうせい",
+          "url": "https://www.youtube.com/watch?v=RPQg5ZnqTqo",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "40392368-15be-43ae-9144-ad29dcfaefea",
+      "slug": "jp-video-newyear-setplay",
+      "title": "JP 武器商人お年玉セットプレイ・派生コンボ",
+      "url": "https://www.youtube.com/watch?v=6EvRH7Su0Wg",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "f03a15ce-80c9-4968-b63c-097999ce54f0",
+          "note": "JP specialist-video audit. No pixel or device verification.",
+          "video_id": "40392368-15be-43ae-9144-ad29dcfaefea",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:30:15.505327+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 130
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "787b41a7-0f4f-4802-ace3-80661ff6ad29",
+          "title": "JP 武器商人お年玉セットプレイ・派生コンボ",
+          "publisher": "りゅうせい",
+          "url": "https://www.youtube.com/watch?v=6EvRH7Su0Wg",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "ca1a8b19-342c-462f-b2af-68451f586bd6",
+      "slug": "jp-video-merchant-throwtech",
+      "title": "JP 武器商人新セットプレイ・投げ抜け注意",
+      "url": "https://www.youtube.com/watch?v=zfoUNpRa20Y",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "75900a56-95e5-4298-9588-d1083950d646",
+          "note": "JP specialist-video audit. No pixel or device verification.",
+          "video_id": "ca1a8b19-342c-462f-b2af-68451f586bd6",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:30:15.505327+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 130
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "d40a532d-3812-4448-9773-49273bf24731",
+          "title": "JP 武器商人新セットプレイ・投げ抜け注意",
+          "publisher": "りゅうせい",
+          "url": "https://www.youtube.com/watch?v=zfoUNpRa20Y",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "ee3d2583-7f1a-4c2e-8014-c9d3fdff49a8",
+      "slug": "jp-video-sa2-unblockable",
+      "title": "JP SA2確定ガー不連携の再評価",
+      "url": "https://www.youtube.com/watch?v=hXb9uM0bOco",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "d6dc52ca-21bd-4f9e-a1a2-79e8cd0a21fe",
+          "note": "JP specialist-video audit. No pixel or device verification.",
+          "video_id": "ee3d2583-7f1a-4c2e-8014-c9d3fdff49a8",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:30:15.505327+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 130
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "fc75cda2-4f64-4625-953f-56e454b48ef7",
+          "title": "JP SA2確定ガー不連携の再評価",
+          "publisher": "りゅうせい",
+          "url": "https://www.youtube.com/watch?v=hXb9uM0bOco",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "3d508952-1dae-4ae4-baa4-94f22ee7c270",
+      "slug": "jp-video-amnesia-torikore",
+      "title": "JP アムネジア後のとりこれ",
+      "url": "https://www.youtube.com/watch?v=LqRP3AUT8Dw",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "193b00e5-d4d8-4242-b3d4-ed6d3c994a5c",
+          "note": "JP specialist-video audit. No pixel or device verification.",
+          "video_id": "3d508952-1dae-4ae4-baa4-94f22ee7c270",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:30:15.505327+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 130
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "bb3f5092-bb1e-4132-8b93-a772b0f966ec",
+          "title": "JP アムネジア後のとりこれ",
+          "publisher": "ぽてんす",
+          "url": "https://www.youtube.com/watch?v=LqRP3AUT8Dw",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "4ca1498d-dc88-450d-b178-4bbdf8f1f05a",
+      "slug": "jp-video-graveyard-practical",
+      "title": "JP 墓場連携の実戦検証",
+      "url": "https://www.youtube.com/watch?v=ClMfY6szcUc",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "c91908e3-4654-4067-8ed9-4a662f1308c5",
+          "note": "JP specialist-video audit. No pixel or device verification.",
+          "video_id": "4ca1498d-dc88-450d-b178-4bbdf8f1f05a",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:30:15.505327+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 130
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "dc3f4357-a3b5-4a61-839a-433f2705938c",
+          "title": "JP 墓場連携の実戦検証",
+          "publisher": "JP攻略動画",
+          "url": "https://www.youtube.com/watch?v=ClMfY6szcUc",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "46563977-2312-4aa0-80e8-253c8680921b",
+      "slug": "jp-video-corner-combo-1",
+      "title": "JP 画面端コンボ①",
+      "url": "https://www.youtube.com/watch?v=6wwRIdUyDNM",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "3127df48-0f9e-4ee8-86fb-99182f32a290",
+          "note": "JP short-video backlog. No captions; exact on-screen input must not be inferred.",
+          "video_id": "46563977-2312-4aa0-80e8-253c8680921b",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:32:06.266213+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 140
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "3d00f6cf-1106-4400-8f86-af6f7d9a9bd7",
+          "title": "JP 画面端コンボ①",
+          "publisher": "JP short guide",
+          "url": "https://www.youtube.com/watch?v=6wwRIdUyDNM",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "46b54ad2-65c0-4f45-9fe4-9b45a4453998",
+      "slug": "jp-video-wall-splat-short",
+      "title": "JP 壁張り付き限定コンボ",
+      "url": "https://www.youtube.com/watch?v=wLGt1cusFT0",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "764e61dd-18a3-4555-9582-aad56c9e4ff7",
+          "note": "JP short-video backlog. No captions; exact on-screen input must not be inferred.",
+          "video_id": "46b54ad2-65c0-4f45-9fe4-9b45a4453998",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:32:06.266213+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 140
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "de3f5a56-c7dd-426b-a9de-e5cc19c72b47",
+          "title": "JP 壁張り付き限定コンボ",
+          "publisher": "JP short guide",
+          "url": "https://www.youtube.com/watch?v=wLGt1cusFT0",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "47c06f72-d84c-478f-9479-e8ee519a11bc",
+      "slug": "jp-video-amnesia-throw-side-switch",
+      "title": "JP ODアムネジア投げ取得・入れ替えコンボ",
+      "url": "https://www.youtube.com/watch?v=OIQsvoI6WGc",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "8ea74d4b-60c9-4f45-a079-508349623c57",
+          "note": "JP short-video backlog. No captions; exact on-screen input must not be inferred.",
+          "video_id": "47c06f72-d84c-478f-9479-e8ee519a11bc",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:32:06.266213+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 140
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "d03aed9a-343e-4f17-bec4-89f752727d9b",
+          "title": "JP ODアムネジア投げ取得・入れ替えコンボ",
+          "publisher": "inaGuile@攻めガイル",
+          "url": "https://www.youtube.com/watch?v=OIQsvoI6WGc",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "beec9f70-b5c5-4215-bdce-a91e30803705",
+      "slug": "jp-video-di-proof-crouch-setplay",
+      "title": "JP インパクト返し不可・しゃがみ対応セットプレイ",
+      "url": "https://www.youtube.com/watch?v=A28Hs4CPas0",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "f0d0aa3f-ea39-4533-b68a-bce61a4c712c",
+          "note": "JP short-video backlog. No captions; exact on-screen input must not be inferred.",
+          "video_id": "beec9f70-b5c5-4215-bdce-a91e30803705",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:32:06.266213+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 140
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "954e86d8-066d-4571-a88b-f135ab192608",
+          "title": "JP インパクト返し不可・しゃがみ対応セットプレイ",
+          "publisher": "JP short guide",
+          "url": "https://www.youtube.com/watch?v=A28Hs4CPas0",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "33d0aaee-ee45-49cf-a38a-ab8bf4503876",
+      "slug": "jp-video-practical-setplay-matrix",
+      "title": "JP 超実戦向けセットプレイ解説",
+      "url": "https://www.youtube.com/watch?v=9_7W0ISQWQA",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "6e2fca5e-2ce2-4dd6-a69a-075288920270",
+          "note": "JP remaining guide audit. No recipe inferred beyond creator-authored chapter labels.",
+          "video_id": "33d0aaee-ee45-49cf-a38a-ab8bf4503876",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:55:10.104583+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 150
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "9c47376d-e0ae-428a-96c9-448c3c6815f8",
+          "title": "JP 超実戦向けセットプレイ解説",
+          "publisher": "ガーカス",
+          "url": "https://www.youtube.com/watch?v=9_7W0ISQWQA",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "0fc3b11c-f07a-487e-98c2-b098c70a1d01",
+      "slug": "jp-video-graveyard-makoto-route",
+      "title": "JP 墓場連携・誠ルート実演",
+      "url": "https://www.youtube.com/watch?v=zkRUtKkx1vA",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "ef52b73c-7bb9-4ca1-a36f-94260e0c9d67",
+          "note": "JP remaining guide audit. No recipe inferred beyond creator-authored chapter labels.",
+          "video_id": "0fc3b11c-f07a-487e-98c2-b098c70a1d01",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:55:10.104583+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 150
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "e80b39d1-e77c-47ff-a48c-092be7e1a294",
+          "title": "JP 墓場連携・誠ルート実演",
+          "publisher": "ももち / Momochi",
+          "url": "https://www.youtube.com/watch?v=zkRUtKkx1vA",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "a8d38801-20ca-4f52-bc9e-037da091ee74",
+      "slug": "jp-video-sa2-main-route-matrix",
+      "title": "JP SA2ラヴーシュカ主力コンボ・連携講座",
+      "url": "https://www.youtube.com/watch?v=mwhNc0qi3Fs",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "6322dc49-48a6-4ef9-a5c2-8b308c6d894c",
+          "note": "JP remaining guide audit. No recipe inferred beyond creator-authored chapter labels.",
+          "video_id": "a8d38801-20ca-4f52-bc9e-037da091ee74",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:55:10.104583+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 150
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "3b30faf0-9f12-4e3f-8988-49dbde652fd7",
+          "title": "JP SA2ラヴーシュカ主力コンボ・連携講座",
+          "publisher": "りゅうせい",
+          "url": "https://www.youtube.com/watch?v=mwhNc0qi3Fs",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "d839151e-a3d1-433b-92b4-aa2314411c74",
+      "slug": "jp-video-vihhat-drive-tier-actions",
+      "title": "JP 設置後のDrive残量別行動",
+      "url": "https://www.youtube.com/watch?v=qV-KgJ9Uwrw",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "33889700-6164-4f69-9fed-84fd5ac69e47",
+          "note": "JP remaining guide audit. No recipe inferred beyond creator-authored chapter labels.",
+          "video_id": "d839151e-a3d1-433b-92b4-aa2314411c74",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:55:10.104583+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 150
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "b5007395-f8c4-492d-9608-cdd8e439b827",
+          "title": "JP 設置後のDrive残量別行動",
+          "publisher": "なんでねー",
+          "url": "https://www.youtube.com/watch?v=qV-KgJ9Uwrw",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "7e224332-3281-43b2-9a90-7f8c2c0841dd",
+      "slug": "jp-video-graveyard-size-study",
+      "title": "JP 墓場連携・体格キャラ依存研究",
+      "url": "https://www.youtube.com/watch?v=UBsoBb01LOw",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "a45c43bd-1f40-4945-871c-17a892c48112",
+          "note": "JP remaining guide audit. No recipe inferred beyond creator-authored chapter labels.",
+          "video_id": "7e224332-3281-43b2-9a90-7f8c2c0841dd",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:55:10.104583+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 150
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "8ebe90b3-be6c-4aab-b97e-0e70740164f2",
+          "title": "JP 墓場連携・体格キャラ依存研究",
+          "publisher": "りゅうせい",
+          "url": "https://www.youtube.com/watch?v=UBsoBb01LOw",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "b9b5cfeb-fa17-4f0f-af17-9a6f55a6ad2b",
+      "slug": "jp-video-mr2200-setplay-matrix",
+      "title": "JP MR2200セットプレイ解説",
+      "url": "https://www.youtube.com/watch?v=Lj-nsY8XP6g",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "bff019da-9da1-42a8-94ef-32b1604e285e",
+          "note": "JP remaining guide audit. No recipe inferred beyond creator-authored chapter labels.",
+          "video_id": "b9b5cfeb-fa17-4f0f-af17-9a6f55a6ad2b",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T00:55:10.104583+00:00",
+          "entity_type": "character",
+          "relationship": "chapter_analyzed",
+          "display_order": 150
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "b78e454e-230a-45ca-b4fd-d3358b45c4b4",
+          "title": "JP MR2200セットプレイ解説",
+          "publisher": "ロズト",
+          "url": "https://www.youtube.com/watch?v=Lj-nsY8XP6g",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "43b43d08-0ed6-46f5-b3ac-4f38b947be24",
+      "slug": "jp-video-ceo2026-top8-kilzyou-tokido",
+      "title": "CEO 2026 Top 8 Kilzyou (Mai) vs Tokido (JP)",
+      "url": "https://www.youtube.com/watch?v=3wP0NtK1ngI",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "2b516498-fbd6-48a0-80cf-c883432a1f67",
+          "note": "Official current-patch tournament match. Player/opponent/event verified; gameplay extraction pending because the player did not load.",
+          "video_id": "43b43d08-0ed6-46f5-b3ac-4f38b947be24",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T01:08:21.964707+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 160
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "9f57b324-71d0-41a3-aa4c-363ccf24413f",
+          "title": "CEO 2026 Top 8 Kilzyou Mai vs Tokido JP",
+          "publisher": "Capcom Fighters",
+          "url": "https://www.youtube.com/watch?v=3wP0NtK1ngI",
+          "source_type": "video",
+          "reliability_level": "primary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "fc4bbf13-5196-4bd3-b874-5c51575a5ca1",
+      "slug": "jp-video-ceo2026-top8-tokido-micky",
+      "title": "CEO 2026 Top 8 Tokido (JP) vs Micky (Mai)",
+      "url": "https://www.youtube.com/watch?v=uPrVOCsysRc",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "5ce9f1fe-db6e-4b07-b380-a7f132e12a9d",
+          "note": "Official current-patch tournament match. Player/opponent/event verified; gameplay extraction pending because the player did not load.",
+          "video_id": "fc4bbf13-5196-4bd3-b874-5c51575a5ca1",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T01:08:21.964707+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 160
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "fa61bde9-1b52-45ba-a3b1-82e2d91dd95a",
+          "title": "CEO 2026 Top 8 Tokido JP vs Micky Mai",
+          "publisher": "Capcom Fighters",
+          "url": "https://www.youtube.com/watch?v=uPrVOCsysRc",
+          "source_type": "video",
+          "reliability_level": "primary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "026c089a-f047-4935-9b81-cb5f22736164",
+      "slug": "jp-video-ceo2026-gf-tokido-booce",
+      "title": "CEO 2026 Grand Final Booce_Lee (Terry) vs Tokido (JP)",
+      "url": "https://www.youtube.com/watch?v=WEsKeYBCqc4",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "049f9173-8c2e-4cc7-bfc4-2877e4c757d0",
+          "note": "Official current-patch tournament match. Player/opponent/event verified; gameplay extraction pending because the player did not load.",
+          "video_id": "026c089a-f047-4935-9b81-cb5f22736164",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T01:08:21.964707+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 160
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "f60d6e53-1ec4-426e-bb98-29b9db53041d",
+          "title": "CEO 2026 Grand Final Booce_Lee Terry vs Tokido JP",
+          "publisher": "Capcom Fighters",
+          "url": "https://www.youtube.com/watch?v=WEsKeYBCqc4",
+          "source_type": "video",
+          "reliability_level": "primary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "9eba15fa-7dcc-48c6-bded-24b9bfacb562",
+      "slug": "jp-video-ceo2026-top8-booce-tokido",
+      "title": "CEO 2026 Top 8 Booce_Lee (Terry) vs Tokido (JP)",
+      "url": "https://www.youtube.com/watch?v=OkDDXmNFhwY",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "2297c3bc-11e9-4cba-8417-ac4f9e0b1c6f",
+          "note": "Official current-patch tournament match. Player/opponent/event verified; gameplay extraction pending because the player did not load.",
+          "video_id": "9eba15fa-7dcc-48c6-bded-24b9bfacb562",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-09-01T01:08:21.964707+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 160
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "bb4cdd26-6851-4c1c-a626-ae5e4553e885",
+          "title": "CEO 2026 Top 8 Booce_Lee Terry vs Tokido JP",
+          "publisher": "Capcom Fighters",
+          "url": "https://www.youtube.com/watch?v=OkDDXmNFhwY",
+          "source_type": "video",
+          "reliability_level": "primary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "942256c3-6cc7-4ef3-9798-2946f1486088",
+      "slug": "luke-video-season4-new-routes",
+      "title": "SF6 Luke and Jamie Season 4 new combos/setups",
+      "url": "https://www.youtube.com/watch?v=4aXtcLA_p8Q",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "819d6971-7196-476a-89f4-ce910797dd68",
+          "note": "Luke video/Shorts visual backlog; do not infer on-screen recipes.",
+          "video_id": "942256c3-6cc7-4ef3-9798-2946f1486088",
+          "entity_id": "1e4e3f57-7ba0-454c-86d7-72b1deeb3713",
+          "created_at": "2026-09-01T01:28:52.377784+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 160
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "c7bdea28-cb89-4a0f-ada5-7b8a56ecb44d",
+          "title": "SF6 Luke and Jamie Season 4 new combos/setups",
+          "publisher": "YouTube guide",
+          "url": "https://www.youtube.com/watch?v=4aXtcLA_p8Q",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "9830e632-931c-4151-9665-69144d242891",
+      "slug": "luke-short-plus7",
+      "title": "今年のルークは+7Fが強い",
+      "url": "https://www.youtube.com/shorts/Lva0F2KXFEI",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "56b66929-bb54-43ba-83bb-85333a12b7d3",
+          "note": "Luke video/Shorts visual backlog; do not infer on-screen recipes.",
+          "video_id": "9830e632-931c-4151-9665-69144d242891",
+          "entity_id": "1e4e3f57-7ba0-454c-86d7-72b1deeb3713",
+          "created_at": "2026-09-01T01:28:52.377784+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 160
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "8b377079-165e-44d9-85bd-4263e5e7fd9b",
+          "title": "今年のルークは+7Fが強い",
+          "publisher": "jazzzzy669",
+          "url": "https://www.youtube.com/shorts/Lva0F2KXFEI",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "d0c0692e-ce89-40e7-a846-c723d97e2ae4",
+      "slug": "luke-short-modern-meterless-max",
+      "title": "モダンルーク ノーゲージ最大コンボ",
+      "url": "https://www.youtube.com/shorts/aV1ZUHbiE1s",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "55f42ac0-1111-431a-8bff-66ef9942b3ec",
+          "note": "Luke video/Shorts visual backlog; do not infer on-screen recipes.",
+          "video_id": "d0c0692e-ce89-40e7-a846-c723d97e2ae4",
+          "entity_id": "1e4e3f57-7ba0-454c-86d7-72b1deeb3713",
+          "created_at": "2026-09-01T01:28:52.377784+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 160
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "a6a33c11-0b99-4ec0-a464-ec6fb164784c",
+          "title": "モダンルーク ノーゲージ最大コンボ",
+          "publisher": "YouTube short guide",
+          "url": "https://www.youtube.com/shorts/aV1ZUHbiE1s",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "61ddae1f-7dd5-4576-9d80-bb338c3e6903",
+      "slug": "luke-short-corner-backthrow",
+      "title": "ルーク 画面端後ろ投げ後セットプレイ",
+      "url": "https://www.youtube.com/shorts/yA0aERDjluY",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "2799b6b5-d27e-4e27-bea8-363447c90487",
+          "note": "Luke video/Shorts visual backlog; do not infer on-screen recipes.",
+          "video_id": "61ddae1f-7dd5-4576-9d80-bb338c3e6903",
+          "entity_id": "1e4e3f57-7ba0-454c-86d7-72b1deeb3713",
+          "created_at": "2026-09-01T01:28:52.377784+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 160
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "d9e1f48e-16f8-4a5d-b188-39291ebc6c9f",
+          "title": "ルーク 画面端後ろ投げ後セットプレイ",
+          "publisher": "YouTube short guide",
+          "url": "https://www.youtube.com/shorts/yA0aERDjluY",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "365f5310-b61a-47af-8d10-5aeaacfe2b91",
+      "slug": "luke-short-hk-meaty",
+      "title": "ルーク 立ち強K持続当てセットプレイ",
+      "url": "https://www.youtube.com/shorts/MVoZRVTJjY8",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "08db0e8b-a972-464b-9e06-802384dfc2ae",
+          "note": "Luke video/Shorts visual backlog; do not infer on-screen recipes.",
+          "video_id": "365f5310-b61a-47af-8d10-5aeaacfe2b91",
+          "entity_id": "1e4e3f57-7ba0-454c-86d7-72b1deeb3713",
+          "created_at": "2026-09-01T01:28:52.377784+00:00",
+          "entity_type": "character",
+          "relationship": "analysis_backlog",
+          "display_order": 160
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "c2c3d232-ccc1-4413-950b-369816e626f0",
+          "title": "ルーク 立ち強K持続当てセットプレイ",
+          "publisher": "YouTube short guide",
+          "url": "https://www.youtube.com/shorts/MVoZRVTJjY8",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "99d2e615-279e-4beb-9bcb-18ac87d133d6",
+      "slug": "jp-tokido-ceo2026-day3-part2",
+      "title": "【日本語実況】CEO 2026 - Day3 Part2「CAPCOM Pro Tour 2026 Premier」",
+      "url": "https://youtube.com/live/6-LsC5hynes",
+      "current_status": "published",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "263b85ee-5808-4597-9798-81fd13e5ff1c",
+          "note": "Current post-patch JP high-level match reference.",
+          "video_id": "99d2e615-279e-4beb-9bcb-18ac87d133d6",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-27T02:50:07.256767+00:00",
+          "entity_type": "character",
+          "relationship": "tournament_reference",
+          "display_order": 2
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [],
+      "source_binding_gap": false,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "8ca914b4-860d-4a4e-8204-3b8b8c7ef6c1",
+      "slug": "ryu-2026-complete-guide-sawakaze",
+      "title": "[SF6] Master Ryu Easily With This One Guide! 2026 Edition: Complete Combo & Okizeme Guide",
+      "url": "https://www.youtube.com/watch?v=kWS3zqOINUU",
+      "current_status": "published",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "70dab9d4-1363-4076-802e-a0fbc6f4bc11",
+          "note": "Detailed companion article reviewed 2026-08-31; video pixels/timestamps and current-patch reproduction remain pending.",
+          "video_id": "8ca914b4-860d-4a4e-8204-3b8b8c7ef6c1",
+          "entity_id": "9c3a7aaa-e090-40a6-b598-f63afb761b77",
+          "created_at": "2026-08-26T12:57:36.876002+00:00",
+          "entity_type": "character",
+          "relationship": "content_analyzed",
+          "display_order": 30
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "c722b39a-ad34-49dc-8383-943df09a1d6a",
+          "title": "SF6 Master Ryu Easily With This One Guide! 2026 Edition",
+          "publisher": "さわかぜの格ゲーチャンネル",
+          "url": "https://www.youtube.com/watch?v=kWS3zqOINUU",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "6f0af45a-7c95-4c3f-977d-a5910b3a5d5b",
+      "slug": "jp-ray-20260318-combo-oki",
+      "title": "JP 強行動 強連携 コンボ 起き攻め セットプレイ",
+      "url": "https://www.youtube.com/watch?v=o6zXaO4iIz0",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "9a66577d-9cea-4e5b-ac6a-083b95618c29",
+          "note": "JP攻略参考動画。現行パッチでの個別レシピ検証が必要。",
+          "video_id": "6f0af45a-7c95-4c3f-977d-a5910b3a5d5b",
+          "entity_id": "87077ba6-e9da-48b7-b3bd-2499ea4f6d86",
+          "created_at": "2026-08-26T07:21:41.936419+00:00",
+          "entity_type": "character",
+          "relationship": "guide",
+          "display_order": 10
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "20b81ed0-f370-4aa5-b912-8a7c492b1160",
+          "title": "JP 強行動・強連携・コンボ・起き攻め・セットプレイ",
+          "publisher": "レイ スト6",
+          "url": "https://www.youtube.com/watch?v=o6zXaO4iIz0",
+          "source_type": "video",
+          "reliability_level": "community",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    },
+    {
+      "id": "fc914467-030c-47aa-8bf3-8528d173ad0a",
+      "slug": "luke-combo-oki-guide-buzerio",
+      "title": "(OLD) SF6 Luke Combo and Oki Guide",
+      "url": "https://www.youtube.com/watch?v=VTWNWpdNyWc",
+      "current_status": "draft",
+      "classification": "METADATA_INCOMPLETE",
+      "reasons": [
+        "SOURCE_REQUIRED",
+        "TITLE_CONTENT_AND_RELATION_VERIFICATION_REQUIRED"
+      ],
+      "dimensions": {
+        "SOURCE_OK": false,
+        "URL_OK": true,
+        "TITLE_OK": true,
+        "RELATION_OK": true
+      },
+      "relations": [
+        {
+          "id": "98c7b4b1-044d-4d61-8676-55d75d63fed0",
+          "note": "Combo/oki reference; current-patch retest required.",
+          "video_id": "fc914467-030c-47aa-8bf3-8528d173ad0a",
+          "entity_id": "1e4e3f57-7ba0-454c-86d7-72b1deeb3713",
+          "created_at": "2026-08-26T13:48:10.294994+00:00",
+          "entity_type": "character",
+          "relationship": "guide",
+          "display_order": 30
+        }
+      ],
+      "sources": [],
+      "existing_url_matching_sources": [
+        {
+          "source_id": "48a3b9c8-030d-427c-bc20-5b4ac3bfa5db",
+          "title": "SF6 Luke Combo and Oki Guide",
+          "publisher": "BuzerioFGC",
+          "url": "https://www.youtube.com/watch?v=VTWNWpdNyWc",
+          "source_type": "video",
+          "reliability_level": "secondary",
+          "match_basis": "EXACT_URL"
+        }
+      ],
+      "source_binding_gap": true,
+      "duplicate_or_conflicting_identity": false,
+      "reviewed_claim_support": false,
+      "optional_metadata_not_inferred": {
+        "channelName": null,
+        "durationSeconds": null,
+        "language": null,
+        "controlTypes": [],
+        "viewCount": null
+      },
+      "structural_candidate": false
+    }
+  ]
+}

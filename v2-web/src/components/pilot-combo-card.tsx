@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { appendDevicePreviewToken } from "@/lib/device-preview";
 import { releaseFeatures } from "@/lib/release-features";
 import { localizeComboText, localizeSourceType } from "@/lib/detail-localization";
+import { isComboIconPilot } from "@/lib/combo-input-tokens";
 import styles from "./pilot-combo-card.module.css";
 import { ComboInputRecipe } from "./combo-input-recipe";
 
@@ -176,7 +177,7 @@ export function PilotComboCard({
             {expandedFacts.map(([label, value]) => (
               <div key={String(label)}>
                 <dt>{label}</dt>
-                <dd>{label === "コマンド" && (combo.rawRecipe ?? combo.command) ? <ComboInputRecipe recipe={combo.rawRecipe ?? combo.command ?? ""} /> : String(value)}</dd>
+                <dd>{label === "コマンド" && (combo.rawRecipe ?? combo.command) ? <ComboInputRecipe recipe={combo.rawRecipe ?? combo.command ?? ""} iconPilot={isComboIconPilot(combo.id)} /> : String(value)}</dd>
               </div>
             ))}
           </dl>
