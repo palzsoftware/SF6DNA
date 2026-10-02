@@ -131,7 +131,7 @@ export function CharacterDetailPilot({
       </section> : null}
 
       {!preRelease ? <section className={styles.gameplan} aria-labelledby="pilot-gameplan-heading">
-        <div className={styles.sectionTitle}><p className="eyebrow">基本方針</p><h2 id="pilot-gameplan-heading">試合の組み立て方</h2>{profile.gameplan.length ? <p>要点から読み、詳しい説明は必要なときに開けます。</p> : null}</div>
+        <div className={styles.sectionTitle}><p className="eyebrow">基本方針</p><h2 id="pilot-gameplan-heading">試合の組み立て方</h2></div>
         <CharacterGamePlan steps={profile.gameplan} />
         {sourceSamples.length ? <div className={styles.inlineSources} tabIndex={0} aria-label="基本方針の情報源（横スクロール）">{sourceSamples.map((source) => {
           const presentation = presentSource(source.sourceType, source.publisher, source.url);

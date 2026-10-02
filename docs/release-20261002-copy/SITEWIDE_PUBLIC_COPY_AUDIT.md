@@ -32,7 +32,7 @@ JPとRyuは既存の専用profile、Luke/Ken/Zangief等は既存adapterを使う
 | /characters/[slug] | Both detail templates | 基本の勝ち筋 | 長文を読む目的がつかみにくい | SLIGHTLY_MECHANICAL | 試合の組み立て方 | NO | YES | YES |
 | /characters/[slug] | Shared game plan | 手順1／手順2＋常時表示の全文 | 画面を縦に圧迫 | TOO_LONG | 既存の短い見出し＋閉じたdetails。本文・注意点を保持 | NO | YES | YES |
 | /characters/[slug] | Shared range guide | 目的／主に使う技／注意点の横長な文章表 | 情報の階層が弱い | UNCLEAR | 距離ごとのカード：狙い／主に使う技／気をつけること | NO | YES | YES |
-| /characters/[slug] | Pilot section introduction | 使う技、得意な距離、注意点を順に紹介します。 | 全文表示を前提にした紹介 | SLIGHTLY_MECHANICAL | 要点から読み、詳しい説明は必要なときに開けます。 | NO | YES | YES |
+| /characters/[slug] | Pilot section introduction | 使う技、得意な距離、注意点を順に紹介します。 | 全文表示を前提にした紹介 | SLIGHTLY_MECHANICAL | 見出しだけにし、開閉の説明は共通componentへ集約 | NO | YES | YES |
 | /characters/[slug] | Pilot accessible name | Character Detail V2.2 | 内部バージョン | DEVELOPER_FACING | キャラクター情報 | NO | YES | YES |
 | /characters/[slug] | Quick Start | 特徴を知る／技を確認する／今日の15分練習を決める | 行動と移動先が明確 | NATURAL | 5-anchorとDaily15を維持 | NO | NOT_NEEDED | NO |
 | /characters/[slug] | Move Explorer | 技名・コマンドを検索／絞り込みを解除 | 用途と復帰操作が明確 | NATURAL | 維持 | NO | NOT_NEEDED | NO |
@@ -85,3 +85,13 @@ PUBLIC_COPY_ITEMS_CHANGED = 20 文言群（個別の文字列置換数とは異�
 - Quick Start 5-anchor/Daily15、Move Search/filter/原文コマンド、Public Boundaryの既存回帰PASS。
 - Browser QAは公開後の最新Previewで確認し、最終報告へ記載する。375pxを指定できない環境では未測定のまま扱う。
 - SSRは実機・375px DOM・日本語体感の証明ではない。新P0/P1はStatic範囲で0 observed。JP MP4は既知P1のまま別作業。
+
+## Preview browser delta
+
+最初の統合Preview `dpl_GFSf9XqvLLUhXycruogrZc6fzd3J` / `20b1b7dbc1e8732fa13f9537caa18dd057cb1fab` で代表5キャラの描画、Quick Startリンク、攻略なしの空状態、document width一致を確認（clientWidth=1348）。JPは4ポイント/4距離カード、Ryuも同じ構造。JPでクリック展開とEnter折りたたみを確認。
+
+Ryuで開閉の案内がsection紹介と共通componentに重複していたため、section側の1文を削除。本文、注意点、リンクは変更しない。375px指定は利用不可、Mobile DOM/DeviceはNOT_VERIFIED。Ken/ZangiefのMove Searchなしは既存技データなしの状態で、今回の表示不具合ではない。
+
+追加のBrowser確認（同Preview）：RyuのLight表示はcard background白／文字濃色で4距離カードを描画、Darkに復帰。Home/Search/Players/FAQ/Contact/Daily15を描画し、変更した案内を確認。Favoritesはloadingとemptyを別表示する既存経路。観測consoleのchrome-extension由来metadata通知はアプリエラーと分離する。スマホviewport指定・アカウントSave・ゲーム映像の判定は未実施。
+
+重複案内の削除後も398 tests / 14 gates / typecheck / lint / build / diff check PASS。同じNext生成差分を確認し、Batchへ含めない。
