@@ -6,7 +6,7 @@ function load(path, imports) {
   const source = readFileSync(new URL(`../src/components/${path}`, import.meta.url), 'utf8');
   const js = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX } }).outputText;
   const testModule = { exports: {} };
-  new Function('module', 'exports', 'require', js)(testModule, testModule.exports, name => { assert.ok(imports[name], name); return imports[name]; });
+  new Function('module', 'exports', 'require', js)(testModule, testModule.exports, name => { if (name === '@/components/mini-illustration') return { MiniIllustration: () => null }; assert.ok(imports[name], name); return imports[name]; });
   return testModule.exports;
 }
 const jsx = { jsx: (type, props) => ({ type, props }), jsxs: (type, props) => ({ type, props }) };

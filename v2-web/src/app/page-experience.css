@@ -131,3 +131,15 @@
 }
 
 .character-card .character-card__nameplate { padding: 0; left: 16px; right: 16px; bottom: 12px; }
+
+/* Small original helpers reserve their footprint and preserve the text hierarchy. */
+.mini-illustration { display: inline-flex; position: relative; align-items: center; justify-content: center; width: 88px; height: 64px; flex-shrink: 0; color: var(--accent); vertical-align: middle; }
+.mini-illustration > span { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 16px; border: 1px solid currentColor; background: color-mix(in srgb, var(--accent) 9%, var(--surface)); transform: rotate(-6deg); }
+.mini-illustration .visual-icon { width: 30px; height: 30px; margin: 0; transform: rotate(6deg); }
+.mini-illustration > i { width: 5px; height: 5px; border-radius: 50%; background: currentColor; margin: 0 7px; opacity: .55; }
+.mini-illustration[data-kind="history"] { color: var(--info); }
+.daily-card__icon-slot .visual-icon { width: 24px; height: 24px; margin: 0; }
+
+.illustration-heading { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.illustration-heading > div { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 400px) { .illustration-heading .mini-illustration { width: 60px; } }

@@ -1,5 +1,6 @@
 "use client";
 
+import { MiniIllustration } from "@/components/mini-illustration";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getDiagnosisHistory } from "@/lib/local-user-tools";
@@ -57,7 +58,7 @@ export function DailyTrainingPlanner({ dateKey, request, context }: { dateKey: s
 
   return <div className="site-shell page-stack">
     <section className={`hero compact-hero ${styles.hero}`}>
-      <div><p className="eyebrow">DAILY TRAINING</p><h1>今日の15分練習</h1><p>{plan.dateKey.replaceAll("-", "/")}（日本時間）・5分 × 3課題</p></div>
+      <div className="illustration-heading"><MiniIllustration kind="training" /><div><p className="eyebrow">DAILY TRAINING</p><h1>今日の15分練習</h1><p>{plan.dateKey.replaceAll("-", "/")}（日本時間）・5分 × 3課題</p></div></div>
       <div className={styles.progressCard} aria-live="polite"><span>今日の進捗</span><strong>{completeMinutes} / {plan.totalMinutes}分</strong>
         <div className={styles.progressTrack} role="progressbar" aria-label="今日の練習進捗" aria-valuemin={0} aria-valuemax={15} aria-valuenow={completeMinutes}><span style={{ width: `${completeMinutes / plan.totalMinutes * 100}%` }} /></div>
       </div>

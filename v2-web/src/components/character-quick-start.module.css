@@ -10,3 +10,8 @@
 .dailyLink { display: inline-flex; min-height: 44px; align-items: center; gap: 8px; margin-top: 12px; padding: 9px 13px; border: 1px solid var(--accent); border-radius: 10px; color: var(--text); font-weight: 800; }
 .dailyLink:hover { background: var(--bg); }
 .dailyLink:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
+.heading h2 { min-width: 0; overflow-wrap: anywhere; }
+.guide { width: 64px; height: 86px; flex-shrink: 0; object-fit: contain; margin: -4px 0 4px; }
+@media (min-width: 720px) { .guide { width: 80px; height: 108px; } }

@@ -106,7 +106,7 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
     <CharacterTabs slug={character.slug} active="overview" previewToken={previewToken} />
 
     <div className={styles.sections}>
-      <CharacterQuickStart />
+      <CharacterQuickStart characterSlug={character.slug} />
       <section id="pilot-overview" className={styles.section}>
         <p className="eyebrow">基本ガイド</p><h2>{normalizePublicCopy(profile.tagline)}</h2>
         <p>{normalizePublicCopy(profile.winPath)}</p>

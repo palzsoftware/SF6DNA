@@ -1,5 +1,6 @@
 "use client";
 
+import { MiniIllustration } from "@/components/mini-illustration";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import type { CharacterSummary } from "@/types/character";
@@ -64,7 +65,7 @@ export function MyCharacterManager({
   if (visible.length === 0) {
     return (
       <div className="empty-state">
-        <h2>{favoritesOnly ? "お気に入りはまだありません" : "公開キャラクターがありません"}</h2>
+        <MiniIllustration kind="saved" /><h2>{favoritesOnly ? "お気に入りはまだありません" : "公開キャラクターがありません"}</h2>
         <p>{favoritesOnly ? "キャラクターページの☆から追加できます。マイキャラからも選べます。" : "キャラクター情報が掲載されると、ここから選べます。"}</p>{favoritesOnly ? <Link className="button-secondary inline-button" href="/characters">キャラクターを探す</Link> : null}
       </div>
     );

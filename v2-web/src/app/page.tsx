@@ -96,7 +96,7 @@ export default async function HomePage() {
         <div className="daily-grid">
           {todayActions.map((action) => (
             <Link className="daily-card home-purpose-card" data-accent={action.accent} href={action.href} key={action.phase}>
-              <span className="daily-card__icon-slot" aria-hidden="true">{action.phase.slice(0, 2)}</span>
+              <span className="daily-card__icon-slot" aria-hidden="true"><VisualIcon kind={action.phase === "TRAIN" ? "training" : action.phase === "DIAGNOSIS" ? "diagnosis" : "character"} /></span>
               <span className="daily-card__phase">{action.phase === "TRAIN" ? "TODAY’S TRAINING" : action.phase}</span>
               {action.phase === "TRAIN" ? <div className="lab-timer" aria-label="5分の練習を3つ、合計15分">{[1,2,3].map((part) => <span key={part}><b>05</b><small>min</small></span>)}<em>15分で、ひとつ前へ。</em></div> : null}
               <strong>{action.title}</strong>

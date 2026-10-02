@@ -1,5 +1,6 @@
 "use client";
 
+import { MiniIllustration } from "@/components/mini-illustration";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { deleteDiagnosisHistory, getDiagnosisHistory, type DiagnosisHistoryRecord } from "@/lib/local-user-tools";
@@ -22,7 +23,7 @@ export function DiagnosisHistoryTool() {
   }
 
   if (!ready) return <div className="empty-state"><p>診断履歴を読み込んでいます。</p></div>;
-  if (!records.length) return <div className="empty-state"><h2>診断履歴はまだありません</h2><p>診断を最後まで完了すると、この端末に結果概要が保存されます。</p><Link className="button-secondary inline-button" href="/diagnosis">診断を選ぶ</Link></div>;
+  if (!records.length) return <div className="empty-state"><MiniIllustration kind="history" /><h2>診断履歴はまだありません</h2><p>診断を最後まで完了すると、この端末に結果概要が保存されます。</p><Link className="button-secondary inline-button" href="/diagnosis">診断を選ぶ</Link></div>;
 
   return (
     <div className="history-list experience-timeline">

@@ -108,7 +108,7 @@ export function CharacterDetailPilot({
 
   return (
     <section className={styles.pilot} aria-label={`${characterName}のキャラクター情報`}>
-      {!preRelease ? <CharacterQuickStart /> : null}
+      {!preRelease ? <CharacterQuickStart characterSlug={characterSlug} /> : null}
       {!preRelease ? <section className={styles.overview} id="pilot-overview">
         <div className={styles.overviewLead}>
           <p className="eyebrow">基本ガイド</p>
