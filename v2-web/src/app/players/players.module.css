@@ -54,3 +54,10 @@
 @media (max-width: 1100px) { .searchPanel { grid-template-columns: minmax(0, 1fr) minmax(18rem, 1fr); } .resultCount { grid-column: 1 / -1; } .playerGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 720px) { .searchPanel { grid-template-columns: minmax(0, 1fr); align-items: stretch; } .resultCount { grid-column: auto; } .filterGroup, .rankState { grid-column: 1; } .playerGrid, .detailGrid, .facts { grid-template-columns: 1fr; } .playerCard { grid-template-columns: 3.5rem minmax(0, 1fr); } .playerMark { width: 3.5rem; height: 3.5rem; } .sectionHead { align-items: start; flex-direction: column; } .videoRail { grid-auto-columns: min(86vw, 24rem); } }
 @media (max-width: 420px) { .searchRow { grid-template-columns: 1fr; } .playerCard { padding: .85rem; gap: .75rem; } .cardBody dl div { grid-template-columns: 1fr; gap: .15rem; } }
+
+/* Profile identity uses the existing image/initial, never invented achievements. */
+.playerCard { border-radius: 6px 22px 6px 6px; border-top: 2px solid var(--info); transition: transform 160ms ease, border-color 160ms ease; }
+.playerCard:hover { transform: translateY(-2px); border-color: var(--info); }
+.playerMark { border-radius: 50%; background: var(--info-bg); color: var(--text); border: 1px solid var(--border-strong); }
+.searchPanel { border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { .playerCard { transition: none; }.playerCard:hover { transform: none; } }

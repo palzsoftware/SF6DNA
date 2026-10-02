@@ -181,3 +181,11 @@
 .sourceGrid span, .sourceGrid small { color: var(--text-muted); }
 .sourceGrid a { color: var(--link); display: inline-flex; align-items: center; min-height: 44px; }
 @media (max-width: 760px) { .sourceGrid { grid-template-columns: minmax(0,1fr); } }
+
+/* Shared Training Lab rhythm; information and visibility stay in the renderer. */
+.sectionTitle { padding-left: 16px; border-left: 3px solid var(--accent); }
+.subheading { padding: 12px 0; border-bottom: 1px solid var(--border); }
+.subheading h2 { letter-spacing: -.025em; }
+.moveGroup > summary { min-height: 48px; border-left: 3px solid var(--accent); padding-left: 16px; }
+.moveRow { border-radius: 6px; }
+.playerCard { border-radius: 6px 20px 6px 6px; }

@@ -73,3 +73,11 @@
 :global(html[data-appearance]:not([data-appearance="standard"])) .aliasBadge,
 :global(html[data-appearance]:not([data-appearance="standard"])) .open { color: var(--link); }
 @media (max-width: 720px) { .searchBox { position: static; } }
+
+/* Search is the primary tool on this page; keep query/filter behavior intact. */
+.searchHero { border-left: 3px solid var(--info); padding-left: 18px; }
+.searchBox { border-radius: 6px 18px 6px 6px; border-top: 3px solid var(--info); }
+.result { border-radius: 6px; border-left: 3px solid var(--border-strong); }
+.groupHead { padding-left: 12px; border-left: 3px solid var(--info); }
+.typeFilter, .typeFilterActive { min-height: 44px; }
+.result:hover { border-left-color: var(--info); }

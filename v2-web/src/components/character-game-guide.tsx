@@ -23,6 +23,7 @@ export function CharacterRangeGuide({ ranges }: { ranges: CharacterDetailV21Prof
   return <ul className={styles.ranges}>{ranges.map((row) => <li key={row.range}>
     <article className={styles.rangeCard}>
       <h3><span className={styles.marker} aria-hidden="true" />{row.range}</h3>
+      <div className={styles.rangeVisual} aria-hidden="true"><i /><span /><i /></div>
       <dl><div className={styles.purpose}><dt>狙い</dt><dd>{normalizePublicCopy(row.purpose)}</dd></div>
         <div><dt>主に使う技</dt><dd>{normalizePublicCopy(row.actions)}</dd></div>
         <div className={styles.caution}><dt>気をつけること</dt><dd>{normalizePublicCopy(row.caution)}</dd></div>
