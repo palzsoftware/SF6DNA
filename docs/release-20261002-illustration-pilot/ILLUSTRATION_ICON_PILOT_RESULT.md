@@ -11,7 +11,7 @@ Home replaces two-letter training / diagnosis / character slots with existing-st
 
 ## Checks
 
-409 tests PASS, 14 release gates PASS. Typecheck / lint / build / diff verification and deployed browser results are recorded after completion in the final report. Five new tests cover Preview environment allowlisting, Production and promoted-host denial before filesystem access, Quick Start preservation / decorative lazy image semantics, distinct valid assets, and decorative vector helpers. Existing Daily15 handler test imports the presentation helper without changing the tested logic.
+409 tests PASS, 14 release gates PASS. Typecheck / lint / build / diff check PASS. An initial local Turbopack persistence panic was resolved by retaining the old generated cache in a temporary directory and rebuilding with a fresh cache. Generated next-env.d.ts / tsconfig.json diffs were inspected and excluded; final typecheck PASS. Five new tests cover Preview environment allowlisting, Production and promoted-host denial before filesystem access, Quick Start preservation / decorative lazy image semantics, distinct valid assets, and decorative vector helpers. Existing Daily15 handler test imports the presentation helper without changing the tested logic.
 
 No gameplay fact, public data visibility, questions, scoring, recommendation, task generation, save contract, request_id or idempotency changes. No new product function, dependency, DB write, Production, main, sf6dna-v2 or Ver1.1 change. Existing media files, posters and manifest untouched. Release flags unchanged.
 
@@ -19,7 +19,13 @@ Asset total: 71.0 KiB. Delivery route has no-store and noindex, and files are ou
 
 ## Pending acceptance
 
-Deployed Dark / Light desktop smoke and asset loading: pending new Preview.
+Code commit: c85e24ee2487b4a5b3d78843d6e45fdf310a74ef
+Verified Preview: https://sf-6-jkpcdryjm-somas11620-9368.vercel.app/
+Deployment: dpl_6MkWgdCb1o6qia81zuzsrymjbfLy, READY, exact code SHA / branch match.
+
+Deployed Dark / Light desktop smoke: PASS for Home, Diagnosis, Daily15, Characters, JP, Ryu, Luke, Search, Favorites. Browser viewport innerWidth 1363, document clientWidth / scrollWidth 1348 / 1348 for each theme / route. No document-wide overflow observed. Three chibi image sources loaded with natural dimensions; ordinary lazy-loading can show not-yet-loaded state before the image enters the view. No broken complete images or current-host console errors observed. Favorites empty helper verified after local preference initialization. Main Hero and character-list artwork unchanged. No mobile PASS inferred.
+
+Final documentation-only commit retains this code / asset evidence; its deployment metadata is checked in the final report.
 Mobile 320 / 375 / 390 / 430: USER_REQUIRED (cloud viewport resize unavailable).
 Character derivative rights: UNVERIFIED_FOR_PRODUCTION.
 JP SA2: MEDIA_INPUT_REQUIRED, untouched.
