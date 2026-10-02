@@ -14,6 +14,7 @@ function load(file, overrides = {}) {
   }).outputText;
   new Function('module', 'exports', 'require', js)(testModule, testModule.exports, name => {
     if (name in overrides) return overrides[name];
+    if (name === '@/components/visual-icon') return load('components/visual-icon.tsx', {});
     if (name.endsWith('.module.css')) return { default: new Proxy({}, { get: (_, key) => key }), __esModule: true };
     if (name.endsWith('.css')) return {};
     if (name.startsWith('@/lib/')) return load(`lib/${name.slice(6)}.ts`, overrides);
@@ -158,4 +159,15 @@ test('mobile return dock identifies exact current routes without diagnosis-prefi
     if (active.length) assert.ok(active[0][0].includes(`href="${pathname}"`));
     assert.deepEqual([...html.matchAll(/href="([^"]+)"/g)].map(m => m[1]), routes);
   }
+});
+
+test('visual symbols stay decorative and retain readable navigation labels', () => {
+ const { VisualIcon, destinationIcon } = load('components/visual-icon.tsx');
+ for (const [href, kind] of [['/search','search'], ['/videos','video'], ['/favorites','saved'], ['/diagnosis/history','history']]) {
+  assert.equal(destinationIcon(href), kind);
+  const html = renderToStaticMarkup(React.createElement('a', { href }, React.createElement(VisualIcon, { kind }), '目的地'));
+  assert.ok(html.includes('aria-hidden="true"'));
+  assert.ok(html.includes('focusable="false"'));
+  assert.ok(html.includes('目的地'));
+ }
 });

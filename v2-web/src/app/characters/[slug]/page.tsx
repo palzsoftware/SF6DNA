@@ -218,7 +218,7 @@ export default async function CharacterPage({
               alt={character.name}
               width={760}
               height={760}
-              sizes="(max-width: 720px) 100vw, 42vw"
+              sizes="(max-width: 760px) 28vw, 42vw"
               priority
             />
           </div>

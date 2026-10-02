@@ -98,7 +98,7 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
         <CharacterPreferenceActions slug={character.slug} />
       </div>
       {character.imageUrl ? <div className={styles.portrait}>
-        <Image src={character.imageUrl} alt={character.name} width={760} height={760} sizes="(max-width: 720px) 100vw, 42vw" priority />
+        <Image src={character.imageUrl} alt={character.name} width={760} height={760} sizes="(max-width: 760px) 28vw, 42vw" priority />
       </div> : null}
     </header>
 

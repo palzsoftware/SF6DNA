@@ -47,3 +47,7 @@
 .points::before { left: 6px; }
 .points > li::before { content: ""; position: absolute; left: 1px; top: 26px; width: 10px; height: 10px; border: 2px solid var(--accent); border-radius: 50%; background: var(--surface); }
 @media (max-width: 900px) { .ranges { grid-template-columns: minmax(0, 1fr); } }
+
+.rangeOverview { display: flex; align-items: stretch; margin-bottom: 8px; border-bottom: 3px solid var(--info); background: var(--bg-subtle); overflow-wrap: anywhere; }
+.rangeOverview span { flex: 1; min-width: 0; padding: 10px 6px; text-align: center; font-weight: 700; font-size: .85rem; border-right: 1px solid var(--border); }
+.rangeOverview span:last-child { border-right: 0; }

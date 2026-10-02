@@ -111,3 +111,21 @@
 @media (max-width: 340px) {
  .experience-continue .home-public-nav, .experience-explore .home-public-nav { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Original geometric symbols supplement visible labels. */
+.visual-icon { display: inline-block; width: 20px; height: 20px; flex: 0 0 20px; vertical-align: middle; margin-right: 8px; color: var(--info); }
+.visual-search-control { position: relative; min-width: 0; width: 100%; }
+.visual-search-control > .visual-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; }
+:root[data-theme] .visual-search-control input.visual-search-field { width: 100%; min-width: 0; min-height: 48px; padding: 12px 14px 12px 44px; border: 2px solid color-mix(in srgb, var(--info) 65%, var(--border)); border-radius: 10px; color: var(--text); background: color-mix(in srgb, var(--info) 12%, var(--surface-strong)); box-sizing: border-box; }
+:root[data-theme] .visual-search-control input.visual-search-field:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-color: var(--accent); }
+.character-card .character-card__media img, .character-card:hover .character-card__media img { object-fit: contain; object-position: center; padding: 12px 12px 80px; box-sizing: border-box; transform: none; }
+@media (max-width: 720px) {
+ .character-hero.character-hero--overview { grid-template-columns: minmax(0, 1fr) minmax(0, 28%); min-height: 0; padding: 18px; gap: 12px; align-items: start; }
+ .character-hero--overview .character-hero__visual-wrap { min-height: 0; align-self: start; }
+ .character-hero--overview .character-hero__image { max-height: 180px; object-position: center top; }
+ .character-hero--overview .character-hero__copy { padding-bottom: 0; min-width: 0; }
+ .character-hero--overview .character-hero__title-row { flex-wrap: wrap; }
+ .character-hero--overview h1 { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+ .character-hero--overview .character-hero__chips { margin-block: 10px; }
+ .character-hero--overview .user-tool-actions { flex-wrap: wrap; gap: 8px; }
+}

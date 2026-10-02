@@ -20,7 +20,7 @@ export function CharacterGamePlan({ steps }: { steps: CharacterDetailV21Profile[
 
 export function CharacterRangeGuide({ ranges }: { ranges: CharacterDetailV21Profile["ranges"] }) {
   if (!ranges.length) return <p>距離別の立ち回りはまだ掲載していません。</p>;
-  return <ul className={styles.ranges}>{ranges.map((row) => <li key={row.range} data-range={row.range}>
+  return <div><div className={styles.rangeOverview} aria-label="距離の区分">{ranges.map(row => <span key={row.range}>{row.range}</span>)}</div><p className={styles.hint}>距離の区分を示した模式図です。技の届く距離を測ったものではありません。</p><ul className={styles.ranges}>{ranges.map((row) => <li key={row.range} data-range={row.range}>
     <article className={styles.rangeCard}>
       <h3><span className={styles.marker} aria-hidden="true" />{row.range}</h3>
       <div className={styles.rangeVisual} aria-hidden="true"><i /><span /><i /></div>
@@ -29,5 +29,5 @@ export function CharacterRangeGuide({ ranges }: { ranges: CharacterDetailV21Prof
         <div className={styles.caution}><dt>気をつけること</dt><dd>{normalizePublicCopy(row.caution)}</dd></div>
       </dl>
     </article>
-  </li>)}</ul>;
+  </li>)}</ul></div>;
 }

@@ -1,3 +1,4 @@
+import { VisualIcon, destinationIcon } from "@/components/visual-icon";
 export const dynamic = "force-dynamic";
 
 import Image from "next/image";
@@ -115,7 +116,7 @@ export default async function HomePage() {
           {resumeLinks.map(([icon, title, description, href]) => (
             <Link className="home-public-link" href={href} key={href}>
               <span className="home-public-link__icon" aria-hidden="true">{icon}</span>
-              <strong>{title}</strong>
+              <strong><VisualIcon kind={destinationIcon(href)} />{title}</strong>
               <span>{description}</span>
             </Link>
           ))}
@@ -131,7 +132,7 @@ export default async function HomePage() {
         <div className="home-command-search">
           <strong>キャラクター・プレイヤー・動画を検索</strong>
           <form className="search-form" action="/search">
-            <input name="q" placeholder="例：JP / 翔" aria-label="キャラクター・プレイヤー・動画を検索" />
+            <div className="visual-search-control"><VisualIcon kind="search" /><input className="visual-search-field" name="q" placeholder="例：JP / 翔" aria-label="キャラクター・プレイヤー・動画を検索" /></div>
             <button type="submit">検索</button>
           </form>
         </div>
@@ -141,7 +142,7 @@ export default async function HomePage() {
           {browseLinks.map(([icon, title, description, href]) => (
             <Link className="home-public-link" href={href} key={href}>
               <span className="home-public-link__icon" aria-hidden="true">{icon}</span>
-              <strong>{title}</strong>
+              <strong><VisualIcon kind={destinationIcon(href)} />{title}</strong>
               <span>{description}</span>
             </Link>
           ))}

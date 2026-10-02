@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { VisualIcon } from "./visual-icon";
 import { useState } from "react";
 import styles from "./player-identity.module.css";
 
@@ -15,7 +16,7 @@ export function PlayerIdentity({ name, imageUrl, team, region, characters }: Pro
       <p className={styles.name}>{name}</p>
       {team ? <p>{team}</p> : null}
       {region ? <p>{region}</p> : null}
-      {characters.length ? <p>使用キャラクター：{characters.join(" / ")}</p> : null}
+      {characters.length ? <p><VisualIcon kind="character" />使用キャラクター：{characters.join(" / ")}</p> : null}
       {!imageUrl || failed === imageUrl ? <p className={styles.mediaNote}>選手ビジュアルは今後のアップデートで追加予定です</p> : null}
     </div>
     {imageUrl && failed !== imageUrl ? <Image src={imageUrl} alt={name} fill

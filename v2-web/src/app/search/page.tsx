@@ -1,3 +1,4 @@
+import { VisualIcon, destinationIcon } from "@/components/visual-icon";
 import Link from "next/link";
 import { getPublicSearchSuggestionCandidates, searchAcrossContent } from "@/lib/search";
 import { suggestSearchTerms } from "@/lib/search-suggestions";
@@ -72,13 +73,14 @@ export default async function SearchPage({
       </section>
 
       <form className={styles.searchBox} action="/search">
-        <input
+        <div className="visual-search-control"><VisualIcon kind="search" /><input
+          className="visual-search-field"
           name="q"
           defaultValue={q}
           placeholder="例: JP / Ryu / Nemo"
           aria-label="検索キーワード"
           autoComplete="off"
-        />
+        /></div>
         <button type="submit">検索</button>
       </form>
 
@@ -105,7 +107,7 @@ export default async function SearchPage({
             {QUICK_START.map(([code, title, description, href]) => (
               <Link className={styles.quickCard} href={href} key={href}>
                 <span>{code}</span>
-                <strong>{title}</strong>
+                <strong><VisualIcon kind={destinationIcon(href)} />{title}</strong>
                 <small>{description}</small>
               </Link>
             ))}
@@ -149,7 +151,7 @@ export default async function SearchPage({
               {groups.map((group) => (
                 <section className={styles.group} data-result-kind={group.type} key={group.type}>
                   <div className={styles.groupHead}>
-                    <h3>{TYPE_LABELS[group.type] ?? group.type}</h3>
+                    <h3><VisualIcon kind={group.type === "tournament" ? "source" : group.type} />{TYPE_LABELS[group.type] ?? group.type}</h3>
                     <span>{group.items.length}件</span>
                   </div>
                   <div className={styles.resultList}>

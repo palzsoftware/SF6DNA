@@ -14,6 +14,7 @@ function load(file, overrides) {
   }).outputText;
   new Function('module', 'exports', 'require', js)(compiled, compiled.exports, name => {
     if (name in overrides) return overrides[name];
+    if (name === '@/components/visual-icon') return load('components/visual-icon.tsx', {});
     if (name === 'react/jsx-runtime' || name === 'react') return require(name);
     return {};
   });

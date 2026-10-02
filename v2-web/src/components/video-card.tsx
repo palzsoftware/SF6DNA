@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { VisualIcon } from "./visual-icon";
 import { useEffect, useState } from "react";
 import type { VideoSummary } from "@/lib/event-media";
 import { formatVideoDuration, VIDEO_CATEGORY_LABELS } from "@/lib/video-library";
@@ -53,13 +54,13 @@ export function VideoCard({ video, publishedDate, onPreferenceChange }: { video:
       </a>
       <div className="video-card__body">
         <span className="search-result__type">{[video.platform, category].filter(Boolean).join(" / ") || "VIDEO"}</span>
-        <div className="video-card__flags"><span>{favorite ? "保存済み" : "未保存"}</span><span>{watched ? "視聴済み" : "未視聴"}</span></div>
+        <div className="video-card__flags"><span><VisualIcon kind="saved" />{favorite ? "保存済み" : "未保存"}</span><span>{watched ? "視聴済み" : "未視聴"}</span></div>
         <h2><Link href={`/videos/${video.slug}`}>{video.title}</Link></h2>
         {video.channelName ? <p>{video.channelName}</p> : null}
         {relations.length ? <ul className="video-card__relations" aria-label="関連する人物・キャラクター・大会">{relations.map((name, index) => <li key={`${name}-${index}`}>{name}</li>)}</ul> : null}
         {publishedDate || duration ? <small>{[publishedDate, duration].filter(Boolean).join(" / ")}</small> : null}
         <div className="video-card__actions">
-          <a className="video-card__watch" href={video.url} target="_blank" rel="noopener noreferrer">{watchLabel}</a>
+          <a className="video-card__watch" href={video.url} target="_blank" rel="noopener noreferrer"><VisualIcon kind="video" />{watchLabel}</a>
           <button className="button-secondary" type="button" onClick={toggleFavorite} aria-pressed={favorite} aria-label={`${video.title}を${favorite ? "お気に入りから外す" : "お気に入りに追加"}`}>{favorite ? "★ お気に入り" : "☆ お気に入り"}</button>
           <button className="button-secondary" type="button" onClick={() => void share()} aria-label={`${video.title}を共有`}>共有</button>
           <button className="button-secondary" type="button" onClick={toggleWatched} aria-pressed={watched}>{watched ? "視聴済みを解除" : "視聴済みにする"}</button>

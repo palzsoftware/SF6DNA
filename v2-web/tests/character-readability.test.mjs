@@ -50,3 +50,14 @@ test('long Japanese text and markup-like input remain complete and escaped in na
   assert.doesNotMatch(html, /<script>/);
   assert.match(html, /<summary>[\s\S]+<\/summary><div/);
 });
+
+// Render the new overview with real profiles; preserve every distance label and caveat.
+test('distance diagram labels come from the profile and do not imply measured reach', () => {
+ const profile = getCharacterDetailV21Profile('jp');
+ const before = structuredClone(profile.ranges);
+ const html = renderToStaticMarkup(React.createElement(CharacterRangeGuide, { ranges: profile.ranges }));
+ assert.ok(html.includes('aria-label="距離の区分"'));
+ assert.ok(html.includes('技の届く距離を測ったものではありません'));
+ for (const row of profile.ranges) { assert.ok(html.includes(escaped(row.range))); assert.ok(html.includes(escaped(row.caution))); }
+ assert.deepEqual(profile.ranges, before);
+});
