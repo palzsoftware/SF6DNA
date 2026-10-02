@@ -1,6 +1,7 @@
 import type { DevicePreviewBundle } from "@/lib/device-preview";
 import { jpMoveReviewFixture } from "@/lib/jp-move-review-fixture";
 import { ryuMoveReviewFixture } from "@/lib/ryu-move-review-fixture";
+import { getYasmineMoveMediaPilot } from "@/lib/yasmine-move-media-pilot";
 
 const sharedEmpty: Pick<DevicePreviewBundle, "guideSections" | "moves" | "matchups" | "training"> = {
   guideSections: [],
@@ -111,6 +112,7 @@ const fixtures: Record<"ryu" | "jp" | "luke" | "manon", DevicePreviewBundle> = {
 };
 
 export function getCharacterDetailV21Fixture(slug: string): DevicePreviewBundle | null {
+  if (slug === "yasmine") return getYasmineMoveMediaPilot();
   if (slug === "ryu" || slug === "jp" || slug === "luke" || slug === "manon") return fixtures[slug];
   if (overviewOnlySlugs.has(slug)) {
     return { ...sharedEmpty, combos: [], setups: [], sequences: [] };

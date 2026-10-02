@@ -188,4 +188,21 @@
 .subheading h2 { letter-spacing: -.025em; }
 .moveGroup > summary { min-height: 48px; border-left: 3px solid var(--accent); padding-left: 16px; }
 .moveRow { border-radius: 6px; }
+
+/* Give captured motion its own readable track; rows without media stay compact. */
+@media (min-width: 1081px) {
+  .moveRow[data-has-media="true"] { grid-template-columns: minmax(160px,.65fr) minmax(280px,1.35fr) minmax(230px,1fr); align-items: start; }
+  .moveRow[data-has-media="true"] .moveIdentity { grid-column: 1; grid-row: 1 / 3; }
+  .moveRow[data-has-media="true"] .moveMedia { grid-column: 2; grid-row: 1 / 3; width: 100%; align-self: center; }
+  .moveRow[data-has-media="true"] .moveCommands { grid-column: 3; grid-row: 1; }
+  .moveRow[data-has-media="true"] .moveFrame { grid-column: 3; grid-row: 2; }
+  .moveRow[data-has-media="true"] .moveDetailLink { grid-column: 3; grid-row: 3; }
+}
+@media (min-width: 761px) and (max-width: 1080px) {
+  .moveRow[data-has-media="true"] { grid-template-columns: minmax(0,1fr) minmax(240px,48%); align-items: start; }
+  .moveRow[data-has-media="true"] .moveIdentity { grid-column: 1; grid-row: 1; }
+  .moveRow[data-has-media="true"] .moveCommands { grid-column: 1; grid-row: 2; }
+  .moveRow[data-has-media="true"] .moveMedia { grid-column: 2; grid-row: 1 / 3; width: 100%; align-self: center; }
+  .moveRow[data-has-media="true"] .moveFrame, .moveRow[data-has-media="true"] .moveDetailLink { grid-column: 1 / -1; }
+}
 .playerCard { border-radius: 6px 20px 6px 6px; }

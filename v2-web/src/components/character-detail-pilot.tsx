@@ -153,7 +153,7 @@ export function CharacterDetailPilot({
           type, label: moveTypeLabels[type] ?? "その他", items: moves.map(move => ({
             id: move.id, name: move.name,
             commands: (move.commands ?? []).map(command => command.commandText ?? command.numericNotation ?? command.buttonNotation ?? ""),
-            content: <article className={styles.moveRow} role="row" key={move.id} data-move-id={move.id} data-move-slug={move.slug}>
+            content: <article className={styles.moveRow} role="row" key={move.id} data-move-id={move.id} data-move-slug={move.slug} data-has-media={Boolean(move.media)}>
                   <div className={styles.moveIdentity} role="cell">
                     <span>{verificationLabel(move.frame?.verificationStatus ?? null)}</span>
                     <h3>{move.name}</h3>
