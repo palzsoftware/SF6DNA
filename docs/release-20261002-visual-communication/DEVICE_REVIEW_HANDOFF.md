@@ -1,6 +1,10 @@
 # Device review handoff
 
-Final Preview: pending deployment verification.
+Browser-verified snapshot: `a7da42b5d48ee35a519c52ef3764505628e2f467`, Preview https://sf-6-mcdhgqs8v-somas11620-9368.vercel.app/, deployment `dpl_BpwvZgWYRvA1pKt99iwNq7zB3vWw`, READY / branch / SHA match.
+
+Use the newest RC Preview whose deployment Git SHA equals current branch HEAD; the final follow-up adjusts nameplate spacing and excludes screen-edge context from the distance strip. The final report records that exact deployment.
+
+Desktop Cloud Browser: Home, Characters, JP, Diagnosis, Players, Videos, Search, Favorites render in Light; no document width overflow observed (1348px). Base Card browser checks confirmed all31 use contain/center/no enlargement; offscreen images remain lazy-loaded, so not all31 were loaded at once. Search input distinct tint and 2px border confirmed in Dark and Light. Final Dark/Light regression follows deployment. This environment does not expose mobile viewport resizing; 320/375/390/430 measurements remain NOT_VERIFIED.
 
 Review only Search / Characters / JP in one smartphone session:
 1. Search: field identifiable at a glance, focus visible, input usable in Dark/Light.

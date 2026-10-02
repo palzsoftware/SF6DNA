@@ -129,3 +129,5 @@
  .character-hero--overview .character-hero__chips { margin-block: 10px; }
  .character-hero--overview .user-tool-actions { flex-wrap: wrap; gap: 8px; }
 }
+
+.character-card .character-card__nameplate { padding: 0; left: 16px; right: 16px; bottom: 12px; }

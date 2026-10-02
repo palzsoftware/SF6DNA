@@ -16,3 +16,5 @@ Search inputs on Home and Search receive an inner field with distinct tint/borde
 Browser verification of final Preview is recorded in DEVICE_REVIEW_HANDOFF.md. Mobile viewport measurements and final human alignment assessment must not be represented as device PASS.
 
 JP SA2 remains **MEDIA_INPUT_REQUIRED**. MP4/poster files and manifest/mapping unchanged. Re-recording is outside this batch.
+
+Browser inspection identified nameplate padding overlapping the reserved image area; nameplate padding removed without changing card height. The diagram excludes screen-edge context from the distance strip; all original context cards remain.
