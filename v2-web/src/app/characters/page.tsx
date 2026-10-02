@@ -85,14 +85,14 @@ export default async function CharactersPage({
           ) : (
             <div className="empty-state">
               <h2>該当するキャラクターが見つかりません</h2>
-              <p>名前を短くして再検索するか、一覧に戻って選択してください。</p>
+              <p>名前を短くして検索するか、一覧から探せます。</p>
               <Link className="inline-button button-secondary" href="/characters">一覧に戻る</Link>
             </div>
           )}
         </section>
       ) : (
         <section className="empty-state">
-          <h2>公開データはまだありません</h2>
+          <h2>キャラクター情報はまだ掲載していません</h2>
           <p>情報を確認できたキャラクターから順に掲載します。</p>
         </section>
       )}

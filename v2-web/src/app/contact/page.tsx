@@ -27,7 +27,7 @@ export default async function ContactPage() {
       </section>
 
       <section className="info-panel">
-        <h2>サイト内お問い合わせフォーム</h2>
+        <h2>お問い合わせフォーム</h2>
         <p className="data-notice">お問い合わせへの返信に必要なメールアドレスと内容を保存します。ログイン中の場合は、アカウント情報と関連付けて管理します。迷惑行為対策用の情報を含め、保存したデータは180日以内に削除します。</p>
         <ContactForm defaultEmail={accountEmail} />
       </section>

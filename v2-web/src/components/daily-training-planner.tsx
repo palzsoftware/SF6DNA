@@ -28,7 +28,7 @@ function TrainingCard({ item, index, expanded, complete, onToggle, onComplete }:
       <div className={styles.detailGrid}>{detailSections.map(([key, label]) => <section className={styles.detailSection} key={key}>
         <h3>{label}</h3><ul>{item.detail[key].map((line) => <li key={line}>{line}</li>)}</ul>
       </section>)}</div>
-      <button className={complete ? styles.undoButton : styles.completeButton} type="button" onClick={onComplete}>{complete ? "完了を取り消す" : "このトレーニングを完了にする"}</button>
+      <button className={complete ? styles.undoButton : styles.completeButton} type="button" onClick={onComplete}>{complete ? "完了を取り消す" : "この練習を完了にする"}</button>
     </div> : null}
   </article>;
 }

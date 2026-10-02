@@ -137,7 +137,7 @@ test("client exposes accessible accordion and page-only fifteen-minute progress"
   assert.match(clientSource, /aria-controls/);
   assert.match(clientSource, /role="progressbar"/);
   assert.match(clientSource, /aria-valuemax=\{15\}/);
-  assert.match(clientSource, /このトレーニングを完了にする/);
+  assert.match(clientSource, /この練習を完了にする/);
   assert.match(clientSource, /今日のメニュー完了/);
   assert.doesNotMatch(clientSource, /localStorage\.setItem|sessionStorage\.setItem|fetch\(|\.insert\(/);
 });

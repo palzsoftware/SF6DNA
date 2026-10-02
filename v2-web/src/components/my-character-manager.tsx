@@ -59,13 +59,13 @@ export function MyCharacterManager({
     });
   }
 
-  if (!ready) return <div className="empty-state"><p>保存データを読み込んでいます。</p></div>;
+  if (!ready) return <div className="empty-state"><p>お気に入りとマイキャラを読み込んでいます。</p></div>;
 
   if (visible.length === 0) {
     return (
       <div className="empty-state">
         <h2>{favoritesOnly ? "お気に入りはまだありません" : "公開キャラクターがありません"}</h2>
-        <p>{favoritesOnly ? "キャラクター詳細またはマイキャラ管理から登録できます。" : "公開データの準備後に利用できます。"}</p>
+        <p>{favoritesOnly ? "キャラクターページの☆から追加できます。マイキャラからも選べます。" : "キャラクター情報が掲載されると、ここから選べます。"}</p>
       </div>
     );
   }

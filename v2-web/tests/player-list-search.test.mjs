@@ -22,7 +22,7 @@ test("player search covers aliases, team, characters, and region", () => {
 
 test("player directory has result count, zero-result state, and accessible input", () => {
   const source = read("src/components/player-directory.tsx");
-  for (const marker of ["aria-live=\"polite\"", "条件に一致するプレイヤーはいません", "検索をクリア", "htmlFor=\"player-search\""]) assert.match(source, new RegExp(marker));
+  for (const marker of ["aria-live=\"polite\"", "条件に一致するプレイヤーはいません", "絞り込みを解除", "htmlFor=\"player-search\""]) assert.match(source, new RegExp(marker));
 });
 
 test("player directory V2 combines category and character groups with AND", () => {

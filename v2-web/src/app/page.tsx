@@ -43,7 +43,7 @@ const browseLinks = [
 ] as const;
 
 const recentUpdates = [
-  ["2026-10-01", "リリース前QAを強化", "Lukeの入力表示と認証エラー経路の回帰確認を追加しました。"],
+  ["2026-10-01", "リリース前QAを強化", "Lukeの入力表示とログイン時のエラー表示を見直しました。"],
   ["2026-10-01", "情報源の表示を整理", "公式技表など、リンク先の内容が分かる案内へ調整しました。"],
   ["2026-09-30", "コンボ入力表示を改善", "コンボの原文を保持しながら、入力を読み取りやすくする共通表示を整えました。"],
 ] as const;
@@ -132,7 +132,7 @@ export default async function HomePage() {
       <section aria-labelledby="updates-title">
         <div className="section-heading">
           <h2 id="updates-title">最近の更新</h2>
-          <p>リリース前の主な改善を3件だけ表示しています。</p>
+          <p>最近の改善を紹介します。</p>
         </div>
         <div className="guide-stack">
           {recentUpdates.map(([date, title, body]) => (

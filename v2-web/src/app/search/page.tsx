@@ -88,7 +88,7 @@ export default async function SearchPage({
           <div>
             {suggestions.map((suggestion) => (
               <Link href={typeHref(suggestion.value, "all")} key={`${suggestion.type}:${suggestion.value}`}>
-                {suggestion.label}<small>{suggestion.type}</small>
+                {suggestion.label}<small>{TYPE_LABELS[suggestion.type] ?? suggestion.type}</small>
               </Link>
             ))}
           </div>
@@ -98,8 +98,8 @@ export default async function SearchPage({
       {!q ? (
         <section className={styles.quickStart}>
           <div className="section-heading">
-            <h2>目的から開く</h2>
-            <p>何を調べるか迷ったら、入口を選んでください。</p>
+            <h2>探したい情報を選ぶ</h2>
+            <p>キャラクター・プレイヤー・動画の一覧からも探せます。</p>
           </div>
           <div className={styles.quickGrid}>
             {QUICK_START.map(([code, title, description, href]) => (

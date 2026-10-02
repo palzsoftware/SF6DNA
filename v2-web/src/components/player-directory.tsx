@@ -85,7 +85,7 @@ export function PlayerDirectory({ players }: { players: PlayerSummary[] }) {
             placeholder="例：ときど、VARREL、JP"
             autoComplete="off"
           />
-          {hasFilters ? <button type="button" onClick={clearAll}>検索をクリア</button> : null}
+          {hasFilters ? <button type="button" onClick={clearAll}>絞り込みを解除</button> : null}
         </div>
       </div>
       <fieldset className={styles.filterGroup}>
@@ -112,6 +112,6 @@ export function PlayerDirectory({ players }: { players: PlayerSummary[] }) {
     {filteredPlayers.length ? <div className={styles.playerGrid}>{filteredPlayers.map((player) => {
       const mainCharacter = player.characters.find((item) => item.role === "main") ?? player.characters[0];
       return <Link className={`${styles.playerCard}${player.imageUrl ? "" : " character-card--no-image"}`} href={`/players/${player.slug}`} key={player.id}><div className={styles.playerMark} aria-hidden="true">{Array.from(player.displayName)[0]}</div><div className={styles.cardBody}><p className="eyebrow">{playerTypeLabel(player.playerType)}</p><h2>{player.displayName}</h2><dl><div><dt>チーム</dt><dd>{player.teamName ?? "未登録"}</dd></div><div><dt>主なキャラクター</dt><dd>{mainCharacter?.characterName ?? "未登録"}</dd></div><div><dt>地域</dt><dd>{player.region ?? player.countryCode ?? "未登録"}</dd></div></dl><span>プロフィールを見る →</span></div></Link>;
-    })}</div> : <div className="empty-state"><p>条件に一致するプレイヤーはいません。検索語またはフィルターを変更してください。</p><button className="inline-button button-secondary" type="button" onClick={clearAll}>条件をすべてクリア</button></div>}
+    })}</div> : <div className="empty-state"><p>条件に一致するプレイヤーはいません。名前や絞り込み条件を変えて探せます。</p><button className="inline-button button-secondary" type="button" onClick={clearAll}>絞り込みを解除</button></div>}
   </section>;
 }
