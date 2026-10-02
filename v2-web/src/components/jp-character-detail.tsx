@@ -1,3 +1,4 @@
+import { uniqueCharacterVideos } from "@/lib/character-video-references";
 import Image from "next/image";
 import { CharacterGamePlan, CharacterRangeGuide } from "@/components/character-game-guide";
 import Link from "next/link";
@@ -22,8 +23,8 @@ import styles from "./jp-character-detail.module.css";
 type Move = DevicePreviewBundle["moves"][number];
 
 const moveLabels: Record<string, string> = {
-  normal: "通常技", unique: "特殊技", target_combo: "ターゲットコンボ",
-  special: "必殺技", throw: "投げ", super: "スーパーアーツ", system: "共通システム",
+  normal: "通常技", unique: "特殊技", target_combo: "特殊技",
+  special: "必殺技", throw: "投げ", super: "SA", system: "システム", drive: "システム",
 };
 
 function verifiedLabel(status: string | null | undefined) {
@@ -41,14 +42,11 @@ function moveSummary(value: string | null) {
 }
 
 function MoveCard({ move }: { move: Move }) {
-  return <article className={styles.moveCard}>
+  return <article className={styles.moveCard} data-move-id={move.id} data-move-slug={move.slug}>
     <div className={styles.moveHead}>
       <div><small>{verifiedLabel(move.frame?.verificationStatus)}</small><h3>{move.name}</h3>
         {moveSummary(move.usageSummary) ? <p>{moveSummary(move.usageSummary)}</p> : null}</div>
-      <div className={styles.motion}>
-        {move.media ? <MoveMotionMedia media={move.media} title={move.name} className={styles.motionAsset} />
-          : <span aria-label={`${move.name}の動作メディアは未登録`}>動作映像は未掲載</span>}
-      </div>
+      {move.media ? <div className={styles.motion}><MoveMotionMedia media={move.media} title={move.name} className={styles.motionAsset} /></div> : null}
     </div>
     <div className={styles.commands} aria-label={`${move.name}のコマンド`}>
       {move.commands?.length ? move.commands.map((command, index) =>
@@ -61,6 +59,7 @@ function MoveCard({ move }: { move: Move }) {
     </div>
     <dl className={styles.frames}>
       <div><dt>発生</dt><dd>{known(move.frame?.startup, "確認中")}</dd></div>
+      <div><dt>ヒット時</dt><dd>{known(move.frame?.onHit, "確認中")}</dd></div>
       <div><dt>ガード時</dt><dd>{known(move.frame?.onBlock, "確認中")}</dd></div>
       <div><dt>ダメージ</dt><dd>{known(move.frame?.damage, "確認中")}</dd></div>
     </dl>
@@ -77,7 +76,8 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
   videos: VideoSummary[];
 }) {
   const groups = Object.entries(bundle.moves.reduce<Record<string, Move[]>>((result, move) => {
-    (result[move.moveType ?? "other"] ??= []).push(move);
+    const type = move.moveType === "target_combo" ? "unique" : move.moveType ?? "other";
+    (result[type] ??= []).push(move);
     return result;
   }, {}));
   const showStrategyLinks = releaseFeatures.publicStrategyContent || previewActive;
@@ -214,7 +214,7 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
       <section id="related-videos" className={styles.section}>
         <div className={styles.heading}><h2>関連動画</h2><Link href={localLink("/characters/jp/videos")}>このキャラの動画を探す →</Link></div>
         {videos.length ? <div className={styles.videoRail} aria-label="関連動画">
-          {videos.slice(0, 6).map(video => <VideoCard key={video.id} video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} />)}
+          {uniqueCharacterVideos(videos).map(video => <VideoCard key={video.id} video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} />)}
         </div> : <p>関連動画は未掲載です。</p>}
       </section>
       <section id="sources" className={styles.section}>

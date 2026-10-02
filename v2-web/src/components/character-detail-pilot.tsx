@@ -6,7 +6,7 @@ import { ComboInputRecipe } from "@/components/combo-input-recipe";
 import { PilotComboCard } from "@/components/pilot-combo-card";
 import { CharacterPlayerCard } from "@/components/character-player-card";
 import { CharacterVideoReferenceCard } from "@/components/character-video-reference-card";
-import { characterVideoReferences } from "@/lib/character-video-references";
+import { characterVideoReferences, uniqueCharacterVideos } from "@/lib/character-video-references";
 import { VideoCard } from "@/components/video-card";
 import { MoveMotionMedia } from "@/components/move-motion-media";
 import type { CharacterDetailV21Profile } from "@/lib/character-detail-v21";
@@ -55,11 +55,12 @@ function sourceLink(label: string | null | undefined, url: string | null | undef
 const moveTypeLabels: Record<string, string> = {
   normal: "通常技",
   unique: "特殊技",
-  target_combo: "ターゲットコンボ",
+  target_combo: "特殊技",
   special: "必殺技",
-  super: "スーパーアーツ",
+  super: "SA",
   throw: "投げ",
-  system: "共通システム",
+  system: "システム",
+  drive: "システム",
 };
 
 function commandLabel(command: NonNullable<DevicePreviewBundle["moves"][number]["commands"]>[number]) {
@@ -94,14 +95,14 @@ export function CharacterDetailPilot({
   const publicSources = sources.filter((source) => source.relationship !== "candidate");
   const sourceSamples = publicSources.slice(0, 8);
   const strategyListAvailable = releaseFeatures.publicStrategyContent || previewActive;
-  const videoSamples = videos.slice(0, 6);
+  const videoSamples = uniqueCharacterVideos(videos);
   const videoReferences = characterVideoReferences(publicSources, videos.map((video) => video.url));
   const videoGroups = CHARACTER_VIDEO_GROUP_ORDER.flatMap((group) => {
     const items = videoSamples.filter((video) => classifyCharacterVideo(video) === group);
     return items.length ? [{ group, items }] : [];
   });
   const moveGroups = Object.entries(bundle.moves.reduce<Record<string, DevicePreviewBundle["moves"]>>((groups, move) => {
-    const type = move.moveType ?? "other";
+    const type = move.moveType === "target_combo" ? "unique" : move.moveType ?? "other";
     (groups[type] ??= []).push(move);
     return groups;
   }, {}));
@@ -152,7 +153,7 @@ export function CharacterDetailPilot({
           type, label: moveTypeLabels[type] ?? "その他", items: moves.map(move => ({
             id: move.id, name: move.name,
             commands: (move.commands ?? []).map(command => command.commandText ?? command.numericNotation ?? command.buttonNotation ?? ""),
-            content: <article className={styles.moveRow} role="row" key={move.id}>
+            content: <article className={styles.moveRow} role="row" key={move.id} data-move-id={move.id} data-move-slug={move.slug}>
                   <div className={styles.moveIdentity} role="cell">
                     <span>{verificationLabel(move.frame?.verificationStatus ?? null)}</span>
                     <h3>{move.name}</h3>
@@ -171,7 +172,7 @@ export function CharacterDetailPilot({
                     <div><dt>発生</dt><dd>{valueOrUnknown(move.frame?.startup, "確認中")}</dd></div>
                     {move.frame?.active !== null && move.frame?.active !== undefined && move.frame.active !== "" ? <div><dt>持続</dt><dd>{move.frame.active}</dd></div> : null}
                     {move.frame?.recovery !== null && move.frame?.recovery !== undefined && move.frame.recovery !== "" ? <div><dt>硬直</dt><dd>{move.frame.recovery}</dd></div> : null}
-                    {move.frame?.onHit !== null && move.frame?.onHit !== undefined && move.frame.onHit !== "" ? <div><dt>ヒット時</dt><dd>{move.frame.onHit}</dd></div> : null}
+                    <div><dt>ヒット時</dt><dd>{valueOrUnknown(move.frame?.onHit, "確認中")}</dd></div>
                     <div><dt>ガード時</dt><dd>{valueOrUnknown(move.frame?.onBlock, "確認中")}</dd></div>
                     <div><dt>ダメージ</dt><dd>{valueOrUnknown(move.frame?.damage, "確認中")}</dd></div>
                   </dl>

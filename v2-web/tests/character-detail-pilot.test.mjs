@@ -55,13 +55,14 @@ test("pilot uses safe player fallback and reusable video library", () => {
   const page = readProjectFile("src/app/characters/[slug]/page.tsx");
 
   assert.match(source, /<CharacterPlayerCard/);
-  assert.match(source, /videoSamples = videos\.slice\(0, 6\)/);
+  assert.match(source, /videoSamples = uniqueCharacterVideos\(videos\)/);
   assert.match(source, /classifyCharacterVideo\(video\) === group/);
   assert.match(source, /<VideoCard/);
   const card = readProjectFile("src/components/character-player-card.tsx");
   assert.match(card, /item\.characterSlug === characterSlug/);
   assert.doesNotMatch(source, /player\.characters\[0\]\?\.characterName \?\? characterName/);
-  assert.match(page, /getDevicePreviewBundle/);
+  assert.match(page, /resolveCharacterDetailData/);
+  assert.match(readProjectFile("src/lib/character-detail-data.ts"), /getDevicePreviewBundle/);
   assert.doesNotMatch(source, /NO SIGNAL|画像なし|近日アップデート/);
 });
 
@@ -96,7 +97,7 @@ test("related cards use grids while source chips remain contained", () => {
 
 test("Manon target combos receive their own move group label", () => {
   const source = readProjectFile("src/components/character-detail-pilot.tsx");
-  assert.match(source, /target_combo:\s*"ターゲットコンボ"/);
+  assert.match(source, /target_combo:\s*"特殊技"/);
 });
 
 test("RC detail does not link to strategy pages hidden by release gates", () => {

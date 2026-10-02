@@ -43,7 +43,7 @@ test("motion media renders only when a record exists and supports accessible GIF
 });
 
 test("Ryu and JP use a protected Preview-only fixture when the legacy RPC gate is unavailable", () => {
-  assert.match(page, /remotePilotBundle \?\? \(pilotRequested \? getCharacterDetailV21Fixture/);
+  assert.match(page, /resolveCharacterDetailData\(character\.id, character\.slug, previewToken\)/);
   assert.match(fixture, /status: "draft"/);
   assert.match(fixture, /verificationStatus: "unverified"/);
   assert.doesNotMatch(fixture, /verificationStatus: "verified"/);

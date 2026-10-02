@@ -45,7 +45,7 @@
 .commands span, .commands small { color: var(--muted); font-size: .72rem; }
 .commands code { min-width: 0; color: #bfefff; }
 .commands small { grid-column: 2; }
-.frames { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 0; }
+.frames { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin: 0; }
 .frames > div { min-width: 0; padding: 8px; background: var(--bg); }
 .frames dt { color: var(--muted); font-size: .72rem; }
 .frames dd { margin: 3px 0 0; font-weight: 800; }

@@ -34,15 +34,15 @@ vm.runInNewContext(js, {
     if (name === "@/lib/public-copy") return { normalizePublicCopy: (value) => value, isInternalMoveNote: () => false };
     if (name === "@/lib/release-features") return { releaseFeatures: { publicStrategyContent: false } };
     if (name === "@/lib/character-learning-structure") return { CHARACTER_VIDEO_GROUP_ORDER: [] };
-    if (name === "@/lib/character-video-references") return { characterVideoReferences: () => [] };
+    if (name === "@/lib/character-video-references") return realModule("lib/character-video-references.ts");
     return {};
   },
 });
-function render(frame, preRelease = true) {
+function render(frame, preRelease = true, extraMoves = []) {
   return renderToStaticMarkup(require("react").createElement(compiled.exports.CharacterDetailPilot, {
     characterName: "リュウ", characterSlug: "ryu", previewToken: null, preRelease,
     players: [], videos: [], sources: [], profile: { tagline: "特徴", winPath: "距離", firstLesson: "最初の練習", strength: "強み", weakness: "注意点", gameplan: [], ranges: [] },
-    bundle: { combos: [], setups: [], sequences: [], moves: [{ id: "test-move", slug: "test-move", name: "試験用の技", moveType: "special", status: "draft", usageSummary: null, frame, commands: [{ scheme: "classic", commandText: "236P", conditionText: null }] }] },
+    bundle: { combos: [], setups: [], sequences: [], moves: [{ id: "test-move", slug: "test-move", name: "試験用の技", moveType: "special", status: "draft", usageSummary: null, frame, commands: [{ scheme: "classic", commandText: "236P", conditionText: null }] }, ...extraMoves] },
   }));
 }
 
@@ -54,8 +54,9 @@ test("move cards render supplied active, recovery and hit values without interpr
 
 test("old frame payloads omit absent optional statistics rather than invent values", () => {
   const html = render({ startup: "4", onBlock: "-1", damage: 300, verificationStatus: "reviewed" });
-  for (const value of ["持続", "硬直", "ヒット時"]) assert.ok(!html.includes(value));
+  for (const value of ["持続", "硬直"]) assert.ok(!html.includes(value));
   assert.ok(html.includes("動作映像は未掲載"));
+  assert.match(html, /ヒット時<\/dt><dd>確認中<\/dd>/);
 });
 
 test("blank optional values remain absent while literal zero and signed advantage survive", () => {
@@ -74,4 +75,21 @@ test("public character quick-start anchors resolve and filtered move content ret
   assert.match(html, /技名・コマンドを検索/);
   assert.match(html, /data-original-input="236P"/);
   assert.match(html, /確認済みのコンボはまだありません/);
+});
+
+
+test("all 31 character datasets retain every required category ID, including target combos without media", () => {
+  const slugs = [...readFileSync(new URL("../src/lib/character-detail-route.ts", import.meta.url), "utf8").matchAll(/^  "([a-z-]+)",/gm)].map(match => match[1]);
+  assert.equal(slugs.length, 31);
+  for (const slug of slugs) {
+    const moves = ["normal", "unique", "target_combo", "special", "throw", "super"].flatMap(moveType => Array.from({ length: 12 }, (_, index) => ({
+      id: `${slug}-${moveType}-${index}`, slug: `${slug}-${moveType}-${index}`, name: `長い日本語の技名 ${index}`, moveType, status: "draft", usageSummary: null,
+      commands: [{ scheme: "classic", commandText: "236236PP", conditionText: null }], frame: { startup: "4", onHit: "+2", onBlock: "-3", damage: 0, verificationStatus: null },
+    })));
+    const html = render({ startup: "4" }, false, moves);
+    for (const move of moves) assert.ok(html.includes(`data-move-id="${move.id}"`), move.id);
+    for (const label of ["通常技", "特殊技", "必殺技", "投げ", "SA"]) assert.ok(html.includes(label), `${slug}: ${label}`);
+    assert.ok(!html.includes("ターゲットコンボ"));
+    assert.match(html, /ダメージ<\/dt><dd>0<\/dd>/);
+  }
 });

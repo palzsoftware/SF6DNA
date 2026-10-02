@@ -41,7 +41,7 @@ test("video preferences stay local and reversible while Character V2.1 links to 
   assert.match(card, /navigator\.share/);
   assert.match(card, /navigator\.clipboard\.writeText/);
   assert.match(globalPage, /<VideoLibrary videos=\{videos\}/);
-  assert.match(pilot, /videos\.slice\(0, 6\)/);
+  assert.match(pilot, /uniqueCharacterVideos\(videos\)/);
   assert.match(pilot, /`\/characters\/\$\{characterSlug\}\/videos`/);
 });
 

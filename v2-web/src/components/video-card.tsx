@@ -50,7 +50,8 @@ export function VideoCard({ video, publishedDate, onPreferenceChange }: { video:
   return (
     <article className={`video-card${watched ? " video-card--watched" : ""}`}>
       <a className="video-card__thumbnail" href={video.url} target="_blank" rel="noopener noreferrer" aria-label={`${video.title}を外部サイトで再生`}>
-        {video.thumbnailUrl ? <span style={{ backgroundImage: `url(${video.thumbnailUrl})` }} /> : <strong>YOUTUBE</strong>}
+        {/* eslint-disable-next-line @next/next/no-img-element -- external thumbnails are lazy and reserve their aspect ratio. */}
+        {video.thumbnailUrl ? <img src={video.thumbnailUrl} alt="" width={480} height={270} loading="lazy" decoding="async" style={{ width: "100%", height: "auto", aspectRatio: "16 / 9", objectFit: "cover" }} /> : <strong>YOUTUBE</strong>}
       </a>
       <div className="video-card__body">
         <span className="search-result__type">{[video.platform, category].filter(Boolean).join(" / ") || "VIDEO"}</span>
