@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CharacterGamePlan, CharacterRangeGuide } from "@/components/character-game-guide";
 import { CharacterQuickStart } from "@/components/character-quick-start";
 import { CharacterMoveExplorer } from "@/components/character-move-explorer";
 import { ComboInputRecipe } from "@/components/combo-input-recipe";
@@ -106,7 +107,7 @@ export function CharacterDetailPilot({
   }, {}));
 
   return (
-    <section className={styles.pilot} aria-label={`${characterName} Character Detail V2.2`}>
+    <section className={styles.pilot} aria-label={`${characterName}のキャラクター情報`}>
       {!preRelease ? <CharacterQuickStart /> : null}
       {!preRelease ? <section className={styles.overview} id="pilot-overview">
         <div className={styles.overviewLead}>
@@ -130,10 +131,8 @@ export function CharacterDetailPilot({
       </section> : null}
 
       {!preRelease ? <section className={styles.gameplan} aria-labelledby="pilot-gameplan-heading">
-        <div className={styles.sectionTitle}><p className="eyebrow">基本方針</p><h2 id="pilot-gameplan-heading">基本の勝ち筋</h2>{profile.gameplan.length ? <p>使う技、得意な距離、注意点を順に紹介します。</p> : null}</div>
-        {profile.gameplan.length ? <ol className={styles.gameplanSteps}>
-          {profile.gameplan.map((step, index) => <li key={step.label}><span>手順 {index + 1}</span><div><h3>{normalizePublicCopy(step.title)}</h3><p>{normalizePublicCopy(step.body)}</p><small>{normalizePublicCopy(step.caution)}</small></div></li>)}
-        </ol> : <div className="empty-state"><p>基本方針は未掲載です。</p></div>}
+        <div className={styles.sectionTitle}><p className="eyebrow">基本方針</p><h2 id="pilot-gameplan-heading">試合の組み立て方</h2>{profile.gameplan.length ? <p>要点から読み、詳しい説明は必要なときに開けます。</p> : null}</div>
+        <CharacterGamePlan steps={profile.gameplan} />
         {sourceSamples.length ? <div className={styles.inlineSources} tabIndex={0} aria-label="基本方針の情報源（横スクロール）">{sourceSamples.map((source) => {
           const presentation = presentSource(source.sourceType, source.publisher, source.url);
           return <a href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}><span>{presentation.badge}</span>{presentation.cta} ↗</a>;
@@ -203,8 +202,8 @@ export function CharacterDetailPilot({
       </section> : null}
 
       {!preRelease ? <section className={styles.rangeSection} id="pilot-neutral-defense" aria-labelledby="pilot-range-heading">
-        <div className={styles.sectionTitle}><p className="eyebrow">立ち回り・防御</p><h2 id="pilot-range-heading">距離別の立ち回り</h2><p>間合いごとの主力技、狙い、注意点。</p></div>
-        {profile.ranges.length ? <div className={styles.rangeTable} role="table" aria-label={`${characterName}の距離別行動`}>{profile.ranges.map((row) => <div role="row" key={row.range}><strong role="rowheader">{row.range}</strong><p role="cell"><span>主に使う技</span>{normalizePublicCopy(row.actions)}</p><p role="cell"><span>目的</span>{normalizePublicCopy(row.purpose)}</p><p role="cell"><span>注意点</span>{normalizePublicCopy(row.caution)}</p></div>)}</div> : <div className="empty-state"><p>距離別の攻略情報は未掲載です。</p></div>}
+        <div className={styles.sectionTitle}><p className="eyebrow">立ち回り・防御</p><h2 id="pilot-range-heading">距離別の立ち回り</h2><p>距離ごとに、狙い・使う技・注意点をまとめました。</p></div>
+        <CharacterRangeGuide ranges={profile.ranges} />
       </section> : null}
 
       {!preRelease ? <section className={styles.related} id="related-players">

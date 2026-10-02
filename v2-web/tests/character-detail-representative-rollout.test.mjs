@@ -21,16 +21,16 @@ test("27 overview-only fixtures use empty section data instead of reviewed gamep
 
 test("shared component receives the adapted profile and renders natural section fallbacks", () => {
   const page = read("src/app/characters/[slug]/page.tsx");
-  const shared = read("src/components/character-detail-pilot.tsx");
+  const shared = read("src/components/character-detail-pilot.tsx") + read("src/components/character-game-guide.tsx");
   assert.match(page, /adaptCharacterDetailV2Profile/);
   assert.match(page, /profile=\{pilotProfile\}/);
   for (const text of [
-    "基本方針は未掲載です。",
+    "試合の組み立て方はまだ掲載していません。",
     "技データは未掲載です。",
     "確認済みのコンボはまだありません。",
     "確認済みのセットプレイはまだありません。",
     "確認済みの連携・対策はまだありません。",
-    "距離別の攻略情報は未掲載です。",
+    "距離別の立ち回りはまだ掲載していません。",
     "関連プレイヤーは未掲載です。",
     "関連動画は未掲載です。",
   ]) {

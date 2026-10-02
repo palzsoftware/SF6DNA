@@ -130,7 +130,7 @@ test("Ryu and JP V2.1 removes duplicate navigation and exposes concrete page str
   const copy = readProjectFile("src/lib/character-detail-v21.ts");
   const page = readProjectFile("src/app/characters/[slug]/page.tsx");
 
-  for (const marker of ["基本の勝ち筋", "まず確認するコンボ", "セットプレイ", "連携・対策", "距離別の立ち回り", "関連プレイヤー", "関連動画"]) {
+  for (const marker of ["試合の組み立て方", "まず確認するコンボ", "セットプレイ", "連携・対策", "距離別の立ち回り", "関連プレイヤー", "関連動画"]) {
     assert.match(source, new RegExp(marker));
   }
   assert.match(page, /!pilotRequested \? <nav/);

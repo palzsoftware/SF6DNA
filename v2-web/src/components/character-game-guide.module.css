@@ -1,0 +1,27 @@
+.plan, .points, .ranges, .ranges > li { min-width: 0; }
+.hint { margin: 0 0 12px; color: var(--muted); font-size: .85rem; line-height: 1.7; }
+.points, .ranges { margin: 0; padding: 0; list-style: none; }
+.points { display: grid; gap: 10px; }
+.point, .rangeCard { border: 1px solid var(--border); border-radius: 14px; background: var(--surface); color: var(--text); overflow-wrap: anywhere; }
+.point summary { display: list-item; min-height: 44px; padding: 14px 16px; cursor: pointer; font-weight: 700; line-height: 1.6; }
+.point summary::marker { color: var(--text); }
+.point summary:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; border-radius: 12px; }
+.point[open] summary { border-bottom: 1px solid var(--border); }
+.number { display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; margin-right: 8px; border: 1px solid var(--border); border-radius: 50%; font-size: .8em; vertical-align: middle; }
+.detail { padding: 16px; }
+.detail p { margin: 0; line-height: 1.8; }
+.caution { padding: 12px; border-left: 3px solid var(--muted); background: var(--surface-strong); border-radius: 0 8px 8px 0; }
+.detail .caution { margin-top: 14px; }
+.caution strong { display: block; margin-bottom: 6px; font-size: .8rem; }
+.ranges { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.rangeCard { height: 100%; padding: 18px; }
+.rangeCard h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; font-size: 1rem; }
+.marker { flex: 0 0 10px; height: 10px; border: 2px solid currentColor; border-radius: 50%; }
+.rangeCard dl { display: grid; gap: 14px; margin: 0; }
+.rangeCard dt { margin-bottom: 5px; color: var(--muted); font-size: .75rem; font-weight: 700; }
+.rangeCard dd { margin: 0; line-height: 1.7; font-size: .9rem; }
+.purpose { padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.purpose dd { font-weight: 700; }
+@media (max-width: 600px) { .ranges { grid-template-columns: minmax(0, 1fr); } .rangeCard { padding: 16px; } }
+/* Native disclosure requires no animation; reduced-motion remains motion-free. */
+@media (prefers-reduced-motion: reduce) { .point, .rangeCard { animation: none; transition: none; } }

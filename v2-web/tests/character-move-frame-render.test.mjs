@@ -12,7 +12,7 @@ function realModule(file) {
   const script = ts.transpileModule(readFileSync(new URL(`../src/${file}`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX } }).outputText;
   new Function("module", "exports", "require", script)(result, result.exports, name => {
     if (name.endsWith(".css")) return { default: {} };
-    if (name === "@/lib/character-move-filter") return realModule("lib/character-move-filter.ts");
+    if (name.startsWith("@/lib/")) return realModule(`lib/${name.slice(6)}.ts`);
     return require(name);
   });
   return result.exports;
@@ -24,6 +24,7 @@ vm.runInNewContext(js, {
   module: compiled, exports: compiled.exports,
   require(name) {
     if (name === "react/jsx-runtime") return require(name);
+    if (name === "@/components/character-game-guide") return realModule("components/character-game-guide.tsx");
     if (name === "@/components/character-quick-start") return realModule("components/character-quick-start.tsx");
     if (name === "@/components/character-move-explorer") return realModule("components/character-move-explorer.tsx");
     if (name.endsWith(".css")) return { default: {} };

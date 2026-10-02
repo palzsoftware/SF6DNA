@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CharacterGamePlan, CharacterRangeGuide } from "@/components/character-game-guide";
 import Link from "next/link";
 import { CharacterPreferenceActions } from "@/components/character-preference-actions";
 import { CharacterQuickStart } from "@/components/character-quick-start";
@@ -122,10 +123,8 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
       </section>
 
       <section className={styles.section}>
-        <h2>基本の勝ち筋</h2>
-        <ol className={styles.steps}>{profile.gameplan.map((step, index) => <li key={`${step.label}-${index}`}>
-          <span>手順 {index + 1}</span><div><h3>{normalizePublicCopy(step.title)}</h3><p>{normalizePublicCopy(step.body)}</p><small>{normalizePublicCopy(step.caution)}</small></div>
-        </li>)}</ol>
+        <h2>試合の組み立て方</h2>
+        <CharacterGamePlan steps={profile.gameplan} />
         {character.sources.length ? <div className={styles.rail} tabIndex={0} aria-label="基本方針の情報源（横スクロール）">
           {character.sources.slice(0, 8).map(source => {
             const item = presentSource(source.sourceType, source.publisher, source.url);
@@ -203,10 +202,7 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
 
       <section id="pilot-neutral-defense" className={styles.section}>
         <h2>距離別の立ち回り</h2>
-        {profile.ranges.length ? <div className={styles.rangeList}>{profile.ranges.map(row => <article key={row.range}>
-          <h3>{row.range}</h3><p><strong>主に使う技</strong>{normalizePublicCopy(row.actions)}</p>
-          <p><strong>目的</strong>{normalizePublicCopy(row.purpose)}</p><p><strong>注意点</strong>{normalizePublicCopy(row.caution)}</p>
-        </article>)}</div> : <p>距離別の攻略情報は未掲載です。</p>}
+        <CharacterRangeGuide ranges={profile.ranges} />
       </section>
 
       <section id="related-players" className={styles.section}>
