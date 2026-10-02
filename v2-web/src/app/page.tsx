@@ -1,3 +1,4 @@
+import { PracticeContinue } from "@/components/practice-history";
 import { VisualIcon, destinationIcon } from "@/components/visual-icon";
 export const dynamic = "force-dynamic";
 
@@ -113,6 +114,7 @@ export default async function HomePage() {
           <p>お気に入り、マイキャラ、前の診断へ。</p>
         </div>
         <nav className="home-public-nav" aria-label="続きから">
+          <PracticeContinue />
           {resumeLinks.map(([icon, title, description, href]) => (
             <Link className="home-public-link" href={href} key={href}>
               <span className="home-public-link__icon" aria-hidden="true">{icon}</span>

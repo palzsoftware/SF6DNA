@@ -112,12 +112,12 @@ test("route is dynamic, noindex, and independent of disabled library flags", () 
   assert.match(pageSource, /index:\s*false/);
   assert.match(pageSource, /follow:\s*false/);
   assert.doesNotMatch(pageSource, /releaseFeatures|user_id|service[_-]?role|redirect\(/);
-  assert.match(pageSource, /parseDailyTrainingRequest\(await searchParams\)/);
+  assert.match(pageSource, /parseDailyTrainingRequest\(params\)/);
 });
 test("diagnosis link with valid focus skips the optional private loader", () => {
   assert.match(pageSource, /request\?\.focus\s*\?\s*\{\s*primaryIssue:\s*null,\s*state:\s*"empty"\s*\}\s*:\s*await loadDailyTrainingContext\(\)/);
 });
-test("browser storage read is protected and contains no new writes", () => {
+test("diagnosis storage read stays protected and writes are delegated to the practice store", () => {
   assert.match(clientSource, /try\s*\{/);
   assert.match(clientSource, /getDiagnosisHistory\(\)/);
   assert.match(clientSource, /catch\s*\{/);
@@ -129,16 +129,16 @@ test("client uses three-card plan, safe explanatory text, and existing design cl
   assert.match(clientSource, /5分 × 3課題/);
   assert.match(clientSource, /plan\.items\.map/);
   assert.doesNotMatch(clientSource, /<table|dangerouslySetInnerHTML|user_id|AIコーチ|listTrainingLibrary/);
-  assert.match(clientSource, /練習の完了状態は保存されず、ページを開き直すと消えます/);
+  assert.match(clientSource, /練習内容と完了状態はこのブラウザに保存されます/);
 });
 
-test("client exposes accessible accordion and page-only fifteen-minute progress", () => {
+test("client exposes accessible accordion and fifteen-minute progress", () => {
   assert.match(clientSource, /aria-expanded/);
   assert.match(clientSource, /aria-controls/);
   assert.match(clientSource, /role="progressbar"/);
   assert.match(clientSource, /aria-valuemax=\{15\}/);
   assert.match(clientSource, /この練習を完了にする/);
-  assert.match(clientSource, /今日のメニュー完了/);
+  assert.match(clientSource, /15分メニュー完了/);
   assert.doesNotMatch(clientSource, /localStorage\.setItem|sessionStorage\.setItem|fetch\(|\.insert\(/);
 });
 test("error boundary does not expose internal error messages", () => {

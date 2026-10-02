@@ -1,0 +1,10 @@
+.timeline { list-style: none; padding: 0 0 0 1.1rem; margin: 0; border-left: 2px solid var(--border); display: grid; gap: 1rem; }
+.session { min-width: 0; position: relative; padding: 1rem 1.2rem; background: var(--surface); border-radius: 14px; overflow-wrap: anywhere; }
+.session::before { content: ""; position: absolute; left: -1.5rem; top: 1.3rem; width: .6rem; height: .6rem; border-radius: 50%; background: var(--accent); }
+.heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; color: var(--muted); font-size: .85rem; }
+.heading strong { color: var(--text); }
+.session h2 { font-size: 1.1rem; }
+.items { list-style: none; padding: 0; display: grid; gap: .55rem; }
+.items li { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: .3rem; }
+.items li > span:first-child { color: var(--accent); }
+@media (max-width: 400px) { .session { padding: .9rem; } }

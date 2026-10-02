@@ -14,6 +14,8 @@ function load(file, overrides = {}) {
   }).outputText;
   new Function('module', 'exports', 'require', js)(testModule, testModule.exports, name => {
     if (name in overrides) return overrides[name];
+    if (name === '@/components/practice-history') return load('components/practice-history.tsx', overrides);
+    if (name === '@/components/mini-illustration') return load('components/mini-illustration.tsx', overrides);
     if (name === '@/components/visual-icon') return load('components/visual-icon.tsx', {});
     if (name.endsWith('.module.css')) return { default: new Proxy({}, { get: (_, key) => key }), __esModule: true };
     if (name.endsWith('.css')) return {};

@@ -1,3 +1,4 @@
+import { isSessionId } from "@/lib/daily-practice";
 import type { Metadata } from "next";
 import { DailyTrainingPlanner } from "@/components/daily-training-planner";
 import { getJstDateKey, parseDailyTrainingRequest } from "@/lib/daily-training";
@@ -11,13 +12,16 @@ export const metadata: Metadata = {
 };
 
 export default async function DailyTrainingPage({ searchParams }: {
-  searchParams: Promise<{ diagnosis?: string | string[]; focus?: string | string[] }>;
+  searchParams: Promise<{ diagnosis?: string | string[]; focus?: string | string[]; session?: string | string[]; new?: string | string[] }>;
 }) {
-  const request = parseDailyTrainingRequest(await searchParams);
+  const params = await searchParams;
+  const request = parseDailyTrainingRequest(params);
+  const sessionId = isSessionId(params.session) ? params.session : null;
+  const fresh = params.new === "1";
   const context: DailyTrainingContext = request?.focus
     ? { primaryIssue: null, state: "empty" }
     : await loadDailyTrainingContext();
   const dateKey = getJstDateKey(new Date());
-  return <DailyTrainingPlanner key={`${dateKey}:${request?.diagnosisType ?? "auto"}:${request?.focus ?? "none"}`}
-    dateKey={dateKey} request={request} context={context} />;
+  return <DailyTrainingPlanner key={`${dateKey}:${request?.diagnosisType ?? "auto"}:${request?.focus ?? "none"}:${sessionId ?? ""}:${fresh}` }
+    dateKey={dateKey} request={request} context={context} sessionId={sessionId} fresh={fresh} />;
 }

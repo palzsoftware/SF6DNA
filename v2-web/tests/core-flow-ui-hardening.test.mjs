@@ -61,7 +61,8 @@ test('Daily15 closes first and other cards and handles a changed plan', () => {
   const h = hooks(); let ids = ['a', 'b', 'c'];
   const { DailyTrainingPlanner } = load('daily-training-planner.tsx', {
     react: h.react, 'react/jsx-runtime': jsx, 'next/link': { default: 'a' },
-    '@/lib/local-user-tools': { getDiagnosisHistory: () => [] },
+    '@/lib/local-user-tools': { getDiagnosisHistory: () => [], getCharacterStatuses: () => ({}) },
+    '@/lib/daily-practice': {},
     '@/lib/daily-training': { resolveDailyTrainingSelection: () => ({}), buildDailyTrainingPlan: () => ({
       dateKey: '2026-09-30', theme: 'fixture', reason: 'fixture', source: 'default', totalMinutes: 15,
       items: ids.map(id => ({ id, detail: { matchFocus: ['fixture'] } })),
