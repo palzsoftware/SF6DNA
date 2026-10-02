@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { createHash } from 'node:crypto';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { createRequire } from 'node:module';
@@ -52,7 +53,7 @@ test('DI, DR and CDR remain distinct and cancel restrictions survive rendering',
  assert.match(html,/パリィからのラッシュよりDriveゲージを多く使います/);
  assert.match(html,/動ける状態で/);
 });
-test('eight pending media mappings render no empty slots, requests or fake playback controls', () => {
+test('preview-only captures render no empty slots or media in the non-preview fallback', () => {
  assert.equal((html.match(/data-media-slot=/g)||[]).length,0);
  assert.doesNotMatch(html,/<(video|source|iframe|img)\b|src=""|autoplay|<button\b/);
  assert.match(css,/\.gameplayMedia/);
@@ -103,17 +104,37 @@ test('draft and preview captures cannot auto-promote to production; unknown or c
  assert.ok(media.resolveBeginnerMedia('impact','production',[{...clip,status:'approved_for_public'}]));
 });
 test('approved clip SSR retains pause controls, poster and no eager load or autoplay under any motion preference', () => {
- media.beginnerMediaManifest.push({...clip,status:'approved_for_public'});
+ const original = [...media.beginnerMediaManifest];
+ media.beginnerMediaManifest.splice(0, media.beginnerMediaManifest.length, {...clip,status:'approved_for_public'});
  try {
   const rendered = renderToStaticMarkup(React.createElement(mediaComponent.BeginnerMedia,{id:'impact'}));
   assert.match(rendered,/<video[^>]*controls=""/); assert.match(rendered,/preload="none"/);
   assert.match(rendered,/poster="\/media\/beginner\/beginner-drive-impact.webp"/);
   assert.match(rendered,/type="video\/mp4"/); assert.match(rendered,/<figcaption>/);
   assert.doesNotMatch(rendered,/autoplay|autoPlay/);
- } finally { media.beginnerMediaManifest.pop(); }
+ } finally { media.beginnerMediaManifest.splice(0,media.beginnerMediaManifest.length,...original); }
  assert.equal(renderToStaticMarkup(React.createElement(mediaComponent.BeginnerMedia,{id:'impact'})),'');
 });
 test('every installed beginner asset and poster exists and no manifest references character motion media', () => {
  assert.deepEqual(media.validateBeginnerMedia(media.beginnerMediaManifest),[]);
  for (const asset of media.beginnerMediaManifest) for (const url of [asset.mediaUrl,asset.posterUrl].filter(Boolean)) assert.ok(existsSync(resolve(root,'public',url.slice(1))),url);
+});
+
+test('eight user clips map each tutorial step to distinct local video and poster paths', () => {
+ assert.equal(media.beginnerMediaManifest.length,8);
+ assert.deepEqual(new Set(media.beginnerMediaManifest.map(x=>x.id)),new Set(media.beginnerMediaIds));
+ assert.equal(new Set(media.beginnerMediaManifest.map(x=>x.mediaUrl)).size,8);
+ assert.equal(new Set(media.beginnerMediaManifest.map(x=>x.posterUrl)).size,8);
+ for(const asset of media.beginnerMediaManifest){assert.equal(asset.status,'approved_for_preview');assert.equal(media.resolveBeginnerMedia(asset.id,'preview'),asset);assert.equal(media.resolveBeginnerMedia(asset.id,'production'),null);}
+ for(const [id,file] of [['impact','drive-impact'],['rush','drive-rush'],['cancel-rush','cancel-drive-rush']]) assert.equal(media.resolveBeginnerMedia(id,'preview').mediaUrl,`/media/beginner/beginner-${file}.mp4`);
+});
+test('Preview tutorial SSR renders eight native players; missing and unknown media still collapse safely',()=>{
+ const old=process.env.VERCEL_ENV;process.env.VERCEL_ENV='preview';
+ try {const page=renderToStaticMarkup(React.createElement(route.default));assert.equal((page.match(/<video\b/g)||[]).length,8);assert.equal((page.match(/preload="none"/g)||[]).length,8);assert.doesNotMatch(page,/autoplay|autoPlay/);assert.equal(renderToStaticMarkup(React.createElement(mediaComponent.BeginnerMedia,{id:'unknown'})),'');}
+ finally {if(old===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=old;}
+});
+
+test('reviewed tutorial videos and posters retain distinct inspected content identities',()=>{
+ const expected={"guard": ["07f8a27083833eec23be86f11875b1da7d0c2e295ebb096023d0196077f92578", "a18a97be0315806282ae6426d929cfbfc998225fca6d7680f14f3d37eca19cfb"], "anti-air": ["d72dba13efcfdc93e91179875aac987ea746d381125d27f67c5cd354c5633a87", "c011d3d9b08b90304dfd52a0905bff903871878c75c26da0cbc3342bfd82fab4"], "impact": ["7a66bfd8dfcb4549cc891b6ac18b0bf5621ffb9f0dab070acf608385bb8b4d28", "4618164c5cf2bfa4618745ef677af807998addd518f9dccaa6893ad3ae6badd4"], "parry": ["7a5f1d982d0b15d795e9ffdbc779106118322bff7a72688622a5ef0724bc84f6", "41d8418af7e6abb2ccab262c0b7308ad7f2980163edf2e900050cc1e97c804ef"], "rush": ["68413e3b94a34958ee0d88305ea4cb79fe5e36131aa7018166a8a6bee66a10de", "6d8960ded65ab33d1425a8cd8b7b5093f6585d6e4372e1890e93e5457804bcfa"], "cancel-rush": ["22433b679a5d7b08c897d46680e328fd708adfe51e5e67b5f16ee68e586cf8ab", "8f2a16f32e4054d478e33058b64b51bbb80283864414e9ff5c3412def4b234df"], "super": ["80e1db9876ef84a6c858f2120849dd143914c85cf0173937fefd4a0885e64382", "7dae7d0ebe846cea3f1d83917a186533dd67d114a3763360e4c7b67dbac57e61"], "combo": ["b4876f9e5a310202a19ef2303ee6676a00cf4c61be0dac37c791abd41b19b793", "0a418867e3d51ede2ddeafeaf9a66557f4e615c92f94207bf92f2cde1f56142b"]};
+ for(const asset of media.beginnerMediaManifest){for(const [index,url] of [asset.mediaUrl,asset.posterUrl].entries()){const bytes=readFileSync(resolve(root,'public',url.slice(1)));assert.ok(bytes.length>0);assert.equal(createHash('sha256').update(bytes).digest('hex'),expected[asset.id][index]);}}
 });
