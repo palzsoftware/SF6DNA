@@ -60,7 +60,7 @@ test("JP SA and CA clips match reviewed gauge and health states in the SHA-verif
     ["jp-sa3", "1845d4b9-4bac-4e4e-b6fd-3b57accfa973"],
     ["jp-ca", "2472fe66-f312-4a5d-9c7c-25e0fa2515d7"],
   ]));
-  assert.ok(superClips.every((clip) => clip.source_file === source.filename && clip.verification_status === "approved_for_preview" && clip.cut_review_status === "CUT_REVIEW_PASS"));
+  assert.ok(superClips.every((clip) => (clip.move_slug === "jp-sa2" ? clip.source_file === "jp-sa2-whiff.mp4.mp4" : clip.source_file === source.filename) && clip.verification_status === "approved_for_preview" && clip.cut_review_status === "CUT_REVIEW_PASS"));
   assert.match(superClips.find((clip) => clip.move_slug === "jp-ca").mapping_evidence, /CA indicator/);
   const publicRoot = new URL("../public/", import.meta.url).pathname;
   assert.deepEqual(validateMotionMediaManifest(manifest, { publicRoot }).errors, []);

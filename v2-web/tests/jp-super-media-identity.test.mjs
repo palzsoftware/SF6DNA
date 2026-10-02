@@ -9,12 +9,13 @@ const hash = (url) => createHash('sha256').update(readFileSync(new URL(`../publi
 
 // Identities were inspected from exported MP4 frames on 2026-10-02:
 // SA1: gauge 3 -> 2, projectile; SA2: gauge 3 -> 1, portals/spheres.
+// SA2 was replaced from the user recapture on 2026-10-03; its new opening and poster were reviewed.
 // Hashes prevent the same two valid files from silently reversing again.
 for (const [slug, moveId, expectedHash, duration, size, posterHash] of [
   ['jp-sa1', '7817f9e6-8542-4da1-be01-c6bd24294f22', '7cc436d994eecb24d1def02e2aeac6fd28ad832100e674d109f0cfe2ef0411d8', 4350, 852298, '843df7b99bdfbef5981f0bd6eca6eeb9c10bd8068de459d1860b00ec6a42c67d'],
-  ['jp-sa2', '85762bb5-b5ae-4a88-b4ee-55112037774e', 'c0c574c716ae554eb3c9c985b1aff8c5b62b8fdb84f946b93c4e57405cbaf94f', 7000, 1079850, '27218e5a97f02b2a392faa0add731de4656b6c6e91f6a158c053f7df1b441c05'],
+  ['jp-sa2', '85762bb5-b5ae-4a88-b4ee-55112037774e', 'f5877f603a3ab8417c67a7403b97d91a54f98e63544ccfc998bf20351c1f3545', 5767, 1728576, '907f0246d95332be223ef52e0e088a23a1803a53518de399f610b024e6640448'],
 ]) {
-  test(`${slug} binds its inspected video bytes and unchanged poster to the canonical move`, () => {
+  test(`${slug} binds its inspected video bytes and matching poster to the canonical move`, () => {
     const clips = manifest.clips.filter((clip) => clip.move_slug === slug);
     assert.equal(clips.length, 1);
     const clip = clips[0];
