@@ -97,6 +97,6 @@ test('Home return journey describes the character-only favorites destination', a
     assert.ok(links.some(link => link.props.href === route), route);
   }
   const favorite = links.find(link => link.props.href === '/favorites');
-  assert.match(text(favorite), /保存したキャラクターへ戻る/);
+  assert.match(text(favorite), /保存したキャラ/);
   assert.doesNotMatch(text(favorite), /動画/);
 });

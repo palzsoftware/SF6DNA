@@ -16,7 +16,7 @@ test("Home uses natural hero copy and selects three characters from the public p
 test("Home search and character count describe their public scope", () => {
   assert.match(pageSource, /キャラクター・プレイヤー・動画を検索/);
   assert.match(pageSource, /\$\{characters\.length\}キャラクターの情報/);
-  assert.match(pageSource, /横断検索/);
+  assert.match(pageSource, /サイト内を検索/);
   assert.doesNotMatch(pageSource, />1か所</);
 });
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MobileDock } from "@/components/mobile-dock";
 import { AppearanceSelector, ThemeSelector } from "@/components/theme-selector";
 import "./globals.css";
 import "./tools.css";
@@ -64,13 +65,22 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <header className="site-header">
           <div className="site-shell site-header__inner">
             <Link className="site-brand" href="/">SF6DNA</Link>
-            <nav className="site-nav" aria-label="主要ナビゲーション">
+            <nav className="site-nav desktop-global-nav" aria-label="主要ナビゲーション">
               <Link href="/characters">キャラクター</Link>
               <Link href="/diagnosis">診断</Link>
               <Link href="/search">検索</Link>
               <Link href="/players">プレイヤー</Link>
               <Link href="/videos">動画</Link>
             </nav>
+            <details className="mobile-global-menu"><summary>メニュー</summary>
+            <nav className="site-nav" aria-label="モバイル探索メニュー">
+              <Link href="/characters">キャラクター</Link>
+              <Link href="/diagnosis">診断</Link>
+              <Link href="/search">検索</Link>
+              <Link href="/players">プレイヤー</Link>
+              <Link href="/videos">動画</Link>
+            </nav>
+            </details>
             <details className="display-settings"><summary>表示設定</summary><div className="display-settings__body"><ThemeSelector /><AppearanceSelector /></div></details>
           </div>
         </header>
@@ -86,12 +96,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             </nav>
           </div>
         </footer>
-        <nav className="mobile-dock" aria-label="スマートフォン用クイックナビゲーション">
-          <Link href="/characters">キャラ</Link>
-          <Link href="/diagnosis">診断</Link>
-          <Link href="/search">検索</Link>
-          <Link href="/favorites">保存</Link>
-        </nav>
+        <MobileDock />
       </body>
     </html>
   );

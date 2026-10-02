@@ -32,7 +32,7 @@ test("reviewed routes use concrete destination labels", () => {
   assert.match(publicCopy, /問い合わせフォームへ/);
   assert.match(publicCopy, /更新履歴をすべて見る/);
   assert.match(publicCopy, /次の対戦で、/);
-  assert.match(publicCopy, /キャラクター・プレイヤー・動画を横断検索/);
+  assert.match(publicCopy, /サイト内を検索/);
 });
 
 test("Login and Contact helpers use natural copy without weakening retention disclosure", () => {

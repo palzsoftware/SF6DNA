@@ -30,16 +30,16 @@ const todayActions = [
 ] as const;
 
 const resumeLinks = [
-  ["SAVE", "お気に入り", "保存したキャラクターへ戻る", "/favorites"],
-  ["MY", "マイキャラ", "使用キャラクターの設定を見る", "/my-characters"],
-  ["HIST", "診断履歴", "これまでの診断結果を振り返る", "/diagnosis/history"],
+  ["SAVE", "お気に入り", "保存したキャラ", "/favorites"],
+  ["MY", "マイキャラ", "使用キャラの設定", "/my-characters"],
+  ["HIST", "診断履歴", "前の診断結果", "/diagnosis/history"],
 ] as const;
 
 const browseLinks = [
-  ["SEARCH", "検索", "キャラクター・プレイヤー・動画を横断検索", "/search"],
-  ["PLAYER", "プレイヤー", "参考になるプレイヤーを探す", "/players"],
-  ["CHARACTER", "キャラクター", "特徴と技からキャラクターを知る", "/characters"],
-  ["SOURCE", "情報源", "掲載情報の出典と方針を見る", "/sources"],
+  ["SEARCH", "検索", "サイト内を検索", "/search"],
+  ["PLAYER", "プレイヤー", "参考プレイヤーを探す", "/players"],
+  ["CHARACTER", "キャラクター", "特徴と技を見る", "/characters"],
+  ["SOURCE", "情報源", "出典と掲載方針", "/sources"],
 ] as const;
 
 const recentUpdates = [

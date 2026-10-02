@@ -105,6 +105,7 @@ test('fresh Home and mobile dock retain intended return routes', async () => {
   const imports = { 'next/link': link, 'next/image': { default: 'img', __esModule: true },
     '@/lib/characters': { listCharacters: async () => [] }, '@/lib/home-hero': { pickRandomHeroCharacters: () => [] },
     '@/components/theme-selector': { ThemeSelector: () => null, AppearanceSelector: () => null },
+    '@/components/mobile-dock': load('components/mobile-dock.tsx', { 'next/link': link, 'next/navigation': { usePathname: () => '/' } }),
   };
   const Home = load('app/page.tsx', imports).default;
   const home = renderToStaticMarkup(await Home());
@@ -118,7 +119,7 @@ test('fresh Home and mobile dock retain intended return routes', async () => {
   const Layout = load('app/layout.tsx', imports).default;
   const layout = renderToStaticMarkup(React.createElement(Layout, null, 'fixture'));
   const dock = layout.slice(layout.indexOf('mobile-dock'));
-  assert.deepEqual([...dock.matchAll(/href="([^"]+)"/g)].map(m => m[1]), ['/characters','/diagnosis','/search','/favorites']);
+  assert.deepEqual([...dock.matchAll(/href="([^"]+)"/g)].map(m => m[1]), ['/','/me/training','/favorites','/diagnosis/history','/my-characters']);
 });
 
 test('Video filter handlers open/close, count conditions, clear, search and sort actual results', () => {
@@ -141,4 +142,20 @@ test('Video filter handlers open/close, count conditions, clear, search and sort
   app.nodes().find(n => n.type === 'select').props.onChange({ target: { value: 'newest' } }); app.render();
   assert.deepEqual(app.nodes().filter(n => n.type === 'article').map(n => n.props['data-id']), ['b','a']);
   assert.ok(app.nodes().some(n => text(n).includes('2件中 2件を表示')));
+});
+
+
+test('mobile return dock identifies exact current routes without diagnosis-prefix confusion', () => {
+  const link = { default: props => React.createElement('a', props), __esModule: true };
+  const routes = ['/', '/me/training', '/favorites', '/diagnosis/history', '/my-characters'];
+  const global = ['/characters', '/diagnosis', '/search', '/players', '/videos'];
+  assert.equal(routes.filter(route => global.includes(route)).length, 0);
+  for (const pathname of [...routes, '/diagnosis/improvement-check', '/characters/jp']) {
+    const { MobileDock } = load('components/mobile-dock.tsx', { 'next/link': link, 'next/navigation': { usePathname: () => pathname } });
+    const html = renderToStaticMarkup(React.createElement(MobileDock));
+    const active = [...html.matchAll(/<a[^>]*aria-current="page"[^>]*>/g)];
+    assert.equal(active.length, routes.includes(pathname) ? 1 : 0, pathname);
+    if (active.length) assert.ok(active[0][0].includes(`href="${pathname}"`));
+    assert.deepEqual([...html.matchAll(/href="([^"]+)"/g)].map(m => m[1]), routes);
+  }
 });
