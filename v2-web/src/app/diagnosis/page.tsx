@@ -7,10 +7,10 @@ export default async function DiagnosisPage() {
   const diagnoses = await listDiagnoses();
 
   return (
-    <div className="site-shell page-stack">
+    <div className="site-shell page-stack experience-analysis">
       <section className="hero">
         <p className="eyebrow">DIAGNOSIS</p>
-        <h1>診断</h1>
+        <h1>自分のプレイを、振り返る。</h1><ol className="analysis-route" aria-label="診断の流れ"><li>回答する</li><li>傾向を知る</li><li>練習を決める</li></ol>
         <p>プレイ傾向や課題を知り、今日の練習を決めましょう。キャラクター選びに役立つ診断もあります。</p>
       </section>
 

@@ -29,18 +29,19 @@ function sourceProviderLabel(publisher: string | null, url: string) {
 export default async function SourcesPage() {
   const sources = await listPublicSources();
   return (
-    <div className="site-shell page-stack">
+    <div className="site-shell page-stack experience-reference">
       <section className="hero">
         <p className="eyebrow">SOURCES</p>
         <h1>情報源</h1>
         <p>掲載情報に関連するサイト・記事・動画へのリンクをまとめています。</p>
       </section>
-      <section className="card-grid" aria-label="情報の公開方針">
+      <details className="reference-policy"><summary>掲載情報と参照先の扱い</summary><section className="card-grid" aria-label="情報の公開方針">
         <article className="info-panel"><h2>公式情報・一次情報</h2><p>掲載する情報には、できる限り参照先を添えます。</p></article>
         <article className="info-panel"><h2>ゲーム内での確認</h2><p>実機での確認が必要な内容は、確認が終わるまで推測で補いません。</p></article>
         <article className="info-panel"><h2>アップデート後の確認</h2><p>パッチで変わった可能性がある情報は、対象期間と内容を確かめてから掲載します。</p></article>
         <article className="info-panel"><h2>外部リンク</h2><p>出典を選ぶと外部サイトへ移動します。リンク先の利用条件やプライバシー方針をご覧ください。</p></article>
-      </section>
+      </section></details>
+      <p>リンク先は掲載内容の参照先です。リンクがあるだけで、すべての内容を実機検証済みとは限りません。</p>
       {sources.length ? (
         <section className="search-result-list">
           {sources.map((source) => (

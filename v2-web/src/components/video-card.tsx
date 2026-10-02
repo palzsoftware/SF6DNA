@@ -53,9 +53,10 @@ export function VideoCard({ video, publishedDate, onPreferenceChange }: { video:
       </a>
       <div className="video-card__body">
         <span className="search-result__type">{[video.platform, category].filter(Boolean).join(" / ") || "VIDEO"}</span>
+        <div className="video-card__flags"><span>{favorite ? "保存済み" : "未保存"}</span><span>{watched ? "視聴済み" : "未視聴"}</span></div>
         <h2><Link href={`/videos/${video.slug}`}>{video.title}</Link></h2>
         {video.channelName ? <p>{video.channelName}</p> : null}
-        {relations.length ? <p>{relations.join(" / ")}</p> : null}
+        {relations.length ? <ul className="video-card__relations" aria-label="関連する人物・キャラクター・大会">{relations.map((name, index) => <li key={`${name}-${index}`}>{name}</li>)}</ul> : null}
         {publishedDate || duration ? <small>{[publishedDate, duration].filter(Boolean).join(" / ")}</small> : null}
         <div className="video-card__actions">
           <a className="video-card__watch" href={video.url} target="_blank" rel="noopener noreferrer">{watchLabel}</a>

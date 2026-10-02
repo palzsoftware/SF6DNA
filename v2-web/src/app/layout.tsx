@@ -11,6 +11,7 @@ import "./character-overview-refresh.css";
 import "./mobile-refresh.css";
 import "./theme.css";
 import "./training-lab-refresh.css";
+import "./page-experience.css";
 
 // Runs in the document head before paint. An absent choice keeps the established dark default.
 const themeInit = `(function(){var m='dark',a='standard';try{m=localStorage.getItem('sf6dna-color-mode')||'dark';a=localStorage.getItem('sf6dna-theme')||'standard';}catch(e){}if(m!=='light'&&m!=='dark'&&m!=='system')m='dark';if(a!=='standard'&&a!=='fighter'&&a!=='cute-pink'&&a!=='monochrome')a='standard';var d=m==='system'?(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'):m;document.documentElement.dataset.theme=d;document.documentElement.dataset.resolvedColorMode=d;document.documentElement.dataset.colorMode=m;document.documentElement.dataset.appearance=a;})();`;
@@ -70,8 +71,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/players">プレイヤー</Link>
               <Link href="/videos">動画</Link>
             </nav>
-            <ThemeSelector />
-            <AppearanceSelector />
+            <details className="display-settings"><summary>表示設定</summary><div className="display-settings__body"><ThemeSelector /><AppearanceSelector /></div></details>
           </div>
         </header>
         <main id="main-content" tabIndex={-1}>{children}</main>

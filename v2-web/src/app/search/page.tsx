@@ -64,7 +64,7 @@ export default async function SearchPage({
   const groups = groupResults(visibleResults);
 
   return (
-    <div className={`site-shell page-stack ${styles.searchPage}`}>
+    <div className={`site-shell page-stack ${styles.searchPage} experience-discovery`}>
       <section className={styles.searchHero}>
         <p className="eyebrow">SEARCH</p>
         <h1>キャラクターや動画を探す</h1>
@@ -147,7 +147,7 @@ export default async function SearchPage({
           {visibleResults.length ? (
             <div className={styles.groups}>
               {groups.map((group) => (
-                <section className={styles.group} key={group.type}>
+                <section className={styles.group} data-result-kind={group.type} key={group.type}>
                   <div className={styles.groupHead}>
                     <h3>{TYPE_LABELS[group.type] ?? group.type}</h3>
                     <span>{group.items.length}件</span>
@@ -171,7 +171,7 @@ export default async function SearchPage({
             </div>
           ) : (
             <section className={`empty-state ${styles.emptyHelp}`}>
-              <h2>{results.length ? "この種類では一致する情報がありません" : "一致する情報が見つかりません"}</h2>
+              <h2>{results.length ? "この種類では一致する情報がありません" : "一致する情報が見つかりません"}</h2><p>検索語：{q} / 種類：{TYPE_LABELS[selectedType] ?? "すべて"}</p><Link className="text-link" href="/search">検索条件をリセット</Link>
               <ul>
                 <li>キャラクター名やプレイヤー名の一部でも検索できます。</li>
                 <li>つづりが不明なときは、短い名前でも試せます。</li>

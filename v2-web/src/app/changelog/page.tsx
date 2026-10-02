@@ -14,7 +14,7 @@ const entries = [
 
 export default function ChangelogPage() {
   return (
-    <div className="site-shell page-stack">
+    <div className="site-shell page-stack experience-changelog">
       <section className="hero"><p className="eyebrow">CHANGELOG</p><h1>更新履歴</h1><p>SF6DNAの主要な機能追加・品質改善をまとめています。</p></section>
       <section className="guide-stack lab-changelog">
         {entries.map((entry) => <article className="info-panel" key={`${entry.date}-${entry.title}`}><time className="eyebrow" dateTime={entry.date}>{entry.date}</time><h2>{entry.title}</h2><p>{entry.body}</p></article>)}

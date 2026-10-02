@@ -114,7 +114,7 @@ export function VideoLibrary({ videos, lockedCharacter, initialPlayer }: { video
   }
 
   return (
-    <div className={styles.library}>
+    <div className={`${styles.library} experience-video-library`}>
       <div className={styles.toolbar}>
         <div className={styles.topRow}>
           <label>動画を検索<input value={filters.query} onChange={(event) => { setFilters((current) => ({ ...current, query: event.target.value })); setVisible(12); }} placeholder="例：JP SA2 上級者、翔 試合" /></label>

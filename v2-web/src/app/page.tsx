@@ -38,7 +38,7 @@ const resumeLinks = [
 const browseLinks = [
   ["SEARCH", "検索", "キャラクター・プレイヤー・動画を横断検索", "/search"],
   ["PLAYER", "プレイヤー", "参考になるプレイヤーを探す", "/players"],
-  ["VIDEO", "動画", "攻略・対戦動画を探す", "/videos"],
+  ["CHARACTER", "キャラクター", "特徴と技からキャラクターを知る", "/characters"],
   ["SOURCE", "情報源", "掲載情報の出典と方針を見る", "/sources"],
 ] as const;
 
@@ -106,17 +106,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="home-command-center" aria-label="SF6DNAを検索">
-        <div className="home-command-search">
-          <strong>キャラクター・プレイヤー・動画を検索</strong>
-          <form className="search-form" action="/search">
-            <input name="q" placeholder="例：JP / 翔" aria-label="キャラクター・プレイヤー・動画を検索" />
-            <button type="submit">検索</button>
-          </form>
-        </div>
-      </section>
-
-      <section aria-labelledby="resume-title">
+      <section className="experience-continue" aria-labelledby="resume-title">
         <div className="section-heading">
           <h2 id="resume-title">続きから</h2>
           <p>お気に入り、マイキャラ、前の診断へ。</p>
@@ -132,11 +122,21 @@ export default async function HomePage() {
         </nav>
       </section>
 
-      <section aria-labelledby="browse-title">
+      <section className="experience-explore" aria-labelledby="browse-title">
         <div className="section-heading">
           <h2 id="browse-title">情報を探す</h2>
           <p>{characters.length ? `${characters.length}キャラクターの情報や、プレイヤー・動画・情報源を探せます。` : "キャラクター、プレイヤー、動画、情報源を探せます。"}</p>
         </div>
+      <section className="home-command-center" aria-label="SF6DNAを検索">
+        <div className="home-command-search">
+          <strong>キャラクター・プレイヤー・動画を検索</strong>
+          <form className="search-form" action="/search">
+            <input name="q" placeholder="例：JP / 翔" aria-label="キャラクター・プレイヤー・動画を検索" />
+            <button type="submit">検索</button>
+          </form>
+        </div>
+      </section>
+
         <nav className="home-public-nav" aria-label="情報を探す">
           {browseLinks.map(([icon, title, description, href]) => (
             <Link className="home-public-link" href={href} key={href}>
@@ -148,12 +148,14 @@ export default async function HomePage() {
         </nav>
       </section>
 
-      <section aria-labelledby="updates-title">
+      <section className="experience-watch" aria-labelledby="watch-title"><div><p className="eyebrow">WATCH</p><h2 id="watch-title">今日は、動画から学ぶ。</h2><p>気になるキャラクターやプレイヤーで絞って、攻略・対戦動画へ。</p></div><Link className="button-primary" href="/videos">動画を探す</Link><span className="experience-play" aria-hidden="true">▶</span></section>
+
+      <section className="experience-updates" aria-labelledby="updates-title">
         <div className="section-heading">
           <h2 id="updates-title">最近の更新</h2>
           <p>最近の改善を紹介します。</p>
         </div>
-        <div className="guide-stack">
+        <div className="guide-stack experience-update-strip">
           {recentUpdates.map(([date, title, body]) => (
             <article className="info-panel" key={`${date}-${title}`}>
               <p className="eyebrow">{date}</p>

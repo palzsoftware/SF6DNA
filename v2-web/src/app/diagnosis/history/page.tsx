@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function DiagnosisHistoryPage() {
   return (
-    <div className="site-shell page-stack">
+    <div className="site-shell page-stack experience-history">
       <section className="hero">
         <p className="eyebrow">DIAGNOSIS HISTORY</p>
         <h1>診断履歴</h1>

@@ -13,11 +13,11 @@ export default async function VideosPage({ searchParams }: {
   const videos = await listVideos();
 
   return (
-    <div className="site-shell page-stack">
+    <div className="site-shell page-stack experience-video">
       <section className="hero">
         <p className="eyebrow">VIDEOS</p>
-        <h1>動画</h1>
-        <p>攻略・対戦・大会などの動画を探せます。</p>
+        <h1>動画から、次のヒントを。</h1>
+        <p>攻略・対戦・大会などの動画を探せます。</p><p className="experience-video-note">お気に入りは「また見たい動画」、視聴済みは「見終えた動画」の目印です。</p>
       </section>
 
       {videos.length ? (

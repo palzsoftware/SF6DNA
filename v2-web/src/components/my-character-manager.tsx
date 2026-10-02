@@ -65,7 +65,7 @@ export function MyCharacterManager({
     return (
       <div className="empty-state">
         <h2>{favoritesOnly ? "お気に入りはまだありません" : "公開キャラクターがありません"}</h2>
-        <p>{favoritesOnly ? "キャラクターページの☆から追加できます。マイキャラからも選べます。" : "キャラクター情報が掲載されると、ここから選べます。"}</p>
+        <p>{favoritesOnly ? "キャラクターページの☆から追加できます。マイキャラからも選べます。" : "キャラクター情報が掲載されると、ここから選べます。"}</p>{favoritesOnly ? <Link className="button-secondary inline-button" href="/characters">キャラクターを探す</Link> : null}
       </div>
     );
   }

@@ -39,3 +39,11 @@
 .rangeVisual i { flex: 0 0 9px; height: 9px; border: 2px solid var(--info); border-radius: 50%; }
 .rangeVisual span { flex: 1; height: 4px; border-radius: 2px; background: repeating-linear-gradient(90deg,var(--border-strong) 0 12px,transparent 12px 16px); }
 .purpose dt { color: var(--info); }
+.ranges > li[data-range="近距離"] .rangeVisual { max-width: 70px; }
+.ranges > li[data-range="中距離"] .rangeVisual { max-width: 125px; }
+.ranges > li[data-range="遠距離"] .rangeVisual { max-width: 180px; }
+.ranges { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.points > li { padding-left: 14px; }
+.points::before { left: 6px; }
+.points > li::before { content: ""; position: absolute; left: 1px; top: 26px; width: 10px; height: 10px; border: 2px solid var(--accent); border-radius: 50%; background: var(--surface); }
+@media (max-width: 900px) { .ranges { grid-template-columns: minmax(0, 1fr); } }

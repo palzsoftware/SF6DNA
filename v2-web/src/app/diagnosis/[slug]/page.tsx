@@ -14,7 +14,7 @@ export default async function DiagnosisDetailPage({ params }: { params: Promise<
   if (!diagnosis) notFound();
 
   return (
-    <div className="site-shell page-stack">
+    <div className="site-shell page-stack experience-analysis">
       <section className="hero">
         <p className="eyebrow">DIAGNOSIS</p>
         <h1>{diagnosis.title}</h1>

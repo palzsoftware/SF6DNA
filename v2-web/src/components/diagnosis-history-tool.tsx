@@ -22,15 +22,15 @@ export function DiagnosisHistoryTool() {
   }
 
   if (!ready) return <div className="empty-state"><p>診断履歴を読み込んでいます。</p></div>;
-  if (!records.length) return <div className="empty-state"><h2>診断履歴はまだありません</h2><p>診断を最後まで完了すると、この端末に結果概要が保存されます。</p></div>;
+  if (!records.length) return <div className="empty-state"><h2>診断履歴はまだありません</h2><p>診断を最後まで完了すると、この端末に結果概要が保存されます。</p><Link className="button-secondary inline-button" href="/diagnosis">診断を選ぶ</Link></div>;
 
   return (
-    <div className="history-list">
+    <div className="history-list experience-timeline">
       {records.map((record) => (
         <article className="info-panel" key={record.id}>
           <div className="user-character-card__head">
             <div>
-              <p className="eyebrow">{new Date(record.completedAt).toLocaleString("ja-JP")}</p>
+              <time className="eyebrow" dateTime={record.completedAt}>{new Date(record.completedAt).toLocaleString("ja-JP")}</time>
               <h2>{record.diagnosisTitle}</h2>
             </div>
             <button className="text-button" type="button" onClick={() => remove(record.id)}>削除</button>
