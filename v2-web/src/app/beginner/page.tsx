@@ -3,6 +3,7 @@ import Link from "next/link";
 import { VisualIcon } from "@/components/visual-icon";
 import { beginnerSteps, beginnerGlossary, beginnerSources, type BeginnerStep } from "./content";
 import styles from "./page.module.css";
+import { BeginnerMedia } from "./media";
 
 export const metadata: Metadata = {
   title: "スト6を始めたら、まずこれ",
@@ -28,14 +29,8 @@ function Diagram({ step }: { step: BeginnerStep }) {
   return <figure className={styles.diagram}><Flow items={["倒された", "起き上がりにガード", "相手の攻めを見て考える"]}/><figcaption>ガードだけで全部防げるわけではありません</figcaption></figure>;
 }
 
-// Empty slots contain no video/source element, request or playback control.
-// Reviewed recordings can replace this small reserved visual in a later batch.
-function MediaSlot({ id, title }: { id: string; title: string }) {
-  return <div className={styles.mediaSlot} data-media-slot={id} aria-label={`${title}の実演動画用スペース`}><VisualIcon kind="video"/><span>実演</span></div>;
-}
-
 function StepContent({ step }: { step: BeginnerStep }) {
-  return <div className={styles.stepBody}><p className={styles.description}>{step.description}</p><Diagram step={step}/><div className={styles.tryRow}><p className={styles.tryThis}><VisualIcon kind="training"/><span><strong>まず試す</strong>{step.tryThis}</span></p>{step.media ? <MediaSlot id={step.media} title={step.shortTitle}/> : null}</div><p className={styles.caution}>{step.caution}</p>{step.id === "anti-air" || step.id === "combo" ? <Link className={styles.textLink} href="/characters">使うキャラの特徴と技を見る <span aria-hidden="true">↗</span></Link> : null}</div>;
+  return <div className={styles.stepBody}><p className={styles.description}>{step.description}</p><Diagram step={step}/><div className={styles.tryRow}><p className={styles.tryThis}><VisualIcon kind="training"/><span><strong>まず試す</strong>{step.tryThis}</span></p></div>{step.media ? <BeginnerMedia id={step.media}/> : null}<p className={styles.caution}>{step.caution}</p>{step.id === "anti-air" || step.id === "combo" ? <Link className={styles.textLink} href="/characters">使うキャラの特徴と技を見る <span aria-hidden="true">↗</span></Link> : null}</div>;
 }
 
 export default function BeginnerPage() {
@@ -50,7 +45,7 @@ export default function BeginnerPage() {
     <aside className={styles.startNote}><VisualIcon kind="attention"/><p>ゲームを開いたら、使うキャラと操作タイプを選び、ボタン設定を確認。操作に迷ったら、ゲーム内チュートリアルも使えます。</p></aside>
     <nav className={styles.jumpNav} aria-label="初心者ガイドの目次"><a href="#first-basics">まずはここから</a><a href="#drive-systems">システムを知る</a><a href="#combo">コンボと起き上がり</a><a href="#first-match">実戦へ</a></nav>
     <section id="first-basics" className={styles.group} aria-labelledby="basics-heading"><div className={styles.groupHeading}><p className="eyebrow">FIRST STEPS / 01–05</p><h2 id="basics-heading">まずは、動く・守る。</h2><p>ここから1つ選んで試すだけでも、今日の一歩です。</p></div><div className={styles.stepGrid}>{firstSteps.map((step, index) => <article className={styles.step} id={step.id} key={step.id}><div className={styles.stepHeading}><span className={styles.stepNumber}>{String(index + 1).padStart(2, "0")}</span><div><p>{step.label}</p><h3>{step.title}</h3></div></div><StepContent step={step}/></article>)}</div></section>
-    <section id="drive-systems" className={styles.group} aria-labelledby="systems-heading"><div className={styles.groupHeading}><p className="eyebrow">NEXT / 06–10</p><h2 id="systems-heading">システムは、1つずつ。</h2><p>慣れてからで大丈夫。気になる項目を開いてみましょう。</p></div><p className={styles.caution}>Driveゲージが空の「バーンアウト」中は、ゲージが回復しきるまでDrive系の操作を使えません。</p><div className={styles.systemKey} aria-label="インパクトとラッシュの違い"><span><b>DI</b>受け止めて打つ</span><span><b>DR</b>パリィから近づく</span><span><b>CDR</b>技から近づく</span></div><div className={styles.systems}>{laterSteps.map((step, index) => <details className={styles.system} id={step.id} key={step.id} data-system={step.label}><summary><span className={styles.stepNumber}>{String(index + 6).padStart(2, "0")}</span><h3>{step.title}</h3><span className={styles.summaryLabel}>{step.label}</span></summary><StepContent step={step}/></details>)}</div><p className={styles.mediaNote}>「実演」の小さな枠には、今後操作動画を追加します。今は図解だけで読み進められます。</p></section>
+    <section id="drive-systems" className={styles.group} aria-labelledby="systems-heading"><div className={styles.groupHeading}><p className="eyebrow">NEXT / 06–10</p><h2 id="systems-heading">システムは、1つずつ。</h2><p>慣れてからで大丈夫。気になる項目を開いてみましょう。</p></div><p className={styles.caution}>Driveゲージが空の「バーンアウト」中は、ゲージが回復しきるまでDrive系の操作を使えません。</p><div className={styles.systemKey} aria-label="インパクトとラッシュの違い"><span><b>DI</b>受け止めて打つ</span><span><b>DR</b>パリィから近づく</span><span><b>CDR</b>技から近づく</span></div><div className={styles.systems}>{laterSteps.map((step, index) => <details className={styles.system} id={step.id} key={step.id} data-system={step.label}><summary><span className={styles.stepNumber}>{String(index + 6).padStart(2, "0")}</span><h3>{step.title}</h3><span className={styles.summaryLabel}>{step.label}</span></summary><StepContent step={step}/></details>)}</div></section>
     <section className={styles.group} aria-labelledby="practice-heading"><div className={styles.groupHeading}><p className="eyebrow">PUT IT TO USE / 11–12</p><h2 id="practice-heading">攻めは1つ、守りは落ち着いて。</h2></div><div className={styles.stepGrid}>{closingSteps.map((step, index) => <article className={styles.step} id={step.id} key={step.id}><div className={styles.stepHeading}><span className={styles.stepNumber}>{index + 11}</span><div><p>{step.label}</p><h3>{step.title}</h3></div></div><StepContent step={step}/></article>)}</div></section>
     <section id="first-match" className={styles.match} aria-labelledby="match-heading"><p className="eyebrow">TRY A MATCH</p><h2 id="match-heading">全部できなくても、対戦へ。</h2><p>今日はこの中から1つだけ。CPU戦や、気軽に遊べる対戦で試しましょう。</p><ul className={styles.checklist}>{["守る場面でガードする", "ジャンプに対空を1回狙う", "動けるときにインパクト返しを狙う", "練習した攻撃を1回使う", "終わったら、困った場面を1つ思い出す"].map((item) => <li key={item}><VisualIcon kind="check"/>{item}</li>)}</ul><div className={styles.nextActions}><Link href="/diagnosis"><VisualIcon kind="diagnosis"/><span><small>次の一歩</small><strong>課題を診断する</strong><em>対戦で困ったことを整理</em></span><span aria-hidden="true">↗</span></Link><Link href="/me/training"><VisualIcon kind="training"/><span><small>課題が決まったら</small><strong>今日の15分練習へ</strong><em>5分ずつ、3つのメニュー</em></span><span aria-hidden="true">↗</span></Link></div></section>
     <details className={styles.glossary}><summary>言葉に迷ったら：短い用語集</summary><dl>{beginnerGlossary.map(([word, definition]) => <div key={word}><dt>{word}</dt><dd>{definition}</dd></div>)}</dl></details>
