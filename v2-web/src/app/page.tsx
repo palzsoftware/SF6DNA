@@ -53,19 +53,21 @@ export default async function HomePage() {
   const heroCharacters = pickRandomHeroCharacters(characters);
 
   return (
-    <div className="site-shell page-stack">
+    <div className="site-shell page-stack lab-home">
       <section className="home-hero">
         <div className="home-hero__copy">
-          <p className="eyebrow">STREET FIGHTER 6 / PLAYER TOOLKIT</p>
+          <p className="eyebrow">SF6DNA / TRAINING LAB</p>
           <h1>次の対戦で、<span>何を試そう？</span></h1>
-          <p>課題を整理して、今日やることを決める。必要なキャラクター情報や動画も、そのまま探せます。</p>
+          <p>課題を整理して、今日やることを決める。<br />キャラクターの技や動画も、ここから。</p>
           <div className="home-hero__actions">
             <Link className="button-primary" href="/me/training">今日の15分練習を始める</Link>
             <Link className="button-secondary" href="/diagnosis">診断する</Link>
-            <Link className="button-secondary" href="/characters">キャラクターを見る</Link>
+
           </div>
         </div>
         <div className="home-hero__visual" aria-label="SF6キャラクター">
+          <div className="lab-dna" aria-hidden="true">{[0,1,2,3,4,5].map((node) => <i key={node} />)}</div>
+          <span className="lab-visual-label" aria-hidden="true">FIND YOUR NEXT MOVE</span>
           {heroCharacters.map((character, index) => (
             <Link
               className={`hero-fighter hero-fighter--${String.fromCharCode(97 + index)}`}
@@ -88,16 +90,17 @@ export default async function HomePage() {
       <section className="daily-section" aria-labelledby="today-title">
         <div className="section-heading">
           <h2 id="today-title">今日やること</h2>
-          <p>迷ったら、ここから1つ選べば始められます。</p>
+          <p>まずは15分。課題が曖昧なら診断から。</p>
         </div>
         <div className="daily-grid">
           {todayActions.map((action) => (
             <Link className="daily-card home-purpose-card" data-accent={action.accent} href={action.href} key={action.phase}>
               <span className="daily-card__icon-slot" aria-hidden="true">{action.phase.slice(0, 2)}</span>
-              <span className="daily-card__phase">{action.phase}</span>
+              <span className="daily-card__phase">{action.phase === "TRAIN" ? "TODAY’S TRAINING" : action.phase}</span>
+              {action.phase === "TRAIN" ? <div className="lab-timer" aria-label="5分の練習を3つ、合計15分">{[1,2,3].map((part) => <span key={part}><b>05</b><small>min</small></span>)}<em>15分で、ひとつ前へ。</em></div> : null}
               <strong>{action.title}</strong>
               <p>{action.description}</p>
-              <span className="daily-card__arrow">{action.title} →</span>
+              <span className="daily-card__arrow">{action.phase === "TRAIN" ? "練習メニューを見る" : action.title}</span>
             </Link>
           ))}
         </div>
@@ -107,7 +110,7 @@ export default async function HomePage() {
         <div className="home-command-search">
           <strong>キャラクター・プレイヤー・動画を検索</strong>
           <form className="search-form" action="/search">
-            <input name="q" placeholder="例：JP / 翔 / SA2" aria-label="キャラクター・プレイヤー・動画を検索" />
+            <input name="q" placeholder="例：JP / 翔" aria-label="キャラクター・プレイヤー・動画を検索" />
             <button type="submit">検索</button>
           </form>
         </div>
@@ -116,14 +119,30 @@ export default async function HomePage() {
       <section aria-labelledby="resume-title">
         <div className="section-heading">
           <h2 id="resume-title">続きから</h2>
-          <p>保存したものや、自分用の情報へすぐ戻れます。</p>
+          <p>お気に入り、マイキャラ、前の診断へ。</p>
         </div>
         <nav className="home-public-nav" aria-label="続きから">
           {resumeLinks.map(([icon, title, description, href]) => (
             <Link className="home-public-link" href={href} key={href}>
               <span className="home-public-link__icon" aria-hidden="true">{icon}</span>
               <strong>{title}</strong>
-              <span>{description} →</span>
+              <span>{description}</span>
+            </Link>
+          ))}
+        </nav>
+      </section>
+
+      <section aria-labelledby="browse-title">
+        <div className="section-heading">
+          <h2 id="browse-title">情報を探す</h2>
+          <p>{characters.length ? `${characters.length}キャラクターの情報や、プレイヤー・動画・情報源を探せます。` : "キャラクター、プレイヤー、動画、情報源を探せます。"}</p>
+        </div>
+        <nav className="home-public-nav" aria-label="情報を探す">
+          {browseLinks.map(([icon, title, description, href]) => (
+            <Link className="home-public-link" href={href} key={href}>
+              <span className="home-public-link__icon" aria-hidden="true">{icon}</span>
+              <strong>{title}</strong>
+              <span>{description}</span>
             </Link>
           ))}
         </nav>
@@ -146,21 +165,7 @@ export default async function HomePage() {
         <Link className="inline-button button-secondary" href="/changelog">更新履歴をすべて見る</Link>
       </section>
 
-      <section aria-labelledby="browse-title">
-        <div className="section-heading">
-          <h2 id="browse-title">情報を探す</h2>
-          <p>{characters.length ? `${characters.length}キャラクターの情報や、プレイヤー・動画・情報源を探せます。` : "キャラクター、プレイヤー、動画、情報源を探せます。"}</p>
-        </div>
-        <nav className="home-public-nav" aria-label="情報を探す">
-          {browseLinks.map(([icon, title, description, href]) => (
-            <Link className="home-public-link" href={href} key={href}>
-              <span className="home-public-link__icon" aria-hidden="true">{icon}</span>
-              <strong>{title}</strong>
-              <span>{description} →</span>
-            </Link>
-          ))}
-        </nav>
-      </section>
+
     </div>
   );
 }

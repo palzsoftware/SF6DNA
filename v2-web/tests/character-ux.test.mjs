@@ -110,6 +110,11 @@ test('fresh Home and mobile dock retain intended return routes', async () => {
   const home = renderToStaticMarkup(await Home());
   for (const route of ['/me/training','/diagnosis','/characters','/search','/favorites','/my-characters','/diagnosis/history','/changelog']) assert.ok(home.includes(`href="${route}"`), route);
   assert.match(home, /最近の更新/);
+  const hero = home.slice(home.indexOf('class="home-hero"'), home.indexOf('class="daily-section"'));
+  assert.ok(hero.indexOf('href="/me/training"') < hero.indexOf('href="/diagnosis"'));
+  assert.match(home, /aria-label="5分の練習を3つ、合計15分"/);
+  assert.equal([...home.matchAll(/<b>05<\/b>/g)].length, 3);
+  assert.ok(home.indexOf('id="browse-title"') < home.indexOf('id="updates-title"'));
   const Layout = load('app/layout.tsx', imports).default;
   const layout = renderToStaticMarkup(React.createElement(Layout, null, 'fixture'));
   const dock = layout.slice(layout.indexOf('mobile-dock'));
