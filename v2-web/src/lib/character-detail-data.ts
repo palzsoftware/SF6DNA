@@ -1,3 +1,4 @@
+import { getAlexReviewedBundle } from "@/lib/alex-reviewed-media";
 import type { DevicePreviewBundle } from "@/lib/device-preview";
 import { getDevicePreviewBundle } from "@/lib/device-preview";
 import { getCharacterDetailV21Fixture } from "@/lib/character-detail-v21-fixture";
@@ -68,6 +69,8 @@ export async function loadPublicCharacterMoves(characterId: string): Promise<Dev
 }
 
 export async function resolveCharacterDetailData(characterId: string, slug: string, previewToken: string | null): Promise<CharacterDetailData> {
+  const alex = slug === "alex" ? getAlexReviewedBundle(characterId) : null;
+  if (alex) return { bundle: alex, source: "fixture" };
   // The reviewed capture is Preview-only; remote DB identities must not mask it.
   const canonical = slug === "yasmine" ? getYasmineMoveMediaPilot() : null;
   if (canonical) return { bundle: canonical, source: "fixture" };

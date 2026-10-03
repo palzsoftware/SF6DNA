@@ -32,6 +32,7 @@ function environment({ remote = null, canonical = null, blocked = false, queryEr
     return query;
   } };
   const mod = load("src/lib/character-detail-data.ts", (name) => {
+    if (name === "@/lib/alex-reviewed-media") return { getAlexReviewedBundle: () => null };
     if (name === "@/lib/yasmine-move-media-pilot") return { getYasmineMoveMediaPilot: () => process.env.VERCEL_ENV === "preview" ? canonical : null };
     if (name === "@/lib/supabase/server") return { getSupabaseServerClient: () => client };
     if (name === "@/lib/public-move-gate") return { isMovePublicReady: async slug => { calls.push(["gate", slug]); return !blocked; } };

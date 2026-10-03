@@ -314,6 +314,11 @@ export async function getDevicePreviewMoveMotionMedia(
 ): Promise<DevicePreviewMoveMotionMedia[]> {
   if (process.env.VERCEL_ENV !== "preview") return [];
 
+  if (characterId === "0a82075f-b2c3-4a3d-9267-89f3da1543dd") {
+    const { getAlexReviewedMedia } = await import("@/lib/alex-reviewed-media");
+    return getAlexReviewedMedia(characterId);
+  }
+
   const { getPreviewPilotMotionMedia, isPreviewPilotMotionMediaHeld } = await import("@/lib/preview-motion-media-pilot");
   if (isPreviewPilotMotionMediaHeld(characterId)) return [];
   const pilotMedia = getPreviewPilotMotionMedia(characterId);
