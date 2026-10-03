@@ -16,6 +16,14 @@ export function validateYasmineRecovery(manifest, snapshot, options = {}) {
     files.add(clip.media_url);
     if (clip.verification_status !== 'approved_for_preview' || !move) continue;
     if (manifest.identity_approval_status === 'HOLD_UNTIL_CANONICAL') result.errors.push(`${clip.move_slug}: canonical identity approval is held`);
+    if (options.canonical) {
+      const canonical = options.canonical.moves.find(row => row.id === clip.move_id);
+      const proof = clip.canonical_review;
+      if (!canonical || canonical.slug !== clip.move_slug || proof?.status !== 'CONFIRMED'
+        || proof.moveId !== canonical.id || proof.moveSlug !== canonical.slug || proof.name !== canonical.name
+        || proof.category !== canonical.moveType || proof.command !== canonical.commands.find(row => row.scheme === 'classic')?.commandText)
+        result.errors.push(`${clip.move_slug}: canonical per-clip approval required`);
+    }
     const review = clip.visual_review;
     if (clip.cut_review_status !== 'CUT_REVIEW_PASS' || !review || review.status !== 'PASS'
       || review.sourceFile !== clip.source_file || review.startMs !== clip.source_start_ms || review.endMs !== clip.source_end_ms
@@ -38,7 +46,7 @@ export function validateYasmineRecovery(manifest, snapshot, options = {}) {
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const root = new URL('../', import.meta.url);
   const read = relative => JSON.parse(readFileSync(new URL(relative, root), 'utf8'));
-  const result = validateYasmineRecovery(read('v2-web/src/data/SF6DNA_VER1_YASMINE_MEDIA_MANIFEST_20261003.json'), read('v2-web/src/data/YASMINE_PREVIEW_MOVE_SNAPSHOT_20261003.json'), { publicRoot: fileURLToPath(new URL('v2-web/public/', root)) });
+  const result = validateYasmineRecovery(read('v2-web/src/data/SF6DNA_VER1_YASMINE_MEDIA_MANIFEST_20261003.json'), read('v2-web/src/data/YASMINE_PREVIEW_MOVE_SNAPSHOT_20261003.json'), { canonical: read('v2-web/src/data/YASMINE_OFFICIAL_CAPTURE_PREVIEW_20261003.json'), publicRoot: fileURLToPath(new URL('v2-web/public/', root)) });
   console.log(JSON.stringify(result, null, 2));
   if (result.errors.length) process.exitCode = 1;
 }

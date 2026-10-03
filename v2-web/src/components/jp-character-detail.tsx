@@ -7,6 +7,7 @@ import { CharacterQuickStart } from "@/components/character-quick-start";
 import { CharacterMoveExplorer } from "@/components/character-move-explorer";
 import { CharacterTabs } from "@/components/character-tabs";
 import { MoveMotionMedia } from "@/components/move-motion-media";
+import { formatMoveCommand, moveCommandSearchTerms } from "@/lib/move-command-format";
 import { PilotComboCard } from "@/components/pilot-combo-card";
 import { CharacterPlayerCard } from "@/components/character-player-card";
 import { VideoCard } from "@/components/video-card";
@@ -52,7 +53,7 @@ function MoveCard({ move }: { move: Move }) {
       {move.commands?.length ? move.commands.map((command, index) =>
         <div key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}>
           <span>{command.scheme === "classic" ? "クラシック" : command.scheme === "modern" ? "モダン" : command.scheme}</span>
-          <code>{command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "コマンドを確認中"}</code>
+          <code>{formatMoveCommand(command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "コマンドを確認中")}</code>
           {command.conditionText && !isInternalMoveNote(command.conditionText) && !/frame-table row; checked/i.test(command.conditionText)
             ? <small>{normalizePublicCopy(command.conditionText)}</small> : null}
         </div>) : <p>コマンドを確認中</p>}
@@ -141,7 +142,7 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
         {groups.length ? <CharacterMoveExplorer groupClassName={styles.group} listClassName={styles.moveList} groups={groups.map(([type, moves]) => ({
           type, label: moveLabels[type] ?? "その他", items: moves.map(move => ({
             id: move.id, name: move.name,
-            commands: (move.commands ?? []).map(command => command.commandText ?? command.numericNotation ?? command.buttonNotation ?? ""),
+            commands: (move.commands ?? []).flatMap(command => moveCommandSearchTerms(command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "")),
             content: <MoveCard move={move} />,
           })),
         }))} /> : <p>技データは未掲載です。</p>}

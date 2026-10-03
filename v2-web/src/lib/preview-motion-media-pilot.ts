@@ -29,8 +29,7 @@ function toPreviewRecord(clip: PilotClip, displayOrder: number, characterSlug: s
 
 /** Hold applies to all Yasmine Preview media sources, not only local approved clips. */
 export function isPreviewPilotMotionMediaHeld(characterId: string): boolean {
-  return characterId === YASMINE_CHARACTER_ID
-    && yasmineManifest.identity_approval_status === "HOLD_UNTIL_CANONICAL";
+  return characterId === YASMINE_CHARACTER_ID;
 }
 
 export function getPreviewPilotMotionMedia(characterId: string): DevicePreviewMoveMotionMedia[] {

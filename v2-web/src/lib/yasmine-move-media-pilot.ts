@@ -1,5 +1,6 @@
 import snapshot from "@/data/YASMINE_OFFICIAL_CAPTURE_PREVIEW_20261003.json";
 import type { DevicePreviewBundle } from "@/lib/device-preview";
+import { getYasmineConfirmedMedia } from "@/lib/yasmine-confirmed-media";
 
 /** User-supplied official capture, reviewed only. No current-patch or publication grant. */
 export function getYasmineMoveMediaPilot(): DevicePreviewBundle | null {
@@ -16,6 +17,7 @@ export function getYasmineMoveMediaPilot(): DevicePreviewBundle | null {
       return {
         id: move.id, slug: move.slug, name: move.name, moveType: move.moveType,
         usageSummary: null, status: "draft",
+        media: getYasmineConfirmedMedia(move.id),
         frame: frameReady && frame ? {
           startup: frame.startup, active: frame.active, recovery: frame.recovery,
           onHit: frame.onHit, onBlock: frame.onBlock, damage: frame.damage,

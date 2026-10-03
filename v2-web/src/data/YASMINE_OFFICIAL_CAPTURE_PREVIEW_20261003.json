@@ -2202,7 +2202,7 @@
           "commandText": "214214P~4KK",
           "numericNotation": "214214P~4KK",
           "buttonNotation": null,
-          "conditionText": "ナカタゴン・ラカス中に4KK。備考右端の追加条件は画像範囲外。",
+          "conditionText": "ナカタゴン・ラカス中に4KK。初段ヒット/近距離で空振り時/位置が入れ替わった場合2段目に派生",
           "sortOrder": 0
         }
       ],
@@ -2221,7 +2221,7 @@
     {
       "id": "1c09f2c2-5300-4355-b988-3756a2c8c5dd",
       "slug": "yasmine-hiwa-ng-kalangitan-236236k",
-      "name": "SA1 ヒワン・カラヒタン",
+      "name": "SA1 ヒワン・ン・カラヒタン",
       "moveType": "super",
       "strengthVariant": null,
       "status": "draft",

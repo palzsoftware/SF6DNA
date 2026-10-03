@@ -54,7 +54,7 @@
       "media_url": "/media/moves/yasmine/yasmine-standing-light-punch-5lp-normal-recovery.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-standing-light-punch-5lp-normal-recovery.webp",
-      "verification_status": "mapping_hold",
+      "verification_status": "approved_for_preview",
       "loop_start_ms": 0,
       "loop_end_ms": 700,
       "duration_ms": 700,
@@ -78,9 +78,19 @@
         "moveSlug": "yasmine-standing-light-punch-5lp",
         "strengthVariant": null,
         "observedCommand": "5LP",
-        "commandEvidence": "Matched motion identity to Classic DB command; input buttons are not displayed in the recording.",
+        "commandEvidence": "Canonical official capture command matched to standing/crouching motion identity; input HUD not visible. Not an input-button OCR claim.",
         "observedMotion": "Standing short single horizontal blade swipe; arm attack without forward step; neutral before and after.",
         "reviewMethod": "Full source overview plus detailed sequential frames; reviewed first and last neutral frames."
+      },
+      "canonical_review": {
+        "status": "CONFIRMED",
+        "moveId": "42bfb7b6-2511-48e4-b50e-7045fc676ba9",
+        "moveSlug": "yasmine-standing-light-punch-5lp",
+        "name": "立ち弱P（マガアン・ナ・パグラスラス）",
+        "category": "normal",
+        "command": "5LP",
+        "reviewedAt": "2026-10-03",
+        "evidence": "Official capture identity plus source motion, stance and neutral boundaries. Recording order is supporting evidence only; no input HUD."
       }
     },
     {
@@ -94,7 +104,7 @@
       "media_url": "/media/moves/yasmine/yasmine-standing-medium-punch-5mp-normal-recovery.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-standing-medium-punch-5mp-normal-recovery.webp",
-      "verification_status": "mapping_hold",
+      "verification_status": "approved_for_preview",
       "loop_start_ms": 0,
       "loop_end_ms": 1250,
       "duration_ms": 1250,
@@ -118,9 +128,19 @@
         "moveSlug": "yasmine-standing-medium-punch-5mp",
         "strengthVariant": null,
         "observedCommand": "5MP",
-        "commandEvidence": "Matched motion identity to Classic DB command; input buttons are not displayed in the recording.",
+        "commandEvidence": "Canonical official capture command matched to standing/crouching motion identity; input HUD not visible. Not an input-button OCR claim.",
         "observedMotion": "Standing alternating blade sweeps with a wider torso turn; returns to standing stance; distinct from the short light swipe and forward triple sweep.",
         "reviewMethod": "Full source overview plus detailed sequential frames; reviewed first and last neutral frames."
+      },
+      "canonical_review": {
+        "status": "CONFIRMED",
+        "moveId": "6b816c73-20c6-4590-8389-2bd0db98b251",
+        "moveSlug": "yasmine-standing-medium-punch-5mp",
+        "name": "立ち中P（パバリック・バリック・ナ・パグラスラス）",
+        "category": "normal",
+        "command": "5MP",
+        "reviewedAt": "2026-10-03",
+        "evidence": "Official capture identity plus source motion, stance and neutral boundaries. Recording order is supporting evidence only; no input HUD."
       }
     },
     {
@@ -134,7 +154,7 @@
       "media_url": "/media/moves/yasmine/yasmine-standing-heavy-punch-5hp-normal-recovery.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-standing-heavy-punch-5hp-normal-recovery.webp",
-      "verification_status": "mapping_hold",
+      "verification_status": "approved_for_preview",
       "loop_start_ms": 0,
       "loop_end_ms": 1300,
       "duration_ms": 1300,
@@ -158,9 +178,19 @@
         "moveSlug": "yasmine-standing-heavy-punch-5hp",
         "strengthVariant": null,
         "observedCommand": "5HP",
-        "commandEvidence": "Matched motion identity to Classic DB command; input buttons are not displayed in the recording.",
+        "commandEvidence": "Canonical official capture command matched to standing/crouching motion identity; input HUD not visible. Not an input-button OCR claim.",
         "observedMotion": "Standing forward-moving triple blade sweep; long reach and three successive arm motions match the named triple-slash identity.",
         "reviewMethod": "Full source overview plus detailed sequential frames; reviewed first and last neutral frames."
+      },
+      "canonical_review": {
+        "status": "CONFIRMED",
+        "moveId": "de5b585d-28cd-4be8-b495-2611b995ef2f",
+        "moveSlug": "yasmine-standing-heavy-punch-5hp",
+        "name": "立ち強P（トリップレング・パグラスラス）",
+        "category": "normal",
+        "command": "5HP",
+        "reviewedAt": "2026-10-03",
+        "evidence": "Official capture identity plus source motion, stance and neutral boundaries. Recording order is supporting evidence only; no input HUD."
       }
     },
     {
@@ -174,7 +204,7 @@
       "media_url": "/media/moves/yasmine/yasmine-crouching-light-punch-2lp-normal-recovery.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-crouching-light-punch-2lp-normal-recovery.webp",
-      "verification_status": "mapping_hold",
+      "verification_status": "approved_for_preview",
       "loop_start_ms": 0,
       "loop_end_ms": 750,
       "duration_ms": 750,
@@ -198,9 +228,19 @@
         "moveSlug": "yasmine-crouching-light-punch-2lp",
         "strengthVariant": null,
         "observedCommand": "2LP",
-        "commandEvidence": "Matched motion identity to Classic DB command; input buttons are not displayed in the recording.",
+        "commandEvidence": "Canonical official capture command matched to standing/crouching motion identity; input HUD not visible. Not an input-button OCR claim.",
         "observedMotion": "Crouching short single blade swipe, stays low and returns to crouching stance.",
         "reviewMethod": "Full source overview plus detailed sequential frames; reviewed first and last neutral frames."
+      },
+      "canonical_review": {
+        "status": "CONFIRMED",
+        "moveId": "bcdb1926-b1a6-4a85-b8d0-25dcf464fd87",
+        "moveSlug": "yasmine-crouching-light-punch-2lp",
+        "name": "しゃがみ弱P（マビリサング・パグラスラス）",
+        "category": "normal",
+        "command": "2LP",
+        "reviewedAt": "2026-10-03",
+        "evidence": "Official capture identity plus source motion, stance and neutral boundaries. Recording order is supporting evidence only; no input HUD."
       }
     },
     {
@@ -214,7 +254,7 @@
       "media_url": "/media/moves/yasmine/yasmine-crouching-medium-punch-2mp-normal-recovery.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-crouching-medium-punch-2mp-normal-recovery.webp",
-      "verification_status": "mapping_hold",
+      "verification_status": "approved_for_preview",
       "loop_start_ms": 0,
       "loop_end_ms": 900,
       "duration_ms": 900,
@@ -238,9 +278,19 @@
         "moveSlug": "yasmine-crouching-medium-punch-2mp",
         "strengthVariant": null,
         "observedCommand": "2MP",
-        "commandEvidence": "Matched motion identity to Classic DB command; input buttons are not displayed in the recording.",
+        "commandEvidence": "Canonical official capture command matched to standing/crouching motion identity; input HUD not visible. Not an input-button OCR claim.",
         "observedMotion": "Crouching forward claw-like arm sweep; wider torso turn than the short crouching swipe, no upward rising arc.",
         "reviewMethod": "Full source overview plus detailed sequential frames; reviewed first and last neutral frames."
+      },
+      "canonical_review": {
+        "status": "CONFIRMED",
+        "moveId": "03a3c78f-d49e-4dff-9857-08856fd40b25",
+        "moveSlug": "yasmine-crouching-medium-punch-2mp",
+        "name": "しゃがみ中P（カルモット）",
+        "category": "normal",
+        "command": "2MP",
+        "reviewedAt": "2026-10-03",
+        "evidence": "Official capture identity plus source motion, stance and neutral boundaries. Recording order is supporting evidence only; no input HUD."
       }
     },
     {
@@ -254,7 +304,7 @@
       "media_url": "/media/moves/yasmine/yasmine-crouching-heavy-punch-2hp-normal-recovery.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-crouching-heavy-punch-2hp-normal-recovery.webp",
-      "verification_status": "mapping_hold",
+      "verification_status": "approved_for_preview",
       "loop_start_ms": 0,
       "loop_end_ms": 1150,
       "duration_ms": 1150,
@@ -278,9 +328,19 @@
         "moveSlug": "yasmine-crouching-heavy-punch-2hp",
         "strengthVariant": null,
         "observedCommand": "2HP",
-        "commandEvidence": "Matched motion identity to Classic DB command; input buttons are not displayed in the recording.",
+        "commandEvidence": "Canonical official capture command matched to standing/crouching motion identity; input HUD not visible. Not an input-button OCR claim.",
         "observedMotion": "Crouching start into rising overhead blade arc then returns low; clear upward anti-air-like arm motion.",
         "reviewMethod": "Full source overview plus detailed sequential frames; reviewed first and last neutral frames."
+      },
+      "canonical_review": {
+        "status": "CONFIRMED",
+        "moveId": "495aa9a0-c9b0-4484-b845-856a538832e4",
+        "moveSlug": "yasmine-crouching-heavy-punch-2hp",
+        "name": "しゃがみ強P（マミミツィン）",
+        "category": "normal",
+        "command": "2HP",
+        "reviewedAt": "2026-10-03",
+        "evidence": "Official capture identity plus source motion, stance and neutral boundaries. Recording order is supporting evidence only; no input HUD."
       }
     },
     {
@@ -294,7 +354,7 @@
       "media_url": "/media/moves/yasmine/yasmine-standing-light-kick-5lk-normal-recovery.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-standing-light-kick-5lk-normal-recovery.webp",
-      "verification_status": "mapping_hold",
+      "verification_status": "approved_for_preview",
       "loop_start_ms": 0,
       "loop_end_ms": 700,
       "duration_ms": 700,
@@ -318,9 +378,19 @@
         "moveSlug": "yasmine-standing-light-kick-5lk",
         "strengthVariant": null,
         "observedCommand": "5LK",
-        "commandEvidence": "Matched motion identity to Classic DB command; input buttons are not displayed in the recording.",
+        "commandEvidence": "Canonical official capture command matched to standing/crouching motion identity; input HUD not visible. Not an input-button OCR claim.",
         "observedMotion": "Standing low short front kick with one leg, no turning/hopping kick.",
         "reviewMethod": "Full source overview plus detailed sequential frames; reviewed first and last neutral frames."
+      },
+      "canonical_review": {
+        "status": "CONFIRMED",
+        "moveId": "77b8c07a-0085-40ab-bae7-ad37aadd44ce",
+        "moveSlug": "yasmine-standing-light-kick-5lk",
+        "name": "立ち弱K（マババング・シパ）",
+        "category": "normal",
+        "command": "5LK",
+        "reviewedAt": "2026-10-03",
+        "evidence": "Official capture identity plus source motion, stance and neutral boundaries. Recording order is supporting evidence only; no input HUD."
       }
     },
     {
@@ -334,7 +404,7 @@
       "media_url": "/media/moves/yasmine/yasmine-standing-medium-kick-5mk-normal-recovery.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-standing-medium-kick-5mk-normal-recovery.webp",
-      "verification_status": "mapping_hold",
+      "verification_status": "approved_for_preview",
       "loop_start_ms": 0,
       "loop_end_ms": 950,
       "duration_ms": 950,
@@ -358,9 +428,19 @@
         "moveSlug": "yasmine-standing-medium-kick-5mk",
         "strengthVariant": null,
         "observedCommand": "5MK",
-        "commandEvidence": "Matched motion identity to Classic DB command; input buttons are not displayed in the recording.",
+        "commandEvidence": "Canonical official capture command matched to standing/crouching motion identity; input HUD not visible. Not an input-button OCR claim.",
         "observedMotion": "Standing high lateral turning kick; clear single extended leg and pivot, distinct from low kick and hopping heavy kick.",
         "reviewMethod": "Full source overview plus detailed sequential frames; reviewed first and last neutral frames."
+      },
+      "canonical_review": {
+        "status": "CONFIRMED",
+        "moveId": "329ee255-394a-49be-9ecb-e9fb2b982370",
+        "moveSlug": "yasmine-standing-medium-kick-5mk",
+        "name": "立ち中K（タリラング・シパ）",
+        "category": "normal",
+        "command": "5MK",
+        "reviewedAt": "2026-10-03",
+        "evidence": "Official capture identity plus source motion, stance and neutral boundaries. Recording order is supporting evidence only; no input HUD."
       }
     },
     {
@@ -374,7 +454,7 @@
       "media_url": "/media/moves/yasmine/yasmine-standing-heavy-kick-5hk-normal-recovery.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-standing-heavy-kick-5hk-normal-recovery.webp",
-      "verification_status": "mapping_hold",
+      "verification_status": "approved_for_preview",
       "loop_start_ms": 0,
       "loop_end_ms": 1100,
       "duration_ms": 1100,
@@ -398,9 +478,19 @@
         "moveSlug": "yasmine-standing-heavy-kick-5hk",
         "strengthVariant": null,
         "observedCommand": "5HK",
-        "commandEvidence": "Matched motion identity to Classic DB command; input buttons are not displayed in the recording.",
+        "commandEvidence": "Canonical official capture command matched to standing/crouching motion identity; input HUD not visible. Not an input-button OCR claim.",
         "observedMotion": "Standing start into a hopping turning kick, lands forward in a low stance; matches the named jumping kick identity.",
         "reviewMethod": "Full source overview plus detailed sequential frames; reviewed first and last neutral frames."
+      },
+      "canonical_review": {
+        "status": "CONFIRMED",
+        "moveId": "72e48438-5de6-43cb-b421-41a5105dd213",
+        "moveSlug": "yasmine-standing-heavy-kick-5hk",
+        "name": "立ち強K（トゥマタロン・ナ・シパ）",
+        "category": "normal",
+        "command": "5HK",
+        "reviewedAt": "2026-10-03",
+        "evidence": "Official capture identity plus source motion, stance and neutral boundaries. Recording order is supporting evidence only; no input HUD."
       }
     },
     {
@@ -414,7 +504,7 @@
       "media_url": "/media/moves/yasmine/yasmine-crouching-light-kick-2lk-normal-recovery.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-crouching-light-kick-2lk-normal-recovery.webp",
-      "verification_status": "mapping_hold",
+      "verification_status": "approved_for_preview",
       "loop_start_ms": 0,
       "loop_end_ms": 800,
       "duration_ms": 800,
@@ -438,9 +528,19 @@
         "moveSlug": "yasmine-crouching-light-kick-2lk",
         "strengthVariant": null,
         "observedCommand": "2LK",
-        "commandEvidence": "Matched motion identity to Classic DB command; input buttons are not displayed in the recording.",
+        "commandEvidence": "Canonical official capture command matched to standing/crouching motion identity; input HUD not visible. Not an input-button OCR claim.",
         "observedMotion": "Crouching start into brief hand-supported rear-leg kick then returns low; distinct from seated low kick and double sweeping kick.",
         "reviewMethod": "Full source overview plus detailed sequential frames; reviewed first and last neutral frames."
+      },
+      "canonical_review": {
+        "status": "CONFIRMED",
+        "moveId": "dcda78cf-a5be-4d31-9fed-d18bcf34e9ac",
+        "moveSlug": "yasmine-crouching-light-kick-2lk",
+        "name": "しゃがみ弱K（マガアン・ナ・シパ）",
+        "category": "normal",
+        "command": "2LK",
+        "reviewedAt": "2026-10-03",
+        "evidence": "Official capture identity plus source motion, stance and neutral boundaries. Recording order is supporting evidence only; no input HUD."
       }
     },
     {
@@ -454,7 +554,7 @@
       "media_url": "/media/moves/yasmine/yasmine-crouching-medium-kick-2mk-normal-recovery.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-crouching-medium-kick-2mk-normal-recovery.webp",
-      "verification_status": "mapping_hold",
+      "verification_status": "approved_for_preview",
       "loop_start_ms": 0,
       "loop_end_ms": 800,
       "duration_ms": 800,
@@ -478,9 +578,19 @@
         "moveSlug": "yasmine-crouching-medium-kick-2mk",
         "strengthVariant": null,
         "observedCommand": "2MK",
-        "commandEvidence": "Matched motion identity to Classic DB command; input buttons are not displayed in the recording.",
+        "commandEvidence": "Canonical official capture command matched to standing/crouching motion identity; input HUD not visible. Not an input-button OCR claim.",
         "observedMotion": "Crouching seated low forward leg extension, then pulls leg back to crouch; single knee/shin-directed kick.",
         "reviewMethod": "Full source overview plus detailed sequential frames; reviewed first and last neutral frames."
+      },
+      "canonical_review": {
+        "status": "CONFIRMED",
+        "moveId": "44237752-18cd-4aa7-8e78-9670a78a6e2e",
+        "moveSlug": "yasmine-crouching-medium-kick-2mk",
+        "name": "しゃがみ中K（パンドゥログ・ナン・ルロッド）",
+        "category": "normal",
+        "command": "2MK",
+        "reviewedAt": "2026-10-03",
+        "evidence": "Official capture identity plus source motion, stance and neutral boundaries. Recording order is supporting evidence only; no input HUD."
       }
     },
     {
@@ -494,7 +604,7 @@
       "media_url": "/media/moves/yasmine/yasmine-gunting-na-pabagsak-2hk-normal-recovery.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-gunting-na-pabagsak-2hk-normal-recovery.webp",
-      "verification_status": "mapping_hold",
+      "verification_status": "approved_for_preview",
       "loop_start_ms": 0,
       "loop_end_ms": 1200,
       "duration_ms": 1200,
@@ -518,9 +628,19 @@
         "moveSlug": "yasmine-gunting-na-pabagsak-2hk",
         "strengthVariant": null,
         "observedCommand": "2HK",
-        "commandEvidence": "Matched motion identity to Classic DB command; input buttons are not displayed in the recording.",
+        "commandEvidence": "Canonical official capture command matched to standing/crouching motion identity; input HUD not visible. Not an input-button OCR claim.",
         "observedMotion": "Crouching hand-supported scissoring double leg sweep then low recovery; scissors silhouette matches Gunting identity.",
         "reviewMethod": "Full source overview plus detailed sequential frames; reviewed first and last neutral frames."
+      },
+      "canonical_review": {
+        "status": "CONFIRMED",
+        "moveId": "d66223a6-df43-4ce9-801b-dbc83cf21bf1",
+        "moveSlug": "yasmine-gunting-na-pabagsak-2hk",
+        "name": "しゃがみ強K（グンティング・ナ・パバサ）",
+        "category": "normal",
+        "command": "2HK",
+        "reviewedAt": "2026-10-03",
+        "evidence": "Official capture identity plus source motion, stance and neutral boundaries. Recording order is supporting evidence only; no input HUD."
       }
     },
     {
@@ -902,6 +1022,6 @@
       "sha256": "9d3d3297a47f87f6fe35032179bf2ce433479987bdf7489b9ac9be78dd5c3b51"
     }
   ],
-  "identity_approval_status": "HOLD_UNTIL_CANONICAL",
-  "identity_approval_reason": "Current DB/snapshot identity disputed by user QA; official canonical reconciliation not completed."
+  "identity_approval_status": "PARTIAL_CANONICAL_APPROVAL",
+  "identity_approval_reason": "Canonical per-clip review allows only scoped confirmed local clips. Remote Yasmine media remains held; unreviewed clips remain held."
 }

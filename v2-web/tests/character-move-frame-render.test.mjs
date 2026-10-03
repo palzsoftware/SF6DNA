@@ -31,6 +31,7 @@ vm.runInNewContext(js, {
     if (name === "@/components/combo-input-recipe") return { ComboInputRecipe: ({ recipe }) => require("react").createElement("span", { "data-original-input": recipe }, recipe) };
     if (name === "next/link") return { default: props => require("react").createElement("a", props), __esModule: true };
     if (name === "@/lib/device-preview") return { isDevicePreviewRequest: () => false, appendDevicePreviewToken: path => path };
+    if (name === "@/lib/move-command-format") return realModule("lib/move-command-format.ts");
     if (name === "@/lib/public-copy") return { normalizePublicCopy: (value) => value, isInternalMoveNote: () => false };
     if (name === "@/lib/release-features") return { releaseFeatures: { publicStrategyContent: false } };
     if (name === "@/lib/character-learning-structure") return { CHARACTER_VIDEO_GROUP_ORDER: [] };
@@ -49,7 +50,7 @@ function render(frame, preRelease = true, extraMoves = []) {
 test("move cards render supplied active, recovery and hit values without interpreting them", () => {
   const html = render({ startup: "4", active: "4-6", recovery: "7", onHit: "+4", onBlock: "-1", damage: 300, verificationStatus: "reviewed" });
   for (const value of ["持続", "4-6", "硬直", "ヒット時", "+4"]) assert.ok(html.includes(value));
-  assert.ok(html.includes('data-original-input="236P"'));
+  assert.ok(html.includes("↓↘→ + P"));
 });
 
 test("old frame payloads omit absent optional statistics rather than invent values", () => {
@@ -73,7 +74,7 @@ test("public character quick-start anchors resolve and filtered move content ret
     assert.ok(html.includes(`href="#${id}"`)); assert.ok(html.includes(`id="${id}"`));
   }
   assert.match(html, /技名・コマンドを検索/);
-  assert.match(html, /data-original-input="236P"/);
+  assert.ok(html.includes("↓↘→ + P"));
   assert.match(html, /確認済みのコンボはまだありません/);
 });
 

@@ -12,7 +12,7 @@ const source = readFileSync(new URL('../src/lib/yasmine-move-media-pilot.ts', im
 function pilot(data = canonical) {
   const mod = { exports: {} };
   const js = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true } }).outputText;
-  new Function('module', 'exports', 'require', js)(mod, mod.exports, () => data);
+  new Function('module', 'exports', 'require', js)(mod, mod.exports, id => id === '@/lib/yasmine-confirmed-media' ? { getYasmineConfirmedMedia: () => null } : data);
   return mod.exports.getYasmineMoveMediaPilot;
 }
 function environment(value, action) {
@@ -22,15 +22,15 @@ function environment(value, action) {
     if (old === undefined) delete process.env.VERCEL_ENV; else process.env.VERCEL_ENV = old;
   }
 }
-test('canonical review holds every Yasmine clip while keeping prior visual evidence and assets', () => {
-  const result = validateYasmineRecovery(manifest, snapshot, { publicRoot });
+test('canonical review restores only twelve visually reviewed normals while keeping other assets held', () => {
+  const result = validateYasmineRecovery(manifest, snapshot, { publicRoot, canonical });
   assert.deepEqual(result.errors, []);
-  assert.equal(result.stats.approved, 0);
-  assert.equal(result.stats.held, manifest.clips.length);
-  assert.equal(manifest.identity_approval_status, 'HOLD_UNTIL_CANONICAL');
+  assert.equal(result.stats.approved, 12);
+  assert.equal(result.stats.held, manifest.clips.length - 12);
+  assert.equal(manifest.identity_approval_status, 'PARTIAL_CANONICAL_APPROVAL');
   assert.equal(manifest.clips.filter(clip => clip.cut_review_status === 'CUT_REVIEW_PASS').length, 12);
   const formerApproval = manifest.clips.find(clip => clip.cut_review_status === 'CUT_REVIEW_PASS');
-  const reapproved = { ...manifest, clips: [{ ...formerApproval, verification_status: 'approved_for_preview' }] };
+  const reapproved = { ...manifest, identity_approval_status: 'HOLD_UNTIL_CANONICAL', clips: [{ ...formerApproval, verification_status: 'approved_for_preview' }] };
   assert.ok(validateYasmineRecovery(reapproved, snapshot, { checkFiles: false }).errors.some(e => e.includes('canonical identity approval is held')));
 });
 test('normal approvals require motion evidence and cannot use a normals source for another category', () => {

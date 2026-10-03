@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CharacterGamePlan, CharacterRangeGuide } from "@/components/character-game-guide";
 import { CharacterQuickStart } from "@/components/character-quick-start";
 import { CharacterMoveExplorer } from "@/components/character-move-explorer";
-import { ComboInputRecipe } from "@/components/combo-input-recipe";
+import { formatMoveCommand, moveCommandSearchTerms } from "@/lib/move-command-format";
 import { PilotComboCard } from "@/components/pilot-combo-card";
 import { CharacterPlayerCard } from "@/components/character-player-card";
 import { CharacterVideoReferenceCard } from "@/components/character-video-reference-card";
@@ -66,7 +66,7 @@ const moveTypeLabels: Record<string, string> = {
 function commandLabel(command: NonNullable<DevicePreviewBundle["moves"][number]["commands"]>[number]) {
   const scheme = command.scheme === "classic" ? "クラシック" : command.scheme === "modern" ? "モダン" : command.scheme;
   const input = command.commandText ?? command.numericNotation ?? command.buttonNotation;
-  return { scheme, input: input || "コマンドを確認中" };
+  return { scheme, input: input ? formatMoveCommand(input) : "コマンドを確認中" };
 }
 
 export function CharacterDetailPilot({
@@ -152,7 +152,7 @@ export function CharacterDetailPilot({
         {moveGroups.length ? <CharacterMoveExplorer className={styles.moveGroups} groupClassName={styles.moveGroup} listClassName={styles.moveTable} table enabled={!preRelease} groups={moveGroups.map(([type, moves]) => ({
           type, label: moveTypeLabels[type] ?? "その他", items: moves.map(move => ({
             id: move.id, name: move.name,
-            commands: (move.commands ?? []).map(command => command.commandText ?? command.numericNotation ?? command.buttonNotation ?? ""),
+            commands: (move.commands ?? []).flatMap(command => moveCommandSearchTerms(command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "")),
             content: <article className={styles.moveRow} role="row" key={move.id} data-move-id={move.id} data-move-slug={move.slug} data-has-media={Boolean(move.media)}>
                   <div className={styles.moveIdentity} role="cell">
                     <span>{verificationLabel(move.frame?.verificationStatus ?? null)}</span>
@@ -165,7 +165,7 @@ export function CharacterDetailPilot({
                   <div className={styles.moveCommands} role="cell" aria-label={`${move.name}のコマンド`}>
                     {move.commands?.length ? move.commands.map((command, index) => {
                       const label = commandLabel(command);
-                      return <div key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}><span>{label.scheme}</span><ComboInputRecipe recipe={label.input} />{command.conditionText && !isInternalMoveNote(command.conditionText) ? <small>{normalizePublicCopy(command.conditionText)}</small> : null}</div>;
+                      return <div key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}><span>{label.scheme}</span><code>{label.input}</code>{command.conditionText && !isInternalMoveNote(command.conditionText) ? <small>{normalizePublicCopy(command.conditionText)}</small> : null}</div>;
                     }) : <span className={styles.movePending}>コマンドを確認中</span>}
                   </div>
                   <dl className={styles.moveFrame} role="cell">
