@@ -38,7 +38,7 @@ MEDIA_REMAP_READY_COUNT=0 (no video visual approval this batch). MEDIA_HOLD_COUN
 
 ## Validation
 
-Fresh typecheck/lint/build PASS, tests473/473 PASS, gates14/14 PASS. Media validator errors0 approved0/held26. Build-generated next-env.d.ts/tsconfig differences inspected/excluded. Browser checks pending final Preview. Test success is not target-patch certification. RELEASE_STATUS=NO-GO.
+Fresh typecheck/lint/build PASS, tests473/473 PASS, gates14/14 PASS. Media validator errors0 approved0/held26. Build-generated next-env.d.ts/tsconfig differences inspected/excluded. Browser checks recorded below; 375px USER_REQUIRED. Test success is not target-patch certification. RELEASE_STATUS=NO-GO.
 
 ## Input integrity
 
@@ -58,3 +58,9 @@ Fresh typecheck/lint/build PASS, tests473/473 PASS, gates14/14 PASS. Media valid
 | move_frame_data | 3094e995-dacb-4ceb-b2de-e9e0d48003a8 | パリィドライブラッシュ | damage | NULL/empty | 0 | image(20261003-080129).png |
 | move_frame_data | 7778ea64-d350-4185-a6ec-2ac5ecf37930 | キャンセルドライブラッシュ | startup | 9 | — | image(20261003-080129).png |
 | move_frame_data | 7778ea64-d350-4185-a6ec-2ac5ecf37930 | キャンセルドライブラッシュ | damage | NULL/empty | 0 | image(20261003-080129).png |
+
+## Browser verification (2026-10-03)
+
+Implementation Preview dpl_58MV36MtKcSzYch1qCvSVu5haKnW READY, branch sf6dna-v2-chatgpt-rc-20260916, exact SHA37908a5a6d2b998d5ade8ae2e9db6460fb51bf83. Browser width1363px. Filters all71/normal18/特殊技7/special40/throw2/SA4 PASS. Formal name ヒワン・パババ search1; 6MP substring search3 (also236MP), PASS. Throws display D/— and1200; SA/CA rows2000/0/4000/4500 observed. Visible Yasmine videos0. Dark/Light selection and rendered appearance observed; document overflow0. JP/Ryu render correct headings/move sections, video elements26/4 and overflow0. App error not observed in captured log window; extension metadata errors excluded, coverage limited (20 latest errors). Transient browser transport recovered once. 375px USER_REQUIRED; no supported viewport resize API. No new observed P0/P1; existing canonical blockers remain.
+
+Final documentation-only commit uses the same code/assets as this verified implementation. Deployment SHA checked separately in final report. This does not certify target patch, Linya clipped note, SA1 spelling conflict, taunt4 absence or media mapping. Media26 HOLD; remap-ready0.
