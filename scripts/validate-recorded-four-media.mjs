@@ -5,16 +5,21 @@ import { spawnSync } from 'node:child_process';
 import { validateMotionMediaManifest } from './validate-motion-media.mjs';
 export const identities = {
  luke: {
+ '03dc215b-fe91-445b-9089-9a9d090ac1a0': ["luke-sa3-pale-rider", "super"],
+ 'a1931623-d8f1-47e4-9f18-ef4fde632b4b': ["luke-sa2-eraser", "super"],
+ '9e34282d-9da4-43fb-a47c-dfdd72eda6ee': ["luke-sa1-vulcan-blast", "super"],
  'aab86b9c-f501-4928-8818-114f5fc0574a': ['luke-nose-breaker','target_combos'],
  '42cfd8d8-a47b-4d89-8fd6-95e758b07e0d': ['luke-triple-impact','target_combos'],
  'a6088794-0ed1-4ee9-9d4a-ee4cbe159e37': ['luke-snapback-combo','target_combos'],
  },
  manon: {
+ "469e1ffd-bc8b-466e-8858-9cc9f83efeb9": ["manon-tomoe-derriere", "unique"],
+ "44b0a3f1-968d-48e7-8162-8c03e994e443": ["manon-reverence", "unique"],
  '1a11e706-08e7-4a29-a656-84ac942d5a18': ['manon-a-terre','target_combos'],
  'ee465bb0-22b4-41d2-9b26-a2fa733c3d06': ['manon-en-haut','target_combos'],
  '20ab47b8-49bd-4bc0-b54e-ae8cb55aa7b2': ['manon-temps-lie-hp','target_combos'],
  },
- jamie: {'b4cdaafd-615b-4a96-a615-2204c2928ece': ['jamie-tensei-kick','unique']},
+ jamie: {"47f2b44d-7d51-49f0-866e-6a2e1b5648ff": ["jamie-frame-085", "special"],"7bc4a79d-75dd-4a7a-95fe-ed02c344b8b9": ["jamie-frame-084", "special"],"799268da-a1f2-4bb5-b016-6ea3035d2015": ["jamie-frame-039", "special"],'b4cdaafd-615b-4a96-a615-2204c2928ece': ['jamie-tensei-kick','unique']},
  marisa: {
  '3eb3f810-dc04-40dd-82a6-dcad8a5eb0c1': ['marisa-forward-throw','throw'],
  '3d782d80-90d2-4dac-a551-7d1440154270': ['marisa-back-throw','throw'],
@@ -28,6 +33,7 @@ export function validateRecordedCharacter(manifest, expectedCharacter, options =
  if (!expected) result.errors.push('unknown character');
  for (const clip of manifest.clips ?? []) {
   const row = expected?.[clip.move_id];
+  if (clip.move_slug === 'luke-sa3-pale-rider' && /critical art|low life|low-life|CA_ONLY/i.test(clip.condition ?? '')) result.errors.push('SA3 / CA identity conflict');
   if (!row || clip.move_slug !== row[0]) result.errors.push('invalid move ID / slug');
   if (row && clip.category !== row[1]) result.errors.push('wrong category');
   if (clip.variant !== 'default') result.errors.push('variant conflict');
@@ -45,11 +51,11 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const manifest = JSON.parse(readFileSync(path.join(root,'v2-web/src/data',manifestPaths[index]),'utf8'));
   const result = validateRecordedCharacter(manifest, character, { publicRoot: path.join(root,'v2-web/public') });
   errors.push(...result.errors.map(error => `${character}: ${error}`)); clips += result.stats.clips; bytes += result.stats.mediaBytes;
-  if (process.argv.includes('--decode')) for (const clip of manifest.clips) for (const url of [clip.media_url,clip.poster_url]) {
+  if (process.argv.includes('--decode') || process.argv.includes('--decode-new')) for (const clip of manifest.clips.filter(clip => !process.argv.includes('--decode-new') || clip.media_url.includes('/20261004/'))) for (const url of [clip.media_url,clip.poster_url]) {
    const decoded = spawnSync('ffmpeg',['-v','error','-i',path.join(root,'v2-web/public',url),'-f','null','-'],{encoding:'utf8'});
    if (decoded.status !== 0) errors.push(`${character}: decode ${url}: ${decoded.stderr}`);
   }
  }
- console.log(JSON.stringify({ clips, mediaBytes: bytes, errors, decode: process.argv.includes('--decode') ? 'ALL_OUTPUTS' : 'NOT_RUN' },null,2));
+ console.log(JSON.stringify({ clips, mediaBytes: bytes, errors, decode: process.argv.includes('--decode') ? 'ALL_OUTPUTS' : process.argv.includes('--decode-new') ? 'NEW_OUTPUTS_ONLY' : 'NOT_RUN' },null,2));
  process.exitCode = errors.length ? 1 : 0;
 }

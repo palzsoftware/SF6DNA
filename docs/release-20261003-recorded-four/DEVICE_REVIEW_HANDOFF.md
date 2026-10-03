@@ -1,17 +1,17 @@
 # Recorded four-character fast-track handoff
 
-Base: `13afc6c7118235dcd6c462fabc985397f9c183ac`. RC branch only; DB_WRITE 0; Production / main / sf6dna-v2 / Ver1.1 NO_CHANGE. Release remains NO-GO.
+Original batch base: `13afc6c7118235dcd6c462fabc985397f9c183ac`. Three-file continuation Fresh Base: `aded15222cb2426416867d6a17caa7374bcbb52b`. RC branch only; DB_WRITE 0; Production / main / sf6dna-v2 / Ver1.1 NO_CHANGE. Release remains NO-GO.
 
 ## Coverage and evidence
 
 | Character | Fresh DB rows | Before | Reviewed Preview pairs | HOLD rows |
 | --- | ---: | ---: | ---: | ---: |
-| luke | 50 | 1 | 3 | 47 |
-| jamie | 93 | 0 | 1 | 92 |
-| manon | 49 | 3 | 3 | 46 |
-| marisa | 53 | 0 | 2 | 51 |
+| luke | 50 | 3 | 6 | 44 |
+| jamie | 93 | 1 | 4 | 89 |
+| manon | 49 | 3 | 5 | 44 |
+| marisa | 53 | 2 | 2 | 51 |
 
-Nine reviewed pairs total; five newly encoded pairs. Existing Luke one / Manon three are reused without encoding. All nine pairs passed file/nonzero/duplicate/identity checks and full MP4/WebP decode. No Production publication approval. Frame/patch values are not newly verified. Media holds do not hide or delete existing Move cards.
+Seventeen reviewed pairs total; eight newly encoded pairs in this three-file continuation. All nine baseline pairs and their mapping records are unchanged; their 18 asset hashes are locked by a regression test. They were not re-encoded or re-decoded. All 16 new output files passed full MP4/WebP decode, file/nonzero/duplicate/identity checks. No Production publication approval. Frame/patch values are not newly verified. Media holds do not hide or delete existing Move cards.
 
 - Luke Triple Impact: `luke_2(1).mp4` 36,600–39,400 ms; preceding selected トリプルインパクト / LP~MP~HP, isolated three-hit sequence. Snapback Combo: 56,600–60,750 ms; selected スナップバックコンボ / MP~MP~MP~MP, isolated four-hit sequence. Game Move List is evidence; SUCCESS label is NOT_VISIBLE.
 - Jamie 天晴脚: `clip_1364780_20260924_132125.mp4` 14,900–17,100 ms. Selected 天晴脚 at 12s with ↓ + two K; isolated whiff kick before next execution. No Drink Level generalization, follow-up, success label or input-history claim.
@@ -39,12 +39,53 @@ Nine reviewed pairs total; five newly encoded pairs. Existing Luke one / Manon t
 
 Downloaded recordings are HEVC 2560×1440 / 60fps with AAC unless their probe says otherwise; originals remain separate and unchanged. Timeline contact sheets cover available sources, with denser review on accepted intervals. This is not a claim that every execution/variant was manually verified.
 
-Exact access blocks:
+## Three-file continuation intake and full-source timeline
 
-- `luke_5(1).mp4`: HTTP 502 on two helper requests; no endless retry.
-- `clip_1364780_20260924_132637.mp4`: HTTP 502 on two helper requests; contents/category not confirmed.
-- `clip_1364780_20260924_134059.mp4`: existing Manon manifest source; absent from accessible workspace and exact-name / video inventory searches. Existing derived three pairs remain usable.
-- Marisa normals source filename remains unidentified. No fabricated filename or rerecording request. Jamie/Marisa anonymous source filenames were identified from visible character names, not assumed from recording time.
+Only the newly supplied three MP4s were processed. Cached DB/evidence and existing mappings were reused; no DB re-audit or existing nine-pair processing.
+
+| Source | Bytes | Duration s | SHA256 | Integrity |
+| --- | ---: | ---: | --- | --- |
+| luke_5(2).mp4 | 322202281 | 113.070667 | `b8103562caa94f40eb2520f9137dd5d7ae7a8454380918dd848aa516b18c4303` | HEVC 2560×1440, 60fps, playable/full-source decode PASS |
+| clip_1364780_20260924_132637(2).mp4 | 462584489 | 164.677000 | `649f230e882fe87d2560aeaf0e1c24fe46d79bb67138a652ed2f58a0276ddab2` | HEVC 2560×1440, nominal 60fps, playable/full-source decode PASS |
+| clip_1364780_20260924_134059.mp4 | 270103471 | 95.376000 | `e5f3aa18bc08cd8e933a8e3f2f3f124812d245b5df4eaf9c39c37288034e435e` | HEVC 2560×1440, 60fps, playable/full-source decode PASS; SAME_SOURCE as existing Manon manifest |
+
+Input bytes total: 1,054,890,241. Originals unchanged. Timeline intervals below summarize the entire source; exact accepted cut boundaries are in existing manifests. Full-source contact sheets were reviewed and accepted intervals inspected densely, without claiming every frame/execution/variant is verified.
+
+| Source | Seconds (approximate timeline coverage) | Observed content / disposition |
+| --- | --- | --- |
+| Luke SA | 0–4.8 | Approach, whiff jabs/jump; excluded |
+| Luke SA | 4.8–17 | Repeated five-projectile SA1; accepted second isolated execution |
+| Luke SA | 17–32.1 | Resets and SA2 whiff attempts; excluded |
+| Luke SA | 32.1–50 | Ten-hit SA2 executions; accepted first hit sequence |
+| Luke SA | 50–53.3 | Setup/neutral; excluded |
+| Luke SA | 53.3–82 | Normal-life SA3 tackle/mounted-punch executions; accepted first |
+| Luke SA | 82–85 | Low-life CA setup; excluded |
+| Luke SA | 85–109 | Two CA cinematics, visible CA HUD; HOLD MISSING_DEDICATED_DB_CA_ROW; never replace SA3 default |
+| Luke SA | 109–113.071 | Recovery/neutral; excluded |
+| Jamie specials | 0–33 | Air-kick family; button strength unresolved |
+| Jamie specials | 33–38 | Menu selects 魔身, then different move executes; selection alone is not identity |
+| Jamie specials | 38–70 | Further air kicks; strength unresolved |
+| Jamie specials | 70–73 | Menu/reset; excluded |
+| Jamie specials | 73–122 | Spinning ground-kick family, Drink Level 2; strength/individual OD intervals unresolved |
+| Jamie specials | 122–127.5 | Named 点辰 list, 63214K, Drink Level 3+/close-range condition; menu/reset |
+| Jamie specials | 127.5–129.35 | One 魔身 drink, HUD level 2→3; one cycle accepted; tap/hold duration not inferred |
+| Jamie specials | 129.35–134 | Normal 点辰 stun and repeated attempts; isolated first execution accepted before next input |
+| Jamie specials | 134–148.5 | Other throw/attempt animations; not assigned to 点辰 by menu/order |
+| Jamie specials | 148.5–152.3 | OD whiff/setup; excluded |
+| Jamie specials | 152.3–161 | OD 点辰 gold flash, Drive −2, level 3, finger stun into knockdown; first clean execution accepted |
+| Jamie specials | 161–164.677 | Menu/neutral; excluded |
+| Manon unique/TC | 0–5 | Neutral/menu navigation |
+| Manon unique/TC | 5–23 | レベランス selected but repeated throws/jumps execute; do not map throws to selected unique |
+| Manon unique/TC | 23–31 | Isolated elbow strike matches named レベランス preview/4HP; one accepted |
+| Manon unique/TC | 31–45 | Menu followed by rolling kicks; one isolated kick crosschecked with named トモエ・デリエール animation preview/3HK at 45s |
+| Manon unique/TC | 45–60 | Menus and MP→MK target combo; existing ア・テール preserved, not regenerated |
+| Manon unique/TC | 60–73 | Menus and kick target combo; existing アン・オー preserved |
+| Manon unique/TC | 73–86 | Menus and standing HP→HP; existing タン・リエ preserved |
+| Manon unique/TC | 86–95.376 | Repeated crouching two-punch sequence; DB crouching TC name/identity still HOLD, no speculative assignment |
+
+New mappings: Luke SA1/SA2/normal SA3; Jamie 魔身/点辰/OD点辰; Manon レベランス/トモエ・デリエール. SUCCESS_LABEL and INPUT_HISTORY are NOT_VISIBLE in accepted new clips. Luke confidence is VISUAL_CONFIRMED with gauge crosscheck and existing DB command, not input verification. Jamie/Manon use named GAME_MOVE_LIST plus independent animation/visible condition crosschecks; command-list selection is never called an execution success label. Captured source commands are evidence, not a new official/frame/patch verification.
+
+Holds: Luke CA lacks a dedicated cached DB row; all strength/follow-up/hold uncertainty elsewhere stays HOLD. Jamie air/ground kick variants remain UNRESOLVED_VARIANT; 魔身 one-cycle mapping does not establish a hold/tap rule; captured 点辰 rows state observed Drink Level 3/close range and OD Drive consumption, without generalizing other levels. Manon crouching TC/name and back-MK identity remain unresolved. Previous name/category discrepancies and unknown Marisa normals source remain unchanged. No Combo/Setup/YouTube changes.
 
 ## Exact HOLD rows
 
@@ -99,9 +140,9 @@ The following table lists every fresh DB identity and its disposition. DB names/
 | `c647ddae-2f4f-440d-ab84-8c44b5ba9188` | luke-rising-uppercut-h | 強 ライジングアッパー / special | STRENGTH_HOLD_OR_FOLLOW_UP_INPUT_NOT_PROVEN |
 | `3176f9a4-9586-49cc-9dd6-8a444e2cd1ae` | luke-rising-uppercut-od | OD ライジングアッパー / special | STRENGTH_HOLD_OR_FOLLOW_UP_INPUT_NOT_PROVEN |
 | `4743c57a-35e7-404f-82e2-79a0854b12f6` | luke-slam-dunk | スラムダンク / special | STRENGTH_HOLD_OR_FOLLOW_UP_INPUT_NOT_PROVEN |
-| `9e34282d-9da4-43fb-a47c-dfdd72eda6ee` | luke-sa1-vulcan-blast | SA1 バルカンブラスト / super | SOURCE_ACCESS_502_2_ATTEMPTS |
-| `a1931623-d8f1-47e4-9f18-ef4fde632b4b` | luke-sa2-eraser | SA2 イレイザー / super | SOURCE_ACCESS_502_2_ATTEMPTS |
-| `03dc215b-fe91-445b-9089-9a9d090ac1a0` | luke-sa3-pale-rider | SA3 ペイルライダー / super | SOURCE_ACCESS_502_2_ATTEMPTS |
+| `9e34282d-9da4-43fb-a47c-dfdd72eda6ee` | luke-sa1-vulcan-blast | SA1 バルカンブラスト / super | CONFIRMED_PREVIEW_ONLY; VISUAL_CONFIRMED; 10600–14400 ms |
+| `a1931623-d8f1-47e4-9f18-ef4fde632b4b` | luke-sa2-eraser | SA2 イレイザー / super | CONFIRMED_PREVIEW_ONLY; VISUAL_CONFIRMED; 32100–39500 ms |
+| `03dc215b-fe91-445b-9089-9a9d090ac1a0` | luke-sa3-pale-rider | SA3 ペイルライダー / super | CONFIRMED_PREVIEW_ONLY; VISUAL_CONFIRMED; 53300–63800 ms |
 | `dc4d041c-4259-4636-8142-d2f329b7d77b` | luke-forward-throw | 前投げ / throw | EXACT_THROW_SEQUENCE_IDENTITY_NOT_ISOLATED |
 | `c40c1f4a-5753-486d-a902-e017ae79de78` | luke-back-throw | 後ろ投げ / throw | EXACT_THROW_SEQUENCE_IDENTITY_NOT_ISOLATED |
 ### manon — efc5d359-27ec-4660-937c-dc0d84e862f8
@@ -121,8 +162,8 @@ The following table lists every fresh DB identity and its disposition. DB names/
 | `95906801-2718-41e8-a7ff-1e519604881c` | manon-crouching-mk | しゃがみ中K / normal | SOURCE_RECORDING_UNAVAILABLE; variant/medal not inferred |
 | `4d0d1ebf-0226-487b-a19a-109d7efaa506` | manon-crouching-hk | しゃがみ強K / normal | SOURCE_RECORDING_UNAVAILABLE; variant/medal not inferred |
 | `701cd562-2e2b-4b05-afdb-e9a162b076ce` | manon-back-mk | 後ろ中K / unique | SOURCE_RECORDING_UNAVAILABLE; variant/medal not inferred |
-| `44b0a3f1-968d-48e7-8162-8c03e994e443` | manon-reverence | レベランス / unique | SOURCE_RECORDING_UNAVAILABLE; variant/medal not inferred |
-| `469e1ffd-bc8b-466e-8858-9cc9f83efeb9` | manon-tomoe-derriere | トモエ・デリエール / unique | SOURCE_RECORDING_UNAVAILABLE; variant/medal not inferred |
+| `44b0a3f1-968d-48e7-8162-8c03e994e443` | manon-reverence | レベランス / unique | CONFIRMED_PREVIEW_ONLY; CROSSCHECK_CONFIRMED; 24500–26800 ms |
+| `469e1ffd-bc8b-466e-8858-9cc9f83efeb9` | manon-tomoe-derriere | トモエ・デリエール / unique | CONFIRMED_PREVIEW_ONLY; CROSSCHECK_CONFIRMED; 37100–39100 ms |
 | `1a11e706-08e7-4a29-a656-84ac942d5a18` | manon-a-terre | ア・テール / target_combo | CONFIRMED_PREVIEW_ONLY |
 | `ee465bb0-22b4-41d2-9b26-a2fa733c3d06` | manon-en-haut | アン・オー / target_combo | CONFIRMED_PREVIEW_ONLY |
 | `20ab47b8-49bd-4bc0-b54e-ae8cb55aa7b2` | manon-temps-lie-hp | タン・リエ（HP > HP） / target_combo | CONFIRMED_PREVIEW_ONLY |
@@ -199,7 +240,7 @@ The following table lists every fresh DB identity and its disposition. DB names/
 | `fb988464-1db7-481e-84ca-9b27a848845d` | jamie-frame-036 | 乱酔旋（3段目/即派生） / unique | PARENT_STAGE_OR_DRINK_LEVEL_NOT_PROVEN; whole sequence not assigned to stage row |
 | `7efd3e6d-5b75-4607-8f5d-bd0308ef6748` | jamie-frame-037 | 乱酔旋（3段目/ディレイ派生） / unique | PARENT_STAGE_OR_DRINK_LEVEL_NOT_PROVEN; whole sequence not assigned to stage row |
 | `62a9d028-e70a-401f-adc0-d4d131819f01` | jamie-frame-038 | 乱酔旋（3段目/大幅ディレイ派生） / unique | PARENT_STAGE_OR_DRINK_LEVEL_NOT_PROVEN; whole sequence not assigned to stage row |
-| `799268da-a1f2-4bb5-b016-6ea3035d2015` | jamie-frame-039 | 魔身 / special | STRENGTH_DRINK_LEVEL_OR_FOLLOW_UP_NOT_PROVEN |
+| `799268da-a1f2-4bb5-b016-6ea3035d2015` | jamie-frame-039 | 魔身 / special | CONFIRMED_PREVIEW_ONLY; CROSSCHECK_CONFIRMED; 127500–129300 ms |
 | `3b533de1-ae1a-420f-8f15-4af4722a171d` | jamie-frame-040 | 弱 流酔拳（1段目） / special | STRENGTH_DRINK_LEVEL_OR_FOLLOW_UP_NOT_PROVEN |
 | `c4b68e7e-6984-4038-9947-4ed1cdcea1bc` | jamie-frame-041 | [酔いレベル4]弱 流酔拳（1段目） / special | STRENGTH_DRINK_LEVEL_OR_FOLLOW_UP_NOT_PROVEN |
 | `019bdfff-32b7-482c-8f8b-5732f94e1d11` | jamie-frame-042 | 中 流酔拳（1段目） / special | STRENGTH_DRINK_LEVEL_OR_FOLLOW_UP_NOT_PROVEN |
@@ -244,8 +285,8 @@ The following table lists every fresh DB identity and its disposition. DB names/
 | `af159fff-39b2-4255-9c59-748e66e56203` | jamie-frame-081 | 中 爆廻 / special | STRENGTH_DRINK_LEVEL_OR_FOLLOW_UP_NOT_PROVEN |
 | `299f160e-cafb-43b6-9619-35f1dd864f6d` | jamie-frame-082 | 強 爆廻 / special | STRENGTH_DRINK_LEVEL_OR_FOLLOW_UP_NOT_PROVEN |
 | `f0e84925-ec36-42dd-8fca-75c7e87712ef` | jamie-frame-083 | OD 爆廻 / special | STRENGTH_DRINK_LEVEL_OR_FOLLOW_UP_NOT_PROVEN |
-| `7bc4a79d-75dd-4a7a-95fe-ed02c344b8b9` | jamie-frame-084 | 点辰 / special | STRENGTH_DRINK_LEVEL_OR_FOLLOW_UP_NOT_PROVEN |
-| `47f2b44d-7d51-49f0-866e-6a2e1b5648ff` | jamie-frame-085 | OD 点辰 / special | STRENGTH_DRINK_LEVEL_OR_FOLLOW_UP_NOT_PROVEN |
+| `7bc4a79d-75dd-4a7a-95fe-ed02c344b8b9` | jamie-frame-084 | 点辰 / special | CONFIRMED_PREVIEW_ONLY; CROSSCHECK_CONFIRMED; 129350–131150 ms |
+| `47f2b44d-7d51-49f0-866e-6a2e1b5648ff` | jamie-frame-085 | OD 点辰 / special | CONFIRMED_PREVIEW_ONLY; CROSSCHECK_CONFIRMED; 152300–155700 ms |
 | `0c0fadbb-c919-414e-8989-4d8646a189b2` | jamie-frame-086 | 疾歩仙掌 / special | STRENGTH_DRINK_LEVEL_OR_FOLLOW_UP_NOT_PROVEN |
 | `b4eb57f6-68e4-4332-8966-6ef9b0a500bb` | jamie-frame-087 | OD 疾歩仙掌 / special | STRENGTH_DRINK_LEVEL_OR_FOLLOW_UP_NOT_PROVEN |
 | `e395af47-aedc-467e-b4cb-2aa5c112c348` | jamie-frame-088 | SA1 武麗禽 / super | SUCCESS_INPUT_AND_DRINK_CONDITION_NOT_PROVEN |
@@ -318,6 +359,6 @@ Jamie SA / Marisa SA recordings are available, but accepted source-label/input e
 
 ## Validation / Preview
 
-Targeted checks PASS. Final checks: typecheck PASS, lint PASS, tests 544/544, release-gates 14/14, build PASS, diff-check PASS; validator nine pairs / all 18-file decode PASS. Exact RC/deployment confirmation follows integration. Desktop four routes and JP/Yasmine/Alex regression are required; 375px remains USER_DEVICE_QA_REQUIRED if resize is unavailable.
+Targeted checks PASS. Final checks: typecheck PASS, lint PASS, tests 546/546, release-gates 14/14, build PASS, diff-check PASS; validator seventeen pairs / NEW 16-file decode PASS; nine reused pairs remain byte-identical. Exact RC/deployment confirmation follows integration. Desktop four routes and JP/Yasmine/Alex regression are required; 375px remains USER_DEVICE_QA_REQUIRED if resize is unavailable.
 
-Next single action after this batch: provide the three exact access-blocked MP4s above individually (no ZIP, no rerecording), while rollout can continue to the next character batch.
+Next single action: review the new eight Preview pairs, then continue the next recorded-character batch. No rerecording request. 375px device QA remains USER_REQUIRED. Exact Preview SHA/route QA is recorded after RC integration in the final report.

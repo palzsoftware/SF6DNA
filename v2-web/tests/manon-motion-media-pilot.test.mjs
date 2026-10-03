@@ -9,13 +9,15 @@ const loader = readFileSync(new URL("../src/lib/preview-motion-media-pilot.ts", 
 const fixture = readFileSync(new URL("../src/lib/character-detail-v21-fixture.ts", import.meta.url), "utf8");
 const component = readFileSync(new URL("../src/components/move-motion-media.tsx", import.meta.url), "utf8");
 
-test("Manon's reviewed target combos match the current Move IDs and have valid media and posters", () => {
+test("Manon's reviewed moves match the current Move IDs and have valid media and posters", () => {
   assert.equal(manifest.character_slug, "manon");
   assert.equal(manifest.source_files.length, 1);
   assert.deepEqual(manifest.clips.map(({ move_id, move_slug, category }) => [move_id, move_slug, category]), [
     ["1a11e706-08e7-4a29-a656-84ac942d5a18", "manon-a-terre", "target_combos"],
     ["ee465bb0-22b4-41d2-9b26-a2fa733c3d06", "manon-en-haut", "target_combos"],
     ["20ab47b8-49bd-4bc0-b54e-ae8cb55aa7b2", "manon-temps-lie-hp", "target_combos"],
+    ["44b0a3f1-968d-48e7-8162-8c03e994e443", "manon-reverence", "unique"],
+    ["469e1ffd-bc8b-466e-8858-9cc9f83efeb9", "manon-tomoe-derriere", "unique"],
   ]);
   assert.deepEqual(validateMotionMediaManifest(manifest, { publicRoot }).errors, []);
   assert.ok(manifest.clips.every((clip) => clip.verification_status === "approved_for_preview" && clip.cut_review_status === "CUT_REVIEW_PASS"));
