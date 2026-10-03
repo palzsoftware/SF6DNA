@@ -112,6 +112,7 @@ const fixtures: Record<"ryu" | "jp" | "luke" | "manon", DevicePreviewBundle> = {
 };
 
 export function getCharacterDetailV21Fixture(slug: string): DevicePreviewBundle | null {
+  if (slug === "jamie" && process.env.VERCEL_ENV === "preview") return { ...sharedEmpty, combos: [], setups: [], sequences: [], moves: [{ id: "b4cdaafd-615b-4a96-a615-2204c2928ece", slug: "jamie-tensei-kick", name: "天晴脚", moveType: "unique", usageSummary: null, status: "draft", frame: null, commands: [{ moveId: "b4cdaafd-615b-4a96-a615-2204c2928ece", scheme: "classic", commandText: "2KK", numericNotation: null, buttonNotation: null, conditionText: null, sortOrder: 0 }] }] };
   if (slug === "yasmine") return getYasmineMoveMediaPilot();
   if (slug === "luke" && process.env.VERCEL_ENV !== "preview") return { ...fixtures.luke, moves: fixtures.luke.moves.slice(0, 1) };
   if (slug === "ryu" || slug === "jp" || slug === "luke" || slug === "manon") return fixtures[slug];
