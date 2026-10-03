@@ -10,10 +10,12 @@ const fixture = readFileSync(new URL("../src/lib/character-detail-v21-fixture.ts
 
 test("Luke's reviewed target combo maps to its existing Move and has playable media and poster", () => {
   assert.equal(manifest.character_slug, "luke");
-  assert.equal(manifest.clips.length, 1);
+  assert.equal(manifest.clips.length, 3);
   assert.deepEqual(manifest.clips.map(({ move_id, move_slug, variant, verification_status }) =>
     [move_id, move_slug, variant, verification_status]), [
     ["aab86b9c-f501-4928-8818-114f5fc0574a", "luke-nose-breaker", "default", "approved_for_preview"],
+    ["42cfd8d8-a47b-4d89-8fd6-95e758b07e0d", "luke-triple-impact", "default", "approved_for_preview"],
+    ["a6088794-0ed1-4ee9-9d4a-ee4cbe159e37", "luke-snapback-combo", "default", "approved_for_preview"],
   ]);
   assert.deepEqual(validateMotionMediaManifest(manifest, { publicRoot }).errors, []);
   assert.match(loader, /characterId === LUKE_CHARACTER_ID && lukeManifest.character_slug === "luke"/);

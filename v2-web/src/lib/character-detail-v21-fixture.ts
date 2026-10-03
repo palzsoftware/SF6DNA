@@ -72,7 +72,7 @@ const fixtures: Record<"ryu" | "jp" | "luke" | "manon", DevicePreviewBundle> = {
         conditionText: null,
         sortOrder: 0,
       }],
-    }],
+    }, { id: "42cfd8d8-a47b-4d89-8fd6-95e758b07e0d", slug: "luke-triple-impact", name: "トリプルインパクト", moveType: "target_combo", usageSummary: null, status: "draft", frame: null, commands: [{ moveId: "42cfd8d8-a47b-4d89-8fd6-95e758b07e0d", scheme: "classic", commandText: "LP~MP~HP", numericNotation: null, buttonNotation: null, conditionText: null, sortOrder: 0 }] }, { id: "a6088794-0ed1-4ee9-9d4a-ee4cbe159e37", slug: "luke-snapback-combo", name: "スナップバックコンボ", moveType: "target_combo", usageSummary: null, status: "draft", frame: null, commands: [{ moveId: "a6088794-0ed1-4ee9-9d4a-ee4cbe159e37", scheme: "classic", commandText: "MP~MP~MP~MP", numericNotation: null, buttonNotation: null, conditionText: null, sortOrder: 0 }] }],
     combos: [], setups: [], sequences: [],
   },
   ryu: {
@@ -113,6 +113,7 @@ const fixtures: Record<"ryu" | "jp" | "luke" | "manon", DevicePreviewBundle> = {
 
 export function getCharacterDetailV21Fixture(slug: string): DevicePreviewBundle | null {
   if (slug === "yasmine") return getYasmineMoveMediaPilot();
+  if (slug === "luke" && process.env.VERCEL_ENV !== "preview") return { ...fixtures.luke, moves: fixtures.luke.moves.slice(0, 1) };
   if (slug === "ryu" || slug === "jp" || slug === "luke" || slug === "manon") return fixtures[slug];
   if (overviewOnlySlugs.has(slug)) {
     return { ...sharedEmpty, combos: [], setups: [], sequences: [] };
