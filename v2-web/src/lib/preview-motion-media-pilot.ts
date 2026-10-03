@@ -27,7 +27,14 @@ function toPreviewRecord(clip: PilotClip, displayOrder: number, characterSlug: s
   };
 }
 
+/** Hold applies to all Yasmine Preview media sources, not only local approved clips. */
+export function isPreviewPilotMotionMediaHeld(characterId: string): boolean {
+  return characterId === YASMINE_CHARACTER_ID
+    && yasmineManifest.identity_approval_status === "HOLD_UNTIL_CANONICAL";
+}
+
 export function getPreviewPilotMotionMedia(characterId: string): DevicePreviewMoveMotionMedia[] {
+  if (isPreviewPilotMotionMediaHeld(characterId)) return [];
   const manifest = characterId === JP_CHARACTER_ID && jpManifest.character_slug === "jp" ? jpManifest
     : characterId === RYU_CHARACTER_ID && ryuManifest.character_slug === "ryu" ? ryuManifest
     : characterId === LUKE_CHARACTER_ID && lukeManifest.character_slug === "luke" ? lukeManifest

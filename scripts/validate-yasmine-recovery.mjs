@@ -15,6 +15,7 @@ export function validateYasmineRecovery(manifest, snapshot, options = {}) {
     if (files.has(clip.media_url)) result.errors.push(`${clip.move_slug}: duplicate file mapping`);
     files.add(clip.media_url);
     if (clip.verification_status !== 'approved_for_preview' || !move) continue;
+    if (manifest.identity_approval_status === 'HOLD_UNTIL_CANONICAL') result.errors.push(`${clip.move_slug}: canonical identity approval is held`);
     const review = clip.visual_review;
     if (clip.cut_review_status !== 'CUT_REVIEW_PASS' || !review || review.status !== 'PASS'
       || review.sourceFile !== clip.source_file || review.startMs !== clip.source_start_ms || review.endMs !== clip.source_end_ms

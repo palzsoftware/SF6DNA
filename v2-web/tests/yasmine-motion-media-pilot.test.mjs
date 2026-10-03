@@ -21,17 +21,19 @@ function environment(value, action) {
     if (old === undefined) delete process.env.VERCEL_ENV; else process.env.VERCEL_ENV = old;
   }
 }
-test('single-file recovery approves only visually reviewed normals; other mappings stay held', () => {
+test('canonical review holds every Yasmine clip while keeping prior visual evidence and assets', () => {
   const result = validateYasmineRecovery(manifest, snapshot, { publicRoot });
   assert.deepEqual(result.errors, []);
-  assert.equal(result.stats.approved, 12);
-  assert.equal(result.stats.held, manifest.clips.length - 12);
-  const approved = manifest.clips.filter(clip => clip.verification_status === 'approved_for_preview');
-  assert.ok(approved.every(clip => clip.db_move_type === 'normal' && clip.source_file === 'yasmine-normals(3).mp4'));
-  assert.ok(manifest.clips.filter(clip => clip.verification_status === 'mapping_hold').every(clip => clip.cut_review_status === 'USER_QA_FAIL_PENDING_REAUDIT'));
+  assert.equal(result.stats.approved, 0);
+  assert.equal(result.stats.held, manifest.clips.length);
+  assert.equal(manifest.identity_approval_status, 'HOLD_UNTIL_CANONICAL');
+  assert.equal(manifest.clips.filter(clip => clip.cut_review_status === 'CUT_REVIEW_PASS').length, 12);
+  const formerApproval = manifest.clips.find(clip => clip.cut_review_status === 'CUT_REVIEW_PASS');
+  const reapproved = { ...manifest, clips: [{ ...formerApproval, verification_status: 'approved_for_preview' }] };
+  assert.ok(validateYasmineRecovery(reapproved, snapshot, { checkFiles: false }).errors.some(e => e.includes('canonical identity approval is held')));
 });
 test('normal approvals require motion evidence and cannot use a normals source for another category', () => {
-  const clip = manifest.clips.find(row => row.verification_status === 'approved_for_preview');
+  const clip = { ...manifest.clips.find(row => row.cut_review_status === 'CUT_REVIEW_PASS'), verification_status: 'approved_for_preview' };
   const validate = row => validateYasmineRecovery({ ...manifest, clips: [row] }, snapshot, { checkFiles: false }).errors;
   assert.ok(validate({ ...clip, visual_review: { ...clip.visual_review, observedMotion: '' } }).some(e => e.includes('motion/command evidence')));
   assert.ok(validate({ ...clip, source_end_ms: clip.source_start_ms }).some(e => e.includes('cut interval')));

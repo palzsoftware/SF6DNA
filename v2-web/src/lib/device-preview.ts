@@ -248,12 +248,15 @@ export async function getDevicePreviewBundle(
     commandMap.set(command.moveId, commands);
   }
 
+  const { isPreviewPilotMotionMediaHeld } = await import("@/lib/preview-motion-media-pilot");
+  const mediaHeld = isPreviewPilotMotionMediaHeld(characterId);
   bundle.moves = bundle.moves.map((move) => {
     const copy = copyMap.get(move.id);
     const descriptionJa = typeof copy?.descriptionJa === "string" ? copy.descriptionJa : null;
     const usageSummaryJa = typeof copy?.usageSummaryJa === "string" ? copy.usageSummaryJa : null;
     return {
       ...move,
+      ...(mediaHeld ? { media: null } : {}),
       descriptionJa,
       usageSummaryJa,
       usageSummary: usageSummaryJa ?? move.usageSummary,
@@ -311,7 +314,8 @@ export async function getDevicePreviewMoveMotionMedia(
 ): Promise<DevicePreviewMoveMotionMedia[]> {
   if (process.env.VERCEL_ENV !== "preview") return [];
 
-  const { getPreviewPilotMotionMedia } = await import("@/lib/preview-motion-media-pilot");
+  const { getPreviewPilotMotionMedia, isPreviewPilotMotionMediaHeld } = await import("@/lib/preview-motion-media-pilot");
+  if (isPreviewPilotMotionMediaHeld(characterId)) return [];
   const pilotMedia = getPreviewPilotMotionMedia(characterId);
   if (!isDevicePreviewRequest(previewToken)) return pilotMedia;
 
