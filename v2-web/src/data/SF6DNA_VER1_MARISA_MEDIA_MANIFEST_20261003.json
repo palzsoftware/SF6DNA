@@ -1,0 +1,70 @@
+{
+  "manifest_version": "1.0",
+  "character_slug": "marisa",
+  "source_owner": "user_capture",
+  "captured_patch": "UNKNOWN_NOT_REVERIFIED",
+  "capture_date": "2026-09-24",
+  "source_files": [
+    {
+      "category": "throws",
+      "filename": "clip_1364780_20260924_143815.mp4",
+      "sha256": "4358c4eae43756b94ac0c25150cac48144b242db7e45a928b4f13102ed04dd00"
+    }
+  ],
+  "clips": [
+    {
+      "move_id": "3eb3f810-dc04-40dd-82a6-dcad8a5eb0c1",
+      "move_slug": "marisa-forward-throw",
+      "category": "throw",
+      "variant": "default",
+      "media_url": "/media/moves/marisa/20261003/marisa-forward-throw.mp4",
+      "media_type": "video",
+      "poster_url": "/media/moves/marisa/20261003/marisa-forward-throw.webp",
+      "verification_status": "approved_for_preview",
+      "loop_start_ms": 0,
+      "loop_end_ms": 4100,
+      "duration_ms": 4100,
+      "width": 960,
+      "height": 540,
+      "fps": 30,
+      "filesize_bytes": 744502,
+      "source_file": "clip_1364780_20260924_143815.mp4",
+      "source_start_ms": 2300,
+      "source_end_ms": 6400,
+      "cut_review_status": "CUT_REVIEW_PASS",
+      "mapping_evidence": "VISUAL_CONFIRMED + fresh DB throw identity: opponent remains to original forward side; two-slams throw; no side swap. Isolated grab-to-recovery, repeat executions agree. No game success label, Move List or input history is visible; these are not claimed as evidence. No recording-order assignment.",
+      "game_label": null,
+      "success_label": "NOT_VISIBLE",
+      "command": "LP+LK",
+      "confidence": "VISUAL_CONFIRMED",
+      "publication": "PREVIEW_ONLY"
+    },
+    {
+      "move_id": "3d782d80-90d2-4dac-a551-7d1440154270",
+      "move_slug": "marisa-back-throw",
+      "category": "throw",
+      "variant": "default",
+      "media_url": "/media/moves/marisa/20261003/marisa-back-throw.mp4",
+      "media_type": "video",
+      "poster_url": "/media/moves/marisa/20261003/marisa-back-throw.webp",
+      "verification_status": "approved_for_preview",
+      "loop_start_ms": 0,
+      "loop_end_ms": 3467,
+      "duration_ms": 3467,
+      "width": 960,
+      "height": 540,
+      "fps": 30,
+      "filesize_bytes": 687586,
+      "source_file": "clip_1364780_20260924_143815.mp4",
+      "source_start_ms": 11450,
+      "source_end_ms": 14900,
+      "cut_review_status": "CUT_REVIEW_PASS",
+      "mapping_evidence": "VISUAL_CONFIRMED + fresh DB throw identity: opponent thrown behind; confirmed side swap at completion. Isolated grab-to-recovery, repeat executions agree. No game success label, Move List or input history is visible; these are not claimed as evidence. No recording-order assignment.",
+      "game_label": null,
+      "success_label": "NOT_VISIBLE",
+      "command": "4LP+LK",
+      "confidence": "VISUAL_CONFIRMED",
+      "publication": "PREVIEW_ONLY"
+    }
+  ]
+}
