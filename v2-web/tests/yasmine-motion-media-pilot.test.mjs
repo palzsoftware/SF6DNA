@@ -21,12 +21,22 @@ function environment(value, action) {
     if (old === undefined) delete process.env.VERCEL_ENV; else process.env.VERCEL_ENV = old;
   }
 }
-test('withdrawn mappings preserve assets but none remain approved', () => {
+test('single-file recovery approves only visually reviewed normals; other mappings stay held', () => {
   const result = validateYasmineRecovery(manifest, snapshot, { publicRoot });
   assert.deepEqual(result.errors, []);
-  assert.equal(result.stats.approved, 0);
-  assert.equal(result.stats.held, manifest.clips.length);
-  assert.ok(manifest.clips.every(clip => clip.cut_review_status === 'USER_QA_FAIL_PENDING_REAUDIT'));
+  assert.equal(result.stats.approved, 12);
+  assert.equal(result.stats.held, manifest.clips.length - 12);
+  const approved = manifest.clips.filter(clip => clip.verification_status === 'approved_for_preview');
+  assert.ok(approved.every(clip => clip.db_move_type === 'normal' && clip.source_file === 'yasmine-normals(3).mp4'));
+  assert.ok(manifest.clips.filter(clip => clip.verification_status === 'mapping_hold').every(clip => clip.cut_review_status === 'USER_QA_FAIL_PENDING_REAUDIT'));
+});
+test('normal approvals require motion evidence and cannot use a normals source for another category', () => {
+  const clip = manifest.clips.find(row => row.verification_status === 'approved_for_preview');
+  const validate = row => validateYasmineRecovery({ ...manifest, clips: [row] }, snapshot, { checkFiles: false }).errors;
+  assert.ok(validate({ ...clip, visual_review: { ...clip.visual_review, observedMotion: '' } }).some(e => e.includes('motion/command evidence')));
+  assert.ok(validate({ ...clip, source_end_ms: clip.source_start_ms }).some(e => e.includes('cut interval')));
+  assert.ok(validate({ ...clip, category: 'special' }).some(e => e.includes('another category')));
+  assert.ok(validate({ ...clip, source_file: 'missing-source.mp4' }).some(e => e.includes('reviewed source')));
 });
 test('all DB identities survive suspended media, including all special and SA rows', () => {
   const bundle = environment('preview', () => pilot()());

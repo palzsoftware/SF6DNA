@@ -23,6 +23,11 @@ export function validateYasmineRecovery(manifest, snapshot, options = {}) {
       || review.observedCommand !== clip.command_snapshot) result.errors.push(`${clip.move_slug}: visual identity/command/strength review required`);
     if (move.moveType === 'special' && !['observedStrength', 'observedOD', 'observedFollowUp'].every(key => typeof review?.[key] === 'string' && review[key].trim())) result.errors.push(`${clip.move_slug}: special strength/OD/follow-up visual evidence required`);
     if (move.moveType === 'super' && review?.observedSuper !== move.slug) result.errors.push(`${clip.move_slug}: SA identity review required`);
+    if (move.moveType === 'normal' && (!review?.observedMotion?.trim() || !review?.commandEvidence?.trim())) result.errors.push(`${clip.move_slug}: normal motion/command evidence required`);
+    const source = manifest.source_files.find(row => row.filename === clip.source_file);
+    if (!source || !Number.isInteger(clip.source_start_ms) || !Number.isInteger(clip.source_end_ms)
+      || clip.source_start_ms < 0 || clip.source_end_ms <= clip.source_start_ms) result.errors.push(`${clip.move_slug}: reviewed source/cut interval required`);
+    if (source?.category === 'normals' && (move.moveType !== 'normal' || clip.category !== 'normal')) result.errors.push(`${clip.move_slug}: normals recording cannot approve another category`);
   }
   result.stats.approved = manifest.clips.filter(clip => clip.verification_status === 'approved_for_preview').length;
   result.stats.held = manifest.clips.filter(clip => clip.verification_status === 'mapping_hold').length;
