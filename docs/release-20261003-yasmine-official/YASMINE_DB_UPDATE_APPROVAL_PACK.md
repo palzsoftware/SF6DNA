@@ -1,57 +1,60 @@
-# Yasmine official-capture reconciliation — partial
+# Yasmine official Frame reconciliation / approval preparation
 
-2026-10-03 JST. BASE_SHA = aeff14867ac36d8762298a9bd6b5d808098129b2. DB_WRITE = 0. Production/Ver.1.1 unchanged.
+BASE_SHA=6ccc5a1b0ae7b1853a4fcec81499fb378ef6ce89. 2026-10-03 JST.
+DB_WRITE=0. Production/main/Ver.1.1 unchanged. Media26 HOLD; assets retained.
 
-## Evidence intake
+## Evidence / count units
 
-Official pages supplied by the user as screenshots/PDF, reviewed directly. Browser 403 no longer blocks the readable Command List evidence. Original uploads are retained without edits. PDF text extraction was checked against rendered pages 1–2, especially non-text arrow/P/K icons. Screenshot overlaps/PDF repetitions are one official entry, not duplicate moves.
+20 prior Command families reused without re-audit (COMMAND_FAMILY records). Five official Frame captures visually transcribed; overlap deduped (FRAME_VARIANT_ROW records). Combat71: normal18 including jump6, official 特殊技7, special40, SA/CA4, throw2. Common systems10. Do not add20 families to71. TARGET_COMBO subgroup not independently labelled; Preview uses existing unique grouping without DB category changes.
 
-- スクリーンショット_3-10-2026_162049_www.streetfighter.com.jpeg: SHA256 `25c9e290480e554ccc9296bbe061ceb590f04017f52b8ef2d767caf06d41458d`
-- スクリーンショット_3-10-2026_162144_www.streetfighter.com.jpeg: SHA256 `b54567e9198afc03d0698e5c13139954d66a21d3bb115077a58592c14715a89e`
-- ヤスミン コマンドリスト｜STREET FIGHTER 6（ストリートファイター6）｜CAPCOM.pdf: SHA256 `69fb2a93d86f2b342a878ef4343b416a59857eba82e9dd3c1b1e9bf8711e7fff`
+Fresh DB85 moves/current frames.81 capture rows correspond by name/input/strength/stage/condition and fresh IDs. Four taunts outside supplied table: UNRESOLVED_NOT_IN_SUPPLIED_TABLE, not proven DB_ONLY. OFFICIAL_ONLY=0 within supplied table. Canonical capture count71 combat/81 including systems; entire Master PARTIAL.
 
-- Command PDF: 4 pages. Combat command entries readable on pages 1–2. Page 2 has overlapping navigation graphics; underlying first unique name corroborated by extracted PDF text and command screenshot.
-- Command screenshot: 629×2048. Confirms the same groups; no separate normal section appears in this Command List. Normal identities must come from Frame Data / game command list; absence here is NOT OFFICIAL_ONLY/DB_ONLY evidence.
-- Frame screenshot: 532×2048 for the whole page. Table names, column headers, minus signs, values, variants and notes are too small to reliably transcribe. A 4× inspection enlargement adds no source detail. No guessed numerical value is accepted. Current official patch is not readable/confirmed.
+## Evidence gaps
 
-## Readable official Command List entries
+DB current patch2026.08.03/ecff9a58-d023-43ae-9962-79d25adfc1f3. Capture date is not target patch proof. All official rows PATCH_UNRESOLVED. Linya note right edge clipped. SA1 Frame reads ヒワン・カラヒタン while retained Command-family transcription has ヒワン・ン・カラヒタン; resolve source spelling before DB update. No secondary-source substitution.
 
-20 distinct character-specific entries/families: SPECIAL 9 (including 3 follow-up entries and Linya condition), SUPER 3, official 特殊技 6, THROW 2. This is NOT canonical DB/card/variant count. The 6 特殊技 entries include directional and multi-input moves; the page does not independently label a TARGET_COMBO subgroup. No split into invented weak/medium/heavy/OD/CA rows is made.
+## Frame comparison
 
-SA3 states 体力25%以下で性能がアップ. This confirms the condition but does not by itself decide separate CA DB-row/card handling. Parent inputs are separated from follow-up inputs: e.g. アロン is 6P during ダロイ・ン・トゥビグ, not an unconditional 6P; リニャ is 4KK during ナカタゴン・ラカス. DB combined parent~followup notation is not automatically called a wrong command. P/K are generic button icons; no unshown strength/OD variants inferred.
+77 row matches/4 row mismatches/4 unresolved taunts. Numeric '+' prefix and equivalent dash glyphs normalized only. D/ranges preserved. Blank/dash means no value stated for this row, shown as —; not invented zero or universal N/A. Optional active/recovery transcription partial, not silently filled from DB.
 
-## Fresh DB comparison
+| Field | Match | Official blank/dash | Mismatch | Unresolved |
+|---|---:|---:|---:|---:|
+| startup |71|8|2|4|
+| on_hit |56|23|2|4|
+| on_block |56|25|0|4|
+| damage |79|0|2|4|
 
-Fresh read-only SELECT fetched character, all 85 moves, commands, frames, patches, sources and entity_sources. Actual source relation table is entity_sources. DB current rows = 85. Preview retains its existing 73 unconfirmed cards; no Preview data correction has been published.
+Category differences7 confirmed by official 特殊技 header. Relative order SA1/SA2 and ヒワン/ワリス:2 pairs/4 rows. Official category-local order is not blindly copied into global DB indices. Literal name-label differences3: standing MK subtitle, crouching HK pose prefix, SA1 source spelling conflict; not three distinct move identities. Nine Alon second-stage/state rows have no direct input in official table: COMMAND_CONTEXT_REQUIRES_REVIEW. Five DB rows append P; automatic transition recorded separately, not inferred extra input. No parent/frame/variant merge.
 
-Confirmed CATEGORY_MISMATCH: 7 DB rows map to the six official 特殊技 entries but currently have move_type=normal. Target-combo schema decision remains pending; proposed DB type is not guessed.
+## Approval boundary
 
-| DB slug | Official entry | Current category |
-|---|---|---|
-| yasmine-kumbinasyong-pampabagsak-2mk-hk | コンビナション・パムパバッグサ | normal |
-| yasmine-walis-na-pabagsak-4hk | ワリス・ナ・パバグサ | normal |
-| yasmine-kidlat-na-hiwa-5lp-lp | キドラット・ナ・ヒワ | normal |
-| yasmine-sunod-sunod-na-sipa-1-5mk-mk | スノスノッド・ナ・シパ | normal |
-| yasmine-sunod-sunod-na-sipa-2-5mk-mk-hk | スノスノッド・ナ・シパ | normal |
-| yasmine-tatlong-hiwa-5mp-mp | タッロング・ヒワ | normal |
-| yasmine-hiwang-pababa-6mp | ヒワン・パババ | normal |
+Numerical candidates6 fields in4 rows: throw2 on_hit=D; parry/cancel Drive Rush2 startup=NULL and damage=0. Exact fresh IDs/current/proposed values in Frame CSV. Approval pack PARTIAL/NOT_EXECUTABLE. Target patch/source-to-fact relation/category schema/command context must be established before bounded SQL. Later UPDATE candidates require old-value predicates, expected counts, verification SELECT and rollback from retained current values. Separate identity/category/order, command and frame scopes; no blanket85-row overwrite. Executable DB_UPDATE_REQUIRED count pending. No SQL/verification/status/source/RLS/RPC changes.
 
-Confirmed relative order problems (2 pairs / 4 rows): SA2 is ordered before SA1 in DB (1 vs 9), opposite official SUPER order; ワリス precedes ヒワン in DB (37 vs 57), opposite official 特殊技 order. Official family order and DB global display_order are different units: no automatic numeric replacement proposed.
+## Preview-only correction
 
-Names: official base names transcribed; DB helper labels (SA1/weak/OD/part number) kept separate conceptually. No unsupported claim of global name match/mismatch. Commands: matching input-only subsets recorded in CSV; condition/variant identity is still incomplete. All 85 rows remain incomplete comparisons. Family candidates are not full row verification. DB_ONLY/OFFICIAL_ONLY and canonical total remain UNDETERMINED.
+Separate YASMINE_OFFICIAL_CAPTURE_PREVIEW_20261003.json holds71 combat rows in official order. Old DB snapshot and media assets retained for comparison/validator compatibility. Systems/taunts excluded from combat cards, not deleted. Yasmine-only Preview capture precedes unconfirmed remote identities. Production/development cannot obtain this bundle. Capture fields reviewed, never verified; visible version caveat. Blank/direct-input dash shows — with condition, printed0/D/ranges retained. Classic only; unreviewed DB Modern inputs not imported. Public gate/flags unchanged.
 
-## Frame reconciliation
+MEDIA_REMAP_READY_COUNT=0 (no video visual approval this batch). MEDIA_HOLD_COUNT=26. Prior12 assets retained, not reapproved. JP/Ryu/Beginner/Daily15 unaffected.
 
-85 current frame rows recorded as comparison values only. Official startup/on_hit/on_block/damage/active/recovery remain blank with explicit UNRESOLVED_IMAGE_TEXT_TOO_SMALL. Numeric zero, D/ranges and NULL are preserved. Official N/A cannot be inferred from NULL or move type alone. Stored verified status does not certify the supplied capture or current patch.
+## Validation
 
-## Approval status and safe boundary
+Fresh typecheck/lint/build PASS, tests473/473 PASS, gates14/14 PASS. Media validator errors0 approved0/held26. Build-generated next-env.d.ts/tsconfig differences inspected/excluded. Browser checks pending final Preview. Test success is not target-patch certification. RELEASE_STATUS=NO-GO.
 
-DB_UPDATE_REQUIRED = YES_FOR_CATEGORY_AND_ORDER_FINDINGS; full update scope UNDETERMINED. Approval pack = PARTIAL / NOT_EXECUTABLE. Exact current row IDs/command IDs/frame IDs are in CSV; proposed target schema/category, variants, official frame facts and current patch must be resolved before bounded UPDATE/preconditions/verification/rollback SQL. No SQL execution, DB status/evidence changes or verification promotion.
+## Input integrity
 
-All 26 Yasmine mappings remain HOLD_UNTIL_CANONICAL; assets retained. Canonical identity is not complete, so no mapping reapproval or Preview Snapshot rewrite. JP/Ryu/Beginner/Daily15 code untouched.
+- image(20261003-080108).png: (1590, 1216), SHA256 5887c27a20a77dbf61d7967a2c327fdaedf06302dff741e1b527bd7a7839d46c
+- image(20261003-080050).png: (1405, 908), SHA256 12ce478b4a559b6b7459a88f376395ad42a72955797376d5de3fa31be9b2662d
+- image(20261003-080129).png: (1596, 1046), SHA256 d83ebca0afc4dc39e239076d54feead7265c7da2068792fb5994f37560076825
+- image(20261003-080124).png: (1367, 1142), SHA256 5848a7c129ea6fc6499dff548be69aebe00278af43ce57bae1f142e8818e08c7
+- image(20261003-080100).png: (1348, 506), SHA256 3e5f1a178f44e724a2b42338ad5559ff5c63cc8485408fbc410dc6c7336cd9d8
 
-## Verification scope
+## Exact numerical candidate rows
 
-Documentation-only delta. Fresh full checks: typecheck PASS, lint PASS, tests 468/468 PASS, release gates 14/14 PASS, build PASS. Build-only next-env.d.ts/tsconfig.json edits inspected and excluded; no unrelated code edits staged. Diff-check PASS. Current CSV structural checks confirm 20 unique official entries, 85 unique DB IDs, 85 current frame IDs, 7 category findings, zero populated official numerical fields. These are reconciliation-structure checks, not Canonical correctness certification. New P0/P1 not assessed for incomplete Master; existing identity blocker remains.
-
-NEXT_SINGLE_ACTION: supply a Frame Data PDF or original-resolution screenshots split into table sections (all column headers, every row, variants/notes and patch/version). Do not resend the readable Command List or gameplay recordings. Then complete canonical normal/variant/frame inventory, propose corrections, run UI checks on an approved complete Preview Snapshot and obtain separate DB approval. RELEASE_STATUS = NO-GO.
+| Table | Row ID | Move | Field | Current | Proposed | Source |
+|---|---|---|---|---|---|---|
+| move_frame_data | 6fa1f8ff-fb49-4211-8333-508c23f5ef6f | ピギル・ウロ | on_hit | NULL/empty | D | image(20261003-080124).png |
+| move_frame_data | 204974a2-c459-49ca-83b6-5b362efe1187 | ヒラ・カマイ | on_hit | NULL/empty | D | image(20261003-080124).png |
+| move_frame_data | 3094e995-dacb-4ceb-b2de-e9e0d48003a8 | パリィドライブラッシュ | startup | 3 | — | image(20261003-080129).png |
+| move_frame_data | 3094e995-dacb-4ceb-b2de-e9e0d48003a8 | パリィドライブラッシュ | damage | NULL/empty | 0 | image(20261003-080129).png |
+| move_frame_data | 7778ea64-d350-4185-a6ec-2ac5ecf37930 | キャンセルドライブラッシュ | startup | 9 | — | image(20261003-080129).png |
+| move_frame_data | 7778ea64-d350-4185-a6ec-2ac5ecf37930 | キャンセルドライブラッシュ | damage | NULL/empty | 0 | image(20261003-080129).png |

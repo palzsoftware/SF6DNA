@@ -145,7 +145,7 @@ export function CharacterDetailPilot({
           <div>
             <p className="eyebrow">技データ</p>
             <h2 id="pilot-moves-heading">技一覧・コマンド・主要フレーム</h2>
-            <p>{preRelease ? "公式発表済みの技名です。入力コマンドとフレームは公式一覧を照合してから掲載します。" : "コマンドと主要フレームを技ごとに掲載。数値の「確認中」は未確定の項目です。"}</p>
+            <p>{characterSlug === "yasmine" && process.env.VERCEL_ENV === "preview" ? "公式画面と照合した技データです。資料の対象バージョンは確認中です。「—」は資料に値や直接入力の記載がない項目です。" : preRelease ? "公式発表済みの技名です。入力コマンドとフレームは公式一覧を照合してから掲載します。" : "コマンドと主要フレームを技ごとに掲載。数値の「確認中」は未確定の項目です。"}</p>
           </div>
           {characterSlug === "jp" ? <a href="https://www.streetfighter.com/6/ja-jp/character/jp/frame" target="_blank" rel="noopener noreferrer">CAPCOM公式フレームを見る ↗</a> : null}
         </div>

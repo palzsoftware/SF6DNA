@@ -1,0 +1,2426 @@
+{
+  "version": 1,
+  "characterSlug": "yasmine",
+  "characterId": "a9f61f3f-d6e0-4f98-8f1f-6fb94fae7baa",
+  "capturedAt": "2026-10-03",
+  "publication": "PREVIEW_ONLY",
+  "patchStatus": "PATCH_UNRESOLVED",
+  "canonicalStatus": "CAPTURE_IDENTITIES_RECONCILED_PATCH_AND_NOTE_PENDING",
+  "sourceUrl": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+  "moves": [
+    {
+      "id": "42bfb7b6-2511-48e4-b50e-7045fc676ba9",
+      "slug": "yasmine-standing-light-punch-5lp",
+      "name": "立ち弱P（マガアン・ナ・パグラスラス）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 1,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "42bfb7b6-2511-48e4-b50e-7045fc676ba9",
+          "scheme": "classic",
+          "commandText": "5LP",
+          "numericNotation": "5LP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "5",
+        "active": "5-7",
+        "recovery": "7",
+        "onHit": "4",
+        "onBlock": "-1",
+        "damage": 300,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "77b8c07a-0085-40ab-bae7-ad37aadd44ce",
+      "slug": "yasmine-standing-light-kick-5lk",
+      "name": "立ち弱K（マババング・シパ）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 2,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "77b8c07a-0085-40ab-bae7-ad37aadd44ce",
+          "scheme": "classic",
+          "commandText": "5LK",
+          "numericNotation": "5LK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "5",
+        "active": "5-6",
+        "recovery": "12",
+        "onHit": "2",
+        "onBlock": "-4",
+        "damage": 300,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "6b816c73-20c6-4590-8389-2bd0db98b251",
+      "slug": "yasmine-standing-medium-punch-5mp",
+      "name": "立ち中P（パバリック・バリック・ナ・パグラスラス）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 3,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "6b816c73-20c6-4590-8389-2bd0db98b251",
+          "scheme": "classic",
+          "commandText": "5MP",
+          "numericNotation": "5MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "6",
+        "active": "6-17",
+        "recovery": "18",
+        "onHit": "2",
+        "onBlock": "-3",
+        "damage": 600,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "329ee255-394a-49be-9ecb-e9fb2b982370",
+      "slug": "yasmine-standing-medium-kick-5mk",
+      "name": "立ち中K（タリラング・シパ）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 4,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "329ee255-394a-49be-9ecb-e9fb2b982370",
+          "scheme": "classic",
+          "commandText": "5MK",
+          "numericNotation": "5MK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "10",
+        "active": "10-12",
+        "recovery": "19",
+        "onHit": "3",
+        "onBlock": "-4",
+        "damage": 700,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "de5b585d-28cd-4be8-b495-2611b995ef2f",
+      "slug": "yasmine-standing-heavy-punch-5hp",
+      "name": "立ち強P（トリップレング・パグラスラス）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 5,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "de5b585d-28cd-4be8-b495-2611b995ef2f",
+          "scheme": "classic",
+          "commandText": "5HP",
+          "numericNotation": "5HP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "9",
+        "active": "9-28",
+        "recovery": "15",
+        "onHit": "2",
+        "onBlock": "-3",
+        "damage": 800,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "72e48438-5de6-43cb-b421-41a5105dd213",
+      "slug": "yasmine-standing-heavy-kick-5hk",
+      "name": "立ち強K（トゥマタロン・ナ・シパ）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 6,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "72e48438-5de6-43cb-b421-41a5105dd213",
+          "scheme": "classic",
+          "commandText": "5HK",
+          "numericNotation": "5HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "14",
+        "active": "14-16",
+        "recovery": "20",
+        "onHit": "1",
+        "onBlock": "-4",
+        "damage": 800,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "bcdb1926-b1a6-4a85-b8d0-25dcf464fd87",
+      "slug": "yasmine-crouching-light-punch-2lp",
+      "name": "しゃがみ弱P（マビリサング・パグラスラス）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 7,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "bcdb1926-b1a6-4a85-b8d0-25dcf464fd87",
+          "scheme": "classic",
+          "commandText": "2LP",
+          "numericNotation": "2LP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "4",
+        "active": "4-6",
+        "recovery": "8",
+        "onHit": "4",
+        "onBlock": "-1",
+        "damage": 300,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "dcda78cf-a5be-4d31-9fed-d18bcf34e9ac",
+      "slug": "yasmine-crouching-light-kick-2lk",
+      "name": "しゃがみ弱K（マガアン・ナ・シパ）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 8,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "dcda78cf-a5be-4d31-9fed-d18bcf34e9ac",
+          "scheme": "classic",
+          "commandText": "2LK",
+          "numericNotation": "2LK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "5",
+        "active": "5-7",
+        "recovery": "10",
+        "onHit": "2",
+        "onBlock": "-2",
+        "damage": 200,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "03a3c78f-d49e-4dff-9857-08856fd40b25",
+      "slug": "yasmine-crouching-medium-punch-2mp",
+      "name": "しゃがみ中P（カルモット）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 9,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "03a3c78f-d49e-4dff-9857-08856fd40b25",
+          "scheme": "classic",
+          "commandText": "2MP",
+          "numericNotation": "2MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "6",
+        "active": "6-8",
+        "recovery": "16",
+        "onHit": "4",
+        "onBlock": "0",
+        "damage": 600,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "44237752-18cd-4aa7-8e78-9670a78a6e2e",
+      "slug": "yasmine-crouching-medium-kick-2mk",
+      "name": "しゃがみ中K（パンドゥログ・ナン・ルロッド）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 10,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "44237752-18cd-4aa7-8e78-9670a78a6e2e",
+          "scheme": "classic",
+          "commandText": "2MK",
+          "numericNotation": "2MK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "8",
+        "active": "8-10",
+        "recovery": "19",
+        "onHit": "-1",
+        "onBlock": "-6",
+        "damage": 500,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "495aa9a0-c9b0-4484-b845-856a538832e4",
+      "slug": "yasmine-crouching-heavy-punch-2hp",
+      "name": "しゃがみ強P（マミミツィン）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 11,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "495aa9a0-c9b0-4484-b845-856a538832e4",
+          "scheme": "classic",
+          "commandText": "2HP",
+          "numericNotation": "2HP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "8",
+        "active": "8-13",
+        "recovery": "23",
+        "onHit": "2",
+        "onBlock": "-11",
+        "damage": 800,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "d66223a6-df43-4ce9-801b-dbc83cf21bf1",
+      "slug": "yasmine-gunting-na-pabagsak-2hk",
+      "name": "しゃがみ強K（グンティング・ナ・パバサ）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 12,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "d66223a6-df43-4ce9-801b-dbc83cf21bf1",
+          "scheme": "classic",
+          "commandText": "2HK",
+          "numericNotation": "2HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "10",
+        "active": "10-12",
+        "recovery": "25",
+        "onHit": "D",
+        "onBlock": "-10",
+        "damage": 900,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "7949413b-1ea3-41cd-83be-250b5759aca1",
+      "slug": "yasmine-jumping-light-punch-j-lp",
+      "name": "ジャンプ弱P（マガアン・ナ・パンヒンパパウィド・パグラスラス）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 13,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "ジャンプ中",
+      "commands": [
+        {
+          "moveId": "7949413b-1ea3-41cd-83be-250b5759aca1",
+          "scheme": "classic",
+          "commandText": "j.LP",
+          "numericNotation": "j.LP",
+          "buttonNotation": null,
+          "conditionText": "ジャンプ中",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "4",
+        "active": "4-8",
+        "recovery": "着地後3",
+        "onHit": "—",
+        "onBlock": "—",
+        "damage": 300,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "d58cda82-9f2a-4cc7-b421-7ab696cbbd32",
+      "slug": "yasmine-jumping-light-kick-j-lk",
+      "name": "ジャンプ弱K（パンヒンパパウィド・ナ・シパ・ガミット・アング・トゥホッド）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 14,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "ジャンプ中",
+      "commands": [
+        {
+          "moveId": "d58cda82-9f2a-4cc7-b421-7ab696cbbd32",
+          "scheme": "classic",
+          "commandText": "j.LK",
+          "numericNotation": "j.LK",
+          "buttonNotation": null,
+          "conditionText": "ジャンプ中",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "4",
+        "active": "4-9",
+        "recovery": "着地後3",
+        "onHit": "—",
+        "onBlock": "—",
+        "damage": 300,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "3e76ed52-4ebe-4bcd-a44d-2a60960c5e55",
+      "slug": "yasmine-jumping-medium-punch-j-mp",
+      "name": "ジャンプ中P（パビログ・ナ・パグラスラス）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 15,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "ジャンプ中",
+      "commands": [
+        {
+          "moveId": "3e76ed52-4ebe-4bcd-a44d-2a60960c5e55",
+          "scheme": "classic",
+          "commandText": "j.MP",
+          "numericNotation": "j.MP",
+          "buttonNotation": null,
+          "conditionText": "ジャンプ中",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "7",
+        "active": "7-10",
+        "recovery": "着地後3",
+        "onHit": "—",
+        "onBlock": "—",
+        "damage": 700,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "697468cc-a9d2-4531-b974-b919aec0fc12",
+      "slug": "yasmine-jumping-medium-kick-j-mk",
+      "name": "ジャンプ中K（パンヒンパパウィド・ナ・シパ・サ・ハラップ）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 16,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "ジャンプ中",
+      "commands": [
+        {
+          "moveId": "697468cc-a9d2-4531-b974-b919aec0fc12",
+          "scheme": "classic",
+          "commandText": "j.MK",
+          "numericNotation": "j.MK",
+          "buttonNotation": null,
+          "conditionText": "ジャンプ中",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "7",
+        "active": "7-12",
+        "recovery": "着地後3",
+        "onHit": "—",
+        "onBlock": "—",
+        "damage": 500,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "84d5d088-b584-42e0-a20b-5627d457eb00",
+      "slug": "yasmine-jumping-heavy-punch-j-hp",
+      "name": "ジャンプ強P（ナママロング・マガ・パクパク）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 17,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "ジャンプ中",
+      "commands": [
+        {
+          "moveId": "84d5d088-b584-42e0-a20b-5627d457eb00",
+          "scheme": "classic",
+          "commandText": "j.HP",
+          "numericNotation": "j.HP",
+          "buttonNotation": null,
+          "conditionText": "ジャンプ中",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "9",
+        "active": "9-14",
+        "recovery": "着地後3",
+        "onHit": "—",
+        "onBlock": "—",
+        "damage": 800,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "c030fb18-aa67-4ec7-923e-a54179286219",
+      "slug": "yasmine-jumping-heavy-kick-j-hk",
+      "name": "ジャンプ強K（パンヒンパパウィド・ナ・マラカス・ナ・シパ）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 18,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080050).png",
+      "condition": "ジャンプ中",
+      "commands": [
+        {
+          "moveId": "c030fb18-aa67-4ec7-923e-a54179286219",
+          "scheme": "classic",
+          "commandText": "j.HK",
+          "numericNotation": "j.HK",
+          "buttonNotation": null,
+          "conditionText": "ジャンプ中",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "10",
+        "active": "10-16",
+        "recovery": "着地後3",
+        "onHit": "—",
+        "onBlock": "—",
+        "damage": 800,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080050).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "de33eadd-d757-4794-a2bb-ad809acf4247",
+      "slug": "yasmine-hiwang-pababa-6mp",
+      "name": "ヒワン・パババ",
+      "moveType": "unique",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 19,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080100).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "de33eadd-d757-4794-a2bb-ad809acf4247",
+          "scheme": "classic",
+          "commandText": "6MP",
+          "numericNotation": "6MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "22",
+        "active": "22-24",
+        "recovery": "18",
+        "onHit": "3",
+        "onBlock": "-3",
+        "damage": 600,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080100).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "62dd7d64-e7b7-48f4-a2d7-58ed81feb84d",
+      "slug": "yasmine-walis-na-pabagsak-4hk",
+      "name": "ワリス・ナ・パバグサ",
+      "moveType": "unique",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 20,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080100).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "62dd7d64-e7b7-48f4-a2d7-58ed81feb84d",
+          "scheme": "classic",
+          "commandText": "4HK",
+          "numericNotation": "4HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "22",
+        "active": "22-23",
+        "recovery": "25",
+        "onHit": "D",
+        "onBlock": "-6",
+        "damage": 800,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080100).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "c7bb118a-d199-4e59-bc32-e1b6d34de8c8",
+      "slug": "yasmine-kidlat-na-hiwa-5lp-lp",
+      "name": "キドラット・ナ・ヒワ",
+      "moveType": "unique",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 21,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080100).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "c7bb118a-d199-4e59-bc32-e1b6d34de8c8",
+          "scheme": "classic",
+          "commandText": "5LP~LP",
+          "numericNotation": "5LP~LP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "8",
+        "active": "8-9",
+        "recovery": "16",
+        "onHit": "1",
+        "onBlock": "-3",
+        "damage": 400,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080100).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "e1b79767-8628-4a4a-b36d-570655e8c039",
+      "slug": "yasmine-tatlong-hiwa-5mp-mp",
+      "name": "タッロング・ヒワ",
+      "moveType": "unique",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 22,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080100).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "e1b79767-8628-4a4a-b36d-570655e8c039",
+          "scheme": "classic",
+          "commandText": "5MP~MP",
+          "numericNotation": "5MP~MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "12",
+        "active": "12-13",
+        "recovery": "27",
+        "onHit": "D",
+        "onBlock": "-13",
+        "damage": 400,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080100).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "13f79a86-bf36-4f35-b39b-84af16365872",
+      "slug": "yasmine-sunod-sunod-na-sipa-1-5mk-mk",
+      "name": "スノスノッド・ナ・シパ（1段目）",
+      "moveType": "unique",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 23,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080100).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "13f79a86-bf36-4f35-b39b-84af16365872",
+          "scheme": "classic",
+          "commandText": "5MK~MK",
+          "numericNotation": "5MK~MK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "13",
+        "active": "13-14",
+        "recovery": "33",
+        "onHit": "-13",
+        "onBlock": "-13",
+        "damage": 400,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080100).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "b255814b-57aa-4668-a729-ab6c35b61c35",
+      "slug": "yasmine-sunod-sunod-na-sipa-2-5mk-mk-hk",
+      "name": "スノスノッド・ナ・シパ（2段目）",
+      "moveType": "unique",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 24,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080100).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "b255814b-57aa-4668-a729-ab6c35b61c35",
+          "scheme": "classic",
+          "commandText": "5MK~MK~HK",
+          "numericNotation": "5MK~MK~HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "16",
+        "active": "16-18",
+        "recovery": "28",
+        "onHit": "D",
+        "onBlock": "-9",
+        "damage": 500,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080100).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "3ca23e5c-4ae7-4047-b8fb-9b72af2c62c1",
+      "slug": "yasmine-kumbinasyong-pampabagsak-2mk-hk",
+      "name": "コンビナション・パムパバッグサ",
+      "moveType": "unique",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 25,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080100).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "3ca23e5c-4ae7-4047-b8fb-9b72af2c62c1",
+          "scheme": "classic",
+          "commandText": "2MK~HK",
+          "numericNotation": "2MK~HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "8",
+        "active": "8-9",
+        "recovery": "25",
+        "onHit": "D",
+        "onBlock": "-10",
+        "damage": 500,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080100).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "8416a1f7-69c0-4cc6-8c94-62e5d599ce1f",
+      "slug": "yasmine-daloy-ng-tubig-236lp",
+      "name": "弱 ダロイ・ン・トゥビグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 26,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "8416a1f7-69c0-4cc6-8c94-62e5d599ce1f",
+          "scheme": "classic",
+          "commandText": "236LP",
+          "numericNotation": "236LP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "12",
+        "active": null,
+        "recovery": null,
+        "onHit": "1",
+        "onBlock": "-6",
+        "damage": 400,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "6d0eac80-e601-47e0-bbde-5177918119c7",
+      "slug": "yasmine-alon-236lp-6p",
+      "name": "弱 アロン（1段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 27,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "ダロイ・ン・トゥビグ中に。通常版はヒット時に2段目へ、バヤニ・モード中はヒット/ガード時に2段目へ。",
+      "commands": [
+        {
+          "moveId": "6d0eac80-e601-47e0-bbde-5177918119c7",
+          "scheme": "classic",
+          "commandText": "236LP~6P",
+          "numericNotation": "236LP~6P",
+          "buttonNotation": null,
+          "conditionText": "ダロイ・ン・トゥビグ中に。通常版はヒット時に2段目へ、バヤニ・モード中はヒット/ガード時に2段目へ。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "13",
+        "active": null,
+        "recovery": null,
+        "onHit": "—",
+        "onBlock": "-12",
+        "damage": 300,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "b425b72b-4769-4e8b-81ce-25d5b630de86",
+      "slug": "yasmine-alon-2-236lp-6p-p",
+      "name": "弱 アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": "light",
+      "status": "draft",
+      "displayOrder": 28,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "アロン（1段目）から自動派生。公式行のコマンドは「-」。追加P入力は未確認。バヤニ・モードに移行する。",
+      "commands": [
+        {
+          "moveId": "b425b72b-4769-4e8b-81ce-25d5b630de86",
+          "scheme": "classic",
+          "commandText": "—",
+          "numericNotation": "—",
+          "buttonNotation": null,
+          "conditionText": "アロン（1段目）から自動派生。公式行のコマンドは「-」。追加P入力は未確認。バヤニ・モードに移行する。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "16",
+        "active": null,
+        "recovery": null,
+        "onHit": "1",
+        "onBlock": "—",
+        "damage": 400,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "77e1c548-9ad0-4224-abee-8d3beab0840a",
+      "slug": "yasmine-alon-bayani-236lp-6p",
+      "name": "[強化版]弱 アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 29,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "バヤニ・モード中のアロン2段目。公式行のコマンドは「-」。",
+      "commands": [
+        {
+          "moveId": "77e1c548-9ad0-4224-abee-8d3beab0840a",
+          "scheme": "classic",
+          "commandText": "—",
+          "numericNotation": "—",
+          "buttonNotation": null,
+          "conditionText": "バヤニ・モード中のアロン2段目。公式行のコマンドは「-」。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "16",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-1",
+        "damage": 600,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "5844bf2f-b0b1-4fc0-a357-5fba2447c274",
+      "slug": "yasmine-daloy-ng-tubig-236mp",
+      "name": "中 ダロイ・ン・トゥビグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 30,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "5844bf2f-b0b1-4fc0-a357-5fba2447c274",
+          "scheme": "classic",
+          "commandText": "236MP",
+          "numericNotation": "236MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "16",
+        "active": null,
+        "recovery": null,
+        "onHit": "1",
+        "onBlock": "-6",
+        "damage": 400,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "94df5acf-0ac9-4ec7-b05e-f270b6820620",
+      "slug": "yasmine-alon-236mp-6p",
+      "name": "中 アロン（1段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 31,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "ダロイ・ン・トゥビグ中に。通常版はヒット時に2段目へ、バヤニ・モード中はヒット/ガード時に2段目へ。",
+      "commands": [
+        {
+          "moveId": "94df5acf-0ac9-4ec7-b05e-f270b6820620",
+          "scheme": "classic",
+          "commandText": "236MP~6P",
+          "numericNotation": "236MP~6P",
+          "buttonNotation": null,
+          "conditionText": "ダロイ・ン・トゥビグ中に。通常版はヒット時に2段目へ、バヤニ・モード中はヒット/ガード時に2段目へ。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "13",
+        "active": null,
+        "recovery": null,
+        "onHit": "—",
+        "onBlock": "-12",
+        "damage": 300,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "1aa99f82-81aa-4cac-8532-d5a0aa2a0f7e",
+      "slug": "yasmine-alon-2-236mp-6p-p",
+      "name": "中 アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": "medium",
+      "status": "draft",
+      "displayOrder": 32,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "アロン（1段目）から自動派生。公式行のコマンドは「-」。追加P入力は未確認。バヤニ・モードに移行する。",
+      "commands": [
+        {
+          "moveId": "1aa99f82-81aa-4cac-8532-d5a0aa2a0f7e",
+          "scheme": "classic",
+          "commandText": "—",
+          "numericNotation": "—",
+          "buttonNotation": null,
+          "conditionText": "アロン（1段目）から自動派生。公式行のコマンドは「-」。追加P入力は未確認。バヤニ・モードに移行する。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "22",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "—",
+        "damage": 300,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "8dcbfc4d-c704-4397-bffa-791e12496d45",
+      "slug": "yasmine-alon-bayani-236mp-6p",
+      "name": "[強化版]中 アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 33,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "バヤニ・モード中のアロン2段目。公式行のコマンドは「-」。",
+      "commands": [
+        {
+          "moveId": "8dcbfc4d-c704-4397-bffa-791e12496d45",
+          "scheme": "classic",
+          "commandText": "—",
+          "numericNotation": "—",
+          "buttonNotation": null,
+          "conditionText": "バヤニ・モード中のアロン2段目。公式行のコマンドは「-」。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "22",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-2",
+        "damage": 400,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "368baecb-d1cc-4164-923b-a7512ad7cf55",
+      "slug": "yasmine-daloy-ng-tubig-236hp",
+      "name": "強 ダロイ・ン・トゥビグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 34,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "368baecb-d1cc-4164-923b-a7512ad7cf55",
+          "scheme": "classic",
+          "commandText": "236HP",
+          "numericNotation": "236HP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "21",
+        "active": null,
+        "recovery": null,
+        "onHit": "3",
+        "onBlock": "-6",
+        "damage": 400,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "88e637c4-1c01-4b41-b1e4-8d0443cbf8a6",
+      "slug": "yasmine-alon-236hp-6p",
+      "name": "強 アロン（1段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 35,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "ダロイ・ン・トゥビグ中に。通常版はヒット時に2段目へ、バヤニ・モード中はヒット/ガード時に2段目へ。",
+      "commands": [
+        {
+          "moveId": "88e637c4-1c01-4b41-b1e4-8d0443cbf8a6",
+          "scheme": "classic",
+          "commandText": "236HP~6P",
+          "numericNotation": "236HP~6P",
+          "buttonNotation": null,
+          "conditionText": "ダロイ・ン・トゥビグ中に。通常版はヒット時に2段目へ、バヤニ・モード中はヒット/ガード時に2段目へ。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "13",
+        "active": null,
+        "recovery": null,
+        "onHit": "—",
+        "onBlock": "-12",
+        "damage": 150,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "b17cb130-2e18-4789-8645-3c979a3c5f4f",
+      "slug": "yasmine-alon-2-236hp-6p-p",
+      "name": "強 アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": "heavy",
+      "status": "draft",
+      "displayOrder": 36,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "アロン（1段目）から自動派生。公式行のコマンドは「-」。追加P入力は未確認。バヤニ・モードに移行する。",
+      "commands": [
+        {
+          "moveId": "b17cb130-2e18-4789-8645-3c979a3c5f4f",
+          "scheme": "classic",
+          "commandText": "—",
+          "numericNotation": "—",
+          "buttonNotation": null,
+          "conditionText": "アロン（1段目）から自動派生。公式行のコマンドは「-」。追加P入力は未確認。バヤニ・モードに移行する。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "22",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "—",
+        "damage": 450,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "21410a7b-74b6-40da-8639-7ae894a98e35",
+      "slug": "yasmine-alon-bayani-236hp-6p",
+      "name": "[強化版]強 アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 37,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "バヤニ・モード中のアロン2段目。公式行のコマンドは「-」。",
+      "commands": [
+        {
+          "moveId": "21410a7b-74b6-40da-8639-7ae894a98e35",
+          "scheme": "classic",
+          "commandText": "—",
+          "numericNotation": "—",
+          "buttonNotation": null,
+          "conditionText": "バヤニ・モード中のアロン2段目。公式行のコマンドは「-」。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "22",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-3",
+        "damage": 550,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "adcc4f11-0d51-41b5-9b6b-2ad04b63ac46",
+      "slug": "yasmine-daloy-ng-tubig-236pp",
+      "name": "OD ダロイ・ン・トゥビグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 38,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "adcc4f11-0d51-41b5-9b6b-2ad04b63ac46",
+          "scheme": "classic",
+          "commandText": "236PP",
+          "numericNotation": "236PP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "12",
+        "active": null,
+        "recovery": null,
+        "onHit": "-2",
+        "onBlock": "-3",
+        "damage": 400,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "3485b1cd-dfdf-40d6-9125-42c8ebda906a",
+      "slug": "yasmine-alon-236pp-6p",
+      "name": "OD アロン（1段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 39,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "ダロイ・ン・トゥビグ中に。通常版はヒット時に2段目へ、バヤニ・モード中はヒット/ガード時に2段目へ。",
+      "commands": [
+        {
+          "moveId": "3485b1cd-dfdf-40d6-9125-42c8ebda906a",
+          "scheme": "classic",
+          "commandText": "236PP~6P",
+          "numericNotation": "236PP~6P",
+          "buttonNotation": null,
+          "conditionText": "ダロイ・ン・トゥビグ中に。通常版はヒット時に2段目へ、バヤニ・モード中はヒット/ガード時に2段目へ。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "13",
+        "active": null,
+        "recovery": null,
+        "onHit": "—",
+        "onBlock": "-12",
+        "damage": 300,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "4a6a8134-98c7-4fe2-817c-8131b54cbbc4",
+      "slug": "yasmine-alon-2-236pp-6p-p",
+      "name": "OD アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": "od",
+      "status": "draft",
+      "displayOrder": 40,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "アロン（1段目）から自動派生。公式行のコマンドは「-」。追加P入力は未確認。バヤニ・モードに移行する。",
+      "commands": [
+        {
+          "moveId": "4a6a8134-98c7-4fe2-817c-8131b54cbbc4",
+          "scheme": "classic",
+          "commandText": "—",
+          "numericNotation": "—",
+          "buttonNotation": null,
+          "conditionText": "アロン（1段目）から自動派生。公式行のコマンドは「-」。追加P入力は未確認。バヤニ・モードに移行する。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "56",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "—",
+        "damage": 1100,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "67ba636f-2fb0-4356-b49d-6031c96a44a1",
+      "slug": "yasmine-alon-bayani-236pp-6p",
+      "name": "[強化版]OD アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 41,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "バヤニ・モード中のアロン2段目。公式行のコマンドは「-」。",
+      "commands": [
+        {
+          "moveId": "67ba636f-2fb0-4356-b49d-6031c96a44a1",
+          "scheme": "classic",
+          "commandText": "—",
+          "numericNotation": "—",
+          "buttonNotation": null,
+          "conditionText": "バヤニ・モード中のアロン2段目。公式行のコマンドは「-」。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "56",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-1",
+        "damage": 1500,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "c709a4cc-37ca-4950-8496-1d7630044604",
+      "slug": "yasmine-alon-2-od-bayani-sa2",
+      "name": "[ナカタゴン・ラカス中][強化版]OD アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": "od",
+      "status": "draft",
+      "displayOrder": 42,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "ナカタゴン・ラカス中の強化版ODアロン2段目。公式行のコマンドは「-」。",
+      "commands": [
+        {
+          "moveId": "c709a4cc-37ca-4950-8496-1d7630044604",
+          "scheme": "classic",
+          "commandText": "—",
+          "numericNotation": "—",
+          "buttonNotation": null,
+          "conditionText": "ナカタゴン・ラカス中の強化版ODアロン2段目。公式行のコマンドは「-」。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "47",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-1",
+        "damage": 1900,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "48628cf4-d99e-420b-907e-16435f3650fe",
+      "slug": "yasmine-talim-ng-hangin-214lp",
+      "name": "弱 タリム・ン・ハンギン",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 43,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "48628cf4-d99e-420b-907e-16435f3650fe",
+          "scheme": "classic",
+          "commandText": "214LP",
+          "numericNotation": "214LP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "—",
+        "active": null,
+        "recovery": null,
+        "onHit": "—",
+        "onBlock": "—",
+        "damage": 0,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "b075f9f1-5c86-43bd-b391-c6d8857d7ddb",
+      "slug": "yasmine-talim-ng-hangin-214mp",
+      "name": "中 タリム・ン・ハンギン",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 44,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "b075f9f1-5c86-43bd-b391-c6d8857d7ddb",
+          "scheme": "classic",
+          "commandText": "214MP",
+          "numericNotation": "214MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "21",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-3",
+        "damage": 1100,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "fcc23bd3-7104-4cb5-8421-000a2a5e6db7",
+      "slug": "yasmine-talim-ng-hangin-214hp",
+      "name": "強 タリム・ン・ハンギン",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 45,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "fcc23bd3-7104-4cb5-8421-000a2a5e6db7",
+          "scheme": "classic",
+          "commandText": "214HP",
+          "numericNotation": "214HP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "30",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "1",
+        "damage": 1200,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "46bc481b-23be-4394-9781-cd11b77d52bd",
+      "slug": "yasmine-talim-ng-hangin-214pp",
+      "name": "OD タリム・ン・ハンギン",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 46,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "46bc481b-23be-4394-9781-cd11b77d52bd",
+          "scheme": "classic",
+          "commandText": "214PP",
+          "numericNotation": "214PP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "20",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-12",
+        "damage": 800,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "063766f0-b20c-4f6d-bd7f-80cae0f692f7",
+      "slug": "yasmine-mukha-ng-langit-236lk",
+      "name": "弱 ムカ・ン・ランギット",
+      "moveType": "special",
+      "strengthVariant": "light",
+      "status": "draft",
+      "displayOrder": 47,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "弱中強は23F-44F、ODは18F-45Fで対応派生が可能。14F以降空中判定。",
+      "commands": [
+        {
+          "moveId": "063766f0-b20c-4f6d-bd7f-80cae0f692f7",
+          "scheme": "classic",
+          "commandText": "236LK",
+          "numericNotation": "236LK",
+          "buttonNotation": null,
+          "conditionText": "弱中強は23F-44F、ODは18F-45Fで対応派生が可能。14F以降空中判定。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "—",
+        "active": null,
+        "recovery": "全体59",
+        "onHit": "—",
+        "onBlock": "—",
+        "damage": 0,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "90ef6e3e-33a6-4407-935a-f9843b7d6b17",
+      "slug": "yasmine-mukha-ng-langit-236mk",
+      "name": "中 ムカ・ン・ランギット",
+      "moveType": "special",
+      "strengthVariant": "medium",
+      "status": "draft",
+      "displayOrder": 48,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "弱中強は23F-44F、ODは18F-45Fで対応派生が可能。14F以降空中判定。",
+      "commands": [
+        {
+          "moveId": "90ef6e3e-33a6-4407-935a-f9843b7d6b17",
+          "scheme": "classic",
+          "commandText": "236MK",
+          "numericNotation": "236MK",
+          "buttonNotation": null,
+          "conditionText": "弱中強は23F-44F、ODは18F-45Fで対応派生が可能。14F以降空中判定。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "—",
+        "active": null,
+        "recovery": "全体59",
+        "onHit": "—",
+        "onBlock": "—",
+        "damage": 0,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "9d541ca6-b232-4a72-9d74-23efdff833a4",
+      "slug": "yasmine-mukha-ng-langit-236hk",
+      "name": "強 ムカ・ン・ランギット",
+      "moveType": "special",
+      "strengthVariant": "heavy",
+      "status": "draft",
+      "displayOrder": 49,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "弱中強は23F-44F、ODは18F-45Fで対応派生が可能。14F以降空中判定。",
+      "commands": [
+        {
+          "moveId": "9d541ca6-b232-4a72-9d74-23efdff833a4",
+          "scheme": "classic",
+          "commandText": "236HK",
+          "numericNotation": "236HK",
+          "buttonNotation": null,
+          "conditionText": "弱中強は23F-44F、ODは18F-45Fで対応派生が可能。14F以降空中判定。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "—",
+        "active": null,
+        "recovery": "全体59",
+        "onHit": "—",
+        "onBlock": "—",
+        "damage": 0,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "d3e482ae-ea0c-4643-92d9-9ec0a4727702",
+      "slug": "yasmine-mukha-ng-langit-236kk",
+      "name": "OD ムカ・ン・ランギット",
+      "moveType": "special",
+      "strengthVariant": "od",
+      "status": "draft",
+      "displayOrder": 50,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080108).png",
+      "condition": "弱中強は23F-44F、ODは18F-45Fで対応派生が可能。14F以降空中判定。",
+      "commands": [
+        {
+          "moveId": "d3e482ae-ea0c-4643-92d9-9ec0a4727702",
+          "scheme": "classic",
+          "commandText": "236KK",
+          "numericNotation": "236KK",
+          "buttonNotation": null,
+          "conditionText": "弱中強は23F-44F、ODは18F-45Fで対応派生が可能。14F以降空中判定。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "—",
+        "active": null,
+        "recovery": "全体59",
+        "onHit": "—",
+        "onBlock": "—",
+        "damage": 0,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080108).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "5223be98-b774-44f3-93c6-f525e9bcd293",
+      "slug": "yasmine-ulan-236k-p",
+      "name": "ウラン",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 51,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "ムカ・ン・ランギット中にP。ヒット/ガードさせた高度によって硬直差が変化。",
+      "commands": [
+        {
+          "moveId": "5223be98-b774-44f3-93c6-f525e9bcd293",
+          "scheme": "classic",
+          "commandText": "236K~P",
+          "numericNotation": "236K~P",
+          "buttonNotation": null,
+          "conditionText": "ムカ・ン・ランギット中にP。ヒット/ガードさせた高度によって硬直差が変化。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "17",
+        "active": null,
+        "recovery": null,
+        "onHit": "3～6",
+        "onBlock": "-4～-2",
+        "damage": 800,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "6038b360-5979-4a12-a69f-7b2cbc35edd4",
+      "slug": "yasmine-ulan-236kk-p-or-236k-pp",
+      "name": "OD ウラン",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 52,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "ムカ中にPP / ODムカ中にP。高度によって硬直差が変化。",
+      "commands": [
+        {
+          "moveId": "6038b360-5979-4a12-a69f-7b2cbc35edd4",
+          "scheme": "classic",
+          "commandText": "236KK~P or 236K~PP",
+          "numericNotation": "236KK~P or 236K~PP",
+          "buttonNotation": null,
+          "conditionText": "ムカ中にPP / ODムカ中にP。高度によって硬直差が変化。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "17",
+        "active": null,
+        "recovery": null,
+        "onHit": "5～10",
+        "onBlock": "-2～2",
+        "damage": 800,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "f10077f2-758d-43a5-b0ff-d6a801a17762",
+      "slug": "yasmine-kulog-236k-k",
+      "name": "クロッグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 53,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "ムカ中にK。高度によって硬直差が変化。",
+      "commands": [
+        {
+          "moveId": "f10077f2-758d-43a5-b0ff-d6a801a17762",
+          "scheme": "classic",
+          "commandText": "236K~K",
+          "numericNotation": "236K~K",
+          "buttonNotation": null,
+          "conditionText": "ムカ中にK。高度によって硬直差が変化。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "17",
+        "active": null,
+        "recovery": null,
+        "onHit": "4～10",
+        "onBlock": "-3～4",
+        "damage": 700,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "0ac54e2d-a6af-4ab1-8e54-bfea51f851a4",
+      "slug": "yasmine-kulog-236kk-k-or-236k-kk",
+      "name": "OD クロッグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 54,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "ムカ中にKK / ODムカ中にK。高度によって硬直差が変化。",
+      "commands": [
+        {
+          "moveId": "0ac54e2d-a6af-4ab1-8e54-bfea51f851a4",
+          "scheme": "classic",
+          "commandText": "236KK~K or 236K~KK",
+          "numericNotation": "236KK~K or 236K~KK",
+          "buttonNotation": null,
+          "conditionText": "ムカ中にKK / ODムカ中にK。高度によって硬直差が変化。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "17",
+        "active": null,
+        "recovery": null,
+        "onHit": "7～13",
+        "onBlock": "1～7",
+        "damage": 700,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "802cddff-6b17-4069-9fbb-520d81a10914",
+      "slug": "yasmine-lipad-ng-agila-623lk",
+      "name": "弱 リパ・ン・アギラ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 55,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "802cddff-6b17-4069-9fbb-520d81a10914",
+          "scheme": "classic",
+          "commandText": "623LK",
+          "numericNotation": "623LK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "5",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-29",
+        "damage": 1000,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "a2be59a6-469a-4501-a18d-515c58849bd4",
+      "slug": "yasmine-lipad-ng-agila-623mk",
+      "name": "中 リパ・ン・アギラ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 56,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "a2be59a6-469a-4501-a18d-515c58849bd4",
+          "scheme": "classic",
+          "commandText": "623MK",
+          "numericNotation": "623MK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "6",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-29",
+        "damage": 1200,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "104a6f55-f256-4521-9190-15e6daf741ea",
+      "slug": "yasmine-lipad-ng-agila-623hk",
+      "name": "強 リパ・ン・アギラ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 57,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "104a6f55-f256-4521-9190-15e6daf741ea",
+          "scheme": "classic",
+          "commandText": "623HK",
+          "numericNotation": "623HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "7",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-32",
+        "damage": 1300,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "b79816b6-b16f-47f7-8cbf-32221c3914e6",
+      "slug": "yasmine-lipad-ng-agila-623kk",
+      "name": "OD リパ・ン・アギラ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 58,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "b79816b6-b16f-47f7-8cbf-32221c3914e6",
+          "scheme": "classic",
+          "commandText": "623KK",
+          "numericNotation": "623KK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "6",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-40",
+        "damage": 1600,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "596a4a42-ce50-4c51-a367-0c12f83ce83a",
+      "slug": "yasmine-pangil-sa-likuran-22lp",
+      "name": "弱 パンギル・サ・リクラン",
+      "moveType": "special",
+      "strengthVariant": "light",
+      "status": "draft",
+      "displayOrder": 59,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "596a4a42-ce50-4c51-a367-0c12f83ce83a",
+          "scheme": "classic",
+          "commandText": "22LP",
+          "numericNotation": "22LP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "25",
+        "active": null,
+        "recovery": "全体50",
+        "onHit": "1",
+        "onBlock": "-4",
+        "damage": 600,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "d8540548-4ab4-49d0-adb8-42644a1d0eb3",
+      "slug": "yasmine-pangil-sa-likuran-22mp",
+      "name": "中 パンギル・サ・リクラン",
+      "moveType": "special",
+      "strengthVariant": "medium",
+      "status": "draft",
+      "displayOrder": 60,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "d8540548-4ab4-49d0-adb8-42644a1d0eb3",
+          "scheme": "classic",
+          "commandText": "22MP",
+          "numericNotation": "22MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "25",
+        "active": null,
+        "recovery": "全体50",
+        "onHit": "1",
+        "onBlock": "-4",
+        "damage": 600,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "0396eb74-6549-41c5-a59f-332b92284393",
+      "slug": "yasmine-pangil-sa-likuran-22hp",
+      "name": "強 パンギル・サ・リクラン",
+      "moveType": "special",
+      "strengthVariant": "heavy",
+      "status": "draft",
+      "displayOrder": 61,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "0396eb74-6549-41c5-a59f-332b92284393",
+          "scheme": "classic",
+          "commandText": "22HP",
+          "numericNotation": "22HP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "25",
+        "active": null,
+        "recovery": "全体50",
+        "onHit": "1",
+        "onBlock": "-4",
+        "damage": 600,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "b7a7c5dc-0703-4239-9df4-e62559f5a8e5",
+      "slug": "yasmine-pangil-sa-likuran-22lpmp",
+      "name": "OD 弱 パンギル・サ・リクラン",
+      "moveType": "special",
+      "strengthVariant": "od",
+      "status": "draft",
+      "displayOrder": 62,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "b7a7c5dc-0703-4239-9df4-e62559f5a8e5",
+          "scheme": "classic",
+          "commandText": "22LPMP",
+          "numericNotation": "22LPMP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "25",
+        "active": null,
+        "recovery": "全体50",
+        "onHit": "2",
+        "onBlock": "-2",
+        "damage": 900,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "5386935e-aba2-4eb9-9da4-438334bdb845",
+      "slug": "yasmine-pangil-sa-likuran-22lphp",
+      "name": "OD 中 パンギル・サ・リクラン",
+      "moveType": "special",
+      "strengthVariant": "od",
+      "status": "draft",
+      "displayOrder": 63,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "5386935e-aba2-4eb9-9da4-438334bdb845",
+          "scheme": "classic",
+          "commandText": "22LPHP",
+          "numericNotation": "22LPHP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "25",
+        "active": null,
+        "recovery": "全体50",
+        "onHit": "2",
+        "onBlock": "-2",
+        "damage": 900,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "b923d388-06b0-43fe-9121-fd073404692a",
+      "slug": "yasmine-pangil-sa-likuran-22mphp",
+      "name": "OD 強 パンギル・サ・リクラン",
+      "moveType": "special",
+      "strengthVariant": "od",
+      "status": "draft",
+      "displayOrder": 64,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "b923d388-06b0-43fe-9121-fd073404692a",
+          "scheme": "classic",
+          "commandText": "22MPHP",
+          "numericNotation": "22MPHP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "25",
+        "active": null,
+        "recovery": "全体50",
+        "onHit": "2",
+        "onBlock": "-2",
+        "damage": 900,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "720e4c8e-a93c-457e-b1c8-6ec230947b61",
+      "slug": "yasmine-linya-ng-liwanag-214214p-4kk",
+      "name": "リニャ・ン・リワナグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 65,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "ナカタゴン・ラカス中に4KK。備考右端の追加条件は画像範囲外。",
+      "commands": [
+        {
+          "moveId": "720e4c8e-a93c-457e-b1c8-6ec230947b61",
+          "scheme": "classic",
+          "commandText": "214214P~4KK",
+          "numericNotation": "214214P~4KK",
+          "buttonNotation": null,
+          "conditionText": "ナカタゴン・ラカス中に4KK。備考右端の追加条件は画像範囲外。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "22",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-3",
+        "damage": 1100,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "1c09f2c2-5300-4355-b988-3756a2c8c5dd",
+      "slug": "yasmine-hiwa-ng-kalangitan-236236k",
+      "name": "SA1 ヒワン・カラヒタン",
+      "moveType": "super",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 66,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "1c09f2c2-5300-4355-b988-3756a2c8c5dd",
+          "scheme": "classic",
+          "commandText": "236236K",
+          "numericNotation": "236236K",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "7",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-34",
+        "damage": 2000,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "8ecba6ae-0914-473a-a91b-9619dc3b7ad6",
+      "slug": "yasmine-nakatagong-lakas-214214p",
+      "name": "SA2 ナカタゴン・ラカス",
+      "moveType": "super",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 67,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "バヤニ・モード状態。タイマー1500。",
+      "commands": [
+        {
+          "moveId": "8ecba6ae-0914-473a-a91b-9619dc3b7ad6",
+          "scheme": "classic",
+          "commandText": "214214P",
+          "numericNotation": "214214P",
+          "buttonNotation": null,
+          "conditionText": "バヤニ・モード状態。タイマー1500。",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "—",
+        "active": null,
+        "recovery": null,
+        "onHit": "—",
+        "onBlock": "—",
+        "damage": 0,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "9e92c699-6f60-4553-b1db-322bbdcb32e0",
+      "slug": "yasmine-pamumukadkad-ng-sampaguita-236236p",
+      "name": "SA3 パムムカドカッド・ン・サンパギータ",
+      "moveType": "super",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 68,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "",
+      "commands": [
+        {
+          "moveId": "9e92c699-6f60-4553-b1db-322bbdcb32e0",
+          "scheme": "classic",
+          "commandText": "236236P",
+          "numericNotation": "236236P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "10",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-48",
+        "damage": 4000,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "b55d287e-ca8e-46bd-bf81-db53775b8294",
+      "slug": "yasmine-pamumukadkad-ng-sampaguita-ca-236236p",
+      "name": "CA パムムカドカッド・ン・サンパギータ",
+      "moveType": "super",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 69,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "体力25%以下",
+      "commands": [
+        {
+          "moveId": "b55d287e-ca8e-46bd-bf81-db53775b8294",
+          "scheme": "classic",
+          "commandText": "236236P",
+          "numericNotation": "236236P",
+          "buttonNotation": null,
+          "conditionText": "体力25%以下",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "10",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "-45",
+        "damage": 4500,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "f7faa5a2-62a0-4c72-abf3-91c16631a7c2",
+      "slug": "yasmine-pigil-ulo-lplk",
+      "name": "ピギル・ウロ",
+      "moveType": "throw",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 70,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "近距離で",
+      "commands": [
+        {
+          "moveId": "f7faa5a2-62a0-4c72-abf3-91c16631a7c2",
+          "scheme": "classic",
+          "commandText": "(N or 6)+LP+LK",
+          "numericNotation": "(N or 6)+LP+LK",
+          "buttonNotation": null,
+          "conditionText": "近距離で",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "5",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "—",
+        "damage": 1200,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    },
+    {
+      "id": "4301622d-102a-40e1-b583-2b02db739e54",
+      "slug": "yasmine-hila-kamay-4lplk",
+      "name": "ヒラ・カマイ",
+      "moveType": "throw",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 71,
+      "identityStatus": "READABLE_OFFICIAL_CAPTURE",
+      "sourceFile": "image(20261003-080124).png",
+      "condition": "近距離で",
+      "commands": [
+        {
+          "moveId": "4301622d-102a-40e1-b583-2b02db739e54",
+          "scheme": "classic",
+          "commandText": "4+LP+LK",
+          "numericNotation": "4+LP+LK",
+          "buttonNotation": null,
+          "conditionText": "近距離で",
+          "sortOrder": 0
+        }
+      ],
+      "frame": {
+        "startup": "5",
+        "active": null,
+        "recovery": null,
+        "onHit": "D",
+        "onBlock": "—",
+        "damage": 1200,
+        "verificationStatus": "reviewed",
+        "sourceFile": "image(20261003-080124).png",
+        "patchStatus": "PATCH_UNRESOLVED"
+      }
+    }
+  ]
+}

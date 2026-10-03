@@ -15,7 +15,7 @@ const slugs = [...read("src/lib/character-detail-route.ts").matchAll(/^  "([a-z-
 const empty = () => ({ guideSections: [], moves: [], combos: [], setups: [], sequences: [], matchups: [], training: [] });
 
 // Synthetic rows stay in tests; no DB, status, permissions or assets are changed.
-function environment({ remote = null, blocked = false, queryError = false, commandError = false,
+function environment({ remote = null, canonical = null, blocked = false, queryError = false, commandError = false,
   commandOfficial = true, frameOfficial = true, framePatch = "current", verification = "verified", status = "published" } = {}) {
   const calls = [];
   const row = { id: "move-id", slug: "test-move", name_ja: "test move", move_type: "normal", status };
@@ -32,6 +32,7 @@ function environment({ remote = null, blocked = false, queryError = false, comma
     return query;
   } };
   const mod = load("src/lib/character-detail-data.ts", (name) => {
+    if (name === "@/lib/yasmine-move-media-pilot") return { getYasmineMoveMediaPilot: () => process.env.VERCEL_ENV === "preview" ? canonical : null };
     if (name === "@/lib/supabase/server") return { getSupabaseServerClient: () => client };
     if (name === "@/lib/public-move-gate") return { isMovePublicReady: async slug => { calls.push(["gate", slug]); return !blocked; } };
     if (name === "@/lib/character-detail-route") return route;
@@ -45,6 +46,14 @@ function environment({ remote = null, blocked = false, queryError = false, comma
   });
   return { ...mod, calls };
 }
+
+test("Yasmine Preview capture takes precedence over unconfirmed remote identities", () => withEnv(async () => {
+  const capture = { ...empty(), moves: [{ id: 'reviewed-capture' }] };
+  const env = environment({ canonical: capture, remote: { ...empty(), moves: [{ id: 'unconfirmed-remote' }] } });
+  const resolved = await env.resolveCharacterDetailData('yasmine-id', 'yasmine', 'authorized-test-token');
+  assert.equal(resolved.bundle, capture);
+  assert.equal(env.calls.length, 0);
+}));
 function withEnv(fn) {
   const saved = [process.env.VERCEL_ENV, process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY];
   process.env.VERCEL_ENV = "preview"; process.env.NEXT_PUBLIC_SUPABASE_URL = "https://test.invalid"; process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = "test";

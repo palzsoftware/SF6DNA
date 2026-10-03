@@ -1,9 +1,9 @@
-# Yasmine official evidence handoff
+# Yasmine Canonical Frame device handoff
 
-CANONICAL_MOVE_MASTER = PARTIAL / FRAME_CAPTURE_UNREADABLE.
-MEDIA_MAPPING = HOLD_UNTIL_CANONICAL_COMPLETE.
-USER_DEVICE_QA = DEFERRED.
+Command20 families reused. Frame71 combat +10 systems deduped. Combat filters all71/normal18/特殊技7/special40/throw2/SA4; jump6. D/ranges/printed0 preserved; blanks show —. Media26 HOLD visible0. DB/Production/Ver.1.1 unchanged.
 
-Received Command List PDF is readable and has been transcribed. Do not re-send it or re-record gameplay. The only required input is the official Frame Data as PDF or original-resolution section screenshots. Keep column headers, all rows, variant/condition notes and patch/version visible; overlap a few rows for continuity. Existing 532×2048 whole-page Frame screenshot cannot establish exact values.
+Master PARTIAL: target patch absent; Linya note right edge clipped; SA1 source spelling differs from retained Command transcription. Narrow remaining evidence: target-version/date context and complete Linya note. No complete Frame table or recording resend required. Retained Command evidence can resolve spelling later.
 
-Once canonical identities/commands/variants/frames are complete, user QA is Yasmine Move Master only: categories, names, inputs/conditions, order, counts, filter/search, numerical fields and mobile wrapping. No media QA while held. DB correction is a separately bounded approval, not included here. Production/Ver.1.1 unchanged.
+User QA after Preview READY: Yasmine only—formal names, Classic inputs/conditions, counts, name/6MP search, throw D/—, SA/CA damage2000/0/4000/4500, Alon automatic transition,375px wrapping. No Media QA or DB approval implied. Browser outcome/finalSHA reported after verification.
+
+Remap order Normal → Unique → Specials1/2 → Throws → SA. Each clip needs visual identity approval; no bulk unhold.

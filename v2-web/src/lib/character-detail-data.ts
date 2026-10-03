@@ -4,6 +4,7 @@ import { getCharacterDetailV21Fixture } from "@/lib/character-detail-v21-fixture
 import { isCharacterDetailV2Route } from "@/lib/character-detail-route";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import { isMovePublicReady } from "@/lib/public-move-gate";
+import { getYasmineMoveMediaPilot } from "@/lib/yasmine-move-media-pilot";
 import { getPublicEntitySources } from "@/lib/public-source-links";
 import type { VideoSummary } from "@/lib/event-media";
 
@@ -67,6 +68,9 @@ export async function loadPublicCharacterMoves(characterId: string): Promise<Dev
 }
 
 export async function resolveCharacterDetailData(characterId: string, slug: string, previewToken: string | null): Promise<CharacterDetailData> {
+  // The reviewed capture is Preview-only; remote DB identities must not mask it.
+  const canonical = slug === "yasmine" ? getYasmineMoveMediaPilot() : null;
+  if (canonical) return { bundle: canonical, source: "fixture" };
   const remote = await getDevicePreviewBundle(characterId, previewToken);
   if (remote) return { bundle: remote, source: "device-preview" };
   const publicMoves = await loadPublicCharacterMoves(characterId);

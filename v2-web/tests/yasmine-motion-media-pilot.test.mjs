@@ -6,9 +6,10 @@ import { validateYasmineRecovery } from '../../scripts/validate-yasmine-recovery
 const read = relative => JSON.parse(readFileSync(new URL(relative, import.meta.url), 'utf8'));
 const manifest = read('../src/data/SF6DNA_VER1_YASMINE_MEDIA_MANIFEST_20261003.json');
 const snapshot = read('../src/data/YASMINE_PREVIEW_MOVE_SNAPSHOT_20261003.json');
+const canonical = read('../src/data/YASMINE_OFFICIAL_CAPTURE_PREVIEW_20261003.json');
 const publicRoot = new URL('../public/', import.meta.url).pathname;
 const source = readFileSync(new URL('../src/lib/yasmine-move-media-pilot.ts', import.meta.url), 'utf8');
-function pilot(data = snapshot) {
+function pilot(data = canonical) {
   const mod = { exports: {} };
   const js = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true } }).outputText;
   new Function('module', 'exports', 'require', js)(mod, mod.exports, () => data);
@@ -42,8 +43,8 @@ test('normal approvals require motion evidence and cannot use a normals source f
 });
 test('all DB identities survive suspended media, including all special and SA rows', () => {
   const bundle = environment('preview', () => pilot()());
-  assert.deepEqual(new Set(bundle.moves.map(move => move.id)), new Set(snapshot.moves.map(move => move.id)));
-  assert.equal(bundle.moves.length, 73);
+  assert.deepEqual(new Set(bundle.moves.map(move => move.id)), new Set(canonical.moves.map(move => move.id)));
+  assert.equal(bundle.moves.length, 71);
   assert.equal(bundle.moves.filter(move => move.moveType === 'special').length, 40);
   assert.equal(bundle.moves.filter(move => move.moveType === 'super').length, 4);
   assert.ok(bundle.moves.every(move => move.commands.length && move.status === 'draft'));
@@ -52,30 +53,27 @@ test('all DB identities survive suspended media, including all special and SA ro
   assert.equal(environment('development', () => pilot()()), null);
   assert.equal(environment('preview', () => pilot({ ...snapshot, characterSlug: 'ryu' })()), null);
 });
-test('unverified, stale or unevidenced frames cannot render; stored eligible values are unchanged', () => {
+test('official capture frames are reviewed only, guarded by provenance and Preview environment', () => {
   const bundle = environment('preview', () => pilot()());
-  for (const move of bundle.moves.filter(move => move.frame)) {
-    const stored = snapshot.moves.find(row => row.id === move.id);
+  assert.ok(bundle.moves.every(move => move.frame?.verificationStatus === 'reviewed'));
+  for (const move of bundle.moves) {
+    const stored = canonical.moves.find(row => row.id === move.id);
     assert.equal(move.frame.onHit, stored.frame.onHit);
     assert.equal(move.frame.onBlock, stored.frame.onBlock);
     assert.equal(move.frame.damage, stored.frame.damage);
   }
-  const original = snapshot.moves.find(row => bundle.moves.find(move => move.id === row.id)?.frame);
-  assert.ok(original);
+  const original = canonical.moves[0];
   for (const frame of [
+    { ...original.frame, verificationStatus: 'verified' },
     { ...original.frame, verificationStatus: 'unverified' },
-    { ...original.frame, validFromPatchId: 'old-patch' },
-    { ...original.frame, validToPatchId: 'ended-patch' },
-    { ...original.frame, evidence: [] },
+    { ...original.frame, patchStatus: 'incorrect-patch' },
+    { ...original.frame, sourceFile: 'unknown.png' },
   ]) {
-    const data = { ...snapshot, moves: [{ ...original, frame }] };
-    const move = environment('preview', () => pilot(data)()).moves[0];
+    const move = environment('preview', () => pilot({ ...canonical, moves: [{ ...original, frame }] })()).moves[0];
     assert.equal(move.frame, null);
     assert.equal(move.id, original.id);
   }
-  for (const move of [{ ...original, moveEvidence: [] }, { ...original, commands: original.commands.map(c => ({ ...c, evidence: [] })) }]) {
-    assert.equal(environment('preview', () => pilot({ ...snapshot, moves: [move] })()).moves[0].frame, null);
-  }
+  assert.equal(environment('production', () => pilot()()), null);
 });
 test('validator rejects wrong identities, duplicate files and unreviewed special/SA approvals', () => {
   const validate = clip => validateYasmineRecovery({ ...manifest, clips: [clip] }, snapshot, { checkFiles: false }).errors;
