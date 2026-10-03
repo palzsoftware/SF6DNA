@@ -124,4 +124,23 @@ Seven MP4/WebP pairs are selected for Preview. OD Power Bomb is excluded after s
 
 Validation and exact deployment details will be recorded after checks. Production/Ver1.1/DB remain unchanged.
 
-Local implementation checks: typecheck PASS; lint PASS; tests 499/499 PASS; release-gates 14/14 PASS; build PASS; diff-check PASS; Alex media validator including 14-file full decode PASS. Final Preview QA and deployment SHA are pending the authorized RC push.
+Local implementation checks: typecheck PASS; lint PASS; tests 499/499 PASS; release-gates 14/14 PASS; build PASS; diff-check PASS; Alex media validator including 14-file full decode PASS. Implementation Preview QA is complete as recorded below.
+
+## Verified implementation Preview
+
+- Fresh base: `3c45c6a7981172ac7172a034c2d867555f0976a2`.
+- Implementation RC SHA: `5bdeb6965b82b963b27f1f60dbf93c3173619a5e`; tree `3a16089c06d98c74f2fd000a5885871e0f9dad91`. GitHub-uploaded 24 blobs and resulting tree exactly match the locally tested tree.
+- Vercel deployment: `dpl_6n3jy8THovT94op8Lg3vpeciPvLd`, READY, Preview target, exact RC branch/SHA.
+- URL: https://sf-6-13b5tfljg-somas11620-9368.vercel.app/characters/alex
+- Desktop Dark / Light: PASS at 1363px viewport; three Special / four SA cards; all seven videos readyState 4, no media decode error; each video width 499px; horizontal overflow 0; preload none. Offscreen videos initially stayed unloaded, confirming lazy behavior.
+- JP: 59 cards, Japanese arrow/button commands retained, no Alex media; Yasmine: 71 cards / 12 currently rendered videos, no Alex media; Ryu: 57 cards / 4 currently rendered videos, no Alex media. Representative desktop overflow 0 on all three. These rendered video counts are not total coverage claims.
+- 375px: USER_DEVICE_QA_REQUIRED. This browser exposes no viewport-resize API. No mobile PASS claim.
+- Frames: null for all seven Preview cards; existing DB audit remains evidence only, not new frame verification.
+- Media: seven MP4 + seven WebP, 11,848,898 bytes total. Wrong approved mapping 0; duplicate mapping 0; broken media 0.
+- HOLD: OD Power Bomb (stale initial OD label, new normal SUCCESS); six name/category discrepant candidates; three conditional candidates; Jump six-button identity; all other unconfirmed variants/frames; Combo/Setup and DB edits. Review originals and 17-pair local pack retained.
+- Checks: typecheck PASS; lint PASS; tests 499/499; release-gates 14/14; build PASS; diff-check PASS; Alex validator/full decode PASS.
+- Remote write: authorized RC only. DB_WRITE 0; Production NO_CHANGE; Ver1.1 NO_CHANGE; main and sf6dna-v2 unchanged.
+- FAST_TRACK_STATUS: READY_FOR_RC_PREVIEW_WITH_EXACT_HOLDS. Release remains NO-GO; no Production approval granted.
+- NEXT_SINGLE_ACTION: Alex 375px user-device check; unconfirmed identities remain HOLD while rollout proceeds to the next character.
+
+The following handoff commit changes documentation only. Its own exact Preview SHA is checked after deployment and reported in the conversation; runtime/assets match the implementation SHA above.
