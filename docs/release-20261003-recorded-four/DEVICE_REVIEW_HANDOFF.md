@@ -359,6 +359,8 @@ Jamie SA / Marisa SA recordings are available, but accepted source-label/input e
 
 ## Validation / Preview
 
-Targeted checks PASS. Final checks: typecheck PASS, lint PASS, tests 546/546, release-gates 14/14, build PASS, diff-check PASS; validator seventeen pairs / NEW 16-file decode PASS; nine reused pairs remain byte-identical. Exact RC/deployment confirmation follows integration. Desktop four routes and JP/Yasmine/Alex regression are required; 375px remains USER_DEVICE_QA_REQUIRED if resize is unavailable.
+Targeted checks PASS. Final checks: typecheck PASS, lint PASS, tests 551/551, release-gates 14/14, build PASS, diff-check PASS; validator seventeen pairs / NEW 16-file decode PASS; nine reused pairs remain byte-identical. Exact RC/deployment confirmation follows integration. Desktop four routes and JP/Yasmine/Alex regression are required; 375px remains USER_DEVICE_QA_REQUIRED if resize is unavailable.
 
 Next single action: review the new eight Preview pairs, then continue the next recorded-character batch. No rerecording request. 375px device QA remains USER_REQUIRED. Exact Preview SHA/route QA is recorded after RC integration in the final report.
+
+Preview QA detected two new Manon rows in Luke fallback due to an insertion boundary error. Corrected fixture ownership; runtime fixture-to-manifest character identity and non-Preview coverage tests prevent recurrence. No cross-character video was assigned. Final Preview is reviewed on the corrected commit.

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { createHash } from 'node:crypto';
+import ts from 'typescript';
 import { identities, manifestPaths, validateRecordedCharacter } from '../../scripts/validate-recorded-four-media.mjs';
 const publicRoot = new URL('../public/',import.meta.url).pathname;
 for (const [index, character] of Object.keys(identities).entries()) {
@@ -103,4 +104,27 @@ test("Luke CA cannot replace the normal SA3 clip", () => {
  const m = JSON.parse(readFileSync(new URL("../src/data/SF6DNA_VER1_LUKE_MEDIA_MANIFEST_20260924.json",import.meta.url),"utf8"));
  m.clips.find(c => c.move_slug === "luke-sa3-pale-rider").condition = "low-life critical art";
  assert.ok(validateRecordedCharacter(m,"luke",{publicRoot}).errors.includes("SA3 / CA identity conflict"));
+});
+
+const fixtureSource = readFileSync(new URL("../src/lib/character-detail-v21-fixture.ts",import.meta.url),"utf8");
+function fixtureIn(environment) {
+ const compiled = ts.transpileModule(fixtureSource,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+ const compiledModule = {exports:{}};
+ const require = () => ({jpMoveReviewFixture:[],ryuMoveReviewFixture:[],getYasmineMoveMediaPilot:()=>null});
+ new Function("require","module","exports","process",compiled)(require,compiledModule,compiledModule.exports,{env:{VERCEL_ENV:environment}});
+ return compiledModule.exports.getCharacterDetailV21Fixture;
+}
+for (const [index,character] of Object.keys(identities).entries()) test(`${character}: Preview fixture only contains its reviewed manifest identities`, () => {
+ const manifest = JSON.parse(readFileSync(new URL(`../src/data/${manifestPaths[index]}`,import.meta.url),"utf8"));
+ const fixture = fixtureIn("preview")(character);
+ assert.deepEqual(fixture.moves.map(m=>m.id).sort(),manifest.clips.map(c=>c.move_id).sort());
+ for (const row of fixture.moves) {
+  const clip=manifest.clips.find(c=>c.move_id===row.id);
+  assert.equal(row.slug,clip.move_slug);
+  assert.equal(row.moveType.replace("target_combo","target_combos"),clip.category);
+ }
+});
+test("the additional fixture rows stay outside Production", () => {
+ const getFixture=fixtureIn("production");
+ for (const [character,count] of [["luke",1],["manon",3],["jamie",0],["marisa",0]]) assert.equal(getFixture(character).moves.length,count,character);
 });
