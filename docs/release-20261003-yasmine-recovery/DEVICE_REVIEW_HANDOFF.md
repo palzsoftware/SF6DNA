@@ -12,3 +12,5 @@ Validation: typecheck PASS; lint PASS; tests 463/463; release gates 14/14; mappi
 
 
 Build PASS. Generated next-env.d.ts/tsconfig.json edits were inspected and excluded. Existing 26 MP4s decoded successfully (ffmpeg); this does not validate identity. Diff-check PASS.
+
+Implementation d9bb90b47e76cb4073cdfd9ceb36b670acdd1fb7: Preview READY with exact branch/SHA. Yasmine 73 distinct IDs, specials40, videos0; Desktop Dark/Light, overflow false and broken images0. JP59/26 videos, Ryu57/4 videos, Beginner8 videos route smokes PASS. No new site-origin console errors observed. Full visual mapping and current official values remain blocked; 375px is not certified. Final docs-only deployment is checked separately.
