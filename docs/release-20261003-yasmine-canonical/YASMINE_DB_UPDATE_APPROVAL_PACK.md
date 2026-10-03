@@ -64,3 +64,13 @@ NEW_P0 = 0 observed in containment delta; NEW_P1 = 0 observed in containment del
 | on_hit | 56 | 29 |
 | on_block | 62 | 23 |
 | damage | 83 | 2 |
+
+## Deployed containment QA
+
+Implementation SHA: 4c3a83dd6a2ca26b319102582fe0854b289bc8ec. Preview dpl_3pfEZvrDUYapAehUHF5nYKV9c8cd was READY, target branch and exact SHA matched.
+
+Desktop Yasmine Dark/Light: no document-wide overflow observed, zero video elements. Existing Snapshot cards: 73 unique identities; filter results normal 25, special 40, super 4, throw 2, unique 2, all 73. Search 5LP returns 2 cards and restores 73 after clearing. These validate containment/filter behavior ONLY, not official category/name/command correctness. No canonical correction or frame completion is claimed.
+
+JP and Ryu representative routes render, retain respectively 26 and 4 video elements, and show no document-wide overflow. No application console error observed during the inspected navigation; browser-extension metadata errors excluded. Runtime server logs were not audited. 375px browser resize was unavailable: USER_REQUIRED, deferred until Canonical Master is ready.
+
+FINAL_RELEASE_GO = NO. Canonical counts, mismatch counts, official-only/DB-only identities and DB update necessity remain UNDETERMINED. DB_WRITE = 0; Production/Ver.1.1 unchanged. Next single action is obtaining the current official Command List and Frame Data contents (including patch/variants/conditions); no gameplay rerecording is requested.
