@@ -1,3 +1,5 @@
+> Mapping acceptance withdrawn on 2026-10-03 after user device QA found name/command/video mismatches. All 26 mappings are held. Historical PASS statements below are superseded by ../release-20261003-yasmine-recovery/YASMINE_FULL_MEDIA_RECONCILIATION.md.
+
 # Yasmine Media Integration Result — PARTIAL PREVIEW PILOT
 
 BASE_SHA = 634ad668e3c84eb51ddb0be643a07d9604cb52b6

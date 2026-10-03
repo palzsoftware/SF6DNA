@@ -1,72 +1,78 @@
-import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
-import test from "node:test";
-import ts from "typescript";
-import { validateMotionMediaManifest } from "../../scripts/validate-motion-media.mjs";
-
-const manifest = JSON.parse(readFileSync(new URL("../src/data/SF6DNA_VER1_YASMINE_MEDIA_MANIFEST_20261003.json", import.meta.url), "utf8"));
-const publicRoot = new URL("../public/", import.meta.url).pathname;
-const source = readFileSync(new URL("../src/lib/yasmine-move-media-pilot.ts", import.meta.url), "utf8");
-function pilot(data = manifest) {
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import test from 'node:test';
+import ts from 'typescript';
+import { validateYasmineRecovery } from '../../scripts/validate-yasmine-recovery.mjs';
+const read = relative => JSON.parse(readFileSync(new URL(relative, import.meta.url), 'utf8'));
+const manifest = read('../src/data/SF6DNA_VER1_YASMINE_MEDIA_MANIFEST_20261003.json');
+const snapshot = read('../src/data/YASMINE_PREVIEW_MOVE_SNAPSHOT_20261003.json');
+const publicRoot = new URL('../public/', import.meta.url).pathname;
+const source = readFileSync(new URL('../src/lib/yasmine-move-media-pilot.ts', import.meta.url), 'utf8');
+function pilot(data = snapshot) {
   const mod = { exports: {} };
   const js = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true } }).outputText;
-  new Function("module", "exports", "require", js)(mod, mod.exports, () => data);
+  new Function('module', 'exports', 'require', js)(mod, mod.exports, () => data);
   return mod.exports.getYasmineMoveMediaPilot;
 }
-function withEnvironment(value, action) {
-  const previous = process.env.VERCEL_ENV;
+function environment(value, action) {
+  const old = process.env.VERCEL_ENV;
   process.env.VERCEL_ENV = value;
   try { return action(); } finally {
-    if (previous === undefined) delete process.env.VERCEL_ENV; else process.env.VERCEL_ENV = previous;
+    if (old === undefined) delete process.env.VERCEL_ENV; else process.env.VERCEL_ENV = old;
   }
 }
-
-test("Yasmine capture mappings have independent clips, posters, review evidence and bounded nonoverlapping cuts", () => {
-  assert.equal(manifest.source_files.length, 6);
-  assert.equal(manifest.clips.length, 26);
-  assert.deepEqual(validateMotionMediaManifest(manifest, { publicRoot }).errors, []);
-  const intervals = new Map();
-  for (const clip of manifest.clips) {
-    assert.equal(clip.cut_review_status, "CUT_REVIEW_PASS");
-    assert.ok(clip.mapping_evidence.trim().length > 0);
-    assert.ok(clip.source_start_ms < clip.poster_source_ms && clip.poster_source_ms < clip.source_end_ms);
-    const previous = intervals.get(clip.source_file) ?? [];
-    assert.ok(previous.every(([start, end]) => clip.source_end_ms <= start || clip.source_start_ms >= end));
-    previous.push([clip.source_start_ms, clip.source_end_ms]); intervals.set(clip.source_file, previous);
-  }
-  assert.equal(new Set(manifest.clips.map(c => c.move_id)).size, manifest.clips.length);
-  assert.equal(new Set(manifest.clips.map(c => c.sha256)).size, manifest.clips.length);
-  const supers = manifest.clips.filter(c => c.db_move_type === "super");
-  assert.equal(supers.length, 4);
-  assert.equal(new Set(supers.map(c => c.media_url)).size, 4);
-  assert.equal(supers.filter(c => c.move_slug.includes("-ca-")).length, 1);
-  assert.equal(manifest.clips.some(c => c.move_slug.includes("jumping-")), false, "unrecorded jumping normals must not reuse standing clips");
+test('withdrawn mappings preserve assets but none remain approved', () => {
+  const result = validateYasmineRecovery(manifest, snapshot, { publicRoot });
+  assert.deepEqual(result.errors, []);
+  assert.equal(result.stats.approved, 0);
+  assert.equal(result.stats.held, manifest.clips.length);
+  assert.ok(manifest.clips.every(clip => clip.cut_review_status === 'USER_QA_FAIL_PENDING_REAUDIT'));
 });
-
-test("Yasmine draft capture fixture cannot render in Production or masquerade as verified frames", () => {
-  assert.equal(withEnvironment("production", () => pilot()()), null);
-  assert.equal(withEnvironment("development", () => pilot()()), null);
-  const bundle = withEnvironment("preview", () => pilot()());
-  assert.equal(bundle.moves.length, manifest.clips.length);
-  assert.ok(bundle.moves.every(m => m.status === "draft" && m.frame === null));
+test('all DB identities survive suspended media, including all special and SA rows', () => {
+  const bundle = environment('preview', () => pilot()());
+  assert.deepEqual(new Set(bundle.moves.map(move => move.id)), new Set(snapshot.moves.map(move => move.id)));
+  assert.equal(bundle.moves.length, 73);
+  assert.equal(bundle.moves.filter(move => move.moveType === 'special').length, 40);
+  assert.equal(bundle.moves.filter(move => move.moveType === 'super').length, 4);
+  assert.ok(bundle.moves.every(move => move.commands.length && move.status === 'draft'));
   assert.deepEqual(bundle.combos, []); assert.deepEqual(bundle.setups, []);
-  for (const move of bundle.moves) {
-    const clip = manifest.clips.find(c => c.move_id === move.id);
-    assert.equal(move.slug, clip.move_slug);
-    assert.equal(move.name, clip.move_name);
-    assert.equal(move.moveType, clip.db_move_type);
-    assert.equal(move.commands[0].commandText, clip.command_snapshot);
+  assert.equal(environment('production', () => pilot()()), null);
+  assert.equal(environment('development', () => pilot()()), null);
+  assert.equal(environment('preview', () => pilot({ ...snapshot, characterSlug: 'ryu' })()), null);
+});
+test('unverified, stale or unevidenced frames cannot render; stored eligible values are unchanged', () => {
+  const bundle = environment('preview', () => pilot()());
+  for (const move of bundle.moves.filter(move => move.frame)) {
+    const stored = snapshot.moves.find(row => row.id === move.id);
+    assert.equal(move.frame.onHit, stored.frame.onHit);
+    assert.equal(move.frame.onBlock, stored.frame.onBlock);
+    assert.equal(move.frame.damage, stored.frame.damage);
+  }
+  const original = snapshot.moves.find(row => bundle.moves.find(move => move.id === row.id)?.frame);
+  assert.ok(original);
+  for (const frame of [
+    { ...original.frame, verificationStatus: 'unverified' },
+    { ...original.frame, validFromPatchId: 'old-patch' },
+    { ...original.frame, validToPatchId: 'ended-patch' },
+    { ...original.frame, evidence: [] },
+  ]) {
+    const data = { ...snapshot, moves: [{ ...original, frame }] };
+    const move = environment('preview', () => pilot(data)()).moves[0];
+    assert.equal(move.frame, null);
+    assert.equal(move.id, original.id);
+  }
+  for (const move of [{ ...original, moveEvidence: [] }, { ...original, commands: original.commands.map(c => ({ ...c, evidence: [] })) }]) {
+    assert.equal(environment('preview', () => pilot({ ...snapshot, moves: [move] })()).moves[0].frame, null);
   }
 });
-
-test("held or wrong-character mappings fail closed; duplicate mappings and missing files are rejected", () => {
-  const held = { ...manifest, clips: [{ ...manifest.clips[0], verification_status: "mapping_hold" }] };
-  assert.deepEqual(withEnvironment("preview", () => pilot(held)()).moves, []);
-  assert.equal(withEnvironment("preview", () => pilot({ ...manifest, character_slug: "ryu" })()), null);
+test('validator rejects wrong identities, duplicate files and unreviewed special/SA approvals', () => {
+  const validate = clip => validateYasmineRecovery({ ...manifest, clips: [clip] }, snapshot, { checkFiles: false }).errors;
+  assert.ok(validate({ ...manifest.clips[0], move_slug: 'ryu-standing-light-punch' }).some(e => e.includes('identity/category')));
+  for (const type of ['special', 'super']) {
+    const clip = manifest.clips.find(row => row.db_move_type === type);
+    assert.ok(validate({ ...clip, verification_status: 'approved_for_preview' }).some(e => e.includes('review required')));
+  }
   const duplicate = { ...manifest, clips: [...manifest.clips, manifest.clips[0]] };
-  assert.ok(validateMotionMediaManifest(duplicate, { checkFiles: false }).errors.some(e => e.includes("duplicate move_id + variant")));
-  const wrong = { ...manifest, clips: [{ ...manifest.clips[0], move_slug: "ryu-standing-light-punch" }] };
-  assert.deepEqual(withEnvironment("preview", () => pilot(wrong)()).moves, []);
-  const missing = { ...manifest, clips: [{ ...manifest.clips[0], poster_url: "/media/moves/yasmine/missing.webp" }] };
-  assert.ok(validateMotionMediaManifest(missing, { publicRoot }).errors.some(e => e.includes("missing asset")));
+  assert.ok(validateYasmineRecovery(duplicate, snapshot, { checkFiles: false }).errors.some(e => e.includes('duplicate file mapping')));
+  assert.ok(validateYasmineRecovery({ ...manifest, character_id: 'wrong' }, snapshot, { checkFiles: false }).errors.includes('character identity mismatch'));
 });

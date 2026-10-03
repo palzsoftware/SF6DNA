@@ -1,18 +1,31 @@
-import manifest from "@/data/SF6DNA_VER1_YASMINE_MEDIA_MANIFEST_20261003.json";
+import snapshot from "@/data/YASMINE_PREVIEW_MOVE_SNAPSHOT_20261003.json";
 import type { DevicePreviewBundle } from "@/lib/device-preview";
 
-/** Reviewed capture identities only. This is not a public Move grant or frame verification. */
+/** DB identity fallback, independent of media approval. Preview only; no publication grant. */
 export function getYasmineMoveMediaPilot(): DevicePreviewBundle | null {
-  if (process.env.VERCEL_ENV !== "preview" || manifest.character_slug !== "yasmine") return null;
+  if (process.env.VERCEL_ENV !== "preview" || snapshot.characterSlug !== "yasmine") return null;
   return {
     guideSections: [], combos: [], setups: [], sequences: [], matchups: [], training: [],
-    moves: manifest.clips.filter((clip) => clip.verification_status === "approved_for_preview" && clip.move_slug.startsWith("yasmine-")).map((clip) => ({
-      id: clip.move_id, slug: clip.move_slug, name: clip.move_name,
-      moveType: clip.db_move_type, usageSummary: null, status: "draft", frame: null,
-      commands: clip.command_snapshot ? [{
-        moveId: clip.move_id, scheme: "classic", commandText: clip.command_snapshot,
-        numericNotation: null, buttonNotation: null, conditionText: null, sortOrder: 0,
-      }] : [],
-    })),
+    moves: snapshot.moves.filter((move) => move.slug.startsWith("yasmine-")).map((move) => {
+      const frame = move.frame;
+      // Reuse stored verification only when all existing evidence requirements hold.
+      // This does not assert a fresh official-table reconciliation on the snapshot date.
+      const frameReady = frame?.verificationStatus === "verified"
+        && frame.validFromPatchId === snapshot.currentPatchId && frame.validToPatchId === null
+        && frame.evidence.length > 0 && move.moveEvidence.length > 0
+        && move.commands.some((command) => command.evidence.length > 0);
+      return {
+        id: move.id, slug: move.slug, name: move.name, moveType: move.moveType,
+        usageSummary: null, status: "draft",
+        frame: frameReady && frame ? {
+          startup: frame.startup, active: frame.active, recovery: frame.recovery,
+          onHit: frame.onHit, onBlock: frame.onBlock, damage: frame.damage,
+          verificationStatus: frame.verificationStatus,
+        } : null,
+        commands: move.commands.map(({ moveId, scheme, commandText, numericNotation, buttonNotation, conditionText, sortOrder }) => ({
+          moveId, scheme, commandText, numericNotation, buttonNotation, conditionText, sortOrder,
+        })),
+      };
+    }),
   };
 }

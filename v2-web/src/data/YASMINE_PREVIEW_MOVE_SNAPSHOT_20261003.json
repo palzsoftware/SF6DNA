@@ -1,0 +1,3599 @@
+{
+  "version": 1,
+  "characterSlug": "yasmine",
+  "characterId": "a9f61f3f-d6e0-4f98-8f1f-6fb94fae7baa",
+  "readAt": "2026-10-03",
+  "currentPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+  "currentPatch": "2026.08.03",
+  "officialReconciliation": "BLOCKED_HTTP_403",
+  "moves": [
+    {
+      "id": "d66223a6-df43-4ce9-801b-dbc83cf21bf1",
+      "slug": "yasmine-gunting-na-pabagsak-2hk",
+      "name": "グンティング・ナ・パバサ",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 30,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "c144d4b2-b35d-45c6-b81a-9ed252d6e089",
+          "moveId": "d66223a6-df43-4ce9-801b-dbc83cf21bf1",
+          "scheme": "classic",
+          "commandText": "2HK",
+          "numericNotation": "2HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "d723561a-e255-47b4-8659-721e40a815ec",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "10",
+        "active": "10-12",
+        "recovery": "25",
+        "onHit": "D",
+        "onBlock": "-10",
+        "damage": 900,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "495aa9a0-c9b0-4484-b845-856a538832e4",
+      "slug": "yasmine-crouching-heavy-punch-2hp",
+      "name": "しゃがみ強P（マミミツィン）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 31,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "2effc68b-6ab7-454f-aebf-f02d4c31cee6",
+          "moveId": "495aa9a0-c9b0-4484-b845-856a538832e4",
+          "scheme": "classic",
+          "commandText": "2HP",
+          "numericNotation": "2HP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "99234aa6-9a54-4c86-9cff-cb325cdc9424",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "8",
+        "active": "6",
+        "recovery": "23",
+        "onHit": "2",
+        "onBlock": "-11",
+        "damage": 800,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dcda78cf-a5be-4d31-9fed-d18bcf34e9ac",
+      "slug": "yasmine-crouching-light-kick-2lk",
+      "name": "しゃがみ弱K（マガアン・ナ・シパ）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 32,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "e3ff67d3-b4e3-42d0-842b-10fa5f514988",
+          "moveId": "dcda78cf-a5be-4d31-9fed-d18bcf34e9ac",
+          "scheme": "classic",
+          "commandText": "2LK",
+          "numericNotation": "2LK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "697a86a6-4ca0-46ca-a8c1-fd4a6a75d6c9",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "5",
+        "active": "3",
+        "recovery": "10",
+        "onHit": "2",
+        "onBlock": "-2",
+        "damage": 200,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bcdb1926-b1a6-4a85-b8d0-25dcf464fd87",
+      "slug": "yasmine-crouching-light-punch-2lp",
+      "name": "しゃがみ弱P（マビリサング・パグラスラス）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 33,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "08ac5d30-a418-4ae7-8025-3f5895964144",
+          "moveId": "bcdb1926-b1a6-4a85-b8d0-25dcf464fd87",
+          "scheme": "classic",
+          "commandText": "2LP",
+          "numericNotation": "2LP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "1f5e1d3f-683f-42d7-b6dc-89ac87daa2fb",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "4",
+        "active": "3",
+        "recovery": "8",
+        "onHit": "4",
+        "onBlock": "-1",
+        "damage": 300,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "44237752-18cd-4aa7-8e78-9670a78a6e2e",
+      "slug": "yasmine-crouching-medium-kick-2mk",
+      "name": "しゃがみ中K（パンドゥログ・ナン・ルロッド）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 34,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "780ca8e0-440e-43da-95f3-a7809318df3d",
+          "moveId": "44237752-18cd-4aa7-8e78-9670a78a6e2e",
+          "scheme": "classic",
+          "commandText": "2MK",
+          "numericNotation": "2MK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "fee8107e-0495-460f-ab39-9161d61ca8cf",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "8",
+        "active": "3",
+        "recovery": "19",
+        "onHit": "-1",
+        "onBlock": "-6",
+        "damage": 500,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3ca23e5c-4ae7-4047-b8fb-9b72af2c62c1",
+      "slug": "yasmine-kumbinasyong-pampabagsak-2mk-hk",
+      "name": "コンビナション・パムパバッグサ",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 35,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "df52d093-79a8-4be1-8287-514ae67abf59",
+          "moveId": "3ca23e5c-4ae7-4047-b8fb-9b72af2c62c1",
+          "scheme": "classic",
+          "commandText": "2MK~HK",
+          "numericNotation": "2MK~HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "b3a5ad28-b984-43de-8e0e-3ce0fc779cd0",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "8",
+        "active": "8-9",
+        "recovery": "25",
+        "onHit": "D",
+        "onBlock": "-10",
+        "damage": 500,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "03a3c78f-d49e-4dff-9857-08856fd40b25",
+      "slug": "yasmine-crouching-medium-punch-2mp",
+      "name": "しゃがみ中P（カルモット）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 36,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "9c43e2db-937e-485b-8ab2-a3e79f0ca8b6",
+          "moveId": "03a3c78f-d49e-4dff-9857-08856fd40b25",
+          "scheme": "classic",
+          "commandText": "2MP",
+          "numericNotation": "2MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "bc7a87dc-8984-401f-8903-cb8ba31435d3",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "6",
+        "active": "3",
+        "recovery": "16",
+        "onHit": "4",
+        "onBlock": "0",
+        "damage": 600,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "62dd7d64-e7b7-48f4-a2d7-58ed81feb84d",
+      "slug": "yasmine-walis-na-pabagsak-4hk",
+      "name": "ワリス・ナ・パバグサ",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 37,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "beca8877-2729-4c93-b4f6-c50492ff83de",
+          "moveId": "62dd7d64-e7b7-48f4-a2d7-58ed81feb84d",
+          "scheme": "classic",
+          "commandText": "4HK",
+          "numericNotation": "4HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "589e3406-ce24-41bb-8a7c-452841b4ffba",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "22",
+        "active": "22-23",
+        "recovery": "25",
+        "onHit": "D",
+        "onBlock": "-6",
+        "damage": 800,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "72e48438-5de6-43cb-b421-41a5105dd213",
+      "slug": "yasmine-standing-heavy-kick-5hk",
+      "name": "立ち強K（トゥマタロン・ナ・シパ）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 40,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "1af69783-d0cb-4f6f-b434-f9489815a55a",
+          "moveId": "72e48438-5de6-43cb-b421-41a5105dd213",
+          "scheme": "classic",
+          "commandText": "5HK",
+          "numericNotation": "5HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "4eb757f6-056e-4627-aed6-ae7825317e2b",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "14",
+        "active": "3",
+        "recovery": "20",
+        "onHit": "1",
+        "onBlock": "-4",
+        "damage": 800,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "de5b585d-28cd-4be8-b495-2611b995ef2f",
+      "slug": "yasmine-standing-heavy-punch-5hp",
+      "name": "立ち強P（トリップレング・パグラスラス）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 41,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "00841241-f748-4d50-93f0-1ee2fc2656c2",
+          "moveId": "de5b585d-28cd-4be8-b495-2611b995ef2f",
+          "scheme": "classic",
+          "commandText": "5HP",
+          "numericNotation": "5HP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "54e2d29e-222c-416f-9ae9-fdfae2e0a677",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "9",
+        "active": "9-10,15-16,27-28",
+        "recovery": "15",
+        "onHit": "+2",
+        "onBlock": "-3",
+        "damage": 800,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "77b8c07a-0085-40ab-bae7-ad37aadd44ce",
+      "slug": "yasmine-standing-light-kick-5lk",
+      "name": "立ち弱K（マババング・シパ）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 42,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "1bd49474-d0ba-4609-8d99-62cbf01db4b7",
+          "moveId": "77b8c07a-0085-40ab-bae7-ad37aadd44ce",
+          "scheme": "classic",
+          "commandText": "5LK",
+          "numericNotation": "5LK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "8885ac20-ee19-4705-9c52-7947ba99158a",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "5",
+        "active": "2",
+        "recovery": "12",
+        "onHit": "2",
+        "onBlock": "-4",
+        "damage": 300,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "42bfb7b6-2511-48e4-b50e-7045fc676ba9",
+      "slug": "yasmine-standing-light-punch-5lp",
+      "name": "立ち弱P（マガアン・ナ・パグラスラス）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 43,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "ec381d8a-a686-4886-b0e3-2929ea2c9236",
+          "moveId": "42bfb7b6-2511-48e4-b50e-7045fc676ba9",
+          "scheme": "classic",
+          "commandText": "5LP",
+          "numericNotation": "5LP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "13a4b39a-ac51-4514-b582-673b1b2af6d0",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "5",
+        "active": "3",
+        "recovery": "7",
+        "onHit": "4",
+        "onBlock": "-1",
+        "damage": 300,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c7bb118a-d199-4e59-bc32-e1b6d34de8c8",
+      "slug": "yasmine-kidlat-na-hiwa-5lp-lp",
+      "name": "キドラット・ナ・ヒワ",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 44,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "19a4ae9e-8569-4dd8-929e-4b6a5f2da6c2",
+          "moveId": "c7bb118a-d199-4e59-bc32-e1b6d34de8c8",
+          "scheme": "classic",
+          "commandText": "5LP~LP",
+          "numericNotation": "5LP~LP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "7b65abc8-939b-4730-ac81-f52041ef6ff0",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "8",
+        "active": "8-9",
+        "recovery": "16",
+        "onHit": "1",
+        "onBlock": "-3",
+        "damage": 400,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "329ee255-394a-49be-9ecb-e9fb2b982370",
+      "slug": "yasmine-standing-medium-kick-5mk",
+      "name": "立ち中K",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 45,
+      "moveEvidence": [],
+      "commands": [
+        {
+          "id": "12cfef3b-4c23-461d-9db2-884a16137b34",
+          "moveId": "329ee255-394a-49be-9ecb-e9fb2b982370",
+          "scheme": "classic",
+          "commandText": "5MK",
+          "numericNotation": "5MK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "a0d427c5-0b1e-443e-a4bb-b3962b40fd46",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "10",
+        "active": "3",
+        "recovery": "19",
+        "onHit": "3",
+        "onBlock": "-4",
+        "damage": 700,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "13f79a86-bf36-4f35-b39b-84af16365872",
+      "slug": "yasmine-sunod-sunod-na-sipa-1-5mk-mk",
+      "name": "スノスノッド・ナ・シパ（1段目）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 46,
+      "moveEvidence": [],
+      "commands": [
+        {
+          "id": "cc8d9f58-45ed-4c8d-8591-8b838cf69bba",
+          "moveId": "13f79a86-bf36-4f35-b39b-84af16365872",
+          "scheme": "classic",
+          "commandText": "5MK~MK",
+          "numericNotation": "5MK~MK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "942197ff-1ad9-4333-86dc-8f5e2518de6a",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "13",
+        "active": "13-14",
+        "recovery": "33",
+        "onHit": "-13",
+        "onBlock": "-13",
+        "damage": 400,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b255814b-57aa-4668-a729-ab6c35b61c35",
+      "slug": "yasmine-sunod-sunod-na-sipa-2-5mk-mk-hk",
+      "name": "スノスノッド・ナ・シパ（2段目）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 47,
+      "moveEvidence": [],
+      "commands": [
+        {
+          "id": "f42cafe0-b547-422f-ad6f-1e2fe71fc4f3",
+          "moveId": "b255814b-57aa-4668-a729-ab6c35b61c35",
+          "scheme": "classic",
+          "commandText": "5MK~MK~HK",
+          "numericNotation": "5MK~MK~HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "1191dc43-65e9-414d-8283-6d1215e90251",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "16",
+        "active": "16-18",
+        "recovery": "28",
+        "onHit": "D",
+        "onBlock": "-9",
+        "damage": 500,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "6b816c73-20c6-4590-8389-2bd0db98b251",
+      "slug": "yasmine-standing-medium-punch-5mp",
+      "name": "立ち中P（パバリック・バリック ・ナ・パグラスラス）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 48,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "32991c24-5e83-4d97-92cb-576fb443fcf2",
+          "moveId": "6b816c73-20c6-4590-8389-2bd0db98b251",
+          "scheme": "classic",
+          "commandText": "5MP",
+          "numericNotation": "5MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "7c5c0f98-3723-4c0c-b06c-df45898cff9c",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "6",
+        "active": "6-7,16-17",
+        "recovery": "18",
+        "onHit": "+2",
+        "onBlock": "-3",
+        "damage": 600,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "e1b79767-8628-4a4a-b36d-570655e8c039",
+      "slug": "yasmine-tatlong-hiwa-5mp-mp",
+      "name": "タッロング・ヒワ",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 49,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "5d61c505-7ed2-473c-afe4-9eacb0956f48",
+          "moveId": "e1b79767-8628-4a4a-b36d-570655e8c039",
+          "scheme": "classic",
+          "commandText": "5MP~MP",
+          "numericNotation": "5MP~MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "3b6622ca-d906-42a2-b005-513e3b92e167",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "12",
+        "active": "12-13",
+        "recovery": "27",
+        "onHit": "D",
+        "onBlock": "-13",
+        "damage": 400,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "de33eadd-d757-4794-a2bb-ad809acf4247",
+      "slug": "yasmine-hiwang-pababa-6mp",
+      "name": "ヒワン・パババ",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 57,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "d04c6314-e4e2-4467-9939-c6b6b8f63b22",
+          "moveId": "de33eadd-d757-4794-a2bb-ad809acf4247",
+          "scheme": "classic",
+          "commandText": "6MP",
+          "numericNotation": "6MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "7c0b23f1-1c79-4e11-874a-802c4d8a4c69",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "22",
+        "active": "22-24",
+        "recovery": "18",
+        "onHit": "+3",
+        "onBlock": "-3",
+        "damage": 600,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c030fb18-aa67-4ec7-923e-a54179286219",
+      "slug": "yasmine-jumping-heavy-kick-j-hk",
+      "name": "ジャンプ強K（パンヒンパパウィド・ナ・マラカス・ナ・シパ）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 61,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "0014a09f-763a-4426-b1c5-e61508b076f9",
+          "moveId": "c030fb18-aa67-4ec7-923e-a54179286219",
+          "scheme": "classic",
+          "commandText": "j.HK",
+          "numericNotation": "j.HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "f0110c67-9dfd-4f37-a126-3b036ae52367",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "10",
+        "active": "10-16",
+        "recovery": "3 (landing)",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 800,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "84d5d088-b584-42e0-a20b-5627d457eb00",
+      "slug": "yasmine-jumping-heavy-punch-j-hp",
+      "name": "ジャンプ強P（ナママロング・マガ・パクパク）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 62,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "e4811bc0-80b2-46c0-9112-24c5f1d219a0",
+          "moveId": "84d5d088-b584-42e0-a20b-5627d457eb00",
+          "scheme": "classic",
+          "commandText": "j.HP",
+          "numericNotation": "j.HP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "fbe4ce67-c466-47d3-a9c3-e26017119041",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "9",
+        "active": "9-14",
+        "recovery": "3 (landing)",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 800,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "d58cda82-9f2a-4cc7-b421-7ab696cbbd32",
+      "slug": "yasmine-jumping-light-kick-j-lk",
+      "name": "ジャンプ弱K（パンヒンパパウィド・ナ・シパ・ガミット・アング・トゥホッド）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 63,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "55de8ef9-ae34-4634-88a8-cb8db3ada347",
+          "moveId": "d58cda82-9f2a-4cc7-b421-7ab696cbbd32",
+          "scheme": "classic",
+          "commandText": "j.LK",
+          "numericNotation": "j.LK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "78f22160-30cc-4ec3-a081-2d68c4f2898c",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "4",
+        "active": "4-9",
+        "recovery": "3 (landing)",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 300,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "7949413b-1ea3-41cd-83be-250b5759aca1",
+      "slug": "yasmine-jumping-light-punch-j-lp",
+      "name": "ジャンプ弱P（マガアン・ナ・パンヒンパパウィド・パグラスラス）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 64,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "92542ced-17b5-4af7-b154-9c606f451cc1",
+          "moveId": "7949413b-1ea3-41cd-83be-250b5759aca1",
+          "scheme": "classic",
+          "commandText": "j.LP",
+          "numericNotation": "j.LP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "d9c94c04-d868-4533-9010-c8a032ecf1b0",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "4",
+        "active": "4-8",
+        "recovery": "3 (landing)",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 300,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "697468cc-a9d2-4531-b974-b919aec0fc12",
+      "slug": "yasmine-jumping-medium-kick-j-mk",
+      "name": "ジャンプ中K（パンヒンパパウィド・ナ・シパ・サ・ハラップ）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 65,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "c16e3102-0f58-4985-b23e-a58edc99035b",
+          "moveId": "697468cc-a9d2-4531-b974-b919aec0fc12",
+          "scheme": "classic",
+          "commandText": "j.MK",
+          "numericNotation": "j.MK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "0fe6594d-dd24-4738-8dc3-c41b8bfd3ef5",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "7",
+        "active": "7-12",
+        "recovery": "3 (landing)",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 500,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3e76ed52-4ebe-4bcd-a44d-2a60960c5e55",
+      "slug": "yasmine-jumping-medium-punch-j-mp",
+      "name": "ジャンプ中P（パビログ・ナ・パグラスラス）",
+      "moveType": "normal",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 66,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "3310ba61-c5b8-4854-8dc1-8387dc427642",
+          "moveId": "3e76ed52-4ebe-4bcd-a44d-2a60960c5e55",
+          "scheme": "classic",
+          "commandText": "j.MP",
+          "numericNotation": "j.MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "45107896-8a64-47b5-b9f0-79690fdcec44",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "7",
+        "active": "7-10",
+        "recovery": "3 (landing)",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 700,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "720e4c8e-a93c-457e-b1c8-6ec230947b61",
+      "slug": "yasmine-linya-ng-liwanag-214214p-4kk",
+      "name": "リニャ・ン・リワナグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 2,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "383f9c5b-09b4-445a-940c-04d93ee679c3",
+          "moveId": "720e4c8e-a93c-457e-b1c8-6ec230947b61",
+          "scheme": "classic",
+          "commandText": "214214P~4KK",
+          "numericNotation": "214214P~4KK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "e11adbf7-2b9f-4cb9-a1b3-1ee0cbd5bf7d",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "22",
+        "active": "22-23",
+        "recovery": "20",
+        "onHit": "D",
+        "onBlock": "-3",
+        "damage": 1100,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fcc23bd3-7104-4cb5-8421-000a2a5e6db7",
+      "slug": "yasmine-talim-ng-hangin-214hp",
+      "name": "強 タリム・ン・ハンギン",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 3,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "240dcdbf-1c1b-4f5c-b11e-34052d17b67b",
+          "moveId": "fcc23bd3-7104-4cb5-8421-000a2a5e6db7",
+          "scheme": "classic",
+          "commandText": "214HP",
+          "numericNotation": "214HP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "4eaccea6-e997-4444-85f6-381ec33ddc04",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "30",
+        "active": "30-31",
+        "recovery": "17",
+        "onHit": "D",
+        "onBlock": "+1",
+        "damage": 1200,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "48628cf4-d99e-420b-907e-16435f3650fe",
+      "slug": "yasmine-talim-ng-hangin-214lp",
+      "name": "弱 タリム・ン・ハンギン",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 4,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "b98e409d-02cf-465d-8d85-7c113f739dbf",
+          "moveId": "48628cf4-d99e-420b-907e-16435f3650fe",
+          "scheme": "classic",
+          "commandText": "214LP",
+          "numericNotation": "214LP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "dcdf516f-13d8-4363-bb27-e42c1530d114",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": null,
+        "active": null,
+        "recovery": "35 total",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 0,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b075f9f1-5c86-43bd-b391-c6d8857d7ddb",
+      "slug": "yasmine-talim-ng-hangin-214mp",
+      "name": "中 タリム・ン・ハンギン",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 5,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "5698c500-7b26-4570-b2e9-92dd8631235f",
+          "moveId": "b075f9f1-5c86-43bd-b391-c6d8857d7ddb",
+          "scheme": "classic",
+          "commandText": "214MP",
+          "numericNotation": "214MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "7b069acd-6b36-4020-be1c-25fc261a19f5",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "21",
+        "active": "21-22",
+        "recovery": "24",
+        "onHit": "D",
+        "onBlock": "-3",
+        "damage": 1100,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "46bc481b-23be-4394-9781-cd11b77d52bd",
+      "slug": "yasmine-talim-ng-hangin-214pp",
+      "name": "OD タリム・ン・ハンギン",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 6,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "ffea681c-5528-4a6c-9379-98cb8c78f9c5",
+          "moveId": "46bc481b-23be-4394-9781-cd11b77d52bd",
+          "scheme": "classic",
+          "commandText": "214PP",
+          "numericNotation": "214PP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "dfd863a3-860d-466e-816b-0ff451e8ee23",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "20",
+        "active": "20-21",
+        "recovery": "28",
+        "onHit": "D",
+        "onBlock": "-12",
+        "damage": 800,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "596a4a42-ce50-4c51-a367-0c12f83ce83a",
+      "slug": "yasmine-pangil-sa-likuran-22lp",
+      "name": "弱 パンギル・サ・リクラン",
+      "moveType": "special",
+      "strengthVariant": "light",
+      "status": "draft",
+      "displayOrder": 7,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "bd59ac52-e3ea-46e6-ac7c-578c6ca68e8f",
+          "moveId": "596a4a42-ce50-4c51-a367-0c12f83ce83a",
+          "scheme": "classic",
+          "commandText": "22LP",
+          "numericNotation": "22LP",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "2009e734-11fb-4685-9073-0d9bde0ef5aa",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "25",
+        "active": null,
+        "recovery": "全体 50",
+        "onHit": "1",
+        "onBlock": "-4",
+        "damage": 600,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b7a7c5dc-0703-4239-9df4-e62559f5a8e5",
+      "slug": "yasmine-pangil-sa-likuran-22lpmp",
+      "name": "OD 弱 パンギル・サ・リクラン",
+      "moveType": "special",
+      "strengthVariant": "od",
+      "status": "draft",
+      "displayOrder": 8,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "52174b8e-aff3-4a31-baec-9ad85c5d351d",
+          "moveId": "b7a7c5dc-0703-4239-9df4-e62559f5a8e5",
+          "scheme": "classic",
+          "commandText": "22LPMP",
+          "numericNotation": "22LPMP",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "dd447929-062b-417d-b49c-24520e0f084b",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "25",
+        "active": null,
+        "recovery": "全体 50",
+        "onHit": "2",
+        "onBlock": "-2",
+        "damage": 900,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "368baecb-d1cc-4164-923b-a7512ad7cf55",
+      "slug": "yasmine-daloy-ng-tubig-236hp",
+      "name": "強 ダロイ・ン・トゥビグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 12,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "0d1eafbd-bb00-4820-a180-1d111089b05c",
+          "moveId": "368baecb-d1cc-4164-923b-a7512ad7cf55",
+          "scheme": "classic",
+          "commandText": "236HP",
+          "numericNotation": "236HP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "eda398b9-973b-4bed-aecc-536443c3471a",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "21",
+        "active": "21-23",
+        "recovery": "22",
+        "onHit": "+3",
+        "onBlock": "-6",
+        "damage": 400,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "88e637c4-1c01-4b41-b1e4-8d0443cbf8a6",
+      "slug": "yasmine-alon-236hp-6p",
+      "name": "強 アロン（1段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 13,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "acc1a763-0b46-4342-b358-b9b783fa3783",
+          "moveId": "88e637c4-1c01-4b41-b1e4-8d0443cbf8a6",
+          "scheme": "classic",
+          "commandText": "236HP~6P",
+          "numericNotation": "236HP~6P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "a49db721-e2b3-4c48-94f6-2b4de7c28a2a",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "13",
+        "active": "13-14,21-22,32-33",
+        "recovery": "24",
+        "onHit": null,
+        "onBlock": "-12",
+        "damage": 150,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "21410a7b-74b6-40da-8639-7ae894a98e35",
+      "slug": "yasmine-alon-bayani-236hp-6p",
+      "name": "[強化版]強 アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 14,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "56b2657f-9432-42cb-b364-0a76399fd11b",
+          "moveId": "21410a7b-74b6-40da-8639-7ae894a98e35",
+          "scheme": "classic",
+          "commandText": "236HP~6P",
+          "numericNotation": "236HP~6P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "ee72b1aa-acfa-4c7f-a96d-446a743cc8e3",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "22",
+        "active": "22-24",
+        "recovery": "26",
+        "onHit": "D",
+        "onBlock": "-3",
+        "damage": 550,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "063766f0-b20c-4f6d-bd7f-80cae0f692f7",
+      "slug": "yasmine-mukha-ng-langit-236lk",
+      "name": "弱 ムカ・ン・ランギット",
+      "moveType": "special",
+      "strengthVariant": "light",
+      "status": "draft",
+      "displayOrder": 15,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "efc5bc77-278b-48bb-b7e3-2e7e0d429192",
+          "moveId": "063766f0-b20c-4f6d-bd7f-80cae0f692f7",
+          "scheme": "classic",
+          "commandText": "236LK",
+          "numericNotation": "236LK",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "04307592-46d9-412f-a464-2e7f08f2d678",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": null,
+        "active": null,
+        "recovery": "全体 59",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 0,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "d3e482ae-ea0c-4643-92d9-9ec0a4727702",
+      "slug": "yasmine-mukha-ng-langit-236kk",
+      "name": "OD ムカ・ン・ランギット",
+      "moveType": "special",
+      "strengthVariant": "od",
+      "status": "draft",
+      "displayOrder": 16,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "885b1c1e-a39d-4526-84d0-439777ff4b54",
+          "moveId": "d3e482ae-ea0c-4643-92d9-9ec0a4727702",
+          "scheme": "classic",
+          "commandText": "236KK",
+          "numericNotation": "236KK",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "9a0ca7e6-c000-4f7b-aabc-5613e4b599a8",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": null,
+        "active": null,
+        "recovery": "全体 59",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 0,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "0ac54e2d-a6af-4ab1-8e54-bfea51f851a4",
+      "slug": "yasmine-kulog-236kk-k-or-236k-kk",
+      "name": "OD クロッグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 17,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "c8197546-6a89-413b-b368-fbc7362a421c",
+          "moveId": "0ac54e2d-a6af-4ab1-8e54-bfea51f851a4",
+          "scheme": "classic",
+          "commandText": "236KK~K or 236K~KK",
+          "numericNotation": "236KK~K or 236K~KK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "2111b691-fa49-4cc5-b4f7-49f4dc2204f5",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "17",
+        "active": "17-until landing",
+        "recovery": "12 (landing)",
+        "onHit": "7～13",
+        "onBlock": "1～7",
+        "damage": 700,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "6038b360-5979-4a12-a69f-7b2cbc35edd4",
+      "slug": "yasmine-ulan-236kk-p-or-236k-pp",
+      "name": "OD ウラン",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 18,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "1df9b401-4e8c-4787-8848-863590044809",
+          "moveId": "6038b360-5979-4a12-a69f-7b2cbc35edd4",
+          "scheme": "classic",
+          "commandText": "236KK~P or 236K~PP",
+          "numericNotation": "236KK~P or 236K~PP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "1c1589e0-ed69-4f72-b4c3-40feb2d51763",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "17",
+        "active": "17-20",
+        "recovery": "12 (landing)",
+        "onHit": "5～10",
+        "onBlock": "-2～2",
+        "damage": 800,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "f10077f2-758d-43a5-b0ff-d6a801a17762",
+      "slug": "yasmine-kulog-236k-k",
+      "name": "クロッグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 19,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "9a47f4cd-df84-4666-95f6-600aace8ed54",
+          "moveId": "f10077f2-758d-43a5-b0ff-d6a801a17762",
+          "scheme": "classic",
+          "commandText": "236K~K",
+          "numericNotation": "236K~K",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "fb30b40a-72d9-41fe-b5ae-cca913878bcb",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "17",
+        "active": "17-until landing",
+        "recovery": "12 (landing)",
+        "onHit": "4～10",
+        "onBlock": "-3～4",
+        "damage": 700,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5223be98-b774-44f3-93c6-f525e9bcd293",
+      "slug": "yasmine-ulan-236k-p",
+      "name": "ウラン",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 20,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "52e9ae95-7486-4917-9201-2e297b91275c",
+          "moveId": "5223be98-b774-44f3-93c6-f525e9bcd293",
+          "scheme": "classic",
+          "commandText": "236K~P",
+          "numericNotation": "236K~P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "aa97f8d3-35ff-4c33-919e-5f4092d192e2",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "17",
+        "active": "17-20",
+        "recovery": "12 (landing)",
+        "onHit": "3～6",
+        "onBlock": "-4～-2",
+        "damage": 800,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "8416a1f7-69c0-4cc6-8c94-62e5d599ce1f",
+      "slug": "yasmine-daloy-ng-tubig-236lp",
+      "name": "弱 ダロイ・ン・トゥビグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 21,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "23cee3fd-4eec-4834-b322-7ccc7ddaf1d8",
+          "moveId": "8416a1f7-69c0-4cc6-8c94-62e5d599ce1f",
+          "scheme": "classic",
+          "commandText": "236LP",
+          "numericNotation": "236LP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "781eca06-d9f8-40cd-bfbd-483b8ba72103",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "12",
+        "active": "12-14",
+        "recovery": "22",
+        "onHit": "+1",
+        "onBlock": "-6",
+        "damage": 400,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "6d0eac80-e601-47e0-bbde-5177918119c7",
+      "slug": "yasmine-alon-236lp-6p",
+      "name": "弱 アロン（1段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 22,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "5550f776-fdfe-49e7-b1b4-5ee6ca7920a2",
+          "moveId": "6d0eac80-e601-47e0-bbde-5177918119c7",
+          "scheme": "classic",
+          "commandText": "236LP~6P",
+          "numericNotation": "236LP~6P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "9911a282-2b9f-40c7-a12d-64fcb88dfc77",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "13",
+        "active": "13-14,21-22,32-33",
+        "recovery": "24",
+        "onHit": null,
+        "onBlock": "-12",
+        "damage": 300,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "77e1c548-9ad0-4224-abee-8d3beab0840a",
+      "slug": "yasmine-alon-bayani-236lp-6p",
+      "name": "[強化版]弱 アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 23,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "b005faf6-0d85-409c-b576-c5dab645caae",
+          "moveId": "77e1c548-9ad0-4224-abee-8d3beab0840a",
+          "scheme": "classic",
+          "commandText": "236LP~6P",
+          "numericNotation": "236LP~6P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "c91d7d92-e5e9-440d-ad90-60fa90bd125e",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "16",
+        "active": "16-18",
+        "recovery": "20",
+        "onHit": "D",
+        "onBlock": "-1",
+        "damage": 600,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5844bf2f-b0b1-4fc0-a357-5fba2447c274",
+      "slug": "yasmine-daloy-ng-tubig-236mp",
+      "name": "中 ダロイ・ン・トゥビグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 24,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "838a548b-099d-4515-ac37-ecfe93dc3eb0",
+          "moveId": "5844bf2f-b0b1-4fc0-a357-5fba2447c274",
+          "scheme": "classic",
+          "commandText": "236MP",
+          "numericNotation": "236MP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "0dcb9027-93a5-4b4c-a3ea-1d77187553ec",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "16",
+        "active": "16-18",
+        "recovery": "22",
+        "onHit": "+1",
+        "onBlock": "-6",
+        "damage": 400,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "94df5acf-0ac9-4ec7-b05e-f270b6820620",
+      "slug": "yasmine-alon-236mp-6p",
+      "name": "中 アロン（1段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 25,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "82068f6c-6836-4cb7-a601-c9439a555824",
+          "moveId": "94df5acf-0ac9-4ec7-b05e-f270b6820620",
+          "scheme": "classic",
+          "commandText": "236MP~6P",
+          "numericNotation": "236MP~6P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "eb694e25-d02e-400a-a02e-08b2b9c279df",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "13",
+        "active": "13-14,21-22,32-33",
+        "recovery": "24",
+        "onHit": null,
+        "onBlock": "-12",
+        "damage": 300,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "8dcbfc4d-c704-4397-bffa-791e12496d45",
+      "slug": "yasmine-alon-bayani-236mp-6p",
+      "name": "[強化版]中 アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 26,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "99dd176d-6e0f-4378-932b-dfa835b8ce24",
+          "moveId": "8dcbfc4d-c704-4397-bffa-791e12496d45",
+          "scheme": "classic",
+          "commandText": "236MP~6P",
+          "numericNotation": "236MP~6P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "090b1d9a-1198-4c61-afa8-af02b00e79be",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "22",
+        "active": "22-24",
+        "recovery": "22",
+        "onHit": "D",
+        "onBlock": "-2",
+        "damage": 400,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "adcc4f11-0d51-41b5-9b6b-2ad04b63ac46",
+      "slug": "yasmine-daloy-ng-tubig-236pp",
+      "name": "OD ダロイ・ン・トゥビグ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 27,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "c5744d25-af48-40f8-85c7-e8aca90b0268",
+          "moveId": "adcc4f11-0d51-41b5-9b6b-2ad04b63ac46",
+          "scheme": "classic",
+          "commandText": "236PP",
+          "numericNotation": "236PP",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "34e4e0c4-8c8c-4ebe-ae95-6a03064b57d8",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "12",
+        "active": "12-14",
+        "recovery": "22",
+        "onHit": "-2",
+        "onBlock": "-3",
+        "damage": 400,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3485b1cd-dfdf-40d6-9125-42c8ebda906a",
+      "slug": "yasmine-alon-236pp-6p",
+      "name": "OD アロン（1段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 28,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "e59437ab-2aca-4277-ab3c-5ce3eecb36d7",
+          "moveId": "3485b1cd-dfdf-40d6-9125-42c8ebda906a",
+          "scheme": "classic",
+          "commandText": "236PP~6P",
+          "numericNotation": "236PP~6P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "626891a0-45c1-4740-863c-7dc8ea2c93e3",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "13",
+        "active": "13-14,21-22,32-33",
+        "recovery": "24",
+        "onHit": null,
+        "onBlock": "-12",
+        "damage": 300,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "67ba636f-2fb0-4356-b49d-6031c96a44a1",
+      "slug": "yasmine-alon-bayani-236pp-6p",
+      "name": "[強化版]OD アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 29,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "d366b0a7-9d42-46bf-a3a2-6ff7283c0110",
+          "moveId": "67ba636f-2fb0-4356-b49d-6031c96a44a1",
+          "scheme": "classic",
+          "commandText": "236PP~6P",
+          "numericNotation": "236PP~6P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "30c6aa01-33f2-4abb-8885-97fd978ce762",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "56",
+        "active": "56",
+        "recovery": "58",
+        "onHit": "D",
+        "onBlock": "-1",
+        "damage": 1500,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "104a6f55-f256-4521-9190-15e6daf741ea",
+      "slug": "yasmine-lipad-ng-agila-623hk",
+      "name": "強 リパ・ン・アギラ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 51,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "7778a0e0-52b2-4cca-b3c6-4600ed60f2d0",
+          "moveId": "104a6f55-f256-4521-9190-15e6daf741ea",
+          "scheme": "classic",
+          "commandText": "623HK",
+          "numericNotation": "623HK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "288c5a1f-7fd5-469d-8496-c31c49d929a1",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "7",
+        "active": "7-10,15-16",
+        "recovery": "27+着地後12",
+        "onHit": "D",
+        "onBlock": "-32",
+        "damage": 1300,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b79816b6-b16f-47f7-8cbf-32221c3914e6",
+      "slug": "yasmine-lipad-ng-agila-623kk",
+      "name": "OD リパ・ン・アギラ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 52,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "f1132564-7107-4f8e-9c44-280ec4374620",
+          "moveId": "b79816b6-b16f-47f7-8cbf-32221c3914e6",
+          "scheme": "classic",
+          "commandText": "623KK",
+          "numericNotation": "623KK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "b14e2487-726a-4ef5-8202-7ac17fc84ece",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "6",
+        "active": "6-9,14-15",
+        "recovery": "27+着地後19",
+        "onHit": "D",
+        "onBlock": "-40",
+        "damage": 1600,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "802cddff-6b17-4069-9fbb-520d81a10914",
+      "slug": "yasmine-lipad-ng-agila-623lk",
+      "name": "弱 リパ・ン・アギラ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 53,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "d5e1eb96-db53-4391-9c92-8b61db55dfaa",
+          "moveId": "802cddff-6b17-4069-9fbb-520d81a10914",
+          "scheme": "classic",
+          "commandText": "623LK",
+          "numericNotation": "623LK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "eec2ea0f-ce34-4d52-a688-ff1325bcb81b",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "5",
+        "active": "5-8,13-14",
+        "recovery": "27+着地後12",
+        "onHit": "D",
+        "onBlock": "-29",
+        "damage": 1000,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2be59a6-469a-4501-a18d-515c58849bd4",
+      "slug": "yasmine-lipad-ng-agila-623mk",
+      "name": "中 リパ・ン・アギラ",
+      "moveType": "special",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 54,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "0ec155ef-8fdf-4714-941e-1244ff96cece",
+          "moveId": "a2be59a6-469a-4501-a18d-515c58849bd4",
+          "scheme": "classic",
+          "commandText": "623MK",
+          "numericNotation": "623MK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "5399d06d-412e-4985-a225-5e7889862a2f",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "6",
+        "active": "6-9,14-15",
+        "recovery": "27+着地後12",
+        "onHit": "D",
+        "onBlock": "-29",
+        "damage": 1200,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b425b72b-4769-4e8b-81ce-25d5b630de86",
+      "slug": "yasmine-alon-2-236lp-6p-p",
+      "name": "弱 アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": "light",
+      "status": "draft",
+      "displayOrder": 921,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "82befc7f-f783-40e6-9156-d0577edd76c5",
+          "moveId": "b425b72b-4769-4e8b-81ce-25d5b630de86",
+          "scheme": "classic",
+          "commandText": "236LP~6P~P",
+          "numericNotation": "236LP~6P~P",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "52600e7d-fe9f-4994-b304-b603a18a1a9e",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "16",
+        "active": "16-18",
+        "recovery": "20",
+        "onHit": "1",
+        "onBlock": "ー",
+        "damage": 400,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1aa99f82-81aa-4cac-8532-d5a0aa2a0f7e",
+      "slug": "yasmine-alon-2-236mp-6p-p",
+      "name": "中 アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": "medium",
+      "status": "draft",
+      "displayOrder": 922,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "5e978f39-7b5f-424b-b198-ac3f5780c42b",
+          "moveId": "1aa99f82-81aa-4cac-8532-d5a0aa2a0f7e",
+          "scheme": "classic",
+          "commandText": "236MP~6P~P",
+          "numericNotation": "236MP~6P~P",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "8ea9edda-7698-4fce-8c54-fa9332061ca4",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "22",
+        "active": "22-24",
+        "recovery": "22",
+        "onHit": "D",
+        "onBlock": "ー",
+        "damage": 300,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b17cb130-2e18-4789-8645-3c979a3c5f4f",
+      "slug": "yasmine-alon-2-236hp-6p-p",
+      "name": "強 アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": "heavy",
+      "status": "draft",
+      "displayOrder": 923,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "05965986-ec4a-494f-afb0-09ae9bba156f",
+          "moveId": "b17cb130-2e18-4789-8645-3c979a3c5f4f",
+          "scheme": "classic",
+          "commandText": "236HP~6P~P",
+          "numericNotation": "236HP~6P~P",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "65f9d39a-1e4d-469a-8824-fa4d477bd96f",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "22",
+        "active": "22-24",
+        "recovery": "26",
+        "onHit": "D",
+        "onBlock": "ー",
+        "damage": 450,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "4a6a8134-98c7-4fe2-817c-8131b54cbbc4",
+      "slug": "yasmine-alon-2-236pp-6p-p",
+      "name": "OD アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": "od",
+      "status": "draft",
+      "displayOrder": 924,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "fb121915-708b-4062-a073-0738ccca209e",
+          "moveId": "4a6a8134-98c7-4fe2-817c-8131b54cbbc4",
+          "scheme": "classic",
+          "commandText": "236PP~6P~P",
+          "numericNotation": "236PP~6P~P",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "a8596f54-2b6f-4cb0-add9-6727cd418b7c",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "56",
+        "active": "56",
+        "recovery": "58",
+        "onHit": "D",
+        "onBlock": "ー",
+        "damage": 1100,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c709a4cc-37ca-4950-8496-1d7630044604",
+      "slug": "yasmine-alon-2-od-bayani-sa2",
+      "name": "[ナカタゴン・ラカス中][強化版]OD アロン（2段目）",
+      "moveType": "special",
+      "strengthVariant": "od",
+      "status": "draft",
+      "displayOrder": 925,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "5a115593-e037-4a5e-9a43-ee119d8e439b",
+          "moveId": "c709a4cc-37ca-4950-8496-1d7630044604",
+          "scheme": "classic",
+          "commandText": "236PP~6P~P",
+          "numericNotation": "236PP~6P~P",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "9e42dc2b-0cf2-434a-81fd-8d3ab580b078",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "47",
+        "active": "47- 110",
+        "recovery": "59",
+        "onHit": "D",
+        "onBlock": "-1",
+        "damage": 1900,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "90ef6e3e-33a6-4407-935a-f9843b7d6b17",
+      "slug": "yasmine-mukha-ng-langit-236mk",
+      "name": "中 ムカ・ン・ランギット",
+      "moveType": "special",
+      "strengthVariant": "medium",
+      "status": "draft",
+      "displayOrder": 927,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "6d765b9f-a45f-4166-9069-43cfa345c36d",
+          "moveId": "90ef6e3e-33a6-4407-935a-f9843b7d6b17",
+          "scheme": "classic",
+          "commandText": "236MK",
+          "numericNotation": "236MK",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "c3351afd-cda2-4571-b843-69e0594bc6bf",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": null,
+        "active": null,
+        "recovery": "全体 59",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 0,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "9d541ca6-b232-4a72-9d74-23efdff833a4",
+      "slug": "yasmine-mukha-ng-langit-236hk",
+      "name": "強 ムカ・ン・ランギット",
+      "moveType": "special",
+      "strengthVariant": "heavy",
+      "status": "draft",
+      "displayOrder": 928,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "1e518abe-831e-4b6e-acd5-839792347a14",
+          "moveId": "9d541ca6-b232-4a72-9d74-23efdff833a4",
+          "scheme": "classic",
+          "commandText": "236HK",
+          "numericNotation": "236HK",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "fd992b7d-a457-4ab9-b45c-dbd388152fc9",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": null,
+        "active": null,
+        "recovery": "全体 59",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 0,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "d8540548-4ab4-49d0-adb8-42644a1d0eb3",
+      "slug": "yasmine-pangil-sa-likuran-22mp",
+      "name": "中 パンギル・サ・リクラン",
+      "moveType": "special",
+      "strengthVariant": "medium",
+      "status": "draft",
+      "displayOrder": 931,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "7d04d01f-3114-430d-96fd-399961e77777",
+          "moveId": "d8540548-4ab4-49d0-adb8-42644a1d0eb3",
+          "scheme": "classic",
+          "commandText": "22MP",
+          "numericNotation": "22MP",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "5bc33d89-693d-4d19-b2b6-00122f8894f4",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "25",
+        "active": null,
+        "recovery": "全体 50",
+        "onHit": "1",
+        "onBlock": "-4",
+        "damage": 600,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "0396eb74-6549-41c5-a59f-332b92284393",
+      "slug": "yasmine-pangil-sa-likuran-22hp",
+      "name": "強 パンギル・サ・リクラン",
+      "moveType": "special",
+      "strengthVariant": "heavy",
+      "status": "draft",
+      "displayOrder": 932,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "7c94c900-22a9-477d-a797-52f28b417107",
+          "moveId": "0396eb74-6549-41c5-a59f-332b92284393",
+          "scheme": "classic",
+          "commandText": "22HP",
+          "numericNotation": "22HP",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "4262db2c-c67f-471b-8eb3-96fca66abc2e",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "25",
+        "active": null,
+        "recovery": "全体 50",
+        "onHit": "1",
+        "onBlock": "-4",
+        "damage": 600,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5386935e-aba2-4eb9-9da4-438334bdb845",
+      "slug": "yasmine-pangil-sa-likuran-22lphp",
+      "name": "OD 中 パンギル・サ・リクラン",
+      "moveType": "special",
+      "strengthVariant": "od",
+      "status": "draft",
+      "displayOrder": 934,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "d3d935bf-d10e-4011-ab1e-ed816c061e20",
+          "moveId": "5386935e-aba2-4eb9-9da4-438334bdb845",
+          "scheme": "classic",
+          "commandText": "22LPHP",
+          "numericNotation": "22LPHP",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "3db89ff8-db31-4300-a2d2-281d67612637",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "25",
+        "active": null,
+        "recovery": "全体 50",
+        "onHit": "2",
+        "onBlock": "-2",
+        "damage": 900,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b923d388-06b0-43fe-9121-fd073404692a",
+      "slug": "yasmine-pangil-sa-likuran-22mphp",
+      "name": "OD 強 パンギル・サ・リクラン",
+      "moveType": "special",
+      "strengthVariant": "od",
+      "status": "draft",
+      "displayOrder": 935,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "dc783515-d13e-4ca1-815c-5668100da393",
+          "moveId": "b923d388-06b0-43fe-9121-fd073404692a",
+          "scheme": "classic",
+          "commandText": "22MPHP",
+          "numericNotation": "22MPHP",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "02bacdcc-4be9-4c1b-a688-938fe2da1d6a",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "25",
+        "active": null,
+        "recovery": "全体 50",
+        "onHit": "2",
+        "onBlock": "-2",
+        "damage": 900,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "8ecba6ae-0914-473a-a91b-9619dc3b7ad6",
+      "slug": "yasmine-nakatagong-lakas-214214p",
+      "name": "SA2 ナカタゴン・ラカス",
+      "moveType": "super",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 1,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "362810c8-5694-437e-97aa-7ef1c3846744",
+          "moveId": "8ecba6ae-0914-473a-a91b-9619dc3b7ad6",
+          "scheme": "classic",
+          "commandText": "214214P",
+          "numericNotation": "214214P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "7cf04c9d-1537-49ab-9ebd-a1cc202817b7",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": null,
+        "active": null,
+        "recovery": "10 total",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 0,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1c09f2c2-5300-4355-b988-3756a2c8c5dd",
+      "slug": "yasmine-hiwa-ng-kalangitan-236236k",
+      "name": "SA1 ヒワン・ン・カラヒタン",
+      "moveType": "super",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 9,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "370a2089-bf02-4ab1-a2cd-0d53b10e56ce",
+          "moveId": "1c09f2c2-5300-4355-b988-3756a2c8c5dd",
+          "scheme": "classic",
+          "commandText": "236236K",
+          "numericNotation": "236236K",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "cb5004c9-1128-4d0d-b6d6-5cdf008ed01d",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "7",
+        "active": "7-12",
+        "recovery": "50",
+        "onHit": "D",
+        "onBlock": "-34",
+        "damage": 2000,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "9e92c699-6f60-4553-b1db-322bbdcb32e0",
+      "slug": "yasmine-pamumukadkad-ng-sampaguita-236236p",
+      "name": "SA3 パムムカドカッド・ン・サンパギータ",
+      "moveType": "super",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 10,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "1c97433f-f1c9-48b7-9b28-93845dc619c9",
+          "moveId": "9e92c699-6f60-4553-b1db-322bbdcb32e0",
+          "scheme": "classic",
+          "commandText": "236236P",
+          "numericNotation": "236236P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "df37fd0e-53f2-4d5d-b8bf-a1f465f9b641",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "10",
+        "active": "10-12",
+        "recovery": "70",
+        "onHit": "D",
+        "onBlock": "-48",
+        "damage": 4000,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b55d287e-ca8e-46bd-bf81-db53775b8294",
+      "slug": "yasmine-pamumukadkad-ng-sampaguita-ca-236236p",
+      "name": "CA パムムカドカッド・ン・サンパギータ",
+      "moveType": "super",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 11,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "14930f68-985e-4650-ae7b-07f4eb25ffaf",
+          "moveId": "b55d287e-ca8e-46bd-bf81-db53775b8294",
+          "scheme": "classic",
+          "commandText": "236236P",
+          "numericNotation": "236236P",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "16d8ef80-1ba6-4af6-a957-3781b85d02ec",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "10",
+        "active": "10-12",
+        "recovery": "70",
+        "onHit": "D",
+        "onBlock": "-45",
+        "damage": 4500,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "4301622d-102a-40e1-b583-2b02db739e54",
+      "slug": "yasmine-hila-kamay-4lplk",
+      "name": "ヒラ・カマイ",
+      "moveType": "throw",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 38,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "cfec384c-8cf5-4e4e-afe5-11bfc56dc1ef",
+          "moveId": "4301622d-102a-40e1-b583-2b02db739e54",
+          "scheme": "classic",
+          "commandText": "4LPLK",
+          "numericNotation": "4LPLK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "204974a2-c459-49ca-83b6-5b362efe1187",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "5",
+        "active": "3",
+        "recovery": "23",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 1200,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "f7faa5a2-62a0-4c72-abf3-91c16631a7c2",
+      "slug": "yasmine-pigil-ulo-lplk",
+      "name": "ピギル・ウロ",
+      "moveType": "throw",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 67,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "c5556dfe-7216-48d6-a428-c0a555144c75",
+          "moveId": "f7faa5a2-62a0-4c72-abf3-91c16631a7c2",
+          "scheme": "classic",
+          "commandText": "LPLK",
+          "numericNotation": "LPLK",
+          "buttonNotation": null,
+          "conditionText": null,
+          "sortOrder": 0,
+          "evidence": []
+        }
+      ],
+      "frame": {
+        "id": "6fa1f8ff-fb49-4211-8333-508c23f5ef6f",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": "5",
+        "active": "3",
+        "recovery": "23",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 1200,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "723e292b-7d41-47c1-85ab-b549b32d7742",
+      "slug": "yasmine-forward-step-66",
+      "name": "前方ステップ",
+      "moveType": "unique",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 936,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "6fe31b40-8eb9-4bc8-af84-201eca0d8d0c",
+          "moveId": "723e292b-7d41-47c1-85ab-b549b32d7742",
+          "scheme": "classic",
+          "commandText": "66",
+          "numericNotation": "66",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "67669f46-3a26-4cdf-bfff-9e0cbded80d9",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": null,
+        "active": null,
+        "recovery": "全体 19",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 0,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "id": "da883fa5-c9ef-4a75-b8cc-3bfb26879ee9",
+      "slug": "yasmine-back-step-44",
+      "name": "後方ステップ",
+      "moveType": "unique",
+      "strengthVariant": null,
+      "status": "draft",
+      "displayOrder": 937,
+      "moveEvidence": [
+        {
+          "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+          "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+          "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+        }
+      ],
+      "commands": [
+        {
+          "id": "59ebabb5-468e-4396-b653-bdb6d69a832b",
+          "moveId": "da883fa5-c9ef-4a75-b8cc-3bfb26879ee9",
+          "scheme": "classic",
+          "commandText": "44",
+          "numericNotation": "44",
+          "buttonNotation": null,
+          "conditionText": "CAPCOM official Classic frame-table mapping; reviewed 2026-08-27.",
+          "sortOrder": 0,
+          "evidence": [
+            {
+              "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+              "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+              "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+            }
+          ]
+        }
+      ],
+      "frame": {
+        "id": "32672cb9-0b9b-4d36-8883-3bc42e9586e7",
+        "validFromPatchId": "ecff9a58-d023-43ae-9962-79d25adfc1f3",
+        "validToPatchId": null,
+        "verificationStatus": "verified",
+        "startup": null,
+        "active": null,
+        "recovery": "全体 23",
+        "onHit": null,
+        "onBlock": null,
+        "damage": 0,
+        "evidence": [
+          {
+            "id": "c6787ad3-2666-4cf5-92cc-a231c3ab3c4d",
+            "url": "https://www.streetfighter.com/6/ja-jp/character/yasmine/frame",
+            "accessedAt": "2026-08-27T08:37:20.353861+00:00"
+          }
+        ]
+      }
+    }
+  ]
+}

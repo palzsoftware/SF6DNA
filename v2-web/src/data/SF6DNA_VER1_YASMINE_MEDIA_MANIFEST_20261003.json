@@ -49,7 +49,7 @@
       "media_url": "/media/moves/yasmine/yasmine-standing-light-punch-5lp.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-standing-light-punch-5lp.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 850,
       "duration_ms": 850,
@@ -61,8 +61,8 @@
       "source_start_ms": 3550,
       "source_end_ms": 4400,
       "poster_source_ms": 3840,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Single standing hand strike; short recovery, contrasted with two/three-slash recordings.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "353ec7f932056c7c14b647676ceac1b2ccc983fb528cd8c24a91a416d338f253"
     },
     {
@@ -76,7 +76,7 @@
       "media_url": "/media/moves/yasmine/yasmine-standing-medium-punch-5mp.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-standing-medium-punch-5mp.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1550,
       "duration_ms": 1550,
@@ -88,8 +88,8 @@
       "source_start_ms": 7350,
       "source_end_ms": 8900,
       "poster_source_ms": 7850,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Standing two-slash motion; distinct from the single hand strike and advancing triple-slash motion.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "706bfff55c804f356e54cb022ac0c5c9b2d44cefea23c61220f994473936fb31"
     },
     {
@@ -103,7 +103,7 @@
       "media_url": "/media/moves/yasmine/yasmine-standing-heavy-punch-5hp.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-standing-heavy-punch-5hp.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1550,
       "duration_ms": 1550,
@@ -115,8 +115,8 @@
       "source_start_ms": 11000,
       "source_end_ms": 12550,
       "poster_source_ms": 11600,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Advancing triple-slash motion matching the DB triple-slash name.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "9a48f62f4fd4403a1860a6a493a357b23f0666cf58361685f1d980ef53f0bdcf"
     },
     {
@@ -130,7 +130,7 @@
       "media_url": "/media/moves/yasmine/yasmine-crouching-light-punch-2lp.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-crouching-light-punch-2lp.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1150,
       "duration_ms": 1150,
@@ -142,8 +142,8 @@
       "source_start_ms": 15650,
       "source_end_ms": 16800,
       "poster_source_ms": 16120,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Low crouching quick hand strike.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "20f13c74393e6297fb0a92a48dff40baae8edb8f323848d04d74363111cd2982"
     },
     {
@@ -157,7 +157,7 @@
       "media_url": "/media/moves/yasmine/yasmine-crouching-medium-punch-2mp.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-crouching-medium-punch-2mp.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1900,
       "duration_ms": 1900,
@@ -169,8 +169,8 @@
       "source_start_ms": 18450,
       "source_end_ms": 20350,
       "poster_source_ms": 19500,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Crouching horizontal hand/claw strike.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "1677acc432f5ef32a4fcf4c7f466671fc0fbc85c815647e17649c2d9d68fff3c"
     },
     {
@@ -184,7 +184,7 @@
       "media_url": "/media/moves/yasmine/yasmine-crouching-heavy-punch-2hp.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-crouching-heavy-punch-2hp.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1550,
       "duration_ms": 1550,
@@ -196,8 +196,8 @@
       "source_start_ms": 22100,
       "source_end_ms": 23650,
       "poster_source_ms": 22650,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Crouching rising arm strike, visually distinct from horizontal crouching punches.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "1faf7d1b90783107339cd2eda3866aea0016c3070dfac0534da04affcfe53b7b"
     },
     {
@@ -211,7 +211,7 @@
       "media_url": "/media/moves/yasmine/yasmine-standing-light-kick-5lk.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-standing-light-kick-5lk.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1050,
       "duration_ms": 1050,
@@ -223,8 +223,8 @@
       "source_start_ms": 25550,
       "source_end_ms": 26600,
       "poster_source_ms": 25950,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Short low standing kick.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "83ed5011f744d3a96b80cdcc1bbaf646521c79f34683e85b1cb8db10117ff707"
     },
     {
@@ -238,7 +238,7 @@
       "media_url": "/media/moves/yasmine/yasmine-standing-medium-kick-5mk.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-standing-medium-kick-5mk.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1050,
       "duration_ms": 1050,
@@ -250,8 +250,8 @@
       "source_start_ms": 28400,
       "source_end_ms": 29450,
       "poster_source_ms": 28850,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Standing side kick at waist height.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "4d1ba7f5fb3fd39a0ac4f55ec5ad69a8ac0e04fdb5b7ab047a623ac4edfa3084"
     },
     {
@@ -265,7 +265,7 @@
       "media_url": "/media/moves/yasmine/yasmine-standing-heavy-kick-5hk.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-standing-heavy-kick-5hk.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1500,
       "duration_ms": 1500,
@@ -277,8 +277,8 @@
       "source_start_ms": 31350,
       "source_end_ms": 32850,
       "poster_source_ms": 31900,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Leaping side kick, matching DB leaping kick name.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "9004902502f256a1440883204e44743f9c620177a2112ca89e0ff277a448342d"
     },
     {
@@ -292,7 +292,7 @@
       "media_url": "/media/moves/yasmine/yasmine-crouching-light-kick-2lk.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-crouching-light-kick-2lk.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1150,
       "duration_ms": 1150,
@@ -304,8 +304,8 @@
       "source_start_ms": 36000,
       "source_end_ms": 37150,
       "poster_source_ms": 36400,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Short low kick from crouch.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "80a6e3485bf97804f2a151bb6a9234b5d04cb7f6594ba3fdd8ab9bdbd24d4ed2"
     },
     {
@@ -319,7 +319,7 @@
       "media_url": "/media/moves/yasmine/yasmine-crouching-medium-kick-2mk.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-crouching-medium-kick-2mk.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1400,
       "duration_ms": 1400,
@@ -331,8 +331,8 @@
       "source_start_ms": 39150,
       "source_end_ms": 40550,
       "poster_source_ms": 39600,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Extended sliding low kick from crouch.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "1ba12bd67c7abec3b00f10bb266dbd00a51d9579661092fd1774889fc06bbe77"
     },
     {
@@ -346,7 +346,7 @@
       "media_url": "/media/moves/yasmine/yasmine-gunting-na-pabagsak-2hk.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-gunting-na-pabagsak-2hk.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1450,
       "duration_ms": 1450,
@@ -358,8 +358,8 @@
       "source_start_ms": 42550,
       "source_end_ms": 44000,
       "poster_source_ms": 43050,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Full low rotating sweep from crouch; distinct from the sliding medium kick.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "5e867de5374efe75fd617536f893298fc78294a157553d4a06ae430e5382c339"
     },
     {
@@ -373,7 +373,7 @@
       "media_url": "/media/moves/yasmine/yasmine-hiwang-pababa-6mp.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-hiwang-pababa-6mp.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 2050,
       "duration_ms": 2050,
@@ -385,8 +385,8 @@
       "source_start_ms": 3350,
       "source_end_ms": 5400,
       "poster_source_ms": 4100,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "In-game list selects ヒワン・パババ before isolated overhead leaping arm motion.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "195e30ed1e64ad171c26ec1cd3099441cf83db78d058448dbecb04214e21512c"
     },
     {
@@ -400,7 +400,7 @@
       "media_url": "/media/moves/yasmine/yasmine-walis-na-pabagsak-4hk.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-walis-na-pabagsak-4hk.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 2650,
       "duration_ms": 2650,
@@ -412,8 +412,8 @@
       "source_start_ms": 12150,
       "source_end_ms": 14800,
       "poster_source_ms": 13050,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "In-game list selects ワリス・ナ・パバグサ before isolated low rotating sweep.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "8792cdcb04f51115526e563d6d2aee06a948344e4d0a1ea9ee937939cc6d33b0"
     },
     {
@@ -427,7 +427,7 @@
       "media_url": "/media/moves/yasmine/yasmine-kidlat-na-hiwa-5lp-lp.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-kidlat-na-hiwa-5lp-lp.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1700,
       "duration_ms": 1700,
@@ -439,8 +439,8 @@
       "source_start_ms": 20200,
       "source_end_ms": 21900,
       "poster_source_ms": 20800,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "In-game list selects キドラット・ナ・ヒワ, followed by two-hit hand chain.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "f5df8e649102de31235bed5ac2cb9fba1cc008c9b51e8bfc119db9e3cd7a4cbc"
     },
     {
@@ -454,7 +454,7 @@
       "media_url": "/media/moves/yasmine/yasmine-tatlong-hiwa-5mp-mp.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-tatlong-hiwa-5mp-mp.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 2700,
       "duration_ms": 2700,
@@ -466,8 +466,8 @@
       "source_start_ms": 28550,
       "source_end_ms": 31250,
       "poster_source_ms": 29900,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "In-game list selects タッロング・ヒワ, followed by three-hit hand chain.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "11ebe61099ca58882d9c68970bcb8b8274e3e1d2ea274f1a424ffe0602886916"
     },
     {
@@ -481,7 +481,7 @@
       "media_url": "/media/moves/yasmine/yasmine-sunod-sunod-na-sipa-1-5mk-mk.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-sunod-sunod-na-sipa-1-5mk-mk.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 2550,
       "duration_ms": 2550,
@@ -493,8 +493,8 @@
       "source_start_ms": 41100,
       "source_end_ms": 43650,
       "poster_source_ms": 42100,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "In-game list selects スノスノッド・ナ・シパ; the isolated first attempt shows two kicks/two hits without the final kick.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "7742b3568e0b2964f9550632186582436ed4d53afd86609054d8567df6f57c47"
     },
     {
@@ -508,7 +508,7 @@
       "media_url": "/media/moves/yasmine/yasmine-sunod-sunod-na-sipa-2-5mk-mk-hk.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-sunod-sunod-na-sipa-2-5mk-mk-hk.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 3400,
       "duration_ms": 3400,
@@ -520,8 +520,8 @@
       "source_start_ms": 44200,
       "source_end_ms": 47600,
       "poster_source_ms": 45900,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Second isolated attempt completes the kick chain with the third hit/launch; distinct source interval from the first stage.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "02ca339abdc756df93a6591471decbd78365d724d53bdf9174777bee133517fc"
     },
     {
@@ -535,7 +535,7 @@
       "media_url": "/media/moves/yasmine/yasmine-pigil-ulo-lplk.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-pigil-ulo-lplk.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 3150,
       "duration_ms": 3150,
@@ -547,8 +547,8 @@
       "source_start_ms": 6850,
       "source_end_ms": 10000,
       "poster_source_ms": 8350,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Grab and forward knockdown to the right, without changing facing side.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "399969d6c143cf0791351db2bba2b641363e4cc17aa024fd2d55ccf6d507ae04"
     },
     {
@@ -562,7 +562,7 @@
       "media_url": "/media/moves/yasmine/yasmine-hila-kamay-4lplk.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-hila-kamay-4lplk.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 2950,
       "duration_ms": 2950,
@@ -574,8 +574,8 @@
       "source_start_ms": 14250,
       "source_end_ms": 17200,
       "poster_source_ms": 15550,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Grab with side switch and backward knockdown to the left.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "472c961b512fd8e3320ebccbd87c1dda33e403ad6b74141bef5ba12984d4dc98"
     },
     {
@@ -589,7 +589,7 @@
       "media_url": "/media/moves/yasmine/yasmine-hiwa-ng-kalangitan-236236k.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-hiwa-ng-kalangitan-236236k.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 4667,
       "duration_ms": 4667,
@@ -601,8 +601,8 @@
       "source_start_ms": 3180,
       "source_end_ms": 7850,
       "poster_source_ms": 4700,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "One SA stock consumed (3→2); aerial multihit attack. Leading unrelated jump excluded.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "e63d7bd748138e1a1419981b77e415c27a86adbdc9f70a1c0d6adf4e4b42b33d"
     },
     {
@@ -616,7 +616,7 @@
       "media_url": "/media/moves/yasmine/yasmine-nakatagong-lakas-214214p.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-nakatagong-lakas-214214p.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 2133,
       "duration_ms": 2133,
@@ -628,8 +628,8 @@
       "source_start_ms": 12960,
       "source_end_ms": 15080,
       "poster_source_ms": 14050,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Two SA stocks consumed (3→1), transformation cinematic and persistent glowing state. Leading unrelated jump excluded.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "05d08f86016e06719ec982c097ea9b08c8a02cbd44765e798c400ba88d6de0ba"
     },
     {
@@ -643,7 +643,7 @@
       "media_url": "/media/moves/yasmine/yasmine-pamumukadkad-ng-sampaguita-236236p.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-pamumukadkad-ng-sampaguita-236236p.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 10983,
       "duration_ms": 10983,
@@ -655,8 +655,8 @@
       "source_start_ms": 24080,
       "source_end_ms": 35050,
       "poster_source_ms": 29550,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Three SA stocks consumed (3→0); blue cinematic ending. Distinct from the low-health CA recording.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "b939bf0ce49c625a95c6a9e75490d7d831b0f6de9f54dd363e2db5db0070f4b3"
     },
     {
@@ -670,7 +670,7 @@
       "media_url": "/media/moves/yasmine/yasmine-pamumukadkad-ng-sampaguita-ca-236236p.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-pamumukadkad-ng-sampaguita-ca-236236p.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 10900,
       "duration_ms": 10900,
@@ -682,8 +682,8 @@
       "source_start_ms": 43080,
       "source_end_ms": 53980,
       "poster_source_ms": 49800,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "Low-health CA gauge label visible before activation; distinct purple/red CA cinematic ending.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "21610a98f00f834facfc12ca48e7c6f0250ec3d30ee060f698b2188051284628"
     },
     {
@@ -697,7 +697,7 @@
       "media_url": "/media/moves/yasmine/yasmine-kulog-236k-k.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-kulog-236k-k.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 1550,
       "duration_ms": 1550,
@@ -709,8 +709,8 @@
       "source_start_ms": 91450,
       "source_end_ms": 93000,
       "poster_source_ms": 92220,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "In-game list selects クロッグ immediately before the somersault follow-up that passes behind the dummy. No OD flash in the reviewed sequence. The family is identified by menu plus motion, not recording order.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "4a7eec4842b0b7cca0b06d10380ca48a4a0a92b30c9a142a1cde0afc69fbc446"
     },
     {
@@ -724,7 +724,7 @@
       "media_url": "/media/moves/yasmine/yasmine-ulan-236k-p.mp4",
       "media_type": "video",
       "poster_url": "/media/moves/yasmine/yasmine-ulan-236k-p.webp",
-      "verification_status": "approved_for_preview",
+      "verification_status": "mapping_hold",
       "loop_start_ms": 0,
       "loop_end_ms": 2633,
       "duration_ms": 2633,
@@ -736,8 +736,8 @@
       "source_start_ms": 112720,
       "source_end_ms": 115350,
       "poster_source_ms": 113450,
-      "cut_review_status": "CUT_REVIEW_PASS",
-      "mapping_evidence": "In-game list selects ウラン before the subsequent airborne multihit follow-up. Earlier failed inputs and neutral jump are excluded; no OD flash in the reviewed activation.",
+      "cut_review_status": "USER_QA_FAIL_PENDING_REAUDIT",
+      "mapping_evidence": "Previous mapping approval withdrawn after user reported name/command/video mismatches. Original recording retrieval HTTP 502; visual re-audit pending. Previous timestamps are candidates only.",
       "sha256": "9d3d3297a47f87f6fe35032179bf2ce433479987bdf7489b9ac9be78dd5c3b51"
     }
   ]
