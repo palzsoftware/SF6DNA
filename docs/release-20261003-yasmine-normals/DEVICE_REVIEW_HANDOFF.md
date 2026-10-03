@@ -8,4 +8,4 @@ The recording does not show input history. Specifically confirm weak/medium/heav
 
 Special/unique/throw/SA mappings, frame data, Production/DB/Ver.1.1 remain unchanged. Release remains NO-GO.
 
-Browser evidence: 12/12 restored clips played; 73 cards/25 normals retained; desktop media 499.3px at 1363px; Dark/Light no overflow; JP/Ryu representative regression passed. 375px is USER_REQUIRED because the available browser cannot resize its viewport. Tests464/464, release-gates14/14, typecheck/lint/build/validator/diff-check PASS. No repeated Daily15 or other device QA requested.
+Browser evidence: 12/12 restored clips played; 73 cards/25 normals retained; desktop media 499.3px at 1363px; Dark/Light no overflow; JP/Ryu representative regression passed. 375px is USER_REQUIRED because the available browser cannot resize its viewport. Tests465/465, release-gates14/14, typecheck/lint/build/validator/diff-check PASS. No repeated Daily15 or other device QA requested.

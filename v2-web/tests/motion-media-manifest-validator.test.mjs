@@ -53,6 +53,16 @@ test('accepts mapping_hold for an ambiguous clip without publishing it', () => {
   assert.deepEqual(result.errors, []);
 });
 
+test('rejects an existing but empty poster after encoding', async () => {
+  const root = await mkdtemp(path.join(tmpdir(), 'motion-media-empty-poster-'));
+  const assetDir = path.join(root, 'media/moves/jp');
+  mkdirSync(assetDir, { recursive: true });
+  writeFileSync(path.join(assetDir, 'jp-test.mp4'), '1234');
+  writeFileSync(path.join(assetDir, 'jp-test.webp'), '');
+  const result = validateMotionMediaManifest(validManifest(), { publicRoot: root });
+  assert.ok(result.errors.some(error => error.includes('poster_url: empty asset')));
+});
+
 test('rejects duplicate move variant mapping', () => {
   const manifest = validManifest();
   manifest.clips.push({ ...manifest.clips[0], media_url: '/media/moves/jp/other.mp4' });

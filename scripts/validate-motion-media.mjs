@@ -144,6 +144,7 @@ export function validateMotionMediaManifest(manifest, { publicRoot, checkFiles =
       if (clip?.poster_url) {
         const posterPath = publicAssetPath(publicRoot, clip.poster_url, `${prefix}.poster_url`, errors);
         if (posterPath && !existsSync(posterPath)) errors.push(`${prefix}.poster_url: missing asset ${clip.poster_url}`);
+        else if (posterPath && statSync(posterPath).size === 0) errors.push(`${prefix}.poster_url: empty asset ${clip.poster_url}`);
       }
     }
   }
