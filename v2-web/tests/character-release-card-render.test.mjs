@@ -38,3 +38,20 @@ test('existing video and GIF media render through the existing component without
  const html=render('c-viper',[{...moves[0],media}]);assert.ok(html.includes('/test.mp4'));assert.ok(html.includes('preload="none"'));assert.ok(html.includes('/test.webp'));assert.ok(!html.includes('動作映像は未掲載'));
  const gif=render('sagat',[{...moves[0],media:{...media,mediaType:'gif',mediaUrl:'/test.gif'}}]);assert.ok(gif.includes('/test.gif'));
 });
+
+const releaseSnapshot=JSON.parse(readFileSync(new URL('../src/data/ALL_CHARACTER_RELEASE_FIXTURE_20261004.json',import.meta.url),'utf8'));
+test('generated DB fixtures SSR renders exact IDs, real commands and frame values for all 31 characters',()=>{
+ for(const [slug,entry] of Object.entries(releaseSnapshot.characters)){
+  const html=render(slug,entry.moves);
+  assert.equal((html.match(/<article/g)||[]).length,entry.moves.length,slug);
+  assert.equal((html.match(/DB収録データ・公開審査前/g)||[]).length,entry.moves.length,slug);
+  for(const move of entry.moves){
+   assert.ok(html.includes('data-move-id="'+move.id+'"'),slug+':'+move.slug);
+   for(const field of ['startup','onHit','onBlock','damage']){
+    const value=move.frame?.[field];
+    if(value!==null&&value!==undefined&&value!=='')assert.ok(html.includes(String(value)),slug+':'+move.slug+':'+field);
+   }
+  }
+  assert.equal((html.match(/動作映像は未掲載/g)||[]).length,entry.moves.length,slug);
+ }
+});

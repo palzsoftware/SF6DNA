@@ -15,7 +15,7 @@ const slugs = [...read("src/lib/character-detail-route.ts").matchAll(/^  "([a-z-
 const empty = () => ({ guideSections: [], moves: [], combos: [], setups: [], sequences: [], matchups: [], training: [] });
 
 // Synthetic rows stay in tests; no DB, status, permissions or assets are changed.
-function environment({ remote = null, canonical = null, blocked = false, queryError = false, commandError = false,
+function environment({ remote = null, canonical = null, generated = null, blocked = false, queryError = false, commandError = false,
   commandOfficial = true, frameOfficial = true, framePatch = "current", verification = "verified", status = "published" } = {}) {
   const calls = [];
   const row = { id: "move-id", character_id: "character-id", slug: "test-move", name_ja: "test move", move_type: "normal", status };
@@ -32,6 +32,7 @@ function environment({ remote = null, canonical = null, blocked = false, queryEr
     return query;
   } };
   const mod = load("src/lib/character-detail-data.ts", (name) => {
+    if (name === "@/lib/generated-release-fixture") return { getGeneratedReleaseFixture: async () => process.env.VERCEL_ENV === "preview" ? generated : null };
     if (name === "@/lib/release-character-move-resolver") return load("src/lib/release-character-move-resolver.ts");
     if (name === "@/lib/alex-reviewed-media") return { getAlexReviewedBundle: () => null };
     if (name === "@/lib/yasmine-move-media-pilot") return { getYasmineMoveMediaPilot: () => process.env.VERCEL_ENV === "preview" ? canonical : null };
@@ -65,6 +66,17 @@ function withEnv(fn) {
     }
   });
 }
+
+test("generated candidates fill an empty public result only in Preview, without replacing authorized bundles", () => withEnv(async () => {
+  const candidate = { ...empty(), moves: [{ id: "candidate" }] };
+  const env = environment({ blocked: true, generated: candidate });
+  assert.equal((await env.resolveCharacterDetailData("character-id", "c-viper", null)).bundle, candidate);
+  const authorized = { ...empty(), moves: [{ id: "authorized" }] };
+  const protectedEnv = environment({ remote: authorized, generated: candidate });
+  assert.equal((await protectedEnv.resolveCharacterDetailData("character-id", "ingrid", "authorized-test-token")).bundle, authorized);
+  process.env.VERCEL_ENV = "production";
+  assert.equal((await env.resolveCharacterDetailData("character-id", "c-viper", null)).bundle, null);
+}));
 
 test("all 31 character slugs resolve gated DB moves before an empty overview fixture", () => withEnv(async () => {
   assert.equal(slugs.length, 31);

@@ -17,6 +17,8 @@ export type DevicePreviewBundle = {
     name: string;
     moveType: string | null;
     usageSummary: string | null;
+    /** Read-only DB candidate, never a claim of official identity approval. */
+    releaseFixture?: boolean;
     descriptionJa?: string | null;
     usageSummaryJa?: string | null;
     status: string;

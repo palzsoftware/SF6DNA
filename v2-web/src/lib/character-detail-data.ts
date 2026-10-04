@@ -1,4 +1,5 @@
 import { resolveReleaseCharacterMoves } from "@/lib/release-character-move-resolver";
+import { getGeneratedReleaseFixture } from "@/lib/generated-release-fixture";
 import { getAlexReviewedBundle } from "@/lib/alex-reviewed-media";
 import type { DevicePreviewBundle } from "@/lib/device-preview";
 import { getDevicePreviewBundle } from "@/lib/device-preview";
@@ -68,6 +69,8 @@ export async function resolveCharacterDetailData(characterId: string, slug: stri
   if (publicMoves?.length) {
     return { bundle: { guideSections: [], moves: publicMoves, combos: [], setups: [], sequences: [], matchups: [], training: [] }, source: "public" };
   }
+  const generated = await getGeneratedReleaseFixture(characterId, slug);
+  if (generated) return { bundle: generated, source: "fixture" };
   // Reviewed pilot fallback stays Preview-only at the route boundary. Do not
   // turn a missing public grant into an admin/secret-key query or draft export.
   return { bundle: fallback ? { ...fallback, moves: fallback.moves.map((move) => ({ ...move })) } : null,

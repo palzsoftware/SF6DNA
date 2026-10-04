@@ -155,7 +155,7 @@ export function CharacterDetailPilot({
             commands: (move.commands ?? []).flatMap(command => moveCommandSearchTerms(command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "")),
             content: <article className={styles.moveRow} role="row" key={move.id} data-move-id={move.id} data-move-slug={move.slug} data-has-media={Boolean(move.media)}>
                   <div className={styles.moveIdentity} role="cell">
-                    <span>{verificationLabel(move.frame?.verificationStatus ?? null)}</span>
+                    <span>{move.releaseFixture ? "DB収録データ・公開審査前" : verificationLabel(move.frame?.verificationStatus ?? null)}</span>
                     <h3>{move.name}</h3>
                     {publicMoveSummary(move.usageSummary) ? <p>{publicMoveSummary(move.usageSummary)}</p> : null}
                   </div>
