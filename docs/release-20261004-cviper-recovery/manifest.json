@@ -1,0 +1,12 @@
+{
+  "character": "c-viper",
+  "source_file": "clip_1364780_20261003_170040.mp4",
+  "source_sha256": "9610dbe1e1e25cdd7266bf492f3d54740f2184c34d2c1677a47eddf1ec6aa027",
+  "verification": "VISUALLY_REVIEWED_LOCAL_CANDIDATE",
+  "moves": [
+    {"move_id":"ed13ddb1-b91d-4ba7-9c93-51c39b480f1d","move_slug":"c-viper-limit-decoupler-236236k","name_ja":"SA1 バウンサーステップ","start":3.5,"end":7.5,"media":"mp4/c-viper-sa1-bouncer-step.mp4","poster":"webp/c-viper-sa1-bouncer-step.webp"},
+    {"move_id":"9001ec69-8aa2-4dc6-96b2-e29bfb12a99d","move_slug":"c-viper-mission-complete-214214p","name_ja":"SA2 ミッションオーバー","start":28.5,"end":37.0,"media":"mp4/c-viper-sa2-mission-over.mp4","poster":"webp/c-viper-sa2-mission-over.webp"},
+    {"move_id":"233040e0-3d41-4a5b-8417-02fad0150b27","move_slug":"c-viper-hard-luck-rejector-214214k","name_ja":"SA3 アンラックリジェクター","start":57.5,"end":74.2,"media":"mp4/c-viper-sa3-hard-luck-rejector.mp4","poster":"webp/c-viper-sa3-hard-luck-rejector.webp"},
+    {"move_id":"7c08292e-4913-4e2c-8f53-c77f66df12f1","move_slug":"c-viper-hard-luck-rejector-ca-214214k","name_ja":"CA アンラックリジェクター","start":104.5,"end":119.5,"media":"mp4/c-viper-ca-hard-luck-rejector.mp4","poster":"webp/c-viper-ca-hard-luck-rejector.webp"}
+  ]
+}

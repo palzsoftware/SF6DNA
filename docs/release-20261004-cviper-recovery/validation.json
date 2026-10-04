@@ -1,0 +1,52 @@
+{
+  "mp4": [
+    {
+      "file": "c-viper-ca-hard-luck-rejector.mp4",
+      "size": 3569749,
+      "duration": 14.266667,
+      "sha256": "444af5564e10889bc38cc79d0ca01bb648d5736851dff4e082886da865a2935b"
+    },
+    {
+      "file": "c-viper-sa1-bouncer-step.mp4",
+      "size": 818927,
+      "duration": 4.0,
+      "sha256": "6da5aaff972221ac6525739820d0e5fa65f3dc30b0cc5ac5e154689bc289cea1"
+    },
+    {
+      "file": "c-viper-sa2-mission-over.mp4",
+      "size": 2697009,
+      "duration": 8.5,
+      "sha256": "28f28cda1cc68f3b847a57318e0001d4f791d58757b702bbf60647b708a4013e"
+    },
+    {
+      "file": "c-viper-sa3-hard-luck-rejector.mp4",
+      "size": 4320628,
+      "duration": 16.7,
+      "sha256": "fc015aa399304413aa08b66ad090e7f6b03326e6cd6b3a6e91b4281c6aba7264"
+    }
+  ],
+  "webp": [
+    {
+      "file": "c-viper-ca-hard-luck-rejector.webp",
+      "size": 20710,
+      "sha256": "e57ebc7de248a147018a4a86f47242a10add012900fae8b6bf1674116fe6ff4b"
+    },
+    {
+      "file": "c-viper-sa1-bouncer-step.webp",
+      "size": 14104,
+      "sha256": "a2670a897d3c96f1e9bbd322617bb137235cb1cd7d64fe4127582d1ae6e8520a"
+    },
+    {
+      "file": "c-viper-sa2-mission-over.webp",
+      "size": 16624,
+      "sha256": "d911d76d14416e21f125d8c0d80510d4d85df969120711417e44f121f941030e"
+    },
+    {
+      "file": "c-viper-sa3-hard-luck-rejector.webp",
+      "size": 13126,
+      "sha256": "f4979b5ff8d57557f1a058d430cb4bbdba7a593f80ab65d0223b703ca0306328"
+    }
+  ],
+  "zero_byte": 0,
+  "duplicate_hashes": 0
+}
