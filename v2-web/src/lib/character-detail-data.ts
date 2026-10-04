@@ -1,3 +1,4 @@
+import { resolveReleaseCharacterMoves } from "@/lib/release-character-move-resolver";
 import { getAlexReviewedBundle } from "@/lib/alex-reviewed-media";
 import type { DevicePreviewBundle } from "@/lib/device-preview";
 import { getDevicePreviewBundle } from "@/lib/device-preview";
@@ -20,7 +21,7 @@ export async function loadPublicCharacterMoves(characterId: string): Promise<Dev
   const supabase = getSupabaseServerClient();
   const [{ data: moves, error }, { data: patch, error: patchError }] = await Promise.all([
     supabase.from("moves")
-      .select("id, slug, name_ja, move_type, usage_summary, usage_summary_ja, description_ja, status")
+      .select("id, character_id, slug, name_ja, move_type, usage_summary, usage_summary_ja, description_ja, status")
       .eq("character_id", characterId).eq("status", "published")
       .order("display_order", { ascending: true }),
     supabase.from("patches").select("id").eq("is_current", true).maybeSingle(),
@@ -49,23 +50,9 @@ export async function loadPublicCharacterMoves(characterId: string): Promise<Dev
   ]);
   const officialCommands = new Set(commandSources.filter((source) => source.reliabilityLevel === "official").map((source) => source.entityId));
   const officialFrames = new Set(frameSources.filter((source) => source.reliabilityLevel === "official").map((source) => source.entityId));
-  return ready.flatMap((move) => {
-    const moveCommands = (commands ?? []).filter((command) => command.move_id === move.id && command.control_scheme === "classic" && officialCommands.has(String(command.id)));
-    const frame = (frames ?? []).find((frame) => frame.move_id === move.id && frame.verification_status === "verified"
-      && frame.valid_from_patch_id === patch.id && frame.valid_to_patch_id === null && officialFrames.has(String(frame.id)));
-    if (!moveCommands.length || !frame) return [];
-    return [{
-      id: String(move.id), slug: String(move.slug), name: String(move.name_ja),
-      moveType: move.move_type, status: "published", usageSummary: null,
-      commands: moveCommands.map((command) => ({
-        moveId: String(command.move_id), scheme: "classic", commandText: command.command_text,
-        numericNotation: command.numeric_notation, buttonNotation: command.button_notation,
-        conditionText: command.condition_text, sortOrder: command.sort_order,
-      })),
-      frame: { startup: frame.startup, active: frame.active, recovery: frame.recovery, onHit: frame.on_hit,
-        onBlock: frame.on_block, damage: frame.damage, verificationStatus: "verified" },
-    }];
-  });
+  return resolveReleaseCharacterMoves({ characterId, currentPatchId: String(patch.id),
+    moves: ready, commands: commands ?? [], frames: frames ?? [],
+    gateReadyIds: new Set(ids), officialCommandIds: officialCommands, officialFrameIds: officialFrames });
 }
 
 export async function resolveCharacterDetailData(characterId: string, slug: string, previewToken: string | null): Promise<CharacterDetailData> {

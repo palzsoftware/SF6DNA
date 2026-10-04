@@ -18,7 +18,7 @@ const empty = () => ({ guideSections: [], moves: [], combos: [], setups: [], seq
 function environment({ remote = null, canonical = null, blocked = false, queryError = false, commandError = false,
   commandOfficial = true, frameOfficial = true, framePatch = "current", verification = "verified", status = "published" } = {}) {
   const calls = [];
-  const row = { id: "move-id", slug: "test-move", name_ja: "test move", move_type: "normal", status };
+  const row = { id: "move-id", character_id: "character-id", slug: "test-move", name_ja: "test move", move_type: "normal", status };
   const command = { id: "classic-id", move_id: "move-id", control_scheme: "classic", command_text: "LP", sort_order: 0 };
   const frame = { id: "frame-id", move_id: "move-id", valid_from_patch_id: framePatch, valid_to_patch_id: null, verification_status: verification, startup: "4", on_block: "-1", damage: 100 };
   const client = { from(table) {
@@ -32,6 +32,7 @@ function environment({ remote = null, canonical = null, blocked = false, queryEr
     return query;
   } };
   const mod = load("src/lib/character-detail-data.ts", (name) => {
+    if (name === "@/lib/release-character-move-resolver") return load("src/lib/release-character-move-resolver.ts");
     if (name === "@/lib/alex-reviewed-media") return { getAlexReviewedBundle: () => null };
     if (name === "@/lib/yasmine-move-media-pilot") return { getYasmineMoveMediaPilot: () => process.env.VERCEL_ENV === "preview" ? canonical : null };
     if (name === "@/lib/supabase/server") return { getSupabaseServerClient: () => client };
@@ -87,36 +88,36 @@ test("authorized remote bundle, including deliberately empty moves, wins over pu
 }));
 test("token-free request cannot use draft remote bundle", () => withEnv(async () => {
   const env = environment({ remote: { ...empty(), moves: [{ status: "draft" }] } });
-  assert.equal((await env.resolveCharacterDetailData("id", "ken", null)).source, "public");
+  assert.equal((await env.resolveCharacterDetailData("character-id", "ken", null)).source, "public");
 }));
 test("publication gate rejection keeps DB move out of the bundle", () => withEnv(async () => {
   const env = environment({ blocked: true });
-  assert.deepEqual(await env.loadPublicCharacterMoves("id"), []);
+  assert.deepEqual(await env.loadPublicCharacterMoves("character-id"), []);
 }));
 test("unpublished row stays excluded even if a client mock returns it", () => withEnv(async () => {
-  assert.deepEqual(await environment({ status: "draft" }).loadPublicCharacterMoves("id"), []);
+  assert.deepEqual(await environment({ status: "draft" }).loadPublicCharacterMoves("character-id"), []);
 }));
 test("each rendered Classic command and frame needs its own official evidence", () => withEnv(async () => {
   for (const options of [{ commandOfficial: false }, { frameOfficial: false }]) {
-    assert.deepEqual(await environment(options).loadPublicCharacterMoves("id"), []);
+    assert.deepEqual(await environment(options).loadPublicCharacterMoves("character-id"), []);
   }
 }));
 test("old patch or reviewed frame cannot leak into verified fields", () => withEnv(async () => {
   for (const options of [{ framePatch: "old" }, { verification: "reviewed" }]) {
-    assert.deepEqual(await environment(options).loadPublicCharacterMoves("id"), []);
+    assert.deepEqual(await environment(options).loadPublicCharacterMoves("character-id"), []);
   }
 }));
 test("query failure differs from successful empty publication and stays safe", () => withEnv(async () => {
   for (const options of [{ queryError: true }, { commandError: true }]) {
     const env = environment(options);
-    assert.equal(await env.loadPublicCharacterMoves("id"), null);
-    const result = await env.resolveCharacterDetailData("id", "ken", null);
+    assert.equal(await env.loadPublicCharacterMoves("character-id"), null);
+    const result = await env.resolveCharacterDetailData("character-id", "ken", null);
     assert.equal(result.source, "unavailable"); assert.deepEqual(result.bundle.moves, []);
   }
 }));
 test("Production never falls back to Preview fixture drafts", () => withEnv(async () => {
   process.env.VERCEL_ENV = "production";
-  const result = await environment({ blocked: true }).resolveCharacterDetailData("id", "ryu", null);
+  const result = await environment({ blocked: true }).resolveCharacterDetailData("character-id", "ryu", null);
   assert.equal(result.bundle, null); assert.equal(route.isCharacterDetailV2Route("ryu"), false);
 }));
 test("related videos use explicit entity IDs, stable order and deduplication, not names", () => {
