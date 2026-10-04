@@ -50,3 +50,26 @@ No page implementation changed. Desktop / 390 / 375 browser QA NOT_RUN: media no
 Fresh checks: typecheck PASS; lint PASS; current full suite 561/561 PASS (557 remote tests + 4 recovery metadata tests; lost unpushed tests are not counted as restored); targeted recovery/formatter tests 19/19 PASS; release gates 14/14 PASS; build PASS; diff-check PASS. Production build emitted existing metadataBase localhost warnings. Generated Next config differences were reviewed and excluded. Media decode validator BLOCKED_HTTP_502; metadata integrity is separate from decode validation. Remote write NO; Preview NOT_CREATED. DB/migration/Production/main/sf6dna-v2/Ver1.1 unchanged.
 
 Next single action: restore accessible bytes for the preserved SA4 candidate and verify CA duration metadata before runtime integration or remote-write approval.
+
+## Revalidation and HOLD classification — 2026-10-04 continuation
+
+Fresh remote remains 2380758461e80b39c533f600375d239d407f8d7f; drift NO. Local basis 9252938aa60ebc82941c98014d469771ba1bf813.
+
+Fresh Library inventory confirms the same 4 MP4 / 4 WebP. This batch tried the eight assets together, then CA MP4 alone: both transfers returned HTTP 502. MEDIA_REVALIDATION_BLOCKED. No local media bytes, no fresh decode/poster/visual PASS, no runtime integration, no recut. SA1/SA2/SA3/CA are REVALIDATION_HOLD. Prior confirmed mapping remains 4/61; freshly revalidated confirmed 0/61; non-SA HOLD remains 57. These are separate populations, not 4 new approvals.
+
+CA duration difference: 15 - 14.266667 = 0.733333 seconds; UNRESOLVED. Seek rounding, timebase, encoder frame truncation, different cut boundary, source duration and actual missing animation cannot be distinguished without decoded clip/source endpoints. No cause is presumed; stored interval and MP4 retained unchanged.
+
+### Mutually exclusive primary HOLD counts (57 non-SA moves)
+
+- HOLD_SOURCE_NOT_ACCESSIBLE: 52
+- HOLD_OLD_CANDIDATE_LOST: 5 (metadata only, not adopted)
+
+All 57 additionally depend on source access. DB category working inventory: normal 21, unique 2, special 32, throw 2. The lost five overlap normal 2 / special 3. No extra canonical/strength/OD/condition/command blocker is assigned merely from a command string. Those identity subclasses remain NOT_ASSESSED without source evidence, rather than proven absent. SOURCE_NOT_PRESENT_IN_RECEIVED_MEDIA and NOT_RECORDED are not asserted. Prior command REVIEW_ONLY=1 is retained as a prior finding without a recovered exact row, not added to an exclusive count.
+
+### Next existing source, one file
+
+clip_1364780_20261003_165707(1).mp4, current Library metadata 353320250 bytes, is the preferred transfer. The (1) and non-suffixed entries have equal size but are not asserted to have equal hash. Prior evidence associates the (1) source with special/follow-up candidates; the special pool contains 32 HOLD, more than the other categories. This is a prioritization hypothesis, not proof that all 32 occur in this one recording. Actual yield is unknown until the full timeline is viewed. Do not map from historical names/timestamps alone. TRANSFER_EXISTING_SOURCE; no re-recording request.
+
+Browser QA: NOT_RUN_RUNTIME_NOT_INTEGRATED. Remote write NO, Preview NO. Existing runtime, formatter, media assets and protected areas unchanged. No Reference Character completion claim.
+
+Fresh checks in this continuation: targeted recovery/command tests 19 PASS; typecheck PASS; lint PASS; full current suite 561/561 PASS; release gates 14/14 PASS; build PASS; diff-check PASS. Existing Ryu/JP motion-media validator PASS (27 clips, 6 sources), scoped to its unchanged existing manifest, not to C.Viper SA bytes. C.Viper recovery metadata/unique bindings PASS via targeted tests; C.Viper byte decode/zero-byte/hash/visual mapping validation BLOCKED_HTTP_502. No decode failure count or wrong-mapping zero is inferred from lack of bytes. Stored zero-byte/hash duplicate zero remain prior evidence only. Build-generated next-env.d.ts/tsconfig changes were inspected and excluded. No runtime change. Remote checked again before commit: same SHA, drift NO.
