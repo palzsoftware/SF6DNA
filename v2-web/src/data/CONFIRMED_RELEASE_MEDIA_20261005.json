@@ -13,7 +13,11 @@
     "start": 9.395,
     "end": 12.8,
     "identityStatus": "CONFIRMED_PRIOR_EVIDENCE_REUSED",
-    "reviewStatus": "CANDIDATE_ONLY"
+    "reviewStatus": "CANDIDATE_ONLY",
+    "confidence": "HIGH",
+    "mappingMethod": "PRIOR_CONFIRMED_MAPPING_REUSED",
+    "variant": "super",
+    "mappingStatus": "CONFIRMED"
   },
   {
     "characterSlug": "elena",
@@ -29,7 +33,11 @@
     "start": 29.39,
     "end": 35.15,
     "identityStatus": "CONFIRMED_PRIOR_EVIDENCE_REUSED",
-    "reviewStatus": "CANDIDATE_ONLY"
+    "reviewStatus": "CANDIDATE_ONLY",
+    "confidence": "HIGH",
+    "mappingMethod": "PRIOR_CONFIRMED_MAPPING_REUSED",
+    "variant": "super",
+    "mappingStatus": "CONFIRMED"
   },
   {
     "characterSlug": "elena",
@@ -45,7 +53,11 @@
     "start": 57.2,
     "end": 63.1,
     "identityStatus": "CONFIRMED_PRIOR_EVIDENCE_REUSED",
-    "reviewStatus": "HOLD_COMMAND_REVIEW"
+    "reviewStatus": "HOLD_COMMAND_REVIEW",
+    "confidence": "HIGH",
+    "mappingMethod": "PRIOR_CONFIRMED_MAPPING_REUSED",
+    "variant": "super",
+    "mappingStatus": "CONFIRMED"
   },
   {
     "characterSlug": "elena",
@@ -61,7 +73,11 @@
     "start": 88.575,
     "end": 98.8,
     "identityStatus": "CONFIRMED_PRIOR_EVIDENCE_REUSED",
-    "reviewStatus": "CANDIDATE_ONLY"
+    "reviewStatus": "CANDIDATE_ONLY",
+    "confidence": "HIGH",
+    "mappingMethod": "PRIOR_CONFIRMED_MAPPING_REUSED",
+    "variant": "super",
+    "mappingStatus": "CONFIRMED"
   },
   {
     "characterSlug": "elena",
@@ -77,6 +93,10 @@
     "start": 113.31,
     "end": 123.25,
     "identityStatus": "CONFIRMED_PRIOR_EVIDENCE_REUSED",
-    "reviewStatus": "CANDIDATE_ONLY"
+    "reviewStatus": "CANDIDATE_ONLY",
+    "confidence": "HIGH",
+    "mappingMethod": "PRIOR_CONFIRMED_MAPPING_REUSED",
+    "variant": "super",
+    "mappingStatus": "CONFIRMED"
   }
 ]

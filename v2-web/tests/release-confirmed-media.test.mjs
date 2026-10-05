@@ -43,3 +43,26 @@ test('Preview media resolver uses only exact move ID and slug, production return
   assert.equal((await mod.exports.getReleaseConfirmedMedia('elena',moves)).size,0);
  }finally{if(saved===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=saved;}
 });
+
+test('future confirmed packs attach by identity without a page edit, while review-only and incomplete rows stay held',async()=>{
+ const compiled=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+ const saved=process.env.VERCEL_ENV;
+ const move=snapshot.characters['c-viper'].moves[0];
+ const row={...manifest[0],characterSlug:'c-viper',moveId:move.id,moveSlug:move.slug,mediaType:'gif',mediaUrl:'/media/c-viper/confirmed.webp'};
+ async function resolve(rows){
+  const mod={exports:{}};
+  new Function('require','module','exports',compiled)(()=>({__esModule:true,default:rows}),mod,mod.exports);
+  return mod.exports.getReleaseConfirmedMedia('c-viper',[move]);
+ }
+ try{
+  process.env.VERCEL_ENV='preview';
+  assert.equal((await resolve([row])).get(move.id)?.mediaType,'gif');
+  assert.equal((await resolve([{...row,mediaUrl:'/media/c-viper/confirmed.gif'}])).size,1);
+  for(const change of [{confidence:'MEDIUM'},{confidence:'LOW'},{mappingStatus:'REVIEW_REQUIRED'},{mappingStatus:'HOLD'},{sourceHash:''},{mappingMethod:''},{end:row.start},{characterSlug:'elena'},{moveSlug:'wrong'},{mediaUrl:'/media/../wrong.webp'}]){
+   assert.equal((await resolve([{...row,...change}])).size,0,JSON.stringify(change));
+  }
+  assert.equal((await resolve([row,row])).size,1);
+  process.env.VERCEL_ENV='production';
+  assert.equal((await resolve([row])).size,0);
+ }finally{if(saved===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=saved;}
+});
