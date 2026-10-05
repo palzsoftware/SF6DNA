@@ -55,3 +55,17 @@ test('generated DB fixtures SSR renders exact IDs, real commands and frame value
   assert.equal((html.match(/動作映像は未掲載/g)||[]).length,entry.moves.length,slug);
  }
 });
+
+test('confirmed Elena media renders on the exact five cards while 67 others retain fallback',()=>{
+ const confirmed=JSON.parse(readFileSync(new URL('../src/data/CONFIRMED_RELEASE_MEDIA_20261005.json',import.meta.url),'utf8'));
+ const byId=new Map(confirmed.map(row=>[row.moveId,row]));
+ const moves=releaseSnapshot.characters.elena.moves.map(move=>{
+   const row=byId.get(move.id);
+   return {...move,media:row?{id:'release-'+row.moveId,moveId:row.moveId,mediaType:'video',mediaUrl:row.mediaUrl,posterUrl:row.posterUrl,sourceUrl:null,sourceLabel:null,status:'draft',displayOrder:null}:null};
+ });
+ const html=render('elena',moves);
+ assert.equal((html.match(/<article/g)||[]).length,72);
+ assert.equal((html.match(/<video/g)||[]).length,5);
+ assert.equal((html.match(/動作映像は未掲載/g)||[]).length,67);
+ for(const row of confirmed)assert.ok(html.includes(row.mediaUrl)&&html.includes(row.posterUrl));
+});

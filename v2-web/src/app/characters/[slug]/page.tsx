@@ -19,6 +19,7 @@ import { getPlayerBySlug } from "@/lib/players";
 import { releaseFeatures } from "@/lib/release-features";
 import { getCharacterDetailV21Profile } from "@/lib/character-detail-v21";
 import { resolveCharacterDetailData, resolveCharacterRelatedVideos } from "@/lib/character-detail-data";
+import { getReleaseConfirmedMedia } from "@/lib/release-confirmed-media";
 import { isCharacterDetailV2Route } from "@/lib/character-detail-route";
 import { adaptCharacterDetailV2Profile } from "@/lib/character-detail-v2-profile-adapter";
 import { presentSource } from "@/lib/source-presentation";
@@ -141,9 +142,15 @@ export default async function CharacterPage({
     ? await Promise.all([resolveCharacterDetailData(character.id, character.slug, previewToken), listVideos(), getDevicePreviewMoveMotionMedia(character.id, previewToken)])
     : [null, await listVideos(), []];
   const pilotBundle = remotePilotBundle?.bundle ?? null;
-  if (pilotBundle && moveMedia.length) {
+  if (pilotBundle) {
     const mediaByMove = new Map(moveMedia.map((media) => [media.moveId, media]));
-    pilotBundle.moves = pilotBundle.moves.map((move) => ({ ...move, media: mediaByMove.get(move.id) ?? null }));
+    const confirmed = await getReleaseConfirmedMedia(character.slug, pilotBundle.moves);
+    const generatedCandidate = remotePilotBundle?.source === "fixture" &&
+      (character.slug === "c-viper" || character.slug === "elena" || character.slug === "sagat");
+    pilotBundle.moves = pilotBundle.moves.map((move) => ({
+      ...move,
+      media: confirmed.get(move.id) ?? (generatedCandidate ? null : mediaByMove.get(move.id) ?? move.media ?? null),
+    }));
   }
   const pilotPlayers = pilotBundle
     ? (await Promise.all(
