@@ -31,6 +31,8 @@ test('Preview fallback preserves public gate, character binding and existing ref
  const resolver=read('../src/lib/character-detail-data.ts');
  assert.ok(resolver.indexOf('if (publicMoves?.length)')<resolver.indexOf('const generated ='));
  assert.ok(resolver.indexOf('if (remote)')<resolver.indexOf('const generated ='));
- assert.ok(resolver.indexOf('if (alex)')<resolver.indexOf('const generated ='));
+ assert.match(resolver,/hasNineCharacterIntegrationCandidate\(slug\) && process.env.VERCEL_ENV === "preview"/);
+ assert.ok(resolver.indexOf('getNineCharacterIntegrationCandidate(characterId, slug)')<resolver.indexOf('const generated ='));
+ assert.match(resolver,/candidate \? \{ bundle: candidate.bundle, source: "fixture" \} : \{ bundle: null, source: "unavailable" \}/);
  assert.doesNotMatch(loader,/service_role|SUPABASE|fetch\(/);
 });

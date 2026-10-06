@@ -12,6 +12,7 @@ function realModule(file) {
   const script = ts.transpileModule(readFileSync(new URL(`../src/${file}`, import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX } }).outputText;
   new Function("module", "exports", "require", script)(result, result.exports, name => {
     if (name.endsWith(".css")) return { default: {} };
+    if (name.startsWith("@/data/")) return { __esModule: true, default: JSON.parse(readFileSync(new URL(`../src/data/${name.slice(7)}`, import.meta.url), "utf8")) };
     if (name.startsWith("@/lib/")) return realModule(`lib/${name.slice(6)}.ts`);
     return require(name);
   });
@@ -24,6 +25,7 @@ vm.runInNewContext(js, {
   module: compiled, exports: compiled.exports,
   require(name) {
     if (name === "react/jsx-runtime") return require(name);
+    if (name === "@/components/move-motion-media") return realModule("components/move-motion-media.tsx");
     if (name === "@/components/character-game-guide") return realModule("components/character-game-guide.tsx");
     if (name === "@/components/character-quick-start") return realModule("components/character-quick-start.tsx");
     if (name === "@/components/character-move-explorer") return realModule("components/character-move-explorer.tsx");
@@ -93,4 +95,58 @@ test("all 31 character datasets retain every required category ID, including tar
     assert.ok(!html.includes("ターゲットコンボ"));
     assert.match(html, /ダメージ<\/dt><dd>0<\/dd>/);
   }
+});
+
+
+test("Alex safe Preview render separates retained64 base from63 cards and one identity hold",()=>{
+ const previous=process.env.VERCEL_ENV;process.env.VERCEL_ENV="preview";
+ try{
+  const snapshot=JSON.parse(readFileSync(new URL("../src/data/ALL_CHARACTER_RELEASE_FIXTURE_20261004.json",import.meta.url),"utf8"));
+  const candidate=realModule("lib/nine-character-integration-candidate.ts").getNineCharacterIntegrationCandidate(snapshot.characters.alex.characterId,"alex");
+  assert.deepEqual(candidate.counts,{dataBase:64,publicCandidate:63,held:1});
+  const html=renderToStaticMarkup(require("react").createElement(compiled.exports.CharacterDetailPilot,{characterName:"アレックス",characterSlug:"alex",previewToken:null,preRelease:true,players:[],videos:[],sources:[],profile:{tagline:"特徴",winPath:"距離",firstLesson:"最初",strength:"強み",weakness:"注意",gameplan:[],ranges:[]},bundle:candidate.bundle}));
+  const rendered=[...html.matchAll(/data-move-id="([^"]+)"/g)].map(m=>m[1]);
+  assert.equal(rendered.length,63);assert.deepEqual(new Set(rendered),new Set(candidate.bundle.moves.map(m=>m.id)));
+  assert.ok(!rendered.includes("7b009800-5747-4b7d-a2c1-7163f1826d48"));
+  assert.equal(candidate.bundle.moves.filter(m=>m.media).length,6);
+  for(const m of candidate.bundle.moves.filter(m=>m.media))assert.ok(html.includes(m.media.mediaUrl),m.id);
+  assert.match(html,/確認中/);assert.match(html,/動作映像は未掲載/);
+ }finally{if(previous===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=previous;}
+});
+
+for (const slug of ['c-viper','elena','sagat','lily','juri','dee-jay','jp','alex','ingrid']) test(`${slug} snapshot candidate SSR preserves all safe card IDs, commands and exact frame notation`,()=>{
+ const previous=process.env.VERCEL_ENV;process.env.VERCEL_ENV='preview';
+ try{
+  const snapshot=JSON.parse(readFileSync(new URL('../src/data/ALL_CHARACTER_RELEASE_FIXTURE_20261004.json',import.meta.url),'utf8'));
+  const candidate=realModule('lib/nine-character-integration-candidate.ts').getNineCharacterIntegrationCandidate(snapshot.characters[slug].characterId,slug);
+  const html=renderToStaticMarkup(require('react').createElement(compiled.exports.CharacterDetailPilot,{characterName:slug,characterSlug:slug,previewToken:null,preRelease:true,players:[],videos:[],sources:[],profile:{tagline:'特徴',winPath:'距離',firstLesson:'最初',strength:'強み',weakness:'注意',gameplan:[],ranges:[]},bundle:candidate.bundle}));
+  const ids=[...html.matchAll(/data-move-id="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,candidate.counts.publicCandidate);assert.deepEqual(new Set(ids),new Set(candidate.bundle.moves.map(m=>m.id)));
+  const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#x27;');
+  const labels={startup:'発生',onHit:'ヒット時',onBlock:'ガード時',damage:'ダメージ'};
+  for(const m of candidate.bundle.moves){const card=html.slice(html.indexOf(`data-move-id="${m.id}"`)).split('</article>')[0];if(m.commands.some(c=>c.scheme==='classic'))assert.ok(card.includes('クラシック'),m.id);else assert.equal(candidate.evidence[m.id].command_classifications.classic.status,'NOT_APPLICABLE');for(const [k,label] of Object.entries(labels))assert.ok(card.includes(`<dt>${label}</dt><dd>${m.frame[k]===null?(m.frameFieldStatus[k]==='OFFICIAL_NA'?'—':'確認中'):escape(m.frame[k])}</dd>`),`${m.id}:${k}`);if(!m.media)assert.ok(card.includes('動作映像は未掲載'),m.id);assert.ok(card.includes('公開審査前'),m.id);}
+  if(slug==='alex')assert.ok(!ids.includes('7b009800-5747-4b7d-a2c1-7163f1826d48'));
+ }finally{if(previous===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=previous;}
+});
+
+test('JP dedicated renderer displays accepted snapshot, N/A and fallback without changing its reviewed fixture',()=>{
+ const previous=process.env.VERCEL_ENV;process.env.VERCEL_ENV='preview';
+ try{
+  const snapshot=JSON.parse(readFileSync(new URL('../src/data/ALL_CHARACTER_RELEASE_FIXTURE_20261004.json',import.meta.url),'utf8'));
+  const candidate=realModule('lib/nine-character-integration-candidate.ts').getNineCharacterIntegrationCandidate(snapshot.characters.jp.characterId,'jp');
+  const mod={exports:{}};const script=ts.transpileModule(readFileSync(new URL('../src/components/jp-character-detail.tsx',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
+  new Function('module','exports','require',script)(mod,mod.exports,name=>{
+   if(name==='react/jsx-runtime')return require(name);
+   if(name==='next/link')return {default:p=>require('react').createElement('a',p),__esModule:true};
+   if(name.endsWith('.css'))return {default:{}};
+   if(name==='@/components/character-move-explorer')return realModule('components/character-move-explorer.tsx');
+   if(name==='@/components/move-motion-media')return realModule('components/move-motion-media.tsx');
+   if(name.startsWith('@/components/'))return new Proxy({},{get:()=>()=>null});
+   if(name==='@/lib/device-preview')return {appendDevicePreviewToken:p=>p};
+   if(name==='@/lib/release-features')return {releaseFeatures:{publicStrategyContent:false}};
+   if(name.startsWith('@/lib/'))return realModule(`lib/${name.slice(6)}.ts`);
+   return {};
+  });
+  const html=renderToStaticMarkup(require('react').createElement(mod.exports.JpCharacterDetail,{character:{slug:'jp',name:'JP',imageUrl:null,sources:[]},previewToken:null,previewActive:false,bundle:candidate.bundle,profile:{tagline:'特徴',winPath:'距離',firstLesson:'最初',strength:'強み',weakness:'注意',gameplan:[],ranges:[]},players:[],videos:[],pilotOverview:true}));
+  const ids=[...html.matchAll(/data-move-id="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,59);assert.deepEqual(new Set(ids),new Set(candidate.bundle.moves.map(m=>m.id)));assert.match(html,/公開審査前/);assert.match(html,/動作映像は未掲載/);assert.match(html,/ガード時<\/dt><dd>—<\/dd>/);assert.match(html,/500 \/ 500/);
+ }finally{if(previous===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=previous;}
 });

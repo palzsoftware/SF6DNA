@@ -145,7 +145,7 @@ export function CharacterDetailPilot({
           <div>
             <p className="eyebrow">技データ</p>
             <h2 id="pilot-moves-heading">技一覧・コマンド・主要フレーム</h2>
-            <p>{characterSlug === "yasmine" && process.env.VERCEL_ENV === "preview" ? "公式画面と照合した技データです。資料の対象バージョンは確認中です。「—」は資料に値や直接入力の記載がない項目です。" : preRelease ? "公式発表済みの技名です。入力コマンドとフレームは公式一覧を照合してから掲載します。" : "コマンドと主要フレームを技ごとに掲載。数値の「確認中」は未確定の項目です。"}</p>
+            <p>{bundle.moves.some(move => move.frameFieldStatus) ? "2026年10月6日に取得したCAPCOM公式フレーム表の値を掲載しています。Battle Version番号は未確認です。「—」は公式N/A、「確認中」は保留項目です。公開審査前のPreview候補です。" : characterSlug === "yasmine" && process.env.VERCEL_ENV === "preview" ? "公式画面と照合した技データです。資料の対象バージョンは確認中です。「—」は資料に値や直接入力の記載がない項目です。" : preRelease ? "公式発表済みの技名です。入力コマンドとフレームは公式一覧を照合してから掲載します。" : "コマンドと主要フレームを技ごとに掲載。数値の「確認中」は未確定の項目です。"}</p>
           </div>
           {characterSlug === "jp" ? <a href="https://www.streetfighter.com/6/ja-jp/character/jp/frame" target="_blank" rel="noopener noreferrer">CAPCOM公式フレームを見る ↗</a> : null}
         </div>
@@ -169,12 +169,12 @@ export function CharacterDetailPilot({
                     }) : <span className={styles.movePending}>コマンドを確認中</span>}
                   </div>
                   <dl className={styles.moveFrame} role="cell">
-                    <div><dt>発生</dt><dd>{valueOrUnknown(move.frame?.startup, "確認中")}</dd></div>
+                    <div><dt>発生</dt><dd>{valueOrUnknown(move.frame?.startup, move.frameFieldStatus?.startup === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
                     {move.frame?.active !== null && move.frame?.active !== undefined && move.frame.active !== "" ? <div><dt>持続</dt><dd>{move.frame.active}</dd></div> : null}
                     {move.frame?.recovery !== null && move.frame?.recovery !== undefined && move.frame.recovery !== "" ? <div><dt>硬直</dt><dd>{move.frame.recovery}</dd></div> : null}
-                    <div><dt>ヒット時</dt><dd>{valueOrUnknown(move.frame?.onHit, "確認中")}</dd></div>
-                    <div><dt>ガード時</dt><dd>{valueOrUnknown(move.frame?.onBlock, "確認中")}</dd></div>
-                    <div><dt>ダメージ</dt><dd>{valueOrUnknown(move.frame?.damage, "確認中")}</dd></div>
+                    <div><dt>ヒット時</dt><dd>{valueOrUnknown(move.frame?.onHit, move.frameFieldStatus?.onHit === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
+                    <div><dt>ガード時</dt><dd>{valueOrUnknown(move.frame?.onBlock, move.frameFieldStatus?.onBlock === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
+                    <div><dt>ダメージ</dt><dd>{valueOrUnknown(move.frame?.damage, move.frameFieldStatus?.damage === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
                   </dl>
                   {!preRelease && releaseFeatures.publicStrategyContent ? <Link className={styles.moveDetailLink} href={appendDevicePreviewToken(`/moves/${move.slug}`, previewToken)}>技の詳細を見る →</Link> : null}
                 </article>,

@@ -34,9 +34,9 @@ const PILOT_CHARACTER_SLUGS = new Set([
 
 /**
  * Exposes the approved staged rollout on ordinary
- * URLs in RC Preview only.
- * Production keeps its current release boundary until device re-QA is approved.
+ * URLs in RC Preview; Production additionally needs a trusted registry grant.
+ * This selects the template only. The resolver independently checks public eligibility.
  */
-export function isCharacterDetailV2Route(slug: string) {
-  return process.env.VERCEL_ENV === "preview" && PILOT_CHARACTER_SLUGS.has(slug);
+export function isCharacterDetailV2Route(slug: string, releaseApproved = false) {
+  return (process.env.VERCEL_ENV === "preview" || (process.env.VERCEL_ENV === "production" && releaseApproved)) && PILOT_CHARACTER_SLUGS.has(slug);
 }

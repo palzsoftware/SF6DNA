@@ -77,3 +77,24 @@ test("Preview token is inserted before a section hash", () => {
   assert.match(source, /const \[pathAndQuery, hash\] = href\.split\("#", 2\)/);
   assert.match(source, /`\$\{withToken\}#\$\{hash\}`/);
 });
+
+test('server-selected Production navigation uses move anchors without granting data', async () => {
+  const React = await import('react');
+  const { renderToStaticMarkup } = await import('react-dom/server');
+  const { createRequire } = await import('node:module');
+  const nativeRequire = createRequire(import.meta.url);
+  const loaded = { exports: {} };
+  const output = ts.transpileModule(read('src/components/character-tabs.tsx'), {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true },
+  }).outputText;
+  new Function('module','exports','require',output)(loaded,loaded.exports,name => {
+    if(name==='next/link') return function LinkFixture({href,children,...props}) { return React.createElement('a',{href,...props},children); };
+    if(name==='@/lib/device-preview') return {appendDevicePreviewToken:href=>href,isDevicePreviewRequest:()=>false};
+    if(name==='@/lib/character-detail-route') return {isCharacterDetailV2Route:loadRouteGate('production')};
+    return nativeRequire(name);
+  });
+  const render = pilotOverview=>renderToStaticMarkup(React.createElement(loaded.exports.CharacterTabs,{slug:'alex',active:'overview',pilotOverview}));
+  assert.ok(render(true).includes('/characters/alex#pilot-moves'));
+  assert.ok(!render(false).includes('#pilot-moves'));
+  assert.equal(loadRouteGate('production')('alex'),false);
+});

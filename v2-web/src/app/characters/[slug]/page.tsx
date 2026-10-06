@@ -20,6 +20,7 @@ import { releaseFeatures } from "@/lib/release-features";
 import { getCharacterDetailV21Profile } from "@/lib/character-detail-v21";
 import { resolveCharacterDetailData, resolveCharacterRelatedVideos } from "@/lib/character-detail-data";
 import { getReleaseConfirmedMedia } from "@/lib/release-confirmed-media";
+import { getCharacterProductionApproval } from "@/lib/production-character-approval";
 import { isCharacterDetailV2Route } from "@/lib/character-detail-route";
 import { adaptCharacterDetailV2Profile } from "@/lib/character-detail-v2-profile-adapter";
 import { presentSource } from "@/lib/source-presentation";
@@ -121,7 +122,7 @@ export default async function CharacterPage({
   searchParams: Promise<{ preview?: string | string[] }>;
 }) {
   const [{ slug }, query] = await Promise.all([params, searchParams]);
-  const previewToken = normalizeDevicePreviewToken(query.preview);
+  const previewToken = process.env.VERCEL_ENV === "production" ? null : normalizeDevicePreviewToken(query.preview);
   const character = await getCharacterBySlug(slug, previewToken);
 
   if (!character) notFound();
@@ -131,7 +132,8 @@ export default async function CharacterPage({
     listCharacterSectionItems(character.id, "videos"),
   ]);
   const previewActive = isDevicePreviewRequest(previewToken);
-  const pilotRequested = isCharacterDetailV2Route(character.slug);
+  const production = process.env.VERCEL_ENV === "production";
+  const pilotRequested = isCharacterDetailV2Route(character.slug, Boolean(getCharacterProductionApproval(character.id, character.slug)));
   const pilotProfile = pilotRequested
     ? adaptCharacterDetailV2Profile({
         character,
@@ -139,17 +141,18 @@ export default async function CharacterPage({
       }).profile
     : null;
   const [remotePilotBundle, allVideos, moveMedia] = pilotRequested
-    ? await Promise.all([resolveCharacterDetailData(character.id, character.slug, previewToken), listVideos(), getDevicePreviewMoveMotionMedia(character.id, previewToken)])
+    ? await Promise.all([resolveCharacterDetailData(character.id, character.slug, previewToken), listVideos(), production ? Promise.resolve([]) : getDevicePreviewMoveMotionMedia(character.id, previewToken)])
     : [null, await listVideos(), []];
   const pilotBundle = remotePilotBundle?.bundle ?? null;
   if (pilotBundle) {
     const mediaByMove = new Map(moveMedia.map((media) => [media.moveId, media]));
-    const confirmed = await getReleaseConfirmedMedia(character.slug, pilotBundle.moves);
+    const confirmed = production ? new Map() : await getReleaseConfirmedMedia(character.slug, pilotBundle.moves);
     const generatedCandidate = remotePilotBundle?.source === "fixture" &&
       (character.slug === "c-viper" || character.slug === "elena" || character.slug === "sagat");
     pilotBundle.moves = pilotBundle.moves.map((move) => ({
       ...move,
-      media: confirmed.get(move.id) ?? (generatedCandidate ? null : mediaByMove.get(move.id) ?? move.media ?? null),
+      media: production ? null : character.slug === "alex" ? move.media ?? null :
+        confirmed.get(move.id) ?? (generatedCandidate ? null : mediaByMove.get(move.id) ?? move.media ?? null),
     }));
   }
   const pilotPlayers = pilotBundle
@@ -188,6 +191,7 @@ export default async function CharacterPage({
       profile={pilotProfile}
       players={pilotPlayers}
       videos={pilotVideos}
+      pilotOverview={Boolean(pilotBundle && pilotProfile)}
     />;
   }
 
@@ -251,7 +255,7 @@ export default async function CharacterPage({
         ))}
       </section> : null}
 
-      <CharacterTabs slug={character.slug} active="overview" previewToken={previewToken} />
+      <CharacterTabs slug={character.slug} active="overview" previewToken={previewToken} pilotOverview={Boolean(pilotBundle && pilotProfile)} />
 
       {!pilotRequested ? <nav className="character-overview-index" aria-label="概要ページ内ナビゲーション">
         {matchupCard ? <a href="#before-match">対戦前30秒</a> : null}

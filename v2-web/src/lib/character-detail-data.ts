@@ -1,6 +1,7 @@
 import { resolveReleaseCharacterMoves } from "@/lib/release-character-move-resolver";
 import { getGeneratedReleaseFixture } from "@/lib/generated-release-fixture";
-import { getAlexReviewedBundle } from "@/lib/alex-reviewed-media";
+import { getNineCharacterIntegrationCandidate, hasNineCharacterIntegrationCandidate } from "@/lib/nine-character-integration-candidate";
+import { getCharacterProductionApproval, isProductionMoveApproved, type CharacterApproval } from "@/lib/production-character-approval";
 import type { DevicePreviewBundle } from "@/lib/device-preview";
 import { getDevicePreviewBundle } from "@/lib/device-preview";
 import { getCharacterDetailV21Fixture } from "@/lib/character-detail-v21-fixture";
@@ -17,12 +18,12 @@ export type CharacterDetailData = {
 };
 
 /** Normal requests use the existing public gate, never privileged DB access. */
-export async function loadPublicCharacterMoves(characterId: string): Promise<DevicePreviewBundle["moves"] | null> {
+export async function loadPublicCharacterMoves(characterId: string, approval?: CharacterApproval): Promise<DevicePreviewBundle["moves"] | null> {
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) return null;
   const supabase = getSupabaseServerClient();
   const [{ data: moves, error }, { data: patch, error: patchError }] = await Promise.all([
     supabase.from("moves")
-      .select("id, character_id, slug, name_ja, move_type, usage_summary, usage_summary_ja, description_ja, status")
+      .select("id, character_id, slug, name_ja, move_type, strength_variant, usage_summary, usage_summary_ja, description_ja, status")
       .eq("character_id", characterId).eq("status", "published")
       .order("display_order", { ascending: true }),
     supabase.from("patches").select("id").eq("is_current", true).maybeSingle(),
@@ -45,20 +46,42 @@ export async function loadPublicCharacterMoves(characterId: string): Promise<Dev
       .is("valid_to_patch_id", null).eq("verification_status", "verified"),
   ]);
   if (commandError || frameError) return null;
-  const [commandSources, frameSources] = await Promise.all([
+  const [commandSources, frameSources, moveSources] = await Promise.all([
     getPublicEntitySources(["move_command"], (commands ?? []).map((command) => String(command.id))),
     getPublicEntitySources(["frame", "move_frame_data"], (frames ?? []).map((frame) => String(frame.id))),
+    approval ? getPublicEntitySources(["move"], ids) : Promise.resolve([]),
   ]);
   const officialCommands = new Set(commandSources.filter((source) => source.reliabilityLevel === "official").map((source) => source.entityId));
   const officialFrames = new Set(frameSources.filter((source) => source.reliabilityLevel === "official").map((source) => source.entityId));
-  return resolveReleaseCharacterMoves({ characterId, currentPatchId: String(patch.id),
+  const selected = resolveReleaseCharacterMoves({ characterId, currentPatchId: String(patch.id),
     moves: ready, commands: commands ?? [], frames: frames ?? [],
     gateReadyIds: new Set(ids), officialCommandIds: officialCommands, officialFrameIds: officialFrames });
+  if (!approval) return selected;
+  return selected.filter(move => {
+    const selectedCommands = (commands ?? []).filter(c => c.move_id === move.id && officialCommands.has(String(c.id)));
+    const selectedFrames = (frames ?? []).filter(f => f.move_id === move.id);
+    const entityIds = new Set([move.id, ...selectedCommands.map(c => String(c.id)), ...selectedFrames.map(f => String(f.id))]);
+    const sources = [...moveSources, ...commandSources, ...frameSources].filter(s => entityIds.has(s.entityId))
+      .sort((a,b) => `${a.entityType}:${a.entityId}:${a.sourceId}`.localeCompare(`${b.entityType}:${b.entityId}:${b.sourceId}`));
+    return isProductionMoveApproved(approval, { move, characterId, patchId: String(patch.id),
+      rawMove: ready.find(r => r.id === move.id), commands: selectedCommands, frames: selectedFrames, sources });
+  });
 }
 
 export async function resolveCharacterDetailData(characterId: string, slug: string, previewToken: string | null): Promise<CharacterDetailData> {
-  const alex = slug === "alex" ? getAlexReviewedBundle(characterId) : null;
-  if (alex) return { bundle: alex, source: "fixture" };
+  if (process.env.VERCEL_ENV === "production") {
+    const approval = getCharacterProductionApproval(characterId, slug);
+    if (!approval) return { bundle: null, source: "unavailable" };
+    const moves = await loadPublicCharacterMoves(characterId, approval).catch(() => null);
+    if (!moves?.length) return { bundle: null, source: "unavailable" };
+    return { bundle: { guideSections: [], moves, combos: [], setups: [], sequences: [], matchups: [], training: [] }, source: "public" };
+  }
+  // Owner-reviewed Preview candidates retain pending fields and held identities.
+  // Failure must not restore a held identity through older fixture fallback.
+  if (hasNineCharacterIntegrationCandidate(slug) && process.env.VERCEL_ENV === "preview") {
+    const candidate = getNineCharacterIntegrationCandidate(characterId, slug);
+    return candidate ? { bundle: candidate.bundle, source: "fixture" } : { bundle: null, source: "unavailable" };
+  }
   // The reviewed capture is Preview-only; remote DB identities must not mask it.
   const canonical = slug === "yasmine" ? getYasmineMoveMediaPilot() : null;
   if (canonical) return { bundle: canonical, source: "fixture" };

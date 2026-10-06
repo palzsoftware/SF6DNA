@@ -45,9 +45,9 @@ function moveSummary(value: string | null) {
 function MoveCard({ move }: { move: Move }) {
   return <article className={styles.moveCard} data-move-id={move.id} data-move-slug={move.slug}>
     <div className={styles.moveHead}>
-      <div><small>{verifiedLabel(move.frame?.verificationStatus)}</small><h3>{move.name}</h3>
+      <div><small>{move.releaseFixture ? "公開審査前" : verifiedLabel(move.frame?.verificationStatus)}</small><h3>{move.name}</h3>
         {moveSummary(move.usageSummary) ? <p>{moveSummary(move.usageSummary)}</p> : null}</div>
-      {move.media ? <div className={styles.motion}><MoveMotionMedia media={move.media} title={move.name} className={styles.motionAsset} /></div> : null}
+      {move.media ? <div className={styles.motion}><MoveMotionMedia media={move.media} title={move.name} className={styles.motionAsset} /></div> : <p>動作映像は未掲載</p>}
     </div>
     <div className={styles.commands} aria-label={`${move.name}のコマンド`}>
       {move.commands?.length ? move.commands.map((command, index) =>
@@ -59,16 +59,17 @@ function MoveCard({ move }: { move: Move }) {
         </div>) : <p>コマンドを確認中</p>}
     </div>
     <dl className={styles.frames}>
-      <div><dt>発生</dt><dd>{known(move.frame?.startup, "確認中")}</dd></div>
-      <div><dt>ヒット時</dt><dd>{known(move.frame?.onHit, "確認中")}</dd></div>
-      <div><dt>ガード時</dt><dd>{known(move.frame?.onBlock, "確認中")}</dd></div>
-      <div><dt>ダメージ</dt><dd>{known(move.frame?.damage, "確認中")}</dd></div>
+      <div><dt>発生</dt><dd>{known(move.frame?.startup, move.frameFieldStatus?.startup === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
+      <div><dt>ヒット時</dt><dd>{known(move.frame?.onHit, move.frameFieldStatus?.onHit === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
+      <div><dt>ガード時</dt><dd>{known(move.frame?.onBlock, move.frameFieldStatus?.onBlock === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
+      <div><dt>ダメージ</dt><dd>{known(move.frame?.damage, move.frameFieldStatus?.damage === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
     </dl>
   </article>;
 }
 
-export function JpCharacterDetail({ character, previewToken, previewActive, bundle, profile, players, videos }: {
+export function JpCharacterDetail({ character, previewToken, previewActive, bundle, profile, players, videos, pilotOverview = false }: {
   character: CharacterDetail;
+  pilotOverview?: boolean;
   previewToken: string | null;
   previewActive: boolean;
   bundle: DevicePreviewBundle;
@@ -104,7 +105,7 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
     </header>
 
     {previewActive ? <aside className={styles.notice}><strong>実機確認プレビュー</strong><p>この画面には掲載前の情報も含まれます。掲載前の内容は一般公開には反映されていません。</p></aside> : null}
-    <CharacterTabs slug={character.slug} active="overview" previewToken={previewToken} />
+    <CharacterTabs slug={character.slug} active="overview" previewToken={previewToken} pilotOverview={pilotOverview} />
 
     <div className={styles.sections}>
       <CharacterQuickStart characterSlug={character.slug} />

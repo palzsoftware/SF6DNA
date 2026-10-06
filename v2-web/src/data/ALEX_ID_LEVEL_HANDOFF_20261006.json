@@ -1,0 +1,647 @@
+{
+  "publication": "SUPPORT_ONLY_NO_APPROVAL",
+  "moves": [
+    {
+      "id": "fd27f911-987b-4ba0-b727-e73301ffeb69",
+      "slug": "alex-sledgecross-hammer-214214p",
+      "mediaStatus": "BAD_CUT_HOLD",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "86136a6f-495e-4ecb-b34e-c0c66aab81c1",
+      "slug": "alex-raging-spear-236236k",
+      "mediaStatus": "READY_REUSED",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "9e860acc-4183-42c6-8071-28a50656d749",
+      "slug": "alex-the-final-prison-236236p",
+      "mediaStatus": "READY_REUSED",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "9c0ca2ef-2b05-4832-b9d0-667400e56919",
+      "slug": "alex-the-final-prison-ca-236236p",
+      "mediaStatus": "READY_REUSED",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "198b2771-cd99-415b-9181-643335438cfb",
+      "slug": "alex-flash-chop-236hp",
+      "mediaStatus": "READY_REUSED",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "60fe5e26-346d-4244-bb8d-8d66cb939b47",
+      "slug": "alex-flash-axe-236lp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "fd9176ef-2810-46e8-ada0-6f5bca4e5b40",
+      "slug": "alex-flash-axe-236mp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "df42445a-7291-48a3-98a6-0b7bea16b05c",
+      "slug": "alex-flash-chop-236pp",
+      "mediaStatus": "READY_REUSED",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "f49ec8eb-db39-4fc4-903a-eee03177a81c",
+      "slug": "alex-roundhouse-kick-2hk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "true",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "722822a4-42cd-474f-809b-981acd8d6151",
+      "slug": "alex-crouching-heavy-punch-2hp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "4a767cab-a099-4066-98b1-5b004bc28c1c",
+      "slug": "alex-crouching-light-kick-2lk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "b73d481c-b66b-42e9-9030-6c9ee11d9336",
+      "slug": "alex-twisted-drop-2lk-2hk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "4e02716a-415f-4866-9055-c5869ebefebe",
+      "slug": "alex-crouching-light-punch-2lp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "6532d41e-6d5e-406c-8040-6a5b8af429d2",
+      "slug": "alex-illegal-knees-2lplk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "e647cf99-9518-4a09-a260-fbec66e090ed",
+      "slug": "alex-crouching-medium-kick-2mk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "2b4abc16-695d-4e0d-a503-df2819624a2a",
+      "slug": "alex-crouching-medium-punch-2mp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "8c40a2bd-8778-4ddd-991b-d0cda1925665",
+      "slug": "alex-prowler-stance-2pp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "46bc5d76-8274-4235-be2b-5c09e1035dff",
+      "slug": "alex-dangerous-armbar-br-spiral-ddt-2pp-2lplk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "cde1ae13-ff8c-46ed-898a-9b6cb9dbfef9",
+      "slug": "alex-low-retreat-2pp-4",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "ea2c911c-7bc1-4d56-a43b-44fae109c7ad",
+      "slug": "alex-low-rush-2pp-6",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "c4a1e985-e97a-4521-a40e-a100be2d1150",
+      "slug": "alex-slashing-elbow-2pp-6p",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "7b009800-5747-4b7d-a2c1-7163f1826d48",
+      "slug": "alex-exit-prowler-stance-2pp-8",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "SOURCE_REVIEW",
+      "modernReconciliation": "SOURCE_REVIEW"
+    },
+    {
+      "id": "11cb8084-9168-443d-a745-01b2cc63cde4",
+      "slug": "alex-sweep-combination-1-br-flying-suplex-2pp-hk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "9efc0fc8-d2b8-430a-8a1e-0f96ddabbaeb",
+      "slug": "alex-sweep-combination-2-br-flying-suplex-2pp-hk-hk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "f6924ab4-3295-4729-a3ca-efdaee104dae",
+      "slug": "alex-heavy-lariat-2pp-hp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "be41531a-a64a-4fd3-880d-4b724a06b62c",
+      "slug": "alex-heavy-lariat-hold-2pp-hp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "506b622b-765d-43c4-8111-321848d0fb0d",
+      "slug": "alex-tactical-hop-2pp-lk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "e9c32aa7-f4de-4fad-93ef-2ef2ce81b646",
+      "slug": "alex-palm-jab-2pp-lp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "4298e722-af4f-4f5d-95aa-511c5612044d",
+      "slug": "alex-hyper-takedown-br-death-valley-bomb-2pp-lplk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "7ec8deb6-fab6-4f6d-9c9c-a26cdb74df43",
+      "slug": "alex-air-stampede-2pp-mk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "f333f69c-b7fa-4cc7-a96f-14696fc9f16f",
+      "slug": "alex-shoulder-launcher-br-falling-moon-2pp-mp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "f312a35c-8737-45fc-a731-3c07ecda80d3",
+      "slug": "alex-guillotine-hammer-4lplk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "71900c8b-9822-4bd4-991d-510ffea50306",
+      "slug": "alex-oblique-stomp-4mk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "96f8e0b4-0df3-42f1-b698-9e325616b5b2",
+      "slug": "alex-collapsing-driver-4mk-backturn",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "159999da-db98-44ff-b5bd-e6c6687e02ac",
+      "slug": "alex-standing-heavy-kick-5hk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "32b42551-6729-4d36-92a2-c54f76f098f0",
+      "slug": "alex-standing-heavy-kick-hold-5-hk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "d72274a8-0aad-475d-a176-dcee5068a8ec",
+      "slug": "alex-standing-heavy-punch-5hp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "f1171ce3-0b61-4af3-9906-43af129b39c4",
+      "slug": "alex-standing-heavy-punch-hold-5-hp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "24ad3665-2bb5-4c37-8089-b07386e38983",
+      "slug": "alex-standing-light-kick-5lk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "90e1bd5d-0305-4ba0-b56f-8553db6d7f72",
+      "slug": "alex-standing-light-punch-5lp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "f6486eb1-7501-461d-8893-e52e46961a80",
+      "slug": "alex-standing-medium-kick-5mk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "1ac8c98d-1504-4f70-985a-581e3f185003",
+      "slug": "alex-standing-medium-punch-5mp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "72002e54-4e8a-4f0b-9e65-0131a7103581",
+      "slug": "alex-palm-strikes-5mp-hp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "5c35ac75-3556-47be-86e0-a772d49af0f1",
+      "slug": "alex-aerial-knee-smash-623hk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "3073d9fd-49df-451d-9c8c-93a51bf34e40",
+      "slug": "alex-aerial-knee-smash-623kk",
+      "mediaStatus": "READY_REUSED",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "9b8e20f3-1bef-48e4-ae7f-8aa3dc16aeb3",
+      "slug": "alex-aerial-knee-smash-623lk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "c6b7057f-1029-427f-b5be-7c6b899eda2d",
+      "slug": "alex-aerial-knee-smash-623mk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "a9c526e6-55e2-400e-943a-30dbd838497e",
+      "slug": "alex-power-bomb-63214hp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "a62a7836-7c5b-4e47-a4e9-61dbfa2f082a",
+      "slug": "alex-power-bomb-63214lp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "9168f1d7-f1db-4052-9671-ce8d7af1f787",
+      "slug": "alex-power-bomb-63214mp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "6cda610f-fab6-4960-bf8c-95a85af896a8",
+      "slug": "alex-power-bomb-63214pp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "fed2bcf4-7765-4414-a749-34bd33b51aa1",
+      "slug": "alex-od-hyper-bomb-63214pp-6-backturn",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "32d9fde6-3c18-4bec-a93e-09a7dbdd6cd6",
+      "slug": "alex-power-drop-63214pp-backturn",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "a89e15c4-dc2b-4c32-9cae-f3552d77d202",
+      "slug": "alex-power-drop-63214p-backturn",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "9b99c569-c6d8-407a-8c2a-fe018577ef22",
+      "slug": "alex-chop-6mp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONFIRMED",
+      "modernReconciliation": "CONFIRMED"
+    },
+    {
+      "id": "52ca8101-2dbc-4b9b-8f4a-a595333b7aeb",
+      "slug": "alex-flying-cross-chop-j-2hp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "fa2e772a-edf7-4bc6-91b5-a268233449ca",
+      "slug": "alex-jumping-heavy-kick-j-hk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "a9d9c4e7-283b-4752-b4e0-479d0f1918c0",
+      "slug": "alex-jumping-heavy-punch-j-hp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "e23d9ea0-95fa-413d-a422-522925408935",
+      "slug": "alex-jumping-light-kick-j-lk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "48afacd7-cf3c-4abe-9aef-dfb65cead3f4",
+      "slug": "alex-jumping-light-punch-j-lp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "3ee78b99-47b1-4000-a31a-bf83fb0d1b96",
+      "slug": "alex-jumping-medium-kick-j-mk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "dcaea7bc-4cc8-414f-8a01-6cfae24f14e7",
+      "slug": "alex-jumping-medium-punch-j-mp",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "false",
+      "modernEligibility": "false",
+      "classicReconciliation": "NOT_APPLICABLE",
+      "modernReconciliation": "NOT_APPLICABLE"
+    },
+    {
+      "id": "1330719f-f6a7-43c0-8b6b-65d4e72ac6d3",
+      "slug": "alex-arm-lock-lplk",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    },
+    {
+      "id": "e7b534dd-8d0c-4200-ba60-e79ae126020a",
+      "slug": "alex-omega-wing-buster-pp-sa2",
+      "mediaStatus": "MISSING",
+      "routeIdentityStatus": "HOLD_NO_SELECTED_ID_LIST",
+      "classicEligibility": "true",
+      "modernEligibility": "true",
+      "classicReconciliation": "CONDITION_CONFIRMED",
+      "modernReconciliation": "CONDITION_CONFIRMED"
+    }
+  ],
+  "sourceArchiveSha256": "9e22c170a2dbcd3681d2f1b0653918e466875b734ad6c4321d149ee5bb76fdc6",
+  "sourceCsvSha256": "813e70f032fc574c90275f4bd74d1d96a5863a60635e29967d8796cfd55ca186"
+}

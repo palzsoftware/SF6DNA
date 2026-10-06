@@ -19,6 +19,8 @@ export type DevicePreviewBundle = {
     usageSummary: string | null;
     /** Read-only DB candidate, never a claim of official identity approval. */
     releaseFixture?: boolean;
+    /** NULL values retain their source classification; N/A is distinct from pending. */
+    frameFieldStatus?: Partial<Record<"startup" | "active" | "recovery" | "onHit" | "onBlock" | "damage", string>>;
     descriptionJa?: string | null;
     usageSummaryJa?: string | null;
     status: string;
@@ -28,7 +30,8 @@ export type DevicePreviewBundle = {
       recovery?: string | null;
       onHit?: string | null;
       onBlock: string | null;
-      damage: number | null;
+      /** Official conditional/multi-hit notation must not be reduced to a guessed total. */
+      damage: number | string | null;
       verificationStatus: string | null;
     } | null;
     commands?: DevicePreviewMoveCommand[];

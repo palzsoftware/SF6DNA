@@ -46,13 +46,16 @@ export function CharacterTabs({
   slug,
   active,
   previewToken,
+  pilotOverview = false,
 }: {
   slug: string;
   active: CharacterSectionKey;
   previewToken?: string | null;
+  /** Server-selected overview navigation only; this does not grant data access. */
+  pilotOverview?: boolean;
 }) {
   const previewActive = isDevicePreviewRequest(previewToken);
-  const pilotV21 = isCharacterDetailV2Route(slug);
+  const pilotV21 = isCharacterDetailV2Route(slug) || pilotOverview;
   const tabs = pilotV21 ? pilotV21Tabs : previewActive ? previewTabs : publicTabs;
   const gatedPilotSections = new Set<CharacterSectionKey>(["moves", "combos", "setups", "sequences"]);
 

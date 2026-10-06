@@ -34,7 +34,8 @@ function environment({ remote = null, canonical = null, generated = null, blocke
   const mod = load("src/lib/character-detail-data.ts", (name) => {
     if (name === "@/lib/generated-release-fixture") return { getGeneratedReleaseFixture: async () => process.env.VERCEL_ENV === "preview" ? generated : null };
     if (name === "@/lib/release-character-move-resolver") return load("src/lib/release-character-move-resolver.ts");
-    if (name === "@/lib/alex-reviewed-media") return { getAlexReviewedBundle: () => null };
+    if (name === "@/lib/nine-character-integration-candidate") return { getNineCharacterIntegrationCandidate: () => null, hasNineCharacterIntegrationCandidate: s => ["c-viper","elena","sagat","lily","juri","dee-jay","jp","alex","ingrid"].includes(s) };
+    if (name === "@/lib/production-character-approval") return { getCharacterProductionApproval: () => null, isProductionMoveApproved: () => false };
     if (name === "@/lib/yasmine-move-media-pilot") return { getYasmineMoveMediaPilot: () => process.env.VERCEL_ENV === "preview" ? canonical : null };
     if (name === "@/lib/supabase/server") return { getSupabaseServerClient: () => client };
     if (name === "@/lib/public-move-gate") return { isMovePublicReady: async slug => { calls.push(["gate", slug]); return !blocked; } };
@@ -70,20 +71,25 @@ function withEnv(fn) {
 test("generated candidates fill an empty public result only in Preview, without replacing authorized bundles", () => withEnv(async () => {
   const candidate = { ...empty(), moves: [{ id: "candidate" }] };
   const env = environment({ blocked: true, generated: candidate });
-  assert.equal((await env.resolveCharacterDetailData("character-id", "c-viper", null)).bundle, candidate);
+  assert.equal((await env.resolveCharacterDetailData("character-id", "mai", null)).bundle, candidate);
   const authorized = { ...empty(), moves: [{ id: "authorized" }] };
   const protectedEnv = environment({ remote: authorized, generated: candidate });
-  assert.equal((await protectedEnv.resolveCharacterDetailData("character-id", "ingrid", "authorized-test-token")).bundle, authorized);
+  assert.equal((await protectedEnv.resolveCharacterDetailData("character-id", "mai", "authorized-test-token")).bundle, authorized);
   process.env.VERCEL_ENV = "production";
   assert.equal((await env.resolveCharacterDetailData("character-id", "c-viper", null)).bundle, null);
 }));
 
-test("all 31 character slugs resolve gated DB moves before an empty overview fixture", () => withEnv(async () => {
+test("22 other character slugs resolve gated DB moves; nine invalid candidate identities fail closed", () => withEnv(async () => {
   assert.equal(slugs.length, 31);
   for (const slug of slugs) {
     const env = environment();
     assert.equal(route.isCharacterDetailV2Route(slug), true);
     const result = await env.resolveCharacterDetailData("character-id", slug, null);
+    if (["c-viper","elena","sagat","lily","juri","dee-jay","jp","alex","ingrid"].includes(slug)) {
+      assert.deepEqual(result, { bundle: null, source: "unavailable" });
+      assert.equal(env.calls.length, 0);
+      continue;
+    }
     assert.equal(result.source, "public", slug);
     assert.equal(result.bundle.moves.length, 1, slug);
     assert.deepEqual(result.bundle.combos, []);
