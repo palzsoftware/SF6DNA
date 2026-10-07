@@ -1,3 +1,5 @@
+import { selectMoveMotionMedia } from "@/lib/move-media-presentation";
+import { Sf6CommandInput } from "@/components/sf6-command-input";
 import { uniqueCharacterVideos } from "@/lib/character-video-references";
 import Image from "next/image";
 import { CharacterGamePlan, CharacterRangeGuide } from "@/components/character-game-guide";
@@ -7,7 +9,7 @@ import { CharacterQuickStart } from "@/components/character-quick-start";
 import { CharacterMoveExplorer } from "@/components/character-move-explorer";
 import { CharacterTabs } from "@/components/character-tabs";
 import { MoveMotionMedia } from "@/components/move-motion-media";
-import { formatMoveCommand, moveCommandSearchTerms } from "@/lib/move-command-format";
+import { sf6CommandSearchTerms } from "@/lib/sf6-command-tokens";
 import { PilotComboCard } from "@/components/pilot-combo-card";
 import { CharacterPlayerCard } from "@/components/character-player-card";
 import { VideoCard } from "@/components/video-card";
@@ -43,17 +45,18 @@ function moveSummary(value: string | null) {
 }
 
 function MoveCard({ move }: { move: Move }) {
+  const motionPresentation = selectMoveMotionMedia(move);
   return <article className={styles.moveCard} data-move-id={move.id} data-move-slug={move.slug}>
     <div className={styles.moveHead}>
       <div><small>{move.releaseFixture ? "公開審査前" : verifiedLabel(move.frame?.verificationStatus)}</small><h3>{move.name}</h3>
         {moveSummary(move.usageSummary) ? <p>{moveSummary(move.usageSummary)}</p> : null}</div>
-      {move.media ? <div className={styles.motion}><MoveMotionMedia media={move.media} title={move.name} className={styles.motionAsset} /></div> : <p>動作映像は未掲載</p>}
+      {motionPresentation.media ? <div className={styles.motion}><MoveMotionMedia media={motionPresentation.media} title={move.name} className={styles.motionAsset} /></div> : <p>動作映像は未掲載</p>}
     </div>
     <div className={styles.commands} aria-label={`${move.name}のコマンド`}>
       {move.commands?.length ? move.commands.map((command, index) =>
         <div key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}>
           <span>{command.scheme === "classic" ? "クラシック" : command.scheme === "modern" ? "モダン" : command.scheme}</span>
-          <code>{formatMoveCommand(command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "コマンドを確認中")}</code>
+          <Sf6CommandInput value={command.commandText ?? command.numericNotation ?? command.buttonNotation ?? ""} />
           {command.conditionText && !isInternalMoveNote(command.conditionText) && !/frame-table row; checked/i.test(command.conditionText)
             ? <small>{normalizePublicCopy(command.conditionText)}</small> : null}
         </div>) : <p>コマンドを確認中</p>}
@@ -61,7 +64,7 @@ function MoveCard({ move }: { move: Move }) {
     <dl className={styles.frames}>
       <div><dt>発生</dt><dd>{known(move.frame?.startup, move.frameFieldStatus?.startup === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
       <div><dt>ヒット時</dt><dd>{known(move.frame?.onHit, move.frameFieldStatus?.onHit === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
-      <div><dt>ガード時</dt><dd>{known(move.frame?.onBlock, move.frameFieldStatus?.onBlock === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
+      {move.moveType !== "throw" ? <div><dt>ガード時</dt><dd>{known(move.frame?.onBlock, move.frameFieldStatus?.onBlock === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div> : null}
       <div><dt>ダメージ</dt><dd>{known(move.frame?.damage, move.frameFieldStatus?.damage === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
     </dl>
   </article>;
@@ -143,7 +146,7 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
         {groups.length ? <CharacterMoveExplorer groupClassName={styles.group} listClassName={styles.moveList} groups={groups.map(([type, moves]) => ({
           type, label: moveLabels[type] ?? "その他", items: moves.map(move => ({
             id: move.id, name: move.name,
-            commands: (move.commands ?? []).flatMap(command => moveCommandSearchTerms(command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "")),
+            commands: (move.commands ?? []).flatMap(command => sf6CommandSearchTerms(command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "")),
             content: <MoveCard move={move} />,
           })),
         }))} /> : <p>技データは未掲載です。</p>}

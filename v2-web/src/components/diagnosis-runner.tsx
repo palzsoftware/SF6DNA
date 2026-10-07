@@ -77,7 +77,7 @@ function calculateTotals(diagnosis: DiagnosisDefinition, answers: Record<string,
 function resultCopy(type: string) {
   if (type === "playstyle") return { title: "あなたのプレイスタイル傾向", body: "点数が高い項目ほど、回答から見える好み・得意志向が強い傾向です。実戦では複数のスタイルを併用します。", scoreLabel: "傾向", searchLabel: "関連する攻略を探す" };
   if (type === "character_fit") return { title: "相性が良さそうなキャラクター特性", body: "点数が高い項目ほど、キャラクター選びで重視すると相性が良くなりやすい特性です。十分に確認できた特性があるキャラクターだけを候補に表示します。", scoreLabel: "適性", searchLabel: "関連キャラ・攻略を探す" };
-  return { title: "優先して改善したい項目", body: "点数が高いほど「今の練習優先度が高い」という自己評価結果です。実戦ログやリプレイで確認すると精度が上がります。", scoreLabel: "優先度", searchLabel: "関連攻略を探す" };
+  return { title: "優先して改善したい項目", body: "回答をもとに、先に練習したい項目を並べています。点数が高い項目から1つ選び、リプレイで実際に困っている場面を確認しましょう。", scoreLabel: "優先度", searchLabel: "関連攻略を探す" };
 }
 
 export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition }) {
@@ -205,8 +205,8 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
       // reset or a different payload, so revisiting this result is idempotent.
       setDatabaseSaveStatus("saved");
       setDatabaseSaveMessage(null);
-    } catch (error) {
-      console.error("[diagnosis] result save failed", error);
+    } catch {
+      console.error("[diagnosis] result save failed");
       setDatabaseSaveStatus("failed");
       setDatabaseSaveMessage("診断結果をアカウントに保存できませんでした。下のボタンからもう一度お試しください。");
     } finally {
@@ -238,7 +238,7 @@ export function DiagnosisRunner({ diagnosis }: { diagnosis: DiagnosisDefinition 
       const improvement = result.filter(([key, score]) => IMPROVEMENT_AXES.has(key) && score > 0).slice(0, 3);
       const style = result.filter(([key, score]) => !IMPROVEMENT_AXES.has(key) && score > 0).slice(0, 3);
       const topQuery = [...improvement, ...style].map(([key]) => axisLabel(key)).join(" ");
-      return <section className="info-panel diagnosis-result"><p className="eyebrow">RESULT</p><h2>総合診断結果</h2>{resumedCount ? <p className="data-notice">この結果には、この端末に保存されていた前回の回答 {resumedCount}件を使っています。</p> : null}<DatabaseSaveNotice status={databaseSaveStatus} message={databaseSaveMessage} onRetry={() => void saveCompletedDiagnosis()} /><div className="character-columns"><div><h3>改善優先度</h3><ResultList rows={improvement} label="優先度" /></div><div><h3>プレイスタイル傾向</h3><ResultList rows={style} label="傾向" /></div></div><RecommendationBlock loading={recommendationLoading} recommendations={recommendations} message={recommendationMessage} /><div className="diagnosis-actions"><Link className="button-primary" href={buildDailyTrainingHref(diagnosis.diagnosisType, result)}>今日の練習を決める</Link>{topQuery ? <Link className="button-primary" href={`/search?q=${encodeURIComponent(topQuery)}`}>関連情報をまとめて探す</Link> : null}{releaseFeatures.aiCoach && topQuery ? <Link className="button-secondary" href={`/coach?q=${encodeURIComponent(topQuery)}`}>AIコーチの根拠情報を見る</Link> : null}<ResetButton onReset={reset} /></div></section>;
+      return <section className="info-panel diagnosis-result"><p className="eyebrow">RESULT</p><h2>総合診断結果</h2><p>改善優先度は「先に練習したいこと」、プレイスタイル傾向は「好みの戦い方」を示します。まずは優先度の高い項目を1つ選び、今日の15分練習へ進みましょう。</p>{resumedCount ? <p className="data-notice">この結果には、この端末に保存されていた前回の回答 {resumedCount}件を使っています。</p> : null}<DatabaseSaveNotice status={databaseSaveStatus} message={databaseSaveMessage} onRetry={() => void saveCompletedDiagnosis()} /><div className="character-columns"><div><h3>改善優先度</h3><ResultList rows={improvement} label="優先度" /></div><div><h3>プレイスタイル傾向</h3><ResultList rows={style} label="傾向" /></div></div><RecommendationBlock loading={recommendationLoading} recommendations={recommendations} message={recommendationMessage} /><div className="diagnosis-actions"><Link className="button-primary" href={buildDailyTrainingHref(diagnosis.diagnosisType, result)}>今日の練習を決める</Link>{topQuery ? <Link className="button-primary" href={`/search?q=${encodeURIComponent(topQuery)}`}>関連情報をまとめて探す</Link> : null}{releaseFeatures.aiCoach && topQuery ? <Link className="button-secondary" href={`/coach?q=${encodeURIComponent(topQuery)}`}>AIコーチの根拠情報を見る</Link> : null}<ResetButton onReset={reset} /></div></section>;
     }
     const copy = resultCopy(diagnosis.diagnosisType);
     const priorities = result.filter(([, score]) => score > 0).slice(0, 3);

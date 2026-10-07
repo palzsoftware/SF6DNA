@@ -25,6 +25,9 @@ vm.runInNewContext(js, {
   module: compiled, exports: compiled.exports,
   require(name) {
     if (name === "react/jsx-runtime") return require(name);
+    if (name === "@/components/sf6-command-input") return realModule("components/sf6-command-input.tsx");
+    if (name === "@/lib/sf6-command-tokens") return realModule("lib/sf6-command-tokens.ts");
+    if (name === "@/components/accessible-command") return realModule("components/accessible-command.tsx");
     if (name === "@/components/move-motion-media") return realModule("components/move-motion-media.tsx");
     if (name === "@/components/character-game-guide") return realModule("components/character-game-guide.tsx");
     if (name === "@/components/character-quick-start") return realModule("components/character-quick-start.tsx");
@@ -33,6 +36,7 @@ vm.runInNewContext(js, {
     if (name === "@/components/combo-input-recipe") return { ComboInputRecipe: ({ recipe }) => require("react").createElement("span", { "data-original-input": recipe }, recipe) };
     if (name === "next/link") return { default: props => require("react").createElement("a", props), __esModule: true };
     if (name === "@/lib/device-preview") return { isDevicePreviewRequest: () => false, appendDevicePreviewToken: path => path };
+    if (name === "@/lib/move-media-presentation") return realModule("lib/move-media-presentation.ts");
     if (name === "@/lib/move-command-format") return realModule("lib/move-command-format.ts");
     if (name === "@/lib/public-copy") return { normalizePublicCopy: (value) => value, isInternalMoveNote: () => false };
     if (name === "@/lib/release-features") return { releaseFeatures: { publicStrategyContent: false } };
@@ -51,8 +55,9 @@ function render(frame, preRelease = true, extraMoves = []) {
 
 test("move cards render supplied active, recovery and hit values without interpreting them", () => {
   const html = render({ startup: "4", active: "4-6", recovery: "7", onHit: "+4", onBlock: "-1", damage: 300, verificationStatus: "reviewed" });
+  assert.doesNotMatch(html, /<dl[^>]*role=/, "frame descriptions retain native dt/dd semantics");
   for (const value of ["持続", "4-6", "硬直", "ヒット時", "+4"]) assert.ok(html.includes(value));
-  assert.ok(html.includes("↓↘→ + P"));
+  assert.ok(html.replace(/<[^>]*>/g, "").replace(/\s+/g, "").includes("↓↘→P"));
 });
 
 test("old frame payloads omit absent optional statistics rather than invent values", () => {
@@ -76,7 +81,7 @@ test("public character quick-start anchors resolve and filtered move content ret
     assert.ok(html.includes(`href="#${id}"`)); assert.ok(html.includes(`id="${id}"`));
   }
   assert.match(html, /技名・コマンドを検索/);
-  assert.ok(html.includes("↓↘→ + P"));
+  assert.ok(html.replace(/<[^>]*>/g, "").replace(/\s+/g, "").includes("↓↘→P"));
   assert.match(html, /確認済みのコンボはまだありません/);
 });
 
@@ -122,8 +127,8 @@ for (const slug of ['c-viper','elena','sagat','lily','juri','dee-jay','jp','alex
   const html=renderToStaticMarkup(require('react').createElement(compiled.exports.CharacterDetailPilot,{characterName:slug,characterSlug:slug,previewToken:null,preRelease:true,players:[],videos:[],sources:[],profile:{tagline:'特徴',winPath:'距離',firstLesson:'最初',strength:'強み',weakness:'注意',gameplan:[],ranges:[]},bundle:candidate.bundle}));
   const ids=[...html.matchAll(/data-move-id="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,candidate.counts.publicCandidate);assert.deepEqual(new Set(ids),new Set(candidate.bundle.moves.map(m=>m.id)));
   const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#x27;');
-  const labels={startup:'発生',onHit:'ヒット時',onBlock:'ガード時',damage:'ダメージ'};
-  for(const m of candidate.bundle.moves){const card=html.slice(html.indexOf(`data-move-id="${m.id}"`)).split('</article>')[0];if(m.commands.some(c=>c.scheme==='classic'))assert.ok(card.includes('クラシック'),m.id);else assert.equal(candidate.evidence[m.id].command_classifications.classic.status,'NOT_APPLICABLE');for(const [k,label] of Object.entries(labels))assert.ok(card.includes(`<dt>${label}</dt><dd>${m.frame[k]===null?(m.frameFieldStatus[k]==='OFFICIAL_NA'?'—':'確認中'):escape(m.frame[k])}</dd>`),`${m.id}:${k}`);if(!m.media)assert.ok(card.includes('動作映像は未掲載'),m.id);assert.ok(card.includes('公開審査前'),m.id);}
+  const labels={startup:'発生',onHit:'ヒット時',damage:'ダメージ'};
+  for(const m of candidate.bundle.moves){const card=html.slice(html.indexOf(`data-move-id="${m.id}"`)).split('</article>')[0];if(m.commands.some(c=>c.scheme==='classic'))assert.ok(card.includes('クラシック'),m.id);else assert.equal(candidate.evidence[m.id].command_classifications.classic.status,'NOT_APPLICABLE');for(const [k,label] of Object.entries(labels))assert.ok(card.includes(`<dt>${label}</dt><dd>${m.frame[k]===null?(m.frameFieldStatus[k]==='OFFICIAL_NA'?'—':'確認中'):escape(m.frame[k])}</dd>`),`${m.id}:${k}`);if(m.moveType==='throw')assert.ok(!card.includes('<dt>ガード時</dt>'),`${m.id}:throw on-block suppressed`);else assert.ok(card.includes(`<dt>ガード時</dt><dd>${m.frame.onBlock===null?(m.frameFieldStatus.onBlock==='OFFICIAL_NA'?'—':'確認中'):escape(m.frame.onBlock)}</dd>`),`${m.id}:onBlock`);if(!m.media)assert.ok(card.includes('動作映像は未掲載'),m.id);assert.ok(card.includes('公開審査前'),m.id);}
   if(slug==='alex')assert.ok(!ids.includes('7b009800-5747-4b7d-a2c1-7163f1826d48'));
  }finally{if(previous===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=previous;}
 });
@@ -136,6 +141,8 @@ test('JP dedicated renderer displays accepted snapshot, N/A and fallback without
   const mod={exports:{}};const script=ts.transpileModule(readFileSync(new URL('../src/components/jp-character-detail.tsx',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
   new Function('module','exports','require',script)(mod,mod.exports,name=>{
    if(name==='react/jsx-runtime')return require(name);
+   if(name==='@/components/sf6-command-input')return realModule('components/sf6-command-input.tsx');
+   if(name==='@/components/accessible-command')return realModule('components/accessible-command.tsx');
    if(name==='next/link')return {default:p=>require('react').createElement('a',p),__esModule:true};
    if(name.endsWith('.css'))return {default:{}};
    if(name==='@/components/character-move-explorer')return realModule('components/character-move-explorer.tsx');
@@ -147,6 +154,7 @@ test('JP dedicated renderer displays accepted snapshot, N/A and fallback without
    return {};
   });
   const html=renderToStaticMarkup(require('react').createElement(mod.exports.JpCharacterDetail,{character:{slug:'jp',name:'JP',imageUrl:null,sources:[]},previewToken:null,previewActive:false,bundle:candidate.bundle,profile:{tagline:'特徴',winPath:'距離',firstLesson:'最初',strength:'強み',weakness:'注意',gameplan:[],ranges:[]},players:[],videos:[],pilotOverview:true}));
-  const ids=[...html.matchAll(/data-move-id="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,59);assert.deepEqual(new Set(ids),new Set(candidate.bundle.moves.map(m=>m.id)));assert.match(html,/公開審査前/);assert.match(html,/動作映像は未掲載/);assert.match(html,/ガード時<\/dt><dd>—<\/dd>/);assert.match(html,/500 \/ 500/);
+  const ids=[...html.matchAll(/data-move-id="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,59);assert.deepEqual(new Set(ids),new Set(candidate.bundle.moves.map(m=>m.id)));assert.match(html,/公開審査前/);assert.match(html,/動作映像は未掲載/);for(const move of candidate.bundle.moves){const card=html.slice(html.indexOf(`data-move-id="${move.id}"`)).split("</article>")[0];if(move.moveType==="throw")assert.ok(!card.includes("<dt>ガード時</dt>"));else if(move.frameFieldStatus?.onBlock==="OFFICIAL_NA")assert.match(card,/ガード時<\/dt><dd>—<\/dd>/);}
+  assert.ok(html.includes("data-token-kind"));assert.match(html,/500 \/ 500/);
  }finally{if(previous===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=previous;}
 });

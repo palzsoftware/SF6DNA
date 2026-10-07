@@ -1,4 +1,5 @@
 import { approvedPlayerImage } from "@/lib/approved-player-images";
+import { safeExternalUrl } from "@/lib/safe-external-url";
 import { getPublicEntitySources } from "@/lib/public-source-links";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type { PlayerDetail, PlayerSummary } from "@/types/player";
@@ -92,7 +93,7 @@ export async function listPlayers(): Promise<
       characterId: String(row.character_id),
       characterSlug: character.slug,
       characterName: character.name_ja,
-      role: String(row.role ?? "main"),
+      role: String(row.role ?? "unknown"),
     });
   }
   for (const row of aliasRows ?? []) {
@@ -173,25 +174,13 @@ export async function getPlayerBySlug(
         ? player.bio
         : null,
 
-    youtubeUrl:
-      typeof player.youtube_url === "string"
-        ? player.youtube_url
-        : null,
+    youtubeUrl: safeExternalUrl(player.youtube_url),
 
-    twitchUrl:
-      typeof player.twitch_url === "string"
-        ? player.twitch_url
-        : null,
+    twitchUrl: safeExternalUrl(player.twitch_url),
 
-    xUrl:
-      typeof player.x_url === "string"
-        ? player.x_url
-        : null,
+    xUrl: safeExternalUrl(player.x_url),
 
-    websiteUrl:
-      typeof player.website_url === "string"
-        ? player.website_url
-        : null,
+    websiteUrl: safeExternalUrl(player.website_url),
 
     characters: (links ?? []).flatMap((row) => {
       const character = row.characters as unknown as {
@@ -211,7 +200,7 @@ export async function getPlayerBySlug(
         characterId: String(row.character_id),
         characterSlug: character.slug,
         characterName: character.name_ja,
-        role: String(row.role ?? "main"),
+        role: String(row.role ?? "unknown"),
       }];
     }),
 

@@ -14,7 +14,8 @@ test("player list exposes team, main character, region, and detail route", () =>
 test("player detail covers release QA sections and natural empty states", () => {
   const page = read("src/app/players/[slug]/page.tsx");
   for (const marker of ["使用キャラクター", "SNS・外部リンク", "大会実績", "関連動画", "情報源", "まだありません"]) assert.match(page, new RegExp(marker));
-  assert.doesNotMatch(page, /NO SIGNAL|nullを表示|準備中/);
+  assert.doesNotMatch(page, /NO SIGNAL|nullを表示|>準備中</);
+  assert.match(page, /おすすめ動画は現在準備中です。/);
 });
 
 test("player image policy only permits allowlisted images and renders approved fallback copy", () => {

@@ -27,3 +27,10 @@ export function safePlayerBio(bio: string | null) {
     .replace(/^JP専門プレイヤーとして参照する競技プレイヤー。$/, "公開プロフィールにJPとの関係が記載されている競技プレイヤーです。");
   return japanese;
 }
+
+export function playerBioSummary(bio: string | null) {
+  if (!bio) return null;
+  const sentences = bio.match(/[^。！？!?]+[。！？!?]?/g) ?? [bio];
+  const short = sentences.slice(0, 2).join("").trim();
+  return short.length > 220 ? `${short.slice(0, 220)}…` : short;
+}

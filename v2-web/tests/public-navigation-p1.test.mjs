@@ -33,9 +33,9 @@ test("public navigation uses available routes and seeds the existing player face
   assert.doesNotMatch(matchup, /href=\{`\/characters\/\$\{[^}]+\}\/(training|moves)`\}/);
   assert.match(matchup, /releaseFeatures\.publicStrategyContent\s*\?\s*<Link/);
   assert.match(matchup, /<article className="search-result"/);
-  assert.match(playerPage, /href=\{videoPlayerHref\(player\.displayName\)\}/);
-  assert.match(videosPage, /videoPlayerFromQuery\(\(await searchParams\)\.player\)/);
-  assert.match(videosPage, /initialPlayer=\{player\}/);
+  assert.match(playerPage, /href=\{videoPlayerHref\(player\.displayName, player\.id\)\}/);
+  assert.match(videosPage, /videoPlayerFromQuery\(params\.player\)/);
+  assert.match(videosPage, /initialPlayer=\{playerId \? null : player\}/);
   assert.match(library, /players: initialPlayer \? new Set\(\[initialPlayer\]\) : new Set\(\)/);
   assert.match(videoFilters, /includesAny\(video\.players, filters\.players\)/);
 });

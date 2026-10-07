@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { validateContactPayload, type ContactPayload } from "@/lib/contact-form";
+import { validateContactPayload } from "@/lib/contact-form";
+import { readBoundedJson, RequestBodyTooLargeError } from "@/lib/bounded-json";
 import { getSupabaseAuthServerClient } from "@/lib/supabase/auth-server";
 
 const MAX_REQUEST_BYTES = 16_384;
@@ -13,7 +14,7 @@ function hasForeignOrigin(request: Request) {
   const origin = request.headers.get("origin");
   if (!origin) return false;
   try {
-    return new URL(origin).host !== new URL(request.url).host;
+    return new URL(origin).origin !== new URL(request.url).origin;
   } catch {
     return true;
   }
@@ -29,11 +30,14 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, message: "入力内容が大きすぎます。" }, { status: 413 });
   }
 
-  let payload: ContactPayload;
+  let payload: unknown;
 
   try {
-    payload = await request.json() as ContactPayload;
-  } catch {
+    payload = await readBoundedJson(request, MAX_REQUEST_BYTES);
+  } catch (error) {
+    if (error instanceof RequestBodyTooLargeError) {
+      return NextResponse.json({ ok: false, message: "入力内容が大きすぎます。" }, { status: 413 });
+    }
     return NextResponse.json({ ok: false, message: "入力内容を読み取れませんでした。" }, { status: 400 });
   }
 

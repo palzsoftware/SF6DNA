@@ -1,3 +1,4 @@
+import type { MotionMediaPresentation } from "@/lib/move-media-presentation";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 
 export type DevicePreviewBundle = {
@@ -36,6 +37,7 @@ export type DevicePreviewBundle = {
     } | null;
     commands?: DevicePreviewMoveCommand[];
     media?: DevicePreviewMoveMotionMedia | null;
+    motionMediaPresentation?: MotionMediaPresentation<DevicePreviewMoveMotionMedia>;
   }>;
   combos: Array<{
     id: string;

@@ -1,4 +1,5 @@
 import { getPublicEntitySources } from "@/lib/public-source-links";
+import { safeExternalUrl } from "@/lib/safe-external-url";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type { DetailSource, SimpleDetail } from "@/lib/content-detail";
 
@@ -60,18 +61,64 @@ export function formatVideoPublishedDate(value: string | null): string | null {
   }).format(date);
 }
 
-export async function listVideos(): Promise<VideoSummary[]> {
+export type VideoQuery = { playerId?: string; characterId?: string; limit?: number };
+
+// A player × character request requires the same match participant row.
+// Independent entity links do not prove which character the player used.
+async function relatedVideoIds(supabase: ReturnType<typeof getSupabaseServerClient>, query: VideoQuery): Promise<string[]> {
+  let participants = supabase.from("match_participants").select("match_id");
+  if (query.playerId) participants = participants.eq("player_id", query.playerId);
+  if (query.characterId) participants = participants.eq("character_id", query.characterId);
+  const { data: participantRows, error: participantError } = await participants;
+  if (participantError) throw new Error("Match relation lookup failed");
+  const matchIds = Array.from(new Set((participantRows ?? []).map((row) => String(row.match_id))));
+  const { data: matches, error: matchError } = matchIds.length
+    ? await supabase.from("matches").select("video_id").in("id", matchIds).eq("status", "published")
+    : { data: [], error: null };
+  if (matchError) throw new Error("Published match lookup failed");
+  const ids = (matches ?? []).flatMap((row) => row.video_id ? [String(row.video_id)] : []);
+  if (!(query.playerId && query.characterId)) {
+    const { data: links, error } = await supabase.from("entity_videos").select("video_id")
+      .eq("entity_type", query.playerId ? "player" : "character")
+      .eq("entity_id", query.playerId ?? query.characterId!);
+    if (error) throw new Error("Video relation lookup failed");
+    ids.push(...(links ?? []).map((row) => String(row.video_id)));
+  }
+  return Array.from(new Set(ids));
+}
+
+export async function listVideos(query: VideoQuery = {}): Promise<VideoSummary[]> {
+  try {
+    return await loadVideos(query);
+  } catch {
+    console.error("[event-media] video lookup unavailable");
+    return [];
+  }
+}
+
+async function loadVideos(query: VideoQuery): Promise<VideoSummary[]> {
   if (!configured()) return [];
 
   const supabase = getSupabaseServerClient();
 
-  const { data, error } = await supabase
+  let videoQuery = supabase
     .from("videos")
     .select(
       "id, slug, title, platform, video_type, published_at, description, url, thumbnail_url, external_id",
     )
     .eq("status", "published")
-    .order("published_at", { ascending: false });
+    .order("published_at", { ascending: false, nullsFirst: false })
+    .order("id", { ascending: true });
+  if (query.playerId || query.characterId) {
+    const ids = await relatedVideoIds(supabase, query);
+    if (!ids.length) return [];
+    videoQuery = videoQuery.in("id", ids);
+  }
+  if (query.limit !== undefined) {
+    const limit = Number.isFinite(query.limit) ? Math.max(1, Math.min(100, Math.floor(query.limit))) : 24;
+    videoQuery = videoQuery.limit(limit);
+  }
+  const { data, error } = await videoQuery;
 
   if (error) {
     console.error(
@@ -130,12 +177,12 @@ export async function listVideos(): Promise<VideoSummary[]> {
   for (const row of matchPlayerRows ?? []) playerNames.set(String(row.id), String(row.display_name));
   const tournamentNames = new Map((tournamentRows ?? []).map((row) => [String(row.id), String(row.name)]));
 
-  return (data ?? []).map((row) => {
+  return (data ?? []).filter((row) => safeExternalUrl(row.url) !== null).map((row) => {
     const related = (relationRows ?? []).filter((relation) => String(relation.video_id) === String(row.id));
     const relatedMatches = (matchRows ?? []).filter((match) => String(match.video_id) === String(row.id));
     const relatedMatchIds = new Set(relatedMatches.map((match) => String(match.id)));
     const relatedParticipants = (participantRows ?? []).filter((participant) => relatedMatchIds.has(String(participant.match_id)));
-    const url = String(row.url);
+    const url = safeExternalUrl(row.url)!;
     return {
     id: String(row.id),
     slug: String(row.slug),
@@ -241,6 +288,9 @@ export async function getVideoBySlug(
 
   if (error || !data) return null;
 
+  const videoUrl = safeExternalUrl(data.url);
+  if (!videoUrl) return null;
+
   const [
     { data: relationRows, error: relationError },
     sourceRows,
@@ -345,8 +395,8 @@ export async function getVideoBySlug(
     ],
     sources,
     externalLink:
-      typeof data.url === "string" && /^https:\/\//i.test(data.url)
-        ? { href: data.url, label: "YouTubeで見る" }
+      videoUrl.startsWith("https:")
+        ? { href: videoUrl, label: "YouTubeで見る" }
         : undefined,
   };
 }

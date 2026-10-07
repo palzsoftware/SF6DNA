@@ -1,12 +1,13 @@
+import { publicPageMetadata } from "@/lib/public-page-metadata";
 export const dynamic = "force-dynamic";
 
 import { listPublicSources } from "@/lib/public-sources";
 import { localizeSourceType } from "@/lib/detail-localization";
 
-export const metadata = {
+export const metadata = publicPageMetadata("/sources", {
   title: "情報源",
   description: "SF6DNAの掲載情報に関連する公式サイト・記事・動画へのリンクをまとめています。",
-};
+});
 
 const RELIABILITY_LABELS: Record<string, string> = {
   official: "公式情報",

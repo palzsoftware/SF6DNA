@@ -1,10 +1,11 @@
+import { publicPageMetadata } from "@/lib/public-page-metadata";
 export const dynamic = "force-dynamic";
 
 import { listPlayers } from "@/lib/players";
 import { PlayerDirectory } from "@/components/player-directory";
 import styles from "./players.module.css";
 
-export const metadata = { title: "プレイヤー情報", description: "SF6のプロ、競技プレイヤー、キャラ職人、配信者などを使用キャラクターや参考情報と合わせて探せます。" };
+export const metadata = publicPageMetadata("/players", { title: "プレイヤー情報", description: "SF6のプロ、競技プレイヤー、キャラ職人、配信者などを使用キャラクターや参考情報と合わせて探せます。" });
 
 export default async function PlayersPage() {
   const players = await listPlayers();

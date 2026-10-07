@@ -53,12 +53,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const supabase = getSupabaseServerClient();
 
-  const [
-    characters,
-    players,
-    videos,
-    diagnoses,
-  ] = await Promise.all([
+  const results = await Promise.allSettled([
     supabase
       .from("characters")
       .select("slug")
@@ -81,26 +76,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .eq("status", "published"),
   ]);
 
-  const dynamicGroups: Array<
-    [string, Array<{ slug: string }> | null, string | null]
-  > = [
-    ["/characters", characters.data, characters.error?.message ?? null],
-    ["/players", players.data, players.error?.message ?? null],
-    ["/videos", videos.data, videos.error?.message ?? null],
-    ["/diagnosis", diagnoses.data, diagnoses.error?.message ?? null],
-  ];
-
-  for (const [root, rows, error] of dynamicGroups) {
-    if (error) {
-      console.error(`[sitemap] ${root} lookup failed`, error);
+  const roots = ["/characters", "/players", "/videos", "/diagnosis"];
+  const seen = new Set(entries.map((entry) => entry.url));
+  for (const [index, result] of results.entries()) {
+    const root = roots[index];
+    if (result.status === "rejected" || result.value.error) {
+      // Keep other published groups and static URLs available, without logging DB details.
+      console.error(`[sitemap] ${root} lookup failed`);
       continue;
     }
-
-    for (const row of rows ?? []) {
-      if (!row.slug) continue;
-
+    if (!Array.isArray(result.value.data)) continue;
+    for (const row of result.value.data) {
+      if (!row || typeof row.slug !== "string" || !row.slug.trim()) continue;
+      // A slug is one path segment; never turn response data into a query or fragment.
+      const url = `${siteUrl}${root}/${encodeURIComponent(row.slug)}`;
+      if (seen.has(url)) continue;
+      seen.add(url);
       entries.push({
-        url: `${siteUrl}${root}/${row.slug}`,
+        url,
         changeFrequency: "weekly",
       });
     }

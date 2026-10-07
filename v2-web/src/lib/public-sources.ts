@@ -1,4 +1,5 @@
 import { getSupabaseServerClient } from "@/lib/supabase/server";
+import { safeExternalUrl } from "@/lib/safe-external-url";
 
 type PublicSourceRpcRow = {
   id: string | null;
@@ -48,10 +49,11 @@ export async function listPublicSources(): Promise<PublicSource[]> {
 
   return rows
     .flatMap((row) => {
+      const url = safeExternalUrl(row.url);
       if (
         !row.id ||
         !row.title ||
-        !row.url ||
+        !url ||
         !row.source_type ||
         !row.reliability_level
       ) {
@@ -61,7 +63,7 @@ export async function listPublicSources(): Promise<PublicSource[]> {
       return [{
         id: row.id,
         title: row.title,
-        url: row.url,
+        url,
         publisher: row.publisher,
         sourceType: row.source_type,
         reliabilityLevel: row.reliability_level,

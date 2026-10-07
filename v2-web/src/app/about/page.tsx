@@ -1,4 +1,5 @@
-export const metadata = { title: "SF6DNAについて" };
+import { publicPageMetadata } from "@/lib/public-page-metadata";
+export const metadata = publicPageMetadata("/about", { title: "SF6DNAについて" });
 
 export default function AboutPage() {
   return (

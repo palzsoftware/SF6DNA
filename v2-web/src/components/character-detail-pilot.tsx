@@ -2,7 +2,10 @@ import Link from "next/link";
 import { CharacterGamePlan, CharacterRangeGuide } from "@/components/character-game-guide";
 import { CharacterQuickStart } from "@/components/character-quick-start";
 import { CharacterMoveExplorer } from "@/components/character-move-explorer";
-import { formatMoveCommand, moveCommandSearchTerms } from "@/lib/move-command-format";
+import { moveCommandSearchTerms } from "@/lib/move-command-format";
+import { Sf6CommandInput } from "@/components/sf6-command-input";
+import { selectMoveMotionMedia } from "@/lib/move-media-presentation";
+import { sf6CommandSearchTerms } from "@/lib/sf6-command-tokens";
 import { PilotComboCard } from "@/components/pilot-combo-card";
 import { CharacterPlayerCard } from "@/components/character-player-card";
 import { CharacterVideoReferenceCard } from "@/components/character-video-reference-card";
@@ -64,9 +67,15 @@ const moveTypeLabels: Record<string, string> = {
 };
 
 function commandLabel(command: NonNullable<DevicePreviewBundle["moves"][number]["commands"]>[number]) {
-  const scheme = command.scheme === "classic" ? "クラシック" : command.scheme === "modern" ? "モダン" : command.scheme;
+  const normalizedScheme = command.scheme.trim().toLocaleLowerCase("ja-JP").replaceAll("-", "_");
+  const scheme = normalizedScheme === "classic" ? "クラシック"
+    : normalizedScheme === "modern_simple" ? "モダン・シンプル"
+    : normalizedScheme === "modern_manual" ? "モダン・マニュアル"
+    : normalizedScheme === "modern_assist" ? "モダン・アシスト"
+    : normalizedScheme === "modern" ? "モダン"
+    : command.scheme;
   const input = command.commandText ?? command.numericNotation ?? command.buttonNotation;
-  return { scheme, input: input ? formatMoveCommand(input) : "コマンドを確認中" };
+  return { scheme, input: input ?? "" };
 }
 
 export function CharacterDetailPilot({
@@ -150,35 +159,50 @@ export function CharacterDetailPilot({
           {characterSlug === "jp" ? <a href="https://www.streetfighter.com/6/ja-jp/character/jp/frame" target="_blank" rel="noopener noreferrer">CAPCOM公式フレームを見る ↗</a> : null}
         </div>
         {moveGroups.length ? <CharacterMoveExplorer className={styles.moveGroups} groupClassName={styles.moveGroup} listClassName={styles.moveTable} table enabled={!preRelease} groups={moveGroups.map(([type, moves]) => ({
-          type, label: moveTypeLabels[type] ?? "その他", items: moves.map(move => ({
-            id: move.id, name: move.name,
-            commands: (move.commands ?? []).flatMap(command => moveCommandSearchTerms(command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "")),
-            content: <article className={styles.moveRow} role="row" key={move.id} data-move-id={move.id} data-move-slug={move.slug} data-has-media={Boolean(move.media)}>
-                  <div className={styles.moveIdentity} role="cell">
-                    <span>{move.releaseFixture ? "DB収録データ・公開審査前" : verificationLabel(move.frame?.verificationStatus ?? null)}</span>
-                    <h3>{move.name}</h3>
-                    {publicMoveSummary(move.usageSummary) ? <p>{publicMoveSummary(move.usageSummary)}</p> : null}
-                  </div>
-                  <div className={styles.moveMedia} role="cell">
-                    {move.media ? <MoveMotionMedia media={move.media} title={move.name} className={styles.moveMediaAsset} /> : <span className={styles.moveMediaFallback} aria-label={`${move.name}の動作メディアは未登録`}>動作映像は未掲載</span>}
-                  </div>
-                  <div className={styles.moveCommands} role="cell" aria-label={`${move.name}のコマンド`}>
-                    {move.commands?.length ? move.commands.map((command, index) => {
-                      const label = commandLabel(command);
-                      return <div key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}><span>{label.scheme}</span><code>{label.input}</code>{command.conditionText && !isInternalMoveNote(command.conditionText) ? <small>{normalizePublicCopy(command.conditionText)}</small> : null}</div>;
-                    }) : <span className={styles.movePending}>コマンドを確認中</span>}
-                  </div>
-                  <dl className={styles.moveFrame} role="cell">
-                    <div><dt>発生</dt><dd>{valueOrUnknown(move.frame?.startup, move.frameFieldStatus?.startup === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
-                    {move.frame?.active !== null && move.frame?.active !== undefined && move.frame.active !== "" ? <div><dt>持続</dt><dd>{move.frame.active}</dd></div> : null}
-                    {move.frame?.recovery !== null && move.frame?.recovery !== undefined && move.frame.recovery !== "" ? <div><dt>硬直</dt><dd>{move.frame.recovery}</dd></div> : null}
-                    <div><dt>ヒット時</dt><dd>{valueOrUnknown(move.frame?.onHit, move.frameFieldStatus?.onHit === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
-                    <div><dt>ガード時</dt><dd>{valueOrUnknown(move.frame?.onBlock, move.frameFieldStatus?.onBlock === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
-                    <div><dt>ダメージ</dt><dd>{valueOrUnknown(move.frame?.damage, move.frameFieldStatus?.damage === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
-                  </dl>
-                  {!preRelease && releaseFeatures.publicStrategyContent ? <Link className={styles.moveDetailLink} href={appendDevicePreviewToken(`/moves/${move.slug}`, previewToken)}>技の詳細を見る →</Link> : null}
-                </article>,
-          })),
+          type, label: moveTypeLabels[type] ?? "その他", items: moves.map(move => {
+            const motionPresentation = selectMoveMotionMedia(move);
+            const isThrow = move.moveType === "throw";
+            return {
+              id: move.id, name: move.name,
+              commands: (move.commands ?? []).flatMap(command => {
+                const input = command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "";
+                return [...moveCommandSearchTerms(input), ...sf6CommandSearchTerms(input)];
+              }),
+              schemes: [...new Set((move.commands ?? []).map(command => command.scheme).filter(Boolean))],
+              content: <article className={styles.moveRow} role="row" key={move.id} data-move-id={move.id} data-move-slug={move.slug} data-move-type={move.moveType ?? "other"} data-has-media={Boolean(motionPresentation.media)}>
+                    <div className={styles.moveIdentity} role="cell">
+                      <span>{move.releaseFixture ? "DB収録データ・公開審査前" : verificationLabel(move.frame?.verificationStatus ?? null)}</span>
+                      <h3>{move.name}</h3>
+                      {publicMoveSummary(move.usageSummary) ? <p>{publicMoveSummary(move.usageSummary)}</p> : null}
+                    </div>
+                    <div className={styles.moveMedia} role="cell">
+                      {motionPresentation.media ? <MoveMotionMedia media={motionPresentation.media} title={move.name} className={styles.moveMediaAsset} /> : <span className={styles.moveMediaFallback} aria-label={`${move.name}の動作メディアは未登録`}>動作映像は未掲載</span>}
+                    </div>
+                    <div className={styles.moveCommands} role="cell" aria-label={`${move.name}のコマンド`}>
+                      {move.commands?.length ? move.commands.map((command, index) => {
+                        const label = commandLabel(command);
+                        return <div key={`${command.scheme}-${command.sortOrder ?? index}-${index}`}><span>{label.scheme}</span><code><Sf6CommandInput value={label.input} /></code>{command.conditionText && !isInternalMoveNote(command.conditionText) ? <small>{normalizePublicCopy(command.conditionText)}</small> : null}</div>;
+                      }) : <span className={styles.movePending}>コマンドを確認中</span>}
+                    </div>
+                    <div className={styles.moveFrameCell} role="cell"><dl className={styles.moveFrame}>
+                      <div><dt>発生</dt><dd>{valueOrUnknown(move.frame?.startup, move.frameFieldStatus?.startup === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
+                      {move.frame?.active !== null && move.frame?.active !== undefined && move.frame.active !== "" ? <div><dt>持続</dt><dd>{move.frame.active}</dd></div> : null}
+                      {move.frame?.recovery !== null && move.frame?.recovery !== undefined && move.frame.recovery !== "" ? <div><dt>硬直</dt><dd>{move.frame.recovery}</dd></div> : null}
+                      <div><dt>ヒット時</dt><dd>{valueOrUnknown(move.frame?.onHit, move.frameFieldStatus?.onHit === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
+                      {!isThrow ? <div><dt>ガード時</dt><dd>{valueOrUnknown(move.frame?.onBlock, move.frameFieldStatus?.onBlock === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div> : null}
+                      <div><dt>ダメージ</dt><dd>{valueOrUnknown(move.frame?.damage, move.frameFieldStatus?.damage === "OFFICIAL_NA" ? "—" : "確認中")}</dd></div>
+                    </dl></div>
+                    {!preRelease && (releaseFeatures.publicStrategyContent || strategyListAvailable) ? <div className={styles.moveActions}>
+                      {releaseFeatures.publicStrategyContent ? <Link className={styles.moveDetailLink} href={appendDevicePreviewToken(`/moves/${move.slug}`, previewToken)}>技の詳細を見る →</Link> : null}
+                      {strategyListAvailable ? <nav className={styles.moveStrategyLinks} aria-label={`${move.name}から関連攻略へ`}>
+                        <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/combos`, previewToken)}>コンボ</Link>
+                        <Link href="#pilot-setplay">セットプレイ</Link>
+                        <Link href="#pilot-sequences">対策</Link>
+                      </nav> : null}
+                    </div> : null}
+                  </article>,
+            };
+          }),
         }))} /> : <div className="empty-state"><p>技データは未掲載です。</p></div>}
       </section>
 

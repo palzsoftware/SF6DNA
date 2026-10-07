@@ -1,7 +1,8 @@
+import { publicPageMetadata } from "@/lib/public-page-metadata";
 import Link from "next/link";
 import { listDiagnoses } from "@/lib/diagnosis";
 
-export const metadata = { title: "診断" };
+export const metadata = publicPageMetadata("/diagnosis", { title: "診断" });
 
 export default async function DiagnosisPage() {
   const diagnoses = await listDiagnoses();

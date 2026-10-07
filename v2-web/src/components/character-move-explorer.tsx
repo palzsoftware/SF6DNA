@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState, type ReactNode } from "react";
-import { matchesMoveSearch, type SearchableMove } from "@/lib/character-move-filter";
+import { matchesMoveScheme, matchesMoveSearch, type MoveSchemeFilter, type SearchableMove } from "@/lib/character-move-filter";
 import styles from "./character-move-explorer.module.css";
 
 type MoveItem = SearchableMove & { id: string; content: ReactNode };
@@ -18,24 +18,37 @@ export function CharacterMoveExplorer({ groups, groupClassName, listClassName, c
   const inputId = useId();
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
+  const [scheme, setScheme] = useState<MoveSchemeFilter>("all");
   const filtered = groups.filter(group => category === "all" || category === group.type)
-    .map(group => ({ ...group, items: group.items.filter(item => matchesMoveSearch(item, query)) }))
+    .map(group => ({ ...group, items: group.items.filter(item => matchesMoveSearch(item, query) && matchesMoveScheme(item, scheme)) }))
     .filter(group => group.items.length > 0);
   const total = groups.reduce((count, group) => count + group.items.length, 0);
   const count = filtered.reduce((sum, group) => sum + group.items.length, 0);
-  const active = Boolean(query.trim()) || category !== "all";
+  const active = Boolean(query.trim()) || category !== "all" || scheme !== "all";
 
   return <div className={[styles.explorer, className].filter(Boolean).join(" ")}>
     {enabled ? <div className={styles.controls}>
       <label htmlFor={inputId}>技名・コマンドを検索</label>
       <input id={inputId} type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="技名や入力コマンド" />
-      <div className={styles.categories} role="group" aria-label="技のカテゴリ">
-        {[{ type: "all", label: "すべて" }, ...groups].map(group =>
-          <button type="button" key={group.type} aria-pressed={category === group.type} onClick={() => setCategory(group.type)}>{group.label}</button>
-        )}
+      <div className={styles.filterBlock}>
+        <span>技カテゴリ</span>
+        <div className={styles.categories} role="group" aria-label="技のカテゴリ">
+          {[{ type: "all", label: "すべて" }, ...groups].map(group =>
+            <button type="button" key={group.type} aria-pressed={category === group.type} onClick={() => setCategory(group.type)}>{group.label}</button>
+          )}
+        </div>
+      </div>
+      <div className={styles.filterBlock}>
+        <span>操作タイプ</span>
+        <div className={styles.categories} role="group" aria-label="操作タイプ">
+          {([["all", "すべて"], ["classic", "クラシック"], ["modern", "モダン"]] as const).map(([value, label]) =>
+            <button type="button" key={value} aria-pressed={scheme === value} onClick={() => setScheme(value)}>{label}</button>
+          )}
+        </div>
+        <small>操作タイプ未確定・共通扱いの技は絞り込みで除外しません。</small>
       </div>
       <div className={styles.result}><p role="status" aria-live="polite">{count} / {total} 技</p>
-        {active ? <button type="button" onClick={() => { setQuery(""); setCategory("all"); }}>絞り込みを解除</button> : null}
+        {active ? <button type="button" onClick={() => { setQuery(""); setCategory("all"); setScheme("all"); }}>絞り込みを解除</button> : null}
       </div>
     </div> : null}
     {filtered.length ? filtered.map((group, index) => <details className={groupClassName} key={group.type} open={active || index === 0}>

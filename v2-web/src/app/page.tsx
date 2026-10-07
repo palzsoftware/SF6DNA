@@ -1,3 +1,5 @@
+import { publicPageMetadata } from "@/lib/public-page-metadata";
+export const metadata = publicPageMetadata("/", {});
 import { PracticeContinue } from "@/components/practice-history";
 import { VisualIcon, destinationIcon } from "@/components/visual-icon";
 export const dynamic = "force-dynamic";
@@ -60,14 +62,14 @@ export default async function HomePage() {
         <div className="home-hero__copy">
           <p className="eyebrow">SF6DNA / TRAINING LAB</p>
           <h1>次の対戦で、<span>何を試そう？</span></h1>
-          <p>課題を整理して、今日やることを決める。<br />キャラクターの技や動画も、ここから。</p>
+          <p>診断で課題を見つけ、今日の15分練習へ。<br />キャラクターの技や参考プレイヤー、動画も探せます。</p>
           <div className="home-hero__actions">
             <Link className="button-primary" href="/me/training">今日の15分練習を始める</Link>
-            <Link className="button-secondary" href="/diagnosis">診断する</Link>
+            <Link className="button-secondary" href="/diagnosis">自分の課題を診断する</Link>
 
           </div>
         </div>
-        <div className="home-hero__visual" aria-label="SF6キャラクター">
+        <div className="home-hero__visual" role="group" aria-label="SF6キャラクター">
           <div className="lab-dna" aria-hidden="true">{[0,1,2,3,4,5].map((node) => <i key={node} />)}</div>
           <span className="lab-visual-label" aria-hidden="true">FIND YOUR NEXT MOVE</span>
           {heroCharacters.map((character, index) => (
@@ -99,7 +101,7 @@ export default async function HomePage() {
             <Link className="daily-card home-purpose-card" data-accent={action.accent} href={action.href} key={action.phase}>
               <span className="daily-card__icon-slot" aria-hidden="true"><VisualIcon kind={action.phase === "TRAIN" ? "training" : action.phase === "DIAGNOSIS" ? "diagnosis" : "character"} /></span>
               <span className="daily-card__phase">{action.phase === "TRAIN" ? "TODAY’S TRAINING" : action.phase}</span>
-              {action.phase === "TRAIN" ? <div className="lab-timer" aria-label="5分の練習を3つ、合計15分">{[1,2,3].map((part) => <span key={part}><b>05</b><small>min</small></span>)}<em>15分で、ひとつ前へ。</em></div> : null}
+              {action.phase === "TRAIN" ? <div className="lab-timer" role="group" aria-label="5分の練習を3つ、合計15分">{[1,2,3].map((part) => <span key={part}><b>05</b><small>min</small></span>)}<em>15分で、ひとつ前へ。</em></div> : null}
               <strong>{action.title}</strong>
               <p>{action.description}</p>
               <span className="daily-card__arrow">{action.phase === "TRAIN" ? "練習メニューを見る" : action.title}</span>

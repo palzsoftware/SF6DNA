@@ -1,11 +1,12 @@
+import { publicPageMetadata } from "@/lib/public-page-metadata";
 import Link from "next/link";
 import { CharacterCard } from "@/components/character-card";
 import { characterDataSourceStatus, listCharacters } from "@/lib/characters";
 
-export const metadata = {
+export const metadata = publicPageMetadata("/characters", {
   title: "キャラクター情報",
   description: "SF6のキャラクターの特徴と、関連プレイヤー・動画を紹介します。",
-};
+});
 
 function normalizeQuery(value: string | string[] | undefined) {
   const raw = Array.isArray(value) ? value[0] : value;

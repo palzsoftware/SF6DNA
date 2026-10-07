@@ -1,3 +1,4 @@
+import { publicPageMetadata } from "@/lib/public-page-metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -99,7 +100,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const character = await getCharacterBySlug(slug);
 
-  if (!character) return { title: "キャラクター情報" };
+  if (!character) return publicPageMetadata("", { title: "キャラクター情報" }, false);
   const pilotProfile = isCharacterDetailV2Route(character.slug)
     ? adaptCharacterDetailV2Profile({
         character,
@@ -107,11 +108,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       }).profile
     : null;
 
-  return {
+  return publicPageMetadata(`/characters/${encodeURIComponent(character.slug)}`, {
     title: `${character.name} | キャラクター情報`,
     description:
       pilotProfile?.tagline ?? character.shortDescription ?? `${character.name}の特徴、使用プレイヤー、関連動画。`,
-  };
+  });
 }
 
 export default async function CharacterPage({
@@ -141,8 +142,8 @@ export default async function CharacterPage({
       }).profile
     : null;
   const [remotePilotBundle, allVideos, moveMedia] = pilotRequested
-    ? await Promise.all([resolveCharacterDetailData(character.id, character.slug, previewToken), listVideos(), production ? Promise.resolve([]) : getDevicePreviewMoveMotionMedia(character.id, previewToken)])
-    : [null, await listVideos(), []];
+    ? await Promise.all([resolveCharacterDetailData(character.id, character.slug, previewToken), listVideos({ characterId: character.id }), production ? Promise.resolve([]) : getDevicePreviewMoveMotionMedia(character.id, previewToken)])
+    : [null, await listVideos({ characterId: character.id }), []];
   const pilotBundle = remotePilotBundle?.bundle ?? null;
   if (pilotBundle) {
     const mediaByMove = new Map(moveMedia.map((media) => [media.moveId, media]));
@@ -160,7 +161,7 @@ export default async function CharacterPage({
         relatedPlayers.map((item) => getPlayerBySlug(item.href.split("/").filter(Boolean).at(-1) ?? ""))
       )).filter((player) => player !== null)
     : [];
-  const pilotVideos = resolveCharacterRelatedVideos(allVideos, relatedVideos.map((video) => video.id));
+  const pilotVideos = resolveCharacterRelatedVideos(allVideos, [...relatedVideos.map((video) => video.id), ...allVideos.map((video) => video.id)]);
   const matchupCard = releaseFeatures.publicStrategyContent
     ? character.guideSections.find((section) => section.sectionKey === "matchup_card") ?? null
     : null;

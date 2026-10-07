@@ -1,6 +1,9 @@
 .explorer { display: grid; gap: 12px; }
 .controls { display: grid; gap: 10px; }
 .controls label { font-weight: 700; }
+.filterBlock { display: grid; gap: 6px; }
+.filterBlock > span { color: var(--text-muted); font-size: .72rem; font-weight: 800; letter-spacing: .04em; }
+.filterBlock > small { color: var(--text-muted); font-size: .68rem; line-height: 1.5; }
 .controls input { box-sizing: border-box; width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font: inherit; }
 .categories { display: flex; flex-wrap: wrap; gap: 8px; }
 .categories button, .result button { min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font: inherit; white-space: normal; overflow-wrap: anywhere; }

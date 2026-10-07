@@ -1,3 +1,5 @@
+import type { PlayerProfileIntake } from "@/lib/player-profile-contract";
+
 export type PlayerSummary = {
   id: string;
   slug: string;
@@ -36,6 +38,8 @@ export type PlayerTournamentResult = {
 };
 
 export type PlayerDetail = PlayerSummary & {
+  // Optional local/evidence intake; legacy DB columns do not imply current status.
+  profileIntake?: PlayerProfileIntake;
   realName: string | null;
   bio: string | null;
   youtubeUrl: string | null;

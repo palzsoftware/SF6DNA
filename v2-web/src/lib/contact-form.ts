@@ -23,7 +23,16 @@ export type ContactValidationResult =
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export function validateContactPayload(payload: ContactPayload): ContactValidationResult {
+export function validateContactPayload(value: unknown): ContactValidationResult {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return { ok: false, message: "入力内容を確認してください。" };
+  }
+  const payload = value as Record<string, unknown>;
+  if (typeof payload.category !== "string" || typeof payload.message !== "string" || typeof payload.email !== "string"
+      || (payload.targetUrl !== undefined && typeof payload.targetUrl !== "string")
+      || (payload.website !== undefined && typeof payload.website !== "string")) {
+    return { ok: false, message: "入力内容を確認してください。" };
+  }
   if (payload.website?.trim()) return { ok: false, message: "送信できませんでした。" };
   if (!CONTACT_CATEGORIES.includes(payload.category as ContactCategory)) {
     return { ok: false, message: "お問い合わせの種類を選んでください。" };
@@ -40,6 +49,7 @@ export function validateContactPayload(payload: ContactPayload): ContactValidati
     return { ok: false, message: "返信先メールアドレスを正しく入力してください。" };
   }
   if (targetUrl) {
+    if (targetUrl.length > 2048) return { ok: false, message: "対象URLは2048文字以内で入力してください。" };
     try {
       const parsed = new URL(targetUrl);
       if (!["http:", "https:"].includes(parsed.protocol)) throw new Error("unsupported protocol");

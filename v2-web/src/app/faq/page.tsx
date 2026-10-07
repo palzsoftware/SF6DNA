@@ -1,4 +1,5 @@
-export const metadata = { title: "FAQ" };
+import { publicPageMetadata } from "@/lib/public-page-metadata";
+export const metadata = publicPageMetadata("/faq", { title: "FAQ" });
 
 import { FaqBrowser, type FaqItem } from "@/components/faq-browser";
 import { PUBLIC_CONTACT_EMAIL } from "@/lib/contact";

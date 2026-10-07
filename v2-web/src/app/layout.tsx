@@ -40,19 +40,19 @@ export const metadata: Metadata = {
     template: "%s | SF6DNA",
   },
   description:
-    "Street Fighter 6の診断・キャラクター情報・プレイヤー・動画を整理して確認できるSF6上達支援サイト。",
+    "Street Fighter 6の診断で課題を見つけ、今日の練習を決める。キャラクターの技やプレイヤー、関連動画も探せます。",
   openGraph: {
     type: "website",
     siteName: "SF6DNA",
     title: "SF6DNA",
     description:
-      "Street Fighter 6の診断・キャラクター情報・プレイヤー・動画を整理して確認できるSF6上達支援サイト。",
+      "Street Fighter 6の診断で課題を見つけ、今日の練習を決める。キャラクターの技やプレイヤー、関連動画も探せます。",
   },
   twitter: {
     card: "summary_large_image",
     title: "SF6DNA",
     description:
-      "Street Fighter 6の診断・キャラクター情報・プレイヤー・動画を整理して確認できるSF6上達支援サイト。",
+      "Street Fighter 6の診断で課題を見つけ、今日の練習を決める。キャラクターの技やプレイヤー、関連動画も探せます。",
   },
 };
 

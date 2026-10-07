@@ -10,7 +10,8 @@ test("video detail exposes a safe external YouTube action and list dates are loc
   const detail = read("src/lib/event-media.ts");
   const view = read("src/components/simple-detail.tsx");
   const list = read("src/components/video-library.tsx");
-  assert.match(detail, /\? \{ href: data\.url, label: "YouTubeで見る" \}/);
+  assert.match(detail, /const videoUrl = safeExternalUrl\(data\.url\)/);
+  assert.match(detail, /\? \{ href: videoUrl, label: "YouTubeで見る" \}/);
   assert.match(view, /target="_blank" rel="noopener noreferrer"/);
   assert.match(list, /formatVideoPublishedDate\(video\.publishedAt\)/);
 });

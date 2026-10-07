@@ -12,7 +12,7 @@ function stub(name){
  if(name.endsWith('.module.css'))return {default:new Proxy({},{get:(_,key)=>String(key)})};
  if(name==='next/link')return {default:({children,href,...props})=>React.createElement('a',{...props,href},children)};
  if(name==='next/image')return {default:({unoptimized,onError,...props})=>React.createElement('img',props)};
- const real={'@/lib/move-command-format':'lib/move-command-format.ts','@/lib/character-move-filter':'lib/character-move-filter.ts','@/lib/release-features':'lib/release-features.ts','@/components/character-move-explorer':'components/character-move-explorer.tsx','@/components/move-motion-media':'components/move-motion-media.tsx'};
+ const real={'@/lib/move-media-presentation':'lib/move-media-presentation.ts','@/components/sf6-command-input':'components/sf6-command-input.tsx','@/lib/sf6-command-tokens':'lib/sf6-command-tokens.ts','@/components/accessible-command':'components/accessible-command.tsx','@/lib/command-accessibility':'lib/command-accessibility.ts','@/lib/move-command-format':'lib/move-command-format.ts','@/lib/character-move-filter':'lib/character-move-filter.ts','@/lib/release-features':'lib/release-features.ts','@/components/character-move-explorer':'components/character-move-explorer.tsx','@/components/move-motion-media':'components/move-motion-media.tsx'};
  if(real[name])return load(real[name]);
  if(name==='@/lib/device-preview')return {isDevicePreviewRequest:()=>false,appendDevicePreviewToken:x=>x};
  if(name==='@/lib/public-copy')return {isInternalMoveNote:()=>false,normalizePublicCopy:x=>x};
@@ -31,7 +31,7 @@ const categories=['normal','unique','target_combo','special','throw','super'];
 const moves=categories.map((moveType,i)=>({id:'test-'+i,slug:'test-'+i,name:'テスト技'+i,moveType,status:'published',usageSummary:null,commands:[{scheme:'classic',commandText:'236LP'}],frame:{startup:'7',onHit:'+2',onBlock:'-3',damage:600,verificationStatus:'verified'}}));
 test('shared card SSR keeps every required category and field with no-media fallback for all 31 slugs',()=>{
  assert.equal(slugs.length,31);
- for(const slug of slugs){const html=render(slug,moves);assert.equal((html.match(/<article/g)||[]).length,moves.length,slug);assert.equal((html.match(/動作映像は未掲載/g)||[]).length,moves.length,slug);for(const text of ['通常技','特殊技','必殺技','投げ','SA','発生','ヒット時','ガード時','ダメージ','600','↓↘→ + 弱P'])assert.ok(html.includes(text),slug+':'+text);}
+ for(const slug of slugs){const html=render(slug,moves);assert.equal((html.match(/<article/g)||[]).length,moves.length,slug);assert.equal((html.match(/動作映像は未掲載/g)||[]).length,moves.length,slug);for(const text of ['通常技','特殊技','必殺技','投げ','SA','発生','ヒット時','ガード時','ダメージ','600','↓↘→'])assert.ok(html.includes(text),slug+':'+text);assert.ok(html.includes('弱P'),slug+':explicit strength');}
 });
 test('existing video and GIF media render through the existing component without mandatory media on other cards',()=>{
  const media={id:'media',moveId:'test-0',mediaType:'video',mediaUrl:'/test.mp4',posterUrl:'/test.webp',sourceUrl:null,sourceLabel:null,status:'published'};

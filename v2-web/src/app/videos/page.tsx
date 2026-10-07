@@ -1,16 +1,21 @@
+import { publicPageMetadata } from "@/lib/public-page-metadata";
 export const dynamic = "force-dynamic";
 
 import { listVideos } from "@/lib/event-media";
 import { VideoLibrary } from "@/components/video-library";
-import { videoPlayerFromQuery } from "@/lib/video-player-filter";
+import { videoPlayerFromQuery, videoEntityIdFromQuery } from "@/lib/video-player-filter";
 
-export const metadata = { title: "動画" };
+export const metadata = publicPageMetadata("/videos", { title: "動画" });
 
 export default async function VideosPage({ searchParams }: {
-  searchParams: Promise<{ player?: string | string[] }>;
+  searchParams: Promise<{ player?: string | string[]; playerId?: string | string[]; characterId?: string | string[] }>;
 }) {
-  const player = videoPlayerFromQuery((await searchParams).player);
-  const videos = await listVideos();
+  const params = await searchParams;
+  const player = videoPlayerFromQuery(params.player);
+  const playerId = videoEntityIdFromQuery(params.playerId);
+  const characterId = videoEntityIdFromQuery(params.characterId);
+  const invalidFilter = (params.playerId !== undefined && !playerId) || (params.characterId !== undefined && !characterId);
+  const videos = invalidFilter ? [] : await listVideos({ playerId: playerId ?? undefined, characterId: characterId ?? undefined });
 
   return (
     <div className="site-shell page-stack experience-video">
@@ -21,10 +26,10 @@ export default async function VideosPage({ searchParams }: {
       </section>
 
       {videos.length ? (
-        <VideoLibrary videos={videos} initialPlayer={player} key={player ?? "all"} />
+        <VideoLibrary videos={videos} initialPlayer={playerId ? null : player} key={player ?? "all"} />
       ) : (
         <section className="empty-state">
-          <h2>公開済み動画はまだありません</h2>
+          <h2>{playerId || characterId ? "条件に合う公開動画はまだありません" : "公開済み動画はまだありません"}</h2>
           <p>掲載できる動画から順次追加します。</p>
         </section>
       )}

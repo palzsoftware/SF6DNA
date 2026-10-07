@@ -1,3 +1,4 @@
+import { safeExternalUrl } from "@/lib/safe-external-url";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 
 type PublicEntitySourceRpcRow = {
@@ -36,48 +37,59 @@ export async function getPublicEntitySources(
 
   const supabase = getSupabaseServerClient();
 
-  const { data, error } = await supabase.rpc(
-    "get_public_entity_sources",
-    {
-      target_entity_types: entityTypes,
-      target_entity_ids: entityIds,
-    },
-  );
+  let result;
+  try {
+    result = await supabase.rpc(
+      "get_public_entity_sources",
+      {
+        target_entity_types: entityTypes,
+        target_entity_ids: entityIds,
+      },
+    );
+  } catch {
+    // Source availability must not prevent the parent content from rendering.
+    console.error("[public-source-links] lookup unavailable");
+    return [];
+  }
+  const { data, error } = result;
 
   if (error) {
     console.error(
       "[public-source-links] lookup failed",
-      error.message,
     );
     return [];
   }
 
-  const rows = (data ?? []) as PublicEntitySourceRpcRow[];
+  if (!Array.isArray(data)) return [];
+  const rows = data as Array<PublicEntitySourceRpcRow | null>;
 
   return rows.flatMap((row) => {
     if (
-      !row.entity_type ||
-      !row.entity_id ||
-      !row.source_id ||
-      !row.title ||
-      !row.url ||
-      !row.source_type
+      !row ||
+      typeof row.entity_type !== "string" || !row.entity_type ||
+      typeof row.entity_id !== "string" || !row.entity_id ||
+      typeof row.source_id !== "string" || !row.source_id ||
+      typeof row.title !== "string" || !row.title ||
+      typeof row.url !== "string" || !row.url ||
+      typeof row.source_type !== "string" || !row.source_type
     ) {
       return [];
     }
 
+    const url = safeExternalUrl(row.url);
+    if (!url) return [];
     return [{
       entityType: row.entity_type,
       entityId: row.entity_id,
       sourceId: row.source_id,
-      relationship: row.relationship ?? "supporting",
+      relationship: typeof row.relationship === "string" ? row.relationship : "supporting",
       title: row.title,
-      url: row.url,
+      url,
       sourceType: row.source_type,
-      publisher: row.publisher,
-      publishedAt: row.published_at,
-      accessedAt: row.accessed_at,
-      reliabilityLevel: row.reliability_level,
+      publisher: typeof row.publisher === "string" ? row.publisher : null,
+      publishedAt: typeof row.published_at === "string" ? row.published_at : null,
+      accessedAt: typeof row.accessed_at === "string" ? row.accessed_at : null,
+      reliabilityLevel: typeof row.reliability_level === "string" ? row.reliability_level : null,
     }];
   });
 }

@@ -61,3 +61,6 @@
 .playerMark { border-radius: 50%; background: var(--info-bg); color: var(--text); border: 1px solid var(--border-strong); }
 .searchPanel { border-radius: 6px; }
 @media (prefers-reduced-motion: reduce) { .playerCard { transition: none; }.playerCard:hover { transform: none; } }
+
+.playerPage :is(h1, h2, p, li, summary) { overflow-wrap: anywhere; }
+.playerPage details p { white-space: pre-line; }

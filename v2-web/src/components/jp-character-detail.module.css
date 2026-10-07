@@ -33,7 +33,7 @@
 .group summary span { flex: 0 0 auto; color: var(--muted); }
 .moveList { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; padding-bottom: 12px; }
 .moveCard { min-width: 0; padding: 14px; border: 1px solid var(--border); background: var(--surface); }
-.moveHead { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 180px); gap: 12px; }
+.moveHead { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 12px; }
 .moveHead > * { min-width: 0; }
 .moveHead h3 { margin: 4px 0; }
 .moveHead p { margin: 6px 0; color: var(--muted); font-size: .82rem; }
@@ -81,7 +81,7 @@
 }
 @media (max-width: 520px) {
   .duo, .facts, .sources { grid-template-columns: minmax(0, 1fr); }
-  .moveHead { grid-template-columns: minmax(0, 1fr) minmax(0, 110px); }
+  .moveHead { grid-template-columns: minmax(0, 1fr); }
   .entry dl { grid-template-columns: minmax(0, 1fr); }
   .rangeList article { grid-template-columns: minmax(0, 1fr); }
   .rangeList p { grid-column: 1; }
@@ -97,3 +97,6 @@
  .chips { margin-block: 10px; }
  .hero :global(.user-tool-actions) { flex-wrap: wrap; gap: 8px; }
 }
+
+@media (min-width: 761px) and (max-width: 1100px) { .moveHead { grid-template-columns: minmax(0, 1fr) minmax(0, 360px); } }
+@media (max-width: 760px) { .moveHead { grid-template-columns: minmax(0, 1fr); } .motion { width: 100%; } }
