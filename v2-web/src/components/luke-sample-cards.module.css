@@ -1,0 +1,7 @@
+.section { min-width: 0; scroll-margin-top: 90px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.grid > * { min-width: 0; overflow-wrap: anywhere; }
+.grid p { overflow-wrap: anywhere; }
+@media (max-width: 760px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+
+.motion { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; object-fit: contain; border-radius: 11px; }

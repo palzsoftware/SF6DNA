@@ -1,3 +1,4 @@
+import { LukeSampleCards } from "@/components/luke-sample-cards";
 import { publicPageMetadata } from "@/lib/public-page-metadata";
 import Image from "next/image";
 import Link from "next/link";
@@ -120,7 +121,7 @@ export default async function CharacterPage({
   searchParams,
 }: {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ preview?: string | string[] }>;
+  searchParams: Promise<{ preview?: string | string[]; sample?: string | string[] }>;
 }) {
   const [{ slug }, query] = await Promise.all([params, searchParams]);
   const previewToken = process.env.VERCEL_ENV === "production" ? null : normalizeDevicePreviewToken(query.preview);
@@ -255,6 +256,8 @@ export default async function CharacterPage({
           </Link>
         ))}
       </section> : null}
+
+      <LukeSampleCards slug={character.slug} requested={query.sample} environment={process.env.VERCEL_ENV} />
 
       <CharacterTabs slug={character.slug} active="overview" previewToken={previewToken} pilotOverview={Boolean(pilotBundle && pilotProfile)} />
 

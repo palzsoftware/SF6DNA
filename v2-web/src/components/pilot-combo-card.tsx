@@ -38,6 +38,8 @@ export type PilotComboCardData = {
     type: "gif" | "webp" | "video";
     url: string;
     posterUrl?: string | null;
+    loop?: boolean;
+    caption?: string | null;
   } | null;
 };
 
@@ -85,9 +87,11 @@ function toggleStoredId(key: string, id: string) {
 export function PilotComboCard({
   combo,
   previewToken,
+  sample = false,
 }: {
   combo: PilotComboCardData;
   previewToken?: string | null;
+  sample?: boolean;
 }) {
   const [favorite, setFavorite] = useState(false);
   const [training, setTraining] = useState(false);
@@ -95,12 +99,13 @@ export function PilotComboCard({
   const sourceUrl = safeExternalUrl(combo.sourceUrl);
 
   useEffect(() => {
+    if (sample) return;
     const frame = window.requestAnimationFrame(() => {
       setFavorite(readIds(FAVORITE_KEY).includes(combo.id));
       setTraining(readIds(TRAINING_KEY).includes(combo.id));
     });
     return () => window.cancelAnimationFrame(frame);
-  }, [combo.id]);
+  }, [combo.id, sample]);
 
   const expandedFacts = [
     ["コマンド", displayValue(combo.command, "コマンド未確認")],
@@ -121,7 +126,7 @@ export function PilotComboCard({
       {combo.media ? (
         <div className={styles.media}>
           {combo.media.type === "video" ? (
-            <video controls preload="none" poster={combo.media.posterUrl ?? undefined}>
+            <video controls playsInline loop={combo.media.loop} muted={combo.media.loop} preload="none" poster={combo.media.posterUrl ?? undefined}>
               <source src={combo.media.url} />
             </video>
           ) : (
@@ -130,6 +135,8 @@ export function PilotComboCard({
           )}
         </div>
       ) : <div className={styles.mediaPlaceholder}><span>動作メディア</span><small>動作メディア未登録</small></div>}
+
+      {combo.media?.caption ? <p role="note">{combo.media.caption}</p> : null}
 
       <div className={styles.summaryRow}>
         <div className={styles.main}>
@@ -151,7 +158,7 @@ export function PilotComboCard({
         </div>
       </div>
 
-      <div className={styles.actions}>
+      {!sample ? <div className={styles.actions}>
         <button
           type="button"
           aria-label={`${combo.name}をお気に入り${favorite ? "から外す" : "に追加"}`}
@@ -168,7 +175,7 @@ export function PilotComboCard({
         >
           {training ? "● 練習中" : "● 練習する"}
         </button>
-      </div>
+      </div> : null}
 
       <details className={styles.details}>
         <summary>詳細を開く</summary>
@@ -189,7 +196,7 @@ export function PilotComboCard({
               </a>
             ) : <span>参考リンクなし</span>}
           </div>
-          {releaseFeatures.publicStrategyContent ? <Link href={appendDevicePreviewToken(combo.href, previewToken)}>個別ページを見る →</Link> : null}
+          {!sample && releaseFeatures.publicStrategyContent ? <Link href={appendDevicePreviewToken(combo.href, previewToken)}>個別ページを見る →</Link> : null}
         </div>
       </details>
     </article>
