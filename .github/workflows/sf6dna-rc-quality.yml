@@ -1,0 +1,60 @@
+name: SF6DNA RC quality
+
+on:
+  push:
+    branches:
+      - sf6dna-v2-chatgpt-rc-20260916
+    paths:
+      - "v2-web/**"
+      - ".github/workflows/sf6dna-rc-quality.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sf6dna-rc-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Typecheck / Lint / Test / Gates / Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: v2-web
+    env:
+      CI: "true"
+      NEXT_TELEMETRY_DISABLED: "1"
+      # CI must not access real Supabase. Vercel Preview has separate environment settings.
+      NEXT_PUBLIC_SUPABASE_URL: "https://example.invalid"
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: "ci-only-placeholder"
+    steps:
+      - name: Checkout current RC SHA
+        uses: actions/checkout@v4
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: v2-web/package-lock.json
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Release gates
+        run: npm run test:release-gates
+
+      - name: Production-mode build with CI-only placeholders
+        run: npm run build
