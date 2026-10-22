@@ -53,11 +53,20 @@ const recentUpdates = [
 ] as const;
 
 export default async function HomePage() {
-  const characters = await listCharacters();
+  let characters: Awaited<ReturnType<typeof listCharacters>> = [];
+  let characterLoadFailed = false;
+  try {
+    characters = await listCharacters();
+  } catch {
+    characterLoadFailed = true;
+  }
   const heroCharacters = pickRandomHeroCharacters(characters);
 
   return (
     <div className="site-shell page-stack lab-home">
+      {characterLoadFailed ? (
+        <p className="data-notice" role="status">キャラクター情報を読み込めませんでした。診断や練習は引き続き利用できます。</p>
+      ) : null}
       <section className="home-hero">
         <div className="home-hero__copy">
           <p className="eyebrow">SF6DNA / TRAINING LAB</p>

@@ -11,7 +11,11 @@ export async function readBoundedJson(request: Request, maxBytes: number): Promi
       if (done) break;
       total += value.byteLength;
       if (total > maxBytes) {
-        await reader.cancel();
+        try {
+          await reader.cancel();
+        } catch {
+          // Preserve the known size-limit failure if stream cancellation fails.
+        }
         throw new RequestBodyTooLargeError("Request body too large");
       }
       chunks.push(value);
