@@ -35,11 +35,12 @@ export async function loadPublicCharacterMoves(characterId: string, approval?: C
   const readiness = await Promise.all(rows.map((move) => isMovePublicReady(String(move.slug))));
   const ready = rows.filter((move, index) => move.status === "published" && readiness[index]);
   if (!ready.length) return [];
+  const includeModern = !approval && process.env.VERCEL_ENV === "preview";
   const ids = ready.map((move) => String(move.id));
   const [{ data: commands, error: commandError }, { data: frames, error: frameError }] = await Promise.all([
     supabase.from("move_commands")
       .select("id, move_id, control_scheme, command_text, numeric_notation, button_notation, condition_text, sort_order")
-      .in("move_id", ids).eq("control_scheme", "classic").order("sort_order", { ascending: true }),
+      .in("move_id", ids).in("control_scheme", includeModern ? ["classic", "modern"] : ["classic"]).order("sort_order", { ascending: true }),
     supabase.from("move_frame_data")
       .select("id, move_id, startup, active, recovery, on_hit, on_block, damage, verification_status, valid_from_patch_id, valid_to_patch_id")
       .in("move_id", ids).eq("valid_from_patch_id", patch.id)
@@ -54,11 +55,11 @@ export async function loadPublicCharacterMoves(characterId: string, approval?: C
   const officialCommands = new Set(commandSources.filter((source) => source.reliabilityLevel === "official").map((source) => source.entityId));
   const officialFrames = new Set(frameSources.filter((source) => source.reliabilityLevel === "official").map((source) => source.entityId));
   const selected = resolveReleaseCharacterMoves({ characterId, currentPatchId: String(patch.id),
-    moves: ready, commands: commands ?? [], frames: frames ?? [],
+    moves: ready, commands: (commands ?? []).filter(c => includeModern || c.control_scheme === "classic"), frames: frames ?? [], includeModern,
     gateReadyIds: new Set(ids), officialCommandIds: officialCommands, officialFrameIds: officialFrames });
   if (!approval) return selected;
   return selected.filter(move => {
-    const selectedCommands = (commands ?? []).filter(c => c.move_id === move.id && officialCommands.has(String(c.id)));
+    const selectedCommands = (commands ?? []).filter(c => c.move_id === move.id && c.control_scheme === "classic" && officialCommands.has(String(c.id)));
     const selectedFrames = (frames ?? []).filter(f => f.move_id === move.id);
     const entityIds = new Set([move.id, ...selectedCommands.map(c => String(c.id)), ...selectedFrames.map(f => String(f.id))]);
     const sources = [...moveSources, ...commandSources, ...frameSources].filter(s => entityIds.has(s.entityId))

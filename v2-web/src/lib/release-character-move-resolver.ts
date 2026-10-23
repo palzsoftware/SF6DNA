@@ -21,9 +21,9 @@ export type ReleaseFrameRow = {
  * Media absence never removes an eligible card. Ambiguous frame rows fail closed.
  */
 export function resolveReleaseCharacterMoves({ characterId, currentPatchId, moves, commands, frames,
-  gateReadyIds, officialCommandIds, officialFrameIds,
+  gateReadyIds, officialCommandIds, officialFrameIds, includeModern = false,
 }: {
-  characterId: string; currentPatchId: string;
+  characterId: string; currentPatchId: string; includeModern?: boolean;
   moves: ReleaseMoveRow[]; commands: ReleaseCommandRow[]; frames: ReleaseFrameRow[];
   gateReadyIds: Set<string>; officialCommandIds: Set<string>; officialFrameIds: Set<string>;
 }): DevicePreviewBundle["moves"] {
@@ -34,14 +34,14 @@ export function resolveReleaseCharacterMoves({ characterId, currentPatchId, move
     if (move.character_id !== characterId || move.status !== "published" || !gateReadyIds.has(move.id)
       || moveCounts.get(move.id) !== 1 || !move.slug || !move.name_ja.trim()) return [];
     const moveCommands: DevicePreviewMoveCommand[] = commands.filter(command => command.move_id === move.id
-      && command.control_scheme === "classic" && officialCommandIds.has(command.id)
+      && (command.control_scheme === "classic" || (includeModern && command.control_scheme === "modern")) && officialCommandIds.has(command.id)
       && Boolean(command.command_text?.trim() || command.numeric_notation?.trim() || command.button_notation?.trim()))
-      .map(command => ({ moveId: move.id, scheme: "classic", commandText: command.command_text,
+      .map(command => ({ moveId: move.id, scheme: command.control_scheme as "classic" | "modern", commandText: command.command_text,
         numericNotation: command.numeric_notation, buttonNotation: command.button_notation,
         conditionText: command.condition_text, sortOrder: command.sort_order }));
     const currentFrames = frames.filter(frame => frame.move_id === move.id
       && frame.valid_from_patch_id === currentPatchId && frame.valid_to_patch_id === null);
-    if (!moveCommands.length || currentFrames.length !== 1) return [];
+    if (!moveCommands.some(command => command.scheme === "classic") || currentFrames.length !== 1) return [];
     const frame = currentFrames[0];
     if (frame.verification_status !== "verified" || !officialFrameIds.has(frame.id)) return [];
     return [{ id: move.id, slug: move.slug, name: move.name_ja, moveType: move.move_type,
