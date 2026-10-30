@@ -109,6 +109,7 @@ test('fresh Home and mobile dock retain intended return routes', async () => {
     '@/lib/characters': { listCharacters: async () => [] }, '@/lib/home-hero': { pickRandomHeroCharacters: () => [] },
     '@/components/theme-selector': { ThemeSelector: () => null, AppearanceSelector: () => null },
     '@/components/mobile-dock': load('components/mobile-dock.tsx', { 'next/link': link, 'next/navigation': { usePathname: () => '/' } }),
+    '@/components/mobile-global-menu': load('components/mobile-global-menu.tsx', { 'next/navigation': { usePathname: () => '/' } }),
   };
   const Home = load('app/page.tsx', imports).default;
   const home = renderToStaticMarkup(await Home());

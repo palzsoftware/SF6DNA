@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MobileDock } from "@/components/mobile-dock";
+import { MobileGlobalMenu } from "@/components/mobile-global-menu";
 import { AppearanceSelector, ThemeSelector } from "@/components/theme-selector";
 import "./globals.css";
 import "./tools.css";
@@ -74,7 +75,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/videos">動画</Link>
               <Link href="/auth">ログイン・アカウント</Link>
             </nav>
-            <details className="mobile-global-menu" name="site-header-panels"><summary>メニュー</summary>
+            <MobileGlobalMenu>
             <nav className="site-nav" aria-label="モバイル探索メニュー">
               <Link href="/characters">キャラクター</Link>
               <Link href="/diagnosis">診断</Link>
@@ -83,7 +84,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/videos">動画</Link>
               <Link href="/auth">ログイン・アカウント</Link>
             </nav>
-            </details>
+            </MobileGlobalMenu>
             <details className="display-settings" name="site-header-panels"><summary>表示設定</summary><div className="display-settings__body"><ThemeSelector /><AppearanceSelector /></div></details>
           </div>
         </header>
