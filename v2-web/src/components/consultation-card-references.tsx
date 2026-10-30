@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Sf6CardCommand, Sf6CardRecipe } from './sf6-card-command';
 import { matchCardPayloads, type ConsultationCardPayload } from '../lib/consultation-card-payload';
 import type { Relation } from '../lib/character-consultation';
@@ -17,7 +18,7 @@ export function ConsultationCardReferences({ relations, payloads, kind = 'Move' 
       <dt>SA消費</dt><dd>{payload.localComboReference.sa_cost}</dd>
       <dt>終了時の有利時間</dt><dd>+{payload.localComboReference.end_frame}F（検証録画）</dd></dl></>}
     {payload.cardType === 'Move' ? <Sf6CardCommand input={payload.input} /> : <Sf6CardRecipe recipe={payload.recipe} />}
-    <a href={relation.href}>カードの詳細を見る</a>
+    <Link href={relation.href}>カードの詳細を見る</Link>
   </article>)}</> : <p>{kind === 'Move' ? 'おすすめの技は現在確認中です。まずは下の練習から始めましょう。' : 'おすすめのコンボは現在確認中です。まずは基本操作の練習を優先しましょう。'}</p>;
 }
 

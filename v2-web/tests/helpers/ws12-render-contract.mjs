@@ -31,7 +31,7 @@ export function makeSourceLoader(overrides = {}) {
     assert.equal((compiled.diagnostics ?? []).filter(d=>d.category===ts.DiagnosticCategory.Error).length,0,path+': syntax/transpile diagnostics');
     new Function('module','exports','require',compiled.outputText)(loadedModule,loadedModule.exports,name=>{
       if (Object.hasOwn(overrides,name)) return overrides[name];
-      if (name==='react' || name==='react/jsx-runtime') return require(name);
+      if (name==='react' || name==='react/jsx-runtime' || name==='next/link') return require(name);
       if (name.endsWith('.module.css')) return {default:new Proxy({},{get:(_,key)=>String(key)}),__esModule:true};
       if (name.startsWith('@/')) return load(name.slice(2));
       if (name.startsWith('.')) return load(posix.join(posix.dirname(path),name));
