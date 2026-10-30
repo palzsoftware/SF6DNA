@@ -7,6 +7,8 @@ import Link from "next/link";
 import { CharacterPreferenceActions } from "@/components/character-preference-actions";
 import { CharacterQuickStart } from "@/components/character-quick-start";
 import { CharacterMoveExplorer } from "@/components/character-move-explorer";
+import { moveCardAnchorId } from "@/lib/move-card-reference";
+import { projectJpSafeMoveCard } from "@/lib/jp-safe-move-reference";
 import { CharacterTabs } from "@/components/character-tabs";
 import { MoveMotionMedia } from "@/components/move-motion-media";
 import { sf6CommandSearchTerms } from "@/lib/sf6-command-tokens";
@@ -44,9 +46,10 @@ function moveSummary(value: string | null) {
   return value && !isInternalMoveNote(value) ? normalizePublicCopy(value) : null;
 }
 
-function MoveCard({ move }: { move: Move }) {
+function MoveCard({ move: sourceMove }: { move: Move }) {
+  const move = projectJpSafeMoveCard(sourceMove, process.env.VERCEL_ENV);
   const motionPresentation = selectMoveMotionMedia(move);
-  return <article className={styles.moveCard} data-move-id={move.id} data-move-slug={move.slug}>
+  return <article id={moveCardAnchorId(move.slug) ?? undefined} tabIndex={-1} className={styles.moveCard} data-move-id={move.id} data-move-slug={move.slug}>
     <div className={styles.moveHead}>
       <div><small>{move.releaseFixture ? "公開審査前" : verifiedLabel(move.frame?.verificationStatus)}</small><h3>{move.name}</h3>
         {moveSummary(move.usageSummary) ? <p>{moveSummary(move.usageSummary)}</p> : null}</div>
@@ -145,7 +148,7 @@ export function JpCharacterDetail({ character, previewToken, previewActive, bund
         </div>
         {groups.length ? <CharacterMoveExplorer groupClassName={styles.group} listClassName={styles.moveList} groups={groups.map(([type, moves]) => ({
           type, label: moveLabels[type] ?? "その他", items: moves.map(move => ({
-            id: move.id, name: move.name,
+            id: move.id, name: move.name, anchorId: moveCardAnchorId(move.slug) ?? undefined,
             commands: (move.commands ?? []).flatMap(command => sf6CommandSearchTerms(command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "")),
             content: <MoveCard move={move} />,
           })),

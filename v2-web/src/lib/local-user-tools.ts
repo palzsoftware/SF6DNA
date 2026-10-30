@@ -1,3 +1,5 @@
+import { personalStorageKey, type PersonalOwner } from "./personalization-storage";
+
 export type CharacterUseStatus = "main" | "sub" | "learning";
 
 export type RankRecord = {
@@ -23,7 +25,6 @@ export type DiagnosisHistoryRecord = {
 const FAVORITES_KEY = "sf6dna_v2_favorite_characters";
 const CHARACTER_STATUS_KEY = "sf6dna_v2_character_status";
 const RANK_HISTORY_KEY = "sf6dna_v2_rank_history";
-const DIAGNOSIS_HISTORY_KEY = "sf6dna_v2_diagnosis_history";
 
 function readJson<T>(key: string, fallback: T): T {
   if (typeof window === "undefined") return fallback;
@@ -81,17 +82,59 @@ export function deleteRankRecord(id: string) {
   writeJson(RANK_HISTORY_KEY, getRankHistory().filter((record) => record.id !== id));
 }
 
-export function getDiagnosisHistory() {
-  return readJson<DiagnosisHistoryRecord[]>(DIAGNOSIS_HISTORY_KEY, [])
-    .filter((record) => record && typeof record.id === "string" && typeof record.diagnosisSlug === "string")
-    .sort((a, b) => b.completedAt.localeCompare(a.completedAt));
+function isDiagnosisHistoryRecord(value: unknown): value is DiagnosisHistoryRecord {
+  if (!value || typeof value !== "object") return false;
+  const record = value as Partial<DiagnosisHistoryRecord>;
+  return typeof record.id === "string" && record.id.length > 0 &&
+    typeof record.diagnosisSlug === "string" && record.diagnosisSlug.length > 0 &&
+    typeof record.diagnosisTitle === "string" && typeof record.diagnosisType === "string" &&
+    typeof record.completedAt === "string" && Array.isArray(record.topResults) &&
+    record.topResults.every((item) => item && typeof item.key === "string" &&
+      typeof item.label === "string" && typeof item.score === "number" && Number.isFinite(item.score));
 }
 
-export function saveDiagnosisHistory(record: DiagnosisHistoryRecord) {
-  const current = getDiagnosisHistory();
-  writeJson(DIAGNOSIS_HISTORY_KEY, [record, ...current].slice(0, 50));
+/** Guest history is available only after auth explicitly resolves to Guest. */
+function readGuestDiagnosisHistory(owner: PersonalOwner | null): { key: string; records: DiagnosisHistoryRecord[] } | null {
+  if (owner !== "guest" || typeof window === "undefined") return null;
+  const key = personalStorageKey(owner, "diagnosis_history");
+  if (!key) return null;
+  try {
+    const raw = window.localStorage.getItem(key);
+    if (raw === null) return { key, records: [] };
+    const parsed: unknown = JSON.parse(raw);
+    if (!Array.isArray(parsed) || !parsed.every(isDiagnosisHistoryRecord)) return null;
+    return { key, records: parsed };
+  } catch {
+    return null;
+  }
 }
 
-export function deleteDiagnosisHistory(id: string) {
-  writeJson(DIAGNOSIS_HISTORY_KEY, getDiagnosisHistory().filter((record) => record.id !== id));
+/** null means Owner/read/storage failure; it must not be rendered as an empty history. */
+export function getDiagnosisHistory(owner: PersonalOwner | null): DiagnosisHistoryRecord[] | null {
+  const read = readGuestDiagnosisHistory(owner);
+  return read ? [...read.records].sort((a, b) => b.completedAt.localeCompare(a.completedAt)) : null;
+}
+
+export function saveDiagnosisHistory(owner: PersonalOwner | null, record: DiagnosisHistoryRecord): boolean {
+  if (!isDiagnosisHistoryRecord(record)) return false;
+  const current = readGuestDiagnosisHistory(owner);
+  if (!current) return false;
+  try {
+    window.localStorage.setItem(current.key, JSON.stringify([record, ...current.records.filter(item => item.id !== record.id)].slice(0, 50)));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export function deleteDiagnosisHistory(owner: PersonalOwner | null, id: string): boolean {
+  if (typeof id !== "string" || !id) return false;
+  const current = readGuestDiagnosisHistory(owner);
+  if (!current) return false;
+  try {
+    window.localStorage.setItem(current.key, JSON.stringify(current.records.filter((record) => record.id !== id)));
+    return true;
+  } catch {
+    return false;
+  }
 }

@@ -1,8 +1,14 @@
+import { extractVideoLearningIntent } from "@/lib/video-learning";
+import { extractVideoTournamentIntent } from "@/lib/video-event-aliases";
+
 export type VideoIntent = {
+  learningTopics?: Set<string>;
+  targetRanks?: Set<string>;
   characters: Set<string>;
   players: Set<string>;
   categories: Set<string>;
   events: Set<string>;
+  eventYears?: Set<string>;
   levels: Set<string>;
   modes: Set<string>;
   controls: Set<string>;
@@ -11,16 +17,12 @@ export type VideoIntent = {
   suggestions: string[];
 };
 
-type AliasKind = Exclude<keyof VideoIntent, "remainingTerms" | "suggestions">;
+type AliasKind = Exclude<keyof VideoIntent, "remainingTerms" | "suggestions" | "eventYears" | "learningTopics" | "targetRanks">;
 type Alias = { kind: AliasKind; id: string; aliases: string[] };
 
 export const VIDEO_INTENT_ALIASES: Alias[] = [
   { kind: "characters", id: "jp", aliases: ["jp", "ジェイピー", "じぇいぴー"] },
   { kind: "characters", id: "ryu", aliases: ["ryu", "リュウ", "りゅう"] },
-  { kind: "events", id: "capcom_cup", aliases: ["capcom cup", "カプコンカップ", "cc"] },
-  { kind: "events", id: "sfl", aliases: ["sfl"] },
-  { kind: "events", id: "evo", aliases: ["evo"] },
-  { kind: "events", id: "world_warrior", aliases: ["world warrior", "ワールドウォリアー"] },
   { kind: "categories", id: "torikore", aliases: ["とりこれ", "トリコレ"] },
   { kind: "categories", id: "combo", aliases: ["コンボ", "combo"] },
   { kind: "categories", id: "setplay", aliases: ["セットプレイ", "setplay"] },
@@ -44,13 +46,13 @@ export const VIDEO_INTENT_ALIASES: Alias[] = [
   { kind: "players", id: "tokido", aliases: ["ときど", "tokido"] },
   { kind: "players", id: "ryusei", aliases: ["りゅうせい", "ryusei"] },
   { kind: "players", id: "kisaragi_ren", aliases: ["如月れん"] },
-  { kind: "levels", id: "beginner", aliases: ["初心者", "beginner"] },
-  { kind: "levels", id: "intermediate", aliases: ["中級者", "intermediate"] },
-  { kind: "levels", id: "advanced", aliases: ["上級者", "advanced"] },
+  { kind: "levels", id: "beginner", aliases: ["初心者向け", "初心者講座", "初心者", "入門", "beginner"] },
+  { kind: "levels", id: "intermediate", aliases: ["中級者向け", "中級者", "intermediate"] },
+  { kind: "levels", id: "advanced", aliases: ["上級者向け", "上級者", "advanced"] },
   { kind: "modes", id: "match", aliases: ["試合", "match", "対戦"] },
   { kind: "modes", id: "guide", aliases: ["解説", "guide"] },
-  { kind: "controls", id: "classic", aliases: ["classic", "クラシック"] },
-  { kind: "controls", id: "modern", aliases: ["modern", "モダン"] },
+  { kind: "controls", id: "classic", aliases: ["classic", "クラシック操作", "クラシック向け", "クラシック"] },
+  { kind: "controls", id: "modern", aliases: ["modern", "モダン操作", "モダン向け", "モダン"] },
   { kind: "languages", id: "ja", aliases: ["日本語", "japanese"] },
   { kind: "languages", id: "en", aliases: ["英語", "english"] },
 ];
@@ -77,7 +79,13 @@ export function parseVideoIntent(input: string): VideoIntent {
     levels: new Set(), modes: new Set(), controls: new Set(), languages: new Set(),
     remainingTerms: [], suggestions: [],
   };
-  let rest = ` ${normalizeIntentText(input)} `;
+  const learning = extractVideoLearningIntent(input);
+  result.learningTopics = learning.topics;
+  result.targetRanks = learning.targetRanks;
+  const tournament = extractVideoTournamentIntent(learning.remainingText);
+  result.events = tournament.events;
+  result.eventYears = tournament.years;
+  let rest = ` ${normalizeIntentText(tournament.remainingText)} `;
   const aliases = VIDEO_INTENT_ALIASES.flatMap((entry) => entry.aliases.map((alias) => ({ ...entry, alias: normalizeIntentText(alias) })))
     .sort((a, b) => b.alias.length - a.alias.length);
   for (const entry of aliases) {

@@ -51,34 +51,84 @@ test('held character routes keep metadata gates closed', async () => {
 });
 
 test('favorite action exposes character and changing action while preserving storage handler', () => {
-  const slots = []; let cursor = 0; let effect;
-  const react = { ...React, useMemo: f => f(), useEffect: f => { effect = f; }, useState: initial => {
-    const i = cursor++; if (!(i in slots)) slots[i] = initial;
-    return [slots[i], next => { slots[i] = typeof next === 'function' ? next(slots[i]) : next; }];
-  } };
+  const slots = [];
+  let cursor = 0;
+  let effect;
+  const react = {
+    ...React,
+    useMemo: f => f(),
+    useEffect: f => { effect = f; },
+    useState: initial => {
+      const i = cursor++;
+      if (!(i in slots)) slots[i] = initial;
+      return [slots[i], next => {
+        slots[i] = typeof next === 'function' ? next(slots[i]) : next;
+      }];
+    },
+  };
   const writes = [];
   const { MyCharacterManager } = load('components/my-character-manager.tsx', {
-    react, 'next/link': { __esModule: true, default: 'a' },
-    '@/lib/local-user-tools': { getCharacterStatuses: () => ({}), getFavoriteCharacterSlugs: () => [], setFavoriteCharacter: (...args) => writes.push(args) },
+    react,
+    'next/link': { __esModule: true, default: 'a' },
+    '@/lib/use-personalization-owner': {
+      usePersonalizationOwner: () => ({
+        state: { status: 'ready', owner: 'guest', version: 1 },
+        isCurrent: () => true,
+      }),
+    },
+    '@/lib/personalization-storage': {
+      getCharacterStatuses: owner => {
+        assert.equal(owner, 'guest');
+        return {};
+      },
+      getFavoriteCharacterSlugs: owner => {
+        assert.equal(owner, 'guest');
+        return [];
+      },
+      setFavoriteCharacter: (...args) => {
+        writes.push(args);
+        return true;
+      },
+      setCharacterStatus: () => true,
+    },
   });
   const props = { characters: [{ id: 'ryu', slug: 'ryu', name: 'リュウ' }] };
-  const render = () => { cursor = 0; return MyCharacterManager(props); };
+  const render = () => {
+    cursor = 0;
+    const outer = MyCharacterManager(props);
+    assert.equal(typeof outer.type, 'function');
+    return outer.type(outer.props);
+  };
   const find = tree => {
     if (Array.isArray(tree)) return tree.map(find).find(Boolean);
     if (!React.isValidElement(tree)) return null;
     return tree.type === 'button' ? tree : find(tree.props.children);
   };
   const previous = globalThis.window;
-  globalThis.window = { requestAnimationFrame: f => { f(); return 1; }, cancelAnimationFrame() {} };
+  globalThis.window = {
+    requestAnimationFrame: f => { f(); return 1; },
+    cancelAnimationFrame() {},
+  };
   try {
-    render(); effect();
-    let button = find(render()); assert.equal(button.props['aria-label'], 'リュウをお気に入りに追加'); assert.equal(button.props['aria-pressed'], false);
-    button.props.onClick(); button = find(render());
-    assert.equal(button.props['aria-label'], 'リュウをお気に入りから削除'); assert.equal(button.props['aria-pressed'], true);
-    button.props.onClick(); assert.deepEqual(writes, [['ryu',true],['ryu',false]]);
-  } finally { globalThis.window = previous; }
+    render();
+    assert.equal(typeof effect, 'function');
+    effect();
+    let button = find(render());
+    assert.equal(button.props['aria-label'], 'リュウをお気に入りに追加');
+    assert.equal(button.props['aria-pressed'], false);
+    button.props.onClick();
+    button = find(render());
+    assert.equal(button.props['aria-label'], 'リュウをお気に入りから削除');
+    assert.equal(button.props['aria-pressed'], true);
+    button.props.onClick();
+    assert.deepEqual(writes, [
+      ['guest', 'ryu', true],
+      ['guest', 'ryu', false],
+    ]);
+  } finally {
+    globalThis.window = previous;
+  }
 });
-
 test('Home return journey describes the character-only favorites destination', async () => {
   const { default: HomePage } = load('app/page.tsx', {
     '@/lib/characters': { listCharacters: async () => [] },

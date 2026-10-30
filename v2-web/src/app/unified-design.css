@@ -1,0 +1,120 @@
+/* SF6DNA owner-rebased presentation candidate, 2026-10-30.
+ * Staged scope: HOME, Player, Video. Shared shell and other owners stay intact.
+ * Activation is a separate layout diff. Existing theme tokens remain authoritative.
+ */
+body[data-ui="unified-20261030"] {
+  --ui-card-radius: 16px;
+  --ui-field-radius: 10px;
+  --ui-accent-soft: color-mix(in srgb, var(--accent) 9%, var(--surface));
+}
+body[data-ui="unified-20261030"] :is(.lab-home,.experience-profile,.experience-video) .eyebrow {
+  color: var(--accent); font-size: .7rem; letter-spacing: .16em; font-weight: 800;
+}
+body[data-ui="unified-20261030"] .lab-home .home-hero {
+  border-radius: var(--ui-card-radius); border-top-color: var(--accent); box-shadow: none;
+  background: linear-gradient(125deg, var(--ui-accent-soft), var(--surface) 70%);
+}
+body[data-ui="unified-20261030"] .lab-home .home-hero h1 {
+  font-size: clamp(2rem,4.5vw,3.4rem); line-height: 1.25; letter-spacing: -.045em;
+}
+body[data-ui="unified-20261030"] .lab-home :is(.daily-card,.home-public-link,.feature-card) {
+  border-radius: var(--ui-card-radius); box-shadow: none; border-color: var(--border);
+  background: var(--surface);
+}
+body[data-ui="unified-20261030"] .lab-home .daily-card { border-inline-start-color: var(--accent); }
+body[data-ui="unified-20261030"] .lab-home .daily-card__icon-slot { color: var(--accent); }
+body[data-ui="unified-20261030"] :is(.lab-home,.experience-profile,.experience-video) :is(.button-primary,.button-secondary) {
+  min-height: 44px; border-radius: var(--ui-field-radius); font-weight: 750;
+}
+/* Do not recolor disabled controls or suppress save/error messages. */
+body[data-ui="unified-20261030"] :is(.lab-home,.experience-profile,.experience-video) .button-primary:not(:disabled) {
+  color: var(--accent-contrast); background: var(--accent); border-color: var(--accent);
+}
+body[data-ui="unified-20261030"] :is(.lab-home,.experience-profile,.experience-video) .button-secondary:not(:disabled) {
+  color: var(--text); background: var(--surface); border-color: var(--border);
+}
+body[data-ui="unified-20261030"] .experience-profile .info-panel {
+  border-radius: var(--ui-card-radius); box-shadow: none; border-color: var(--border);
+}
+body[data-ui="unified-20261030"] .experience-video .video-card-grid {
+  display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px;
+}
+body[data-ui="unified-20261030"] :is(.experience-video,.experience-profile) .video-card {
+  min-width: 0; overflow: hidden; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--ui-card-radius);
+  box-shadow: none; display: flex; flex-direction: column;
+}
+body[data-ui="unified-20261030"] :is(.experience-video,.experience-profile) .video-card__thumbnail {
+  aspect-ratio: 16/9; background: var(--surface-strong);
+}
+body[data-ui="unified-20261030"] :is(.experience-video,.experience-profile) .video-card__thumbnail img { object-fit: cover; }
+body[data-ui="unified-20261030"] :is(.experience-video,.experience-profile) .video-card__body {
+  flex: 1; padding: 20px; gap: 12px;
+}
+/* Current VideoCard uses h2; the original demo-only h3 selector missed it. */
+body[data-ui="unified-20261030"] :is(.experience-video,.experience-profile) .video-card h2 {
+  font-size: 1.08rem; line-height: 1.55; overflow-wrap: anywhere;
+}
+body[data-ui="unified-20261030"] :is(.experience-video,.experience-profile) .video-card__actions {
+  margin-top: auto; padding-top: 14px; border-top: 1px solid var(--border);
+  gap: 8px; flex-wrap: wrap;
+}
+body[data-ui="unified-20261030"] :is(.experience-video,.experience-profile) .video-card__relations li {
+  color: var(--text-secondary); background: var(--surface-strong);
+  border: 1px solid var(--border); border-radius: 6px;
+}
+body[data-ui="unified-20261030"] :is(.lab-home,.experience-profile,.experience-video) :is(button,a,input,select,textarea,summary):focus-visible {
+  outline: 3px solid var(--focus-ring,var(--accent)); outline-offset: 3px;
+}
+@media(max-width:1000px) {
+  body[data-ui="unified-20261030"] .experience-video .video-card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:520px) {
+  body[data-ui="unified-20261030"] .experience-video .video-card-grid { grid-template-columns: minmax(0,1fr); }
+}
+@media(prefers-reduced-motion:reduce) {
+  body[data-ui="unified-20261030"] :is(.lab-home,.experience-profile,.experience-video) :is(.daily-card,.feature-card,.video-card) {
+    transition: none; animation: none; transform: none;
+  }
+}
+
+/* Home discovery links keep the shared Light/Dark and appearance color roles. */
+body[data-ui="unified-20261030"] .lab-home .home-learn-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;
+}
+body[data-ui="unified-20261030"] .lab-home .home-learn-card {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+  min-width: 0; padding: clamp(20px, 3vw, 32px); border: 1px solid var(--border);
+  border-radius: var(--ui-card-radius); background: var(--surface); color: var(--text);
+  text-decoration: none; overflow-wrap: anywhere;
+}
+body[data-ui="unified-20261030"] .lab-home .home-learn-card:is(:hover, :focus-visible) {
+  border-color: var(--accent); background: var(--surface-hover);
+}
+body[data-ui="unified-20261030"] .lab-home .home-learn-icon {
+  display: grid; place-items: center; width: 44px; height: 44px;
+  border-radius: 10px; background: var(--ui-accent-soft); color: var(--accent);
+}
+body[data-ui="unified-20261030"] .lab-home .home-learn-card h3 {
+  margin: 0; font-size: clamp(1.1rem, 2vw, 1.45rem); line-height: 1.5;
+}
+body[data-ui="unified-20261030"] .lab-home .home-learn-card p {
+  margin: 0; color: var(--text-secondary); line-height: 1.75;
+}
+body[data-ui="unified-20261030"] .lab-home .home-learn-action {
+  display: inline-flex; align-items: center; justify-content: space-between; gap: 16px;
+  width: 100%; min-height: 44px; margin-top: auto; padding-top: 12px;
+  border-top: 1px solid var(--border); color: var(--link); font-weight: 750;
+}
+body[data-ui="unified-20261030"] .lab-home .experience-explore .home-public-nav {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 720px) {
+  body[data-ui="unified-20261030"] .lab-home .experience-explore .home-public-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  body[data-ui="unified-20261030"] .lab-home .home-learn-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 420px) {
+  body[data-ui="unified-20261030"] .lab-home .experience-explore .home-public-nav { grid-template-columns: minmax(0, 1fr); }
+}

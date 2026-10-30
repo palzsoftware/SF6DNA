@@ -1,3 +1,4 @@
+import {renderUnified,assertUniqueAnchors} from './helpers/character-unified-ssr.mjs';
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
@@ -13,13 +14,19 @@ const slugs = [
 ];
 
 test("all 31 preview routes share the audited copy and layout component", () => {
-  const route = read("src/lib/character-detail-route.ts");
   const page = read("src/app/characters/[slug]/page.tsx");
-  assert.equal(slugs.length, 31);
-  assert.equal(new Set(slugs).size, 31);
-  for (const slug of slugs) assert.match(route, new RegExp(`"${slug}"`));
-  assert.match(page, /<CharacterDetailPilot/);
-  assert.match(route, /process\.env\.VERCEL_ENV === "preview"/);
+  assert.equal(slugs.length, 31); assert.equal(new Set(slugs).size, 31);
+  assert.match(page, /<CharacterUnifiedPage/);
+  for (const slug of slugs) {
+    const html = renderUnified(slug);
+    assert.match(html, /data-character-template="unified-v1"/);
+    assert.match(html, new RegExp(`data-character-slug="${slug}"`));
+    assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
+    assert.equal((html.match(/aria-label="キャラクターページ内の移動"/g) ?? []).length, 1);
+    for (const heading of ['基本情報','技カード','使用Player','関連Video','情報源']) assert.ok(html.includes(heading));
+    assertUniqueAnchors(assert, html);
+  }
+
 });
 
 test("public terminology normalization covers the approved Japanese terms", () => {

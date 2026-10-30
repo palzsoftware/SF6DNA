@@ -1,3 +1,4 @@
+import { LukeCanonicalComboReference } from "./luke-canonical-combo-reference";
 import Link from "next/link";
 import { CharacterGamePlan, CharacterRangeGuide } from "@/components/character-game-guide";
 import { CharacterQuickStart } from "@/components/character-quick-start";
@@ -19,6 +20,7 @@ import { presentSource } from "@/lib/source-presentation";
 import { isInternalMoveNote, normalizePublicCopy } from "@/lib/public-copy";
 import { CHARACTER_VIDEO_GROUP_LABELS, CHARACTER_VIDEO_GROUP_ORDER, classifyCharacterVideo } from "@/lib/character-learning-structure";
 import { releaseFeatures } from "@/lib/release-features";
+import { moveCardAnchorId } from "@/lib/move-card-reference";
 import type { SourceReference } from "@/types/character";
 import type { PlayerDetail } from "@/types/player";
 import styles from "./character-detail-pilot.module.css";
@@ -163,13 +165,13 @@ export function CharacterDetailPilot({
             const motionPresentation = selectMoveMotionMedia(move);
             const isThrow = move.moveType === "throw";
             return {
-              id: move.id, name: move.name,
+              id: move.id, name: move.name, anchorId: moveCardAnchorId(move.slug) ?? undefined,
               commands: (move.commands ?? []).flatMap(command => {
                 const input = command.commandText ?? command.numericNotation ?? command.buttonNotation ?? "";
                 return [...moveCommandSearchTerms(input), ...sf6CommandSearchTerms(input)];
               }),
               schemes: [...new Set((move.commands ?? []).map(command => command.scheme).filter(Boolean))],
-              content: <article className={styles.moveRow} role="row" key={move.id} data-move-id={move.id} data-move-slug={move.slug} data-move-type={move.moveType ?? "other"} data-has-media={Boolean(motionPresentation.media)}>
+              content: <article id={moveCardAnchorId(move.slug) ?? undefined} tabIndex={-1} className={styles.moveRow} role="row" key={move.id} data-move-id={move.id} data-move-slug={move.slug} data-move-type={move.moveType ?? "other"} data-has-media={Boolean(motionPresentation.media)}>
                     <div className={styles.moveIdentity} role="cell">
                       <span>{move.releaseFixture ? "DB収録データ・公開審査前" : verificationLabel(move.frame?.verificationStatus ?? null)}</span>
                       <h3>{move.name}</h3>
@@ -205,6 +207,8 @@ export function CharacterDetailPilot({
           }),
         }))} /> : <div className="empty-state"><p>技データは未掲載です。</p></div>}
       </section>
+
+      <LukeCanonicalComboReference characterSlug={characterSlug} />
 
       {!preRelease ? <section className={styles.comboSection} id="pilot-combos" aria-labelledby="pilot-combos-heading">
         <div className={styles.subheading}><div><p className="eyebrow">コンボ</p><h2 id="pilot-combos-heading">まず確認するコンボ</h2>{comboSamples.length ? <p>用途と消費ゲージを比較。気になるコンボの詳細を確認。</p> : null}</div>{strategyListAvailable ? <Link href={appendDevicePreviewToken(`/characters/${characterSlug}/combos`, previewToken)}>コンボ一覧を見る →</Link> : null}</div>

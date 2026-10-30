@@ -41,9 +41,23 @@ const resumeLinks = [
 
 const browseLinks = [
   ["SEARCH", "検索", "サイト内を検索", "/search"],
-  ["PLAYER", "プレイヤー", "参考プレイヤーを探す", "/players"],
   ["CHARACTER", "キャラクター", "特徴と技を見る", "/characters"],
   ["SOURCE", "情報源", "出典と掲載方針", "/sources"],
+] as const;
+
+const learnLinks = [
+  {
+    phase: "PLAYER ARCHIVE", icon: "player", href: "/players",
+    title: "憧れのプレイから、ヒントを。",
+    description: "名前・所属・使用キャラから探せるプレイヤー図鑑。",
+    action: "プレイヤー図鑑へ",
+  },
+  {
+    phase: "VIDEO LIBRARY", icon: "video", href: "/videos",
+    title: "今、見たい動画にたどり着く。",
+    description: "キャラクターや目的で絞り込み、見たいものを整理。",
+    action: "動画リストへ",
+  },
 ] as const;
 
 const recentUpdates = [
@@ -64,8 +78,8 @@ export default async function HomePage() {
 
   return (
     <div className="site-shell page-stack lab-home">
-      {characterLoadFailed ? (
-        <p className="data-notice" role="status">キャラクター情報を読み込めませんでした。診断や練習は引き続き利用できます。</p>
+      {characterLoadFailed || characters.length === 0 ? (
+        <p className="data-notice" role="status">キャラクター情報は現在表示できません。</p>
       ) : null}
       <section className="home-hero">
         <div className="home-hero__copy">
@@ -119,6 +133,24 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <section className="experience-learn" aria-labelledby="learn-title">
+        <div className="section-heading">
+          <h2 id="learn-title">見つけて、学ぶ。</h2>
+          <p>気になるプレイヤーや動画から、次の一歩へ。</p>
+        </div>
+        <div className="home-learn-grid">
+          {learnLinks.map((item) => (
+            <Link className="home-learn-card" href={item.href} key={item.href}>
+              <span className="home-learn-icon" aria-hidden="true"><VisualIcon kind={item.icon} /></span>
+              <span className="eyebrow">{item.phase}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <span className="home-learn-action">{item.action}<span aria-hidden="true">→</span></span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section className="experience-continue" aria-labelledby="resume-title">
         <div className="section-heading">
           <h2 id="resume-title">続きから</h2>
@@ -162,7 +194,6 @@ export default async function HomePage() {
         </nav>
       </section>
 
-      <section className="experience-watch" aria-labelledby="watch-title"><div><p className="eyebrow">WATCH</p><h2 id="watch-title">今日は、動画から学ぶ。</h2><p>気になるキャラクターやプレイヤーで絞って、攻略・対戦動画へ。</p></div><Link className="button-primary" href="/videos">動画を探す</Link><span className="experience-play" aria-hidden="true">▶</span></section>
 
       <section className="experience-updates" aria-labelledby="updates-title">
         <div className="section-heading">

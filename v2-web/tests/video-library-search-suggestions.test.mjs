@@ -1,3 +1,4 @@
+import { assertVideoPreferenceCard } from './helpers/video-preference-card-contract.mjs';
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
@@ -15,13 +16,13 @@ test("video library supports scalable display, AND groups, OR values and request
   assert.match(component, /プレイヤー（1P \/ 2P）/);
   assert.match(component, /キャラクター（1P \/ 2P）/);
   assert.match(component, /操作タイプ/);
-  assert.match(component, /カテゴリ/);
-  assert.match(component, /ガイド \/ 対戦/);
+  assert.match(component, /内容・技術/);
+  assert.match(component, /動画の種類/);
   assert.match(component, /言語/);
   assert.match(component, /お気に入り優先/);
   assert.match(component, /未視聴優先/);
   assert.match(component, /短い順/);
-  assert.match(logic, /includesAny\(video\.events, filters\.events\)/);
+  assert.match(logic, /videoMatchesRelationFilters\(video, filters\)/);
   assert.match(logic, /values\.some\(\(value\) => selected\.has\(value\)\)/);
   assert.match(logic, /preferenceMatches/);
   assert.match(logic, /\.some\(Boolean\)/);
@@ -36,11 +37,11 @@ test("video preferences stay local and reversible while Character V2.1 links to 
   ]);
   assert.match(preferences, /sf6dna:favorite-videos:v1/);
   assert.match(preferences, /sf6dna:watched-videos:v1/);
-  assert.match(card, /aria-pressed=\{favorite\}/);
-  assert.match(card, /aria-pressed=\{watched\}/);
+  assertVideoPreferenceCard('favorite');
+  assert.match(card, /useOwnedVideoPreferences/);
   assert.match(card, /navigator\.share/);
   assert.match(card, /navigator\.clipboard\.writeText/);
-  assert.match(globalPage, /<VideoLibrary videos=\{videos\}/);
+  assert.match(globalPage, /<VideoLibrary videos=\{result\.items\}/);
   assert.match(pilot, /uniqueCharacterVideos\(videos\)/);
   assert.match(pilot, /`\/characters\/\$\{characterSlug\}\/videos`/);
 });

@@ -1,3 +1,4 @@
+import type { PlayerArchiveDisplay } from "@/lib/player-archive-display";
 import type { PlayerProfileIntake } from "@/lib/player-profile-contract";
 
 export type PlayerSummary = {
@@ -38,6 +39,7 @@ export type PlayerTournamentResult = {
 };
 
 export type PlayerDetail = PlayerSummary & {
+  archiveDisplay?: PlayerArchiveDisplay;
   // Optional local/evidence intake; legacy DB columns do not imply current status.
   profileIntake?: PlayerProfileIntake;
   realName: string | null;

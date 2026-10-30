@@ -18,7 +18,7 @@ function load(file) {
     if (name === "@/lib/device-preview") return { appendDevicePreviewToken: path => path };
     if (name === "@/lib/release-features") return { releaseFeatures: { publicStrategyContent: false } };
     if (name.startsWith("@/lib/")) return load(`lib/${name.slice(6)}.ts`);
-    if (name.startsWith("@/components/")) return load(`components/${name.slice(13)}.tsx`);
+    if (name.startsWith("@/components/")) return load(`components/${name.slice(13)}` + (existsSync(new URL(`../src/components/${name.slice(13)}.tsx`, import.meta.url)) ? ".tsx" : ".ts"));
     if (name.startsWith("@/data/")) return { __esModule: true, default: JSON.parse(readFileSync(new URL(`../src/data/${name.slice(7)}`, import.meta.url), "utf8")) };
     if (name.startsWith(".")) {
       const base = path.posix.join(path.posix.dirname(file), name);
@@ -45,16 +45,20 @@ test("explicit QA route renders exactly two sample cards with readable input and
     assert.equal((html.match(/<article\b/g) ?? []).length, 2);
     assert.equal((html.match(/<video\b/g) ?? []).length, 2);
     assert.equal((html.match(/loop=""/g) ?? []).length, 2);
-    for (const text of ["ノーズブレイカー", "しゃがみ中K始動", "Classic", "Modern", "実機確認待ち", "参考映像", "レシピとの対応"]) assert.ok(html.includes(text), text);
-    assert.doesNotMatch(html, /お気に入り|練習する|個別ページを見る/);
+    for (const text of ["ノーズブレイカー", "しゃがみ中K始動", "Classic", "Modern", "確認中", "参考映像", "別録画"]) assert.ok(html.includes(text), text);
+    assert.doesNotMatch(html, /お気に入り|個別ページを見る/);
   }
 });
 
 test("unknown damage, meter, frame and Modern input are not synthesized", () => {
-  for (const key of ["damage", "drive", "sa", "difficulty"]) assert.equal(data.lukeComboSample[key], null);
+  const canonical = load("lib/luke-canonical-combo.ts").lukeCanonicalCombo;
+  for (const [key, source] of [["id", "combo_id"], ["command", "raw_recipe"], ["damage", "damage"], ["drive", "drive_cost"], ["sa", "sa_cost"], ["difficulty", "difficulty"], ["patch", "patch"]]) assert.equal(data.lukeComboSample[key], canonical[source]);
+  assert.equal(data.lukeComboSample.media.url, canonical.media.clean.path);
+  assert.equal(data.lukeComboSample.difficulty, null);
+  assert.equal(data.lukeComboSample.patch, null);
   for (const key of ["modern", "frame", "damage"]) assert.equal(data.lukeMoveSample[key], null);
   assert.equal(data.lukeComboSample.verificationStatus, "review_required");
-  assert.doesNotMatch(render("preview"), /ダメージ<\/small><strong>0|ドライブ 0|SA 0/);
+  assert.doesNotMatch(render("preview"), /ダメージ<\/small><strong>0/);
 });
 
 test("move identity and Classic input agree with existing fixture and reviewed media evidence", () => {
@@ -72,12 +76,12 @@ test("move identity and Classic input agree with existing fixture and reviewed m
 test("sample assets exist; ambiguous GIF segmentation is not connected", () => {
   for (const url of [data.lukeMoveSample.media.mediaUrl, data.lukeMoveSample.media.posterUrl, data.lukeComboSample.media.url, data.lukeComboSample.media.posterUrl]) assert.ok(existsSync(new URL(`../public${url}`, import.meta.url)), url);
   assert.doesNotMatch(render("preview"), /crouching_mp_candidate|standing_mp_candidate/);
-  assert.match(data.lukeComboSample.media.caption, /対応.*実機確認待ち/);
+  assert.match(data.lukeComboSample.media.caption, /別録画.*Evidence.*転用していません.*確認中/);
 });
 
 test("route attachment preserves public strategy and publication registry boundaries", () => {
   const route = readFileSync(new URL("../src/app/characters/[slug]/page.tsx", import.meta.url), "utf8");
-  assert.match(route, /<LukeSampleCards slug=\{character\.slug\} requested=\{query\.sample\} environment=\{process\.env\.VERCEL_ENV\}/);
+  assert.match(route, /<LukeSampleCards slug=\{character\.slug\} requested=\{query\.sample\} environment=\{process\.env\.VERCEL_ENV\} moveOnly/);
   const component = readFileSync(new URL("../src/components/luke-sample-cards.tsx", import.meta.url), "utf8");
   assert.doesNotMatch(component, /supabase|fetch\(|published|verified"/);
 });

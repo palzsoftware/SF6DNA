@@ -4,6 +4,12 @@ import { readFileSync } from 'node:fs';
 import ts from 'typescript';
 const safeModule = { exports: {} };
 new Function("module", "exports", ts.transpileModule(readFileSync(new URL("../src/lib/safe-external-url.ts", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText)(safeModule, safeModule.exports);
+function pureLib(file) {
+  const mod = { exports: {} };
+  const js = ts.transpileModule(readFileSync(new URL(`../src/lib/${file}.ts`, import.meta.url), 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText;
+  new Function('require', 'module', 'exports', js)(name => name.includes('safe-external-url') ? safeModule.exports : pureLib(name.split('/').at(-1)), mod, mod.exports);
+  return mod.exports;
+}
 const code = ts.transpileModule(readFileSync(new URL('../src/lib/event-media.ts', import.meta.url), 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText;
 function setup(rows, failure) {
   const calls = [];
@@ -23,7 +29,7 @@ function setup(rows, failure) {
     }; return query;
   }};
   const loaded = { exports: {} };
-  new Function('require', 'module', 'exports', code)(name => name.includes("safe-external-url") ? safeModule.exports : name.includes('supabase/server') ? { getSupabaseServerClient: () => client } : { getPublicEntitySources: async () => [] }, loaded, loaded.exports);
+  new Function('require', 'module', 'exports', code)(name => name.includes("safe-external-url") ? safeModule.exports : name.includes('supabase/server') ? { getSupabaseServerClient: () => client } : name.includes('public-source-links') ? { getPublicEntitySources: async () => [] } : pureLib(name.split('/').at(-1)), loaded, loaded.exports);
   return { list: loaded.exports.listVideos, calls };
 }
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://example.test';

@@ -52,7 +52,7 @@ const TEMPLATES = {
   decision: { title: "見るポイントを1つに絞る", goal: "相手の行動を全部見ようとして迷わないよう、今の対戦で見るポイントと対応を1つ決めます。" },
   knowledge: { title: "分からなかった場面を調べる", goal: "直近の対戦で分からなかった場面を1つ選び、リプレイ・トレモ・攻略情報を使って状況を確認します。" },
   habit: { title: "いつもの癖を1つ見直す", goal: "リプレイから同じ場面で繰り返している行動を1つ探し、次の対戦で試す別の行動を決めます。" },
-  review: { title: "今日の練習を仕上げる", goal: "最初の10分で練習した内容をもう一度行い、次の対戦で意識することを1つに絞ります。" },
+  review: { title: "練習内容を確認する", goal: "直近に練習した内容を確認し、次の対戦で意識することを1つに絞ります。まだ練習していない場合は、普段使う基本操作を1つ確認します。" },
 } satisfies Record<string, Template>;
 type TemplateKey = keyof typeof TEMPLATES;
 
@@ -178,7 +178,7 @@ export function buildDailyTrainingPlan({ dateKey, selection }: {
   const label = validFocus ? FOCUS_LABELS[validFocus] : "基礎練習";
   const reasons: Record<DailyTrainingSelection["source"], string> = {
     diagnosis_link: `診断結果の「${label}」を、最初の5分に設定しています。診断は自己評価をもとにした練習の目安です。`,
-    local_diagnosis: `このブラウザに残っている直近の課題診断から「${label}」を選びました。アカウントに保存された診断履歴とは別の情報です。`,
+    local_diagnosis: `直近の課題診断から「${label}」を選びました。診断は自己評価をもとにした練習の目安です。`,
     match_issue: `ログイン中のアカウントにある直近の対戦課題から「${label}」を選びました。`,
     default: "練習課題がまだ選ばれていないため、共通の基礎メニューを表示しています。",
   };

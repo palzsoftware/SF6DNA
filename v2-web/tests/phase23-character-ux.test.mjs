@@ -1,3 +1,4 @@
+import {renderUnified,assertUniqueAnchors} from './helpers/character-unified-ssr.mjs';
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -25,19 +26,14 @@ test("character Move pages avoid repeated empty motion placeholders", () => {
 });
 
 test("character UX keeps existing routes and hides empty profile panels", () => {
-  const directory = read("src/app/characters/page.tsx");
-  const detail = read("src/app/characters/[slug]/page.tsx");
-  const layout = read("src/app/layout.tsx");
+  const directory=read('src/app/characters/page.tsx');const layout=read('src/app/layout.tsx');
+  for(const route of ['/favorites','/compare'])assert.ok(directory.includes(route));
+  for(const route of ['/counters','/training'])assert.ok(!directory.includes(`href="${route}"`));
+  const html=renderUnified('ryu');
+  assert.ok(html.includes('強みは確認中です。'));assert.ok(html.includes('注意点は確認中です。'));
+  for(const href of ['/players','/videos'])assert.ok(html.includes(`href="${href}"`));
+  assertUniqueAnchors(assert,html);assert.ok(layout.includes('./ux-refresh.css'));
 
-  for (const route of ["/favorites", "/compare"]) {
-    assert.ok(directory.includes(route), `character directory quick route missing: ${route}`);
-  }
-  for (const route of ["/counters", "/training"]) {
-    assert.ok(!directory.includes(`href="${route}"`), `unavailable public route exposed: ${route}`);
-  }
-  assert.ok(detail.includes("hasStrengthProfile"), "empty strength/weakness panels should be suppressed");
-  assert.ok(detail.includes("guide-groups"), "guide sections should be grouped for scanning");
-  assert.ok(layout.includes("./ux-refresh.css"), "UX refresh stylesheet missing");
 });
 
 test("daily-use character sections have dedicated searchable surfaces", () => {

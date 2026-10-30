@@ -1,3 +1,5 @@
+import { lukeCanonicalCombo as combo } from "@/lib/luke-canonical-combo";
+
 /** Explicit QA intake; neither a publication approval nor a DB record. */
 export function isLukeSampleRequest(slug: string, requested: string | string[] | undefined, environment: string | undefined) {
   return slug === "luke" && requested === "luke" && (environment === "preview" || environment === "development");
@@ -25,27 +27,29 @@ export const lukeMoveSample = {
   },
 } as const;
 
+/** QA presentation of the existing reference; facts have one source of truth. */
 export const lukeComboSample = {
-  id: "qa-sample:luke-crmk-rush-20261011",
+  id: combo.combo_id,
   href: "/characters/luke?sample=luke#luke-sample-cards",
-  name: "しゃがみ中K始動・ラッシュ（サンプル）",
-  starter: "しゃがみ中K",
-  purpose: "中央の伸ばし候補・実機確認待ち",
+  name: combo.formal_card_name,
+  starter: combo.starter,
+  purpose: combo.purpose,
   category: "drive_rush",
-  command: "しゃがみ中K → キャンセルラッシュ → しゃがみ中P → しゃがみ強P → ジャスト中フラ → ジャスト弱フラ",
-  startCondition: "Classic・キャンセルラッシュ使用（成立条件は実機確認待ち）",
-  endCondition: "実機確認待ち",
-  damage: null,
-  drive: null,
-  sa: null,
-  difficulty: null,
+  command: combo.raw_recipe,
+  startCondition: combo.condition,
+  endCondition: combo.end_state,
+  damage: combo.damage,
+  drive: combo.drive_cost,
+  sa: combo.sa_cost,
+  difficulty: combo.difficulty,
+  patch: combo.patch,
   verificationStatus: "review_required",
   preview: true,
   media: {
     type: "video" as const,
-    url: "/media/qa/luke/combo-reference.mp4",
-    posterUrl: "/media/qa/luke/combo-reference-poster.png",
+    url: combo.media.clean.path,
+    posterUrl: "/media/qa/luke/combo-clean-20261011-poster.jpg",
     loop: true,
-    caption: "UI確認用の参考映像です。レシピとの対応・コンボ成立・数値は実機確認待ちです。",
+    caption: "参考映像は同じ入力順の別録画です。数値・終了状態はEvidence映像の記録で、この参考映像へは転用していません。ジャスト成功の客観検証・現行バージョンでの成立は確認中です。",
   },
 };

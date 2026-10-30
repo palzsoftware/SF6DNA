@@ -24,6 +24,9 @@ export type PublicSource = {
 };
 
 export async function listPublicSources(): Promise<PublicSource[]> {
+  // Registered sources are not automatically approved for public listing.
+  // Database RPC permissions must be enforced separately.
+  if (process.env.SF6DNA_PUBLIC_SOURCE_LIST_ENABLED !== "true") return [];
   if (
     !process.env.NEXT_PUBLIC_SUPABASE_URL ||
     !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY

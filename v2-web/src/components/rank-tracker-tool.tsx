@@ -1,15 +1,29 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type FormEvent } from "react";
 import type { CharacterSummary } from "@/types/character";
-import { deleteRankRecord, getRankHistory, saveRankRecord, type RankRecord } from "@/lib/local-user-tools";
+import { deleteRankRecord, getRankHistory, saveRankRecord, type RankRecord, type PersonalOwner } from "@/lib/personalization-storage";
+import { usePersonalizationOwner } from "@/lib/use-personalization-owner";
 
 function today() {
   return new Date().toISOString().slice(0, 10);
 }
 
 export function RankTrackerTool({ characters }: { characters: CharacterSummary[] }) {
+  const { state, isCurrent } = usePersonalizationOwner();
+  if (state.status === "error") return <div className="empty-state"><p>認証状態を確認できません。ランク記録を保護するため、表示を停止しています。</p></div>;
+  if (state.status !== "ready" || !isCurrent()) return <div className="empty-state"><p>ランク記録を読み込んでいます。</p></div>;
+  return <ScopedRankTrackerTool key={state.owner} owner={state.owner} isCurrent={isCurrent} characters={characters} />;
+}
+
+function ScopedRankTrackerTool({ characters, owner, isCurrent }: {
+  characters: CharacterSummary[];
+  owner: PersonalOwner;
+  isCurrent: () => boolean;
+}) {
   const [records, setRecords] = useState<RankRecord[]>([]);
+  const [ready, setReady] = useState(false);
+  const [storageError, setStorageError] = useState(false);
   const [date, setDate] = useState(today());
   const [characterSlug, setCharacterSlug] = useState(characters[0]?.slug ?? "");
   const [metric, setMetric] = useState<"MR" | "LP">("MR");
@@ -17,9 +31,13 @@ export function RankTrackerTool({ characters }: { characters: CharacterSummary[]
   const [note, setNote] = useState("");
 
   useEffect(() => {
-    const frame = window.requestAnimationFrame(() => setRecords(getRankHistory()));
+    const frame = window.requestAnimationFrame(() => {
+      if (!isCurrent()) return;
+      setRecords(getRankHistory(owner));
+      setReady(true);
+    });
     return () => window.cancelAnimationFrame(frame);
-  }, []);
+  }, [isCurrent, owner]);
 
   const selected = characters.find((character) => character.slug === characterSlug) ?? null;
   const filtered = useMemo(
@@ -31,8 +49,9 @@ export function RankTrackerTool({ characters }: { characters: CharacterSummary[]
   const first = filtered[0];
   const delta = latest && first ? latest.value - first.value : null;
 
-  function submit(event: React.FormEvent<HTMLFormElement>) {
+  function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (!ready || !isCurrent()) return;
     const numeric = Number(value);
     if (!selected || !date || !Number.isFinite(numeric) || numeric < 0) return;
 
@@ -46,19 +65,24 @@ export function RankTrackerTool({ characters }: { characters: CharacterSummary[]
       note: note.trim(),
       createdAt: new Date().toISOString(),
     };
-    saveRankRecord(record);
-    setRecords(getRankHistory());
+    if (!saveRankRecord(owner, record)) { setStorageError(true); return; }
+    setStorageError(false);
+    setRecords(getRankHistory(owner));
     setValue("");
     setNote("");
   }
 
   function remove(id: string) {
-    deleteRankRecord(id);
-    setRecords(getRankHistory());
+    if (!ready || !isCurrent()) return;
+    if (!deleteRankRecord(owner, id)) { setStorageError(true); return; }
+    setStorageError(false);
+    setRecords(getRankHistory(owner));
   }
 
+  if (!ready || !isCurrent()) return <div className="empty-state"><p>ランク記録を読み込んでいます。</p></div>;
   return (
     <div className="page-stack">
+      {storageError ? <p role="alert">端末への保存に失敗しました。ブラウザの設定・空き容量をご確認ください。</p> : null}
       <form className="tool-form" onSubmit={submit}>
         <label className="compact-field"><span>日付</span><input type="date" value={date} onChange={(e) => setDate(e.target.value)} required /></label>
         <label className="compact-field"><span>キャラクター</span><select value={characterSlug} onChange={(e) => setCharacterSlug(e.target.value)}>{characters.map((character) => <option key={character.id} value={character.slug}>{character.name}</option>)}</select></label>

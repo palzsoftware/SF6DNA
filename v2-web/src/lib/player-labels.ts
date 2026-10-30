@@ -14,7 +14,11 @@ const PLAYER_TYPE_LABELS: Record<string, string> = {
 const PLAYER_ROLE_LABELS: Record<string, string> = {
   main: "メイン",
   secondary: "サブ",
-  reference: "参考プレイヤー",
+  sub: "サブ",
+  historical: "過去の使用",
+  former: "過去の使用",
+  tournament: "大会での使用",
+  reference: "使用関係",
 };
 
 export function playerTypeLabel(value: string | null) {

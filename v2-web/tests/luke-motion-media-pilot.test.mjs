@@ -1,10 +1,11 @@
+import { fileURLToPath } from 'node:url';
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { validateMotionMediaManifest } from "../../scripts/validate-motion-media.mjs";
 
 const manifest = JSON.parse(readFileSync(new URL("../src/data/SF6DNA_VER1_LUKE_MEDIA_MANIFEST_20260924.json", import.meta.url), "utf8"));
-const publicRoot = new URL("../public/", import.meta.url).pathname;
+const publicRoot = fileURLToPath(new URL("../public/", import.meta.url));
 const loader = readFileSync(new URL("../src/lib/preview-motion-media-pilot.ts", import.meta.url), "utf8");
 const fixture = readFileSync(new URL("../src/lib/character-detail-v21-fixture.ts", import.meta.url), "utf8");
 

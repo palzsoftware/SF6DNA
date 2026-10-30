@@ -28,7 +28,8 @@ function sourceProviderLabel(publisher: string | null, url: string) {
 }
 
 export default async function SourcesPage() {
-  const sources = await listPublicSources();
+  const paused = process.env.SF6DNA_PUBLIC_SOURCE_LIST_ENABLED !== "true";
+  const sources = paused ? [] : await listPublicSources();
   return (
     <div className="site-shell page-stack experience-reference">
       <section className="hero">
@@ -53,6 +54,8 @@ export default async function SourcesPage() {
             </a>
           ))}
         </section>
+      ) : paused ? (
+        <section className="empty-state"><h2>情報源一覧は公開準備中です</h2><p>掲載情報の確認後に公開します。</p></section>
       ) : (
         <section className="empty-state"><h2>情報源を表示できません</h2><p>時間をおいて、もう一度ページを開いてください。</p></section>
       )}

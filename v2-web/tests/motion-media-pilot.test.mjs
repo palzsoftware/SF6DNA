@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import assert from "node:assert/strict";
 import { existsSync, readFileSync, statSync } from "node:fs";
 import test from "node:test";
@@ -62,7 +63,7 @@ test("JP SA and CA clips match reviewed gauge and health states in the SHA-verif
   ]));
   assert.ok(superClips.every((clip) => (clip.move_slug === "jp-sa2" ? clip.source_file === "jp-sa2-whiff.mp4.mp4" : clip.source_file === source.filename) && clip.verification_status === "approved_for_preview" && clip.cut_review_status === "CUT_REVIEW_PASS"));
   assert.match(superClips.find((clip) => clip.move_slug === "jp-ca").mapping_evidence, /CA indicator/);
-  const publicRoot = new URL("../public/", import.meta.url).pathname;
+  const publicRoot = fileURLToPath(new URL("../public/", import.meta.url));
   assert.deepEqual(validateMotionMediaManifest(manifest, { publicRoot }).errors, []);
 });
 
@@ -80,7 +81,7 @@ test("Ryu pilot maps the reviewed normals and two distinguishable specials", () 
   assert.ok(ryuManifest.clips.every((clip) => clip.variant === "default" && clip.verification_status === "approved_for_preview"));
   assert.equal(ryuManifest.clips.filter((clip) => clip.verification_status === "mapping_hold").length, 0);
   assert.equal(ryuManifest.clips.filter((clip) => clip.category === "unique_attacks").length, 0);
-  const publicRoot = new URL("../public/", import.meta.url).pathname;
+  const publicRoot = fileURLToPath(new URL("../public/", import.meta.url));
   assert.deepEqual(validateMotionMediaManifest(ryuManifest, { publicRoot }).errors, []);
   const duplicate = { ...ryuManifest, clips: [...ryuManifest.clips, { ...ryuManifest.clips.at(-1) }] };
   assert.ok(validateMotionMediaManifest(duplicate, { publicRoot }).errors.some((error) => error.includes("duplicate move_id + variant")));

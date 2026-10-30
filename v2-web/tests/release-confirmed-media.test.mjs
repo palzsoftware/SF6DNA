@@ -1,3 +1,4 @@
+﻿import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -18,7 +19,7 @@ test('exact confirmed identities, assets, hashes, no duplicates and no speculati
   assert.equal(row.identityStatus,'CONFIRMED_PRIOR_EVIDENCE_REUSED');
   assert.equal(snapshot.characters.elena.moves.find(m=>m.id===row.moveId)?.slug,row.moveSlug);
   for(const [url,hash] of [[row.mediaUrl,row.mediaHash],[row.posterUrl,row.posterHash]]){
-   const name=path.join(new URL('./public',root).pathname,url);
+   const name = fileURLToPath(new URL(url.replace(/^\/+/, ''), new URL('./public/', root)));
    assert.ok(statSync(name).size>0);
    assert.equal(createHash('sha256').update(readFileSync(name)).digest('hex'),hash);
   }

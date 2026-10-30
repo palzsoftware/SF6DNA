@@ -1,0 +1,34 @@
+{
+  "kakeru": {
+    "production": null,
+    "development": "b1d6c5b4-9157-455a-84b5-6b5c2ecb80ee"
+  },
+  "tokido": {
+    "production": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "development": "24f7c815-946f-49f0-aede-7b8f42fdfebb"
+  },
+  "dogura": {
+    "production": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "development": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6"
+  },
+  "leshar": {
+    "production": "fde7c095-b6fc-40ad-a287-6a8f8d3e3444",
+    "development": "fde7c095-b6fc-40ad-a287-6a8f8d3e3444"
+  },
+  "ryusei": {
+    "production": "66f1e8db-358c-4cd6-9e00-005162fec7eb",
+    "development": "fa32345b-a9a5-4113-b584-49009f54639d"
+  },
+  "higuchi": {
+    "production": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "development": "670431a1-addb-4c8e-9828-a45652ff976b"
+  },
+  "momochi": {
+    "production": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "development": "4398b674-1d5d-4725-a322-ecf5a61fef29"
+  },
+  "menard": {
+    "production": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "development": "b2aa9518-06eb-45d1-bf37-e39147173072"
+  }
+}

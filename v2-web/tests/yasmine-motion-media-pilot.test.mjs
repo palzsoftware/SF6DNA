@@ -1,5 +1,6 @@
-import assert from 'node:assert/strict';
+﻿import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import ts from 'typescript';
 import { validateYasmineRecovery } from '../../scripts/validate-yasmine-recovery.mjs';
@@ -7,7 +8,7 @@ const read = relative => JSON.parse(readFileSync(new URL(relative, import.meta.u
 const manifest = read('../src/data/SF6DNA_VER1_YASMINE_MEDIA_MANIFEST_20261003.json');
 const snapshot = read('../src/data/YASMINE_PREVIEW_MOVE_SNAPSHOT_20261003.json');
 const canonical = read('../src/data/YASMINE_OFFICIAL_CAPTURE_PREVIEW_20261003.json');
-const publicRoot = new URL('../public/', import.meta.url).pathname;
+const publicRoot = fileURLToPath(new URL('../public/', import.meta.url));
 const source = readFileSync(new URL('../src/lib/yasmine-move-media-pilot.ts', import.meta.url), 'utf8');
 function pilot(data = canonical) {
   const mod = { exports: {} };

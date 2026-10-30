@@ -158,9 +158,11 @@ test("invalid and impossible dates are rejected explicitly", () => {
   assert.throws(() => getJstDateKey(new Date("bad")), RangeError);
   assert.equal(plan("default", null, "2028-02-29").items.length, 3);
 });
-test("browser history and account history are described separately", () => {
-  assert.match(plan("local_diagnosis", "anti_air").reason, /このブラウザ/);
-  assert.match(plan("local_diagnosis", "anti_air").reason, /アカウントに保存された診断履歴とは別/);
+test("diagnosis reason stays neutral about storage while match issues identify the account", () => {
+  const reason = plan("local_diagnosis", "anti_air").reason;
+  assert.match(reason, /直近の課題診断/);
+  assert.match(reason, /自己評価/);
+  assert.doesNotMatch(reason, /このブラウザ|アカウントに保存された診断履歴とは別/);
   assert.match(plan("match_issue", "habit").reason, /ログイン中のアカウント/);
 });
 test("invalid source-focus combinations fall back safely", () => {
@@ -184,11 +186,11 @@ test("impact training uses natural player-facing terminology", () => {
   assert.doesNotMatch(JSON.stringify(detail), /音や色を確認|正解を先読み/);
 });
 
-test("combo practice uses safe generic content and five consecutive successes per side", () => {
+test("combo practice uses current R4 safe generic content and a provisional eight-of-ten target", () => {
   const detail = plan("diagnosis_link", "execution").items[0].detail;
   const text = JSON.stringify(detail);
-  assert.match(text, /実戦で使っている基本コンボ/);
-  assert.match(text, /1P側と2P側で、それぞれ5回連続成功/);
-  assert.match(text, /左右合計10回のうち8回成功/);
+  assert.match(text, /成立確認済みの短いコンボ/);
+  assert.match(text, /左右合計10回中8回/);
+  assert.match(text, /連続成功は必須にしません/);
   assert.doesNotMatch(text, /リュウ|JPなら|ルーク|キャミィ|屈大P/);
 });

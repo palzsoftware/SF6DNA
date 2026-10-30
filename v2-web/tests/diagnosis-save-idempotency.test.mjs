@@ -31,20 +31,26 @@ test("the diagnosis client persists one request id before the RPC and retains it
   const rpcIndex = runner.indexOf('supabase.rpc("save_diagnosis_result_with_answers"');
   assert.ok(persistIndex >= 0 && persistIndex < rpcIndex);
   assert.doesNotMatch(runner.slice(rpcIndex, runner.indexOf("function reset()", rpcIndex)), /localStorage\.removeItem\(storageKey\)/);
-  assert.match(runner.slice(runner.indexOf("function reset()")), /localStorage\.removeItem\(saveRequestKey\(diagnosis\.slug\)\)/);
+  const reset = runner.slice(runner.indexOf("function reset()"));
+  assert.match(reset, /const requestStorageKey = saveRequestKey\(currentOwner, diagnosis\.slug\)/);
+  assert.match(reset, /localStorage\.removeItem\(requestStorageKey\)/);
   assert.match(runner, /onRetry=\{\(\) => void saveCompletedDiagnosis\(\)\}/);
 });
 
 test("guest diagnosis keeps browser history without attempting an account RPC", () => {
-  assert.match(runner, /saveDiagnosisHistory\(\{/);
-  const guestIndex = runner.indexOf('authError?.name === "AuthSessionMissingError"');
-  const rpcIndex = runner.indexOf('supabase.rpc("save_diagnosis_result_with_answers"');
-  assert.ok(guestIndex >= 0 && guestIndex < rpcIndex);
-  assert.match(runner.slice(guestIndex, rpcIndex), /setDatabaseSaveStatus\("idle"\)[\s\S]*?return;/);
+  assert.match(runner, /saveDiagnosisHistory\(currentOwner, record\)/);
+  const save = runner.slice(runner.indexOf('const saveCompletedDiagnosis ='));
+  const guard = save.indexOf('currentOwner === "guest"');
+  const client = save.indexOf('getSupabaseBrowserClient()');
+  assert.ok(guard >= 0 && guard < client);
+  assert.match(save.slice(guard, client), /return;/);
 });
 
 test("authenticated diagnosis saves through the account RPC and keeps failures visible", () => {
-  assert.match(runner, /if \(!authData\.user\)[\s\S]*?return;/);
+  const authGuard = runner.indexOf('authData.user?.id?.toLowerCase() !== expectedUserId');
+  const rpc = runner.indexOf('supabase.rpc("save_diagnosis_result_with_answers"');
+  assert.ok(authGuard >= 0 && authGuard < rpc);
+  assert.match(runner.slice(authGuard, rpc), /throw new Error\("diagnosis_owner_changed"\)/);
   assert.match(runner, /supabase\.rpc\("save_diagnosis_result_with_answers"/);
   assert.match(runner, /setDatabaseSaveStatus\("failed"\)/);
   assert.match(runner, /診断結果をアカウントに保存できませんでした。下のボタンからもう一度お試しください/);

@@ -1,6 +1,7 @@
+import {assertQuarterCirclePunch} from './helpers/character-unified-ssr.mjs';
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import vm from "node:vm";
 import { createRequire } from "node:module";
 import { renderToStaticMarkup } from "react-dom/server";
@@ -14,6 +15,8 @@ function realModule(file) {
     if (name.endsWith(".css")) return { default: {} };
     if (name.startsWith("@/data/")) return { __esModule: true, default: JSON.parse(readFileSync(new URL(`../src/data/${name.slice(7)}`, import.meta.url), "utf8")) };
     if (name.startsWith("@/lib/")) return realModule(`lib/${name.slice(6)}.ts`);
+    if (name.startsWith("@/components/")) { const base = `components/${name.slice(13)}`; return realModule(base + (existsSync(new URL(`../src/${base}.tsx`, import.meta.url)) ? ".tsx" : ".ts")); }
+    if (name.startsWith(".")) { const base = file.slice(0, file.lastIndexOf("/")+1) + name.replace(/^\.\//, ""); return realModule(base + (existsSync(new URL(`../src/${base}.tsx`, import.meta.url)) ? ".tsx" : ".ts")); }
     return require(name);
   });
   return result.exports;
@@ -38,10 +41,12 @@ vm.runInNewContext(js, {
     if (name === "@/lib/device-preview") return { isDevicePreviewRequest: () => false, appendDevicePreviewToken: path => path };
     if (name === "@/lib/move-media-presentation") return realModule("lib/move-media-presentation.ts");
     if (name === "@/lib/move-command-format") return realModule("lib/move-command-format.ts");
+    if (name === "@/lib/move-card-reference") return realModule("lib/move-card-reference.ts");
     if (name === "@/lib/public-copy") return { normalizePublicCopy: (value) => value, isInternalMoveNote: () => false };
     if (name === "@/lib/release-features") return { releaseFeatures: { publicStrategyContent: false } };
     if (name === "@/lib/character-learning-structure") return { CHARACTER_VIDEO_GROUP_ORDER: [] };
     if (name === "@/lib/character-video-references") return realModule("lib/character-video-references.ts");
+    if (name === "./luke-canonical-combo-reference") return realModule("components/luke-canonical-combo-reference.tsx");
     return {};
   },
 });
@@ -57,7 +62,7 @@ test("move cards render supplied active, recovery and hit values without interpr
   const html = render({ startup: "4", active: "4-6", recovery: "7", onHit: "+4", onBlock: "-1", damage: 300, verificationStatus: "reviewed" });
   assert.doesNotMatch(html, /<dl[^>]*role=/, "frame descriptions retain native dt/dd semantics");
   for (const value of ["持続", "4-6", "硬直", "ヒット時", "+4"]) assert.ok(html.includes(value));
-  assert.ok(html.replace(/<[^>]*>/g, "").replace(/\s+/g, "").includes("↓↘→P"));
+  assertQuarterCirclePunch(assert, html);
 });
 
 test("old frame payloads omit absent optional statistics rather than invent values", () => {
@@ -81,7 +86,7 @@ test("public character quick-start anchors resolve and filtered move content ret
     assert.ok(html.includes(`href="#${id}"`)); assert.ok(html.includes(`id="${id}"`));
   }
   assert.match(html, /技名・コマンドを検索/);
-  assert.ok(html.replace(/<[^>]*>/g, "").replace(/\s+/g, "").includes("↓↘→P"));
+  assertQuarterCirclePunch(assert, html);
   assert.match(html, /確認済みのコンボはまだありません/);
 });
 

@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { Sf6CardRecipe } from "./sf6-card-command";
+import type { CardRecipe } from "../lib/card-command-gauge-contract";
 import { useEffect, useState } from "react";
 import { appendDevicePreviewToken } from "@/lib/device-preview";
 import { releaseFeatures } from "@/lib/release-features";
@@ -88,10 +90,12 @@ export function PilotComboCard({
   combo,
   previewToken,
   sample = false,
+  commandRecipe,
 }: {
   combo: PilotComboCardData;
   previewToken?: string | null;
   sample?: boolean;
+  commandRecipe?: CardRecipe;
 }) {
   const [favorite, setFavorite] = useState(false);
   const [training, setTraining] = useState(false);
@@ -184,7 +188,7 @@ export function PilotComboCard({
             {expandedFacts.map(([label, value]) => (
               <div key={String(label)}>
                 <dt>{label}</dt>
-                <dd>{label === "コマンド" && (combo.rawRecipe ?? combo.command) ? <ComboInputRecipe recipe={combo.rawRecipe ?? combo.command ?? ""} iconPilot={isComboIconPilot(combo.id)} /> : String(value)}</dd>
+                <dd>{label === "コマンド" && (combo.rawRecipe ?? combo.command) ? (commandRecipe && commandRecipe.recipe_id === combo.id && commandRecipe.raw_recipe === (combo.rawRecipe ?? combo.command) ? <Sf6CardRecipe recipe={commandRecipe} /> : <ComboInputRecipe recipe={combo.rawRecipe ?? combo.command ?? ""} iconPilot={isComboIconPilot(combo.id)} />) : String(value)}</dd>
               </div>
             ))}
           </dl>

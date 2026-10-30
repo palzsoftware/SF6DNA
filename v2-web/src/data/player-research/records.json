@@ -1,0 +1,808 @@
+[
+  {
+    "research_id": "kakeru-practice-001",
+    "player_id": "b1d6c5b4-9157-455a-84b5-6b5c2ecb80ee",
+    "player_slug": "kakeru",
+    "player_name": "翔 / Kakeru",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "practice",
+    "analysis_title": "対戦を回す練習にリプレイ確認とトレモを加える",
+    "observed_behavior": {
+      "text": "SFLをきっかけにcosaの方法を参考にして、リプレイ確認とトレモを練習へ取り入れたと説明。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "kakeru-1-e1"
+      ]
+    },
+    "situation": {
+      "text": "SFLでは対戦候補が最大4人に限られる状況。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "kakeru-1-e1"
+      ]
+    },
+    "possible_reason": {
+      "text": "対戦相手への事前準備を重視したため。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "kakeru-1-e1"
+      ]
+    },
+    "strength_or_purpose": null,
+    "practical_lesson": {
+      "text": "次の対戦相手のリプレイから1局面を選び、トレモで対処候補を試す。",
+      "basis": "ai_hypothesis",
+      "evidence_ids": [
+        "kakeru-1-e1"
+      ]
+    },
+    "related_character": "JP",
+    "opponent_character": null,
+    "source_url": "https://game.watch.impress.co.jp/docs/interview/2011054.html",
+    "source_title": "翔選手インタビュー：CC11覇者の素顔に迫る",
+    "source_type": "interview",
+    "source_date": "2025-04-30",
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "historical",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "research-source-16ac4c028c8a0d1c",
+    "evidence": [
+      {
+        "evidence_id": "kakeru-1-e1",
+        "source_url": "https://game.watch.impress.co.jp/docs/interview/2011054.html",
+        "locator": "見出し「CAPCOM CUP 11優勝を振り返る」/ L241",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "インタビュー本文の本人発言を確認。動画観察ではない。practical_lessonはAIによる応用案で効果未検証。環境別実IDは別台帳で接続するためplayer_idはnull。現行パッチの技数値は未検証。",
+    "learning_tags": [
+      "practice"
+    ]
+  },
+  {
+    "research_id": "kakeru-practice-002",
+    "player_id": "b1d6c5b4-9157-455a-84b5-6b5c2ecb80ee",
+    "player_slug": "kakeru",
+    "player_name": "翔 / Kakeru",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "practice",
+    "analysis_title": "別キャラの試用からJPの利点を再評価する",
+    "observed_behavior": {
+      "text": "複数キャラを試した後、CC11ではJPに絞ったと説明。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "kakeru-2-e1"
+      ]
+    },
+    "situation": {
+      "text": "CC11で使用するキャラを迷っていた。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "kakeru-2-e1"
+      ]
+    },
+    "possible_reason": {
+      "text": "他キャラを試したことでJPの良さが改めて見えたと本人が述べた。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "kakeru-2-e1"
+      ]
+    },
+    "strength_or_purpose": null,
+    "practical_lesson": {
+      "text": "キャラ変更を結論にする前に、別キャラと比較して自キャラの長所を言語化する。",
+      "basis": "ai_hypothesis",
+      "evidence_ids": [
+        "kakeru-2-e1"
+      ]
+    },
+    "related_character": "JP",
+    "opponent_character": null,
+    "source_url": "https://game.watch.impress.co.jp/docs/interview/2011054.html",
+    "source_title": "翔選手インタビュー：CC11覇者の素顔に迫る",
+    "source_type": "interview",
+    "source_date": "2025-04-30",
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "historical",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "research-source-16ac4c028c8a0d1c",
+    "evidence": [
+      {
+        "evidence_id": "kakeru-2-e1",
+        "source_url": "https://game.watch.impress.co.jp/docs/interview/2011054.html",
+        "locator": "同見出し / L230",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "インタビュー本文の本人発言を確認。動画観察ではない。practical_lessonはAIによる応用案で効果未検証。環境別実IDは別台帳で接続するためplayer_idはnull。現行パッチの技数値は未検証。",
+    "learning_tags": [
+      "practice"
+    ]
+  },
+  {
+    "research_id": "tokido-practice-003",
+    "player_id": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "player_slug": "tokido",
+    "player_name": "ときど",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "practice",
+    "analysis_title": "練習相手と継続して対戦する",
+    "observed_behavior": {
+      "text": "Lesharと日々オフラインを中心に、一部オンラインでも練習していたと説明。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "tokido-3-e1"
+      ]
+    },
+    "situation": {
+      "text": "CPT2024 SUPER PREMIER JAPAN優勝後の振り返り。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "tokido-3-e1"
+      ]
+    },
+    "possible_reason": null,
+    "strength_or_purpose": null,
+    "practical_lesson": {
+      "text": "対戦相手と定期的に練習し、前回から変えた行動を記録する。",
+      "basis": "ai_hypothesis",
+      "evidence_ids": [
+        "tokido-3-e1"
+      ]
+    },
+    "related_character": "ケン",
+    "opponent_character": null,
+    "source_url": "https://game.watch.impress.co.jp/docs/kikaku/1636989.html",
+    "source_title": "CPT2024 Sプレミア ジャパン レポート",
+    "source_type": "interview",
+    "source_date": "2024-11-05",
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "historical",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "research-source-b512539810af54d7",
+    "evidence": [
+      {
+        "evidence_id": "tokido-3-e1",
+        "source_url": "https://game.watch.impress.co.jp/docs/kikaku/1636989.html",
+        "locator": "見出し「週7のオフライン練習」/ L354",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "インタビュー本文の本人発言を確認。動画観察ではない。practical_lessonはAIによる応用案で効果未検証。環境別実IDは別台帳で接続するためplayer_idはnull。現行パッチの技数値は未検証。",
+    "learning_tags": [
+      "practice"
+    ]
+  },
+  {
+    "research_id": "tokido-match_flow-004",
+    "player_id": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "player_slug": "tokido",
+    "player_name": "ときど",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "match_flow",
+    "analysis_title": "相手の準備を踏まえて使用キャラを絞る",
+    "observed_behavior": {
+      "text": "SFL:WC2025ではJP一本の予定で臨んだと説明。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "tokido-4-e1"
+      ]
+    },
+    "situation": {
+      "text": "相手の取り組みを事前に把握していた。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "tokido-4-e1"
+      ]
+    },
+    "possible_reason": {
+      "text": "特殊なキャラが来れば別だったが、事前情報からJP一本と判断した。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "tokido-4-e1"
+      ]
+    },
+    "strength_or_purpose": null,
+    "practical_lesson": {
+      "text": "大会前に想定対戦を整理し、キャラ選択を変える条件も書き出す。",
+      "basis": "ai_hypothesis",
+      "evidence_ids": [
+        "tokido-4-e1"
+      ]
+    },
+    "related_character": "JP",
+    "opponent_character": null,
+    "source_url": "https://game.watch.impress.co.jp/docs/interview/2093537.html",
+    "source_title": "SFL:WC2025 REJECT優勝インタビュー",
+    "source_type": "interview",
+    "source_date": "2026-03-15",
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "historical",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "research-source-d2f321fa76755760",
+    "evidence": [
+      {
+        "evidence_id": "tokido-4-e1",
+        "source_url": "https://game.watch.impress.co.jp/docs/interview/2093537.html",
+        "locator": "JP一本予定についての質問 / L272–273",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "インタビュー本文の本人発言を確認。動画観察ではない。practical_lessonはAIによる応用案で効果未検証。環境別実IDは別台帳で接続するためplayer_idはnull。現行パッチの技数値は未検証。",
+    "learning_tags": [
+      "match_flow"
+    ]
+  },
+  {
+    "research_id": "leshar-match_flow-005",
+    "player_id": "fde7c095-b6fc-40ad-a287-6a8f8d3e3444",
+    "player_slug": "leshar",
+    "player_name": "Leshar",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "match_flow",
+    "analysis_title": "翌日の味方の対戦を考慮してキャラを選ぶ",
+    "observed_behavior": {
+      "text": "Big Bird戦でテリーを選んだ理由を説明。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "leshar-5-e1"
+      ]
+    },
+    "situation": {
+      "text": "翌日にふ〜どのエドとBig Birdの個人戦が予定されていた。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "leshar-5-e1"
+      ]
+    },
+    "possible_reason": {
+      "text": "REJECTのエドを相手に見せたくなかったため。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "leshar-5-e1"
+      ]
+    },
+    "strength_or_purpose": null,
+    "practical_lesson": {
+      "text": "チーム戦では目の前の相性に加え、次の対戦へ渡る情報も判断材料にする。",
+      "basis": "ai_hypothesis",
+      "evidence_ids": [
+        "leshar-5-e1"
+      ]
+    },
+    "related_character": "テリー",
+    "opponent_character": null,
+    "source_url": "https://game.watch.impress.co.jp/docs/interview/2093537.html",
+    "source_title": "SFL:WC2025 REJECT優勝インタビュー",
+    "source_type": "interview",
+    "source_date": "2026-03-15",
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "historical",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "research-source-d2f321fa76755760",
+    "evidence": [
+      {
+        "evidence_id": "leshar-5-e1",
+        "source_url": "https://game.watch.impress.co.jp/docs/interview/2093537.html",
+        "locator": "オーダーについての質問 / L299–301",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "インタビュー本文の本人発言を確認。動画観察ではない。practical_lessonはAIによる応用案で効果未検証。環境別実IDは別台帳で接続するためplayer_idはnull。現行パッチの技数値は未検証。",
+    "learning_tags": [
+      "match_flow"
+    ]
+  },
+  {
+    "research_id": "leshar-practice-006",
+    "player_id": "fde7c095-b6fc-40ad-a287-6a8f8d3e3444",
+    "player_slug": "leshar",
+    "player_name": "Leshar",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "practice",
+    "analysis_title": "複数大会の練習に優先順位を付ける",
+    "observed_behavior": {
+      "text": "今回は個人戦の練習を抑え、チーム戦に集中したと説明。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "leshar-6-e1"
+      ]
+    },
+    "situation": {
+      "text": "CC12とSFL:WC2025の並行準備。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "leshar-6-e1"
+      ]
+    },
+    "possible_reason": {
+      "text": "日本リーグ最後の機会としてSFLでの勝利を重視していた。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "leshar-6-e1"
+      ]
+    },
+    "strength_or_purpose": null,
+    "practical_lesson": {
+      "text": "練習時間が限られる場合は最優先の大会と対象キャラを先に決める。",
+      "basis": "ai_hypothesis",
+      "evidence_ids": [
+        "leshar-6-e1"
+      ]
+    },
+    "related_character": null,
+    "opponent_character": null,
+    "source_url": "https://game.watch.impress.co.jp/docs/interview/2093537.html",
+    "source_title": "SFL:WC2025 REJECT優勝インタビュー",
+    "source_type": "interview",
+    "source_date": "2026-03-15",
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "historical",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "research-source-d2f321fa76755760",
+    "evidence": [
+      {
+        "evidence_id": "leshar-6-e1",
+        "source_url": "https://game.watch.impress.co.jp/docs/interview/2093537.html",
+        "locator": "個人戦とチーム戦の切り替えについて / L312–313",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "インタビュー本文の本人発言を確認。動画観察ではない。practical_lessonはAIによる応用案で効果未検証。環境別実IDは別台帳で接続するためplayer_idはnull。現行パッチの技数値は未検証。",
+    "learning_tags": [
+      "practice"
+    ]
+  },
+  {
+    "research_id": "dogura-practice-007",
+    "player_id": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "player_slug": "dogura",
+    "player_name": "どぐら",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "practice",
+    "analysis_title": "長い大会での集中維持を本人が振り返る",
+    "observed_behavior": {
+      "text": "体力が付いたことでEVOの長い開催時間でも最後まで集中できたと本人が振り返った。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "dogura-7-e1"
+      ]
+    },
+    "situation": {
+      "text": "待ち時間が長く、過去には疲労でぼんやりすることがあった。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "dogura-7-e1"
+      ]
+    },
+    "possible_reason": null,
+    "strength_or_purpose": null,
+    "practical_lesson": {
+      "text": "長時間の大会を想定し、自分の疲労と集中の変化を記録する。体力向上の因果や効果量はこの発言から確定しない。",
+      "basis": "ai_hypothesis",
+      "evidence_ids": [
+        "dogura-7-e1"
+      ]
+    },
+    "related_character": null,
+    "opponent_character": null,
+    "source_url": "https://news.mynavi.jp/article/20260824-4847023/3",
+    "source_title": "SFL2026宣材撮影会インタビュー Crazy Raccoon",
+    "source_type": "interview",
+    "source_date": "2026-08-24",
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "historical",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "research-source-e14abdbc07bf8921",
+    "evidence": [
+      {
+        "evidence_id": "dogura-7-e1",
+        "source_url": "https://news.mynavi.jp/article/20260824-4847023/3",
+        "locator": "競技に体力が活きるかという質問 / L235–237",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "インタビュー本文の本人発言を確認。動画観察ではない。practical_lessonはAIによる応用案で効果未検証。環境別実IDは別台帳で接続するためplayer_idはnull。現行パッチの技数値は未検証。",
+    "learning_tags": [
+      "practice"
+    ]
+  },
+  {
+    "research_id": "dogura-match_flow-008",
+    "player_id": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "player_slug": "dogura",
+    "player_name": "どぐら",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "match_flow",
+    "analysis_title": "個人成績よりチーム全体の勝率を優先する方針",
+    "observed_behavior": {
+      "text": "自分の成績よりチーム勝率を重視し、前年に味方が引き受けた苦しい対戦を自分も担いたいと述べた。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "dogura-8-e1"
+      ]
+    },
+    "situation": {
+      "text": "SFL2026への意気込み。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "dogura-8-e1"
+      ]
+    },
+    "possible_reason": {
+      "text": "前年にボンちゃんがチームのために苦しい相手を担当したことを踏まえた。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "dogura-8-e1"
+      ]
+    },
+    "strength_or_purpose": null,
+    "practical_lesson": {
+      "text": "チーム戦では自分だけの勝率でなく、全体の対戦割り当ても検討する。",
+      "basis": "ai_hypothesis",
+      "evidence_ids": [
+        "dogura-8-e1"
+      ]
+    },
+    "related_character": null,
+    "opponent_character": null,
+    "source_url": "https://news.mynavi.jp/article/20260824-4847023/3",
+    "source_title": "SFL2026宣材撮影会インタビュー Crazy Raccoon",
+    "source_type": "interview",
+    "source_date": "2026-08-24",
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "historical",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "research-source-e14abdbc07bf8921",
+    "evidence": [
+      {
+        "evidence_id": "dogura-8-e1",
+        "source_url": "https://news.mynavi.jp/article/20260824-4847023/3",
+        "locator": "シーズンの意気込み / L239–240",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "インタビュー本文の本人発言を確認。動画観察ではない。practical_lessonはAIによる応用案で効果未検証。環境別実IDは別台帳で接続するためplayer_idはnull。現行パッチの技数値は未検証。",
+    "learning_tags": [
+      "match_flow"
+    ]
+  },
+  {
+    "research_id": "ryusei-practice-009",
+    "player_id": "fa32345b-a9a5-4113-b584-49009f54639d",
+    "player_slug": "ryusei",
+    "player_name": "りゅうせい",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "practice",
+    "analysis_title": "共同練習後も会話してチームの理解を深める",
+    "observed_behavior": {
+      "text": "新加入選手と一緒に練習し、練習後にもDiscordで話していると説明。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "ryusei-9-e1"
+      ]
+    },
+    "situation": {
+      "text": "エース2名が移籍し、初参加の選手が加入したチーム体制。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "ryusei-9-e1"
+      ]
+    },
+    "possible_reason": {
+      "text": "互いに高め合い、コミュニケーションも重視したいと述べた。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "ryusei-9-e1"
+      ]
+    },
+    "strength_or_purpose": null,
+    "practical_lesson": {
+      "text": "共同練習後に困った局面を1つ共有し、相手の見方を聞く。",
+      "basis": "ai_hypothesis",
+      "evidence_ids": [
+        "ryusei-9-e1"
+      ]
+    },
+    "related_character": null,
+    "opponent_character": null,
+    "source_url": "https://news.mynavi.jp/article/20240708-2980244/2",
+    "source_title": "SFL宣材撮影会インタビュー Belc FAV gaming",
+    "source_type": "interview",
+    "source_date": "2024-07-08",
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "historical",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "research-source-6810e014205838ca",
+    "evidence": [
+      {
+        "evidence_id": "ryusei-9-e1",
+        "source_url": "https://news.mynavi.jp/article/20240708-2980244/2",
+        "locator": "チーム体制の変化について / L227–229",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "インタビュー本文の本人発言を確認。動画観察ではない。practical_lessonはAIによる応用案で効果未検証。環境別実IDは別台帳で接続するためplayer_idはnull。現行パッチの技数値は未検証。",
+    "learning_tags": [
+      "practice"
+    ]
+  },
+  {
+    "research_id": "higuchi-official-profile-001",
+    "player_id": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "player_slug": "higuchi",
+    "player_name": "ひぐち",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "defense",
+    "analysis_title": "所属先が紹介する守りと反撃",
+    "observed_behavior": null,
+    "situation": null,
+    "possible_reason": null,
+    "strength_or_purpose": {
+      "text": "所属先の紹介文は、防御で耐え、相手の隙へ反撃するスタイルとして紹介している。",
+      "basis": "third_party_analysis",
+      "evidence_ids": [
+        "higuchi-official-profile-e1"
+      ]
+    },
+    "practical_lesson": null,
+    "related_character": null,
+    "opponent_character": null,
+    "source_url": "https://zetadivision.com/players/%E3%81%B2%E3%81%90%E3%81%A1",
+    "source_title": "ひぐち｜MEMBERS｜ZETA DIVISION",
+    "source_type": "third_party_analysis",
+    "source_date": null,
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "unknown",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "higuchi-official-profile",
+    "evidence": [
+      {
+        "evidence_id": "higuchi-official-profile-e1",
+        "source_url": "https://zetadivision.com/players/%E3%81%B2%E3%81%90%E3%81%A1",
+        "locator": "所属先公式プロフィール L49",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "所属先による紹介であり、本人発言・試合観察ではない。具体的な判断・練習方法・現行パッチを保証しない。独立した対戦映像による追加検証が必要。",
+    "learning_tags": [
+      "defense"
+    ]
+  },
+  {
+    "research_id": "momochi-official-profile-001",
+    "player_id": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "player_slug": "momochi",
+    "player_name": "ももち",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "adaptation",
+    "analysis_title": "所属先が紹介する相手の分析",
+    "observed_behavior": null,
+    "situation": null,
+    "possible_reason": null,
+    "strength_or_purpose": {
+      "text": "所属先の紹介文は、冷静なプレイと相手の分析を特徴として挙げている。",
+      "basis": "third_party_analysis",
+      "evidence_ids": [
+        "momochi-official-profile-e1"
+      ]
+    },
+    "practical_lesson": null,
+    "related_character": null,
+    "opponent_character": null,
+    "source_url": "https://zetadivision.com/players/%E3%82%82%E3%82%82%E3%81%A1",
+    "source_title": "ももち｜MEMBERS｜ZETA DIVISION",
+    "source_type": "third_party_analysis",
+    "source_date": null,
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "unknown",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "momochi-official-profile",
+    "evidence": [
+      {
+        "evidence_id": "momochi-official-profile-e1",
+        "source_url": "https://zetadivision.com/players/%E3%82%82%E3%82%82%E3%81%A1",
+        "locator": "所属先公式プロフィール L48",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "所属先による紹介であり、本人発言・試合観察ではない。具体的な判断・練習方法・現行パッチを保証しない。独立した対戦映像による追加検証が必要。",
+    "learning_tags": [
+      "adaptation"
+    ]
+  },
+  {
+    "research_id": "menard-official-profile-001",
+    "player_id": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "player_slug": "menard",
+    "player_name": "MenaRD",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "adaptation",
+    "analysis_title": "所属先が紹介する適応力",
+    "observed_behavior": null,
+    "situation": null,
+    "possible_reason": null,
+    "strength_or_purpose": {
+      "text": "所属先の紹介文は、適応力を特徴として挙げている。",
+      "basis": "third_party_analysis",
+      "evidence_ids": [
+        "menard-official-profile-e1"
+      ]
+    },
+    "practical_lesson": null,
+    "related_character": null,
+    "opponent_character": null,
+    "source_url": "https://zetadivision.com/players/menard",
+    "source_title": "MenaRD｜MEMBERS｜ZETA DIVISION",
+    "source_type": "third_party_analysis",
+    "source_date": null,
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "unknown",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "menard-official-profile",
+    "evidence": [
+      {
+        "evidence_id": "menard-official-profile-e1",
+        "source_url": "https://zetadivision.com/players/menard",
+        "locator": "所属先公式プロフィール L49",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "所属先による紹介であり、本人発言・試合観察ではない。具体的な判断・練習方法・現行パッチを保証しない。独立した対戦映像による追加検証が必要。",
+    "learning_tags": [
+      "adaptation"
+    ]
+  },
+  {
+    "research_id": "kakeru-practice-003",
+    "player_id": "b1d6c5b4-9157-455a-84b5-6b5c2ecb80ee",
+    "player_slug": "kakeru",
+    "player_name": "翔 / Kakeru",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "practice",
+    "analysis_title": "勝敗だけでなく取り組みへの納得感を見直す",
+    "observed_behavior": {
+      "text": "SFL2024当時、勝てている場合でも自分が納得していなければ取り組み方を変えていたと説明している。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "kakeru-practice-003-e1"
+      ]
+    },
+    "situation": null,
+    "possible_reason": null,
+    "strength_or_purpose": null,
+    "practical_lesson": {
+      "text": "勝敗とは別に、意図した行動を選べたかを振り返る。変更は一つずつ試す。",
+      "basis": "ai_hypothesis",
+      "evidence_ids": [
+        "kakeru-practice-003-e1"
+      ]
+    },
+    "related_character": "JP",
+    "opponent_character": null,
+    "source_url": "https://game.watch.impress.co.jp/docs/interview/2011054.html",
+    "source_title": "翔選手インタビュー：CC11覇者の素顔に迫る",
+    "source_type": "interview",
+    "source_date": "2025-04-30",
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "historical",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "research-source-16ac4c028c8a0d1c",
+    "evidence": [
+      {
+        "evidence_id": "kakeru-practice-003-e1",
+        "source_url": "https://game.watch.impress.co.jp/docs/interview/2011054.html",
+        "locator": "GAME Watch 本人インタビュー L242",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "2025-04-30本人インタビュー本文を確認。AI応用案は本人の発言ではない。今回の試合映像検証なし。実ID未確認・公開承認PENDINGを維持。",
+    "learning_tags": [
+      "practice"
+    ]
+  },
+  {
+    "research_id": "kakeru-practice-004",
+    "player_id": "b1d6c5b4-9157-455a-84b5-6b5c2ecb80ee",
+    "player_slug": "kakeru",
+    "player_name": "翔 / Kakeru",
+    "identity_environment": "vvsknbmlfvvnrmgtyhbf",
+    "analysis_category": "practice",
+    "analysis_title": "配信をJPプレイヤーとの情報交換に活用する",
+    "observed_behavior": {
+      "text": "配信でJPプレイヤーから意見を受け取り、やり取りしながらプレイしていると説明している。",
+      "basis": "first_person_statement",
+      "evidence_ids": [
+        "kakeru-practice-004-e1"
+      ]
+    },
+    "situation": null,
+    "possible_reason": null,
+    "strength_or_purpose": null,
+    "practical_lesson": {
+      "text": "調べた対処を共有し、他のプレイヤーの意見もトレモで確認する。",
+      "basis": "ai_hypothesis",
+      "evidence_ids": [
+        "kakeru-practice-004-e1"
+      ]
+    },
+    "related_character": "JP",
+    "opponent_character": null,
+    "source_url": "https://game.watch.impress.co.jp/docs/interview/2011054.html",
+    "source_title": "翔選手インタビュー：CC11覇者の素顔に迫る",
+    "source_type": "interview",
+    "source_date": "2025-04-30",
+    "match_or_video_timestamp": null,
+    "game_patch": null,
+    "patch_applicability": "historical",
+    "verification_status": "reviewed",
+    "last_reviewed_at": "2026-10-30",
+    "publication_approval": "PENDING",
+    "source_id": null,
+    "local_source_key": "research-source-16ac4c028c8a0d1c",
+    "evidence": [
+      {
+        "evidence_id": "kakeru-practice-004-e1",
+        "source_url": "https://game.watch.impress.co.jp/docs/interview/2011054.html",
+        "locator": "GAME Watch 本人インタビュー L264",
+        "access_level": "text_read"
+      }
+    ],
+    "review_notes": "2025-04-30本人インタビュー本文を確認。AI応用案は本人の発言ではない。今回の試合映像検証なし。実ID未確認・公開承認PENDINGを維持。",
+    "learning_tags": [
+      "practice"
+    ]
+  }
+]

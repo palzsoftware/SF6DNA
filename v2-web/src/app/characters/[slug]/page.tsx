@@ -1,101 +1,27 @@
+import { Suspense } from "react";
+import { headers } from "next/headers";
+import { AutoYouTubeVideos, AutoVideoLoading } from "@/components/auto-youtube-videos";
+import { isLukeSampleRequest } from "@/lib/luke-sample-cards";
 import { LukeSampleCards } from "@/components/luke-sample-cards";
+import { LukeCanonicalComboReference } from "@/components/luke-canonical-combo-reference";
+import { CharacterUnifiedPage } from "@/components/character-unified-page";
+import { characterUnifiedEvidence } from "@/lib/character-unified-evidence";
+import { projectJpSafeMoveCard } from "@/lib/jp-safe-move-reference";
 import { publicPageMetadata } from "@/lib/public-page-metadata";
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CharacterPreferenceActions } from "@/components/character-preference-actions";
-import { CharacterTabs } from "@/components/character-tabs";
-import { CharacterDetailPilot } from "@/components/character-detail-pilot";
-import { JpCharacterDetail } from "@/components/jp-character-detail";
-import {
-  appendDevicePreviewToken,
-  getDevicePreviewMoveMotionMedia,
-  isDevicePreviewRequest,
-  normalizeDevicePreviewToken,
-} from "@/lib/device-preview";
+import { getDevicePreviewMoveMotionMedia, normalizeDevicePreviewToken } from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
 import { listCharacterSectionItems } from "@/lib/character-sections";
-import { CharacterRelatedSection } from "@/components/character-related-section";
 import { listVideos } from "@/lib/event-media";
 import { getPlayerBySlug } from "@/lib/players";
-import { releaseFeatures } from "@/lib/release-features";
 import { getCharacterDetailV21Profile } from "@/lib/character-detail-v21";
 import { resolveCharacterDetailData, resolveCharacterRelatedVideos } from "@/lib/character-detail-data";
 import { getReleaseConfirmedMedia } from "@/lib/release-confirmed-media";
-import { getCharacterProductionApproval } from "@/lib/production-character-approval";
 import { isCharacterDetailV2Route } from "@/lib/character-detail-route";
 import { adaptCharacterDetailV2Profile } from "@/lib/character-detail-v2-profile-adapter";
-import { presentSource } from "@/lib/source-presentation";
-import type { CharacterGuideSection } from "@/types/character";
-
-const quickActions = [
-  ["プレイヤー", "参考プレイヤーを探す", "/players", "PRO"],
-  ["動画", "関連動画を見る", "/videos", "VIDEO"],
-] as const;
-
-const guideGroups = [
-  {
-    key: "core",
-    title: "基本方針",
-    description: "キャラクターの勝ち筋と軸になる考え方。",
-    sectionKeys: ["overview"],
-  },
-  {
-    key: "level",
-    title: "レベル別の優先事項",
-    description: "習熟度に応じて覚える内容を絞り込みます。",
-    sectionKeys: ["beginner", "intermediate", "advanced", "mr1700"],
-  },
-  {
-    key: "decision",
-    title: "実戦判断",
-    description: "防御とゲージ管理など、試合中の判断基準。",
-    sectionKeys: ["defense", "meter"],
-  },
-  {
-    key: "practice",
-    title: "練習",
-    description: "実戦へつなげるための反復項目。",
-    sectionKeys: ["training"],
-  },
-] as const;
-
-type GuideGroupResult = {
-  key: string;
-  title: string;
-  description: string;
-  items: CharacterGuideSection[];
-};
-
-function groupedGuideSections(sections: CharacterGuideSection[]): GuideGroupResult[] {
-  const used = new Set<string>();
-  const groups: GuideGroupResult[] = guideGroups.flatMap((group) => {
-    const items = group.sectionKeys.flatMap((key) =>
-      sections.filter((section) => section.sectionKey === key)
-    );
-    items.forEach((item) => used.add(item.id));
-    return items.length
-      ? [{ key: group.key, title: group.title, description: group.description, items }]
-      : [];
-  });
-
-  const remaining = sections.filter(
-    (section) => section.sectionKey !== "matchup_card" && !used.has(section.id)
-  );
-  if (remaining.length) {
-    groups.push({
-      key: "other",
-      title: "その他",
-      description: "追加の確認項目。",
-      items: remaining,
-    });
-  }
-  return groups;
-}
-
-function sectionHref(slug: string, path: string, previewToken: string | null) {
-  return appendDevicePreviewToken(`/characters/${slug}${path}`, previewToken);
-}
+import { getWs5TxtPreviewCandidate } from "@/lib/official-txt-preview-snapshot";
+import { connectOfficialTxtCharacterPageData, isWs5LocalCardRequest } from "@/lib/official-txt-character-page-connection.mjs";
+import type { CanonicalTxtRecord } from "@/lib/canonical-txt-connection.mjs";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -133,279 +59,43 @@ export default async function CharacterPage({
     listCharacterSectionItems(character.id, "players"),
     listCharacterSectionItems(character.id, "videos"),
   ]);
-  const previewActive = isDevicePreviewRequest(previewToken);
   const production = process.env.VERCEL_ENV === "production";
-  const pilotRequested = isCharacterDetailV2Route(character.slug, Boolean(getCharacterProductionApproval(character.id, character.slug)));
-  const pilotProfile = pilotRequested
-    ? adaptCharacterDetailV2Profile({
-        character,
-        dedicatedProfile: getCharacterDetailV21Profile(character.slug),
-      }).profile
-    : null;
-  const [remotePilotBundle, allVideos, moveMedia] = pilotRequested
-    ? await Promise.all([resolveCharacterDetailData(character.id, character.slug, previewToken), listVideos({ characterId: character.id }), production ? Promise.resolve([]) : getDevicePreviewMoveMotionMedia(character.id, previewToken)])
-    : [null, await listVideos({ characterId: character.id }), []];
-  const pilotBundle = remotePilotBundle?.bundle ?? null;
-  if (pilotBundle) {
-    const mediaByMove = new Map(moveMedia.map((media) => [media.moveId, media]));
-    const confirmed = production ? new Map() : await getReleaseConfirmedMedia(character.slug, pilotBundle.moves);
-    const generatedCandidate = remotePilotBundle?.source === "fixture" &&
-      (character.slug === "c-viper" || character.slug === "elena" || character.slug === "sagat");
-    pilotBundle.moves = pilotBundle.moves.map((move) => ({
-      ...move,
-      media: production ? null : character.slug === "alex" ? move.media ?? null :
-        confirmed.get(move.id) ?? (generatedCandidate ? null : mediaByMove.get(move.id) ?? move.media ?? null),
-    }));
+  const data = await resolveCharacterDetailData(character.id, character.slug, previewToken);
+  const [allVideos, moveMedia] = await Promise.all([
+    listVideos({ characterId: character.id }),
+    production ? Promise.resolve([]) : getDevicePreviewMoveMotionMedia(character.id, previewToken),
+  ]);
+  const bundle = data.bundle ? { ...data.bundle } : null;
+  if (bundle) {
+    const mediaByMove = new Map(moveMedia.map(media => [media.moveId, media]));
+    const confirmed = production ? new Map() : await getReleaseConfirmedMedia(character.slug, bundle.moves);
+    const generatedCandidate = data.source === "fixture" &&
+      ["c-viper", "elena", "sagat"].includes(character.slug);
+    bundle.moves = bundle.moves.map(original => {
+      const move = character.slug === "jp" ? projectJpSafeMoveCard(original, process.env.VERCEL_ENV) : original;
+      return { ...move, media: production ? null : character.slug === "alex" ? move.media ?? null :
+        confirmed.get(move.id) ?? (generatedCandidate ? null : mediaByMove.get(move.id) ?? move.media ?? null) };
+    });
   }
-  const pilotPlayers = pilotBundle
-    ? (await Promise.all(
-        relatedPlayers.map((item) => getPlayerBySlug(item.href.split("/").filter(Boolean).at(-1) ?? ""))
-      )).filter((player) => player !== null)
-    : [];
-  const pilotVideos = resolveCharacterRelatedVideos(allVideos, [...relatedVideos.map((video) => video.id), ...allVideos.map((video) => video.id)]);
-  const matchupCard = releaseFeatures.publicStrategyContent
-    ? character.guideSections.find((section) => section.sectionKey === "matchup_card") ?? null
-    : null;
-  const groups = releaseFeatures.publicStrategyContent
-    ? groupedGuideSections(character.guideSections)
-    : [];
-  const hasStrengthProfile = Boolean(character.strengthsSummary || character.weaknessesSummary);
-
-  // Keep the JP Preview layout independent from the shared pilot and its
-  // nested grids. Data, visibility gates and media mapping remain the same.
-  if (character.slug === "jp" && pilotBundle && pilotProfile) {
-    // The local pilot fixture contains reviewed drafts. Never pass those cards
-    // into the ordinary JP page while public strategy remains disabled.
-    const publicJpBundle = previewActive ? pilotBundle : {
-      ...pilotBundle,
-      combos: releaseFeatures.publicStrategyContent
-        ? pilotBundle.combos.filter((item) => item.status === "published" && item.verificationStatus === "verified") : [],
-      setups: releaseFeatures.publicStrategyContent
-        ? pilotBundle.setups.filter((item) => item.status === "published" && item.verificationStatus === "verified") : [],
-      sequences: releaseFeatures.publicStrategyContent
-        ? pilotBundle.sequences.filter((item) => item.status === "published" && item.verificationStatus === "verified") : [],
-    };
-    return <JpCharacterDetail
-      character={character}
-      previewToken={previewToken}
-      previewActive={previewActive}
-      bundle={publicJpBundle}
-      profile={pilotProfile}
-      players={pilotPlayers}
-      videos={pilotVideos}
-      pilotOverview={Boolean(pilotBundle && pilotProfile)}
-    />;
-  }
-
-  return (
-    <div className="site-shell page-stack character-overview-page">
-      <section className="character-hero character-hero--overview">
-        <div className="character-hero__copy">
-          <p className="eyebrow">キャラクター</p>
-          <div className="character-hero__title-row">
-            <div>
-              <h1>{character.name}</h1>
-              {character.nameEn ? <p className="character-subtitle">{character.nameEn}</p> : null}
-            </div>
-            <span className="character-ready-badge">キャラクター情報</span>
-          </div>
-          <p className="character-hero__lead">
-            {pilotProfile?.tagline ?? character.shortDescription ?? "特徴、使用プレイヤー、関連動画をまとめています。"}
-          </p>
-          <div className="chip-row character-hero__chips">
-            {character.archetypeLabel ? <span className="chip">{character.archetypeLabel}</span> : null}
-            {character.rangeLabel ? <span className="chip">{character.rangeLabel}</span> : null}
-            {character.difficulty ? <span className="chip">難易度 {character.difficulty}/5</span> : null}
-            {character.releaseDate ? <span className="chip">参戦日 {character.releaseDate}</span> : null}
-          </div>
-          <CharacterPreferenceActions slug={character.slug} />
-        </div>
-        {character.imageUrl ? (
-          <div className="character-hero__visual-wrap">
-            <Image
-              className="character-hero__image"
-              src={character.imageUrl}
-              alt={character.name}
-              width={760}
-              height={760}
-              sizes="(max-width: 760px) 28vw, 42vw"
-              priority
-            />
-          </div>
-        ) : null}
-      </section>
-
-      {previewActive ? (
-        <section className="data-notice character-preview-notice">
-          <strong>実機確認プレビュー</strong>
-          <p>この画面には掲載前の情報も含まれます。掲載前の内容は一般公開には反映されていません。</p>
-        </section>
-      ) : null}
-
-      {!pilotRequested ? <section className="character-home-actions character-home-actions--primary" aria-label={`${character.name}のよく使う情報`}>
-        {quickActions.map(([label, description, path, code]) => (
-          <Link
-            className="character-home-action"
-            href={sectionHref(character.slug, path, previewToken)}
-            key={path}
-          >
-            <span className="character-home-action__code">{code}</span>
-            <strong>{label}</strong>
-            <span>{description}</span>
-            <span className="character-home-action__arrow">{label}を見る →</span>
-          </Link>
-        ))}
-      </section> : null}
-
-      <LukeSampleCards slug={character.slug} requested={query.sample} environment={process.env.VERCEL_ENV} />
-
-      <CharacterTabs slug={character.slug} active="overview" previewToken={previewToken} pilotOverview={Boolean(pilotBundle && pilotProfile)} />
-
-      {!pilotRequested ? <nav className="character-overview-index" aria-label="概要ページ内ナビゲーション">
-        {matchupCard ? <a href="#before-match">対戦前30秒</a> : null}
-        {hasStrengthProfile ? <a href="#profile">強み・注意点</a> : null}
-        {groups.map((group) => <a href={`#guide-${group.key}`} key={group.key}>{group.title}</a>)}
-        {pilotBundle ? <a href="#pilot-combos">コンボカード</a> : null}
-        {pilotBundle ? <a href="#pilot-neutral-defense">立ち回り / 防御</a> : null}
-        {pilotBundle ? <a href="#pilot-motion-media">動作メディア</a> : null}
-        <a href="#related-players">関連プレイヤー</a>
-        <a href="#related-videos">関連動画</a>
-        <a href="#sources">情報源</a>
-      </nav> : null}
-
-      {matchupCard ? (
-        <section className="matchup-spotlight" id="before-match">
-          <div className="matchup-spotlight__head">
-            <div>
-              <p className="eyebrow">BEFORE MATCH</p>
-              <h2>対戦前30秒</h2>
-            </div>
-            <Link className="section-action-link" href={sectionHref(character.slug, "/matchups", previewToken)}>
-              対策をすべて見る →
-            </Link>
-          </div>
-          <article className="matchup-spotlight__card">
-            <h3>{matchupCard.title}</h3>
-            <p className="preline">{matchupCard.body}</p>
-          </article>
-        </section>
-      ) : null}
-
-      {hasStrengthProfile && !pilotRequested ? (
-        <section className="character-profile-section" id="profile">
-          <div className="section-heading">
-            <h2>強みと注意点</h2>
-          </div>
-          <div className="character-columns character-profile-grid">
-            {character.strengthsSummary ? (
-              <article className="info-panel character-profile-card character-profile-card--strength">
-                <span className="character-profile-card__label">STRENGTH</span>
-                <h3>強み</h3>
-                <p className="preline">{character.strengthsSummary}</p>
-              </article>
-            ) : null}
-            {character.weaknessesSummary ? (
-              <article className="info-panel character-profile-card character-profile-card--weakness">
-                <span className="character-profile-card__label">CAUTION</span>
-                <h3>注意点</h3>
-                <p className="preline">{character.weaknessesSummary}</p>
-              </article>
-            ) : null}
-          </div>
-        </section>
-      ) : null}
-
-      {releaseFeatures.publicStrategyContent ? (
-        <section>
-          <div className="section-heading">
-            <h2>立ち回り・考え方</h2>
-            <p>{previewActive ? "未公開候補を用途別に整理して確認できます。" : "攻略本文は対象パッチと出典を確認した上で公開します。"}</p>
-          </div>
-          {groups.length ? (
-            <div className="guide-groups character-guide-groups">
-              {groups.map((group) => (
-                <section className="guide-group" id={`guide-${group.key}`} key={group.key}>
-                  <div className="guide-group__heading">
-                    <h2>{group.title}</h2>
-                    <p>{group.description}</p>
-                  </div>
-                  <div className="guide-accordion-list">
-                    {group.items.map((section, index) => (
-                      <details className="guide-accordion" key={section.id} open={group.key === "core" && index === 0}>
-                        <summary>
-                          <span>{section.title}</span>
-                          <span className="guide-accordion__hint">開く</span>
-                        </summary>
-                        <div className="guide-accordion__body">
-                          <p className="preline">{section.body}</p>
-                        </div>
-                      </details>
-                    ))}
-                  </div>
-                </section>
-              ))}
-            </div>
-          ) : null}
-        </section>
-      ) : null}
-
-      {pilotBundle && pilotProfile ? (
-        <CharacterDetailPilot
-          characterName={character.name}
-          characterSlug={character.slug}
-          previewToken={previewToken}
-          bundle={pilotBundle}
-          players={pilotPlayers}
-          videos={pilotVideos}
-          archetypeLabel={character.archetypeLabel}
-          rangeLabel={character.rangeLabel}
-          difficulty={character.difficulty}
-          sources={character.sources}
-          profile={pilotProfile}
-        />
-      ) : (
-        <>
-          <CharacterRelatedSection
-            id="related-players"
-            title="関連プレイヤー"
-            emptyText="表示できる関連プレイヤーはありません。"
-            href={`/characters/${character.slug}/players`}
-            items={relatedPlayers}
-          />
-          <CharacterRelatedSection
-            id="related-videos"
-            title="関連動画"
-            emptyText="表示できる関連動画はありません。"
-            href={`/characters/${character.slug}/videos`}
-            items={relatedVideos}
-            videos={pilotVideos}
-          />
-        </>
-      )}
-
-      {!pilotRequested ? <section id="sources">
-        <div className="section-heading">
-          <h2>情報源</h2>
-          <p>キャラクター情報の参照先です。</p>
-        </div>
-        {character.sources.length ? (
-          <div className="source-compact-grid">
-            {character.sources.map((source) => {
-              const presentation = presentSource(source.sourceType, source.publisher, source.url);
-              return (
-                <a className="source-compact-card" href={source.url} target="_blank" rel="noopener noreferrer" key={source.id}>
-                  <span>{presentation.badge}</span>
-                  <strong>{source.title}</strong>
-                  {source.publisher ? <small>{source.publisher}</small> : null}
-                  <small>{presentation.cta} ↗</small>
-                </a>
-              );
-            })}
-          </div>
-        ) : (
-          <div className="empty-state"><p>公開済みの出典情報はまだありません。</p></div>
-        )}
-      </section> : null}
-    </div>
-  );
+  const players = (await Promise.all(relatedPlayers.map(item =>
+    getPlayerBySlug(item.href.split("/").filter(Boolean).at(-1) ?? "")))).filter(player => player !== null);
+  const videos = resolveCharacterRelatedVideos(allVideos,
+    [...relatedVideos.map(video => video.id), ...allVideos.map(video => video.id)]);
+  const moveEvidence = await characterUnifiedEvidence(character.slug, bundle?.moves ?? [], process.env.VERCEL_ENV);
+  const admission = { nodeEnv:process.env.NODE_ENV, vercelEnv:process.env.VERCEL_ENV,
+    vercel:process.env.VERCEL, enabled:process.env.SF6DNA_WS5_TXT_PREVIEW,
+    host:(await headers()).get("host") };
+  const txtCandidate = isWs5LocalCardRequest(admission) ? getWs5TxtPreviewCandidate(character.slug) : null;
+  const connectedTxt = txtCandidate ? connectOfficialTxtCharacterPageData({ character,
+    resolved:{...data,bundle}, moveEvidence, candidate:txtCandidate, admission,
+    mediaRegistry:(await import("@/data/SF6DNA_WS5_MEDIA_KEY_REGISTRY_20261026.json")).default,
+    records:(await import("@/data/SF6DNA_WS5_OFFICIAL_TXT_CANONICAL_20261026.json")).default as unknown as Record<string,CanonicalTxtRecord>,
+  }) : null;
+  const finalBundle = connectedTxt?.bundle ?? bundle;
+  const combinedMoveEvidence = connectedTxt?.moveEvidence ?? moveEvidence;
+  return <CharacterUnifiedPage automaticVideos={<Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} /></Suspense>} character={character} bundle={finalBundle} players={players} videos={videos}
+    moveEvidence={combinedMoveEvidence}
+    localMoveReferences={!production && isLukeSampleRequest(character.slug, query.sample, process.env.VERCEL_ENV) ?
+      <LukeSampleCards slug={character.slug} requested={query.sample} environment={process.env.VERCEL_ENV} moveOnly /> : null}
+    localReferences={!production ? <LukeCanonicalComboReference characterSlug={character.slug} /> : null} />;
 }

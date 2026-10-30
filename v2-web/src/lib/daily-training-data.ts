@@ -1,19 +1,28 @@
 import { getSupabaseAuthServerClient } from "@/lib/supabase/auth-server";
 import { normalizePrimaryIssue, type PrimaryIssue } from "@/lib/daily-training";
+import { accountScope } from "@/lib/diagnosis-storage-scope";
+import type { PersonalOwner } from "@/lib/personalization-storage";
 
 export type DailyTrainingContext = {
   primaryIssue: PrimaryIssue | null;
   state: "guest" | "match" | "empty" | "unavailable";
+  // Legacy or explicit-link contexts may lack ownership. The client must not
+  // consume their primaryIssue without a verified current-owner match.
+  owner?: PersonalOwner | null;
 };
 
 export async function loadDailyTrainingContext(): Promise<DailyTrainingContext> {
+  let owner: PersonalOwner | null = null;
   try {
     const supabase = await getSupabaseAuthServerClient();
     const { data, error: authError } = await supabase.auth.getUser();
     if (authError) {
-      return { primaryIssue: null, state: authError.name === "AuthSessionMissingError" ? "guest" : "unavailable" };
+      const guest = authError.name === "AuthSessionMissingError";
+      return { primaryIssue: null, state: guest ? "guest" : "unavailable", owner: guest ? "guest" : null };
     }
-    if (!data.user) return { primaryIssue: null, state: "guest" };
+    if (!data.user) return { primaryIssue: null, state: "guest", owner: "guest" };
+    owner = accountScope(data.user.id);
+    if (!owner) return { primaryIssue: null, state: "unavailable", owner: null };
 
     const { data: row, error } = await supabase
       .from("user_match_logs")
@@ -23,11 +32,12 @@ export async function loadDailyTrainingContext(): Promise<DailyTrainingContext> 
       .order("id", { ascending: false })
       .limit(1)
       .maybeSingle();
-    if (error) return { primaryIssue: null, state: "unavailable" };
+    if (error) return { primaryIssue: null, state: "unavailable", owner };
     const primaryIssue = normalizePrimaryIssue(row?.primary_issue);
-    return { primaryIssue, state: primaryIssue ? "match" : "empty" };
+    return { primaryIssue, state: primaryIssue ? "match" : "empty", owner };
   } catch {
-    // Environment, auth and query failures must not prevent the basic 15-minute plan.
-    return { primaryIssue: null, state: "unavailable" };
+    // An already verified owner can use the existing unavailable fallback.
+    // Unknown authentication never masquerades as a Guest context.
+    return { primaryIssue: null, state: "unavailable", owner };
   }
 }

@@ -1,3 +1,4 @@
+import {renderUnified,assertUniqueAnchors} from './helpers/character-unified-ssr.mjs';
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -127,22 +128,19 @@ test("ordinary character detail withholds draft strategy and preview-only notice
 });
 
 test("Ryu and JP V2.1 removes duplicate navigation and exposes concrete page structures", () => {
-  const source = readProjectFile("src/components/character-detail-pilot.tsx");
-  const copy = readProjectFile("src/lib/character-detail-v21.ts");
   const page = readProjectFile("src/app/characters/[slug]/page.tsx");
-
-  for (const marker of ["試合の組み立て方", "まず確認するコンボ", "セットプレイ", "連携・対策", "距離別の立ち回り", "関連プレイヤー", "関連動画"]) {
-    assert.match(source, new RegExp(marker));
+  assert.match(page, /<CharacterUnifiedPage/);
+  for (const slug of ['ryu','jp']) {
+    const html = renderUnified(slug);
+    assert.equal((html.match(/aria-label="キャラクターページ内の移動"/g) ?? []).length, 1);
+    for (const id of ['pilot-overview','pilot-moves','character-players','character-videos','sources','pilot-combos','pilot-setplay','pilot-sequences','pilot-counters']) assert.ok(html.includes(`id="${id}"`), id);
+    assertUniqueAnchors(assert,html);
+    assert.equal((html.match(/data-strategy-publication="CLOSED"/g) ?? []).length, 4);
   }
-  assert.match(page, /!pilotRequested \? <nav/);
-  assert.match(page, /!pilotRequested \? <section className="character-home-actions/);
-  assert.match(copy, /波動拳/);
-  assert.match(copy, /昇龍拳/);
-  assert.match(copy, /トルバラン/);
-  assert.match(copy, /トリグラフ/);
-  assert.match(copy, /ヴィーハト/);
-  assert.match(copy, /ラヴーシュカ/);
-  assert.doesNotMatch(copy, /空中に置く技|地面からの攻撃|相手を困らせる技/);
+  const copy=readProjectFile('src/lib/character-detail-v21.ts');
+  for(const term of ['波動拳','昇龍拳','トルバラン','トリグラフ','ヴィーハト','ラヴーシュカ']) assert.ok(copy.includes(term));
+  assert.doesNotMatch(copy,/空中に置く技|地面からの攻撃|相手を困らせる技/);
+
 });
 
 test("V2.1 keeps strategy copy RC Preview-only and sources use classified CTAs", () => {

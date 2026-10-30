@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import ts from 'typescript';
+import { loadSource } from './helpers/ws12-render-contract.mjs';
 const source = readFileSync(new URL('../src/lib/combo-input-tokens.ts', import.meta.url), 'utf8');
 const testModule = { exports: {} };
 new Function('module', 'exports', ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText)(testModule, testModule.exports);
@@ -128,6 +129,7 @@ test('a nonpilot card keeps a byte-for-byte text recipe instead of enabling icon
   };
   const recipe = loadComponent('combo-input-recipe.tsx', { '@/lib/combo-input-tokens': testModule.exports });
   const { PilotComboCard } = loadComponent('pilot-combo-card.tsx', {
+    './sf6-card-command': loadSource('components/sf6-card-command.ts'),
     './combo-input-recipe': recipe,
     'next/link': { default: props => React.createElement('a', props), __esModule: true },
     '@/lib/device-preview': { appendDevicePreviewToken: value => value },
@@ -161,4 +163,19 @@ test('a nonpilot card keeps a byte-for-byte text recipe instead of enabling icon
     if (!isComboIconPilot(entry.id)) assert.doesNotMatch(html, /role="img"/);
   }
   assert.match(readFileSync(new URL('../src/components/jp-character-detail.tsx', import.meta.url), 'utf8'), /rawRecipe: combo\.command/);
+  const combo = {id:'not-a-pilot-id', href:'/combos/example', name:'fixture', rawRecipe:raw, command:'正規化済み',
+    damage:null, drive:null, sa:null, difficulty:null, verificationStatus:'unverified', preview:true};
+  const commandRecipe={schema_version:'ws12-card-recipe/1',card_kind:'combo',recipe_id:combo.id,raw_recipe:raw,control:'classic',game_verification:'NOT_VERIFIED',steps:[]};
+  const before=structuredClone({combo,commandRecipe});
+  const fallback=renderToStaticMarkup(React.createElement(PilotComboCard,{combo,commandRecipe}));
+  assert.match(fallback,/data-render-mode="WHOLE_RAW_FALLBACK"/);
+  assert.match(fallback,/aria-label="クラシック、5LP &gt; Drive Rush &gt; DR &gt; DI\(PC\)、コマンド表示確認中"/);
+  assert.ok(fallback.includes(escaped(raw)));
+  assert.doesNotMatch(fallback,/<svg|正規化済み/);
+  assert.deepEqual({combo,commandRecipe},before);
+  for(const incorrect of [{...commandRecipe,recipe_id:'wrong-id'},{...commandRecipe,raw_recipe:'other recipe'}]) {
+    const rejected=renderToStaticMarkup(React.createElement(PilotComboCard,{combo,commandRecipe:incorrect}));
+    assert.doesNotMatch(rejected,/data-render-mode=|<svg/);
+    assert.ok(rejected.includes(escaped(raw)));
+  }
 });

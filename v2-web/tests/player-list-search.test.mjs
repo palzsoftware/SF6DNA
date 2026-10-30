@@ -5,15 +5,15 @@ import test from "node:test";
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
 test("player directory supports normalized partial search and clear", () => {
-  const source = read("src/components/player-directory.tsx");
+  const source = read("src/components/player-directory.tsx") + read("src/lib/player-directory-filter.ts");
   assert.match(source, /normalize\("NFKC"\)/);
   assert.match(source, /toLocaleLowerCase\("ja"\)/);
   assert.match(source, /includes\(needle\)/);
-  assert.match(source, /setQuery\(""\)/);
+  assert.match(source, /update\(\{ query: ""/);
 });
 
 test("player search covers aliases, team, characters, and region", () => {
-  const component = read("src/components/player-directory.tsx");
+  const component = read("src/components/player-directory.tsx") + read("src/lib/player-directory-filter.ts");
   const loader = read("src/lib/players.ts");
   for (const marker of ["player.aliases", "player.teamName", "player.region", "player.countryCode", "character.characterName", "character.characterSlug"]) assert.match(component, new RegExp(marker.replaceAll(".", "\\.")));
   assert.match(loader, /player_aliases/);
@@ -21,22 +21,22 @@ test("player search covers aliases, team, characters, and region", () => {
 });
 
 test("player directory has result count, zero-result state, and accessible input", () => {
-  const source = read("src/components/player-directory.tsx");
+  const source = read("src/components/player-directory.tsx") + read("src/lib/player-directory-filter.ts");
   for (const marker of ["aria-live=\"polite\"", "条件に一致するプレイヤーはいません", "絞り込みを解除", "htmlFor=\"player-search\""]) assert.match(source, new RegExp(marker));
 });
 
 test("player directory V2 combines category and character groups with AND", () => {
-  const source = read("src/components/player-directory.tsx");
+  const source = read("src/components/player-directory.tsx") + read("src/lib/player-directory-filter.ts");
   assert.match(source, /playerMatchesFilters/);
   assert.match(source, /categoryMatch && characterMatch/);
   assert.match(source, /type="checkbox"/);
   assert.match(source, /選択中のフィルター/);
-  assert.match(source, /setCategories\(\[\]\)/);
-  assert.match(source, /setCharacters\(\[\]\)/);
+  assert.match(source, /categories: \[\]/);
+  assert.match(source, /characters: \[\]/);
 });
 
 test("player directory exposes a source-dated unknown rank state", () => {
-  const source = read("src/components/player-directory.tsx");
+  const source = read("src/components/player-directory.tsx") + read("src/lib/player-directory-filter.ts");
   assert.match(source, />ランク</);
   assert.match(source, /ランクでの絞り込みは現在利用できません/);
   assert.doesNotMatch(source, /current_rank\s*=/);

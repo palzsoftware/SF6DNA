@@ -20,8 +20,13 @@ function load(path, globals = {}, imports = {}) {
   return compiled.exports;
 }
 
-const intent = load('video-intent');
-const library = load('video-library', {}, { '@/lib/video-intent': intent });
+const aliases = load('video-event-aliases');
+const learningRegistry = load('video-learning-registry');
+const learning = load('video-learning', {}, { '@/lib/video-learning-registry': learningRegistry });
+const intent = load('video-intent', {}, { '@/lib/video-event-aliases': aliases, '@/lib/video-learning': learning });
+const safeUrls = load('safe-external-url');
+const presentation = load('video-presentation', {}, { '@/lib/safe-external-url': safeUrls });
+const library = load('video-library', {}, { '@/lib/video-intent': intent, '@/lib/video-event-aliases': aliases, '@/lib/video-presentation': presentation, '@/lib/video-learning': learning, '@/lib/video-learning-registry': learningRegistry });
 const video = (id, overrides = {}) => ({ id, slug: id, title: id, platform: 'youtube',
   videoType: 'guide', publishedAt: null, description: null, url: 'https://youtu.be/abcdefghi',
   thumbnailUrl: null, channelName: null, durationSeconds: null, language: null,

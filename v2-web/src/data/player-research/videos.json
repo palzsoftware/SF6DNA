@@ -1,0 +1,72 @@
+[
+  {
+    "key": "kakeru-Z9xK6zsfQ6o",
+    "playerSlug": "kakeru",
+    "title": "KAKERU vs BLAZ｜CAPCOM CUP 11 Grand Final",
+    "youtubeId": "Z9xK6zsfQ6o",
+    "channelName": "Capcom Fighters JP",
+    "kind": "大会対戦",
+    "reason": "CAPCOM CUP 11決勝の対戦全体を視聴できます。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2025-03-19",
+    "evidenceBasis": "投稿者・タイトル・概要欄のメタデータ確認。映像の局面分析ではない。",
+    "identityBinding": "slug候補。現行台帳・対象環境の実IDと照合してから製品接続する。"
+  },
+  {
+    "key": "blaz-Z9xK6zsfQ6o",
+    "playerSlug": "blaz",
+    "title": "KAKERU vs BLAZ｜CAPCOM CUP 11 Grand Final",
+    "youtubeId": "Z9xK6zsfQ6o",
+    "channelName": "Capcom Fighters JP",
+    "kind": "大会対戦",
+    "reason": "CAPCOM CUP 11決勝の対戦全体を視聴できます。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2025-03-19",
+    "evidenceBasis": "投稿者・タイトル・概要欄のメタデータ確認。映像の局面分析ではない。",
+    "identityBinding": "slug候補。現行台帳・対象環境の実IDと照合してから製品接続する。"
+  },
+  {
+    "key": "uma-_DbJcZXq-qo",
+    "playerSlug": "uma",
+    "title": "Uma vs Chris Wong｜CAPCOM CUP X Grand Final",
+    "youtubeId": "_DbJcZXq-qo",
+    "channelName": "Capcom Fighters",
+    "kind": "大会対戦",
+    "reason": "CAPCOM CUP X決勝のジュリ対ルークを視聴できます。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2024-02-26",
+    "evidenceBasis": "投稿者・タイトル・概要欄のメタデータ確認。映像の局面分析ではない。",
+    "identityBinding": "slug候補。現行台帳・対象環境の実IDと照合してから製品接続する。"
+  },
+  {
+    "key": "chris-wong-_DbJcZXq-qo",
+    "playerSlug": "chris-wong",
+    "title": "Uma vs Chris Wong｜CAPCOM CUP X Grand Final",
+    "youtubeId": "_DbJcZXq-qo",
+    "channelName": "Capcom Fighters",
+    "kind": "大会対戦",
+    "reason": "CAPCOM CUP X決勝のジュリ対ルークを視聴できます。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2024-02-26",
+    "evidenceBasis": "投稿者・タイトル・概要欄のメタデータ確認。映像の局面分析ではない。",
+    "identityBinding": "slug候補。現行台帳・対象環境の実IDと照合してから製品接続する。"
+  },
+  {
+    "key": "dogura-uWenGJimPRE",
+    "playerSlug": "dogura",
+    "title": "格ゲーが上達するタイミングについて語るどぐら",
+    "youtubeId": "uWenGJimPRE",
+    "channelName": "どぐら 生駒デビル",
+    "kind": "本人解説",
+    "reason": "本人チャンネルの練習・上達に関する動画です。映像内の具体的発言の精査は未完了です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2024-11-01",
+    "evidenceBasis": "投稿者・タイトル・概要欄のメタデータ確認。映像の局面分析ではない。",
+    "identityBinding": "slug候補。現行台帳・対象環境の実IDと照合してから製品接続する。"
+  }
+]

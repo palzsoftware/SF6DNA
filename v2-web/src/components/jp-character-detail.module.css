@@ -32,7 +32,8 @@
 .group summary { display: flex; justify-content: space-between; gap: 12px; min-height: 52px; align-items: center; cursor: pointer; }
 .group summary span { flex: 0 0 auto; color: var(--muted); }
 .moveList { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; padding-bottom: 12px; }
-.moveCard { min-width: 0; padding: 14px; border: 1px solid var(--border); background: var(--surface); }
+.moveCard { min-width: 0; padding: 14px; border: 1px solid var(--border); background: var(--surface); scroll-margin-top: 130px; }
+.moveCard:target, .moveCard:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .moveHead { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 12px; }
 .moveHead > * { min-width: 0; }
 .moveHead h3 { margin: 4px 0; }

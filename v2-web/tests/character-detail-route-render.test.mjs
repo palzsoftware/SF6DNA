@@ -1,3 +1,4 @@
+import {renderUnified,assertUniqueAnchors} from './helpers/character-unified-ssr.mjs';
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
@@ -24,17 +25,16 @@ const allCharacterSlugs = [
 ];
 
 test("all 31 character routes select the V2 shared template in RC Preview", () => {
-  const enabled = loadRouteGate("preview");
-  for (const slug of allCharacterSlugs) {
-    assert.equal(enabled(slug), true);
-  }
-  assert.equal(enabled("not-a-character"), false);
+  const enabled=loadRouteGate('preview');
+  for(const slug of allCharacterSlugs){assert.equal(enabled(slug),true);const html=renderUnified(slug);assert.match(html,/data-character-template="unified-v1"/);assertUniqueAnchors(assert,html);}
+  assert.equal(enabled('not-a-character'),false);
+  const page=read('src/app/characters/[slug]/page.tsx');
+  assert.match(page,/<CharacterUnifiedPage/);
+  assert.match(page,/resolveCharacterDetailData\(character\.id, character\.slug, previewToken\)/);
+  assert.match(page,/process\.env\.VERCEL_ENV === "production" \? null : normalizeDevicePreviewToken/);
+  assert.match(page,/localReferences=\{!production \?/);
+  assert.doesNotMatch(page,/pilotBundle && previewToken/);
 
-  const page = read("src/app/characters/[slug]/page.tsx");
-  assert.match(page, /isCharacterDetailV2Route\(character\.slug\)/);
-  assert.match(page, /pilotProfile\?\.tagline \?\? character\.shortDescription/);
-  assert.match(page, /\{pilotBundle && pilotProfile \? \(/);
-  assert.doesNotMatch(page, /pilotBundle && previewToken/);
 });
 
 test("Production boundary remains closed for all 31 characters", () => {

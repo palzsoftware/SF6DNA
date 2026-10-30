@@ -1,0 +1,50 @@
+[
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "830621f4-38aa-49e3-a320-31621e983fb5",
+    "playerSlug": "blaz",
+    "recommendationKey": "blaz-Z9xK6zsfQ6o"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "15778fa3-31cb-4567-851f-5d443cd2e0ac",
+    "playerSlug": "chris-wong",
+    "recommendationKey": "chris-wong-_DbJcZXq-qo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-uWenGJimPRE"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b1d6c5b4-9157-455a-84b5-6b5c2ecb80ee",
+    "playerSlug": "kakeru",
+    "recommendationKey": "kakeru-Z9xK6zsfQ6o"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "830621f4-38aa-49e3-a320-31621e983fb5",
+    "playerSlug": "blaz",
+    "recommendationKey": "blaz-Z9xK6zsfQ6o"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "3fd5264b-4ab4-4dc6-9efe-1bea209c4573",
+    "playerSlug": "uma",
+    "recommendationKey": "uma-_DbJcZXq-qo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "15778fa3-31cb-4567-851f-5d443cd2e0ac",
+    "playerSlug": "chris-wong",
+    "recommendationKey": "chris-wong-_DbJcZXq-qo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-uWenGJimPRE"
+  }
+]

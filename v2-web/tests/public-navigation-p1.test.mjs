@@ -17,10 +17,10 @@ test("player video URL carries the exact player filter value", () => {
 });
 
 test("public navigation uses available routes and seeds the existing player facet", async () => {
-  const [improve, matchup, playerPage, videosPage, library, videoFilters, flags] = await Promise.all([
+  const [improve, matchup, playerProfile, videosPage, library, videoFilters, flags] = await Promise.all([
     read("src/components/improvement-loop-tool.tsx"),
     read("src/app/matchup-card/page.tsx"),
-    read("src/app/players/[slug]/page.tsx"),
+    read("src/components/player-profile.tsx"),
     read("src/app/videos/page.tsx"),
     read("src/components/video-library.tsx"),
     read("src/lib/video-library.ts"),
@@ -33,9 +33,9 @@ test("public navigation uses available routes and seeds the existing player face
   assert.doesNotMatch(matchup, /href=\{`\/characters\/\$\{[^}]+\}\/(training|moves)`\}/);
   assert.match(matchup, /releaseFeatures\.publicStrategyContent\s*\?\s*<Link/);
   assert.match(matchup, /<article className="search-result"/);
-  assert.match(playerPage, /href=\{videoPlayerHref\(player\.displayName, player\.id\)\}/);
+  assert.match(playerProfile, /href=\{videoPlayerHref\(player\.displayName, player\.id\)\}/);
   assert.match(videosPage, /videoPlayerFromQuery\(params\.player\)/);
   assert.match(videosPage, /initialPlayer=\{playerId \? null : player\}/);
-  assert.match(library, /players: initialPlayer \? new Set\(\[initialPlayer\]\) : new Set\(\)/);
-  assert.match(videoFilters, /includesAny\(video\.players, filters\.players\)/);
+  assert.match(library, /players: initialPlayer \? new Set\(videoInitialPlayerIds\(videos, initialPlayer\)\)/);
+  assert.match(videoFilters, /videoMatchesRelationFilters\(video, filters\)/);
 });

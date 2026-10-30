@@ -9,11 +9,16 @@ function read(path) {
 }
 
 function loadParser() {
-  const source = read("src/lib/video-intent.ts");
-  const output = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
-  const compiled = { exports: {} };
-  vm.runInNewContext(`(function (exports, compiled) { ${output.replaceAll("module.exports", "compiled.exports")}\n})(compiled.exports, compiled);`, { compiled });
-  return compiled.exports.parseVideoIntent;
+  function load(path, imports = {}) {
+    const output = ts.transpileModule(read(path), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
+    const compiled = { exports: {} };
+    vm.runInNewContext(output, { module: compiled, exports: compiled.exports, require(name) { assert.ok(name in imports, name); return imports[name]; } });
+    return compiled.exports;
+  }
+  const aliases = load("src/lib/video-event-aliases.ts");
+  const registry = load("src/lib/video-learning-registry.ts");
+  const learning = load("src/lib/video-learning.ts", { "@/lib/video-learning-registry": registry });
+  return load("src/lib/video-intent.ts", { "@/lib/video-event-aliases": aliases, "@/lib/video-learning": learning }).parseVideoIntent;
 }
 
 test("parser decomposes natural-language examples and leaves typos untouched", () => {
@@ -32,9 +37,11 @@ test("parser decomposes natural-language examples and leaves typos untouched", (
 
 test("video intent parser covers the release examples without automatic replacement", () => {
   const parser = read("src/lib/video-intent.ts");
-  for (const value of ["jp", "ryu", "torikore", "sa2", "lethal", "max_damage_combo", "sho", "tokido", "ryusei", "kisaragi_ren", "capcom_cup", "sfl", "beginner", "intermediate", "advanced", "match"]) {
+  for (const value of ["jp", "ryu", "torikore", "sa2", "lethal", "max_damage_combo", "sho", "tokido", "ryusei", "kisaragi_ren", "beginner", "intermediate", "advanced", "match"]) {
     assert.match(parser, new RegExp(`id: "${value}"`));
   }
+  const aliases = read("src/lib/video-event-aliases.ts");
+  for (const value of ["capcom_cup", "sfl"]) assert.match(aliases, new RegExp(`id: "${value}"`));
   assert.match(parser, /remainingTerms/);
   assert.match(parser, /suggestions/);
 });
@@ -44,7 +51,7 @@ test("video filters combine parsed intent with explicit group filters", () => {
   assert.match(library, /parseVideoIntent\(filters\.query\)/);
   assert.match(library, /videoMatchesIntent/);
   assert.match(library, /filters\.levels/);
-  assert.match(library, /includesAny\(video\.categories/);
+  assert.match(library, /includesAny\(videoContentCategories\(video\)/);
 });
 
 test("100+ library controls retain twelve-item loading and user preferences", () => {

@@ -1,7 +1,7 @@
 .playerPage { min-width: 0; }
 .listHero { max-width: 52rem; }
 .directory { min-width: 0; display: grid; gap: 1rem; }
-.searchPanel { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(18rem, 32rem) auto; align-items: end; gap: 1rem; padding: 1rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); }
+.searchPanel { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(18rem, 32rem); align-items: end; gap: 1rem; padding: 1rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); }
 .searchPanel h2, .searchPanel p { margin: 0; }
 .searchPanel > div:first-child p { margin-top: .35rem; color: var(--muted); }
 .searchControl { min-width: 0; display: grid; gap: .4rem; }
@@ -64,3 +64,27 @@
 
 .playerPage :is(h1, h2, p, li, summary) { overflow-wrap: anywhere; }
 .playerPage details p { white-space: pre-line; }
+
+
+/* WS15: shrinkable team filters and explicit character groups. */
+.filterNote { grid-column: 1 / -1; min-width: 0; color: var(--muted); font-size: .85rem; overflow-wrap: anywhere; }
+.characterGroup { min-width: 0; margin-top: 1rem; }
+.characterGroup h3 { font-size: 1rem; margin-bottom: .5rem; }
+.filterOptions label { max-width: 100%; min-height: 2.75rem; }
+.filterOptions label span { min-width: 0; overflow-wrap: anywhere; }
+.filterOptions input { flex-shrink: 0; }
+.playerCard:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+
+/* Isolated unified presentation delta; no component logic changes. */
+:global(body[data-ui="unified-20261030"]) .listHero { max-width: none; }
+:global(body[data-ui="unified-20261030"]) .searchPanel { background: var(--surface); padding: 20px; border-radius: 16px; }
+:global(body[data-ui="unified-20261030"]) .searchRow input { background: var(--input-bg,var(--surface)); border-radius: 10px; min-height: 46px; }
+:global(body[data-ui="unified-20261030"]) .filterOptions label, :global(body[data-ui="unified-20261030"]) .filterChips button { min-height: 44px; }
+:global(body[data-ui="unified-20261030"]) .playerGrid { gap: 18px; }
+:global(body[data-ui="unified-20261030"]) .playerCard { border-radius: 16px; background: var(--surface); }
+:global(body[data-ui="unified-20261030"]) .playerMark { background: var(--surface-strong); color: var(--text); }
+
+/* Long names remain selectable; no filter or player data is changed. */
+:global(body[data-ui="unified-20261030"]) .filterOptions label { min-width: 0; overflow-wrap: anywhere; }
+:global(body[data-ui="unified-20261030"]) .filterOptions { padding: 4px; }

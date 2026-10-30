@@ -41,3 +41,42 @@
 :global(html[data-appearance]:not([data-appearance="standard"])) .option:has(input:checked) { color: var(--info); background: var(--info-bg); }
 :global(html[data-theme="light"]) .unavailable,
 :global(html[data-appearance]:not([data-appearance="standard"])) .unavailable { color: var(--text-muted); }
+
+.library, .topRow > label { min-width: 0; }
+.topRow input, .topRow select { min-width: 0; max-width: 100%; }
+.option { max-width: 100%; overflow-wrap: anywhere; }
+.option input { flex-shrink: 0; }
+
+.searchScope { margin: 0; color: var(--copy-muted, var(--muted)); font-size: .8rem; line-height: 1.6; overflow-wrap: anywhere; }
+.selectedConditions { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+.selectedConditions button { min-height: 44px; max-width: 100%; padding: 8px 10px; border: 1px solid var(--line-strong, var(--border)); border-radius: 10px; background: transparent; color: var(--text); font: inherit; font-size: .8rem; text-align: left; overflow-wrap: anywhere; cursor: pointer; }
+.library button:focus-visible, .library input:focus-visible, .library select:focus-visible { outline: 2px solid var(--info, #53d8ff); outline-offset: 3px; }
+@media (max-width: 560px) { .option, .activeSummary button, .clear { min-height: 44px; } .activeSummary { flex-wrap: wrap; } }
+
+
+/* Isolated unified presentation delta; no component logic changes. */
+:global(body[data-ui="unified-20261030"]) .toolbar { background: var(--surface); padding: 20px; border-radius: 16px; border-color: var(--border); }
+:global(body[data-ui="unified-20261030"]) .topRow input, :global(body[data-ui="unified-20261030"]) .topRow select { background: var(--input-bg,var(--surface)); color: var(--text); min-height: 46px; border-radius: 10px; }
+:global(body[data-ui="unified-20261030"]) .activeSummary { background: color-mix(in srgb,var(--accent) 8%,var(--surface)); color: var(--muted); }
+:global(body[data-ui="unified-20261030"]) .activeSummary button { color: var(--accent); min-height: 44px; }
+:global(body[data-ui="unified-20261030"]) .filter legend { color: var(--text-secondary,var(--text)); }
+:global(body[data-ui="unified-20261030"]) .option { color: var(--muted); min-height: 40px; border-color: var(--border); }
+:global(body[data-ui="unified-20261030"]) .option:has(input:checked) { color: var(--text); border-color: var(--accent); background: color-mix(in srgb,var(--accent) 10%,var(--surface)); }
+:global(body[data-ui="unified-20261030"]) .option input { accent-color: var(--accent); }
+:global(body[data-ui="unified-20261030"]) .unavailable { color: var(--muted); }
+:global(body[data-ui="unified-20261030"]) .clear, :global(body[data-ui="unified-20261030"]) .filterToggle { min-height: 44px; border-radius: 10px; }
+
+:global(body[data-ui="unified-20261030"]) .selectedConditions button { border-color: var(--border); background: var(--surface); color: var(--text); }
+:global(body[data-ui="unified-20261030"]) .library :is(button,input,select):focus-visible { outline-color: var(--focus-ring,var(--accent)); }
+
+/* Ver.1.0 readability polish: preserve filtering and preference behavior. */
+:global(body[data-ui="unified-20261030"]) .topRow label,
+:global(body[data-ui="unified-20261030"]) .filter legend,
+:global(body[data-ui="unified-20261030"]) .option { font-size: .875rem; line-height: 1.6; }
+:global(body[data-ui="unified-20261030"]) .option { min-height: 44px; }
+:global(body[data-ui="unified-20261030"]) .activeSummary { flex-wrap: wrap; overflow-wrap: anywhere; }
+:global(body[data-ui="unified-20261030"]) .activeSummary > * { min-width: 0; max-width: 100%; }
+:global(body[data-ui="unified-20261030"]) .activeSummary button { white-space: normal; overflow-wrap: anywhere; }
+@media (max-width: 560px) {
+  :global(body[data-ui="unified-20261030"]) .toolbar { padding: 12px; }
+}

@@ -8,14 +8,14 @@ test("player list exposes team, main character, region, and detail route", () =>
   const page = read("src/app/players/page.tsx");
   const directory = read("src/components/player-directory.tsx");
   assert.match(page, /<PlayerDirectory players=\{players\}/);
-  for (const marker of ["チーム", "主なキャラクター", "地域", "/players/${player.slug}"]) assert.match(directory, new RegExp(marker.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  for (const marker of ["チーム", "使用キャラクター", "地域", "playerDetailHref(player.slug, state)"]) assert.match(directory, new RegExp(marker.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
 });
 
 test("player detail covers release QA sections and natural empty states", () => {
-  const page = read("src/app/players/[slug]/page.tsx");
+  const page = read("src/app/players/[slug]/page.tsx") + read("src/components/player-profile.tsx");
   for (const marker of ["使用キャラクター", "SNS・外部リンク", "大会実績", "関連動画", "情報源", "まだありません"]) assert.match(page, new RegExp(marker));
   assert.doesNotMatch(page, /NO SIGNAL|nullを表示|>準備中</);
-  assert.match(page, /おすすめ動画は現在準備中です。/);
+  assert.match(page, /おすすめ動画は確認できたものから追加します。/);
 });
 
 test("player image policy only permits allowlisted images and renders approved fallback copy", () => {
@@ -40,7 +40,7 @@ test("player relations exclude unpublished characters and support tournament res
 });
 
 test("related video cards reuse favorite, watched, and share controls", () => {
-  const page = read("src/app/players/[slug]/page.tsx");
+  const page = read("src/app/players/[slug]/page.tsx") + read("src/components/player-profile.tsx");
   const card = read("src/components/video-card.tsx");
   assert.match(page, /<VideoCard/);
   for (const marker of ["お気に入り", "視聴済み", "共有"]) assert.match(card, new RegExp(marker));

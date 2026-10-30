@@ -7,7 +7,6 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import React from 'react';
 
 const require = createRequire(import.meta.url);
-const { NextRequest } = require('next/server');
 function load(path, overrides = {}) {
   const mod = { exports: {} };
   const js = ts.transpileModule(readFileSync(new URL(`../src/${path}`, import.meta.url), 'utf8'), {
@@ -18,6 +17,7 @@ function load(path, overrides = {}) {
 }
 
 test('malformed paths fail before auth, while valid encoding preserves cookie refresh', async () => {
+  const { NextRequest } = require('next/server');
   const names = ['NEXT_PUBLIC_SUPABASE_URL', 'NEXT_PUBLIC_SUPABASE_ANON_KEY'];
   const saved = names.map(name => process.env[name]);
   Object.assign(process.env, { NEXT_PUBLIC_SUPABASE_URL: 'https://test.supabase.co', NEXT_PUBLIC_SUPABASE_ANON_KEY: 'fixture' });
@@ -101,22 +101,35 @@ test('source transport failure preserves player identity and missing relations d
   const original = console.error; const logs=[]; console.error=(...args)=>logs.push(args.join(' '));
   try {
     const sources = load('lib/public-source-links.ts', {'@/lib/supabase/server':{getSupabaseServerClient:()=>client}});
-    const { getPlayerBySlug } = load('lib/players.ts', {'@/lib/supabase/server':{getSupabaseServerClient:()=>client}, '@/lib/public-source-links':sources, '@/lib/approved-player-images':{approvedPlayerImage:()=>null}});
+    const { getPlayerBySlug } = load('lib/players.ts', {'@/lib/supabase/server':{getSupabaseServerClient:()=>client}, '@/lib/public-source-links':sources, '@/lib/approved-player-images':{approvedPlayerImage:()=>null},
+      '@/lib/sfl2026-template-connection':{
+        connectSfl2026Summaries: items=>items,
+        connectSfl2026Detail: item=>item
+      }});
     const player=await getPlayerBySlug('fixture');
     assert.equal(player.displayName,'公開Player'); assert.equal(player.teamName,null); assert.deepEqual(player.characters,[]); assert.deepEqual(player.sources,[]);
     assert.doesNotMatch(logs.join(' '),/PRIVATE_SOURCE_FAILURE/);
   } finally {console.error=original;['NEXT_PUBLIC_SUPABASE_URL','NEXT_PUBLIC_SUPABASE_ANON_KEY'].forEach((name,i)=>saved[i]===undefined?delete process.env[name]:process.env[name]=saved[i])}
 });
 
-test('optional video transport failure preserves player page and local empty state', async () => {
+test('video loader API_ERROR preserves player page and forwards the error state', async () => {
   const player = { id:'p',slug:'p',displayName:'公開Player',realName:null,bio:null,teamName:null,characters:[],tournamentResults:[],sources:[] };
   const original = console.error;const logs=[];console.error=(...args)=>logs.push(args.join(' '));
   try {
     const { default:Page } = load('app/players/[slug]/page.tsx', {
       '@/lib/public-page-metadata':load('lib/public-page-metadata.ts'),
       '@/lib/players':{getPlayerBySlug:async()=>player},
-      '@/lib/event-media':{listVideos:async()=>{throw Error('PRIVATE_VIDEO_FAILURE')},formatVideoPublishedDate:()=>null},
-      '@/components/player-evidence-sections':{PlayerEvidenceSections:()=>null},'@/components/player-identity':{PlayerIdentity:()=>null},'@/components/video-card':{VideoCard:()=>null},
+      '@/lib/event-media':{listVideosResult:async options=>{
+        assert.deepEqual(options, { playerId: 'p', limit: 8 });
+        return { state: 'API_ERROR', items: [], warnings: [] };
+      }},
+      '@/components/player-detail-supplements':{attachPlayerTeamResults:received=>{assert.equal(received,player);return received;},playerDetailSupplements:received=>{ assert.equal(received, player); return {}; }},
+      '@/components/auto-youtube-videos':{AutoYouTubeVideos:()=>null,AutoVideoLoading:()=>null},
+      '@/components/player-profile':{PlayerProfile:({player,relatedVideos,relatedVideoState})=>{
+        assert.deepEqual(relatedVideos, []);
+        assert.equal(relatedVideoState, 'API_ERROR');
+        return React.createElement('main', {'data-video-state': relatedVideoState}, React.createElement('h1',null,player.displayName));
+      }},'@/components/player-evidence-sections':{PlayerEvidenceSections:()=>null},'@/components/player-identity':{PlayerIdentity:()=>null},'@/components/video-card':{VideoCard:()=>null},
       '@/lib/player-labels':{playerTypeLabel:()=>'',playerRoleLabel:()=>''},
       '@/lib/player-presentation':{playerRegionLabel:()=>'',playerSourceCta:()=>'',safePlayerBio:()=>null,playerBioSummary:()=>null},
       '@/lib/video-player-filter':{videoPlayerHref:()=>'/videos'},
@@ -124,9 +137,9 @@ test('optional video transport failure preserves player page and local empty sta
       'next/link':{default:({children,...props})=>React.createElement('a',props,children),__esModule:true},
       '../players.module.css':{default:{},__esModule:true},
     });
-    const html=renderToStaticMarkup(await Page({params:Promise.resolve({slug:'p'})}));
+    const html=renderToStaticMarkup(await Page({params:Promise.resolve({slug:'p'}),searchParams:Promise.resolve({})}));
     assert.match(html,/<h1>公開Player<\/h1>/);
-    assert.match(html,/このプレイヤーの関連動画はまだ掲載していません/);
+    assert.match(html,/data-video-state="API_ERROR"/);
     assert.doesNotMatch(logs.join(' '),/PRIVATE_VIDEO_FAILURE/);
   } finally {console.error=original;}
 });

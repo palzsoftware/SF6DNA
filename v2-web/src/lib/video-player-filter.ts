@@ -11,6 +11,6 @@ export function videoPlayerHref(displayName: string, playerId?: string, characte
 }
 
 export function videoEntityIdFromQuery(value: string | string[] | undefined): string | null {
-  const id = Array.isArray(value) ? value[0] : value;
-  return id && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id) ? id : null;
+  const id = typeof value === "string" ? value : undefined;
+  return id && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id) ? id.toLowerCase() : null;
 }

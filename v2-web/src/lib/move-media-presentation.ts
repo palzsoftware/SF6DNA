@@ -26,7 +26,7 @@ export function selectMoveMotionMedia<T>(move: {
     c.variantKey === (p?.variantKey ?? "") && c.media != null &&
     c.confidence === "HIGH" && c.identity === "CONFIRMED" && c.quality === "PASS" &&
     c.decode === "PASS" && c.animation === "PASS" && c.loop === "PASS" && c.hash === "PASS");
-  const hit = candidates.find(c => c.outcome === "HIT");
+  const hit = upgradePriority ? candidates.find(c => c.outcome === "HIT") : undefined;
   const existing = p?.existingValidation === "HOLD" ? null : move.media ?? null;
   const chosen = hit ?? (existing == null ? candidates[0] : undefined);
   const media = chosen?.media ?? existing;

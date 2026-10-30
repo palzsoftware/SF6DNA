@@ -1,13 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,existsSync,statSync} from 'node:fs';
+import {posix} from 'node:path';
 import {createRequire} from 'node:module';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import ts from 'typescript';
 const require=createRequire(import.meta.url),cache=new Map();
-const load=path=>{if(cache.has(path))return cache.get(path);const m={exports:{}};const js=ts.transpileModule(readFileSync(new URL('../src/'+path,import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;new Function('module','exports','require',js)(m,m.exports,stub);cache.set(path,m.exports);return m.exports;};
-function stub(name){
+function resolveSource(base){
+ const normalized=posix.normalize(base);
+ if(normalized.startsWith('../')||posix.isAbsolute(normalized))throw new Error('Source import outside src '+base);
+ const file=[normalized,normalized+'.ts',normalized+'.tsx',normalized+'/index.ts',normalized+'/index.tsx'].find(candidate=>{const url=new URL('../src/'+candidate,import.meta.url);return existsSync(url)&&statSync(url).isFile();});
+ if(!file)throw new Error('Unresolved source import '+base);
+ return file;
+}
+const load=path=>{if(cache.has(path))return cache.get(path);const m={exports:{}};const js=ts.transpileModule(readFileSync(new URL('../src/'+path,import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;cache.set(path,m.exports);new Function('module','exports','require',js)(m,m.exports,name=>stub(name,path));return m.exports;};
+function stub(name,from){
  if(name==='react'||name==='react/jsx-runtime')return require(name);
  if(name.endsWith('.module.css'))return {default:new Proxy({},{get:(_,key)=>String(key)})};
  if(name==='next/link')return {default:({children,href,...props})=>React.createElement('a',{...props,href},children)};
@@ -22,6 +30,8 @@ function stub(name){
  if(name==='@/lib/source-presentation')return {};
  const components={'@/components/character-game-guide':['CharacterGamePlan','CharacterRangeGuide'],'@/components/character-quick-start':['CharacterQuickStart'],'@/components/pilot-combo-card':['PilotComboCard'],'@/components/character-player-card':['CharacterPlayerCard'],'@/components/character-video-reference-card':['CharacterVideoReferenceCard'],'@/components/video-card':['VideoCard']};
  if(components[name])return Object.fromEntries(components[name].map(key=>[key,()=>null]));
+ if(name.startsWith('@/'))return load(resolveSource(name.slice(2)));
+ if(name.startsWith('.'))return load(resolveSource(posix.join(posix.dirname(from),name)));
  throw new Error('Unexpected import '+name);
 }
 const {CharacterDetailPilot}=load('components/character-detail-pilot.tsx');
@@ -31,7 +41,11 @@ const categories=['normal','unique','target_combo','special','throw','super'];
 const moves=categories.map((moveType,i)=>({id:'test-'+i,slug:'test-'+i,name:'テスト技'+i,moveType,status:'published',usageSummary:null,commands:[{scheme:'classic',commandText:'236LP'}],frame:{startup:'7',onHit:'+2',onBlock:'-3',damage:600,verificationStatus:'verified'}}));
 test('shared card SSR keeps every required category and field with no-media fallback for all 31 slugs',()=>{
  assert.equal(slugs.length,31);
- for(const slug of slugs){const html=render(slug,moves);assert.equal((html.match(/<article/g)||[]).length,moves.length,slug);assert.equal((html.match(/動作映像は未掲載/g)||[]).length,moves.length,slug);for(const text of ['通常技','特殊技','必殺技','投げ','SA','発生','ヒット時','ガード時','ダメージ','600','↓↘→'])assert.ok(html.includes(text),slug+':'+text);assert.ok(html.includes('弱P'),slug+':explicit strength');}
+ for(const slug of slugs){const html=render(slug,moves);assert.equal((html.match(/<article/g)||[]).length,moves.length,slug);assert.equal((html.match(/動作映像は未掲載/g)||[]).length,moves.length,slug);for(const text of ['通常技','特殊技','必殺技','投げ','SA','発生','ヒット時','ガード時','ダメージ','600'])assert.ok(html.includes(text),slug+':'+text);
+ const commands=[...html.matchAll(/<span[^>]*role="img"[^>]*aria-label="下、右下、右、弱パンチ"[^>]*>(.*?)<\/span><\/span>/g)];
+ assert.equal(commands.length,moves.length,slug+':one semantic command per card');
+ for(const command of commands){assert.equal((command[1].match(/<svg /g)||[]).length,4);assert.match(command[1],/rotate\(90 12 12\)[\s\S]*rotate\(45 12 12\)[\s\S]*rotate\(0 12 12\)/);assert.doesNotMatch(command[1],/236LP/);}
+ }
 });
 test('existing video and GIF media render through the existing component without mandatory media on other cards',()=>{
  const media={id:'media',moveId:'test-0',mediaType:'video',mediaUrl:'/test.mp4',posterUrl:'/test.webp',sourceUrl:null,sourceLabel:null,status:'published'};
@@ -39,8 +53,8 @@ test('existing video and GIF media render through the existing component without
  const gif=render('sagat',[{...moves[0],media:{...media,mediaType:'gif',mediaUrl:'/test.gif'}}]);assert.ok(gif.includes('/test.gif'));
 });
 
-const releaseSnapshot=JSON.parse(readFileSync(new URL('../src/data/ALL_CHARACTER_RELEASE_FIXTURE_20261004.json',import.meta.url),'utf8'));
 test('generated DB fixtures SSR renders exact IDs, real commands and frame values for all 31 characters',()=>{
+ const releaseSnapshot=JSON.parse(readFileSync(new URL('../src/data/ALL_CHARACTER_RELEASE_FIXTURE_20261004.json',import.meta.url),'utf8'));
  for(const [slug,entry] of Object.entries(releaseSnapshot.characters)){
   const html=render(slug,entry.moves);
   assert.equal((html.match(/<article/g)||[]).length,entry.moves.length,slug);
@@ -57,6 +71,7 @@ test('generated DB fixtures SSR renders exact IDs, real commands and frame value
 });
 
 test('confirmed Elena media renders on the exact five cards while 67 others retain fallback',()=>{
+ const releaseSnapshot=JSON.parse(readFileSync(new URL('../src/data/ALL_CHARACTER_RELEASE_FIXTURE_20261004.json',import.meta.url),'utf8'));
  const confirmed=JSON.parse(readFileSync(new URL('../src/data/CONFIRMED_RELEASE_MEDIA_20261005.json',import.meta.url),'utf8'));
  const byId=new Map(confirmed.map(row=>[row.moveId,row]));
  const moves=releaseSnapshot.characters.elena.moves.map(move=>{

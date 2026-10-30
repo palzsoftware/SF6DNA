@@ -17,10 +17,10 @@ test('current evidence requires freshness; historical evidence is retained witho
  assert.deepEqual(contract.publicPlayerFacts([old],now),[old]);
  for(const change of [{state:'PENDING'},{state:'UNVERIFIED'},{verified:false},{sourceUrl:'javascript:alert(1)'},{sourceDate:'not a date'},{sourceDate:'2027-01-01'}]) assert.deepEqual(contract.publicPlayerFacts([{...fact,...change}],now),[]);
 });
-test('recommendation needs verification, public status and a meaningful reason',()=>{
- const video={...fact,state:'HISTORICAL',title:'公式試合',recommendationReason:'キャラの立ち回りを見る',published:true};
+test('recommendation needs verification, confirmed relation, public status and a meaningful reason',()=>{
+ const video={...fact,state:'HISTORICAL',title:'公式試合',recommendationReason:'キャラの立ち回りを見る',published:true,relationConfirmed:true};
  assert.deepEqual(contract.publicRecommendedVideos([video]),[video]);
- for(const change of [{published:false},{recommendationReason:''},{title:''},{verified:false}]) assert.deepEqual(contract.publicRecommendedVideos([{...video,...change}]),[]);
+ for(const change of [{published:false},{recommendationReason:''},{title:''},{verified:false},{relationConfirmed:false},{relationConfirmed:undefined}]) assert.deepEqual(contract.publicRecommendedVideos([{...video,...change}]),[]);
  assert.deepEqual(contract.publicRecommendedVideos(),[]);
 });
 test('long biography gets a short summary without replacing its full source text',()=>{

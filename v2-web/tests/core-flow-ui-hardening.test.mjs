@@ -16,7 +16,7 @@ function hooks() {
     useState: initial => {
       const i = cursor++; if (!(i in state)) state[i] = typeof initial === 'function' ? initial() : initial;
       return [state[i], next => { state[i] = typeof next === 'function' ? next(state[i]) : next; }];
-    }, useEffect: () => {},
+    }, useEffect: () => {}, useMemo: fn => fn(), useRef: value => ({ current: value }),
   } };
 }
 function auth(action, clientThrows = false) {
@@ -61,16 +61,31 @@ test('Daily15 closes first and other cards and handles a changed plan', () => {
   const h = hooks(); let ids = ['a', 'b', 'c'];
   const { DailyTrainingPlanner } = load('daily-training-planner.tsx', {
     react: h.react, 'react/jsx-runtime': jsx, 'next/link': { default: 'a' },
-    '@/lib/local-user-tools': { getDiagnosisHistory: () => [], getCharacterStatuses: () => ({}) },
+    'next/navigation': { useRouter: () => ({ refresh: () => { throw Error('unexpected refresh'); } }) },
+    '@/lib/use-personalization-owner': { usePersonalizationOwner: () => ({ state: { status: 'ready', owner: 'guest', version: 1 }, isCurrent: () => true }) },
+    '@/lib/personalization-storage': { getCharacterStatuses: () => ({}) },
+    '@/lib/daily-diagnosis-input': { readDailyDiagnosisInput: () => { throw Error('unexpected history read'); } },
+    '@/lib/daily-practice-owner': { readOwnedPractice: () => { throw Error('unexpected practice read'); } },
+    '@/lib/daily-practice-owner-lock': { savePracticeWithOwnerLock: () => { throw Error('unexpected write'); } },
+    './daily-training-quality-card': { DailyTrainingQualityCard: () => null },
     '@/lib/daily-practice': {},
-    '@/lib/daily-training': { resolveDailyTrainingSelection: () => ({}), buildDailyTrainingPlan: () => ({
+    '@/lib/daily-training': { isImprovementFocus: () => false, resolveDailyTrainingSelection: () => ({}), buildDailyTrainingPlan: () => ({
       dateKey: '2026-09-30', theme: 'fixture', reason: 'fixture', source: 'default', totalMinutes: 15,
       items: ids.map(id => ({ id, detail: { matchFocus: ['fixture'] } })),
     }) }, './daily-training-planner.module.css': { default: {} },
   });
   function cards() {
-    h.reset(); const tree = DailyTrainingPlanner({ dateKey: '2026-09-30', request: {}, context: { state: 'empty', primaryIssue: null } });
-    return tree.props.children[2].props.children;
+    h.reset(); const wrapper = DailyTrainingPlanner({ dateKey: '2026-09-30', request: { diagnosisType: 'improvement', focus: null }, context: { owner: 'guest', state: 'empty', primaryIssue: null } });
+    assert.equal(typeof wrapper.type, 'function');
+    const tree = wrapper.type(wrapper.props);
+    const findCards = node => {
+      if (!node || typeof node !== 'object') return null;
+      if (node.props?.['aria-label'] === '今日の練習項目') return node.props.children;
+      const children = Array.isArray(node.props?.children) ? node.props.children : [node.props?.children];
+      for (const child of children.flat(Infinity)) { const found = findCards(child); if (found) return found; }
+      return null;
+    };
+    return findCards(tree);
   }
   let list = cards(); assert.deepEqual(list.map(x => x.props.expanded), [true, false, false]);
   list[0].props.onToggle(); list = cards(); assert.deepEqual(list.map(x => x.props.expanded), [false, false, false]);

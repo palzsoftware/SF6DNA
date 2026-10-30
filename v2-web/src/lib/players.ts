@@ -1,8 +1,16 @@
+import { attachPlayerArchiveDisplay } from "@/lib/player-archive-display";
+import { attachReleasePlayerProfile } from "@/lib/player-profile-release-connection";
+import { connectSfl2026Summaries, connectSfl2026Detail } from "@/lib/sfl2026-template-connection";
+import { attachApprovedPlayerIntake } from "@/lib/player-profile-approved-intake";
 import { approvedPlayerImage } from "@/lib/approved-player-images";
 import { safeExternalUrl } from "@/lib/safe-external-url";
 import { getPublicEntitySources } from "@/lib/public-source-links";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type { PlayerDetail, PlayerSummary } from "@/types/player";
+
+function relationFailure() {
+  return { data: null, error: { message: "PLAYER_RELATION_UNAVAILABLE" } };
+}
 
 function isConfigured() {
   return Boolean(
@@ -73,14 +81,14 @@ export async function listPlayers(): Promise<
     { data: links, error: linkError },
     { data: aliasRows, error: aliasError },
   ] = await Promise.all([
-    supabase
+    Promise.resolve(supabase
       .from("player_characters")
       .select("player_id, character_id, role, characters!inner(slug, name_ja, status)")
-      .in("player_id", playerIds),
-    supabase
+      .in("player_id", playerIds)).catch(relationFailure),
+    Promise.resolve(supabase
       .from("player_aliases")
       .select("player_id, alias")
-      .in("player_id", playerIds),
+      .in("player_id", playerIds)).catch(relationFailure),
   ]);
   if (linkError) console.error("[players] list character links failed", linkError.message);
   if (aliasError) console.error("[players] list aliases failed", aliasError.message);
@@ -101,6 +109,11 @@ export async function listPlayers(): Promise<
     if (player && typeof row.alias === "string") player.aliases.push(row.alias);
   }
   return summaries;
+}
+
+/** Directory-only scope: preserve listPlayers for existing callers. */
+export async function listDirectoryPlayers(): Promise<PlayerSummary[]> {
+  return connectSfl2026Summaries(await listPlayers());
 }
 
 export async function getPlayerBySlug(
@@ -130,22 +143,24 @@ export async function getPlayerBySlug(
     return null;
   }
 
+  if (!connectSfl2026Detail(toSummary(player))) return null;
+
   const [
     { data: links, error: linkError },
     { data: resultRows, error: resultError },
     sourceLinks,
   ] = await Promise.all([
-    supabase
+    Promise.resolve(supabase
       .from("player_characters")
       .select(
         "character_id, role, characters!inner(slug, name_ja, status)",
       )
-      .eq("player_id", player.id),
+      .eq("player_id", player.id)).catch(relationFailure),
 
-    supabase
+    Promise.resolve(supabase
       .from("tournament_results")
       .select("tournament_id, placement, note, tournaments!inner(slug, name, status)")
-      .eq("player_id", player.id),
+      .eq("player_id", player.id)).catch(relationFailure),
 
     getPublicEntitySources(
       ["player"],
@@ -161,7 +176,7 @@ export async function getPlayerBySlug(
   }
   if (resultError) console.error("[players] tournament results failed", resultError.message);
 
-  return {
+  return attachPlayerArchiveDisplay(attachReleasePlayerProfile(attachApprovedPlayerIntake({
     ...toSummary(player),
 
     realName:
@@ -223,5 +238,5 @@ export async function getPlayerBySlug(
         note: typeof row.note === "string" ? row.note : null,
       }];
     }),
-  };
+  })));
 }

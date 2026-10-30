@@ -190,7 +190,8 @@
 .subheading { padding: 12px 0; border-bottom: 1px solid var(--border); }
 .subheading h2 { letter-spacing: -.025em; }
 .moveGroup > summary { min-height: 48px; border-left: 3px solid var(--accent); padding-left: 16px; }
-.moveRow { border-radius: 6px; }
+.moveRow { border-radius: 6px; scroll-margin-top: 6rem; }
+.moveRow:target, .moveRow:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* Move cards use one consistent two-column rhythm on desktop; media quality state does not change layout semantics. */
 .playerCard { border-radius: 6px 20px 6px 6px; }

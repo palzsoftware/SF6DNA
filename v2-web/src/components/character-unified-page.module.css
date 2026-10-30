@@ -1,0 +1,142 @@
+.page { display: grid; gap: 24px; min-width: 0; padding-block: 28px 60px; overflow-wrap: anywhere; }
+.page *, .page *::before, .page *::after { box-sizing: border-box; min-width: 0; }
+.page h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin: 8px 0; }
+.page h2 { margin: 0 0 18px; font-size: 1.45rem; }
+.page h3 { margin: 10px 0; line-height: 1.5; }
+.page p, .page dd { line-height: 1.75; }
+.page a { text-underline-offset: 3px; }
+.page :focus-visible { outline: 3px solid var(--focus-ring, #ff9d51); outline-offset: 4px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 280px; align-items: center; gap: 24px; }
+.english { color: var(--text-muted, #b5bdc8); letter-spacing: .08em; }
+.portrait { width: 100%; height: 280px; object-fit: contain; }
+.imageFallback { display: grid; place-items: center; min-height: 180px; padding: 20px; background: var(--surface-raised, #182029); border-radius: 14px; }
+.navigation { display: flex; gap: 12px 20px; flex-wrap: wrap; padding: 16px; background: var(--bg-subtle, #151c25); border-radius: 12px; }
+.section { padding: clamp(16px, 3vw, 28px); border: 1px solid var(--border, #35414f); border-radius: 16px; background: var(--surface, #121923); scroll-margin-top: 100px; }
+.facts, .profileGrid, .relatedGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.profileGrid, .relatedGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.facts { margin: 0 0 18px; }
+.facts dt, .notes dt, .frames dt { color: var(--text-muted, #b5bdc8); font-size: .85rem; }
+.page dd { margin: 4px 0 0; }
+.profileGrid > div { background: var(--surface-raised, #19222e); padding: 16px; border-radius: 10px; }
+.moveGroup { border-top: 1px solid var(--border, #35414f); padding: 16px 0; }
+.moveGroup summary { cursor: pointer; display: flex; gap: 16px; padding: 12px 0; }
+.moveGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 16px; }
+.moveCard { border: 1px solid var(--border-strong, #3a4654); background: var(--surface-raised, #19222e); padding: 16px; border-radius: 12px; scroll-margin-top: 110px; }
+.moveCard header { min-height: 64px; }
+.tag { font-size: .8rem; color: var(--link, #ffc195); }
+.mediaSlot { display: grid; place-items: center; aspect-ratio: 16 / 9; background: var(--bg-subtle, #0e141d); color: var(--text-secondary, #c9d2df); border: 1px solid var(--border, #35414f); border-radius: 10px; padding: 10px; text-align: center; overflow: hidden; }
+.moveCard[data-has-media="false"] .mediaSlot { aspect-ratio: auto; min-height: 56px; padding: 8px; }
+.mediaAsset { width: 100%; max-width: 100%; height: auto; max-height: 100%; object-fit: contain; }
+.commands { display: grid; gap: 8px; margin-block: 12px; }
+.commands dt { font-weight: 700; }
+.commandLine { display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+.commandLine small { color: var(--text-muted, #b5bdc8); }
+.frames { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.moveDetails { margin-top: 12px; border-top: 1px solid var(--border, #35414f); padding-top: 10px; }
+.moveDetails summary { cursor: pointer; color: var(--link, #ffc195); font-weight: 700; }
+.notes { display: grid; gap: 8px; margin-top: 12px; }
+.cardSources { border-top: 1px solid var(--border, #35414f); padding-top: 12px; font-size: .85rem; }
+.sources { padding-left: 20px; display: grid; gap: 8px; }
+.empty, .closedCard { padding: 16px; background: var(--surface-raised, #19222e); border-radius: 10px; }
+.closedCard { max-width: 440px; }
+@media (max-width: 1100px) { .moveGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .portrait { height: 180px; }
+  .facts, .profileGrid, .relatedGrid, .moveGrid { grid-template-columns: minmax(0, 1fr); }
+  .section { padding: 16px; }
+  .moveCard header { min-height: 0; margin-bottom: 12px; }
+  .navigation { gap: 12px; }
+}
+
+
+/* SF6DNA WS5 R4.2 compact variants */
+.commandVariant { display: grid; gap: 4px; margin-block: 4px; }
+.frameVariant { margin-block: 8px; }
+.anchorAlias { display: block; height: 0; scroll-margin-top: 110px; }
+.frameVariant > strong { display: block; margin-bottom: 6px; color: var(--text-secondary, #c9d2df); }
+.localCandidateNotice { padding: 10px 12px; border: 1px solid #a97b39; border-radius: 8px; color: #f3cc8e; }
+
+/* WS5 compact media candidate: bounded media, side-by-side controls, dense frames. */
+.moveGroup { padding: 4px 0; }
+.moveGroup > summary { min-height: 48px; padding: 10px 0; }
+.moveCard { padding: 12px; }
+.moveCard header { min-height: 0; margin-bottom: 8px; }
+.moveCard h3 { margin: 4px 0; font-size: 1rem; line-height: 1.4; }
+.mediaSlot { height: clamp(112px, 13vw, 148px); aspect-ratio: auto; padding: 0; }
+.mediaSlot > *, .mediaSlot img, .mediaSlot video { max-width: 100%; max-height: 100%; object-fit: contain; }
+.mediaSlot video, .mediaSlot img { width: 100%; height: 100%; }
+.moveCard[data-has-media="false"] .mediaSlot { min-height: 32px; height: 32px; padding: 4px; }
+.commands { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-block: 10px; }
+.commands dd { margin-top: 4px; }
+.commandLine { margin-bottom: 2px; gap: 4px; }
+.frames { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px 8px; margin-block: 8px; }
+.frames dt { font-size: .75rem; }
+.frames dd { margin-top: 2px; line-height: 1.4; font-variant-numeric: tabular-nums; }
+.frameVariant { margin-block: 4px; }
+.moveDetails { margin-top: 8px; padding-top: 6px; }
+.moveDetails summary { padding: 4px 0; font-size: .85rem; }
+@media (max-width: 640px) { .mediaSlot { height: 144px; } }
+
+/* Full source frame: never constrain a taller video inside an undersized slot. */
+.moveCard[data-has-media="true"] .mediaSlot {
+  display: block; width: 100%; height: auto; min-height: 0;
+  aspect-ratio: 16 / 9; padding: 0; overflow: hidden;
+}
+.moveCard[data-has-media="true"] .mediaSlot video,
+.moveCard[data-has-media="true"] .mediaSlot img {
+  display: block; width: 100%; height: 100%; min-height: 0;
+  max-width: 100%; max-height: 100%; object-fit: contain; object-position: center;
+}
+
+
+/* WS5 category headers: independent rows, count badge and visible toggle. */
+.moveGroup { border: 1px solid var(--border, #35414f); border-radius: 10px; margin-block: 10px; padding: 0; background: var(--surface, #121923); overflow: hidden; }
+.moveGroup > summary { display: flex; align-items: center; gap: 12px; min-height: 52px; margin: 0; padding: 12px 14px; list-style: none; background: var(--surface-raised, #19222e); }
+.moveGroup > summary::-webkit-details-marker { display: none; }
+.moveGroup > summary > strong { flex: 1; font-size: 1rem; line-height: 1.4; }
+.moveGroup > summary > span { flex: 0 0 auto; padding: 2px 9px; border: 1px solid var(--border, #35414f); border-radius: 999px; color: var(--text-secondary, #c9d2df); font-size: .8rem; line-height: 1.6; font-variant-numeric: tabular-nums; }
+.moveGroup > summary::after { content: ""; flex: 0 0 7px; width: 7px; height: 7px; margin: 0 3px 3px 4px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform .15s; }
+.moveGroup[open] > summary { border-bottom: 1px solid var(--border, #35414f); }
+.moveGroup[open] > summary::after { transform: rotate(225deg); margin-top: 6px; }
+.moveGroup > summary:hover { background: var(--surface-strong, #222f3d); }
+.moveGroup > .moveGrid { padding: 12px; }
+@media (max-width: 640px) { .moveGroup > summary { padding: 12px; } .moveGroup > .moveGrid { padding: 8px; gap: 10px; } }
+@media (prefers-reduced-motion: reduce) { .moveGroup > summary::after { transition: none; } }
+
+/* WS5 QA card alignment: append to current CSS, never replace it. */
+.moveGrid { align-items: stretch; }
+.moveCard { display: flex; flex-direction: column; }
+.moveCard > header { min-height: 76px; }
+.moveCard > .commands { min-height: 112px; }
+.moveCard > .moveDetails { margin-top: auto; }
+.commandLine > small { flex-basis: 100%; }
+.notes p { margin: 4px 0; }
+
+/* Layout-only integration: copy, source gates, moves and existing anchors stay intact. */
+:global(body[data-ui="unified-20261030"]) .hero {
+  padding: clamp(20px, 4vw, 40px); border: 1px solid var(--border);
+  border-top: 3px solid var(--accent); border-radius: 16px; background: var(--surface);
+}
+:global(body[data-ui="unified-20261030"]) .navigation {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+}
+:global(body[data-ui="unified-20261030"]) .navigation a {
+  display: inline-flex; align-items: center; min-height: 44px; padding-inline: 8px;
+}
+:global(body[data-ui="unified-20261030"]) .profileGrid > div { background: var(--surface-strong); }
+.relatedSections { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.relatedPanel .relatedGrid { grid-template-columns: minmax(0, 1fr); }
+.relatedLink { display: inline-flex; align-items: center; min-height: 44px; margin-top: 12px; }
+@media (max-width: 900px) { .relatedSections { grid-template-columns: minmax(0, 1fr); } }
+
+/* Combo references share Move-card metrics and icon assets; keep media bounded. */
+.comboCard { max-width: 880px; }
+.comboMedia { aspect-ratio: 16 / 9; background: var(--bg-subtle, #0e141d); border-radius: 10px; overflow: hidden; }
+.comboMedia video { display: block; width: 100%; height: 100%; object-fit: contain; }
+.comboRecipe { display: flex; flex-wrap: wrap; gap: 12px; margin-block: 16px; }
+.comboStep { display: grid; align-content: start; gap: 6px; max-width: 100%; }
+.comboStep small { color: var(--text-muted, #b5bdc8); }
+.comboDescription { border-top: 1px solid var(--border, #35414f); margin-top: 12px; padding-top: 12px; }
+.comboDescription h4 { margin: 0 0 8px; }
+.comboDescription p { margin: 6px 0; }

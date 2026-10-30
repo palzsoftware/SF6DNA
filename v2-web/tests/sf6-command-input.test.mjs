@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import ts from "typescript";
+import { commandRenderSnapshot, assertRenderedCommand } from './helpers/ws12-render-contract.mjs';
 
 const source = readFileSync(new URL("../src/lib/sf6-command-tokens.ts", import.meta.url), "utf8");
 const mod = { exports: {} };
@@ -12,8 +13,12 @@ const visible = value => tokenizeSf6Command(value).filter(token => !/^\s+$/.test
 test("Ingrid SA2-style double reverse-quarter-circle never exposes raw numpad", () => {
   for (const raw of ["214214P", "214214 + P"]) {
     const out = visible(raw);
-    assert.ok(out.includes("↓↙← ×2"), raw);
+    assert.ok(out.includes("↓↙←↓↙←"), raw);
     assert.ok(out.includes("P"), raw);
+    assertRenderedCommand(commandRenderSnapshot(raw, {scheme:'classic'}),
+      ['direction-2','direction-1','direction-4','direction-2','direction-1','direction-4','button-p'],
+      raw.includes('+') ? '下、左下、左、下、左下、左、同時押し、パンチ（強度未特定）' : '下、左下、左、下、左下、左、パンチ（強度未特定）', '214214');
+    assert.equal(sf6CommandSearchTerms(raw)[0],raw);
     assert.doesNotMatch(sf6CommandSearchTerms(raw)[1] ?? "", /214214/);
   }
 });
@@ -22,13 +27,34 @@ test("representative motion families render as arrows or readable motion labels"
   const cases = {
     "236LP": ["↓↘→", "弱P"],
     "623HP": ["→↓↘", "強P"],
-    "236236P": ["↓↘→ ×2", "P"],
+    "236236P": ["↓↘→↓↘→", "P"],
     "[4]6P": ["←溜め→", "P"],
     "[2]8K": ["↓溜め↑", "K"],
     "360P": ["1回転", "P"],
     "720K": ["2回転", "K"],
   };
-  for (const [raw, expected] of Object.entries(cases)) for (const token of expected) assert.ok(visible(raw).includes(token), `${raw}: ${token}`);
+  const assets = {
+    '236LP':['direction-2','direction-3','direction-6','button-p'],
+    '623HP':['direction-6','direction-2','direction-3','button-p'],
+    '236236P':['direction-2','direction-3','direction-6','direction-2','direction-3','direction-6','button-p'],
+    '[4]6P':['button-p'], '[2]8K':['button-k'], '360P':['button-p'], '720K':['button-k'],
+  };
+  const labels = {
+    '236LP':'下、右下、右、弱パンチ', '623HP':'右、下、右下、強パンチ',
+    '236236P':'下、右下、右、下、右下、右、パンチ（強度未特定）',
+    '[4]6P':'後ろ溜めから前、パンチ（強度未特定）', '[2]8K':'下溜めから上、キック（強度未特定）',
+    '360P':'1回転入力、パンチ（強度未特定）', '720K':'2回転入力、キック（強度未特定）',
+  };
+  for (const [raw, expected] of Object.entries(cases)) {
+    for (const token of expected) assert.ok(visible(raw).includes(token), `${raw}: ${token}`);
+    const result=commandRenderSnapshot(raw,{scheme:'classic'});
+    assertRenderedCommand(result,assets[raw],labels[raw],raw.match(/\d{3,}/)?.[0]);
+    if (raw === '236LP') assert.match(result.html, />弱<\/span>/);
+    if (raw === '623HP') assert.match(result.html, />強<\/span>/);
+    if (raw.startsWith('[')) assert.ok(result.html.includes('溜め'));
+    if (raw.startsWith('360')) assert.ok(result.html.includes('1回転'));
+    if (raw.startsWith('720')) assert.ok(result.html.includes('2回転'));
+  }
 });
 
 test("Classic strengths, Modern buttons, drive and SA are explicit semantic tokens", () => {
@@ -50,7 +76,11 @@ test("component uses SF6DNA semantic token roles with accessible labels and no r
   const component = readFileSync(new URL("../src/components/sf6-command-input.tsx", import.meta.url), "utf8");
   const css = readFileSync(new URL("../src/components/sf6-command-input.module.css", import.meta.url), "utf8");
   assert.match(component, /data-token-kind=\{token\.kind\}/);
-  assert.match(component, /role="img" aria-label=\{tokens\.map/);
+  const rendered=commandRenderSnapshot('236LP',{scheme:'classic'});
+  assertRenderedCommand(rendered,['direction-2','direction-3','direction-6','button-p'],'下、右下、右、弱パンチ','236');
+  const named=commandRenderSnapshot('236LP',{scheme:'classic',accessibleName:'正式技名、クラシック、手動入力、通常時、下、右下、右、弱パンチ'});
+  assert.equal(named.label,'正式技名、クラシック、手動入力、通常時、下、右下、右、弱パンチ');
+  assert.equal((named.html.match(/role="img"/g)||[]).length,1);
   assert.match(component, /data-token-kind=\{token\.kind\} aria-hidden="true"/);
   assert.doesNotMatch(component, /aria-label=\{token\.label\}/);
   assert.doesNotMatch(component, /data-raw|title=\{.*raw/);

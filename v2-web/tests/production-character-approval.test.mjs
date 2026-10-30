@@ -30,7 +30,25 @@ const cases = [
 ['T06 existing gate AND release grant',()=>{assert.equal(resolve({gateReadyIds:new Set()}).length,0);const {grant,proof}=sample();grant.moves=[];assert.equal(gate.isProductionMoveApproved(grant,proof),false);}],
 ['T07 no preview getters in production resolver',async()=>{const calls=[];const mod=load('src/lib/character-detail-data.ts',n=>{if(n==='@/lib/production-character-approval')return gate;if(n==='@/lib/character-detail-route')return route;if(n==='@/lib/release-character-move-resolver')return publicResolver;return new Proxy({}, {get:()=>()=>{calls.push(n);throw Error('unauthorized getter');}});});const prior=process.env.VERCEL_ENV;process.env.VERCEL_ENV='production';try{assert.deepEqual(await mod.resolveCharacterDetailData('c','alex','attack'),{bundle:null,source:'unavailable'});assert.equal(calls.length,0);}finally{process.env.VERCEL_ENV=prior;}}],
 ['T08 query failure cannot fixture-fallback',()=>assert.match(read('src/lib/character-detail-data.ts'),/loadPublicCharacterMoves\(characterId, approval\)\.catch\(\(\) => null\)/)],
-['T09 root server derived grant',()=>{const p=read('src/app/characters/[slug]/page.tsx');assert.match(p,/Boolean\(getCharacterProductionApproval\(character.id, character.slug\)\)/);assert.match(p,/production \? Promise.resolve\(\[\]\)/);}],
+['T09 root server derived grant',async()=>{
+ const p=read('src/app/characters/[slug]/page.tsx');
+ assert.match(p,/resolveCharacterDetailData\(character.id, character.slug, previewToken\)/);
+ assert.match(p,/const bundle = data.bundle/);
+ assert.match(p,/production \? Promise.resolve\(\[\]\)/);
+ const calls=[];
+ const mod=load('src/lib/character-detail-data.ts',n=>{
+  if(n==='@/lib/production-character-approval')return gate;
+  return new Proxy({}, {get:()=>()=>{calls.push(n);throw Error('Unapproved Production must not load data');}});
+ });
+ const prior=process.env.VERCEL_ENV;process.env.VERCEL_ENV='production';
+ try{
+  for(const slug of slugs){
+   assert.equal(gate.getCharacterProductionApproval(snapshot.characters[slug].characterId ?? 'unapproved-id',slug),null);
+   assert.deepEqual(await mod.resolveCharacterDetailData(snapshot.characters[slug].characterId ?? 'unapproved-id',slug,'untrusted-preview-token'),{bundle:null,source:'unavailable'},slug);
+  }
+  assert.deepEqual(calls,[]);
+ }finally{if(prior===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=prior;}
+}],
 ['T10 exact move allowlist',()=>{const {grant,proof}=sample();grant.moves[0].id='other';assert.equal(gate.isProductionMoveApproved(grant,proof),false);}],
 ['T11 identity variant condition stale proof',()=>{for(const field of ['id','slug','name','moveType']){const {grant,proof}=sample();proof.move[field]='changed';assert.equal(gate.isProductionMoveApproved(grant,proof),false);}}],
 ['T12 patch mismatch',()=>{const {grant,proof}=sample();proof.patchId='old';assert.equal(gate.isProductionMoveApproved(grant,proof),false);}],

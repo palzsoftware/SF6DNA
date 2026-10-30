@@ -1,10 +1,11 @@
+import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { createHash } from 'node:crypto';
 import ts from 'typescript';
 import { identities, manifestPaths, validateRecordedCharacter } from '../../scripts/validate-recorded-four-media.mjs';
-const publicRoot = new URL('../public/',import.meta.url).pathname;
+const publicRoot = fileURLToPath(new URL('../public/',import.meta.url));
 for (const [index, character] of Object.keys(identities).entries()) {
  const manifest = JSON.parse(readFileSync(new URL(`../src/data/${manifestPaths[index]}`,import.meta.url),'utf8'));
  test(`${character}: exact reviewed identities/assets only`, () => assert.deepEqual(validateRecordedCharacter(manifest,character,{publicRoot}).errors,[]));

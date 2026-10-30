@@ -1,39 +1,28 @@
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
-import {createRequire} from 'node:module';
 import test from 'node:test';
-import ts from 'typescript';
-const require=createRequire(import.meta.url);
-const source=readFileSync(new URL('../src/components/diagnosis-runner.tsx',import.meta.url),'utf8');
-const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
-const diagnosis={id:'10000000-0000-4000-8000-000000000001',slug:'fixture',title:'Fixture',diagnosisType:'improvement',questions:[{id:'q',options:[{id:'o',scorePayload:{anti_air:1}}]}]};
-const storage=new Map();
-function harness({auth={data:{user:{id:'A'}},error:null},rpcError=null,delay=false,complete=true}={}){
- let callback,index=0,rpcCalls=[],statuses=[],logs=[];
- const values=[complete?1:0,{q:'o'},0,true,[],null,false,'idle',null];
- const react={useState:(initial)=>{const slot=index++;return [values[slot]??initial,(v)=>{if(slot===7)statuses.push(v);}]},useRef:v=>({current:v}),useEffect:()=>{},useMemo:f=>f(),useCallback:f=>{callback=f;return f;}};
- const deps={'react':react,'react/jsx-runtime':require('react/jsx-runtime'),'next/link':()=>null,'@/lib/local-user-tools':{saveDiagnosisHistory:()=>{}},'@/lib/daily-training':{buildDailyTrainingHref:()=>'/me/training'},'@/lib/release-features':{releaseFeatures:{aiCoach:false}},'@/lib/supabase/client':{getSupabaseBrowserClient:()=>({auth:{getUser:async()=>auth},rpc:async(name,args)=>{rpcCalls.push({name,args});if(delay)await Promise.resolve();return {data:'saved-id',error:rpcError};}})}};
- const loadedModule={exports:{}};
- const logger={error:(...args)=>logs.push(args)};
- const window={localStorage:{getItem:key=>storage.get(key)??null,setItem:(key,v)=>storage.set(key,v)}};
- new Function('module','exports','require','window','console',js)(loadedModule,loadedModule.exports,n=>{if(!(n in deps))throw new Error(n);return deps[n];},window,logger);
- loadedModule.exports.DiagnosisRunner({diagnosis});
- return {save:()=>callback(),rpcCalls,statuses,logs};
-}
+import { environment, A, draftKey, requestKey } from './helpers/diagnosis-owner-save-harness.mjs';
+
 test('guest and missing session never submit save mutation',async()=>{
- for(const auth of [{data:{user:null},error:null},{data:{user:null},error:{name:'AuthSessionMissingError'}}]){const h=harness({auth});await h.save();assert.equal(h.rpcCalls.length,0);assert.equal(h.statuses.at(-1),'idle');}
+ for(const error of [null,{name:'AuthSessionMissingError'}]){
+  const e=environment();e.setUser(null);e.seedDraft(null);e.setAuthError(error);
+  const v=e.mount();await v.settle();assert.equal(v.getStatus(),'idle');assert.equal(e.calls.length,0);assert.equal(e.rows.size,0);assert.equal(e.storage.has(requestKey),false);
+ }
 });
-test('invalid or expired auth fails without anon fallback and without secret logging',async()=>{
- const secret={name:'AuthApiError',message:'fixture private email/token',session:{refresh_token:'fixture'}};
- const h=harness({auth:{data:{user:null},error:secret}});await h.save();assert.equal(h.rpcCalls.length,0);assert.equal(h.statuses.at(-1),'failed');assert.deepEqual(h.logs,[['[diagnosis] result save failed']]);
+test('invalid or expired save-time auth fails without anon fallback and without secret logging',async()=>{
+ const e=environment();e.setAuthError({name:'AuthApiError',message:'fixture private email/token',session:{refresh_token:'fixture'}});
+ const v=e.mount();await v.settle();assert.equal(v.getStatus(),'failed');assert.equal(e.calls.length,0);assert.equal(e.storage.has(requestKey),false);assert.deepEqual(e.errors,[['[diagnosis] result save failed']]);
 });
 test('RPC error stays failed and preserves retry request identity',async()=>{
- storage.clear();const h=harness({rpcError:{code:'42501',message:'private fixture'}});await h.save();assert.equal(h.statuses.at(-1),'failed');const id=h.rpcCalls[0].args.p_request_id;await h.save();assert.equal(h.rpcCalls[1].args.p_request_id,id);assert.equal(JSON.stringify(h.logs).includes('42501'),false);
+ const e=environment();e.failNext();const v=e.mount();await v.settle();assert.equal(v.getStatus(),'failed');const id=e.calls[0].p_request_id;
+ await v.retry();await v.settle();assert.equal(v.getStatus(),'saved');assert.equal(e.calls[1].p_request_id,id);assert.equal(e.rows.size,1);assert.deepEqual(e.errors,[['[diagnosis] result save failed']]);
 });
 test('reload/re-login keeps request id and sends no client owner override',async()=>{
- storage.clear();const first=harness();await first.save();const second=harness();await second.save();assert.equal(first.rpcCalls[0].args.p_request_id,second.rpcCalls[0].args.p_request_id);assert.equal('user_id' in first.rpcCalls[0].args,false);assert.equal(second.statuses.at(-1),'saved');
+ const e=environment();const first=e.mount();await first.settle();e.setUser(null);await e.mount().settle();assert.equal(e.calls.length,1);
+ e.setUser(A);const second=e.mount();await second.settle();assert.equal(second.getStatus(),'saved');assert.equal(e.calls[0].p_request_id,e.calls[1].p_request_id);assert.equal(e.rows.size,1);
+ for(const call of e.calls){assert.equal('user_id' in call,false);assert.equal('p_user_id' in call,false);assert.equal(call.user,A);}
 });
 test('incomplete diagnosis and simultaneous submissions do not duplicate requests',async()=>{
- const incomplete=harness({complete:false});await incomplete.save();assert.equal(incomplete.rpcCalls.length,0);
- const h=harness({delay:true});await Promise.all([h.save(),h.save()]);assert.equal(h.rpcCalls.length,1);
+ const incomplete=environment();incomplete.storage.delete(draftKey);await incomplete.mount().settle();assert.equal(incomplete.calls.length,0);
+ const e=environment();e.failNext();const v=e.mount();await v.settle();assert.equal(v.getStatus(),'failed');assert.equal(e.calls.length,1);
+ await Promise.all([v.retry(),v.retry()]);await v.settle();assert.equal(e.calls.length,2,'only one additional RPC for simultaneous retries');assert.equal(e.rows.size,1);assert.equal(v.getStatus(),'saved');
 });

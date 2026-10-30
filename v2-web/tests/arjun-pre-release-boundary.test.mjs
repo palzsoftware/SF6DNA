@@ -34,10 +34,14 @@ test("internal route reuses Character Detail, remains unindexed, and never enter
   const page = read("src/app/internal/character-preview/[slug]/page.tsx");
   assert.match(page, /getPreReleaseCharacter\(slug\)/);
   assert.match(page, /if \(!character\) notFound\(\)/);
-  assert.match(page, /<CharacterDetailPilot[\s\S]*?preRelease/);
+  assert.match(page, /<CharacterUnifiedPage \{\.\.\.preReleaseUnifiedProps\(character\)\}/);
   assert.match(page, /robots: \{ index: false, follow: false, noarchive: true \}/);
-  const shared = read("src/components/character-detail-pilot.tsx");
-  assert.match(shared, /!preRelease \? <section className=\{styles\.comboSection\}/);
+  const shared = read("src/components/character-unified-page.tsx");
+  assert.match(shared, /showPreferences = true/);
+  assert.match(dataSource, /showPreferences: false/);
+  const strategy = read("src/components/character-strategy-slot.tsx");
+  assert.match(strategy, /data-strategy-publication="CLOSED"/);
+  assert.doesNotMatch(strategy, /<a\b|<Link\b|<iframe\b|<video\b/);
   for (const path of ["src/lib/character-detail-route.ts", "src/lib/character-detail-v21-fixture.ts", "src/app/sitemap.ts", "src/lib/character-recommendations.ts"]) {
     assert.doesNotMatch(read(path), /["']arjun["']/i, path);
   }

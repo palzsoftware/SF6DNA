@@ -10,7 +10,9 @@ import {
   setCharacterStatus,
   setFavoriteCharacter,
   type CharacterUseStatus,
-} from "@/lib/local-user-tools";
+  type PersonalOwner,
+} from "@/lib/personalization-storage";
+import { usePersonalizationOwner } from "@/lib/use-personalization-owner";
 
 const STATUS_LABELS: Record<CharacterUseStatus, string> = {
   main: "メイン",
@@ -18,25 +20,36 @@ const STATUS_LABELS: Record<CharacterUseStatus, string> = {
   learning: "練習中",
 };
 
-export function MyCharacterManager({
-  characters,
-  favoritesOnly = false,
-}: {
+export function MyCharacterManager({ characters, favoritesOnly = false }: {
   characters: CharacterSummary[];
   favoritesOnly?: boolean;
+}) {
+  const { state, isCurrent } = usePersonalizationOwner();
+  if (state.status === "error") return <div className="empty-state"><p>認証状態を確認できません。記録を表示せず保護しています。ページを再読み込みしてください。</p></div>;
+  if (state.status !== "ready" || !isCurrent()) return <div className="empty-state"><p>お気に入りとマイキャラを読み込んでいます。</p></div>;
+  return <ScopedMyCharacterManager key={state.owner} owner={state.owner} isCurrent={isCurrent} characters={characters} favoritesOnly={favoritesOnly} />;
+}
+
+function ScopedMyCharacterManager({ owner, isCurrent, characters, favoritesOnly }: {
+  owner: PersonalOwner;
+  isCurrent: () => boolean;
+  characters: CharacterSummary[];
+  favoritesOnly: boolean;
 }) {
   const [favorites, setFavorites] = useState<string[]>([]);
   const [statuses, setStatuses] = useState<Record<string, CharacterUseStatus>>({});
   const [ready, setReady] = useState(false);
+  const [storageError, setStorageError] = useState(false);
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
-      setFavorites(getFavoriteCharacterSlugs());
-      setStatuses(getCharacterStatuses());
+      if (!isCurrent()) return;
+      setFavorites(getFavoriteCharacterSlugs(owner));
+      setStatuses(getCharacterStatuses(owner));
       setReady(true);
     });
     return () => window.cancelAnimationFrame(frame);
-  }, []);
+  }, [owner, isCurrent]);
 
   const visible = useMemo(
     () => characters.filter((character) => !favoritesOnly || favorites.includes(character.slug)),
@@ -44,14 +57,18 @@ export function MyCharacterManager({
   );
 
   function toggleFavorite(slug: string) {
+    if (!isCurrent()) return;
     const enabled = !favorites.includes(slug);
-    setFavoriteCharacter(slug, enabled);
+    if (!setFavoriteCharacter(owner, slug, enabled)) { setStorageError(true); return; }
+    setStorageError(false);
     setFavorites((current) => enabled ? [...current, slug] : current.filter((value) => value !== slug));
   }
 
   function changeStatus(slug: string, next: string) {
+    if (!isCurrent()) return;
     const status = (next || null) as CharacterUseStatus | null;
-    setCharacterStatus(slug, status);
+    if (!setCharacterStatus(owner, slug, status)) { setStorageError(true); return; }
+    setStorageError(false);
     setStatuses((current) => {
       const updated = { ...current };
       if (status) updated[slug] = status;
@@ -60,19 +77,21 @@ export function MyCharacterManager({
     });
   }
 
-  if (!ready) return <div className="empty-state"><p>お気に入りとマイキャラを読み込んでいます。</p></div>;
+  if (!ready || !isCurrent()) return <div className="empty-state"><p>お気に入りとマイキャラを読み込んでいます。</p></div>;
 
   if (visible.length === 0) {
     return (
       <div className="empty-state">
         <MiniIllustration kind="saved" /><h2>{favoritesOnly ? "お気に入りはまだありません" : "公開キャラクターがありません"}</h2>
         <p>{favoritesOnly ? "キャラクターページの☆から追加できます。マイキャラからも選べます。" : "キャラクター情報が掲載されると、ここから選べます。"}</p>{favoritesOnly ? <Link className="button-secondary inline-button" href="/characters">キャラクターを探す</Link> : null}
+        {storageError ? <p role="alert">端末への保存に失敗しました。</p> : null}
       </div>
     );
   }
 
   return (
     <div className="user-character-grid">
+      {storageError ? <p role="alert">端末への保存に失敗しました。ブラウザの空き容量や設定をご確認ください。</p> : null}
       {visible.map((character) => {
         const favorite = favorites.includes(character.slug);
         return (

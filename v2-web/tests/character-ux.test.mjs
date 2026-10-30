@@ -34,7 +34,7 @@ const props = { groups, groupClassName: 'group', listClassName: 'list' };
 // Execute the actual handlers with deterministic state; no browser, network or DB.
 function mount(file, exported, props, extra = {}) {
   const slots = []; let cursor = 0;
-  const react = { ...React, useId: () => 'fixture-id', useMemo: factory => factory(), useEffect: () => {},
+  const react = { ...React, useId: () => 'fixture-id', useMemo: factory => factory(), useRef: initial => ({ current: initial }), useEffect: () => {},
     useState: initial => { const index = cursor++; if (!(index in slots)) slots[index] = typeof initial === 'function' ? initial() : initial;
       return [slots[index], next => { slots[index] = typeof next === 'function' ? next(slots[index]) : next; }]; },
   };
@@ -128,10 +128,17 @@ test('fresh Home and mobile dock retain intended return routes', async () => {
 test('Video filter handlers open/close, count conditions, clear, search and sort actual results', () => {
   const base = { title: 'JP guide', description: '', events: [], players: ['翔'], characters: ['jp'], controlTypes: [], categories: ['guide'], levels: [], languages: [], videoType: 'guide', tags: [], publishedAt: '2026-09-30', viewCount: null, durationSeconds: null };
   const videos = [{ ...base, id: 'a' }, { ...base, id: 'b', title: 'Ryu match', players: ['ウメハラ'], characters: ['ryu'], publishedAt: '2026-10-01' }];
+  for (const video of videos) {
+    video.entityRefs = {
+      characters: video.characters.map(label => ({ id: 'character-' + label, label })),
+      players: video.players.map(label => ({ id: 'player-' + label, label })),
+      tournaments: [],
+    };
+  }
   const app = mount('components/video-library.tsx', 'VideoLibrary', { videos }, {
     '@/components/video-card': { VideoCard: props => React.createElement('article', { 'data-id': props.video.id }, props.video.title) },
     '@/lib/event-media': { formatVideoPublishedDate: value => value },
-    '@/lib/video-preferences': { readVideoPreference: () => new Set(), VIDEO_FAVORITES_KEY: 'favorites', VIDEO_WATCHED_KEY: 'watched' },
+    '@/lib/use-owned-video-preferences': { useOwnedVideoPreferences: () => ({ status: 'ready', favorites: new Set(), watched: new Set(), refresh: () => {}, toggle: () => false, message: '' }) },
   });
   const toggle = () => app.nodes().find(n => n.type === 'button' && n.props['aria-controls']);
   assert.equal(toggle().props['aria-expanded'], false); toggle().props.onClick(); app.render(); assert.equal(toggle().props['aria-expanded'], true);

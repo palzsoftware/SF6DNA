@@ -1,0 +1,1742 @@
+[
+  {
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "2bassa",
+      "name": "2BASSA",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 6位 FUKUSHIMA IBUSHIGIN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/2bassa/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "akira-cammy",
+      "name": "あきら",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 2位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 1位 Yogibo REJECT",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 7位 名古屋OJA BODY STAR",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 3位 名古屋OJA BODY STAR Mildom",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 6位 名古屋OJA BODY STAR",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "dogura",
+      "name": "どぐら",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 3位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 2位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 5位 CYCLOPS athlete gaming OSAKA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 6位 名古屋OJA BODY STAR",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 4位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 5位 イタザンオーシャン",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "fuudo",
+      "name": "ふ～ど",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 優勝/Division F 1位 REJECT",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 2位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 2位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 3位 名古屋OJA BODY STAR Mildom",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 3位 Mildom Beast",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 4位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 3位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 6位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "gachikun",
+      "name": "ガチくん",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 優勝/Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 8位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 2位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 1位 ネモオーロラ",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 6位 トキドフレイム",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "hibiki",
+      "name": "ひびき",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 2位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 3位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 5位 トキドフレイム",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "higuchi",
+      "name": "ひぐち",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 3位 ZETA DIVISION Geekly",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 2位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 3位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 2位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "002a208f-3804-4a01-908a-72d713390998",
+    "playerSlug": "hikaru-aki",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "hikaru-aki",
+      "name": "ひかる",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 3位 ZETA DIVISION Geekly",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 3位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+    "playerSlug": "hinao",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "hinao",
+      "name": "ひなお",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hinao/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "itabashi-zangief",
+      "name": "板橋ザンギエフ",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 4位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 6位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 2位 DetonarioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 7位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 8位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 2位 トキドフレイム",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 5位 イタザンオーシャン",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 1位 イタザンオーシャン",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "john-takeuchi",
+      "name": "竹内ジョン",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 4位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 6位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 2位 DetonarioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 7位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 8位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 2位 ネモオーロラ",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "jr",
+      "name": "Jr.",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/jr/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "kawano",
+      "name": "カワノ",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 優勝/Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 8位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 2位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 3位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 4位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 6位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "kincho-terry",
+      "name": "きんちょ",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kincho/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "kobayan",
+      "name": "こばやん",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 6位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kobayan/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "menard",
+      "name": "MenaRD",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mena/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "momochi",
+      "name": "ももち",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 3位 ZETA DIVISION Geekly",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 4位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 6位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 6位 モモチスプラッシュ",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sahara-ed",
+      "name": "さはら",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sahara/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "082e5e11-4622-4df7-9123-969e2812584a",
+    "playerSlug": "sako",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sako",
+      "name": "sako",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 5位 Victrix FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 6位 FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 1位 FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 4位 v6プラス FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 1位 v6プラス FAV Rohto Z!",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 1位 ネモオーロラ",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "b3f67376-cb75-4b44-8b2d-ef50058a1b98",
+    "playerSlug": "sfl2026-01",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-01",
+      "name": "りゅうきち",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 5位 Victrix FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 6位 FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "7a90ef97-9573-40e9-b2ad-10dbfcfc62af",
+    "playerSlug": "sfl2026-03",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-03",
+      "name": "藤村",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 5位 Victrix FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 4位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 6位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 6位 モモチスプラッシュ",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 4位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "383d3822-4380-4a7e-abb0-dd2e1107e970",
+    "playerSlug": "sfl2026-04",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-04",
+      "name": "もけ",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 5位 Victrix FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 5位 VARREL",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 6位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 5位 マゴスカーレット",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "78d2c3bf-8074-4098-b152-607229b7aaac",
+    "playerSlug": "sfl2026-06",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-06",
+      "name": "ボンちゃん",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 3位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 2位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 1位 FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 4位 v6プラス FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 1位 v6プラス FAV Rohto Z!",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 3位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "b8123b68-73ab-47cd-8e96-66a19b742430",
+    "playerSlug": "sfl2026-07",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-07",
+      "name": "かずのこ",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 3位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 2位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 5位 CYCLOPS athlete gaming OSAKA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "8ee95472-918e-4e26-973f-229d013428bc",
+    "playerSlug": "sfl2026-09",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-09",
+      "name": "cosa",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 6位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 3位 FUKUSHIMA IBUSHIGIN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 3位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "a7c857d1-688b-420d-bfa2-5182d3b7d007",
+    "playerSlug": "sfl2026-10",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-10",
+      "name": "まちゃぼー",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 6位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 6位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 6位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 3位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 1位 マゴスカーレット",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "0f15ca45-13d9-48c4-aec1-48f53b9ebec0",
+    "playerSlug": "sfl2026-17",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-17",
+      "name": "ACQUA",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 2位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 3位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 9位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "7764028a-a2a1-4521-9d71-f767cb23522d",
+    "playerSlug": "sfl2026-21",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-21",
+      "name": "ヤナイ",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 6位 FUKUSHIMA IBUSHIGIN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 3位 FUKUSHIMA IBUSHIGIN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 7位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "53b40fa8-2fe7-4f68-8e81-6f60c61850f4",
+    "playerSlug": "sfl2026-22",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-22",
+      "name": "ジョニィ",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 6位 FUKUSHIMA IBUSHIGIN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 4位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 6位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "ae0979da-221d-4103-a359-ab77e07e425c",
+    "playerSlug": "sfl2026-25",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-25",
+      "name": "マゴ",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 5位 VARREL",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 5位 VARREL",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 6位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 5位 マゴスカーレット",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 1位 マゴスカーレット",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 3位 マゴスカーレット",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "e55d5abe-c01b-4f34-b4a6-6a68875b10f9",
+    "playerSlug": "sfl2026-27",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-27",
+      "name": "水派",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 5位 VARREL",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 5位 VARREL",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 6位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 5位 マゴスカーレット",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "b873fd7a-8989-4012-af27-5048b973f880",
+    "playerSlug": "sfl2026-28",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-28",
+      "name": "わびいち",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/wabiichi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+    "playerSlug": "sfl2026-31",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-31",
+      "name": "ぷげら",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 優勝/Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 8位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 2位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 4位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "8b2973ca-8f44-405e-b283-f18ebe8eb2af",
+    "playerSlug": "sfl2026-34",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-34",
+      "name": "KEI.B",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 2位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 5位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 7位 名古屋OJA BODY STAR",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "50e69eec-324e-4a14-ab05-d4a17153d499",
+    "playerSlug": "sfl2026-35",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-35",
+      "name": "ナウマン",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 4位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 6位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 2位 DetonarioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 7位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 8位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 3位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "a9168dfc-4134-46fc-b133-5ba6c8c229c8",
+    "playerSlug": "sfl2026-37",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-37",
+      "name": "Seiya",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 2位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/seiya/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "35f872d6-5217-4ac5-8f5f-6cacfbd08671",
+    "playerSlug": "sfl2026-38",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-38",
+      "name": "らおやむ",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/raoyamu/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "94514ef4-6035-4d16-8b7d-5b0b0e800efa",
+    "playerSlug": "sfl2026-39",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-39",
+      "name": "大谷",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 2位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 5位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "d04a2537-3071-4ee5-944b-6241d8422b8a",
+    "playerSlug": "sfl2026-40",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-40",
+      "name": "もっちー",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 2位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 5位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "beb71f4d-8a13-4a75-8a76-d4b3dd869e87",
+    "playerSlug": "sfl2026-41",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-41",
+      "name": "ウメハラ",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 優勝/Division F 1位 REJECT",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 2位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 3位 名古屋OJA BODY STAR Mildom",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 3位 Mildom Beast",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 3位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 4位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 4位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "42057adf-9dc1-422d-b991-867f140009f3",
+    "playerSlug": "sfl2026-43",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-43",
+      "name": "YAS",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yas/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "b179dd80-e897-40a9-855f-5af4f3ac97ee",
+    "playerSlug": "sfl2026-45",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-45",
+      "name": "高木",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 4位 CAG OSAKA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takagi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "ebbdd60b-d733-486f-b6e2-e61d35f19f17",
+    "playerSlug": "sfl2026-46",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "sfl2026-46",
+      "name": "あでりい",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 2位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/adelie/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "shuto",
+      "name": "Shuto",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 3位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 2位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 3位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 2位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 7位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 4位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 3位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 2位 ネモオーロラ",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d",
+    "playerSlug": "takepi",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "takepi",
+      "name": "takepi",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takepi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "tokido",
+      "name": "ときど",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 優勝/Division F 1位 REJECT",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 1位 Yogibo REJECT",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 1位 FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 4位 v6プラス FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 1位 v6プラス FAV Rohto Z!",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 2位 トキドフレイム",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 6位 トキドフレイム",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 5位 トキドフレイム",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "torimeshi",
+      "name": "鶏めし",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 6位 FUKUSHIMA IBUSHIGIN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 1位 Yogibo REJECT",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 7位 名古屋OJA BODY STAR",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 4位 v6プラス FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "yamaguchi",
+      "name": "ヤマグチ",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 3位 ZETA DIVISION Geekly",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 4位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 6位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  }
+]

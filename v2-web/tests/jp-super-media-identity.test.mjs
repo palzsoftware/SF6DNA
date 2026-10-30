@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, statSync } from 'node:fs';
@@ -36,5 +37,5 @@ test('JP corrected super media remain distinct and SA3/CA bytes remain unchanged
   assert.notEqual(hash('/media/moves/jp/jp-sa1.mp4'), hash('/media/moves/jp/jp-sa2.mp4'));
   assert.equal(hash('/media/moves/jp/jp-sa3.mp4'), '96b3223e3f77f7222ff28c49eab61544f0cc97463f5cee057ff82e5304f72255');
   assert.equal(hash('/media/moves/jp/jp-ca.mp4'), 'fdda0948f87bbb5a6f8dc0e06a003d9611ddb49faec19e1030c2433f9e561729');
-  assert.deepEqual(validateMotionMediaManifest(manifest, { publicRoot: new URL('../public/', import.meta.url).pathname }).errors, []);
+  assert.deepEqual(validateMotionMediaManifest(manifest, { publicRoot: fileURLToPath(new URL('../public/', import.meta.url)) }).errors, []);
 });

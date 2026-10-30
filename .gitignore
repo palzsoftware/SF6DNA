@@ -5,3 +5,13 @@ node_modules/
 
 # Supabase CLI local state
 supabase/.temp/
+
+# SF6DNA local secrets and working backups
+.env
+.env.*
+!.env.example
+!.env.sample
+/v2-web.zip
+/v2-web (2).zip
+/v2-web/.sf6dna-local-qa-*/
+*.bak
