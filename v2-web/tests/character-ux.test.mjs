@@ -147,7 +147,7 @@ test('Video filter handlers open/close, count conditions, clear, search and sort
   const player = app.nodes().find(n => n.type === 'label' && text(n) === '翔');
   player.props.children[0].props.onChange(); app.render(); assert.match(text(toggle()), /（1）/);
   assert.equal(app.nodes().filter(n => n.type === 'article').length, 1);
-  app.nodes().find(n => n.type === 'button' && text(n) === 'すべて解除').props.onClick(); app.render(); assert.equal(app.nodes().filter(n => n.type === 'article').length, 2);
+  app.nodes().find(n => n.type === 'button' && text(n) === '条件をクリア').props.onClick(); app.render(); assert.equal(app.nodes().filter(n => n.type === 'article').length, 2);
   app.nodes().find(n => n.type === 'input' && n.props.placeholder).props.onChange({ target: { value: 'JP' } }); app.render(); assert.equal(app.nodes().filter(n => n.type === 'article').length, 1);
   app.nodes().find(n => n.type === 'button' && text(n) === '条件をクリア').props.onClick(); app.render();
   app.nodes().find(n => n.type === 'select').props.onChange({ target: { value: 'newest' } }); app.render();

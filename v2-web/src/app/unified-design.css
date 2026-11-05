@@ -134,3 +134,18 @@ body[data-ui="unified-20261030"] .lab-home .experience-explore .home-public-nav 
 @media (max-width: 420px) {
   body[data-ui="unified-20261030"] .lab-home .experience-explore .home-public-nav { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Favorite overlay is a sibling of the thumbnail link, never a nested button. */
+.video-card__media { position: relative; }
+.video-card__media .video-card__thumbnail { width: 100%; }
+.video-card__favorite {
+  position: absolute; top: 8px; right: 8px; z-index: 1;
+  display: grid; place-items: center; width: 44px; height: 44px;
+  padding: 0; border: 0; border-radius: 50%; background: rgba(0,0,0,.55);
+  color: #fff; font-size: 30px; line-height: 1; text-shadow: 0 1px 3px #000;
+}
+.video-card__favorite--active { color: #ffd43b; }
+.video-card__favorite:disabled { opacity: .55; cursor: wait; }
+.video-card__flags .video-card__watched-label {
+  color: #fff; background: #b4232e; border-color: #b4232e; font-weight: 700;
+}

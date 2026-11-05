@@ -51,8 +51,10 @@ function FilterGroup({ title, values, selected, labels, unavailable, disabled = 
   onToggle: (value: string) => void;
 }) {
   return (
-    <fieldset className={styles.filter}>
-      <legend>{title}</legend>
+    <details className={styles.filter}>
+      <summary>{title}{selected.size ? `（${selected.size}）` : ""}</summary>
+      <fieldset className={styles.filterChoices}>
+      <legend className={styles.visuallyHidden}>{title}</legend>
       {values.length ? (
         <div className={styles.options}>
           {values.map((value) => (
@@ -64,6 +66,7 @@ function FilterGroup({ title, values, selected, labels, unavailable, disabled = 
         </div>
       ) : <p className={styles.unavailable}>{unavailable ?? "この条件で選べる項目はまだありません。"}</p>}
     </fieldset>
+    </details>
   );
 }
 
@@ -149,6 +152,8 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
       <div className={styles.toolbar}>
         <div className={styles.topRow}>
           <label>掲載動画を検索<input type="search" aria-describedby={scopeId} value={filters.query} onChange={(event) => { setFilters((current) => ({ ...current, query: event.target.value })); setVisible(12); }} placeholder="例：ダイヤ帯 モダン、初心者、座学 MR1600" /></label>
+          <div className={styles.sortControls}>
+          <button className={styles.clear} type="button" onClick={clearFilters}>条件をクリア</button>
           <label>並び順<select value={sort} onChange={(event) => setSort(event.target.value as VideoSort)}>
             <option value="recommended">おすすめ順</option><option value="newest">新しい順</option><option value="oldest">古い順</option>
             <option value="view_count" disabled={!videos.some((video) => video.viewCount !== null)}>再生回数順</option>
@@ -156,6 +161,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
             <option value="shortest" disabled={!videos.some((video) => video.durationSeconds !== null)}>短い順</option>
             <option value="longest" disabled={!videos.some((video) => video.durationSeconds !== null)}>長い順</option>
           </select></label>
+          </div>
         </div>
         <p id={scopeId} className={styles.searchScope}>現在登録されている公開動画を検索します。YouTube全体の検索ではありません。大会の年度は、確認済みの大会名にある場合のみ絞り込めます。座学はテーマ別、対象ランク・MRは講座の対象者として確認した情報で絞り込みます。ダイヤ帯・プラチナ帯、初心者、モダンなども組み合わせて検索できます。分類が未確認の動画は、その条件に含めません。</p>
         <button
@@ -170,7 +176,6 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
         </button>
         {activeFilterCount ? <div className={styles.activeSummary} aria-live="polite">
           <span>{activeFilterCount}件の条件を選択中</span>
-          <button type="button" onClick={clearFilters}>すべて解除</button>
         </div> : null}
         {activeSelections.length || filters.query ? <div className={styles.selectedConditions} aria-label="選択中の検索条件">
           {filters.query ? <button type="button" onClick={() => { setFilters(current => ({ ...current, query: "" })); setVisible(12); }} aria-label="キーワードを解除">キーワード：{filters.query} ×</button> : null}
@@ -193,7 +198,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
         </div>
         <div className={styles.summary}>
           <span role="status" aria-live="polite">{preferenceWaiting ? preferences.message : `${results.length}件中 ${Math.min(visible, results.length)}件を表示`}</span>
-          <button className={styles.clear} type="button" onClick={clearFilters}>条件をクリア</button>
+
         </div>
       </div>
 
