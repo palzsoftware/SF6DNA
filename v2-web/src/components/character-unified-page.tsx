@@ -5,7 +5,8 @@ import { CharacterMoveExplorer } from "./character-move-explorer";
 import { Sf6CommandInput } from "./sf6-command-input";
 import { MoveMotionMedia } from "./move-motion-media";
 import { CharacterPlayerCard } from "./character-player-card";
-import { VideoCard } from "./video-card";
+import { CharacterRelatedVideos } from "./character-related-videos";
+import type { VideoRetrievalState } from "@/lib/video-retrieval-state";
 import { CharacterStrategySlot } from "./character-strategy-slot";
 import { CharacterPreferenceActions } from "./character-preference-actions";
 import { moveCardAnchorId } from "@/lib/move-card-reference";
@@ -22,8 +23,9 @@ import { getOfficialTxtPreviewDisplayCategory } from "@/lib/official-txt-device-
 import type { DevicePreviewBundle } from "@/lib/device-preview";
 import type { CharacterDetail, SourceReference } from "@/types/character";
 import type { PlayerDetail } from "@/types/player";
-import { formatVideoPublishedDate, type VideoSummary } from "@/lib/event-media";
+import { type VideoSummary } from "@/lib/event-media";
 import { officialMoveDisplayNotes, trailingCommandCondition, simultaneousButtonHint } from "@/lib/official-move-display-notes";
+import { characterOverviewCopy } from "@/lib/character-overview-copy";
 import styles from "./character-unified-page.module.css";
 
 const labels: Record<string, string> = { normal: "通常技", unique: "特殊技", target_combo: "特殊技",
@@ -138,10 +140,11 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
   </article>;
 }
 
-export function CharacterUnifiedPage({ character, bundle, players, videos, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true }: {
+export function CharacterUnifiedPage({ character, bundle, players, videos, videoState, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true }: {
   character: CharacterDetail; bundle: DevicePreviewBundle | null; players: PlayerDetail[]; videos: VideoSummary[];
-  moveEvidence?: Record<string, UnifiedMoveEvidence>; localReferences?: ReactNode; localMoveReferences?: ReactNode; automaticVideos?: ReactNode; showPreferences?: boolean;
+  videoState?: VideoRetrievalState; moveEvidence?: Record<string, UnifiedMoveEvidence>; localReferences?: ReactNode; localMoveReferences?: ReactNode; automaticVideos?: ReactNode; showPreferences?: boolean;
 }) {
+  const overview = characterOverviewCopy[character.slug] ?? character;
   const moves = bundle?.moves ?? [];
   const dReversalCondition = (move: UnifiedMove): "guard" | "wakeup" | null => {
     const evidence = (move.commands ?? []).filter(row => row.moveId === move.id)
@@ -185,7 +188,7 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, moveE
     <section className={styles.hero} aria-labelledby="character-title">
       <div><p className="eyebrow">キャラクター</p><h1 id="character-title">{character.name}</h1>
         <p className={styles.english} aria-label="英名">{character.nameEn ?? "英名確認中"}</p>
-        <p>{publicText(character.shortDescription, "概要は確認中です。")}</p>
+        <p>{publicText(overview.shortDescription, "概要は確認中です。")}</p>
         {showPreferences ? <CharacterPreferenceActions slug={character.slug} /> : null}
       </div>
       {character.imageUrl ? <Image src={character.imageUrl} alt={character.name} width={540} height={540}
@@ -193,17 +196,17 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, moveE
         : <div className={styles.imageFallback} aria-label={`${character.name}の画像は準備中`}>キャラクター画像は準備中</div>}
     </section>
     <nav className={styles.navigation} aria-label="キャラクターページ内の移動">
-      <a href="#pilot-overview">基本情報</a><a href="#pilot-moves">技カード</a><a href="#character-players">使用Player</a>
-      <a href="#character-videos">関連Video</a><a href="#sources">情報源</a>
+      <a href="#pilot-overview">基本情報</a><a href="#pilot-moves">技カード</a><a href="#character-players">使用プレイヤー</a>
+      <a href="#character-videos">関連動画</a><a href="#sources">情報源</a>
     </nav>
     <section id="pilot-overview" className={styles.section}><h2>基本情報</h2>
       <dl className={styles.facts}>
         <div><dt>得意距離</dt><dd>{publicText(character.rangeLabel, "確認中")}</dd></div>
-        <div><dt>タイプ</dt><dd>{publicText(character.archetypeLabel, "確認中")}</dd></div>
+        <div><dt>戦い方のタイプ</dt><dd>{publicText(character.archetypeLabel, "確認中")}</dd></div>
         <div><dt>難易度</dt><dd>{character.difficulty !== null && character.difficulty >= 1 && character.difficulty <= 5 ? `${character.difficulty} / 5` : "確認中"}</dd></div>
       </dl>
-      <div className={styles.profileGrid}><div><h3>強み</h3><p>{publicText(character.strengthsSummary, "強みは確認中です。")}</p></div>
-        <div><h3>注意点</h3><p>{publicText(character.weaknessesSummary, "注意点は確認中です。")}</p></div></div>
+      <div className={styles.profileGrid}><div><h3>強み</h3><p>{publicText(overview.strengthsSummary, "強みは確認中です。")}</p></div>
+        <div><h3>苦手な状況・注意点</h3><p>{publicText(overview.weaknessesSummary, "注意点は確認中です。")}</p></div></div>
     </section>
     <section id="pilot-moves" className={styles.section}><h2>技カード</h2>
       <p>「—」は公式資料のN/A、「公式資料に記載なし」は未記載、「確認中」は未確認項目です。「ダウン」はヒット時に相手がダウンする意味です。ClassicとModernは別の入力として表示します。</p>
@@ -227,12 +230,9 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, moveE
           : <p>使用プレイヤーの情報を確認中です。</p>}
         <Link className={styles.relatedLink} href="/players">プレイヤー図鑑を見る →</Link>
       </section>
-      <section id="character-videos" className={`${styles.section} ${styles.relatedPanel}`}><h2>関連ビデオ</h2>
-        {connectedVideos.length ? <div className={styles.relatedGrid}>{connectedVideos.map(video =>
-          <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />)}</div>
-          : <p>関連動画は準備中です。</p>}
+      <section id="character-videos" className={`${styles.section} ${styles.relatedPanel} ${styles.videoPanel} experience-video`}><h2>関連動画</h2>
+        <CharacterRelatedVideos videos={connectedVideos} state={videoState} />
         {automaticVideos}
-        <Link className={styles.relatedLink} href="/videos">動画一覧を見る →</Link>
       </section>
     </section>
     <CharacterStrategySlot kind="combo" previewContent={character.slug === "luke" ? localReferences : null} /><CharacterStrategySlot kind="setplay" /><CharacterStrategySlot kind="sequence" /><CharacterStrategySlot kind="counter" />

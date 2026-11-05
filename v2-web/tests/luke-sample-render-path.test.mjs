@@ -46,7 +46,7 @@ function setup(slug){return loader(app,{
  '@/components/auto-youtube-videos':{AutoYouTubeVideos:()=>null,AutoVideoLoading:()=>null},
  '@/lib/characters':{getCharacterBySlug:async()=>({...character,slug}),listCharacters:async()=>[]},
  '@/lib/character-sections':{listCharacterSectionItems:async()=>[]},
- '@/lib/event-media':{listVideos:async()=>[],formatVideoPublishedDate:v=>v},
+ '@/lib/event-media':{listVideos:async()=>[],listVideosResult:async()=>({state:'SUCCESS_EMPTY',items:[],warnings:[]}),formatVideoPublishedDate:v=>v},
  '@/lib/players':{getPlayerBySlug:async()=>null},
  '@/lib/character-detail-data':{resolveCharacterDetailData:async()=>({bundle:null,source:'test'}),resolveCharacterRelatedVideos:()=>[]},
  '@/lib/device-preview':{normalizeDevicePreviewToken:()=>null,getDevicePreviewMoveMotionMedia:async()=>[],appendDevicePreviewToken:p=>p},

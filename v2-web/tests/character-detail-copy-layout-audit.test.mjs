@@ -23,7 +23,7 @@ test("all 31 preview routes share the audited copy and layout component", () => 
     assert.match(html, new RegExp(`data-character-slug="${slug}"`));
     assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
     assert.equal((html.match(/aria-label="キャラクターページ内の移動"/g) ?? []).length, 1);
-    for (const heading of ['基本情報','技カード','使用Player','関連Video','情報源']) assert.ok(html.includes(heading));
+    for (const heading of ['基本情報','技カード','使用プレイヤー','関連動画','情報源']) assert.ok(html.includes(heading));
     assertUniqueAnchors(assert, html);
   }
 

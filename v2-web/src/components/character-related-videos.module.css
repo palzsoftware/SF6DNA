@@ -1,0 +1,8 @@
+.category { min-width: 0; margin-block: 24px; }
+.count { font-size: .85em; font-weight: normal; }
+.rail { display: grid; grid-auto-flow: column; grid-auto-columns: min(340px, 85%); gap: 18px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x proximity; padding: 6px 3px 18px; max-width: 100%; }
+.rail > * { min-width: 0; scroll-snap-align: start; }
+.rail:focus-visible { outline: 3px solid var(--focus-ring, var(--accent)); outline-offset: 3px; }
+.empty, .pending { color: var(--text-secondary); }
+.pending { margin-block: 20px; }
+.pending summary { cursor: pointer; min-height: 44px; }

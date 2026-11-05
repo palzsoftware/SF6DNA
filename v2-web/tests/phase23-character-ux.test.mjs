@@ -1,4 +1,4 @@
-import {renderUnified,assertUniqueAnchors} from './helpers/character-unified-ssr.mjs';
+import {renderUnified,assertUniqueAnchors,loadSource} from './helpers/character-unified-ssr.mjs';
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -30,7 +30,8 @@ test("character UX keeps existing routes and hides empty profile panels", () => 
   for(const route of ['/favorites','/compare'])assert.ok(directory.includes(route));
   for(const route of ['/counters','/training'])assert.ok(!directory.includes(`href="${route}"`));
   const html=renderUnified('ryu');
-  assert.ok(html.includes('強みは確認中です。'));assert.ok(html.includes('注意点は確認中です。'));
+  const copy=loadSource('lib/character-overview-copy').characterOverviewCopy.ryu;
+  assert.ok(html.includes(copy.strengthsSummary));assert.ok(html.includes(copy.weaknessesSummary));
   for(const href of ['/players','/videos'])assert.ok(html.includes(`href="${href}"`));
   assertUniqueAnchors(assert,html);assert.ok(layout.includes('./ux-refresh.css'));
 

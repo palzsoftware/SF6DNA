@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { youtubeVideoIdFromUrl } from "@/lib/character-related-video-contract.mjs";
 import { headers } from "next/headers";
 import { AutoYouTubeVideos, AutoVideoLoading } from "@/components/auto-youtube-videos";
 import { isLukeSampleRequest } from "@/lib/luke-sample-cards";
@@ -12,7 +13,7 @@ import { notFound } from "next/navigation";
 import { getDevicePreviewMoveMotionMedia, normalizeDevicePreviewToken } from "@/lib/device-preview";
 import { getCharacterBySlug } from "@/lib/characters";
 import { listCharacterSectionItems } from "@/lib/character-sections";
-import { listVideos } from "@/lib/event-media";
+import { listVideosResult } from "@/lib/event-media";
 import { getPlayerBySlug } from "@/lib/players";
 import { getCharacterDetailV21Profile } from "@/lib/character-detail-v21";
 import { resolveCharacterDetailData, resolveCharacterRelatedVideos } from "@/lib/character-detail-data";
@@ -61,10 +62,11 @@ export default async function CharacterPage({
   ]);
   const production = process.env.VERCEL_ENV === "production";
   const data = await resolveCharacterDetailData(character.id, character.slug, previewToken);
-  const [allVideos, moveMedia] = await Promise.all([
-    listVideos({ characterId: character.id }),
+  const [relatedVideoResult, moveMedia] = await Promise.all([
+    listVideosResult({ characterId: character.id }),
     production ? Promise.resolve([]) : getDevicePreviewMoveMotionMedia(character.id, previewToken),
   ]);
+  const allVideos = relatedVideoResult.items;
   const bundle = data.bundle ? { ...data.bundle } : null;
   if (bundle) {
     const mediaByMove = new Map(moveMedia.map(media => [media.moveId, media]));
@@ -81,6 +83,7 @@ export default async function CharacterPage({
     getPlayerBySlug(item.href.split("/").filter(Boolean).at(-1) ?? "")))).filter(player => player !== null);
   const videos = resolveCharacterRelatedVideos(allVideos,
     [...relatedVideos.map(video => video.id), ...allVideos.map(video => video.id)]);
+  const registeredYoutubeIds = [...new Set(videos.flatMap(video => { const id = youtubeVideoIdFromUrl(video.url); return id ? [id] : []; }))];
   const moveEvidence = await characterUnifiedEvidence(character.slug, bundle?.moves ?? [], process.env.VERCEL_ENV);
   const admission = { nodeEnv:process.env.NODE_ENV, vercelEnv:process.env.VERCEL_ENV,
     vercel:process.env.VERCEL, enabled:process.env.SF6DNA_WS5_TXT_PREVIEW,
@@ -93,7 +96,7 @@ export default async function CharacterPage({
   }) : null;
   const finalBundle = connectedTxt?.bundle ?? bundle;
   const combinedMoveEvidence = connectedTxt?.moveEvidence ?? moveEvidence;
-  return <CharacterUnifiedPage automaticVideos={<Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} /></Suspense>} character={character} bundle={finalBundle} players={players} videos={videos}
+  return <CharacterUnifiedPage automaticVideos={<Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} registeredYoutubeIds={registeredYoutubeIds} /></Suspense>} character={character} bundle={finalBundle} players={players} videos={videos} videoState={relatedVideoResult.state}
     moveEvidence={combinedMoveEvidence}
     localMoveReferences={!production && isLukeSampleRequest(character.slug, query.sample, process.env.VERCEL_ENV) ?
       <LukeSampleCards slug={character.slug} requested={query.sample} environment={process.env.VERCEL_ENV} moveOnly /> : null}

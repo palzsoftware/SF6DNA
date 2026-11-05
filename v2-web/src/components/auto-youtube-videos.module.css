@@ -27,7 +27,14 @@
 
 .searchPanel { padding: clamp(1rem, 3vw, 1.6rem); border: 1px solid #57728a; border-radius: 18px; background: #101b2d; color: #f4f7ff; min-width: 0; }
 .searchPanel h2 { margin-top: 0; }
-.searchForm { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-block: 1.2rem; }
+.searchForm { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; margin-block: 1.2rem; }
+.searchMainRow { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; align-items: end; }
+.advancedFilters { min-width: 0; border-top: 1px solid #ffffff30; padding-top: .5rem; }
+.advancedFilters summary { min-height: 44px; padding-block: .7rem; box-sizing: border-box; cursor: pointer; font-weight: 700; }
+.advancedFilters summary::marker { color: #83d8ff; }
+.advancedFilters summary:focus-visible { outline: 3px solid #83d8ff; outline-offset: 3px; }
+.advancedGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; padding-top: .8rem; }
+.filterCount { display: inline-block; margin-left: .75rem; padding: .15rem .55rem; border-radius: 999px; color: #bceaff; border: 1px solid #57728a; font-size: .8rem; }
 .searchForm label { display: grid; gap: .5rem; font-weight: 700; min-width: 0; }
 .searchForm input, .searchForm select { box-sizing: border-box; width: 100%; min-width: 0; min-height: 48px; padding: .7rem; border: 1px solid #91abc8; border-radius: 8px; background: #081322; color: #f4f7ff; font: inherit; }
 .searchForm input::placeholder { color: #b8c7d8; }
@@ -36,5 +43,5 @@
 .searchActions button, .searchActions a { min-height: 48px; display: inline-flex; align-items: center; padding: .7rem 1rem; box-sizing: border-box; font: inherit; font-weight: 700; }
 .searchActions button { border: 0; border-radius: 8px; background: #83d8ff; color: #081322; cursor: pointer; }
 .searchActions a { color: #bceaff; }
-@media (max-width: 760px) { .searchForm { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .searchForm { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 760px) { .searchMainRow { grid-template-columns: minmax(0, 1fr); } .advancedGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .advancedGrid { grid-template-columns: minmax(0, 1fr); } }

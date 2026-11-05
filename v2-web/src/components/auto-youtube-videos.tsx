@@ -4,12 +4,12 @@ const DETAIL_KINDS = ["all", "guide", "match", "combo"] as const;
 import { AutoVideoResults } from "./auto-video-results";
 export { AutoVideoResults } from "./auto-video-results";
 
-export async function AutoYouTubeVideos({ names, englishNames }: { names: readonly string[]; englishNames?: readonly string[] }) {
+export async function AutoYouTubeVideos({ names, englishNames, registeredYoutubeIds = [] }: { names: readonly string[]; englishNames?: readonly string[]; registeredYoutubeIds?: readonly string[] }) {
   if (!autoVideoEnabled()) return null;
   const results = await Promise.all(DETAIL_KINDS.map(kind => getAutoVideos(names, kind)));
   return <AutoVideoResults key={JSON.stringify(names)} result={results[0]}
     searches={{ all: results[0], guide: results[1], match: results[2], combo: results[3] }}
-    names={names} englishNames={englishNames} />;
+    names={names} englishNames={englishNames} registeredYoutubeIds={registeredYoutubeIds} />;
 }
 export async function FilteredAutoYouTubeVideos(props: Parameters<typeof autoVideoFilterNames>[0]) {
   if (!autoVideoEnabled()) return null;

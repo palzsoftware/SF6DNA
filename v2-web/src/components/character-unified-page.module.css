@@ -140,3 +140,6 @@
 .comboDescription { border-top: 1px solid var(--border, #35414f); margin-top: 12px; padding-top: 12px; }
 .comboDescription h4 { margin: 0 0 8px; }
 .comboDescription p { margin: 6px 0; }
+
+/* Related videos use the same responsive card grid and theme as /videos. */
+.videoPanel { grid-column: 1 / -1; }

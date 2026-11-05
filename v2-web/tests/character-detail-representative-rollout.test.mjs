@@ -1,4 +1,4 @@
-import {renderUnified,character} from './helpers/character-unified-ssr.mjs';
+import {renderUnified,character,loadSource} from './helpers/character-unified-ssr.mjs';
 import assert from "node:assert/strict";
 import test from "node:test";
 import ts from "typescript";
@@ -36,13 +36,24 @@ test("shared component receives the adapted profile and renders natural section 
   assert.deepEqual(forwarded, ['character']);
   for (const slug of ['ryu','jp','luke','yasmine']) {
     const missing=renderUnified(slug);
-    for(const text of ['概要は確認中です。','強みは確認中です。','注意点は確認中です。','英名確認中','技データは確認中です。','使用プレイヤーの情報を確認中です。','関連動画は準備中です。','情報源を確認中です。'])assert.ok(missing.includes(text),text);
+    const copy=loadSource('lib/character-overview-copy').characterOverviewCopy[slug];
+    for(const text of Object.values(copy))assert.ok(missing.includes(text),`${slug}: approved copy`);
+    for(const text of ['英名確認中','技データは確認中です。','使用プレイヤーの情報を確認中です。','この条件で表示できる公開動画はまだありません。','情報源を確認中です。'])assert.ok(missing.includes(text),text);
     const internal=renderUnified(slug,{character:character(slug,{shortDescription:'baseline internal',strengthsSummary:'publication gated internal',weaknessesSummary:'awaiting official/game verification'})});
     assert.doesNotMatch(internal,/baseline internal|publication gated internal|awaiting official/);
     const valid=renderUnified(slug,{character:character(slug,{shortDescription:'確認済みの概要',strengthsSummary:'確認済みの強み',weaknessesSummary:'確認済みの注意点'})});
-    for(const text of ['確認済みの概要','確認済みの強み','確認済みの注意点'])assert.ok(valid.includes(text));
+    for(const text of Object.values(copy))assert.ok(valid.includes(text),`${slug}: editorial copy takes precedence`);
+    for(const text of ['確認済みの概要','確認済みの強み','確認済みの注意点'])assert.ok(!valid.includes(text));
   }
 
+  const unknown={slug:'qa-unregistered-character'};
+  const missing=renderUnified('ryu',{character:character('ryu',unknown)});
+  for(const text of ['概要は確認中です。','強みは確認中です。','注意点は確認中です。'])assert.ok(missing.includes(text),text);
+  const internal=renderUnified('ryu',{character:character('ryu',{...unknown,shortDescription:'baseline internal',strengthsSummary:'publication gated internal',weaknessesSummary:'awaiting official/game verification'})});
+  assert.doesNotMatch(internal,/baseline internal|publication gated internal|awaiting official/);
+  for(const text of ['概要は確認中です。','強みは確認中です。','注意点は確認中です。'])assert.ok(internal.includes(text),text);
+  const valid=renderUnified('ryu',{character:character('ryu',{...unknown,shortDescription:'確認済みの概要',strengthsSummary:'確認済みの強み',weaknessesSummary:'確認済みの注意点'})});
+  for(const text of ['確認済みの概要','確認済みの強み','確認済みの注意点'])assert.ok(valid.includes(text));
 });
 
 test("31-character rollout does not enable production or public strategy content", () => {
