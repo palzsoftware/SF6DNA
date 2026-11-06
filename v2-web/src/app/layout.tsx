@@ -70,6 +70,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <nav className="site-nav desktop-global-nav" aria-label="主要ナビゲーション">
               <Link href="/characters">キャラクター</Link>
               <Link href="/diagnosis">診断</Link>
+              <Link href="/me/training">15分練習</Link>
               <Link href="/search">検索</Link>
               <Link href="/players">プレイヤー</Link>
               <Link href="/videos">動画</Link>
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <nav className="site-nav" aria-label="モバイル探索メニュー">
               <Link href="/characters">キャラクター</Link>
               <Link href="/diagnosis">診断</Link>
+              <Link href="/me/training">15分練習</Link>
               <Link href="/search">検索</Link>
               <Link href="/players">プレイヤー</Link>
               <Link href="/videos">動画</Link>
