@@ -8,6 +8,7 @@ import { CharacterPlayerCard } from "./character-player-card";
 import { CharacterRelatedVideos } from "./character-related-videos";
 import type { VideoRetrievalState } from "@/lib/video-retrieval-state";
 import { CharacterStrategySlot } from "./character-strategy-slot";
+import type { StrategyCardView } from "./strategy-card-explorer";
 import { CharacterPreferenceActions } from "./character-preference-actions";
 import { moveCardAnchorId } from "@/lib/move-card-reference";
 import { moveCommandSearchTerms } from "@/lib/move-command-format";
@@ -140,11 +141,16 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
   </article>;
 }
 
-export function CharacterUnifiedPage({ character, bundle, players, videos, videoState, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true }: {
+export function CharacterUnifiedPage({ character, bundle, players, videos, videoState, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, strategyCards = [], strategyCardsAuthorized = false }: {
   character: CharacterDetail; bundle: DevicePreviewBundle | null; players: PlayerDetail[]; videos: VideoSummary[];
   videoState?: VideoRetrievalState; moveEvidence?: Record<string, UnifiedMoveEvidence>; localReferences?: ReactNode; localMoveReferences?: ReactNode; automaticVideos?: ReactNode; showPreferences?: boolean;
+  /** Pre-authorized cards only; never pass raw research fixtures from a public route. */
+  strategyCards?: StrategyCardView[];
+  /** Must be asserted by the existing server-side publication/Preview authorization gate. */
+  strategyCardsAuthorized?: boolean;
 }) {
   const overview = characterOverviewCopy[character.slug] ?? character;
+  const visibleStrategyCards = strategyCardsAuthorized && process.env.VERCEL_ENV !== "production" ? strategyCards : [];
   const moves = bundle?.moves ?? [];
   const dReversalCondition = (move: UnifiedMove): "guard" | "wakeup" | null => {
     const evidence = (move.commands ?? []).filter(row => row.moveId === move.id)
@@ -235,7 +241,7 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, video
         {automaticVideos}
       </section>
     </section>
-    <CharacterStrategySlot kind="combo" previewContent={character.slug === "luke" ? localReferences : null} /><CharacterStrategySlot kind="setplay" /><CharacterStrategySlot kind="sequence" /><CharacterStrategySlot kind="counter" />
+    <CharacterStrategySlot kind="combo" items={visibleStrategyCards.filter(card => card.kind === "combo")} previewContent={character.slug === "luke" ? localReferences : null} /><CharacterStrategySlot kind="setplay" items={visibleStrategyCards.filter(card => card.kind === "setplay")} /><CharacterStrategySlot kind="sequence" items={visibleStrategyCards.filter(card => card.kind === "sequence")} /><CharacterStrategySlot kind="counter" items={visibleStrategyCards.filter(card => card.kind === "counter")} />
     <section id="sources" className={styles.section}><h2>情報源</h2><SourceLinks sources={character.sources} /></section>
     {/* Strategy reference media is retained in source, hidden for Ver.1.0. */}
   </div>;

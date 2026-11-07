@@ -1,0 +1,24 @@
+.explorer { min-width: 0; display: grid; gap: 12px; }
+.explorer label { font-weight: 700; }
+.explorer input { min-width: 0; width: 100%; min-height: 44px; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border, #35414f); color: inherit; background: var(--surface-raised, #19222e); }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filters button { min-height: 44px; border-radius: 999px; padding: 8px 14px; border: 1px solid var(--border, #35414f); color: inherit; background: var(--surface-raised, #19222e); cursor: pointer; }
+.filters button[aria-pressed="true"] { border-color: var(--accent, #ff9d51); font-weight: 700; }
+.count { margin: 0; color: var(--text-muted, #b5bdc8); }
+.rail { min-width: 0; width: 100%; display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x proximity; padding: 0 2px 14px; scrollbar-gutter: stable; }
+.item { flex: 0 0 min(360px, 86%); min-width: 0; scroll-snap-align: start; }
+.item > * { height: 100%; }
+.empty { padding: 20px; margin: 0; border: 1px dashed var(--border, #35414f); border-radius: 12px; }
+.explorer :focus-visible { outline: 3px solid var(--focus-ring, #ff9d51); outline-offset: 3px; }
+@media (max-width: 640px) { .item { flex-basis: min(320px, 88%); } .rail { gap: 10px; } }
+@media (prefers-reduced-motion: reduce) { .rail { scroll-behavior: auto; } }
+
+.contentCard { display: grid; gap: 12px; min-width: 0; border: 1px solid var(--border,#35414f); border-radius: 12px; padding: 14px; }
+.contentCard h3 { margin: 0; }
+.cardMedia { display: grid; min-height: 170px; place-items: center; background: var(--surface-raised,#19222e); border-radius: 8px; overflow: hidden; }
+.cardMedia video,.cardMedia img { width: 100%; max-height: 240px; object-fit: contain; }
+.cardTag { opacity: .8; }
+.fact { display: grid; grid-template-columns: minmax(7em,auto) 1fr; gap: 8px; }
+.fact dt { font-weight: 600; }
+.fact dd { min-width: 0; overflow-wrap: anywhere; margin: 0; }
+.contentCard details summary { cursor: pointer; min-height: 44px; padding: 10px 0; }

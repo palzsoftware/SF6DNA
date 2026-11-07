@@ -3,6 +3,7 @@ import { youtubeVideoIdFromUrl } from "@/lib/character-related-video-contract.mj
 import { headers } from "next/headers";
 import { AutoYouTubeVideos, AutoVideoLoading } from "@/components/auto-youtube-videos";
 import { isLukeSampleRequest } from "@/lib/luke-sample-cards";
+import { projectPreviewStrategyCards } from "@/lib/strategy-card-projection";
 import { LukeSampleCards } from "@/components/luke-sample-cards";
 import { LukeCanonicalComboReference } from "@/components/luke-canonical-combo-reference";
 import { CharacterUnifiedPage } from "@/components/character-unified-page";
@@ -95,9 +96,13 @@ export default async function CharacterPage({
     records:(await import("@/data/SF6DNA_WS5_OFFICIAL_TXT_CANONICAL_20261026.json")).default as unknown as Record<string,CanonicalTxtRecord>,
   }) : null;
   const finalBundle = connectedTxt?.bundle ?? bundle;
+  // Only the existing authenticated Preview RPC is eligible. Fixture/research are excluded.
+  const strategyCardsAuthorized = process.env.VERCEL_ENV === "preview" && Boolean(previewToken) && data.source === "device-preview";
+  const strategyCards = strategyCardsAuthorized && finalBundle ? projectPreviewStrategyCards(finalBundle) : [];
   const combinedMoveEvidence = connectedTxt?.moveEvidence ?? moveEvidence;
   return <CharacterUnifiedPage automaticVideos={<Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} registeredYoutubeIds={registeredYoutubeIds} /></Suspense>} character={character} bundle={finalBundle} players={players} videos={videos} videoState={relatedVideoResult.state}
     moveEvidence={combinedMoveEvidence}
+    strategyCards={strategyCards} strategyCardsAuthorized={strategyCardsAuthorized}
     localMoveReferences={!production && isLukeSampleRequest(character.slug, query.sample, process.env.VERCEL_ENV) ?
       <LukeSampleCards slug={character.slug} requested={query.sample} environment={process.env.VERCEL_ENV} moveOnly /> : null}
     localReferences={!production ? <LukeCanonicalComboReference characterSlug={character.slug} /> : null} />;
