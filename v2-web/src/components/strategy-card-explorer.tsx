@@ -47,7 +47,7 @@ export function StrategyCardExplorer({ kind, items }: { kind: StrategyCardView["
   return <div className={styles.explorer} data-strategy-explorer={kind}>
     <label htmlFor={fieldId}>カードを検索</label>
     <input id={fieldId} type="search" value={query} onChange={e => setQuery(e.target.value)}
-      placeholder={kind === "combo" ? "技名・SA3・ゲージなし" : kind === "setplay" ? "安全飛び・F式・画面端" : kind === "sequence" ? "暴れ潰し・固め・ラッシュ" : "対戦キャラ・対象技・対策"} />
+      placeholder={kind === "combo" ? "技名・SA3・ゲージなし" : kind === "setplay" ? "安全飛び・投げ重ね・画面端" : kind === "sequence" ? "暴れ潰し・固め・ラッシュ" : "対戦キャラ・対象技・対策"} />
     <div className={styles.filters} role="group" aria-label="カテゴリ・条件フィルター">
       <button type="button" aria-pressed={currentCategory === "all" && !condition} onClick={() => { setCategory("all"); setCondition(""); }}>すべて</button>
       {categories.map(option => <button key={option.value} type="button" aria-pressed={currentCategory === option.value}
