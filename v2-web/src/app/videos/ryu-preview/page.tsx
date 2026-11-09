@@ -9,7 +9,7 @@ export default function RyuVideoPreviewPage() {
   return <div className="site-shell page-stack experience-video">
     <section className="hero"><p className="eyebrow">VIDEOS / PREVIEW ONLY</p>
       <h1>リュウの動画カード（確認用）</h1>
-      <p>既存の動画カードを使った候補9件です。DBの公開ステータスは変更していません。</p>
+      <p>既存の動画カードを使った候補27件です。動画種類・リュウ使用プレイヤー・並び替えを組み合わせて確認できます。DBの公開ステータスは変更していません。</p>
       <p>使用キャラ・出演・公開日・パッチ適合性は最終確認前です。攻略内容をSF6DNAが保証するものではありません。</p>
       <p><Link href="/videos">通常の動画一覧に戻る</Link></p>
     </section>

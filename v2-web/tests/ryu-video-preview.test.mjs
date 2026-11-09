@@ -10,10 +10,10 @@ test("preview-only route is gated and reuses the shared library", () => {
  assert.match(source, /index: false/);
  assert.match(source, /<VideoLibrary[^>]*previewCandidates/);
 });
-test("nine unique candidates without confirmed public relation IDs", () => {
+test("27 unique candidates without confirmed public relation IDs", () => {
  const source = read("lib/ryu-video-preview.ts");
  const ids = [...source.matchAll(/\[\s*"([A-Za-z0-9_-]{11})"/g)].map(x=>x[1]);
- assert.equal(ids.length, 9);
+ assert.equal(ids.length, 27);
  assert.equal(new Set(ids).size, 9);
  assert.doesNotMatch(source, /entityRefs\s*:/);
  assert.doesNotMatch(source, /matchBindings\s*:/);

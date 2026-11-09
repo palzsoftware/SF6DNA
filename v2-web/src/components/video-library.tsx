@@ -79,6 +79,13 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
     players: initialPlayer ? new Set(videoInitialPlayerIds(videos, initialPlayer)) : new Set(),
   }));
   const [sort, setSort] = useState<VideoSort>("recommended");
+  const [previewKind, setPreviewKind] = useState("all");
+  const [previewPlayer, setPreviewPlayer] = useState("all");
+  const previewPlayers = useMemo(() => unique(videos.flatMap(video => video.players)), [videos]);
+  const previewFiltered = useMemo(() => !previewCandidates ? videos : videos.filter(video =>
+    (previewKind === "all" || video.videoType === previewKind) &&
+    (previewPlayer === "all" || video.players.includes(previewPlayer))),
+    [videos, previewCandidates, previewKind, previewPlayer]);
   const [visible, setVisible] = useState(12);
   const preferences = useOwnedVideoPreferences(previewCandidates);
   const preferenceReady = preferences.status === "ready";
@@ -109,8 +116,8 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
     ? { ...filters, characters: new Set(options.characters.some(ref => ref.label === lockedCharacter) ? options.characters.filter(ref => ref.label === lockedCharacter).map(ref => ref.id) : [lockedCharacter]) }
     : filters, [filters, lockedCharacter, options.characters]);
   const results = useMemo(
-    () => preferenceWaiting ? [] : sortVideos(filterVideos(videos, effectiveFilters, favorites, watched, learningRecords), sort, favorites, watched),
-    [videos, effectiveFilters, favorites, watched, sort, preferenceWaiting, learningRecords],
+    () => preferenceWaiting ? [] : sortVideos(filterVideos(previewFiltered, effectiveFilters, favorites, watched, learningRecords), sort, favorites, watched),
+    [previewFiltered, effectiveFilters, favorites, watched, sort, preferenceWaiting, learningRecords],
   );
   const activeFilterCount = useMemo(() => (
     Number(Boolean(filters.query.trim())) + filters.events.size + filters.players.size + (lockedCharacter ? 0 : filters.characters.size) +
@@ -135,6 +142,8 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
   function clearFilters() {
     setFilters(EMPTY_FILTERS);
     setSort("recommended");
+    setPreviewKind("all");
+    setPreviewPlayer("all");
     setVisible(12);
   }
 
@@ -150,6 +159,14 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
   return (
     <div className={`${styles.library} experience-video-library`}>
       <div className={styles.toolbar}>
+        {previewCandidates ? <div className={styles.previewFilters} aria-label="リュウ動画の候補絞り込み">
+          <label>動画の種類<select aria-label="動画種類で絞り込み" value={previewKind} onChange={event => { setPreviewKind(event.target.value); setVisible(12); }}>
+            <option value="all">すべて</option><option value="guide">解説・コンボ</option><option value="counter">リュウ対策</option><option value="match">対戦・大会</option>
+          </select></label>
+          <label>リュウ使用プレイヤー（タイトル等の候補）<select aria-label="使用プレイヤーで絞り込み" value={previewPlayer} onChange={event => { setPreviewPlayer(event.target.value); setVisible(12); }}>
+            <option value="all">全プレイヤー</option>{previewPlayers.map(player => <option key={player} value={player}>{player}</option>)}
+          </select></label>
+        </div> : null}
         <div className={styles.topRow}>
           <label>掲載動画を検索<input type="search" aria-describedby={scopeId} value={filters.query} onChange={(event) => { setFilters((current) => ({ ...current, query: event.target.value })); setVisible(12); }} placeholder="例：ダイヤ帯 モダン、初心者、座学 MR1600" /></label>
           <div className={styles.sortControls}>
