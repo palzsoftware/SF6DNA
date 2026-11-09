@@ -2,6 +2,7 @@ import { VideoSearchForm, VideoSearchResults } from "@/components/video-search-p
 import { parseVideoSearchFilters, videoSearchQuery, type VideoSearchParams } from "@/lib/video-search-filters";
 import { Suspense } from "react";
 import { AutoVideoLoading } from "@/components/auto-youtube-videos";
+import { autoVideoEnabled } from "@/lib/auto-youtube-videos";
 import { publicPageMetadata } from "@/lib/public-page-metadata";
 export const dynamic = "force-dynamic";
 
@@ -53,8 +54,8 @@ export default async function VideosPage({ searchParams }: {
 
       {hasServerFilters ? <p>指定された条件で表示しています。 <Link href="/videos">指定条件を解除</Link></p> : null}
       <VideoSearchForm key={JSON.stringify(params)} filters={filters} params={params} />
-      <Suspense key={JSON.stringify(params)} fallback={<AutoVideoLoading />}><VideoSearchResults filters={filters}
-        exact={{ playerId, characterId, tournamentId, player, invalidFilter }} /></Suspense>
+      {autoVideoEnabled() ? <Suspense key={JSON.stringify(params)} fallback={<AutoVideoLoading />}><VideoSearchResults filters={filters}
+        exact={{ playerId, characterId, tournamentId, player, invalidFilter }} /></Suspense> : null}
 
       <section aria-label="掲載動画"><h2>掲載動画</h2>
         <p>{showRyuCandidates ? "掲載済み動画とPreview限定の検証候補をまとめて表示しています。候補の出演者・使用キャラ・現行パッチ適合性は未確認です。" : "掲載済みの動画です。上の検索条件はYouTube検索に使用します。"}</p>

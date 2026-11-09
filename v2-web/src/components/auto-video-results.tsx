@@ -49,7 +49,7 @@ export function AutoVideoResults({ result, searches, names = [], englishNames, s
     viewCountCheckedAt: null,
   }));
   return <section className={styles.panel} data-auto-video-state={selected.state}>
-    <h3>{names.length ? `${names.join("・")}の動画を探す` : "スト6の動画を探す"}</h3>
+    <h3>YouTube検索結果{names.length ? `：${names.join("・")}` : ""}</h3>
     <p className={styles.note}>YouTubeの検索結果です。種類を選ぶと、その目的で検索した動画に切り替わります。内容や人物の一致を保証するものではありません。</p>
     {!hideKindFilters ? <div className={styles.filters} role="group" aria-label="動画の種類">
       {VIDEO_SEARCH_KINDS.filter(value => searches ? value in searches : ["all", "guide", "match", "combo"].includes(value)).map(value => <button key={value} type="button" aria-pressed={kind === value}
