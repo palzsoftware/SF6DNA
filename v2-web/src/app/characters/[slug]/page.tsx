@@ -92,7 +92,7 @@ export default async function CharacterPage({
   const characterCandidateVideos = previewCandidates.filter(video => {
     const youtubeId = youtubeVideoIdFromUrl(video.url);
     return youtubeId !== null && !publishedYoutubeIds.has(youtubeId);
-  }) : [];
+  });
   const moveEvidence = await characterUnifiedEvidence(character.slug, bundle?.moves ?? [], process.env.VERCEL_ENV);
   const admission = { nodeEnv:process.env.NODE_ENV, vercelEnv:process.env.VERCEL_ENV,
     vercel:process.env.VERCEL, enabled:process.env.SF6DNA_WS5_TXT_PREVIEW,
