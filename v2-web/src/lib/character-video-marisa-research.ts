@@ -73,6 +73,24 @@ const candidates = [
     "マリーザ シーズン2セットプレイ",
     "投稿者未確認",
     "guide"
+  ],
+  [
+    "tbLajAzANrY",
+    "【スト６】１５分で使えるマリーザ講座！！このキャラで重要な技は〇〇！！",
+    "いおりチャンネル",
+    "guide"
+  ],
+  [
+    "liZq7lIszWY",
+    "マリーザのODスクトゥム、実は簡単に対策できます",
+    "いおりチャンネル",
+    "counter"
+  ],
+  [
+    "66iA4izlnO4",
+    "【スト6】マリーザ 実戦向けコンボ 起き攻め セットプレイ SF6 Marisa Combo Oki Setup",
+    "レイ / Ray",
+    "guide"
   ]
 ] as const;
 export const CHARACTER_VIDEO_MARISA_RESEARCH: VideoSummary[] = candidates.map(([id,title,channel,kind]): VideoSummary => ({
