@@ -61,6 +61,12 @@ const nextTenVideoSeeds = [
         "対本田・マリーザには弱攻撃で詐欺飛び",
         "【スト6】ずんだもんふぁいたーch【解説】",
         "counter"
+      ],
+      [
+        "W_Z7J--vaBA",
+        "Six Bit（E.本田）vs ウメハラ（豪鬼）",
+        "Stremphoenix",
+        "match"
       ]
     ]
   },
@@ -80,6 +86,18 @@ const nextTenVideoSeeds = [
         "ディージェイ ランクマ：中ソバットを信じる",
         "まりゅーちゃんねる",
         "match"
+      ],
+      [
+        "BPwbUSFJxys",
+        "Classic DeeJay Combos & Setup Guide Season 3",
+        "Joe Ebios",
+        "guide"
+      ],
+      [
+        "c7Zo42qS4Hw",
+        "ディージェイ初心者向け31コンボ集（モダン・クラシック）",
+        "まりゅーちゃんねる",
+        "guide"
       ]
     ]
   },
@@ -110,6 +128,12 @@ const nextTenVideoSeeds = [
         "5qAQenFz8aQ",
         "マノンの武器職人から新コンボを授かる立川",
         "立川ちゃんねる",
+        "guide"
+      ],
+      [
+        "07THf6Qiqm4",
+        "Street Fighter 6 Manon Combo Guide",
+        "MC MuraFGC",
         "guide"
       ]
     ]
@@ -148,6 +172,12 @@ const nextTenVideoSeeds = [
         "マリーザ ランクマ・実戦動画",
         "アゴアニキ",
         "match"
+      ],
+      [
+        "-FH9kleTkjo",
+        "EVO2025 板橋ザンギエフ（マリーザ）vs VIDEOGUY JR（JP）",
+        "Capcom Fighters JP",
+        "match"
       ]
     ]
   },
@@ -167,6 +197,18 @@ const nextTenVideoSeeds = [
         "ザンギエフのインパクトパニカン時の選択肢",
         "えよこ",
         "guide"
+      ],
+      [
+        "seI8Ybaxmi4",
+        "Street Fighter 6 Zangief Dream Combos",
+        "ROUBICHL9TAL-YT",
+        "guide"
+      ],
+      [
+        "F6H5Lss6v6s",
+        "ザンギエフ対策 SA・起き攻め対応（相手側視点）",
+        "jyouji背骨",
+        "counter"
       ]
     ]
   },
@@ -186,6 +228,18 @@ const nextTenVideoSeeds = [
         "リリー対策：三種の神器とNG行動",
         "うりょ",
         "counter"
+      ],
+      [
+        "2NT2NgsklEg",
+        "リリー弱コンドルウィンドをあきらが解説",
+        "Vtuber Showdown【Vtuber格ゲーch】",
+        "guide"
+      ],
+      [
+        "8zKQFinzbV8",
+        "リリー vs E.本田 開発者対戦スペシャル",
+        "Street Fighter",
+        "match"
       ]
     ]
   },
@@ -223,6 +277,18 @@ const nextTenVideoSeeds = [
         "キャミィ初心者向け コンボ・起き攻め講座",
         "べーやんの部屋【ゆっくり解説チャンネル】",
         "guide"
+      ],
+      [
+        "AMphCRWwn3k",
+        "キャミィYear2 使い方・コンボ・起き攻め",
+        "Rush Gorou",
+        "guide"
+      ],
+      [
+        "tqFsYQ_zcAg",
+        "キャミィYear3 実用的基本コンボ完全版",
+        "アダー@実用的ゲームちゃんねる",
+        "guide"
       ]
     ]
   },
@@ -248,6 +314,24 @@ const nextTenVideoSeeds = [
         "ラシード イウサールの活用法",
         "doskonnbu",
         "guide"
+      ],
+      [
+        "6aiDYqdv26I",
+        "花籠つばさのラシード基礎・コンボ講習",
+        "Vtuber Showdown【Vtuber格ゲーch】",
+        "guide"
+      ],
+      [
+        "wsVyJbn5aR8",
+        "にじさんじ初のラシード使いに俺はなる",
+        "花籠つばさ / Hanakago Tsubasa",
+        "guide"
+      ],
+      [
+        "iWhE4SQUhhE",
+        "モダンラシード ダイヤ帯ランクマ",
+        "花籠つばさ / Hanakago Tsubasa",
+        "match"
       ]
     ]
   },
@@ -273,6 +357,24 @@ const nextTenVideoSeeds = [
         "ひかる選手 A.K.I. 対戦リプレイ",
         "SF6-MODERN",
         "match"
+      ],
+      [
+        "rOCVfugRvms",
+        "A.K.I.でグランドマスターに到達する叶",
+        "Kanae Channel",
+        "match"
+      ],
+      [
+        "n0guRH2hoNY",
+        "初心者モダンA.K.I. ジャンプ攻撃からコンボ",
+        "Rumaterasu",
+        "guide"
+      ],
+      [
+        "jDqwQkq8vwU",
+        "ひかる A.K.I. 新コンボ・セットプレイ解説",
+        "ひかる しとね",
+        "guide"
       ]
     ]
   },
@@ -303,6 +405,12 @@ const nextTenVideoSeeds = [
         "m_ajGPJKVvo",
         "モダンエドのドリーム練習・リプレイ反省",
         "常闇トワ切り抜きch",
+        "guide"
+      ],
+      [
+        "NoH1BViQnRU",
+        "SF6 ED Beginner Guide: Combos & Setups",
+        "Joe Ebios",
         "guide"
       ]
     ]
