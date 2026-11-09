@@ -96,8 +96,8 @@ export function projectRyuSetplayPreviewCards(): StrategyCardView[] {
     id: candidate.id,
     kind: "setplay",
     title: candidate.title,
-    category: "R5候補",
-    categoryLabel: "R5資料候補",
+    category: "Drive資料候補",
+    categoryLabel: "未検証候補",
     searchTerms: [candidate.route, candidate.summary, candidate.feature, candidate.conditions, "起き攻め", "投げ重ね", "画面端"],
     driveCost: null,
     saCost: null,
@@ -107,7 +107,7 @@ export function projectRyuSetplayPreviewCards(): StrategyCardView[] {
 
 export function RyuSetplayPreviewNotice() {
   return <aside className={styles.notice} role="note">
-    <strong>Preview限定：Drive資料のセットプレイ候補2件</strong>
+    <strong>Preview限定：Driveの具体候補2件</strong>
     <p>具体候補のみを表示しています。どちらも実機未検証・公開承認なしです。ダメージとドライブゲージ量は資料に未記載のため補っていません。記載されたフレーム値やPatchとの一致も再確認が必要です。</p>
     <p>ProductionとDBには反映しません。</p>
   </aside>;
