@@ -152,6 +152,9 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, video
   previewComboCards?: StrategyCardView[];
   /** Renders only when the Ryu candidate-only Preview view is active. */
   previewComboNotice?: ReactNode;
+  /** Only populated by the server route for an explicit Preview-only Ryu candidate view. */
+  previewSetplayCards?: StrategyCardView[];
+  previewSetplayNotice?: ReactNode;
 }) {
   const overview = characterOverviewCopy[character.slug] ?? character;
   const visibleStrategyCards = strategyCardsAuthorized && process.env.VERCEL_ENV !== "production" ? strategyCards : [];
@@ -245,7 +248,7 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, video
         {automaticVideos}
       </section>
     </section>
-    <CharacterStrategySlot kind="combo" items={previewComboCards.length ? previewComboCards : visibleStrategyCards.filter(card => card.kind === "combo")} previewContent={character.slug === "luke" ? localReferences : null} previewNotice={character.slug === "ryu" && previewComboCards.length ? previewComboNotice : null} /><CharacterStrategySlot kind="setplay" items={visibleStrategyCards.filter(card => card.kind === "setplay")} /><CharacterStrategySlot kind="sequence" items={visibleStrategyCards.filter(card => card.kind === "sequence")} /><CharacterStrategySlot kind="counter" items={visibleStrategyCards.filter(card => card.kind === "counter")} />
+    <CharacterStrategySlot kind="combo" items={previewComboCards.length ? previewComboCards : visibleStrategyCards.filter(card => card.kind === "combo")} previewContent={character.slug === "luke" ? localReferences : null} previewNotice={character.slug === "ryu" && previewComboCards.length ? previewComboNotice : null} /><CharacterStrategySlot kind="setplay" items={previewSetplayCards?.length ? previewSetplayCards : visibleStrategyCards.filter(card => card.kind === "setplay")} previewNotice={character.slug === "ryu" && previewSetplayCards?.length ? previewSetplayNotice : null} /><CharacterStrategySlot kind="sequence" items={visibleStrategyCards.filter(card => card.kind === "sequence")} /><CharacterStrategySlot kind="counter" items={visibleStrategyCards.filter(card => card.kind === "counter")} />
     <section id="sources" className={styles.section}><h2>情報源</h2><SourceLinks sources={character.sources} /></section>
     {/* Strategy reference media is retained in source, hidden for Ver.1.0. */}
   </div>;
