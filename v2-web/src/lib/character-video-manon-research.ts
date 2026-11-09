@@ -217,6 +217,12 @@ const candidates = [
     "GANAKEN Year2マノン強化点解説",
     "GANAKEN / ガナケン",
     "guide"
+  ],
+  [
+    "-IlXBGdD_VQ",
+    "世界1位マノン あくたがわ 調整後の対戦リプレイ",
+    "SF6-MODERN",
+    "match"
   ]
 ] as const;
 export const CHARACTER_VIDEO_MANON_RESEARCH: VideoSummary[] = candidates.map(([id,title,channel,kind]): VideoSummary => ({
