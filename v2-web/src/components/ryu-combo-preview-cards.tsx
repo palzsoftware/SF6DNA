@@ -39,7 +39,8 @@ function routePart(part: string, key: string) {
   const normalized = part
     .replace(/^4強P(?:（上げ突き）)?$/, "上げ突き")
     .replace(/^6中P(?:（鎖骨割り）)?$/, "鎖骨割り")
-    .replace(/^6強P（ガード\\+3）$/, "鳩尾砕き（ガード+3）")\n    .replace(/^6強P（ガード＋3）$/, "鳩尾砕き（ガード＋3）")\n    .replace(/^6強P(?:（鳩尾砕き）)?$/, "鳩尾砕き");
+    .replace(/^6強P（ガード[+＋]3）$/, "鳩尾砕き（ガード+3）")
+    .replace(/^6強P(?:（鳩尾砕き）)?$/, "鳩尾砕き");
   const reference = moveReferences.find(item => normalized.includes(item.match));
   if (reference) {
     const before = normalized.slice(0, normalized.indexOf(reference.match));
