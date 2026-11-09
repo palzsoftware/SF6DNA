@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import { VideoCard } from "@/components/video-card";
+import type { VideoSummary } from "@/lib/event-media";
 import { filterUniqueAutoVideoHits } from "@/lib/character-related-video-contract.mjs";
 import type { AutoVideoResult } from "@/lib/auto-youtube-videos";
 import { VIDEO_SEARCH_KINDS, VIDEO_SEARCH_LABELS, youtubeSearchHref, type VideoSearchKind } from "@/lib/auto-video-search";
@@ -22,6 +24,30 @@ export function AutoVideoResults({ result, searches, names = [], englishNames, s
   const selected = searches?.[kind] ?? result;
   const uniqueItems = filterUniqueAutoVideoHits(selected.items, registeredYoutubeIds);
   const shown = uniqueItems.slice(0, visible);
+  // Search hits have no verified player/character/match association. Keep those fields empty.
+  // A stable candidate ID permits favorite/watched without modifying published DB records.
+  const cards: VideoSummary[] = shown.map(video => ({
+    id: `youtube:${video.videoId}`,
+    slug: `youtube-${video.videoId}`,
+    title: video.title,
+    platform: "youtube",
+    videoType: null,
+    publishedAt: null,
+    description: null,
+    url: video.watchUrl,
+    thumbnailUrl: video.thumbnailUrl,
+    channelName: video.channelTitle,
+    durationSeconds: null,
+    language: null,
+    controlTypes: [],
+    events: [],
+    characters: [],
+    players: [],
+    categories: [],
+    level: "unknown",
+    viewCount: null,
+    viewCountCheckedAt: null,
+  }));
   return <section className={styles.panel} data-auto-video-state={selected.state}>
     <h3>{names.length ? `${names.join("・")}の動画を探す` : "スト6の動画を探す"}</h3>
     <p className={styles.note}>YouTubeの検索結果です。種類を選ぶと、その目的で検索した動画に切り替わります。内容や人物の一致を保証するものではありません。</p>
@@ -31,13 +57,9 @@ export function AutoVideoResults({ result, searches, names = [], englishNames, s
     </div> : null}
     {selected.state === "RESULTS" ? <>
       <p role="status" aria-live="polite">{VIDEO_SEARCH_LABELS[kind]}：{uniqueItems.length}件中{shown.length}件表示</p>
-      <ul className={styles.grid}>{shown.map(video => <li key={video.videoId}>
-        <a className={styles.card} href={video.watchUrl} target="_blank" rel="noopener noreferrer">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={video.thumbnailUrl} alt="" width={480} height={360} loading="lazy" referrerPolicy="no-referrer" />
-          <div><strong>{video.title}</strong>{video.channelTitle ? <span>{video.channelTitle}</span> : null}<span className={styles.cta}>YouTubeで見る ↗</span></div>
-        </a>
-      </li>)}</ul>
+      <div className="video-card-grid">{cards.map(video =>
+        <VideoCard key={video.id} video={video} publishedDate={null} previewCandidate />
+      )}</div>
       {visible < uniqueItems.length ? <button className={styles.more} type="button" onClick={() => setVisible(count => count + 12)}>もっと見る（残り{uniqueItems.length - visible}件）</button> : null}
     </> : <p role="status">{selected.state === "EMPTY" ? "この検索では動画が見つかりませんでした。下のリンクからYouTubeでも探せます。"
       : selected.state === "UNAVAILABLE" ? "現在、自動検索を利用できません。YouTubeで直接探せます。"
