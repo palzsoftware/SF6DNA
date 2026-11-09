@@ -26,7 +26,7 @@ const candidates = [
     "channel": "Street Fighter"
   },
   {
-    "slug": "a-k-i",
+    "slug": "aki",
     "name": "A.K.I.",
     "id": "Yva_TJaMfrk",
     "date": "2023-09-18",
