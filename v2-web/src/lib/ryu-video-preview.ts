@@ -299,7 +299,7 @@ const candidates = [
     "ひぐちゃんねる。EndingWalkerのリュウの強さと立ち回りに関する考察。2025年時点。"
   ]
 ] as const;
-export const RYU_VIDEO_PREVIEW: VideoSummary[] = [...candidates.map(([youtubeId, title, videoType, date, player, description]) => ({
+export const RYU_VIDEO_PREVIEW: VideoSummary[] = [...candidates.map(([youtubeId, title, videoType, date, player, description]): VideoSummary => ({
   id: `preview-ryu-${youtubeId}`,
   slug: `preview-ryu-${youtubeId}`,
   title,
