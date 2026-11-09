@@ -1,4 +1,5 @@
 import type { VideoSummary } from "@/lib/event-media";
+import { CHARACTER_VIDEO_DEEJAY_RESEARCH } from "@/lib/character-video-deejay-research";
 import { CHARACTER_VIDEO_HONDA_RESEARCH } from "@/lib/character-video-honda-research";
 import { NEXT_TEN_PUBLIC_SEARCH_FOLLOWUP } from "@/lib/character-video-public-search-followup";
 import { NEXT_TEN_PUBLIC_SEARCH_BATCH } from "@/lib/character-video-public-search-batch";
@@ -630,7 +631,7 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   ...CHARACTER_VIDEO_BATCH_05,
   ...CHARACTER_VIDEO_BATCH_06,
   "e-honda": [...(CHARACTER_VIDEO_BATCH_03["e-honda"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["e-honda"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["e-honda"] ?? []), ...CHARACTER_VIDEO_HONDA_RESEARCH],
-  "dee-jay": [...(CHARACTER_VIDEO_BATCH_03["dee-jay"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["dee-jay"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["dee-jay"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_FOLLOWUP["dee-jay"] ?? [])],
+  "dee-jay": [...(CHARACTER_VIDEO_BATCH_03["dee-jay"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["dee-jay"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["dee-jay"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_FOLLOWUP["dee-jay"] ?? []), ...CHARACTER_VIDEO_DEEJAY_RESEARCH],
   "manon": [...(CHARACTER_VIDEO_BATCH_03["manon"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["manon"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["manon"] ?? [])],
   "marisa": [...(CHARACTER_VIDEO_BATCH_03["marisa"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["marisa"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["marisa"] ?? [])],
   "zangief": [...(CHARACTER_VIDEO_BATCH_03["zangief"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["zangief"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["zangief"] ?? [])],
