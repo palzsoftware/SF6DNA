@@ -221,6 +221,12 @@ const nextTenVideoSeeds = [
         "マノン関連の参考動画（原題・投稿者未確認）",
         "",
         "guide"
+      ],
+      [
+        "rDDR4r27QIc",
+        "マノン初心者向けの立ち回りと起き攻め解説",
+        "べーやんの部屋【ゆっくり解説チャンネル】",
+        "guide"
       ]
     ]
   },
@@ -350,6 +356,12 @@ const nextTenVideoSeeds = [
         "リリー初心者向け モダン中心の解説",
         "小路KOG",
         "guide"
+      ],
+      [
+        "nDepiCGJ0n4",
+        "YEAR3調整でMリリーがどうなったのか、分かりやすく解説します",
+        "涼川リトのMリリー講座",
+        "guide"
       ]
     ]
   },
@@ -466,6 +478,12 @@ const nextTenVideoSeeds = [
         "ラシードの新しい基本コンボと起き攻め／クラシック＆モダン",
         "クローバー",
         "guide"
+      ],
+      [
+        "ZzWJS6dWp1E",
+        "スト6四年目のラシード使いプロならコンボトライアルもノーミスでいけるよね？【ガチくん/スト6】",
+        "ガチくん /Gachikun",
+        "guide"
       ]
     ]
   },
@@ -563,6 +581,12 @@ const nextTenVideoSeeds = [
         "gRAHjdxxFC0",
         "エド 覚えたいコンボとセットプレイ",
         "投稿者未確認",
+        "guide"
+      ],
+      [
+        "75hzqsjo0_g",
+        "【スト6】エド 実戦向けコンボ 起き攻め セットプレイ SF6 Ed Combo Oki Setup",
+        "レイ / Ray",
         "guide"
       ]
     ]
