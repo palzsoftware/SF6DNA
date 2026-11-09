@@ -75,6 +75,18 @@ const nextTenVideoSeeds = [
         "エドモンド本田の評価を巡る対談・対策議論",
         "ストーム久保",
         "guide"
+      ],
+      [
+        "Gn0W7tbFikI",
+        "本田の最大コンボと凶悪起き攻め研究",
+        "ストーム久保",
+        "guide"
+      ],
+      [
+        "nYpZwvGWp3E",
+        "本田の鯖折りからのコンボ・起き攻め研究",
+        "ストーム久保",
+        "guide"
       ]
     ]
   },
@@ -118,6 +130,12 @@ const nextTenVideoSeeds = [
         "ディージェイ ラッシュ立ち中Kからの新コンボ",
         "まりゅーちゃんねる",
         "guide"
+      ],
+      [
+        "5buLfWSq5rI",
+        "ディージェイ初心者向け総合解説・コンボ・セットプレイ",
+        "ヤングとだか",
+        "guide"
       ]
     ]
   },
@@ -154,6 +172,54 @@ const nextTenVideoSeeds = [
         "07THf6Qiqm4",
         "Street Fighter 6 Manon Combo Guide",
         "MC MuraFGC",
+        "guide"
+      ],
+      [
+        "sbhofpmIilc",
+        "LEGENDマノンが教える初中級者向け使い方講座",
+        "GANAKEN / ガナケン",
+        "guide"
+      ],
+      [
+        "PoAI6qhC_KI",
+        "year3対応マノンの実践起き攻め45選",
+        "GANAKEN / ガナケン",
+        "guide"
+      ],
+      [
+        "VskOhxzSFOg",
+        "マノン関連の参考動画（原題・投稿者未確認）",
+        "",
+        "guide"
+      ],
+      [
+        "xZKUW5qV5bo",
+        "マノン関連の参考動画（原題・投稿者未確認）",
+        "",
+        "guide"
+      ],
+      [
+        "g3pzNVD-yyg",
+        "マノン関連の参考動画（原題・投稿者未確認）",
+        "",
+        "guide"
+      ],
+      [
+        "-qWrRwPAo5k",
+        "マノン関連の参考動画（原題・投稿者未確認）",
+        "",
+        "guide"
+      ],
+      [
+        "vepjFX8gaaU",
+        "マノン関連の参考動画（原題・投稿者未確認）",
+        "",
+        "guide"
+      ],
+      [
+        "Vd3mC1fHIJg",
+        "マノン関連の参考動画（原題・投稿者未確認）",
+        "",
         "guide"
       ]
     ]
@@ -198,6 +264,12 @@ const nextTenVideoSeeds = [
         "EVO2025 板橋ザンギエフ（マリーザ）vs VIDEOGUY JR（JP）",
         "Capcom Fighters JP",
         "match"
+      ],
+      [
+        "zrzR48VHtS8",
+        "MR2100↑マリーザ コンボ・起き攻め・セットプレイ",
+        "レイ / Ray",
+        "guide"
       ]
     ]
   },
@@ -431,6 +503,12 @@ const nextTenVideoSeeds = [
         "ひかる（A.K.I.）vs ウメハラ（豪鬼）2026",
         "Stremphoenix",
         "match"
+      ],
+      [
+        "6S9pobDk1gk",
+        "A.K.I. 覚えたいコンボとセットプレイ 前編",
+        "投稿者未確認",
+        "guide"
       ]
     ]
   },
@@ -467,6 +545,12 @@ const nextTenVideoSeeds = [
         "NoH1BViQnRU",
         "SF6 ED Beginner Guide: Combos & Setups",
         "Joe Ebios",
+        "guide"
+      ],
+      [
+        "gRAHjdxxFC0",
+        "エド 覚えたいコンボとセットプレイ",
+        "投稿者未確認",
         "guide"
       ]
     ]
