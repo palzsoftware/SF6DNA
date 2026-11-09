@@ -1,8 +1,60 @@
 import type { ReactNode } from "react";
-import { Sf6CommandInput } from "@/components/sf6-command-input";
 import type { StrategyCardView } from "@/components/strategy-card-explorer";
 import { RYU_COMBO_PREVIEW_CANDIDATES, type RyuComboPreviewCandidate } from "@/data/ryu-combo-preview";
 import styles from "./ryu-combo-preview-cards.module.css";
+
+const moveReferences = [
+  { match: "上げ突き", slug: "ryu-back-hp" },
+  { match: "鎖骨割り", slug: "ryu-collarbone-breaker" },
+  { match: "鳩尾砕き", slug: "ryu-solar-plexus-strike" },
+  { match: "OD上段足刀蹴り", slug: "ryu-od-high-blade-kick" },
+  { match: "強上段足刀蹴り", slug: "ryu-h-high-blade-kick" },
+  { match: "中上段足刀蹴り", slug: "ryu-m-high-blade-kick" },
+  { match: "弱上段足刀蹴り", slug: "ryu-l-high-blade-kick" },
+  { match: "OD竜巻旋風脚", slug: "ryu-od-tatsumaki" },
+  { match: "強竜巻旋風脚", slug: "ryu-h-tatsumaki" },
+  { match: "中竜巻旋風脚", slug: "ryu-m-tatsumaki" },
+  { match: "弱竜巻旋風脚", slug: "ryu-l-tatsumaki" },
+  { match: "OD昇龍拳", slug: "ryu-od-shoryuken" },
+  { match: "強昇龍拳", slug: "ryu-h-shoryuken" },
+  { match: "中昇龍拳", slug: "ryu-m-shoryuken" },
+  { match: "弱昇龍拳", slug: "ryu-l-shoryuken" },
+  { match: "電刃OD波掌撃", slug: "ryu-denjin-od-hashogeki" },
+  { match: "電刃波掌撃", slug: "ryu-denjin-hashogeki" },
+  { match: "OD波掌撃", slug: "ryu-od-hashogeki" },
+  { match: "強波掌撃", slug: "ryu-h-hashogeki" },
+  { match: "中波掌撃", slug: "ryu-m-hashogeki" },
+  { match: "弱波掌撃", slug: "ryu-l-hashogeki" },
+  { match: "電刃錬気", slug: "ryu-denjin-charge" },
+  { match: "強波動拳", slug: "ryu-h-hadoken" },
+  { match: "中波動拳", slug: "ryu-m-hadoken" },
+  { match: "弱波動拳", slug: "ryu-l-hadoken" },
+  { match: "旋風脚", slug: "ryu-forward-hk" },
+  { match: "SA3", slug: "ryu-sa3-shin-shoryuken" },
+  { match: "SA2", slug: "ryu-sa2-shin-hashogeki" },
+  { match: "SA1", slug: "ryu-sa1-shinku-hadoken" },
+] as const;
+
+function routePart(part: string, key: string) {
+  const reference = moveReferences.find(item => part.includes(item.match));
+  if (reference) {
+    const before = part.slice(0, part.indexOf(reference.match));
+    const after = part.slice(part.indexOf(reference.match) + reference.match.length);
+    return <span key={key}>{before}<a href={`#move-${reference.slug}`}>{reference.match}</a>{after}</span>;
+  }
+
+  const normal = part.match(/^(J|[245])?(弱|中|強)(P|K)(.*)$/);
+  if (!normal) return <span key={key}>{part}</span>;
+  const [, position, strength, button, suffix] = normal;
+  const posture = position === "J" ? "ジャンプ" : position === "2" ? "しゃがみ" : position === "5" ? "立ち" : "";
+  return <span key={key}>{posture}{strength}{button}{suffix}</span>;
+}
+
+function ComboRoute({ route }: { route: string }) {
+  return <span className={styles.routeSequence}>
+    {route.split(" → ").map((part, index) => <ReactNode key={index}>{index ? " → " : null}{routePart(part, `route-${index}`)}</ReactNode>)}
+  </span>;
+}
 
 function RyuComboCandidateCard({ candidate }: { candidate: RyuComboPreviewCandidate }) {
   return <article className={styles.card} data-research-status="unverified">
@@ -10,7 +62,7 @@ function RyuComboCandidateCard({ candidate }: { candidate: RyuComboPreviewCandid
     <h3>{candidate.title}</h3>
     <div className={styles.route}>
       <strong>コンボルート</strong>
-      <Sf6CommandInput value={candidate.route} scheme="classic" iconSize={20} />
+      <ComboRoute route={candidate.route} />
     </div>
     <p className={styles.summary}>{candidate.summary}</p>
     <details className={styles.details}>
@@ -56,4 +108,3 @@ export function RyuComboPreviewNotice() {
     <p>この候補はPreviewのみ表示し、ProductionとDBには反映しません。</p>
   </aside>;
 }
-
