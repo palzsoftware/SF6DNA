@@ -13,6 +13,7 @@ import { CHARACTER_VIDEO_DEEP_JURI } from "@/lib/character-video-deep-juri";
 import { CHARACTER_VIDEO_DEEP_KIMBERLY } from "@/lib/character-video-deep-kimberly";
 import { CHARACTER_VIDEO_DEEP_GUILE } from "@/lib/character-video-deep-guile";
 import { CHARACTER_VIDEO_DEEP_CHUN_LI } from "@/lib/character-video-deep-chun-li";
+import { CHARACTER_VIDEO_EXTRA_CHUN_LI } from "@/lib/character-video-extra-chun-li";
 import { CHARACTER_VIDEO_DEEP_JAMIE } from "@/lib/character-video-deep-jamie";
 import { CHARACTER_VIDEO_EXTRA_JAMIE } from "@/lib/character-video-extra-jamie";
 import { CHARACTER_VIDEO_DEEP_LUKE } from "@/lib/character-video-deep-luke";
@@ -38,7 +39,7 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   "juri": [...(CHARACTER_VIDEO_BATCH_02["juri"] ?? []), ...CHARACTER_VIDEO_DEEP_JURI],
   "kimberly": [...(CHARACTER_VIDEO_BATCH_02["kimberly"] ?? []), ...CHARACTER_VIDEO_DEEP_KIMBERLY],
   "guile": [...(CHARACTER_VIDEO_BATCH_01["guile"] ?? []), ...CHARACTER_VIDEO_DEEP_GUILE],
-  "chun-li": [...(CHARACTER_VIDEO_BATCH_01["chun-li"] ?? []), ...CHARACTER_VIDEO_DEEP_CHUN_LI],
+  "chun-li": [...(CHARACTER_VIDEO_BATCH_01["chun-li"] ?? []), ...CHARACTER_VIDEO_DEEP_CHUN_LI, ...CHARACTER_VIDEO_EXTRA_CHUN_LI],
   "jamie": [...(CHARACTER_VIDEO_BATCH_01["jamie"] ?? []), ...CHARACTER_VIDEO_DEEP_JAMIE, ...CHARACTER_VIDEO_EXTRA_JAMIE],
   "luke": [...(CHARACTER_VIDEO_BATCH_01["luke"] ?? []), ...CHARACTER_VIDEO_DEEP_LUKE, ...CHARACTER_VIDEO_EXTRA_LUKE],
   "jp": [...(CHARACTER_VIDEO_BATCH_01["jp"] ?? []), ...CHARACTER_VIDEO_DEEP_JP, ...CHARACTER_VIDEO_EXTRA_JP],
