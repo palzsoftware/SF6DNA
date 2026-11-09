@@ -54,9 +54,9 @@ function routePart(part: string, key: string) {
   return <span key={key}>{posture}{strength}{button}{suffix}</span>;
 }
 
-function ComboRoute({ route }: { route: string }) {
-  return <span className={styles.routeSequence}>
-    {route.split(/\s*→\s*/u).map((part, index) => <Fragment key={index}>{index ? " → " : null}{routePart(part, `route-${index}`)}</Fragment>)}
+export function RyuComboRoute({ route }: { route: string }) {
+  return <span >
+    {route.split(/\s*(?:→|>)\s*/u).map((part, index) => <Fragment key={index}>{index ? " → " : null}{routePart(part, `route-${index}`)}</Fragment>)}
   </span>;
 }
 
@@ -66,7 +66,7 @@ function RyuComboCandidateCard({ candidate }: { candidate: RyuComboPreviewCandid
     <h3>{candidate.title}</h3>
     <div className={styles.route}>
       <strong>コンボルート</strong>
-      <ComboRoute route={candidate.route} />
+      <RyuComboRoute route={candidate.route} />
     </div>
     <p className={styles.summary}>{candidate.summary}</p>
     <details className={styles.details}>
