@@ -155,6 +155,139 @@ const candidates = [
     "channel": "あじふらい",
     "kind": "guide",
     "source": "https://www.sf6-ingrid.com/article/deejay-setplay-and-combo-matsuri-ajifly"
+  },
+  {
+    "id": "9A4QXgyMY68",
+    "title": "SF6 Dee Jay Fundamentals Guide: Combos & Setups",
+    "channel": "Joe Ebios",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=9A4QXgyMY68"
+  },
+  {
+    "id": "X0pscP1dB7s",
+    "title": "【202412ver】ディージェイ 基本コンボ",
+    "channel": "メノ(Meno)",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=X0pscP1dB7s"
+  },
+  {
+    "id": "8h8cgkkXnWE",
+    "title": "ディージェイ誕生日記念動画2026 モダンディージェイ対戦動画",
+    "channel": "投稿者未確認",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=8h8cgkkXnWE"
+  },
+  {
+    "id": "xWijHMEOULI",
+    "title": "ディージェイ修行！takeraCUPに参戦",
+    "channel": "まりゅーちゃんねる",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=xWijHMEOULI"
+  },
+  {
+    "id": "5uNmSR47C5k",
+    "title": "ディージェイランクマ！各キャラの対策を考える",
+    "channel": "まりゅーちゃんねる",
+    "kind": "match",
+    "source": "https://yutura.net/channel/120080/video/5uNmSR47C5k/"
+  },
+  {
+    "id": "kEEvmbdtfqk",
+    "title": "コンボダメージが高すぎるディージェイを研究",
+    "channel": "ストーム久保",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=kEEvmbdtfqk"
+  },
+  {
+    "id": "QKC538_gXzI",
+    "title": "ディージェイのコンボ火力調整に驚くふ～ど",
+    "channel": "ふ～ど Fuudo",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=QKC538_gXzI"
+  },
+  {
+    "id": "nbPjCHPsYPQ",
+    "title": "お昼DJランクマ２時間",
+    "channel": "TAKERA CHANNEL",
+    "kind": "match",
+    "source": "https://yutura.net/channel/26082/video/nbPjCHPsYPQ/"
+  },
+  {
+    "id": "zA3mLyohxdQ",
+    "title": "ディージェイ対策講座",
+    "channel": "スト6初心者応援チャンネル",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=zA3mLyohxdQ"
+  },
+  {
+    "id": "_95lHl0MWsc",
+    "title": "ディージェイランクマ！悔しさをバネに！",
+    "channel": "まりゅーちゃんねる",
+    "kind": "match",
+    "source": "https://yutura.net/channel/120080/video/_95lHl0MWsc/"
+  },
+  {
+    "id": "pZfbP3J9dWw",
+    "title": "ディージェイ修行！キャラ対策を進めたい！",
+    "channel": "まりゅーちゃんねる",
+    "kind": "match",
+    "source": "https://yutura.net/channel/120080/video/pZfbP3J9dWw/"
+  },
+  {
+    "id": "L0Ede2sZyCc",
+    "title": "Street Fighter 6 Dee Jay Combo Guide",
+    "channel": "MC MuraFGC",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=L0Ede2sZyCc"
+  },
+  {
+    "id": "FWar708A-W8",
+    "title": "Must Know Deejay Combos for Street Fighter 6",
+    "channel": "2XKairos",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=FWar708A-W8"
+  },
+  {
+    "id": "x-5JuUmexfQ",
+    "title": "Street Fighter 6 Dee Jay Combos - Combo Guide",
+    "channel": "Daryus P",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=x-5JuUmexfQ"
+  },
+  {
+    "id": "TLCRRTOUBNM",
+    "title": "真面目にランクあげたいDJランクマ",
+    "channel": "TAKERA CHANNEL",
+    "kind": "match",
+    "source": "https://yutura.net/channel/26082/video/TLCRRTOUBNM/"
+  },
+  {
+    "id": "Tgo3I5ZbhPk",
+    "title": "pad筋を取り戻すDJランクマ",
+    "channel": "TAKERA CHANNEL",
+    "kind": "match",
+    "source": "https://yutura.net/channel/26082/video/Tgo3I5ZbhPk/"
+  },
+  {
+    "id": "I80Ddi2TtZM",
+    "title": "一旦パッド戻ったDJランクマ",
+    "channel": "TAKERA CHANNEL",
+    "kind": "match",
+    "source": "https://yutura.net/channel/26082/video/I80Ddi2TtZM/"
+  },
+  {
+    "id": "WBU_WIBTwqA",
+    "title": "昼のランクマDJ",
+    "channel": "TAKERA CHANNEL",
+    "kind": "match",
+    "source": "https://yutura.net/channel/26082/video/WBU_WIBTwqA/"
+  },
+  {
+    "id": "-k8002NHQKM",
+    "title": "禁煙DJランクマ",
+    "channel": "TAKERA CHANNEL",
+    "kind": "match",
+    "source": "https://yutura.net/channel/26082/video/-k8002NHQKM/"
   }
 ] as const;
 export const CHARACTER_VIDEO_DEEJAY_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
