@@ -119,6 +119,60 @@ const candidates = [
     "Master Rank E Honda Guide - Street Fighter 6",
     "Chachironi",
     "guide"
+  ],
+  [
+    "W9rzaWMCQq0",
+    "あーるえいち（E.本田）vs ひなお（イングリッド）",
+    "Stremphoenix",
+    "match"
+  ],
+  [
+    "mrDb0IUx6Q8",
+    "かっこいいが好きど（アルジュン）vs あーるえいち（E.本田）",
+    "Stremphoenix",
+    "match"
+  ],
+  [
+    "Uz-Cds22XrU",
+    "k4sen本田と順番に戦うスト6対戦会",
+    "k4sen / かせん",
+    "match"
+  ],
+  [
+    "kNRt74xwomE",
+    "本田使われが解説する本田対策【百貫・頭突き】",
+    "おーさま劇場",
+    "counter"
+  ],
+  [
+    "RhY90qe-hwM",
+    "世界1位E.本田・すーも。の高レベル対戦",
+    "SF6-MODERN",
+    "match"
+  ],
+  [
+    "GbccE9neKUM",
+    "SF6: E. Honda Tech (Season 3 Edition)",
+    "Killerex100",
+    "guide"
+  ],
+  [
+    "W4El3cW8WME",
+    "やたら硬派な激強本田に遭遇するハイタニ",
+    "ハイタニ TV",
+    "match"
+  ],
+  [
+    "auEHlMDDSqg",
+    "世界1位E.本田・カンフーマスターの画面端猫だまし",
+    "SF6-MODERN",
+    "match"
+  ],
+  [
+    "PszBtndhSrI",
+    "世界1位E.本田・すーも。の横綱相撲",
+    "SF6-MODERN",
+    "match"
   ]
 ] as const;
 export const CHARACTER_VIDEO_HONDA_RESEARCH: VideoSummary[] = candidates.map(([id, title, channel, kind]): VideoSummary => ({
