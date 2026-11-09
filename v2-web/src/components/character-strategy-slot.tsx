@@ -14,7 +14,7 @@ export function CharacterStrategySlot({ kind, previewContent, previewNotice, ite
   const [id, label] = labels[kind];
   // A presentation component must not make unpublished research publicly visible.
   // Preview cards can be supplied only by an existing server authorization gate.
-  const showPreview = kind === "combo" && ["development", "preview"].includes(process.env.VERCEL_ENV ?? process.env.NODE_ENV ?? "");
+  const showPreview = ["development", "preview"].includes(process.env.VERCEL_ENV ?? process.env.NODE_ENV ?? "");
   return <section id={id} className={styles.section} data-strategy-publication="CLOSED">
     <h2>{label}</h2>
     {showPreview && previewNotice ? previewNotice : null}
