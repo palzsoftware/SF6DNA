@@ -8,6 +8,8 @@ type OwnerState =
   | { status: "loading" | "error" }
   | { status: "ready"; owner: PersonalOwner; version: number };
 
+const PREVIEW_GUEST_STATE: OwnerState = { status: "ready", owner: "guest", version: 0 };
+
 /** Any auth event invalidates owner-bound UI before a new identity is accepted. */
 export function usePersonalizationOwner(skipAuthForPreview = false) {
   const generation = useRef(0);
@@ -57,7 +59,7 @@ export function usePersonalizationOwner(skipAuthForPreview = false) {
     };
   }, [skipAuthForPreview]);
 
-  const effectiveState: OwnerState = skipAuthForPreview ? { status: "ready", owner: "guest", version: 0 } : state;
+  const effectiveState: OwnerState = skipAuthForPreview ? PREVIEW_GUEST_STATE : state;
   const isCurrent = useCallback(
     () => skipAuthForPreview || (state.status === "ready" && state.version === generation.current),
     [state, skipAuthForPreview],
