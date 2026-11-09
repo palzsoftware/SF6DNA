@@ -80,7 +80,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
   }));
   const [sort, setSort] = useState<VideoSort>("recommended");
   const [visible, setVisible] = useState(12);
-  const preferences = useOwnedVideoPreferences();
+  const preferences = useOwnedVideoPreferences(previewCandidates);
   const preferenceReady = preferences.status === "ready";
   const favorites = useMemo(() => new Set(preferences.favorites), [preferences.favorites]);
   const watched = useMemo(() => new Set(preferences.watched), [preferences.watched]);
@@ -206,7 +206,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
       {preferenceWaiting ? <section className="empty-state" role="status"><p>{preferences.message}</p></section> : results.length ? (
         <>
           <div className="video-card-grid">
-            {results.slice(0, visible).map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} onPreferenceChange={refreshPreferences} previewCandidate={previewCandidates} key={video.id} />)}
+            {results.slice(0, visible).map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} onPreferenceChange={refreshPreferences} previewCandidate={previewCandidates} previewLocalOnly={previewCandidates} key={video.id} />)}
           </div>
           {visible < results.length ? <button className={`button-secondary ${styles.more}`} type="button" onClick={() => setVisible((count) => count + 12)}>さらに12件表示</button> : null}
         </>

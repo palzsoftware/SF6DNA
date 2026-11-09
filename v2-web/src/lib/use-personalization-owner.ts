@@ -9,11 +9,12 @@ type OwnerState =
   | { status: "ready"; owner: PersonalOwner; version: number };
 
 /** Any auth event invalidates owner-bound UI before a new identity is accepted. */
-export function usePersonalizationOwner() {
+export function usePersonalizationOwner(skipAuthForPreview = false) {
   const generation = useRef(0);
   const [state, setState] = useState<OwnerState>({ status: "loading" });
 
   useEffect(() => {
+    if (skipAuthForPreview) return;
     let active = true;
     let timer: ReturnType<typeof setTimeout> | undefined;
     let subscription: { unsubscribe: () => void } | undefined;
@@ -54,11 +55,12 @@ export function usePersonalizationOwner() {
       if (timer) clearTimeout(timer);
       subscription?.unsubscribe();
     };
-  }, []);
+  }, [skipAuthForPreview]);
 
+  const effectiveState: OwnerState = skipAuthForPreview ? { status: "ready", owner: "guest", version: 0 } : state;
   const isCurrent = useCallback(
-    () => state.status === "ready" && state.version === generation.current,
-    [state],
+    () => skipAuthForPreview || (state.status === "ready" && state.version === generation.current),
+    [state, skipAuthForPreview],
   );
-  return { state, isCurrent };
+  return { state: effectiveState, isCurrent };
 }

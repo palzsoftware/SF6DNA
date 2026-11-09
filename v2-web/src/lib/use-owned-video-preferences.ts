@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { usePersonalizationOwner } from "@/lib/use-personalization-owner";
+import { PREVIEW_VIDEO_PREFERENCE_CHANGED, previewVideoPreferenceKey, readPreviewVideoPreferences, togglePreviewVideoPreference } from "@/lib/preview-video-preferences";
 import {
   ownedVideoPreferenceKey, readOwnedVideoPreferences, toggleOwnedVideoPreference,
   videoOwnerScopeIsCurrent, VIDEO_PREFERENCE_CHANGED,
@@ -11,8 +12,8 @@ import {
 type Snapshot = { owner: VideoOwnerScope["owner"]; version: number; value: OwnedVideoPreferenceRead };
 const EMPTY: ReadonlySet<string> = new Set();
 
-export function useOwnedVideoPreferences() {
-  const { state, isCurrent } = usePersonalizationOwner();
+export function useOwnedVideoPreferences(previewLocalOnly = false) {
+  const { state, isCurrent } = usePersonalizationOwner(previewLocalOnly);
   const scope = useMemo<VideoOwnerScope | null>(() => state.status === "ready"
     ? { owner: state.owner, version: state.version, isCurrent } : null, [state, isCurrent]);
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
@@ -20,26 +21,26 @@ export function useOwnedVideoPreferences() {
 
   const refresh = useCallback(() => {
     if (!videoOwnerScopeIsCurrent(scope)) return;
-    const value = readOwnedVideoPreferences(scope);
+    const value = previewLocalOnly ? readPreviewVideoPreferences() : readOwnedVideoPreferences(scope);
     if (videoOwnerScopeIsCurrent(scope)) setSnapshot({ owner: scope.owner, version: scope.version, value });
-  }, [scope]);
+  }, [scope, previewLocalOnly]);
 
   useEffect(() => {
     if (!scope) return;
     const frame = window.requestAnimationFrame(refresh);
     const changed = () => refresh();
     const stored = (event: StorageEvent) => {
-      if (event.key === null || event.key === ownedVideoPreferenceKey(scope.owner, "favorite") ||
-          event.key === ownedVideoPreferenceKey(scope.owner, "watched")) refresh();
+      if (event.key === null || event.key === (previewLocalOnly ? previewVideoPreferenceKey("favorite") : ownedVideoPreferenceKey(scope.owner, "favorite")) ||
+          event.key === (previewLocalOnly ? previewVideoPreferenceKey("watched") : ownedVideoPreferenceKey(scope.owner, "watched"))) refresh();
     };
-    window.addEventListener(VIDEO_PREFERENCE_CHANGED, changed);
+    window.addEventListener(previewLocalOnly ? PREVIEW_VIDEO_PREFERENCE_CHANGED : VIDEO_PREFERENCE_CHANGED, changed);
     window.addEventListener("storage", stored);
     return () => {
       window.cancelAnimationFrame(frame);
-      window.removeEventListener(VIDEO_PREFERENCE_CHANGED, changed);
+      window.removeEventListener(previewLocalOnly ? PREVIEW_VIDEO_PREFERENCE_CHANGED : VIDEO_PREFERENCE_CHANGED, changed);
       window.removeEventListener("storage", stored);
     };
-  }, [scope, refresh]);
+  }, [scope, refresh, previewLocalOnly]);
 
   // Mask on render; do not wait for effect cleanup to hide the previous Owner.
   const matching = videoOwnerScopeIsCurrent(scope) && snapshot?.owner === scope.owner && snapshot.version === scope.version;
@@ -50,12 +51,12 @@ export function useOwnedVideoPreferences() {
 
   const toggle = useCallback((kind: VideoPreferenceKind, videoId: string): boolean => {
     if (status !== "ready" || !videoOwnerScopeIsCurrent(scope)) return false;
-    const result = toggleOwnedVideoPreference(scope, kind, videoId);
+    const result = previewLocalOnly ? togglePreviewVideoPreference(kind, videoId) : toggleOwnedVideoPreference(scope, kind, videoId);
     if (!videoOwnerScopeIsCurrent(scope)) return false;
     refresh();
     setNotice({ owner: scope.owner, version: scope.version, text: result.ok ? "" : "動画の保存に失敗しました。時間をおいて再度お試しください。" });
     return result.ok;
-  }, [scope, status, refresh]);
+  }, [scope, status, refresh, previewLocalOnly]);
 
   const savedNotice = scope && notice?.owner === scope.owner && notice.version === scope.version ? notice.text : "";
   const message = status === "loading" ? "動画の保存設定を確認しています。"

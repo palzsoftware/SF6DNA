@@ -7,10 +7,10 @@ import type { VideoSummary } from "@/lib/event-media";
 import { formatVideoDuration, VIDEO_CATEGORY_LABELS } from "@/lib/video-library";
 import { useOwnedVideoPreferences } from "@/lib/use-owned-video-preferences";
 
-export function VideoCard({ video, publishedDate, onPreferenceChange, previewCandidate = false }: { video: VideoSummary; publishedDate: string | null; onPreferenceChange?: () => void; previewCandidate?: boolean }) {
+export function VideoCard({ video, publishedDate, onPreferenceChange, previewCandidate = false, previewLocalOnly = false }: { video: VideoSummary; publishedDate: string | null; onPreferenceChange?: () => void; previewCandidate?: boolean; previewLocalOnly?: boolean }) {
   const videoUrl = videoPresentationUrl(video.url);
   const thumbnailUrl = videoPresentationUrl(video.thumbnailUrl);
-  const preferences = useOwnedVideoPreferences();
+  const preferences = useOwnedVideoPreferences(previewLocalOnly);
   const preferenceReady = preferences.status === "ready";
   const watched = preferenceReady && preferences.watched.has(video.id);
   const favorite = preferenceReady && preferences.favorites.has(video.id);
@@ -77,7 +77,6 @@ export function VideoCard({ video, publishedDate, onPreferenceChange, previewCan
         <span className="search-result__type">{[video.platform, category].filter(Boolean).join(" / ") || "VIDEO"}</span>
         <div className="video-card__flags"><span className={watched ? "video-card__watched-label" : undefined}>{preferenceReady ? watched ? "視聴済み" : "未視聴" : pendingLabel}</span></div>
         <h2>{previewCandidate ? video.title : <Link href={`/videos/${encodeURIComponent(video.slug)}`}>{video.title}</Link>}</h2>
-        {previewCandidate ? <small role="status">確認用候補・公開未承認（出演・使用キャラ名は候補情報）</small> : null}
         {video.channelName ? <p>{video.channelName}</p> : null}
         {relations.length ? <ul className="video-card__relations" aria-label="関連する人物・キャラクター・大会">{relations.map((name, index) => <li key={`${name}-${index}`}>{name}</li>)}</ul> : null}
         {publishedDate || duration ? <small>{[publishedDate, duration].filter(Boolean).join(" / ")}</small> : null}
