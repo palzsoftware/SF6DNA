@@ -1,4 +1,6 @@
 import type { VideoSummary } from "@/lib/event-media";
+import { CHARACTER_VIDEO_MANON_RESEARCH } from "@/lib/character-video-manon-research";
+import { CHARACTER_VIDEO_MARISA_RESEARCH } from "@/lib/character-video-marisa-research";
 import { CHARACTER_VIDEO_DEEJAY_RESEARCH } from "@/lib/character-video-deejay-research";
 import { CHARACTER_VIDEO_HONDA_RESEARCH } from "@/lib/character-video-honda-research";
 import { NEXT_TEN_PUBLIC_SEARCH_FOLLOWUP } from "@/lib/character-video-public-search-followup";
@@ -632,8 +634,8 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   ...CHARACTER_VIDEO_BATCH_06,
   "e-honda": [...(CHARACTER_VIDEO_BATCH_03["e-honda"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["e-honda"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["e-honda"] ?? []), ...CHARACTER_VIDEO_HONDA_RESEARCH],
   "dee-jay": [...(CHARACTER_VIDEO_BATCH_03["dee-jay"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["dee-jay"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["dee-jay"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_FOLLOWUP["dee-jay"] ?? []), ...CHARACTER_VIDEO_DEEJAY_RESEARCH],
-  "manon": [...(CHARACTER_VIDEO_BATCH_03["manon"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["manon"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["manon"] ?? [])],
-  "marisa": [...(CHARACTER_VIDEO_BATCH_03["marisa"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["marisa"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["marisa"] ?? [])],
+  "manon": [...(CHARACTER_VIDEO_BATCH_03["manon"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["manon"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["manon"] ?? []), ...CHARACTER_VIDEO_MANON_RESEARCH],
+  "marisa": [...(CHARACTER_VIDEO_BATCH_03["marisa"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["marisa"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["marisa"] ?? []), ...CHARACTER_VIDEO_MARISA_RESEARCH],
   "zangief": [...(CHARACTER_VIDEO_BATCH_03["zangief"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["zangief"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["zangief"] ?? [])],
   "lily": [...(CHARACTER_VIDEO_BATCH_04["lily"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["lily"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["lily"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_FOLLOWUP["lily"] ?? [])],
   "cammy": [...(CHARACTER_VIDEO_BATCH_04["cammy"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["cammy"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["cammy"] ?? [])],
