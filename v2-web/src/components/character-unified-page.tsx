@@ -141,13 +141,17 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
   </article>;
 }
 
-export function CharacterUnifiedPage({ character, bundle, players, videos, videoState, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, strategyCards = [], strategyCardsAuthorized = false }: {
+export function CharacterUnifiedPage({ character, bundle, players, videos, videoState, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, strategyCards = [], strategyCardsAuthorized = false, previewComboCards = [], previewComboNotice }: {
   character: CharacterDetail; bundle: DevicePreviewBundle | null; players: PlayerDetail[]; videos: VideoSummary[];
   videoState?: VideoRetrievalState; moveEvidence?: Record<string, UnifiedMoveEvidence>; localReferences?: ReactNode; localMoveReferences?: ReactNode; automaticVideos?: ReactNode; showPreferences?: boolean;
   /** Pre-authorized cards only; never pass raw research fixtures from a public route. */
   strategyCards?: StrategyCardView[];
   /** Must be asserted by the existing server-side publication/Preview authorization gate. */
   strategyCardsAuthorized?: boolean;
+  /** Only populated by the server route for an explicit Preview-only Ryu candidate view. */
+  previewComboCards?: StrategyCardView[];
+  /** Renders only when the Ryu candidate-only Preview view is active. */
+  previewComboNotice?: ReactNode;
 }) {
   const overview = characterOverviewCopy[character.slug] ?? character;
   const visibleStrategyCards = strategyCardsAuthorized && process.env.VERCEL_ENV !== "production" ? strategyCards : [];
@@ -241,7 +245,7 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, video
         {automaticVideos}
       </section>
     </section>
-    <CharacterStrategySlot kind="combo" items={visibleStrategyCards.filter(card => card.kind === "combo")} previewContent={character.slug === "luke" ? localReferences : null} /><CharacterStrategySlot kind="setplay" items={visibleStrategyCards.filter(card => card.kind === "setplay")} /><CharacterStrategySlot kind="sequence" items={visibleStrategyCards.filter(card => card.kind === "sequence")} /><CharacterStrategySlot kind="counter" items={visibleStrategyCards.filter(card => card.kind === "counter")} />
+    <CharacterStrategySlot kind="combo" items={previewComboCards.length ? previewComboCards : visibleStrategyCards.filter(card => card.kind === "combo")} previewContent={character.slug === "luke" ? localReferences : null} previewNotice={character.slug === "ryu" && previewComboCards.length ? previewComboNotice : null} /><CharacterStrategySlot kind="setplay" items={visibleStrategyCards.filter(card => card.kind === "setplay")} /><CharacterStrategySlot kind="sequence" items={visibleStrategyCards.filter(card => card.kind === "sequence")} /><CharacterStrategySlot kind="counter" items={visibleStrategyCards.filter(card => card.kind === "counter")} />
     <section id="sources" className={styles.section}><h2>情報源</h2><SourceLinks sources={character.sources} /></section>
     {/* Strategy reference media is retained in source, hidden for Ver.1.0. */}
   </div>;

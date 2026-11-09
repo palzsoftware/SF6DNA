@@ -1,0 +1,20 @@
+.preview { display: grid; gap: 14px; min-width: 0; }
+.notice { padding: 14px 16px; border: 1px solid var(--accent, #ff9d51); border-radius: 12px; background: var(--surface-raised, #19222e); }
+.notice strong { display: block; margin-bottom: 6px; }
+.notice p { margin: 6px 0 0; color: var(--text-muted, #b5bdc8); line-height: 1.6; }
+.card { display: grid; align-content: start; gap: 10px; height: 100%; min-width: 0; padding: 14px; border: 1px solid var(--border, #35414f); border-radius: 12px; background: var(--surface, #141a22); }
+.card h3 { margin: 0; font-size: 1.05rem; line-height: 1.4; }
+.tag { color: var(--text-muted, #b5bdc8); }
+.route { display: grid; gap: 8px; min-width: 0; padding: 12px; border-radius: 10px; background: var(--surface-raised, #19222e); }
+.route strong { font-size: .9rem; }
+.route > span { min-width: 0; flex-wrap: wrap; row-gap: 6px; }
+.summary { margin: 0; line-height: 1.5; }
+.details { border-top: 1px solid var(--border, #35414f); }
+.details summary { min-height: 44px; padding: 12px 0 4px; cursor: pointer; font-weight: 700; }
+.details dl { display: grid; gap: 8px; margin: 12px 0; }
+.details dl > div { display: grid; grid-template-columns: minmax(9em, 35%) minmax(0, 1fr); gap: 8px; }
+.details dt { font-weight: 700; }
+.details dd { min-width: 0; margin: 0; overflow-wrap: anywhere; line-height: 1.5; }
+.source { margin: 0; overflow-wrap: anywhere; }
+.source a { color: var(--link, #8ab4ff); }
+@media (max-width: 520px) { .details dl > div { grid-template-columns: 1fr; gap: 2px; } }
