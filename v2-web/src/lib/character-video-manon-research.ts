@@ -151,6 +151,72 @@ const candidates = [
     "マノン WW#1参加",
     "GANAKEN / ガナケン",
     "match"
+  ],
+  [
+    "-KL04Cfe1_o",
+    "マノン コンボトライアル 初級・中級・上級",
+    "そーだらいと",
+    "guide"
+  ],
+  [
+    "-uhB4ySE9Ys",
+    "テリー使いのマノン対策まとめ",
+    "holosokuのスト6攻略チャンネル",
+    "counter"
+  ],
+  [
+    "5lMWtAKHroE",
+    "たいじのマノン参考動画",
+    "投稿者未確認",
+    "guide"
+  ],
+  [
+    "lgmyiRQJkTY",
+    "マノン 起き上がり投げ参考動画",
+    "投稿者未確認",
+    "guide"
+  ],
+  [
+    "Sh95nrJSPgE",
+    "マノン起き攻め33選",
+    "GANAKEN / ガナケン",
+    "guide"
+  ],
+  [
+    "8mWmWF6HGlk",
+    "マノン起き攻め参考動画",
+    "投稿者未確認",
+    "guide"
+  ],
+  [
+    "E064Ku0u8LM",
+    "芥川 マノンLEGEND対戦",
+    "投稿者未確認",
+    "match"
+  ],
+  [
+    "-06MaPCRNOM",
+    "関優太 マノン関連",
+    "投稿者未確認",
+    "match"
+  ],
+  [
+    "a3OyaMQ6p3E",
+    "まさはる マノン対戦配信",
+    "投稿者未確認",
+    "match"
+  ],
+  [
+    "pBii_Giu4XQ",
+    "マノン新セットプレイ",
+    "投稿者未確認",
+    "guide"
+  ],
+  [
+    "m3_bwlcMOrk",
+    "GANAKEN Year2マノン強化点解説",
+    "GANAKEN / ガナケン",
+    "guide"
   ]
 ] as const;
 export const CHARACTER_VIDEO_MANON_RESEARCH: VideoSummary[] = candidates.map(([id,title,channel,kind]): VideoSummary => ({
