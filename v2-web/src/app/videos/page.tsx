@@ -37,6 +37,7 @@ export default async function VideosPage({ searchParams }: {
         <p>攻略・対戦・大会などの動画を探せます。</p><p className="experience-video-note">お気に入りは「また見たい動画」、視聴済みは「見終えた動画」の目印です。</p>
       </section>
 
+      {process.env.VERCEL_ENV === "preview" ? <p><Link href="/videos/ryu-preview">リュウ動画カード9件のPreview候補を見る</Link>（非公開・未承認）</p> : null}
       {hasServerFilters ? <p>指定された条件で表示しています。 <Link href="/videos">指定条件を解除</Link></p> : null}
       <VideoSearchForm key={JSON.stringify(params)} filters={filters} params={params} />
       <Suspense key={JSON.stringify(params)} fallback={<AutoVideoLoading />}><VideoSearchResults filters={filters}

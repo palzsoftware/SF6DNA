@@ -70,7 +70,7 @@ function FilterGroup({ title, values, selected, labels, unavailable, disabled = 
   );
 }
 
-export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialPlayer, learningRecords = PUBLISHED_VIDEO_LEARNING }: { videos: VideoSummary[]; lockedCharacter?: string; initialPlayer?: string | null; learningRecords?: readonly VideoLearningAnnotation[] }) {
+export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialPlayer, learningRecords = PUBLISHED_VIDEO_LEARNING, previewCandidates = false }: { videos: VideoSummary[]; lockedCharacter?: string; initialPlayer?: string | null; learningRecords?: readonly VideoLearningAnnotation[]; previewCandidates?: boolean }) {
   const videos = useMemo(() => suppliedVideos.map(video => applyReviewedVideoMetadata(video, learningRecords)), [suppliedVideos, learningRecords]);
   const panelId = useId();
   const scopeId = useId();
@@ -163,7 +163,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
           </select></label>
           </div>
         </div>
-        <p id={scopeId} className={styles.searchScope}>現在登録されている公開動画を検索します。YouTube全体の検索ではありません。大会の年度は、確認済みの大会名にある場合のみ絞り込めます。座学はテーマ別、対象ランク・MRは講座の対象者として確認した情報で絞り込みます。ダイヤ帯・プラチナ帯、初心者、モダンなども組み合わせて検索できます。分類が未確認の動画は、その条件に含めません。</p>
+        <p id={scopeId} className={styles.searchScope}>{previewCandidates ? "このページはPreview限定の候補9件です。出演・使用キャラ名や公開日、現行パッチ適合性は確認前です。お気に入りと視聴済みは候補専用IDで保存され、正式登録動画とは別に扱います。" : "現在登録されている公開動画を検索します。"}YouTube全体の検索ではありません。大会の年度は、確認済みの大会名にある場合のみ絞り込めます。座学はテーマ別、対象ランク・MRは講座の対象者として確認した情報で絞り込みます。ダイヤ帯・プラチナ帯、初心者、モダンなども組み合わせて検索できます。分類が未確認の動画は、その条件に含めません。</p>
         <button
           className={styles.filterToggle}
           type="button"
@@ -206,7 +206,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
       {preferenceWaiting ? <section className="empty-state" role="status"><p>{preferences.message}</p></section> : results.length ? (
         <>
           <div className="video-card-grid">
-            {results.slice(0, visible).map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} onPreferenceChange={refreshPreferences} key={video.id} />)}
+            {results.slice(0, visible).map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} onPreferenceChange={refreshPreferences} previewCandidate={previewCandidates} key={video.id} />)}
           </div>
           {visible < results.length ? <button className={`button-secondary ${styles.more}`} type="button" onClick={() => setVisible((count) => count + 12)}>さらに12件表示</button> : null}
         </>
