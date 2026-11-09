@@ -141,7 +141,7 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
   </article>;
 }
 
-export function CharacterUnifiedPage({ character, bundle, players, videos, videoState, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, strategyCards = [], strategyCardsAuthorized = false, previewComboCards = [], previewComboNotice, previewSetplayCards = [], previewSetplayNotice }: {
+export function CharacterUnifiedPage({ character, bundle, players, videos, videoState, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, strategyCards = [], strategyCardsAuthorized = false, previewComboCards = [], previewComboNotice, previewSetplayCards = [], previewSetplayNotice, previewSequenceCards = [], previewSequenceNotice }: {
   character: CharacterDetail; bundle: DevicePreviewBundle | null; players: PlayerDetail[]; videos: VideoSummary[];
   videoState?: VideoRetrievalState; moveEvidence?: Record<string, UnifiedMoveEvidence>; localReferences?: ReactNode; localMoveReferences?: ReactNode; automaticVideos?: ReactNode; showPreferences?: boolean;
   /** Pre-authorized cards only; never pass raw research fixtures from a public route. */
@@ -155,6 +155,10 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, video
   /** Only populated by the server route for an explicit Preview-only Ryu candidate view. */
   previewSetplayCards?: StrategyCardView[];
   previewSetplayNotice?: ReactNode;
+  /** Only populated by the server route for an explicit Preview-only Ryu candidate view. */
+  previewSequenceCards?: StrategyCardView[];
+  /** Renders only when the Ryu candidate-only Preview view is active. */
+  previewSequenceNotice?: ReactNode;
 }) {
   const overview = characterOverviewCopy[character.slug] ?? character;
   const visibleStrategyCards = strategyCardsAuthorized && process.env.VERCEL_ENV !== "production" ? strategyCards : [];
@@ -248,7 +252,7 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, video
         {automaticVideos}
       </section>
     </section>
-    <CharacterStrategySlot kind="combo" items={previewComboCards.length ? previewComboCards : visibleStrategyCards.filter(card => card.kind === "combo")} previewContent={character.slug === "luke" ? localReferences : null} previewNotice={character.slug === "ryu" && previewComboCards.length ? previewComboNotice : null} /><CharacterStrategySlot kind="setplay" items={previewSetplayCards?.length ? previewSetplayCards : visibleStrategyCards.filter(card => card.kind === "setplay")} previewNotice={character.slug === "ryu" && previewSetplayCards?.length ? previewSetplayNotice : null} /><CharacterStrategySlot kind="sequence" items={visibleStrategyCards.filter(card => card.kind === "sequence")} /><CharacterStrategySlot kind="counter" items={visibleStrategyCards.filter(card => card.kind === "counter")} />
+    <CharacterStrategySlot kind="combo" items={previewComboCards.length ? previewComboCards : visibleStrategyCards.filter(card => card.kind === "combo")} previewContent={character.slug === "luke" ? localReferences : null} previewNotice={character.slug === "ryu" && previewComboCards.length ? previewComboNotice : null} /><CharacterStrategySlot kind="setplay" items={previewSetplayCards?.length ? previewSetplayCards : visibleStrategyCards.filter(card => card.kind === "setplay")} previewNotice={character.slug === "ryu" && previewSetplayCards?.length ? previewSetplayNotice : null} /><CharacterStrategySlot kind="sequence" items={previewSequenceCards.length ? previewSequenceCards : visibleStrategyCards.filter(card => card.kind === "sequence")} previewNotice={character.slug === "ryu" && previewSequenceCards.length ? previewSequenceNotice : null} /><CharacterStrategySlot kind="counter" items={visibleStrategyCards.filter(card => card.kind === "counter")} />
     <section id="sources" className={styles.section}><h2>情報源</h2><SourceLinks sources={character.sources} /></section>
     {/* Strategy reference media is retained in source, hidden for Ver.1.0. */}
   </div>;
