@@ -173,6 +173,84 @@ const candidates = [
     "世界1位E.本田・すーも。の横綱相撲",
     "SF6-MODERN",
     "match"
+  ],
+  [
+    "5OjQW4b3QjQ",
+    "本田の四股ハメであらゆる選択肢を潰す",
+    "ストーム久保",
+    "guide"
+  ],
+  [
+    "GaPEjq8syWk",
+    "本田限定テクニックを使う四股完全二択",
+    "ストーム久保",
+    "guide"
+  ],
+  [
+    "3ln24SnvPa8",
+    "地獄の本田環境到来？超強化された本田の性能",
+    "ストーム久保",
+    "guide"
+  ],
+  [
+    "k8_3YwG2CDA",
+    "瀬島山コーチング：モダン本田への実戦指導",
+    "ACQUA",
+    "guide"
+  ],
+  [
+    "3d_y780nvHU",
+    "13分でわかる本田対策【ベガ目線】",
+    "大車輪",
+    "counter"
+  ],
+  [
+    "SP0UxcNRinY",
+    "テリーの本田対策（知識編）",
+    "jyouji背骨",
+    "counter"
+  ],
+  [
+    "f-AI_JFDNSY",
+    "【202412ver】エドモンド本田 基本コンボ",
+    "メノ(Meno)",
+    "guide"
+  ],
+  [
+    "hVX8l23l3fs",
+    "本田の百貫落とし対策",
+    "ずんだもんふぁいたーch",
+    "counter"
+  ],
+  [
+    "gVWf_DizJ1k",
+    "本田戦はこう勝つ：LEGEND視点で対戦を後付け解説",
+    "いおりチャンネル",
+    "counter"
+  ],
+  [
+    "V_V6HhuCKB8",
+    "頭突きと百貫中心のマスター本田に遭遇する西田",
+    "西田の小ネタ2",
+    "match"
+  ],
+  [
+    "1jCE0NgvSv0",
+    "ジャスパ対策が必要な最強技8選（本田・頭突きと百貫を含む）",
+    "SmashlogTV - SF6",
+    "counter"
+  ],
+  [
+    "fvs_qp0RD5w",
+    "クラシック本田限定コンボの研究",
+    "ストーム久保",
+    "guide"
+  ],
+  [
+    "qZsyJBlfB0I",
+    "本田のSAゲージ回収コンボ研究",
+    "ストーム久保",
+    "guide"
   ]
 ] as const;
 export const CHARACTER_VIDEO_HONDA_RESEARCH: VideoSummary[] = candidates.map(([id, title, channel, kind]): VideoSummary => ({
