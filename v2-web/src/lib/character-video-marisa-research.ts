@@ -49,6 +49,30 @@ const candidates = [
     "SHAKAとおぼのマリーザ・マノン対戦まとめ",
     "SHAKA Ad Channel",
     "match"
+  ],
+  [
+    "SvwOk6ut-1E",
+    "ACQUA講座 マリーザ対策：ファランクスとグラディウス",
+    "ACQUA",
+    "counter"
+  ],
+  [
+    "OWdWrNH8Zrk",
+    "レイのマリーザ対策解説",
+    "レイ / Ray",
+    "counter"
+  ],
+  [
+    "hVCvPS2Q8K4",
+    "マリーザ セットプレイまとめ",
+    "投稿者未確認",
+    "guide"
+  ],
+  [
+    "ZDAKC2CbGRQ",
+    "マリーザ シーズン2セットプレイ",
+    "投稿者未確認",
+    "guide"
   ]
 ] as const;
 export const CHARACTER_VIDEO_MARISA_RESEARCH: VideoSummary[] = candidates.map(([id,title,channel,kind]): VideoSummary => ({
