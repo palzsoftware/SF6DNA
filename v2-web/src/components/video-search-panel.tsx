@@ -5,8 +5,11 @@ import { videoSearchNames, videoSearchQuery, VIDEO_SEARCH_TOPIC_LABELS, VIDEO_SE
 import { AutoVideoResults } from "./auto-video-results";
 import styles from "./auto-youtube-videos.module.css";
 
-export function VideoSearchForm({ filters, params }: { filters: VideoSearchFilters; params: VideoSearchParams }) {
-  const advancedCount = [filters.kind !== "all", Boolean(filters.topic), Boolean(filters.targetRank), Boolean(filters.level), Boolean(filters.control), filters.language !== "ja"].filter(Boolean).length;
+export function VideoSearchForm({ filters, params, playerOptions = [] }: { filters: VideoSearchFilters; params: VideoSearchParams; playerOptions?: string[] }) {
+  const previewPlayer = typeof params.previewPlayer === "string" && playerOptions.includes(params.previewPlayer) ? params.previewPlayer : "all";
+  const allowedSorts = ["recommended","newest","oldest","favorite","unwatched","watched"];
+  const selectedSort = typeof params.sort === "string" && allowedSorts.includes(params.sort) ? params.sort : "recommended";
+  const advancedCount = [filters.kind !== "all", Boolean(filters.topic), Boolean(filters.targetRank), Boolean(filters.level), Boolean(filters.control), filters.language !== "ja",previewPlayer !== "all", selectedSort !== "recommended"].filter(Boolean).length;
   return <section className={styles.searchPanel} aria-labelledby="video-search-heading">
     <h2 id="video-search-heading">見たい動画を探す</h2>
     <p id="video-query-help">プレイヤー・キャラ・所属チーム・大会名をまとめて検索できます。複数の言葉はスペースで区切ってください。</p>
@@ -29,6 +32,8 @@ export function VideoSearchForm({ filters, params }: { filters: VideoSearchFilte
       <label>習熟度<select name="level" defaultValue={filters.level ?? ""}><option value="">指定なし</option>{Object.entries(VIDEO_SEARCH_LEVEL_LABELS).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
       <label>操作タイプ<select name="control" defaultValue={filters.control ?? ""}><option value="">指定なし</option>{Object.entries(VIDEO_SEARCH_CONTROL_LABELS).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
       <label>検索言語<select name="language" defaultValue={filters.language}><option value="ja">日本語優先</option><option value="en">海外動画を探す（英語）</option></select></label>
+      {playerOptions.length ? <label>使用プレイヤー（タイトル等の候補）<select name="previewPlayer" defaultValue={previewPlayer}><option value="all">全プレイヤー</option>{playerOptions.map(name => <option key={name} value={name}>{name}</option>)}</select></label> : null}
+      <label>並び順<select name="sort" defaultValue={selectedSort}><option value="recommended">おすすめ順</option><option value="newest">新しい順</option><option value="oldest">古い順</option><option value="favorite">お気に入り優先</option><option value="unwatched">未視聴優先</option><option value="watched">視聴済み優先</option></select></label>
         </div>
       </details>
     </form>

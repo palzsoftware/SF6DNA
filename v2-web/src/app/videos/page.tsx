@@ -23,6 +23,11 @@ export default async function VideosPage({ searchParams }: {
   const params = await searchParams;
   const filters = parseVideoSearchFilters(params);
   const listingQuery = filters.valid ? videoSearchQuery(filters) : "";
+  const sortChoices = ["recommended","newest","oldest","favorite","unwatched","watched"] as const;
+  const selectedSort = typeof params.sort === "string" && sortChoices.some(value => value === params.sort) ? params.sort as typeof sortChoices[number] : "recommended";
+  const availablePreviewPlayers = [...new Set(RYU_VIDEO_PREVIEW.flatMap(video => video.players))].sort((a,b) => a.localeCompare(b,"ja"));
+  const selectedPreviewPlayer = typeof params.previewPlayer === "string" && availablePreviewPlayers.includes(params.previewPlayer) ? params.previewPlayer : "all";
+  const selectedPreviewKind = filters.kind === "guide" || filters.kind === "combo" ? "guide" : filters.kind === "match" ? "match" : filters.kind === "counter" ? "counter" : "all";
   const player = videoPlayerFromQuery(params.player);
   const playerId = videoEntityIdFromQuery(params.playerId);
   const characterId = videoEntityIdFromQuery(params.characterId);
@@ -53,7 +58,7 @@ export default async function VideosPage({ searchParams }: {
       </section>
 
       {hasServerFilters ? <p>指定された条件で表示しています。 <Link href="/videos">指定条件を解除</Link></p> : null}
-      <VideoSearchForm key={JSON.stringify(params)} filters={filters} params={params} />
+      <VideoSearchForm key={JSON.stringify(params)} filters={filters} params={params} playerOptions={showRyuCandidates ? availablePreviewPlayers : []} />
       {autoVideoEnabled() ? <Suspense key={JSON.stringify(params)} fallback={<AutoVideoLoading />}><VideoSearchResults filters={filters}
         exact={{ playerId, characterId, tournamentId, player, invalidFilter }} /></Suspense> : null}
 
@@ -63,8 +68,9 @@ export default async function VideosPage({ searchParams }: {
           learningRecords={getRegisteredVideoLearning(result.items)}
           initialPlayer={playerId ? null : player}
           previewCandidates={showRyuCandidates}
-          initialQuery={listingQuery} hideSearchInput
-          key={[player, playerId, characterId, tournamentId, showRyuCandidates, listingQuery].join(":")} />
+          initialQuery={listingQuery} hideSearchInput listingOnly
+          initialSort={selectedSort} initialPreviewKind={showRyuCandidates ? selectedPreviewKind : "all"} initialPreviewPlayer={showRyuCandidates ? selectedPreviewPlayer : "all"}
+          key={[player, playerId, characterId, tournamentId, showRyuCandidates, listingQuery, selectedSort, selectedPreviewKind, selectedPreviewPlayer].join(":")} />
           : result.state === "SUCCESS_EMPTY" ? <p>掲載動画は準備中です。上のYouTube検索もご利用ください。</p>
           : <VideoRetrievalStatus state={result.state} invalidFilter={invalidFilter} />}
         {showRyuCandidates && result.state !== "SUCCESS_WITH_RESULTS" && result.state !== "SUCCESS_EMPTY" ? <VideoRetrievalStatus state={result.state} invalidFilter={invalidFilter} /> : null}
