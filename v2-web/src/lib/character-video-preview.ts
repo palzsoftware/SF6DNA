@@ -67,6 +67,12 @@ const nextTenVideoSeeds = [
         "Six Bit（E.本田）vs ウメハラ（豪鬼）",
         "Stremphoenix",
         "match"
+      ],
+      [
+        "vtUV_bHbgIw",
+        "エドモンド本田の評価を巡る対談・対策議論",
+        "ストーム久保",
+        "guide"
       ]
     ]
   },
@@ -96,6 +102,18 @@ const nextTenVideoSeeds = [
       [
         "c7Zo42qS4Hw",
         "ディージェイ初心者向け31コンボ集（モダン・クラシック）",
+        "まりゅーちゃんねる",
+        "guide"
+      ],
+      [
+        "tx9W2fUtmSg",
+        "ディージェイ びっくり投げ連携の対の選択肢",
+        "まりゅーちゃんねる",
+        "guide"
+      ],
+      [
+        "MaehgtDWJeM",
+        "ディージェイ ラッシュ立ち中Kからの新コンボ",
         "まりゅーちゃんねる",
         "guide"
       ]
@@ -209,6 +227,18 @@ const nextTenVideoSeeds = [
         "ザンギエフ対策 SA・起き攻め対応（相手側視点）",
         "jyouji背骨",
         "counter"
+      ],
+      [
+        "jDYhRkladJU",
+        "えよこザンギエフによるプロ3人抜きの実戦動画",
+        "えよこ",
+        "match"
+      ],
+      [
+        "brh3-U0DHx8",
+        "モダンザンギエフの対策・攻略解説",
+        "しんじさん",
+        "counter"
       ]
     ]
   },
@@ -240,6 +270,12 @@ const nextTenVideoSeeds = [
         "リリー vs E.本田 開発者対戦スペシャル",
         "Street Fighter",
         "match"
+      ],
+      [
+        "f67FJ4G7Dso",
+        "リリー初心者向け モダン中心の解説",
+        "小路KOG",
+        "guide"
       ]
     ]
   },
@@ -289,6 +325,12 @@ const nextTenVideoSeeds = [
         "キャミィYear3 実用的基本コンボ完全版",
         "アダー@実用的ゲームちゃんねる",
         "guide"
+      ],
+      [
+        "XTdHld8MkHc",
+        "キャミィ戦強化合宿（対策・練習）",
+        "蒼輪ちなみ / Sourin Chinami",
+        "counter"
       ]
     ]
   },
@@ -332,6 +374,12 @@ const nextTenVideoSeeds = [
         "モダンラシード ダイヤ帯ランクマ",
         "花籠つばさ / Hanakago Tsubasa",
         "match"
+      ],
+      [
+        "9f5wB0-V6L4",
+        "竹内ジョンによるラシード新コンボ・ゲージ効率",
+        "竹内ジョンチャンネル",
+        "guide"
       ]
     ]
   },
@@ -375,6 +423,12 @@ const nextTenVideoSeeds = [
         "ひかる A.K.I. 新コンボ・セットプレイ解説",
         "ひかる しとね",
         "guide"
+      ],
+      [
+        "JohqtPj_fGk",
+        "ひかる（A.K.I.）vs ウメハラ（豪鬼）2026",
+        "Stremphoenix",
+        "match"
       ]
     ]
   },
