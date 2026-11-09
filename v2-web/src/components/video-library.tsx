@@ -87,7 +87,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
     (previewKind === "all" || video.videoType === previewKind) &&
     (previewPlayer === "all" || video.players.includes(previewPlayer))),
     [videos, previewCandidates, previewKind, previewPlayer]);
-  const [visible, setVisible] = useState(12);
+  const [visible, setVisible] = useState(24);
   const preferences = useOwnedVideoPreferences(previewCandidates);
   const preferenceReady = preferences.status === "ready";
   const favorites = useMemo(() => new Set(preferences.favorites), [preferences.favorites]);
@@ -145,7 +145,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
     setSort("recommended");
     setPreviewKind("all");
     setPreviewPlayer("all");
-    setVisible(12);
+    setVisible(24);
   }
 
   function toggle(group: keyof Pick<VideoFilters, "events" | "players" | "characters" | "controls" | "categories" | "levels" | "languages" | "modes" | "preference" | "learningTopics" | "targetRanks">, value: string) {
@@ -154,22 +154,22 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
       if (next.has(value)) next.delete(value); else next.add(value);
       return { ...current, [group]: next } as VideoFilters;
     });
-    setVisible(12);
+    setVisible(24);
   }
 
   return (
     <div className={`${styles.library} experience-video-library`}>
       {!listingOnly ? <div className={styles.toolbar}>
-        {previewCandidates ? <div className={styles.previewFilters} aria-label="リュウ動画の候補絞り込み">
-          <label>動画の種類<select aria-label="動画種類で絞り込み" value={previewKind} onChange={event => { setPreviewKind(event.target.value); setVisible(12); }}>
+        {previewCandidates ? <div className={styles.previewFilters} aria-label="候補動画の絞り込み">
+          <label>動画の種類<select aria-label="動画種類で絞り込み" value={previewKind} onChange={event => { setPreviewKind(event.target.value); setVisible(24); }}>
             <option value="all">すべて</option><option value="guide">解説・コンボ</option><option value="counter">リュウ対策</option><option value="match">対戦・大会</option>
           </select></label>
-          <label>使用プレイヤー（タイトル等の候補）<select aria-label="使用プレイヤーで絞り込み" value={previewPlayer} onChange={event => { setPreviewPlayer(event.target.value); setVisible(12); }}>
+          <label>使用プレイヤー（タイトル等の候補）<select aria-label="使用プレイヤーで絞り込み" value={previewPlayer} onChange={event => { setPreviewPlayer(event.target.value); setVisible(24); }}>
             <option value="all">全プレイヤー</option>{previewPlayers.map(player => <option key={player} value={player}>{player}</option>)}
           </select></label>
         </div> : null}
         <div className={styles.topRow}>
-          {!hideSearchInput ? <label>掲載動画を検索<input type="search" aria-describedby={scopeId} value={filters.query} onChange={(event) => { setFilters((current) => ({ ...current, query: event.target.value })); setVisible(12); }} placeholder="例：ダイヤ帯 モダン、初心者、座学 MR1600" /></label> : null}
+          {!hideSearchInput ? <label>掲載動画を検索<input type="search" aria-describedby={scopeId} value={filters.query} onChange={(event) => { setFilters((current) => ({ ...current, query: event.target.value })); setVisible(24); }} placeholder="例：ダイヤ帯 モダン、初心者、座学 MR1600" /></label> : null}
           <div className={styles.sortControls}>
           <button className={styles.clear} type="button" onClick={clearFilters}>条件をクリア</button>
           <label>並び順<select value={sort} onChange={(event) => setSort(event.target.value as VideoSort)}>
@@ -196,7 +196,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
           <span>{activeFilterCount}件の条件を選択中</span>
         </div> : null}
         {activeSelections.length || (!hideSearchInput && filters.query) ? <div className={styles.selectedConditions} aria-label="選択中の検索条件">
-          {!hideSearchInput && filters.query ? <button type="button" onClick={() => { setFilters(current => ({ ...current, query: "" })); setVisible(12); }} aria-label="キーワードを解除">キーワード：{filters.query} ×</button> : null}
+          {!hideSearchInput && filters.query ? <button type="button" onClick={() => { setFilters(current => ({ ...current, query: "" })); setVisible(24); }} aria-label="キーワードを解除">キーワード：{filters.query} ×</button> : null}
           {activeSelections.map(item => <button type="button" key={`${item.group}:${item.value}`} onClick={() => toggle(item.group, item.value)} aria-label={`${item.label}を解除`}>{item.label} ×</button>)}
         </div> : null}
         <div className={`${styles.filters} ${filtersOpen ? styles.filtersOpen : ""}`} id={panelId}>
@@ -224,9 +224,9 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
       {preferenceWaiting ? <section className="empty-state" role="status"><p>{preferences.message}</p></section> : results.length ? (
         <>
           <div className="video-card-grid">
-            {results.slice(0, visible).map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} onPreferenceChange={refreshPreferences} previewCandidate={previewCandidates && video.id.startsWith("preview-ryu-")} previewLocalOnly={previewCandidates} key={video.id} />)}
+            {results.slice(0, visible).map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} onPreferenceChange={refreshPreferences} previewCandidate={previewCandidates && video.id.startsWith("preview-")} previewLocalOnly={previewCandidates} key={video.id} />)}
           </div>
-          {visible < results.length ? <button className={`button-secondary ${styles.more}`} type="button" onClick={() => setVisible((count) => count + 12)}>さらに12件表示</button> : null}
+          {visible < results.length ? <button className={`button-secondary ${styles.more}`} type="button" onClick={() => setVisible((count) => count + 24)}>さらに24件表示</button> : null}
         </>
       ) : <section className="empty-state"><h2>現在登録されている公開動画に該当するものがありません</h2><p>条件を減らすか、検索語を変えてください。確認できていないプレイヤー・大会・対象MR情報は検索対象に含めません。座学やMRの条件は、分類情報が登録された動画のみが対象です。</p></section>}
     </div>
