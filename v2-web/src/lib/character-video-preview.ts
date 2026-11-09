@@ -4,6 +4,7 @@ import { CHARACTER_VIDEO_BATCH_01 } from "@/lib/character-video-batch-01";
 import { CHARACTER_VIDEO_BATCH_02 } from "@/lib/character-video-batch-02";
 import { CHARACTER_VIDEO_BATCH_03 } from "@/lib/character-video-batch-03";
 import { CHARACTER_VIDEO_BATCH_04 } from "@/lib/character-video-batch-04";
+import { CHARACTER_VIDEO_BATCH_05 } from "@/lib/character-video-batch-05";
 
 /** Preview-only candidates. Add new character arrays only after reviewing sources.
  * Missing characters intentionally have zero candidates; no inferred relations.
@@ -15,6 +16,7 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   ...CHARACTER_VIDEO_BATCH_02,
   ...CHARACTER_VIDEO_BATCH_03,
   ...CHARACTER_VIDEO_BATCH_04,
+  ...CHARACTER_VIDEO_BATCH_05,
 };
 
 export function getCharacterPreviewVideos(characterSlug: string): VideoSummary[] {
