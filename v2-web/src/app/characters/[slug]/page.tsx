@@ -19,6 +19,8 @@ import { getPlayerBySlug } from "@/lib/players";
 import { getCharacterDetailV21Profile } from "@/lib/character-detail-v21";
 import { resolveCharacterDetailData, resolveCharacterRelatedVideos } from "@/lib/character-detail-data";
 import { getReleaseConfirmedMedia } from "@/lib/release-confirmed-media";
+import { VideoLibrary } from "@/components/video-library";
+import { RYU_VIDEO_PREVIEW } from "@/lib/ryu-video-preview";
 import { isCharacterDetailV2Route } from "@/lib/character-detail-route";
 import { adaptCharacterDetailV2Profile } from "@/lib/character-detail-v2-profile-adapter";
 import { getWs5TxtPreviewCandidate } from "@/lib/official-txt-preview-snapshot";
@@ -85,6 +87,12 @@ export default async function CharacterPage({
   const videos = resolveCharacterRelatedVideos(allVideos,
     [...relatedVideos.map(video => video.id), ...allVideos.map(video => video.id)]);
   const registeredYoutubeIds = [...new Set(videos.flatMap(video => { const id = youtubeVideoIdFromUrl(video.url); return id ? [id] : []; }))];
+  const showRyuPreview = process.env.VERCEL_ENV === "preview" && character.slug === "ryu";
+  const publishedYoutubeIds = new Set(registeredYoutubeIds);
+  const ryuCandidateVideos = showRyuPreview ? RYU_VIDEO_PREVIEW.filter(video => {
+    const youtubeId = youtubeVideoIdFromUrl(video.url);
+    return youtubeId !== null && !publishedYoutubeIds.has(youtubeId);
+  }) : [];
   const moveEvidence = await characterUnifiedEvidence(character.slug, bundle?.moves ?? [], process.env.VERCEL_ENV);
   const admission = { nodeEnv:process.env.NODE_ENV, vercelEnv:process.env.VERCEL_ENV,
     vercel:process.env.VERCEL, enabled:process.env.SF6DNA_WS5_TXT_PREVIEW,
@@ -100,7 +108,11 @@ export default async function CharacterPage({
   const strategyCardsAuthorized = process.env.VERCEL_ENV === "preview" && Boolean(previewToken) && data.source === "device-preview";
   const strategyCards = strategyCardsAuthorized && finalBundle ? projectPreviewStrategyCards(finalBundle) : [];
   const combinedMoveEvidence = connectedTxt?.moveEvidence ?? moveEvidence;
-  return <CharacterUnifiedPage automaticVideos={<Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} registeredYoutubeIds={registeredYoutubeIds} /></Suspense>} character={character} bundle={finalBundle} players={players} videos={videos} videoState={relatedVideoResult.state}
+  return <CharacterUnifiedPage videoCandidateSection={showRyuPreview ? <section aria-label="リュウ関連動画のPreview候補">
+    <h3>リュウ関連動画（Preview）</h3>
+    <p>解説・対戦・対策の候補動画です。出演者や使用キャラクターはタイトル等からの候補で、公開済み動画との重複は除外しています。</p>
+    <VideoLibrary videos={ryuCandidateVideos} learningRecords={[]} previewCandidates />
+  </section> : null} automaticVideos={<Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} registeredYoutubeIds={registeredYoutubeIds} /></Suspense>} character={character} bundle={finalBundle} players={players} videos={videos} videoState={relatedVideoResult.state}
     moveEvidence={combinedMoveEvidence}
     strategyCards={strategyCards} strategyCardsAuthorized={strategyCardsAuthorized}
     localMoveReferences={!production && isLukeSampleRequest(character.slug, query.sample, process.env.VERCEL_ENV) ?

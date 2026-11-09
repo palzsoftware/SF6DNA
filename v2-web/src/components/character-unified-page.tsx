@@ -141,9 +141,9 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
   </article>;
 }
 
-export function CharacterUnifiedPage({ character, bundle, players, videos, videoState, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, strategyCards = [], strategyCardsAuthorized = false }: {
+export function CharacterUnifiedPage({ character, bundle, players, videos, videoState, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, videoCandidateSection, showPreferences = true, strategyCards = [], strategyCardsAuthorized = false }: {
   character: CharacterDetail; bundle: DevicePreviewBundle | null; players: PlayerDetail[]; videos: VideoSummary[];
-  videoState?: VideoRetrievalState; moveEvidence?: Record<string, UnifiedMoveEvidence>; localReferences?: ReactNode; localMoveReferences?: ReactNode; automaticVideos?: ReactNode; showPreferences?: boolean;
+  videoState?: VideoRetrievalState; moveEvidence?: Record<string, UnifiedMoveEvidence>; localReferences?: ReactNode; localMoveReferences?: ReactNode; automaticVideos?: ReactNode; videoCandidateSection?: ReactNode; showPreferences?: boolean;
   /** Pre-authorized cards only; never pass raw research fixtures from a public route. */
   strategyCards?: StrategyCardView[];
   /** Must be asserted by the existing server-side publication/Preview authorization gate. */
@@ -238,6 +238,7 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, video
       </section>
       <section id="character-videos" className={`${styles.section} ${styles.relatedPanel} ${styles.videoPanel} experience-video`}><h2>関連動画</h2>
         <CharacterRelatedVideos videos={connectedVideos} state={videoState} />
+        {videoCandidateSection}
         {automaticVideos}
       </section>
     </section>
