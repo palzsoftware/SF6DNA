@@ -9,7 +9,7 @@ const candidates = [
     "title": "Street Fighter 6 Character Guide | E. Honda"
   },
   {
-    "slug": "deejay",
+    "slug": "dee-jay",
     "name": "ディージェイ",
     "id": "GUDRAkoriD4",
     "date": "2023-05-22",
