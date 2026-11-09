@@ -16,6 +16,7 @@ import { CHARACTER_VIDEO_DEEP_CHUN_LI } from "@/lib/character-video-deep-chun-li
 import { CHARACTER_VIDEO_DEEP_JAMIE } from "@/lib/character-video-deep-jamie";
 import { CHARACTER_VIDEO_DEEP_LUKE } from "@/lib/character-video-deep-luke";
 import { CHARACTER_VIDEO_DEEP_JP } from "@/lib/character-video-deep-jp";
+import { CHARACTER_VIDEO_EXTRA_JP } from "@/lib/character-video-extra-jp";
 
 /** Preview-only candidates. Add new character arrays only after reviewing sources.
  * Missing characters intentionally have zero candidates; no inferred relations.
@@ -38,7 +39,7 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   "chun-li": [...(CHARACTER_VIDEO_BATCH_01["chun-li"] ?? []), ...CHARACTER_VIDEO_DEEP_CHUN_LI],
   "jamie": [...(CHARACTER_VIDEO_BATCH_01["jamie"] ?? []), ...CHARACTER_VIDEO_DEEP_JAMIE],
   "luke": [...(CHARACTER_VIDEO_BATCH_01["luke"] ?? []), ...CHARACTER_VIDEO_DEEP_LUKE],
-  "jp": [...(CHARACTER_VIDEO_BATCH_01["jp"] ?? []), ...CHARACTER_VIDEO_DEEP_JP],
+  "jp": [...(CHARACTER_VIDEO_BATCH_01["jp"] ?? []), ...CHARACTER_VIDEO_DEEP_JP, ...CHARACTER_VIDEO_EXTRA_JP],
 };
 
 export function getCharacterPreviewVideos(characterSlug: string): VideoSummary[] {
