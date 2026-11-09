@@ -91,6 +91,18 @@ const candidates = [
     "【スト6】マリーザ 実戦向けコンボ 起き攻め セットプレイ SF6 Marisa Combo Oki Setup",
     "レイ / Ray",
     "guide"
+  ],
+  [
+    "BIp_UORpVeU",
+    "【スト6】MR2100↑マリーザ セットプレイ 起き攻め まとめ",
+    "レイ / Ray",
+    "guide"
+  ],
+  [
+    "E2_puFqlSCQ",
+    "MR2000台 レジェ行ってネタだけじゃない所を見せるランクマ【マリーザ】",
+    "アゴアニキ",
+    "match"
   ]
 ] as const;
 export const CHARACTER_VIDEO_MARISA_RESEARCH: VideoSummary[] = candidates.map(([id,title,channel,kind]): VideoSummary => ({
