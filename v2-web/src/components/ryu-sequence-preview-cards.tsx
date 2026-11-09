@@ -464,7 +464,7 @@ function RyuSequenceCandidateCard({ candidate }: { candidate: RyuSequenceCandida
         <div><dt>GIF</dt><dd>未設定</dd></div>
       </dl>
       <p className={styles.source}>
-        <span>Drive候補ID {candidate.sourceRecordId}・調査日 {candidate.researchDate}:</span>{" "}
+        <span>Drive候補ID {candidate.id}・調査日 {candidate.researchDate}:</span>{" "}
         <a href={candidate.sourceUrl} target="_blank" rel="noopener noreferrer">出典候補を開く ↗</a>
       </p>
     </details>
