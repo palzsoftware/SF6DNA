@@ -98,7 +98,7 @@ export function projectRyuSetplayPreviewCards(): StrategyCardView[] {
     title: candidate.title,
     category: "Drive資料候補",
     categoryLabel: "未検証候補",
-    searchTerms: [candidate.route, candidate.summary, candidate.feature, candidate.conditions, "起き攻め", "投げ重ね", "画面端"],
+    searchTerms: [candidate.route, candidate.summary, candidate.feature, candidate.conditions, "起き攻め", ...(candidate.id === "RYU-SETPLAY-0336" ? ["打撃重ね"] : ["投げ重ね", "画面端"])],
     driveCost: null,
     saCost: null,
     content: <RyuSetplayCandidateCard key={candidate.id} candidate={candidate} /> as ReactNode,
