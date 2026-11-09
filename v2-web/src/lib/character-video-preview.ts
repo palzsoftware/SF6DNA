@@ -31,6 +31,311 @@ import { CHARACTER_VIDEO_EXTRA_JP } from "@/lib/character-video-extra-jp";
  * Missing characters intentionally have zero candidates; no inferred relations.
  * This registry is not a publication approval source.
  */
+/**
+ * Character research intake 11–20, 2026-11-09. The video IDs are grounded in
+ * searchable YouTube pages or indexed video pages (e.g. yutura.net).
+ * Short display titles are summaries, not necessarily exact uploaded titles.
+ * All records are Preview-only and do NOT establish patch verification,
+ * rights, Player bindings, or public approval. Playback has not been tested.
+ */
+const nextTenVideoSeeds = [
+  {
+    "slug": "e-honda",
+    "name": "E.本田",
+    "batch": "03",
+    "videos": [
+      [
+        "hZCIEEgyJ2I",
+        "あーるえいち（E.本田）vs ウメハラ（豪鬼）",
+        "Stremphoenix",
+        "match"
+      ],
+      [
+        "4GdN8uwY-vE",
+        "しっくすびっと（E.本田）vs ウメハラ（豪鬼）",
+        "Stremphoenix",
+        "match"
+      ],
+      [
+        "bL69DoEvCwQ",
+        "対本田・マリーザには弱攻撃で詐欺飛び",
+        "【スト6】ずんだもんふぁいたーch【解説】",
+        "counter"
+      ]
+    ]
+  },
+  {
+    "slug": "dee-jay",
+    "name": "ディージェイ",
+    "batch": "03",
+    "videos": [
+      [
+        "xSw_ORpmDQA",
+        "ディージェイ初心者向け講座：コンボと立ち回り",
+        "べーやんの部屋【ゆっくり解説チャンネル】",
+        "guide"
+      ],
+      [
+        "NiXdBvGzFaI",
+        "ディージェイ ランクマ：中ソバットを信じる",
+        "まりゅーちゃんねる",
+        "match"
+      ]
+    ]
+  },
+  {
+    "slug": "manon",
+    "name": "マノン",
+    "batch": "03",
+    "videos": [
+      [
+        "97PjzREK1WE",
+        "マノン Year3対応 実戦向けコンボ・起き攻め・セットプレイ",
+        "レイ / Ray",
+        "guide"
+      ],
+      [
+        "IRkgJs03Ly0",
+        "マノンのコンボ・連携・セットプレイを紹介",
+        "チャンネルゴメス",
+        "guide"
+      ],
+      [
+        "L4UazTzprJw",
+        "Classic MANON Complete Combos & Setup Guide 2026.08.03",
+        "Joe Ebios",
+        "guide"
+      ],
+      [
+        "5qAQenFz8aQ",
+        "マノンの武器職人から新コンボを授かる立川",
+        "立川ちゃんねる",
+        "guide"
+      ]
+    ]
+  },
+  {
+    "slug": "marisa",
+    "name": "マリーザ",
+    "batch": "03",
+    "videos": [
+      [
+        "8BvuYDaZx4Q",
+        "マリーザ MR2100↑ 立ち回り解説",
+        "レイ / Ray",
+        "guide"
+      ],
+      [
+        "K8LpM8DOIPM",
+        "マリーザ MR2100↑ 初心者向け総合解説",
+        "レイ / Ray",
+        "guide"
+      ],
+      [
+        "DnhAUfsKonA",
+        "マリーザ MR2100↑ セットプレイ・起き攻め",
+        "レイ / Ray",
+        "guide"
+      ],
+      [
+        "anKlgYuF8PM",
+        "マリーザでレジェンドを目指すランクマ",
+        "アゴアニキ",
+        "match"
+      ],
+      [
+        "0achwHVREGA",
+        "マリーザ ランクマ・実戦動画",
+        "アゴアニキ",
+        "match"
+      ]
+    ]
+  },
+  {
+    "slug": "zangief",
+    "name": "ザンギエフ",
+    "batch": "03",
+    "videos": [
+      [
+        "lx_V6kKBA4U",
+        "ザンギエフのドライブラッシュの使い方",
+        "えよこ",
+        "guide"
+      ],
+      [
+        "KeuqM_-SRHQ",
+        "ザンギエフのインパクトパニカン時の選択肢",
+        "えよこ",
+        "guide"
+      ]
+    ]
+  },
+  {
+    "slug": "lily",
+    "name": "リリー",
+    "batch": "04",
+    "videos": [
+      [
+        "sLrHdeSDJhU",
+        "リリーのコスパ最強コンボ",
+        "ストーム久保",
+        "guide"
+      ],
+      [
+        "b6lu4PpeJqM",
+        "リリー対策：三種の神器とNG行動",
+        "うりょ",
+        "counter"
+      ]
+    ]
+  },
+  {
+    "slug": "cammy",
+    "name": "キャミィ",
+    "batch": "04",
+    "videos": [
+      [
+        "BTuBsr7Zpes",
+        "キャミィ コンボ100連発 場面別総集編",
+        "猫と隼チャンネル",
+        "guide"
+      ],
+      [
+        "bsicBb8tcvM",
+        "キャミィのアサルトブレード実戦コンボ",
+        "ストーム久保",
+        "guide"
+      ],
+      [
+        "mgoYn1s9lIE",
+        "キャミィ 基本操作＆コンボ完全解説",
+        "Alldevice",
+        "guide"
+      ],
+      [
+        "lsAIrPPYmO0",
+        "モダンキャミィの初心者向け簡単コンボ",
+        "カプコン大好きTAKUさん",
+        "guide"
+      ],
+      [
+        "amBm8P1cxuw",
+        "キャミィ初心者向け コンボ・起き攻め講座",
+        "べーやんの部屋【ゆっくり解説チャンネル】",
+        "guide"
+      ]
+    ]
+  },
+  {
+    "slug": "rashid",
+    "name": "ラシード",
+    "batch": "04",
+    "videos": [
+      [
+        "eXUug9kjcVQ",
+        "ラシード 2026年8月版 実戦コンボ20選",
+        "doskonnbu",
+        "guide"
+      ],
+      [
+        "wGgBKjzTygM",
+        "レジェンド帯をワールとラッシュで戦うラシード",
+        "doskonnbu",
+        "match"
+      ],
+      [
+        "6I-l3e9Bu7A",
+        "ラシード イウサールの活用法",
+        "doskonnbu",
+        "guide"
+      ]
+    ]
+  },
+  {
+    "slug": "aki",
+    "name": "A.K.I.",
+    "batch": "04",
+    "videos": [
+      [
+        "NXu5hPyW7Hw",
+        "A.K.I. 2026年3月版 基本コンボ",
+        "メノ(Meno)",
+        "guide"
+      ],
+      [
+        "yRKt8zcZw_s",
+        "A.K.I. 立ち回り解説（攻め方・守り方）",
+        "(つ)の。",
+        "guide"
+      ],
+      [
+        "jXCzuToJaq4",
+        "ひかる選手 A.K.I. 対戦リプレイ",
+        "SF6-MODERN",
+        "match"
+      ]
+    ]
+  },
+  {
+    "slug": "ed",
+    "name": "エド",
+    "batch": "04",
+    "videos": [
+      [
+        "9h4pDmZ38IQ",
+        "えびはら選手 エド 対戦リプレイ",
+        "SF6-MODERN",
+        "match"
+      ],
+      [
+        "cTVRgnkzjVc",
+        "モダンエド 10分で分かる初心者向け講座",
+        "シラバイクロム",
+        "guide"
+      ],
+      [
+        "0xceiBiNy7Q",
+        "エドの使い方・コンボ・起き攻め・ドリーム",
+        "Gorou / 五郎",
+        "guide"
+      ],
+      [
+        "m_ajGPJKVvo",
+        "モダンエドのドリーム練習・リプレイ反省",
+        "常闇トワ切り抜きch",
+        "guide"
+      ]
+    ]
+  }
+] as const;
+const NEXT_TEN_VIDEO_CANDIDATES: Readonly<Record<string, VideoSummary[]>> = Object.fromEntries(
+  nextTenVideoSeeds.map(({ slug, name, videos }) => [
+    slug,
+    videos.map(([youtubeId, title, channel, kind]): VideoSummary => ({
+      id: `preview-${slug}-${youtubeId}`,
+      slug: `preview-${slug}-${youtubeId}`,
+      title,
+      platform: "youtube",
+      videoType: kind,
+      publishedAt: null,
+      description: "関連動画の未検証候補。掲載当時の内容で、現行Patch適合・出演者関係・再生可否は未確認です。",
+      url: `https://www.youtube.com/watch?v=${youtubeId}`,
+      thumbnailUrl: `https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`,
+      channelName: channel,
+      durationSeconds: null,
+      language: null,
+      controlTypes: [],
+      events: [],
+      characters: [name],
+      players: [],
+      categories: [kind],
+      level: "unknown",
+      viewCount: null,
+      viewCountCheckedAt: null,
+    })),
+  ]),
+);
+
 const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>> = {
   ryu: RYU_VIDEO_PREVIEW,
   ...CHARACTER_VIDEO_BATCH_01,
@@ -39,6 +344,16 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   ...CHARACTER_VIDEO_BATCH_04,
   ...CHARACTER_VIDEO_BATCH_05,
   ...CHARACTER_VIDEO_BATCH_06,
+  "e-honda": [...(CHARACTER_VIDEO_BATCH_03["e-honda"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["e-honda"] ?? [])],
+  "dee-jay": [...(CHARACTER_VIDEO_BATCH_03["dee-jay"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["dee-jay"] ?? [])],
+  "manon": [...(CHARACTER_VIDEO_BATCH_03["manon"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["manon"] ?? [])],
+  "marisa": [...(CHARACTER_VIDEO_BATCH_03["marisa"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["marisa"] ?? [])],
+  "zangief": [...(CHARACTER_VIDEO_BATCH_03["zangief"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["zangief"] ?? [])],
+  "lily": [...(CHARACTER_VIDEO_BATCH_04["lily"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["lily"] ?? [])],
+  "cammy": [...(CHARACTER_VIDEO_BATCH_04["cammy"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["cammy"] ?? [])],
+  "rashid": [...(CHARACTER_VIDEO_BATCH_04["rashid"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["rashid"] ?? [])],
+  "aki": [...(CHARACTER_VIDEO_BATCH_04["aki"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["aki"] ?? [])],
+  "ed": [...(CHARACTER_VIDEO_BATCH_04["ed"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["ed"] ?? [])],
   "dhalsim": [...(CHARACTER_VIDEO_BATCH_02["dhalsim"] ?? []), ...CHARACTER_VIDEO_DEEP_DHALSIM, ...CHARACTER_VIDEO_EXTRA_DHALSIM],
   "blanka": [...(CHARACTER_VIDEO_BATCH_02["blanka"] ?? []), ...CHARACTER_VIDEO_DEEP_BLANKA, ...CHARACTER_VIDEO_EXTRA_BLANKA],
   "ken": [...(CHARACTER_VIDEO_BATCH_02["ken"] ?? []), ...CHARACTER_VIDEO_DEEP_KEN, ...CHARACTER_VIDEO_EXTRA_KEN],
