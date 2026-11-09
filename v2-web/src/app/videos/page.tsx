@@ -13,7 +13,7 @@ import { VideoLibrary } from "@/components/video-library";
 import { getRegisteredVideoLearning } from "@/lib/video-learning-registered";
 import { videoPlayerFromQuery, videoEntityIdFromQuery } from "@/lib/video-player-filter";
 import { youtubeVideoIdFromUrl } from "@/lib/character-related-video-contract.mjs";
-import { RYU_VIDEO_PREVIEW } from "@/lib/ryu-video-preview";
+import { getAllPreviewVideoCandidates } from "@/lib/character-video-preview";
 
 export const metadata = publicPageMetadata("/videos", { title: "動画" });
 
@@ -25,7 +25,8 @@ export default async function VideosPage({ searchParams }: {
   const listingQuery = filters.valid ? videoSearchQuery(filters) : "";
   const sortChoices = ["recommended","newest","oldest","favorite","unwatched","watched"] as const;
   const selectedSort = typeof params.sort === "string" && sortChoices.some(value => value === params.sort) ? params.sort as typeof sortChoices[number] : "recommended";
-  const availablePreviewPlayers = [...new Set(RYU_VIDEO_PREVIEW.flatMap(video => video.players))].sort((a,b) => a.localeCompare(b,"ja"));
+  const candidateCatalog = process.env.VERCEL_ENV === "preview" ? getAllPreviewVideoCandidates() : [];
+  const availablePreviewPlayers = [...new Set(candidateCatalog.flatMap(video => video.players))].sort((a,b) => a.localeCompare(b,"ja"));
   const selectedPreviewPlayer = typeof params.previewPlayer === "string" && availablePreviewPlayers.includes(params.previewPlayer) ? params.previewPlayer : "all";
   const selectedPreviewKind = filters.kind === "guide" || filters.kind === "combo" ? "guide" : filters.kind === "match" ? "match" : filters.kind === "counter" ? "counter" : "all";
   const player = videoPlayerFromQuery(params.player);
@@ -37,17 +38,17 @@ export default async function VideosPage({ searchParams }: {
     ? { state: "RELATION_UNRESOLVED" as const, items: [], warnings: ["INVALID_FILTER"] }
     : await listVideosResult({ playerId: playerId ?? undefined, characterId: characterId ?? undefined, tournamentId: tournamentId ?? undefined });
   const hasServerFilters = Boolean(playerId || characterId || tournamentId);
-  const showRyuCandidates = process.env.VERCEL_ENV === "preview" && !invalidFilter && !hasServerFilters && !player;
+  const showPreviewCandidates = process.env.VERCEL_ENV === "preview" && !invalidFilter && !hasServerFilters && !player;
   const publishedIds = new Set(result.items.flatMap(video => {
     const youtubeId = youtubeVideoIdFromUrl(video.url);
     return youtubeId ? [youtubeId] : [];
   }));
-  const ryuCandidates = showRyuCandidates ? RYU_VIDEO_PREVIEW.filter(video => {
+  const previewVideos = showPreviewCandidates ? candidateCatalog.filter(video => {
     const youtubeId = youtubeVideoIdFromUrl(video.url);
     return youtubeId !== null && !publishedIds.has(youtubeId);
   }) : [];
-  // One unified library. Unapproved candidates are injected only for this isolated Preview branch.
-  const displayedVideos = showRyuCandidates ? [...result.items, ...ryuCandidates] : result.items;
+  // Preview candidates must be registered explicitly and remain outside public approval.
+  const displayedVideos = showPreviewCandidates ? [...result.items, ...previewVideos] : result.items;
 
   return (
     <div className="site-shell page-stack experience-video">
@@ -58,22 +59,22 @@ export default async function VideosPage({ searchParams }: {
       </section>
 
       {hasServerFilters ? <p>指定された条件で表示しています。 <Link href="/videos">指定条件を解除</Link></p> : null}
-      <VideoSearchForm key={JSON.stringify(params)} filters={filters} params={params} playerOptions={showRyuCandidates ? availablePreviewPlayers : []} />
+      <VideoSearchForm key={JSON.stringify(params)} filters={filters} params={params} playerOptions={showPreviewCandidates ? availablePreviewPlayers : []} />
       {autoVideoEnabled() ? <Suspense key={JSON.stringify(params)} fallback={<AutoVideoLoading />}><VideoSearchResults filters={filters}
         exact={{ playerId, characterId, tournamentId, player, invalidFilter }} /></Suspense> : null}
 
       <section aria-label="掲載動画"><h2>掲載動画</h2>
-        <p>{showRyuCandidates ? "掲載済み動画とPreview限定の検証候補をまとめて表示しています。候補の出演者・使用キャラ・現行パッチ適合性は未確認です。" : "掲載済みの動画です。上の検索条件はYouTube検索に使用します。"}</p>
+        <p>{showPreviewCandidates ? "掲載済み動画とPreview限定の検証候補をまとめて表示しています。候補の出演者・使用キャラ・現行パッチ適合性は未確認です。" : "掲載済みの動画です。上の検索条件はYouTube検索に使用します。"}</p>
         {displayedVideos.length > 0 ? <VideoLibrary videos={displayedVideos}
           learningRecords={getRegisteredVideoLearning(result.items)}
           initialPlayer={playerId ? null : player}
-          previewCandidates={showRyuCandidates}
+          previewCandidates={showPreviewCandidates}
           initialQuery={listingQuery} hideSearchInput listingOnly
-          initialSort={selectedSort} initialPreviewKind={showRyuCandidates ? selectedPreviewKind : "all"} initialPreviewPlayer={showRyuCandidates ? selectedPreviewPlayer : "all"}
-          key={[player, playerId, characterId, tournamentId, showRyuCandidates, listingQuery, selectedSort, selectedPreviewKind, selectedPreviewPlayer].join(":")} />
+          initialSort={selectedSort} initialPreviewKind={showPreviewCandidates ? selectedPreviewKind : "all"} initialPreviewPlayer={showPreviewCandidates ? selectedPreviewPlayer : "all"}
+          key={[player, playerId, characterId, tournamentId, showPreviewCandidates, listingQuery, selectedSort, selectedPreviewKind, selectedPreviewPlayer].join(":")} />
           : result.state === "SUCCESS_EMPTY" ? <p>掲載動画は準備中です。上のYouTube検索もご利用ください。</p>
           : <VideoRetrievalStatus state={result.state} invalidFilter={invalidFilter} />}
-        {showRyuCandidates && result.state !== "SUCCESS_WITH_RESULTS" && result.state !== "SUCCESS_EMPTY" ? <VideoRetrievalStatus state={result.state} invalidFilter={invalidFilter} /> : null}
+        {showPreviewCandidates && result.state !== "SUCCESS_WITH_RESULTS" && result.state !== "SUCCESS_EMPTY" ? <VideoRetrievalStatus state={result.state} invalidFilter={invalidFilter} /> : null}
       </section>
 
     </div>
