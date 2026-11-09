@@ -7,6 +7,7 @@ import { CHARACTER_VIDEO_BATCH_04 } from "@/lib/character-video-batch-04";
 import { CHARACTER_VIDEO_BATCH_05 } from "@/lib/character-video-batch-05";
 import { CHARACTER_VIDEO_BATCH_06 } from "@/lib/character-video-batch-06";
 import { CHARACTER_VIDEO_DEEP_DHALSIM } from "@/lib/character-video-deep-dhalsim";
+import { CHARACTER_VIDEO_EXTRA_DHALSIM } from "@/lib/character-video-extra-dhalsim";
 import { CHARACTER_VIDEO_DEEP_BLANKA } from "@/lib/character-video-deep-blanka";
 import { CHARACTER_VIDEO_EXTRA_BLANKA } from "@/lib/character-video-extra-blanka";
 import { CHARACTER_VIDEO_DEEP_KEN } from "@/lib/character-video-deep-ken";
@@ -38,7 +39,7 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   ...CHARACTER_VIDEO_BATCH_04,
   ...CHARACTER_VIDEO_BATCH_05,
   ...CHARACTER_VIDEO_BATCH_06,
-  "dhalsim": [...(CHARACTER_VIDEO_BATCH_02["dhalsim"] ?? []), ...CHARACTER_VIDEO_DEEP_DHALSIM],
+  "dhalsim": [...(CHARACTER_VIDEO_BATCH_02["dhalsim"] ?? []), ...CHARACTER_VIDEO_DEEP_DHALSIM, ...CHARACTER_VIDEO_EXTRA_DHALSIM],
   "blanka": [...(CHARACTER_VIDEO_BATCH_02["blanka"] ?? []), ...CHARACTER_VIDEO_DEEP_BLANKA, ...CHARACTER_VIDEO_EXTRA_BLANKA],
   "ken": [...(CHARACTER_VIDEO_BATCH_02["ken"] ?? []), ...CHARACTER_VIDEO_DEEP_KEN, ...CHARACTER_VIDEO_EXTRA_KEN],
   "juri": [...(CHARACTER_VIDEO_BATCH_02["juri"] ?? []), ...CHARACTER_VIDEO_DEEP_JURI, ...CHARACTER_VIDEO_EXTRA_JURI],
