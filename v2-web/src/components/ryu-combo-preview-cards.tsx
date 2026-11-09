@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 import type { StrategyCardView } from "@/components/strategy-card-explorer";
 import { RYU_COMBO_PREVIEW_CANDIDATES, type RyuComboPreviewCandidate } from "@/data/ryu-combo-preview";
 import styles from "./ryu-combo-preview-cards.module.css";
@@ -36,10 +36,14 @@ const moveReferences = [
 ] as const;
 
 function routePart(part: string, key: string) {
-  const reference = moveReferences.find(item => part.includes(item.match));
+  const normalized = part
+    .replace(/^4強P(?:（上げ突き）)?$/, "上げ突き")
+    .replace(/^6中P(?:（鎖骨割り）)?$/, "鎖骨割り")
+    .replace(/^6強P(?:（鳩尾砕き）)?$/, "鳩尾砕き");
+  const reference = moveReferences.find(item => normalized.includes(item.match));
   if (reference) {
-    const before = part.slice(0, part.indexOf(reference.match));
-    const after = part.slice(part.indexOf(reference.match) + reference.match.length);
+    const before = normalized.slice(0, normalized.indexOf(reference.match));
+    const after = normalized.slice(normalized.indexOf(reference.match) + reference.match.length);
     return <span key={key}>{before}<a href={`#move-${reference.slug}`}>{reference.match}</a>{after}</span>;
   }
 
@@ -52,7 +56,7 @@ function routePart(part: string, key: string) {
 
 function ComboRoute({ route }: { route: string }) {
   return <span className={styles.routeSequence}>
-    {route.split(" → ").map((part, index) => <ReactNode key={index}>{index ? " → " : null}{routePart(part, `route-${index}`)}</ReactNode>)}
+    {route.split(" → ").map((part, index) => <Fragment key={index}>{index ? " → " : null}{routePart(part, `route-${index}`)}</Fragment>)}
   </span>;
 }
 
@@ -77,7 +81,6 @@ function RyuComboCandidateCard({ candidate }: { candidate: RyuComboPreviewCandid
         <div><dt>参照Patch</dt><dd>{candidate.patch}</dd></div>
         <div><dt>確認状態</dt><dd>{candidate.evidenceStatus}</dd></div>
         <div><dt>GIF</dt><dd>未設定</dd></div>
-        <div><dt>資料の原表記</dt><dd>{candidate.route}</dd></div>
       </dl>
       <p className={styles.source}>
         <span>{candidate.sourceLabel}（調査日 {candidate.researchDate}）:</span>{" "}
