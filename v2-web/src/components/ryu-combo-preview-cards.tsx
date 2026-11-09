@@ -39,7 +39,7 @@ function routePart(part: string, key: string) {
   const normalized = part
     .replace(/^4強P(?:（上げ突き）)?$/, "上げ突き")
     .replace(/^6中P(?:（鎖骨割り）)?$/, "鎖骨割り")
-    .replace(/^6強P(?:（鳩尾砕き）)?$/, "鳩尾砕き");
+    .replace(/^6強P（ガード\\+3）$/, "鳩尾砕き（ガード+3）")\n    .replace(/^6強P（ガード＋3）$/, "鳩尾砕き（ガード＋3）")\n    .replace(/^6強P(?:（鳩尾砕き）)?$/, "鳩尾砕き");
   const reference = moveReferences.find(item => normalized.includes(item.match));
   if (reference) {
     const before = normalized.slice(0, normalized.indexOf(reference.match));
@@ -47,10 +47,10 @@ function routePart(part: string, key: string) {
     return <span key={key}>{before}<a href={`#move-${reference.slug}`}>{reference.match}</a>{after}</span>;
   }
 
-  const normal = part.match(/^(J|[245])?(弱|中|強)(P|K)(.*)$/);
+  const normal = part.match(/^(J|[2456])?(弱|中|強)(P|K)(.*)$/);
   if (!normal) return <span key={key}>{part}</span>;
   const [, position, strength, button, suffix] = normal;
-  const posture = position === "J" ? "ジャンプ" : position === "2" ? "しゃがみ" : position === "5" ? "立ち" : "";
+  const posture = position === "J" ? "ジャンプ" : position === "2" ? "しゃがみ" : position === "5" ? "立ち" : position === "6" ? "前" : "";
   return <span key={key}>{posture}{strength}{button}{suffix}</span>;
 }
 
