@@ -1,4 +1,5 @@
 import type { VideoSummary } from "@/lib/event-media";
+import { RYU_VIDEO_RESEARCH_BATCH } from "@/lib/ryu-video-research-batch";
 /** Preview-only candidates, not published video or confirmed Player/Match relation records. */
 const candidates = [
   [
@@ -313,4 +314,4 @@ export const RYU_VIDEO_PREVIEW: VideoSummary[] = candidates.map(([youtubeId, tit
   // Preview-only labels inferred from titles, not authoritative entityRefs.
   players: player ? player.split("|") : [],
   categories: [videoType], level: "unknown", viewCount: null, viewCountCheckedAt: null,
-}));
+}})), ...RYU_VIDEO_RESEARCH_BATCH];
