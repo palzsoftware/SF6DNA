@@ -29,7 +29,7 @@ export function StrategyCardExplorer({ kind, items }: { kind: StrategyCardView["
     combo: ["SA1", "SA2", "SA3", "ゲージなし"],
     setplay: ["安全飛び", "投げ重ね", "打撃重ね", "起き攻め", "画面端", "その他"],
     sequence: ["暴れ潰し", "固め", "投げ連携", "投げ択", "シミー", "投げ狩り", "中下段", "打撃択", "キャンセル択", "ドライブラッシュ"],
-    counter: ["全キャラ共通候補", "キャミィ専用技の候補", "波動拳", "波掌撃", "確定反撃"],
+    counter: ["通常技", "特殊技", "ターゲットコンボ", "必殺技", "SA", "投げ後・起き上がり", "画面端", "キャミィ", "波動拳", "波掌撃", "確定反撃"],
   };
   const results = useMemo(() => {
     const byCategory = searchStrategyCards(authorized, { query, category: currentCategory });
