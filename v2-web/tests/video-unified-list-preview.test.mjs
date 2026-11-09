@@ -14,5 +14,6 @@ test("video list uses a single general library for published and Preview-only ca
 test("shared library preserves published detail links, preview cards remain non-navigable",()=>{
  const library=read("components/video-library.tsx");
  assert.match(library,/previewCandidate=\{previewCandidates && video\.id\.startsWith\("preview-ryu-"\)\}/);
- assert.match(library,/previewCandidates=\{showRyuCandidates\}/);
+ const page=read("app/videos/page.tsx");
+ assert.match(page,/previewCandidates=\{showRyuCandidates\}/);
 });
