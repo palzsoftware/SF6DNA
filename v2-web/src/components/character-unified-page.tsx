@@ -141,7 +141,7 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
   </article>;
 }
 
-export function CharacterUnifiedPage({ character, bundle, players, videos, videoState, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, strategyCards = [], strategyCardsAuthorized = false, previewComboCards = [], previewComboNotice }: {
+export function CharacterUnifiedPage({ character, bundle, players, videos, videoState, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, strategyCards = [], strategyCardsAuthorized = false, previewComboCards = [], previewComboNotice, previewSetplayCards = [], previewSetplayNotice }: {
   character: CharacterDetail; bundle: DevicePreviewBundle | null; players: PlayerDetail[]; videos: VideoSummary[];
   videoState?: VideoRetrievalState; moveEvidence?: Record<string, UnifiedMoveEvidence>; localReferences?: ReactNode; localMoveReferences?: ReactNode; automaticVideos?: ReactNode; showPreferences?: boolean;
   /** Pre-authorized cards only; never pass raw research fixtures from a public route. */
