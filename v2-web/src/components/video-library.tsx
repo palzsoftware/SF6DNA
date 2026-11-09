@@ -163,7 +163,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
           <label>動画の種類<select aria-label="動画種類で絞り込み" value={previewKind} onChange={event => { setPreviewKind(event.target.value); setVisible(12); }}>
             <option value="all">すべて</option><option value="guide">解説・コンボ</option><option value="counter">リュウ対策</option><option value="match">対戦・大会</option>
           </select></label>
-          <label>リュウ使用プレイヤー（タイトル等の候補）<select aria-label="使用プレイヤーで絞り込み" value={previewPlayer} onChange={event => { setPreviewPlayer(event.target.value); setVisible(12); }}>
+          <label>使用プレイヤー（タイトル等の候補）<select aria-label="使用プレイヤーで絞り込み" value={previewPlayer} onChange={event => { setPreviewPlayer(event.target.value); setVisible(12); }}>
             <option value="all">全プレイヤー</option>{previewPlayers.map(player => <option key={player} value={player}>{player}</option>)}
           </select></label>
         </div> : null}
@@ -180,7 +180,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
           </select></label>
           </div>
         </div>
-        <p id={scopeId} className={styles.searchScope}>{previewCandidates ? "このページはPreview限定の候補9件です。出演・使用キャラ名や公開日、現行パッチ適合性は確認前です。お気に入りと視聴済みは候補専用IDで保存され、正式登録動画とは別に扱います。" : "現在登録されている公開動画を検索します。"}YouTube全体の検索ではありません。大会の年度は、確認済みの大会名にある場合のみ絞り込めます。座学はテーマ別、対象ランク・MRは講座の対象者として確認した情報で絞り込みます。ダイヤ帯・プラチナ帯、初心者、モダンなども組み合わせて検索できます。分類が未確認の動画は、その条件に含めません。</p>
+        <p id={scopeId} className={styles.searchScope}>{previewCandidates ? "Preview用の検証候補を含みます。お気に入りと視聴済みはPreview専用のブラウザ保存を使用します。出演・使用キャラ名や公開日は未確認の場合があります。" : "現在登録されている公開動画を検索します。"}YouTube全体の検索ではありません。大会の年度は、確認済みの大会名にある場合のみ絞り込めます。座学はテーマ別、対象ランク・MRは講座の対象者として確認した情報で絞り込みます。ダイヤ帯・プラチナ帯、初心者、モダンなども組み合わせて検索できます。分類が未確認の動画は、その条件に含めません。</p>
         <button
           className={styles.filterToggle}
           type="button"
@@ -223,7 +223,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
       {preferenceWaiting ? <section className="empty-state" role="status"><p>{preferences.message}</p></section> : results.length ? (
         <>
           <div className="video-card-grid">
-            {results.slice(0, visible).map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} onPreferenceChange={refreshPreferences} previewCandidate={previewCandidates} previewLocalOnly={previewCandidates} key={video.id} />)}
+            {results.slice(0, visible).map((video) => <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} onPreferenceChange={refreshPreferences} previewCandidate={previewCandidates && video.id.startsWith("preview-ryu-")} previewLocalOnly={previewCandidates} key={video.id} />)}
           </div>
           {visible < results.length ? <button className={`button-secondary ${styles.more}`} type="button" onClick={() => setVisible((count) => count + 12)}>さらに12件表示</button> : null}
         </>
