@@ -6,6 +6,7 @@ import { CHARACTER_VIDEO_BATCH_03 } from "@/lib/character-video-batch-03";
 import { CHARACTER_VIDEO_BATCH_04 } from "@/lib/character-video-batch-04";
 import { CHARACTER_VIDEO_BATCH_05 } from "@/lib/character-video-batch-05";
 import { CHARACTER_VIDEO_BATCH_06 } from "@/lib/character-video-batch-06";
+import { CHARACTER_VIDEO_DEEP_JAMIE } from "@/lib/character-video-deep-jamie";
 import { CHARACTER_VIDEO_DEEP_LUKE } from "@/lib/character-video-deep-luke";
 import { CHARACTER_VIDEO_DEEP_JP } from "@/lib/character-video-deep-jp";
 
@@ -21,6 +22,7 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   ...CHARACTER_VIDEO_BATCH_04,
   ...CHARACTER_VIDEO_BATCH_05,
   ...CHARACTER_VIDEO_BATCH_06,
+  "jamie": [...(CHARACTER_VIDEO_BATCH_01["jamie"] ?? []), ...CHARACTER_VIDEO_DEEP_JAMIE],
   "luke": [...(CHARACTER_VIDEO_BATCH_01["luke"] ?? []), ...CHARACTER_VIDEO_DEEP_LUKE],
   "jp": [...(CHARACTER_VIDEO_BATCH_01["jp"] ?? []), ...CHARACTER_VIDEO_DEEP_JP],
 };
