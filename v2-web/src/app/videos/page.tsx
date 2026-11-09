@@ -1,5 +1,5 @@
 import { VideoSearchForm, VideoSearchResults } from "@/components/video-search-panel";
-import { parseVideoSearchFilters, type VideoSearchParams } from "@/lib/video-search-filters";
+import { parseVideoSearchFilters, videoSearchQuery, type VideoSearchParams } from "@/lib/video-search-filters";
 import { Suspense } from "react";
 import { AutoVideoLoading } from "@/components/auto-youtube-videos";
 import { publicPageMetadata } from "@/lib/public-page-metadata";
@@ -21,6 +21,7 @@ export default async function VideosPage({ searchParams }: {
 }) {
   const params = await searchParams;
   const filters = parseVideoSearchFilters(params);
+  const listingQuery = filters.valid ? videoSearchQuery(filters) : "";
   const player = videoPlayerFromQuery(params.player);
   const playerId = videoEntityIdFromQuery(params.playerId);
   const characterId = videoEntityIdFromQuery(params.characterId);
@@ -61,7 +62,8 @@ export default async function VideosPage({ searchParams }: {
           learningRecords={getRegisteredVideoLearning(result.items)}
           initialPlayer={playerId ? null : player}
           previewCandidates={showRyuCandidates}
-          key={[player, playerId, characterId, tournamentId, showRyuCandidates].join(":")} />
+          initialQuery={listingQuery} hideSearchInput
+          key={[player, playerId, characterId, tournamentId, showRyuCandidates, listingQuery].join(":")} />
           : result.state === "SUCCESS_EMPTY" ? <p>掲載動画は準備中です。上のYouTube検索もご利用ください。</p>
           : <VideoRetrievalStatus state={result.state} invalidFilter={invalidFilter} />}
         {showRyuCandidates && result.state !== "SUCCESS_WITH_RESULTS" && result.state !== "SUCCESS_EMPTY" ? <VideoRetrievalStatus state={result.state} invalidFilter={invalidFilter} /> : null}

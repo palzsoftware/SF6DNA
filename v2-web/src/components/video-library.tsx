@@ -70,12 +70,13 @@ function FilterGroup({ title, values, selected, labels, unavailable, disabled = 
   );
 }
 
-export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialPlayer, learningRecords = PUBLISHED_VIDEO_LEARNING, previewCandidates = false }: { videos: VideoSummary[]; lockedCharacter?: string; initialPlayer?: string | null; learningRecords?: readonly VideoLearningAnnotation[]; previewCandidates?: boolean }) {
+export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialPlayer, learningRecords = PUBLISHED_VIDEO_LEARNING, previewCandidates = false, initialQuery = "", hideSearchInput = false }: { videos: VideoSummary[]; lockedCharacter?: string; initialPlayer?: string | null; learningRecords?: readonly VideoLearningAnnotation[]; previewCandidates?: boolean; initialQuery?: string; hideSearchInput?: boolean }) {
   const videos = useMemo(() => suppliedVideos.map(video => applyReviewedVideoMetadata(video, learningRecords)), [suppliedVideos, learningRecords]);
   const panelId = useId();
   const scopeId = useId();
   const [filters, setFilters] = useState<VideoFilters>(() => ({
     ...EMPTY_FILTERS,
+    query: initialQuery,
     players: initialPlayer ? new Set(videoInitialPlayerIds(videos, initialPlayer)) : new Set(),
   }));
   const [sort, setSort] = useState<VideoSort>("recommended");
@@ -140,7 +141,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
   ];
 
   function clearFilters() {
-    setFilters(EMPTY_FILTERS);
+    setFilters({ ...EMPTY_FILTERS, query: initialQuery });
     setSort("recommended");
     setPreviewKind("all");
     setPreviewPlayer("all");
@@ -168,7 +169,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
           </select></label>
         </div> : null}
         <div className={styles.topRow}>
-          <label>掲載動画を検索<input type="search" aria-describedby={scopeId} value={filters.query} onChange={(event) => { setFilters((current) => ({ ...current, query: event.target.value })); setVisible(12); }} placeholder="例：ダイヤ帯 モダン、初心者、座学 MR1600" /></label>
+          {!hideSearchInput ? <label>掲載動画を検索<input type="search" aria-describedby={scopeId} value={filters.query} onChange={(event) => { setFilters((current) => ({ ...current, query: event.target.value })); setVisible(12); }} placeholder="例：ダイヤ帯 モダン、初心者、座学 MR1600" /></label> : null}
           <div className={styles.sortControls}>
           <button className={styles.clear} type="button" onClick={clearFilters}>条件をクリア</button>
           <label>並び順<select value={sort} onChange={(event) => setSort(event.target.value as VideoSort)}>
@@ -194,8 +195,8 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
         {activeFilterCount ? <div className={styles.activeSummary} aria-live="polite">
           <span>{activeFilterCount}件の条件を選択中</span>
         </div> : null}
-        {activeSelections.length || filters.query ? <div className={styles.selectedConditions} aria-label="選択中の検索条件">
-          {filters.query ? <button type="button" onClick={() => { setFilters(current => ({ ...current, query: "" })); setVisible(12); }} aria-label="キーワードを解除">キーワード：{filters.query} ×</button> : null}
+        {activeSelections.length || (!hideSearchInput && filters.query) ? <div className={styles.selectedConditions} aria-label="選択中の検索条件">
+          {!hideSearchInput && filters.query ? <button type="button" onClick={() => { setFilters(current => ({ ...current, query: "" })); setVisible(12); }} aria-label="キーワードを解除">キーワード：{filters.query} ×</button> : null}
           {activeSelections.map(item => <button type="button" key={`${item.group}:${item.value}`} onClick={() => toggle(item.group, item.value)} aria-label={`${item.label}を解除`}>{item.label} ×</button>)}
         </div> : null}
         <div className={`${styles.filters} ${filtersOpen ? styles.filtersOpen : ""}`} id={panelId}>

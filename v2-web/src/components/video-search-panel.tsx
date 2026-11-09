@@ -32,7 +32,7 @@ export function VideoSearchForm({ filters, params }: { filters: VideoSearchFilte
         </div>
       </details>
     </form>
-    <p className={styles.note}>入力・選択した条件はYouTubeの検索語として使います。検索結果の対象ランク・操作タイプ・現行パッチ対応を確認済みにするものではありません。掲載動画の確認済み分類を探す場合は、下の掲載動画の絞り込みをご利用ください。</p>
+    <p className={styles.note}>入力・選択した条件はYouTubeの検索語として使います。検索キーワードは掲載動画の絞り込みにも使用します。YouTube検索結果の対象ランク・操作タイプ・現行パッチ対応を確認済みにするものではありません。選手や大会の正式な関連は、確認済みの登録情報だけを使用します。</p>
   </section>;
 }
 export async function VideoSearchResults({ filters, exact }: {
