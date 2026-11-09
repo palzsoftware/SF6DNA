@@ -6,6 +6,7 @@ import { isLukeSampleRequest } from "@/lib/luke-sample-cards";
 import { projectPreviewStrategyCards } from "@/lib/strategy-card-projection";
 import { projectRyuComboPreviewCards, RyuComboPreviewNotice } from "@/components/ryu-combo-preview-cards";
 import { projectRyuSetplayPreviewCards, RyuSetplayPreviewNotice } from "@/components/ryu-setplay-preview-cards";
+import { projectRyuSequencePreviewCards, RyuSequencePreviewNotice } from "@/components/ryu-sequence-preview-cards";
 import { LukeSampleCards } from "@/components/luke-sample-cards";
 import { LukeCanonicalComboReference } from "@/components/luke-canonical-combo-reference";
 import { CharacterUnifiedPage } from "@/components/character-unified-page";
@@ -51,11 +52,12 @@ export default async function CharacterPage({
   searchParams,
 }: {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ preview?: string | string[]; sample?: string | string[]; comboPreview?: string | string[]; setplayPreview?: string | string[] }>;
+  searchParams: Promise<{ preview?: string | string[]; sample?: string | string[]; comboPreview?: string | string[]; setplayPreview?: string | string[]; sequencePreview?: string | string[] }>;
 }) {
   const [{ slug }, query] = await Promise.all([params, searchParams]);
   const comboPreviewRequested = Array.isArray(query.comboPreview) ? query.comboPreview.includes("1") : query.comboPreview === "1";
   const setplayPreviewRequested = Array.isArray(query.setplayPreview) ? query.setplayPreview.includes("1") : query.setplayPreview === "1";
+  const sequencePreviewRequested = Array.isArray(query.sequencePreview) ? query.sequencePreview.includes("1") : query.sequencePreview === "1";
   const previewToken = process.env.VERCEL_ENV === "production" ? null : normalizeDevicePreviewToken(query.preview);
   const character = await getCharacterBySlug(slug, previewToken);
 
@@ -107,11 +109,14 @@ export default async function CharacterPage({
     ? projectRyuComboPreviewCards() : [];
   const previewSetplayCards = process.env.VERCEL_ENV === "preview" && character.slug === "ryu" && setplayPreviewRequested
     ? projectRyuSetplayPreviewCards() : [];
+  const previewSequenceCards = process.env.VERCEL_ENV === "preview" && character.slug === "ryu" && sequencePreviewRequested
+    ? projectRyuSequencePreviewCards() : [];
   const combinedMoveEvidence = connectedTxt?.moveEvidence ?? moveEvidence;
   return <CharacterUnifiedPage automaticVideos={<Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} registeredYoutubeIds={registeredYoutubeIds} /></Suspense>} character={character} bundle={finalBundle} players={players} videos={videos} videoState={relatedVideoResult.state}
     moveEvidence={combinedMoveEvidence}
     strategyCards={strategyCards} strategyCardsAuthorized={strategyCardsAuthorized} previewComboCards={previewComboCards} previewComboNotice={previewComboCards.length ? <RyuComboPreviewNotice /> : null}
     previewSetplayCards={previewSetplayCards} previewSetplayNotice={previewSetplayCards.length ? <RyuSetplayPreviewNotice /> : null}
+    previewSequenceCards={previewSequenceCards} previewSequenceNotice={previewSequenceCards.length ? <RyuSequencePreviewNotice /> : null}
     localMoveReferences={!production && isLukeSampleRequest(character.slug, query.sample, process.env.VERCEL_ENV) ?
       <LukeSampleCards slug={character.slug} requested={query.sample} environment={process.env.VERCEL_ENV} moveOnly /> : null}
     localReferences={!production ? <LukeCanonicalComboReference characterSlug={character.slug} /> : null} />;
