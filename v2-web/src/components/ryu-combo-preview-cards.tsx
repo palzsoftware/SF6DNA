@@ -56,7 +56,7 @@ function routePart(part: string, key: string) {
 
 function ComboRoute({ route }: { route: string }) {
   return <span className={styles.routeSequence}>
-    {route.split(/\\s*→\\s*/u).map((part, index) => <Fragment key={index}>{index ? " → " : null}{routePart(part, `route-${index}`)}</Fragment>)}
+    {route.split(/\s*→\s*/u).map((part, index) => <Fragment key={index}>{index ? " → " : null}{routePart(part, `route-${index}`)}</Fragment>)}
   </span>;
 }
 
