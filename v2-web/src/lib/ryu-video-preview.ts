@@ -256,6 +256,46 @@ const candidates = [
     "2026-01-27",
     null,
     "レイ【スト6】。小技・中攻撃・強攻撃・インパクト・SA始動と起き攻め。2026年1月時点の動画。"
+  ],
+  [
+    "k45E5fCaS54",
+    "【スト6】今から始めても大丈夫！リュウ初心者向け解説なのだ！",
+    "guide",
+    "2024-12-19",
+    null,
+    "ぷにぷにの格ゲー解説ちゃんねる。通常技、必殺技、簡単なコンボ。Year2時点の動画。"
+  ],
+  [
+    "JWskwGQzYOM",
+    "スト6リュウ Year4対応 中央の起き攻め完全版",
+    "guide",
+    "2026-08-22",
+    null,
+    "オバハン。Year4の中央セットプレイ。技性能・有利フレームは未検証。"
+  ],
+  [
+    "2nn6IujVX7c",
+    "SF6 Problem X (Arjun) vs EndingWalker (Ryu)",
+    "match",
+    "2026-10-14",
+    null,
+    "Stremphoenixの対戦映像。タイトル記載の出演者と使用キャラは正式なPlayer/Match関連未確認。"
+  ],
+  [
+    "qdA3DjyoHbk",
+    "YAS リュウ DreamHack 2026の試合振り返り",
+    "match",
+    "2026-05-18",
+    null,
+    "YasTubeによるDreamHack 2026の試合映像候補。出演者の正式関連付けは未確認。"
+  ],
+  [
+    "vNFcTuXBdgA",
+    "ひぐちが語るEndingWalkerのリュウの強さと勝ち方",
+    "guide",
+    "2025-04-09",
+    null,
+    "ひぐちゃんねる。EndingWalkerのリュウの強さと立ち回りに関する考察。2025年時点。"
   ]
 ] as const;
 export const RYU_VIDEO_PREVIEW: VideoSummary[] = candidates.map(([youtubeId, title, videoType, date, player, description]) => ({
