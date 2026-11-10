@@ -157,6 +157,24 @@ const candidates = [
     "MARISA Combo Guide (Modern Controls)",
     "ahmz1404",
     "guide"
+  ],
+  [
+    "AaLhALUuEDo",
+    "シュートによるマリーザ同キャラ対戦の重要ポイント解説",
+    "しゅーとチャンネル / Shuto",
+    "guide"
+  ],
+  [
+    "F1fy-Zi8aEY",
+    "Shuto（マリーザ）vs Yossan（ジュリ）高レベル対戦",
+    "SF6 High Level Replays",
+    "match"
+  ],
+  [
+    "VN_j6LXI2Kw",
+    "Shutoがマリーザでランクマッチ対戦",
+    "しゅーとチャンネル / Shuto",
+    "match"
   ]
 ] as const;
 export const CHARACTER_VIDEO_MARISA_RESEARCH: VideoSummary[] = candidates.map(([id,title,channel,kind]): VideoSummary => ({
