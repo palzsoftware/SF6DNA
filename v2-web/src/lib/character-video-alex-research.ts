@@ -78,6 +78,27 @@ const candidates = [
     "channel": "ぷにぷに@スト６解説ずんだもん",
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=lPvLljxNCf0"
+  },
+  {
+    "id": "DHVwKD4gH6A",
+    "title": "今すぐ使えるアレックス解説！ 超絶テクキャラを簡単に使おう",
+    "channel": "小路KOG",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/75358/video/DHVwKD4gH6A/"
+  },
+  {
+    "id": "0OVLCpwJOlQ",
+    "title": "アレックス新発表の対戦映像をハイタニが解説",
+    "channel": "ハイタニ TV",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/55522/video/0OVLCpwJOlQ/"
+  },
+  {
+    "id": "W9u4b_f_JAI",
+    "title": "KEI.Bにアレックスを教わる甘結もか（元配信）",
+    "channel": "甘結もか",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/kirinuki/RTA_riM4MZc"
   }
 ] as const;
 
