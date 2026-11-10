@@ -240,6 +240,14 @@ const candidates = [
     "kind": "counter",
     "source": "https://www.youtube.com/watch?v=5_DaC9-uXbo",
     "counterTarget": "akuma"
+  },
+  {
+    "id": "CjYt87XbZYk",
+    "title": "豪鬼 その場起き上がり先行入力フレーム練習",
+    "channel": "桜乃シャル(Vtuber)",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=CjYt87XbZYk",
+    "counterTarget": null
   }
 ] as const;
 
