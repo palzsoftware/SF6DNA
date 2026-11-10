@@ -197,6 +197,97 @@ const candidates = [
     "channel": "立川ちゃんねる",
     "kind": "guide",
     "source": "https://www.tubetre.com/videos/view/60Ay_4arCFc"
+  },
+  {
+    "id": "WWfpWn9qbqk",
+    "title": "ザンギエフ 通常投げ・スープレックス始動の起き攻めレシピ",
+    "channel": "膝十字断裂丸",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=WWfpWn9qbqk"
+  },
+  {
+    "id": "P9iGFOZjMvg",
+    "title": "おしゃべりザンギエフ SFL2026公式ショート",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/P9iGFOZjMvg/"
+  },
+  {
+    "id": "nsV6MWjjn-g",
+    "title": "新バージョンザンギエフ状況別コンボ完全解説",
+    "channel": "ポンギエフPONGIEF",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=nsV6MWjjn-g"
+  },
+  {
+    "id": "D4nmAyg7gVQ",
+    "title": "ザンギエフの強行動・実戦コンボ集",
+    "channel": "ザンギもん【スト6】ザンギエフ解説",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=D4nmAyg7gVQ"
+  },
+  {
+    "id": "l_2gYTz7qJ4",
+    "title": "ザンギエフ対策完全版・初心者からマスターまで",
+    "channel": "スト6初心者応援チャンネル",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=l_2gYTz7qJ4"
+  },
+  {
+    "id": "WY41my99soU",
+    "title": "Junior（ザンギエフ）vs ふ～ど（エド） Combo Breaker 2026",
+    "channel": "The King Arena",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=WY41my99soU"
+  },
+  {
+    "id": "nS7y9tMjE3s",
+    "title": "SF6 Zangief High Level New Combo",
+    "channel": "Street Fighter X",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=nS7y9tMjE3s"
+  },
+  {
+    "id": "qAXQq9ZVl0I",
+    "title": "YAS（リュウ）vs Jr.（ザンギエフ）SFL JAPAN 2026",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/qAXQq9ZVl0I/"
+  },
+  {
+    "id": "jMwAlwX_egQ",
+    "title": "板橋ザンギエフ出場SFL2026 REJECT対DFM実況・対戦映像",
+    "channel": "たいじ/たいちゃんねる",
+    "kind": "match",
+    "source": "https://yutura.net/channel/16928/video/jMwAlwX_egQ/"
+  },
+  {
+    "id": "9MpYfe8lLMY",
+    "title": "板橋ザンギエフ（ザンギエフ）vs ウメハラ（豪鬼）EWC2026",
+    "channel": "The King Arena",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=9MpYfe8lLMY"
+  },
+  {
+    "id": "zTpjhfQRtDw",
+    "title": "Junior（ザンギエフ）対戦リプレイ",
+    "channel": "Fight Club TV",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=zTpjhfQRtDw"
+  },
+  {
+    "id": "3hbQ-GzfGaM",
+    "title": "こばやん（ザンギエフ）vs EndingWalker（リュウ）CEO2026",
+    "channel": "The King Arena",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=3hbQ-GzfGaM"
+  },
+  {
+    "id": "WVSMETYIztc",
+    "title": "SFL JAPAN 2026 Division S 第7節 こばやん（ザンギエフ）出場アーカイブ",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://youtube.com/live/WVSMETYIztc"
   }
 ] as const;
 export const CHARACTER_VIDEO_ZANGIEF_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
