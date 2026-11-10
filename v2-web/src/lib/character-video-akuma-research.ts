@@ -352,6 +352,30 @@ const candidates = [
     "kind": "counter",
     "source": "https://www.youtube.com/watch?v=UJO-EcL9b8c",
     "counterTarget": "akuma"
+  },
+  {
+    "id": "9JoHREE7Zz0",
+    "title": "豪鬼の立ち回り考察 画面端と波動拳の運用",
+    "channel": "スト6の妖精・にこ太郎",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=9JoHREE7Zz0",
+    "counterTarget": null
+  },
+  {
+    "id": "Go83PINqvhY",
+    "title": "しゅーとが解説する豪鬼の起き攻め・セットプレイ",
+    "channel": "しゅーとチャンネル / Shuto",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=Go83PINqvhY",
+    "counterTarget": null
+  },
+  {
+    "id": "JiANkUA1PnM",
+    "title": "豪鬼とは ストーリーやシリーズ性能の歴史を解説（SF6参戦前資料）",
+    "channel": "ぴんぴゲームチャンネル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=JiANkUA1PnM",
+    "counterTarget": null
   }
 ] as const;
 
