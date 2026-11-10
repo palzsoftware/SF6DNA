@@ -324,11 +324,11 @@ const candidates = [
     "source": "https://www.youtube.com/watch?v=0WwdDDE4HA4"
   },
   {
-    "id": "N_IfMcqhZYY",
-    "title": "sakoらによるエレナ祭の事前企画",
-    "channel": "sakonoko_game",
+    "id": "f-RbdMw5xSQ",
+    "title": "エレナでレジェンドに到達したコンボと起き攻めを解説",
+    "channel": "クローバー",
     "kind": "guide",
-    "source": "https://www.youtube.com/watch?v=N_IfMcqhZYY"
+    "source": "https://www.youtube.com/watch?v=f-RbdMw5xSQ"
   }
 ] as const;
 export const CHARACTER_VIDEO_ELENA_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
