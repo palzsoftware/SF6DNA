@@ -630,6 +630,22 @@ const NEXT_TEN_VIDEO_CANDIDATES: Readonly<Record<string, VideoSummary[]>> = Obje
   ]),
 );
 
+// Character countermeasures are indexed by the character being countered, not by the character used.
+// Only explicitly identified, source-titled cases are relocated. Unclear titles remain for manual review.
+const ED_VS_JP_COUNTER_VIDEO_IDS = new Set([
+  "preview-ed-w7lMBJrwKT4",
+  "preview-ed-aA450Ly66ok",
+]);
+const edVsJpCounterVideos: VideoSummary[] = CHARACTER_VIDEO_ED_RESEARCH
+  .filter(video => ED_VS_JP_COUNTER_VIDEO_IDS.has(video.id))
+  .map(video => ({
+    ...video,
+    id: video.id.replace("preview-ed-", "preview-jp-"),
+    slug: video.slug.replace("preview-ed-", "preview-jp-"),
+    characters: ["JP"],
+    description: `JPへの対策動画（使用キャラはエド）。${video.description ?? ""}`,
+  }));
+
 const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>> = {
   ryu: RYU_VIDEO_PREVIEW,
   ...CHARACTER_VIDEO_BATCH_01,
@@ -647,7 +663,7 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   "cammy": [...(CHARACTER_VIDEO_BATCH_04["cammy"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["cammy"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["cammy"] ?? []), ...CHARACTER_VIDEO_CAMMY_RESEARCH],
   "rashid": [...(CHARACTER_VIDEO_BATCH_04["rashid"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["rashid"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["rashid"] ?? []), ...CHARACTER_VIDEO_RASHID_RESEARCH],
   "aki": [...(CHARACTER_VIDEO_BATCH_04["aki"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["aki"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["aki"] ?? []), ...CHARACTER_VIDEO_AKI_RESEARCH],
-  "ed": [...(CHARACTER_VIDEO_BATCH_04["ed"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["ed"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["ed"] ?? []), ...CHARACTER_VIDEO_ED_RESEARCH],
+  "ed": [...(CHARACTER_VIDEO_BATCH_04["ed"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["ed"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["ed"] ?? []), ...CHARACTER_VIDEO_ED_RESEARCH.filter(video => !ED_VS_JP_COUNTER_VIDEO_IDS.has(video.id))],
   "dhalsim": [...(CHARACTER_VIDEO_BATCH_02["dhalsim"] ?? []), ...CHARACTER_VIDEO_DEEP_DHALSIM, ...CHARACTER_VIDEO_EXTRA_DHALSIM],
   "blanka": [...(CHARACTER_VIDEO_BATCH_02["blanka"] ?? []), ...CHARACTER_VIDEO_DEEP_BLANKA, ...CHARACTER_VIDEO_EXTRA_BLANKA],
   "ken": [...(CHARACTER_VIDEO_BATCH_02["ken"] ?? []), ...CHARACTER_VIDEO_DEEP_KEN, ...CHARACTER_VIDEO_EXTRA_KEN],
@@ -657,7 +673,7 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   "chun-li": [...(CHARACTER_VIDEO_BATCH_01["chun-li"] ?? []), ...CHARACTER_VIDEO_DEEP_CHUN_LI, ...CHARACTER_VIDEO_EXTRA_CHUN_LI],
   "jamie": [...(CHARACTER_VIDEO_BATCH_01["jamie"] ?? []), ...CHARACTER_VIDEO_DEEP_JAMIE, ...CHARACTER_VIDEO_EXTRA_JAMIE],
   "luke": [...(CHARACTER_VIDEO_BATCH_01["luke"] ?? []), ...CHARACTER_VIDEO_DEEP_LUKE, ...CHARACTER_VIDEO_EXTRA_LUKE],
-  "jp": [...(CHARACTER_VIDEO_BATCH_01["jp"] ?? []), ...CHARACTER_VIDEO_DEEP_JP, ...CHARACTER_VIDEO_EXTRA_JP],
+  "jp": [...(CHARACTER_VIDEO_BATCH_01["jp"] ?? []), ...CHARACTER_VIDEO_DEEP_JP, ...CHARACTER_VIDEO_EXTRA_JP, ...edVsJpCounterVideos],
 };
 
 export function getCharacterPreviewVideos(characterSlug: string): VideoSummary[] {
