@@ -162,7 +162,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
       {!listingOnly ? <div className={styles.toolbar}>
         {previewCandidates ? <div className={styles.previewFilters} aria-label="候補動画の絞り込み">
           <label>動画の種類<select aria-label="動画種類で絞り込み" value={previewKind} onChange={event => { setPreviewKind(event.target.value); setVisible(24); }}>
-            <option value="all">すべて</option><option value="guide">解説・コンボ</option><option value="counter">リュウ対策</option><option value="match">対戦・大会</option>
+            <option value="all">すべて</option><option value="guide">解説・コンボ</option><option value="counter">このキャラへの対策</option><option value="match">対戦・大会</option>
           </select></label>
           <label>使用プレイヤー（タイトル等の候補）<select aria-label="使用プレイヤーで絞り込み" value={previewPlayer} onChange={event => { setPreviewPlayer(event.target.value); setVisible(24); }}>
             <option value="all">全プレイヤー</option>{previewPlayers.map(player => <option key={player} value={player}>{player}</option>)}
