@@ -91,6 +91,41 @@ const candidates = [
     "channel": "Stremphoenix",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=6OZNRemfzf0"
+  },
+  {
+    "id": "DhGj-hrwXow",
+    "title": "sakoがエレナ使いと対話する対戦・キャラ研究",
+    "channel": "sakonoko_game",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=DhGj-hrwXow"
+  },
+  {
+    "id": "GmNcth8Osz8",
+    "title": "エレナ実装前の技性能を考察するsako",
+    "channel": "sakonoko_game",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=GmNcth8Osz8"
+  },
+  {
+    "id": "BSX-XyzMPmA",
+    "title": "エレナを3日間使ったsakoの初期感想",
+    "channel": "sakonoko_game",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=BSX-XyzMPmA"
+  },
+  {
+    "id": "lHcPYKvIM9w",
+    "title": "sakoエレナの高レベル対戦・激熱コンボ",
+    "channel": "昇龍拳",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=lHcPYKvIM9w"
+  },
+  {
+    "id": "g5nToPkbrXc",
+    "title": "sakoエレナの対戦・実戦コンボ",
+    "channel": "昇龍拳",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=g5nToPkbrXc"
   }
 ] as const;
 export const CHARACTER_VIDEO_ELENA_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
