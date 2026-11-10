@@ -288,6 +288,38 @@ const candidates = [
     "kind": "counter",
     "source": "https://www.youtube.com/watch?v=CDtOPdRif2E",
     "counterTarget": "akuma"
+  },
+  {
+    "id": "Wi-AVwBgNPE",
+    "title": "翔JPが対策しづらい豪鬼の行動を解説",
+    "channel": "IBUSHIGIN | Kakeru",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=Wi-AVwBgNPE",
+    "counterTarget": "akuma"
+  },
+  {
+    "id": "OA3zTq9KAY8",
+    "title": "リュウ視点 対豪鬼 確定反撃と斬空波動拳対策4選",
+    "channel": "けんてぃちゅーぶ【スト6攻略】",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=OA3zTq9KAY8",
+    "counterTarget": "akuma"
+  },
+  {
+    "id": "B6NkxMYNDsk",
+    "title": "豪鬼の厳選10コンボとセットプレイ集",
+    "channel": "ミダ猫のゲーム動画",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=B6NkxMYNDsk",
+    "counterTarget": null
+  },
+  {
+    "id": "qNtPFSHVsYQ",
+    "title": "全キャラ対策 忘れがちな確定反撃集（豪鬼含む）",
+    "channel": "けんてぃちゅーぶ【スト6攻略】",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=qNtPFSHVsYQ",
+    "counterTarget": "akuma"
   }
 ] as const;
 
