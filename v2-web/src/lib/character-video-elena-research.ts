@@ -273,6 +273,27 @@ const candidates = [
     "channel": "どぐら 生駒デビル",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=YxcD-mQfIIk"
+  },
+  {
+    "id": "-At3QQx0mTU",
+    "title": "Year4強化後のエレナでどぐらがランクマ",
+    "channel": "どぐら 生駒デビル",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=-At3QQx0mTU"
+  },
+  {
+    "id": "P6hFk1nHiA8",
+    "title": "どぐらのエレナ対JP戦とベガへの切り替え実戦",
+    "channel": "どぐら 生駒デビル",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=P6hFk1nHiA8"
+  },
+  {
+    "id": "bU8I3T9oLes",
+    "title": "ウメハラの豪鬼研究配信中にsakoエレナと対戦",
+    "channel": "Daigo the BeasTV",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=bU8I3T9oLes"
   }
 ] as const;
 export const CHARACTER_VIDEO_ELENA_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
