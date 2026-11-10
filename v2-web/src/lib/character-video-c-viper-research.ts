@@ -56,6 +56,20 @@ const candidates = [
     "channel": "ぷげら pugera",
     "kind": "guide",
     "source": "https://yutura.net/channel/111842/video/4rtacgNj7oY/"
+  },
+  {
+    "id": "kDQ-dQhXxMM",
+    "title": "【スト６】ヴァイパーと対戦して対策する！！",
+    "channel": "いおりチャンネル",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=kDQ-dQhXxMM"
+  },
+  {
+    "id": "RINLGEfZGMU",
+    "title": "【スト6】とりあえず一週間ぼられないためのヴァイパー対策",
+    "channel": "えらさんは今日も頑張る",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=RINLGEfZGMU"
   }
 ] as const;
 export const CHARACTER_VIDEO_C_VIPER_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
