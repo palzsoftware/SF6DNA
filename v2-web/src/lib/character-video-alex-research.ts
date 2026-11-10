@@ -99,6 +99,167 @@ const candidates = [
     "channel": "甘結もか",
     "kind": "guide",
     "source": "https://ckworks.jp/vinforadar/video/kirinuki/RTA_riM4MZc"
+  },
+  {
+    "id": "uKc9SMONlxU",
+    "title": "アレックス コンボ解説（海外コミュニティ共有）",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=uKc9SMONlxU"
+  },
+  {
+    "id": "49lg89YGQtU",
+    "title": "アレックス コンボトライアル（海外コミュニティ共有）",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=49lg89YGQtU"
+  },
+  {
+    "id": "z34waVoFeto",
+    "title": "ネモのアレックス MR1900到達・実戦映像",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=z34waVoFeto"
+  },
+  {
+    "id": "oFo2KZYXSpc",
+    "title": "アレックスの日本人上位プレイヤー対戦映像",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=oFo2KZYXSpc"
+  },
+  {
+    "id": "IpJrZ3ARb7U",
+    "title": "Diaphone アレックス マスター挑戦",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=IpJrZ3ARb7U"
+  },
+  {
+    "id": "hm7pOWDLup4",
+    "title": "Diaphone アレックス攻略ポイント",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=hm7pOWDLup4"
+  },
+  {
+    "id": "hBmZsyIT1wc",
+    "title": "Brian_F アレックス マスター挑戦",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=hBmZsyIT1wc"
+  },
+  {
+    "id": "OTUupXXEl0k",
+    "title": "Chris_F アレックス攻略ガイド",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=OTUupXXEl0k"
+  },
+  {
+    "id": "IcxokfrsS9M",
+    "title": "Brian_F アレックス ハイマスター挑戦",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=IcxokfrsS9M"
+  },
+  {
+    "id": "cZ8loAhgOI4",
+    "title": "アレックスへの対策ガイド",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=cZ8loAhgOI4"
+  },
+  {
+    "id": "6F-d5TYZlWU",
+    "title": "MR1800帯プレイヤーによるアレックス考察",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=6F-d5TYZlWU"
+  },
+  {
+    "id": "H3dGEtl0mSw",
+    "title": "iZonk アレックス攻略ガイド",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=H3dGEtl0mSw"
+  },
+  {
+    "id": "weypQccKcEE",
+    "title": "アレックスの強い行動・ネタへの対策",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=weypQccKcEE"
+  },
+  {
+    "id": "Af1Q3NhcaZs",
+    "title": "アレックスの投げループ研究",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=Af1Q3NhcaZs"
+  },
+  {
+    "id": "gBAMPgAEhmM",
+    "title": "アレックスの構え（Prowler）解説",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=gBAMPgAEhmM"
+  },
+  {
+    "id": "niL54FSweT4",
+    "title": "アレックスの構え移行・ホップの行動分岐",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=niL54FSweT4"
+  },
+  {
+    "id": "L4OjcgYa7-o",
+    "title": "Brian_F アレックス攻略解説",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=L4OjcgYa7-o"
+  },
+  {
+    "id": "A7PmzSV22_w",
+    "title": "Diaphone アレックス グランドマスター帯対戦",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=A7PmzSV22_w"
+  },
+  {
+    "id": "XcL_mC291fQ",
+    "title": "アレックス 上級者向け攻略解説",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=XcL_mC291fQ"
+  },
+  {
+    "id": "r8U8-JsTIRE",
+    "title": "アレックス エアニー後の起き攻め",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=r8U8-JsTIRE"
+  },
+  {
+    "id": "6ZfpSE1-6Ak",
+    "title": "Leshar アレックスの攻略ポイント",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=6ZfpSE1-6Ak"
+  },
+  {
+    "id": "kJMZ1VlMJ3U",
+    "title": "アレックス 構え（Prowler）攻略解説",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=kJMZ1VlMJ3U"
+  },
+  {
+    "id": "mrL3t2_mMSY",
+    "title": "アレックス 追加攻略ポイント",
+    "channel": "未確認（コミュニティ索引）",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=mrL3t2_mMSY"
   }
 ] as const;
 
