@@ -112,6 +112,62 @@ const candidates = [
     "channel": "しゅーとチャンネル / Shuto",
     "kind": "guide",
     "source": "https://yutura.net/channel/99161/video/QDakuqBqdbM/"
+  },
+  {
+    "id": "MwDicXEEhI0",
+    "title": "SFL2026 あきら キャミィ vs ヤナイ サガット",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/MwDicXEEhI0/"
+  },
+  {
+    "id": "Lzj9AlmVOd0",
+    "title": "SFL2026 cosa ケン vs ヤナイ サガット",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/Lzj9AlmVOd0/"
+  },
+  {
+    "id": "i3thfKeAEqg",
+    "title": "2026年5月版 サガット最速起き攻めの全て",
+    "channel": "スト6の思い出",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=i3thfKeAEqg"
+  },
+  {
+    "id": "A1cESBAhgUk",
+    "title": "IGN Japan サガット実装前プレビュー・コンボトライアル",
+    "channel": "IGN Japan",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/17855/video/A1cESBAhgUk/"
+  },
+  {
+    "id": "-Ukqx7wZdyM",
+    "title": "ボンちゃんによる2026年5月調整・サガット確認",
+    "channel": "プロゲーマーボンちゃん",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/53696/video/-Ukqx7wZdyM/"
+  },
+  {
+    "id": "FcdP0QP3sM4",
+    "title": "ボンちゃん サガット vs 立川 アルジュン",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/FcdP0QP3sM4/"
+  },
+  {
+    "id": "ybBUW0nmYkM",
+    "title": "ボンちゃんがサガットのデヨの歴史を解説",
+    "channel": "プロゲーマーボンちゃん",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/53696/video/ybBUW0nmYkM/"
+  },
+  {
+    "id": "6jazofn8Ao8",
+    "title": "ボンちゃん サガット vs あくたがわ マノン",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/6jazofn8Ao8/"
   }
 ] as const;
 export const CHARACTER_VIDEO_SAGAT_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
