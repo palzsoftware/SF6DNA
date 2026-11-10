@@ -314,6 +314,38 @@ const candidates = [
     "kind": "counter",
     "source": "https://www.youtube.com/watch?v=UVpYJhM-RpQ",
     "published": "2026-05-29"
+  },
+  {
+    "id": "HuuDH6L_JzM",
+    "title": "Punk (Ingrid) vs. Levihakai (Elena) - Grand Final - US East 1 - World Warrior 2026",
+    "channel": "Capcom Fighters",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=HuuDH6L_JzM",
+    "published": "2026-06-17"
+  },
+  {
+    "id": "9OFgdvcPH3Q",
+    "title": "[Street Fighter 6] Ingrid's 18 Best Combos and Set Plays",
+    "channel": "ミダ猫のゲーム動画",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=9OFgdvcPH3Q",
+    "published": "2026-05-30"
+  },
+  {
+    "id": "n3SRVhCrvno",
+    "title": "SF6: Ingrid Tech — Meaties, Safe Jumps, Side Switches, DI Resets",
+    "channel": "Killerex100",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=n3SRVhCrvno",
+    "published": "2026-05-29"
+  },
+  {
+    "id": "uUwAfxvrxo4",
+    "title": "イングリッド対戦動画を確認するどぐら：ビームの高火力を検証",
+    "channel": "どぐら 生駒デビル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=uUwAfxvrxo4",
+    "published": "2026-05-22"
   }
 ] as const;
 
