@@ -180,12 +180,20 @@ const candidates = [
     "published": "2026-05-22"
   },
   {
-    "id": "DTrKXwhHLuo",
-    "title": "『ストリートファイター6』イングリッド ティザートレーラー",
-    "channel": "CapcomChannel",
-    "kind": "guide",
-    "source": "https://www.4gamer.net/games/635/G063504/20260403001/",
-    "published": "2026-04-03"
+    "id": "Ts0QlLNkoGI",
+    "title": "レジェ帯でMRを爆盛りするイングリッド",
+    "channel": "勇者きょーすけの配信",
+    "kind": "match",
+    "source": "https://yutura.net/channel/167116/video/Ts0QlLNkoGI/",
+    "published": "2026-09-08"
+  },
+  {
+    "id": "So068YOIB8c",
+    "title": "【スト６】新キャラ・イングリッドを使ってみる",
+    "channel": "かずのこチャンネル",
+    "kind": "match",
+    "source": "https://yutura.net/channel/20381/trend/So068YOIB8c/",
+    "published": "2026-05-28"
   }
 ] as const;
 
