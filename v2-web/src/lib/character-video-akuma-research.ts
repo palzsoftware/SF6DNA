@@ -256,6 +256,22 @@ const candidates = [
     "kind": "guide",
     "source": "https://yutura.net/channel/13246/popular/B6T4KRc4fxw/",
     "counterTarget": null
+  },
+  {
+    "id": "t8YSPUmjgeI",
+    "title": "sakoによる豪鬼対策・斬空の対処法",
+    "channel": "sakonoko_game",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=t8YSPUmjgeI",
+    "counterTarget": "akuma"
+  },
+  {
+    "id": "3UzqIJNNWzE",
+    "title": "豪鬼の起き攻めセットプレイ最新版まとめ（2024年当時）",
+    "channel": "スト6攻略備忘録チャンネル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=3UzqIJNNWzE",
+    "counterTarget": null
   }
 ] as const;
 
