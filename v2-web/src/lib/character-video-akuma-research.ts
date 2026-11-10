@@ -320,6 +320,38 @@ const candidates = [
     "kind": "counter",
     "source": "https://www.youtube.com/watch?v=qNtPFSHVsYQ",
     "counterTarget": "akuma"
+  },
+  {
+    "id": "ekE-aAm70JI",
+    "title": "豪鬼 知っておきたいセットプレイをおさらい② 初中級者向け",
+    "channel": "yoriの天敵 Gameちゃんねる",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=ekE-aAm70JI",
+    "counterTarget": null
+  },
+  {
+    "id": "KBQtF76Zvic",
+    "title": "豪鬼 とりこれコンボとセットプレイ徹底解説",
+    "channel": "いおりチャンネル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=KBQtF76Zvic",
+    "counterTarget": null
+  },
+  {
+    "id": "POdewS08jZk",
+    "title": "豪鬼が使う全ての通常技の性能を解説するシュート",
+    "channel": "しゅーとチャンネル / Shuto",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=POdewS08jZk",
+    "counterTarget": null
+  },
+  {
+    "id": "UJO-EcL9b8c",
+    "title": "ケン視点の対豪鬼 波動拳へのジャストパリィとOD波動拳",
+    "channel": "おらりん",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=UJO-EcL9b8c",
+    "counterTarget": "akuma"
   }
 ] as const;
 
