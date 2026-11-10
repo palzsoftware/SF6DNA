@@ -175,6 +175,104 @@ const candidates = [
     "channel": "なるおのひとりでできるもん",
     "kind": "match",
     "source": "https://yutura.net/channel/98960/popular/sv3ZchxWMEE/"
+  },
+  {
+    "id": "v6ON98Lr6hM",
+    "title": "SF6 Cammy Combo Guide - BEST combos for season 3",
+    "channel": "MOTHMAN",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=v6ON98Lr6hM"
+  },
+  {
+    "id": "ihSFM1gSdNg",
+    "title": "SF6 Cammy Guide - How to play Cammy",
+    "channel": "iZonk Gaming",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=ihSFM1gSdNg"
+  },
+  {
+    "id": "Miag9zpaW_Q",
+    "title": "Cammy Combo Guide - Street Fighter 6",
+    "channel": "rooflemonger",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=Miag9zpaW_Q"
+  },
+  {
+    "id": "1r0P1oXEFvo",
+    "title": "空星きらめのキャミィ練習・かずのこ＆あきらコーチング元配信",
+    "channel": "空星きらめ",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=1r0P1oXEFvo"
+  },
+  {
+    "id": "3brFe5YD4K4",
+    "title": "折咲もしゅ キャミィあきらコーチング4回目",
+    "channel": "折咲もしゅ",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/3brFe5YD4K4"
+  },
+  {
+    "id": "GgbjO8MKxu0",
+    "title": "折咲もしゅ キャミィあきらコーチング3回目",
+    "channel": "折咲もしゅ",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/GgbjO8MKxu0"
+  },
+  {
+    "id": "KzABu4gFz_o",
+    "title": "折咲もしゅ Mキャミィ RFN4練習＆スクリム",
+    "channel": "折咲もしゅ",
+    "kind": "match",
+    "source": "https://ckworks.jp/vinforadar/video/KzABu4gFz_o"
+  },
+  {
+    "id": "ORq8CC2fLho",
+    "title": "折咲もしゅ Mキャミィ マスターチャレンジ",
+    "channel": "折咲もしゅ",
+    "kind": "match",
+    "source": "https://ckworks.jp/vinforadar/video/ORq8CC2fLho"
+  },
+  {
+    "id": "gKMyVDLDDXc",
+    "title": "SF6 Cammy Rookie To Master Rank Up Guide",
+    "channel": "Akaraien",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=gKMyVDLDDXc"
+  },
+  {
+    "id": "zN7UaBCaT_w",
+    "title": "Cammy Tips & Tricks Guide - Street Fighter 6",
+    "channel": "rooflemonger",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=zN7UaBCaT_w"
+  },
+  {
+    "id": "OYvkiHx0lkw",
+    "title": "春麗軍 vs キャミィ軍 7on7 対抗戦",
+    "channel": "ハイタニ TV",
+    "kind": "match",
+    "source": "https://yutura.net/channel/55522/video/OYvkiHx0lkw/"
+  },
+  {
+    "id": "ECi5x_RUgS4",
+    "title": "Mキャミィで深夜のランクマ挑戦",
+    "channel": "柚原いづみ",
+    "kind": "match",
+    "source": "https://ckworks.jp/vinforadar/video/ECi5x_RUgS4"
+  },
+  {
+    "id": "yh_YDwDyrlg",
+    "title": "Mキャミィ マスターチャレンジ Part2",
+    "channel": "銀棘ぐみ",
+    "kind": "match",
+    "source": "https://ckworks.jp/vinforadar/video/yh_YDwDyrlg"
+  },
+  {
+    "id": "eEdFCbSnDEw",
+    "title": "Mキャミィ vs クラシック操作対戦集",
+    "channel": "切り抜きチャンネル",
+    "kind": "match",
+    "source": "https://ckworks.jp/vinforadar/video/kirinuki/eEdFCbSnDEw"
   }
 ] as const;
 export const CHARACTER_VIDEO_CAMMY_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
