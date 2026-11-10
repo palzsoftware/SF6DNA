@@ -234,6 +234,22 @@ const candidates = [
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=xOfY-shPsPw",
     "published": "2026-06-05"
+  },
+  {
+    "id": "X_8DBIwexDo",
+    "title": "MR2000の猛者イングリッドをレジェンドがコーチングしてみた！！！勝つために重要な考え方とは？",
+    "channel": "勇者きょーすけの配信",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/167116/video/X_8DBIwexDo/",
+    "published": "2026-11-07"
+  },
+  {
+    "id": "iqCqhmqh4wo",
+    "title": "【限界突破】イングリッドでついにMR2200達成！！！宇宙規模のポテンシャルを見よ！！！",
+    "channel": "勇者きょーすけの配信",
+    "kind": "match",
+    "source": "https://yutura.net/channel/167116/video/iqCqhmqh4wo/",
+    "published": "2026-10-09"
   }
 ] as const;
 
