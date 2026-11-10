@@ -189,6 +189,34 @@ const candidates = [
     "channel": "卯埜らび / Rabi Uno",
     "kind": "guide",
     "source": "https://yutura.net/channel/113399/video/0bB_SgPwplU/"
+  },
+  {
+    "id": "3PRlt5v8PmA",
+    "title": "Before You Main! A SF6 Guide to Sagat",
+    "channel": "TheYukster",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=3PRlt5v8PmA"
+  },
+  {
+    "id": "l50j2Dr2G6s",
+    "title": "Sagat Combo Guide for Street Fighter 6",
+    "channel": "iZonk Gaming",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=l50j2Dr2G6s"
+  },
+  {
+    "id": "Kmq0DDk0FAE",
+    "title": "マゴがメインキャラ候補としてサガットを使い始める",
+    "channel": "マゴ /MAGO",
+    "kind": "match",
+    "source": "https://yutura.net/channel/74045/video/Kmq0DDk0FAE/"
+  },
+  {
+    "id": "jX6ZIfGVP-U",
+    "title": "テリー使いのサガット対策まとめ",
+    "channel": "holosokuのスト6攻略チャンネル",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=jX6ZIfGVP-U"
   }
 ] as const;
 export const CHARACTER_VIDEO_SAGAT_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
