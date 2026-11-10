@@ -272,6 +272,22 @@ const candidates = [
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=3UzqIJNNWzE",
     "counterTarget": null
+  },
+  {
+    "id": "7K_FohnZWpo",
+    "title": "STREET FIGHTER 6 AKUMA COMBOS Complete Combo Guide",
+    "channel": "VesperArcade",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=7K_FohnZWpo",
+    "counterTarget": null
+  },
+  {
+    "id": "CDtOPdRif2E",
+    "title": "Terry vs Akuma Match Up Guide",
+    "channel": "Singh Reviewing Things",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=CDtOPdRif2E",
+    "counterTarget": "akuma"
   }
 ] as const;
 
