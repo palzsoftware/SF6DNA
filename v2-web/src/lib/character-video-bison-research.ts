@@ -252,6 +252,34 @@ const candidates = [
     "channel": "どぐらのちょっとええ感じ",
     "kind": "guide",
     "source": "https://yutura.net/channel/115818/video/Lh9LmhOYt00/"
+  },
+  {
+    "id": "HOu9CQ-_MZM",
+    "title": "How to do THE M. Bison Combo in SF6",
+    "channel": "Lewis Hards",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=HOu9CQ-_MZM"
+  },
+  {
+    "id": "sv3ZchxWMEE",
+    "title": "なるお8キャラでマゴのベガに対戦・対策",
+    "channel": "なるおのひとりでできるもん",
+    "kind": "counter",
+    "source": "https://yutura.net/channel/98960/popular/sv3ZchxWMEE/"
+  },
+  {
+    "id": "9u3SIr0x8HA",
+    "title": "香港最強HotDog29 ベガの高レベル対戦集",
+    "channel": "昇龍拳",
+    "kind": "match",
+    "source": "https://yutura.net/channel/76337/video/9u3SIr0x8HA/"
+  },
+  {
+    "id": "WbUCOPEgi5g",
+    "title": "いおり LEGEND帯のベガ戦を含む対戦集",
+    "channel": "いおりチャンネル",
+    "kind": "match",
+    "source": "https://yutura.net/channel/75881/video/WbUCOPEgi5g/"
   }
 ] as const;
 
