@@ -258,6 +258,62 @@ const candidates = [
     "kind": "guide",
     "source": "https://yutura.net/channel/129246/popular/bSIyVWNfzyg/",
     "published": "2026-05-27"
+  },
+  {
+    "id": "98Eu1UWmFfo",
+    "title": "20 Grossly Vicious SA2 Setups & Combos for Ingrid [SF6]",
+    "channel": "ジェントル / 格ゲー研究会",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=98Eu1UWmFfo",
+    "published": "2026-05-31"
+  },
+  {
+    "id": "nQ6tcRElnfA",
+    "title": "Ingrid Combos - Street Fighter 6",
+    "channel": "Chato",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=nQ6tcRElnfA",
+    "published": "2026-05-29"
+  },
+  {
+    "id": "1spwdY-WnZE",
+    "title": "Street Fighter6 Year3 Ingrid ComboMovie",
+    "channel": "t2 satowa",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=1spwdY-WnZE",
+    "published": "2026-05-31"
+  },
+  {
+    "id": "7725Mx2Ax60",
+    "title": "【SF6】世界1位イングリッド！プルプルなぷるの高レベル対戦集",
+    "channel": "SF6-MODERN",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=7725Mx2Ax60",
+    "published": "2026-07-17"
+  },
+  {
+    "id": "PpMJBt0_9kw",
+    "title": "イングリッドでついに最高ランク「レジェンド」に到達。覚醒した立ち回りを見よ！！！",
+    "channel": "勇者きょーすけの配信",
+    "kind": "match",
+    "source": "https://yutura.net/channel/167116/video/PpMJBt0_9kw/",
+    "published": "2026-09-07"
+  },
+  {
+    "id": "gzmKQLKakuM",
+    "title": "【スト6】イングリッドでレジェンド目指して！",
+    "channel": "いおりチャンネル",
+    "kind": "match",
+    "source": "https://yutura.net/channel/75881/video/gzmKQLKakuM/",
+    "published": "2026-09-22"
+  },
+  {
+    "id": "UVpYJhM-RpQ",
+    "title": "Higuchi feels sick just thinking about the Ingrid vs. Guile matchup",
+    "channel": "ひぐちゃんねる",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=UVpYJhM-RpQ",
+    "published": "2026-05-29"
   }
 ] as const;
 
