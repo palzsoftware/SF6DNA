@@ -224,6 +224,22 @@ const candidates = [
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=koFGCTA9Vrs",
     "counterTarget": null
+  },
+  {
+    "id": "bD3eB-MEF7s",
+    "title": "豪鬼 コンボや起き攻めの先行入力フレーム練習動画",
+    "channel": "桜乃シャル(Vtuber)",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=bD3eB-MEF7s",
+    "counterTarget": null
+  },
+  {
+    "id": "5_DaC9-uXbo",
+    "title": "全キャラ対策② ハイスタンダード編 豪鬼対策を含む",
+    "channel": "SmashlogTV - SF6",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=5_DaC9-uXbo",
+    "counterTarget": "akuma"
   }
 ] as const;
 
