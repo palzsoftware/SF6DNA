@@ -140,6 +140,34 @@ const candidates = [
     "channel": "Capcom Fighters JP",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=yOseauyL0X4"
+  },
+  {
+    "id": "xWjPz1FufXU",
+    "title": "SF6 Mai Practical Combos and Okizeme (2025/08)",
+    "channel": "Sea Leaf Dojo",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=xWjPz1FufXU"
+  },
+  {
+    "id": "pM9KOJhhwTE",
+    "title": "SFL2026 あでりい エド vs マゴ 舞",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=pM9KOJhhwTE"
+  },
+  {
+    "id": "IBjBV9NxWeg",
+    "title": "もけ×ナウマン 舞の弱点と花蝶扇への回答",
+    "channel": "SmashlogTV - SF6",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=IBjBV9NxWeg"
+  },
+  {
+    "id": "o1vkmB5DjuE",
+    "title": "30秒でわかる舞対策",
+    "channel": "えだ",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=o1vkmB5DjuE"
   }
 ] as const;
 export const CHARACTER_VIDEO_MAI_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
