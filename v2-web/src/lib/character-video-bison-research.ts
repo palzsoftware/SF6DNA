@@ -280,6 +280,55 @@ const candidates = [
     "channel": "いおりチャンネル",
     "kind": "match",
     "source": "https://yutura.net/channel/75881/video/WbUCOPEgi5g/"
+  },
+  {
+    "id": "vbjHaptdYKU",
+    "title": "ラシード視点 ベガ対策 5分解説",
+    "channel": "4shika / Yoshika",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=vbjHaptdYKU"
+  },
+  {
+    "id": "c55VhLSvKR8",
+    "title": "どぐら ベガ会議後のランクマッチ",
+    "channel": "どぐら 生駒デビル",
+    "kind": "match",
+    "source": "https://yutura.net/channel/55594/trend/c55VhLSvKR8/"
+  },
+  {
+    "id": "7FihGFOQpBo",
+    "title": "SHAKAとおぼのスト6対戦総集編（ベガ登場）",
+    "channel": "SHAKA Ad Channel",
+    "kind": "match",
+    "source": "https://yutura.net/channel/71919/video/7FihGFOQpBo/"
+  },
+  {
+    "id": "oY6KGIzGh4c",
+    "title": "Year3 全キャラクター初心者おすすめランキング（ベガを含む）",
+    "channel": "SmashlogTV - SF6",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/86476/video/oY6KGIzGh4c/"
+  },
+  {
+    "id": "kk4UvLgx0eo",
+    "title": "SFL2026 らおやむ ベガ対JP戦の振り返り・インタビュー",
+    "channel": "ぶいすぽ暮らし",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/125402/video/kk4UvLgx0eo/"
+  },
+  {
+    "id": "bVnsj5MrPFk",
+    "title": "スト6 ベガ使用ゲーム配信",
+    "channel": "だのん / ゲーム配信",
+    "kind": "match",
+    "source": "https://yutura.net/channel/170154/popular/bVnsj5MrPFk/"
+  },
+  {
+    "id": "uelJZYSNAAg",
+    "title": "春麗がベガに挑む対戦ショート",
+    "channel": "シン・宮村優子ちゃんねる (仮)",
+    "kind": "match",
+    "source": "https://yutura.net/channel/135328/video/uelJZYSNAAg/"
   }
 ] as const;
 
