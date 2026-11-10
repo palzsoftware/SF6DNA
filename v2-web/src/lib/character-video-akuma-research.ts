@@ -144,6 +144,62 @@ const candidates = [
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=rhqvd28qmaQ",
     "counterTarget": null
+  },
+  {
+    "id": "-2_1PQXFQIA",
+    "title": "豪鬼の立ち回りから必須コンボまで！豪鬼の使い方解説 基本編",
+    "channel": "煌月ソウル【スト6解説】",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=-2_1PQXFQIA",
+    "counterTarget": null
+  },
+  {
+    "id": "JlTG66o2sUM",
+    "title": "豪鬼 実戦用 厳選コンボ 2026ver",
+    "channel": "Tamusin 3123",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=JlTG66o2sUM",
+    "counterTarget": null
+  },
+  {
+    "id": "GL5BEqEvTcs",
+    "title": "2026年対応版 豪鬼コンボ＆起き攻め完全ガイド",
+    "channel": "さわかぜの格ゲーチャンネル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=GL5BEqEvTcs",
+    "counterTarget": null
+  },
+  {
+    "id": "nYR3cV4EPv8",
+    "title": "15分で使える豪鬼講座 百鬼と斬空、強ワザの使い方",
+    "channel": "いおりチャンネル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=nYR3cV4EPv8",
+    "counterTarget": null
+  },
+  {
+    "id": "tPF5EfzgcRs",
+    "title": "ACQUA講座 豪鬼対策",
+    "channel": "ACQUA",
+    "kind": "counter",
+    "source": "https://acqua-souken.com/v/tPF5EfzgcRs/",
+    "counterTarget": "akuma"
+  },
+  {
+    "id": "-0plE29PtAo",
+    "title": "エド攻略 キャラ対策編 Part.1 豪鬼ほか複数キャラクター",
+    "channel": "魔王城",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=-0plE29PtAo",
+    "counterTarget": "akuma"
+  },
+  {
+    "id": "G8TiVdF8dx0",
+    "title": "レジェンドケンのいおり 超簡単全キャラ対策 豪鬼編含む",
+    "channel": "いおりチャンネル",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=G8TiVdF8dx0",
+    "counterTarget": "akuma"
   }
 ] as const;
 
