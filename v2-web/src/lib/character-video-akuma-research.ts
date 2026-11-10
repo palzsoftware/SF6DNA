@@ -128,6 +128,22 @@ const candidates = [
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=9Yks0MtCIZE",
     "counterTarget": null
+  },
+  {
+    "id": "v6APk7c2KLI",
+    "title": "Year4最新版 レジェンド豪鬼のコンボ＆起き攻めまとめ",
+    "channel": "南風カイ",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=v6APk7c2KLI",
+    "counterTarget": null
+  },
+  {
+    "id": "rhqvd28qmaQ",
+    "title": "10分ちょっとで分かるモダン豪鬼徹底解説",
+    "channel": "シラバイクロム",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=rhqvd28qmaQ",
+    "counterTarget": null
   }
 ] as const;
 
