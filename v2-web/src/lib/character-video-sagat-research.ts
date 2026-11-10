@@ -280,6 +280,34 @@ const candidates = [
     "channel": "志上ハジメ",
     "kind": "match",
     "source": "https://yutura.net/channel/56238/video/ARR5F9ztsxk/"
+  },
+  {
+    "id": "ta-0jFArgtI",
+    "title": "2026版サガットコンボ・起き攻めの徹底解説",
+    "channel": "さわかぜの格ゲーチャンネル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=ta-0jFArgtI"
+  },
+  {
+    "id": "ONpbt2wugjY",
+    "title": "ぷげらによるMR1600サガットのリプレイコーチング",
+    "channel": "ぷげら pugera",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/111842/video/ONpbt2wugjY/"
+  },
+  {
+    "id": "ozgsqoG1bN4",
+    "title": "甘結もかのサガット練習配信",
+    "channel": "甘結もか",
+    "kind": "match",
+    "source": "https://yutura.net/channel/111609/video/ozgsqoG1bN4/"
+  },
+  {
+    "id": "ch659dOdyfI",
+    "title": "The Sagat Guide",
+    "channel": "Siberian Lab",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=ch659dOdyfI"
   }
 ] as const;
 export const CHARACTER_VIDEO_SAGAT_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
