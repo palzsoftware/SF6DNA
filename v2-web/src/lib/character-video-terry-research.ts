@@ -196,6 +196,48 @@ const candidates = [
     "channel": "きんちょ / kincho",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=QRHI46eWiDk"
+  },
+  {
+    "id": "YFFAILD2zyY",
+    "title": "EndingWalker（エド）vs きんちょ（テリー）",
+    "channel": "The King Arena",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=YFFAILD2zyY"
+  },
+  {
+    "id": "LGEKEvbptT4",
+    "title": "カワノ（豪鬼）vs きんちょ（テリー）",
+    "channel": "SF6 Replays Room",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=LGEKEvbptT4"
+  },
+  {
+    "id": "uTl2Lc5-MlE",
+    "title": "SFL2026 どぐら（エレナ）vs きんちょ（テリー）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=uTl2Lc5-MlE"
+  },
+  {
+    "id": "yPB0njAEjTU",
+    "title": "SFL2026 ヤマグチ（舞）vs きんちょ（テリー）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=yPB0njAEjTU"
+  },
+  {
+    "id": "OBfzwC_TK9M",
+    "title": "SFL2026 わびいち（テリー）vs 大谷（ルーク）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=OBfzwC_TK9M"
+  },
+  {
+    "id": "QnanF8nM-gU",
+    "title": "SFL2026 ぷげら（C.ヴァイパー）vs わびいち（テリー）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=QnanF8nM-gU"
   }
 ] as const;
 
