@@ -346,6 +346,38 @@ const candidates = [
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=uUwAfxvrxo4",
     "published": "2026-05-22"
+  },
+  {
+    "id": "-jafa-_SrZ0",
+    "title": "【SF6】世界1位イングリッド！もみぢの高レベル対戦",
+    "channel": "SF6-MODERN",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=-jafa-_SrZ0",
+    "published": "2026-07-19"
+  },
+  {
+    "id": "IglhQhCzcjw",
+    "title": "Punk (Ingrid) vs Space Boy (Mai) - SF6 High Level Gameplay",
+    "channel": "The FGC Place",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=IglhQhCzcjw",
+    "published": "2026-06-09"
+  },
+  {
+    "id": "pxHbtHpAnFY",
+    "title": "Kawano (Ingrid) vs Hinao (Ingrid) - Mirror Match",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=pxHbtHpAnFY",
+    "published": "2026-06-09"
+  },
+  {
+    "id": "-dG4O8NGf4A",
+    "title": "Kosaku (Elena) vs Kawano (Ingrid) - High Level Gameplay",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=-dG4O8NGf4A",
+    "published": "2026-06-10"
   }
 ] as const;
 
