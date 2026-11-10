@@ -721,7 +721,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "b3f67376-cb75-4b44-8b2d-ef50058a1b98",
+        "playerSlug": "ryukichi",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "7847d0ac-4911-4062-9a1e-0b140de1aaef",
+        "playerSlug": "ryukichi",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "7a90ef97-9573-40e9-b2ad-10dbfcfc62af",
@@ -769,7 +783,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "7a90ef97-9573-40e9-b2ad-10dbfcfc62af",
+        "playerSlug": "fujimura",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+        "playerSlug": "fujimura",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "383d3822-4380-4a7e-abb0-dd2e1107e970",
@@ -813,7 +841,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "383d3822-4380-4a7e-abb0-dd2e1107e970",
+        "playerSlug": "moke",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "4567da1f-313c-4e33-9188-f0b6b40bd5ef",
+        "playerSlug": "moke",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "78d2c3bf-8074-4098-b152-607229b7aaac",
@@ -857,7 +899,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "78d2c3bf-8074-4098-b152-607229b7aaac",
+        "playerSlug": "bonchan",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "062106c7-faba-4351-864c-6d4247104d3c",
+        "playerSlug": "bonchan",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "b8123b68-73ab-47cd-8e96-66a19b742430",
@@ -889,7 +945,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "b8123b68-73ab-47cd-8e96-66a19b742430",
+        "playerSlug": "kazunoko",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+        "playerSlug": "kazunoko",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "8ee95472-918e-4e26-973f-229d013428bc",
@@ -921,7 +991,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "8ee95472-918e-4e26-973f-229d013428bc",
+        "playerSlug": "cosa",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40",
+        "playerSlug": "cosa",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "a7c857d1-688b-420d-bfa2-5182d3b7d007",
@@ -969,7 +1053,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "a7c857d1-688b-420d-bfa2-5182d3b7d007",
+        "playerSlug": "machabo",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+        "playerSlug": "machabo",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "0f15ca45-13d9-48c4-aec1-48f53b9ebec0",
@@ -1001,7 +1099,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "0f15ca45-13d9-48c4-aec1-48f53b9ebec0",
+        "playerSlug": "acqua",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "7e097cfa-f78d-4f34-8ec4-3b824fbe629b",
+        "playerSlug": "acqua",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "7764028a-a2a1-4521-9d71-f767cb23522d",
@@ -1033,7 +1145,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "7764028a-a2a1-4521-9d71-f767cb23522d",
+        "playerSlug": "yanai",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "550ff109-ebb9-49ca-9075-beda80781a2b",
+        "playerSlug": "yanai",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "53b40fa8-2fe7-4f68-8e81-6f60c61850f4",
@@ -1069,7 +1195,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "53b40fa8-2fe7-4f68-8e81-6f60c61850f4",
+        "playerSlug": "johnny",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "4cbf8a8c-b4d8-47f0-9d24-dae5fc75e98f",
+        "playerSlug": "johnny",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "ae0979da-221d-4103-a359-ab77e07e425c",
@@ -1121,7 +1261,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "ae0979da-221d-4103-a359-ab77e07e425c",
+        "playerSlug": "mago",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "acecad48-2087-4384-94c0-0797a679edf9",
+        "playerSlug": "mago",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "e55d5abe-c01b-4f34-b4a6-6a68875b10f9",
@@ -1165,7 +1319,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "e55d5abe-c01b-4f34-b4a6-6a68875b10f9",
+        "playerSlug": "mizuha",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "543994bb-8c4f-48df-9000-876ba1ede2dc",
+        "playerSlug": "mizuha",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "b873fd7a-8989-4012-af27-5048b973f880",
@@ -1189,7 +1357,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "b873fd7a-8989-4012-af27-5048b973f880",
+        "playerSlug": "wabiichi",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+        "playerSlug": "wabiichi",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
@@ -1233,7 +1415,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+        "playerSlug": "pugera",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+        "playerSlug": "pugera",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "8b2973ca-8f44-405e-b283-f18ebe8eb2af",
@@ -1265,7 +1461,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "8b2973ca-8f44-405e-b283-f18ebe8eb2af",
+        "playerSlug": "keib",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "59e8dc48-ce3b-4bb2-8ef3-b685988f3d34",
+        "playerSlug": "keib",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "50e69eec-324e-4a14-ab05-d4a17153d499",
@@ -1309,7 +1519,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "50e69eec-324e-4a14-ab05-d4a17153d499",
+        "playerSlug": "nauman",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "f53b36e7-978f-4920-b157-6124fc91b44a",
+        "playerSlug": "nauman",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "a9168dfc-4134-46fc-b133-5ba6c8c229c8",
@@ -1333,7 +1557,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "a9168dfc-4134-46fc-b133-5ba6c8c229c8",
+        "playerSlug": "seiya",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "7469e615-8c28-40f6-929f-3b01aec9d3f4",
+        "playerSlug": "seiya",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "35f872d6-5217-4ac5-8f5f-6cacfbd08671",
@@ -1357,7 +1595,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "35f872d6-5217-4ac5-8f5f-6cacfbd08671",
+        "playerSlug": "raoyamu",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "4980df9e-9c1c-440a-bead-f1a6bd55250e",
+        "playerSlug": "raoyamu",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "94514ef4-6035-4d16-8b7d-5b0b0e800efa",
@@ -1389,7 +1641,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "94514ef4-6035-4d16-8b7d-5b0b0e800efa",
+        "playerSlug": "otani",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "215f7aa3-8a4a-402c-be2a-49eac857b6b8",
+        "playerSlug": "otani",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "d04a2537-3071-4ee5-944b-6241d8422b8a",
@@ -1417,7 +1683,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "d04a2537-3071-4ee5-944b-6241d8422b8a",
+        "playerSlug": "mocchi",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "ab837dad-605a-41a2-9d5c-2fe4d6fe22d8",
+        "playerSlug": "mocchi",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "beb71f4d-8a13-4a75-8a76-d4b3dd869e87",
@@ -1465,7 +1745,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "beb71f4d-8a13-4a75-8a76-d4b3dd869e87",
+        "playerSlug": "daigo",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "877b2d79-a55a-4514-ae0e-4356d6d109a3",
+        "playerSlug": "daigo",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "42057adf-9dc1-422d-b991-867f140009f3",
@@ -1489,7 +1783,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "42057adf-9dc1-422d-b991-867f140009f3",
+        "playerSlug": "yas",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+        "playerSlug": "yas",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "b179dd80-e897-40a9-855f-5af4f3ac97ee",
@@ -1513,7 +1821,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "b179dd80-e897-40a9-855f-5af4f3ac97ee",
+        "playerSlug": "takagi",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "106e21de-1383-4dcb-ab09-4d0d7dc2c4ed",
+        "playerSlug": "takagi",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "ebbdd60b-d733-486f-b6e2-e61d35f19f17",
@@ -1537,7 +1859,21 @@
         }
       ]
     },
-    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+    "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。",
+    "identityVariants": [
+      {
+        "environment": "development",
+        "playerId": "ebbdd60b-d733-486f-b6e2-e61d35f19f17",
+        "playerSlug": "adelie",
+        "phase": "post_slug_migration"
+      },
+      {
+        "environment": "production",
+        "playerId": "50ff5be0-2e00-46f8-b9b2-2dbba268f7e6",
+        "playerSlug": "adelie",
+        "phase": "existing"
+      }
+    ]
   },
   {
     "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
