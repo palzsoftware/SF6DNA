@@ -200,6 +200,30 @@ const candidates = [
     "kind": "counter",
     "source": "https://www.youtube.com/watch?v=G8TiVdF8dx0",
     "counterTarget": "akuma"
+  },
+  {
+    "id": "QVcZRJhnuZQ",
+    "title": "豪鬼使うなら覚えたいコンボ達 初中級者向け",
+    "channel": "yoriの天敵 Gameちゃんねる",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=QVcZRJhnuZQ",
+    "counterTarget": null
+  },
+  {
+    "id": "jgdzilDnpXA",
+    "title": "豪鬼の使い方 初心者向けコンボ・技の使い方徹底解説",
+    "channel": "SmashlogTV - SF6",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=jgdzilDnpXA",
+    "counterTarget": null
+  },
+  {
+    "id": "koFGCTA9Vrs",
+    "title": "豪鬼によるモダン対策の初歩を学ぶ",
+    "channel": "yoriの天敵 Gameちゃんねる",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=koFGCTA9Vrs",
+    "counterTarget": null
   }
 ] as const;
 
