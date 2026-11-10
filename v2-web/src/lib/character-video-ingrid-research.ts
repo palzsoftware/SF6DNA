@@ -66,6 +66,86 @@ const candidates = [
     "kind": "guide",
     "source": "https://yutura.net/channel/75881/video/I_pM4R_dO68/",
     "published": "2026-10-01"
+  },
+  {
+    "id": "6X6v4SKS-tQ",
+    "title": "『スト6』イングリッドが参戦！CPU対決・技表・コンボトライアル",
+    "channel": "電撃オンライン",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/1077/video/6X6v4SKS-tQ/",
+    "published": "2026-05-21"
+  },
+  {
+    "id": "Fb566Gy3YcU",
+    "title": "【202605ver】ストリートファイター6 イングリッド 基本コンボ",
+    "channel": "メノ(Meno)",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/60439/video/Fb566Gy3YcU/",
+    "published": "2026-05-28"
+  },
+  {
+    "id": "CRG2SuegGV8",
+    "title": "対イングリッド専用バッドエンドコンボを研究するカワノ",
+    "channel": "カワノKawano",
+    "kind": "counter",
+    "source": "https://yutura.net/channel/43075/trend/CRG2SuegGV8/",
+    "published": "2026-10-08"
+  },
+  {
+    "id": "91WWyC3AujQ",
+    "title": "イングリッド実装！高火力コンボや隠し要素を試すありけん",
+    "channel": "ありけん",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/16537/video/91WWyC3AujQ/",
+    "published": "2026-05-29"
+  },
+  {
+    "id": "kwWm8THVuPQ",
+    "title": "ぷげら（アルジュン）vs MT2 Impact（イングリッド）",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/kwWm8THVuPQ/",
+    "published": "2026-10-13"
+  },
+  {
+    "id": "d45cgkMXB5w",
+    "title": "かずのこ（アルジュン）vs こな76（イングリッド）",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/d45cgkMXB5w/",
+    "published": "2026-10-20"
+  },
+  {
+    "id": "_AlYZkqEB18",
+    "title": "かずのこ（アルジュン）vs オニキ（イングリッド）",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/_AlYZkqEB18/",
+    "published": "2026-10-19"
+  },
+  {
+    "id": "A1Ed4u7uaQM",
+    "title": "【スト6】イングリッド、実は超攻撃的キャラ！？調整後を使って対戦してみた",
+    "channel": "いおりチャンネル",
+    "kind": "match",
+    "source": "https://yutura.net/channel/75881/video/A1Ed4u7uaQM/",
+    "published": "2026-09-29"
+  },
+  {
+    "id": "ox0fkqsh7R4",
+    "title": "イングリッド最前線攻略所・実装初日の長時間研究配信",
+    "channel": "ACQUA",
+    "kind": "guide",
+    "source": "https://acqua-souken.com/live/ox0fkqsh7R4/",
+    "published": "2026-05-28"
+  },
+  {
+    "id": "HXEDttti3Rg",
+    "title": "【スト６】イングリッド触って対戦会がちでミリしらになりそうな件について",
+    "channel": "渡会雲雀",
+    "kind": "match",
+    "source": "https://www.youtube.com/live/HXEDttti3Rg",
+    "published": "2026-05-28"
   }
 ] as const;
 
