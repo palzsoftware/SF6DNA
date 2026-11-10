@@ -64,6 +64,70 @@ const candidates = [
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=TNXx-RHBF7E",
     "counterTarget": null
+  },
+  {
+    "id": "wfybyZfve8M",
+    "title": "ウメハラ豪鬼のコンボが進化した高レベル対戦",
+    "channel": "スト6 Best Legend Replays",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=wfybyZfve8M",
+    "counterTarget": null
+  },
+  {
+    "id": "hHD7cUdQ-tE",
+    "title": "ウメハラ豪鬼の新しい武器・コンボとランクマ",
+    "channel": "細かすぎて伝えたい梅原大吾",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=hHD7cUdQ-tE",
+    "counterTarget": null
+  },
+  {
+    "id": "UZADiO2hvh0",
+    "title": "新しい手応えを感じるウメハラ豪鬼の立ち回り",
+    "channel": "Daigo the BeasTV",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=UZADiO2hvh0",
+    "counterTarget": null
+  },
+  {
+    "id": "c5OQJHg28Dw",
+    "title": "ウメハラ豪鬼のコンボ選択と実戦研究",
+    "channel": "Daigo the BeasTV",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=c5OQJHg28Dw",
+    "counterTarget": null
+  },
+  {
+    "id": "fS-DHB4rvYk",
+    "title": "ウメハラ豪鬼MR2400突破・レジェンド1位",
+    "channel": "Daigo the BeasTV",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=fS-DHB4rvYk",
+    "counterTarget": null
+  },
+  {
+    "id": "ZM8KS_CUmuU",
+    "title": "ウメハラ豪鬼の対テリー逆転劇",
+    "channel": "Daigo the BeasTV",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=ZM8KS_CUmuU",
+    "counterTarget": null
+  },
+  {
+    "id": "bU8I3T9oLes",
+    "title": "豪鬼の調整案とコンボを考えるウメハラ",
+    "channel": "Daigo the BeasTV",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=bU8I3T9oLes",
+    "counterTarget": null
+  },
+  {
+    "id": "9Yks0MtCIZE",
+    "title": "ウメハラ豪鬼との対戦で対応を考えるACQUA",
+    "channel": "ACQUA",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=9Yks0MtCIZE",
+    "counterTarget": null
   }
 ] as const;
 
