@@ -99,6 +99,104 @@ const candidates = [
     "channel": "Itabashi Zangief",
     "kind": "guide",
     "source": "https://yutura.net/channel/143874/video/KgITtE8Agxg/"
+  },
+  {
+    "id": "B1-Dp1ZzV6g",
+    "title": "こばやん（ザンギエフ）世界1位の投げの暴力",
+    "channel": "SF6-MODERN",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=B1-Dp1ZzV6g"
+  },
+  {
+    "id": "DKaO4Dup2qs",
+    "title": "こばやん（ザンギエフ）恐怖の近距離戦",
+    "channel": "SF6-MODERN",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=DKaO4Dup2qs"
+  },
+  {
+    "id": "VCnN3DPdTPM",
+    "title": "Junior（ザンギエフ）世界1位の近距離戦",
+    "channel": "SF6-MODERN",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=VCnN3DPdTPM"
+  },
+  {
+    "id": "GQTZjWHEtww",
+    "title": "SF6: Zangief Combos + Hype!",
+    "channel": "desk",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=GQTZjWHEtww"
+  },
+  {
+    "id": "RbQztrP_Pcw",
+    "title": "SFL2026 カワノ（ルーク）対Jr.（ザンギエフ）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/RbQztrP_Pcw/"
+  },
+  {
+    "id": "uafn_f_IbYQ",
+    "title": "SFL2026 MenaRD（ルーク）対こばやん（ザンギエフ）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/uafn_f_IbYQ/"
+  },
+  {
+    "id": "elXo-r39uLU",
+    "title": "SFL2026 Seiya（春麗）対板橋ザンギエフ（ザンギエフ）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/elXo-r39uLU/"
+  },
+  {
+    "id": "JD2_NKqTxBI",
+    "title": "SFL2026 ひなお（サガット／リュウ）対板橋ザンギエフ（ザンギエフ）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/JD2_NKqTxBI/"
+  },
+  {
+    "id": "3bdPWvARRjw",
+    "title": "SFL2026 らおやむ（ベガ）対Jr.（ザンギエフ）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/3bdPWvARRjw/"
+  },
+  {
+    "id": "myH8vsW5C3o",
+    "title": "SFL2026 板橋ザンギエフ（ザンギエフ）対水派（キャミィ）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/myH8vsW5C3o/"
+  },
+  {
+    "id": "B7A1fzI0AU4",
+    "title": "SFL2026板橋ザンギエフの公式ハイライト",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/B7A1fzI0AU4/"
+  },
+  {
+    "id": "Q4roaJhhZjU",
+    "title": "ザンギエフExpert 2コンボトライアル参考",
+    "channel": "投稿者未確認",
+    "kind": "guide",
+    "source": "https://www.reddit.com/r/StreetFighter/comments/1n3gt5z"
+  },
+  {
+    "id": "kATfcH329_I",
+    "title": "ザンギエフExpert 3コンボトライアル参考",
+    "channel": "投稿者未確認",
+    "kind": "guide",
+    "source": "https://www.reddit.com/r/StreetFighter/comments/1n3gt5z"
+  },
+  {
+    "id": "60Ay_4arCFc",
+    "title": "EVOフランスのザンギ選手こばやん・板橋ザンギエフの解説",
+    "channel": "立川ちゃんねる",
+    "kind": "guide",
+    "source": "https://www.tubetre.com/videos/view/60Ay_4arCFc"
   }
 ] as const;
 export const CHARACTER_VIDEO_ZANGIEF_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
