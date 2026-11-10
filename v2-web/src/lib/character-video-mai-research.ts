@@ -308,6 +308,27 @@ const candidates = [
     "channel": "紫宮るな",
     "kind": "counter",
     "source": "https://www.youtube.com/watch?v=2nN4kqb8520"
+  },
+  {
+    "id": "rBDKs_mJo1I",
+    "title": "舞の使い方：コンボ・地上戦・花蝶扇・起き攻め",
+    "channel": "B",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=rBDKs_mJo1I"
+  },
+  {
+    "id": "wTDVQxLclsk",
+    "title": "今夜勝ちたい人のためのモダン舞の使い方4選",
+    "channel": "ずんだもんふぁいたーch",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=wTDVQxLclsk"
+  },
+  {
+    "id": "RJR0k7baO6U",
+    "title": "キンバリー視点の舞対策",
+    "channel": "隼「スト6」",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=RJR0k7baO6U"
   }
 ] as const;
 export const CHARACTER_VIDEO_MAI_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
