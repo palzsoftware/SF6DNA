@@ -194,6 +194,14 @@ const candidates = [
     "kind": "match",
     "source": "https://yutura.net/channel/20381/trend/So068YOIB8c/",
     "published": "2026-05-28"
+  },
+  {
+    "id": "yMT_fWXdqaA",
+    "title": "【完全解説】最終レジェイングリッドがキャラ相性表と対戦攻略を解説",
+    "channel": "勇者きょーすけの配信",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/167116/video/yMT_fWXdqaA/",
+    "published": "2026-11-09"
   }
 ] as const;
 
