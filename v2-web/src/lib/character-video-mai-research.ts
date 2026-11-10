@@ -168,6 +168,41 @@ const candidates = [
     "channel": "えだ",
     "kind": "counter",
     "source": "https://www.youtube.com/watch?v=o1vkmB5DjuE"
+  },
+  {
+    "id": "E6UhDZaVo3U",
+    "title": "SFL2026 KEI.B 舞 vs わびいち テリー",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=E6UhDZaVo3U"
+  },
+  {
+    "id": "DXjs7uddpJU",
+    "title": "Mai Shiranui Ultimate Starter Guide",
+    "channel": "rooflemonger",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=DXjs7uddpJU"
+  },
+  {
+    "id": "R-wjKWyb24U",
+    "title": "テリー視点の舞対策：花蝶扇・画面端・確定反撃",
+    "channel": "holosokuのスト6攻略チャンネル",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=R-wjKWyb24U"
+  },
+  {
+    "id": "YTujuiyij9c",
+    "title": "マゴ 舞 vs ウメハラ 豪鬼",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=YTujuiyij9c"
+  },
+  {
+    "id": "jXPG3v8kgm4",
+    "title": "KIDO アルジュン vs もけ 舞",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=jXPG3v8kgm4"
   }
 ] as const;
 export const CHARACTER_VIDEO_MAI_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
