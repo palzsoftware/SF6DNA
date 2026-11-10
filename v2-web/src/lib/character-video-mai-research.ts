@@ -259,6 +259,55 @@ const candidates = [
     "channel": "PlayStation Japan",
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=S4jHKaCg4rc"
+  },
+  {
+    "id": "9waoRzuPD0o",
+    "title": "ハイタニによる舞の花蝶扇対策・防御方針",
+    "channel": "ハイタニ TV",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=9waoRzuPD0o"
+  },
+  {
+    "id": "jm-Tgn5BHkE",
+    "title": "TOPANGA TV マゴが舞の弱点と花蝶扇対策を解説",
+    "channel": "mago",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=jm-Tgn5BHkE"
+  },
+  {
+    "id": "g_lWcNT4xqc",
+    "title": "舞の実戦基礎コンボ解説 通常編",
+    "channel": "あかさか ゆっくり実況",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=g_lWcNT4xqc"
+  },
+  {
+    "id": "nmJ9W-YB_q0",
+    "title": "舞の花蝶扇対策まとめ 初心者向け解説",
+    "channel": "戦闘民族ずんだもん",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=nmJ9W-YB_q0"
+  },
+  {
+    "id": "Oxz-RHX4sf0",
+    "title": "舞まだまだ強いか？ 新環境での舞実戦",
+    "channel": "いおりチャンネル",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=Oxz-RHX4sf0"
+  },
+  {
+    "id": "i2D8tttwYKc",
+    "title": "紫宮るな 舞対策のコーチングと対戦切り抜き",
+    "channel": "さくっと切り抜き",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=i2D8tttwYKc"
+  },
+  {
+    "id": "2nN4kqb8520",
+    "title": "紫宮るな 舞対策のコーチング元配信",
+    "channel": "紫宮るな",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=2nN4kqb8520"
   }
 ] as const;
 export const CHARACTER_VIDEO_MAI_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
