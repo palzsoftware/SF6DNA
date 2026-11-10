@@ -245,6 +245,20 @@ const candidates = [
     "channel": "小路KOG",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=wy64YtrHaBE"
+  },
+  {
+    "id": "Pa56fZFXaVc",
+    "title": "ACQUA×ハメコ 舞の使い方徹底解説",
+    "channel": "SmashlogTV - SF6",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=Pa56fZFXaVc"
+  },
+  {
+    "id": "S4jHKaCg4rc",
+    "title": "公式舞キャラクターガイド 日本語版",
+    "channel": "PlayStation Japan",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=S4jHKaCg4rc"
   }
 ] as const;
 export const CHARACTER_VIDEO_MAI_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
