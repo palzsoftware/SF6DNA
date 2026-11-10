@@ -231,6 +231,27 @@ const candidates = [
     "channel": "ぶいすぽ暮らし",
     "kind": "guide",
     "source": "https://yutura.net/channel/125402/video/LFmPkskwW6Y/"
+  },
+  {
+    "id": "5e-Jw-48Hj8",
+    "title": "実用的！ヴァイパー使いの悩みを捌きまくるChatPGR",
+    "channel": "ぷげら pugera",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/111842/video/5e-Jw-48Hj8/"
+  },
+  {
+    "id": "edPoRFtwgxE",
+    "title": "上位ヴァイパーのリプレイ見てみる",
+    "channel": "うりょ",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/141424/video/edPoRFtwgxE/"
+  },
+  {
+    "id": "WbUCOPEgi5g",
+    "title": "いおり配信のLEGEND帯対戦まとめ（00:58:26 C.ヴァイパー戦）",
+    "channel": "いおりチャンネル",
+    "kind": "match",
+    "source": "https://yutura.net/channel/75881/video/WbUCOPEgi5g/"
   }
 ] as const;
 export const CHARACTER_VIDEO_C_VIPER_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
