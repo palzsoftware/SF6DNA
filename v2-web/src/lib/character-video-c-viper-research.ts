@@ -203,6 +203,34 @@ const candidates = [
     "channel": "Stremphoenix",
     "kind": "match",
     "source": "https://yutura.net/channel/56626/video/ECDx7XOmBXA/"
+  },
+  {
+    "id": "EtOH8v9CYCk",
+    "title": "SFL2026 ふ～ど（C.ヴァイパー）vs 大谷（ルーク）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/EtOH8v9CYCk/"
+  },
+  {
+    "id": "jaa-yqsYi_k",
+    "title": "ハイタニがふ～どヴァイパー対大谷戦を解説",
+    "channel": "ハイタニ TV",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/55522/video/jaa-yqsYi_k/"
+  },
+  {
+    "id": "YAyjmKbVd38",
+    "title": "ふ～ど（C.ヴァイパー）vs ウメハラ（豪鬼）",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/YAyjmKbVd38/"
+  },
+  {
+    "id": "LFmPkskwW6Y",
+    "title": "SFL2026 ふ～どインタビュー・ヴァイパーの戦い方（3:32〜）",
+    "channel": "ぶいすぽ暮らし",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/125402/video/LFmPkskwW6Y/"
   }
 ] as const;
 export const CHARACTER_VIDEO_C_VIPER_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
