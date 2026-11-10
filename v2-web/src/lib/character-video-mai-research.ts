@@ -105,6 +105,41 @@ const candidates = [
     "channel": "Capcom Fighters JP",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=GCy88rhmgbk"
+  },
+  {
+    "id": "YUUwamdJnd8",
+    "title": "SFL2026 ナウマン 舞 vs ときど JP",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=YUUwamdJnd8"
+  },
+  {
+    "id": "GOJvwSFRuRo",
+    "title": "SFL2026 ボンちゃん サガット vs もけ 舞",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=GOJvwSFRuRo"
+  },
+  {
+    "id": "UaI4L_OZQnc",
+    "title": "SFL2026 もけ 舞 vs ひびき リリー",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=UaI4L_OZQnc"
+  },
+  {
+    "id": "Fp_A_VA_D7k",
+    "title": "SFL2026 大谷 ケン vs KEI.B 舞",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=Fp_A_VA_D7k"
+  },
+  {
+    "id": "yOseauyL0X4",
+    "title": "SFL2026 さはら エド vs マゴ 舞",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=yOseauyL0X4"
   }
 ] as const;
 export const CHARACTER_VIDEO_MAI_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
