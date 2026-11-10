@@ -168,6 +168,27 @@ const candidates = [
     "channel": "Stremphoenix",
     "kind": "match",
     "source": "https://yutura.net/channel/56626/video/6jazofn8Ao8/"
+  },
+  {
+    "id": "zkG6wjLucac",
+    "title": "SF6: Sagat SA2 Setups",
+    "channel": "Killerex100",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=zkG6wjLucac"
+  },
+  {
+    "id": "zs2BFZMe3OU",
+    "title": "公式日本語サガットキャラクターガイド",
+    "channel": "CapcomChannel",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=zs2BFZMe3OU"
+  },
+  {
+    "id": "0bB_SgPwplU",
+    "title": "サガットのクラシックコンボ練習配信",
+    "channel": "卯埜らび / Rabi Uno",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/113399/video/0bB_SgPwplU/"
   }
 ] as const;
 export const CHARACTER_VIDEO_SAGAT_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
