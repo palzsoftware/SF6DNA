@@ -308,6 +308,27 @@ const candidates = [
     "channel": "Siberian Lab",
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=ch659dOdyfI"
+  },
+  {
+    "id": "BekVnXPcsyQ",
+    "title": "ボンちゃん（サガット）vs どぐら（イングリッド）",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=BekVnXPcsyQ"
+  },
+  {
+    "id": "dnKIAK1gdks",
+    "title": "Bonchan（サガット）vs Orarin（ケン）高レベル対戦",
+    "channel": "The FGC Place",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=dnKIAK1gdks"
+  },
+  {
+    "id": "zb02JPPgsrg",
+    "title": "ボンちゃん（サガット）vs 板橋ザンギエフ（ザンギエフ）",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=zb02JPPgsrg"
   }
 ] as const;
 export const CHARACTER_VIDEO_SAGAT_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
