@@ -1,5 +1,6 @@
 import { CHARACTER_VIDEO_INGRID_RESEARCH } from "@/lib/character-video-ingrid-research";
 import { CHARACTER_VIDEO_YASMINE_RESEARCH } from "@/lib/character-video-yasmine-research";
+import { CHARACTER_VIDEO_ARJUN_RESEARCH } from "@/lib/character-video-arjun-research";
 import { CHARACTER_VIDEO_ALEX_RESEARCH } from "@/lib/character-video-alex-research";
 import { CHARACTER_VIDEO_C_VIPER_RESEARCH } from "@/lib/character-video-c-viper-research";
 import { CHARACTER_VIDEO_SAGAT_RESEARCH } from "@/lib/character-video-sagat-research";
@@ -674,6 +675,7 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   "alex": [...(CHARACTER_VIDEO_BATCH_06["alex"] ?? []), ...CHARACTER_VIDEO_ALEX_RESEARCH],
   "ingrid": [...(CHARACTER_VIDEO_BATCH_06["ingrid"] ?? []), ...CHARACTER_VIDEO_INGRID_RESEARCH],
   "yasmine": [...(CHARACTER_VIDEO_BATCH_06["yasmine"] ?? []), ...CHARACTER_VIDEO_YASMINE_RESEARCH],
+  "arjun": [...(CHARACTER_VIDEO_BATCH_06["arjun"] ?? []), ...CHARACTER_VIDEO_ARJUN_RESEARCH],
   "e-honda": [...(CHARACTER_VIDEO_BATCH_03["e-honda"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["e-honda"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["e-honda"] ?? []), ...CHARACTER_VIDEO_HONDA_RESEARCH],
   "dee-jay": [...(CHARACTER_VIDEO_BATCH_03["dee-jay"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["dee-jay"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["dee-jay"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_FOLLOWUP["dee-jay"] ?? []), ...CHARACTER_VIDEO_DEEJAY_RESEARCH],
   "manon": [...(CHARACTER_VIDEO_BATCH_03["manon"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["manon"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["manon"] ?? []), ...CHARACTER_VIDEO_MANON_RESEARCH],
