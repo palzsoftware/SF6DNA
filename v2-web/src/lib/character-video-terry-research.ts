@@ -252,6 +252,48 @@ const candidates = [
     "channel": "Capcom Fighters JP",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=E6UhDZaVo3U"
+  },
+  {
+    "id": "CkdofwH4on8",
+    "title": "きんちょ Cテリー コンボ・セットプレイ解説",
+    "channel": "きんちょ / kincho",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=CkdofwH4on8"
+  },
+  {
+    "id": "JS92IsKuNjc",
+    "title": "きんちょ モダンテリーの使い方・コンボ",
+    "channel": "きんちょ / kincho",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=JS92IsKuNjc"
+  },
+  {
+    "id": "vMuVlQrIG7o",
+    "title": "電撃オンライン スト6テリー初心者向け解説",
+    "channel": "電撃オンライン",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=vMuVlQrIG7o"
+  },
+  {
+    "id": "st47D1CJc2o",
+    "title": "モダンテリー コンボと起き攻め",
+    "channel": "ペインポソ",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=st47D1CJc2o"
+  },
+  {
+    "id": "EtqBPPtSBl0",
+    "title": "5 Tips on How to Beat Terry Bogard",
+    "channel": "Depressed Gamer",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=EtqBPPtSBl0"
+  },
+  {
+    "id": "jz2tlA9u93g",
+    "title": "きんちょ テリー練習配信 #405",
+    "channel": "きんちょ / kincho",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=jz2tlA9u93g"
   }
 ] as const;
 
