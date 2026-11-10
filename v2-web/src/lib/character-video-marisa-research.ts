@@ -175,6 +175,78 @@ const candidates = [
     "Shutoがマリーザでランクマッチ対戦",
     "しゅーとチャンネル / Shuto",
     "match"
+  ],
+  [
+    "1UCX7kejiA8",
+    "配信者マリーザ王決定戦",
+    "ドズル社",
+    "match"
+  ],
+  [
+    "0RS2a_dUKas",
+    "マスター帯のマリーザ高火力コンボ・対戦集",
+    "白熊Baller",
+    "match"
+  ],
+  [
+    "9f2YT4KwGWY",
+    "ハイタニがマリーザの新コンボを検証",
+    "ハイタニ TV",
+    "guide"
+  ],
+  [
+    "pHg31TQiZ70",
+    "シュートがマリーザの新しい対空方法を研究",
+    "しゅーとチャンネル / Shuto",
+    "guide"
+  ],
+  [
+    "2pXg2ve5PQU",
+    "アプデ後のマリーザを徹底チェック",
+    "アゴアニキ",
+    "guide"
+  ],
+  [
+    "j2hta4G_u1k",
+    "っぱマリーザってわけ：リハビリランクマ",
+    "アゴアニキ",
+    "match"
+  ],
+  [
+    "tcRES5L8Hfk",
+    "アゴアニキのハーフハート・コンボ研究",
+    "アゴアニキ",
+    "guide"
+  ],
+  [
+    "G0Zpis_UMwM",
+    "板橋ザンギエフ（マリーザ）vs ひぐち（ガイル）",
+    "Stremphoenix",
+    "match"
+  ],
+  [
+    "78VWglF_p1Y",
+    "シュート（マリーザ）vs ひぐち（ガイル）",
+    "Stremphoenix",
+    "match"
+  ],
+  [
+    "zy1Ao4001MM",
+    "Nemo（JP）vs Shuto（マリーザ）",
+    "The FGC Place",
+    "match"
+  ],
+  [
+    "hYpxY2qardw",
+    "TS（豪鬼）vs Shuto（マリーザ）",
+    "SF6 High Level Replays",
+    "match"
+  ],
+  [
+    "ir7RLXkhzSo",
+    "Shuto（舞）vs Zeno（マリーザ）",
+    "SF6 High Level Replays",
+    "match"
   ]
 ] as const;
 export const CHARACTER_VIDEO_MARISA_RESEARCH: VideoSummary[] = candidates.map(([id,title,channel,kind]): VideoSummary => ({
