@@ -678,10 +678,43 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   "jp": [...(CHARACTER_VIDEO_BATCH_01["jp"] ?? []), ...CHARACTER_VIDEO_DEEP_JP, ...CHARACTER_VIDEO_EXTRA_JP, ...edVsJpCounterVideos],
 };
 
+/** Multi-matchup research streams may appear as countermeasure candidates on every character.
+ * Their title does not prove coverage of every character, so that remains explicitly unverified.
+ * Keep the original research items; project a countermeasure view without mutating them. */
+const CROSS_CHARACTER_COUNTER_VIDEO_IDS = new Set([
+  "5uNmSR47C5k", // Dee Jay ranked-match stream discussing several matchups
+  "pZfbP3J9dWw", // Dee Jay training stream working through character matchups
+]);
+const crossCharacterCounterVideos = CHARACTER_VIDEO_DEEJAY_RESEARCH.filter(video => {
+  const id = video.url.match(/[?&]v=([A-Za-z0-9_-]{11})(?:&|$)/)?.[1];
+  return id ? CROSS_CHARACTER_COUNTER_VIDEO_IDS.has(id) : false;
+});
+
 export function getCharacterPreviewVideos(characterSlug: string): VideoSummary[] {
-  return [...(previewVideosByCharacter[characterSlug] ?? [])];
+  const original = previewVideosByCharacter[characterSlug];
+  if (!original) return [];
+  const description = "複数キャラクター対策を扱う配信候補です。このキャラの具体的な対策を含むか・該当時刻・現行Patch適合・再生可否は未確認です。";
+  const existingIds = new Set(original.map(video => video.url));
+  const relabel = (video: VideoSummary): VideoSummary => ({
+    ...video,
+    videoType: "counter",
+    categories: ["counter"],
+    description: `${description} ${video.description ?? ""}`,
+  });
+  const local = original.map(video =>
+    crossCharacterCounterVideos.some(candidate => candidate.url === video.url) ? relabel(video) : video
+  );
+  const shared = crossCharacterCounterVideos
+    .filter(video => !existingIds.has(video.url))
+    .map(video => ({
+      ...relabel(video),
+      id: `preview-${characterSlug}-multi-${video.url.match(/[?&]v=([A-Za-z0-9_-]{11})/)?.[1] ?? video.id}`,
+      slug: `preview-${characterSlug}-multi-${video.url.match(/[?&]v=([A-Za-z0-9_-]{11})/)?.[1] ?? video.id}`,
+      characters: original[0]?.characters ?? [],
+    }));
+  return [...local, ...shared];
 }
 
 export function getAllPreviewVideoCandidates(): VideoSummary[] {
-  return Object.values(previewVideosByCharacter).flatMap(videos => [...videos]);
+  return Object.keys(previewVideosByCharacter).flatMap(getCharacterPreviewVideos);
 }
