@@ -49,6 +49,13 @@ const candidates = [
     "channel": "獅白ぼたん",
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=uIp0RtZg_m0"
+  },
+  {
+    "id": "4rtacgNj7oY",
+    "title": "SFL第2節でヴァイパー出陣！カワノvsときどさんを振り返りながらチームの個人的MVPを語るぷげら",
+    "channel": "ぷげら pugera",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/111842/video/4rtacgNj7oY/"
   }
 ] as const;
 export const CHARACTER_VIDEO_C_VIPER_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
