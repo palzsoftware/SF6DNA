@@ -146,6 +146,46 @@ const candidates = [
     "kind": "match",
     "source": "https://www.youtube.com/live/HXEDttti3Rg",
     "published": "2026-05-28"
+  },
+  {
+    "id": "iyGSC0Vjk7w",
+    "title": "イングリッドでついに最終レジェ達成！限界突破した立ち回り",
+    "channel": "勇者きょーすけの配信",
+    "kind": "match",
+    "source": "https://yutura.net/channel/167116/video/iyGSC0Vjk7w/",
+    "published": "2026-11-05"
+  },
+  {
+    "id": "VBf4qf7fgtM",
+    "title": "調整後も貯まったら出すだけのドパキャラだったイングリッドの面白さに気づくストーム久保",
+    "channel": "ストーム久保",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/58286/video/VBf4qf7fgtM/",
+    "published": "2026-10-05"
+  },
+  {
+    "id": "ohQhirOyiIY",
+    "title": "【SF6】世界1位イングリッド！egutoの高レベル対戦集",
+    "channel": "SF6-MODERN",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=ohQhirOyiIY",
+    "published": "2026-06-01"
+  },
+  {
+    "id": "oQpgRncS2JU",
+    "title": "イングリッドの対戦動画が解禁されたので、早速海外から友達と見てみる",
+    "channel": "カワノKawano",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/43075/trend/oQpgRncS2JU/",
+    "published": "2026-05-22"
+  },
+  {
+    "id": "DTrKXwhHLuo",
+    "title": "『ストリートファイター6』イングリッド ティザートレーラー",
+    "channel": "CapcomChannel",
+    "kind": "guide",
+    "source": "https://www.4gamer.net/games/635/G063504/20260403001/",
+    "published": "2026-04-03"
   }
 ] as const;
 
