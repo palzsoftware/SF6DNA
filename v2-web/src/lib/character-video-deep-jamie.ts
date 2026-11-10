@@ -71,7 +71,7 @@ const candidates = [
     "title": "【スト6】勝率UP！ジェイミーのフレーム別起き攻め徹底解説！キャラ対策付！year3対応【ジェイミー】",
     "channel": "ぴゃんぴぃ",
     "date": "2025-07-29",
-    "kind": "counter"
+    "kind": "guide"
   },
   {
     "id": "-cOBtzBnh-0",
