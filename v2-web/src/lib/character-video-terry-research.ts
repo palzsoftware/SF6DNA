@@ -238,6 +238,20 @@ const candidates = [
     "channel": "Capcom Fighters JP",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=QnanF8nM-gU"
+  },
+  {
+    "id": "KQQxU_8oECA",
+    "title": "Combo Breaker 2026 ガチくん（ラシード）vs きんちょ（テリー）",
+    "channel": "The King Arena",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=KQQxU_8oECA"
+  },
+  {
+    "id": "E6UhDZaVo3U",
+    "title": "SFL2026 KEI.B（舞）vs わびいち（テリー）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=E6UhDZaVo3U"
   }
 ] as const;
 
