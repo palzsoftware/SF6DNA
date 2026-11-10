@@ -1,3 +1,4 @@
+import { CHARACTER_VIDEO_AKI_RESEARCH } from "@/lib/character-video-aki-research";
 import { CHARACTER_VIDEO_RASHID_RESEARCH } from "@/lib/character-video-rashid-research";
 import type { VideoSummary } from "@/lib/event-media";
 import { CHARACTER_VIDEO_CAMMY_RESEARCH } from "@/lib/character-video-cammy-research";
@@ -644,7 +645,7 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   "lily": [...(CHARACTER_VIDEO_BATCH_04["lily"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["lily"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["lily"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_FOLLOWUP["lily"] ?? []), ...CHARACTER_VIDEO_LILY_RESEARCH],
   "cammy": [...(CHARACTER_VIDEO_BATCH_04["cammy"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["cammy"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["cammy"] ?? []), ...CHARACTER_VIDEO_CAMMY_RESEARCH],
   "rashid": [...(CHARACTER_VIDEO_BATCH_04["rashid"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["rashid"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["rashid"] ?? []), ...CHARACTER_VIDEO_RASHID_RESEARCH],
-  "aki": [...(CHARACTER_VIDEO_BATCH_04["aki"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["aki"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["aki"] ?? [])],
+  "aki": [...(CHARACTER_VIDEO_BATCH_04["aki"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["aki"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["aki"] ?? []), ...CHARACTER_VIDEO_AKI_RESEARCH],
   "ed": [...(CHARACTER_VIDEO_BATCH_04["ed"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["ed"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["ed"] ?? [])],
   "dhalsim": [...(CHARACTER_VIDEO_BATCH_02["dhalsim"] ?? []), ...CHARACTER_VIDEO_DEEP_DHALSIM, ...CHARACTER_VIDEO_EXTRA_DHALSIM],
   "blanka": [...(CHARACTER_VIDEO_BATCH_02["blanka"] ?? []), ...CHARACTER_VIDEO_DEEP_BLANKA, ...CHARACTER_VIDEO_EXTRA_BLANKA],
