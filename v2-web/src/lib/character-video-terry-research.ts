@@ -133,6 +133,69 @@ const candidates = [
     "channel": "きんちょ / kincho",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=9Jy72mTaIiM"
+  },
+  {
+    "id": "xMJ83EBaCqE",
+    "title": "Cテリー 基礎コンボ キャンセルラッシュなし 2025年3月版",
+    "channel": "きんちょ / kincho",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=xMJ83EBaCqE"
+  },
+  {
+    "id": "6PLesaR5BZ8",
+    "title": "テリー博士きんちょ ODチャージの連携解説",
+    "channel": "きんちょ / kincho",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=6PLesaR5BZ8"
+  },
+  {
+    "id": "Dwv269tCNsk",
+    "title": "テリー博士きんちょ 視聴者の悩みを回答",
+    "channel": "きんちょ / kincho",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=Dwv269tCNsk"
+  },
+  {
+    "id": "YzuedpAiOq0",
+    "title": "SHAKAがテリーをトレモで研究",
+    "channel": "SHAKAファンの作業部屋",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=YzuedpAiOq0"
+  },
+  {
+    "id": "G8TiVdF8dx0",
+    "title": "いおりの全キャラ対策 テリー対策26:22から",
+    "channel": "いおりチャンネル",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=G8TiVdF8dx0"
+  },
+  {
+    "id": "0sEnbKqhcIY",
+    "title": "きんちょ SF6テリー練習配信 #416",
+    "channel": "きんちょ / kincho",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=0sEnbKqhcIY"
+  },
+  {
+    "id": "WWTDMBUaj1k",
+    "title": "きんちょ SF6テリー練習配信 #414",
+    "channel": "きんちょ / kincho",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=WWTDMBUaj1k"
+  },
+  {
+    "id": "IFX9gCyvz8k",
+    "title": "きんちょ SFL第6節振り返り",
+    "channel": "きんちょ / kincho",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=IFX9gCyvz8k"
+  },
+  {
+    "id": "QRHI46eWiDk",
+    "title": "きんちょ スト6テリー練習 #395",
+    "channel": "きんちょ / kincho",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=QRHI46eWiDk"
   }
 ] as const;
 
