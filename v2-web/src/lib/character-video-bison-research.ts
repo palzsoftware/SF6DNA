@@ -126,6 +126,97 @@ const candidates = [
     "channel": "スト6初心者応援チャンネル",
     "kind": "counter",
     "source": "https://sf6-genten.com/article/vega-matchup-year4-anti-vega-guide-ecu1"
+  },
+  {
+    "id": "M4oYhxGBH10",
+    "title": "ベガ コンボトライアル 初級・中級・上級まとめ",
+    "channel": "そーだらいと",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=M4oYhxGBH10"
+  },
+  {
+    "id": "zXLBrOrakSs",
+    "title": "ベガ 確定反撃お手軽高火力コンボ",
+    "channel": "inaGuile@攻めガイル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=zXLBrOrakSs"
+  },
+  {
+    "id": "MgEXr2aATz8",
+    "title": "10分で分かるモダンベガ徹底解説",
+    "channel": "シラバイクロム",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/73942/video/MgEXr2aATz8/"
+  },
+  {
+    "id": "qxScGvxo-90",
+    "title": "ベガの立ち回りから必須コンボまで 使い方解説",
+    "channel": "煌月ソウル",
+    "kind": "guide",
+    "source": "https://sf6-genten.com/article/vega-combo-to-master-kouzuki-soul"
+  },
+  {
+    "id": "MuPGfFo9H7Y",
+    "title": "モダンエド視点 ベガ対処方法を学ぶ常闇トワ",
+    "channel": "常闇トワ切り抜きch",
+    "kind": "counter",
+    "source": "https://yutura.net/channel/71216/video/MuPGfFo9H7Y/"
+  },
+  {
+    "id": "Osn3o0iDMp8",
+    "title": "レジェンドまでベガをやり込んだマゴによるベガ対策講座",
+    "channel": "マゴ /MAGO",
+    "kind": "counter",
+    "source": "https://yutura.net/channel/74045/video/Osn3o0iDMp8/"
+  },
+  {
+    "id": "KnLbFi-wn4g",
+    "title": "板橋アルジュン vs どぐら ベガ",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/KnLbFi-wn4g/"
+  },
+  {
+    "id": "QaFvfI5zZ7I",
+    "title": "カワノ アルジュン vs どぐら ベガ",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/QaFvfI5zZ7I/"
+  },
+  {
+    "id": "P6hFk1nHiA8",
+    "title": "どぐら ベガでJP戦を攻略した実戦",
+    "channel": "どぐら 生駒デビル",
+    "kind": "match",
+    "source": "https://yutura.net/channel/55594/video/P6hFk1nHiA8/"
+  },
+  {
+    "id": "pqiwKaFPoHc",
+    "title": "あくたがわ マノン vs どぐら ベガ",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/pqiwKaFPoHc/"
+  },
+  {
+    "id": "EdC3S43E70c",
+    "title": "YHC餅 ダルシム vs どぐら ベガ",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/EdC3S43E70c/"
+  },
+  {
+    "id": "Wo9dldv6Kms",
+    "title": "どぐらのベガ再始動ランクマッチ",
+    "channel": "どぐら 生駒デビル",
+    "kind": "match",
+    "source": "https://yutura.net/channel/55594/video/Wo9dldv6Kms/"
+  },
+  {
+    "id": "PBWnKVqGBuQ",
+    "title": "SFL2026 ときど JP vs らおやむ ベガ",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/PBWnKVqGBuQ/"
   }
 ] as const;
 
