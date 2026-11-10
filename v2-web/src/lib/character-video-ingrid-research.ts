@@ -250,6 +250,14 @@ const candidates = [
     "kind": "match",
     "source": "https://yutura.net/channel/167116/video/iqCqhmqh4wo/",
     "published": "2026-10-09"
+  },
+  {
+    "id": "bSIyVWNfzyg",
+    "title": "【スト6】「SA2回すキャラになる!?」イングリッドSAのダメージをガチ検証した結果",
+    "channel": "ひろしまのあきら",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/129246/popular/bSIyVWNfzyg/",
+    "published": "2026-05-27"
   }
 ] as const;
 
