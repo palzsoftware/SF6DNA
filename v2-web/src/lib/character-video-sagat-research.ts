@@ -217,6 +217,34 @@ const candidates = [
     "channel": "holosokuのスト6攻略チャンネル",
     "kind": "counter",
     "source": "https://www.youtube.com/watch?v=jX6ZIfGVP-U"
+  },
+  {
+    "id": "MSVazuIY3Kw",
+    "title": "ボンちゃんがサガットをランクマッチに投入",
+    "channel": "プロゲーマーボンちゃん",
+    "kind": "match",
+    "source": "https://yutura.net/channel/53696/trend/MSVazuIY3Kw/"
+  },
+  {
+    "id": "2Mm6fmurHH0",
+    "title": "ふり〜だがボンちゃんサガットの大会戦績を振り返る",
+    "channel": "ふり〜だ",
+    "kind": "match",
+    "source": "https://yutura.net/channel/4351/video/2Mm6fmurHH0/"
+  },
+  {
+    "id": "005YPELlcXI",
+    "title": "ボンちゃんがサガットの地上戦の悩みを分析",
+    "channel": "プロゲーマーボンちゃん",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/53696/video/005YPELlcXI/"
+  },
+  {
+    "id": "edbvmn79iRQ",
+    "title": "ボンちゃんのサガット参戦日・初日研究",
+    "channel": "プロゲーマーボンちゃん",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/53696/trend/edbvmn79iRQ/"
   }
 ] as const;
 export const CHARACTER_VIDEO_SAGAT_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
