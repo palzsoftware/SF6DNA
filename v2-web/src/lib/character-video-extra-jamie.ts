@@ -139,7 +139,7 @@ const candidates = [
     "title": "【 #スト６ 】ジェイミー 最大コンボ 【 #sf6 #初心者 #対策 #コンボ #streetfighter #short #ジェイミー 】",
     "channel": "リプラボ / Replay-Lab",
     "date": "2024-06-19",
-    "kind": "counter"
+    "kind": "guide"
   },
   {
     "id": "M4Wsb4rINJY",
