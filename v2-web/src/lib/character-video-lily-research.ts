@@ -127,6 +127,118 @@ const candidates = [
     "channel": "日野ハナ",
     "kind": "match",
     "source": "https://vmato.jp/watch/SSvwukeSQKI"
+  },
+  {
+    "id": "fbIrba3T2_0",
+    "title": "ElChakotay's Lily Combo Video - Street Fighter 6",
+    "channel": "ElChakotay",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=fbIrba3T2_0"
+  },
+  {
+    "id": "31gQH22DrvU",
+    "title": "Mリリーで高みを目指すグラマス帯ランクマ",
+    "channel": "千羽黒乃",
+    "kind": "match",
+    "source": "https://ckworks.jp/vinforadar/video/31gQH22DrvU"
+  },
+  {
+    "id": "kLs7qQrEB1c",
+    "title": "リリー大足研究：ヤバい連携を発見",
+    "channel": "Vtuber Showdown",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/kirinuki/kLs7qQrEB1c"
+  },
+  {
+    "id": "LfOxW4AbNL0",
+    "title": "今日こそMR盛るぞ Mリリーランクマ",
+    "channel": "千羽黒乃",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=LfOxW4AbNL0"
+  },
+  {
+    "id": "Zi6jYfrvDDQ",
+    "title": "MリリーMaster帯ランクマ 打撃と投げ",
+    "channel": "千羽黒乃",
+    "kind": "match",
+    "source": "https://ckworks.jp/vinforadar/video/Zi6jYfrvDDQ"
+  },
+  {
+    "id": "g18R7uZtQDc",
+    "title": "リリーが消えた？判定検証",
+    "channel": "千羽黒乃",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/g18R7uZtQDc"
+  },
+  {
+    "id": "Ij0K3RzN8mw",
+    "title": "リリー判定検証 元配信",
+    "channel": "千羽黒乃",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=Ij0K3RzN8mw"
+  },
+  {
+    "id": "Dv08BfAgQog",
+    "title": "リリーのリプレイで不可解な判定を検証",
+    "channel": "Vtuber Showdown",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/kirinuki/Dv08BfAgQog"
+  },
+  {
+    "id": "m0uM5X4hqTY",
+    "title": "MリリーMR1820からのアルマス帯ランクマ",
+    "channel": "千羽黒乃",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=m0uM5X4hqTY"
+  },
+  {
+    "id": "wMT2K07xUHE",
+    "title": "桜葉ハグにリリーを教える千羽黒乃",
+    "channel": "Vtuber Showdown",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/kirinuki/wMT2K07xUHE"
+  },
+  {
+    "id": "x8BPgTtF4vI",
+    "title": "Master帯で勝つためのMリリー講座",
+    "channel": "千羽黒乃",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/x8BPgTtF4vI"
+  },
+  {
+    "id": "hUgydxIPG10",
+    "title": "Year3調整をひびき先生に教わるリリー講座",
+    "channel": "千羽黒乃",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/hUgydxIPG10"
+  },
+  {
+    "id": "uRZTb_F2Pxw",
+    "title": "アルマス安定を目指すMリリーランクマ",
+    "channel": "千羽黒乃",
+    "kind": "match",
+    "source": "https://ckworks.jp/vinforadar/video/uRZTb_F2Pxw"
+  },
+  {
+    "id": "XnREVt1IsD8",
+    "title": "MリリーMR1897からのランクマ配信",
+    "channel": "千羽黒乃",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=XnREVt1IsD8"
+  },
+  {
+    "id": "FnC0QejTI-8",
+    "title": "MリリーMR1900チャレンジ",
+    "channel": "千羽黒乃",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=FnC0QejTI-8"
+  },
+  {
+    "id": "SI3DZbC1Mq4",
+    "title": "分析官・T リリーのランクマ研究",
+    "channel": "岸堂天真",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=SI3DZbC1Mq4"
   }
 ] as const;
 export const CHARACTER_VIDEO_LILY_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
