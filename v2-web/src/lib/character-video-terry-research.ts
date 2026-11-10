@@ -91,6 +91,48 @@ const candidates = [
     "channel": "In my Dragon Age era",
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=rnXgyjtIA_Q"
+  },
+  {
+    "id": "tWYecYU1_ME",
+    "title": "【スト6、SF6】テリー対策",
+    "channel": "ACQUA",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=tWYecYU1_ME"
+  },
+  {
+    "id": "owIhfqYDrPs",
+    "title": "【スト6】テリー対策を考える",
+    "channel": "ACQUA",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=owIhfqYDrPs"
+  },
+  {
+    "id": "iMuN21QQ53g",
+    "title": "10分で分かるモダンテリー徹底解説",
+    "channel": "シラバイクロム",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=iMuN21QQ53g"
+  },
+  {
+    "id": "zNbYOYgfhTg",
+    "title": "KIDOアルジュン vs きんちょテリー",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=zNbYOYgfhTg"
+  },
+  {
+    "id": "p2E_B3e_Cc0",
+    "title": "テリーの使い方徹底解説 立川×ハメコ",
+    "channel": "SmashlogTV - SF6",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=p2E_B3e_Cc0"
+  },
+  {
+    "id": "9Jy72mTaIiM",
+    "title": "きんちょ テリーランクマ練習配信 #417",
+    "channel": "きんちょ / kincho",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=9Jy72mTaIiM"
   }
 ] as const;
 
