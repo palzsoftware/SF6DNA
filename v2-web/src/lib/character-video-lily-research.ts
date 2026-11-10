@@ -239,6 +239,48 @@ const candidates = [
     "channel": "岸堂天真",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=SI3DZbC1Mq4"
+  },
+  {
+    "id": "Ex2ouF_FlwY",
+    "title": "ひびき先生に学ぶリリーコーチング：困ったときはくそプレイ",
+    "channel": "千羽黒乃",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/Ex2ouF_FlwY"
+  },
+  {
+    "id": "cokgJ6vbWNo",
+    "title": "ひびき先生によるリリーのコーチング元配信",
+    "channel": "千羽黒乃",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=cokgJ6vbWNo"
+  },
+  {
+    "id": "Y41Hlrbm91g",
+    "title": "ひびき先生 アルマス後のMリリーコーチング",
+    "channel": "千羽黒乃",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/Y41Hlrbm91g"
+  },
+  {
+    "id": "6dPP806I7Uc",
+    "title": "最強リリーひびき先生に学ぶ高みを目指すリリーコーチング",
+    "channel": "千羽黒乃",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/6dPP806I7Uc"
+  },
+  {
+    "id": "mHX1N7irH3Q",
+    "title": "覚醒したリリー MR帯ランクマ",
+    "channel": "岸堂天真",
+    "kind": "match",
+    "source": "https://ckworks.jp/vinforadar/video/mHX1N7irH3Q"
+  },
+  {
+    "id": "S1tTBxV0GIA",
+    "title": "リリー使い岸堂天真のランクマ修行配信",
+    "channel": "岸堂天真",
+    "kind": "match",
+    "source": "https://ckworks.jp/vinforadar/video/S1tTBxV0GIA"
   }
 ] as const;
 export const CHARACTER_VIDEO_LILY_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
