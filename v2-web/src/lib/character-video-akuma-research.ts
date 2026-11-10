@@ -248,6 +248,14 @@ const candidates = [
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=CjYt87XbZYk",
     "counterTarget": null
+  },
+  {
+    "id": "B6T4KRc4fxw",
+    "title": "ウメハラ豪鬼のランクマとカワノの瞬獄殺連携",
+    "channel": "Daigo the BeasTV",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/13246/popular/B6T4KRc4fxw/",
+    "counterTarget": null
   }
 ] as const;
 
