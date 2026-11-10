@@ -119,6 +119,90 @@ const candidates = [
     "channel": "PlayStation Japan",
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=IRjymRoP4bU"
+  },
+  {
+    "id": "lZkkIZFpcYg",
+    "title": "C. Viper Combo Compilation!!! (ALL YOU NEED TO KNOW!)",
+    "channel": "Doctor DP | FGC",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=lZkkIZFpcYg"
+  },
+  {
+    "id": "oQQzfQhT2Tg",
+    "title": "SF6: C Viper SA1 Overview + Useful Setups",
+    "channel": "Killerex100",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=oQQzfQhT2Tg"
+  },
+  {
+    "id": "fRsNOJCkizA",
+    "title": "【スト6】ヴァイパー完全解説!!コンボ・使い方・対策・セットプレイ・対戦動画すべてある！",
+    "channel": "いおりチャンネル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=fRsNOJCkizA"
+  },
+  {
+    "id": "metNr-Gz0Yc",
+    "title": "【スト6】ヴァイパーの実戦コンボ＆セットプレイまとめ！",
+    "channel": "いおりチャンネル",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/75881/video/metNr-Gz0Yc/"
+  },
+  {
+    "id": "8dO7xNajc9Y",
+    "title": "【スト6】ヴァイパーが強そうなので使っていきます！",
+    "channel": "いおりチャンネル",
+    "kind": "match",
+    "source": "https://yutura.net/channel/75881/video/8dO7xNajc9Y/"
+  },
+  {
+    "id": "61O8EIekHCU",
+    "title": "【スト6】「ここから倒せる」ヴァイパーの火力が理不尽すぎた！",
+    "channel": "いおりチャンネル",
+    "kind": "match",
+    "source": "https://yutura.net/channel/75881/video/61O8EIekHCU/"
+  },
+  {
+    "id": "2IXxqqFbFGU",
+    "title": "REJECTのヴァイパー対策を支えたたいじについて、ときどに聞く立川",
+    "channel": "立川ちゃんねる",
+    "kind": "counter",
+    "source": "https://yutura.net/channel/100695/video/2IXxqqFbFGU/"
+  },
+  {
+    "id": "Oof7jZJILkE",
+    "title": "SFL2026 さはら（エド）vs ふ～ど（C.ヴァイパー）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/Oof7jZJILkE/"
+  },
+  {
+    "id": "QnanF8nM-gU",
+    "title": "SFL2026 ぷげら（C.ヴァイパー）vs わびいち（テリー）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/QnanF8nM-gU/"
+  },
+  {
+    "id": "B_P0z75f3_s",
+    "title": "SFL2026 ぷげら（C.ヴァイパー）vs YAS（リュウ）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/B_P0z75f3_s/"
+  },
+  {
+    "id": "u5O4saobv0E",
+    "title": "SFL2026 ふ～ど（C.ヴァイパー）vs KEI.B（舞）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/u5O4saobv0E/"
+  },
+  {
+    "id": "ECDx7XOmBXA",
+    "title": "KIDO（アルジュン）vs ふ～ど（C.ヴァイパー）",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/ECDx7XOmBXA/"
   }
 ] as const;
 export const CHARACTER_VIDEO_C_VIPER_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
