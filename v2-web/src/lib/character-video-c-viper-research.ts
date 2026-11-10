@@ -70,6 +70,48 @@ const candidates = [
     "channel": "えらさんは今日も頑張る",
     "kind": "counter",
     "source": "https://www.youtube.com/watch?v=RINLGEfZGMU"
+  },
+  {
+    "id": "U1PPJygEnxg",
+    "title": "【Mジュリ】キャラ対策ヴァイパー編 / Mヴァイパー使いと対戦研究",
+    "channel": "黒燿リラ / KOKUYOU LIRA",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=U1PPJygEnxg"
+  },
+  {
+    "id": "N_Zwgoy1g4A",
+    "title": "Punk（キャミィ）vs かずのこ（C.ヴァイパー）",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/N_Zwgoy1g4A/"
+  },
+  {
+    "id": "JjoLN3LnMoY",
+    "title": "立川にヴァイパーを教わる石狩あかり",
+    "channel": "Vtuber Showdown",
+    "kind": "guide",
+    "source": "https://ckworks.jp/vinforadar/video/kirinuki/JjoLN3LnMoY"
+  },
+  {
+    "id": "0nJsNGYSiAQ",
+    "title": "『ストリートファイター6』キャラクターガイド｜C.ヴァイパー",
+    "channel": "CapcomChannel",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=0nJsNGYSiAQ"
+  },
+  {
+    "id": "FoK_E3zJYE8",
+    "title": "C.ヴァイパーコンボトライアルをレバーレスで解説",
+    "channel": "Rush Gorou / 五郎",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/106217/video/FoK_E3zJYE8/"
+  },
+  {
+    "id": "5fIGxqhzd98",
+    "title": "C.ヴァイパーを制圧する 対空精度 #SFL #スト6",
+    "channel": "Capcom Fighters JP",
+    "kind": "counter",
+    "source": "https://yutura.net/channel/47625/video/5fIGxqhzd98/"
   }
 ] as const;
 export const CHARACTER_VIDEO_C_VIPER_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
