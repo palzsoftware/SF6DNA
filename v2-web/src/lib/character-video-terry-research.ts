@@ -294,6 +294,41 @@ const candidates = [
     "channel": "きんちょ / kincho",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=jz2tlA9u93g"
+  },
+  {
+    "id": "-Zs-S_wkk3Q",
+    "title": "テリーの使い方：技ごとの小ネタ・起き攻め",
+    "channel": "シバスピス",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=-Zs-S_wkk3Q"
+  },
+  {
+    "id": "EwhicaVTKvM",
+    "title": "何したらいいか分からん人向け！テリーの動かし方講座",
+    "channel": "ぷげら pugera",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=EwhicaVTKvM"
+  },
+  {
+    "id": "C84Sx-LKgG4",
+    "title": "Modern Terry Master Guide! Street Fighter 6",
+    "channel": "Hidden Juice Village ASAP Dream",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=C84Sx-LKgG4"
+  },
+  {
+    "id": "gkWJZGlRiTY",
+    "title": "テリーの技の使い方 2025.12.16 Ver.",
+    "channel": "jyouji背骨",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=gkWJZGlRiTY"
+  },
+  {
+    "id": "kTy-lDSZe64",
+    "title": "10 SF6 Terry Combos You Should Know",
+    "channel": "Squilliam",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=kTy-lDSZe64"
   }
 ] as const;
 
