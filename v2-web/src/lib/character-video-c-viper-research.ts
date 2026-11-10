@@ -252,6 +252,34 @@ const candidates = [
     "channel": "いおりチャンネル",
     "kind": "match",
     "source": "https://yutura.net/channel/75881/video/WbUCOPEgi5g/"
+  },
+  {
+    "id": "RxfXXASNeiw",
+    "title": "KIDO（アルジュン）vs かずのこ（C.ヴァイパー）",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/RxfXXASNeiw/"
+  },
+  {
+    "id": "gReX06ENJzU",
+    "title": "おじリーグ前のヴァイパー戦対策・スパーをぷげらが解説",
+    "channel": "ぷげら pugera",
+    "kind": "counter",
+    "source": "https://yutura.net/channel/111842/video/gReX06ENJzU/"
+  },
+  {
+    "id": "NZRxukCfgQM",
+    "title": "ヴァイパー使い必見 サンキャンの上手い使い方を解説",
+    "channel": "ぷげら pugera",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/111842/video/NZRxukCfgQM/"
+  },
+  {
+    "id": "00mCD30qGvc",
+    "title": "【スト6、SF6】ヴァイパー対策！",
+    "channel": "ACQUA",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=00mCD30qGvc"
   }
 ] as const;
 export const CHARACTER_VIDEO_C_VIPER_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
