@@ -48,7 +48,7 @@ const candidates = [
     "title": "見るとダルシムのランクが絶対に上がる動画【スト6】【キャラ対策,コンボ,攻め方】【クラシック,モダン対応】",
     "channel": "たこ煮",
     "date": "2025-10-09",
-    "kind": "counter"
+    "kind": "guide"
   },
   {
     "id": "l19rCIg7P34",
