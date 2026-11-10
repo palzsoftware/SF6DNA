@@ -217,6 +217,41 @@ const candidates = [
     "channel": "Capcom Fighters JP",
     "kind": "match",
     "source": "https://yutura.net/channel/47625/video/PBWnKVqGBuQ/"
+  },
+  {
+    "id": "3bdPWvARRjw",
+    "title": "SFL2026 らおやむ ベガ vs Jr. ザンギエフ",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/3bdPWvARRjw/"
+  },
+  {
+    "id": "7AI1oOYP0Ks",
+    "title": "SFL2026 ひなお ルーク vs らおやむ ベガ",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/7AI1oOYP0Ks/"
+  },
+  {
+    "id": "5d7MoGK8wbo",
+    "title": "SFL2026 ヤナイ ベガ vs ひぐち ガイル",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/5d7MoGK8wbo/"
+  },
+  {
+    "id": "Ac70fTzF_l8",
+    "title": "ベガに施された調整内容を検証するぷげら",
+    "channel": "ぷげら pugera",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/111842/video/Ac70fTzF_l8/"
+  },
+  {
+    "id": "Lh9LmhOYt00",
+    "title": "どぐらが語るキャラ評価とベガの伸ばしポイント",
+    "channel": "どぐらのちょっとええ感じ",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/115818/video/Lh9LmhOYt00/"
   }
 ] as const;
 
