@@ -202,6 +202,38 @@ const candidates = [
     "kind": "guide",
     "source": "https://yutura.net/channel/167116/video/yMT_fWXdqaA/",
     "published": "2026-11-09"
+  },
+  {
+    "id": "aonR2oJw0gQ",
+    "title": "端は〇〇さえ意識すれば有利に動けます。MR1300イングリッドのリプレイコーチング#81",
+    "channel": "ぷげら pugera",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/111842/video/aonR2oJw0gQ/",
+    "published": "2026-10-22"
+  },
+  {
+    "id": "4HRZavsOV78",
+    "title": "Mのサブキャラ二次面接!!イングリッドとジュリを試しに使ってみたら印象が大きく変わりました!!",
+    "channel": "立川ちゃんねる",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/100695/video/4HRZavsOV78/",
+    "published": "2026-10-29"
+  },
+  {
+    "id": "JQTFOP209hE",
+    "title": "[SF6] Ingrid Basic Combo Guide Part 1 (Provisional)",
+    "channel": "yoriの天敵 Gameちゃんねる",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=JQTFOP209hE",
+    "published": "2026-05-29"
+  },
+  {
+    "id": "xOfY-shPsPw",
+    "title": "【SF6】相打ちなしワンコンボ最大ダメージランキング【イングリッド追加アプデver】",
+    "channel": "traias channel",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=xOfY-shPsPw",
+    "published": "2026-06-05"
   }
 ] as const;
 
