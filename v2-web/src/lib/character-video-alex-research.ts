@@ -260,6 +260,69 @@ const candidates = [
     "channel": "未確認（コミュニティ索引）",
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=mrL3t2_mMSY"
+  },
+  {
+    "id": "frxVML8xfZk",
+    "title": "アレックス対策：エアスタンピート対策3選",
+    "channel": "ずんだもんふぁいたーch",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=frxVML8xfZk"
+  },
+  {
+    "id": "JYf4yz2t0z8",
+    "title": "今すぐ勝ちたいアレックス対策 初見連携を許さない",
+    "channel": "小路KOG",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=JYf4yz2t0z8"
+  },
+  {
+    "id": "1YdHZiL9kJ8",
+    "title": "どぐらのアレックス研究・評価",
+    "channel": "どぐら 生駒デビル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=1YdHZiL9kJ8"
+  },
+  {
+    "id": "4GuP2RNvxH0",
+    "title": "Shinto（アレックス）vs ウメハラ（豪鬼）",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=4GuP2RNvxH0"
+  },
+  {
+    "id": "ui3s3w75lEA",
+    "title": "Shinto（アレックス）vs かずのこ（アルジュン）10月13日",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=ui3s3w75lEA"
+  },
+  {
+    "id": "eFj9AyFFLzM",
+    "title": "Shinto（アレックス）vs かずのこ（アルジュン）10月17日",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=eFj9AyFFLzM"
+  },
+  {
+    "id": "cwnF-NGNPFM",
+    "title": "小路KOG アレックス 初日ランク配信",
+    "channel": "小路KOG",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=cwnF-NGNPFM"
+  },
+  {
+    "id": "wtxaZcPRpFw",
+    "title": "小路KOG アレックス2 練習配信",
+    "channel": "小路KOG",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=wtxaZcPRpFw"
+  },
+  {
+    "id": "GOVnS9mJYl4",
+    "title": "小路KOG 新しいアレックスムーブを発見",
+    "channel": "小路KOG",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=GOVnS9mJYl4"
   }
 ] as const;
 
