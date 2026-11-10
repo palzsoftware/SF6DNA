@@ -280,6 +280,55 @@ const candidates = [
     "channel": "ACQUA",
     "kind": "counter",
     "source": "https://www.youtube.com/watch?v=00mCD30qGvc"
+  },
+  {
+    "id": "ZfvlURaYrX4",
+    "title": "SFL2026 Shuto（リュウ）vs 藤村（C.ヴァイパー）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/ZfvlURaYrX4/"
+  },
+  {
+    "id": "SkSvPgwqDXM",
+    "title": "SFL2026 藤村（C.ヴァイパー）vs MenaRD（ブランカ）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/SkSvPgwqDXM/"
+  },
+  {
+    "id": "Ia0xOzG131w",
+    "title": "SFL2026 藤村（C.ヴァイパー）vs ACQUA（ブランカ）",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://yutura.net/channel/47625/video/Ia0xOzG131w/"
+  },
+  {
+    "id": "jAfLajJmJEc",
+    "title": "SF6 C.Viper Starter Guide: What you should be doing",
+    "channel": "MC MuraFGC",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=jAfLajJmJEc"
+  },
+  {
+    "id": "W4zbt3RsmBA",
+    "title": "C Viper New Combo - Street Fighter 6",
+    "channel": "Fighting Grounds",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=W4zbt3RsmBA"
+  },
+  {
+    "id": "TgJs5Spvt7Y",
+    "title": "かずのこ選手が語る『C.ヴァイパーにしかない魅力』5選",
+    "channel": "SmashlogTV - SF6",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/86476/trend/TgJs5Spvt7Y/"
+  },
+  {
+    "id": "xu8QqcF2RD4",
+    "title": "立川がC.ヴァイパーのモダン適性を最速調査",
+    "channel": "立川ちゃんねる",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/100695/trend/xu8QqcF2RD4/"
   }
 ] as const;
 export const CHARACTER_VIDEO_C_VIPER_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
