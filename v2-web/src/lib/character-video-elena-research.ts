@@ -294,6 +294,41 @@ const candidates = [
     "channel": "Daigo the BeasTV",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=bU8I3T9oLes"
+  },
+  {
+    "id": "ni_rVlwA80E",
+    "title": "sakoのエレナSA2ヒーリングを使った実戦研究",
+    "channel": "sakonoko_game",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=ni_rVlwA80E"
+  },
+  {
+    "id": "ptxc0-LjFeg",
+    "title": "sakoがエレナ3日間の実戦で得た評価",
+    "channel": "sakonoko_game",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=ptxc0-LjFeg"
+  },
+  {
+    "id": "u_47AlOKqQ4",
+    "title": "KEI.Bによるエレナの立ち回り・主要通常技解説",
+    "channel": "KEI.B / バンババン",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=u_47AlOKqQ4"
+  },
+  {
+    "id": "0WwdDDE4HA4",
+    "title": "SHAKAがエレナの初公開対戦映像を検討",
+    "channel": "SHAKAファンの作業部屋",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=0WwdDDE4HA4"
+  },
+  {
+    "id": "N_IfMcqhZYY",
+    "title": "sakoらによるエレナ祭の事前企画",
+    "channel": "sakonoko_game",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=N_IfMcqhZYY"
   }
 ] as const;
 export const CHARACTER_VIDEO_ELENA_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
