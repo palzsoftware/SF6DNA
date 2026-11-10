@@ -1,4 +1,5 @@
 import type { VideoSummary } from "@/lib/event-media";
+import { CHARACTER_VIDEO_LILY_RESEARCH } from "@/lib/character-video-lily-research";
 import { CHARACTER_VIDEO_ZANGIEF_RESEARCH } from "@/lib/character-video-zangief-research";
 import { CHARACTER_VIDEO_MANON_RESEARCH } from "@/lib/character-video-manon-research";
 import { CHARACTER_VIDEO_MARISA_RESEARCH } from "@/lib/character-video-marisa-research";
@@ -638,7 +639,7 @@ const previewVideosByCharacter: Readonly<Record<string, readonly VideoSummary[]>
   "manon": [...(CHARACTER_VIDEO_BATCH_03["manon"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["manon"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["manon"] ?? []), ...CHARACTER_VIDEO_MANON_RESEARCH],
   "marisa": [...(CHARACTER_VIDEO_BATCH_03["marisa"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["marisa"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["marisa"] ?? []), ...CHARACTER_VIDEO_MARISA_RESEARCH],
   "zangief": [...(CHARACTER_VIDEO_BATCH_03["zangief"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["zangief"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["zangief"] ?? []), ...CHARACTER_VIDEO_ZANGIEF_RESEARCH],
-  "lily": [...(CHARACTER_VIDEO_BATCH_04["lily"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["lily"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["lily"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_FOLLOWUP["lily"] ?? [])],
+  "lily": [...(CHARACTER_VIDEO_BATCH_04["lily"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["lily"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["lily"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_FOLLOWUP["lily"] ?? []), ...CHARACTER_VIDEO_LILY_RESEARCH],
   "cammy": [...(CHARACTER_VIDEO_BATCH_04["cammy"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["cammy"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["cammy"] ?? [])],
   "rashid": [...(CHARACTER_VIDEO_BATCH_04["rashid"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["rashid"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["rashid"] ?? [])],
   "aki": [...(CHARACTER_VIDEO_BATCH_04["aki"] ?? []), ...(NEXT_TEN_VIDEO_CANDIDATES["aki"] ?? []), ...(NEXT_TEN_PUBLIC_SEARCH_BATCH["aki"] ?? [])],
