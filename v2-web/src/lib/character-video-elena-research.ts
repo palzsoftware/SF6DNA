@@ -126,6 +126,69 @@ const candidates = [
     "channel": "昇龍拳",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=g5nToPkbrXc"
+  },
+  {
+    "id": "8lfdW-TRFLA",
+    "title": "鵜飼 2026年8月版エレナのコンボ・起き攻め解説",
+    "channel": "鵜飼 -うかい-",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=8lfdW-TRFLA"
+  },
+  {
+    "id": "rg6PKgqvevM",
+    "title": "エレナ初心者解説・サバンナケン入門",
+    "channel": "斜落せつな",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=rg6PKgqvevM"
+  },
+  {
+    "id": "gIJSr85OJtI",
+    "title": "sakoエレナの高レベル対戦動画",
+    "channel": "昇龍拳",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=gIJSr85OJtI"
+  },
+  {
+    "id": "cepP7O-ftNg",
+    "title": "テリー側から見たエレナ対策・確定反撃",
+    "channel": "holosokuのスト6攻略チャンネル",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=cepP7O-ftNg"
+  },
+  {
+    "id": "MZi3RsNog1Y",
+    "title": "ベガ視点のエレナ対策9分解説",
+    "channel": "大車輪",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=MZi3RsNog1Y"
+  },
+  {
+    "id": "Un0tiGf3KR4",
+    "title": "リュウ視点のエレナ確反・リンクシング対策4選",
+    "channel": "けんてぃちゅーぶ",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=Un0tiGf3KR4"
+  },
+  {
+    "id": "5CGamXfpvPM",
+    "title": "ケン視点のエレナ地上戦・差し返し対策",
+    "channel": "おらりん",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=5CGamXfpvPM"
+  },
+  {
+    "id": "jqFhyP1FBzc",
+    "title": "ACQUA講座 初心者向けモダンエレナ使い方",
+    "channel": "ACQUA",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=jqFhyP1FBzc"
+  },
+  {
+    "id": "oBcADOclnkQ",
+    "title": "ACQUA講座 エレナへの確定反撃・補正切り対策",
+    "channel": "ACQUA",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=oBcADOclnkQ"
   }
 ] as const;
 export const CHARACTER_VIDEO_ELENA_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
