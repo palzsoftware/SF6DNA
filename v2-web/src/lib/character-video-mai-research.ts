@@ -203,6 +203,48 @@ const candidates = [
     "channel": "Stremphoenix",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=jXPG3v8kgm4"
+  },
+  {
+    "id": "GyoFveyZb5c",
+    "title": "Rank 2 Mai Shiranui 高レベル対戦・セットプレイ",
+    "channel": "NoMii Aegis",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=GyoFveyZb5c"
+  },
+  {
+    "id": "Iu-oIaPmH_Q",
+    "title": "Street Fighter 6 Mai 18 Trade Setups",
+    "channel": "ROUBICHL9TAL-YT",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=Iu-oIaPmH_Q"
+  },
+  {
+    "id": "DPjXwpDM43w",
+    "title": "リュウ・ケン・豪鬼・舞・ルーク・テリーの違い",
+    "channel": "SmashlogTV - SF6",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=DPjXwpDM43w"
+  },
+  {
+    "id": "USexrq4NLX4",
+    "title": "ひぐちの舞花蝶扇完全対策",
+    "channel": "ひぐちゃんねる",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=USexrq4NLX4"
+  },
+  {
+    "id": "zSBGYWl-cCE",
+    "title": "葛葉とどぐらによる舞対策の研究",
+    "channel": "どぐらのちょっとええ感じ",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=zSBGYWl-cCE"
+  },
+  {
+    "id": "wy64YtrHaBE",
+    "title": "小路KOGがナウマン舞とのスパーを振り返る",
+    "channel": "小路KOG",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=wy64YtrHaBE"
   }
 ] as const;
 export const CHARACTER_VIDEO_MAI_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
