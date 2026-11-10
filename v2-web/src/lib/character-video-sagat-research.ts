@@ -245,6 +245,41 @@ const candidates = [
     "channel": "プロゲーマーボンちゃん",
     "kind": "guide",
     "source": "https://yutura.net/channel/53696/trend/edbvmn79iRQ/"
+  },
+  {
+    "id": "lT83dGc2-v4",
+    "title": "ひなお サガット vs 翔 アルジュン",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/lT83dGc2-v4/"
+  },
+  {
+    "id": "baiVox9bdKA",
+    "title": "Blaz ジェイミー vs ヤナイ サガット",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56626/video/baiVox9bdKA/"
+  },
+  {
+    "id": "xSisBuOpi8k",
+    "title": "どぐらがレジェンド上位Blazサガットと対戦",
+    "channel": "どぐら 生駒デビル",
+    "kind": "match",
+    "source": "https://yutura.net/channel/55594/trend/xSisBuOpi8k/"
+  },
+  {
+    "id": "nzrj7qpfjuY",
+    "title": "どぐらがサガットで緊急ランクマに挑戦",
+    "channel": "どぐら 生駒デビル",
+    "kind": "match",
+    "source": "https://yutura.net/channel/55594/trend/nzrj7qpfjuY/"
+  },
+  {
+    "id": "ARR5F9ztsxk",
+    "title": "初心者サガットのランクマ・バトルハブ配信",
+    "channel": "志上ハジメ",
+    "kind": "match",
+    "source": "https://yutura.net/channel/56238/video/ARR5F9ztsxk/"
   }
 ] as const;
 export const CHARACTER_VIDEO_SAGAT_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
