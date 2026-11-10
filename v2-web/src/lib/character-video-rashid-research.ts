@@ -210,6 +210,76 @@ const candidates = [
     "channel": "ガチくん /Gachikun",
     "kind": "match",
     "source": "https://yutura.net/channel/75894/popular/VVwwKQO_Tdg/"
+  },
+  {
+    "id": "g6QOejOwI9c",
+    "title": "ストーム久保がガチくんのラシードを研究",
+    "channel": "ストーム久保",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=g6QOejOwI9c"
+  },
+  {
+    "id": "woehFw9bhKU",
+    "title": "今シーズンのラシードはこれが最強",
+    "channel": "ガチくん /Gachikun",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=woehFw9bhKU"
+  },
+  {
+    "id": "eK8OUpiuBvg",
+    "title": "ラシードのイウサールと対空の難しさ",
+    "channel": "ストーム久保",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=eK8OUpiuBvg"
+  },
+  {
+    "id": "DCxaiOe37QE",
+    "title": "ラシード イウサールのすべて 完全解説",
+    "channel": "クローバー",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=DCxaiOe37QE"
+  },
+  {
+    "id": "NbhxozOZhdo",
+    "title": "世界1位ラシード ガチくん怒涛の連撃",
+    "channel": "SF6-MODERN",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=NbhxozOZhdo"
+  },
+  {
+    "id": "_MyTQzuFewM",
+    "title": "satoru_pc ラシード 世界1位対戦",
+    "channel": "SF6-MODERN",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=_MyTQzuFewM"
+  },
+  {
+    "id": "DxOfjnlpb1o",
+    "title": "サトル ラシード 高レベル対戦",
+    "channel": "SF6-MODERN",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=DxOfjnlpb1o"
+  },
+  {
+    "id": "hsJNwiTmE9c",
+    "title": "竹内ジョセフィーヌのラシード初心者向け講座",
+    "channel": "竹内ジョンチャンネル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=hsJNwiTmE9c"
+  },
+  {
+    "id": "GoIh1gS57OM",
+    "title": "ガチくん ラシード新コンボ対戦",
+    "channel": "SF6-MODERN",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=GoIh1gS57OM"
+  },
+  {
+    "id": "WBLm6HzSlCU",
+    "title": "ラシードの高難度コンボと起き攻め安定化",
+    "channel": "doskonnbu",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=WBLm6HzSlCU"
   }
 ] as const;
 
