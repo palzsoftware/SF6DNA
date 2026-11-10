@@ -1,0 +1,101 @@
+import type { VideoSummary } from "@/lib/event-media";
+/** Elena source-traced Preview research; counter means a guide AGAINST Elena. Content, playability and patch applicability unverified. */
+const candidates = [
+  {
+    "id": "TsM0ctTBwJQ",
+    "title": "SF6 S4 Elena Practical Combo and Okizeme Guide with Inputs and Notes",
+    "channel": "Sea Leaf Dojo",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=TsM0ctTBwJQ"
+  },
+  {
+    "id": "Pu5kXU92rJ0",
+    "title": "エレナ徹底対策 リンクスワール・スピンサイズ・各種タゲコン",
+    "channel": "スト6初心者応援チャンネル",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=Pu5kXU92rJ0"
+  },
+  {
+    "id": "_jNUQq36vSQ",
+    "title": "エレナの立ち回りから必須コンボまで 使い方解説",
+    "channel": "煌月ソウル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=_jNUQq36vSQ"
+  },
+  {
+    "id": "G_aSayiIcGg",
+    "title": "Street Fighter 6 Elena Combos! Complete Combo Guide",
+    "channel": "VesperArcade",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=G_aSayiIcGg"
+  },
+  {
+    "id": "rw7qdWlaA90",
+    "title": "ストリートファイター6 エレナ 基本コンボ",
+    "channel": "メノ(Meno)",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=rw7qdWlaA90"
+  },
+  {
+    "id": "H0xfcC4zmc4",
+    "title": "エレナの中下段択への対策解説",
+    "channel": "ひろしまのあきら",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=H0xfcC4zmc4"
+  },
+  {
+    "id": "Hl4_NWWbIbg",
+    "title": "とりあえず一週間ぼられないためのエレナ対策",
+    "channel": "えらさんは今日も頑張る",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=Hl4_NWWbIbg"
+  },
+  {
+    "id": "BPYKK53xb3M",
+    "title": "SFL2026 どぐら エレナ vs sako エレナ",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=BPYKK53xb3M"
+  },
+  {
+    "id": "uTl2Lc5-MlE",
+    "title": "SFL2026 どぐら エレナ vs きんちょ テリー",
+    "channel": "Capcom Fighters JP",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=uTl2Lc5-MlE"
+  },
+  {
+    "id": "S9YasKcLXlA",
+    "title": "ストーム久保のエレナ下アピール起き攻め実験",
+    "channel": "ストーム久保",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=S9YasKcLXlA"
+  },
+  {
+    "id": "w7SgCHyUN08",
+    "title": "sako エレナ vs かずのこ アルジュン",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=w7SgCHyUN08"
+  },
+  {
+    "id": "ab7H-07N87c",
+    "title": "カワノ アルジュン vs sako エレナ",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=ab7H-07N87c"
+  },
+  {
+    "id": "6OZNRemfzf0",
+    "title": "KIDO アルジュン vs sako エレナ",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=6OZNRemfzf0"
+  }
+] as const;
+export const CHARACTER_VIDEO_ELENA_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
+ id:`preview-elena-${id}`,slug:`preview-elena-${id}`,title,platform:"youtube",videoType:kind,publishedAt:null,
+ description:`${kind==="counter"?"エレナへの対策動画。":kind==="match"?"エレナが登場する対戦・大会動画。":"エレナの攻略・練習動画。"} 出典: ${source}。動画再生・収録内容・現行Patchとの整合・公開適格性は未検証です。`,
+ url:`https://www.youtube.com/watch?v=${id}`,thumbnailUrl:`https://i.ytimg.com/vi/${id}/hqdefault.jpg`,channelName:channel,
+ durationSeconds:null,language:null,controlTypes:[],events:[],characters:["エレナ"],players:[],categories:[kind],level:"unknown",viewCount:null,viewCountCheckedAt:null,
+}));
