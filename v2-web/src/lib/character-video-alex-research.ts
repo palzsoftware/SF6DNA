@@ -323,6 +323,20 @@ const candidates = [
     "channel": "小路KOG",
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=GOVnS9mJYl4"
+  },
+  {
+    "id": "bqirqxPEqcw",
+    "title": "LeShar（アレックス）vs ひなお（サガット）",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=bqirqxPEqcw"
+  },
+  {
+    "id": "Rh1Sus7X-oU",
+    "title": "かずのこ（アレックス）vs ときど（JP）",
+    "channel": "Stremphoenix",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=Rh1Sus7X-oU"
   }
 ] as const;
 
