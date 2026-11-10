@@ -231,6 +231,48 @@ const candidates = [
     "channel": "テタホ",
     "kind": "guide",
     "source": "https://www.youtube.com/watch?v=zPARW20XGR0"
+  },
+  {
+    "id": "x3i43ga693o",
+    "title": "カプコン公式 日本語版エレナキャラクターガイド",
+    "channel": "CapcomChannel",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=x3i43ga693o"
+  },
+  {
+    "id": "DBO-rAHD9jU",
+    "title": "どぐらエレナのヒーリングを活用した対戦集",
+    "channel": "昇龍拳",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=DBO-rAHD9jU"
+  },
+  {
+    "id": "jOsezMQyqWU",
+    "title": "どぐらエレナの高レベル対戦集",
+    "channel": "昇龍拳",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=jOsezMQyqWU"
+  },
+  {
+    "id": "8HyKTp4bgh8",
+    "title": "どぐらが語るレジェンド到達後のエレナ評価",
+    "channel": "どぐらのちょっとええ感じ",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=8HyKTp4bgh8"
+  },
+  {
+    "id": "OFAtZ8mfXuU",
+    "title": "どぐら・sakoらによるエレナのキャラ相性議論",
+    "channel": "どぐら 生駒デビル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=OFAtZ8mfXuU"
+  },
+  {
+    "id": "YxcD-mQfIIk",
+    "title": "どぐらのエレナ性能検証カスタム対戦",
+    "channel": "どぐら 生駒デビル",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=YxcD-mQfIIk"
   }
 ] as const;
 export const CHARACTER_VIDEO_ELENA_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
