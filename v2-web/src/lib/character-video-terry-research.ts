@@ -334,7 +334,7 @@ const candidates = [
 
 export const CHARACTER_VIDEO_TERRY_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
  id:`preview-terry-${id}`,slug:`preview-terry-${id}`,title,platform:"youtube",videoType:kind,publishedAt:null,
- description:`${kind === "counter" ? "テリーへの対策。" : "テリーの攻略・使い方。"}出典: ${source}。再生可否・現行Patch適合・公開承認は未検証です。`,
+ description:`${kind === "counter" ? "テリーへの対策。" : kind === "match" ? "テリー関連の対戦・大会動画。" : "テリーの攻略・使い方。"}出典: ${source}。再生可否・現行Patch適合・公開承認は未検証です。`,
  url:`https://www.youtube.com/watch?v=${id}`,thumbnailUrl:`https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
  channelName:channel,durationSeconds:null,language:null,controlTypes:[],events:[],characters:["テリー"],players:[],categories:[kind],level:"unknown",viewCount:null,viewCountCheckedAt:null,
 }));
