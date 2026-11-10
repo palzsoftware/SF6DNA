@@ -84,6 +84,132 @@ const candidates = [
     "channel": "Xuses",
     "kind": "match",
     "source": "https://www.youtube.com/watch?v=_5nUpsLmWvk"
+  },
+  {
+    "id": "4zdoJFZnF58",
+    "title": "レジェンド帯におけるセットプレイの考え方",
+    "channel": "doskonnbu",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=4zdoJFZnF58"
+  },
+  {
+    "id": "ffl2j1zL10M",
+    "title": "Year3対応 ガチくんが愛用するラシードコンボ",
+    "channel": "ガチくん /Gachikun",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=ffl2j1zL10M"
+  },
+  {
+    "id": "fuJD80pymuk",
+    "title": "STREET FIGHTER 6 RASHID COMBOS Starter Combo Guide",
+    "channel": "VesperArcade",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=fuJD80pymuk"
+  },
+  {
+    "id": "hkYqoYwAbGs",
+    "title": "Rashid SF6 BnB and practical combo guide",
+    "channel": "rooflemonger",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=hkYqoYwAbGs"
+  },
+  {
+    "id": "ol12yc6mllg",
+    "title": "ラシードの全て 戦略・テクニック・イウサール理論",
+    "channel": "クローバー",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=ol12yc6mllg"
+  },
+  {
+    "id": "Qm18nWDSURU",
+    "title": "Rashid Gachikun Ranked Match Highlights",
+    "channel": "SF6 DOJO REPLAYS",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=Qm18nWDSURU"
+  },
+  {
+    "id": "Xzt98iG5E_8",
+    "title": "スト6 ラシード対策講座",
+    "channel": "石上ですが",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=Xzt98iG5E_8"
+  },
+  {
+    "id": "c4I7ZVYJBg4",
+    "title": "ラシード対策",
+    "channel": "ACQUA",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=c4I7ZVYJBg4"
+  },
+  {
+    "id": "TzknzSzfHcU",
+    "title": "16分でわかるラシード対策 ベガ目線",
+    "channel": "大車輪",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=TzknzSzfHcU"
+  },
+  {
+    "id": "8HoDt0ln8sc",
+    "title": "テリー使いのラシード対策まとめ",
+    "channel": "holosokuのスト6攻略チャンネル",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=8HoDt0ln8sc"
+  },
+  {
+    "id": "_GPaZ-S9mh0",
+    "title": "師弟杯 ラシード師弟 渋谷ハルとガチくん",
+    "channel": "渋谷ハル切り抜き",
+    "kind": "match",
+    "source": "https://ckworks.jp/vinforadar/video/_GPaZ-S9mh0"
+  },
+  {
+    "id": "9EfBI2tJBKs",
+    "title": "ラシード師弟杯 元配信 渋谷ハル ガチくん",
+    "channel": "渋谷ハル",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=9EfBI2tJBKs"
+  },
+  {
+    "id": "LKIrzILJo9c",
+    "title": "ガチくん驚異の62ヒットコンボ",
+    "channel": "ガチくん /Gachikun",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/75894/popular/LKIrzILJo9c/"
+  },
+  {
+    "id": "6Zvegf5OykA",
+    "title": "ガチくん イウサールを抜けられた実戦",
+    "channel": "ガチくん /Gachikun",
+    "kind": "match",
+    "source": "https://yutura.net/channel/75894/popular/6Zvegf5OykA/"
+  },
+  {
+    "id": "VU72LitmdBQ",
+    "title": "ガチくん リーサルのアドリブコンボ",
+    "channel": "ガチくん /Gachikun",
+    "kind": "match",
+    "source": "https://yutura.net/channel/75894/popular/VU72LitmdBQ/"
+  },
+  {
+    "id": "m4SM3UqUSqc",
+    "title": "ガチくん イウサールとSA3の判断",
+    "channel": "ガチくん /Gachikun",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/75894/popular/m4SM3UqUSqc/"
+  },
+  {
+    "id": "3RKO3b3270w",
+    "title": "ガチくん ラシードの対空",
+    "channel": "ガチくん /Gachikun",
+    "kind": "guide",
+    "source": "https://yutura.net/channel/75894/popular/3RKO3b3270w/"
+  },
+  {
+    "id": "VVwwKQO_Tdg",
+    "title": "ガチくん リーサル場面のビタコン",
+    "channel": "ガチくん /Gachikun",
+    "kind": "match",
+    "source": "https://yutura.net/channel/75894/popular/VVwwKQO_Tdg/"
   }
 ] as const;
 
