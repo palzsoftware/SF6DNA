@@ -189,6 +189,48 @@ const candidates = [
     "channel": "ACQUA",
     "kind": "counter",
     "source": "https://www.youtube.com/watch?v=oBcADOclnkQ"
+  },
+  {
+    "id": "Jcejyjlwp-w",
+    "title": "エレナ初心者向けコンボ・起き攻め・立ち回り解説配信",
+    "channel": "クローバー",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=Jcejyjlwp-w"
+  },
+  {
+    "id": "r-VVJCSAJ6o",
+    "title": "どぐらが使い込んだエレナへの対策・ぼったくりポイント",
+    "channel": "どぐら 生駒デビル",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=r-VVJCSAJ6o"
+  },
+  {
+    "id": "1HXTSFdf7dI",
+    "title": "どぐらのエレナとりこれ講座 MR2400まで使用",
+    "channel": "どぐら 生駒デビル",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=1HXTSFdf7dI"
+  },
+  {
+    "id": "kmp7A8qwnrI",
+    "title": "立川によるマノン視点のサガット・エレナ対策講座",
+    "channel": "SHAKA Ad Channel",
+    "kind": "counter",
+    "source": "https://www.youtube.com/watch?v=kmp7A8qwnrI"
+  },
+  {
+    "id": "8J2FA2FQrQ8",
+    "title": "どぐらエレナ高レベル対戦・起き攻め集",
+    "channel": "昇龍拳",
+    "kind": "match",
+    "source": "https://www.youtube.com/watch?v=8J2FA2FQrQ8"
+  },
+  {
+    "id": "zPARW20XGR0",
+    "title": "あきらのエレナ講座・ホロライブ切り抜きまとめ",
+    "channel": "テタホ",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=zPARW20XGR0"
   }
 ] as const;
 export const CHARACTER_VIDEO_ELENA_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
