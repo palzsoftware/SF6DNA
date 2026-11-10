@@ -112,6 +112,13 @@ const candidates = [
     "channel": "Capcom Fighters JP",
     "kind": "counter",
     "source": "https://yutura.net/channel/47625/video/5fIGxqhzd98/"
+  },
+  {
+    "id": "IRjymRoP4bU",
+    "title": "『ストリートファイター6』キャラクターガイド｜C.ヴァイパー（C.Viper）",
+    "channel": "PlayStation Japan",
+    "kind": "guide",
+    "source": "https://www.youtube.com/watch?v=IRjymRoP4bU"
   }
 ] as const;
 export const CHARACTER_VIDEO_C_VIPER_RESEARCH: VideoSummary[] = candidates.map(({id,title,channel,kind,source}): VideoSummary => ({
