@@ -21,8 +21,11 @@ test("VideoCard receives Preview-only and non-persistent preference flags", () =
   assert.match(code, /previewCandidate previewLocalOnly/);
   assert.match(code, /verified-player-count="0"/);
 });
-test("safe apply is additive and refuses changes to pre-existing files", () => {
-  const code = read("../../apply_additive_local.py");
-  assert.match(code, /existing file differs/);
-  assert.doesNotMatch(code, /v2-web\/src\/app\/characters\/\[slug\]\/page\.tsx',/);
+test("local research route stays isolated from published character and database paths", () => {
+  const code = read("../src/app/arjun-research-local/page.tsx");
+  assert.match(code, /notFound\(\)/);
+  assert.match(code, /Arjun77LocalPreview/);
+  assert.match(code, /Arjun142LocalPreview/);
+  assert.match(code, /ArjunPlayerVideoLocalPreview/);
+  assert.doesNotMatch(code, /@\/lib\/supabase|publicStrategyContent|\.from\(/);
 });
