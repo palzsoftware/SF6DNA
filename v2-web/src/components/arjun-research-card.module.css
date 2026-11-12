@@ -1,0 +1,11 @@
+.card { display:flex; flex-direction:column; gap:12px; min-width:0; height:100%; padding:16px; background:var(--surface,#121923); border:1px solid var(--border,#35414f); border-radius:12px; overflow-wrap:anywhere; }
+.status { margin:0; font-size:.78rem; color:var(--text-muted,#aeb9c6); }
+.title { margin:0; font-size:1.08rem; line-height:1.5; }
+.fields { display:grid; gap:10px; margin:0; }
+.fields > div { display:grid; gap:4px; min-width:0; }
+.fields dt { color:var(--text-muted,#aeb9c6); font-weight:600; font-size:.82rem; }
+.fields dd { margin:0; line-height:1.65; overflow-wrap:anywhere; }
+.explanation { margin:0; line-height:1.65; }
+.caution { margin-top:auto; font-size:.78rem; color:var(--text-muted,#aeb9c6); line-height:1.6; }
+.source { padding-top:10px; border-top:1px solid var(--border,#35414f); font-size:.85rem; }
+.source a { text-underline-offset:3px; }
