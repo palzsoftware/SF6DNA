@@ -42,6 +42,10 @@ test("Preview favorites and unwatched filters reuse the video-card preference st
   assert.match(src, /onPreferenceChange=\{preferences\.refresh\}/);
   assert.match(src, /お気に入りのみ/);
   assert.match(src, /未視聴のみ/);
-  assert.match(src, /disabled=\{preferences\.status !== "ready"\}/);
+  assert.match(src, /type="checkbox"/);
+  assert.match(src, /投稿日が新しい順/);
+  assert.match(src, /投稿日が古い順/);
+  assert.match(src, /タイトル順/);
+  assert.match(src, /disabled={preferences.status !== "ready"}/);
   assert.doesNotMatch(src, /createClient\(|localStorage\.|\.from\(/);
 });
