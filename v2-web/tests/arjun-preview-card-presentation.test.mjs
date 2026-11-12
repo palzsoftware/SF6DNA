@@ -33,3 +33,15 @@ test("player candidates remain explicitly unverified and display video evidence 
   assert.match(src,/関連動画の候補を見る/);
   assert.match(src,/ArjunVideoPreviewSearch/);
 });
+
+test("Preview favorites and unwatched filters reuse the video-card preference store", () => {
+  const src = read("../src/components/arjun-video-preview-search.tsx");
+  assert.match(src, /useOwnedVideoPreferences\(true\)/);
+  assert.match(src, /preferences\.favorites\.has\(video\.id\)/);
+  assert.match(src, /!preferences\.watched\.has\(video\.id\)/);
+  assert.match(src, /onPreferenceChange=\{preferences\.refresh\}/);
+  assert.match(src, /お気に入りのみ/);
+  assert.match(src, /未視聴のみ/);
+  assert.match(src, /disabled=\{preferences\.status !== "ready"\}/);
+  assert.doesNotMatch(src, /createClient\(|localStorage\.|\.from\(/);
+});
