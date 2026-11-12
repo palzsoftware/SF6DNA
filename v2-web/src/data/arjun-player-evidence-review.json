@@ -1,0 +1,134 @@
+{
+  "schema": "sf6dna/arjun-player-evidence-review/1",
+  "checked_on": "2026-11-12",
+  "character_slug": "arjun",
+  "publication": "LOCAL_ONLY",
+  "confirmed_main_count": 0,
+  "confirmed_player_character_db_relations": {
+    "development": 0,
+    "production": 0
+  },
+  "rows": [
+    {
+      "label": "かずのこ",
+      "possible_player_slug": "kazunoko",
+      "development_status": "draft",
+      "production_status": "draft",
+      "evidence_tier": "VIDEO_TITLE_CANDIDATE",
+      "note": "名前と使用キャラは候補。メイン変更の裏付けなし",
+      "external_source": null,
+      "relationship_confirmed": false,
+      "main_confirmed": false
+    },
+    {
+      "label": "立川",
+      "possible_player_slug": "tachikawa",
+      "development_status": "not_found",
+      "production_status": "published",
+      "evidence_tier": "VIDEO_TITLE_CANDIDATE",
+      "note": "Productionに選手レコード。使用キャラ関係はなし",
+      "external_source": null,
+      "relationship_confirmed": false,
+      "main_confirmed": false
+    },
+    {
+      "label": "KIDO",
+      "possible_player_slug": null,
+      "development_status": "not_found",
+      "production_status": "not_found",
+      "evidence_tier": "VIDEO_TITLE_CANDIDATE",
+      "note": "同名・本人ID照合待ち",
+      "external_source": null,
+      "relationship_confirmed": false,
+      "main_confirmed": false
+    },
+    {
+      "label": "カワノ",
+      "possible_player_slug": "kawano",
+      "development_status": "draft",
+      "production_status": "draft",
+      "evidence_tier": "VIDEO_TITLE_CANDIDATE",
+      "note": "本人ID照合候補。アルジュンのメイン使用未確認",
+      "external_source": null,
+      "relationship_confirmed": false,
+      "main_confirmed": false
+    },
+    {
+      "label": "ネモ",
+      "possible_player_slug": "nemo",
+      "development_status": "draft",
+      "production_status": "published",
+      "evidence_tier": "VIDEO_TITLE_CANDIDATE",
+      "note": "本人ID照合候補。アルジュンのメイン使用未確認",
+      "external_source": null,
+      "relationship_confirmed": false,
+      "main_confirmed": false
+    },
+    {
+      "label": "Problem X",
+      "possible_player_slug": null,
+      "development_status": "not_found",
+      "production_status": "not_found",
+      "evidence_tier": "VIDEO_TITLE_CANDIDATE",
+      "note": "本人ID照合待ち",
+      "external_source": null,
+      "relationship_confirmed": false,
+      "main_confirmed": false
+    },
+    {
+      "label": "Suisenri",
+      "possible_player_slug": null,
+      "development_status": "not_found",
+      "production_status": "not_found",
+      "evidence_tier": "VIDEO_TITLE_CANDIDATE",
+      "note": "本人ID照合待ち",
+      "external_source": null,
+      "relationship_confirmed": false,
+      "main_confirmed": false
+    },
+    {
+      "label": "板橋",
+      "possible_player_slug": "itabashi-zangief",
+      "development_status": "draft",
+      "production_status": "draft",
+      "evidence_tier": "VIDEO_TITLE_CANDIDATE",
+      "note": "板橋ザンギエフの同一人物か追加確認が必要",
+      "external_source": null,
+      "relationship_confirmed": false,
+      "main_confirmed": false
+    },
+    {
+      "label": "翔",
+      "possible_player_slug": "kakeru",
+      "development_status": "draft",
+      "production_status": "not_found",
+      "evidence_tier": "VIDEO_TITLE_CANDIDATE",
+      "note": "既存候補表示名はKakeru / 翔。本人照合未確定",
+      "external_source": null,
+      "relationship_confirmed": false,
+      "main_confirmed": false
+    },
+    {
+      "label": "ACQUA",
+      "possible_player_slug": "acqua",
+      "development_status": "draft",
+      "production_status": "draft",
+      "evidence_tier": "RANKED_AND_VIDEO_CANDIDATE",
+      "note": "外部統計ではランク戦使用の継続が示唆。公式メイン認定はなし",
+      "external_source": "https://sfl-simulator.vercel.app/players?player=acqua",
+      "relationship_confirmed": false,
+      "main_confirmed": false
+    },
+    {
+      "label": "Vxbao",
+      "possible_player_slug": "vxbao",
+      "development_status": "draft",
+      "production_status": "not_found",
+      "evidence_tier": "TOURNAMENT_USE_REPORTED",
+      "note": "11/1中国WW決勝でアルジュン使用し優勝との報道。メインキャラ変更は未確認",
+      "external_source": "https://dashfight.com/news/hurricane-makes-history-as-5-moore-players-qualify-for-capcom-cup-13-9363",
+      "relationship_confirmed": false,
+      "main_confirmed": false
+    }
+  ]
+}

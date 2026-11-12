@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - sf6dna-v2-chatgpt-rc-20260916
+      - sf6dna-arjun-preview-qa-20261112
     paths:
       - "v2-web/**"
       - ".github/workflows/sf6dna-rc-quality.yml"

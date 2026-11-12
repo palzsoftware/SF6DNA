@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const dat=JSON.parse(fs.readFileSync(new URL('../src/data/arjun-player-evidence-review.json',import.meta.url)));
+const component=fs.readFileSync(new URL('../src/components/arjun-player-video-local-preview.tsx',import.meta.url),'utf8');
+const route=fs.readFileSync(new URL('../src/app/arjun-research-local/page.tsx',import.meta.url),'utf8');
+test('review exactly 11 named people, including Vxbao and ACQUA',()=>{assert.equal(dat.rows.length,11);assert.equal(new Set(dat.rows.map(r=>r.label)).size,11);assert.ok(dat.rows.some(r=>r.label==='Vxbao'));assert.ok(dat.rows.some(r=>r.label==='ACQUA'));});
+test('none falsely presented as main or linked player',()=>{assert.equal(dat.confirmed_main_count,0);assert.ok(dat.rows.every(x=>x.main_confirmed===false&&x.relationship_confirmed===false));assert.doesNotMatch(component,/<CharacterPlayerCard/);assert.doesNotMatch(component,/href=\{`\/players\//);});
+test('existing local gate maintained',()=>{assert.match(route,/NODE_ENV !== "development"/);assert.match(route,/process\.env\.VERCEL_ENV/);assert.match(route,/SF6DNA_ARJUN_LOCAL_PREVIEW !== "1"/);assert.match(component,/SF6DNA_ARJUN_LOCAL_PREVIEW !== "1"/);});
+test('research videos remain candidate only',()=>{assert.match(component,/previewCandidate previewLocalOnly/);assert.match(component,/data-arjun-relation="unverified"/);});
+test('main/report distinction is preserved',()=>{const v=dat.rows.find(r=>r.label==='Vxbao');assert.equal(v.evidence_tier,'TOURNAMENT_USE_REPORTED');assert.equal(v.development_status,'draft');const a=dat.rows.find(r=>r.label==='ACQUA');assert.equal(a.evidence_tier,'RANKED_AND_VIDEO_CANDIDATE');});
