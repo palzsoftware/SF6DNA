@@ -32,7 +32,7 @@ jobs:
       NEXT_PUBLIC_SUPABASE_URL: "https://example.invalid"
       NEXT_PUBLIC_SUPABASE_ANON_KEY: "ci-only-placeholder"
     steps:
-      - name: Checkout current RC SHA
+      - name: Checkout current SHA
         uses: actions/checkout@v4
 
       - name: Set up Node 22
@@ -55,7 +55,9 @@ jobs:
         run: npm test
 
       - name: Release gates
+        if: ${{ success() || failure() }}
         run: npm run test:release-gates
 
       - name: Production-mode build with CI-only placeholders
+        if: ${{ success() || failure() }}
         run: npm run build
