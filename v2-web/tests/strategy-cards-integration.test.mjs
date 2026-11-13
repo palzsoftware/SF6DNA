@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
-const ts = require('/opt/nvm/versions/node/v22.16.0/lib/node_modules/typescript/lib/typescript.js');
+const ts = require('typescript');
 const root = new URL('../', import.meta.url);
 const path = name => new URL(name, root);
 const elements = (type, props) => ({type, props:props??{}});

@@ -2,9 +2,10 @@ import type { ReactNode } from "react";
 import { StrategyCardExplorer, type StrategyCardView } from "./strategy-card-explorer";
 import styles from "./character-unified-page.module.css";
 
-export function CharacterStrategySlot({ kind, previewContent, items = [] }: {
+export function CharacterStrategySlot({ kind, previewContent, previewNotice, items = [] }: {
   kind: "combo" | "setplay" | "sequence" | "counter";
   previewContent?: ReactNode;
+  previewNotice?: ReactNode;
   /** Server-side publication filtering is mandatory before passing this array. */
   items?: StrategyCardView[];
 }) {
@@ -13,9 +14,10 @@ export function CharacterStrategySlot({ kind, previewContent, items = [] }: {
   const [id, label] = labels[kind];
   // A presentation component must not make unpublished research publicly visible.
   // Preview cards can be supplied only by an existing server authorization gate.
-  const showPreview = kind === "combo" && ["development", "preview"].includes(process.env.VERCEL_ENV ?? process.env.NODE_ENV ?? "");
+  const showPreview = ["development", "preview"].includes(process.env.VERCEL_ENV ?? process.env.NODE_ENV ?? "");
   return <section id={id} className={styles.section} data-strategy-publication="CLOSED">
     <h2>{label}</h2>
+    {showPreview && previewNotice ? previewNotice : null}
     <StrategyCardExplorer kind={kind} items={items} />
     {showPreview && previewContent ? previewContent : null}
   </section>;

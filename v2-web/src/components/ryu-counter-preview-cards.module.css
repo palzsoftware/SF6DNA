@@ -1,0 +1,14 @@
+.notice { padding: 14px 16px; border: 1px solid var(--accent, #ff9d51); border-radius: 12px; background: var(--surface-raised, #19222e); }
+.notice strong { display: block; margin-bottom: 6px; }
+.notice p { margin: 6px 0 0; color: var(--text-muted, #b5bdc8); line-height: 1.6; }
+.card { display: grid; align-content: start; gap: 10px; min-width: 0; padding: 14px; border: 1px solid var(--border, #35414f); border-radius: 12px; background: var(--surface, #141a22); }
+.card h3 { margin: 0; font-size: 1.05rem; line-height: 1.45; }
+.scope { width: fit-content; color: var(--text-muted, #b5bdc8); font-size: .85rem; }
+.card details { border-top: 1px solid var(--border, #35414f); }
+.card summary { min-height: 44px; padding: 12px 0 4px; cursor: pointer; font-weight: 700; }
+.card dl { display: grid; gap: 10px; margin: 12px 0; }
+.card dl > div { display: grid; gap: 4px; }
+.card dt { font-weight: 700; }
+.card dd { min-width: 0; margin: 0; overflow-wrap: anywhere; line-height: 1.55; }
+.source { margin: 0; overflow-wrap: anywhere; font-size: .9rem; }
+.source a { color: var(--link, #8ab4ff); }
