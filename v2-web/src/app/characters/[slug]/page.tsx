@@ -1,3 +1,4 @@
+import { connectRyuQaMotion } from "@/lib/ryu-qa-motion";
 import { Suspense } from "react";
 import { youtubeVideoIdFromUrl } from "@/lib/character-related-video-contract.mjs";
 import { headers } from "next/headers";
@@ -111,7 +112,11 @@ export default async function CharacterPage({
     mediaRegistry:(await import("@/data/SF6DNA_WS5_MEDIA_KEY_REGISTRY_20261026.json")).default,
     records:(await import("@/data/SF6DNA_WS5_OFFICIAL_TXT_CANONICAL_20261026.json")).default as unknown as Record<string,CanonicalTxtRecord>,
   }) : null;
-  const finalBundle = connectedTxt?.bundle ?? bundle;
+  const resolvedBundle = connectedTxt?.bundle ?? bundle;
+  const finalBundle = resolvedBundle ? { ...resolvedBundle,
+    moves: connectRyuQaMotion(character.slug, resolvedBundle.moves, (await headers()).get("host"),
+      data.source === "device-preview" ? previewToken : null),
+  } : null;
   // Only the existing authenticated Preview RPC is eligible. Fixture/research are excluded.
   const strategyCardsAuthorized = process.env.VERCEL_ENV === "preview" && Boolean(previewToken) && data.source === "device-preview";
   const strategyCards = strategyCardsAuthorized && finalBundle ? projectPreviewStrategyCards(finalBundle) : [];

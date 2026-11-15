@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   // Keep Next's trailing-slash handling unchanged.
   skipProxyUrlNormalize: true,
   outputFileTracingIncludes: {
+    "/api/ryu-qa-motion/*": ["./src/data/ryu-qa-gifs/*.gif"],
     "/api/illustration-pilot/*": ["./src/data/illustration-pilot/*.webp"],
   },
   images: {
