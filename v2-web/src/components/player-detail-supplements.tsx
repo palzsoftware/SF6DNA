@@ -20,8 +20,21 @@ export function playerDetailSupplements(player: { id: string; slug: string }, en
  };
 }
 
+type TeamIdentityVariant = { environment: string; playerId: string; playerSlug: string };
+type TeamBindingRow = PlayerArchiveBinding & { environment: string; identityVariants?: readonly TeamIdentityVariant[] };
+
+/** Resolve the recorded post-migration slug for the same environment and same UUID only. */
+export function resolveTeamBindingIdentities(rows: readonly TeamBindingRow[], environment: string): PlayerArchiveBinding[] {
+ const scope = environment === "wnuxaxbrpudyypzdbdho" ? "production" : environment === "vvsknbmlfvvnrmgtyhbf" ? "development" : null;
+ return rows.filter(row => row.environment === environment).map(row => {
+  const variants = scope ? (row.identityVariants ?? []).filter(v => v.environment === scope && v.playerId === row.playerId) : [];
+  if (variants.length !== 1) return row;
+  const slug = variants[0].playerSlug;
+  return { ...row, playerSlug: slug, display: { ...row.display, slug } };
+ });
+}
+
 /** Pending team records remain hidden. Matching requires environment + real ID + slug. */
-export function attachPlayerTeamResults<T extends PlayerDetail>(player: T, environment: string): T {
- const scoped = teamBindings.filter(row => row.environment === environment) as PlayerArchiveBinding[];
- return attachPlayerArchiveDisplay(player, scoped);
+export function attachPlayerTeamResults<T extends PlayerDetail>(player: T, environment: string, rows: readonly TeamBindingRow[] = teamBindings as TeamBindingRow[]): T {
+ return attachPlayerArchiveDisplay(player, resolveTeamBindingIdentities(rows, environment));
 }

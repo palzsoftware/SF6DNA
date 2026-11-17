@@ -17,7 +17,7 @@ function safeUrl(value: string): string | null {
   catch { return null; }
 }
 function ClaimText({ label, claim }: { label: string; claim: Claim }) {
-  if (!claim) return null;
+  if (!claim || !claim.text?.trim()) return null;
   return <div><dt>{label}（{basisLabels[claim.basis] ?? "分類未確認"}）</dt><dd>{claim.text}</dd></div>;
 }
 /** draftPreview is for isolated review only. Never derive it from URL parameters. */

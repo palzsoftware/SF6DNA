@@ -38,10 +38,6 @@
           "title": "チームのリーグ実績",
           "items": [
             {
-              "text": "",
-              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
-            },
-            {
               "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 2位 広島 TEAM iXA",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
             },
@@ -60,6 +56,17 @@
             {
               "text": "ストリートファイターリーグ: Pro-JP 2021 6位 名古屋OJA BODY STAR",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2025: 5位",
+              "sourceUrl": "https://www.shacknews.com/article/144229/evo-japan-2025-results-winners-top-8",
+              "researchId": "A_2025-05",
+              "sourceCheckedOn": "2026-11-17"
             }
           ]
         }
@@ -160,6 +167,17 @@
             {
               "text": "ストリートファイターリーグ powered by RAGE 6位 フードガイア",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO 2025: 同率5位",
+              "sourceUrl": "https://evo.gg/news/evo-2025-street-fighter-6-recap/",
+              "researchId": "A_2025-08",
+              "sourceCheckedOn": "2026-11-17"
             }
           ]
         }
@@ -280,6 +298,23 @@
             {
               "text": "ストリートファイターリーグ: Pro-JP 2021 5位 忍ism Gaming",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2025: 7位",
+              "sourceUrl": "https://www.shacknews.com/article/144229/evo-japan-2025-results-winners-top-8",
+              "researchId": "A_2025-06",
+              "sourceCheckedOn": "2026-11-17"
+            },
+            {
+              "text": "EVO Japan 2026: 3位",
+              "sourceUrl": "https://www.shacknews.com/article/148960/evo-japan-2026-winners-top-8",
+              "researchId": "C_2026-01",
+              "sourceCheckedOn": "2026-11-17"
             }
           ]
         }
@@ -554,6 +589,17 @@
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kobayan/"
             }
           ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2025: 3位",
+              "sourceUrl": "https://www.shacknews.com/article/144229/evo-japan-2025-results-winners-top-8",
+              "researchId": "A_2025-03",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
         }
       ]
     },
@@ -576,6 +622,23 @@
             {
               "text": "初出場",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mena/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2025: 1位",
+              "sourceUrl": "https://www.shacknews.com/article/144229/evo-japan-2025-results-winners-top-8",
+              "researchId": "A_2025-01",
+              "sourceCheckedOn": "2026-11-17"
+            },
+            {
+              "text": "EVO 2025: 優勝",
+              "sourceUrl": "https://evo.gg/news/evo-2025-street-fighter-6-recap/",
+              "researchId": "A_2025-07",
+              "sourceCheckedOn": "2026-11-17"
             }
           ]
         }
@@ -622,6 +685,17 @@
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
             }
           ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2025: 4位",
+              "sourceUrl": "https://www.shacknews.com/article/144229/evo-japan-2025-results-winners-top-8",
+              "researchId": "A_2025-04",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
         }
       ]
     },
@@ -644,6 +718,23 @@
             {
               "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 1位 Good 8 Squad",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sahara/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "CAPCOM CUP 12: 優勝",
+              "sourceUrl": "https://saiganak.com/event/capcomcup-12-sfl-world-championship-2025-result/amp/",
+              "researchId": "R20261117-CC12-01",
+              "sourceCheckedOn": "2026-11-17"
+            },
+            {
+              "text": "UFA 2025: 優勝",
+              "sourceUrl": "https://esports.gg/news/fgc/ufa-2025-details-results",
+              "researchId": "R20261117-UFA25-01",
+              "sourceCheckedOn": "2026-11-17"
             }
           ]
         }
@@ -716,6 +807,17 @@
             {
               "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 6位 FAV gaming",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2025: 2位",
+              "sourceUrl": "https://www.shacknews.com/article/144229/evo-japan-2025-results-winners-top-8",
+              "researchId": "A_2025-02",
+              "sourceCheckedOn": "2026-11-17"
             }
           ]
         }
@@ -1922,6 +2024,17 @@
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
             }
           ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2026: 同率5位",
+              "sourceUrl": "https://www.shacknews.com/article/148960/evo-japan-2026-winners-top-8",
+              "researchId": "C_2026-02",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
         }
       ]
     },
@@ -1944,6 +2057,17 @@
             {
               "text": "初出場",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takepi/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2026: 同率7位",
+              "sourceUrl": "https://www.shacknews.com/article/148960/evo-japan-2026-winners-top-8",
+              "researchId": "C_2026-03",
+              "sourceCheckedOn": "2026-11-17"
             }
           ]
         }
@@ -1996,6 +2120,17 @@
             {
               "text": "ストリートファイターリーグ powered by RAGE 5位 トキドフレイム",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "CEO 2026: 優勝",
+              "sourceUrl": "https://www.inside-games.jp/release/prtimes/20260818/302058.html",
+              "researchId": "R20261117-CEO26-01",
+              "sourceCheckedOn": "2026-11-17"
             }
           ]
         }
@@ -2068,6 +2203,17 @@
             {
               "text": "ストリートファイターリーグ: Pro-JP 2022 5位 忍ism Gaming",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2026: 1位",
+              "sourceUrl": "https://www.shacknews.com/article/148960/evo-japan-2026-winners-top-8",
+              "researchId": "R20261117-EVOJ2026-01",
+              "sourceCheckedOn": "2026-11-17"
             }
           ]
         }
