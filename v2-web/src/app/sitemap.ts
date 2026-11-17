@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
+import { isPublicPlayerIdentity } from "@/lib/player-publication-gate";
 
 function getSiteUrl() {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
@@ -62,7 +63,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     supabase
       .from("players")
-      .select("slug")
+      .select("id, slug")
       .eq("status", "published"),
 
     supabase
@@ -88,6 +89,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (!Array.isArray(result.value.data)) continue;
     for (const row of result.value.data) {
       if (!row || typeof row.slug !== "string" || !row.slug.trim()) continue;
+      // Player URLs follow the same publication gate as /players/[slug].
+      if (root === "/players" && !isPublicPlayerIdentity((row as { id?: unknown }).id, row.slug)) continue;
       // A slug is one path segment; never turn response data into a query or fragment.
       const url = `${siteUrl}${root}/${encodeURIComponent(row.slug)}`;
       if (seen.has(url)) continue;

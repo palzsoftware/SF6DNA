@@ -1,5 +1,6 @@
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import { isMovePublicReady } from "@/lib/public-move-gate";
+import { isPublicPlayerIdentity } from "@/lib/player-publication-gate";
 import { releaseFeatures } from "@/lib/release-features";
 import type { SearchEntityType, SearchResultItem } from "@/types/search";
 import type { SearchSuggestionCandidate } from "@/lib/search-suggestions";
@@ -105,6 +106,7 @@ export async function searchAcrossContent(rawQuery: string): Promise<SearchResul
     const id = row.entity_id ?? "";
     const title = row.title ?? "";
     if (!slug || !id || !title) return [];
+    if (type === "player" && !isPublicPlayerIdentity(id, slug)) return [];
 
     const matchedBy: SearchResultItem["matchedBy"] =
       row.matched_by === "alias"
@@ -175,7 +177,7 @@ export async function getPublicSearchSuggestionCandidates(): Promise<SearchSugge
       label: String(row.name_ja), value: String(row.name_ja), type: "キャラクター",
       aliases: [row.name_en, row.short_name, ...(typeof row.slug === "string" ? CHARACTER_SUGGESTION_ALIASES[row.slug] ?? [] : []), ...(characterAliases.get(String(row.id)) ?? [])].filter((value): value is string => typeof value === "string" && Boolean(value.trim())),
     })),
-    ...(playersResult.data ?? []).map((row) => ({
+    ...(playersResult.data ?? []).filter((row) => isPublicPlayerIdentity(row.id, row.slug)).map((row) => ({
       label: String(row.display_name), value: String(row.display_name), type: "プレイヤー",
       aliases: [row.real_name, row.team_name, ...(typeof row.slug === "string" ? PLAYER_SUGGESTION_ALIASES[row.slug] ?? [] : []), ...(playerAliases.get(String(row.id)) ?? []), ...(playerCharacters.get(String(row.id)) ?? [])].filter((value): value is string => typeof value === "string" && Boolean(value.trim())),
     })),

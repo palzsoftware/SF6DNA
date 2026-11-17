@@ -34,6 +34,7 @@ function fixture(environment) {
   const loadedModule = { exports: {} };
   new Function("module", "exports", "require", "process", js)(loadedModule, loadedModule.exports,
     name => {
+      if (name === "@/lib/player-publication-gate") return { isPublicPlayerIdentity: () => true };
       assert.equal(name, "@/lib/supabase/server");
       return { getSupabaseServerClient: () => client };
     }, { env: { VERCEL_ENV: environment, NEXT_PUBLIC_SITE_URL: "https://example.test",

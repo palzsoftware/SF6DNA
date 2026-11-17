@@ -102,10 +102,7 @@ test('source transport failure preserves player identity and missing relations d
   try {
     const sources = load('lib/public-source-links.ts', {'@/lib/supabase/server':{getSupabaseServerClient:()=>client}});
     const { getPlayerBySlug } = load('lib/players.ts', {'@/lib/supabase/server':{getSupabaseServerClient:()=>client}, '@/lib/public-source-links':sources, '@/lib/approved-player-images':{approvedPlayerImage:()=>null},
-      '@/lib/sfl2026-template-connection':{
-        connectSfl2026Summaries: items=>items,
-        connectSfl2026Detail: item=>item
-      }});
+      '@/lib/player-publication-gate':{ gatePublicPlayers: items => items, gatePublicPlayer: item => item, isPublicPlayerIdentity: () => true }});
     const player=await getPlayerBySlug('fixture');
     assert.equal(player.displayName,'公開Player'); assert.equal(player.teamName,null); assert.deepEqual(player.characters,[]); assert.deepEqual(player.sources,[]);
     assert.doesNotMatch(logs.join(' '),/PRIVATE_SOURCE_FAILURE/);

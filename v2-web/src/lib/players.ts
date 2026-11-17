@@ -1,6 +1,6 @@
 import { attachPlayerArchiveDisplay } from "@/lib/player-archive-display";
 import { attachReleasePlayerProfile } from "@/lib/player-profile-release-connection";
-import { connectSfl2026Summaries, connectSfl2026Detail } from "@/lib/sfl2026-template-connection";
+import { gatePublicPlayers, gatePublicPlayer } from "@/lib/player-publication-gate";
 import { attachApprovedPlayerIntake } from "@/lib/player-profile-approved-intake";
 import { approvedPlayerImage } from "@/lib/approved-player-images";
 import { safeExternalUrl } from "@/lib/safe-external-url";
@@ -111,9 +111,9 @@ export async function listPlayers(): Promise<
   return summaries;
 }
 
-/** Directory-only scope: preserve listPlayers for existing callers. */
+/** Public directory scope: DB published AND legacy-public or individually approved identity. */
 export async function listDirectoryPlayers(): Promise<PlayerSummary[]> {
-  return connectSfl2026Summaries(await listPlayers());
+  return gatePublicPlayers(await listPlayers());
 }
 
 export async function getPlayerBySlug(
@@ -143,7 +143,7 @@ export async function getPlayerBySlug(
     return null;
   }
 
-  if (!connectSfl2026Detail(toSummary(player))) return null;
+  if (!gatePublicPlayer(toSummary(player))) return null;
 
   const [
     { data: links, error: linkError },

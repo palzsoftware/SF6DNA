@@ -49,7 +49,7 @@ test('sitemap isolates a rejected group while retaining published filters and va
   const queries = [];
   const client = { from(table) {
     const filters = [];
-    const query = { select(column) { assert.equal(column, 'slug'); return this; }, eq(key, value) { filters.push([key, value]); return this; },
+    const query = { select(column) { assert.ok(table === 'players' ? column === 'id, slug' : column === 'slug', column); return this; }, eq(key, value) { filters.push([key, value]); return this; },
       then(resolve, reject) {
         queries.push({ table, filters });
         return (table === 'players' ? Promise.reject(new Error('SECRET')) : Promise.resolve({

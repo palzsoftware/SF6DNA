@@ -16,6 +16,7 @@ test("disabled strategy and library results are hidden even when RPC returns eli
     }) }) },
     "@/lib/public-move-gate": { isMovePublicReady: async () => { moveChecks++; return true; } },
     "@/lib/release-features": { releaseFeatures: { publicStrategyContent: false, training: false } },
+    "@/lib/player-publication-gate": { isPublicPlayerIdentity: () => true },
   };
   new Function("module", "exports", "require", "process", js)(loadedModule, loadedModule.exports,
     name => { assert.ok(imports[name], name); return imports[name]; },

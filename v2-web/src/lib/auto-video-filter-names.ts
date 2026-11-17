@@ -1,6 +1,6 @@
 import "server-only";
 import { listCharacters } from "@/lib/characters";
-import { listPlayers } from "@/lib/players";
+import { listDirectoryPlayers } from "@/lib/players";
 
 /** Resolve exact public identities before calling external search; never use raw URL text. */
 export async function autoVideoFilterNames(filters: {
@@ -11,7 +11,7 @@ export async function autoVideoFilterNames(filters: {
   try {
     const names: string[] = [];
     if (filters.playerId || filters.player) {
-      const players = await listPlayers();
+      const players = await listDirectoryPlayers();
       const matches = players.filter(row => filters.playerId
         ? row.id === filters.playerId : row.displayName === filters.player);
       if (matches.length !== 1) return null;

@@ -23,10 +23,8 @@ function client(tables, sources=[]) {
 function loaders(tables,sources=[]) {
   const db=client(tables,sources);
   const imports={'@/lib/supabase/server':{getSupabaseServerClient:()=>db},'@/lib/safe-external-url':{safeExternalUrl},'@/lib/approved-player-images':{approvedPlayerImage:()=>null}};
-  imports['@/lib/sfl2026-template-connection'] = {
-    connectSfl2026Summaries: items => items,
-    connectSfl2026Detail: item => item,
-  };
+  // Gate membership is covered by player-publication-gate.test.mjs; these fixtures test query filters.
+  imports['@/lib/player-publication-gate'] = { gatePublicPlayers: items => items, gatePublicPlayer: item => item, isPublicPlayerIdentity: () => true };
   imports['@/lib/player-profile-contract']=load('../src/lib/player-profile-contract.ts',imports);
   imports['@/lib/player-profile-approved-intake']=load('../src/lib/player-profile-approved-intake.ts',imports);
   imports['@/lib/player-archive-display']=load('../src/lib/player-archive-display.ts',imports);
