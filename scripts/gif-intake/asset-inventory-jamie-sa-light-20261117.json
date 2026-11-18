@@ -1,0 +1,42 @@
+{
+ "generated": "2026-11-17",
+ "note": "SA3/CA軽量版の素材台帳(Drive個別取得・SHA一致)",
+ "records": [
+  {
+   "character": "jamie",
+   "file": "jamie-sa3-getsusaiho_under10mb_64color_nodither.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "076ba920be6205c9d9174f51a615bfef8e385d38cbcede740165dd767942586e",
+   "width": 480,
+   "height": 270,
+   "frames": 204,
+   "durationMs": 10200,
+   "bytes": 9786204,
+   "derivedFrom": {
+    "original": "jamie-sa3-getsusaiho.gif",
+    "originalSha256": "b9f83599170092027d527f0d0858bd93d4deca9121bffc311f50fa3b8690eaf6",
+    "originalBytes": 14590240,
+    "originalDriveId": "1E0tCQvL3tnt4M4_3frAjvyeTnAIBhqr_",
+    "note": "10MB未満の軽量版(減色)。元は10MB超でコネクタ取得不可だった"
+   }
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-ca-getsusaiho_under10mb_32color_nodither.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "4f9e86ad4f1ae598560fb281b94f185b3fb6039afdf15cbab80692a152ac52b6",
+   "width": 480,
+   "height": 270,
+   "frames": 242,
+   "durationMs": 12100,
+   "bytes": 9066842,
+   "derivedFrom": {
+    "original": "jamie-ca-getsusaiho.gif",
+    "originalSha256": "8f154500c0876524be125ad8659994f88fc9aa51f6172528986c328951e3274d",
+    "originalBytes": 16935411,
+    "originalDriveId": "1bw8yoMemDl_Pw-pEMClB6ooJbNamUtn5",
+    "note": "10MB未満の軽量版(減色)。元は10MB超でコネクタ取得不可だった"
+   }
+  }
+ ]
+}

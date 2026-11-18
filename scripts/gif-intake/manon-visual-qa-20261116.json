@@ -1,0 +1,432 @@
+{
+ "generated": "2026-11-16",
+ "scope": "manon: 静的一致/要映像確認の16本",
+ "method": "各GIFを等間隔8フレームのコンタクトシートで目視(Claude)。同系統の映像との比較で強度・OD差を判断。入力操作との一致は映像から証明できない。承認ではない。",
+ "limits": [
+  "VISUAL_PASS/APPROVEDは人手の映像確認後にのみ設定する",
+  "CONFIRMED=ローカルQA表示に使ってよい。公開承認ではない"
+ ],
+ "summary": {
+  "confirmed": 4,
+  "needsMoreCheck": 12,
+  "mismatch": 0
+ },
+ "mismatches": [],
+ "entries": [
+  {
+   "file": "manon-heavy-degage.gif",
+   "moveSlug": "manon-degage-h",
+   "moveId": "f284f407-cbb4-4300-a615-9a11af7178df",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": true
+   },
+   "observation": "飛び上がる蹴りで1回大きくヒットし、相手がダウンする。弱・中は2段のヒット火花で、ヒット数の違いから区別できる。",
+   "unconfirmed": [
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 1450,
+    "frames": 29,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-od-degage.gif",
+   "moveSlug": "manon-degage-od",
+   "moveId": "9de1ac97-fc73-4ae2-9271-64174f9b1c27",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": true
+   },
+   "observation": "同系統の蹴りに金色のOD演出が付く。",
+   "unconfirmed": [
+    "実際の入力操作との一致(映像からは証明できない)",
+    "OD消費であること"
+   ],
+   "metrics": {
+    "durationMs": 2150,
+    "frames": 43,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-od-rond-point.gif",
+   "moveSlug": "manon-rond-point-od",
+   "moveId": "e33ab912-790e-4cc3-b532-1518cf8bdf7b",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": true
+   },
+   "observation": "同系統の回転蹴りに金色のOD演出が付き、相手が打ち上がる。",
+   "unconfirmed": [
+    "実際の入力操作との一致(映像からは証明できない)",
+    "OD消費であること"
+   ],
+   "metrics": {
+    "durationMs": 1850,
+    "frames": 37,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-od-manege-dore.gif",
+   "moveSlug": "manon-manege-od",
+   "moveId": "ddc87d1a-7319-4f33-836d-1f1d49e31e79",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": true
+   },
+   "observation": "掴み投げの動作に金色のOD演出が付く。",
+   "unconfirmed": [
+    "実際の入力操作との一致(映像からは証明できない)",
+    "OD消費であること"
+   ],
+   "metrics": {
+    "durationMs": 3050,
+    "frames": 61,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-light-degage.gif",
+   "moveSlug": "manon-degage-l",
+   "moveId": "f21d0878-5c98-45f9-995c-1488b784d044",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "蹴りの2段ヒットが見えるが、中との違いが映像から区別できない。",
+   "unconfirmed": [
+    "弱であること(中との区別)",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 1650,
+    "frames": 33,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-medium-degage.gif",
+   "moveSlug": "manon-degage-m",
+   "moveId": "61da79b8-44e4-4102-8fd8-b8567c34b055",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "蹴りの2段ヒットが見えるが、弱との違いが映像から区別できない。",
+   "unconfirmed": [
+    "中であること(弱との区別)",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 1600,
+    "frames": 32,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-light-manege-dore.gif",
+   "moveSlug": "manon-manege-l",
+   "moveId": "47d8e1cb-af05-4495-994d-cdf7f83675da",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "掴み投げの動作。弱/中/強の違いを映像から区別できない。",
+   "unconfirmed": [
+    "弱であること",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 2650,
+    "frames": 53,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-medium-manege-dore.gif",
+   "moveSlug": "manon-manege-m",
+   "moveId": "1c8375a6-7858-40ad-8ca3-aa265f2da682",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "掴み投げの動作。弱/中/強の違いを映像から区別できない。",
+   "unconfirmed": [
+    "中であること",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 2700,
+    "frames": 54,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-heavy-manege-dore.gif",
+   "moveSlug": "manon-manege-h",
+   "moveId": "7508a273-cd0f-43ae-85f1-e16dc8f9b850",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "掴み投げの動作。弱/中/強の違いを映像から区別できない。",
+   "unconfirmed": [
+    "強であること",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 3450,
+    "frames": 69,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-light-rond-point.gif",
+   "moveSlug": "manon-rond-point-l",
+   "moveId": "a517d65e-66a7-48ed-bbcc-7fd5be704c28",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "回転蹴りの動作。弱/中/強の違いを映像から区別できない。",
+   "unconfirmed": [
+    "弱であること",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 1900,
+    "frames": 38,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-medium-rond-point.gif",
+   "moveSlug": "manon-rond-point-m",
+   "moveId": "c2ee71d5-9294-43c2-9f9a-c1cba60a080c",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "回転蹴りの動作。弱/中/強の違いを映像から区別できない。",
+   "unconfirmed": [
+    "中であること",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 1700,
+    "frames": 34,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-heavy-rond-point.gif",
+   "moveSlug": "manon-rond-point-h",
+   "moveId": "dbde2cbc-e04d-4c39-8847-4eaf65282637",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "回転蹴りの動作。弱/中/強の違いを映像から区別できない。",
+   "unconfirmed": [
+    "強であること",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 1650,
+    "frames": 33,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-od-grand-fouette.gif",
+   "moveSlug": "manon-grand-fouette-od",
+   "moveId": "1ee03250-5022-4db8-ab9c-f08af76c1a4b",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "金色のOD演出を伴う蹴り。同系統の非OD映像が無く、技名との対応を映像から判断できない。",
+   "unconfirmed": [
+    "技名との一致(比較対象なし)",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 1800,
+    "frames": 36,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-od-renverse.gif",
+   "moveSlug": "manon-renverse-od",
+   "moveId": "2a72c52e-206d-4c2c-b564-705305fd9d1c",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "金色のOD演出を伴う大きな動作。同系統の非OD映像が無く、技名との対応を映像から判断できない。",
+   "unconfirmed": [
+    "技名との一致(比較対象なし)",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 3450,
+    "frames": 69,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-sa1-arabesque.gif",
+   "moveSlug": "manon-sa1",
+   "moveId": "d7961e55-c6ed-443d-a3fa-e53fdc54fd26",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "暗転演出つきのSA。SA1/SA2のどちらかを映像から区別できない。",
+   "unconfirmed": [
+    "SA1であること(SA2との区別)",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 3000,
+    "frames": 60,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-sa2-etoile.gif",
+   "moveSlug": "manon-sa2",
+   "moveId": "3e16e56f-1b3d-43ad-a321-ef70e876a8e0",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "顔のアップ演出つきのSA。SA1/SA2のどちらかを映像から区別できない。",
+   "unconfirmed": [
+    "SA2であること(SA1との区別)",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 5450,
+    "frames": 109,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

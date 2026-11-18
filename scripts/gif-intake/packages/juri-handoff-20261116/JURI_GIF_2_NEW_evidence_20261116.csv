@@ -1,0 +1,3 @@
+﻿character,filename,source,start,end,frames,size_bytes,width,height,fps,loop,sha256,classification
+juri,juri_044011_019p80_021p00_unmapped_HOLD.gif,clip_1364780_20261004_044011.mp4,19.8,21.0,24,1682275,480,270,20,0,9d2b39b12af465678f0ed911c8c92ac10a06f519635727b83892caa6aca13106,HOLD
+juri,juri_044011_033p55_034p95_unmapped_HOLD.gif,clip_1364780_20261004_044011.mp4,33.55,34.95,28,1328479,480,270,20,0,e1f82373a475d5a995428eab0dae4cd29b036ed8e2d0619f69a8ab6843eef8ef,HOLD

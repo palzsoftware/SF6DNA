@@ -1,0 +1,49 @@
+{
+ "generated": "2026-11-17",
+ "scope": "manon SA3/CA 軽量版の目視QA",
+ "entries": [
+  {
+   "character": "manon",
+   "file": "manon-sa3-pas-de-deux_under10mb_48color_nodither.gif",
+   "moveSlug": "manon-sa3",
+   "moveId": "061b7386-762e-467c-9b9d-09470f92a27d",
+   "fixtureName": "SA3 パ・ド・ドゥ",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "開始時のSAゲージが3本、技の開始後に0本へ減る(3本消費=SA3)。『CA』表示は無い。パ・ド・ドゥの演出(カット演出つきの多段)。",
+   "unconfirmed": [
+    "入力表示は一部のコマで読み取れず、コマンド(236236P)の一致は静的照合のみ",
+    "SA1/SA2(ボタンK)とは別に、3本消費でSA3と判断",
+    "軽量版は減色(32〜64色・PSNR 25〜28dB)で元GIFより画質が粗い"
+   ],
+   "metrics": {
+    "frames": 215,
+    "durationMs": 10750,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "manon",
+   "file": "manon-ca-pas-de-deux_under10mb_32color.gif",
+   "moveSlug": "manon-ca",
+   "moveId": "1d2d8c87-2a79-44c4-a3e3-263a7e00f9a4",
+   "fixtureName": "CA パ・ド・ドゥ",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "ゲージ位置に『CA』表示、入力表示 ↓↘→↓↘→+P(236236P)。SA3と同じ演出をCAとして区別できる。",
+   "unconfirmed": [
+    "CAの発動条件は公開データによる静的照合",
+    "軽量版は減色(32〜64色・PSNR 25〜28dB)で元GIFより画質が粗い"
+   ],
+   "metrics": {
+    "frames": 237,
+    "durationMs": 11850,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

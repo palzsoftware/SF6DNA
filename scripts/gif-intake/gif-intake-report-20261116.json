@@ -1,0 +1,6584 @@
+{
+ "generated": "2026-11-16",
+ "note": "検査合格は承認ではない。目視未承認のまま。",
+ "count": 246,
+ "summary": {
+  "CONNECTABLE_CANDIDATE": 75,
+  "BLOCKED": 3,
+  "HOLD_UNCONFIRMED_MAPPING": 2,
+  "MP4_KEPT": 78,
+  "HOLD_ALT_VERSION": 3,
+  "HOLD_SUSPECTED_OLD": 2,
+  "HOLD_NO_FIXTURE_MOVE": 75,
+  "HOLD_NOT_INSPECTED": 8
+ },
+ "records": [
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_1-luke-standing-lp.gif",
+   "moveId": "beb7d320-94fb-4e21-93ca-7defe9570f50",
+   "moveSlug": "luke-standing-lp",
+   "inspect": {
+    "sha256": "a7dcfdcf4edbe723437534b83794c0577905617dd02eafffaa8d6d1b4bde8898",
+    "frames": 15,
+    "width": 480,
+    "height": 270,
+    "durationMs": 750,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "beb7d320-94fb-4e21-93ca-7defe9570f50",
+    "slug": "luke-standing-lp",
+    "name": "立ち弱P",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "弱P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_2-luke-standing-lk.gif",
+   "moveId": "b09359b8-9a9b-4fce-a1e6-5ed2a1bc1afe",
+   "moveSlug": "luke-standing-lk",
+   "inspect": {
+    "sha256": "504bc896f3ebf0f2b364191bc7db9d9e8a2cfe3eac95d8efacdcaf121e38afe3",
+    "frames": 18,
+    "width": 480,
+    "height": 270,
+    "durationMs": 900,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "b09359b8-9a9b-4fce-a1e6-5ed2a1bc1afe",
+    "slug": "luke-standing-lk",
+    "name": "立ち弱K",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "弱K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_3-luke-standing-mp.gif",
+   "moveId": "548d97af-d316-4a12-9574-e08b9dad159a",
+   "moveSlug": "luke-standing-mp",
+   "inspect": {
+    "sha256": "8bc80480a6741f695f2cc639cf1e9e66885ce4eda1f62ef150cd669ce933ef1c",
+    "frames": 19,
+    "width": 480,
+    "height": 270,
+    "durationMs": 950,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "548d97af-d316-4a12-9574-e08b9dad159a",
+    "slug": "luke-standing-mp",
+    "name": "立ち中P",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "中P",
+    "hasMedia": false
+   },
+   "connectionClass": "BLOCKED",
+   "reasons": [
+    "DUPLICATE:22_5-luke-standing-hp.gif"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_4-luke-standing-mk.gif",
+   "moveId": "82fb24e6-a9e4-4f76-9686-450d0ff43143",
+   "moveSlug": "luke-standing-mk",
+   "inspect": {
+    "sha256": "fcd60fed5df554ff32773161a2f688c3473c66ad1c24cd7c829925ac82af3ea5",
+    "frames": 19,
+    "width": 480,
+    "height": 270,
+    "durationMs": 950,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "82fb24e6-a9e4-4f76-9686-450d0ff43143",
+    "slug": "luke-standing-mk",
+    "name": "立ち中K",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "中K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_5-luke-standing-hp-verified.gif",
+   "moveId": "97651c5b-50de-45b3-851d-4e6157c22192",
+   "moveSlug": "luke-standing-hp",
+   "inspect": {
+    "sha256": "52b1d934f46441931567c1ef2820c1d2e9cfd337bd45d3cf1d85e7959b6af34c",
+    "frames": 24,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1200,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "97651c5b-50de-45b3-851d-4e6157c22192",
+    "slug": "luke-standing-hp",
+    "name": "立ち強P",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "強P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_6-luke-standing-hk.gif",
+   "moveId": "0dd61560-79e9-4220-89a7-3044bc01b630",
+   "moveSlug": "luke-standing-hk",
+   "inspect": {
+    "sha256": "240819e38fb972c5cf1f4ab2fc72a1688619fac3e6aa6d51e5ca9eb5544f9003",
+    "frames": 22,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1100,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "0dd61560-79e9-4220-89a7-3044bc01b630",
+    "slug": "luke-standing-hk",
+    "name": "立ち強K",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "強K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_7-luke-crouching-lp.gif",
+   "moveId": "40d7e3a8-5e6c-49b1-9e88-3cdb830f8ce0",
+   "moveSlug": "luke-crouching-lp",
+   "inspect": {
+    "sha256": "27cead4d1fb484b65ae8c1820f5aececc90f1d3f71c3214efe71c6b9cf37a997",
+    "frames": 16,
+    "width": 480,
+    "height": 270,
+    "durationMs": 800,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "40d7e3a8-5e6c-49b1-9e88-3cdb830f8ce0",
+    "slug": "luke-crouching-lp",
+    "name": "しゃがみ弱P",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 弱P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_8-luke-crouching-lk.gif",
+   "moveId": "3ead79b6-43a0-4376-8ccb-04e068be8df7",
+   "moveSlug": "luke-crouching-lk",
+   "inspect": {
+    "sha256": "dc4618586ad08c80fc3ae63d3d16c87fb3a8b320376ef6d700cd4552236317fb",
+    "frames": 17,
+    "width": 480,
+    "height": 270,
+    "durationMs": 850,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "3ead79b6-43a0-4376-8ccb-04e068be8df7",
+    "slug": "luke-crouching-lk",
+    "name": "しゃがみ弱K",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 弱K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_9-luke-crouching-mp.gif",
+   "moveId": "d21b0a0c-4d1a-4ccf-9a0f-585246d91395",
+   "moveSlug": "luke-crouching-mp",
+   "inspect": {
+    "sha256": "b1dd119efbf46344e229a04307f460a9bd4d84000ee83d37c8308ccf4f142481",
+    "frames": 20,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1000,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "d21b0a0c-4d1a-4ccf-9a0f-585246d91395",
+    "slug": "luke-crouching-mp",
+    "name": "しゃがみ中P",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 中P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "110-luke-calf-squash.gif",
+   "moveId": "2666b0fc-64f1-405c-afbe-382431e1df9b",
+   "moveSlug": "luke-crouching-mk",
+   "inspect": {
+    "sha256": "2fdb4476ea39410acc851f9bedd71ed01e158f7e2c7e2e7b3f6e4cb81ee42350",
+    "frames": 19,
+    "width": 480,
+    "height": 270,
+    "durationMs": 950,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "2666b0fc-64f1-405c-afbe-382431e1df9b",
+    "slug": "luke-crouching-mk",
+    "name": "しゃがみ中K",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 中K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_11-luke-crouching-hp.gif",
+   "moveId": "2efffb76-d9f8-44e2-830a-16ee127f96cc",
+   "moveSlug": "luke-crouching-hp",
+   "inspect": {
+    "sha256": "b0e14fcf45bd12ace392f6759fcd7d1187452735ec276b42265ebc15b66a5e50",
+    "frames": 21,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1050,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "2efffb76-d9f8-44e2-830a-16ee127f96cc",
+    "slug": "luke-crouching-hp",
+    "name": "しゃがみ強P",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_12-luke-trench-break.gif",
+   "moveId": "9f9e639b-a942-40a2-ad23-33fa36e1ac06",
+   "moveSlug": "luke-crouching-hk",
+   "inspect": {
+    "sha256": "4068189e71c37345ca7edec253802e0cf1a9cb38285694f5abe01c34c93e157c",
+    "frames": 25,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1250,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "unconfirmed_mapping",
+   "fixtureMove": {
+    "id": "9f9e639b-a942-40a2-ad23-33fa36e1ac06",
+    "slug": "luke-crouching-hk",
+    "name": "しゃがみ強K",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 強K",
+    "hasMedia": false
+   },
+   "connectionClass": "HOLD_UNCONFIRMED_MAPPING",
+   "reasons": [
+    "Stage1でHOLD判定済み"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_13-luke-jumping-lp.gif",
+   "moveId": "00fb09ee-aba9-4dc7-8115-29b46bd67dad",
+   "moveSlug": "luke-jump-lp",
+   "inspect": {
+    "sha256": "81dd6a73922d0fadfac0419274a877d8ca95e8f8763aa4aef21063a9ec7e63da",
+    "frames": 26,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1300,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "00fb09ee-aba9-4dc7-8115-29b46bd67dad",
+    "slug": "luke-jump-lp",
+    "name": "ジャンプ弱P",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）弱P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_14-luke-jumping-lk.gif",
+   "moveId": "31807b8f-99c8-446f-a2db-5200ae2fae69",
+   "moveSlug": "luke-jump-lk",
+   "inspect": {
+    "sha256": "c966b5613a7d19eadbbc4290c1868a55e46b9ebfdd2e1321f0f5c195281dc814",
+    "frames": 22,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1100,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "31807b8f-99c8-446f-a2db-5200ae2fae69",
+    "slug": "luke-jump-lk",
+    "name": "ジャンプ弱K",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）弱K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_15-luke-jumping-mp.gif",
+   "moveId": "48c184ed-390f-454f-9de8-75df3887fc13",
+   "moveSlug": "luke-jump-mp",
+   "inspect": {
+    "sha256": "1154bfdd3f5acce3f651962b93b71ffd86c4e50235b076aeac3e8eef21020af1",
+    "frames": 22,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1100,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "48c184ed-390f-454f-9de8-75df3887fc13",
+    "slug": "luke-jump-mp",
+    "name": "ジャンプ中P",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）中P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_16-luke-jumping-mk.gif",
+   "moveId": "779533b9-24da-421b-ac57-bb8c3d5700b9",
+   "moveSlug": "luke-jump-mk",
+   "inspect": {
+    "sha256": "5211977b5b05dc55a7e6e2b38a9a9cefcbb9d3b3297d94d811a0b1bb0ded1fe1",
+    "frames": 26,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1300,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "779533b9-24da-421b-ac57-bb8c3d5700b9",
+    "slug": "luke-jump-mk",
+    "name": "ジャンプ中K",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）中K",
+    "hasMedia": false
+   },
+   "connectionClass": "BLOCKED",
+   "reasons": [
+    "DUPLICATE:22_18-luke-jumping-hk.gif"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "117-luke-gunmetal-hammer.gif",
+   "moveId": "229b7150-2d1c-46ae-87cf-c2dfa413d588",
+   "moveSlug": "luke-jump-hp",
+   "inspect": {
+    "sha256": "7e78d82efc4f47573682a1f3aaa874cae177a8aa4dbf612df7e67b82434c1f3d",
+    "frames": 19,
+    "width": 480,
+    "height": 270,
+    "durationMs": 950,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "229b7150-2d1c-46ae-87cf-c2dfa413d588",
+    "slug": "luke-jump-hp",
+    "name": "ジャンプ強P",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）強P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_18-luke-jumping-hk-verified.gif",
+   "moveId": "5a9a9a77-2943-428c-8eb0-8729e26ed0bc",
+   "moveSlug": "luke-jump-hk",
+   "inspect": {
+    "sha256": "fae484613fcd559c746aa7b4cba6ac485073a482942c135e437b6624dbe15eb8",
+    "frames": 28,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1400,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "5a9a9a77-2943-428c-8eb0-8729e26ed0bc",
+    "slug": "luke-jump-hk",
+    "name": "ジャンプ強K",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）強K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_19-luke-rawhide.gif",
+   "moveId": "f415ffa3-f701-4586-8e02-e30596c119e9",
+   "moveSlug": "luke-rawhide",
+   "inspect": {
+    "sha256": "cadfca07fca1ddff686ae7726ef0430bdca85d8d55ecb7823ef9ff6490a07b5b",
+    "frames": 25,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1250,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "f415ffa3-f701-4586-8e02-e30596c119e9",
+    "slug": "luke-rawhide",
+    "name": "ローハイド",
+    "moveType": "unique",
+    "category": "特殊技",
+    "command": "→ + 中P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_20-luke-suppressor.gif",
+   "moveId": "4383dae4-bdac-418f-9a11-e4632eb25696",
+   "moveSlug": "luke-suppressor",
+   "inspect": {
+    "sha256": "5213834492e7a4380b71cc10d5cef1fc02410c52ace0e97b35bcd834bc172b8c",
+    "frames": 26,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1300,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "4383dae4-bdac-418f-9a11-e4632eb25696",
+    "slug": "luke-suppressor",
+    "name": "サプレッサー",
+    "moveType": "unique",
+    "category": "特殊技",
+    "command": "← + 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_21-luke-outlaw-kick.gif",
+   "moveId": "938179e9-b0e1-4b22-8adb-d61bcb84ae86",
+   "moveSlug": "luke-outlaw-kick",
+   "inspect": {
+    "sha256": "ac84c876b3446d9a56b8431e10c66e57e7ade2bde744bbf6ff3478f5aabaece6",
+    "frames": 26,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1300,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "938179e9-b0e1-4b22-8adb-d61bcb84ae86",
+    "slug": "luke-outlaw-kick",
+    "name": "アウトローキック",
+    "moveType": "unique",
+    "category": "特殊技",
+    "command": "← + 強K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_25-luke-triple-impact-full.gif",
+   "moveId": "42cfd8d8-a47b-4d89-8fd6-95e758b07e0d",
+   "moveSlug": "luke-triple-impact",
+   "inspect": {
+    "sha256": "10b2889d906dd772642d000f6747dae9122e386076430d96256bdaa6bc2202fd",
+    "frames": 44,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2200,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "42cfd8d8-a47b-4d89-8fd6-95e758b07e0d",
+    "slug": "luke-triple-impact",
+    "name": "トリプルインパクト",
+    "moveType": "target_combo",
+    "category": "ターゲットコンボ",
+    "command": "弱P ＞ 中P ＞ 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_27-luke-nose-breaker.gif",
+   "moveId": "aab86b9c-f501-4928-8818-114f5fc0574a",
+   "moveSlug": "luke-nose-breaker",
+   "inspect": {
+    "sha256": "c862d202356dd89153a9fd5281792df9c1c9da29a920f4e4e185cd4ee6e5e4ab",
+    "frames": 36,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1800,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "aab86b9c-f501-4928-8818-114f5fc0574a",
+    "slug": "luke-nose-breaker",
+    "name": "ノーズブレイカー",
+    "moveType": "target_combo",
+    "category": "ターゲットコンボ",
+    "command": "↓ + 中K ＞ ↓ + 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_29-luke-snapback-combo-full.gif",
+   "moveId": "a6088794-0ed1-4ee9-9d4a-ee4cbe159e37",
+   "moveSlug": "luke-snapback-combo",
+   "inspect": {
+    "sha256": "01bec0d42f1edd44f998498f6f5f81bac6a0161a5ae6261ebc77720e23996dec",
+    "frames": 59,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2950,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "a6088794-0ed1-4ee9-9d4a-ee4cbe159e37",
+    "slug": "luke-snapback-combo",
+    "name": "スナップバックコンボ",
+    "moveType": "target_combo",
+    "category": "ターゲットコンボ",
+    "command": "中P ＞ 中P ＞ 中P ＞ 中P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_30-luke-light-sand-blast.gif",
+   "moveId": "e5c37a22-9ba1-409b-bc2a-52b4839c8e6f",
+   "moveSlug": "luke-sand-blast-l",
+   "inspect": {
+    "sha256": "3901f3778a84f0d501e7b11897cf95bfdf8770663d7d1639b05458d73e1666d0",
+    "frames": 27,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1350,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "e5c37a22-9ba1-409b-bc2a-52b4839c8e6f",
+    "slug": "luke-sand-blast-l",
+    "name": "弱 サンドブラスト",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓↘→ + 弱P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_31-luke-medium-sand-blast.gif",
+   "moveId": "e881de87-5e45-4e0f-bda5-668c28d2b76a",
+   "moveSlug": "luke-sand-blast-m",
+   "inspect": {
+    "sha256": "244d08ca756e75e796b1405f691d8a72419ea4754cc4a822e684fb9e2f0cb89c",
+    "frames": 27,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1350,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "e881de87-5e45-4e0f-bda5-668c28d2b76a",
+    "slug": "luke-sand-blast-m",
+    "name": "中 サンドブラスト",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓↘→ + 中P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_32-luke-heavy-sand-blast.gif",
+   "moveId": "fb68e4ad-4c0a-4bc1-bd8c-c79244c78d78",
+   "moveSlug": "luke-sand-blast-h",
+   "inspect": {
+    "sha256": "d302e82b104b87d20ad23dc964a798216ee8c9a44f94701dc725a6a946603328",
+    "frames": 28,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1400,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "fb68e4ad-4c0a-4bc1-bd8c-c79244c78d78",
+    "slug": "luke-sand-blast-h",
+    "name": "強 サンドブラスト",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓↘→ + 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_33-luke-od-sand-blast.gif",
+   "moveId": "0466a4f1-0e3c-4352-8f61-0f1874663e99",
+   "moveSlug": "luke-sand-blast-od",
+   "inspect": {
+    "sha256": "dd0c68bc040d6c53f47f221a127ff66e25adb2179b305d01dc301224c9eaffd8",
+    "frames": 36,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1800,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "0466a4f1-0e3c-4352-8f61-0f1874663e99",
+    "slug": "luke-sand-blast-od",
+    "name": "OD サンドブラスト",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓↘→ + PP",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_34-luke-fatal-shot.gif",
+   "moveId": "423f6d80-072c-4dd1-863d-5b8e0061a37d",
+   "moveSlug": "luke-fatal-shot",
+   "inspect": {
+    "sha256": "bc9bf0cc46bddc8c9a40f409801f9910b45725c4b34e83853eefee46a17579f6",
+    "frames": 44,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2200,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "423f6d80-072c-4dd1-863d-5b8e0061a37d",
+    "slug": "luke-fatal-shot",
+    "name": "フェイタルショット",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "ODサンドブラスト後に PP",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_35-luke-light-flash-knuckle.gif",
+   "moveId": "53070580-449c-4fcb-b6f5-bb97de387ba1",
+   "moveSlug": "luke-flash-knuckle-l",
+   "inspect": {
+    "sha256": "30869638ca2c0a6ddbdffb7234b2283bef95942f3c81a0a185495b00640420e6",
+    "frames": 22,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1100,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "53070580-449c-4fcb-b6f5-bb97de387ba1",
+    "slug": "luke-flash-knuckle-l",
+    "name": "弱 フラッシュナックル",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓↙← + 弱P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_38-luke-medium-flash-knuckle.gif",
+   "moveId": "8668e8a5-945a-437c-a833-f265d837d0bc",
+   "moveSlug": "luke-flash-knuckle-m",
+   "inspect": {
+    "sha256": "0c49140bacb24cc382a8ecd8ad72752fa393e15c2e04e0d96200fac9a345c3a6",
+    "frames": 29,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "8668e8a5-945a-437c-a833-f265d837d0bc",
+    "slug": "luke-flash-knuckle-m",
+    "name": "中 フラッシュナックル",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓↙← + 中P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_41-luke-heavy-flash-knuckle.gif",
+   "moveId": "4b6fa7c0-c85c-4d4f-aca4-b54b29599818",
+   "moveSlug": "luke-flash-knuckle-h",
+   "inspect": {
+    "sha256": "82e05ff0ac86444d337c49addde25766d1a7338477bc376ef17e4a1f4d3aa386",
+    "frames": 32,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1600,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "4b6fa7c0-c85c-4d4f-aca4-b54b29599818",
+    "slug": "luke-flash-knuckle-h",
+    "name": "強 フラッシュナックル",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓↙← + 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_45-luke-od-flash-knuckle-followup.gif",
+   "moveId": "9616dccc-5222-420c-97c7-512fe6ebad17",
+   "moveSlug": "luke-flash-knuckle-od",
+   "inspect": {
+    "sha256": "d4b9a2f34b17cf4f465066315ff5a6c4a9f314efef467e930e8855a5babe9185",
+    "frames": 28,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1400,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "unconfirmed_mapping",
+   "fixtureMove": {
+    "id": "9616dccc-5222-420c-97c7-512fe6ebad17",
+    "slug": "luke-flash-knuckle-od",
+    "name": "OD フラッシュナックル",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓↙← + PP",
+    "hasMedia": false
+   },
+   "connectionClass": "HOLD_UNCONFIRMED_MAPPING",
+   "reasons": [
+    "Stage1でHOLD判定済み"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_46-luke-ddt.gif",
+   "moveId": "6afa6076-dff0-4ca5-b00d-acbf1a6f74e0",
+   "moveSlug": "luke-ddt",
+   "inspect": {
+    "sha256": "91a9f9ebe83adc5e56bd60143b37ce2c6872dff96365c3d80d5d8324bb7d4777",
+    "frames": 67,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3350,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "6afa6076-dff0-4ca5-b00d-acbf1a6f74e0",
+    "slug": "luke-ddt",
+    "name": "DDT（投げ）",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "ODフラッシュナックル1段目中に PP",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_47-luke-aerial-flash-knuckle.gif",
+   "moveId": "5d28a0ed-7abe-4c1b-8cc4-bcb208d55626",
+   "moveSlug": "luke-aerial-flash-knuckle",
+   "inspect": {
+    "sha256": "539857ce413be67fb8973392bc8c57e8436f9c622262dcd71682d924270f7ff0",
+    "frames": 43,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2150,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "5d28a0ed-7abe-4c1b-8cc4-bcb208d55626",
+    "slug": "luke-aerial-flash-knuckle",
+    "name": "エアリアルフラッシュナックル",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "（ジャンプ中）↓↙← + P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-avenger.gif",
+   "moveId": "29ba87ce-14a6-40b2-84aa-936228092b66",
+   "moveSlug": "luke-avenger",
+   "inspect": {
+    "sha256": "8eb8e20e2210c78bc9cca716476b49e68572ef78646bf6b78e36fbe50753b7d0",
+    "frames": 29,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "29ba87ce-14a6-40b2-84aa-936228092b66",
+    "slug": "luke-avenger",
+    "name": "アベンジャー",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓↘→ + K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-no-chaser.gif",
+   "moveId": "c9027806-a085-4461-a802-592e907e9a46",
+   "moveSlug": "luke-no-chaser",
+   "inspect": {
+    "sha256": "d3d63d27ea30b986528fcd03f6d169321c6b074285ae0179698c9d732fa1d679",
+    "frames": 33,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1650,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "c9027806-a085-4461-a802-592e907e9a46",
+    "slug": "luke-no-chaser",
+    "name": "ノーチェイサー",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "アベンジャー中に P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-impaler.gif",
+   "moveId": "b2aaf0e6-82b4-49eb-8690-96450cfb7d1e",
+   "moveSlug": "luke-impaler",
+   "inspect": {
+    "sha256": "60d9908205a56cc97f7775803d5fcac0f370dba530b83122f0c22a85ad0d73a2",
+    "frames": 32,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1600,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "b2aaf0e6-82b4-49eb-8690-96450cfb7d1e",
+    "slug": "luke-impaler",
+    "name": "インペイラー",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "アベンジャー中に K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-light-rising-uppercut.gif",
+   "moveId": "ee3a7178-324f-4238-9e0d-b3735dfc9beb",
+   "moveSlug": "luke-rising-uppercut-l",
+   "inspect": {
+    "sha256": "140035eaa1707133efe10b152712147c1027f174a2208bd655fd327955c37ee5",
+    "frames": 36,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1800,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "ee3a7178-324f-4238-9e0d-b3735dfc9beb",
+    "slug": "luke-rising-uppercut-l",
+    "name": "弱 ライジングアッパー",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→↓↘ + 弱P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-medium-rising-uppercut.gif",
+   "moveId": "249ae616-7fd2-422e-80a3-65bb64b80a17",
+   "moveSlug": "luke-rising-uppercut-m",
+   "inspect": {
+    "sha256": "44fad8918e29b54419ee9ae008baab55057abe17b0b924d65be575477486bc4b",
+    "frames": 36,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1800,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "249ae616-7fd2-422e-80a3-65bb64b80a17",
+    "slug": "luke-rising-uppercut-m",
+    "name": "中 ライジングアッパー",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→↓↘ + 中P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-heavy-rising-uppercut.gif",
+   "moveId": "c647ddae-2f4f-440d-ab84-8c44b5ba9188",
+   "moveSlug": "luke-rising-uppercut-h",
+   "inspect": {
+    "sha256": "00d89bb2f6720273561a46a29529304c69cd205b3a8738f89c4aa5a896489fe2",
+    "frames": 40,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2000,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "c647ddae-2f4f-440d-ab84-8c44b5ba9188",
+    "slug": "luke-rising-uppercut-h",
+    "name": "強 ライジングアッパー",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→↓↘ + 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-od-rising-uppercut.gif",
+   "moveId": "3176f9a4-9586-49cc-9dd6-8a444e2cd1ae",
+   "moveSlug": "luke-rising-uppercut-od",
+   "inspect": {
+    "sha256": "a632c4c724e787272dc0c8af71ffdbba40c92cb5e82cb195a93d2fe3fb57f9e2",
+    "frames": 43,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2150,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "3176f9a4-9586-49cc-9dd6-8a444e2cd1ae",
+    "slug": "luke-rising-uppercut-od",
+    "name": "OD ライジングアッパー",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→↓↘ + PP",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-slam-dunk.gif",
+   "moveId": "4743c57a-35e7-404f-82e2-79a0854b12f6",
+   "moveSlug": "luke-slam-dunk",
+   "inspect": {
+    "sha256": "f55a250449195fc6ef258c185adc5181c618662344aabdd33980f52b86a64bbe",
+    "frames": 42,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2100,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "4743c57a-35e7-404f-82e2-79a0854b12f6",
+    "slug": "luke-slam-dunk",
+    "name": "スラムダンク",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "ODライジングアッパー後に PP",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "01-luke-sa1-vulcan-blast.gif",
+   "moveId": "9e34282d-9da4-43fb-a47c-dfdd72eda6ee",
+   "moveSlug": "luke-sa1-vulcan-blast",
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "alt_version",
+   "fixtureMove": {
+    "id": "9e34282d-9da4-43fb-a47c-dfdd72eda6ee",
+    "slug": "luke-sa1-vulcan-blast",
+    "name": "SA1 バルカンブラスト",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↘→↓↘→ + P",
+    "hasMedia": false
+   },
+   "connectionClass": "HOLD_ALT_VERSION",
+   "reasons": [
+    "Stage1でHOLD判定済み"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-sa1-balanced.gif",
+   "moveId": "9e34282d-9da4-43fb-a47c-dfdd72eda6ee",
+   "moveSlug": "luke-sa1-vulcan-blast",
+   "inspect": {
+    "sha256": "1762882dc5e5b7297769c1f05964ba555556b19302f122efadd82eb3c03c5fe4",
+    "frames": 60,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3000,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "9e34282d-9da4-43fb-a47c-dfdd72eda6ee",
+    "slug": "luke-sa1-vulcan-blast",
+    "name": "SA1 バルカンブラスト",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↘→↓↘→ + P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "02-luke-sa2-eraser.gif",
+   "moveId": "a1931623-d8f1-47e4-9f18-ef4fde632b4b",
+   "moveSlug": "luke-sa2-eraser",
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "alt_version",
+   "fixtureMove": {
+    "id": "a1931623-d8f1-47e4-9f18-ef4fde632b4b",
+    "slug": "luke-sa2-eraser",
+    "name": "SA2 イレイザー",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↙←↓↙← + P",
+    "hasMedia": false
+   },
+   "connectionClass": "HOLD_ALT_VERSION",
+   "reasons": [
+    "Stage1でHOLD判定済み"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-sa2-balanced.gif",
+   "moveId": "a1931623-d8f1-47e4-9f18-ef4fde632b4b",
+   "moveSlug": "luke-sa2-eraser",
+   "inspect": {
+    "sha256": "df090c19463afcd3833bf9478e21b74597ecf6438f6e990a64b241c9bcaeb641",
+    "frames": 151,
+    "width": 480,
+    "height": 270,
+    "durationMs": 7550,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "a1931623-d8f1-47e4-9f18-ef4fde632b4b",
+    "slug": "luke-sa2-eraser",
+    "name": "SA2 イレイザー",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↙←↓↙← + P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "03-luke-sa3-pale-rider.gif",
+   "moveId": "03dc215b-fe91-445b-9089-9a9d090ac1a0",
+   "moveSlug": "luke-sa3-pale-rider",
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "alt_version",
+   "fixtureMove": {
+    "id": "03dc215b-fe91-445b-9089-9a9d090ac1a0",
+    "slug": "luke-sa3-pale-rider",
+    "name": "SA3 ペイルライダー",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↘→↓↘→ + K",
+    "hasMedia": false
+   },
+   "connectionClass": "HOLD_ALT_VERSION",
+   "reasons": [
+    "Stage1でHOLD判定済み"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-sa3-balanced.gif",
+   "moveId": "03dc215b-fe91-445b-9089-9a9d090ac1a0",
+   "moveSlug": "luke-sa3-pale-rider",
+   "inspect": {
+    "sha256": "d6ebe57cdb17b8f7f698ad914d48f8b50a6c7c47b1ee948f1538ba48f127938c",
+    "frames": 198,
+    "width": 480,
+    "height": 270,
+    "durationMs": 9900,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "03dc215b-fe91-445b-9089-9a9d090ac1a0",
+    "slug": "luke-sa3-pale-rider",
+    "name": "SA3 ペイルライダー",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↘→↓↘→ + K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_5-luke-standing-hp.gif",
+   "moveId": "97651c5b-50de-45b3-851d-4e6157c22192",
+   "moveSlug": "luke-standing-hp",
+   "inspect": {
+    "sha256": "8bc80480a6741f695f2cc639cf1e9e66885ce4eda1f62ef150cd669ce933ef1c",
+    "frames": 19,
+    "width": 480,
+    "height": 270,
+    "durationMs": 950,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "suspected_old",
+   "fixtureMove": {
+    "id": "97651c5b-50de-45b3-851d-4e6157c22192",
+    "slug": "luke-standing-hp",
+    "name": "立ち強P",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "強P",
+    "hasMedia": false
+   },
+   "connectionClass": "HOLD_SUSPECTED_OLD",
+   "reasons": [
+    "Stage1でHOLD判定済み"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_18-luke-jumping-hk.gif",
+   "moveId": "5a9a9a77-2943-428c-8eb0-8729e26ed0bc",
+   "moveSlug": "luke-jump-hk",
+   "inspect": {
+    "sha256": "5211977b5b05dc55a7e6e2b38a9a9cefcbb9d3b3297d94d811a0b1bb0ded1fe1",
+    "frames": 26,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1300,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "suspected_old",
+   "fixtureMove": {
+    "id": "5a9a9a77-2943-428c-8eb0-8729e26ed0bc",
+    "slug": "luke-jump-hk",
+    "name": "ジャンプ強K",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）強K",
+    "hasMedia": false
+   },
+   "connectionClass": "HOLD_SUSPECTED_OLD",
+   "reasons": [
+    "Stage1でHOLD判定済み"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_36-luke-light-flash-knuckle-charged.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_37-luke-light-flash-knuckle-perfect.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_39-luke-medium-flash-knuckle-charged.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_40-luke-medium-flash-knuckle-perfect.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_42-luke-heavy-flash-knuckle-charged.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_43-luke-heavy-flash-knuckle-perfect.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_48-luke-aerial-flash-knuckle-charged.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_49-luke-od-aerial-flash-knuckle.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-od-avenger.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-od-no-chaser.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "luke-od-impaler.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_23-luke-double-impact-followup.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_64-luke-ca-pale-rider.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_65-luke-sweeper.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_66-luke-scrapper.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_67-luke-forward-dash.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_69-luke-muzzle-flash.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_72-luke-drive-parry.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_75-luke-parry-drive-rush.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "luke",
+   "file": "22_76-luke-cancel-drive-rush.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": null,
+    "frames": null,
+    "width": null,
+    "height": null,
+    "durationMs": null,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": "no_move_match",
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし(実体は未取得: 取得してもカードが無く接続不可)"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "jp-od-departure-mp-hp.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "22df6ec6d46c7c8cdf120f005c251216df4a13b995aefc3b111f1d478b606261",
+    "frames": 60,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3000,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "jp-od-departure-lp-mp.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "446fe25e609d18797c262a302b6967e892d49a4f1f91af974b77da1ef8da45a1",
+    "frames": 54,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2700,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "jp-od-departure-lp-hp.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "85233833ac90e442b0e8a91749f218f2b55d46e6ebf35b3e0972c7c7adf2959f",
+    "frames": 54,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2700,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_38-jp-medium-departure.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "ea4ed7b5af7fe0bae458d96ef57bbfb1380461d75007a0e66209227a9ab50b21",
+    "frames": 74,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3700,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_37-jp-light-departure.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "4376ee0b777771ff9de31c51c8adca5763c293d08b9d0d0d792c9aec5dfd7451",
+    "frames": 72,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3600,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_39-jp-heavy-departure.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "c7ea06d5d17052038ce283a62ee9de0f4ce02dbe81c50cafb1341c235217f4c6",
+    "frames": 75,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3750,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "jp-abnimach.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "eeef108c1c5a4954b098c8222c777faa1b0c560bb0df26b29f5df69d8deba4f9",
+    "frames": 69,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "jp-od-abnimach.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "05d4bc6b6adc49549636c3fc6b0ecb0d0defdc998be0bc8a778d509eaa74918d",
+    "frames": 69,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "jp-torbalan-feint.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "9af1e84d1d7121e61a8ba3e43f5da109a8798f4d494d49a8209b22dcaa40f325",
+    "frames": 28,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1400,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_50-jp-od-torbalan.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "a0789c82011bd8bb25abf3f56b698cc13954cde76ac0f8ccdaff0e5730fe87c2",
+    "frames": 45,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2250,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_48-jp-medium-torbalan.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "dee96a6ceeb7ef26824707459d03ae41a41c5c6387c5f1c4ee363c37e0a82e1a",
+    "frames": 45,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2250,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_47-jp-light-torbalan.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "79852d6b0a6761e168e53569ae3aa3a0a131deb116e778fad111dd004e3f5290",
+    "frames": 43,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2150,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_49-jp-heavy-torbalan.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "f3a89a13e5aa043a2bb5e61fa2456592574c9647225f20d2fccb923e47770c1d",
+    "frames": 43,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2150,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_17-jp-jumping-hp.gif",
+   "moveId": "88b7028e-f54a-4b51-a75a-670ccfce75dc",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "a1fd716555063b1a910b9f763d195cbaf0f218575a835950946ecd8aee0e0e54",
+    "frames": 29,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "88b7028e-f54a-4b51-a75a-670ccfce75dc",
+    "slug": "jp-jump-hp",
+    "name": "ジャンプ強P（イディナローク）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）強P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_13-jp-jumping-lp.gif",
+   "moveId": "00edfdc1-cf06-4b8c-b836-a213a7028cf6",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "7c0d4d1475a274a08ee7f0a5ef620a50f92ebd7135d274d2700ff190e8dc1eae",
+    "frames": 28,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1400,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "00edfdc1-cf06-4b8c-b836-a213a7028cf6",
+    "slug": "jp-jump-lp",
+    "name": "ジャンプ弱P（ルイースイ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）弱P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_15-jp-jumping-mp.gif",
+   "moveId": "3baf3077-05b0-4360-b548-ee16b68f8a37",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "b181cd2fa489f1149d493529845296dc4bc3c7d5d28f5a33adeb0a49bf74f2b0",
+    "frames": 30,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1500,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "3baf3077-05b0-4360-b548-ee16b68f8a37",
+    "slug": "jp-jump-mp",
+    "name": "ジャンプ中P（ローシャッチ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）中P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_32-jp-od-heavy-triglav.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "b220eb5ce4b7954b6de8be977378f2a538b4a0f196dcb9274848f530d61e0302",
+    "frames": 47,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2350,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_31-jp-od-medium-triglav.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "7ae8df6d1e8e7a0a0a479057891354006fad52e210bf09814d15a0948848ec80",
+    "frames": 47,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2350,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_6-jp-standing-hk.gif",
+   "moveId": "9e959d30-059e-404b-ab0e-279ec4c5a54a",
+   "moveSlug": "jp-standing-hk",
+   "inspect": {
+    "sha256": "3e4dec2bebe7e3b693e90ac0d95386a9ca9c09e767d3394c538c552157ab16ab",
+    "frames": 29,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "9e959d30-059e-404b-ab0e-279ec4c5a54a",
+    "slug": "jp-standing-hk",
+    "name": "立ち強K（オボロートニ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "強K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_4-jp-standing-mk.gif",
+   "moveId": "94ad1cb7-1464-432d-b7ee-34e0171541b0",
+   "moveSlug": "jp-standing-mk",
+   "inspect": {
+    "sha256": "989c14e9e14addf0a326eb67cc644bd06a2e4294a7bf8fa5c439b34fcd75b9dc",
+    "frames": 27,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1350,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "94ad1cb7-1464-432d-b7ee-34e0171541b0",
+    "slug": "jp-standing-mk",
+    "name": "立ち中K（ウームヌィ・ウダール）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "中K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_8-jp-crouching-lk.gif",
+   "moveId": "5a596631-df8f-450b-b735-ae4b9ca14390",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "f12270ee3e8ba5cf6ca2c5f1aad460feb847d50a5180626ecca01a1077db3145",
+    "frames": 20,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1000,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "5a596631-df8f-450b-b735-ae4b9ca14390",
+    "slug": "jp-crouching-lk",
+    "name": "しゃがみ弱K（リョーフキー・ウダール）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 弱K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_18-jp-jumping-hk.gif",
+   "moveId": "61797d46-a331-4638-ba60-3dc3ea0cfd16",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "b50b719d42ca980bf8459ad1e41f6e7990ad2d315766d49e85abb08083bee79c",
+    "frames": 31,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1550,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "61797d46-a331-4638-ba60-3dc3ea0cfd16",
+    "slug": "jp-jump-hk",
+    "name": "ジャンプ強K（ジャール・プチーツァ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）強K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_5-jp-standing-hp.gif",
+   "moveId": "45863f7d-e112-42d8-ab88-d33839b4873a",
+   "moveSlug": "jp-standing-hp",
+   "inspect": {
+    "sha256": "661f49b0f60e672aeb0f5bf826c012e514c49eed331db68fdb4a1e113196c390",
+    "frames": 28,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1400,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "45863f7d-e112-42d8-ab88-d33839b4873a",
+    "slug": "jp-standing-hp",
+    "name": "立ち強P（キンターヴル）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "強P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_11-jp-crouching-hp.gif",
+   "moveId": "33b785cd-b4e9-4232-be5c-aca9ccef7b0a",
+   "moveSlug": "jp-crouching-hp",
+   "inspect": {
+    "sha256": "450d187e830d0b70f3096c3eeeb91d074d2c405e16f12e85b3a4ef9ab430741e",
+    "frames": 24,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1200,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "33b785cd-b4e9-4232-be5c-aca9ccef7b0a",
+    "slug": "jp-crouching-hp",
+    "name": "しゃがみ強P（マリートヴァ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_3-jp-standing-mp.gif",
+   "moveId": "e4ed90d9-23bf-4089-978a-4f2061e3b94a",
+   "moveSlug": "jp-standing-mp",
+   "inspect": {
+    "sha256": "c6ddaee71515a98f3b8fd1104f12d1ea7424a538cff282f7922441c29a43985d",
+    "frames": 26,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1300,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "e4ed90d9-23bf-4089-978a-4f2061e3b94a",
+    "slug": "jp-standing-mp",
+    "name": "立ち中P（シュトゥールム）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "中P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_9-jp-crouching-mp.gif",
+   "moveId": "0afd12fb-5c7a-4799-b222-21daa7ca18f3",
+   "moveSlug": "jp-crouching-mp",
+   "inspect": {
+    "sha256": "010e22a193e57ac4d815750740d105944aefffcb09b1ef40eeb5b39f77e3aa21",
+    "frames": 25,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1250,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "0afd12fb-5c7a-4799-b222-21daa7ca18f3",
+    "slug": "jp-crouching-mp",
+    "name": "しゃがみ中P（ズミヤー）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 中P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_33-jp-light-stribog.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "6f0b62a8f119535267f605896a4d9c07cd75be82dfdd63f9aa3004505fc9f571",
+    "frames": 35,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1750,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_34-jp-medium-stribog.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "6edfb11c7a4720a62b463ceee55ae4f165c7ea30c441fddfa0cefc1115b7b222",
+    "frames": 40,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2000,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_2-jp-standing-lk.gif",
+   "moveId": "45d7ef0d-2f7c-415d-b433-1e04ad9fe09b",
+   "moveSlug": "jp-standing-lk",
+   "inspect": {
+    "sha256": "bc8a6b1d6c2479236b952eb75b4d35e619a6986e6c4b619d044c66721a4cb32c",
+    "frames": 17,
+    "width": 480,
+    "height": 270,
+    "durationMs": 850,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "45d7ef0d-2f7c-415d-b433-1e04ad9fe09b",
+    "slug": "jp-standing-lk",
+    "name": "立ち弱K（ニージニイ・ウダール）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "弱K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_10-jp-crouching-mk.gif",
+   "moveId": "92ecb272-1cbd-46f0-95f2-ad4d21506e99",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "b849e7b2050594561ad27da83f64bda569bacbec0219a48fb941851b8c50ec7f",
+    "frames": 20,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1000,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "92ecb272-1cbd-46f0-95f2-ad4d21506e99",
+    "slug": "jp-crouching-mk",
+    "name": "しゃがみ中K（ズローバ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 中K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_12-jp-crouching-hk.gif",
+   "moveId": "5fad21d1-bb82-4a22-bf29-f125688d3cb9",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "fe0224d1d04018af5263b248a4f890c02ee374fdde299355e5e8ce9cc61d55f6",
+    "frames": 24,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1200,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "5fad21d1-bb82-4a22-bf29-f125688d3cb9",
+    "slug": "jp-crouching-hk",
+    "name": "しゃがみ強K（ジョーキル）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 強K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_7-jp-crouching-lp.gif",
+   "moveId": "7c4584fd-fdb5-4fb9-84a2-472c3c03febe",
+   "moveSlug": "jp-crouching-lp",
+   "inspect": {
+    "sha256": "60b7da24f30d055418ff65896a9a6fd03002ac43320bb1d0480bcd0cbac08593",
+    "frames": 17,
+    "width": 480,
+    "height": 270,
+    "durationMs": 850,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "7c4584fd-fdb5-4fb9-84a2-472c3c03febe",
+    "slug": "jp-crouching-lp",
+    "name": "しゃがみ弱P（ブィストルイ・ウダール）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 弱P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_1-jp-standing-lp.gif",
+   "moveId": "b558b854-1a5b-41a3-89ec-b119abc475ae",
+   "moveSlug": "jp-standing-lp",
+   "inspect": {
+    "sha256": "72e559e1cfe3137bd2ef1b72cfc90323a3ce41f4196f54ef713cf0dbcb636778",
+    "frames": 16,
+    "width": 480,
+    "height": 270,
+    "durationMs": 800,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "b558b854-1a5b-41a3-89ec-b119abc475ae",
+    "slug": "jp-standing-lp",
+    "name": "立ち弱P（ノーシ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "弱P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-od-renverse.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "4d7d745b46d319c99c79aa59393e5a39ac53162ebb95051c3c482554e7b3ca00",
+    "frames": 69,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-grand-fouette-whiff.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "93951cef0fa049ca78d0de309198df0bcd6b1c0bced2bbbc20e90c40b7d5a338",
+    "frames": 29,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-od-grand-fouette.gif",
+   "moveId": "1ee03250-5022-4db8-ab9c-f08af76c1a4b",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "2eb915fa2bcf25fba43e049d73980547decc38470c09a994ce1655b2e45065f3",
+    "frames": 36,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1800,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "1ee03250-5022-4db8-ab9c-f08af76c1a4b",
+    "slug": "manon-grand-fouette-od",
+    "name": "OD グラン・フェッテ",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "236PP > K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-od-degage.gif",
+   "moveId": "9de1ac97-fc73-4ae2-9271-64174f9b1c27",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "b93e0261952b8109472dab3e303fe98eaaf948b6ea1ac5874eab2cb86c603085",
+    "frames": 43,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2150,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "9de1ac97-fc73-4ae2-9271-64174f9b1c27",
+    "slug": "manon-degage-od",
+    "name": "OD デガジェ",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "214KK",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-light-rond-point.gif",
+   "moveId": "a517d65e-66a7-48ed-bbcc-7fd5be704c28",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "f8415a3d921d2cdd78b5506038115da1c4fb263f0d63ab65d4683cf6c0ae07a0",
+    "frames": 38,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1900,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "a517d65e-66a7-48ed-bbcc-7fd5be704c28",
+    "slug": "manon-rond-point-l",
+    "name": "弱 ロン・ポワン",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "236LK",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-renverse-hit.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "c962526dff62a0ff4ef4313568950b7ebd5d119d2136cbc269784739824a0c08",
+    "frames": 71,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3550,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-medium-degage.gif",
+   "moveId": "61da79b8-44e4-4102-8fd8-b8567c34b055",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "8c49efd1a2645e1edc50712adf93e88abfa58179a6e615e1c17205da8130b526",
+    "frames": 32,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1600,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "61da79b8-44e4-4102-8fd8-b8567c34b055",
+    "slug": "manon-degage-m",
+    "name": "中 デガジェ",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "214MK",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-heavy-degage.gif",
+   "moveId": "f284f407-cbb4-4300-a615-9a11af7178df",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "afe871098f8f5e24effec3388fefa115c1fb2a2387d3b9ae20af3efeaf4fd514",
+    "frames": 29,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "f284f407-cbb4-4300-a615-9a11af7178df",
+    "slug": "manon-degage-h",
+    "name": "強 デガジェ",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "214HK",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-heavy-rond-point.gif",
+   "moveId": "dbde2cbc-e04d-4c39-8847-4eaf65282637",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "42e0c71d1b61c2521c314902dbf76c3d2034b1e5e6341dd2bfbb4c26ee046561",
+    "frames": 33,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1650,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "dbde2cbc-e04d-4c39-8847-4eaf65282637",
+    "slug": "manon-rond-point-h",
+    "name": "強 ロン・ポワン",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "236HK",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-light-degage.gif",
+   "moveId": "f21d0878-5c98-45f9-995c-1488b784d044",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "239b767989d5c8f5643e796bcbb146144e175cc1986ab002a1413b5ebf4ad95c",
+    "frames": 33,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1650,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "f21d0878-5c98-45f9-995c-1488b784d044",
+    "slug": "manon-degage-l",
+    "name": "弱 デガジェ",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "214LK",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-medium-rond-point.gif",
+   "moveId": "c2ee71d5-9294-43c2-9f9a-c1cba60a080c",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "efd72cf4264ab11625d3cc635646cb7a764948847af2822163b818c96dc8d2d6",
+    "frames": 34,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1700,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "c2ee71d5-9294-43c2-9f9a-c1cba60a080c",
+    "slug": "manon-rond-point-m",
+    "name": "中 ロン・ポワン",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "236MK",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-od-rond-point.gif",
+   "moveId": "e33ab912-790e-4cc3-b532-1518cf8bdf7b",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "86f2c2b5f02fc1249f42990f9e14b48a09a2969e026bea4c7a33037e00b48c23",
+    "frames": 37,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1850,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "e33ab912-790e-4cc3-b532-1518cf8bdf7b",
+    "slug": "manon-rond-point-od",
+    "name": "OD ロン・ポワン",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "236KK",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-heavy-manege-dore.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "c1dd9beb1458e4ce5a02f2a7f6bd5044d8b5615f6c6ff0ac6768ac3d4e631c2d",
+    "frames": 69,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-medium-manege-dore.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "cdda9124957ce773b982244cf54f2b496a363e05b1dbcf05e1c85c5c747e361e",
+    "frames": 54,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2700,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-od-manege-dore.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "d2bfb066cb1e8ed28f806a6d9c4c4150405930718c955302f9169421f1801af4",
+    "frames": 61,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3050,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-light-manege-dore.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "0414d98deda5e5c2041cac772211bf25075393b2adedbab66278a039e339ce3b",
+    "frames": 53,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2650,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-sa3-pas-de-deux.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "notInspected": true
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NOT_INSPECTED",
+   "reasons": [
+    "取得上限(10MB)超で未検査"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-ca-pas-de-deux.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "notInspected": true
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NOT_INSPECTED",
+   "reasons": [
+    "取得上限(10MB)超で未検査"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-sa1-arabesque.gif",
+   "moveId": "d7961e55-c6ed-443d-a3fa-e53fdc54fd26",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "ed78ed8c05cb271fa653168703d59feba7a2dcee58d53f9cbe676c731b75298b",
+    "frames": 60,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3000,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "d7961e55-c6ed-443d-a3fa-e53fdc54fd26",
+    "slug": "manon-sa1",
+    "name": "SA1 アラベスク",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "236236K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "manon",
+   "file": "manon-sa2-etoile.gif",
+   "moveId": "3e16e56f-1b3d-43ad-a321-ef70e876a8e0",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "46b8d8612a2236c11627fd097d6785c89522f7e3965f59b593f3364aaaf51021",
+    "frames": 109,
+    "width": 480,
+    "height": 270,
+    "durationMs": 5450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "3e16e56f-1b3d-43ad-a321-ef70e876a8e0",
+    "slug": "manon-sa2",
+    "name": "SA2 エトワール",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "214214K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-heavy-luminous-dive-kick.gif",
+   "moveId": "69a093f4-92da-44a6-a659-ac11f1ee2f4a",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "1b0f9856f7b9c3037aa7df11cd808bb5edc865a8b2ac9e6684d7ec35f9c4ea17",
+    "frames": 47,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2350,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "69a093f4-92da-44a6-a659-ac11f1ee2f4a",
+    "slug": "jamie-frame-078",
+    "name": "強 無影蹴",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↙ ← + 強K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-medium-luminous-dive-kick.gif",
+   "moveId": "e8c4c6d3-c300-47ae-b94e-5051826ecf29",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "d5498c5df9fff9c93b29ed480467206d4901aecc51397591662dc025a92a85c0",
+    "frames": 42,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2100,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "e8c4c6d3-c300-47ae-b94e-5051826ecf29",
+    "slug": "jamie-frame-077",
+    "name": "中 無影蹴",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↙ ← + 中K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-light-luminous-dive-kick.gif",
+   "moveId": "d38b6a9d-6ad9-43ba-bf10-8b97275d3a4b",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "5ffc75559e69b6c40ba23e3130d60471e985b41adc52aa729a0aa428f14c0848",
+    "frames": 38,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1900,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "d38b6a9d-6ad9-43ba-bf10-8b97275d3a4b",
+    "slug": "jamie-frame-076",
+    "name": "弱 無影蹴",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↙ ← + 弱K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-the-devil-inside.gif",
+   "moveId": "799268da-a1f2-4bb5-b016-6ea3035d2015",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "68aebfed620e53baff0685dce752848f825d2b950bfecb712da500dc8e741164",
+    "frames": 35,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1750,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "799268da-a1f2-4bb5-b016-6ea3035d2015",
+    "slug": "jamie-frame-039",
+    "name": "魔身",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↓ + P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-the-devil-inside-held.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "b2f64673522e271a8ca4573b07c3f4f69a30993511c3ed8dc9df11b91f45ba08",
+    "frames": 59,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2950,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-od-tenshin.gif",
+   "moveId": "47f2b44d-7d51-49f0-866e-6a2e1b5648ff",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "8bf545a6ba1c0b1d90c3b201c004e37494e2b3b55ba36187003f19d366c65153",
+    "frames": 69,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "47f2b44d-7d51-49f0-866e-6a2e1b5648ff",
+    "slug": "jamie-frame-085",
+    "name": "OD 点辰",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→ ↘ ↓ ↙ ← + K K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-od-bakkai.gif",
+   "moveId": "f0e84925-ec36-42dd-8fca-75c7e87712ef",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "bca3d2bb321fa4b1d5f0e1a829db4689a2fd6eb726247e72a651a11e8a7f50e9",
+    "frames": 85,
+    "width": 480,
+    "height": 270,
+    "durationMs": 4250,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "f0e84925-ec36-42dd-8fca-75c7e87712ef",
+    "slug": "jamie-frame-083",
+    "name": "OD 爆廻",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↘ → + K K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-tenshin.gif",
+   "moveId": "7bc4a79d-75dd-4a7a-95fe-ed02c344b8b9",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "37d0a46af13306533a8d763ab3212428d024e4942e440b6be5ed9642e4f275e7",
+    "frames": 40,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2000,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "7bc4a79d-75dd-4a7a-95fe-ed02c344b8b9",
+    "slug": "jamie-frame-084",
+    "name": "点辰",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→ ↘ ↓ ↙ ← + K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-light-bakkai.gif",
+   "moveId": "463834e8-201b-4a0c-a3b7-dc0257089c46",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "9eb382a5829d3bc3066d1420a60d68efdb8d2b862b338784aae74bc2881bf41a",
+    "frames": 61,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3050,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "463834e8-201b-4a0c-a3b7-dc0257089c46",
+    "slug": "jamie-frame-080",
+    "name": "弱 爆廻",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↘ → + 弱K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-heavy-bakkai.gif",
+   "moveId": "299f160e-cafb-43b6-9619-35f1dd864f6d",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "efcccfc5167d717cb43a7efacf1bbf792db4309912b7d8473e833e43d1c27ee5",
+    "frames": 70,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3500,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "299f160e-cafb-43b6-9619-35f1dd864f6d",
+    "slug": "jamie-frame-082",
+    "name": "強 爆廻",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↘ → + 強K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-od-luminous-dive-kick.gif",
+   "moveId": "56e9221a-75ee-4a4a-8295-2c23cd60ce38",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "1709db49991d66d011576e064fcbc237647fede5c677c5abca310c48d5508850",
+    "frames": 53,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2650,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "56e9221a-75ee-4a4a-8295-2c23cd60ce38",
+    "slug": "jamie-frame-079",
+    "name": "OD 無影蹴",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↙ ← + K K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-medium-bakkai.gif",
+   "moveId": "af159fff-39b2-4255-9c59-748e66e56203",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "0266a178f99e4f3908f595ecfa5e3f7ab3d78543883b7f500ebd6a2cd039b1fa",
+    "frames": 64,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3200,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "af159fff-39b2-4255-9c59-748e66e56203",
+    "slug": "jamie-frame-081",
+    "name": "中 爆廻",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↘ → + 中K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-od-arrow-kick.gif",
+   "moveId": "c2316766-56c8-4381-893f-0341e3a91c83",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "39d2ccf34854269d4b3f3daa09d57f0d6e28d0c0dfec43589a707e851f0791c5",
+    "frames": 67,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3350,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "c2316766-56c8-4381-893f-0341e3a91c83",
+    "slug": "jamie-frame-075",
+    "name": "OD 張弓腿",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→ ↓ ↘ + K K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-heavy-arrow-kick.gif",
+   "moveId": "34d6227b-d156-4929-842e-ff1a034f3424",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "eddd1a31ebf517f2d051f08bee5d43a072776787fe10fb7ad7ce42badeefa86f",
+    "frames": 64,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3200,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "34d6227b-d156-4929-842e-ff1a034f3424",
+    "slug": "jamie-frame-074",
+    "name": "強 張弓腿",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→ ↓ ↘ + 強K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-light-arrow-kick.gif",
+   "moveId": "35eaf7e4-dd6e-43a7-afa4-aa207971a336",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "8f8d4ff15886da297146ef6cea9285ec6b63cf08670097d047e4714bf0ed2ddb",
+    "frames": 49,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "35eaf7e4-dd6e-43a7-afa4-aa207971a336",
+    "slug": "jamie-frame-072",
+    "name": "弱 張弓腿",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→ ↓ ↘ + 弱K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-medium-arrow-kick.gif",
+   "moveId": "f118f5a2-8d4c-4622-bcf6-fcd3ea915709",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "d02ceaa32ec4fa8da59f6ade65355bc15544a6834d30107d08012559334ea6d0",
+    "frames": 50,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2500,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "f118f5a2-8d4c-4622-bcf6-fcd3ea915709",
+    "slug": "jamie-frame-073",
+    "name": "中 張弓腿",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→ ↓ ↘ + 中K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-sa3-getsusaiho.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "notInspected": true
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NOT_INSPECTED",
+   "reasons": [
+    "取得上限(10MB)超で未検査"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-ca-getsusaiho.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "notInspected": true
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NOT_INSPECTED",
+   "reasons": [
+    "取得上限(10MB)超で未検査"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-lv4-heavy-freeflow-strikes-full.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "d3c3976b0ca590139e872aec80d40a95c2a5d097d2d6f7ebeb1f85b5b693cfb5",
+    "frames": 81,
+    "width": 480,
+    "height": 270,
+    "durationMs": 4050,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-sa1-breakin.gif",
+   "moveId": "e395af47-aedc-467e-b4cb-2aa5c112c348",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "59ed3cf27d3421203b4d710bac4699aab5b0dde259bd44c5401d572afd7715cd",
+    "frames": 113,
+    "width": 480,
+    "height": 270,
+    "durationMs": 5650,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "e395af47-aedc-467e-b4cb-2aa5c112c348",
+    "slug": "jamie-frame-088",
+    "name": "SA1 武麗禽",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓ ↘ → ↓ ↘ → + K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-lv4-medium-freeflow-strikes-full.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "99afa35d38b61b2c57e5c0505ee07b8509eb9d28f8f4a83d5306c36dde2b206a",
+    "frames": 79,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3950,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-lv4-light-freeflow-strikes-full.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "1f912ce14dfb4649f5a18f3b802ba3d158638f9a3aaeb9b7a934cb41172c2bc1",
+    "frames": 68,
+    "width": 480,
+    "height": 270,
+    "durationMs": 3400,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-sa2-the-devils-song.gif",
+   "moveId": "99b9dbf0-5322-4397-bd1f-976a60965a2d",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "8895ff80bdd88b1a4402781c95b42815bb5bfaa0591fd6faa41a10fab266461e",
+    "frames": 56,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2800,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "99b9dbf0-5322-4397-bd1f-976a60965a2d",
+    "slug": "jamie-frame-089",
+    "name": "SA2 絶唱魔身",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓ ↙ ← ↓ ↙ ← + P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-lv4-flowing-drunken-fist-lp.gif",
+   "moveId": "c4b68e7e-6984-4038-9947-4ed1cdcea1bc",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "22d0a804fc3412d1d32324ab724461187697d298274dea1c524ea8929821f2e5",
+    "frames": 19,
+    "width": 480,
+    "height": 270,
+    "durationMs": 950,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "c4b68e7e-6984-4038-9947-4ed1cdcea1bc",
+    "slug": "jamie-frame-041",
+    "name": "[酔いレベル4]弱 流酔拳（1段目）",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↘ → + 弱P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-lv4-flowing-drunken-fist-mp.gif",
+   "moveId": "0b0016b3-2d95-4406-994b-a44332288da2",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "7eb38609f3d3c6c3e4dd6dbdab7f8db05e8b98f7a580ef6134a1c0a116807f44",
+    "frames": 19,
+    "width": 480,
+    "height": 270,
+    "durationMs": 950,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "0b0016b3-2d95-4406-994b-a44332288da2",
+    "slug": "jamie-frame-043",
+    "name": "[酔いレベル4]中 流酔拳（1段目）",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↘ → + 中P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "jamie-lv4-flowing-drunken-fist-hp.gif",
+   "moveId": "67678625-588d-48cf-b6a3-560abbd7c6fd",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "e45fd1958371c679d0fc42072c0a2eb7fef40b27a83b08fe797a9d81dbe6a5c1",
+    "frames": 20,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1000,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "67678625-588d-48cf-b6a3-560abbd7c6fd",
+    "slug": "jamie-frame-045",
+    "name": "[酔いレベル4]強 流酔拳（1段目）",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↘ → + 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_36-jp-od-stribog.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "b95d154c38fbd0fc86491df20e80bc2a9f42bcd21bc02c94b8246767e071211b",
+    "frames": 43,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2150,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_35-jp-heavy-stribog.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "1fab38259a50d99ba4a1e9092d2966acb525f551a113354b7f3d6e6b4a65c738",
+    "frames": 46,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2300,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "juri",
+   "file": "17_73-juri-sa3-kaisen-dankai-raku.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "notInspected": true
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NOT_INSPECTED",
+   "reasons": [
+    "取得上限(10MB)超で未検査"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "juri",
+   "file": "17_71-juri-sa2-feng-shui-engine.gif",
+   "moveId": "953af9d9-ad43-430d-9ea2-ffa332436fbe",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "7b61dc5a5e23908242370abaf6c6996405e09ac088fa4574d087dca58b5bbc0a",
+    "frames": 47,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2350,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "953af9d9-ad43-430d-9ea2-ffa332436fbe",
+    "slug": "juri-sa2",
+    "name": "SA2 風水エンジン",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "←+SP+H",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "juri",
+   "file": "17_70-juri-sa1-sakkai-fuhazan.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "fc4df289bc5cee4bf5758ff96c525bf11c7635b2d34f1c39fd1a306b1acf96ef",
+    "frames": 104,
+    "width": 480,
+    "height": 270,
+    "durationMs": 5200,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_58-jp-uragan.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "46e8172abc85bbfd789e461c51514290095341a3aff7ec5da03096654fa276ed",
+    "frames": 47,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2350,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_57-jp-ravina.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "45e087bb7bb864585ee7377813e91f098427a933cb63d4b4cfb2a02d9f1932c1",
+    "frames": 49,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2450,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "juri",
+   "file": "17_65-juri-od-tensenrin.gif",
+   "moveId": "3e607e52-090d-4c0b-96ec-d3bf99fd7c8b",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "310cefac6e38626b35cfb802a6e9ec74d61880ceeb5f4925327f6f6ed05c3b60",
+    "frames": 41,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2050,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "3e607e52-090d-4c0b-96ec-d3bf99fd7c8b",
+    "slug": "juri-tensenrin-od",
+    "name": "OD 天穿輪",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→+A+SP",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "juri",
+   "file": "17_64-juri-heavy-tensenrin.gif",
+   "moveId": "1201daae-e1b8-47aa-88d9-19be3fb4f80b",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "a570ba3a0a5e3af1e7494379b97cdbcdd80b93154baeae165447f05d0d19cdb0",
+    "frames": 37,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1850,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "1201daae-e1b8-47aa-88d9-19be3fb4f80b",
+    "slug": "juri-tensenrin-h",
+    "name": "強 天穿輪",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→↓↘+H",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "juri",
+   "file": "17_62-juri-light-tensenrin.gif",
+   "moveId": "1e7d1cc0-8118-4c5a-8b43-94f585c2a83e",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "a05706711d02a2a64bd79eaa610a1a1ec1cd41c1b12a1cf0288618262cfd07d5",
+    "frames": 30,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1500,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "1e7d1cc0-8118-4c5a-8b43-94f585c2a83e",
+    "slug": "juri-tensenrin-l",
+    "name": "弱 天穿輪",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→↓↘+L",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "juri",
+   "file": "17_63-juri-medium-tensenrin.gif",
+   "moveId": "9f311585-00ac-4e7c-83fc-08a04f4f9f8d",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "3dcc62b7419585992f4aa223a4dc42510470548ccd9ac0280f14035d6d655f3f",
+    "frames": 34,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1700,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "9f311585-00ac-4e7c-83fc-08a04f4f9f8d",
+    "slug": "juri-tensenrin-m",
+    "name": "中 天穿輪",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→+SP / →↓↘+M",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_56-jp-ca-interdiction.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "notInspected": true
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NOT_INSPECTED",
+   "reasons": [
+    "取得上限(10MB)超で未検査"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_55-jp-sa3-interdiction.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "bd79b01daad7f329d99a356cbeae49a4aefaecc983f85da8c5d2444e37c86f14",
+    "frames": 187,
+    "width": 480,
+    "height": 270,
+    "durationMs": 9350,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_54-jp-sa2-lovushka.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "4882c8e014d69747c1ca58506dcf23decfb44b27eb57d38655c2fd206135fd52",
+    "frames": 100,
+    "width": 480,
+    "height": 270,
+    "durationMs": 5000,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_53-jp-sa1-chornobog.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "c765790eda6499767c5d9c0dd23653bca5ae3dd539077a4e50169a49be7dfde3",
+    "frames": 59,
+    "width": 480,
+    "height": 270,
+    "durationMs": 2950,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_30-jp-od-light-triglav.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "0d309e3480da408e443bb50681870f827c9538c3a56adb581811366551b81bfe",
+    "frames": 31,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1550,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_29-jp-heavy-triglav.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "fa7c2db3d848a219086d61a57532b1d66afb9ef1e1984d702d1ef8fb3c5346a7",
+    "frames": 37,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1850,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_44-jp-departure-shadow.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "09698fd558e04aded20b44d258e6aa19696c66e148236ca184470598903bc6c6",
+    "frames": 26,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1300,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_27-jp-light-triglav.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "590d90afac21fafa5ef9cd05d2934dcbf39385d2c546631394fda7ecf279e0be",
+    "frames": 28,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1400,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_28-jp-medium-triglav.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "d3381fbf2ffb8b860832e421bab9281d40b03f1f1305da3c0fc13f9ceb8f9935",
+    "frames": 35,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1750,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jp",
+   "file": "9_43-jp-departure-window.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "7c61ea368d88b1bd2152fee1f10ca9bb36683f5081049166e9fcb8bd7ed0517d",
+    "frames": 28,
+    "width": 480,
+    "height": 270,
+    "durationMs": 1400,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-heavy-burnout-stats-result.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "76e85779045024c99ab793858d8db0e84c0a59e15a9fe223a9e6072dac50c5d9",
+    "frames": 1,
+    "width": 1280,
+    "height": 720,
+    "durationMs": 20,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "BLOCKED",
+   "reasons": [
+    "SINGLE_FRAME",
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-medium-burnout-stats.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "7dff57f13852263e70ee781d8ca667e677576fd79a54d455172eaa4e4187c826",
+    "frames": 42,
+    "width": 640,
+    "height": 360,
+    "durationMs": 2100,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-heavy-burnout-stats.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "862bdf0d1332936a4d5208de513271aa1b38e0d22a0177e3a306396a55e7d629",
+    "frames": 170,
+    "width": 320,
+    "height": 180,
+    "durationMs": 13600,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-light-burnout-stats.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "b415976433d4a96175ddaa69c0189be960fb465ea7b73def8173e63bd1ad86b3",
+    "frames": 48,
+    "width": 640,
+    "height": 360,
+    "durationMs": 2400,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-denjin-od-hadoken.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "notInspected": true
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NOT_INSPECTED",
+   "reasons": [
+    "取得上限(10MB)超で未検査"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-denjin-hadoken.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "notInspected": true
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NOT_INSPECTED",
+   "reasons": [
+    "取得上限(10MB)超で未検査"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-drive-reversal.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "686ea50d2937e837bfe6e10c491b01322643931eba1a5816cb5f986e3a1d8b17",
+    "frames": 99,
+    "width": 640,
+    "height": 360,
+    "durationMs": 1980,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-drive-rush.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "c4b17e1ed76d79509294155293518c509d5094f7bf88fbac8f9cb8fa647aeae9",
+    "frames": 78,
+    "width": 640,
+    "height": 360,
+    "durationMs": 1560,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-drive-impact.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "1200f4217ac31dad5b39c6acc8640fb827a27a6f069c99b1d590541753010fe7",
+    "frames": 99,
+    "width": 640,
+    "height": 360,
+    "durationMs": 1980,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-drive-parry.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "6cbbfb48e5f1185856893551144a7bcc111c3355bbe24d2545565981d26d3f81",
+    "frames": 99,
+    "width": 640,
+    "height": 360,
+    "durationMs": 1980,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-forward-throw.gif",
+   "moveId": "252287ef-f49c-4347-ace6-76dce143ef59",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "4122e490fb74b8fdcc0fe0f102bc347ed9a13cd9c83b0604cf5106bbfb632ea5",
+    "frames": 99,
+    "width": 640,
+    "height": 360,
+    "durationMs": 1980,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "252287ef-f49c-4347-ace6-76dce143ef59",
+    "slug": "ryu-forward-throw",
+    "name": "前投げ",
+    "moveType": "throw",
+    "category": "投げ",
+    "command": "弱P + 弱K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-back-throw.gif",
+   "moveId": "b0e5f2a6-29fd-4aa0-98ed-05b9b248343a",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "22271c14750c342497f00321d023e753f69e24877cb2c1d6d9386f24a65ebbf5",
+    "frames": 99,
+    "width": 640,
+    "height": 360,
+    "durationMs": 1980,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "b0e5f2a6-29fd-4aa0-98ed-05b9b248343a",
+    "slug": "ryu-back-throw",
+    "name": "後ろ投げ",
+    "moveType": "throw",
+    "category": "投げ",
+    "command": "← + 弱P + 弱K",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-cancel-drive-rush.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "c4981c6352dbd4aae3d11679c76f5761bf8fc9667f231858412209b9b343efed",
+    "frames": 87,
+    "width": 640,
+    "height": 360,
+    "durationMs": 1740,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-5mp-hit-only.gif",
+   "moveId": "b33dd19c-add5-4420-8856-163fab932249",
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "15f4dd12f39517a21a35b1a5c13dfcc2470d51e07bf291a74aa4070f5b9e314a",
+    "frames": 53,
+    "width": 640,
+    "height": 360,
+    "durationMs": 1060,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": {
+    "id": "b33dd19c-add5-4420-8856-163fab932249",
+    "slug": "ryu-standing-mp",
+    "name": "立ち中P（鉤突き）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "中P",
+    "hasMedia": false
+   },
+   "connectionClass": "CONNECTABLE_CANDIDATE",
+   "reasons": []
+  },
+  {
+   "origin": "drive_existing",
+   "character": "ryu",
+   "file": "ryu-jump-normal-hit.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "9a170d5f6a73374c274812637e91332ce9710416bbf0f3ae3431cc01df870f74",
+    "frames": 102,
+    "width": 640,
+    "height": 360,
+    "durationMs": 2040,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "SUPERSEDED_strength-unknown_Jamie_Lv4_FlowingDrunkenFist_CANDIDATE.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "34b066878a769d13ba4975c2a8523ab8cd588aa163bb91c4cf6baa6db9b40955",
+    "frames": 66,
+    "width": 640,
+    "height": 360,
+    "durationMs": 5500,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "Jamie_Lv4_FlowingDrunkenFist_HP_candidate.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "2f50195eba33050c8c7d5da0602855d2bdedfbb4d02c7305966078de5c1418c5",
+    "frames": 12,
+    "width": 320,
+    "height": 180,
+    "durationMs": 6000,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "Jamie_Lv4_FlowingDrunkenFist_MP_candidate.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "49a9e90933b307b74167c7e45ef16f8f361c412ddc30b4cf563bf154529cd472",
+    "frames": 9,
+    "width": 320,
+    "height": 180,
+    "durationMs": 4500,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "drive_existing",
+   "character": "jamie",
+   "file": "Jamie_Lv4_FlowingDrunkenFist_LP_candidate.gif",
+   "moveId": null,
+   "moveSlug": null,
+   "inspect": {
+    "sha256": "f8a639e17fead8565794affe542379ef95b05d48cff066e1a56d93ad49a5a7fc",
+    "frames": 11,
+    "width": 320,
+    "height": 180,
+    "durationMs": 5500,
+    "loopCount": 0,
+    "errors": []
+   },
+   "role": null,
+   "fixtureMove": null,
+   "connectionClass": "HOLD_NO_FIXTURE_MOVE",
+   "reasons": [
+    "公開用データに対応する技IDなし"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jamie",
+   "file": "jamie-tensei-kick.gif",
+   "moveId": "b4cdaafd-615b-4a96-a615-2204c2928ece",
+   "moveSlug": "jamie-tensei-kick",
+   "inspect": {
+    "sha256": "4952c7015715847233966b9cb7346f5e94be99089fb239c786007dd5321e35c1",
+    "bytes": 1676829,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 44,
+    "durationMs": 2200,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jamie/20261003/jamie-tensei-kick.mp4",
+   "fixtureMove": {
+    "id": "b4cdaafd-615b-4a96-a615-2204c2928ece",
+    "slug": "jamie-tensei-kick",
+    "name": "天晴脚",
+    "moveType": "unique",
+    "category": "特殊技",
+    "command": "↓ + K K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jamie",
+   "file": "jamie-frame-039.gif",
+   "moveId": "799268da-a1f2-4bb5-b016-6ea3035d2015",
+   "moveSlug": "jamie-frame-039",
+   "inspect": {
+    "sha256": "04988ac9df952985ce48048c782f2b92526712bfe209f25f89ab8e879b14f3d3",
+    "bytes": 1441532,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 36,
+    "durationMs": 1800,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jamie/20261004/jamie-frame-039.mp4",
+   "fixtureMove": {
+    "id": "799268da-a1f2-4bb5-b016-6ea3035d2015",
+    "slug": "jamie-frame-039",
+    "name": "魔身",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓ ↓ + P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jamie",
+   "file": "jamie-frame-084.gif",
+   "moveId": "7bc4a79d-75dd-4a7a-95fe-ed02c344b8b9",
+   "moveSlug": "jamie-frame-084",
+   "inspect": {
+    "sha256": "eeb3dbcfface1d0a8d31c66c259dfe049d6a66c6917d7517a8ca3a61477952fc",
+    "bytes": 1191612,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 36,
+    "durationMs": 1800,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jamie/20261004/jamie-frame-084.mp4",
+   "fixtureMove": {
+    "id": "7bc4a79d-75dd-4a7a-95fe-ed02c344b8b9",
+    "slug": "jamie-frame-084",
+    "name": "点辰",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→ ↘ ↓ ↙ ← + K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jamie",
+   "file": "jamie-frame-085.gif",
+   "moveId": "47f2b44d-7d51-49f0-866e-6a2e1b5648ff",
+   "moveSlug": "jamie-frame-085",
+   "inspect": {
+    "sha256": "7cfae218396798b52ec61f1ae95e73146c01b93e7ba633396abbbd3beb9298aa",
+    "bytes": 3792063,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 68,
+    "durationMs": 3400,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jamie/20261004/jamie-frame-085.mp4",
+   "fixtureMove": {
+    "id": "47f2b44d-7d51-49f0-866e-6a2e1b5648ff",
+    "slug": "jamie-frame-085",
+    "name": "OD 点辰",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "→ ↘ ↓ ↙ ← + K K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "luke",
+   "file": "luke-triple-impact.gif",
+   "moveId": "42cfd8d8-a47b-4d89-8fd6-95e758b07e0d",
+   "moveSlug": "luke-triple-impact",
+   "inspect": {
+    "sha256": "3b891b2d45adbdb66a3a08425beccafec1ddded024ce3f302e6bfbb1167d068e",
+    "bytes": 2304772,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 56,
+    "durationMs": 2800,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/luke/20261003/luke-triple-impact.mp4",
+   "fixtureMove": {
+    "id": "42cfd8d8-a47b-4d89-8fd6-95e758b07e0d",
+    "slug": "luke-triple-impact",
+    "name": "トリプルインパクト",
+    "moveType": "target_combo",
+    "category": "ターゲットコンボ",
+    "command": "弱P ＞ 中P ＞ 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "luke",
+   "file": "luke-snapback-combo.gif",
+   "moveId": "a6088794-0ed1-4ee9-9d4a-ee4cbe159e37",
+   "moveSlug": "luke-snapback-combo",
+   "inspect": {
+    "sha256": "562abaffce6ccb0f13f0d1a98ea8bc8f6e280bdc84909ed9a178dbb10e8e3961",
+    "bytes": 4728027,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 83,
+    "durationMs": 4150,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/luke/20261003/luke-snapback-combo.mp4",
+   "fixtureMove": {
+    "id": "a6088794-0ed1-4ee9-9d4a-ee4cbe159e37",
+    "slug": "luke-snapback-combo",
+    "name": "スナップバックコンボ",
+    "moveType": "target_combo",
+    "category": "ターゲットコンボ",
+    "command": "中P ＞ 中P ＞ 中P ＞ 中P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "luke",
+   "file": "luke-sa1-vulcan-blast.gif",
+   "moveId": "9e34282d-9da4-43fb-a47c-dfdd72eda6ee",
+   "moveSlug": "luke-sa1-vulcan-blast",
+   "inspect": {
+    "sha256": "86135dcdf39b544183ec1340cf32cc286e0c95c1a80e5d31a296891d869e4d66",
+    "bytes": 4152373,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 76,
+    "durationMs": 3800,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/luke/20261004/luke-sa1-vulcan-blast.mp4",
+   "fixtureMove": {
+    "id": "9e34282d-9da4-43fb-a47c-dfdd72eda6ee",
+    "slug": "luke-sa1-vulcan-blast",
+    "name": "SA1 バルカンブラスト",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↘→↓↘→ + P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "luke",
+   "file": "luke-sa2-eraser.gif",
+   "moveId": "a1931623-d8f1-47e4-9f18-ef4fde632b4b",
+   "moveSlug": "luke-sa2-eraser",
+   "inspect": {
+    "sha256": "6d938a05147f95a7118ce09aaab42fcdb51099e1ea736907de4ff5b91d3058b1",
+    "bytes": 7356247,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 148,
+    "durationMs": 7400,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/luke/20261004/luke-sa2-eraser.mp4",
+   "fixtureMove": {
+    "id": "a1931623-d8f1-47e4-9f18-ef4fde632b4b",
+    "slug": "luke-sa2-eraser",
+    "name": "SA2 イレイザー",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↙←↓↙← + P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "luke",
+   "file": "luke-sa3-pale-rider.gif",
+   "moveId": "03dc215b-fe91-445b-9089-9a9d090ac1a0",
+   "moveSlug": "luke-sa3-pale-rider",
+   "inspect": {
+    "sha256": "2e9b113b32380072b06d612039a554bef937a24c4ae6c7352190ed6cf6b0a058",
+    "bytes": 9202975,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 210,
+    "durationMs": 10500,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/luke/20261004/luke-sa3-pale-rider.mp4",
+   "fixtureMove": {
+    "id": "03dc215b-fe91-445b-9089-9a9d090ac1a0",
+    "slug": "luke-sa3-pale-rider",
+    "name": "SA3 ペイルライダー",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↘→↓↘→ + K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "manon",
+   "file": "manon-a-terre.gif",
+   "moveId": "1a11e706-08e7-4a29-a656-84ac942d5a18",
+   "moveSlug": "manon-a-terre",
+   "inspect": {
+    "sha256": "592a3478795c26c94a433969cac829696786962c15de7c7b0146c538ef0ec92d",
+    "bytes": 2130435,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 37,
+    "durationMs": 1850,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/manon/manon-a-terre.mp4",
+   "fixtureMove": {
+    "id": "1a11e706-08e7-4a29-a656-84ac942d5a18",
+    "slug": "manon-a-terre",
+    "name": "ア・テール",
+    "moveType": "target_combo",
+    "category": "ターゲットコンボ",
+    "command": "MP > MK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "manon",
+   "file": "manon-en-haut.gif",
+   "moveId": "ee465bb0-22b4-41d2-9b26-a2fa733c3d06",
+   "moveSlug": "manon-en-haut",
+   "inspect": {
+    "sha256": "0b966451a5df0ec8957d338c411594a5ed32fa50468d546023919276ac538cf6",
+    "bytes": 2688794,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 44,
+    "durationMs": 2200,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/manon/manon-en-haut.mp4",
+   "fixtureMove": {
+    "id": "ee465bb0-22b4-41d2-9b26-a2fa733c3d06",
+    "slug": "manon-en-haut",
+    "name": "アン・オー",
+    "moveType": "target_combo",
+    "category": "ターゲットコンボ",
+    "command": "←+MK > MK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "manon",
+   "file": "manon-temps-lie-hp.gif",
+   "moveId": "20ab47b8-49bd-4bc0-b54e-ae8cb55aa7b2",
+   "moveSlug": "manon-temps-lie-hp",
+   "inspect": {
+    "sha256": "9a1fe6f5150e6dbfb5efb97613e4a0543a14cba6a1c399181b1ab9bced386fab",
+    "bytes": 2502292,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 46,
+    "durationMs": 2300,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/manon/manon-temps-lie-hp.mp4",
+   "fixtureMove": {
+    "id": "20ab47b8-49bd-4bc0-b54e-ae8cb55aa7b2",
+    "slug": "manon-temps-lie-hp",
+    "name": "タン・リエ（HP > HP）",
+    "moveType": "target_combo",
+    "category": "ターゲットコンボ",
+    "command": "HP > HP",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "manon",
+   "file": "manon-reverence.gif",
+   "moveId": "44b0a3f1-968d-48e7-8162-8c03e994e443",
+   "moveSlug": "manon-reverence",
+   "inspect": {
+    "sha256": "f69bdf98a02af5bc9ce7a44f2ae6608ce46ce5f66278a5d6ba554aba00d3177a",
+    "bytes": 1958036,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 46,
+    "durationMs": 2300,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/manon/20261004/manon-reverence.mp4",
+   "fixtureMove": {
+    "id": "44b0a3f1-968d-48e7-8162-8c03e994e443",
+    "slug": "manon-reverence",
+    "name": "レベランス",
+    "moveType": "unique",
+    "category": "特殊技",
+    "command": "←+HP",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "manon",
+   "file": "manon-tomoe-derriere.gif",
+   "moveId": "469e1ffd-bc8b-466e-8858-9cc9f83efeb9",
+   "moveSlug": "manon-tomoe-derriere",
+   "inspect": {
+    "sha256": "3f60afafda5cbf2713f5407ed5e8226c368eae6798ad18df1c0878414b0dfe15",
+    "bytes": 2032937,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 40,
+    "durationMs": 2000,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/manon/20261004/manon-tomoe-derriere.mp4",
+   "fixtureMove": {
+    "id": "469e1ffd-bc8b-466e-8858-9cc9f83efeb9",
+    "slug": "manon-tomoe-derriere",
+    "name": "トモエ・デリエール",
+    "moveType": "unique",
+    "category": "特殊技",
+    "command": "↘+HK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "marisa",
+   "file": "marisa-forward-throw.gif",
+   "moveId": "3eb3f810-dc04-40dd-82a6-dcad8a5eb0c1",
+   "moveSlug": "marisa-forward-throw",
+   "inspect": {
+    "sha256": "fe7ac543397102596950b2853ac22a66c6508e1da5fb296bf5296255d2cdfdd5",
+    "bytes": 4508457,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 82,
+    "durationMs": 4100,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/marisa/20261003/marisa-forward-throw.mp4",
+   "fixtureMove": {
+    "id": "3eb3f810-dc04-40dd-82a6-dcad8a5eb0c1",
+    "slug": "marisa-forward-throw",
+    "name": "前投げ",
+    "moveType": "throw",
+    "category": "投げ",
+    "command": "近距離 LP+LK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "marisa",
+   "file": "marisa-back-throw.gif",
+   "moveId": "3d782d80-90d2-4dac-a551-7d1440154270",
+   "moveSlug": "marisa-back-throw",
+   "inspect": {
+    "sha256": "ec7d3be93c76e744e4d45a80598f2d923e314eebe9349f860f5a77b35ec6d16d",
+    "bytes": 3710795,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 69,
+    "durationMs": 3450,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/marisa/20261003/marisa-back-throw.mp4",
+   "fixtureMove": {
+    "id": "3d782d80-90d2-4dac-a551-7d1440154270",
+    "slug": "marisa-back-throw",
+    "name": "後ろ投げ",
+    "moveType": "throw",
+    "category": "投げ",
+    "command": "近距離 ←+LP+LK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-guillotine.gif",
+   "moveId": "610e39c3-8fef-4a72-b85b-15c3a8fedd71",
+   "moveSlug": "jp-guillotine",
+   "inspect": {
+    "sha256": "903a7da5e60567ceff16d18bf73103933fe1e79e01e45948bf240d2973b15743",
+    "bytes": 711863,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 20,
+    "durationMs": 1000,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-guillotine.mp4",
+   "fixtureMove": {
+    "id": "610e39c3-8fef-4a72-b85b-15c3a8fedd71",
+    "slug": "jp-guillotine",
+    "name": "ギリオチーナ",
+    "moveType": "unique",
+    "category": "特殊技",
+    "command": "→ + 中K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-shalosti.gif",
+   "moveId": "290c6317-4a8a-4241-84cb-fc6774db1a98",
+   "moveSlug": "jp-shalosti",
+   "inspect": {
+    "sha256": "61a1edb6a63365a1556df4a546e446fa14827163008009d0aff73b2bc9320046",
+    "bytes": 1354044,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 25,
+    "durationMs": 1250,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-shalosti.mp4",
+   "fixtureMove": {
+    "id": "290c6317-4a8a-4241-84cb-fc6774db1a98",
+    "slug": "jp-shalosti",
+    "name": "シャーロスチ",
+    "moveType": "unique",
+    "category": "特殊技",
+    "command": "→ + 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-forward-hk.gif",
+   "moveId": "3ed94fcd-3820-4ad6-91ea-7405360afac0",
+   "moveSlug": "jp-forward-hk",
+   "inspect": {
+    "sha256": "cfc89c6084d87590f0cb6da5ba9399aa29efb94bb7c88d57a884fb1a43387c98",
+    "bytes": 1769295,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 31,
+    "durationMs": 1550,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-forward-hk.mp4",
+   "fixtureMove": {
+    "id": "3ed94fcd-3820-4ad6-91ea-7405360afac0",
+    "slug": "jp-forward-hk",
+    "name": "前強K（Bylina）",
+    "moveType": "unique",
+    "category": "特殊技",
+    "command": "→ + 強K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-jump-lp.gif",
+   "moveId": "00edfdc1-cf06-4b8c-b836-a213a7028cf6",
+   "moveSlug": "jp-jump-lp",
+   "inspect": {
+    "sha256": "e009742fd6957d698c08aed86266d3c7f3a1e5302047f71799ab4bb7114b1d5d",
+    "bytes": 1727371,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 34,
+    "durationMs": 1700,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-jump-lp.mp4",
+   "fixtureMove": {
+    "id": "00edfdc1-cf06-4b8c-b836-a213a7028cf6",
+    "slug": "jp-jump-lp",
+    "name": "ジャンプ弱P（ルイースイ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）弱P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-grom-strelka.gif",
+   "moveId": "fb460c24-5453-48e4-bc72-dc3dffcfc81c",
+   "moveSlug": "jp-grom-strelka",
+   "inspect": {
+    "sha256": "b4248cf9a537f6aaa9abbf3483c5c9f541c900a61c64f015574a55578458dc2d",
+    "bytes": 1253022,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 39,
+    "durationMs": 1950,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-grom-strelka.mp4",
+   "fixtureMove": {
+    "id": "fb460c24-5453-48e4-bc72-dc3dffcfc81c",
+    "slug": "jp-grom-strelka",
+    "name": "グローム・ストレルカ",
+    "moveType": "target_combo",
+    "category": "ターゲットコンボ",
+    "command": "← + 中P > 中P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-jump-lk.gif",
+   "moveId": "6cb6065e-9c33-47d1-af2c-00e4b3871182",
+   "moveSlug": "jp-jump-lk",
+   "inspect": {
+    "sha256": "26d4fe30213aa7f3ca388ef1ef95294ae55ee4d1aff4b504bbdb850949e74926",
+    "bytes": 1712513,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 34,
+    "durationMs": 1700,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-jump-lk.mp4",
+   "fixtureMove": {
+    "id": "6cb6065e-9c33-47d1-af2c-00e4b3871182",
+    "slug": "jp-jump-lk",
+    "name": "ジャンプ弱K（ヴァローナ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）弱K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-jump-mp.gif",
+   "moveId": "3baf3077-05b0-4360-b548-ee16b68f8a37",
+   "moveSlug": "jp-jump-mp",
+   "inspect": {
+    "sha256": "c1b96ee608870e9d9770e7fa0ebe0f58fc6a97cf20fb164460ddeecee52d5320",
+    "bytes": 1587733,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 30,
+    "durationMs": 1500,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-jump-mp.mp4",
+   "fixtureMove": {
+    "id": "3baf3077-05b0-4360-b548-ee16b68f8a37",
+    "slug": "jp-jump-mp",
+    "name": "ジャンプ中P（ローシャッチ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）中P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-zilant.gif",
+   "moveId": "0cc4dbc5-1dfc-4225-b050-a6ad29b92c0e",
+   "moveSlug": "jp-zilant",
+   "inspect": {
+    "sha256": "add19d794fbdc816622aabb9a4b747b7fd9d4c33dab5034768e05b32d296944a",
+    "bytes": 2435697,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 45,
+    "durationMs": 2250,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-zilant.mp4",
+   "fixtureMove": {
+    "id": "0cc4dbc5-1dfc-4225-b050-a6ad29b92c0e",
+    "slug": "jp-zilant",
+    "name": "ジラント",
+    "moveType": "target_combo",
+    "category": "ターゲットコンボ",
+    "command": "強K > 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-jump-mk.gif",
+   "moveId": "ce1e365b-8572-44a2-8767-0bce9f20054b",
+   "moveSlug": "jp-jump-mk",
+   "inspect": {
+    "sha256": "1d0e7875be3f5d162ec01814dda4118df6f99a230308abcdbe700a976dec0799",
+    "bytes": 1755880,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 31,
+    "durationMs": 1550,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-jump-mk.mp4",
+   "fixtureMove": {
+    "id": "ce1e365b-8572-44a2-8767-0bce9f20054b",
+    "slug": "jp-jump-mk",
+    "name": "ジャンプ中K（コンダ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）中K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-zilant-mid.gif",
+   "moveId": "1e3cc0be-14ef-4c39-9392-d8b88196fc46",
+   "moveSlug": "jp-zilant-mid",
+   "inspect": {
+    "sha256": "45669b77a3da49e3d75ae5fb8e8c097867e63c2bf122c272b404caecfd2d635d",
+    "bytes": 3186296,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 51,
+    "durationMs": 2550,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-zilant-mid.mp4",
+   "fixtureMove": {
+    "id": "1e3cc0be-14ef-4c39-9392-d8b88196fc46",
+    "slug": "jp-zilant-mid",
+    "name": "ジラント・ミドル",
+    "moveType": "target_combo",
+    "category": "ターゲットコンボ",
+    "command": "強K > 強P > 強P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-jump-hp.gif",
+   "moveId": "88b7028e-f54a-4b51-a75a-670ccfce75dc",
+   "moveSlug": "jp-jump-hp",
+   "inspect": {
+    "sha256": "a51896f6e94790a69c2cac43e9078be3d9fb6da8f7da2a9650d73fe8b325c3f0",
+    "bytes": 1689501,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 33,
+    "durationMs": 1650,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-jump-hp.mp4",
+   "fixtureMove": {
+    "id": "88b7028e-f54a-4b51-a75a-670ccfce75dc",
+    "slug": "jp-jump-hp",
+    "name": "ジャンプ強P（イディナローク）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）強P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-zilant-low.gif",
+   "moveId": "0b5841d6-8c3d-4da9-af74-0d4e9c2e389c",
+   "moveSlug": "jp-zilant-low",
+   "inspect": {
+    "sha256": "b6a49fcb80be2124977f958a453e1b352a662225d91344a4c775f50760148caa",
+    "bytes": 2916818,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 49,
+    "durationMs": 2450,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-zilant-low.mp4",
+   "fixtureMove": {
+    "id": "0b5841d6-8c3d-4da9-af74-0d4e9c2e389c",
+    "slug": "jp-zilant-low",
+    "name": "ジラント・ロー",
+    "moveType": "target_combo",
+    "category": "ターゲットコンボ",
+    "command": "強K > 強P > 強K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-jump-hk.gif",
+   "moveId": "61797d46-a331-4638-ba60-3dc3ea0cfd16",
+   "moveSlug": "jp-jump-hk",
+   "inspect": {
+    "sha256": "c940f5ae401215a410989c2c28c01ea19aa5490f7c06cc36b51a110b9320348c",
+    "bytes": 1782445,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 33,
+    "durationMs": 1650,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-jump-hk.mp4",
+   "fixtureMove": {
+    "id": "61797d46-a331-4638-ba60-3dc3ea0cfd16",
+    "slug": "jp-jump-hk",
+    "name": "ジャンプ強K（ジャール・プチーツァ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "（ジャンプ中に）強K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-sa2.gif",
+   "moveId": "85762bb5-b5ae-4a88-b4ee-55112037774e",
+   "moveSlug": "jp-sa2",
+   "inspect": {
+    "sha256": "470125a5d35b668623cad24b6fa592d9fd6e3305a6c3f27ae4ce2098868ce2a3",
+    "bytes": 5573402,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 115,
+    "durationMs": 5750,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-sa2.mp4",
+   "fixtureMove": {
+    "id": "85762bb5-b5ae-4a88-b4ee-55112037774e",
+    "slug": "jp-sa2",
+    "name": "ラヴーシュカ / Lovushka（SA2）",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↙← ↓↙← + P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-sa1.gif",
+   "moveId": "7817f9e6-8542-4da1-be01-c6bd24294f22",
+   "moveSlug": "jp-sa1",
+   "inspect": {
+    "sha256": "f2e5f5092f2579901116578e636cd1eaffa8b0f6f87c08a8ec0c5f283de90cb7",
+    "bytes": 3786468,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 87,
+    "durationMs": 4350,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-sa1.mp4",
+   "fixtureMove": {
+    "id": "7817f9e6-8542-4da1-be01-c6bd24294f22",
+    "slug": "jp-sa1",
+    "name": "チェルノボーグ / Chornobog（SA1）",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↘→ ↓↘→ + P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-sa3.gif",
+   "moveId": "1845d4b9-4bac-4e4e-b6fd-3b57accfa973",
+   "moveSlug": "jp-sa3",
+   "inspect": {
+    "sha256": "32bbc0881071c28b219bcbef783d7999b5469c1f807b777c9a49a9b6b0308822",
+    "bytes": 8953473,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 199,
+    "durationMs": 9950,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-sa3.mp4",
+   "fixtureMove": {
+    "id": "1845d4b9-4bac-4e4e-b6fd-3b57accfa973",
+    "slug": "jp-sa3",
+    "name": "ザプリェット / Interdiction（SA3）",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↘→ ↓↘→ + K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "jp",
+   "file": "jp-ca.gif",
+   "moveId": "2472fe66-f312-4a5d-9c7c-25e0fa2515d7",
+   "moveSlug": "jp-ca",
+   "inspect": {
+    "sha256": "dd4b0663a9541d59ba099de1441bc3b17c6d282239b0c8c67b4f5165fbdcfd00",
+    "bytes": 10562455,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 222,
+    "durationMs": 11100,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/jp/jp-ca.mp4",
+   "fixtureMove": {
+    "id": "2472fe66-f312-4a5d-9c7c-25e0fa2515d7",
+    "slug": "jp-ca",
+    "name": "ザプリェット / Interdiction（CA）",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "↓↘→ ↓↘→ + K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "ryu",
+   "file": "ryu-standing-hk.gif",
+   "moveId": "b2362378-1411-45ae-a0f0-014e898042e0",
+   "moveSlug": "ryu-standing-hk",
+   "inspect": {
+    "sha256": "7004a6bb03fc5fc1b634e7def72efa374d1eefaaad0c7504213fc0513e72683c",
+    "bytes": 836903,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 21,
+    "durationMs": 1050,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/ryu/ryu-standing-hk.mp4",
+   "fixtureMove": {
+    "id": "b2362378-1411-45ae-a0f0-014e898042e0",
+    "slug": "ryu-standing-hk",
+    "name": "立ち強K（後ろ回し蹴り）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "強K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "ryu",
+   "file": "ryu-crouching-hk.gif",
+   "moveId": "06cb478c-ed44-47f7-99ec-1a2dbe45e8b5",
+   "moveSlug": "ryu-crouching-hk",
+   "inspect": {
+    "sha256": "e9ead4ff9943a374698779dc9d5fa34abb831703dc9fa80a4d7026a77b60392b",
+    "bytes": 920473,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 21,
+    "durationMs": 1050,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/ryu/ryu-crouching-hk.mp4",
+   "fixtureMove": {
+    "id": "06cb478c-ed44-47f7-99ec-1a2dbe45e8b5",
+    "slug": "ryu-crouching-hk",
+    "name": "しゃがみ強K（回転足払い）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "↓ + 強K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "ryu",
+   "file": "ryu-denjin-charge.gif",
+   "moveId": "db46db6f-26dd-4638-8397-d235750929b9",
+   "moveSlug": "ryu-denjin-charge",
+   "inspect": {
+    "sha256": "c998252ad875f233f0680002e1dcf6e295d877bffdeb24681445bc184bf061cd",
+    "bytes": 1228043,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 32,
+    "durationMs": 1600,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/ryu/ryu-denjin-charge.mp4",
+   "fixtureMove": {
+    "id": "db46db6f-26dd-4638-8397-d235750929b9",
+    "slug": "ryu-denjin-charge",
+    "name": "電刃錬気",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓↓ + P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "ryu",
+   "file": "ryu-od-high-blade-kick.gif",
+   "moveId": "1aefba80-f15b-4bf2-b96c-a06155070371",
+   "moveSlug": "ryu-od-high-blade-kick",
+   "inspect": {
+    "sha256": "9d853fa7ecdac0820a2d426d158c2d2e3bcc26af3dfcf14dabc0fe9d19a7cb18",
+    "bytes": 1273126,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 30,
+    "durationMs": 1500,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/ryu/ryu-od-high-blade-kick.mp4",
+   "fixtureMove": {
+    "id": "1aefba80-f15b-4bf2-b96c-a06155070371",
+    "slug": "ryu-od-high-blade-kick",
+    "name": "OD 上段足刀蹴り",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "↓↘→ + KK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "yasmine",
+   "file": "yasmine-standing-light-punch-5lp-normal-recovery.gif",
+   "moveId": "42bfb7b6-2511-48e4-b50e-7045fc676ba9",
+   "moveSlug": "yasmine-standing-light-punch-5lp-normal-recovery",
+   "inspect": {
+    "sha256": "5ee5df43ca60f04a5c67e13510109e5c211e7a08a3382e5bae06c78c7b7c27dc",
+    "bytes": 374045,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 14,
+    "durationMs": 700,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/yasmine/yasmine-standing-light-punch-5lp-normal-recovery.mp4",
+   "fixtureMove": {
+    "id": "42bfb7b6-2511-48e4-b50e-7045fc676ba9",
+    "slug": "yasmine-standing-light-punch-5lp",
+    "name": "立ち弱P（マガアン・ナ・パグラスラス）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "5LP",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "yasmine",
+   "file": "yasmine-standing-medium-punch-5mp-normal-recovery.gif",
+   "moveId": "6b816c73-20c6-4590-8389-2bd0db98b251",
+   "moveSlug": "yasmine-standing-medium-punch-5mp-normal-recovery",
+   "inspect": {
+    "sha256": "516da3acf126224045fcdbf0b96472a194bd838b3b5160c41d022c39f2fffdfe",
+    "bytes": 613420,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 25,
+    "durationMs": 1250,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/yasmine/yasmine-standing-medium-punch-5mp-normal-recovery.mp4",
+   "fixtureMove": {
+    "id": "6b816c73-20c6-4590-8389-2bd0db98b251",
+    "slug": "yasmine-standing-medium-punch-5mp",
+    "name": "立ち中P（パバリック・バリック ・ナ・パグラスラス）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "5MP",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "yasmine",
+   "file": "yasmine-standing-heavy-punch-5hp-normal-recovery.gif",
+   "moveId": "de5b585d-28cd-4be8-b495-2611b995ef2f",
+   "moveSlug": "yasmine-standing-heavy-punch-5hp-normal-recovery",
+   "inspect": {
+    "sha256": "4badf2704fb1dc02898314b761649068b2a3de37aea04ac6699148000aaecd79",
+    "bytes": 1237067,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 26,
+    "durationMs": 1300,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/yasmine/yasmine-standing-heavy-punch-5hp-normal-recovery.mp4",
+   "fixtureMove": {
+    "id": "de5b585d-28cd-4be8-b495-2611b995ef2f",
+    "slug": "yasmine-standing-heavy-punch-5hp",
+    "name": "立ち強P（トリップレング・パグラスラス）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "5HP",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "yasmine",
+   "file": "yasmine-crouching-light-punch-2lp-normal-recovery.gif",
+   "moveId": "bcdb1926-b1a6-4a85-b8d0-25dcf464fd87",
+   "moveSlug": "yasmine-crouching-light-punch-2lp-normal-recovery",
+   "inspect": {
+    "sha256": "23abf13d34572bfc1901ee313fa3049155313c4e24cbfd6000b2b22f06042081",
+    "bytes": 341220,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 15,
+    "durationMs": 750,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/yasmine/yasmine-crouching-light-punch-2lp-normal-recovery.mp4",
+   "fixtureMove": {
+    "id": "bcdb1926-b1a6-4a85-b8d0-25dcf464fd87",
+    "slug": "yasmine-crouching-light-punch-2lp",
+    "name": "しゃがみ弱P（マビリサング・パグラスラス）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "2LP",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "yasmine",
+   "file": "yasmine-crouching-medium-punch-2mp-normal-recovery.gif",
+   "moveId": "03a3c78f-d49e-4dff-9857-08856fd40b25",
+   "moveSlug": "yasmine-crouching-medium-punch-2mp-normal-recovery",
+   "inspect": {
+    "sha256": "9f4c55a2af8ed46342410a38ec5ef0b82e758aa8b2090d413cb1eeed9ce1fb76",
+    "bytes": 422944,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 18,
+    "durationMs": 900,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/yasmine/yasmine-crouching-medium-punch-2mp-normal-recovery.mp4",
+   "fixtureMove": {
+    "id": "03a3c78f-d49e-4dff-9857-08856fd40b25",
+    "slug": "yasmine-crouching-medium-punch-2mp",
+    "name": "しゃがみ中P（カルモット）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "2MP",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "yasmine",
+   "file": "yasmine-crouching-heavy-punch-2hp-normal-recovery.gif",
+   "moveId": "495aa9a0-c9b0-4484-b845-856a538832e4",
+   "moveSlug": "yasmine-crouching-heavy-punch-2hp-normal-recovery",
+   "inspect": {
+    "sha256": "c3cbf5f3128e9f8f953de3b5bfcccbab973fe1a04afd2f377fc41508d6fa5b6e",
+    "bytes": 866634,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 23,
+    "durationMs": 1150,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/yasmine/yasmine-crouching-heavy-punch-2hp-normal-recovery.mp4",
+   "fixtureMove": {
+    "id": "495aa9a0-c9b0-4484-b845-856a538832e4",
+    "slug": "yasmine-crouching-heavy-punch-2hp",
+    "name": "しゃがみ強P（マミミツィン）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "2HP",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "yasmine",
+   "file": "yasmine-standing-light-kick-5lk-normal-recovery.gif",
+   "moveId": "77b8c07a-0085-40ab-bae7-ad37aadd44ce",
+   "moveSlug": "yasmine-standing-light-kick-5lk-normal-recovery",
+   "inspect": {
+    "sha256": "9d7f19901db7698a64ef7041e02815b4717f458f21122d80dfaa600ddf78bbf8",
+    "bytes": 352744,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 14,
+    "durationMs": 700,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/yasmine/yasmine-standing-light-kick-5lk-normal-recovery.mp4",
+   "fixtureMove": {
+    "id": "77b8c07a-0085-40ab-bae7-ad37aadd44ce",
+    "slug": "yasmine-standing-light-kick-5lk",
+    "name": "立ち弱K（マババング・シパ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "5LK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "yasmine",
+   "file": "yasmine-standing-medium-kick-5mk-normal-recovery.gif",
+   "moveId": "329ee255-394a-49be-9ecb-e9fb2b982370",
+   "moveSlug": "yasmine-standing-medium-kick-5mk-normal-recovery",
+   "inspect": {
+    "sha256": "b2de4f02efd47f6da362bd37f33d005f5c48a5f4befa020b547538b16104e0b2",
+    "bytes": 895613,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 19,
+    "durationMs": 950,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/yasmine/yasmine-standing-medium-kick-5mk-normal-recovery.mp4",
+   "fixtureMove": {
+    "id": "329ee255-394a-49be-9ecb-e9fb2b982370",
+    "slug": "yasmine-standing-medium-kick-5mk",
+    "name": "立ち中K",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "5MK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "yasmine",
+   "file": "yasmine-standing-heavy-kick-5hk-normal-recovery.gif",
+   "moveId": "72e48438-5de6-43cb-b421-41a5105dd213",
+   "moveSlug": "yasmine-standing-heavy-kick-5hk-normal-recovery",
+   "inspect": {
+    "sha256": "62b7bfb7c7b7b7152f5fd3f510391f658a521411756b3800e66713d25f63d76e",
+    "bytes": 1252776,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 22,
+    "durationMs": 1100,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/yasmine/yasmine-standing-heavy-kick-5hk-normal-recovery.mp4",
+   "fixtureMove": {
+    "id": "72e48438-5de6-43cb-b421-41a5105dd213",
+    "slug": "yasmine-standing-heavy-kick-5hk",
+    "name": "立ち強K（トゥマタロン・ナ・シパ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "5HK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "yasmine",
+   "file": "yasmine-crouching-light-kick-2lk-normal-recovery.gif",
+   "moveId": "dcda78cf-a5be-4d31-9fed-d18bcf34e9ac",
+   "moveSlug": "yasmine-crouching-light-kick-2lk-normal-recovery",
+   "inspect": {
+    "sha256": "30c1c6c7b13803f82fb4e99d1375fc14573d92707f06e2fcdf868b55efa414bb",
+    "bytes": 446833,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 16,
+    "durationMs": 800,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/yasmine/yasmine-crouching-light-kick-2lk-normal-recovery.mp4",
+   "fixtureMove": {
+    "id": "dcda78cf-a5be-4d31-9fed-d18bcf34e9ac",
+    "slug": "yasmine-crouching-light-kick-2lk",
+    "name": "しゃがみ弱K（マガアン・ナ・シパ）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "2LK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "yasmine",
+   "file": "yasmine-crouching-medium-kick-2mk-normal-recovery.gif",
+   "moveId": "44237752-18cd-4aa7-8e78-9670a78a6e2e",
+   "moveSlug": "yasmine-crouching-medium-kick-2mk-normal-recovery",
+   "inspect": {
+    "sha256": "350d0a28a783c119d9e7879d989260b86c9b73c03f1e32ac78a6971e4c87c369",
+    "bytes": 438984,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 16,
+    "durationMs": 800,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/yasmine/yasmine-crouching-medium-kick-2mk-normal-recovery.mp4",
+   "fixtureMove": {
+    "id": "44237752-18cd-4aa7-8e78-9670a78a6e2e",
+    "slug": "yasmine-crouching-medium-kick-2mk",
+    "name": "しゃがみ中K（パンドゥログ・ナン・ルロッド）",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "2MK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "yasmine",
+   "file": "yasmine-gunting-na-pabagsak-2hk-normal-recovery.gif",
+   "moveId": "d66223a6-df43-4ce9-801b-dbc83cf21bf1",
+   "moveSlug": "yasmine-gunting-na-pabagsak-2hk-normal-recovery",
+   "inspect": {
+    "sha256": "df90f3f2a245b3c3efd11d50dd1afb8ff7c86b36ea83e18b99527bd4e282954b",
+    "bytes": 1157366,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 24,
+    "durationMs": 1200,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/moves/yasmine/yasmine-gunting-na-pabagsak-2hk-normal-recovery.mp4",
+   "fixtureMove": {
+    "id": "d66223a6-df43-4ce9-801b-dbc83cf21bf1",
+    "slug": "yasmine-gunting-na-pabagsak-2hk",
+    "name": "グンティング・ナ・パバサ",
+    "moveType": "normal",
+    "category": "通常技",
+    "command": "2HK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "alex",
+   "file": "od-aerial-knee-smash.gif",
+   "moveId": "3073d9fd-49df-451d-9c8c-93a51bf34e40",
+   "moveSlug": "od-aerial-knee-smash",
+   "inspect": {
+    "sha256": "a73cf56c36be603fd9114c4af8fdaab03349d9f5bb368bc8869494cc53a06cea",
+    "bytes": 7233516,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 124,
+    "durationMs": 6200,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/alex/20261003/od-aerial-knee-smash.mp4",
+   "fixtureMove": {
+    "id": "3073d9fd-49df-451d-9c8c-93a51bf34e40",
+    "slug": "alex-aerial-knee-smash-623kk",
+    "name": "エアニースマッシュ",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "623KK",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "alex",
+   "file": "sa1-raging-spear.gif",
+   "moveId": "86136a6f-495e-4ecb-b34e-c0c66aab81c1",
+   "moveSlug": "sa1-raging-spear",
+   "inspect": {
+    "sha256": "68239a0c2e30fc244c534944b756383ba1962e03c7d903ee45c5ee4f008c3912",
+    "bytes": 3213897,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 74,
+    "durationMs": 3700,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/alex/20261003/sa1-raging-spear.mp4",
+   "fixtureMove": {
+    "id": "86136a6f-495e-4ecb-b34e-c0c66aab81c1",
+    "slug": "alex-raging-spear-236236k",
+    "name": "レイジングスピアー",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "236236K",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "alex",
+   "file": "ca-final-captchude.gif",
+   "moveId": "9c0ca2ef-2b05-4832-b9d0-667400e56919",
+   "moveSlug": "ca-final-captchude",
+   "inspect": {
+    "sha256": "1745fef2a8dff523daddd3c1f12c399cdb733d6ef5b4e5b71650e6add1c35e84",
+    "bytes": 10793265,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 231,
+    "durationMs": 11550,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/alex/20261003/ca-final-captchude.mp4",
+   "fixtureMove": {
+    "id": "9c0ca2ef-2b05-4832-b9d0-667400e56919",
+    "slug": "alex-the-final-prison-ca-236236p",
+    "name": "ファイナルキャプチュード（CA）",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "236236P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "alex",
+   "file": "sa3-final-captchude.gif",
+   "moveId": "9e860acc-4183-42c6-8071-28a50656d749",
+   "moveSlug": "sa3-final-captchude",
+   "inspect": {
+    "sha256": "c5c3d5e9731935743a577f00c3c71c6ed53b007257e00ea74f9124e988ce7f56",
+    "bytes": 9538942,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 209,
+    "durationMs": 10450,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/alex/20261003/sa3-final-captchude.mp4",
+   "fixtureMove": {
+    "id": "9e860acc-4183-42c6-8071-28a50656d749",
+    "slug": "alex-the-final-prison-236236p",
+    "name": "ファイナルキャプチュード",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "236236P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "alex",
+   "file": "flash-chop-heavy.gif",
+   "moveId": "198b2771-cd99-415b-9181-643335438cfb",
+   "moveSlug": "flash-chop-heavy",
+   "inspect": {
+    "sha256": "982c5e3315c4bacdf2fb6a7db76c3c4f5519bec666d0c1f85dd1e404bd009204",
+    "bytes": 1764574,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 34,
+    "durationMs": 1700,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/alex/20261003/flash-chop-heavy.mp4",
+   "fixtureMove": {
+    "id": "198b2771-cd99-415b-9181-643335438cfb",
+    "slug": "alex-flash-chop-236hp",
+    "name": "フラッシュチョップ",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "236HP",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "alex",
+   "file": "od-flash-chop.gif",
+   "moveId": "df42445a-7291-48a3-98a6-0b7bea16b05c",
+   "moveSlug": "od-flash-chop",
+   "inspect": {
+    "sha256": "e7692bbe8e5f110ea9f8ef1618c02d59283ca17824b0f7c9fbc5d76595e45116",
+    "bytes": 1371846,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 28,
+    "durationMs": 1400,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/alex/20261003/od-flash-chop.mp4",
+   "fixtureMove": {
+    "id": "df42445a-7291-48a3-98a6-0b7bea16b05c",
+    "slug": "alex-flash-chop-236pp",
+    "name": "フラッシュチョップ",
+    "moveType": "special",
+    "category": "必殺技",
+    "command": "236PP",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  },
+  {
+   "origin": "made_from_approved_mp4",
+   "character": "alex",
+   "file": "sa2-sledgecross-hammer.gif",
+   "moveId": "fd27f911-987b-4ba0-b727-e73301ffeb69",
+   "moveSlug": "sa2-sledgecross-hammer",
+   "inspect": {
+    "sha256": "2716458ab97340204d019b0f415ff43363ec65b4b66aec4622abb80fca30142d",
+    "bytes": 8074323,
+    "errors": [],
+    "width": 480,
+    "height": 270,
+    "frames": 155,
+    "durationMs": 7750,
+    "loopCount": 0
+   },
+   "sourceVideo": "v2-web/public/media/alex/20261003/sa2-sledgecross-hammer.mp4",
+   "fixtureMove": {
+    "id": "fd27f911-987b-4ba0-b727-e73301ffeb69",
+    "slug": "alex-sledgecross-hammer-214214p",
+    "name": "スレッジクロスハンマー",
+    "moveType": "super",
+    "category": "SA/CA",
+    "command": "214214P",
+    "hasMedia": false
+   },
+   "connectionClass": "MP4_KEPT",
+   "reasons": [
+    "MP4あり: GIFは上乗せしない"
+   ]
+  }
+ ]
+}

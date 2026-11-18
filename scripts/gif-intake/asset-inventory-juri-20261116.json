@@ -1,0 +1,71 @@
+{
+ "generated": "2026-11-16",
+ "records": [
+  {
+   "character": "juri",
+   "file": "17_62-juri-light-tensenrin.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "a05706711d02a2a64bd79eaa610a1a1ec1cd41c1b12a1cf0288618262cfd07d5",
+   "width": 480,
+   "height": 270,
+   "frames": 30,
+   "durationMs": 1500,
+   "bytes": 2457421
+  },
+  {
+   "character": "juri",
+   "file": "17_63-juri-medium-tensenrin.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "3dcc62b7419585992f4aa223a4dc42510470548ccd9ac0280f14035d6d655f3f",
+   "width": 480,
+   "height": 270,
+   "frames": 34,
+   "durationMs": 1700,
+   "bytes": 2877002
+  },
+  {
+   "character": "juri",
+   "file": "17_64-juri-heavy-tensenrin.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "a570ba3a0a5e3af1e7494379b97cdbcdd80b93154baeae165447f05d0d19cdb0",
+   "width": 480,
+   "height": 270,
+   "frames": 37,
+   "durationMs": 1850,
+   "bytes": 3210358
+  },
+  {
+   "character": "juri",
+   "file": "17_65-juri-od-tensenrin.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "310cefac6e38626b35cfb802a6e9ec74d61880ceeb5f4925327f6f6ed05c3b60",
+   "width": 480,
+   "height": 270,
+   "frames": 41,
+   "durationMs": 2050,
+   "bytes": 3404264
+  },
+  {
+   "character": "juri",
+   "file": "17_70-juri-sa1-sakkai-fuhazan.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "fc4df289bc5cee4bf5758ff96c525bf11c7635b2d34f1c39fd1a306b1acf96ef",
+   "width": 480,
+   "height": 270,
+   "frames": 104,
+   "durationMs": 5200,
+   "bytes": 7342147
+  },
+  {
+   "character": "juri",
+   "file": "17_71-juri-sa2-feng-shui-engine.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "7b61dc5a5e23908242370abaf6c6996405e09ac088fa4574d087dca58b5bbc0a",
+   "width": 480,
+   "height": 270,
+   "frames": 47,
+   "durationMs": 2350,
+   "bytes": 2545179
+  }
+ ]
+}

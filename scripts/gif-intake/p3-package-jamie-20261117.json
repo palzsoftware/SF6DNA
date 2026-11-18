@@ -1,0 +1,38 @@
+{
+ "date": "2026-11-17",
+ "character": "jamie",
+ "records": [
+  {
+   "character": "jamie",
+   "asset_filename": "jamie-standing-hp.gif",
+   "asset_sha256": "26d7ea92c668a303f00a73d2ef0bc2b672ee5ac74e669e0aa2e0f618349c6d43",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "jamie",
+   "asset_filename": "jamie-standing-lk.gif",
+   "asset_sha256": "98ff02848b3d4691440e46f80ce8f07cd65a4c5b2e1de6752703df5e504f512a",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "jamie",
+   "asset_filename": "jamie-standing-mk.gif",
+   "asset_sha256": "7ab5fdbb5c48de6115efa4c49a56142942bc37a76ed60e80f5065478e6d718dc",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "jamie",
+   "asset_filename": "jamie-standing-hk.gif",
+   "asset_sha256": "76a9889391e66598e360822b0b919018dcd0c6243665e932e4cec1677b0ea5d8",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  }
+ ]
+}

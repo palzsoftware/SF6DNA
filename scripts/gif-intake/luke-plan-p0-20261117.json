@@ -1,0 +1,72 @@
+{
+ "character": "luke",
+ "total": 5,
+ "summary": {
+  "HOLD": 5
+ },
+ "holdReasons": {
+  "NO_MOVE_ID": 5
+ },
+ "rows": [
+  {
+   "file": "17_73-juri-sa3-kaisen-dankai-raku_under10mb_128color.gif",
+   "sha256": "2a8c04a02cc30436532773425b6c4d2dd3a5cc82cb9f0de9ce1e28d242d6d53d",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "juri_044314_118.70_121.90_air_strike_impact_variant_HOLD.gif",
+   "sha256": "60eb98a6e7397ccf7fcbb19b69421def1a60c37f8d46782db5aa0755cd0c1968",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "juri_044314_67.20_69.60_ground_fire_arc_variant_HOLD.gif",
+   "sha256": "9329c7b0227836c9416985dd9740d94c17c9a86e9e2aa940218fe88a6f4168cf",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "juri_044314_71.35_73.25_ground_purple_slash_variant_HOLD.gif",
+   "sha256": "64605581da6375bb5b34ed94847f019e004a409a46a13d41684275d3daee0a96",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "luke_hissatsu1_76s40_77s95_unmapped_candidate.gif",
+   "sha256": "15c29457ffa0a9fd0c79f8ec8657c1d31a2061f1959961fdd23884af522cf13e",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  }
+ ]
+}

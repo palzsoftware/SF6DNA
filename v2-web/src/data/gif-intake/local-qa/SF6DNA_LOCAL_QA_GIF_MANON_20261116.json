@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "characterSlug": "manon",
+  "localQaOnly": true,
+  "approval": "NOT_APPROVED",
+  "note": "ローカルQA専用。公開承認ではない。表示は開発環境のlocalhost限定の隔離ルートのみ。",
+  "entries": [
+    {
+      "moveId": "f284f407-cbb4-4300-a615-9a11af7178df",
+      "moveSlug": "manon-degage-h",
+      "fileName": "manon-degage-h.gif",
+      "sha256": "afe871098f8f5e24effec3388fefa115c1fb2a2387d3b9ae20af3efeaf4fd514",
+      "bytes": 2400708,
+      "width": 480,
+      "height": 270,
+      "durationMs": 1450,
+      "sourceFile": "manon-heavy-degage.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "飛び上がる蹴りで1回大きくヒットし、相手がダウンする。弱・中は2段のヒット火花で、ヒット数の違いから区別できる。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "9de1ac97-fc73-4ae2-9271-64174f9b1c27",
+      "moveSlug": "manon-degage-od",
+      "fileName": "manon-degage-od.gif",
+      "sha256": "b93e0261952b8109472dab3e303fe98eaaf948b6ea1ac5874eab2cb86c603085",
+      "bytes": 3357491,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2150,
+      "sourceFile": "manon-od-degage.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "同系統の蹴りに金色のOD演出が付く。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)",
+        "OD消費であること"
+      ]
+    },
+    {
+      "moveId": "e33ab912-790e-4cc3-b532-1518cf8bdf7b",
+      "moveSlug": "manon-rond-point-od",
+      "fileName": "manon-rond-point-od.gif",
+      "sha256": "86f2c2b5f02fc1249f42990f9e14b48a09a2969e026bea4c7a33037e00b48c23",
+      "bytes": 3004520,
+      "width": 480,
+      "height": 270,
+      "durationMs": 1850,
+      "sourceFile": "manon-od-rond-point.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "同系統の回転蹴りに金色のOD演出が付き、相手が打ち上がる。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)",
+        "OD消費であること"
+      ]
+    },
+    {
+      "moveId": "ddc87d1a-7319-4f33-836d-1f1d49e31e79",
+      "moveSlug": "manon-manege-od",
+      "fileName": "manon-manege-od.gif",
+      "sha256": "d2bfb066cb1e8ed28f806a6d9c4c4150405930718c955302f9169421f1801af4",
+      "bytes": 5138315,
+      "width": 480,
+      "height": 270,
+      "durationMs": 3050,
+      "sourceFile": "manon-od-manege-dore.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "掴み投げの動作に金色のOD演出が付く。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)",
+        "OD消費であること"
+      ]
+    },
+    {
+      "moveId": "d7961e55-c6ed-443d-a3fa-e53fdc54fd26",
+      "moveSlug": "manon-sa1",
+      "fileName": "manon-sa1.gif",
+      "sha256": "ed78ed8c05cb271fa653168703d59feba7a2dcee58d53f9cbe676c731b75298b",
+      "bytes": 4424244,
+      "width": 480,
+      "height": 270,
+      "durationMs": 3000,
+      "sourceFile": "manon-sa1-arabesque.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "暗転カットイン付きのSA。入力表示が ↓↘→↓↘→+K(236236K)で、マノンのSA1の公開コマンドと一致(SA3/CAは236236Pで別)。",
+      "unconfirmed": [
+        "Classic/Modernの別は映像から判別不能"
+      ]
+    },
+    {
+      "moveId": "3e16e56f-1b3d-43ad-a321-ef70e876a8e0",
+      "moveSlug": "manon-sa2",
+      "fileName": "manon-sa2.gif",
+      "sha256": "46b8d8612a2236c11627fd097d6785c89522f7e3965f59b593f3364aaaf51021",
+      "bytes": 8672323,
+      "width": 480,
+      "height": 270,
+      "durationMs": 5450,
+      "sourceFile": "manon-sa2-etoile.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "顔アップ演出付きのSA。入力表示が ↓↙←↓↙←+K(214214K)で、マノンのSA2の公開コマンドと一致。",
+      "unconfirmed": [
+        "Classic/Modernの別は映像から判別不能"
+      ]
+    },
+    {
+      "moveId": "061b7386-762e-467c-9b9d-09470f92a27d",
+      "moveSlug": "manon-sa3",
+      "fileName": "manon-sa3.gif",
+      "sha256": "bee950000618aed2a34e29e33f67ffca162bf99766e1d7eb8a124bfa2558dc7c",
+      "bytes": 9701305,
+      "width": 480,
+      "height": 270,
+      "durationMs": 10750,
+      "sourceFile": "manon-sa3-pas-de-deux_under10mb_48color_nodither.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "開始時のSAゲージが3本、技の開始後に0本へ減る(3本消費=SA3)。『CA』表示は無い。パ・ド・ドゥの演出(カット演出つきの多段)。",
+      "unconfirmed": [
+        "入力表示は一部のコマで読み取れず、コマンド(236236P)の一致は静的照合のみ",
+        "SA1/SA2(ボタンK)とは別に、3本消費でSA3と判断",
+        "軽量版は減色(32〜64色・PSNR 25〜28dB)で元GIFより画質が粗い"
+      ]
+    },
+    {
+      "moveId": "1d2d8c87-2a79-44c4-a3e3-263a7e00f9a4",
+      "moveSlug": "manon-ca",
+      "fileName": "manon-ca.gif",
+      "sha256": "1720773971c4d6ff7c0d4c505e9ccd7d55a1ddd1e093fd734707022c118267f3",
+      "bytes": 9205251,
+      "width": 480,
+      "height": 270,
+      "durationMs": 11850,
+      "sourceFile": "manon-ca-pas-de-deux_under10mb_32color.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "ゲージ位置に『CA』表示、入力表示 ↓↘→↓↘→+P(236236P)。SA3と同じ演出をCAとして区別できる。",
+      "unconfirmed": [
+        "CAの発動条件は公開データによる静的照合",
+        "軽量版は減色(32〜64色・PSNR 25〜28dB)で元GIFより画質が粗い"
+      ]
+    },
+    {
+      "moveId": "23ddbf0e-4f6d-43d1-bc7d-69243454a4bb",
+      "moveSlug": "manon-standing-lp",
+      "fileName": "manon-standing-lp.gif",
+      "sha256": "ee76c1d6319d434ac394bb9c7b5c18d5015afe452a8a367874a35c091a20cd1c",
+      "bytes": 1654250,
+      "width": 480,
+      "height": 270,
+      "durationMs": 1860,
+      "sourceFile": "manon-standing-lp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "a30bb77f-b445-45d8-9553-69f9f95d4c7f",
+      "moveSlug": "manon-standing-mp",
+      "fileName": "manon-standing-mp.gif",
+      "sha256": "99652d337a76c69d92dfc7b3205b878c0ca0668d72a5a7e17cf99dbed8034525",
+      "bytes": 1883822,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2130,
+      "sourceFile": "manon-standing-mp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "a2ab637e-c864-42d6-a7ae-4bd8817a95dd",
+      "moveSlug": "manon-standing-hp",
+      "fileName": "manon-standing-hp.gif",
+      "sha256": "3fe3851ef3c3d286491dbf62248724919098fe2013f1b60bac5d9c3c7ab601af",
+      "bytes": 2100199,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2330,
+      "sourceFile": "manon-standing-hp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "a581ec10-1e15-42d2-ba9b-18f968c65f39",
+      "moveSlug": "manon-standing-lk",
+      "fileName": "manon-standing-lk.gif",
+      "sha256": "bc9853b6a1b79f195db176ac1a717f01350b09862a8bb1b341822f6dda27a46e",
+      "bytes": 2213216,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2460,
+      "sourceFile": "manon-standing-lk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "0e2b2802-d460-4eaa-bc76-c4da80e6bb29",
+      "moveSlug": "manon-standing-mk",
+      "fileName": "manon-standing-mk.gif",
+      "sha256": "c49cb57a7c288fa515aa65d69e16210e15d916bfc37bf7ccb4ee0fb5bf5f0322",
+      "bytes": 2631176,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2860,
+      "sourceFile": "manon-standing-mk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "f0a39044-5d2c-4a5f-82df-9c16820eebdf",
+      "moveSlug": "manon-standing-hk",
+      "fileName": "manon-standing-hk.gif",
+      "sha256": "85a3f9bee4adb8aec993df0b497e242b4cd9f7c7fb3bf15cecd38814426771a0",
+      "bytes": 2680219,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2930,
+      "sourceFile": "manon-standing-hk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "e9d7d8e0-0ead-44cc-9c9f-4137ecb3aae4",
+      "moveSlug": "manon-forward-throw",
+      "fileName": "manon-forward-throw.gif",
+      "sha256": "df2bcbd861968a0fb0478f091fb0a2dc9110e5eea0cee3afbdc65624ef2d0de2",
+      "bytes": 4021151,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2600,
+      "sourceFile": "manon-forward-throw-batch07-candidate.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "2026-11-17目視QA: 位置入替なし=前投げ。技術QA PASS・Manifest SHA一致。Drive 1jE1sUcxGDEWW1BSrBPylH60MTlFd8VFZ",
+      "unconfirmed": []
+    },
+    {
+      "moveId": "55b92472-63bf-4775-baf8-ee65ee4b1b60",
+      "moveSlug": "manon-back-throw",
+      "fileName": "manon-back-throw.gif",
+      "sha256": "baa974e8e7118d617ecdb2fc16df69b4feb3adcb3120dfcf922b27054016f07a",
+      "bytes": 3367922,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2200,
+      "sourceFile": "manon-back-throw-batch07-candidate.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "2026-11-17目視QA: 位置入替=後ろ投げ。技術QA PASS・Manifest SHA一致。Drive 1_4hQ4xjVH-hngYnyrlrsGEwdby7t6uK_",
+      "unconfirmed": []
+    }
+  ]
+}

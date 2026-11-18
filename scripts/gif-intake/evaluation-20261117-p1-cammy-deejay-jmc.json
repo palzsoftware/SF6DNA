@@ -1,0 +1,639 @@
+{
+ "date": "2026-11-17",
+ "summary": {
+  "received": 114,
+  "sha_matched": 62,
+  "connected_new": 32,
+  "hold": 82,
+  "cumulative": 72
+ },
+ "sobat_swap": "041/042はファイル名と中身が入替(入力表示の強/中で確定)",
+ "hold": [
+  {
+   "file": "001-dee-jay-standing-lp.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1VJWn8Tamx0f6M_X-tSb1d_H1HAXEwjxZ",
+   "bytes": 1576771
+  },
+  {
+   "file": "002-dee-jay-standing-lk.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1BlQLPWbB_u34XBF_WJp5UnfBb9LVf1tQ",
+   "bytes": 1649992
+  },
+  {
+   "file": "003-dee-jay-standing-mp.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1p4_3a7B0d5UwXAv1spW_3hzsEHehtnZI",
+   "bytes": 2128684
+  },
+  {
+   "file": "004-dee-jay-standing-mk.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1AXGu8hPnsLpE-n-u0B6AXNB9zA8vM5fI",
+   "bytes": 2102558
+  },
+  {
+   "file": "005-dee-jay-standing-hp.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1nLT9BJsI4IeZqCADK1-ebI4YfKeXMI06",
+   "bytes": 2719323
+  },
+  {
+   "file": "006-dee-jay-standing-hk.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1b4djqcKNwBA_nnA58612QsOQ9-asrMhZ",
+   "bytes": 2352441
+  },
+  {
+   "file": "007-dee-jay-crouching-lp.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "12s7C3M8RBJOYVMnDugAuoOzQAblbYEid",
+   "bytes": 1859650
+  },
+  {
+   "file": "008-dee-jay-crouching-lk.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1k92jyOaJUZXoeyWeOvzMoElg5Qjln3UF",
+   "bytes": 1730482
+  },
+  {
+   "file": "009-dee-jay-crouching-mp.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1Czfjj_YQVsJfeQ2QohfFSMC1TS2gLdVB",
+   "bytes": 1936985
+  },
+  {
+   "file": "010-dee-jay-crouching-mk.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1vj8tKhQ2kbBRSkxMKG2fCE1IkL0FcqlR",
+   "bytes": 2435579
+  },
+  {
+   "file": "011-dee-jay-crouching-hp.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1ebmkLTSFZj-FnMpGaDJ3oRGeddcK4ls6",
+   "bytes": 2897011
+  },
+  {
+   "file": "012-dee-jay-crouching-hk.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1_PSpue2e6P4o-y5iAl57B4_AidqBy6vY",
+   "bytes": 3243382
+  },
+  {
+   "file": "014-dee-jay-jump-lk.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "18tdwuymrTY8w28DkhZQrQ_IKdZ5XE-6t",
+   "bytes": 3292201
+  },
+  {
+   "file": "015-dee-jay-jump-mp.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "12ojqkLg0qTeqsAf8_BjYWpK7yE8H-0b1",
+   "bytes": 3182682
+  },
+  {
+   "file": "016-dee-jay-jump-mk.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "18fCQJQhgidEChZrQZDWs3xLnmosl6bEr",
+   "bytes": 3387510
+  },
+  {
+   "file": "017-dee-jay-jump-hp.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1cRUPAZDxf3iHqnAVinpYqtVvsXx4_cpa",
+   "bytes": 3522627
+  },
+  {
+   "file": "018-dee-jay-jump-hk.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1wy75a4Ocn4ley65WcmUqhRpwkFUGWM_9",
+   "bytes": 3362530
+  },
+  {
+   "file": "031-dee-jay-air-slasher-l.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1McmVhEdsWpk5pFkSUSXVwnoP_gc4wkEo",
+   "bytes": 3612408
+  },
+  {
+   "file": "032-dee-jay-air-slasher-m.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1T694PhMQZI2bc48T3d9FgeD069s0w-le",
+   "bytes": 5092005
+  },
+  {
+   "file": "033-dee-jay-air-slasher-h.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "10hglwcFZaSthq01vmGtxsaafclpWSG8M",
+   "bytes": 6225825
+  },
+  {
+   "file": "036-dee-jay-jackknife-l.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1_yQScMxujcGKbJj1T6qnaA5_qqr7yvCy",
+   "bytes": 2951963
+  },
+  {
+   "file": "037-dee-jay-jackknife-m.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1YMyiddyHRqnViP9UpqVytsrKWOova02M",
+   "bytes": 4259985
+  },
+  {
+   "file": "038-dee-jay-jackknife-h.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "17O3hWkPwdX0GHWOevWY_LbZ_pFuYiqtT",
+   "bytes": 6234663
+  },
+  {
+   "file": "044-dee-jay-mgu-l.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1JouIEgqLByQyyu2dYh3G9NH54EX3a3M6",
+   "bytes": 5607538
+  },
+  {
+   "file": "045-dee-jay-mgu-m.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1VVYmsIn4bQFchfYS_pSW-S78-RcSIQN7",
+   "bytes": 5600230
+  },
+  {
+   "file": "046-dee-jay-mgu-h.gif",
+   "char": "dee-jay",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1lpkjgnUXO7OQ6Dc1d-lWzc85r-iEuRTK",
+   "bytes": 8423444
+  },
+  {
+   "file": "cammy-air-throw.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1Mwf_iB9bJjN3BpaaDIEnGb4HNFKWoJcz",
+   "bytes": 7297762
+  },
+  {
+   "file": "cammy-ca_under10mb.gif",
+   "char": "cammy",
+   "status": "HOLD",
+   "fixtureName": "デルタレッドアサルト（CA）",
+   "reason": "HOLD_MOVE_ID: 体力満タン・CA表示なし(CA条件を確認できない)"
+  },
+  {
+   "file": "cammy-crouching-hk.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1voISLVf1qmohZX9L3N7p9Cf4T27BTEZO",
+   "bytes": 3826846
+  },
+  {
+   "file": "cammy-crouching-hp.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1jbSBWslRYvRWpcCW6fZurzAK2VZKX2rl",
+   "bytes": 2624545
+  },
+  {
+   "file": "cammy-crouching-lk.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1ALN-Cl2f3U7khkimzo-5JhsAgYH4_1O8",
+   "bytes": 2338683
+  },
+  {
+   "file": "cammy-crouching-lp-complete.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1HMA5jvjPRdD1aOU4Ka3RqlP5oX8NM-nH",
+   "bytes": 2014721
+  },
+  {
+   "file": "cammy-crouching-mk.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1n6vBJjhVMny06QWFRuFQ0ZPlreTNM107",
+   "bytes": 2575340
+  },
+  {
+   "file": "cammy-crouching-mp.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "14h9EdKTENOff_JjpnVb4Ua8TgSwSXWZ8",
+   "bytes": 2140901
+  },
+  {
+   "file": "cammy-jump-hk.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1wVXiaLFTlFsXgW-kilXqvPwFh0ZTdju1",
+   "bytes": 3543372
+  },
+  {
+   "file": "cammy-jump-hp-trimmed.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1k21AxQzAN5ENeY4IGGDcZwVLFs0OL4pP",
+   "bytes": 3310975
+  },
+  {
+   "file": "cammy-jump-lk.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1uMe__I-bR6EECo3kft3E6oUqQOfnXJaD",
+   "bytes": 3424718
+  },
+  {
+   "file": "cammy-jump-lp.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1tLGy7XaDiYAO9ENWExMM70Dg-8X-clLu",
+   "bytes": 3288889
+  },
+  {
+   "file": "cammy-jump-mk.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "16j_YE2c4t-8uaYjw_8SMq8Sgjgtautdl",
+   "bytes": 3444827
+  },
+  {
+   "file": "cammy-jump-mp.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "12T6vflyR7dromn6Hx9FO0IdEGaxsLJda",
+   "bytes": 3464464
+  },
+  {
+   "file": "cammy-knuckle-h-r16.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "13U38i_ukbEk8SDUJxPj6zIMPW6VAqDDB",
+   "bytes": 2942728
+  },
+  {
+   "file": "cammy-knuckle-l.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1VLxFgD-7B6hMU87UPf1chmQVBT3GA50V",
+   "bytes": 3128891
+  },
+  {
+   "file": "cammy-knuckle-m-r16-final.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "13xb575gKE_qv0TI_gVdmNSugN6WEjNL5",
+   "bytes": 2762410
+  },
+  {
+   "file": "cammy-sa2-air_under10mb.gif",
+   "char": "cammy",
+   "status": "HOLD",
+   "fixtureName": "エアキラービースピン",
+   "reason": "HOLD_MOVE_ID: 入力表示はP(拳)、データは214214K。ボタン不一致のためデータ確認が必要"
+  },
+  {
+   "file": "cammy-sa2-r16-final_under10mb.gif",
+   "char": "cammy",
+   "status": "HOLD",
+   "fixtureName": "キラービースピン",
+   "reason": "HOLD_MOVE_ID: 入力表示はP(拳)、データは214214K。ボタン不一致のためデータ確認が必要"
+  },
+  {
+   "file": "cammy-spike-l.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1SF5RftA2WpPrfyt5iqtB9QR6zO3PQsuN",
+   "bytes": 4127328
+  },
+  {
+   "file": "cammy-spike-m.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1rjdxFBFh03HtF6kDlqP-64yKBJl-F7Wa",
+   "bytes": 4105024
+  },
+  {
+   "file": "cammy-spiral-l-r16-complete.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1B0pps9rb4FASJadoJnVhLdr65WSSXsls",
+   "bytes": 3581867
+  },
+  {
+   "file": "cammy-spiral-m-r16.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1xr2CfOmvGSHZCUfMVMHQ5CCJ1tbr9Ni8",
+   "bytes": 3247395
+  },
+  {
+   "file": "cammy-standing-hk.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1V7i42oPhpFeli7k0RZrOompS6BpSWbIJ",
+   "bytes": 3104199
+  },
+  {
+   "file": "cammy-standing-hp.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1e7m9xgb6V_3uQ_d2Dz3m-vF7iZG2qakd",
+   "bytes": 3251221
+  },
+  {
+   "file": "cammy-standing-lk.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1zWVZDpGmmmxSsjaaw380s9lBrjJ13OiH",
+   "bytes": 1989877
+  },
+  {
+   "file": "cammy-standing-lp.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1Rw7wE_pe74IZ7JgAs8124tEXcUSS199G",
+   "bytes": 1715103
+  },
+  {
+   "file": "cammy-standing-mk.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1oB5e9hm_CaJ1TuRX7qhkGaHvQy0SGrcj",
+   "bytes": 2498720
+  },
+  {
+   "file": "cammy-standing-mp.gif",
+   "char": "cammy",
+   "status": "DOWNLOAD_HOLD",
+   "reason": "未取得(10MB超または今回対象外)",
+   "driveId": "1MvrDaBablhFgj-fY8ruYmL2fJlYyOTqK",
+   "bytes": 2068226
+  },
+  {
+   "file": "jamie-standing-lp.gif",
+   "char": "jamie",
+   "status": "HOLD",
+   "fixtureName": "立ち弱P（杯打）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "jamie-standing-lk.gif",
+   "char": "jamie",
+   "status": "HOLD",
+   "fixtureName": "立ち弱K（頂奏）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "jamie-standing-mp.gif",
+   "char": "jamie",
+   "status": "HOLD",
+   "fixtureName": "立ち中P（背束拳）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "jamie-standing-mk.gif",
+   "char": "jamie",
+   "status": "HOLD",
+   "fixtureName": "立ち中K（瞬歩脚）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "jamie-standing-hp.gif",
+   "char": "jamie",
+   "status": "HOLD",
+   "fixtureName": "立ち強P（連發拳）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "jamie-standing-hk.gif",
+   "char": "jamie",
+   "status": "HOLD",
+   "fixtureName": "立ち強K（魔霞弧）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "manon-standing-lp.gif",
+   "char": "manon",
+   "status": "HOLD",
+   "fixtureName": "立ち弱P",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "manon-standing-mp.gif",
+   "char": "manon",
+   "status": "HOLD",
+   "fixtureName": "立ち中P",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "manon-standing-hp.gif",
+   "char": "manon",
+   "status": "HOLD",
+   "fixtureName": "立ち強P",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "manon-standing-lk.gif",
+   "char": "manon",
+   "status": "HOLD",
+   "fixtureName": "立ち弱K",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "manon-standing-mk.gif",
+   "char": "manon",
+   "status": "HOLD",
+   "fixtureName": "立ち中K",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "manon-standing-hk.gif",
+   "char": "manon",
+   "status": "HOLD",
+   "fixtureName": "立ち強K",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-standing-lp-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "立ち弱P（手突）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-jump-lk-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "ジャンプ弱K（鶴脚打）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-jump-mk-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "ジャンプ中K（飛翔脚）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-jump-hk-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "ジャンプ強K（鷹翔脚）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-standing-mp-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "立ち中P（頸穿刀）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-standing-hp-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "立ち強P（顎狙突拳）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-crouching-lp-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "しゃがみ弱P（尖打）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-crouching-mp-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "しゃがみ中P（丹頂拳）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-crouching-hp-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "しゃがみ強P（孔雀掌）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-standing-lk-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "立ち弱K（斧刃脚）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-standing-mk-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "立ち中K（外擺脚）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-standing-hk-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "立ち強K（前周脚）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-crouching-lk-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "しゃがみ弱K（前掃腿）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-crouching-mk-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "しゃがみ中K（後掃旋腿）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  },
+  {
+   "file": "chun-li-crouching-hk-candidate.gif",
+   "char": "chun-li",
+   "status": "HOLD",
+   "fixtureName": "しゃがみ強K（元伝暗殺蹴）",
+   "reason": "HOLD_MOVE_ID: STRENGTH_NOT_VERIFIED(通常技は入力表示が出ず弱/中/強を確認できない)"
+  }
+ ]
+}

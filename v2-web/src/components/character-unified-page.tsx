@@ -235,7 +235,10 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, moveE
         <Link className={styles.relatedLink} href="/videos">動画一覧を見る →</Link>
       </section>
     </section>
-    <CharacterStrategySlot kind="combo" previewContent={character.slug === "luke" ? localReferences : null} /><CharacterStrategySlot kind="setplay" /><CharacterStrategySlot kind="sequence" /><CharacterStrategySlot kind="counter" />
+    <CharacterStrategySlot kind="combo" characterSlug={character.slug} previewContent={character.slug === "luke" ? localReferences : null} />
+    <CharacterStrategySlot kind="setplay" characterSlug={character.slug} />
+    <CharacterStrategySlot kind="sequence" characterSlug={character.slug} />
+    <CharacterStrategySlot kind="counter" characterSlug={character.slug} />
     <section id="sources" className={styles.section}><h2>情報源</h2><SourceLinks sources={character.sources} /></section>
     {/* Strategy reference media is retained in source, hidden for Ver.1.0. */}
   </div>;

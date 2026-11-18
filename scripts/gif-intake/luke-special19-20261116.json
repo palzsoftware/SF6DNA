@@ -1,0 +1,417 @@
+{
+ "generated": "2026-11-16",
+ "basis": "現行公開用データの必殺技19件 × ChatGPT 9本強度照合 + 残り10本照合(差分のみ)",
+ "summary": {
+  "total": 19,
+  "HOLD_STRENGTH_NOT_VERIFIED": 9,
+  "LOCAL_CONNECTED": 9,
+  "HOLD_OD_CONDITION_UNVERIFIED": 1,
+  "newLocalConnections": 0
+ },
+ "odFlashKnuckleCandidates": {
+  "twoHit": {
+   "file": "luke_hissatsu1_76s40_77s95_unmapped_candidate.gif",
+   "sha256": "15c29457ffa0a9fd0c79f8ec8657c1d31a2061f1959961fdd23884af522cf13e",
+   "frames": 31,
+   "note": "2HITS候補。私の71本の台帳には無い(ChatGPT側の新規切り出し候補)。実体は未受領。"
+  },
+  "fourHit": {
+   "file": "22_45-luke-od-flash-knuckle-followup.gif",
+   "sha256": "d4b9a2f34b17cf4f465066315ff5a6c4a9f314efef467e930e8855a5babe9185",
+   "frames": 28
+  }
+ },
+ "entries": [
+  {
+   "moveId": "e5c37a22-9ba1-409b-bc2a-52b4839c8e6f",
+   "moveSlug": "luke-sand-blast-l",
+   "name": "弱 サンドブラスト",
+   "status": "HOLD_STRENGTH_NOT_VERIFIED",
+   "reason": "元動画の映像位置はChatGPTが複数フレームで一致確認済みだが、入力表示なし・撮影順のみで強度は未確認。",
+   "sourceVideoMatch": "MULTIFRAME_MATCH",
+   "gifCandidates": [
+    {
+     "file": "22_30-luke-light-sand-blast.gif",
+     "sha256": "3901f3778a84f0d501e7b11897cf95bfdf8770663d7d1639b05458d73e1666d0",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": "MULTIFRAME_MATCH(ledger時刻付近)"
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "e881de87-5e45-4e0f-bda5-668c28d2b76a",
+   "moveSlug": "luke-sand-blast-m",
+   "name": "中 サンドブラスト",
+   "status": "HOLD_STRENGTH_NOT_VERIFIED",
+   "reason": "元動画の映像位置はChatGPTが複数フレームで一致確認済みだが、入力表示なし・撮影順のみで強度は未確認。",
+   "sourceVideoMatch": "MULTIFRAME_MATCH",
+   "gifCandidates": [
+    {
+     "file": "22_31-luke-medium-sand-blast.gif",
+     "sha256": "244d08ca756e75e796b1405f691d8a72419ea4754cc4a822e684fb9e2f0cb89c",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": "MULTIFRAME_MATCH(ledger時刻付近)"
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "fb68e4ad-4c0a-4bc1-bd8c-c79244c78d78",
+   "moveSlug": "luke-sand-blast-h",
+   "name": "強 サンドブラスト",
+   "status": "HOLD_STRENGTH_NOT_VERIFIED",
+   "reason": "元動画の映像位置はChatGPTが複数フレームで一致確認済みだが、入力表示なし・撮影順のみで強度は未確認。",
+   "sourceVideoMatch": "MULTIFRAME_MATCH",
+   "gifCandidates": [
+    {
+     "file": "22_32-luke-heavy-sand-blast.gif",
+     "sha256": "d302e82b104b87d20ad23dc964a798216ee8c9a44f94701dc725a6a946603328",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": "MULTIFRAME_MATCH(ledger時刻付近)"
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "0466a4f1-0e3c-4352-8f61-0f1874663e99",
+   "moveSlug": "luke-sand-blast-od",
+   "name": "OD サンドブラスト",
+   "status": "LOCAL_CONNECTED",
+   "reason": "既に接続済み(今回の証拠で変更なし)。",
+   "sourceVideoMatch": null,
+   "gifCandidates": [
+    {
+     "file": "22_33-luke-od-sand-blast.gif",
+     "sha256": "dd0c68bc040d6c53f47f221a127ff66e25adb2179b305d01dc301224c9eaffd8",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": null
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "423f6d80-072c-4dd1-863d-5b8e0061a37d",
+   "moveSlug": "luke-fatal-shot",
+   "name": "フェイタルショット",
+   "status": "LOCAL_CONNECTED",
+   "reason": "既に接続済み(今回の証拠で変更なし)。",
+   "sourceVideoMatch": null,
+   "gifCandidates": [
+    {
+     "file": "22_34-luke-fatal-shot.gif",
+     "sha256": "bc9bf0cc46bddc8c9a40f409801f9910b45725c4b34e83853eefee46a17579f6",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": null
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "53070580-449c-4fcb-b6f5-bb97de387ba1",
+   "moveSlug": "luke-flash-knuckle-l",
+   "name": "弱 フラッシュナックル",
+   "status": "HOLD_STRENGTH_NOT_VERIFIED",
+   "reason": "元動画の映像位置はChatGPTが複数フレームで一致確認済みだが、入力表示なし・撮影順のみで強度は未確認。",
+   "sourceVideoMatch": "MULTIFRAME_MATCH",
+   "gifCandidates": [
+    {
+     "file": "22_35-luke-light-flash-knuckle.gif",
+     "sha256": "30869638ca2c0a6ddbdffb7234b2283bef95942f3c81a0a185495b00640420e6",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": "MULTIFRAME_MATCH(ledger時刻付近)"
+    },
+    {
+     "file": "22_36-luke-light-flash-knuckle-charged.gif",
+     "sha256": "fe22dc00ec9d6f2d09a3ec4ab5dddf505651a2e9e5b7eb92bba582d9152d781b",
+     "static": "NEEDS_VISUAL_QA",
+     "chatgptSourceMatch": null
+    },
+    {
+     "file": "22_37-luke-light-flash-knuckle-perfect.gif",
+     "sha256": "268aaf4010133aa3a8f6b91864c8e6b38a07908ca35ba1bf18dfd1c56b6c75cb",
+     "static": "NEEDS_VISUAL_QA",
+     "chatgptSourceMatch": null
+    }
+   ],
+   "derivedCandidatesUnconnected": [
+    "22_36-luke-light-flash-knuckle-charged.gif",
+    "22_37-luke-light-flash-knuckle-perfect.gif"
+   ]
+  },
+  {
+   "moveId": "8668e8a5-945a-437c-a833-f265d837d0bc",
+   "moveSlug": "luke-flash-knuckle-m",
+   "name": "中 フラッシュナックル",
+   "status": "HOLD_STRENGTH_NOT_VERIFIED",
+   "reason": "元動画の映像位置はChatGPTが複数フレームで一致確認済みだが、入力表示なし・撮影順のみで強度は未確認。",
+   "sourceVideoMatch": "MULTIFRAME_MATCH",
+   "gifCandidates": [
+    {
+     "file": "22_38-luke-medium-flash-knuckle.gif",
+     "sha256": "0c49140bacb24cc382a8ecd8ad72752fa393e15c2e04e0d96200fac9a345c3a6",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": "MULTIFRAME_MATCH(ledger時刻付近)"
+    },
+    {
+     "file": "22_39-luke-medium-flash-knuckle-charged.gif",
+     "sha256": "a561f657854a6668ed2b46ff3d1dca4e4c3d07456243a338aee513f57e54f163",
+     "static": "NEEDS_VISUAL_QA",
+     "chatgptSourceMatch": null
+    },
+    {
+     "file": "22_40-luke-medium-flash-knuckle-perfect.gif",
+     "sha256": "6533341039639da8c62485a3d93ea4557321d8c1a0b6950225ef0b6113e3dfb8",
+     "static": "NEEDS_VISUAL_QA",
+     "chatgptSourceMatch": null
+    }
+   ],
+   "derivedCandidatesUnconnected": [
+    "22_39-luke-medium-flash-knuckle-charged.gif",
+    "22_40-luke-medium-flash-knuckle-perfect.gif"
+   ]
+  },
+  {
+   "moveId": "4b6fa7c0-c85c-4d4f-aca4-b54b29599818",
+   "moveSlug": "luke-flash-knuckle-h",
+   "name": "強 フラッシュナックル",
+   "status": "HOLD_STRENGTH_NOT_VERIFIED",
+   "reason": "元動画の映像位置はChatGPTが複数フレームで一致確認済みだが、入力表示なし・撮影順のみで強度は未確認。",
+   "sourceVideoMatch": "MULTIFRAME_MATCH",
+   "gifCandidates": [
+    {
+     "file": "22_41-luke-heavy-flash-knuckle.gif",
+     "sha256": "82e05ff0ac86444d337c49addde25766d1a7338477bc376ef17e4a1f4d3aa386",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": "MULTIFRAME_MATCH(ledger時刻付近)"
+    },
+    {
+     "file": "22_42-luke-heavy-flash-knuckle-charged.gif",
+     "sha256": "fb4c3ce0bb73e17f7fcbad3dbe75aecfa0b4fb7c9f12fbe0ad13f272ed24c88c",
+     "static": "NEEDS_VISUAL_QA",
+     "chatgptSourceMatch": null
+    },
+    {
+     "file": "22_43-luke-heavy-flash-knuckle-perfect.gif",
+     "sha256": "f682eef616a0d8df6259f87230349b01436ff02a5037cfaeecc3aeb6f7b04b16",
+     "static": "NEEDS_VISUAL_QA",
+     "chatgptSourceMatch": null
+    }
+   ],
+   "derivedCandidatesUnconnected": [
+    "22_42-luke-heavy-flash-knuckle-charged.gif",
+    "22_43-luke-heavy-flash-knuckle-perfect.gif"
+   ]
+  },
+  {
+   "moveId": "9616dccc-5222-420c-97c7-512fe6ebad17",
+   "moveSlug": "luke-flash-knuckle-od",
+   "name": "OD フラッシュナックル",
+   "status": "HOLD_OD_CONDITION_UNVERIFIED",
+   "reason": "2HITS候補(31f)と4HITS追撃版(22_45・28f)は別シーケンス。どちらがOD単体カードか、初段止めの正式条件が未確認。22_45は元動画の時刻・対応も未確定。",
+   "sourceVideoMatch": null,
+   "gifCandidates": [],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "6afa6076-dff0-4ca5-b00d-acbf1a6f74e0",
+   "moveSlug": "luke-ddt",
+   "name": "DDT（投げ）",
+   "status": "LOCAL_CONNECTED",
+   "reason": "既に接続済み(今回の証拠で変更なし)。",
+   "sourceVideoMatch": null,
+   "gifCandidates": [
+    {
+     "file": "22_46-luke-ddt.gif",
+     "sha256": "91a9f9ebe83adc5e56bd60143b37ce2c6872dff96365c3d80d5d8324bb7d4777",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": null
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "5d28a0ed-7abe-4c1b-8cc4-bcb208d55626",
+   "moveSlug": "luke-aerial-flash-knuckle",
+   "name": "エアリアルフラッシュナックル",
+   "status": "LOCAL_CONNECTED",
+   "reason": "既に接続済み(今回の証拠で変更なし)。",
+   "sourceVideoMatch": null,
+   "gifCandidates": [
+    {
+     "file": "22_47-luke-aerial-flash-knuckle.gif",
+     "sha256": "539857ce413be67fb8973392bc8c57e8436f9c622262dcd71682d924270f7ff0",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": null
+    },
+    {
+     "file": "22_48-luke-aerial-flash-knuckle-charged.gif",
+     "sha256": "839ea0a4831ec6b1c581a1c557f5ba7e5d04468febffa878c339126c976ab6bf",
+     "static": "NEEDS_VISUAL_QA",
+     "chatgptSourceMatch": null
+    },
+    {
+     "file": "22_49-luke-od-aerial-flash-knuckle.gif",
+     "sha256": "4c1275e20c239311012cda4b76a8065a6d1cb53018a8fb7e54788d9ed251947c",
+     "static": "HOLD",
+     "chatgptSourceMatch": null
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "29ba87ce-14a6-40b2-84aa-936228092b66",
+   "moveSlug": "luke-avenger",
+   "name": "アベンジャー",
+   "status": "LOCAL_CONNECTED",
+   "reason": "既に接続済み(今回の証拠で変更なし)。",
+   "sourceVideoMatch": null,
+   "gifCandidates": [
+    {
+     "file": "luke-avenger.gif",
+     "sha256": "8eb8e20e2210c78bc9cca716476b49e68572ef78646bf6b78e36fbe50753b7d0",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": null
+    },
+    {
+     "file": "luke-od-avenger.gif",
+     "sha256": "4b5b11e84ffe3323ce0e157cfb8e893fd35f1ad901b046d9645f37876f9ee93e",
+     "static": "HOLD",
+     "chatgptSourceMatch": null
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "c9027806-a085-4461-a802-592e907e9a46",
+   "moveSlug": "luke-no-chaser",
+   "name": "ノーチェイサー",
+   "status": "LOCAL_CONNECTED",
+   "reason": "既に接続済み(今回の証拠で変更なし)。",
+   "sourceVideoMatch": null,
+   "gifCandidates": [
+    {
+     "file": "luke-no-chaser.gif",
+     "sha256": "d3d63d27ea30b986528fcd03f6d169321c6b074285ae0179698c9d732fa1d679",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": null
+    },
+    {
+     "file": "luke-od-no-chaser.gif",
+     "sha256": "4456a4418b7d2dc9a3164831cac0ce196283e109d5b6da4516f89140b6b3b2e6",
+     "static": "HOLD",
+     "chatgptSourceMatch": null
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "b2aaf0e6-82b4-49eb-8690-96450cfb7d1e",
+   "moveSlug": "luke-impaler",
+   "name": "インペイラー",
+   "status": "LOCAL_CONNECTED",
+   "reason": "既に接続済み(今回の証拠で変更なし)。",
+   "sourceVideoMatch": null,
+   "gifCandidates": [
+    {
+     "file": "luke-impaler.gif",
+     "sha256": "60d9908205a56cc97f7775803d5fcac0f370dba530b83122f0c22a85ad0d73a2",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": null
+    },
+    {
+     "file": "luke-od-impaler.gif",
+     "sha256": "4a5446302548c05d6ff1af5709011bc1ffac57343aa4c21eee653b78b7debac4",
+     "static": "HOLD",
+     "chatgptSourceMatch": null
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "ee3a7178-324f-4238-9e0d-b3735dfc9beb",
+   "moveSlug": "luke-rising-uppercut-l",
+   "name": "弱 ライジングアッパー",
+   "status": "HOLD_STRENGTH_NOT_VERIFIED",
+   "reason": "元動画の映像位置はChatGPTが複数フレームで一致確認済みだが、入力表示なし・撮影順のみで強度は未確認。",
+   "sourceVideoMatch": "MULTIFRAME_MATCH",
+   "gifCandidates": [
+    {
+     "file": "luke-light-rising-uppercut.gif",
+     "sha256": "140035eaa1707133efe10b152712147c1027f174a2208bd655fd327955c37ee5",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": "MULTIFRAME_MATCH(ledger時刻付近)"
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "249ae616-7fd2-422e-80a3-65bb64b80a17",
+   "moveSlug": "luke-rising-uppercut-m",
+   "name": "中 ライジングアッパー",
+   "status": "HOLD_STRENGTH_NOT_VERIFIED",
+   "reason": "元動画の映像位置はChatGPTが複数フレームで一致確認済みだが、入力表示なし・撮影順のみで強度は未確認。",
+   "sourceVideoMatch": "MULTIFRAME_MATCH",
+   "gifCandidates": [
+    {
+     "file": "luke-medium-rising-uppercut.gif",
+     "sha256": "44fad8918e29b54419ee9ae008baab55057abe17b0b924d65be575477486bc4b",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": "MULTIFRAME_MATCH(ledger時刻付近)"
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "c647ddae-2f4f-440d-ab84-8c44b5ba9188",
+   "moveSlug": "luke-rising-uppercut-h",
+   "name": "強 ライジングアッパー",
+   "status": "HOLD_STRENGTH_NOT_VERIFIED",
+   "reason": "元動画の映像位置はChatGPTが複数フレームで一致確認済みだが、入力表示なし・撮影順のみで強度は未確認。",
+   "sourceVideoMatch": "MULTIFRAME_MATCH",
+   "gifCandidates": [
+    {
+     "file": "luke-heavy-rising-uppercut.gif",
+     "sha256": "00d89bb2f6720273561a46a29529304c69cd205b3a8738f89c4aa5a896489fe2",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": "MULTIFRAME_MATCH(ledger時刻付近)"
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "3176f9a4-9586-49cc-9dd6-8a444e2cd1ae",
+   "moveSlug": "luke-rising-uppercut-od",
+   "name": "OD ライジングアッパー",
+   "status": "LOCAL_CONNECTED",
+   "reason": "既に接続済み(今回の証拠で変更なし)。",
+   "sourceVideoMatch": null,
+   "gifCandidates": [
+    {
+     "file": "luke-od-rising-uppercut.gif",
+     "sha256": "a632c4c724e787272dc0c8af71ffdbba40c92cb5e82cb195a93d2fe3fb57f9e2",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": null
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  },
+  {
+   "moveId": "4743c57a-35e7-404f-82e2-79a0854b12f6",
+   "moveSlug": "luke-slam-dunk",
+   "name": "スラムダンク",
+   "status": "LOCAL_CONNECTED",
+   "reason": "既に接続済み(今回の証拠で変更なし)。",
+   "sourceVideoMatch": null,
+   "gifCandidates": [
+    {
+     "file": "luke-slam-dunk.gif",
+     "sha256": "f55a250449195fc6ef258c185adc5181c618662344aabdd33980f52b86a64bbe",
+     "static": "MATCHED_STATIC",
+     "chatgptSourceMatch": null
+    }
+   ],
+   "derivedCandidatesUnconnected": []
+  }
+ ]
+}

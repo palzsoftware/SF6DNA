@@ -1,0 +1,86 @@
+{
+ "manifest_version": "1.0",
+ "character_slug": "jp",
+ "source_owner": "user_capture",
+ "captured_patch": "2026.08.03",
+ "capture_date": "2026-11-13",
+ "source_files": [
+  {
+   "category": "gif_delivery",
+   "filename": "9_8-jp-crouching-lk.gif",
+   "sha256": "f12270ee3e8ba5cf6ca2c5f1aad460feb847d50a5180626ecca01a1077db3145"
+  },
+  {
+   "category": "gif_delivery",
+   "filename": "9_10-jp-crouching-mk.gif",
+   "sha256": "b849e7b2050594561ad27da83f64bda569bacbec0219a48fb941851b8c50ec7f"
+  },
+  {
+   "category": "gif_delivery",
+   "filename": "9_12-jp-crouching-hk.gif",
+   "sha256": "fe0224d1d04018af5263b248a4f890c02ee374fdde299355e5e8ce9cc61d55f6"
+  }
+ ],
+ "clips": [
+  {
+   "move_id": "5a596631-df8f-450b-b735-ae4b9ca14390",
+   "move_slug": "jp-crouching-lk",
+   "category": "normal",
+   "variant": "default",
+   "media_url": "/media/moves/jp/gif/jp-crouching-lk.gif",
+   "media_type": "gif",
+   "poster_url": null,
+   "verification_status": "capture_received",
+   "loop_start_ms": 0,
+   "loop_end_ms": 1000,
+   "duration_ms": 1000,
+   "width": 480,
+   "height": 270,
+   "fps": 20.0,
+   "filesize_bytes": 1469413,
+   "source_file": "9_8-jp-crouching-lk.gif",
+   "cut_review_status": "CUT_REVIEW_PENDING",
+   "mapping_evidence": "既存GIFの技ID/slugが公開用データ(ALL_CHARACTER_RELEASE_FIXTURE_20261004)の技「しゃがみ弱K（リョーフキー・ウダール）」と一致。公式コマンド: ↓ + 弱K。映像の目視確認: 未実施"
+  },
+  {
+   "move_id": "92ecb272-1cbd-46f0-95f2-ad4d21506e99",
+   "move_slug": "jp-crouching-mk",
+   "category": "normal",
+   "variant": "default",
+   "media_url": "/media/moves/jp/gif/jp-crouching-mk.gif",
+   "media_type": "gif",
+   "poster_url": null,
+   "verification_status": "capture_received",
+   "loop_start_ms": 0,
+   "loop_end_ms": 1000,
+   "duration_ms": 1000,
+   "width": 480,
+   "height": 270,
+   "fps": 20.0,
+   "filesize_bytes": 1504738,
+   "source_file": "9_10-jp-crouching-mk.gif",
+   "cut_review_status": "CUT_REVIEW_PENDING",
+   "mapping_evidence": "既存GIFの技ID/slugが公開用データ(ALL_CHARACTER_RELEASE_FIXTURE_20261004)の技「しゃがみ中K（ズローバ）」と一致。公式コマンド: ↓ + 中K。映像の目視確認: 未実施"
+  },
+  {
+   "move_id": "5fad21d1-bb82-4a22-bf29-f125688d3cb9",
+   "move_slug": "jp-crouching-hk",
+   "category": "normal",
+   "variant": "default",
+   "media_url": "/media/moves/jp/gif/jp-crouching-hk.gif",
+   "media_type": "gif",
+   "poster_url": null,
+   "verification_status": "capture_received",
+   "loop_start_ms": 0,
+   "loop_end_ms": 1200,
+   "duration_ms": 1200,
+   "width": 480,
+   "height": 270,
+   "fps": 20.0,
+   "filesize_bytes": 1712025,
+   "source_file": "9_12-jp-crouching-hk.gif",
+   "cut_review_status": "CUT_REVIEW_PENDING",
+   "mapping_evidence": "既存GIFの技ID/slugが公開用データ(ALL_CHARACTER_RELEASE_FIXTURE_20261004)の技「しゃがみ強K（ジョーキル）」と一致。公式コマンド: ↓ + 強K。映像の目視確認: 未実施"
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+fileName,moveSlug,moveId,variantKey,sha256_expected,in_restore149,driveFileId
+luke-aerial-flash-knuckle.gif,luke-aerial-flash-knuckle,5d28a0ed-7abe-4c1b-8cc4-bcb208d55626,normal,539857ce413be67fb8973392bc8c57e8436f9c622262dcd71682d924270f7ff0,True,15WOvueZXMqhxNKZ3Zi6qOtfoR6j3XUJu
+luke-aerial-flash-knuckle-charged.gif,luke-aerial-flash-knuckle,5d28a0ed-7abe-4c1b-8cc4-bcb208d55626,charged,839ea0a4831ec6b1c581a1c557f5ba7e5d04468febffa878c339126c976ab6bf,False,
+luke-flash-knuckle-l-normal.gif,luke-flash-knuckle-l,53070580-449c-4fcb-b6f5-bb97de387ba1,normal,30869638ca2c0a6ddbdffb7234b2283bef95942f3c81a0a185495b00640420e6,False,
+luke-flash-knuckle-l-charged.gif,luke-flash-knuckle-l,53070580-449c-4fcb-b6f5-bb97de387ba1,charged,fe22dc00ec9d6f2d09a3ec4ab5dddf505651a2e9e5b7eb92bba582d9152d781b,False,
+luke-flash-knuckle-l-perfect.gif,luke-flash-knuckle-l,53070580-449c-4fcb-b6f5-bb97de387ba1,perfect,268aaf4010133aa3a8f6b91864c8e6b38a07908ca35ba1bf18dfd1c56b6c75cb,False,
+luke-flash-knuckle-m-normal.gif,luke-flash-knuckle-m,8668e8a5-945a-437c-a833-f265d837d0bc,normal,0c49140bacb24cc382a8ecd8ad72752fa393e15c2e04e0d96200fac9a345c3a6,False,
+luke-flash-knuckle-m-charged.gif,luke-flash-knuckle-m,8668e8a5-945a-437c-a833-f265d837d0bc,charged,a561f657854a6668ed2b46ff3d1dca4e4c3d07456243a338aee513f57e54f163,False,
+luke-flash-knuckle-m-perfect.gif,luke-flash-knuckle-m,8668e8a5-945a-437c-a833-f265d837d0bc,perfect,6533341039639da8c62485a3d93ea4557321d8c1a0b6950225ef0b6113e3dfb8,False,
+luke-flash-knuckle-h-normal.gif,luke-flash-knuckle-h,4b6fa7c0-c85c-4d4f-aca4-b54b29599818,normal,82e05ff0ac86444d337c49addde25766d1a7338477bc376ef17e4a1f4d3aa386,False,
+luke-flash-knuckle-h-charged.gif,luke-flash-knuckle-h,4b6fa7c0-c85c-4d4f-aca4-b54b29599818,charged,fb4c3ce0bb73e17f7fcbad3dbe75aecfa0b4fb7c9f12fbe0ad13f272ed24c88c,False,
+luke-flash-knuckle-h-perfect.gif,luke-flash-knuckle-h,4b6fa7c0-c85c-4d4f-aca4-b54b29599818,perfect,f682eef616a0d8df6259f87230349b01436ff02a5037cfaeecc3aeb6f7b04b16,False,

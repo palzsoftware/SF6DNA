@@ -1,0 +1,48 @@
+{
+ "character": "juri",
+ "total": 3,
+ "summary": {
+  "HOLD": 3
+ },
+ "holdReasons": {
+  "NO_MOVE_ID": 3
+ },
+ "rows": [
+  {
+   "file": "juri_044314_103.20_104.90_air_spinning_hit_effect_HOLD.gif",
+   "sha256": "104850418a8ea3847728e8a7be12ca74d4a6269fa11fd416420cb702fc33d196",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "juri_044314_59.48_61.25_purple_arc_multi_hit_ground_attack_HOLD.gif",
+   "sha256": "9b6e16f141c8e9d52a8819960bac97e0844bac4a9b8a942fbe9354278f883b8c",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "juri_044445_30.35_32.30_forward_strike_fire_impact_HOLD.gif",
+   "sha256": "4a6115eb3c6d517ad938799ea49de4dde6897be3b89903929243d2188403913e",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  }
+ ]
+}

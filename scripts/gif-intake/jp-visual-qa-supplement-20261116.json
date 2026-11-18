@@ -1,0 +1,59 @@
+{
+ "generated": "2026-11-16",
+ "scope": "JP目視QAの追補(OD ストリボーグ/OD トルバラン)。既存の jp-visual-qa-20261116.json は変更しない",
+ "method": "12コマの等間隔コンタクトシートを目視",
+ "entries": [
+  {
+   "file": "9_36-jp-od-stribog.gif",
+   "moveSlug": "jp-stribog-od",
+   "moveId": "b8329b05-de0d-46dd-8688-e44231540c80",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": null
+   },
+   "observation": "紫のエネルギーをまとった槍の突きから多段ヒット(ヒット数表示が増加)→相手がダウンするまでの流れ。OD ストリボーグの技名と整合。",
+   "unconfirmed": [
+    "OD(強化版)の入力(ボタン2つ同時)は映像に表示されない。技名とファイル名の区分で判断",
+    "非OD版(弱/中/強)との取り違えは区分OD(ファイル名・技名)で判断"
+   ],
+   "metrics": {
+    "frames": 43,
+    "durationMs": 2150,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "9_50-jp-od-torbalan.gif",
+   "moveSlug": "jp-torbalan-od",
+   "moveId": "852ac443-78e0-4c00-a43e-5196d33aba36",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": null
+   },
+   "observation": "JPが位置を移動するように現れ、暗い紫のエネルギー攻撃が連続してヒットし、相手がダウンする流れ。OD トルバランの技名とおおむね整合。",
+   "unconfirmed": [
+    "映像だけではトルバランの動作と断定する決め手が弱い(技名・ファイル名・別名表との一致で判断)",
+    "OD(強化版)の入力は映像に表示されない"
+   ],
+   "metrics": {
+    "frames": 45,
+    "durationMs": 2250,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

@@ -1,0 +1,106 @@
+diff --git a/v2-web/src/lib/device-preview.ts b/v2-web/src/lib/device-preview.ts
+index 8aa5877..b7dde95 100644
+--- a/v2-web/src/lib/device-preview.ts
++++ b/v2-web/src/lib/device-preview.ts
+@@ -37,6 +37,8 @@ export type DevicePreviewBundle = {
+     } | null;
+     commands?: DevicePreviewMoveCommand[];
+     media?: DevicePreviewMoveMotionMedia | null;
++    // 同じ技IDに紐づく動作パターン(通常/チャージ/パーフェクト等)。技IDは増やさない。任意項目なので未指定の技は従来どおり。
++    mediaVariants?: Array<{ variantKey: string; label: string; media: DevicePreviewMoveMotionMedia }>;
+     motionMediaPresentation?: MotionMediaPresentation<DevicePreviewMoveMotionMedia>;
+   }>;
+   combos: Array<{
+diff --git a/v2-web/src/lib/character-unified-contract.ts b/v2-web/src/lib/character-unified-contract.ts
+index 9b23d14..8bc1932 100644
+--- a/v2-web/src/lib/character-unified-contract.ts
++++ b/v2-web/src/lib/character-unified-contract.ts
+@@ -85,6 +85,14 @@ export function unifiedMoveMedia(move: UnifiedMove) {
+   return media?.moveId === move.id && typeof media.mediaUrl === "string" && media.mediaUrl.trim()
+     ? media : null;
+ }
++/** 切り替え表示してよい動作パターン。通常の media が無い技、または2件未満のときは空(従来表示のまま)。 */
++export function unifiedMoveMediaVariants(move: UnifiedMove) {
++  const base = unifiedMoveMedia(move);
++  const variants = (move.mediaVariants ?? []).filter(v =>
++    v.media.moveId === move.id && typeof v.media.mediaUrl === "string" && v.media.mediaUrl.trim());
++  // 先頭は必ず現在表示中の media と同じ(既存の表示を差し替えない)
++  return base && variants.length >= 2 && variants[0].media.mediaUrl === base.mediaUrl ? variants : [];
++}
+ export function unifiedPlayers(character: Pick<CharacterDetail, "id" | "slug">, players: PlayerDetail[]) {
+   if (character.slug === "ingrid") return [];
+   const seen = new Set<string>();
+diff --git a/v2-web/src/components/character-unified-page.tsx b/v2-web/src/components/character-unified-page.tsx
+index 8cedeb3..28ec106 100644
+--- a/v2-web/src/components/character-unified-page.tsx
++++ b/v2-web/src/components/character-unified-page.tsx
+@@ -4,6 +4,7 @@ import Link from "next/link";
+ import { CharacterMoveExplorer } from "./character-move-explorer";
+ import { Sf6CommandInput } from "./sf6-command-input";
+ import { MoveMotionMedia } from "./move-motion-media";
++import { MoveMotionVariantTabs } from "./move-motion-variant-tabs";
+ import { CharacterPlayerCard } from "./character-player-card";
+ import { VideoCard } from "./video-card";
+ import { CharacterStrategySlot } from "./character-strategy-slot";
+@@ -15,7 +16,7 @@ import { isInternalMoveNote, normalizePublicCopy } from "@/lib/public-copy";
+ import { presentSource } from "@/lib/source-presentation";
+ import { safeExternalUrl } from "@/lib/safe-external-url";
+ import { UNIFIED_MEDIA_PLACEHOLDER, unifiedCommandRows, unifiedCommandText, unifiedConditionRows, unifiedFrameValue,
+-  unifiedInputPathLabel, unifiedOtherCommandRows, unifiedMoveMedia, unifiedPlayers, unifiedSources,
++  unifiedInputPathLabel, unifiedOtherCommandRows, unifiedMoveMedia, unifiedMoveMediaVariants, unifiedPlayers, unifiedSources,
+   unifiedControlInputFallback, unifiedMoveFilterSchemes, unifiedCommandDisplay,
+   type UnifiedMove, type UnifiedMoveEvidence } from "@/lib/character-unified-contract";
+ import { getOfficialTxtPreviewDisplayCategory } from "@/lib/official-txt-device-preview-adapter.mjs";
+@@ -67,6 +68,7 @@ function SourceLinks({ sources }: { sources: SourceReference[] }) {
+ 
+ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: UnifiedMove; variants?: UnifiedMove[]; evidence?: UnifiedMoveEvidence }) {
+   const media = unifiedMoveMedia(move);
++  const mediaVariants = unifiedMoveMediaVariants(move);
+   const variantLabel = (item: UnifiedMove, index: number) => item.name.match(/^[\[［（(【「]([^\]］）)】」]+)[\]］）)】」]/)?.[1] ?? (variants.length > 1 ? `条件${index + 1}` : "");
+   const cardTitle = variants.length > 1 ? move.name.replace(/^[\[［（(【「][^\]］）)】」]+[\]］）)】」]\s*/, "").trim() : move.name;
+   const conditions = variants.flatMap((item, index) => {
+@@ -91,7 +93,8 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
+     })}
+     <header><span className={styles.tag}>{labels[displayMoveKind(move)] ?? "分類確認中"}</span><h3>{cardTitle}</h3></header>
+     <div className={styles.mediaSlot} data-media-move-id={move.id}>
+-      {media ? <MoveMotionMedia media={media} title={move.name} className={styles.mediaAsset} />
++      {mediaVariants.length ? <MoveMotionVariantTabs variants={mediaVariants} title={move.name} className={styles.mediaAsset} />
++        : media ? <MoveMotionMedia media={media} title={move.name} className={styles.mediaAsset} />
+         : <span>{UNIFIED_MEDIA_PLACEHOLDER}</span>}
+     </div>
+     <dl className={styles.commands}>{(["classic", "modern"] as const).map(scheme => <div key={scheme}><dt>{scheme === "classic" ? "Classic" : "Modern"}</dt><dd>
+diff --git a/tmp/claude-0/-home-claude/d7de6f99-d3cc-52a4-9179-123d58cbd323/scratchpad/vp/src/components/move-motion-variant-tabs.tsx b/v2-web/src/components/move-motion-variant-tabs.tsx
+new file mode 100644
+index 0000000..f082e8a
+--- /dev/null
++++ b/v2-web/src/components/move-motion-variant-tabs.tsx
+@@ -0,0 +1,29 @@
++"use client";
++
++import { useState } from "react";
++import { MoveMotionMedia } from "./move-motion-media";
++import type { MoveMotionMedia as MoveMotionMediaRecord } from "@/lib/move-motion-media";
++
++/**
++ * 同じ技カード内で「通常/チャージ/パーフェクト」などの動作パターンを切り替えて見せる。
++ * 既存の MoveMotionMedia(GIF/MP4の再生部品)をそのまま使い、選んだ1件だけを描画する(非表示パターンは読み込まない)。
++ */
++export function MoveMotionVariantTabs({ variants, title, className }: {
++  variants: Array<{ variantKey: string; label: string; media: MoveMotionMediaRecord }>;
++  title: string;
++  className?: string;
++}) {
++  const [active, setActive] = useState(variants[0].variantKey);
++  const current = variants.find(v => v.variantKey === active) ?? variants[0];
++  return (
++    <>
++      <div role="tablist" aria-label={`${title}の動作パターン`}>
++        {variants.map(v => (
++          <button key={v.variantKey} type="button" role="tab" aria-selected={v.variantKey === current.variantKey}
++            onClick={() => setActive(v.variantKey)}>{v.label}</button>
++        ))}
++      </div>
++      <MoveMotionMedia key={current.media.mediaUrl} media={current.media} title={`${title}（${current.label}）`} className={className} />
++    </>
++  );
++}

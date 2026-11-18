@@ -1,0 +1,428 @@
+[
+ {
+  "group": "cammy/crouching/k",
+  "members": [
+   "cammy-crouching-lk",
+   "cammy-crouching-mk",
+   "cammy-crouching-hk"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   5,
+   8,
+   9
+  ],
+  "ampOrderConsistent": false,
+  "startupOrderConsistent": true,
+  "amp": [
+   12933,
+   14950,
+   11914
+  ]
+ },
+ {
+  "group": "cammy/crouching/p",
+  "members": [
+   "cammy-crouching-hp"
+  ],
+  "strengthClaim": [
+   "h"
+  ],
+  "officialStartup": [
+   10
+  ],
+  "ampOrderConsistent": null,
+  "startupOrderConsistent": null,
+  "amp": [
+   14098
+  ]
+ },
+ {
+  "group": "cammy/standing/k",
+  "members": [
+   "cammy-standing-lk",
+   "cammy-standing-mk",
+   "cammy-standing-hk"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   5,
+   8,
+   11
+  ],
+  "ampOrderConsistent": false,
+  "startupOrderConsistent": true,
+  "amp": [
+   12794,
+   15018,
+   14431
+  ]
+ },
+ {
+  "group": "cammy/standing/p",
+  "members": [
+   "cammy-standing-lp",
+   "cammy-standing-mp",
+   "cammy-standing-hp"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   4,
+   6,
+   8
+  ],
+  "ampOrderConsistent": true,
+  "startupOrderConsistent": true,
+  "amp": [
+   12514,
+   13041,
+   13479
+  ]
+ },
+ {
+  "group": "chun-li/crouching/k",
+  "members": [
+   "chun-li-crouching-lk"
+  ],
+  "strengthClaim": [
+   "l"
+  ],
+  "officialStartup": [
+   4
+  ],
+  "ampOrderConsistent": null,
+  "startupOrderConsistent": null,
+  "amp": [
+   9599
+  ]
+ },
+ {
+  "group": "chun-li/standing/k",
+  "members": [
+   "chun-li-standing-lk",
+   "chun-li-standing-mk",
+   "chun-li-standing-hk"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   5,
+   7,
+   14
+  ],
+  "ampOrderConsistent": true,
+  "startupOrderConsistent": true,
+  "amp": [
+   13299,
+   13616,
+   19250
+  ]
+ },
+ {
+  "group": "chun-li/standing/p",
+  "members": [
+   "chun-li-standing-lp",
+   "chun-li-standing-mp",
+   "chun-li-standing-hp"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   4,
+   5,
+   13
+  ],
+  "ampOrderConsistent": true,
+  "startupOrderConsistent": true,
+  "amp": [
+   14592,
+   15210,
+   18954
+  ]
+ },
+ {
+  "group": "dee-jay/crouching/k",
+  "members": [
+   "dee-jay-crouching-lk",
+   "dee-jay-crouching-mk",
+   "dee-jay-crouching-hk"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   5,
+   8,
+   14
+  ],
+  "ampOrderConsistent": false,
+  "startupOrderConsistent": true,
+  "amp": [
+   16941,
+   14026,
+   15629
+  ]
+ },
+ {
+  "group": "dee-jay/crouching/p",
+  "members": [
+   "dee-jay-crouching-lp",
+   "dee-jay-crouching-mp",
+   "dee-jay-crouching-hp"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   5,
+   6,
+   8
+  ],
+  "ampOrderConsistent": false,
+  "startupOrderConsistent": true,
+  "amp": [
+   19674,
+   22607,
+   21412
+  ]
+ },
+ {
+  "group": "dee-jay/standing/k",
+  "members": [
+   "dee-jay-standing-lk",
+   "dee-jay-standing-mk",
+   "dee-jay-standing-hk"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   5,
+   9,
+   12
+  ],
+  "ampOrderConsistent": false,
+  "startupOrderConsistent": true,
+  "amp": [
+   18801,
+   17465,
+   20999
+  ]
+ },
+ {
+  "group": "dee-jay/standing/p",
+  "members": [
+   "dee-jay-standing-lp",
+   "dee-jay-standing-mp",
+   "dee-jay-standing-hp"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   4,
+   7,
+   9
+  ],
+  "ampOrderConsistent": false,
+  "startupOrderConsistent": true,
+  "amp": [
+   12621,
+   19677,
+   18782
+  ]
+ },
+ {
+  "group": "dee-jay-air-slasher/special/",
+  "members": [
+   "dee-jay-air-slasher-l",
+   "dee-jay-air-slasher-m",
+   "dee-jay-air-slasher-h"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   null,
+   17,
+   17
+  ],
+  "ampOrderConsistent": true,
+  "startupOrderConsistent": true,
+  "amp": [
+   17561,
+   70004,
+   76702
+  ]
+ },
+ {
+  "group": "dee-jay-jackknife/special/",
+  "members": [
+   "dee-jay-jackknife-l",
+   "dee-jay-jackknife-m",
+   "dee-jay-jackknife-h"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   null,
+   6,
+   5
+  ],
+  "ampOrderConsistent": true,
+  "startupOrderConsistent": false,
+  "amp": [
+   18349,
+   26360,
+   68637
+  ]
+ },
+ {
+  "group": "dee-jay-mgu/special/",
+  "members": [
+   "dee-jay-mgu-l",
+   "dee-jay-mgu-m",
+   "dee-jay-mgu-h"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   15,
+   22,
+   28
+  ],
+  "ampOrderConsistent": true,
+  "startupOrderConsistent": true,
+  "amp": [
+   25257,
+   25757,
+   70301
+  ]
+ },
+ {
+  "group": "jamie/standing/k",
+  "members": [
+   "jamie-standing-lk",
+   "jamie-standing-mk",
+   "jamie-standing-hk"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   5,
+   9,
+   15
+  ],
+  "ampOrderConsistent": true,
+  "startupOrderConsistent": true,
+  "amp": [
+   14065,
+   15392,
+   15760
+  ]
+ },
+ {
+  "group": "jamie/standing/p",
+  "members": [
+   "jamie-standing-hp"
+  ],
+  "strengthClaim": [
+   "h"
+  ],
+  "officialStartup": [
+   5
+  ],
+  "ampOrderConsistent": null,
+  "startupOrderConsistent": null,
+  "amp": [
+   14855
+  ]
+ },
+ {
+  "group": "manon/standing/k",
+  "members": [
+   "manon-standing-lk",
+   "manon-standing-mk",
+   "manon-standing-hk"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   5,
+   10,
+   15
+  ],
+  "ampOrderConsistent": false,
+  "startupOrderConsistent": true,
+  "amp": [
+   11920,
+   11639,
+   13461
+  ]
+ },
+ {
+  "group": "manon/standing/p",
+  "members": [
+   "manon-standing-lp",
+   "manon-standing-mp",
+   "manon-standing-hp"
+  ],
+  "strengthClaim": [
+   "l",
+   "m",
+   "h"
+  ],
+  "officialStartup": [
+   4,
+   7,
+   10
+  ],
+  "ampOrderConsistent": true,
+  "startupOrderConsistent": true,
+  "amp": [
+   11960,
+   12028,
+   15548
+  ]
+ }
+]

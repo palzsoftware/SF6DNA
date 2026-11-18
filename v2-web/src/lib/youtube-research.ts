@@ -75,13 +75,21 @@ export async function checkYouTubeResearch(ids: readonly string[]): Promise<YouT
   });
 }
 
-export async function searchYouTubeResearch(query: string, maxResults = 10): Promise<YouTubeResearchCandidate[]> {
+export type YouTubeSearchOptions = { order?: 'relevance' | 'date'; publishedAfter?: string };
+export async function searchYouTubeResearch(query: string, maxResults = 10, options: YouTubeSearchOptions = {}): Promise<YouTubeResearchCandidate[]> {
   const normalized = query.trim();
   if (!SAFE_QUERY.test(normalized)) throw new Error('INVALID_QUERY');
   if (!Number.isFinite(maxResults)) throw new Error('INVALID_LIMIT');
   const limit = Math.min(25, Math.max(1, Math.floor(maxResults)));
-  const items = await api('search', new URLSearchParams({ part: 'snippet', q: normalized,
-    type: 'video', maxResults: String(limit), safeSearch: 'moderate' }));
+  const params = new URLSearchParams({ part: 'snippet', q: normalized,
+    type: 'video', maxResults: String(limit), safeSearch: 'moderate' });
+  if (options.order === 'date') params.set('order', 'date');
+  if (options.publishedAfter) {
+    const after = new Date(options.publishedAfter);
+    if (Number.isNaN(after.getTime())) throw new Error('INVALID_PUBLISHED_AFTER');
+    params.set('publishedAfter', after.toISOString());
+  }
+  const items = await api('search', params);
   const ids = [...new Set(items.flatMap(item => {
     const id = record(record(item).id).videoId;
     return typeof id === 'string' && ID.test(id) ? [id] : [];

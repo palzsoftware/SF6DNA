@@ -1,0 +1,11 @@
+character,slug,name,zero_fields,startup,active,recovery,onHit,onBlock,damage,decision
+ryu,ryu-denjin-charge,電刃錬気,recovery,52,,0,,,,REVIEW_NO_DB_UPDATE
+jp,jp-departure-window,ヴィーハト・アクノ / Departure > Window,active+recovery,44,0,0,0,0,,REVIEW_NO_DB_UPDATE
+luke,luke-avenger,アベンジャー,active+recovery,45,0,0,0,0,,REVIEW_NO_DB_UPDATE
+marisa,marisa-scutum,スクトゥム,active+recovery,54,0,0,0,0,,REVIEW_NO_DB_UPDATE
+rashid,rashid-run,ラン,startup+active+recovery,0,0,0,,,0,REVIEW_NO_DB_UPDATE
+rashid,rashid-side-flip,サイドフリップ,active+recovery,32,0,0,0,0,,REVIEW_NO_DB_UPDATE
+rashid,rashid-wing-stroke,ウイング・ストローク,startup+active+recovery,0,0,0,0,0,,REVIEW_NO_DB_UPDATE
+rashid,rashid-rolling-assault,ローリング・アサルト,active+recovery,33,0,0,0,0,,REVIEW_NO_DB_UPDATE
+aki,aki-orchid-spring,紫泡泉,active+recovery,46,0,0,0,0,,REVIEW_NO_DB_UPDATE
+aki,aki-sinister-slide,悪鬼蛇行,active+recovery,216,0,0,0,0,,REVIEW_NO_DB_UPDATE

@@ -1,0 +1,6 @@
+{
+  "$comment": "候補のみ（未適用）。採用時は v2-web/vercel.json に crons を追加。承認待ち。毎日 04:17 JST = 19:17 UTC。",
+  "crons": [
+    { "path": "/api/youtube/latest/refresh", "schedule": "17 19 * * *" }
+  ]
+}

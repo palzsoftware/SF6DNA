@@ -1,0 +1,12 @@
+7b55ce6107237d67527fe3e1874e66a1d5237aacd10dca713b8bce8b317ab90b  yasmine-standing-light-punch-5lp-r1-candidate.gif
+83f1570946c8aef65f31e7d7a9f2056c9db18c829b3ffcb9f1583cb4c6972fdd  yasmine-standing-medium-punch-5mp-r1-candidate.gif
+0f12be12895453c05743554200df3f19ab085d6abc821bfe56738dfe3e438dc2  yasmine-standing-heavy-punch-5hp-r1-candidate.gif
+3d320a13fa0ae8a67b63740b7c0cf3b06f30538b5225f2b67c6b40e028bd8d6f  yasmine-crouching-light-punch-2lp-r1-candidate.gif
+665561afdcd72d0d4d9ca785f7f34d15a0f7ccd0c35467bcbc5566da6ff3420e  yasmine-crouching-medium-punch-2mp-r1-candidate.gif
+c599de9a0ab1c08f603a984a5491cb3172da2fb6152cf9277160cf6dddfac44d  yasmine-crouching-heavy-punch-2hp-r1-candidate.gif
+0e96c93718265b0ec5c62e1f67bec82123ef8a657c317dd4ab64081e45505a0f  yasmine-standing-light-kick-5lk-r1-candidate.gif
+c7df5ff63bb7c6381d8f94a456b396b1c8d47a3ae18e719c756a7aa86b70202a  yasmine-standing-medium-kick-5mk-r1-candidate.gif
+950b0658ea5eb471890976f1e9fd3ca3229575502e09422c79fc47f926a666c1  yasmine-standing-heavy-kick-5hk-r1-candidate.gif
+0e087f8e884ffec6dd05b3ddc85ea8bc730c80e543ed81cf8e5550ccfc847fad  yasmine-crouching-light-kick-2lk-r1-candidate.gif
+c605dcc1081c97b9c6a5de479ae42dfbcee49a98a0c30870eddeb2fe2472a49d  yasmine-crouching-medium-kick-2mk-r1-candidate.gif
+5dc14a11ce3c47bf6afa954f86ef494be39ffc2e26d9b38842289207f9aabc87  yasmine-gunting-na-pabagsak-2hk-r1-candidate.gif

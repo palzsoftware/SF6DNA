@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-16",
+ "character": "juri",
+ "batch3": {
+  "package": "SF6DNA_JURI_SPECIAL_GIF_BATCH03_20261116.zip (7,316,016B, 取得OK)",
+  "gifs": 3,
+  "sha256_verified": true,
+  "duplicate_with_previous_ledger": 0,
+  "technical_qa": "PASS x3 (480x270/20fps/ループ/34-39フレーム)",
+  "plan_summary": {
+   "HOLD": 3
+  },
+  "hold_reasons": {
+   "NO_MOVE_ID": 3
+  },
+  "rows": [
+   {
+    "file": "juri_044314_103.20_104.90_air_spinning_hit_effect_HOLD.gif",
+    "status": "HOLD",
+    "reasons": [
+     "NO_MOVE_ID"
+    ]
+   },
+   {
+    "file": "juri_044314_59.48_61.25_purple_arc_multi_hit_ground_attack_HOLD.gif",
+    "status": "HOLD",
+    "reasons": [
+     "NO_MOVE_ID"
+    ]
+   },
+   {
+    "file": "juri_044445_30.35_32.30_forward_strike_fire_impact_HOLD.gif",
+    "status": "HOLD",
+    "reasons": [
+     "NO_MOVE_ID"
+    ]
+   }
+  ],
+  "note": "技ID・入力条件ともUNVERIFIED、目視QAもHOLD、同一技の別収録による重複も未解消(パッケージ自己申告)。名前は付けない。"
+ },
+ "batch4": {
+  "package": "SF6DNA_JURI_SPECIAL_BATCH04_20261116.zip (12,341,717B)",
+  "status": "ASSET_NOT_RETRIEVED",
+  "reason": "SIZE_LIMIT: Driveコネクタの10MB上限(素材欠損ではない)",
+  "gifs": "3本(パッケージ記載。中身は未検査)",
+  "next": "10MB未満の分割ZIP、またはGIF単体での再配置が必要"
+ },
+ "local_qa_connected_total": {
+  "luke": 15,
+  "jp": 5,
+  "manon": 4,
+  "juri": 3,
+  "total": 27
+ },
+ "new_connections": 0
+}

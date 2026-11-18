@@ -20,7 +20,7 @@ const api = loadCommonJs(read("src/lib/daily-training.ts"), (name) => {
 const {
   IMPROVEMENT_FOCUS_KEYS, pickDiagnosisFocus, buildDailyTrainingHref,
   parseDailyTrainingRequest, getLatestLocalDiagnosisFocus, normalizePrimaryIssue,
-  resolveDailyTrainingSelection, getJstDateKey, buildDailyTrainingPlan,
+  resolveDailyTrainingSelection, getJstDateKey, buildDailyTrainingPlan, buildHistoryDailyTrainingHref,
 } = api;
 const now = new Date("2026-09-07T05:00:00Z");
 const record = (overrides = {}) => ({
@@ -193,4 +193,35 @@ test("combo practice uses current R4 safe generic content and a provisional eigh
   assert.match(text, /左右合計10回中8回/);
   assert.match(text, /連続成功は必須にしません/);
   assert.doesNotMatch(text, /リュウ|JPなら|ルーク|キャミィ|屈大P/);
+});
+
+// --- Diagnosis history -> today's 15-minute practice ---
+test("history link reuses the result-page href rule for both local and DB record shapes", () => {
+  const local = [{ key: "anti_air", label: "対空", score: 2 }, { key: "punish", label: "確定反撃", score: 5 }];
+  const db = [{ key: "anti_air", score: 2 }, { key: "punish", score: 5 }];
+  const expected = buildDailyTrainingHref("improvement", [["anti_air", 2], ["punish", 5]]);
+  assert.equal(expected, "/me/training?diagnosis=improvement&focus=punish");
+  assert.equal(buildHistoryDailyTrainingHref("improvement", local), expected);
+  assert.equal(buildHistoryDailyTrainingHref("improvement", db), expected);
+});
+test("history link is hidden for playstyle / character_fit / unknown kinds", () => {
+  for (const type of ["playstyle", "character_fit", "invalid", null, undefined]) {
+    assert.equal(buildHistoryDailyTrainingHref(type, [{ key: "anti_air", score: 3 }]), null);
+  }
+});
+test("history link carries only a whitelisted focus and survives malformed rows", () => {
+  const href = buildHistoryDailyTrainingHref("comprehensive", [null, "x", { key: "<script>", score: 99 }, { key: "execution", score: 2 }, { key: "defense", score: "9" }]);
+  assert.equal(href, "/me/training?diagnosis=comprehensive&focus=execution");
+  assert.equal(buildHistoryDailyTrainingHref("improvement", "not-array"), null);
+  assert.equal(buildHistoryDailyTrainingHref("improvement", []), "/me/training?diagnosis=improvement");
+});
+test("history UI wires the helper without touching storage, scoring or release flags", () => {
+  const tool = read("src/components/diagnosis-history-tool.tsx");
+  assert.match(tool, /buildHistoryDailyTrainingHref\(record\.diagnosisType, record\.topResults\)/);
+  assert.match(tool, /この結果で今日の15分練習へ/);
+  assert.doesNotMatch(tool, /releaseFeatures/);
+  const flags = read("src/lib/release-features.ts");
+  assert.match(flags, /aiCoach: false/);
+  assert.match(flags, /training: false/);
+  assert.match(flags, /publicStrategyContent: false/);
 });

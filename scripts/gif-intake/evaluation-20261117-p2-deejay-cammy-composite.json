@@ -1,0 +1,45 @@
+{
+ "generated": "2026-11-17",
+ "scope": "P2: 残り素材受入(DeeJay/Cammy 個別Drive)+複合根拠",
+ "received_new": 54,
+ "sha_matched": 54,
+ "connected_new": 34,
+ "breakdown": {
+  "dee-jay": 21,
+  "cammy": 13
+ },
+ "cumulative": 106,
+ "hold_new": {
+  "dee-jay": [
+   "jump-lk",
+   "jump-mp",
+   "jump-mk",
+   "jump-hp",
+   "jump-hk"
+  ],
+  "cammy": [
+   "crouching-lp",
+   "crouching-mp",
+   "jump x6",
+   "knuckle-l/m/h",
+   "spike-l/m",
+   "spiral-l/m"
+  ]
+ },
+ "sa2": "接続2本(修正候補: 214214K→P。公式ページ未取得)",
+ "sobat": "Manifest誤表記を記録",
+ "case_a_isolated_build": {
+  "entries": 106,
+  "result": "next build成功",
+  "qa_value_hits": 0,
+  "nft_refs": 0
+ },
+ "tests": {
+  "node_test": "1054 / pass 1041 / fail 0 / skip 13",
+  "chromium": "29/29 PASS(1回目はdee-jay 1枚の動作計測が揺れ、再実行で全PASS)",
+  "tsc": "OK",
+  "protected_sha": "14c6047b… 一致",
+  "head": "52eddb3",
+  "page_tsx": "未変更"
+ }
+}

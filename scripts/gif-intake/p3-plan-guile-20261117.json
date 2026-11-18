@@ -1,0 +1,100 @@
+{
+ "character": "guile",
+ "total": 9,
+ "summary": {
+  "CONNECT_READY": 9
+ },
+ "holdReasons": {},
+ "rows": [
+  {
+   "file": "guile-sonic-boom-od-r2-candidate.gif",
+   "sha256": "8472d5032584d9b24424715baf5af1a41b55a14b53f8929003499ddb89f67ebf",
+   "moveId": "9887a4fc-5935-4d09-9504-a326f6d3640e",
+   "moveSlug": "guile-frame-037",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "guile-flash-kick-od-r2-candidate.gif",
+   "sha256": "ad382c72bf78376a1072ac2ec0f7aa8706a0ef25e6f66559ceb9c56d3dbe6b0a",
+   "moveId": "94e9ef6b-c696-4c51-baef-f49af33bf7f2",
+   "moveSlug": "guile-frame-044",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "guile-sa1-up-r2-candidate.gif",
+   "sha256": "48d9442040d171074bbb9d6da93b39364d2c3775eb49f64c8cc6de4a3a55c8e4",
+   "moveId": "7fef2076-927c-4f5c-a765-a155350ee8b6",
+   "moveSlug": "guile-frame-062",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "guile-sa1-r2-candidate.gif",
+   "sha256": "b8108f7a8fa2fc8e383e1ad337271ada1e7659feef94f3995abb27a7dd3e81ce",
+   "moveId": "68472c76-2eb3-4fdb-83e9-9e55fef5b76e",
+   "moveSlug": "guile-frame-063",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "guile-sa2-r2-candidate.gif",
+   "sha256": "210a34069966d5fa129aa9c84c0d36926224c5cc1b64785aed54d0e47b757c5a",
+   "moveId": "1d634ae8-f10b-4791-9ee5-4ebd401872d4",
+   "moveSlug": "guile-frame-064",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "guile-sa3-r2-candidate.gif",
+   "sha256": "2aa914cdec3b360286e01678d50b30d76c24f3206d8663ba846de81ea4742fe0",
+   "moveId": "6d2fde80-170a-494f-b597-63272da2dd1f",
+   "moveSlug": "guile-frame-065",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "guile-ca-r2-candidate.gif",
+   "sha256": "828d46e2dd04adebf5607173a98188ac1344f9b25869f5288f0ac1898c3b2600",
+   "moveId": "d02dfb2e-74a8-409f-b220-3efb3d18772a",
+   "moveSlug": "guile-frame-066",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "guile-forward-throw-20261117-candidate.gif",
+   "sha256": "b43b969d5ff302809da2069c26521bf3f4c827e00835796002a4b38327146f9c",
+   "moveId": "815bf11c-4392-4df2-93f6-646e6f6e776b",
+   "moveSlug": "guile-frame-067",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "guile-back-throw-20261117-candidate.gif",
+   "sha256": "2f384906f28675fd4d8182b7d775fe831fc7051864dcd24f9b573f1e5ea238a2",
+   "moveId": "f5980889-233a-4ed9-819d-594703955bf2",
+   "moveSlug": "guile-frame-068",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "characterSlug": "jp",
+  "localQaOnly": true,
+  "approval": "NOT_APPROVED",
+  "note": "ローカルQA専用。公開承認ではない。表示は開発環境のlocalhost限定の隔離ルートのみ。",
+  "entries": [
+    {
+      "moveId": "5fad21d1-bb82-4a22-bf29-f125688d3cb9",
+      "moveSlug": "jp-crouching-hk",
+      "fileName": "jp-crouching-hk.gif",
+      "sha256": "fe0224d1d04018af5263b248a4f890c02ee374fdde299355e5e8ce9cc61d55f6",
+      "bytes": 1712025,
+      "width": 480,
+      "height": 270,
+      "durationMs": 1200,
+      "sourceFile": "9_12-jp-crouching-hk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "しゃがみ状態から足払い状のキックでヒットし、相手がダウンする。弱K/中Kの映像にはダウンがなく、強度を区別できる。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "94a12a74-68c3-41d2-9fb5-7684451741b5",
+      "moveSlug": "jp-forward-throw",
+      "fileName": "jp-forward-throw.gif",
+      "sha256": "45e087bb7bb864585ee7377813e91f098427a933cb63d4b4cfb2a02d9f1932c1",
+      "bytes": 3369202,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2450,
+      "sourceFile": "9_57-jp-ravina.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "近距離で掴み、相手が右側へ投げ飛ばされて倒れる(前方向)。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)",
+        "公式名称(ラヴィーナ)との対応は公式資料なし(公開用は「前投げ」)"
+      ]
+    },
+    {
+      "moveId": "a63b4bd9-535b-4893-a55e-42d105ad9f8b",
+      "moveSlug": "jp-back-throw",
+      "fileName": "jp-back-throw.gif",
+      "sha256": "46e8172abc85bbfd789e461c51514290095341a3aff7ec5da03096654fa276ed",
+      "bytes": 3464749,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2350,
+      "sourceFile": "9_58-jp-uragan.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "近距離で掴み、相手が左側へ投げ飛ばされJPが右側に立つ(後方向)。前投げと終端の位置関係が逆で区別できる。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)",
+        "公式名称(ウラガーン)との対応は公式資料なし(公開用は「後ろ投げ」)"
+      ]
+    },
+    {
+      "moveId": "b8329b05-de0d-46dd-8688-e44231540c80",
+      "moveSlug": "jp-stribog-od",
+      "fileName": "jp-stribog-od.gif",
+      "sha256": "b95d154c38fbd0fc86491df20e80bc2a9f42bcd21bc02c94b8246767e071211b",
+      "bytes": 2839138,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2150,
+      "sourceFile": "9_36-jp-od-stribog.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "紫のエネルギーをまとった槍の突きから多段ヒット(ヒット数表示が増加)→相手がダウンするまでの流れ。OD ストリボーグの技名と整合。",
+      "unconfirmed": [
+        "OD(強化版)の入力(ボタン2つ同時)は映像に表示されない。技名とファイル名の区分で判断",
+        "非OD版(弱/中/強)との取り違えは区分OD(ファイル名・技名)で判断"
+      ]
+    },
+    {
+      "moveId": "852ac443-78e0-4c00-a43e-5196d33aba36",
+      "moveSlug": "jp-torbalan-od",
+      "fileName": "jp-torbalan-od.gif",
+      "sha256": "a0789c82011bd8bb25abf3f56b698cc13954cde76ac0f8ccdaff0e5730fe87c2",
+      "bytes": 3669017,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2250,
+      "sourceFile": "9_50-jp-od-torbalan.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "JPが位置を移動するように現れ、暗い紫のエネルギー攻撃が連続してヒットし、相手がダウンする流れ。OD トルバランの技名とおおむね整合。",
+      "unconfirmed": [
+        "映像だけではトルバランの動作と断定する決め手が弱い(技名・ファイル名・別名表との一致で判断)",
+        "OD(強化版)の入力は映像に表示されない"
+      ]
+    }
+  ]
+}

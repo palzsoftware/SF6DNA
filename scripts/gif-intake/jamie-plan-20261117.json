@@ -1,0 +1,323 @@
+{
+ "character": "jamie",
+ "total": 27,
+ "summary": {
+  "HOLD": 17,
+  "MP4_PRIORITY": 2,
+  "CONNECT_READY": 5,
+  "NEEDS_VISUAL_QA": 3
+ },
+ "holdReasons": {
+  "STRENGTH_NOT_VERIFIED": 9,
+  "NO_MOVE_ID": 8,
+  "ASSET_NOT_RETRIEVED": 2
+ },
+ "rows": [
+  {
+   "file": "jamie-heavy-luminous-dive-kick.gif",
+   "sha256": "1b0f9856f7b9c3037aa7df11cd808bb5edc865a8b2ac9e6684d7ec35f9c4ea17",
+   "moveId": "69a093f4-92da-44a6-a659-ac11f1ee2f4a",
+   "moveSlug": "jamie-frame-078",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "HOLD",
+   "reasons": [
+    "STRENGTH_NOT_VERIFIED"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-medium-luminous-dive-kick.gif",
+   "sha256": "d5498c5df9fff9c93b29ed480467206d4901aecc51397591662dc025a92a85c0",
+   "moveId": "e8c4c6d3-c300-47ae-b94e-5051826ecf29",
+   "moveSlug": "jamie-frame-077",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "HOLD",
+   "reasons": [
+    "STRENGTH_NOT_VERIFIED"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-light-luminous-dive-kick.gif",
+   "sha256": "5ffc75559e69b6c40ba23e3130d60471e985b41adc52aa729a0aa428f14c0848",
+   "moveId": "d38b6a9d-6ad9-43ba-bf10-8b97275d3a4b",
+   "moveSlug": "jamie-frame-076",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "HOLD",
+   "reasons": [
+    "STRENGTH_NOT_VERIFIED"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-the-devil-inside.gif",
+   "sha256": "68aebfed620e53baff0685dce752848f825d2b950bfecb712da500dc8e741164",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-the-devil-inside-held.gif",
+   "sha256": "b2f64673522e271a8ca4573b07c3f4f69a30993511c3ed8dc9df11b91f45ba08",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-od-tenshin.gif",
+   "sha256": "8bf545a6ba1c0b1d90c3b201c004e37494e2b3b55ba36187003f19d366c65153",
+   "moveId": "47f2b44d-7d51-49f0-866e-6a2e1b5648ff",
+   "moveSlug": "jamie-frame-085",
+   "idSource": "VISUAL_QA",
+   "status": "MP4_PRIORITY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-od-bakkai.gif",
+   "sha256": "bca3d2bb321fa4b1d5f0e1a829db4689a2fd6eb726247e72a651a11e8a7f50e9",
+   "moveId": "f0e84925-ec36-42dd-8fca-75c7e87712ef",
+   "moveSlug": "jamie-frame-083",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-tenshin.gif",
+   "sha256": "37d0a46af13306533a8d763ab3212428d024e4942e440b6be5ed9642e4f275e7",
+   "moveId": "7bc4a79d-75dd-4a7a-95fe-ed02c344b8b9",
+   "moveSlug": "jamie-frame-084",
+   "idSource": "VISUAL_QA",
+   "status": "MP4_PRIORITY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-light-bakkai.gif",
+   "sha256": "9eb382a5829d3bc3066d1420a60d68efdb8d2b862b338784aae74bc2881bf41a",
+   "moveId": "463834e8-201b-4a0c-a3b7-dc0257089c46",
+   "moveSlug": "jamie-frame-080",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "HOLD",
+   "reasons": [
+    "STRENGTH_NOT_VERIFIED"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-heavy-bakkai.gif",
+   "sha256": "efcccfc5167d717cb43a7efacf1bbf792db4309912b7d8473e833e43d1c27ee5",
+   "moveId": "299f160e-cafb-43b6-9619-35f1dd864f6d",
+   "moveSlug": "jamie-frame-082",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "HOLD",
+   "reasons": [
+    "STRENGTH_NOT_VERIFIED"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-od-luminous-dive-kick.gif",
+   "sha256": "1709db49991d66d011576e064fcbc237647fede5c677c5abca310c48d5508850",
+   "moveId": "56e9221a-75ee-4a4a-8295-2c23cd60ce38",
+   "moveSlug": "jamie-frame-079",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-medium-bakkai.gif",
+   "sha256": "0266a178f99e4f3908f595ecfa5e3f7ab3d78543883b7f500ebd6a2cd039b1fa",
+   "moveId": "af159fff-39b2-4255-9c59-748e66e56203",
+   "moveSlug": "jamie-frame-081",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "HOLD",
+   "reasons": [
+    "STRENGTH_NOT_VERIFIED"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-od-arrow-kick.gif",
+   "sha256": "39d2ccf34854269d4b3f3daa09d57f0d6e28d0c0dfec43589a707e851f0791c5",
+   "moveId": "c2316766-56c8-4381-893f-0341e3a91c83",
+   "moveSlug": "jamie-frame-075",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-heavy-arrow-kick.gif",
+   "sha256": "eddd1a31ebf517f2d051f08bee5d43a072776787fe10fb7ad7ce42badeefa86f",
+   "moveId": "34d6227b-d156-4929-842e-ff1a034f3424",
+   "moveSlug": "jamie-frame-074",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "HOLD",
+   "reasons": [
+    "STRENGTH_NOT_VERIFIED"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-light-arrow-kick.gif",
+   "sha256": "8f8d4ff15886da297146ef6cea9285ec6b63cf08670097d047e4714bf0ed2ddb",
+   "moveId": "35eaf7e4-dd6e-43a7-afa4-aa207971a336",
+   "moveSlug": "jamie-frame-072",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "HOLD",
+   "reasons": [
+    "STRENGTH_NOT_VERIFIED"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-medium-arrow-kick.gif",
+   "sha256": "d02ceaa32ec4fa8da59f6ade65355bc15544a6834d30107d08012559334ea6d0",
+   "moveId": "f118f5a2-8d4c-4622-bcf6-fcd3ea915709",
+   "moveSlug": "jamie-frame-073",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "HOLD",
+   "reasons": [
+    "STRENGTH_NOT_VERIFIED"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-lv4-heavy-freeflow-strikes-full.gif",
+   "sha256": "d3c3976b0ca590139e872aec80d40a95c2a5d097d2d6f7ebeb1f85b5b693cfb5",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-sa1-breakin.gif",
+   "sha256": "59ed3cf27d3421203b4d710bac4699aab5b0dde259bd44c5401d572afd7715cd",
+   "moveId": "e395af47-aedc-467e-b4cb-2aa5c112c348",
+   "moveSlug": "jamie-frame-088",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-lv4-medium-freeflow-strikes-full.gif",
+   "sha256": "99afa35d38b61b2c57e5c0505ee07b8509eb9d28f8f4a83d5306c36dde2b206a",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-lv4-light-freeflow-strikes-full.gif",
+   "sha256": "1f912ce14dfb4649f5a18f3b802ba3d158638f9a3aaeb9b7a934cb41172c2bc1",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-sa2-the-devils-song.gif",
+   "sha256": "8895ff80bdd88b1a4402781c95b42815bb5bfaa0591fd6faa41a10fab266461e",
+   "moveId": "99b9dbf0-5322-4397-bd1f-976a60965a2d",
+   "moveSlug": "jamie-frame-089",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-lv4-flowing-drunken-fist-lp.gif",
+   "sha256": "22d0a804fc3412d1d32324ab724461187697d298274dea1c524ea8929821f2e5",
+   "moveId": "c4b68e7e-6984-4038-9947-4ed1cdcea1bc",
+   "moveSlug": "jamie-frame-041",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "NEEDS_VISUAL_QA",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-lv4-flowing-drunken-fist-mp.gif",
+   "sha256": "7eb38609f3d3c6c3e4dd6dbdab7f8db05e8b98f7a580ef6134a1c0a116807f44",
+   "moveId": "0b0016b3-2d95-4406-994b-a44332288da2",
+   "moveSlug": "jamie-frame-043",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "NEEDS_VISUAL_QA",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-lv4-flowing-drunken-fist-hp.gif",
+   "sha256": "e45fd1958371c679d0fc42072c0a2eb7fef40b27a83b08fe797a9d81dbe6a5c1",
+   "moveId": "67678625-588d-48cf-b6a3-560abbd7c6fd",
+   "moveSlug": "jamie-frame-045",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "NEEDS_VISUAL_QA",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie_222205_51p00_52p65_ground_spinning_sweep_HOLD.gif",
+   "sha256": "9656406a78eaea1bcee3e98bb9679323a509a194685c1d13f6c0b01d20e3e505",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-sa3-getsusaiho.gif",
+   "sha256": null,
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "ASSET_NOT_RETRIEVED",
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "jamie-ca-getsusaiho.gif",
+   "sha256": null,
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "ASSET_NOT_RETRIEVED",
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  }
+ ]
+}

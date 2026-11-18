@@ -1,0 +1,24 @@
+{
+ "generated": "2026-11-17",
+ "scope": "P3: 保留通常技の複合根拠(厳格版)+Guile新規",
+ "connected_new": 26,
+ "breakdown": {
+  "chun-li": 7,
+  "jamie": 4,
+  "manon": 6,
+  "guile": 9
+ },
+ "cumulative": 132,
+ "target_150_gap": 18,
+ "priority_note": "『撮影済みNo.1〜12・27〜32』の番号とキャラの対応は未確認。撮影済みの素材全てを処理(リュウ除外)。",
+ "tests": {
+  "node_test": "1054/pass1041/fail0/skip13(件数依存の4テスト期待値を更新)",
+  "chromium": "32/32 PASS",
+  "tsc": "OK",
+  "eslint": "OK",
+  "protected_sha": "14c6047b… 一致",
+  "head": "52eddb3",
+  "page_tsx": "未変更"
+ },
+ "case_a": "106本での隔離Build PASSを再利用(指示)。132本での再実行は未実施"
+}

@@ -1,0 +1,281 @@
+{
+ "generated": "2026-11-17",
+ "note": "ジェイミー素材台帳(Drive個別取得・サイズ照合済み。SHAは取得した実体のSHA-256)",
+ "records": [
+  {
+   "character": "jamie",
+   "file": "jamie-heavy-luminous-dive-kick.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "1b0f9856f7b9c3037aa7df11cd808bb5edc865a8b2ac9e6684d7ec35f9c4ea17",
+   "width": 480,
+   "height": 270,
+   "frames": 47,
+   "durationMs": 2350,
+   "bytes": 3801688
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-medium-luminous-dive-kick.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "d5498c5df9fff9c93b29ed480467206d4901aecc51397591662dc025a92a85c0",
+   "width": 480,
+   "height": 270,
+   "frames": 42,
+   "durationMs": 2100,
+   "bytes": 3437474
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-light-luminous-dive-kick.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "5ffc75559e69b6c40ba23e3130d60471e985b41adc52aa729a0aa428f14c0848",
+   "width": 480,
+   "height": 270,
+   "frames": 38,
+   "durationMs": 1900,
+   "bytes": 2915690
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-the-devil-inside.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "68aebfed620e53baff0685dce752848f825d2b950bfecb712da500dc8e741164",
+   "width": 480,
+   "height": 270,
+   "frames": 35,
+   "durationMs": 1750,
+   "bytes": 2215391
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-the-devil-inside-held.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "b2f64673522e271a8ca4573b07c3f4f69a30993511c3ed8dc9df11b91f45ba08",
+   "width": 480,
+   "height": 270,
+   "frames": 59,
+   "durationMs": 2950,
+   "bytes": 3504485
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-od-tenshin.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "8bf545a6ba1c0b1d90c3b201c004e37494e2b3b55ba36187003f19d366c65153",
+   "width": 480,
+   "height": 270,
+   "frames": 69,
+   "durationMs": 3450,
+   "bytes": 5086343
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-od-bakkai.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "bca3d2bb321fa4b1d5f0e1a829db4689a2fd6eb726247e72a651a11e8a7f50e9",
+   "width": 480,
+   "height": 270,
+   "frames": 85,
+   "durationMs": 4250,
+   "bytes": 6749963
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-tenshin.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "37d0a46af13306533a8d763ab3212428d024e4942e440b6be5ed9642e4f275e7",
+   "width": 480,
+   "height": 270,
+   "frames": 40,
+   "durationMs": 2000,
+   "bytes": 2674365
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-light-bakkai.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "9eb382a5829d3bc3066d1420a60d68efdb8d2b862b338784aae74bc2881bf41a",
+   "width": 480,
+   "height": 270,
+   "frames": 61,
+   "durationMs": 3050,
+   "bytes": 4756350
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-heavy-bakkai.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "efcccfc5167d717cb43a7efacf1bbf792db4309912b7d8473e833e43d1c27ee5",
+   "width": 480,
+   "height": 270,
+   "frames": 70,
+   "durationMs": 3500,
+   "bytes": 5682698
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-od-luminous-dive-kick.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "1709db49991d66d011576e064fcbc237647fede5c677c5abca310c48d5508850",
+   "width": 480,
+   "height": 270,
+   "frames": 53,
+   "durationMs": 2650,
+   "bytes": 4245080
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-medium-bakkai.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "0266a178f99e4f3908f595ecfa5e3f7ab3d78543883b7f500ebd6a2cd039b1fa",
+   "width": 480,
+   "height": 270,
+   "frames": 64,
+   "durationMs": 3200,
+   "bytes": 5052236
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-od-arrow-kick.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "39d2ccf34854269d4b3f3daa09d57f0d6e28d0c0dfec43589a707e851f0791c5",
+   "width": 480,
+   "height": 270,
+   "frames": 67,
+   "durationMs": 3350,
+   "bytes": 5314590
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-heavy-arrow-kick.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "eddd1a31ebf517f2d051f08bee5d43a072776787fe10fb7ad7ce42badeefa86f",
+   "width": 480,
+   "height": 270,
+   "frames": 64,
+   "durationMs": 3200,
+   "bytes": 5239845
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-light-arrow-kick.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "8f8d4ff15886da297146ef6cea9285ec6b63cf08670097d047e4714bf0ed2ddb",
+   "width": 480,
+   "height": 270,
+   "frames": 49,
+   "durationMs": 2450,
+   "bytes": 4086739
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-medium-arrow-kick.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "d02ceaa32ec4fa8da59f6ade65355bc15544a6834d30107d08012559334ea6d0",
+   "width": 480,
+   "height": 270,
+   "frames": 50,
+   "durationMs": 2500,
+   "bytes": 4035638
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-lv4-heavy-freeflow-strikes-full.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "d3c3976b0ca590139e872aec80d40a95c2a5d097d2d6f7ebeb1f85b5b693cfb5",
+   "width": 480,
+   "height": 270,
+   "frames": 81,
+   "durationMs": 4050,
+   "bytes": 6743493
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-sa1-breakin.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "59ed3cf27d3421203b4d710bac4699aab5b0dde259bd44c5401d572afd7715cd",
+   "width": 480,
+   "height": 270,
+   "frames": 113,
+   "durationMs": 5650,
+   "bytes": 8703511
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-lv4-medium-freeflow-strikes-full.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "99afa35d38b61b2c57e5c0505ee07b8509eb9d28f8f4a83d5306c36dde2b206a",
+   "width": 480,
+   "height": 270,
+   "frames": 79,
+   "durationMs": 3950,
+   "bytes": 6500320
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-lv4-light-freeflow-strikes-full.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "1f912ce14dfb4649f5a18f3b802ba3d158638f9a3aaeb9b7a934cb41172c2bc1",
+   "width": 480,
+   "height": 270,
+   "frames": 68,
+   "durationMs": 3400,
+   "bytes": 5885692
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-sa2-the-devils-song.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "8895ff80bdd88b1a4402781c95b42815bb5bfaa0591fd6faa41a10fab266461e",
+   "width": 480,
+   "height": 270,
+   "frames": 56,
+   "durationMs": 2800,
+   "bytes": 3710095
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-lv4-flowing-drunken-fist-lp.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "22d0a804fc3412d1d32324ab724461187697d298274dea1c524ea8929821f2e5",
+   "width": 480,
+   "height": 270,
+   "frames": 19,
+   "durationMs": 950,
+   "bytes": 1436559
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-lv4-flowing-drunken-fist-mp.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "7eb38609f3d3c6c3e4dd6dbdab7f8db05e8b98f7a580ef6134a1c0a116807f44",
+   "width": 480,
+   "height": 270,
+   "frames": 19,
+   "durationMs": 950,
+   "bytes": 1409312
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-lv4-flowing-drunken-fist-hp.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "e45fd1958371c679d0fc42072c0a2eb7fef40b27a83b08fe797a9d81dbe6a5c1",
+   "width": 480,
+   "height": 270,
+   "frames": 20,
+   "durationMs": 1000,
+   "bytes": 1494561
+  },
+  {
+   "character": "jamie",
+   "file": "jamie_222205_51p00_52p65_ground_spinning_sweep_HOLD.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "9656406a78eaea1bcee3e98bb9679323a509a194685c1d13f6c0b01d20e3e505",
+   "width": 480,
+   "height": 270,
+   "frames": 33,
+   "durationMs": 1650,
+   "bytes": 1967978
+  }
+ ]
+}

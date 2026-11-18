@@ -1,0 +1,44 @@
+{
+ "generated": "2026-11-17",
+ "policy": "根拠の弱い通常技は確定扱いにしない。接続済みでも『弱根拠』として別管理し、再撮影・hit素材・入力表示付き素材が来たら再判定する。",
+ "held_not_connected": {
+  "dee-jay": {
+   "jump-lk/mp/mk/hp/hk": "ジャンプ攻撃は再生時間が着地で決まり判別不能。jump-K は強<中で矛盾"
+  },
+  "cammy": {
+   "crouching-lp/mp": "再生時間が逆転(lp17>mp16)",
+   "jump x6": "着地依存で判別不能",
+   "knuckle l/m/h": "再生時間 22/21/21 で逆転・同値",
+   "spike l/m": "30/30 同値",
+   "spiral l/m": "26/23 逆転"
+  },
+  "chun-li": {
+   "crouching-lp/mp/hp": "再生時間 14/16/14 で hp<mp",
+   "crouching-mk/hk": "17/17 同値",
+   "jump-lk/mk/hk": "着地依存",
+   "jump-lp/mp/hp(新規3本)": "供給側でHOLD_WHIFF_AND_AIR_CLIPPING(画面上端欠け)"
+  },
+  "jamie": {
+   "standing-lp/mp": "再生時間 29>27 で逆転",
+   "新規9本": "供給側で全HOLD(旧採用映像との重複可能性)"
+  },
+  "guile": {
+   "standing/crouching 通常技12": "供給側HOLD_WHIFF_HIT_MEDIA_REQUIRED(空振りのみ・hit素材必要)",
+   "flash-kick l/m/h": "再生時間 49/51/51 同値、ジャスト版との区別不能",
+   "sonic-boom hit a/b・sonic-blade a・sonic-cross hit a/b/variant・target-combo a-e": "供給側HOLD_STRENGTH/IDENTITY",
+   "OD sonic blade": "OD弱/中/強3行のどれか判別不能",
+   "OD sonic cross": "複数入力の連続でID未確定",
+   "forward/back air throw": "供給側HOLD_AIR_CLIPPING(画面上端欠け)"
+  }
+ },
+ "connected_but_weak_watch": {
+  "dee-jay": [
+   "crouching-lp/mp(再生時間 14/14 同値)",
+   "mgu-l/m(40/40 同値)"
+  ],
+  "cammy": [
+   "crouching-lk/mk(20/21 差1フレーム)"
+  ],
+  "note": "既存106本の保護のため接続は維持。再判定の対象として監視。"
+ }
+}

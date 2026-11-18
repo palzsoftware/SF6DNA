@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "characterSlug": "jamie",
+  "localQaOnly": true,
+  "approval": "NOT_APPROVED",
+  "note": "ローカルQA専用。公開承認ではない。表示は開発環境のlocalhost限定の隔離ルートのみ。",
+  "entries": [
+    {
+      "moveId": "f0e84925-ec36-42dd-8fca-75c7e87712ef",
+      "moveSlug": "jamie-frame-083",
+      "fileName": "jamie-frame-083.gif",
+      "sha256": "bca3d2bb321fa4b1d5f0e1a829db4689a2fd6eb726247e72a651a11e8a7f50e9",
+      "bytes": 6749963,
+      "width": 480,
+      "height": 270,
+      "durationMs": 4250,
+      "sourceFile": "jamie-od-bakkai.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "緑の『OD SUCCESS』表示+入力 ↓↘→+K(236+KK)。爆廻のOD版。",
+      "unconfirmed": [
+        "OD入力は『OD』表示として映像に出る",
+        "酔いLv2以上の条件は映像から判別不能"
+      ]
+    },
+    {
+      "moveId": "56e9221a-75ee-4a4a-8295-2c23cd60ce38",
+      "moveSlug": "jamie-frame-079",
+      "fileName": "jamie-frame-079.gif",
+      "sha256": "1709db49991d66d011576e064fcbc237647fede5c677c5abca310c48d5508850",
+      "bytes": 4245080,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2650,
+      "sourceFile": "jamie-od-luminous-dive-kick.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "緑の『OD SUCCESS』表示+入力 ↓↙←+K(214+KK)。無影蹴のOD版(前ジャンプ中)。",
+      "unconfirmed": [
+        "OD入力は『OD』表示として映像に出る",
+        "酔いLv1以上・前ジャンプ中の条件は映像から判別不能"
+      ]
+    },
+    {
+      "moveId": "c2316766-56c8-4381-893f-0341e3a91c83",
+      "moveSlug": "jamie-frame-075",
+      "fileName": "jamie-frame-075.gif",
+      "sha256": "e9d15da9a932f8439335f6147da28a66ea8023d3b844f23a389ba69729b04e49",
+      "bytes": 5178714,
+      "width": 480,
+      "height": 270,
+      "durationMs": 3200,
+      "sourceFile": "jamie-od-arrow-kick.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "緑の『OD SUCCESS』表示+入力 →↓↘+K(623+KK)。張弓腿のOD版。 [2026-11-17 修正版: 終端の画面遷移(黒1+復帰)を除去。元SHA=39d2ccf34854…]",
+      "unconfirmed": [
+        "OD入力は『OD』表示として映像に出る"
+      ]
+    },
+    {
+      "moveId": "e395af47-aedc-467e-b4cb-2aa5c112c348",
+      "moveSlug": "jamie-frame-088",
+      "fileName": "jamie-frame-088.gif",
+      "sha256": "59ed3cf27d3421203b4d710bac4699aab5b0dde259bd44c5401d572afd7715cd",
+      "bytes": 8703511,
+      "width": 480,
+      "height": 270,
+      "durationMs": 5650,
+      "sourceFile": "jamie-sa1-breakin.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "画面左下の入力表示が ↓↘→↓↘→+K(236236K)でSA1の公開コマンドと一致。暗転カットイン後に多段の蹴り連撃(最大13HIT表示)。",
+      "unconfirmed": [
+        "SAゲージ消費の入力表示は映像内で確認。Classic/Modernの別は映像から判別不能"
+      ]
+    },
+    {
+      "moveId": "99b9dbf0-5322-4397-bd1f-976a60965a2d",
+      "moveSlug": "jamie-frame-089",
+      "fileName": "jamie-frame-089.gif",
+      "sha256": "8895ff80bdd88b1a4402781c95b42815bb5bfaa0591fd6faa41a10fab266461e",
+      "bytes": 3710095,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2800,
+      "sourceFile": "jamie-sa2-the-devils-song.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示が ↓↙←↓↙←+P(214214P)でSA2の公開コマンドと一致。ドリンクを飲む専用演出(ズームカット)。",
+      "unconfirmed": [
+        "Classic/Modernの別は映像から判別不能"
+      ]
+    },
+    {
+      "moveId": "96b29319-40fe-4f5b-8d8c-cf923cae7dc2",
+      "moveSlug": "jamie-frame-090",
+      "fileName": "jamie-frame-090.gif",
+      "sha256": "076ba920be6205c9d9174f51a615bfef8e385d38cbcede740165dd767942586e",
+      "bytes": 9786204,
+      "width": 480,
+      "height": 270,
+      "durationMs": 10200,
+      "sourceFile": "jamie-sa3-getsusaiho_under10mb_64color_nodither.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↘→↓↘→+P(236236P)。ゲージに『CA』表示は無く通常のSA。暗転・カットイン主体の多段SA(ヒット数表示あり)で最後にハードノックダウン。",
+      "unconfirmed": [
+        "SA3とCAは同じコマンド(236236P)。CA表示の有無で区別(CAは体力25%以下が条件)",
+        "ボタン絵柄(P/K)は拡大の見た目での判断(SA1のKは別アイコン)",
+        "軽量版は減色(32〜64色・PSNR 25〜28dB)で元GIFより画質が粗い"
+      ]
+    },
+    {
+      "moveId": "634d738b-026c-4414-9e20-303468bd83bc",
+      "moveSlug": "jamie-frame-091",
+      "fileName": "jamie-frame-091.gif",
+      "sha256": "4f9e86ad4f1ae598560fb281b94f185b3fb6039afdf15cbab80692a152ac52b6",
+      "bytes": 9066842,
+      "width": 480,
+      "height": 270,
+      "durationMs": 12100,
+      "sourceFile": "jamie-ca-getsusaiho_under10mb_32color_nodither.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "ゲージ位置に『CA』表示、入力表示 ↓↘→↓↘→+P(236236P)。体力25%以下で出せるCAとして映像内で区別できる。",
+      "unconfirmed": [
+        "CAの発動条件(体力25%以下)は公開データによる静的照合。映像内の体力ゲージは未計測",
+        "軽量版は減色(32〜64色・PSNR 25〜28dB)で元GIFより画質が粗い"
+      ]
+    },
+    {
+      "moveId": "4fb6762e-7ea7-4f02-8017-1f84d748bd36",
+      "moveSlug": "jamie-standing-hp",
+      "fileName": "jamie-standing-hp.gif",
+      "sha256": "26d7ea92c668a303f00a73d2ef0bc2b672ee5ac74e669e0aa2e0f618349c6d43",
+      "bytes": 1895222,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2130,
+      "sourceFile": "jamie-standing-hp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "da6ccd2f-8299-4ec1-bf92-c3473685557c",
+      "moveSlug": "jamie-standing-lk",
+      "fileName": "jamie-standing-lk.gif",
+      "sha256": "98ff02848b3d4691440e46f80ce8f07cd65a4c5b2e1de6752703df5e504f512a",
+      "bytes": 1758704,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2000,
+      "sourceFile": "jamie-standing-lk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "720eb2bf-9bf5-4bf9-8722-1cdc5ab3dcf6",
+      "moveSlug": "jamie-standing-mk",
+      "fileName": "jamie-standing-mk.gif",
+      "sha256": "7ab5fdbb5c48de6115efa4c49a56142942bc37a76ed60e80f5065478e6d718dc",
+      "bytes": 1898881,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2130,
+      "sourceFile": "jamie-standing-mk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "183019ce-f164-4619-b634-3192d008013b",
+      "moveSlug": "jamie-standing-hk",
+      "fileName": "jamie-standing-hk.gif",
+      "sha256": "76a9889391e66598e360822b0b919018dcd0c6243665e932e4cec1677b0ea5d8",
+      "bytes": 2101885,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2330,
+      "sourceFile": "jamie-standing-hk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    }
+  ]
+}

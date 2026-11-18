@@ -1,0 +1,22 @@
+{
+ "date": "2026-11-17",
+ "character": "jamie",
+ "records": [
+  {
+   "character": "jamie",
+   "asset_filename": "jamie-sa3-getsusaiho_under10mb_64color_nodither.gif",
+   "asset_sha256": "076ba920be6205c9d9174f51a615bfef8e385d38cbcede740165dd767942586e",
+   "technical_qa": "PASS",
+   "frames": 204,
+   "bytes": 9786204
+  },
+  {
+   "character": "jamie",
+   "asset_filename": "jamie-ca-getsusaiho_under10mb_32color_nodither.gif",
+   "asset_sha256": "4f9e86ad4f1ae598560fb281b94f185b3fb6039afdf15cbab80692a152ac52b6",
+   "technical_qa": "PASS",
+   "frames": 242,
+   "bytes": 9066842
+  }
+ ]
+}

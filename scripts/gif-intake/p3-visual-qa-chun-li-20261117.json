@@ -1,0 +1,146 @@
+{
+ "generated": "2026-11-17",
+ "scope": "chun-li P3",
+ "entries": [
+  {
+   "character": "chun-li",
+   "file": "chun-li-standing-lp-candidate.gif",
+   "moveSlug": "chun-li-standing-lp",
+   "moveId": "e8627cc1-85c3-4fae-a9ef-784311e4ce8d",
+   "fixtureName": "立ち弱P（手突）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠"
+   ],
+   "metrics": {
+    "frames": 10,
+    "durationMs": 800,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "chun-li",
+   "file": "chun-li-standing-mp-candidate.gif",
+   "moveSlug": "chun-li-standing-mp",
+   "moveId": "393af232-0ab0-40c0-86dc-096819601e19",
+   "fixtureName": "立ち中P（頸穿刀）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠"
+   ],
+   "metrics": {
+    "frames": 13,
+    "durationMs": 1040,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "chun-li",
+   "file": "chun-li-standing-hp-candidate.gif",
+   "moveSlug": "chun-li-standing-hp",
+   "moveId": "b1d5ec50-b033-43f4-b034-eb8ccbe7c4b2",
+   "fixtureName": "立ち強P（顎狙突拳）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠"
+   ],
+   "metrics": {
+    "frames": 15,
+    "durationMs": 1200,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "chun-li",
+   "file": "chun-li-standing-lk-candidate.gif",
+   "moveSlug": "chun-li-standing-lk",
+   "moveId": "1d9a313e-8b88-445e-b8cd-896165c27123",
+   "fixtureName": "立ち弱K（斧刃脚）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠"
+   ],
+   "metrics": {
+    "frames": 14,
+    "durationMs": 1120,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "chun-li",
+   "file": "chun-li-standing-mk-candidate.gif",
+   "moveSlug": "chun-li-standing-mk",
+   "moveId": "64f4a965-b6ba-4df0-9e20-c7dc9b1db299",
+   "fixtureName": "立ち中K（外擺脚）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠"
+   ],
+   "metrics": {
+    "frames": 15,
+    "durationMs": 1200,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "chun-li",
+   "file": "chun-li-standing-hk-candidate.gif",
+   "moveSlug": "chun-li-standing-hk",
+   "moveId": "1abb4304-2025-4fd0-867e-bb42c1223945",
+   "fixtureName": "立ち強K（前周脚）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠"
+   ],
+   "metrics": {
+    "frames": 16,
+    "durationMs": 1280,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "chun-li",
+   "file": "chun-li-crouching-lk-candidate.gif",
+   "moveSlug": "chun-li-crouching-lk",
+   "moveId": "73f3ddfa-144b-45fa-8ecf-6f447186af20",
+   "fixtureName": "しゃがみ弱K（前掃腿）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠"
+   ],
+   "metrics": {
+    "frames": 13,
+    "durationMs": 1040,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

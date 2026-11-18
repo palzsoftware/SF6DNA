@@ -1,0 +1,48 @@
+{
+ "generated": "2026-11-17",
+ "scope": "chun-li 追加素材(Drive個別GIF)の入力表示QA",
+ "entries": [
+  {
+   "character": "chun-li",
+   "file": "chun-li-frame-066-candidate.gif",
+   "moveSlug": "chun-li-frame-066",
+   "moveId": "6b5687c5-02d7-4214-8df6-30587b3e6cd1",
+   "fixtureName": "虎襲倒",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示なし(投げ)。相手を投げて位置の入れ替えなし=前投げ(虎襲倒 5/6+弱P弱K)。",
+   "unconfirmed": [
+    "入力表示が無く、前/後ろは位置入替の有無による目視判定",
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 34,
+    "durationMs": 2720,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "chun-li",
+   "file": "chun-li-frame-067-candidate.gif",
+   "moveSlug": "chun-li-frame-067",
+   "moveId": "9bc191ba-9467-4532-aaa9-1df05fecab11",
+   "fixtureName": "太極扇",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示なし(投げ)。相手を投げて位置が入れ替わる=後ろ投げ(太極扇 ←+弱P弱K)。",
+   "unconfirmed": [
+    "入力表示が無く、前/後ろは位置入替の有無による目視判定",
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 34,
+    "durationMs": 2720,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

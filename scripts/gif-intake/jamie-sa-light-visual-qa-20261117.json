@@ -1,0 +1,49 @@
+{
+ "generated": "2026-11-17",
+ "scope": "jamie SA3/CA 軽量版の目視QA",
+ "entries": [
+  {
+   "character": "jamie",
+   "file": "jamie-sa3-getsusaiho_under10mb_64color_nodither.gif",
+   "moveSlug": "jamie-frame-090",
+   "moveId": "96b29319-40fe-4f5b-8d8c-cf923cae7dc2",
+   "fixtureName": "SA3 月牙叉炮",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↘→↓↘→+P(236236P)。ゲージに『CA』表示は無く通常のSA。暗転・カットイン主体の多段SA(ヒット数表示あり)で最後にハードノックダウン。",
+   "unconfirmed": [
+    "SA3とCAは同じコマンド(236236P)。CA表示の有無で区別(CAは体力25%以下が条件)",
+    "ボタン絵柄(P/K)は拡大の見た目での判断(SA1のKは別アイコン)",
+    "軽量版は減色(32〜64色・PSNR 25〜28dB)で元GIFより画質が粗い"
+   ],
+   "metrics": {
+    "frames": 204,
+    "durationMs": 10200,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "jamie",
+   "file": "jamie-ca-getsusaiho_under10mb_32color_nodither.gif",
+   "moveSlug": "jamie-frame-091",
+   "moveId": "634d738b-026c-4414-9e20-303468bd83bc",
+   "fixtureName": "CA 月牙叉炮",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "ゲージ位置に『CA』表示、入力表示 ↓↘→↓↘→+P(236236P)。体力25%以下で出せるCAとして映像内で区別できる。",
+   "unconfirmed": [
+    "CAの発動条件(体力25%以下)は公開データによる静的照合。映像内の体力ゲージは未計測",
+    "軽量版は減色(32〜64色・PSNR 25〜28dB)で元GIFより画質が粗い"
+   ],
+   "metrics": {
+    "frames": 242,
+    "durationMs": 12100,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

@@ -1,0 +1,277 @@
+{
+ "generated": "2026-11-16",
+ "scope": "jp: 静的一致/要映像確認の10本",
+ "method": "各GIFを等間隔8フレームのコンタクトシートで目視(Claude)。同系統の映像との比較で強度・OD差を判断。入力操作との一致は映像から証明できない。承認ではない。",
+ "limits": [
+  "VISUAL_PASS/APPROVEDは人手の映像確認後にのみ設定する",
+  "CONFIRMED=ローカルQA表示に使ってよい。公開承認ではない"
+ ],
+ "summary": {
+  "confirmed": 5,
+  "needsMoreCheck": 5,
+  "mismatch": 0
+ },
+ "mismatches": [],
+ "entries": [
+  {
+   "file": "9_12-jp-crouching-hk.gif",
+   "moveSlug": "jp-crouching-hk",
+   "moveId": "5fad21d1-bb82-4a22-bf29-f125688d3cb9",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": true
+   },
+   "observation": "しゃがみ状態から足払い状のキックでヒットし、相手がダウンする。弱K/中Kの映像にはダウンがなく、強度を区別できる。",
+   "unconfirmed": [
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 1200,
+    "frames": 24,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "9_57-jp-ravina.gif",
+   "moveSlug": "jp-forward-throw",
+   "moveId": "94a12a74-68c3-41d2-9fb5-7684451741b5",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": true
+   },
+   "observation": "近距離で掴み、相手が右側へ投げ飛ばされて倒れる(前方向)。",
+   "unconfirmed": [
+    "実際の入力操作との一致(映像からは証明できない)",
+    "公式名称(ラヴィーナ)との対応は公式資料なし(公開用は「前投げ」)"
+   ],
+   "metrics": {
+    "durationMs": 2450,
+    "frames": 49,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "9_58-jp-uragan.gif",
+   "moveSlug": "jp-back-throw",
+   "moveId": "a63b4bd9-535b-4893-a55e-42d105ad9f8b",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": true
+   },
+   "observation": "近距離で掴み、相手が左側へ投げ飛ばされJPが右側に立つ(後方向)。前投げと終端の位置関係が逆で区別できる。",
+   "unconfirmed": [
+    "実際の入力操作との一致(映像からは証明できない)",
+    "公式名称(ウラガーン)との対応は公式資料なし(公開用は「後ろ投げ」)"
+   ],
+   "metrics": {
+    "durationMs": 2350,
+    "frames": 47,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "jp-abnimach.gif",
+   "moveSlug": "jp-embrace",
+   "moveId": "a7bb98cd-731c-485c-ab95-78de6cf5448e",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": true
+   },
+   "observation": "紫の波動が相手に当たり、相手が被弾する。OD版にある大きな爆発演出は無い。",
+   "unconfirmed": [
+    "実際の入力操作との一致(映像からは証明できない)",
+    "公式名称(アブニマーチ)と公開用名称(エンブレイス)の対応は公式資料なし"
+   ],
+   "metrics": {
+    "durationMs": 3450,
+    "frames": 69,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "jp-od-abnimach.gif",
+   "moveSlug": "jp-embrace-od",
+   "moveId": "e87c51f7-a2e9-44b1-8061-d823351b42d5",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": true
+   },
+   "observation": "同系統の波動に加え、中盤に大きな紫の爆発演出がある(非OD版には無い)。",
+   "unconfirmed": [
+    "実際の入力操作との一致(映像からは証明できない)",
+    "OD消費であること",
+    "公式名称との対応は公式資料なし"
+   ],
+   "metrics": {
+    "durationMs": 3450,
+    "frames": 69,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "9_8-jp-crouching-lk.gif",
+   "moveSlug": "jp-crouching-lk",
+   "moveId": "5a596631-df8f-450b-b735-ae4b9ca14390",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "しゃがみキックでヒット火花が出る。中Kと動作が似ており、弱/中の違いを映像から区別できない。",
+   "unconfirmed": [
+    "弱Kであること(中Kとの区別)",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 1000,
+    "frames": 20,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "9_10-jp-crouching-mk.gif",
+   "moveSlug": "jp-crouching-mk",
+   "moveId": "92ecb272-1cbd-46f0-95f2-ad4d21506e99",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "しゃがみキックでヒット火花が出る。弱Kと動作が似ており、弱/中の違いを映像から区別できない。",
+   "unconfirmed": [
+    "中Kであること(弱Kとの区別)",
+    "実際の入力操作との一致(映像からは証明できない)"
+   ],
+   "metrics": {
+    "durationMs": 1000,
+    "frames": 20,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "jp-od-departure-lp-mp.gif",
+   "moveSlug": "jp-departure-od-l",
+   "moveId": "9ec80073-a3d7-4d24-9437-8a21dc112c68",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "紫の演出と相手の被弾がある。3本のOD版の違いは映像からは区別できない。",
+   "unconfirmed": [
+    "OD弱/中/強のどれか(ボタン組合せ→強度の対応は推定)",
+    "録画区間が1つか3つか(ユーザー証言と不一致のため保留)"
+   ],
+   "metrics": {
+    "durationMs": 2700,
+    "frames": 54,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "jp-od-departure-lp-hp.gif",
+   "moveSlug": "jp-departure-od-m",
+   "moveId": "40e948eb-d634-4dc8-8b3a-43aef82df522",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "紫の演出と相手の被弾がある。3本のOD版の違いは映像からは区別できない。",
+   "unconfirmed": [
+    "OD弱/中/強のどれか",
+    "録画区間が1つか3つか"
+   ],
+   "metrics": {
+    "durationMs": 2700,
+    "frames": 54,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "jp-od-departure-mp-hp.gif",
+   "moveSlug": "jp-departure-od-h",
+   "moveId": "c9f1220a-5353-4da4-803e-02b71563cf85",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "checks": {
+    "appearanceMatchesName": null,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": false
+   },
+   "observation": "紫の演出と相手の被弾がある。3本のOD版の違いは映像からは区別できない。",
+   "unconfirmed": [
+    "OD弱/中/強のどれか",
+    "録画区間が1つか3つか"
+   ],
+   "metrics": {
+    "durationMs": 3000,
+    "frames": 60,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

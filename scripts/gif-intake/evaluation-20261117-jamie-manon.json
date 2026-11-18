@@ -1,0 +1,113 @@
+{
+ "generated": "2026-11-17",
+ "scope": "11/17 ジェイミー受入・マノン追補・ジュリ風破刃/P0 の判定記録(再調査しない)",
+ "jamie": {
+  "retrieved": 25,
+  "download_hold": [
+   "jamie-sa3-getsusaiho.gif(14.6MB)",
+   "jamie-ca-getsusaiho.gif(16.9MB)"
+  ],
+  "connected_local_qa": [
+   "SA1 武麗禽(088)",
+   "SA2 絶唱魔身(089)",
+   "OD 張弓腿(075)",
+   "OD 爆廻(083)",
+   "OD 無影蹴(079)"
+  ],
+  "mp4_priority_qa_pass_not_connected": [
+   "点辰(084)",
+   "OD 点辰(085)"
+  ],
+  "hold_strength": [
+   "爆廻 弱/中/強",
+   "無影蹴 弱/中/強",
+   "張弓腿 弱/中/強"
+  ],
+  "hold_strength_unverified_reason": "入力表示のボタン絵柄で弱/中/強を区別できず、ファイル名だけでは確定しない",
+  "hold_needs_check": [
+   "酔いLv4 流酔拳 LP/MP/HP(041/043/045): 強度根拠なし"
+  ],
+  "hold_move_id": [
+   "jamie-the-devil-inside / -held: 複数動作を含み魔身1行と対応できない",
+   "lv4 freeflow strikes 弱/中/強 full: 打撃派生込みで公開データに対応行なし",
+   "地上回転足払い(HOLD_MOVE_ID, 公式名不明)"
+  ]
+ },
+ "manon": {
+  "newly_connected": [
+   "SA1 アラベスク(236236K)",
+   "SA2 エトワール(214214K)"
+  ],
+  "still_hold": [
+   "OD グラン・フェッテ/OD ルヴェルセ: 入力表示なし",
+   "弱/中/強 各技: 強度根拠なし",
+   "SA3/CA: 10MB超(DOWNLOAD_HOLD)",
+   "新3本(variant): 技ID無し"
+  ]
+ },
+ "juri_waiting_list": [
+  "風破刃 中(HOLD_INPUT 6.5–7.35s 未アップロード)",
+  "風破刃 強(HOLD_INPUT 9.1–10.1s 未アップロード)",
+  "既存候補 風破刃 弱・OD は強度未確認でHOLD(juri-fuhajin-od 7c61f024…は人の目視確認待ち)"
+ ],
+ "totals": {
+  "luke": 15,
+  "jp": 5,
+  "manon": 6,
+  "juri": 5,
+  "jamie": 5,
+  "total": 36
+ },
+ "public_approvals": 0,
+ "other_characters_20261117": {
+  "chunli": {
+   "status": "HOLD_SOURCE",
+   "detail": "Drive『16.春麗』にはmp4(取得不可の大容量)・md・ZIP(コントロール/DEEP)のみで、GIFは1本も無い",
+   "gifs_found": 0
+  },
+  "cammy": {
+   "status": "HOLD_QA",
+   "detail": "取得できたのは R32候補 cammy_delay_reaper.gif 1本(SHA c6560769… 一致・480x270・60コマ・10fps)。映像内に『→+強K』の入力表示があり技ID(35fa1349…, ディレイリーパー 6HK)は候補として一致するが、末尾にポーズメニュー画面が含まれ、複数回の試行が混在、10fpsで基準(20fps)より粗い→接続しない",
+   "moveId": "35fa1349-e2c3-47d7-9aa2-e3a714c3e748",
+   "gifs_found": 1,
+   "download_hold": [
+    "SF6DNA_CAMMY_R16_46GIF_LOCAL_CANDIDATE_20261101.zip (3分割・各約84MB)",
+    "SF6DNA_CAMMY_R15_PART_1-3.zip (分割)"
+   ]
+  },
+  "deejay": {
+   "status": "DOWNLOAD_HOLD",
+   "detail": "SF6DNA_DEEJAY_R15_40GIF_LOCAL_CANDIDATE_20261101.zip は3分割(約84MB/84MB/61MB)でコネクタの10MB上限を超え取得不可。個別GIFはDriveに無い",
+   "gifs_found": 0
+  },
+  "other_gifs": "ryu-* (リュウ)のみ。リュウは今回の対象外"
+ },
+ "verification_20261117": {
+  "lint": "eslint . exit 0",
+  "isolated_build_caseA": "next build 成功(隔離コピー+案Aパッチ)。.next のQA固有値(sha256/ファイル名 126件)ヒット0、nft.jsonにQAデータ/GIFフォルダの参照なし(コンポーネントのコード断片のみ)",
+  "release_gates": "tests/release-gates.test.mjs は全体テストに含まれ pass",
+  "real_tree_build": "NOT_RUN(隔離コピーのビルドで代替。実ツリーは未変更)"
+ },
+ "sa_ca_lightweight_20261117": {
+  "connected_local_qa": [
+   "ジェイミー SA3 月牙叉炮(jamie-frame-090)",
+   "ジェイミー CA 月牙叉炮(jamie-frame-091)",
+   "マノン SA3 パ・ド・ドゥ(manon-sa3)",
+   "マノン CA パ・ド・ドゥ(manon-ca)"
+  ],
+  "basis": "SHA・サイズ・フレーム・寸法はmanifestと一致。CAはゲージ『CA』表示で区別、ジェイミーSA3は入力表示(236236P)+CA表示なし、マノンSA3はゲージ3→0の3本消費で判断(入力表示は一部読取り不可)",
+  "caveats": [
+   "減色版(32〜64色・PSNR25〜28dB)で元GIFより粗い",
+   "マノンSA3のコマンド一致は静的照合",
+   "manifestの『原本との対応』は元SHA・Drive IDの記載による(原本はコネクタ取得不可で再照合していない)"
+  ],
+  "totals": {
+   "luke": 15,
+   "jp": 5,
+   "manon": 8,
+   "juri": 5,
+   "jamie": 7,
+   "total": 40
+  }
+ }
+}

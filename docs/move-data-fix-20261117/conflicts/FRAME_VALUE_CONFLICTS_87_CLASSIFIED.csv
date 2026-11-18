@@ -1,0 +1,88 @@
+priority,subclass,character,slug,name,field,db,txt,conflictFieldsOnMove,dbValuesMatchTxtRows,moveId,sourceRecordKey
+P0,ROW_GRANULARITY_MISMATCH,ken,ken-air-tatsu-od,OD 空中竜巻旋風脚,active,"2,2,2","11-12, 14-15, 18-19, 22-23, 27-28",3,,bacc9cc1-aff3-4b61-841d-fb313a77e3d5,ken:web:315
+P0,SUSPECTED_MAPPING_ERROR,ken,ken-air-tatsu-od,OD 空中竜巻旋風脚,recovery,14... (21 whiff),着地後14,3,,bacc9cc1-aff3-4b61-841d-fb313a77e3d5,ken:web:315
+P0,SUSPECTED_MAPPING_ERROR,ken,ken-air-tatsu-od,OD 空中竜巻旋風脚,onHit,+7...,D,3,,bacc9cc1-aff3-4b61-841d-fb313a77e3d5,ken:web:315
+P0,ROW_GRANULARITY_MISMATCH,luke,luke-flash-knuckle-od,OD フラッシュナックル,onHit,"-,D",-,6,,9616dccc-5222-420c-97c7-512fe6ebad17,luke:web:314
+P0,SUSPECTED_MAPPING_ERROR,luke,luke-flash-knuckle-od,OD フラッシュナックル,damage,800,400,6,,9616dccc-5222-420c-97c7-512fe6ebad17,luke:web:314
+P0,SUSPECTED_MAPPING_ERROR,mai,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,startup,7,10,5,mai:web:202 飛燕連脚（2段目）,f3fc4f71-7de2-4f23-9a7c-5b98c41124b7,mai:web:203
+P0,SUSPECTED_MAPPING_ERROR,mai,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,active,7-8,10-11,5,mai:web:202 飛燕連脚（2段目）,f3fc4f71-7de2-4f23-9a7c-5b98c41124b7,mai:web:203
+P0,SUSPECTED_MAPPING_ERROR,mai,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,recovery,20,28,5,mai:web:202 飛燕連脚（2段目）,f3fc4f71-7de2-4f23-9a7c-5b98c41124b7,mai:web:203
+P0,SUSPECTED_MAPPING_ERROR,mai,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,onHit,-2,3,5,mai:web:202 飛燕連脚（2段目）,f3fc4f71-7de2-4f23-9a7c-5b98c41124b7,mai:web:203
+P0,SUSPECTED_MAPPING_ERROR,mai,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,damage,400,500,5,mai:web:202 飛燕連脚（2段目）,f3fc4f71-7de2-4f23-9a7c-5b98c41124b7,mai:web:203
+P0,SUSPECTED_MAPPING_ERROR,ryu,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,damage,1800,300,6,,3605c1b6-1f6b-42a3-981d-6ce606d760b4,ryu:web:208
+P0,ROW_GRANULARITY_MISMATCH,terry,terry-power-dunk-tc,パワーダンク,active,"7-9,18-20,18-20;42-47","18-20,42-47 ",6,,8884e700-85de-4019-89d6-a3270b0a4026,terry:web:204
+P0,ROW_GRANULARITY_MISMATCH,terry,terry-power-dunk-tc,パワーダンク,onHit,"2,D,D",D,6,,8884e700-85de-4019-89d6-a3270b0a4026,terry:web:204
+P0,ROW_GRANULARITY_MISMATCH,terry,terry-power-dunk-tc,パワーダンク,onBlock,"-3,-14,-",―,6,,8884e700-85de-4019-89d6-a3270b0a4026,terry:web:204
+P0,SUSPECTED_MAPPING_ERROR,terry,terry-power-dunk-tc,パワーダンク,damage,2100,800,6,,8884e700-85de-4019-89d6-a3270b0a4026,terry:web:204
+P1,NUMERIC_CONFLICT,aki,aki-orchid-spring,紫泡泉,startup,46,26,2,,5ad21670-2e9a-44e3-8e35-b3eb76173713,aki:web:306
+P1,ACTIVE_RANGE_CONFLICT,elena,elena-jumping-heavy-kick-j-hk,ジャンプ強K（オーバーヘッドキック）,active,"10-20 / 10-11,13-20","10-11, 13-20",1,,3e2fd952-26b8-4942-85fb-651512e650ba,elena:web:117
+P1,NUMERIC_CONFLICT,juri,juri-ankensatsu-od,OD 暗剣殺,onBlock,-10,-8,1,,4f7d14e2-ed50-4525-aac6-dff1f24c073d,juri:web:309
+P1,NUMERIC_CONFLICT,juri,juri-fuhajin-h,強 風破刃,recovery,20,19,1,,cbc368ca-d0f3-4777-ae9d-cbeeaf937a1f,juri:web:302
+P1,NUMERIC_CONFLICT,juri,juri-fuhajin-l,弱 風破刃,recovery,19,※21,1,,5a98da7b-3c31-4889-af24-22a93f74080b,juri:web:300
+P1,NUMERIC_CONFLICT,juri,juri-tensenrin-h,強 天穿輪,recovery,38,着地後14,2,,1201daae-e1b8-47aa-88d9-19be3fb4f80b,juri:web:315
+P1,ACTIVE_RANGE_CONFLICT,juri,juri-tensenrin-l,弱 天穿輪,active,3,"11-13, 16-17",1,,1e7d1cc0-8118-4c5a-8b43-94f585c2a83e,juri:web:313
+P1,NUMERIC_CONFLICT,juri,juri-tensenrin-m,中 天穿輪,recovery,38,着地後14,2,,9f311585-00ac-4e7c-83fc-08a04f4f9f8d,juri:web:314
+P1,NUMERIC_CONFLICT,juri,juri-tensenrin-od,OD 天穿輪,recovery,51,着地後19,2,,3e607e52-090d-4c0b-96ec-d3bf99fd7c8b,juri:web:316
+P1,ACTIVE_RANGE_CONFLICT,ken,ken-air-tatsu,空中竜巻旋風脚,active,2,"11-12,18-19,26-27",2,,f6171332-63ad-40d3-8fb7-8c4fe6fa6218,ken:web:314
+P1,NUMERIC_CONFLICT,ken,ken-air-tatsu,空中竜巻旋風脚,recovery,16...,着地後14,2,,f6171332-63ad-40d3-8fb7-8c4fe6fa6218,ken:web:314
+P1,NUMERIC_CONFLICT,ken,ken-dragonlash-l,弱 龍尾脚,damage,950,1000,1,,2471b3a9-56a9-4e1c-80d0-3cfd73d4513e,ken:web:316
+P1,NUMERIC_CONFLICT,ken,ken-dragonlash-od,OD 龍尾脚,damage,700,1200,2,,2ae7c845-f576-49f2-b81a-9e556485a9ba,ken:web:319
+P1,NUMERIC_CONFLICT,ken,ken-sa2,SA2 疾風迅雷脚,recovery,32,28,2,,7ec44688-4e77-48bb-8b9f-0731b6eed185,ken:web:401
+P1,ACTIVE_RANGE_CONFLICT,ken,ken-shoryuken-od,OD 昇龍拳,active,"10,10","6-7, 8-15, 30-31, 32, 33-34, 35-39",2,,6876468e-a58f-49ec-8141-ebac16b9a162,ken:web:307
+P1,NUMERIC_CONFLICT,ken,ken-tatsu-h,強 竜巻旋風脚,damage,1300,1000,2,,69c0324c-b2d1-4d19-873f-e147d82c79ab,ken:web:311
+P2,DB_ZERO_PLACEHOLDER,aki,aki-orchid-spring,紫泡泉,active,0,※,2,,5ad21670-2e9a-44e3-8e35-b3eb76173713,aki:web:306
+P2,ACTIVE_LANDING_SEGMENTS,jamie,jamie-frame-076,弱 無影蹴,active,11-着地まで,"11,14-着地まで",1,,d38b6a9d-6ad9-43ba-bf10-8b97275d3a4b,jamie:web:337
+P2,ACTIVE_LANDING_SEGMENTS,jamie,jamie-frame-077,中 無影蹴,active,11-着地まで,"11,14-着地まで",1,,e8c4c6d3-c300-47ae-b94e-5051826ecf29,jamie:web:338
+P2,ACTIVE_LANDING_SEGMENTS,jamie,jamie-frame-078,強 無影蹴,active,11-着地まで,"11,14-着地まで",1,,69a093f4-92da-44a6-a659-ac11f1ee2f4a,jamie:web:339
+P2,ACTIVE_LANDING_SEGMENTS,jamie,jamie-frame-079,OD 無影蹴,active,11-着地まで,"11,14-着地まで",1,,56e9221a-75ee-4a4a-8295-2c23cd60ce38,jamie:web:340
+P2,DB_MULTI_STEP_ROW,juri,juri-go-ohsatsu-od,OD 五黄殺,startup,"18,18,29",18,2,,8b14f12a-30f6-4092-a564-abc65dd214fc,juri:web:312
+P2,DB_VARIABLE_PLACEHOLDER,juri,juri-shikusen,疾空閃,active,variable,18-着地まで,2,,ba59597e-b3b2-4932-ac71-c57a5c8d43c9,juri:web:317
+P2,DB_VARIABLE_PLACEHOLDER,juri,juri-shikusen,疾空閃,recovery,variable,着地後18,2,,ba59597e-b3b2-4932-ac71-c57a5c8d43c9,juri:web:317
+P2,DB_VARIABLE_PLACEHOLDER,juri,juri-shikusen-od,OD 疾空閃,active,variable,16-着地まで,2,,d8b0f1e0-9608-4189-8118-b4bf13274f10,juri:web:318
+P2,DB_VARIABLE_PLACEHOLDER,juri,juri-shikusen-od,OD 疾空閃,recovery,variable,着地後18,2,,d8b0f1e0-9608-4189-8118-b4bf13274f10,juri:web:318
+P2,DB_VARIABLE_PLACEHOLDER,ken,ken-sa2,SA2 疾風迅雷脚,active,variable,"6-7,18-20,31-33,46-48,60-61",2,,7ec44688-4e77-48bb-8b9f-0731b6eed185,ken:web:401
+P2,DB_VARIABLE_PLACEHOLDER,ken,ken-sa3,SA3 神龍烈破,active,variable,"7-9,11-13,14-16,33-35,36-37,38-39,40-41,42-43,44-45",2,,87998cdc-9b82-4b36-9582-3e144fe7b107,ken:web:403
+P2,DB_VARIABLE_PLACEHOLDER,ken,ken-sa3,SA3 神龍烈破,recovery,variable,55,2,,87998cdc-9b82-4b36-9582-3e144fe7b107,ken:web:403
+P2,ACTIVE_LANDING_SEGMENTS,lily,lily-condor-dive,コンドルダイブ,active,until landing,12-着地まで,1,,d9dc6a43-1108-4cc6-b910-a57dd875db7f,lily:web:322
+P2,ACTIVE_LANDING_SEGMENTS,lily,lily-condor-dive-od,OD コンドルダイブ,active,until landing,12-着地まで,1,,3d24b9fa-acd9-40c7-ab2d-c6072387bf4e,lily:web:323
+P2,DB_MULTI_STEP_ROW,luke,luke-flash-knuckle-od,OD フラッシュナックル,startup,"15,33",15,6,,9616dccc-5222-420c-97c7-512fe6ebad17,luke:web:314
+P2,DB_MULTI_STEP_ROW,luke,luke-flash-knuckle-od,OD フラッシュナックル,active,"15,33-36",15,6,,9616dccc-5222-420c-97c7-512fe6ebad17,luke:web:314
+P2,DB_MULTI_STEP_ROW,luke,luke-flash-knuckle-od,OD フラッシュナックル,recovery,"39,16",39,6,,9616dccc-5222-420c-97c7-512fe6ebad17,luke:web:314
+P2,DB_MULTI_STEP_ROW,luke,luke-flash-knuckle-od,OD フラッシュナックル,onBlock,"-22,-",-22,6,,9616dccc-5222-420c-97c7-512fe6ebad17,luke:web:314
+P2,DB_ZERO_PLACEHOLDER,rashid,rashid-wing-stroke,ウイング・ストローク,recovery,0,着地後6,1,,40c5c26a-bcd7-4df0-8ff6-952dbec9b6c5,rashid:web:331
+P2,TXT_MALFORMED_SUSPECTED,ryu,ryu-denjin-hashogeki,[電刃錬気] 波掌撃,active,20-25,20-24.25,1,,5a55599e-800f-4831-886c-345d1e88a9ef,ryu:web:323
+P2,DB_MULTI_STEP_ROW,ryu,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,startup,"6,5,17",5,6,,3605c1b6-1f6b-42a3-981d-6ce606d760b4,ryu:web:208
+P2,DB_MULTI_STEP_ROW,ryu,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,active,"6-9,5-7,17-20",5-7,6,,3605c1b6-1f6b-42a3-981d-6ce606d760b4,ryu:web:208
+P2,DB_MULTI_STEP_ROW,ryu,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,recovery,"11,16,20",16,6,,3605c1b6-1f6b-42a3-981d-6ce606d760b4,ryu:web:208
+P2,DB_MULTI_STEP_ROW,ryu,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,onHit,"7,1,D",1,6,,3605c1b6-1f6b-42a3-981d-6ce606d760b4,ryu:web:208
+P2,DB_MULTI_STEP_ROW,ryu,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,onBlock,"-1,-4,-8",-4,6,,3605c1b6-1f6b-42a3-981d-6ce606d760b4,ryu:web:208
+P2,TXT_MALFORMED_SUSPECTED,ryu,ryu-h-hashogeki,強 波掌撃,active,30-35,30-34.35,1,,41ad35a2-c41d-4b51-ab6c-4e2a37a526b5,ryu:web:322
+P2,TXT_MALFORMED_SUSPECTED,terry,terry-crack-shoot-h,強クラックシュート,active,23-33,23--33,1,,d5d208ff-bfae-440f-9d47-c2236543ebb4,terry:web:315
+P2,DB_MULTI_STEP_ROW,terry,terry-power-dunk-tc,パワーダンク,startup,"7,18,18",18,6,,8884e700-85de-4019-89d6-a3270b0a4026,terry:web:204
+P2,DB_MULTI_STEP_ROW,terry,terry-power-dunk-tc,パワーダンク,recovery,"16,31,33",33,6,,8884e700-85de-4019-89d6-a3270b0a4026,terry:web:204
+P3,TXT_FOOTNOTE_ONLY,ingrid,ingrid-order-of-the-sun-0-stock-214214p-0-stock,SA2 サンオーダー（Lv1）,startup,L103 / M68 / H98,※,1,,4ef25e1d-afed-41ef-8d11-54f917b32b9d,ingrid:web:403
+P3,TXT_FOOTNOTE_ONLY,ingrid,ingrid-order-of-the-sun-1-stock-214214-p-1-stock,SA2 サンオーダー（Lv2）,startup,L103 / M68 / H98,※,1,,6413aa87-0e47-49d2-93ef-bc94a010179e,ingrid:web:404
+P3,TXT_FOOTNOTE_ONLY,ingrid,ingrid-order-of-the-sun-2-stock-214214-p-2-stock,SA2 サンオーダー（Lv3）,startup,L103 / M68 / H98,※,1,,b6bc235a-79d2-46f3-ba3e-92d958bf1868,ingrid:web:405
+P3,DB_ANNOTATED_PREFIX_MATCH,juri,juri-ankensatsu,暗剣殺,onHit,+5 (+8),5,1,,453d3d43-4df0-4281-a38f-4c2b5151fb81,juri:web:307
+P3,DB_ANNOTATED_PREFIX_MATCH,juri,juri-go-ohsatsu,五黄殺,onBlock,-11 (-12),-11,1,,8b775baf-27e9-47cc-a3c3-9d21ae396d88,juri:web:310
+P3,ACTIVE_DURATIONS_VS_RANGES,juri,juri-go-ohsatsu-od,OD 五黄殺,active,"4,3,5","18-21, 34-36, 65-69",2,,8b14f12a-30f6-4092-a564-abc65dd214fc,juri:web:312
+P3,DB_ANNOTATED_PREFIX_MATCH,juri,juri-saihasho,歳破衝,onHit,-2... (+1)...,-2,2,,010a1ad9-e796-4af1-a1a7-2f8d17c7c3fb,juri:web:304
+P3,DB_ANNOTATED_PREFIX_MATCH,juri,juri-saihasho,歳破衝,onBlock,-8... (-3)...,-8,2,,010a1ad9-e796-4af1-a1a7-2f8d17c7c3fb,juri:web:304
+P3,ACTIVE_DURATIONS_VS_RANGES,juri,juri-tensenrin-h,強 天穿輪,active,"8,2,2","5-12, 18-19, 23-24",2,,1201daae-e1b8-47aa-88d9-19be3fb4f80b,juri:web:315
+P3,ACTIVE_DURATIONS_VS_RANGES,juri,juri-tensenrin-m,中 天穿輪,active,"8,2,2","5-12, 18-19, 23-24",2,,9f311585-00ac-4e7c-83fc-08a04f4f9f8d,juri:web:314
+P3,ACTIVE_DURATIONS_VS_RANGES,juri,juri-tensenrin-od,OD 天穿輪,active,"4,2,2,2","6-9, 11-12, 19-20, 23-24",2,,3e607e52-090d-4c0b-96ec-d3bf99fd7c8b,juri:web:316
+P3,ACTIVE_DURATIONS_VS_RANGES,ken,ken-dragonlash-od,OD 龍尾脚,active,"2,7","9-10, 18-24",2,,2ae7c845-f576-49f2-b81a-9e556485a9ba,ken:web:319
+P3,NOTATION_TOTAL_EQUALS_SPLIT,ken,ken-shoryuken-h,強 昇龍拳,recovery,50,35+着地後15,1,,be01ed12-ba8a-457b-9954-a996223e4426,ken:web:306
+P3,NOTATION_TOTAL_EQUALS_SPLIT,ken,ken-shoryuken-l,弱 昇龍拳,recovery,33,21+着地後12,1,,339114d8-31e2-4760-9a65-cf4c9e289616,ken:web:304
+P3,NOTATION_TOTAL_EQUALS_SPLIT,ken,ken-shoryuken-m,中 昇龍拳,recovery,40,28+着地後12,1,,bc92ba83-9725-464b-8358-aff0977879c7,ken:web:305
+P3,NOTATION_TOTAL_EQUALS_SPLIT,ken,ken-shoryuken-od,OD 昇龍拳,recovery,50,35+着地後15,2,,6876468e-a58f-49ec-8141-ebac16b9a162,ken:web:307
+P3,ACTIVE_DURATIONS_VS_RANGES,ken,ken-tatsu-h,強 竜巻旋風脚,active,"2,2,2","16-17, 31-32, 46-47",2,,69c0324c-b2d1-4d19-873f-e147d82c79ab,ken:web:311
+P3,ACTIVE_DURATIONS_VS_RANGES,ken,ken-tatsu-l,弱 竜巻旋風脚,active,"2,3","4-5, 12-14",1,,7e3c88e5-1626-4546-950f-7a7b1a3edcac,ken:web:309
+P3,ACTIVE_DURATIONS_VS_RANGES,ken,ken-tatsu-m,中 竜巻旋風脚,active,"2,2","14-15, 29-30",1,,e59ca6b7-22fc-40f4-94a2-e8a52bd02ade,ken:web:310
+P3,ACTIVE_DURATIONS_VS_RANGES,ken,ken-tatsu-od,OD 竜巻旋風脚,active,"4,3,3,3,3","9-12, 18-20, 27-29, 36-38,54-56",2,,41217421-641d-40ab-89b6-e683ab04fcce,ken:web:312
+P3,NOTATION_TOTAL_EQUALS_SPLIT,ken,ken-tatsu-od,OD 竜巻旋風脚,recovery,34,22+着地後12,2,,41217421-641d-40ab-89b6-e683ab04fcce,ken:web:312
+P3,NOTATION_RANGE,mai,mai-musasabi-no-mai-flame-j-214p,[強化版]ムササビの舞,onBlock,-4...+2,-4～2,1,,beb82132-a72c-4d8b-8b22-bd88143767b4,mai:web:343
+P3,NOTATION_RANGE,mai,mai-musasabi-no-mai-flame-j-214pp,[強化版]OD ムササビの舞,onBlock,-4...+2,-4～2,1,,18670ca7-c6c3-414e-8449-776b5585b10c,mai:web:346
+P3,NOTATION_RANGE,mai,mai-musasabi-no-mai-j-214pp,OD ムササビの舞,onBlock,-7...+1,-7～1,1,,ed62ecda-34f3-43c3-b2fc-4b9bf8a08065,mai:web:345
+P3,NOTATION_PLUS_ZERO,zangief,zangief-ca,CA ボリショイストームバスター,startup,6,6+0,1,,329420bc-a269-4ab5-a252-f1ee48c76224,zangief:web:405
+P3,NOTATION_PLUS_ZERO,zangief,zangief-sa3,SA3 ボリショイストームバスター,startup,6,6+0,1,,07544f32-f3c5-4664-9769-2c6b6a51fbec,zangief:web:404

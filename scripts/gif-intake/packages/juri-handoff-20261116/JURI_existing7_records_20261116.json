@@ -1,0 +1,100 @@
+{
+ "generated": "2026-11-16",
+ "basis": "Drive『ジュリ』フォルダの既存GIF7本。実体を今回取得しSHA-256/諸元を再計測(SA3のみ容量制限で未取得)",
+ "records": [
+  {
+   "asset_filename": "17_62-juri-light-tensenrin.gif",
+   "asset_sha256": "a05706711d02a2a64bd79eaa610a1a1ec1cd41c1b12a1cf0288618262cfd07d5",
+   "asset_size_bytes": 2457421,
+   "frames": 30,
+   "width": 480,
+   "height": 270,
+   "duration_ms": 1500,
+   "technical_qa": "PASS",
+   "publication_status": "NOT_APPROVED",
+   "drive_file_id": "1nkisuNyjxCzMdEn9uKwwHEciFODMqWEl",
+   "sha256_cross_check": "候補Manifest/台帳のSHA-256と一致(今回の実体取得で再確認)",
+   "move_strength": "NOT_VERIFIED",
+   "strength_note": "ChatGPTのManifestに強度の入力証拠なし(ファイル名・撮影順のみ)。強度は未確認"
+  },
+  {
+   "asset_filename": "17_63-juri-medium-tensenrin.gif",
+   "asset_sha256": "3dcc62b7419585992f4aa223a4dc42510470548ccd9ac0280f14035d6d655f3f",
+   "asset_size_bytes": 2877002,
+   "frames": 34,
+   "width": 480,
+   "height": 270,
+   "duration_ms": 1700,
+   "technical_qa": "PASS",
+   "publication_status": "NOT_APPROVED",
+   "drive_file_id": "1KDoKYHrQguBMmOWSpGqfO61rJ-3n4jgR",
+   "sha256_cross_check": "候補Manifest/台帳のSHA-256と一致(今回の実体取得で再確認)",
+   "move_strength": "NOT_VERIFIED",
+   "strength_note": "ChatGPTのManifestに強度の入力証拠なし(ファイル名・撮影順のみ)。強度は未確認"
+  },
+  {
+   "asset_filename": "17_64-juri-heavy-tensenrin.gif",
+   "asset_sha256": "a570ba3a0a5e3af1e7494379b97cdbcdd80b93154baeae165447f05d0d19cdb0",
+   "asset_size_bytes": 3210358,
+   "frames": 37,
+   "width": 480,
+   "height": 270,
+   "duration_ms": 1850,
+   "technical_qa": "PASS",
+   "publication_status": "NOT_APPROVED",
+   "drive_file_id": "1tRINjSZhiHDUcMf8sUul8kq2szSHqMZz",
+   "sha256_cross_check": "候補Manifest/台帳のSHA-256と一致(今回の実体取得で再確認)",
+   "move_strength": "NOT_VERIFIED",
+   "strength_note": "ChatGPTのManifestに強度の入力証拠なし(ファイル名・撮影順のみ)。強度は未確認"
+  },
+  {
+   "asset_filename": "17_65-juri-od-tensenrin.gif",
+   "asset_sha256": "310cefac6e38626b35cfb802a6e9ec74d61880ceeb5f4925327f6f6ed05c3b60",
+   "asset_size_bytes": 3404264,
+   "frames": 41,
+   "width": 480,
+   "height": 270,
+   "duration_ms": 2050,
+   "technical_qa": "PASS",
+   "publication_status": "NOT_APPROVED",
+   "drive_file_id": "1bXHJkQVajx1K4g2J2-uDkkAI8zM8mhCI",
+   "sha256_cross_check": "候補Manifest/台帳のSHA-256と一致(今回の実体取得で再確認)"
+  },
+  {
+   "asset_filename": "17_70-juri-sa1-sakkai-fuhazan.gif",
+   "asset_sha256": "fc4df289bc5cee4bf5758ff96c525bf11c7635b2d34f1c39fd1a306b1acf96ef",
+   "asset_size_bytes": 7342147,
+   "frames": 104,
+   "width": 480,
+   "height": 270,
+   "duration_ms": 5200,
+   "technical_qa": "PASS",
+   "publication_status": "NOT_APPROVED",
+   "drive_file_id": "1y1bOp-zRUQAL7LzdduwAjZwAw489GJt5",
+   "sha256_cross_check": "候補Manifest/台帳のSHA-256と一致(今回の実体取得で再確認)"
+  },
+  {
+   "asset_filename": "17_71-juri-sa2-feng-shui-engine.gif",
+   "asset_sha256": "7b61dc5a5e23908242370abaf6c6996405e09ac088fa4574d087dca58b5bbc0a",
+   "asset_size_bytes": 2545179,
+   "frames": 47,
+   "width": 480,
+   "height": 270,
+   "duration_ms": 2350,
+   "technical_qa": "PASS",
+   "publication_status": "NOT_APPROVED",
+   "drive_file_id": "1RzVQqSEBXUPXe4gPgIkv2eW6xBHsfJb_",
+   "sha256_cross_check": "候補Manifest/台帳のSHA-256と一致(今回の実体取得で再確認)"
+  },
+  {
+   "asset_filename": "17_73-juri-sa3-kaisen-dankai-raku.gif",
+   "asset_sha256": null,
+   "asset_size_bytes": 11016274,
+   "technical_qa": null,
+   "publication_status": "NOT_APPROVED",
+   "drive_file_id": "1w5TJOHrA6GkyPoXEf9fxyi-gS7BIlgPy",
+   "asset_retrieval": "SIZE_LIMIT",
+   "retrieval_note": "素材はDrive上に存在する(11,016,274 bytes)。Google Driveコネクタのダウンロード上限10MBを超えるため取得できなかった。素材不存在ではない"
+  }
+ ]
+}

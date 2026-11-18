@@ -1,0 +1,168 @@
+{
+ "generated": "2026-11-17",
+ "scope": "guile P3",
+ "entries": [
+  {
+   "character": "guile",
+   "file": "guile-sonic-boom-od-r2-candidate.gif",
+   "moveSlug": "guile-frame-037",
+   "moveId": "9887a4fc-5935-4d09-9504-a326f6d3640e",
+   "fixtureName": "OD ソニックブーム",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 緑のOD SUCCESS ←→+P(溜め[4]6+PP)。",
+   "unconfirmed": [],
+   "metrics": {
+    "frames": 43,
+    "durationMs": 2150,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "guile",
+   "file": "guile-flash-kick-od-r2-candidate.gif",
+   "moveSlug": "guile-frame-044",
+   "moveId": "94e9ef6b-c696-4c51-baef-f49af33bf7f2",
+   "fixtureName": "OD サマーソルトキック",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 緑のOD SUCCESS ↓↑+K(溜め[2]8+KK)。",
+   "unconfirmed": [],
+   "metrics": {
+    "frames": 59,
+    "durationMs": 2950,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "guile",
+   "file": "guile-sa1-up-r2-candidate.gif",
+   "moveSlug": "guile-frame-062",
+   "moveId": "7fef2076-927c-4f5c-a765-a155350ee8b6",
+   "fixtureName": "SA1 ソニックハリケーン （上）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ←→←→+P、ゲージ3→2消費=SA1。動作は上方向へ巻き上げる(上)。強度ボタンの絵柄は読めないため「上/横」は動作で判定。",
+   "unconfirmed": [],
+   "metrics": {
+    "frames": 78,
+    "durationMs": 3900,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "guile",
+   "file": "guile-sa1-r2-candidate.gif",
+   "moveSlug": "guile-frame-063",
+   "moveId": "68472c76-2eb3-4fdb-83e9-9e55fef5b76e",
+   "fixtureName": "SA1 ソニックハリケーン （横）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ←→←→+P、ゲージ3→2消費=SA1。動作は水平に薙ぐ(横)。「上/横」は動作で判定。",
+   "unconfirmed": [],
+   "metrics": {
+    "frames": 93,
+    "durationMs": 4650,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "guile",
+   "file": "guile-sa2-r2-candidate.gif",
+   "moveSlug": "guile-frame-064",
+   "moveId": "1d634ae8-f10b-4791-9ee5-4ebd401872d4",
+   "fixtureName": "SA2 ソリッドパンチャー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↙←↓↙←+P、ゲージ3→1消費=SA2。",
+   "unconfirmed": [],
+   "metrics": {
+    "frames": 51,
+    "durationMs": 2550,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "guile",
+   "file": "guile-sa3-r2-candidate.gif",
+   "moveSlug": "guile-frame-065",
+   "moveId": "6d2fde80-170a-494f-b597-63272da2dd1f",
+   "fixtureName": "SA3 クロスファイアサマーソルト",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ←→←→+K、ゲージ3→0消費=SA3(CAラベル無し)。",
+   "unconfirmed": [],
+   "metrics": {
+    "frames": 194,
+    "durationMs": 9700,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "guile",
+   "file": "guile-ca-r2-candidate.gif",
+   "moveSlug": "guile-frame-066",
+   "moveId": "d02dfb2e-74a8-409f-b220-3efb3d18772a",
+   "fixtureName": "CA クロスファイアサマーソルト",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ←→←→+K、ゲージ表示が「CA」=クリティカルアーツ。",
+   "unconfirmed": [],
+   "metrics": {
+    "frames": 208,
+    "durationMs": 10400,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "guile",
+   "file": "guile-forward-throw-20261117-candidate.gif",
+   "moveSlug": "guile-frame-067",
+   "moveId": "815bf11c-4392-4df2-93f6-646e6f6e776b",
+   "fixtureName": "ドラゴンスープレックス",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示なし。投げ成立後に立ち位置が入れ替わらない=前投げ。",
+   "unconfirmed": [],
+   "metrics": {
+    "frames": 63,
+    "durationMs": 3150,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "guile",
+   "file": "guile-back-throw-20261117-candidate.gif",
+   "moveSlug": "guile-frame-068",
+   "moveId": "f5980889-233a-4ed9-819d-594703955bf2",
+   "fixtureName": "ジュードースルー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示なし。投げ成立後に立ち位置が入れ替わる=後ろ投げ。",
+   "unconfirmed": [],
+   "metrics": {
+    "frames": 47,
+    "durationMs": 2350,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

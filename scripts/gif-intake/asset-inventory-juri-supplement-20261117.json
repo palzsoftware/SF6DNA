@@ -1,0 +1,33 @@
+{
+ "generated": "2026-11-17",
+ "note": "ジュリ第7バッチ・P0(11/17)の素材台帳(Driveから個別取得・SHA照合済み)",
+ "records": [
+  {
+   "character": "juri",
+   "file": "juri_044011_100.40_102.40_air_throw_HOLD.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "02229a9f6aa493ae012def2fb847c8330f211b0063907ea8dadf7608a9bbabfb",
+   "width": 480,
+   "height": 270,
+   "frames": 40,
+   "durationMs": 2000,
+   "bytes": 2294059
+  },
+  {
+   "character": "juri",
+   "file": "17_73-juri-sa3-kaisen-dankai-raku_under10mb_128color.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "2a8c04a02cc30436532773425b6c4d2dd3a5cc82cb9f0de9ce1e28d242d6d53d",
+   "width": 480,
+   "height": 270,
+   "frames": 208,
+   "durationMs": 10400,
+   "bytes": 9232744,
+   "derivedFrom": {
+    "file": "17_73-juri-sa3-kaisen-dankai-raku.gif",
+    "sha256": "115b1a869b5ecdbeb1a08d36c5d7e69e84f4f77add9d731ebb14411026586dac",
+    "note": "元版は11,016,274B(10MB上限で取得不可)。ChatGPT側で480x270/20fps/128色に軽量化(時間の切り詰め無し・208フレーム・10.4秒)。元版とは別SHAとして管理"
+   }
+  }
+ ]
+}

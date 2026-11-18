@@ -1,0 +1,49 @@
+{
+ "date": "2026-11-17",
+ "luke_new_gif_creation": {
+  "status": "NOT_DONE",
+  "reason": "元動画 luke_hissatsu1/2.mp4(約40MB, Drive id 1Cor89Zf…/1wbB4Tt…)がこの作業環境から取得不能: Driveコネクタは10MB上限、シェルからDriveは403。既存の大容量取得経路はこの環境に無い(ユーザーが過去に成功した経路は別環境)",
+  "not_confused_with": "元動画を再圧縮・再撮影していない",
+  "unmapped_candidate_76s40_77s95": {
+   "file": "luke_hissatsu1_76s40_77s95_unmapped_candidate.gif",
+   "sha256": "15c29457ffa0a9fd0c79f8ec8657c1d31a2061f1959961fdd23884af522cf13e",
+   "body_retrieved": false,
+   "drive_search": "タイトル検索で0件",
+   "status": "HOLD (技ID・実体とも未確認、2HITS候補として記録のみ)"
+  }
+ },
+ "jp": {
+  "status": "変更なし(20本静的一意+2本追加確認待ち。実体・映像の追加無し)"
+ },
+ "juri": {
+  "batch3": "3本HOLD(NO_MOVE_ID)",
+  "batch4": "12.3MB SIZE_LIMIT 未取得",
+  "sa3": "11MB SIZE_LIMIT 未取得",
+  "closeout_from_drive_manifest": {
+   "managed_files": 20,
+   "semantic_duplicate_candidates_not_proven": [
+    "044011 12.00-13.10 vs 33.55-34.95 (立ちキック)",
+    "044314 59.48-61.25 vs 67.20-69.60 (エフェクト弧)",
+    "044314 103.20-104.90 vs 118.70-121.90 (空中攻撃)"
+   ],
+   "formal_move_ids_verified": 0,
+   "state": "PAUSED_FOR_NEXT_CHARACTER"
+  },
+  "note": "batch3の2本(59.48-61.25, 103.20-104.90)は上記の重複候補に含まれる(未証明)。"
+ },
+ "manon_new3": {
+  "package": "SF6DNA_JURI_CLOSEOUT_MANON_NEW3_20261116.zip 18,127,266B",
+  "status": "ASSET_NOT_RETRIEVED(SIZE_LIMIT)。Manifestのみ確認",
+  "manifest_says": "3本 technical PASS(480x270/20fps)、move_id null・入力未確認・HOLD、既存20本との動作重複は未検証",
+  "plan_status": "HOLD (NO_MOVE_ID)"
+ },
+ "local_qa_connected_total": {
+  "luke": 15,
+  "jp": 5,
+  "manon": 4,
+  "juri": 3,
+  "total": 27
+ },
+ "new_gifs_created": 0,
+ "new_connections": 0
+}

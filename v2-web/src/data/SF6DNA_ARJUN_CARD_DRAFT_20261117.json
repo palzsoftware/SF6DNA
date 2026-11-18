@@ -1,0 +1,3871 @@
+{
+ "guideSections": [],
+ "moves": [
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A100",
+   "slug": "txt-arjun-arjun-web-100",
+   "name": "立ち弱P（ぶつ）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "4",
+    "active": "4-6",
+    "recovery": "9",
+    "onHit": "4",
+    "onBlock": "1",
+    "damage": "300"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A100",
+     "scheme": "classic",
+     "commandText": "LP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A100",
+     "scheme": "modern",
+     "commandText": "弱",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:100",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-standing-lp",
+   "sourceRecordKey": "arjun:web:100",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A101",
+   "slug": "txt-arjun-arjun-web-101",
+   "name": "立ち弱K（蹴る）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "6",
+    "active": "6-8",
+    "recovery": "14",
+    "onHit": "1",
+    "onBlock": "-4",
+    "damage": "400"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A101",
+     "scheme": "classic",
+     "commandText": "LK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "OFFICIAL_NOT_LISTED",
+   "modernInputSourceRecordKey": null,
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-standing-lk",
+   "sourceRecordKey": "arjun:web:101",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A102",
+   "slug": "txt-arjun-arjun-web-102",
+   "name": "立ち中P（ぶん殴る）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "11",
+    "active": "11-13",
+    "recovery": "19",
+    "onHit": "4",
+    "onBlock": "-2",
+    "damage": "700"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A102",
+     "scheme": "classic",
+     "commandText": "MP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A102",
+     "scheme": "modern",
+     "commandText": "AUTO + 中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:102",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-standing-mp",
+   "sourceRecordKey": "arjun:web:102",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A103",
+   "slug": "txt-arjun-arjun-web-103",
+   "name": "立ち中K（引っ掛ける）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "7",
+    "active": "7-9",
+    "recovery": "19",
+    "onHit": "2",
+    "onBlock": "-3",
+    "damage": "700"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A103",
+     "scheme": "classic",
+     "commandText": "MK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A103",
+     "scheme": "modern",
+     "commandText": "中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:103",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-standing-mk",
+   "sourceRecordKey": "arjun:web:103",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A104",
+   "slug": "txt-arjun-arjun-web-104",
+   "name": "立ち強P（打ち砕く）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "15",
+    "active": "15-16",
+    "recovery": "24",
+    "onHit": "2",
+    "onBlock": "-3",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A104",
+     "scheme": "classic",
+     "commandText": "HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A104",
+     "scheme": "modern",
+     "commandText": "AUTO + 強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:104",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-standing-hp",
+   "sourceRecordKey": "arjun:web:104",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A105",
+   "slug": "txt-arjun-arjun-web-105",
+   "name": "立ち強K（ぶっ飛ばす）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "14",
+    "active": "14-17",
+    "recovery": "21",
+    "onHit": "D",
+    "onBlock": "-3",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A105",
+     "scheme": "classic",
+     "commandText": "HK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A105",
+     "scheme": "modern",
+     "commandText": "強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:105",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-standing-hk",
+   "sourceRecordKey": "arjun:web:105",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A106",
+   "slug": "txt-arjun-arjun-web-106",
+   "name": "しゃがみ弱P（小突く）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "5",
+    "active": "5-7",
+    "recovery": "9",
+    "onHit": "5",
+    "onBlock": "-1",
+    "damage": "300"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A106",
+     "scheme": "classic",
+     "commandText": "2 + LP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A106",
+     "scheme": "modern",
+     "commandText": "2 + 弱",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:106",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-crouching-lp",
+   "sourceRecordKey": "arjun:web:106",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A107",
+   "slug": "txt-arjun-arjun-web-107",
+   "name": "しゃがみ弱K（突く）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "5",
+    "active": "5-7",
+    "recovery": "12",
+    "onHit": "2",
+    "onBlock": "-2",
+    "damage": "300"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A107",
+     "scheme": "classic",
+     "commandText": "2 + LK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A107",
+     "scheme": "modern",
+     "commandText": "AUTO + 弱",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:107",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-crouching-lk",
+   "sourceRecordKey": "arjun:web:107",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A108",
+   "slug": "txt-arjun-arjun-web-108",
+   "name": "しゃがみ中P（はらう）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "9",
+    "active": "9-11",
+    "recovery": "22",
+    "onHit": "D",
+    "onBlock": "-4",
+    "damage": "700"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A108",
+     "scheme": "classic",
+     "commandText": "2 + MP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A108",
+     "scheme": "modern",
+     "commandText": "2 + 中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:108",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-crouching-mp",
+   "sourceRecordKey": "arjun:web:108",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A109",
+   "slug": "txt-arjun-arjun-web-109",
+   "name": "しゃがみ中K（伸ばす）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "8",
+    "active": "8-10",
+    "recovery": "18",
+    "onHit": "5",
+    "onBlock": "-2",
+    "damage": "600"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A109",
+     "scheme": "classic",
+     "commandText": "2 + MK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "OFFICIAL_NOT_LISTED",
+   "modernInputSourceRecordKey": null,
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-crouching-mk",
+   "sourceRecordKey": "arjun:web:109",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A110",
+   "slug": "txt-arjun-arjun-web-110",
+   "name": "しゃがみ強P（かちあげる）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "10",
+    "active": "10-16",
+    "recovery": "22",
+    "onHit": "-1",
+    "onBlock": "-5",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A110",
+     "scheme": "classic",
+     "commandText": "2 + HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A110",
+     "scheme": "modern",
+     "commandText": "2 + 強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:110",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-crouching-hp",
+   "sourceRecordKey": "arjun:web:110",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A111",
+   "slug": "txt-arjun-arjun-web-111",
+   "name": "しゃがみ強K（踏み潰す）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "14",
+    "active": "14-16",
+    "recovery": "25",
+    "onHit": "D",
+    "onBlock": "-11",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A111",
+     "scheme": "classic",
+     "commandText": "2 + HK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A111",
+     "scheme": "modern",
+     "commandText": "3 + 強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:201",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-crouching-hk",
+   "sourceRecordKey": "arjun:web:111",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A112",
+   "slug": "txt-arjun-arjun-web-112",
+   "name": "ジャンプ弱P（打つ）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "5",
+    "active": "5-12",
+    "recovery": "着地後3",
+    "onHit": null,
+    "onBlock": null,
+    "damage": "300"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A112",
+     "scheme": "classic",
+     "commandText": "LP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ジャンプ中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A112",
+     "scheme": "modern",
+     "commandText": "弱",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ジャンプ中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:112",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-jumping-lp",
+   "sourceRecordKey": "arjun:web:112",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A113",
+   "slug": "txt-arjun-arjun-web-113",
+   "name": "ジャンプ弱K（踏む）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "7",
+    "active": "7-15",
+    "recovery": "着地後3",
+    "onHit": null,
+    "onBlock": null,
+    "damage": "300"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A113",
+     "scheme": "classic",
+     "commandText": "LK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ジャンプ中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A113",
+     "scheme": "modern",
+     "commandText": "AUTO＋弱",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ジャンプ中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:113",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-jumping-lk",
+   "sourceRecordKey": "arjun:web:113",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A114",
+   "slug": "txt-arjun-arjun-web-114",
+   "name": "ジャンプ中P（すくい上げる）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "8",
+    "active": "8-12",
+    "recovery": "着地後3",
+    "onHit": null,
+    "onBlock": null,
+    "damage": "700"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A114",
+     "scheme": "classic",
+     "commandText": "MP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ジャンプ中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A114",
+     "scheme": "modern",
+     "commandText": "中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ジャンプ中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:114",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-jumping-mp",
+   "sourceRecordKey": "arjun:web:114",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A115",
+   "slug": "txt-arjun-arjun-web-115",
+   "name": "ジャンプ中K（突き破る）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "9",
+    "active": "9-16",
+    "recovery": "着地後3",
+    "onHit": null,
+    "onBlock": null,
+    "damage": "700"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A115",
+     "scheme": "classic",
+     "commandText": "MK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ジャンプ中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A115",
+     "scheme": "modern",
+     "commandText": "AUTO＋中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ジャンプ中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:115",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-jumping-mk",
+   "sourceRecordKey": "arjun:web:115",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A116",
+   "slug": "txt-arjun-arjun-web-116",
+   "name": "ジャンプ強P（振り回す）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "10",
+    "active": "10-15",
+    "recovery": "着地後3",
+    "onHit": null,
+    "onBlock": null,
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A116",
+     "scheme": "classic",
+     "commandText": "HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ジャンプ中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A116",
+     "scheme": "modern",
+     "commandText": "AUTO＋強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ジャンプ中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:116",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-jumping-hp",
+   "sourceRecordKey": "arjun:web:116",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A117",
+   "slug": "txt-arjun-arjun-web-117",
+   "name": "ジャンプ強K（叩き壊す）",
+   "moveType": "normal",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "10",
+    "active": "10-16",
+    "recovery": "着地後3",
+    "onHit": null,
+    "onBlock": null,
+    "damage": "900"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A117",
+     "scheme": "classic",
+     "commandText": "HK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ジャンプ中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A117",
+     "scheme": "modern",
+     "commandText": "強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ジャンプ中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:117",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-jumping-hk",
+   "sourceRecordKey": "arjun:web:117",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A200",
+   "slug": "txt-arjun-arjun-web-200",
+   "name": "仁義の一刀",
+   "moveType": "unique",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "22",
+    "active": "22-24",
+    "recovery": "21",
+    "onHit": "D",
+    "onBlock": "-3",
+    "damage": "1000"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A200",
+     "scheme": "classic",
+     "commandText": "6 + HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A200",
+     "scheme": "modern",
+     "commandText": "6 + 強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:200",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-200",
+   "sourceRecordKey": "arjun:web:200",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A202",
+   "slug": "txt-arjun-arjun-web-202",
+   "name": "頑強な跳舞",
+   "moveType": "unique",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "19",
+    "active": "19-21",
+    "recovery": "21",
+    "onHit": "D",
+    "onBlock": "-4",
+    "damage": "1000"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A202",
+     "scheme": "classic",
+     "commandText": "6 + HK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "OFFICIAL_NOT_LISTED",
+   "modernInputSourceRecordKey": null,
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-202",
+   "sourceRecordKey": "arjun:web:202",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A203",
+   "slug": "txt-arjun-arjun-web-203",
+   "name": "規律の躍動",
+   "moveType": "unique",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "17",
+    "active": "17-19",
+    "recovery": "20",
+    "onHit": "3",
+    "onBlock": "-3",
+    "damage": "900"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A203",
+     "scheme": "classic",
+     "commandText": "MK>HK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A203",
+     "scheme": "modern",
+     "commandText": "中>中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:203",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-203",
+   "sourceRecordKey": "arjun:web:203",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A204",
+   "slug": "txt-arjun-arjun-web-204",
+   "name": "不敵の調べ",
+   "moveType": "unique",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "16",
+    "active": "16-18",
+    "recovery": "30",
+    "onHit": "D",
+    "onBlock": "-11",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A204",
+     "scheme": "classic",
+     "commandText": "HP>HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A204",
+     "scheme": "modern",
+     "commandText": "AUTO + 強>AUTO + 強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:204",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-204",
+   "sourceRecordKey": "arjun:web:204",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A205",
+   "slug": "txt-arjun-arjun-web-205",
+   "name": "鎮圧",
+   "moveType": "unique",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "18",
+    "active": "18-20",
+    "recovery": "40",
+    "onHit": "D",
+    "onBlock": "ー",
+    "damage": "2000"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "OFFICIAL_NA",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A205",
+     "scheme": "classic",
+     "commandText": "HP>HP>HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A205",
+     "scheme": "modern",
+     "commandText": "AUTO + 強>AUTO + 強>強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:205",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-205",
+   "sourceRecordKey": "arjun:web:205",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A206",
+   "slug": "txt-arjun-arjun-web-206",
+   "name": "追跡",
+   "moveType": "unique",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": null,
+    "active": null,
+    "recovery": null,
+    "onHit": null,
+    "onBlock": null,
+    "damage": "0"
+   },
+   "frameFieldStatus": {
+    "startup": "PENDING",
+    "active": "PENDING",
+    "recovery": "PENDING",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A206",
+     "scheme": "classic",
+     "commandText": "HP>HP>HK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A206",
+     "scheme": "modern",
+     "commandText": "AUTO + 強>AUTO + 強>6 + 強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:206",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-206",
+   "sourceRecordKey": "arjun:web:206",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A208",
+   "slug": "txt-arjun-arjun-web-208",
+   "name": "無情の拳",
+   "moveType": "unique",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "24",
+    "active": "24-26",
+    "recovery": "42",
+    "onHit": "D",
+    "onBlock": "-23",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A208",
+     "scheme": "classic",
+     "commandText": "HK>HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A208",
+     "scheme": "modern",
+     "commandText": "強>強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:208",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-208",
+   "sourceRecordKey": "arjun:web:208",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A209",
+   "slug": "txt-arjun-arjun-web-209",
+   "name": "無情の拳（ホールド）",
+   "moveType": "unique",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "41",
+    "active": "41-43",
+    "recovery": "42",
+    "onHit": "D",
+    "onBlock": "-19",
+    "damage": "1000"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A209",
+     "scheme": "classic",
+     "commandText": "HK>HPホールド",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A209",
+     "scheme": "modern",
+     "commandText": "強>強ホールド",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:209",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-209",
+   "sourceRecordKey": "arjun:web:209",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A300",
+   "slug": "txt-arjun-arjun-web-300",
+   "name": "弱 大義の巨腕",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "15",
+    "active": "15-21",
+    "recovery": "17",
+    "onHit": "2",
+    "onBlock": "-2",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A300",
+     "scheme": "classic",
+     "commandText": "236 + LP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A300",
+     "scheme": "modern",
+     "commandText": "SP/236 + 弱",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:300",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-300",
+   "sourceRecordKey": "arjun:web:300",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A301",
+   "slug": "txt-arjun-arjun-web-301",
+   "name": "中 大義の巨腕",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "20",
+    "active": "20-26",
+    "recovery": "17",
+    "onHit": "2",
+    "onBlock": "-2",
+    "damage": "900"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A301",
+     "scheme": "classic",
+     "commandText": "236 + MP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A301",
+     "scheme": "modern",
+     "commandText": "236 + 中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:301",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-301",
+   "sourceRecordKey": "arjun:web:301",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A302",
+   "slug": "txt-arjun-arjun-web-302",
+   "name": "強 大義の巨腕",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "28",
+    "active": "28-33",
+    "recovery": "20",
+    "onHit": "D",
+    "onBlock": "2",
+    "damage": "1000"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A302",
+     "scheme": "classic",
+     "commandText": "236 + HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A302",
+     "scheme": "modern",
+     "commandText": "236 + 強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:302",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-302",
+   "sourceRecordKey": "arjun:web:302",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A303",
+   "slug": "txt-arjun-arjun-web-303",
+   "name": "追撃",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "20",
+    "active": "20-27",
+    "recovery": "19",
+    "onHit": "D",
+    "onBlock": "1",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A303",
+     "scheme": "classic",
+     "commandText": "6 + LP | MP | HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "大義の巨腕中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A303",
+     "scheme": "modern",
+     "commandText": "6 + 攻撃",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "大義の巨腕中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:303",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-303",
+   "sourceRecordKey": "arjun:web:303",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A304",
+   "slug": "txt-arjun-arjun-web-304",
+   "name": "OD 大義の巨腕",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "23",
+    "active": "23-28",
+    "recovery": "20",
+    "onHit": "D",
+    "onBlock": "2",
+    "damage": "1000"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A304",
+     "scheme": "classic",
+     "commandText": "236 + LPMPHP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A304",
+     "scheme": "modern",
+     "commandText": "AUTO + SP/236 + 攻撃二つ",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:304",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-304",
+   "sourceRecordKey": "arjun:web:304",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A305",
+   "slug": "txt-arjun-arjun-web-305",
+   "name": "OD 追撃",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "20",
+    "active": "20-27",
+    "recovery": "19",
+    "onHit": "D",
+    "onBlock": "1",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A305",
+     "scheme": "classic",
+     "commandText": "6 + LP | MP | HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "OD大義の巨腕中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A305",
+     "scheme": "modern",
+     "commandText": "6 + 攻撃",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "OD大義の巨腕中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:305",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-305",
+   "sourceRecordKey": "arjun:web:305",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A306",
+   "slug": "txt-arjun-arjun-web-306",
+   "name": "弱 厳酷な岩肩",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "19",
+    "active": "19-34",
+    "recovery": "22",
+    "onHit": "D",
+    "onBlock": "-4",
+    "damage": "1000"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A306",
+     "scheme": "classic",
+     "commandText": "623 + LP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A306",
+     "scheme": "modern",
+     "commandText": "623 + 弱",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:306",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-306",
+   "sourceRecordKey": "arjun:web:306",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A307",
+   "slug": "txt-arjun-arjun-web-307",
+   "name": "中 厳酷な岩肩",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "23",
+    "active": "23-41",
+    "recovery": "19",
+    "onHit": "D",
+    "onBlock": "-4",
+    "damage": "1100"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A307",
+     "scheme": "classic",
+     "commandText": "623 + MP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A307",
+     "scheme": "modern",
+     "commandText": "6+SP/623 + 中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:307",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-307",
+   "sourceRecordKey": "arjun:web:307",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A308",
+   "slug": "txt-arjun-arjun-web-308",
+   "name": "強 厳酷な岩肩",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "28",
+    "active": "28-48",
+    "recovery": "27",
+    "onHit": "D",
+    "onBlock": "1",
+    "damage": "1200"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A308",
+     "scheme": "classic",
+     "commandText": "623 + HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A308",
+     "scheme": "modern",
+     "commandText": "623 + 強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:308",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-308",
+   "sourceRecordKey": "arjun:web:308",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A309",
+   "slug": "txt-arjun-arjun-web-309",
+   "name": "過剰な正義",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "11",
+    "active": "11-26",
+    "recovery": "27",
+    "onHit": "D",
+    "onBlock": "-7",
+    "damage": "1600"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A309",
+     "scheme": "classic",
+     "commandText": "（厳酷な岩肩で岩に触れると自動派生）",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A309",
+     "scheme": "modern",
+     "commandText": "（厳酷な岩肩で岩に触れると自動派生）",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:309",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-309",
+   "sourceRecordKey": "arjun:web:309",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A310",
+   "slug": "txt-arjun-arjun-web-310",
+   "name": "OD 厳酷な岩肩",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "22",
+    "active": "22-42",
+    "recovery": "27",
+    "onHit": "D",
+    "onBlock": "1",
+    "damage": "1200"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A310",
+     "scheme": "classic",
+     "commandText": "623 + LPMPHP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A310",
+     "scheme": "modern",
+     "commandText": "6 + AUTO + SP/623 + 攻撃二つ",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:310",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-310",
+   "sourceRecordKey": "arjun:web:310",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A311",
+   "slug": "txt-arjun-arjun-web-311",
+   "name": "OD 過剰な正義",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "11",
+    "active": "11-26",
+    "recovery": "27",
+    "onHit": "D",
+    "onBlock": "-7",
+    "damage": "1600"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A311",
+     "scheme": "classic",
+     "commandText": "（厳酷な岩肩で岩に触れると自動派生）",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A311",
+     "scheme": "modern",
+     "commandText": "（厳酷な岩肩で岩に触れると自動派生）",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:311",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-311",
+   "sourceRecordKey": "arjun:web:311",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A312",
+   "slug": "txt-arjun-arjun-web-312",
+   "name": "息吹の円筒",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "17",
+    "active": null,
+    "recovery": null,
+    "onHit": "D",
+    "onBlock": "-6",
+    "damage": "600"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "PENDING",
+    "recovery": "PENDING",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A312",
+     "scheme": "classic",
+     "commandText": "236 + LK | MK | HK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A312",
+     "scheme": "modern",
+     "commandText": "4 + SP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:312",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-312",
+   "sourceRecordKey": "arjun:web:312",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A313",
+   "slug": "txt-arjun-arjun-web-313",
+   "name": "弱 息吹の震撼",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "15",
+    "active": "15-24",
+    "recovery": "18",
+    "onHit": "D",
+    "onBlock": "-7",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A313",
+     "scheme": "classic",
+     "commandText": "6 + LP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "息吹の円筒中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A313",
+     "scheme": "modern",
+     "commandText": "6 + SP/6 + 弱",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "息吹の円筒中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:313",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-313",
+   "sourceRecordKey": "arjun:web:313",
+   "officialSupplementaryRows": [
+    {
+     "sourceRecordKey": "arjun:web:316",
+     "name": "息吹の震撼(飛び道具)",
+     "damage": "700"
+    }
+   ]
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A314",
+   "slug": "txt-arjun-arjun-web-314",
+   "name": "中 息吹の震撼",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "15",
+    "active": "15-24",
+    "recovery": "18",
+    "onHit": "D",
+    "onBlock": "-7",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A314",
+     "scheme": "classic",
+     "commandText": "6 + MP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "息吹の円筒中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A314",
+     "scheme": "modern",
+     "commandText": "6 + 中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "息吹の円筒中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:314",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-314",
+   "sourceRecordKey": "arjun:web:314",
+   "officialSupplementaryRows": [
+    {
+     "sourceRecordKey": "arjun:web:316",
+     "name": "息吹の震撼(飛び道具)",
+     "damage": "700"
+    }
+   ]
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A315",
+   "slug": "txt-arjun-arjun-web-315",
+   "name": "強 息吹の震撼",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "15",
+    "active": "15-24",
+    "recovery": "18",
+    "onHit": "D",
+    "onBlock": "-7",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A315",
+     "scheme": "classic",
+     "commandText": "6 + HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "息吹の円筒中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A315",
+     "scheme": "modern",
+     "commandText": "6 + 強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "息吹の円筒中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:315",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-315",
+   "sourceRecordKey": "arjun:web:315",
+   "officialSupplementaryRows": [
+    {
+     "sourceRecordKey": "arjun:web:316",
+     "name": "息吹の震撼(飛び道具)",
+     "damage": "700"
+    }
+   ]
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A317",
+   "slug": "txt-arjun-arjun-web-317",
+   "name": "OD 息吹の円筒",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "17",
+    "active": null,
+    "recovery": null,
+    "onHit": "D",
+    "onBlock": "1",
+    "damage": "600"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "PENDING",
+    "recovery": "PENDING",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A317",
+     "scheme": "classic",
+     "commandText": "236 + LKMKHK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A317",
+     "scheme": "modern",
+     "commandText": "4 + AUTO + SP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:317",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-317",
+   "sourceRecordKey": "arjun:web:317",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A318",
+   "slug": "txt-arjun-arjun-web-318",
+   "name": "OD 弱 息吹の震撼",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "15",
+    "active": "15-24",
+    "recovery": "18",
+    "onHit": "D",
+    "onBlock": "-7",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A318",
+     "scheme": "classic",
+     "commandText": "6 + LP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "OD息吹の円筒中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A318",
+     "scheme": "modern",
+     "commandText": "6 + SP/6 + 弱",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "OD息吹の円筒中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:318",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-318",
+   "sourceRecordKey": "arjun:web:318",
+   "officialSupplementaryRows": [
+    {
+     "sourceRecordKey": "arjun:web:321",
+     "name": "OD 息吹の震撼(飛び道具)",
+     "damage": "1000"
+    }
+   ]
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A319",
+   "slug": "txt-arjun-arjun-web-319",
+   "name": "OD 中 息吹の震撼",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "15",
+    "active": "15-24",
+    "recovery": "18",
+    "onHit": "D",
+    "onBlock": "-7",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A319",
+     "scheme": "classic",
+     "commandText": "6 + MP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "OD息吹の円筒中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A319",
+     "scheme": "modern",
+     "commandText": "6 + 中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "OD息吹の円筒中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:319",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-319",
+   "sourceRecordKey": "arjun:web:319",
+   "officialSupplementaryRows": [
+    {
+     "sourceRecordKey": "arjun:web:321",
+     "name": "OD 息吹の震撼(飛び道具)",
+     "damage": "1000"
+    }
+   ]
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A320",
+   "slug": "txt-arjun-arjun-web-320",
+   "name": "OD 強 息吹の震撼",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "15",
+    "active": "15-24",
+    "recovery": "18",
+    "onHit": "D",
+    "onBlock": "-7",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A320",
+     "scheme": "classic",
+     "commandText": "6 + HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "OD息吹の円筒中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A320",
+     "scheme": "modern",
+     "commandText": "6 + 強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "OD息吹の円筒中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:320",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-320",
+   "sourceRecordKey": "arjun:web:320",
+   "officialSupplementaryRows": [
+    {
+     "sourceRecordKey": "arjun:web:321",
+     "name": "OD 息吹の震撼(飛び道具)",
+     "damage": "1000"
+    }
+   ]
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A322",
+   "slug": "txt-arjun-arjun-web-322",
+   "name": "弱 神気の巨巌",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "25",
+    "active": "25-34",
+    "recovery": "21",
+    "onHit": "D",
+    "onBlock": "-6",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A322",
+     "scheme": "classic",
+     "commandText": "214 + LK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A322",
+     "scheme": "modern",
+     "commandText": "1+SP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:322",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-322",
+   "sourceRecordKey": "arjun:web:322",
+   "officialSupplementaryRows": [
+    {
+     "sourceRecordKey": "arjun:web:325",
+     "name": "神気の巨巌(飛び道具)",
+     "damage": "800"
+    }
+   ]
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A323",
+   "slug": "txt-arjun-arjun-web-323",
+   "name": "中 神気の巨巌",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "25",
+    "active": "25-34",
+    "recovery": "21",
+    "onHit": "D",
+    "onBlock": "-6",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A323",
+     "scheme": "classic",
+     "commandText": "214 + MK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A323",
+     "scheme": "modern",
+     "commandText": "2+SP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:323",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-323",
+   "sourceRecordKey": "arjun:web:323",
+   "officialSupplementaryRows": [
+    {
+     "sourceRecordKey": "arjun:web:325",
+     "name": "神気の巨巌(飛び道具)",
+     "damage": "800"
+    }
+   ]
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A324",
+   "slug": "txt-arjun-arjun-web-324",
+   "name": "強 神気の巨巌",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "25",
+    "active": "25-34",
+    "recovery": "21",
+    "onHit": "D",
+    "onBlock": "-6",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A324",
+     "scheme": "classic",
+     "commandText": "214 + HK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A324",
+     "scheme": "modern",
+     "commandText": "3+SP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:324",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-324",
+   "sourceRecordKey": "arjun:web:324",
+   "officialSupplementaryRows": [
+    {
+     "sourceRecordKey": "arjun:web:325",
+     "name": "神気の巨巌(飛び道具)",
+     "damage": "800"
+    }
+   ]
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A326",
+   "slug": "txt-arjun-arjun-web-326",
+   "name": "OD 弱 神気の巨巌",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "20",
+    "active": "20-29",
+    "recovery": "21",
+    "onHit": "D",
+    "onBlock": "-6",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A326",
+     "scheme": "classic",
+     "commandText": "214 + LKMK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A326",
+     "scheme": "modern",
+     "commandText": "1 + AUTO + SP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:326",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-326",
+   "sourceRecordKey": "arjun:web:326",
+   "officialSupplementaryRows": [
+    {
+     "sourceRecordKey": "arjun:web:329",
+     "name": "OD 神気の巨巌(飛び道具)",
+     "damage": "800"
+    }
+   ]
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A327",
+   "slug": "txt-arjun-arjun-web-327",
+   "name": "OD 中 神気の巨巌",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "20",
+    "active": "20-29",
+    "recovery": "21",
+    "onHit": "D",
+    "onBlock": "-6",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A327",
+     "scheme": "classic",
+     "commandText": "214 + LKHK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A327",
+     "scheme": "modern",
+     "commandText": "2 + AUTO + SP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:327",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-327",
+   "sourceRecordKey": "arjun:web:327",
+   "officialSupplementaryRows": [
+    {
+     "sourceRecordKey": "arjun:web:329",
+     "name": "OD 神気の巨巌(飛び道具)",
+     "damage": "800"
+    }
+   ]
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A328",
+   "slug": "txt-arjun-arjun-web-328",
+   "name": "OD 強 神気の巨巌",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "20",
+    "active": "20-29",
+    "recovery": "21",
+    "onHit": "D",
+    "onBlock": "-6",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A328",
+     "scheme": "classic",
+     "commandText": "214 + MKHK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A328",
+     "scheme": "modern",
+     "commandText": "3 + AUTO + SP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:328",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-328",
+   "sourceRecordKey": "arjun:web:328",
+   "officialSupplementaryRows": [
+    {
+     "sourceRecordKey": "arjun:web:329",
+     "name": "OD 神気の巨巌(飛び道具)",
+     "damage": "800"
+    }
+   ]
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A330",
+   "slug": "txt-arjun-arjun-web-330",
+   "name": "鬼気迫る尋問",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "8",
+    "active": "8-10",
+    "recovery": "35",
+    "onHit": "D",
+    "onBlock": null,
+    "damage": "1600"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A330",
+     "scheme": "classic",
+     "commandText": "63214 +LP | MP | HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "近距離で",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A330",
+     "scheme": "modern",
+     "commandText": "63214 + 攻撃",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "近距離で",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:330",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-330",
+   "sourceRecordKey": "arjun:web:330",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A331",
+   "slug": "txt-arjun-arjun-web-331",
+   "name": "OD 鬼気迫る尋問",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "26",
+    "active": "26-28",
+    "recovery": "38",
+    "onHit": "D",
+    "onBlock": null,
+    "damage": "2200"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A331",
+     "scheme": "classic",
+     "commandText": "63214 + LPMPHP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "近距離で",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A331",
+     "scheme": "modern",
+     "commandText": "63214 + 攻撃二つ",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "近距離で",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:331",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-331",
+   "sourceRecordKey": "arjun:web:331",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A332",
+   "slug": "txt-arjun-arjun-web-332",
+   "name": "不撓の警衛",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "3",
+    "active": "3-28",
+    "recovery": "30",
+    "onHit": "D",
+    "onBlock": "-3",
+    "damage": "1500"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A332",
+     "scheme": "classic",
+     "commandText": "5252 + HK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A332",
+     "scheme": "modern",
+     "commandText": "5252 + 強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:332",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-332",
+   "sourceRecordKey": "arjun:web:332",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A333",
+   "slug": "txt-arjun-arjun-web-333",
+   "name": "倫理の崩壊",
+   "moveType": "special",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "28",
+    "active": "28-65",
+    "recovery": "23",
+    "onHit": "D",
+    "onBlock": "3",
+    "damage": "1500"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A333",
+     "scheme": "classic",
+     "commandText": "LP | MP | HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "不撓の警衛中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A333",
+     "scheme": "modern",
+     "commandText": "攻撃",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "不撓の警衛中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:333",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-333",
+   "sourceRecordKey": "arjun:web:333",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A400",
+   "slug": "txt-arjun-arjun-web-400",
+   "name": "SA1 破壊の蛮声",
+   "moveType": "super",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "8",
+    "active": "8-69",
+    "recovery": "67",
+    "onHit": "D",
+    "onBlock": "-46",
+    "damage": "2000"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A400",
+     "scheme": "classic",
+     "commandText": "236236 + LK | MK | HK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A400",
+     "scheme": "modern",
+     "commandText": "5 or 6＋強SP/236236＋弱",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:400",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-400",
+   "sourceRecordKey": "arjun:web:400",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A401",
+   "slug": "txt-arjun-arjun-web-401",
+   "name": "SA2 忘却の一槌",
+   "moveType": "super",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "9",
+    "active": "9-12",
+    "recovery": "57",
+    "onHit": "D",
+    "onBlock": "-41",
+    "damage": "3000"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A401",
+     "scheme": "classic",
+     "commandText": "214214 + LP | MP | HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A401",
+     "scheme": "modern",
+     "commandText": "4＋強SP/214214＋中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:401",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-401",
+   "sourceRecordKey": "arjun:web:401",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A402",
+   "slug": "txt-arjun-arjun-web-402",
+   "name": "SA3 秩序の鬼神",
+   "moveType": "super",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "13",
+    "active": "13-15",
+    "recovery": "58",
+    "onHit": "D",
+    "onBlock": "-41",
+    "damage": "4000"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A402",
+     "scheme": "classic",
+     "commandText": "236236 + LP | MP | HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A402",
+     "scheme": "modern",
+     "commandText": "2＋強SP/236236＋強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:402",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-402",
+   "sourceRecordKey": "arjun:web:402",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A403",
+   "slug": "txt-arjun-arjun-web-403",
+   "name": "CA 秩序の鬼神",
+   "moveType": "super",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "13",
+    "active": "13-15",
+    "recovery": "58",
+    "onHit": "D",
+    "onBlock": "-41",
+    "damage": "4500"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A403",
+     "scheme": "classic",
+     "commandText": "236236 + LP | MP | HP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "体力25%以下で",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A403",
+     "scheme": "modern",
+     "commandText": "2＋強SP/236236＋強",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "体力25%以下で",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:403",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-403",
+   "sourceRecordKey": "arjun:web:403",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A500",
+   "slug": "txt-arjun-arjun-web-500",
+   "name": "豪胆な制裁",
+   "moveType": "throw",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "5",
+    "active": "5-7",
+    "recovery": "23",
+    "onHit": "D",
+    "onBlock": null,
+    "damage": "1200"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A500",
+     "scheme": "classic",
+     "commandText": "N or 6 + LPLK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "近距離で",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A500",
+     "scheme": "modern",
+     "commandText": "N or 6 + 弱中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "近距離で",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:500",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-500",
+   "sourceRecordKey": "arjun:web:500",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A501",
+   "slug": "txt-arjun-arjun-web-501",
+   "name": "処罰の天秤",
+   "moveType": "throw",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "5",
+    "active": "5-7",
+    "recovery": "23",
+    "onHit": "D",
+    "onBlock": null,
+    "damage": "1200"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A501",
+     "scheme": "classic",
+     "commandText": "4 + LPLK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "近距離で",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A501",
+     "scheme": "modern",
+     "commandText": "4 + 弱中",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "近距離で",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:501",
+   "registrationScope": "REGISTER_CANDIDATE",
+   "proposedDbSlug": "arjun-capcom-web-501",
+   "sourceRecordKey": "arjun:web:501",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A600",
+   "slug": "txt-arjun-arjun-web-600",
+   "name": "前方ステップ",
+   "moveType": "system",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": null,
+    "active": null,
+    "recovery": null,
+    "onHit": null,
+    "onBlock": null,
+    "damage": "0"
+   },
+   "frameFieldStatus": {
+    "startup": "PENDING",
+    "active": "PENDING",
+    "recovery": "PENDING",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A600",
+     "scheme": "classic",
+     "commandText": "5656 + 6",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A600",
+     "scheme": "modern",
+     "commandText": "5656 + 6",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:600",
+   "registrationScope": "EXCLUDE_COMMON_SYSTEM",
+   "proposedDbSlug": null,
+   "sourceRecordKey": "arjun:web:600",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A601",
+   "slug": "txt-arjun-arjun-web-601",
+   "name": "後方ステップ",
+   "moveType": "system",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": null,
+    "active": null,
+    "recovery": null,
+    "onHit": null,
+    "onBlock": null,
+    "damage": "0"
+   },
+   "frameFieldStatus": {
+    "startup": "PENDING",
+    "active": "PENDING",
+    "recovery": "PENDING",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A601",
+     "scheme": "classic",
+     "commandText": "5454 + 4",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A601",
+     "scheme": "modern",
+     "commandText": "5454 + 4",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:601",
+   "registrationScope": "EXCLUDE_COMMON_SYSTEM",
+   "proposedDbSlug": null,
+   "sourceRecordKey": "arjun:web:601",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A602",
+   "slug": "txt-arjun-arjun-web-602",
+   "name": "ドライブインパクト（暴力沙汰）",
+   "moveType": "system",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "26",
+    "active": "26-27",
+    "recovery": "35",
+    "onHit": "D",
+    "onBlock": "-3",
+    "damage": "800"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A602",
+     "scheme": "classic",
+     "commandText": "HPHK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A602",
+     "scheme": "modern",
+     "commandText": "DI",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:602",
+   "registrationScope": "EXCLUDE_COMMON_SYSTEM",
+   "proposedDbSlug": null,
+   "sourceRecordKey": "arjun:web:602",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A603",
+   "slug": "txt-arjun-arjun-web-603",
+   "name": "[ガード時]ドライブリバーサル（過剰防衛）",
+   "moveType": "system",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "20",
+    "active": "20-22",
+    "recovery": "26",
+    "onHit": "D",
+    "onBlock": "-6",
+    "damage": "500"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A603",
+     "scheme": "classic",
+     "commandText": "6 + HPHK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ガード中 or ドライブパリィ成立中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A603",
+     "scheme": "modern",
+     "commandText": "6＋DI",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ガード中 or ドライブパリィ成立中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:603",
+   "registrationScope": "EXCLUDE_COMMON_SYSTEM",
+   "proposedDbSlug": null,
+   "sourceRecordKey": "arjun:web:603",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A604",
+   "slug": "txt-arjun-arjun-web-604",
+   "name": "[起き上がり時]ドライブリバーサル（過剰防衛）",
+   "moveType": "system",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "18",
+    "active": "18-20",
+    "recovery": "26",
+    "onHit": "D",
+    "onBlock": "-6",
+    "damage": "500"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onBlock": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A604",
+     "scheme": "classic",
+     "commandText": "6 ＋ HPHK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "起き上がり時に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A604",
+     "scheme": "modern",
+     "commandText": "6＋DI",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "起き上がり時に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:604",
+   "registrationScope": "EXCLUDE_COMMON_SYSTEM",
+   "proposedDbSlug": null,
+   "sourceRecordKey": "arjun:web:604",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A605",
+   "slug": "txt-arjun-arjun-web-605",
+   "name": "ドライブパリィ",
+   "moveType": "system",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "1",
+    "active": "[※2] 1-12",
+    "recovery": "33",
+    "onHit": null,
+    "onBlock": null,
+    "damage": "0"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A605",
+     "scheme": "classic",
+     "commandText": "MPMK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A605",
+     "scheme": "modern",
+     "commandText": "DP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:605",
+   "registrationScope": "EXCLUDE_COMMON_SYSTEM",
+   "proposedDbSlug": null,
+   "sourceRecordKey": "arjun:web:605",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A606",
+   "slug": "txt-arjun-arjun-web-606",
+   "name": "ジャストパリィ（打撃）",
+   "moveType": "system",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "1",
+    "active": null,
+    "recovery": "1",
+    "onHit": null,
+    "onBlock": null,
+    "damage": "0"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "PENDING",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A606",
+     "scheme": "classic",
+     "commandText": "ガード方向 ＋  MPMK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A606",
+     "scheme": "modern",
+     "commandText": "ガード方向 ＋  DP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:606",
+   "registrationScope": "EXCLUDE_COMMON_SYSTEM",
+   "proposedDbSlug": null,
+   "sourceRecordKey": "arjun:web:606",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A607",
+   "slug": "txt-arjun-arjun-web-607",
+   "name": "ジャストパリィ（飛び道具）",
+   "moveType": "system",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": "1",
+    "active": null,
+    "recovery": "10",
+    "onHit": null,
+    "onBlock": null,
+    "damage": "0"
+   },
+   "frameFieldStatus": {
+    "startup": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "active": "PENDING",
+    "recovery": "LOCAL_OFFICIAL_TXT_CANONICAL",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A607",
+     "scheme": "classic",
+     "commandText": "MPMK",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A607",
+     "scheme": "modern",
+     "commandText": "DP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": null,
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:607",
+   "registrationScope": "EXCLUDE_COMMON_SYSTEM",
+   "proposedDbSlug": null,
+   "sourceRecordKey": "arjun:web:607",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A608",
+   "slug": "txt-arjun-arjun-web-608",
+   "name": "パリィドライブラッシュ",
+   "moveType": "system",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": null,
+    "active": null,
+    "recovery": null,
+    "onHit": null,
+    "onBlock": null,
+    "damage": "0"
+   },
+   "frameFieldStatus": {
+    "startup": "PENDING",
+    "active": "PENDING",
+    "recovery": "PENDING",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A608",
+     "scheme": "classic",
+     "commandText": "5656 + MPMK + 6",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ドライブパリィ中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A608",
+     "scheme": "modern",
+     "commandText": "5656＋DP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "ドライブパリィ中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:608",
+   "registrationScope": "EXCLUDE_COMMON_SYSTEM",
+   "proposedDbSlug": null,
+   "sourceRecordKey": "arjun:web:608",
+   "officialSupplementaryRows": []
+  },
+  {
+   "id": "sf6dna-preview:arjun:arjun%3Aweb%3A609",
+   "slug": "txt-arjun-arjun-web-609",
+   "name": "キャンセルドライブラッシュ",
+   "moveType": "system",
+   "usageSummary": null,
+   "releaseFixture": false,
+   "status": "draft",
+   "frame": {
+    "verificationStatus": "candidate_only",
+    "startup": null,
+    "active": null,
+    "recovery": null,
+    "onHit": null,
+    "onBlock": null,
+    "damage": "0"
+   },
+   "frameFieldStatus": {
+    "startup": "PENDING",
+    "active": "PENDING",
+    "recovery": "PENDING",
+    "onHit": "PENDING",
+    "onBlock": "PENDING",
+    "damage": "LOCAL_OFFICIAL_TXT_CANONICAL"
+   },
+   "commands": [
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A609",
+     "scheme": "classic",
+     "commandText": "5656 + 6",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "必殺技キャンセル可能な攻撃ヒット中に",
+     "sortOrder": 0
+    },
+    {
+     "moveId": "sf6dna-preview:arjun:arjun%3Aweb%3A609",
+     "scheme": "modern",
+     "commandText": "5656 ＋ 6 or (N or 6) + DP",
+     "numericNotation": null,
+     "buttonNotation": null,
+     "conditionText": "必殺技キャンセル可能な攻撃ヒット中に",
+     "sortOrder": 1
+    }
+   ],
+   "media": null,
+   "ws5ModernInputState": "PENDING",
+   "modernInputSourceRecordKey": "arjun:web:609",
+   "registrationScope": "EXCLUDE_COMMON_SYSTEM",
+   "proposedDbSlug": null,
+   "sourceRecordKey": "arjun:web:609",
+   "officialSupplementaryRows": []
+  }
+ ],
+ "combos": [],
+ "setups": [],
+ "sequences": [],
+ "matchups": [],
+ "training": []
+}

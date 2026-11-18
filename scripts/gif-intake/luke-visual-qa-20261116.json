@@ -1,0 +1,923 @@
+{
+  "generated": "2026-11-16",
+  "scope": "静的一致36本",
+  "method": "ラベル付きコンタクトシート(技名・コマンド・フレームデータ・GIF諸元+等間隔8フレーム)を12枚作成し、Claudeが目視。一部は連続16フレームも確認。",
+  "limits": [
+    "8フレームの抜き取りであり、動作の連続的な確認ではない",
+    "実際の入力操作(コマンド)との一致は映像から証明できない",
+    "弱/中/強の同系統の強度差は静止フレームから判別できないため、該当24本は要追加確認とした",
+    "不一致(MISMATCH)は検出されなかった"
+  ],
+  "summary": {
+    "NEEDS_MORE_CHECK": 24,
+    "CONFIRMED": 12
+  },
+  "mismatches": [],
+  "entries": [
+    {
+      "file": "110-luke-calf-squash.gif",
+      "moveSlug": "luke-crouching-mk",
+      "moveId": "2666b0fc-64f1-405c-afbe-382431e1df9b",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "しゃがみ姿勢から足元への蹴りとヒット火花。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 950,
+        "frames": 19,
+        "coverageRatio": 1.97,
+        "startEndDiff": 14.44
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "117-luke-gunmetal-hammer.gif",
+      "moveSlug": "luke-jump-hp",
+      "moveId": "229b7150-2d1c-46ae-87cf-c2dfa413d588",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "ジャンプ中の攻撃動作とヒット火花。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)",
+        "P/Kの別(ジャンプ攻撃は動作が小さく判別が弱い)"
+      ],
+      "metrics": {
+        "durationMs": 950,
+        "frames": 19,
+        "coverageRatio": null,
+        "startEndDiff": 19.98
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_1-luke-standing-lp.gif",
+      "moveSlug": "luke-standing-lp",
+      "moveId": "beb7d320-94fb-4e21-93ca-7defe9570f50",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "立ち姿勢から素早い突きとヒット火花。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 750,
+        "frames": 15,
+        "coverageRatio": 2.37,
+        "startEndDiff": 10.54
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_11-luke-crouching-hp.gif",
+      "moveSlug": "luke-crouching-hp",
+      "moveId": "2efffb76-d9f8-44e2-830a-16ee127f96cc",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "しゃがみ姿勢からの突き上げとヒット火花、相手が崩れる。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 1050,
+        "frames": 21,
+        "coverageRatio": 1.8,
+        "startEndDiff": 16.36
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_13-luke-jumping-lp.gif",
+      "moveSlug": "luke-jump-lp",
+      "moveId": "00fb09ee-aba9-4dc7-8115-29b46bd67dad",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "ジャンプ中の攻撃動作から着地。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)",
+        "P/Kの別(ジャンプ攻撃は動作が小さく判別が弱い)"
+      ],
+      "metrics": {
+        "durationMs": 1300,
+        "frames": 26,
+        "coverageRatio": null,
+        "startEndDiff": 25.64
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_14-luke-jumping-lk.gif",
+      "moveSlug": "luke-jump-lk",
+      "moveId": "31807b8f-99c8-446f-a2db-5200ae2fae69",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "ジャンプ中の蹴りから着地。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)",
+        "P/Kの別(ジャンプ攻撃は動作が小さく判別が弱い)"
+      ],
+      "metrics": {
+        "durationMs": 1100,
+        "frames": 22,
+        "coverageRatio": null,
+        "startEndDiff": 25.19
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_15-luke-jumping-mp.gif",
+      "moveSlug": "luke-jump-mp",
+      "moveId": "48c184ed-390f-454f-9de8-75df3887fc13",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "ジャンプ中の攻撃動作から着地(P/Kは小さく判別が弱い)。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)",
+        "P/Kの別(ジャンプ攻撃は動作が小さく判別が弱い)"
+      ],
+      "metrics": {
+        "durationMs": 1100,
+        "frames": 22,
+        "coverageRatio": null,
+        "startEndDiff": 27.37
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_18-luke-jumping-hk-verified.gif",
+      "moveSlug": "luke-jump-hk",
+      "moveId": "5a9a9a77-2943-428c-8eb0-8729e26ed0bc",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "ジャンプ中の大きな蹴りとヒット火花。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)",
+        "P/Kの別(ジャンプ攻撃は動作が小さく判別が弱い)"
+      ],
+      "metrics": {
+        "durationMs": 1400,
+        "frames": 28,
+        "coverageRatio": null,
+        "startEndDiff": 27.26
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_19-luke-rawhide.gif",
+      "moveSlug": "luke-rawhide",
+      "moveId": "f415ffa3-f701-4586-8e02-e30596c119e9",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "前進して身を屈める構えからの打撃とヒット火花。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ],
+      "metrics": {
+        "durationMs": 1250,
+        "frames": 25,
+        "coverageRatio": 1.74,
+        "startEndDiff": 11.77
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_2-luke-standing-lk.gif",
+      "moveSlug": "luke-standing-lk",
+      "moveId": "b09359b8-9a9b-4fce-a1e6-5ed2a1bc1afe",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "立ち姿勢から低い蹴りとヒット火花。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 900,
+        "frames": 18,
+        "coverageRatio": 3,
+        "startEndDiff": 20.4
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_20-luke-suppressor.gif",
+      "moveSlug": "luke-suppressor",
+      "moveId": "4383dae4-bdac-418f-9a11-e4632eb25696",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "1歩下がる構えから強打とヒット火花。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ],
+      "metrics": {
+        "durationMs": 1300,
+        "frames": 26,
+        "coverageRatio": 2.05,
+        "startEndDiff": 13.23
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_21-luke-outlaw-kick.gif",
+      "moveSlug": "luke-outlaw-kick",
+      "moveId": "938179e9-b0e1-4b22-8adb-d61bcb84ae86",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "踏み込みの飛び蹴りとヒット火花、相手が倒れる。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ],
+      "metrics": {
+        "durationMs": 1300,
+        "frames": 26,
+        "coverageRatio": 2.17,
+        "startEndDiff": 15.07
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_30-luke-light-sand-blast.gif",
+      "moveSlug": "luke-sand-blast-l",
+      "moveId": "e5c37a22-9ba1-409b-bc2a-52b4839c8e6f",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "波動系の炎の弾を発射し相手に命中、相手が倒れる。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 1350,
+        "frames": 27,
+        "coverageRatio": 1.25,
+        "startEndDiff": 16.74
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_31-luke-medium-sand-blast.gif",
+      "moveSlug": "luke-sand-blast-m",
+      "moveId": "e881de87-5e45-4e0f-bda5-668c28d2b76a",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "波動系の炎の弾を発射し相手に命中、相手が倒れる。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 1350,
+        "frames": 27,
+        "coverageRatio": 1.16,
+        "startEndDiff": 19.84
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_32-luke-heavy-sand-blast.gif",
+      "moveSlug": "luke-sand-blast-h",
+      "moveId": "fb68e4ad-4c0a-4bc1-bd8c-c79244c78d78",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "波動系の炎の弾を発射し相手に命中、相手が倒れる。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 1400,
+        "frames": 28,
+        "coverageRatio": 1.11,
+        "startEndDiff": 18.12
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_33-luke-od-sand-blast.gif",
+      "moveSlug": "luke-sand-blast-od",
+      "moveId": "0466a4f1-0e3c-4352-8f61-0f1874663e99",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "金色のOD演出を伴う炎の弾が命中し相手が倒れる(OD演出が通常版と明確に違う)。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ],
+      "metrics": {
+        "durationMs": 1800,
+        "frames": 36,
+        "coverageRatio": null,
+        "startEndDiff": 25.19
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_34-luke-fatal-shot.gif",
+      "moveSlug": "luke-fatal-shot",
+      "moveId": "423f6d80-072c-4dd1-863d-5b8e0061a37d",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": true,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "ODサンドブラスト(金色演出)の後に大きな爆発の追撃が出て相手が大きく吹き飛ぶ。派生条件の見た目と一致。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ],
+      "metrics": {
+        "durationMs": 2200,
+        "frames": 44,
+        "coverageRatio": null,
+        "startEndDiff": 25.28
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_35-luke-light-flash-knuckle.gif",
+      "moveSlug": "luke-flash-knuckle-l",
+      "moveId": "53070580-449c-4fcb-b6f5-bb97de387ba1",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "踏み込みの突進パンチが命中し相手が浮く。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 1100,
+        "frames": 22,
+        "coverageRatio": 1.57,
+        "startEndDiff": 17.84
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_38-luke-medium-flash-knuckle.gif",
+      "moveSlug": "luke-flash-knuckle-m",
+      "moveId": "8668e8a5-945a-437c-a833-f265d837d0bc",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "踏み込みの突進パンチが命中し相手が倒れる。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 1450,
+        "frames": 29,
+        "coverageRatio": 1.81,
+        "startEndDiff": 22.61
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_4-luke-standing-mk.gif",
+      "moveSlug": "luke-standing-mk",
+      "moveId": "82fb24e6-a9e4-4f76-9686-450d0ff43143",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "立ち姿勢から中段の蹴りとヒット火花。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 950,
+        "frames": 19,
+        "coverageRatio": 2.19,
+        "startEndDiff": 15.1
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_41-luke-heavy-flash-knuckle.gif",
+      "moveSlug": "luke-flash-knuckle-h",
+      "moveId": "4b6fa7c0-c85c-4d4f-aca4-b54b29599818",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "大きく踏み込む突進パンチが命中し相手が倒れる。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 1600,
+        "frames": 32,
+        "coverageRatio": 2.13,
+        "startEndDiff": 30.94
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_46-luke-ddt.gif",
+      "moveSlug": "luke-ddt",
+      "moveId": "6afa6076-dff0-4ca5-b00d-acbf1a6f74e0",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": true,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "ODフラッシュナックル(金色演出)から掴み、DDTで相手を地面に叩きつける。派生条件の見た目と一致。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ],
+      "metrics": {
+        "durationMs": 3350,
+        "frames": 67,
+        "coverageRatio": null,
+        "startEndDiff": 17.74
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_47-luke-aerial-flash-knuckle.gif",
+      "moveSlug": "luke-aerial-flash-knuckle",
+      "moveId": "5d28a0ed-7abe-4c1b-8cc4-bcb208d55626",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "ジャンプ中に突進パンチを出し命中、着地まで収録。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ],
+      "metrics": {
+        "durationMs": 2150,
+        "frames": 43,
+        "coverageRatio": 4.16,
+        "startEndDiff": 29.33
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_5-luke-standing-hp-verified.gif",
+      "moveSlug": "luke-standing-hp",
+      "moveId": "97651c5b-50de-45b3-851d-4e6157c22192",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "立ち姿勢から大きめの突きとヒット火花、相手がよろめく。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 1200,
+        "frames": 24,
+        "coverageRatio": 2.06,
+        "startEndDiff": 14.77
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_6-luke-standing-hk.gif",
+      "moveSlug": "luke-standing-hk",
+      "moveId": "0dd61560-79e9-4220-89a7-3044bc01b630",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "立ち姿勢から高い蹴りとヒット火花。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 1100,
+        "frames": 22,
+        "coverageRatio": 2.06,
+        "startEndDiff": 17.75
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_7-luke-crouching-lp.gif",
+      "moveSlug": "luke-crouching-lp",
+      "moveId": "40d7e3a8-5e6c-49b1-9e88-3cdb830f8ce0",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "しゃがみ姿勢で短い突きとヒット火花。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 800,
+        "frames": 16,
+        "coverageRatio": 3.2,
+        "startEndDiff": 13.23
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_8-luke-crouching-lk.gif",
+      "moveSlug": "luke-crouching-lk",
+      "moveId": "3ead79b6-43a0-4376-8ccb-04e068be8df7",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "しゃがみ姿勢から足元への蹴りとヒット火花。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 850,
+        "frames": 17,
+        "coverageRatio": 2.83,
+        "startEndDiff": 11.4
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "22_9-luke-crouching-mp.gif",
+      "moveSlug": "luke-crouching-mp",
+      "moveId": "d21b0a0c-4d1a-4ccf-9a0f-585246d91395",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "しゃがみ姿勢の突きとヒット火花。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 1000,
+        "frames": 20,
+        "coverageRatio": 2.86,
+        "startEndDiff": 13.88
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "luke-avenger.gif",
+      "moveSlug": "luke-avenger",
+      "moveId": "29ba87ce-14a6-40b2-84aa-936228092b66",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "身を沈めて相手へ突進し、組み合った構えで終わる(派生技の分岐点)。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ],
+      "metrics": {
+        "durationMs": 1450,
+        "frames": 29,
+        "coverageRatio": 1.93,
+        "startEndDiff": 27.64
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "luke-heavy-rising-uppercut.gif",
+      "moveSlug": "luke-rising-uppercut-h",
+      "moveId": "c647ddae-2f4f-440d-ab84-8c44b5ba9188",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "昇りアッパーが命中し相手が高く浮いて倒れる。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 2000,
+        "frames": 40,
+        "coverageRatio": 2.79,
+        "startEndDiff": 24.73
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "luke-impaler.gif",
+      "moveSlug": "luke-impaler",
+      "moveId": "b2aaf0e6-82b4-49eb-8690-96450cfb7d1e",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": true,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "アベンジャーの突進から派生して回転蹴りが命中、相手が吹き飛ぶ。派生条件の見た目と一致。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ],
+      "metrics": {
+        "durationMs": 1600,
+        "frames": 32,
+        "coverageRatio": 2.74,
+        "startEndDiff": 27.6
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "luke-light-rising-uppercut.gif",
+      "moveSlug": "luke-rising-uppercut-l",
+      "moveId": "ee3a7178-324f-4238-9e0d-b3735dfc9beb",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "昇りアッパーが命中し相手が浮いて倒れる。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 1800,
+        "frames": 36,
+        "coverageRatio": 3,
+        "startEndDiff": 24.44
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "luke-medium-rising-uppercut.gif",
+      "moveSlug": "luke-rising-uppercut-m",
+      "moveId": "249ae616-7fd2-422e-80a3-65bb64b80a17",
+      "result": "NEEDS_MORE_CHECK",
+      "localConnectionCandidate": false,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": false
+      },
+      "observation": "昇りアッパーが命中し相手が浮いて倒れる。",
+      "unconfirmed": [
+        "弱/中/強の取り違えがないこと(8フレームの目視では同系統の強度差を判別できない)"
+      ],
+      "metrics": {
+        "durationMs": 1800,
+        "frames": 36,
+        "coverageRatio": 2.77,
+        "startEndDiff": 25.7
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "luke-no-chaser.gif",
+      "moveSlug": "luke-no-chaser",
+      "moveId": "c9027806-a085-4461-a802-592e907e9a46",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": true,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "アベンジャーの突進から派生して大きな爆発の一撃が命中、相手が吹き飛ぶ。派生条件の見た目と一致。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ],
+      "metrics": {
+        "durationMs": 1650,
+        "frames": 33,
+        "coverageRatio": 2.68,
+        "startEndDiff": 31.97
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "luke-od-rising-uppercut.gif",
+      "moveSlug": "luke-rising-uppercut-od",
+      "moveId": "3176f9a4-9586-49cc-9dd6-8a444e2cd1ae",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": null,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "金色のOD演出を伴う多段の昇りアッパーが命中(OD演出が通常版と明確に違う)。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ],
+      "metrics": {
+        "durationMs": 2150,
+        "frames": 43,
+        "coverageRatio": 2.58,
+        "startEndDiff": 29.09
+      },
+      "approval": "NOT_APPROVED"
+    },
+    {
+      "file": "luke-slam-dunk.gif",
+      "moveSlug": "luke-slam-dunk",
+      "moveId": "4743c57a-35e7-404f-82e2-79a0854b12f6",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": true,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "ODライジングアッパー(金色演出)から派生し、炎をまとった叩きつけで相手を落とす。派生条件の見た目と一致。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ],
+      "metrics": {
+        "durationMs": 2100,
+        "frames": 42,
+        "coverageRatio": 3.94,
+        "startEndDiff": 25.57
+      },
+      "approval": "NOT_APPROVED"
+    }
+  ]
+}

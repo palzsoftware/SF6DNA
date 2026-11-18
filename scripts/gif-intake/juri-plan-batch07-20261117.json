@@ -1,0 +1,47 @@
+{
+ "character": "juri",
+ "total": 3,
+ "summary": {
+  "HOLD": 2,
+  "CONNECT_READY": 1
+ },
+ "holdReasons": {
+  "NO_MOVE_ID": 2
+ },
+ "rows": [
+  {
+   "file": "juri_044011_84.75_86.75_ground_throw_two_hit_HOLD.gif",
+   "sha256": "47807989bcd3846a1d0c3e0ed08e028802b280fd7ed4a3819f1a7d486a685945",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "juri_044011_90.15_92.60_ground_throw_three_hit_HOLD.gif",
+   "sha256": "34fd3842d8bfe81852da4bde7dde9b36b09759d4a4192fcce70a0e29ef5a08ef",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "juri_044011_100.40_102.40_air_throw_HOLD.gif",
+   "sha256": "02229a9f6aa493ae012def2fb847c8330f211b0063907ea8dadf7608a9bbabfb",
+   "moveId": "f1f7bdc0-5abb-4dcd-9a18-6ed7ebcacabd",
+   "moveSlug": "juri-air-throw",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  }
+ ]
+}

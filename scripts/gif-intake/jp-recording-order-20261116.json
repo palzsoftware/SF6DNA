@@ -1,0 +1,400 @@
+{
+ "generated": "2026-11-16",
+ "source": "ユーザー本人の提供情報(録画順序と撮影済み動作)。撮影順序は『候補を絞る根拠』であり、技ID・公開承認の確定には使わない",
+ "sourceVideoAccess": "JPの元動画はDriveコネクタの10MB制限と取得経路がなく未取得。区間ごとの内容・GIFとの重複はバイト/映像では比較できていない",
+ "gifProductionThisRound": 0,
+ "frameOverlapSource": "scripts/gif-intake/jp-frame-overlap-20261116.json",
+ "segments": [
+  {
+   "seq": 1,
+   "label": "弱設置",
+   "candidates": [
+    {
+     "slug": "jp-departure-l",
+     "moveId": "f0766896-f8e9-45eb-a769-0762d98a2714"
+    }
+   ],
+   "official": {
+    "officialRecord": "310",
+    "technicalName": "(214LP_set)",
+    "officialCommand": "214 + LP"
+   },
+   "existingGifs": [
+    "9_37-jp-light-departure.gif"
+   ],
+   "overlap": "EXISTING_GIF_CANDIDATE_UNVERIFIED",
+   "production": "NOT_NEEDED_IF_CONFIRMED",
+   "notes": [
+    "公式技術名 214LP_set(設置)と一致する語彙"
+   ],
+   "status": "ORDER_EVIDENCE_ONLY",
+   "moveIdConfirmedByOrder": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "seq": 2,
+   "label": "中設置",
+   "candidates": [
+    {
+     "slug": "jp-departure-m",
+     "moveId": "732536be-f8e8-4701-9871-991075ed5c8a"
+    }
+   ],
+   "official": {
+    "officialRecord": "311",
+    "technicalName": "(214MP_set)",
+    "officialCommand": "214 + MP"
+   },
+   "existingGifs": [
+    "9_38-jp-medium-departure.gif"
+   ],
+   "overlap": "EXISTING_GIF_CANDIDATE_UNVERIFIED",
+   "production": "NOT_NEEDED_IF_CONFIRMED",
+   "notes": [],
+   "status": "ORDER_EVIDENCE_ONLY",
+   "moveIdConfirmedByOrder": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "seq": 3,
+   "label": "強設置",
+   "candidates": [
+    {
+     "slug": "jp-departure-h",
+     "moveId": "50c13c49-015c-423a-880e-9c4663ad34d9"
+    }
+   ],
+   "official": {
+    "officialRecord": "312",
+    "technicalName": "(214HP_set)",
+    "officialCommand": "214 + HP"
+   },
+   "existingGifs": [
+    "9_39-jp-heavy-departure.gif"
+   ],
+   "overlap": "EXISTING_GIF_CANDIDATE_UNVERIFIED",
+   "production": "NOT_NEEDED_IF_CONFIRMED",
+   "notes": [],
+   "status": "ORDER_EVIDENCE_ONLY",
+   "moveIdConfirmedByOrder": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "seq": 4,
+   "label": "OD設置",
+   "candidates": [
+    {
+     "slug": "jp-departure-od-l",
+     "moveId": "9ec80073-a3d7-4d24-9437-8a21dc112c68"
+    },
+    {
+     "slug": "jp-departure-od-m",
+     "moveId": "40e948eb-d634-4dc8-8b3a-43aef82df522"
+    },
+    {
+     "slug": "jp-departure-od-h",
+     "moveId": "c9f1220a-5353-4da4-803e-02b71563cf85"
+    }
+   ],
+   "official": [
+    {
+     "officialRecord": "313",
+     "technicalName": "(EX_214LPMP)",
+     "officialCommand": "214 + LPMP"
+    },
+    {
+     "officialRecord": "314",
+     "technicalName": "(EX_214LPHP)",
+     "officialCommand": "214 + LPHP"
+    },
+    {
+     "officialRecord": "315",
+     "technicalName": "(EX_214MPHP)",
+     "officialCommand": "214 + MPHP"
+    }
+   ],
+   "existingGifs": [
+    "jp-od-departure-lp-mp.gif",
+    "jp-od-departure-lp-hp.gif",
+    "jp-od-departure-mp-hp.gif"
+   ],
+   "overlap": "COUNT_MISMATCH_1_SEGMENT_VS_3_GIFS",
+   "production": "HOLD_UNTIL_CLARIFIED",
+   "notes": [
+    "録画順序のOD設置は1区間だが、公式・公開用データのOD ヴィーハトは3系統(弱+中/弱+強/中+強)で、既存GIFも3本",
+    "1区間のOD設置がどのボタン対か、または3本が別の録画区間由来かは不明(推測しない)"
+   ],
+   "frameEvidence": {
+    "betweenOdGifs": {
+     "jp-od-departure-lp-mp.gif vs jp-od-departure-mp-hp.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "jp-od-departure-lp-hp.gif vs jp-od-departure-lp-mp.gif": {
+      "fractionOfAFramesFoundInB": 0.037,
+      "longestMatchedRun": 1
+     },
+     "jp-od-departure-lp-hp.gif vs jp-od-departure-mp-hp.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     }
+    },
+    "interpretation": "3本は互いにほぼフレームを共有しない(重複は静止姿勢程度)。同一区間の重複切り出しではない。ただし『別撮影』か『1録画内の連続した別区間』かはフレームだけでは判別できない"
+   },
+   "status": "ORDER_EVIDENCE_ONLY",
+   "moveIdConfirmedByOrder": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "seq": 5,
+   "label": "弱ワープ",
+   "candidates": [
+    {
+     "slug": "jp-departure-window",
+     "moveId": "6fbfed6b-7805-4277-b216-60503d4cee88"
+    }
+   ],
+   "official": {
+    "officialRecord": "316",
+    "technicalName": "(214LP_warp)",
+    "officialCommand": "（ヴィーハト設置中に）214 + LPorMP"
+   },
+   "existingGifs": [
+    "9_43-jp-departure-window.gif"
+   ],
+   "overlap": "SHARED_GIF_FOR_SEGMENTS_5_6",
+   "production": "LIKELY_MISSING_UNCONFIRMED",
+   "notes": [
+    "公式技術名 214LP_warp(ワープ)と一致する語彙。公式は弱P・中Pを1レコード(LPorMP)で扱い、公開用データも1技ID",
+    "既存GIF 9_43 は1本のみで、弱・中どちらの録画か不明(推測しない)"
+   ],
+   "frameEvidence": {
+    "9_43_vs_others": {
+     "9_37-jp-light-departure.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "9_38-jp-medium-departure.gif": {
+      "fractionOfAFramesFoundInB": 0.464,
+      "longestMatchedRun": 6
+     },
+     "9_39-jp-heavy-departure.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "jp-od-departure-lp-mp.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "jp-od-departure-lp-hp.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "jp-od-departure-mp-hp.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "9_44-jp-departure-shadow.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     }
+    },
+    "interpretation": "9_43の序盤は中設置(9_38)と同じ動作のフレームを含み、弱設置・強設置・OD設置のGIFとは一致しない。9_43は中ヴィーハト設置の動作を含むと見られる(同一録画かは判別できない)"
+   },
+   "frameSupport": "NOT_SUPPORTED_BY_FRAME_EVIDENCE",
+   "status": "ORDER_EVIDENCE_ONLY",
+   "moveIdConfirmedByOrder": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "seq": 6,
+   "label": "中ワープ",
+   "candidates": [
+    {
+     "slug": "jp-departure-window",
+     "moveId": "6fbfed6b-7805-4277-b216-60503d4cee88"
+    }
+   ],
+   "official": {
+    "officialRecord": "316",
+    "technicalName": "(214LP_warp)",
+    "officialCommand": "（ヴィーハト設置中に）214 + LPorMP"
+   },
+   "existingGifs": [
+    "9_43-jp-departure-window.gif"
+   ],
+   "overlap": "SHARED_GIF_FOR_SEGMENTS_5_6",
+   "production": "NOT_NEEDED_IF_CONFIRMED",
+   "notes": [
+    "弱ワープと同じ技ID候補。技IDは1つなので、強度別の別GIFにする場合は技データ側の判断が必要(今回は変更しない)"
+   ],
+   "frameEvidence": {
+    "9_43_vs_others": {
+     "9_37-jp-light-departure.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "9_38-jp-medium-departure.gif": {
+      "fractionOfAFramesFoundInB": 0.464,
+      "longestMatchedRun": 6
+     },
+     "9_39-jp-heavy-departure.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "jp-od-departure-lp-mp.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "jp-od-departure-lp-hp.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "jp-od-departure-mp-hp.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "9_44-jp-departure-shadow.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     }
+    },
+    "interpretation": "9_43の序盤は中設置(9_38)と同じ動作のフレームを含み、弱設置・強設置・OD設置のGIFとは一致しない。9_43は中ヴィーハト設置の動作を含むと見られる(同一録画かは判別できない)"
+   },
+   "frameSupport": "SUPPORTED_BY_FRAME_EVIDENCE",
+   "status": "ORDER_EVIDENCE_ONLY",
+   "moveIdConfirmedByOrder": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "seq": 7,
+   "label": "強起動",
+   "candidates": [
+    {
+     "slug": "jp-departure-shadow",
+     "moveId": "a6b9d663-b9b3-494b-8d43-7aed196be8f4"
+    }
+   ],
+   "official": {
+    "officialRecord": "317",
+    "technicalName": "(214HP_bomb)",
+    "officialCommand": "（ヴィーハト設置中に）214 + HP"
+   },
+   "existingGifs": [
+    "9_44-jp-departure-shadow.gif"
+   ],
+   "overlap": "EXISTING_GIF_CANDIDATE_UNVERIFIED",
+   "production": "NOT_NEEDED_IF_CONFIRMED",
+   "notes": [
+    "公式技術名 214HP_bomb(起爆)。ユーザーの『起動』は公式の技術名上は『起爆』に当たる可能性があるが、同一と断定しない"
+   ],
+   "frameEvidence": {
+    "9_44_vs_others": {
+     "9_37-jp-light-departure.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "9_38-jp-medium-departure.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "9_39-jp-heavy-departure.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "jp-od-departure-lp-mp.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "jp-od-departure-lp-hp.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "jp-od-departure-mp-hp.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     },
+     "9_43-jp-departure-window.gif": {
+      "fractionOfAFramesFoundInB": 0.0,
+      "longestMatchedRun": 0
+     }
+    },
+    "interpretation": "9_44は既存の設置GIF・OD GIF・9_43のいずれともフレームを共有しない。設置から起爆までの由来は不明"
+   },
+   "status": "ORDER_EVIDENCE_ONLY",
+   "moveIdConfirmedByOrder": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "seq": 8,
+   "label": "OD起動",
+   "candidates": [],
+   "official": null,
+   "existingGifs": [],
+   "overlap": "NO_GIF_NO_MOVE_ID",
+   "production": "HOLD_NO_MOVE_ID",
+   "notes": [
+    "公式一覧・公開用データに『OD版のヴィーハト・チェーニ(起爆)』に当たる技は無い(317はHPのみ)。技IDを作らない"
+   ],
+   "status": "ORDER_EVIDENCE_ONLY",
+   "moveIdConfirmedByOrder": false,
+   "approval": "NOT_APPROVED"
+  }
+ ],
+ "cancelSegments": [
+  {
+   "seq": null,
+   "label": "通常技からのキャンセルワープ",
+   "candidates": [],
+   "official": null,
+   "existingGifs": [],
+   "overlap": "NO_GIF_NO_MOVE_ID",
+   "production": "HOLD_NO_MOVE_ID",
+   "notes": [
+    "単独のワープ(seq 5/6)とは別物として扱う",
+    "公式の通常技注記は『ヴィーハト・チェーニのみキャンセル可能』で、通常技→ワープのキャンセルは公式一覧から確認できない(撮影内容と矛盾する可能性。未確認)",
+    "どの通常技からのキャンセルかの情報なし"
+   ],
+   "videoClassification": {
+    "classes": [
+     "通常技からの連係として撮影された映像",
+     "技のキャンセルが成立している映像",
+     "通常技の硬直終了後に行動している映像",
+     "元動画未取得のため判断できない映像"
+    ],
+    "assigned": "元動画未取得のため判断できない映像",
+    "reason": "元動画(Drive上の旧動画)を取得できておらず、使用した通常技・キャンセル成立の有無を映像で確認できない。連続動作=キャンセル成立とは扱わない"
+   },
+   "status": "ORDER_EVIDENCE_ONLY",
+   "moveIdConfirmedByOrder": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "seq": null,
+   "label": "通常技からのキャンセル起爆",
+   "candidates": [],
+   "official": null,
+   "existingGifs": [],
+   "overlap": "NO_GIF_NO_MOVE_ID",
+   "production": "HOLD_NO_MOVE_ID",
+   "notes": [
+    "単独の起動/起爆(seq 7/8)とは別物として扱う",
+    "公式の通常技注記(5MP/5HK/2LK/2MK)は『ヴィーハト・チェーニのみキャンセル可能』で、候補は存在する",
+    "どの通常技からか、元素材のどの区間かは未確認"
+   ],
+   "videoClassification": {
+    "classes": [
+     "通常技からの連係として撮影された映像",
+     "技のキャンセルが成立している映像",
+     "通常技の硬直終了後に行動している映像",
+     "元動画未取得のため判断できない映像"
+    ],
+    "assigned": "元動画未取得のため判断できない映像",
+    "reason": "元動画(Drive上の旧動画)を取得できておらず、使用した通常技・キャンセル成立の有無を映像で確認できない。連続動作=キャンセル成立とは扱わない"
+   },
+   "status": "ORDER_EVIDENCE_ONLY",
+   "moveIdConfirmedByOrder": false,
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

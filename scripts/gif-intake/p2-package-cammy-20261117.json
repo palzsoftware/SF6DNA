@@ -1,0 +1,106 @@
+{
+ "date": "2026-11-17",
+ "character": "cammy",
+ "records": [
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-air-throw.gif",
+   "asset_sha256": "027dd6540b331151972d0fbbb2c176ac50c1b58d9d14618589e2a0d26ff63135",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-crouching-hk.gif",
+   "asset_sha256": "842a9ef2a53e6190e56da4f97bf91ad978538afb8a56c94490fedc810d47a2b7",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-crouching-hp.gif",
+   "asset_sha256": "d35178493ffac00492dcd9bb874911f65ee909a417a637f0719bfc205e2ce7fe",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-crouching-lk.gif",
+   "asset_sha256": "43a82133b492cbb2e1a5395f554812f51089807494736ed0c848446ee9ab681f",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-crouching-mk.gif",
+   "asset_sha256": "5e64e103a2a5ceadbc4081d6fdaaed0c5d0a4c53aa84690b8652722860821284",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-standing-hk.gif",
+   "asset_sha256": "85940e1baa3be7d0bb7f80e6563f178ba11b312ede476e3cbc885a48243ca83b",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-standing-hp.gif",
+   "asset_sha256": "799c654ba3483edb21e54daf482b86d1776b1e00bf36d53bcfee436eb7342ea4",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-standing-lk.gif",
+   "asset_sha256": "c5c2435521f7740b2ece532cedd842ddbf28c9305715aba2bbeb57ec42b75f15",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-standing-lp.gif",
+   "asset_sha256": "2d24f9d66c14248ef2bd90c27e4fc4f683c5029fdc93adddfe8d382cffcd6d18",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-standing-mk.gif",
+   "asset_sha256": "7482d0c9c1f6bea1fd236e057d96412da9f67f7e25b8e6026c8000c728bc2607",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-standing-mp.gif",
+   "asset_sha256": "fceb05ca3ce269275d889faaa37678880f0022a4cd0a621ceefc33124c0d30a2",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-sa2-r16-final_under10mb.gif",
+   "asset_sha256": "a86b938fdf6112b8d9f7f2fdf71cf3bec33138920155c3617edeb251ee17e0f1",
+   "technical_qa": "PASS"
+  },
+  {
+   "character": "cammy",
+   "asset_filename": "cammy-sa2-air_under10mb.gif",
+   "asset_sha256": "02e82a6440c261801779a4cbe249e7a3b7743db17fda21d02f7bfa896cb2fff2",
+   "technical_qa": "PASS"
+  }
+ ]
+}

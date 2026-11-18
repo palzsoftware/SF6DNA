@@ -1,0 +1,290 @@
+{
+  "guide-ref:LK26-COMBO-001": {
+    "title": "小技3回から弱フラッシュナックル",
+    "iconInput": "2 + LP > 2 + LP > 2 + LP > 214 + LP",
+    "description": "近距離で小技のヒットを確認して締める。ガード時は必殺技を出さない。",
+    "condition": "近距離; ヒット確認",
+    "commandRole": "参考入力手順",
+    "metrics": [
+      {
+        "label": "ダメージ",
+        "value": "1170（参考）"
+      },
+      {
+        "label": "D消費",
+        "value": "0（参考）"
+      },
+      {
+        "label": "SA消費",
+        "value": "0（参考）"
+      }
+    ],
+    "controlLabel": "操作方式未確認",
+    "commandJapanese": "しゃがみ弱P → しゃがみ弱P → しゃがみ弱P → 弱フラッシュナックル",
+    "referenceNotice": "参考攻略・実機未検証"
+  },
+  "guide-ref:LK26-COMBO-002": {
+    "title": "下段小技から弱フラッシュナックル",
+    "iconInput": "2 + LK > 2 + LP > 2 + LP > 214 + LP",
+    "description": "下段からヒット確認するルート。間合いによる接続を確認する。",
+    "condition": "下段ヒット; 間合いに注意",
+    "commandRole": "参考入力手順",
+    "metrics": [
+      {
+        "label": "ダメージ",
+        "value": "未確認"
+      },
+      {
+        "label": "D消費",
+        "value": "0（参考）"
+      },
+      {
+        "label": "SA消費",
+        "value": "0（参考）"
+      }
+    ],
+    "controlLabel": "操作方式未確認",
+    "commandJapanese": "しゃがみ弱K → しゃがみ弱P → しゃがみ弱P → 弱フラッシュナックル",
+    "referenceNotice": "参考攻略・実機未検証"
+  },
+  "guide-ref:LK26-COMBO-003": {
+    "title": "しゃがみ中Pから弱フラッシュナックル",
+    "iconInput": "2 + MP > 2 + LP > 214 + LP",
+    "description": "近距離の中攻撃始動からダウンを狙う。",
+    "condition": "近距離; ヒット",
+    "commandRole": "参考入力手順",
+    "metrics": [
+      {
+        "label": "ダメージ",
+        "value": "未確認"
+      },
+      {
+        "label": "D消費",
+        "value": "0（参考）"
+      },
+      {
+        "label": "SA消費",
+        "value": "0（参考）"
+      }
+    ],
+    "controlLabel": "操作方式未確認",
+    "commandJapanese": "しゃがみ中P → しゃがみ弱P → 弱フラッシュナックル",
+    "referenceNotice": "参考攻略・実機未検証"
+  },
+  "guide-ref:LK26-SETPLAY-001": {
+    "title": "弱ナックル後のラッシュ打撃",
+    "iconInput": "214 + LP > パリィDR > 2 + MP",
+    "description": "弱ナックル後にラッシュで打撃を重ねる候補。受け身別の重ねを確認する。",
+    "condition": "ヒット後+36F(出典掲載); 中央",
+    "commandRole": "参考入力手順",
+    "metrics": [
+      {
+        "label": "ダウン有利",
+        "value": "+36F（資料値）"
+      },
+      {
+        "label": "ガード有利",
+        "value": "未確認"
+      },
+      {
+        "label": "D消費",
+        "value": "未確認"
+      }
+    ],
+    "controlLabel": "操作方式未確認",
+    "commandJapanese": "弱フラッシュナックル → 最速パリィラッシュ → しゃがみ中P",
+    "referenceNotice": "参考攻略・実機未検証"
+  },
+  "guide-ref:LK26-SETPLAY-002": {
+    "title": "弱ナックル後のラッシュ投げ",
+    "iconInput": "214 + LP > パリィDR > 投げ",
+    "description": "打撃と対になる投げ択。最速入力と投げ間合いを確認する。",
+    "condition": "弱フラッシュナックルのヒット後（元資料の+36F参照）、中央",
+    "commandRole": "参考入力手順",
+    "metrics": [
+      {
+        "label": "ダウン有利",
+        "value": "+36F（資料値）"
+      },
+      {
+        "label": "ガード有利",
+        "value": "未確認"
+      },
+      {
+        "label": "D消費",
+        "value": "未確認"
+      }
+    ],
+    "controlLabel": "操作方式未確認",
+    "commandJapanese": "弱フラッシュナックル → 最速パリィラッシュ → 投げ",
+    "referenceNotice": "参考攻略・実機未検証"
+  },
+  "guide-ref:LK26-SETPLAY-003": {
+    "title": "弱ナックル後のラッシュシミー",
+    "iconInput": "214 + LP > パリィDR > 後ろ歩き > 差し返し",
+    "description": "投げ抜けを誘って差し返す候補。距離・相手の行動に注意する。",
+    "condition": "弱フラッシュナックルのヒット後（元資料の+36F参照）、中央・距離条件あり",
+    "commandRole": "参考入力手順",
+    "metrics": [
+      {
+        "label": "ダウン有利",
+        "value": "+36F（資料値）"
+      },
+      {
+        "label": "ガード有利",
+        "value": "未確認"
+      },
+      {
+        "label": "D消費",
+        "value": "未確認"
+      }
+    ],
+    "controlLabel": "操作方式未確認",
+    "commandJapanese": "弱フラッシュナックル → パリィラッシュ → 後ろ歩き → 差し返し",
+    "referenceNotice": "参考攻略・実機未検証"
+  },
+  "guide-ref:LK26-PRESSURE-001": {
+    "title": "しゃがみ中Pガード後の小技",
+    "iconInput": "2 + MP > 2 + LP",
+    "description": "中Pガード後の有利を使った小技連携。間合いによっては空振りする。",
+    "condition": "2中Pが届く距離",
+    "commandRole": "参考入力手順",
+    "metrics": [
+      {
+        "label": "始動技ガード時",
+        "value": "+1F（資料値）"
+      },
+      {
+        "label": "割り込み猶予",
+        "value": "未確認"
+      },
+      {
+        "label": "連続ガード",
+        "value": "未確認"
+      }
+    ],
+    "controlLabel": "操作方式未確認",
+    "commandJapanese": "しゃがみ中P（ガード） → しゃがみ弱P",
+    "referenceNotice": "参考攻略・実機未検証"
+  },
+  "guide-ref:LK26-PRESSURE-002": {
+    "title": "しゃがみ中Pガード後の中足",
+    "iconInput": "2 + MP > 2 + MK",
+    "description": "ガード後の下段択候補。ガードバックと後退による空振りを確認する。",
+    "condition": "2中Pガード後",
+    "commandRole": "参考入力手順",
+    "metrics": [
+      {
+        "label": "始動技ガード時",
+        "value": "+1F（資料値）"
+      },
+      {
+        "label": "割り込み猶予",
+        "value": "未確認"
+      },
+      {
+        "label": "連続ガード",
+        "value": "未確認"
+      }
+    ],
+    "controlLabel": "操作方式未確認",
+    "commandJapanese": "しゃがみ中P（ガード） → しゃがみ中K",
+    "referenceNotice": "参考攻略・実機未検証"
+  },
+  "guide-ref:LK26-PRESSURE-003": {
+    "title": "しゃがみ中Pから立ち弱Pを挟む連携",
+    "iconInput": "2 + MP > LP > 2 + MP",
+    "description": "元資料では連続ガードではないとされる。割り込みや距離条件を確認する。",
+    "condition": "密着寄り",
+    "commandRole": "参考入力手順",
+    "metrics": [
+      {
+        "label": "始動技ガード時",
+        "value": "+1F（資料値）"
+      },
+      {
+        "label": "割り込み猶予",
+        "value": "未確認"
+      },
+      {
+        "label": "連続ガード",
+        "value": "非連続（資料記載）"
+      }
+    ],
+    "controlLabel": "操作方式未確認",
+    "commandJapanese": "しゃがみ中P → 立ち弱P → しゃがみ中P",
+    "referenceNotice": "参考攻略・実機未検証"
+  },
+  "guide-ref:LK26-COUNTER-001": {
+    "title": "弱サンドブラストへの反撃",
+    "iconInput": "236 + LP",
+    "description": "近距離でガードした場合は届く8F以下の技を検討する。先端では反撃が届かない場合がある。",
+    "condition": "単発ガード-8F、近距離",
+    "commandRole": "相手の技",
+    "metrics": [
+      {
+        "label": "相手ガード時",
+        "value": "-8F（資料値）"
+      },
+      {
+        "label": "反撃猶予",
+        "value": "8F以下が目安"
+      },
+      {
+        "label": "距離条件",
+        "value": "近距離・要確認"
+      }
+    ],
+    "controlLabel": "操作方式未確認",
+    "commandJapanese": "相手：弱サンドブラスト",
+    "referenceNotice": "参考攻略・実機未検証"
+  },
+  "guide-ref:LK26-COUNTER-002": {
+    "title": "中サンドブラストへの反撃",
+    "iconInput": "236 + MP",
+    "description": "単発ガード時に届く5F以下の技を検討する。通常技からの連携は別に考える。",
+    "condition": "単発ガード-5F、近距離",
+    "commandRole": "相手の技",
+    "metrics": [
+      {
+        "label": "相手ガード時",
+        "value": "-5F（資料値）"
+      },
+      {
+        "label": "反撃猶予",
+        "value": "5F以下が目安"
+      },
+      {
+        "label": "距離条件",
+        "value": "近距離・要確認"
+      }
+    ],
+    "controlLabel": "操作方式未確認",
+    "commandJapanese": "相手：中サンドブラスト",
+    "referenceNotice": "参考攻略・実機未検証"
+  },
+  "guide-ref:LK26-COUNTER-003": {
+    "title": "強サンドブラストをガードした後",
+    "iconInput": "236 + HP",
+    "description": "元資料の不利値では通常の確定反撃は期待せず、距離と次の行動を確認する。",
+    "condition": "単発ガード-2F",
+    "commandRole": "相手の技",
+    "metrics": [
+      {
+        "label": "相手ガード時",
+        "value": "-2F（資料値）"
+      },
+      {
+        "label": "反撃猶予",
+        "value": "通常確反なし（目安）"
+      },
+      {
+        "label": "距離条件",
+        "value": "距離に注意"
+      }
+    ],
+    "controlLabel": "操作方式未確認",
+    "commandJapanese": "相手：強サンドブラスト",
+    "referenceNotice": "参考攻略・実機未検証"
+  }
+}

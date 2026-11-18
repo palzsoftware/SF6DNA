@@ -1,0 +1,107 @@
+ws5_source_record_key,app_source_record_key,official_name,official_type,official_startup,state,existing_move_id,existing_slug,existing_name,existing_startup
+deejay:web:100,dee-jay:web:100,立ち弱P （ジャブ）,NORMAL,4,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,36de8f7a-a910-4315-8507-77174da08fef,dee-jay-standing-lp,立ち弱P （ジャブ）,4
+deejay:web:101,dee-jay:web:101,立ち弱K （ローキック）,NORMAL,5,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,7debb114-baa2-4cbc-91b7-952b3d2ec571,dee-jay-standing-lk,立ち弱K （ローキック）,5
+deejay:web:102,dee-jay:web:102,立ち中P （フロントフック）,NORMAL,7,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,a37ee100-dbdd-41f9-94a7-e1cc975d98c1,dee-jay-standing-mp,立ち中P （フロントフック）,7
+deejay:web:103,dee-jay:web:103,立ち中K （ミドルキック）,NORMAL,9,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,54a83ad9-53e4-4f7b-ae16-8e827ebbbb2c,dee-jay-standing-mk,立ち中K （ミドルキック）,9
+deejay:web:104,dee-jay:web:104,立ち強P （ブラストアッパー）,NORMAL,9,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,ebdd3009-fee4-4e55-87f1-b26439728dde,dee-jay-standing-hp,立ち強P （ブラストアッパー）,9
+deejay:web:105,dee-jay:web:105,立ち強K （マキシマムキック）,NORMAL,12,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,02fff13d-238d-4072-af8d-da1f75e1654c,dee-jay-standing-hk,立ち強K （マキシマムキック）,12
+deejay:web:106,dee-jay:web:106,しゃがみ弱P （アンダージャブ）,NORMAL,5,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,57beb616-7d69-45dd-972e-226521ec86e7,dee-jay-crouching-lp,しゃがみ弱P （アンダージャブ）,5
+deejay:web:107,dee-jay:web:107,しゃがみ弱K （アンダーウィップ）,NORMAL,5,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,594eaec7-0b10-49a4-b975-faab51565605,dee-jay-crouching-lk,しゃがみ弱K （アンダーウィップ）,5
+deejay:web:108,dee-jay:web:108,しゃがみ中P （レッグクラッシュエルボー）,NORMAL,6,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,e0e9439e-1ded-4732-b34a-f669df106a59,dee-jay-crouching-mp,しゃがみ中P （レッグクラッシュエルボー）,6
+deejay:web:109,dee-jay:web:109,しゃがみ中K （グランドスクラッチ）,NORMAL,8,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,b60102f5-af5c-492a-bca6-0c0277bf69b7,dee-jay-crouching-mk,しゃがみ中K （グランドスクラッチ）,8
+deejay:web:110,dee-jay:web:110,しゃがみ強P （バーストフック）,NORMAL,8,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,516288aa-46c3-433c-b5ff-b72972e5baa8,dee-jay-crouching-hp,しゃがみ強P （バーストフック）,8
+deejay:web:111,dee-jay:web:111,しゃがみ強K （スライディングヒールアッパー）,NORMAL,14,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,e1052f7b-e246-4ca4-9e35-88a3eb86f96b,dee-jay-crouching-hk,しゃがみ強K （スライディングヒールアッパー）,14
+deejay:web:112,dee-jay:web:112,ジャンプ弱P （ファンクストレート）,AIR,4,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,c23de894-0516-4edd-9b97-5b14e536cd32,dee-jay-jump-lp,ジャンプ弱P （ファンクストレート）,4
+deejay:web:113,dee-jay:web:113,ジャンプ弱K （ファンクウィップ）,AIR,4,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,efd4a014-1971-4185-84e4-43168d2dc991,dee-jay-jump-lk,ジャンプ弱K （ファンクウィップ）,4
+deejay:web:114,dee-jay:web:114,ジャンプ中P （ファンクアッパー）,AIR,6,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,0f8ed5f9-a022-4246-9eef-36b077a1441d,dee-jay-jump-mp,ジャンプ中P （ファンクアッパー）,6
+deejay:web:115,dee-jay:web:115,ジャンプ中K （フライングムエタイキック）,AIR,8,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,dc32dc03-29b1-4507-95cd-53e49ff1d5fa,dee-jay-jump-mk,ジャンプ中K （フライングムエタイキック）,8
+deejay:web:116,dee-jay:web:116,ジャンプ強P （ファンクバウンド）,AIR,9,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,83273f07-dab4-4632-bbce-975f2c9ff506,dee-jay-jump-hp,ジャンプ強P （ファンクバウンド）,9
+deejay:web:117,dee-jay:web:117,ジャンプ強K （フライングカリビアンソバット）,AIR,10,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,c6b4199e-1e8e-421a-8826-d091f8028c61,dee-jay-jump-hk,ジャンプ強K （フライングカリビアンソバット）,10
+deejay:web:200,dee-jay:web:200,ニーショット,AIR,6,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,ec176c91-b69d-4988-86f3-579ca6b1f5b4,dee-jay-jump-down-lk,ニーショット,6
+deejay:web:201,dee-jay:web:201,サンライズヒール,NORMAL,19,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,9f3d308c-c982-49e0-9f7f-b270378c7e0f,dee-jay-sunrise-heel,サンライズヒール,19
+deejay:web:202,dee-jay:web:202,フェイスブレイカー,NORMAL,7,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,e6977b57-168b-4876-833c-b0629b37532d,dee-jay-back-hk,フェイスブレイカー,7
+deejay:web:203,dee-jay:web:203,スライディングヒールアッパー,NORMAL,14,HOLD_NO_EXISTING_NAME,,,,
+deejay:web:204,dee-jay:web:204,3ビートコンボ （2段目）,NORMAL,9,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,8d8f6e98-e904-4b4c-9e09-b7e0d213c359,dee-jay-capcom-frame-022,3ビートコンボ （2段目）,9
+deejay:web:205,dee-jay:web:205,3ビートコンボ （3段目）,NORMAL,14,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,69ee97b1-bad9-4fb7-a4ca-61579fbe35ba,dee-jay-threebeat,3ビートコンボ （3段目）,14
+deejay:web:206,dee-jay:web:206,ディージェイスペシャル （2段目）,NORMAL,11,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,2a930171-4677-4be3-9901-a88dc30b0a08,dee-jay-capcom-frame-024,ディージェイスペシャル （2段目）,11
+deejay:web:207,dee-jay:web:207,ディージェイスペシャル （3段目）,NORMAL,13,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,def2c3bc-6abb-4ac0-a8ea-7ff55ec4e2fe,dee-jay-mp-hp-hk,ディージェイスペシャル （3段目）,13
+deejay:web:208,dee-jay:web:208,ファンキーダンス （2段目）,NORMAL,12,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,4f58dac2-713f-405f-b801-25b650ed8342,dee-jay-capcom-frame-026,ファンキーダンス （2段目）,12
+deejay:web:209,dee-jay:web:209,ファンキーダンス （3段目）,NORMAL,20,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,cb0f151e-5a2c-48a4-a31c-435d3994ee06,dee-jay-capcom-frame-027,ファンキーダンス （3段目）,20
+deejay:web:210,dee-jay:web:210,ファンキーダンス・フェイク,NORMAL,,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,3c831bed-9a12-49a5-bd29-6b9d282a35e3,dee-jay-funky-dance,ファンキーダンス・フェイク,
+deejay:web:211,dee-jay:web:211,フライングパーティー,AIR,8,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,d051fd45-5f0f-42da-b15c-49eca2bf8dcd,dee-jay-capcom-frame-029,フライングパーティー,8
+deejay:web:212,dee-jay:web:212,マラカスビート,NORMAL,,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,155af88f-6cb8-40c1-b585-ebfdfb7d2ad3,dee-jay-speedy-maracas,マラカスビート,
+deejay:web:300,dee-jay:web:300,弱 エアスラッシャー,SPECIAL,,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,373ec31c-6d7d-414e-a3e2-39d1e1c17e0d,dee-jay-air-slasher-l,弱 エアスラッシャー,
+deejay:web:301,dee-jay:web:301,中 エアスラッシャー,SPECIAL,17,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,048c78d4-2da9-461b-86ff-fb6b96a66f0b,dee-jay-air-slasher-m,中 エアスラッシャー,17
+deejay:web:302,dee-jay:web:302,強 エアスラッシャー,SPECIAL,17,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,01a68cd2-ff35-4104-9ac6-9ed44641fdb1,dee-jay-air-slasher-h,強 エアスラッシャー,17
+deejay:web:303,dee-jay:web:303,OD エアスラッシャー,SPECIAL,10,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,1d7f9f79-bff7-4c9b-8645-54e95b310d24,dee-jay-air-slasher-od,OD エアスラッシャー,10
+deejay:web:304,dee-jay:web:304,OD エアスラッシャー （射出),SPECIAL,22,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,993e3a92-4ca7-43b1-84f6-3da503d34b89,dee-jay-capcom-frame-035,OD エアスラッシャー （射出),22
+deejay:web:305,dee-jay:web:305,弱 ジャックナイフマキシマム,SPECIAL,,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,3f8211e6-9fdc-45ba-9558-bd5908199ec4,dee-jay-jackknife-l,弱 ジャックナイフマキシマム,
+deejay:web:306,dee-jay:web:306,中 ジャックナイフマキシマム,SPECIAL,6,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,fe965804-a210-4d77-93a3-295f3d7910b0,dee-jay-jackknife-m,中 ジャックナイフマキシマム,6
+deejay:web:307,dee-jay:web:307,強 ジャックナイフマキシマム,SPECIAL,5,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,bc0d5768-33c4-44e4-a841-1c92751c77d8,dee-jay-jackknife-h,強 ジャックナイフマキシマム,5
+deejay:web:308,dee-jay:web:308,OD ジャックナイフマキシマム,SPECIAL,6,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,bc019a33-449a-4662-aaa6-d86d0a766a1c,dee-jay-jackknife-od,OD ジャックナイフマキシマム,6
+deejay:web:309,dee-jay:web:309,フェイクロールステップ,SPECIAL,,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,49f0d4ea-618e-4ce9-94f3-8e6db0b9f7b7,dee-jay-sobat-l,フェイクロールステップ,
+deejay:web:310,dee-jay:web:310,クイックローリングソバット,SPECIAL,12,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,033a5787-d194-4a0f-b05d-6686f04601fe,dee-jay-sobat-m,クイックローリングソバット,12
+deejay:web:311,dee-jay:web:311,ダブルローリングソバット,SPECIAL,15,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,0f1c3e4a-ce03-4f74-8950-5b4c92c4bb68,dee-jay-sobat-h,ダブルローリングソバット,15
+deejay:web:312,dee-jay:web:312,OD ダブルローリングソバット,SPECIAL,17,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,d2b2199c-f28b-4270-a8e1-e7ba02b621b2,dee-jay-sobat-od,OD ダブルローリングソバット,17
+deejay:web:313,dee-jay:web:313,弱 マシンガンアッパー,SPECIAL,15,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,6a35dfc9-4303-420b-ad28-6295c8abe713,dee-jay-mgu-l,弱 マシンガンアッパー,15
+deejay:web:314,dee-jay:web:314,中 マシンガンアッパー,SPECIAL,22,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,1d7e7bdf-87a6-48f4-b57b-ae5e4a39441e,dee-jay-mgu-m,中 マシンガンアッパー,22
+deejay:web:315,dee-jay:web:315,強 マシンガンアッパー,SPECIAL,28,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,6244edb0-12f3-4323-93bb-d3dbd65994d7,dee-jay-mgu-h,強 マシンガンアッパー,28
+deejay:web:316,dee-jay:web:316,OD マシンガンアッパー,SPECIAL,26,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,978c3660-a958-4dd9-87a6-c1c4620d9b8d,dee-jay-mgu-od,OD マシンガンアッパー,26
+deejay:web:317,dee-jay:web:317,ジョスクール,SPECIAL,,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,cb65cb89-a54c-4847-aee3-6de1ea6131c6,dee-jay-jus-cool,ジョスクール,
+deejay:web:318,dee-jay:web:318,OD ジョスクール,SPECIAL,8,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,42d6e0ba-a3ca-4c52-8a9d-cdff56722889,dee-jay-jus-cool-od,OD ジョスクール,8
+deejay:web:319,dee-jay:web:319,ファンキースライサー,SPECIAL,12,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,86a9ab72-14a9-4e31-ba16-a06ef4f35753,dee-jay-jc-lk,ファンキースライサー,12
+deejay:web:320,dee-jay:web:320,OD ファンキースライサー,SPECIAL,9,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,fdc9dc61-f84b-4a8b-9d75-cebc313e486c,dee-jay-jc-lk-od,OD ファンキースライサー,9
+deejay:web:321,dee-jay:web:321,ワニングムーン,SPECIAL,25,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,18e6ec99-6da6-443f-8f48-d9bdc633b9ee,dee-jay-jc-mk,ワニングムーン,25
+deejay:web:322,dee-jay:web:322,OD ワニングムーン,SPECIAL,19,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,e8820828-a3d0-421b-a5cd-f8a82179c893,dee-jay-jc-mk-od,OD ワニングムーン,19
+deejay:web:333,dee-jay:web:333,マキシマムストライク,SPECIAL,15,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,444208d8-6ae6-4e2a-83e3-45271bbf0e83,dee-jay-jc-hk,マキシマムストライク,15
+deejay:web:334,dee-jay:web:334,OD マキシマムストライク,SPECIAL,11,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,df6adee2-e9b5-476d-b3a0-ccec33e56ac3,dee-jay-jc-hk-od,OD マキシマムストライク,11
+deejay:web:335,dee-jay:web:335,ジャグリンステップ,SPECIAL,,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,a6c2fe5a-3708-4852-a006-a81964e63106,dee-jay-jc-dash,ジャグリンステップ,
+deejay:web:336,dee-jay:web:336,OD ジャグリンステップ,SPECIAL,,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,2d1e8e24-0795-486b-97ab-7e1b92a18724,dee-jay-jc-dash-od,OD ジャグリンステップ,
+deejay:web:337,dee-jay:web:337,ジャグリンスウェイ,SPECIAL,,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,7ccdd714-f92b-4519-8294-d0c74b2880bc,dee-jay-jc-backdash,ジャグリンスウェイ,
+deejay:web:338,dee-jay:web:338,OD ジャグリンスウェイ,SPECIAL,,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,02cfea2b-ffef-4597-a02e-1ce45681924f,dee-jay-jc-backdash-od,OD ジャグリンスウェイ,
+deejay:web:400,dee-jay:web:400,SA1 グレイテストソバット,SUPER,7,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,71e6690e-c671-4261-8357-5897427db6b2,dee-jay-sa1,SA1 グレイテストソバット,7
+deejay:web:401,dee-jay:web:401,SA2 サンライズフェスティバル・ライト,SUPER,12,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,d69c4e42-be17-41d0-bd47-361bbb7e5c48,dee-jay-sa2-l,SA2 サンライズフェスティバル・ライト,12
+deejay:web:402,dee-jay:web:402,SA2 サンライズフェスティバル・ライト （2段目）,SUPER,11,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,6fa2d13c-5bc5-4dbd-972e-55a87bffe076,dee-jay-capcom-frame-062,SA2 サンライズフェスティバル・ライト （2段目）,11
+deejay:web:403,dee-jay:web:403,SA2 サンライズフェスティバル・ライト （3段目）,SUPER,10,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,31da6036-e2ce-460a-bb31-61973bb5c2c1,dee-jay-capcom-frame-063,SA2 サンライズフェスティバル・ライト （3段目）,10
+deejay:web:404,dee-jay:web:404,SA2 サンライズフェスティバル・ライト （4段目）,SUPER,12,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,dc38ff4b-74ec-413d-a9ae-f02075fae67c,dee-jay-capcom-frame-064,SA2 サンライズフェスティバル・ライト （4段目）,12
+deejay:web:405,dee-jay:web:405,SA2 サンライズフェスティバル・ライト （5段目）,SUPER,15,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,9f701a1e-3205-4d9d-b3ed-203bbadc692c,dee-jay-capcom-frame-065,SA2 サンライズフェスティバル・ライト （5段目）,15
+deejay:web:406,dee-jay:web:406,SA2 サンライズフェスティバル・ライト （6段目）,SUPER,17,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,f4cee08c-57ca-49d5-b504-49a058a07c1a,dee-jay-capcom-frame-066,SA2 サンライズフェスティバル・ライト （6段目）,17
+deejay:web:407,dee-jay:web:407,SA2 サンライズフェスティバル・ライト （7段目）,SUPER,18,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,7b84810e-b64a-490a-9544-b3e5ad56e18a,dee-jay-capcom-frame-067,SA2 サンライズフェスティバル・ライト （7段目）,18
+deejay:web:408,dee-jay:web:408,SA2 サンライズフェスティバル・マーベラス,SUPER,12,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,ec8badb1-f76c-40df-aef5-0cdecc697567,dee-jay-sa2-m,SA2 サンライズフェスティバル・マーベラス,12
+deejay:web:409,dee-jay:web:409,SA2 サンライズフェスティバル・マーベラス （2段目）,SUPER,11,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,931db92d-9f20-4825-99b3-09fe272e4e9f,dee-jay-capcom-frame-069,SA2 サンライズフェスティバル・マーベラス （2段目）,11
+deejay:web:410,dee-jay:web:410,SA2 サンライズフェスティバル・マーベラス （3段目）,SUPER,10,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,a19af3ac-f82d-4e44-883f-169753de1ae7,dee-jay-capcom-frame-070,SA2 サンライズフェスティバル・マーベラス （3段目）,10
+deejay:web:411,dee-jay:web:411,SA2 サンライズフェスティバル・マーベラス （4段目）,SUPER,12,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,ddec27c3-0c33-451f-b8fd-fee41dd151ed,dee-jay-capcom-frame-071,SA2 サンライズフェスティバル・マーベラス （4段目）,12
+deejay:web:412,dee-jay:web:412,SA2 サンライズフェスティバル・マーベラス （5段目）,SUPER,15,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,04b34d3d-8fc8-41b5-a641-91e15af7eec9,dee-jay-capcom-frame-072,SA2 サンライズフェスティバル・マーベラス （5段目）,15
+deejay:web:413,dee-jay:web:413,SA2 サンライズフェスティバル・マーベラス （6段目）,SUPER,17,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,442bb744-3d02-4420-85af-0e2418addfd1,dee-jay-capcom-frame-073,SA2 サンライズフェスティバル・マーベラス （6段目）,17
+deejay:web:414,dee-jay:web:414,SA2 サンライズフェスティバル・マーベラス （7段目）,SUPER,18,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,23c7fa26-6be5-4265-9cf5-9fa755d7dc49,dee-jay-capcom-frame-074,SA2 サンライズフェスティバル・マーベラス （7段目）,18
+deejay:web:415,dee-jay:web:415,SA2 サンライズフェスティバル・マキシマム,SUPER,12,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,54f8dd59-6fed-42e9-8450-3057a8328280,dee-jay-sa2-h,SA2 サンライズフェスティバル・マキシマム,12
+deejay:web:416,dee-jay:web:416,SA2 サンライズフェスティバル・マキシマム （2段目）,SUPER,11,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,aa24b69c-fad0-4afd-9a10-75d127dc0016,dee-jay-capcom-frame-076,SA2 サンライズフェスティバル・マキシマム （2段目）,11
+deejay:web:417,dee-jay:web:417,SA2 サンライズフェスティバル・マキシマム （3段目）,SUPER,10,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,c6cfbf15-e944-4832-b34f-447992e4349d,dee-jay-capcom-frame-077,SA2 サンライズフェスティバル・マキシマム （3段目）,10
+deejay:web:418,dee-jay:web:418,SA2 サンライズフェスティバル・マキシマム （4段目）,SUPER,12,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,e6c4f92c-6225-49cd-8300-2ba2c4d5261d,dee-jay-capcom-frame-078,SA2 サンライズフェスティバル・マキシマム （4段目）,12
+deejay:web:419,dee-jay:web:419,SA2 サンライズフェスティバル・マキシマム （5段目）,SUPER,15,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,009dbeb4-0f84-45ea-a48b-1c6fefa8276f,dee-jay-capcom-frame-079,SA2 サンライズフェスティバル・マキシマム （5段目）,15
+deejay:web:420,dee-jay:web:420,SA2 サンライズフェスティバル・マキシマム （6段目）,SUPER,17,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,49e5833a-a1e7-4933-91c5-a5aa696578d1,dee-jay-capcom-frame-080,SA2 サンライズフェスティバル・マキシマム （6段目）,17
+deejay:web:421,dee-jay:web:421,SA2 サンライズフェスティバル・マキシマム （7段目）,SUPER,18,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,a2ce8de3-a0ca-4dd7-ab28-d675bb88c037,dee-jay-capcom-frame-081,SA2 サンライズフェスティバル・マキシマム （7段目）,18
+deejay:web:422,dee-jay:web:422,SA2 クライマックスブロー （マーベラス）,SUPER,11,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,b2804ff3-6b1a-426e-b22f-f1e76a65fa30,dee-jay-capcom-frame-082,SA2 クライマックスブロー （マーベラス）,11
+deejay:web:423,dee-jay:web:423,SA2 クライマックスブロー （マキシマム）,SUPER,11,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,1cd1f765-83a1-484f-b376-d4ba0dad6dde,dee-jay-capcom-frame-083,SA2 クライマックスブロー （マキシマム）,11
+deejay:web:424,dee-jay:web:424,SA2 アンコールビート （マーベラス）,SUPER,33,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,3e80f796-5731-4850-afd2-a9ab7d1ba626,dee-jay-capcom-frame-084,SA2 アンコールビート （マーベラス）,33
+deejay:web:425,dee-jay:web:425,SA2 アンコールビート （マキシマム）,SUPER,33,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,874e8382-2786-404c-8f46-e60ebb137773,dee-jay-capcom-frame-085,SA2 アンコールビート （マキシマム）,33
+deejay:web:426,dee-jay:web:426,（失敗版） SA2 サンライズフェスティバル （2段目）,SUPER,11,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,4f198d4d-255c-4144-b0b5-46024644cd77,dee-jay-capcom-frame-086,（失敗版） SA2 サンライズフェスティバル （2段目）,11
+deejay:web:427,dee-jay:web:427,（失敗版） SA2 サンライズフェスティバル （3段目）,SUPER,10,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,7518dac6-a1e4-4cf4-bad8-9a83f5773c1b,dee-jay-capcom-frame-087,（失敗版） SA2 サンライズフェスティバル （3段目）,10
+deejay:web:428,dee-jay:web:428,（失敗版） SA2 サンライズフェスティバル （4段目）,SUPER,12,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,fa9e0930-eec9-4e6c-8e3a-25fa4c3f8df0,dee-jay-capcom-frame-088,（失敗版） SA2 サンライズフェスティバル （4段目）,12
+deejay:web:429,dee-jay:web:429,（失敗版） SA2 サンライズフェスティバル （5段目）,SUPER,15,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,9df53a6c-295c-486c-abb1-e12dd93df036,dee-jay-capcom-frame-089,（失敗版） SA2 サンライズフェスティバル （5段目）,15
+deejay:web:430,dee-jay:web:430,（失敗版） SA2 サンライズフェスティバル （6段目）,SUPER,17,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,713483f8-b6bf-4160-8ba9-a1abe3a0e5a5,dee-jay-capcom-frame-090,（失敗版） SA2 サンライズフェスティバル （6段目）,17
+deejay:web:431,dee-jay:web:431,（失敗版） SA2 サンライズフェスティバル （7段目）,SUPER,18,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,70f30fa3-7f7c-4c95-b5a7-53c4c51aaa6e,dee-jay-capcom-frame-091,（失敗版） SA2 サンライズフェスティバル （7段目）,18
+deejay:web:432,dee-jay:web:432,SA3 サタデーナイト,SUPER,9,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,e52bdd7f-b29f-43ba-83cc-e9f139b4b809,dee-jay-sa3,SA3 サタデーナイト,9
+deejay:web:433,dee-jay:web:433,CA サタデーナイト,SUPER,9,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,88ef0949-2a51-4923-90e2-5a77f1501844,dee-jay-ca,CA サタデーナイト,9
+deejay:web:500,dee-jay:web:500,スタンプ・ザ・ビート,NORMAL,5,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,f6538624-3bad-4968-a1b3-1292f9d96311,dee-jay-forward-throw,スタンプ・ザ・ビート,5
+deejay:web:501,dee-jay:web:501,フリップスルー,NORMAL,5,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,e8b09fbd-4b14-49a8-a1b7-52067f87409b,dee-jay-back-throw,フリップスルー,5
+deejay:web:600,dee-jay:web:600,前方ステップ,F_DASH,,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,c19eaa3a-aa16-4e44-9428-ff6e69f7d051,dee-jay-capcom-frame-096,前方ステップ,
+deejay:web:601,dee-jay:web:601,後方ステップ,B_DASH,,CANDIDATE_NAME_STARTUP_UNIQUE_SLUG_ALIAS,40ee2c2c-00cb-43af-a311-bd194e69c283,dee-jay-capcom-frame-097,後方ステップ,
+deejay:web:602,dee-jay:web:602,ドライブインパクト （ワイルドビート）,SPECIAL,26,HOLD_NO_EXISTING_NAME,,,,
+deejay:web:603,dee-jay:web:603,[ガード時]ドライブリバーサル （レッグスクラッチ）,SPECIAL,20,HOLD_NO_EXISTING_NAME,,,,
+deejay:web:604,dee-jay:web:604,[起き上がり時]ドライブリバーサル（レッグスクラッチ）,SPECIAL,18,HOLD_NO_EXISTING_NAME,,,,
+deejay:web:605,dee-jay:web:605,ドライブパリィ,PARRY,1,HOLD_NO_EXISTING_NAME,,,,
+deejay:web:606,dee-jay:web:606,ジャストパリィ（打撃）,PARRY,1,HOLD_NO_EXISTING_NAME,,,,
+deejay:web:607,dee-jay:web:607,ジャストパリィ（飛び道具）,PARRY,1,HOLD_NO_EXISTING_NAME,,,,
+deejay:web:608,dee-jay:web:608,パリィドライブラッシュ,DRIVE_STEP,,HOLD_NO_EXISTING_NAME,,,,
+deejay:web:609,dee-jay:web:609,キャンセルドライブラッシュ,DRIVE_STEP,,HOLD_NO_EXISTING_NAME,,,,

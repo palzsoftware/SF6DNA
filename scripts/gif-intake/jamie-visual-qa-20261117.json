@@ -1,0 +1,175 @@
+{
+ "generated": "2026-11-17",
+ "scope": "ジェイミー Drive保存GIF(25本取得+2本10MB超)の目視QA。確定は『映像内の入力表示+OD表示+公開コマンドの一意対応』が取れたものだけ",
+ "method": "画面左下の入力表示を拡大して読取り、公開データの該当技に同一コマンド・OD表記の行が1つだけあることを確認。弱/中/強は入力表示のボタン絵柄で区別できないため確定しない",
+ "limits": [
+  "弱/中/強(爆廻・無影蹴・張弓腿・酔いLv4流酔拳)は強度を示す根拠が無くHOLD",
+  "ファイル名(light/medium/heavy)だけでは強度を確定しない"
+ ],
+ "entries": [
+  {
+   "file": "jamie-od-tenshin.gif",
+   "moveSlug": "jamie-frame-085",
+   "moveId": "47f2b44d-7d51-49f0-866e-6a2e1b5648ff",
+   "fixtureName": "OD 点辰",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "onScreenCommandMatches": true,
+    "singleRowForCommand": true
+   },
+   "observation": "緑の『OD SUCCESS』表示+入力 →↘↓↙←+K。命中後にハードノックダウン(公開データ OD 点辰 の onHit=D と整合)。",
+   "unconfirmed": [
+    "OD入力(KK)は『OD』表示として映像に出る(ボタン2個の表示ではない)"
+   ],
+   "metrics": {
+    "frames": 69,
+    "durationMs": 3450,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "jamie-od-bakkai.gif",
+   "moveSlug": "jamie-frame-083",
+   "moveId": "f0e84925-ec36-42dd-8fca-75c7e87712ef",
+   "fixtureName": "OD 爆廻",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "onScreenCommandMatches": true,
+    "singleRowForCommand": true
+   },
+   "observation": "緑の『OD SUCCESS』表示+入力 ↓↘→+K(236+KK)。爆廻のOD版。",
+   "unconfirmed": [
+    "OD入力は『OD』表示として映像に出る",
+    "酔いLv2以上の条件は映像から判別不能"
+   ],
+   "metrics": {
+    "frames": 85,
+    "durationMs": 4250,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "jamie-tenshin.gif",
+   "moveSlug": "jamie-frame-084",
+   "moveId": "7bc4a79d-75dd-4a7a-95fe-ed02c344b8b9",
+   "fixtureName": "点辰",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "onScreenCommandMatches": true,
+    "singleRowForCommand": true
+   },
+   "observation": "入力表示が →↘↓↙←+K(63214K・OD表示なし)で点辰(非OD)の公開コマンドと一致。近距離で掴む技で、命中後+8Fで強制ダウンなし(公開データ onHit +8 と整合)。",
+   "unconfirmed": [
+    "クリップ冒頭に前の入力(↓↓+P=魔身)が含まれ、命中後に別行動(流酔拳系の追撃)が続く。技の終点までは含むが余分な動作あり",
+    "酔いLv3以上の条件は映像から判別不能"
+   ],
+   "metrics": {
+    "frames": 40,
+    "durationMs": 2000,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "jamie-od-luminous-dive-kick.gif",
+   "moveSlug": "jamie-frame-079",
+   "moveId": "56e9221a-75ee-4a4a-8295-2c23cd60ce38",
+   "fixtureName": "OD 無影蹴",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "onScreenCommandMatches": true,
+    "singleRowForCommand": true
+   },
+   "observation": "緑の『OD SUCCESS』表示+入力 ↓↙←+K(214+KK)。無影蹴のOD版(前ジャンプ中)。",
+   "unconfirmed": [
+    "OD入力は『OD』表示として映像に出る",
+    "酔いLv1以上・前ジャンプ中の条件は映像から判別不能"
+   ],
+   "metrics": {
+    "frames": 53,
+    "durationMs": 2650,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "jamie-od-arrow-kick.gif",
+   "moveSlug": "jamie-frame-075",
+   "moveId": "c2316766-56c8-4381-893f-0341e3a91c83",
+   "fixtureName": "OD 張弓腿",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "onScreenCommandMatches": true,
+    "singleRowForCommand": true
+   },
+   "observation": "緑の『OD SUCCESS』表示+入力 →↓↘+K(623+KK)。張弓腿のOD版。",
+   "unconfirmed": [
+    "OD入力は『OD』表示として映像に出る"
+   ],
+   "metrics": {
+    "frames": 67,
+    "durationMs": 3350,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "jamie-sa1-breakin.gif",
+   "moveSlug": "jamie-frame-088",
+   "moveId": "e395af47-aedc-467e-b4cb-2aa5c112c348",
+   "fixtureName": "SA1 武麗禽",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "onScreenCommandMatches": true,
+    "singleRowForCommand": true
+   },
+   "observation": "画面左下の入力表示が ↓↘→↓↘→+K(236236K)でSA1の公開コマンドと一致。暗転カットイン後に多段の蹴り連撃(最大13HIT表示)。",
+   "unconfirmed": [
+    "SAゲージ消費の入力表示は映像内で確認。Classic/Modernの別は映像から判別不能"
+   ],
+   "metrics": {
+    "frames": 113,
+    "durationMs": 5650,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "jamie-sa2-the-devils-song.gif",
+   "moveSlug": "jamie-frame-089",
+   "moveId": "99b9dbf0-5322-4397-bd1f-976a60965a2d",
+   "fixtureName": "SA2 絶唱魔身",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "onScreenCommandMatches": true,
+    "singleRowForCommand": true
+   },
+   "observation": "入力表示が ↓↙←↓↙←+P(214214P)でSA2の公開コマンドと一致。ドリンクを飲む専用演出(ズームカット)。",
+   "unconfirmed": [
+    "Classic/Modernの別は映像から判別不能"
+   ],
+   "metrics": {
+    "frames": 56,
+    "durationMs": 2800,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

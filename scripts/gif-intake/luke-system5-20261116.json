@@ -1,0 +1,55 @@
+{
+  "generated": "2026-11-16",
+  "scope": "ルーク④共通システムGIF 5本と現行の技データの照合(読み取りのみ)。ここでは技IDを追加・変更しない。",
+  "result": {
+    "connected": 0,
+    "hold": 5,
+    "reason": "公開用データ(ALL_CHARACTER_RELEASE_FIXTURE)のルークの技にシステム技が無く、技カードの表示経路(QA統合ページ・正式ページ)に載る技IDが存在しない"
+  },
+  "finding": "動作名に対応する技は、プレビュー用バンドル(SF6DNA_WS5_DEVICE_PREVIEW_BUNDLES_R3_CANDIDATE)にだけ存在する。ただし仮ID(sf6dna-preview:luke:...)・status=draft・releaseFixture=false で、公開用の技IDではない。",
+  "entries": [
+    {
+      "file": "22_67-luke-forward-dash.gif",
+      "sha256": "8f46e0b4",
+      "candidatePreviewMove": "前方ステップ (system) txt-luke-luke-web-600",
+      "status": "HOLD_NO_RELEASE_MOVE_ID"
+    },
+    {
+      "file": "22_69-luke-muzzle-flash.gif",
+      "sha256": "4ea31a78",
+      "candidatePreviewMove": "ドライブインパクト（マズルフラッシュ）(special) txt-luke-luke-web-602",
+      "status": "HOLD_NO_RELEASE_MOVE_ID"
+    },
+    {
+      "file": "22_72-luke-drive-parry.gif",
+      "sha256": "69efd9b8",
+      "candidatePreviewMove": "ドライブパリィ (system) txt-luke-luke-web-605",
+      "status": "HOLD_NO_RELEASE_MOVE_ID"
+    },
+    {
+      "file": "22_75-luke-parry-drive-rush.gif",
+      "sha256": "b26be247",
+      "candidatePreviewMove": "パリィドライブラッシュ (system) txt-luke-luke-web-608",
+      "status": "HOLD_NO_RELEASE_MOVE_ID"
+    },
+    {
+      "file": "22_76-luke-cancel-drive-rush.gif",
+      "sha256": "c265cf7d",
+      "candidatePreviewMove": "キャンセルドライブラッシュ (system) txt-luke-luke-web-609",
+      "status": "HOLD_NO_RELEASE_MOVE_ID"
+    }
+  ],
+  "unblockCondition": "ルークのシステム技(前方ステップ/ドライブインパクト/ドライブパリィ/パリィドライブラッシュ/キャンセルドライブラッシュ)を公開用の技データとして扱う判断(別承認)。承認後は intake-plan.mjs と build-local-qa-data.mjs --plan で同じ手順で接続できる。",
+  "notes": [
+    "sha256は先頭8桁(完全値は luke-ledger-71-20261116.json)",
+    "目視QAは未実施(VISUAL_NOT_RUN)。技IDが決まるまで実施しない"
+  ],
+  "chatgptCommonSystemEvidence": {
+    "received": "2026-11-16 07:10Z (Drive: LUKE_COMMON_SYSTEM_integration_manifest.json / QA_REPORT)",
+    "summary": "候補11件(正式技数ではない): 既存GIF6本(前投げ・後ろ投げ・ドライブパリィ・パリィドライブラッシュ・キャンセルドライブラッシュ・前ダッシュ) / HOLD4(ドライブインパクト・ドライブリバーサル・ジャストパリィ・後ろダッシュ) / NOT_CHECKED1",
+    "formal_move_id": "全件 CLAUDE_CONFIRM(ChatGPT側は技IDを確定していない)",
+    "official_current_card_list": "NOT_OBTAINED",
+    "source_video_match": "全件 NOT_VERIFIED(共通システム専用の元動画は確認できていない)",
+    "effect_on_this_record": "技IDの手がかりは無く、5本のHOLD(公開用データに技が無い)は変わらない。前投げ・後ろ投げは既に接続済みのため再処理しない"
+  }
+}

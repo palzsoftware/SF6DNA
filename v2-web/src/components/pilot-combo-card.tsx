@@ -10,6 +10,7 @@ import { localizeComboText, localizeSourceType } from "@/lib/detail-localization
 import { isComboIconPilot } from "@/lib/combo-input-tokens";
 import styles from "./pilot-combo-card.module.css";
 import { ComboInputRecipe } from "./combo-input-recipe";
+import { StrategyCard, japaneseRouteFromRecipe } from "./strategy-card";
 
 const FAVORITE_KEY = "sf6dna:favorite-combos:v1";
 const TRAINING_KEY = "sf6dna:training-combos:v1";
@@ -111,9 +112,19 @@ export function PilotComboCard({
     return () => window.cancelAnimationFrame(frame);
   }, [combo.id, sample]);
 
-  const expandedFacts = [
-    ["コマンド", displayValue(combo.command, "コマンド未確認")],
+  const recipeMatches = Boolean(commandRecipe && commandRecipe.recipe_id === combo.id && commandRecipe.raw_recipe === (combo.rawRecipe ?? combo.command));
+  const rawRecipe = combo.rawRecipe ?? combo.command ?? null;
+  const categoryLabel = combo.category ? categoryLabels[combo.category] ?? localizeComboText(combo.category) : "カテゴリ未確認";
+  const facts = [
     ["ダメージ", displayValue(combo.damage)],
+    ["Dゲージ消費", displayValue(combo.drive)],
+    ["SA消費", displayValue(combo.sa)],
+    ["終了状況", displayValue(combo.endCondition)],
+    ["難易度", verified && combo.difficulty !== null ? `${combo.difficulty}/5` : "未確認"],
+    ["画面位置", displayValue(combo.position)],
+  ] as const;
+  const details = [
+    ["コマンド", displayValue(rawRecipe, "コマンド未確認")],
     ["ドライブゲージ使用量", displayValue(combo.drive)],
     ["SAゲージ使用量", displayValue(combo.sa)],
     ["開始条件", displayValue(combo.startCondition)],
@@ -122,87 +133,38 @@ export function PilotComboCard({
     ["用途", displayValue(combo.purpose)],
     ["運び", "未確認"],
     ["使用頻度", "未確認"],
+    ["始動", displayValue(combo.starter)],
     ["対応バージョン", displayValue(combo.patch)],
-  ];
+    ["検証状態", verified ? "検証済み" : "未検証"],
+    ["情報源", sourceUrl && combo.sourceLabel ? (
+      <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
+        {combo.sourceLabel}{combo.sourceType ? ` / ${localizeSourceType(combo.sourceType)}` : ""}（{new URL(sourceUrl).hostname}）↗
+      </a>
+    ) : "参考リンクなし"],
+  ] as const;
+  const bookmark = !sample ? (
+    <button type="button" className={styles.bookmark} aria-label={`${combo.name}をお気に入り${favorite ? "から外す" : "に追加"}`} aria-pressed={favorite}
+      onClick={() => setFavorite(toggleStoredId(FAVORITE_KEY, combo.id))}>{favorite ? "★" : "☆"}</button>
+  ) : null;
 
   return (
-    <article className={styles.card}>
-      {combo.media ? (
-        <div className={styles.media}>
-          {combo.media.type === "video" ? (
-            <video controls playsInline loop={combo.media.loop} muted={combo.media.loop} preload="none" poster={combo.media.posterUrl ?? undefined}>
-              <source src={combo.media.url} />
-            </video>
-          ) : (
-            // eslint-disable-next-line @next/next/no-img-element -- Preview media can be GIF/WebP and is not a stable optimized asset.
-            <img src={combo.media.url} alt={`${combo.name}の動作確認`} width="960" height="540" loading="lazy" />
-          )}
-        </div>
-      ) : <div className={styles.mediaPlaceholder}><span>動作メディア</span><small>動作メディア未登録</small></div>}
-
-      {combo.media?.caption ? <p role="note">{combo.media.caption}</p> : null}
-
-      <div className={styles.summaryRow}>
-        <div className={styles.main}>
-          <div className={styles.badges}>
-            <span>{combo.category ? categoryLabels[combo.category] ?? localizeComboText(combo.category) : "カテゴリ未確認"}</span>
-            <span className={styles.difficulty}>{verified && combo.difficulty !== null ? `難易度 ${combo.difficulty}/5` : "難易度 未確認"}</span>
-            <span>ドライブ {displayValue(combo.drive)}</span>
-            <span>SA {displayValue(combo.sa)}</span>
-            {combo.preview ? <span className={styles.preview}>確認用</span> : null}
-          </div>
-          <h2>{combo.name}</h2>
-          {combo.starter ? <p>始動: {combo.starter}</p> : null}
-          {combo.purpose ? <p>{combo.purpose}</p> : null}
-        </div>
-
-        <div className={styles.damage}>
-          <small>ダメージ</small>
-          <strong>{displayValue(combo.damage)}</strong>
-        </div>
-      </div>
-
-      {!sample ? <div className={styles.actions}>
-        <button
-          type="button"
-          aria-label={`${combo.name}をお気に入り${favorite ? "から外す" : "に追加"}`}
-          aria-pressed={favorite}
-          onClick={() => setFavorite(toggleStoredId(FAVORITE_KEY, combo.id))}
-        >
-          {favorite ? "★ お気に入り済み" : "☆ お気に入り"}
-        </button>
-        <button
-          type="button"
-          aria-label={`${combo.name}を${training ? "練習対象から外す" : "練習対象にする"}`}
-          aria-pressed={training}
-          onClick={() => setTraining(toggleStoredId(TRAINING_KEY, combo.id))}
-        >
-          {training ? "● 練習中" : "● 練習する"}
-        </button>
-      </div> : null}
-
-      <details className={styles.details}>
-        <summary>詳細を開く</summary>
-        <div className={styles.detailBody}>
-          <dl>
-            {expandedFacts.map(([label, value]) => (
-              <div key={String(label)}>
-                <dt>{label}</dt>
-                <dd>{label === "コマンド" && (combo.rawRecipe ?? combo.command) ? (commandRecipe && commandRecipe.recipe_id === combo.id && commandRecipe.raw_recipe === (combo.rawRecipe ?? combo.command) ? <Sf6CardRecipe recipe={commandRecipe} /> : <ComboInputRecipe recipe={combo.rawRecipe ?? combo.command ?? ""} iconPilot={isComboIconPilot(combo.id)} />) : String(value)}</dd>
-              </div>
-            ))}
-          </dl>
-          <div className={styles.source}>
-            <span>情報源</span>
-            {sourceUrl && combo.sourceLabel ? (
-              <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
-                {combo.sourceLabel}{combo.sourceType ? ` / ${localizeSourceType(combo.sourceType)}` : ""}（{new URL(sourceUrl).hostname}）↗
-              </a>
-            ) : <span>参考リンクなし</span>}
-          </div>
-          {!sample && releaseFeatures.publicStrategyContent ? <Link href={appendDevicePreviewToken(combo.href, previewToken)}>個別ページを見る →</Link> : null}
-        </div>
-      </details>
-    </article>
+    <StrategyCard
+      kind="combo"
+      title={combo.name}
+      category={combo.preview ? `${categoryLabel}・確認用` : categoryLabel}
+      control={commandRecipe && recipeMatches && commandRecipe.control !== "unknown" ? commandRecipe.control.toUpperCase() : null}
+      media={combo.media ? { type: combo.media.type, url: combo.media.url, posterUrl: combo.media.posterUrl, loop: combo.media.loop, credit: combo.media.caption } : null}
+      mediaAction={bookmark}
+      facts={facts}
+      commandIcons={rawRecipe ? (recipeMatches && commandRecipe ? <Sf6CardRecipe recipe={commandRecipe} /> : <ComboInputRecipe recipe={combo.rawRecipe ?? combo.command ?? ""} iconPilot={isComboIconPilot(combo.id)} />) : null}
+      commandJa={recipeMatches ? japaneseRouteFromRecipe(commandRecipe) : null}
+      body={combo.purpose}
+      details={details}
+      detailsExtra={<>
+        {!sample ? <button type="button" className={styles.trainingToggle} aria-label={`${combo.name}を${training ? "練習対象から外す" : "練習対象にする"}`} aria-pressed={training}
+          onClick={() => setTraining(toggleStoredId(TRAINING_KEY, combo.id))}>{training ? "● 練習中" : "● 練習する"}</button> : null}
+        {!sample && releaseFeatures.publicStrategyContent ? <Link href={appendDevicePreviewToken(combo.href, previewToken)}>個別ページを見る →</Link> : null}
+      </>}
+    />
   );
 }

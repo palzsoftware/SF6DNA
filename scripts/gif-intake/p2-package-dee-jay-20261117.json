@@ -1,0 +1,174 @@
+{
+ "date": "2026-11-17",
+ "character": "dee-jay",
+ "records": [
+  {
+   "character": "dee-jay",
+   "asset_filename": "001-dee-jay-standing-lp.gif",
+   "asset_sha256": "5fb8518f8a31d2516c5d1992596f39574d3a9c654568ff7bad442b8a784fa452",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "002-dee-jay-standing-lk.gif",
+   "asset_sha256": "47acd66dbb73925028acc6aefedcb5ed3986fa0187d5216f9bd52b7094040684",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "003-dee-jay-standing-mp.gif",
+   "asset_sha256": "7538ee63cd8dc4666bda9ec2af70f745cbd97ef66c4bae3f24aefd240b48dc54",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "004-dee-jay-standing-mk.gif",
+   "asset_sha256": "2314d5735cc4df2c968f7f74dd0ccf804f01b57477cd9efbf735d13d63a2cbd2",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "005-dee-jay-standing-hp.gif",
+   "asset_sha256": "023843f59017971c37977ee3b9545036a4df5592fd7c7a51648552802809bb24",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "006-dee-jay-standing-hk.gif",
+   "asset_sha256": "c26df0993da333602f30bf9daf690a1adabf4f30884f791ee63a701e0a2973af",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "007-dee-jay-crouching-lp.gif",
+   "asset_sha256": "c78d97aff5679752ae9bed75f495501043f8e18e3203854266cad61f79703fc6",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "008-dee-jay-crouching-lk.gif",
+   "asset_sha256": "5b3179958a31e48306682ce2a9e1c16285fda494af532f846bc40b69bc560f3f",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "009-dee-jay-crouching-mp.gif",
+   "asset_sha256": "d35c5c791ef7af38fb1c20d06510941c1f471298613f7ba411f2ae6c46bb789f",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "010-dee-jay-crouching-mk.gif",
+   "asset_sha256": "a914a907b56d2014790c0d23a079b498c39479aabe7622af41bd8aceb4df0125",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "011-dee-jay-crouching-hp.gif",
+   "asset_sha256": "84a40ff151aea32371a6b27eef8b176a3601443b5a320d8dc836db903a49f005",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "012-dee-jay-crouching-hk.gif",
+   "asset_sha256": "b08f0f7e006e05cb40b252b9cec018375543219b87e95f9548cea23609369824",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "031-dee-jay-air-slasher-l.gif",
+   "asset_sha256": "e3093f539bbda5a2465219bc649aafad816091f1365cea0de92d594817dbad59",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "032-dee-jay-air-slasher-m.gif",
+   "asset_sha256": "15ec688be4e3d58e8648dabc161c06a2ef64ca6b34f0992a1f4d1e31248b1729",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "033-dee-jay-air-slasher-h.gif",
+   "asset_sha256": "79fb80b806bddf3818a9dcd3a4a6ddfbfa639b3775c3e8450e5e6f8a41d94210",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "036-dee-jay-jackknife-l.gif",
+   "asset_sha256": "8016f1908708465ece5bd1be9c066ebaa31dd28abd836669a581c69eba8646d2",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "037-dee-jay-jackknife-m.gif",
+   "asset_sha256": "5f455f2204d5c33853eb5bf2eab4ba5eca469343a34a62f1758e005f5cf1e48c",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "038-dee-jay-jackknife-h.gif",
+   "asset_sha256": "77a0ada9a367111a94a3c140ba844fb2bba05f589eb2fe7bbe328091fccb5636",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "044-dee-jay-mgu-l.gif",
+   "asset_sha256": "41cb37bced8afb0f9cb1bec4306095672660f8edff4889609048a7cf030a0ae4",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "045-dee-jay-mgu-m.gif",
+   "asset_sha256": "2f2dc3b39f65d005e26d02ddcbff36c4163c01e6a08cc5a147b29421d1b32d5c",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  },
+  {
+   "character": "dee-jay",
+   "asset_filename": "046-dee-jay-mgu-h.gif",
+   "asset_sha256": "3e52ee275925ace330a08260860cf78320bffe5c7d6623f6cbe12d2d6763516d",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117"
+  }
+ ]
+}

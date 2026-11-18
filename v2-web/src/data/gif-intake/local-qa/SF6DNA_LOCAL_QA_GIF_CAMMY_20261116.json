@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 1,
+  "characterSlug": "cammy",
+  "localQaOnly": true,
+  "approval": "NOT_APPROVED",
+  "note": "ローカルQA専用。公開承認ではない。表示は開発環境のlocalhost限定の隔離ルートのみ。",
+  "entries": [
+    {
+      "moveId": "6dd6a2a0-d98b-4b2f-82d3-115d34e7ae1e",
+      "moveSlug": "cammy-cannon-strike-od",
+      "fileName": "cammy-cannon-strike-od.gif",
+      "sha256": "e286baf203617c67c19c81d2eb562c98df5d6c973fd745a093d474185b303dd8",
+      "bytes": 4003447,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1800,
+      "sourceFile": "cammy-cannon-strike-od.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 緑のOD SUCCESS ↓↙←+K。空中での動作(j.214KK)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "80bee02a-249d-4230-9640-bb29964c1434",
+      "moveSlug": "cammy-cannon-strike",
+      "fileName": "cammy-cannon-strike.gif",
+      "sha256": "9e9380c78c49f2167bcb85ae6b57b46ef410ae3d5fe3e5d7a87842564e0748a5",
+      "bytes": 5504029,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2540,
+      "sourceFile": "cammy-cannon-strike.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↙←+K。空中での動作(j.214K)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "00398ea1-7adc-44eb-8edc-321538bec402",
+      "moveSlug": "cammy-forward-throw",
+      "fileName": "cammy-forward-throw.gif",
+      "sha256": "50d7b508205e119c219f1445839a23114ef4d0e29ae0bfc45ee6f73b31d21315",
+      "bytes": 8419966,
+      "width": 640,
+      "height": 360,
+      "durationMs": 3940,
+      "sourceFile": "cammy-forward-throw.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示なし(投げ)。相手を投げて位置の入れ替えなし=前投げ。 [2026-11-17 修正版: 終端の画面遷移(黒1+復帰)を除去。元SHA=8dd04fb48af7…]",
+      "unconfirmed": [
+        "入力表示が無く、前/後ろは位置入替の有無による目視判定",
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "5003bab7-95fe-405f-960b-f1af0fa4151b",
+      "moveSlug": "cammy-back-throw",
+      "fileName": "cammy-back-throw.gif",
+      "sha256": "e5f877138dd831721f81690eb5a4d51e74cc7e21d09b35834719f7c1924968ad",
+      "bytes": 7491194,
+      "width": 640,
+      "height": 360,
+      "durationMs": 3540,
+      "sourceFile": "cammy-back-throw.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示なし(投げ)。相手を飛び越えて背後へ投げ位置が入れ替わる=後ろ投げ。",
+      "unconfirmed": [
+        "入力表示が無く、前/後ろは位置入替の有無による目視判定",
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "7c8eb8b0-fb38-4e7d-a5cd-648448f931b4",
+      "moveSlug": "cammy-hooligan-reverse",
+      "fileName": "cammy-hooligan-reverse.gif",
+      "sha256": "40ffcb7163d1a4bd5569b1777aff77e3b121956d040a7ee9d88ef4e6f188d3dd",
+      "bytes": 3745835,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2080,
+      "sourceFile": "cammy-hooligan-reverse.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↘→+P のあと ↓+K(236P > 2K)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "db190382-371c-4b77-9134-7cf125ac8bb0",
+      "moveSlug": "cammy-hooligan-slicer-od",
+      "fileName": "cammy-hooligan-slicer-od.gif",
+      "sha256": "5b3436c7cb17d3f831d225ecaad71691764fc2b2607dd147ba76e55e2dcc2470",
+      "bytes": 5212815,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2960,
+      "sourceFile": "cammy-hooligan-slicer-od-r16.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 緑のOD SUCCESS ↓↘→+P(236PP)。追加入力なし。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "61721245-946e-4951-9035-a59e0922d101",
+      "moveSlug": "cammy-hooligan-slicer",
+      "fileName": "cammy-hooligan-slicer.gif",
+      "sha256": "e00009fb604219d3200ecaf6d4e74cdf3becf2d9fc7b74477ecac5697b6e0e4d",
+      "bytes": 4515588,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2640,
+      "sourceFile": "cammy-hooligan-slicer-r16.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↘→+P(236P)。追加入力なし。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "84a3ca4b-ab3c-4034-bbeb-e1bcba8775cc",
+      "moveSlug": "cammy-hooligan-strike",
+      "fileName": "cammy-hooligan-strike.gif",
+      "sha256": "619ca2066e0065cfbf696cdf9e4ac45a91a6df7ee0a2b6da10f79fb5938dfbab",
+      "bytes": 3434473,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1840,
+      "sourceFile": "cammy-hooligan-strike.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↘→+P のあと K(236P > K)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "5e300bea-0365-4a60-b820-f42679cd2c7e",
+      "moveSlug": "cammy-hooligan-throw",
+      "fileName": "cammy-hooligan-throw.gif",
+      "sha256": "be032844fd1e6362b4f6011010f76d689ef6a1756478199d6ad0ac482171e13f",
+      "bytes": 6245876,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2940,
+      "sourceFile": "cammy-hooligan-throw.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↘→+P のあと 弱P+弱K(青2つ)(236P > LP+LK)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "a7a85481-b314-4e21-ba23-11b261a41335",
+      "moveSlug": "cammy-knuckle-od",
+      "fileName": "cammy-knuckle-od.gif",
+      "sha256": "f7e717952f0bc88860eb107508ca77bd693af4592c3c2d9ff7d9894d1d28435c",
+      "bytes": 3079332,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1760,
+      "sourceFile": "cammy-knuckle-od-r16-final.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 緑のOD SUCCESS ↓↙←+P(214PP)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "f4475688-1cb6-4d3a-b8a2-67af5f0d0e28",
+      "moveSlug": "cammy-lift-combination",
+      "fileName": "cammy-lift-combination.gif",
+      "sha256": "eb154cfaac839cbbd0b50724c545e403aafb09fbb06c50d6314a0adc91cf834e",
+      "bytes": 4636471,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2640,
+      "sourceFile": "cammy-lift-combination.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ←+中P ▶ 強K(4MP > HK)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "6e3fe94c-78fe-4993-99d9-1cc050510fc9",
+      "moveSlug": "cammy-sa1",
+      "fileName": "cammy-sa1.gif",
+      "sha256": "a04373d1e63d83028106aa0f35fba635aba9633cd0e156243bff1fa89a9dffd7",
+      "bytes": 8812659,
+      "width": 640,
+      "height": 360,
+      "durationMs": 5600,
+      "sourceFile": "cammy-sa1_under10mb.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↘→↓↘→+K(236236K)。ゲージ3→2。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "d6b92f12-9c33-48e7-9220-f75922701a3e",
+      "moveSlug": "cammy-sa3",
+      "fileName": "cammy-sa3.gif",
+      "sha256": "6d96cc68f38bc08085196420890c107653314be604ca6118b9e0c30ed8c53e28",
+      "bytes": 9828863,
+      "width": 640,
+      "height": 360,
+      "durationMs": 10560,
+      "sourceFile": "cammy-sa3-r16_under10mb.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↘→↓↘→+P(236236P)。ゲージ3→0(3本消費)。体力バー満タンでCAではない=SA3。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "3b480694-4948-443a-8a08-c3db8691bcf0",
+      "moveSlug": "cammy-spike-od",
+      "fileName": "cammy-spike-od.gif",
+      "sha256": "7f43ea994c064f21410c0d2a43b5928089d5759638a85f12c71287bce282abbc",
+      "bytes": 4220341,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2480,
+      "sourceFile": "cammy-spike-od-r16.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 緑のOD SUCCESS →↓↘+K(623KK)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "d4eaa3bd-9caa-4bd6-a135-09f0ea3c5813",
+      "moveSlug": "cammy-spiral-od",
+      "fileName": "cammy-spiral-od.gif",
+      "sha256": "e69b25d86fb28e06f19adcb80ebb73c4833f02f18ca38efd2145babfda9f7fa8",
+      "bytes": 3858784,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2320,
+      "sourceFile": "cammy-spiral-od-r16-trimmed.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 緑のOD SUCCESS ↓↘→+K(236KK)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "0d8d69be-af5f-4af6-8467-bb409688c5a8",
+      "moveSlug": "cammy-swing-combination",
+      "fileName": "cammy-swing-combination.gif",
+      "sha256": "9be7d6196fb18a591d07492f08122c28f4a7e717c9cf426934c07bf61eecb325",
+      "bytes": 5082429,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2800,
+      "sourceFile": "cammy-swing-combination.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 強P ▶ 強K(HP > HK)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "2e4348f3-6108-41bc-a0ff-3cac35362291",
+      "moveSlug": "cammy-air-throw",
+      "fileName": "cammy-air-throw.gif",
+      "sha256": "027dd6540b331151972d0fbbb2c176ac50c1b58d9d14618589e2a0d26ff63135",
+      "bytes": 7297762,
+      "width": 640,
+      "height": 360,
+      "durationMs": 3270,
+      "sourceFile": "cammy-air-throw.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示なし。空中の相手を掴んで投げ落とす動作(空中投げ)。強度なし。技IDは動作+Manifest主張+台帳の順序で確定。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ]
+    },
+    {
+      "moveId": "8cefd04a-ac28-44aa-b841-4ceed029513d",
+      "moveSlug": "cammy-crouching-hk",
+      "fileName": "cammy-crouching-hk.gif",
+      "sha256": "842a9ef2a53e6190e56da4f97bf91ad978538afb8a56c94490fedc810d47a2b7",
+      "bytes": 3826846,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2880,
+      "sourceFile": "cammy-crouching-hk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "48162de8-8d3f-4449-afd5-cec46bcf1078",
+      "moveSlug": "cammy-crouching-hp",
+      "fileName": "cammy-crouching-hp.gif",
+      "sha256": "d35178493ffac00492dcd9bb874911f65ee909a417a637f0719bfc205e2ce7fe",
+      "bytes": 2624545,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1680,
+      "sourceFile": "cammy-crouching-hp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "a4b70351-6955-4bd8-857f-40414c293776",
+      "moveSlug": "cammy-crouching-lk",
+      "fileName": "cammy-crouching-lk.gif",
+      "sha256": "43a82133b492cbb2e1a5395f554812f51089807494736ed0c848446ee9ab681f",
+      "bytes": 2338683,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1600,
+      "sourceFile": "cammy-crouching-lk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "cae4b758-62cc-4115-a067-706e84ff59fd",
+      "moveSlug": "cammy-crouching-mk",
+      "fileName": "cammy-crouching-mk.gif",
+      "sha256": "5e64e103a2a5ceadbc4081d6fdaaed0c5d0a4c53aa84690b8652722860821284",
+      "bytes": 2575340,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1680,
+      "sourceFile": "cammy-crouching-mk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "20e18c1b-7943-48b6-a2a3-cc6fe2f4d0d7",
+      "moveSlug": "cammy-standing-hk",
+      "fileName": "cammy-standing-hk.gif",
+      "sha256": "85940e1baa3be7d0bb7f80e6563f178ba11b312ede476e3cbc885a48243ca83b",
+      "bytes": 3104199,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1920,
+      "sourceFile": "cammy-standing-hk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "e0fc3a4b-6aa8-4b6f-accc-ce98a46e1faa",
+      "moveSlug": "cammy-standing-hp",
+      "fileName": "cammy-standing-hp.gif",
+      "sha256": "799c654ba3483edb21e54daf482b86d1776b1e00bf36d53bcfee436eb7342ea4",
+      "bytes": 3251221,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1920,
+      "sourceFile": "cammy-standing-hp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "f778ea31-4d34-4adc-adb0-713d01bffd51",
+      "moveSlug": "cammy-standing-lk",
+      "fileName": "cammy-standing-lk.gif",
+      "sha256": "c5c2435521f7740b2ece532cedd842ddbf28c9305715aba2bbeb57ec42b75f15",
+      "bytes": 1989877,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1280,
+      "sourceFile": "cammy-standing-lk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "087a4701-4c9c-4d72-aba7-6653466bb2bc",
+      "moveSlug": "cammy-standing-lp",
+      "fileName": "cammy-standing-lp.gif",
+      "sha256": "2d24f9d66c14248ef2bd90c27e4fc4f683c5029fdc93adddfe8d382cffcd6d18",
+      "bytes": 1715103,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1120,
+      "sourceFile": "cammy-standing-lp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "f9b6bfa2-1c71-40f4-b77b-d075013b84be",
+      "moveSlug": "cammy-standing-mk",
+      "fileName": "cammy-standing-mk.gif",
+      "sha256": "7482d0c9c1f6bea1fd236e057d96412da9f67f7e25b8e6026c8000c728bc2607",
+      "bytes": 2498720,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1680,
+      "sourceFile": "cammy-standing-mk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "108b54e6-0bc5-4418-b42d-a8ff0c3c8f73",
+      "moveSlug": "cammy-standing-mp",
+      "fileName": "cammy-standing-mp.gif",
+      "sha256": "fceb05ca3ce269275d889faaa37678880f0022a4cd0a621ceefc33124c0d30a2",
+      "bytes": 2068226,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1280,
+      "sourceFile": "cammy-standing-mp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "b71563a1-1e76-426e-846a-efe566eb419f",
+      "moveSlug": "cammy-sa2",
+      "fileName": "cammy-sa2.gif",
+      "sha256": "8415c69397ef07817942af57ff739efb79a857fe2ba29a8e289e672fa3ea6e12",
+      "bytes": 8783307,
+      "width": 640,
+      "height": 360,
+      "durationMs": 6960,
+      "sourceFile": "cammy-sa2-r16-final_under10mb.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↙←↓↙←+Pのボタン絵柄(拳)、ゲージ3→1消費=SA2。既存データは214214K(旧)だが2024年5月調整でPへ変更(二次情報で確認、CAPCOM公式ページは取得不可)。技IDはゲージ消費とモーションで確定。 [2026-11-17 修正版: 終端の画面遷移(黒1+復帰)を除去。元SHA=a86b938fdf61…]",
+      "unconfirmed": []
+    },
+    {
+      "moveId": "13a0114b-6cb3-4079-ae51-d51fa15b20ee",
+      "moveSlug": "cammy-sa2-air",
+      "fileName": "cammy-sa2-air.gif",
+      "sha256": "02e82a6440c261801779a4cbe249e7a3b7743db17fda21d02f7bfa896cb2fff2",
+      "bytes": 7810415,
+      "width": 480,
+      "height": 270,
+      "durationMs": 9000,
+      "sourceFile": "cammy-sa2-air_under10mb.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↙←↓↙←+Pのボタン絵柄(拳)、ゲージ3→1消費=SA2。既存データは214214K(旧)だが2024年5月調整でPへ変更(二次情報で確認、CAPCOM公式ページは取得不可)。技IDはゲージ消費とモーションで確定。",
+      "unconfirmed": []
+    }
+  ]
+}

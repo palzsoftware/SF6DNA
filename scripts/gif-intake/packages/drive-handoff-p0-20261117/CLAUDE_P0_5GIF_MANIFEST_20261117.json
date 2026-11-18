@@ -1,0 +1,200 @@
+{
+  "created_at_jst": "2026-11-17T09:47:31.747119+09:00",
+  "purpose": "P0 5 individual GIF handoff; NOT product publishing",
+  "drive_folder_id": "1env3Gfw3EGQ9YxiiSGF0wltUHb8iJZNj",
+  "drive_upload_status": "COMPLETE: all five individual GIFs uploaded and re-downloaded, SHA256 verified",
+  "existing_source_zip_and_original_assets_are_on_drive": true,
+  "records": [
+    {
+      "character": "juri",
+      "filename": "17_73-juri-sa3-kaisen-dankai-raku_under10mb_128color.gif",
+      "move_id": null,
+      "approval_status": "NOT_APPROVED",
+      "visual_qa": "HOLD",
+      "asset_location": "GOOGLE_DRIVE_HANDOFF",
+      "drive_target_folder": "https://drive.google.com/drive/folders/1env3Gfw3EGQ9YxiiSGF0wltUHb8iJZNj",
+      "drive_file_id": "1uez1KkCOzWeMDtBtw8l1edSgliaH8CHm",
+      "qa": {
+        "sha256": "2a8c04a02cc30436532773425b6c4d2dd3a5cc82cb9f0de9ce1e28d242d6d53d",
+        "bytes": 9232744,
+        "resolution": [
+          480,
+          270
+        ],
+        "frame_count": 208,
+        "loop": 0,
+        "duration_ms": 10400,
+        "fps_nominal": 20.0,
+        "all_frame_decode": "PASS",
+        "technical_qa": "PASS",
+        "bad_frames": []
+      },
+      "source_drive_original_id": "1w5TJOHrA6GkyPoXEf9fxyi-gS7BIlgPy",
+      "source_drive_original_url": "https://drive.google.com/file/d/1w5TJOHrA6GkyPoXEf9fxyi-gS7BIlgPy/view",
+      "source_original_filename": "17_73-juri-sa3-kaisen-dankai-raku.gif",
+      "source_original_sha256": "115b1a869b5ecdbeb1a08d36c5d7e69e84f4f77add9d731ebb14411026586dac",
+      "source_original_bytes": 11016274,
+      "proposed_move_name": "Kaisen Dankairaku SA3 (filename only)",
+      "status": "DERIVED_NEW_LOCAL",
+      "derivation": "ffmpeg 480x270 20fps 128-color palette bayer dither, no time trimming",
+      "source_start": 0,
+      "source_end": 10.4,
+      "drive_file_url": "https://drive.google.com/file/d/1uez1KkCOzWeMDtBtw8l1edSgliaH8CHm/view",
+      "drive_download_sha256": "2a8c04a02cc30436532773425b6c4d2dd3a5cc82cb9f0de9ce1e28d242d6d53d",
+      "drive_sha_verification": "PASS_MATCH_LOCAL",
+      "handoff_status": "UPLOADED_VERIFIED"
+    },
+    {
+      "character": "juri",
+      "filename": "juri_044314_118.70_121.90_air_strike_impact_variant_HOLD.gif",
+      "move_id": null,
+      "approval_status": "NOT_APPROVED",
+      "visual_qa": "HOLD",
+      "asset_location": "GOOGLE_DRIVE_HANDOFF",
+      "drive_target_folder": "https://drive.google.com/drive/folders/1env3Gfw3EGQ9YxiiSGF0wltUHb8iJZNj",
+      "drive_file_id": "1FB8Vi6w6idJSqaV6gfwG-Pjz7uCahYlR",
+      "qa": {
+        "sha256": "60eb98a6e7397ccf7fcbb19b69421def1a60c37f8d46782db5aa0755cd0c1968",
+        "bytes": 5567334,
+        "resolution": [
+          480,
+          270
+        ],
+        "frame_count": 64,
+        "loop": 0,
+        "duration_ms": 3200,
+        "fps_nominal": 20.0,
+        "all_frame_decode": "PASS",
+        "technical_qa": "PASS",
+        "bad_frames": []
+      },
+      "source_drive_zip_id": "1TpsHA9lFdy3FrlCELjzyTryQoYHHisvs",
+      "source_drive_zip_url": "https://drive.google.com/file/d/1TpsHA9lFdy3FrlCELjzyTryQoYHHisvs/view",
+      "status": "EXISTING_EXTRACTED",
+      "proposed_move_name": null,
+      "drive_file_url": "https://drive.google.com/file/d/1FB8Vi6w6idJSqaV6gfwG-Pjz7uCahYlR/view",
+      "drive_download_sha256": "60eb98a6e7397ccf7fcbb19b69421def1a60c37f8d46782db5aa0755cd0c1968",
+      "drive_sha_verification": "PASS_MATCH_LOCAL",
+      "handoff_status": "UPLOADED_VERIFIED"
+    },
+    {
+      "character": "juri",
+      "filename": "juri_044314_67.20_69.60_ground_fire_arc_variant_HOLD.gif",
+      "move_id": null,
+      "approval_status": "NOT_APPROVED",
+      "visual_qa": "HOLD",
+      "asset_location": "GOOGLE_DRIVE_HANDOFF",
+      "drive_target_folder": "https://drive.google.com/drive/folders/1env3Gfw3EGQ9YxiiSGF0wltUHb8iJZNj",
+      "drive_file_id": "1i7wnsbU6hSp7IHdI8B8w0VgvLcgRKJsb",
+      "qa": {
+        "sha256": "9329c7b0227836c9416985dd9740d94c17c9a86e9e2aa940218fe88a6f4168cf",
+        "bytes": 4198708,
+        "resolution": [
+          480,
+          270
+        ],
+        "frame_count": 48,
+        "loop": 0,
+        "duration_ms": 2400,
+        "fps_nominal": 20.0,
+        "all_frame_decode": "PASS",
+        "technical_qa": "PASS",
+        "bad_frames": []
+      },
+      "source_drive_zip_id": "1TpsHA9lFdy3FrlCELjzyTryQoYHHisvs",
+      "source_drive_zip_url": "https://drive.google.com/file/d/1TpsHA9lFdy3FrlCELjzyTryQoYHHisvs/view",
+      "status": "EXISTING_EXTRACTED",
+      "proposed_move_name": null,
+      "drive_file_url": "https://drive.google.com/file/d/1i7wnsbU6hSp7IHdI8B8w0VgvLcgRKJsb/view",
+      "drive_download_sha256": "9329c7b0227836c9416985dd9740d94c17c9a86e9e2aa940218fe88a6f4168cf",
+      "drive_sha_verification": "PASS_MATCH_LOCAL",
+      "handoff_status": "UPLOADED_VERIFIED"
+    },
+    {
+      "character": "juri",
+      "filename": "juri_044314_71.35_73.25_ground_purple_slash_variant_HOLD.gif",
+      "move_id": null,
+      "approval_status": "NOT_APPROVED",
+      "visual_qa": "HOLD",
+      "asset_location": "GOOGLE_DRIVE_HANDOFF",
+      "drive_target_folder": "https://drive.google.com/drive/folders/1env3Gfw3EGQ9YxiiSGF0wltUHb8iJZNj",
+      "drive_file_id": "1mAnnQLCNWcP1mg_mwKzdQ9fHTePk0UFC",
+      "qa": {
+        "sha256": "64605581da6375bb5b34ed94847f019e004a409a46a13d41684275d3daee0a96",
+        "bytes": 2619147,
+        "resolution": [
+          480,
+          270
+        ],
+        "frame_count": 38,
+        "loop": 0,
+        "duration_ms": 1900,
+        "fps_nominal": 20.0,
+        "all_frame_decode": "PASS",
+        "technical_qa": "PASS",
+        "bad_frames": []
+      },
+      "source_drive_zip_id": "1TpsHA9lFdy3FrlCELjzyTryQoYHHisvs",
+      "source_drive_zip_url": "https://drive.google.com/file/d/1TpsHA9lFdy3FrlCELjzyTryQoYHHisvs/view",
+      "status": "EXISTING_EXTRACTED",
+      "proposed_move_name": null,
+      "drive_file_url": "https://drive.google.com/file/d/1mAnnQLCNWcP1mg_mwKzdQ9fHTePk0UFC/view",
+      "drive_download_sha256": "64605581da6375bb5b34ed94847f019e004a409a46a13d41684275d3daee0a96",
+      "drive_sha_verification": "PASS_MATCH_LOCAL",
+      "handoff_status": "UPLOADED_VERIFIED"
+    },
+    {
+      "character": "luke",
+      "filename": "luke_hissatsu1_76s40_77s95_unmapped_candidate.gif",
+      "move_id": null,
+      "approval_status": "NOT_APPROVED",
+      "visual_qa": "HOLD",
+      "asset_location": "GOOGLE_DRIVE_HANDOFF",
+      "drive_target_folder": "https://drive.google.com/drive/folders/1env3Gfw3EGQ9YxiiSGF0wltUHb8iJZNj",
+      "drive_file_id": "1EHzWdiMplDMzrzliDpnXChbM_rf9AW-e",
+      "qa": {
+        "sha256": "15c29457ffa0a9fd0c79f8ec8657c1d31a2061f1959961fdd23884af522cf13e",
+        "bytes": 2512014,
+        "resolution": [
+          480,
+          270
+        ],
+        "frame_count": 31,
+        "loop": 0,
+        "duration_ms": 1550,
+        "fps_nominal": 20.0,
+        "all_frame_decode": "PASS",
+        "technical_qa": "PASS",
+        "bad_frames": []
+      },
+      "source_drive_zip_id": "1h1_FgA2KYXdOxQrvthNAb0XY2WK4Jxuy",
+      "source_drive_zip_url": "https://drive.google.com/file/d/1h1_FgA2KYXdOxQrvthNAb0XY2WK4Jxuy/view",
+      "source_video": "luke_hissatsu1.mp4",
+      "source_start": 76.4,
+      "source_end": 77.95,
+      "proposed_move_name": "OD Flash Knuckle family (unverified)",
+      "status": "EXISTING_EXTRACTED",
+      "drive_file_url": "https://drive.google.com/file/d/1EHzWdiMplDMzrzliDpnXChbM_rf9AW-e/view",
+      "drive_download_sha256": "15c29457ffa0a9fd0c79f8ec8657c1d31a2061f1959961fdd23884af522cf13e",
+      "drive_sha_verification": "PASS_MATCH_LOCAL",
+      "handoff_status": "UPLOADED_VERIFIED"
+    }
+  ],
+  "original_sa3_qa": {
+    "sha256": "115b1a869b5ecdbeb1a08d36c5d7e69e84f4f77add9d731ebb14411026586dac",
+    "bytes": 11016274,
+    "resolution": [
+      480,
+      270
+    ],
+    "frame_count": 208,
+    "loop": 0,
+    "duration_ms": 10400,
+    "fps_nominal": 20.0,
+    "all_frame_decode": "PASS",
+    "technical_qa": "PASS",
+    "bad_frames": []
+  },
+  "note": "Source ZIP/original remain unchanged. None of the five individual GIFs has been uploaded into handoff Drive folder.",
+  "drive_shas_verified": 5
+}

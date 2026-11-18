@@ -1,0 +1,78 @@
+sourceRecordKey,webId,name,officialType,scope,category,slugProposal,previewFamily,previewRelation
+arjun:web:100,100,立ち弱P（ぶつ）,NORMAL,REGISTER_CANDIDATE,normal,arjun-standing-lp,,NOT_IN_PREVIEW
+arjun:web:101,101,立ち弱K（蹴る）,NORMAL,REGISTER_CANDIDATE,normal,arjun-standing-lk,,NOT_IN_PREVIEW
+arjun:web:102,102,立ち中P（ぶん殴る）,NORMAL,REGISTER_CANDIDATE,normal,arjun-standing-mp,,NOT_IN_PREVIEW
+arjun:web:103,103,立ち中K（引っ掛ける）,NORMAL,REGISTER_CANDIDATE,normal,arjun-standing-mk,,NOT_IN_PREVIEW
+arjun:web:104,104,立ち強P（打ち砕く）,NORMAL,REGISTER_CANDIDATE,normal,arjun-standing-hp,,NOT_IN_PREVIEW
+arjun:web:105,105,立ち強K（ぶっ飛ばす）,NORMAL,REGISTER_CANDIDATE,normal,arjun-standing-hk,,NOT_IN_PREVIEW
+arjun:web:106,106,しゃがみ弱P（小突く）,NORMAL,REGISTER_CANDIDATE,normal,arjun-crouching-lp,,NOT_IN_PREVIEW
+arjun:web:107,107,しゃがみ弱K（突く）,NORMAL,REGISTER_CANDIDATE,normal,arjun-crouching-lk,,NOT_IN_PREVIEW
+arjun:web:108,108,しゃがみ中P（はらう）,NORMAL,REGISTER_CANDIDATE,normal,arjun-crouching-mp,,NOT_IN_PREVIEW
+arjun:web:109,109,しゃがみ中K（伸ばす）,NORMAL,REGISTER_CANDIDATE,normal,arjun-crouching-mk,,NOT_IN_PREVIEW
+arjun:web:110,110,しゃがみ強P（かちあげる）,NORMAL,REGISTER_CANDIDATE,normal,arjun-crouching-hp,,NOT_IN_PREVIEW
+arjun:web:111,111,しゃがみ強K（踏み潰す）,NORMAL,REGISTER_CANDIDATE,normal,arjun-crouching-hk,,NOT_IN_PREVIEW
+arjun:web:112,112,ジャンプ弱P（打つ）,AIR,REGISTER_CANDIDATE,normal,arjun-jumping-lp,,NOT_IN_PREVIEW
+arjun:web:113,113,ジャンプ弱K（踏む）,AIR,REGISTER_CANDIDATE,normal,arjun-jumping-lk,,NOT_IN_PREVIEW
+arjun:web:114,114,ジャンプ中P（すくい上げる）,AIR,REGISTER_CANDIDATE,normal,arjun-jumping-mp,,NOT_IN_PREVIEW
+arjun:web:115,115,ジャンプ中K（突き破る）,AIR,REGISTER_CANDIDATE,normal,arjun-jumping-mk,,NOT_IN_PREVIEW
+arjun:web:116,116,ジャンプ強P（振り回す）,AIR,REGISTER_CANDIDATE,normal,arjun-jumping-hp,,NOT_IN_PREVIEW
+arjun:web:117,117,ジャンプ強K（叩き壊す）,AIR,REGISTER_CANDIDATE,normal,arjun-jumping-hk,,NOT_IN_PREVIEW
+arjun:web:200,200,仁義の一刀,NORMAL,REGISTER_CANDIDATE,unique,arjun-capcom-web-200,,NOT_IN_PREVIEW
+arjun:web:201,201,踏み潰す,NORMAL,REGISTER_CANDIDATE,unique,arjun-capcom-web-201,,NOT_IN_PREVIEW
+arjun:web:202,202,頑強な跳舞,NORMAL,REGISTER_CANDIDATE,unique,arjun-capcom-web-202,,NOT_IN_PREVIEW
+arjun:web:203,203,規律の躍動,NORMAL,REGISTER_CANDIDATE,unique,arjun-capcom-web-203,,NOT_IN_PREVIEW
+arjun:web:204,204,不敵の調べ,NORMAL,REGISTER_CANDIDATE,unique,arjun-capcom-web-204,,NOT_IN_PREVIEW
+arjun:web:205,205,鎮圧,NORMAL,REGISTER_CANDIDATE,unique,arjun-capcom-web-205,,NOT_IN_PREVIEW
+arjun:web:206,206,追跡,NORMAL,REGISTER_CANDIDATE,unique,arjun-capcom-web-206,,NOT_IN_PREVIEW
+arjun:web:208,208,無情の拳,NORMAL,REGISTER_CANDIDATE,unique,arjun-capcom-web-208,,NOT_IN_PREVIEW
+arjun:web:209,209,無情の拳（ホールド）,NORMAL,REGISTER_CANDIDATE,unique,arjun-capcom-web-209,,NOT_IN_PREVIEW
+arjun:web:300,300,弱 大義の巨腕,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-300,大義の巨腕,VARIANT
+arjun:web:301,301,中 大義の巨腕,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-301,大義の巨腕,VARIANT
+arjun:web:302,302,強 大義の巨腕,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-302,大義の巨腕,VARIANT
+arjun:web:303,303,追撃,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-303,大義の巨腕,DERIVED
+arjun:web:304,304,OD 大義の巨腕,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-304,大義の巨腕,VARIANT
+arjun:web:305,305,OD 追撃,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-305,大義の巨腕,DERIVED
+arjun:web:306,306,弱 厳酷な岩肩,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-306,厳酷な岩肩,VARIANT
+arjun:web:307,307,中 厳酷な岩肩,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-307,厳酷な岩肩,VARIANT
+arjun:web:308,308,強 厳酷な岩肩,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-308,厳酷な岩肩,VARIANT
+arjun:web:309,309,過剰な正義,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-309,厳酷な岩肩,DERIVED
+arjun:web:310,310,OD 厳酷な岩肩,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-310,厳酷な岩肩,VARIANT
+arjun:web:311,311,OD 過剰な正義,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-311,厳酷な岩肩,DERIVED
+arjun:web:312,312,息吹の円筒,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-312,息吹の円筒,VARIANT
+arjun:web:313,313,弱 息吹の震撼,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-313,息吹の円筒,DERIVED
+arjun:web:314,314,中 息吹の震撼,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-314,息吹の円筒,DERIVED
+arjun:web:315,315,強 息吹の震撼,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-315,息吹の円筒,DERIVED
+arjun:web:316,316,息吹の震撼(飛び道具),SPECIAL,EXCLUDE_PROJECTILE_SPLIT_ROW,,,息吹の円筒,DERIVED
+arjun:web:317,317,OD 息吹の円筒,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-317,息吹の円筒,VARIANT
+arjun:web:318,318,OD 弱 息吹の震撼,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-318,息吹の円筒,DERIVED
+arjun:web:319,319,OD 中 息吹の震撼,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-319,息吹の円筒,DERIVED
+arjun:web:320,320,OD 強 息吹の震撼,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-320,息吹の円筒,DERIVED
+arjun:web:321,321,OD 息吹の震撼(飛び道具),SPECIAL,EXCLUDE_PROJECTILE_SPLIT_ROW,,,息吹の円筒,DERIVED
+arjun:web:322,322,弱 神気の巨巌,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-322,神気の巨巌,VARIANT
+arjun:web:323,323,中 神気の巨巌,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-323,神気の巨巌,VARIANT
+arjun:web:324,324,強 神気の巨巌,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-324,神気の巨巌,VARIANT
+arjun:web:325,325,神気の巨巌(飛び道具),SPECIAL,EXCLUDE_PROJECTILE_SPLIT_ROW,,,神気の巨巌,VARIANT
+arjun:web:326,326,OD 弱 神気の巨巌,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-326,神気の巨巌,VARIANT
+arjun:web:327,327,OD 中 神気の巨巌,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-327,神気の巨巌,VARIANT
+arjun:web:328,328,OD 強 神気の巨巌,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-328,神気の巨巌,VARIANT
+arjun:web:329,329,OD 神気の巨巌(飛び道具),SPECIAL,EXCLUDE_PROJECTILE_SPLIT_ROW,,,神気の巨巌,VARIANT
+arjun:web:330,330,鬼気迫る尋問,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-330,鬼気迫る尋問,VARIANT
+arjun:web:331,331,OD 鬼気迫る尋問,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-331,鬼気迫る尋問,VARIANT
+arjun:web:332,332,不撓の警衛,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-332,不撓の警衛,VARIANT
+arjun:web:333,333,倫理の崩壊,SPECIAL,REGISTER_CANDIDATE,special,arjun-capcom-web-333,不撓の警衛,DERIVED
+arjun:web:400,400,SA1 破壊の蛮声,SUPER,REGISTER_CANDIDATE,super,arjun-capcom-web-400,破壊の蛮声,VARIANT
+arjun:web:401,401,SA2 忘却の一槌,SUPER,REGISTER_CANDIDATE,super,arjun-capcom-web-401,忘却の一鎚,VARIANT_KANJI_CONFLICT
+arjun:web:402,402,SA3 秩序の鬼神,SUPER,REGISTER_CANDIDATE,super,arjun-capcom-web-402,秩序の鬼神,VARIANT
+arjun:web:403,403,CA 秩序の鬼神,SUPER,REGISTER_CANDIDATE,super,arjun-capcom-web-403,秩序の鬼神,VARIANT
+arjun:web:500,500,豪胆な制裁,NORMAL,REGISTER_CANDIDATE,throw,arjun-capcom-web-500,,NOT_IN_PREVIEW
+arjun:web:501,501,処罰の天秤,NORMAL,REGISTER_CANDIDATE,throw,arjun-capcom-web-501,,NOT_IN_PREVIEW
+arjun:web:600,600,前方ステップ,F_DASH,EXCLUDE_COMMON_SYSTEM,,,,NOT_IN_PREVIEW
+arjun:web:601,601,後方ステップ,B_DASH,EXCLUDE_COMMON_SYSTEM,,,,NOT_IN_PREVIEW
+arjun:web:602,602,ドライブインパクト（暴力沙汰）,SPECIAL,EXCLUDE_COMMON_SYSTEM,,,,NOT_IN_PREVIEW
+arjun:web:603,603,[ガード時]ドライブリバーサル（過剰防衛）,SPECIAL,EXCLUDE_COMMON_SYSTEM,,,,NOT_IN_PREVIEW
+arjun:web:604,604,[起き上がり時]ドライブリバーサル（過剰防衛）,SPECIAL,EXCLUDE_COMMON_SYSTEM,,,,NOT_IN_PREVIEW
+arjun:web:605,605,ドライブパリィ,PARRY,EXCLUDE_COMMON_SYSTEM,,,,NOT_IN_PREVIEW
+arjun:web:606,606,ジャストパリィ（打撃）,PARRY,EXCLUDE_COMMON_SYSTEM,,,,NOT_IN_PREVIEW
+arjun:web:607,607,ジャストパリィ（飛び道具）,PARRY,EXCLUDE_COMMON_SYSTEM,,,,NOT_IN_PREVIEW
+arjun:web:608,608,パリィドライブラッシュ,DRIVE_STEP,EXCLUDE_COMMON_SYSTEM,,,,NOT_IN_PREVIEW
+arjun:web:609,609,キャンセルドライブラッシュ,DRIVE_STEP,EXCLUDE_COMMON_SYSTEM,,,,NOT_IN_PREVIEW

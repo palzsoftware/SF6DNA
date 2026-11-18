@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "characterSlug": "chun-li",
+  "localQaOnly": true,
+  "approval": "NOT_APPROVED",
+  "note": "ローカルQA専用。公開承認ではない。表示は開発環境のlocalhost限定の隔離ルートのみ。",
+  "entries": [
+    {
+      "moveId": "6b5687c5-02d7-4214-8df6-30587b3e6cd1",
+      "moveSlug": "chun-li-frame-066",
+      "fileName": "chun-li-frame-066.gif",
+      "sha256": "524ca3d57b713680599ec812ae7e1624762c9525b7483aa58091401293471dbe",
+      "bytes": 5054080,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2720,
+      "sourceFile": "chun-li-frame-066-candidate.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示なし(投げ)。相手を投げて位置の入れ替えなし=前投げ(虎襲倒 5/6+弱P弱K)。",
+      "unconfirmed": [
+        "入力表示が無く、前/後ろは位置入替の有無による目視判定",
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "9bc191ba-9467-4532-aaa9-1df05fecab11",
+      "moveSlug": "chun-li-frame-067",
+      "fileName": "chun-li-frame-067.gif",
+      "sha256": "ac52f7e8b97d5ef4e3a95580c6489ab9434c29ce910de0aeb0e8dd5df27cc8eb",
+      "bytes": 4747458,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2720,
+      "sourceFile": "chun-li-frame-067-candidate.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示なし(投げ)。相手を投げて位置が入れ替わる=後ろ投げ(太極扇 ←+弱P弱K)。",
+      "unconfirmed": [
+        "入力表示が無く、前/後ろは位置入替の有無による目視判定",
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "e8627cc1-85c3-4fae-a9ef-784311e4ce8d",
+      "moveSlug": "chun-li-standing-lp",
+      "fileName": "chun-li-standing-lp.gif",
+      "sha256": "724e2f8e3a24976e1c21961c1039a5a1ccd1aebb550b7a148f896e1f607e4c30",
+      "bytes": 1140345,
+      "width": 640,
+      "height": 360,
+      "durationMs": 800,
+      "sourceFile": "chun-li-standing-lp-candidate.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "393af232-0ab0-40c0-86dc-096819601e19",
+      "moveSlug": "chun-li-standing-mp",
+      "fileName": "chun-li-standing-mp.gif",
+      "sha256": "f5c65ab0618f075621714c0d4c38a1c11826b2af9efdd55384556b06425ea93e",
+      "bytes": 1442362,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1040,
+      "sourceFile": "chun-li-standing-mp-candidate.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "b1d5ec50-b033-43f4-b034-eb8ccbe7c4b2",
+      "moveSlug": "chun-li-standing-hp",
+      "fileName": "chun-li-standing-hp.gif",
+      "sha256": "ba55bdb69796c28f731b7906b36ca8d7c7b81edb2c6121b2192fadb33e74f843",
+      "bytes": 2109211,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1200,
+      "sourceFile": "chun-li-standing-hp-candidate.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "1d9a313e-8b88-445e-b8cd-896165c27123",
+      "moveSlug": "chun-li-standing-lk",
+      "fileName": "chun-li-standing-lk.gif",
+      "sha256": "e4db8e60954a0cf8b41d8b9616d3b07b15dfc15330e60efa1db1220927f68683",
+      "bytes": 1609494,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1120,
+      "sourceFile": "chun-li-standing-lk-candidate.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "64f4a965-b6ba-4df0-9e20-c7dc9b1db299",
+      "moveSlug": "chun-li-standing-mk",
+      "fileName": "chun-li-standing-mk.gif",
+      "sha256": "8165e5e05b4b7778b8010e4ee5e56a2bed36d73a763a2081101664249e09c29b",
+      "bytes": 1712868,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1200,
+      "sourceFile": "chun-li-standing-mk-candidate.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "1abb4304-2025-4fd0-867e-bb42c1223945",
+      "moveSlug": "chun-li-standing-hk",
+      "fileName": "chun-li-standing-hk.gif",
+      "sha256": "11e3e27686fe11a5f8a528eba256285034f001ebe690f0a5b7895a6dae097910",
+      "bytes": 2165782,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1280,
+      "sourceFile": "chun-li-standing-hk-candidate.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "73f3ddfa-144b-45fa-8ecf-6f447186af20",
+      "moveSlug": "chun-li-crouching-lk",
+      "fileName": "chun-li-crouching-lk.gif",
+      "sha256": "81c4516fa4f3086c449efa0496d969f28f25e3e3a1fdf9bf68ee9afd439caea8",
+      "bytes": 1448457,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1040,
+      "sourceFile": "chun-li-crouching-lk-candidate.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①撮影順=コマンドリスト順とファイル名が一致 ②Manifestの技ID主張がfixtureと一致 ③同ボタン群でGIF再生時間が弱<中<強と矛盾しない(厳密な増加) ④fixtureフレームデータの順序と矛盾なし。入力表示による強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+ "manifest_version": "1.0",
+ "character_slug": "ryu",
+ "source_owner": "user_capture",
+ "captured_patch": "2026.08.03",
+ "capture_date": "2026-11-13",
+ "source_files": [
+  {
+   "category": "gif_delivery",
+   "filename": "ryu-forward-throw.gif",
+   "sha256": "4122e490fb74b8fdcc0fe0f102bc347ed9a13cd9c83b0604cf5106bbfb632ea5"
+  },
+  {
+   "category": "gif_delivery",
+   "filename": "ryu-back-throw.gif",
+   "sha256": "22271c14750c342497f00321d023e753f69e24877cb2c1d6d9386f24a65ebbf5"
+  },
+  {
+   "category": "gif_delivery",
+   "filename": "ryu-5mp-hit-only.gif",
+   "sha256": "15f4dd12f39517a21a35b1a5c13dfcc2470d51e07bf291a74aa4070f5b9e314a"
+  }
+ ],
+ "clips": [
+  {
+   "move_id": "252287ef-f49c-4347-ace6-76dce143ef59",
+   "move_slug": "ryu-forward-throw",
+   "category": "throw",
+   "variant": "default",
+   "media_url": "/media/moves/ryu/gif/ryu-forward-throw.gif",
+   "media_type": "gif",
+   "poster_url": null,
+   "verification_status": "capture_received",
+   "loop_start_ms": 0,
+   "loop_end_ms": 1980,
+   "duration_ms": 1980,
+   "width": 640,
+   "height": 360,
+   "fps": 50.0,
+   "filesize_bytes": 8058591,
+   "source_file": "ryu-forward-throw.gif",
+   "cut_review_status": "CUT_REVIEW_PENDING",
+   "mapping_evidence": "既存GIFの技ID/slugが公開用データ(ALL_CHARACTER_RELEASE_FIXTURE_20261004)の技「前投げ」と一致。公式コマンド: 弱P + 弱K。映像の目視確認: 未実施"
+  },
+  {
+   "move_id": "b0e5f2a6-29fd-4aa0-98ed-05b9b248343a",
+   "move_slug": "ryu-back-throw",
+   "category": "throw",
+   "variant": "default",
+   "media_url": "/media/moves/ryu/gif/ryu-back-throw.gif",
+   "media_type": "gif",
+   "poster_url": null,
+   "verification_status": "capture_received",
+   "loop_start_ms": 0,
+   "loop_end_ms": 1980,
+   "duration_ms": 1980,
+   "width": 640,
+   "height": 360,
+   "fps": 50.0,
+   "filesize_bytes": 7107832,
+   "source_file": "ryu-back-throw.gif",
+   "cut_review_status": "CUT_REVIEW_PENDING",
+   "mapping_evidence": "既存GIFの技ID/slugが公開用データ(ALL_CHARACTER_RELEASE_FIXTURE_20261004)の技「後ろ投げ」と一致。公式コマンド: ← + 弱P + 弱K。映像の目視確認: 未実施"
+  },
+  {
+   "move_id": "b33dd19c-add5-4420-8856-163fab932249",
+   "move_slug": "ryu-standing-mp",
+   "category": "normal",
+   "variant": "default",
+   "media_url": "/media/moves/ryu/gif/ryu-standing-mp.gif",
+   "media_type": "gif",
+   "poster_url": null,
+   "verification_status": "capture_received",
+   "loop_start_ms": 0,
+   "loop_end_ms": 1060,
+   "duration_ms": 1060,
+   "width": 640,
+   "height": 360,
+   "fps": 50.0,
+   "filesize_bytes": 3478853,
+   "source_file": "ryu-5mp-hit-only.gif",
+   "cut_review_status": "CUT_REVIEW_PENDING",
+   "mapping_evidence": "既存GIFの技ID/slugが公開用データ(ALL_CHARACTER_RELEASE_FIXTURE_20261004)の技「立ち中P（鉤突き）」と一致。公式コマンド: 中P。映像の目視確認: 未実施"
+  }
+ ]
+}

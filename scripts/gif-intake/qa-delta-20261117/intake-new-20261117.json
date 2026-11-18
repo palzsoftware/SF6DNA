@@ -1,0 +1,156 @@
+[
+ {
+  "fileName": "luke-drive-impact.gif",
+  "driveFileId": "1iRMDemrkA5nvDjwCV1TfKBqgNHzJyPo0",
+  "sha256": "3fdaae43a87f7bf2f297ba9bf49ae0ba3041c60586dff340766f5e5fa5ac4fcd",
+  "bytes": 3865285,
+  "w": 480,
+  "h": 270,
+  "frames": 52,
+  "durationMs": 2600,
+  "dupOf132": null
+ },
+ {
+  "fileName": "yasmine-standing-light-punch-5lp-r1-candidate.gif",
+  "driveFileId": "1LMf3rCi2b2KEICxEha1bNP4sMjBfqHPn",
+  "sha256": "7b55ce6107237d67527fe3e1874e66a1d5237aacd10dca713b8bce8b317ab90b",
+  "bytes": 368249,
+  "w": 480,
+  "h": 270,
+  "frames": 14,
+  "durationMs": 700,
+  "dupOf132": null
+ },
+ {
+  "fileName": "yasmine-standing-medium-punch-5mp-r1-candidate.gif",
+  "driveFileId": "1UPQc-PEvZlNsoZiR-jcQROprDbJW2PUu",
+  "sha256": "83f1570946c8aef65f31e7d7a9f2056c9db18c829b3ffcb9f1583cb4c6972fdd",
+  "bytes": 607624,
+  "w": 480,
+  "h": 270,
+  "frames": 25,
+  "durationMs": 1250,
+  "dupOf132": null
+ },
+ {
+  "fileName": "yasmine-standing-heavy-punch-5hp-r1-candidate.gif",
+  "driveFileId": "1DGUa9zJvUGWzxEitXvOwMS2pGhlMzYr0",
+  "sha256": "0f12be12895453c05743554200df3f19ab085d6abc821bfe56738dfe3e438dc2",
+  "bytes": 1231271,
+  "w": 480,
+  "h": 270,
+  "frames": 26,
+  "durationMs": 1300,
+  "dupOf132": null
+ },
+ {
+  "fileName": "yasmine-crouching-light-punch-2lp-r1-candidate.gif",
+  "driveFileId": "13iml2j_C3jy-uUnYpRkxd2RFobBslzqu",
+  "sha256": "3d320a13fa0ae8a67b63740b7c0cf3b06f30538b5225f2b67c6b40e028bd8d6f",
+  "bytes": 335424,
+  "w": 480,
+  "h": 270,
+  "frames": 15,
+  "durationMs": 750,
+  "dupOf132": null
+ },
+ {
+  "fileName": "yasmine-crouching-medium-punch-2mp-r1-candidate.gif",
+  "driveFileId": "1GOcGRWjBnsl65cCLOHDC3LIUUuu_jSlr",
+  "sha256": "665561afdcd72d0d4d9ca785f7f34d15a0f7ccd0c35467bcbc5566da6ff3420e",
+  "bytes": 417148,
+  "w": 480,
+  "h": 270,
+  "frames": 18,
+  "durationMs": 900,
+  "dupOf132": null
+ },
+ {
+  "fileName": "yasmine-crouching-heavy-punch-2hp-r1-candidate.gif",
+  "driveFileId": "1_a0Oc8zkXLvFF88ORSonHvonznxCM81y",
+  "sha256": "c599de9a0ab1c08f603a984a5491cb3172da2fb6152cf9277160cf6dddfac44d",
+  "bytes": 860838,
+  "w": 480,
+  "h": 270,
+  "frames": 23,
+  "durationMs": 1150,
+  "dupOf132": null
+ },
+ {
+  "fileName": "yasmine-standing-light-kick-5lk-r1-candidate.gif",
+  "driveFileId": "1cAo4I0iGDno8rxhn4d_EGy5LDmnw-tTn",
+  "sha256": "0e96c93718265b0ec5c62e1f67bec82123ef8a657c317dd4ab64081e45505a0f",
+  "bytes": 346948,
+  "w": 480,
+  "h": 270,
+  "frames": 14,
+  "durationMs": 700,
+  "dupOf132": null
+ },
+ {
+  "fileName": "yasmine-standing-medium-kick-5mk-r1-candidate.gif",
+  "driveFileId": "1d7Aax3YzqR-H_CGOCVmDkYVrEU3rniN4",
+  "sha256": "c7df5ff63bb7c6381d8f94a456b396b1c8d47a3ae18e719c756a7aa86b70202a",
+  "bytes": 889817,
+  "w": 480,
+  "h": 270,
+  "frames": 19,
+  "durationMs": 950,
+  "dupOf132": null
+ },
+ {
+  "fileName": "yasmine-standing-heavy-kick-5hk-r1-candidate.gif",
+  "driveFileId": "1yAq1yLsQFnbXQM6jm_axbqIb_S-SC8Ls",
+  "sha256": "950b0658ea5eb471890976f1e9fd3ca3229575502e09422c79fc47f926a666c1",
+  "bytes": 1246980,
+  "w": 480,
+  "h": 270,
+  "frames": 22,
+  "durationMs": 1100,
+  "dupOf132": null
+ },
+ {
+  "fileName": "yasmine-crouching-light-kick-2lk-r1-candidate.gif",
+  "driveFileId": "1x0L1H-EQU9uV77s_aU9Fi2enskHvjjJi",
+  "sha256": "0e087f8e884ffec6dd05b3ddc85ea8bc730c80e543ed81cf8e5550ccfc847fad",
+  "bytes": 441037,
+  "w": 480,
+  "h": 270,
+  "frames": 16,
+  "durationMs": 800,
+  "dupOf132": null
+ },
+ {
+  "fileName": "yasmine-crouching-medium-kick-2mk-r1-candidate.gif",
+  "driveFileId": "1_3t15Kjo_sD_TatJ9lIZKf469xYSOvE1",
+  "sha256": "c605dcc1081c97b9c6a5de479ae42dfbcee49a98a0c30870eddeb2fe2472a49d",
+  "bytes": 433188,
+  "w": 480,
+  "h": 270,
+  "frames": 16,
+  "durationMs": 800,
+  "dupOf132": null
+ },
+ {
+  "fileName": "yasmine-gunting-na-pabagsak-2hk-r1-candidate.gif",
+  "driveFileId": "185oULNKs-Jcf6aOAldrMcqZYlNodiWmb",
+  "sha256": "5dc14a11ce3c47bf6afa954f86ef494be39ffc2e26d9b38842289207f9aabc87",
+  "bytes": 1151570,
+  "w": 480,
+  "h": 270,
+  "frames": 24,
+  "durationMs": 1200,
+  "dupOf132": null
+ },
+ {
+  "fileName": "tech-test-a.gif",
+  "driveFileId": "14jVrWTl12_Jkp0VXZZDKe_u7UXCP4PrJ",
+  "sha256": "c57982467c9eb7ba4c52ee8f34fd9f7d8b9be4bbdd8a455ed7a35eea75a86609",
+  "bytes": 3010113,
+  "w": 480,
+  "h": 270,
+  "frames": 47,
+  "durationMs": 2350,
+  "dupOf132": null
+ }
+]

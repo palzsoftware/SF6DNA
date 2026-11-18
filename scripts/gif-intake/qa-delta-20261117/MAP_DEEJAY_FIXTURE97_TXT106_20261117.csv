@@ -1,0 +1,107 @@
+fixture_move_id,fixture_slug,fixture_name,txt_key,txt_skill,txt_command,match,fixture_startup,txt_startup
+36de8f7a-a910-4315-8507-77174da08fef,dee-jay-standing-lp,立ち弱P （ジャブ）,deejay:web:100,立ち弱P （ジャブ）,LP,NAME+STARTUP,4,4
+7debb114-baa2-4cbc-91b7-952b3d2ec571,dee-jay-standing-lk,立ち弱K （ローキック）,deejay:web:101,立ち弱K （ローキック）,LK,NAME+STARTUP,5,5
+a37ee100-dbdd-41f9-94a7-e1cc975d98c1,dee-jay-standing-mp,立ち中P （フロントフック）,deejay:web:102,立ち中P （フロントフック）,MP,NAME+STARTUP,7,7
+54a83ad9-53e4-4f7b-ae16-8e827ebbbb2c,dee-jay-standing-mk,立ち中K （ミドルキック）,deejay:web:103,立ち中K （ミドルキック）,MK,NAME+STARTUP,9,9
+ebdd3009-fee4-4e55-87f1-b26439728dde,dee-jay-standing-hp,立ち強P （ブラストアッパー）,deejay:web:104,立ち強P （ブラストアッパー）,HP,NAME+STARTUP,9,9
+02fff13d-238d-4072-af8d-da1f75e1654c,dee-jay-standing-hk,立ち強K （マキシマムキック）,deejay:web:105,立ち強K （マキシマムキック）,HK,NAME+STARTUP,12,12
+57beb616-7d69-45dd-972e-226521ec86e7,dee-jay-crouching-lp,しゃがみ弱P （アンダージャブ）,deejay:web:106,しゃがみ弱P （アンダージャブ）,2 + LP,NAME+STARTUP,5,5
+594eaec7-0b10-49a4-b975-faab51565605,dee-jay-crouching-lk,しゃがみ弱K （アンダーウィップ）,deejay:web:107,しゃがみ弱K （アンダーウィップ）,2 + LK,NAME+STARTUP,5,5
+e0e9439e-1ded-4732-b34a-f669df106a59,dee-jay-crouching-mp,しゃがみ中P （レッグクラッシュエルボー）,deejay:web:108,しゃがみ中P （レッグクラッシュエルボー）,2 + MP,NAME+STARTUP,6,6
+b60102f5-af5c-492a-bca6-0c0277bf69b7,dee-jay-crouching-mk,しゃがみ中K （グランドスクラッチ）,deejay:web:109,しゃがみ中K （グランドスクラッチ）,2 + MK,NAME+STARTUP,8,8
+516288aa-46c3-433c-b5ff-b72972e5baa8,dee-jay-crouching-hp,しゃがみ強P （バーストフック）,deejay:web:110,しゃがみ強P （バーストフック）,2 + HP,NAME+STARTUP,8,8
+e1052f7b-e246-4ca4-9e35-88a3eb86f96b,dee-jay-crouching-hk,しゃがみ強K （スライディングヒールアッパー）,deejay:web:111,しゃがみ強K （スライディングヒールアッパー）,2 + HK,NAME+STARTUP,14,14
+c23de894-0516-4edd-9b97-5b14e536cd32,dee-jay-jump-lp,ジャンプ弱P （ファンクストレート）,deejay:web:112,ジャンプ弱P （ファンクストレート）,（ジャンプ中に）LP,NAME+STARTUP,4,4
+efd4a014-1971-4185-84e4-43168d2dc991,dee-jay-jump-lk,ジャンプ弱K （ファンクウィップ）,deejay:web:113,ジャンプ弱K （ファンクウィップ）,（ジャンプ中に）LK,NAME+STARTUP,4,4
+0f8ed5f9-a022-4246-9eef-36b077a1441d,dee-jay-jump-mp,ジャンプ中P （ファンクアッパー）,deejay:web:114,ジャンプ中P （ファンクアッパー）,（ジャンプ中に）MP,NAME+STARTUP,6,6
+dc32dc03-29b1-4507-95cd-53e49ff1d5fa,dee-jay-jump-mk,ジャンプ中K （フライングムエタイキック）,deejay:web:115,ジャンプ中K （フライングムエタイキック）,（ジャンプ中に）MK,NAME+STARTUP,8,8
+83273f07-dab4-4632-bbce-975f2c9ff506,dee-jay-jump-hp,ジャンプ強P （ファンクバウンド）,deejay:web:116,ジャンプ強P （ファンクバウンド）,（ジャンプ中に）HP,NAME+STARTUP,9,9
+c6b4199e-1e8e-421a-8826-d091f8028c61,dee-jay-jump-hk,ジャンプ強K （フライングカリビアンソバット）,deejay:web:117,ジャンプ強K （フライングカリビアンソバット）,（ジャンプ中に）HK,NAME+STARTUP,10,10
+ec176c91-b69d-4988-86f3-579ca6b1f5b4,dee-jay-jump-down-lk,ニーショット,deejay:web:200,ニーショット,（前ジャンプ中に）2 + LK,NAME+STARTUP,6,6
+9f3d308c-c982-49e0-9f7f-b270378c7e0f,dee-jay-sunrise-heel,サンライズヒール,deejay:web:201,サンライズヒール,6 + MK,NAME+STARTUP,19,19
+e6977b57-168b-4876-833c-b0629b37532d,dee-jay-back-hk,フェイスブレイカー,deejay:web:202,フェイスブレイカー,4 + HK,NAME+STARTUP,7,7
+8d8f6e98-e904-4b4c-9e09-b7e0d213c359,dee-jay-capcom-frame-022,3ビートコンボ （2段目）,deejay:web:204,3ビートコンボ （2段目）,LP>MK,NAME+STARTUP,9,9
+69ee97b1-bad9-4fb7-a4ca-61579fbe35ba,dee-jay-threebeat,3ビートコンボ （3段目）,deejay:web:205,3ビートコンボ （3段目）,LP>MK>MK,NAME+STARTUP,14,14
+2a930171-4677-4be3-9901-a88dc30b0a08,dee-jay-capcom-frame-024,ディージェイスペシャル （2段目）,deejay:web:206,ディージェイスペシャル （2段目）,MP>HP,NAME+STARTUP,11,11
+def2c3bc-6abb-4ac0-a8ea-7ff55ec4e2fe,dee-jay-mp-hp-hk,ディージェイスペシャル （3段目）,deejay:web:207,ディージェイスペシャル （3段目）,MP>HP>HK,NAME+STARTUP,13,13
+4f58dac2-713f-405f-b801-25b650ed8342,dee-jay-capcom-frame-026,ファンキーダンス （2段目）,deejay:web:208,ファンキーダンス （2段目）,MP>MP,NAME+STARTUP,12,12
+cb0f151e-5a2c-48a4-a31c-435d3994ee06,dee-jay-capcom-frame-027,ファンキーダンス （3段目）,deejay:web:209,ファンキーダンス （3段目）,MP>MP>HP,NAME+STARTUP,20,20
+3c831bed-9a12-49a5-bd29-6b9d282a35e3,dee-jay-funky-dance,ファンキーダンス・フェイク,deejay:web:210,ファンキーダンス・フェイク,MP>MP>4 + HP,NAME+STARTUP,None,
+d051fd45-5f0f-42da-b15c-49eca2bf8dcd,dee-jay-capcom-frame-029,フライングパーティー,deejay:web:211,フライングパーティー,（ジャンプ中に）MP>HP,NAME+STARTUP,8,8
+155af88f-6cb8-40c1-b585-ebfdfb7d2ad3,dee-jay-speedy-maracas,マラカスビート,deejay:web:212,マラカスビート,5252 + LPMPHP,NAME+STARTUP,None,
+373ec31c-6d7d-414e-a3e2-39d1e1c17e0d,dee-jay-air-slasher-l,弱 エアスラッシャー,deejay:web:300,弱 エアスラッシャー,4溜め6 + LP,NAME+STARTUP,None,
+048c78d4-2da9-461b-86ff-fb6b96a66f0b,dee-jay-air-slasher-m,中 エアスラッシャー,deejay:web:301,中 エアスラッシャー,4溜め6 + MP,NAME+STARTUP,17,17
+01a68cd2-ff35-4104-9ac6-9ed44641fdb1,dee-jay-air-slasher-h,強 エアスラッシャー,deejay:web:302,強 エアスラッシャー,4溜め6 + HP,NAME+STARTUP,17,17
+1d7f9f79-bff7-4c9b-8645-54e95b310d24,dee-jay-air-slasher-od,OD エアスラッシャー,deejay:web:303,OD エアスラッシャー,4溜め6 + LPMPHP,NAME+STARTUP,10,10
+993e3a92-4ca7-43b1-84f6-3da503d34b89,dee-jay-capcom-frame-035,OD エアスラッシャー （射出),deejay:web:304,OD エアスラッシャー （射出),4溜め6 + LPMPHP,NAME+STARTUP,22,22
+3f8211e6-9fdc-45ba-9558-bd5908199ec4,dee-jay-jackknife-l,弱 ジャックナイフマキシマム,deejay:web:305,弱 ジャックナイフマキシマム,2溜め8 + LK,NAME+STARTUP,None,
+fe965804-a210-4d77-93a3-295f3d7910b0,dee-jay-jackknife-m,中 ジャックナイフマキシマム,deejay:web:306,中 ジャックナイフマキシマム,2溜め8 + MK,NAME+STARTUP,6,6
+bc0d5768-33c4-44e4-a841-1c92751c77d8,dee-jay-jackknife-h,強 ジャックナイフマキシマム,deejay:web:307,強 ジャックナイフマキシマム,2溜め8 + HK,NAME+STARTUP,5,5
+bc019a33-449a-4662-aaa6-d86d0a766a1c,dee-jay-jackknife-od,OD ジャックナイフマキシマム,deejay:web:308,OD ジャックナイフマキシマム,2溜め8 + LKMKHK,NAME+STARTUP,6,6
+49f0d4ea-618e-4ce9-94f3-8e6db0b9f7b7,dee-jay-sobat-l,フェイクロールステップ,deejay:web:309,フェイクロールステップ,236 + LK,NAME+STARTUP,None,
+033a5787-d194-4a0f-b05d-6686f04601fe,dee-jay-sobat-m,クイックローリングソバット,deejay:web:310,クイックローリングソバット,236 + MK,NAME+STARTUP,12,12
+0f1c3e4a-ce03-4f74-8950-5b4c92c4bb68,dee-jay-sobat-h,ダブルローリングソバット,deejay:web:311,ダブルローリングソバット,236 + HK,NAME+STARTUP,15,15
+d2b2199c-f28b-4270-a8e1-e7ba02b621b2,dee-jay-sobat-od,OD ダブルローリングソバット,deejay:web:312,OD ダブルローリングソバット,236 + LKMKHK,NAME+STARTUP,17,17
+6a35dfc9-4303-420b-ad28-6295c8abe713,dee-jay-mgu-l,弱 マシンガンアッパー,deejay:web:313,弱 マシンガンアッパー,214 + LP,NAME+STARTUP,15,15
+1d7e7bdf-87a6-48f4-b57b-ae5e4a39441e,dee-jay-mgu-m,中 マシンガンアッパー,deejay:web:314,中 マシンガンアッパー,214 + MP,NAME+STARTUP,22,22
+6244edb0-12f3-4323-93bb-d3dbd65994d7,dee-jay-mgu-h,強 マシンガンアッパー,deejay:web:315,強 マシンガンアッパー,214 + HP,NAME+STARTUP,28,28
+978c3660-a958-4dd9-87a6-c1c4620d9b8d,dee-jay-mgu-od,OD マシンガンアッパー,deejay:web:316,OD マシンガンアッパー,214 + LPMPHP,NAME+STARTUP,26,26
+cb65cb89-a54c-4847-aee3-6de1ea6131c6,dee-jay-jus-cool,ジョスクール,deejay:web:317,ジョスクール,214 + LK | MK | HK,NAME+STARTUP,None,
+42d6e0ba-a3ca-4c52-8a9d-cdff56722889,dee-jay-jus-cool-od,OD ジョスクール,deejay:web:318,OD ジョスクール,214 + LKMKHK,NAME+STARTUP,8,8
+86a9ab72-14a9-4e31-ba16-a06ef4f35753,dee-jay-jc-lk,ファンキースライサー,deejay:web:319,ファンキースライサー,（ジョスクール中に）LK,NAME+STARTUP,12,12
+fdc9dc61-f84b-4a8b-9d75-cebc313e486c,dee-jay-jc-lk-od,OD ファンキースライサー,deejay:web:320,OD ファンキースライサー,（ODジョスクール中に）LK,NAME+STARTUP,9,9
+18e6ec99-6da6-443f-8f48-d9bdc633b9ee,dee-jay-jc-mk,ワニングムーン,deejay:web:321,ワニングムーン,（ジョスクール中に）MK,NAME+STARTUP,25,25
+e8820828-a3d0-421b-a5cd-f8a82179c893,dee-jay-jc-mk-od,OD ワニングムーン,deejay:web:322,OD ワニングムーン,（ODジョスクール中に）MK,NAME+STARTUP,19,19
+444208d8-6ae6-4e2a-83e3-45271bbf0e83,dee-jay-jc-hk,マキシマムストライク,deejay:web:333,マキシマムストライク,（ジョスクール中に）HK,NAME+STARTUP,15,15
+df6adee2-e9b5-476d-b3a0-ccec33e56ac3,dee-jay-jc-hk-od,OD マキシマムストライク,deejay:web:334,OD マキシマムストライク,（ODジョスクール中に）HK,NAME+STARTUP,11,11
+a6c2fe5a-3708-4852-a006-a81964e63106,dee-jay-jc-dash,ジャグリンステップ,deejay:web:335,ジャグリンステップ,（ジョスクール中に）6 + LP | MP | HP,NAME+STARTUP,None,
+2d1e8e24-0795-486b-97ab-7e1b92a18724,dee-jay-jc-dash-od,OD ジャグリンステップ,deejay:web:336,OD ジャグリンステップ,（ジョスクール中に）6 + LP | MP | HP,NAME+STARTUP,None,
+7ccdd714-f92b-4519-8294-d0c74b2880bc,dee-jay-jc-backdash,ジャグリンスウェイ,deejay:web:337,ジャグリンスウェイ,（ジャグリンステップ中に）4 + LP | MP | HP,NAME+STARTUP,None,
+02cfea2b-ffef-4597-a02e-1ce45681924f,dee-jay-jc-backdash-od,OD ジャグリンスウェイ,deejay:web:338,OD ジャグリンスウェイ,（ODジャグリンステップ中に）4 + LP | MP | HP,NAME+STARTUP,None,
+71e6690e-c671-4261-8357-5897427db6b2,dee-jay-sa1,SA1 グレイテストソバット,deejay:web:400,SA1 グレイテストソバット,23626 | 26236 + LK | MK | HK,NAME+STARTUP,7,7
+d69c4e42-be17-41d0-bd47-361bbb7e5c48,dee-jay-sa2-l,SA2 サンライズフェスティバル・ライト,deejay:web:401,SA2 サンライズフェスティバル・ライト,23626 | 26236 + LP,NAME+STARTUP,12,12
+6fa2d13c-5bc5-4dbd-972e-55a87bffe076,dee-jay-capcom-frame-062,SA2 サンライズフェスティバル・ライト （2段目）,deejay:web:402,SA2 サンライズフェスティバル・ライト （2段目）,23626 | 26236 + LP>LP,NAME+STARTUP,11,11
+31da6036-e2ce-460a-bb31-61973bb5c2c1,dee-jay-capcom-frame-063,SA2 サンライズフェスティバル・ライト （3段目）,deejay:web:403,SA2 サンライズフェスティバル・ライト （3段目）,23626 | 26236 + LP>LP>MP,NAME+STARTUP,10,10
+dc38ff4b-74ec-413d-a9ae-f02075fae67c,dee-jay-capcom-frame-064,SA2 サンライズフェスティバル・ライト （4段目）,deejay:web:404,SA2 サンライズフェスティバル・ライト （4段目）,23626 | 26236 + LP>LP>MP>HP,NAME+STARTUP,12,12
+9f701a1e-3205-4d9d-b3ed-203bbadc692c,dee-jay-capcom-frame-065,SA2 サンライズフェスティバル・ライト （5段目）,deejay:web:405,SA2 サンライズフェスティバル・ライト （5段目）,23626 | 26236 + LP>LP>MP>HP>LK,NAME+STARTUP,15,15
+f4cee08c-57ca-49d5-b504-49a058a07c1a,dee-jay-capcom-frame-066,SA2 サンライズフェスティバル・ライト （6段目）,deejay:web:406,SA2 サンライズフェスティバル・ライト （6段目）,23626 | 26236 + LP>LP>MP>HP>LK>MK,NAME+STARTUP,17,17
+7b84810e-b64a-490a-9544-b3e5ad56e18a,dee-jay-capcom-frame-067,SA2 サンライズフェスティバル・ライト （7段目）,deejay:web:407,SA2 サンライズフェスティバル・ライト （7段目）,23626 | 26236 + LP>LP>MP>HP>LK>MK>HK,NAME+STARTUP,18,18
+ec8badb1-f76c-40df-aef5-0cdecc697567,dee-jay-sa2-m,SA2 サンライズフェスティバル・マーベラス,deejay:web:408,SA2 サンライズフェスティバル・マーベラス,23626 | 26236 + MP,NAME+STARTUP,12,12
+931db92d-9f20-4825-99b3-09fe272e4e9f,dee-jay-capcom-frame-069,SA2 サンライズフェスティバル・マーベラス （2段目）,deejay:web:409,SA2 サンライズフェスティバル・マーベラス （2段目）,23626 | 26236 + MP>LP,NAME+STARTUP,11,11
+a19af3ac-f82d-4e44-883f-169753de1ae7,dee-jay-capcom-frame-070,SA2 サンライズフェスティバル・マーベラス （3段目）,deejay:web:410,SA2 サンライズフェスティバル・マーベラス （3段目）,23626 | 26236 + MP>LP>MP,NAME+STARTUP,10,10
+ddec27c3-0c33-451f-b8fd-fee41dd151ed,dee-jay-capcom-frame-071,SA2 サンライズフェスティバル・マーベラス （4段目）,deejay:web:411,SA2 サンライズフェスティバル・マーベラス （4段目）,23626 | 26236 + MP>LP>MP>HP,NAME+STARTUP,12,12
+04b34d3d-8fc8-41b5-a641-91e15af7eec9,dee-jay-capcom-frame-072,SA2 サンライズフェスティバル・マーベラス （5段目）,deejay:web:412,SA2 サンライズフェスティバル・マーベラス （5段目）,23626 | 26236 + MP>LP>MP>HP>LK,NAME+STARTUP,15,15
+442bb744-3d02-4420-85af-0e2418addfd1,dee-jay-capcom-frame-073,SA2 サンライズフェスティバル・マーベラス （6段目）,deejay:web:413,SA2 サンライズフェスティバル・マーベラス （6段目）,23626 | 26236 + MP>LP>MP>HP>LK>MK,NAME+STARTUP,17,17
+23c7fa26-6be5-4265-9cf5-9fa755d7dc49,dee-jay-capcom-frame-074,SA2 サンライズフェスティバル・マーベラス （7段目）,deejay:web:414,SA2 サンライズフェスティバル・マーベラス （7段目）,23626 | 26236 + MP>LP>MP>HP>LK>MK>HK,NAME+STARTUP,18,18
+54f8dd59-6fed-42e9-8450-3057a8328280,dee-jay-sa2-h,SA2 サンライズフェスティバル・マキシマム,deejay:web:415,SA2 サンライズフェスティバル・マキシマム,23626 | 26236 + HP,NAME+STARTUP,12,12
+aa24b69c-fad0-4afd-9a10-75d127dc0016,dee-jay-capcom-frame-076,SA2 サンライズフェスティバル・マキシマム （2段目）,deejay:web:416,SA2 サンライズフェスティバル・マキシマム （2段目）,23626 | 26236 + HP>LP,NAME+STARTUP,11,11
+c6cfbf15-e944-4832-b34f-447992e4349d,dee-jay-capcom-frame-077,SA2 サンライズフェスティバル・マキシマム （3段目）,deejay:web:417,SA2 サンライズフェスティバル・マキシマム （3段目）,23626 | 26236 + HP>LP>MP,NAME+STARTUP,10,10
+e6c4f92c-6225-49cd-8300-2ba2c4d5261d,dee-jay-capcom-frame-078,SA2 サンライズフェスティバル・マキシマム （4段目）,deejay:web:418,SA2 サンライズフェスティバル・マキシマム （4段目）,23626 | 26236 + HP>LP>MP>HP,NAME+STARTUP,12,12
+009dbeb4-0f84-45ea-a48b-1c6fefa8276f,dee-jay-capcom-frame-079,SA2 サンライズフェスティバル・マキシマム （5段目）,deejay:web:419,SA2 サンライズフェスティバル・マキシマム （5段目）,23626 | 26236 + HP>LP>MP>HP>LK,NAME+STARTUP,15,15
+49e5833a-a1e7-4933-91c5-a5aa696578d1,dee-jay-capcom-frame-080,SA2 サンライズフェスティバル・マキシマム （6段目）,deejay:web:420,SA2 サンライズフェスティバル・マキシマム （6段目）,23626 | 26236 + HP>LP>MP>HP>LK>MK,NAME+STARTUP,17,17
+a2ce8de3-a0ca-4dd7-ab28-d675bb88c037,dee-jay-capcom-frame-081,SA2 サンライズフェスティバル・マキシマム （7段目）,deejay:web:421,SA2 サンライズフェスティバル・マキシマム （7段目）,23626 | 26236 + HP>LP>MP>HP>LK>MK>HK,NAME+STARTUP,18,18
+b2804ff3-6b1a-426e-b22f-f1e76a65fa30,dee-jay-capcom-frame-082,SA2 クライマックスブロー （マーベラス）,deejay:web:422,SA2 クライマックスブロー （マーベラス）,（サンライズフェスティバル・マーベラスヒット後に）HP,NAME+STARTUP,11,11
+1cd1f765-83a1-484f-b376-d4ba0dad6dde,dee-jay-capcom-frame-083,SA2 クライマックスブロー （マキシマム）,deejay:web:423,SA2 クライマックスブロー （マキシマム）,（サンライズフェスティバル・マキシマムヒット後に）HP,NAME+STARTUP,11,11
+3e80f796-5731-4850-afd2-a9ab7d1ba626,dee-jay-capcom-frame-084,SA2 アンコールビート （マーベラス）,deejay:web:424,SA2 アンコールビート （マーベラス）,（サンライズフェスティバル・マーベラスヒット後に）HK,NAME+STARTUP,33,33
+874e8382-2786-404c-8f46-e60ebb137773,dee-jay-capcom-frame-085,SA2 アンコールビート （マキシマム）,deejay:web:425,SA2 アンコールビート （マキシマム）,（サンライズフェスティバル・マキシマムヒット後に）HK,NAME+STARTUP,33,33
+4f198d4d-255c-4144-b0b5-46024644cd77,dee-jay-capcom-frame-086,（失敗版） SA2 サンライズフェスティバル （2段目）,deejay:web:426,（失敗版） SA2 サンライズフェスティバル （2段目）,23626 | 26236 + LP | MP | HP>LP,NAME+STARTUP,11,11
+7518dac6-a1e4-4cf4-bad8-9a83f5773c1b,dee-jay-capcom-frame-087,（失敗版） SA2 サンライズフェスティバル （3段目）,deejay:web:427,（失敗版） SA2 サンライズフェスティバル （3段目）,23626 | 26236 + LP | MP | HP>LP>MP,NAME+STARTUP,10,10
+fa9e0930-eec9-4e6c-8e3a-25fa4c3f8df0,dee-jay-capcom-frame-088,（失敗版） SA2 サンライズフェスティバル （4段目）,deejay:web:428,（失敗版） SA2 サンライズフェスティバル （4段目）,23626 | 26236 + LP | MP | HP>LP>MP>HP,NAME+STARTUP,12,12
+9df53a6c-295c-486c-abb1-e12dd93df036,dee-jay-capcom-frame-089,（失敗版） SA2 サンライズフェスティバル （5段目）,deejay:web:429,（失敗版） SA2 サンライズフェスティバル （5段目）,23626 | 26236 + LP | MP | HP>LP>MP>HP>LK,NAME+STARTUP,15,15
+713483f8-b6bf-4160-8ba9-a1abe3a0e5a5,dee-jay-capcom-frame-090,（失敗版） SA2 サンライズフェスティバル （6段目）,deejay:web:430,（失敗版） SA2 サンライズフェスティバル （6段目）,23626 | 26236 + LP | MP | HP>LP>MP>HP>LK>MK,NAME+STARTUP,17,17
+70f30fa3-7f7c-4c95-b5a7-53c4c51aaa6e,dee-jay-capcom-frame-091,（失敗版） SA2 サンライズフェスティバル （7段目）,deejay:web:431,（失敗版） SA2 サンライズフェスティバル （7段目）,23626 | 26236 + LP | MP | HP>LP>MP>HP>LK>MK>HK,NAME+STARTUP,18,18
+e52bdd7f-b29f-43ba-83cc-e9f139b4b809,dee-jay-sa3,SA3 サタデーナイト,deejay:web:432,SA3 サタデーナイト,21424 | 24214 + LP | MP | HP,NAME+STARTUP,9,9
+88ef0949-2a51-4923-90e2-5a77f1501844,dee-jay-ca,CA サタデーナイト,deejay:web:433,CA サタデーナイト,（体力25%以下で）21424 | 24214 + LP | MP | HP,NAME+STARTUP,9,9
+f6538624-3bad-4968-a1b3-1292f9d96311,dee-jay-forward-throw,スタンプ・ザ・ビート,deejay:web:500,スタンプ・ザ・ビート,（近距離で）N or 6 + LPLK,NAME+STARTUP,5,5
+e8b09fbd-4b14-49a8-a1b7-52067f87409b,dee-jay-back-throw,フリップスルー,deejay:web:501,フリップスルー,（近距離で）4 + LPLK,NAME+STARTUP,5,5
+c19eaa3a-aa16-4e44-9428-ff6e69f7d051,dee-jay-capcom-frame-096,前方ステップ,deejay:web:600,前方ステップ,5656 + 6,NAME+STARTUP,None,
+40ee2c2c-00cb-43af-a311-bd194e69c283,dee-jay-capcom-frame-097,後方ステップ,deejay:web:601,後方ステップ,5454 + 4,NAME+STARTUP,None,
+,,,deejay:web:203,スライディングヒールアッパー,,TXT_ONLY,,14
+,,,deejay:web:602,ドライブインパクト （ワイルドビート）,HPHK,TXT_ONLY,,26
+,,,deejay:web:603,[ガード時]ドライブリバーサル （レッグスクラッチ）,（ガード中 or ドライブパリィ成立中に）6 ＋ HPHK,TXT_ONLY,,20
+,,,deejay:web:604,[起き上がり時]ドライブリバーサル（レッグスクラッチ）,（起き上がり時に）6 ＋ HPHK,TXT_ONLY,,18
+,,,deejay:web:605,ドライブパリィ,MPMK,TXT_ONLY,,1
+,,,deejay:web:606,ジャストパリィ（打撃）,ガード方向 ＋  MPMK,TXT_ONLY,,1
+,,,deejay:web:607,ジャストパリィ（飛び道具）,MPMK,TXT_ONLY,,1
+,,,deejay:web:608,パリィドライブラッシュ,（ドライブパリィ中に）5656 ＋ MPMK ＋ 6,TXT_ONLY,,
+,,,deejay:web:609,キャンセルドライブラッシュ,（必殺技キャンセル可能な攻撃ヒット中に）5656 ＋ 6 or (N or 6) + MPMK,TXT_ONLY,,

@@ -1,0 +1,53 @@
+{
+ "generated": "2026-11-17",
+ "scope": "マノンSA1/SA2: 11/16の目視QAでは区別不能だったが、映像内の入力表示で区別できたため補足",
+ "method": "画面左下の入力表示を拡大して読取り、公開データのコマンドと照合",
+ "entries": [
+  {
+   "file": "manon-sa1-arabesque.gif",
+   "moveSlug": "manon-sa1",
+   "moveId": "d7961e55-c6ed-443d-a3fa-e53fdc54fd26",
+   "fixtureName": "SA1 アラベスク",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "onScreenCommandMatches": true,
+    "singleRowForCommand": true
+   },
+   "observation": "暗転カットイン付きのSA。入力表示が ↓↘→↓↘→+K(236236K)で、マノンのSA1の公開コマンドと一致(SA3/CAは236236Pで別)。",
+   "unconfirmed": [
+    "Classic/Modernの別は映像から判別不能"
+   ],
+   "metrics": {
+    "frames": 60,
+    "durationMs": 3000,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-sa2-etoile.gif",
+   "moveSlug": "manon-sa2",
+   "moveId": "3e16e56f-1b3d-43ad-a321-ef70e876a8e0",
+   "fixtureName": "SA2 エトワール",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "onScreenCommandMatches": true,
+    "singleRowForCommand": true
+   },
+   "observation": "顔アップ演出付きのSA。入力表示が ↓↙←↓↙←+K(214214K)で、マノンのSA2の公開コマンドと一致。",
+   "unconfirmed": [
+    "Classic/Modernの別は映像から判別不能"
+   ],
+   "metrics": {
+    "frames": 109,
+    "durationMs": 5450,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

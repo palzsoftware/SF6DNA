@@ -1,0 +1,140 @@
+{
+ "character": "cammy",
+ "total": 13,
+ "summary": {
+  "CONNECT_READY": 13
+ },
+ "holdReasons": {},
+ "rows": [
+  {
+   "file": "cammy-air-throw.gif",
+   "sha256": "027dd6540b331151972d0fbbb2c176ac50c1b58d9d14618589e2a0d26ff63135",
+   "moveId": "2e4348f3-6108-41bc-a0ff-3cac35362291",
+   "moveSlug": "cammy-air-throw",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-crouching-hk.gif",
+   "sha256": "842a9ef2a53e6190e56da4f97bf91ad978538afb8a56c94490fedc810d47a2b7",
+   "moveId": "8cefd04a-ac28-44aa-b841-4ceed029513d",
+   "moveSlug": "cammy-crouching-hk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-crouching-hp.gif",
+   "sha256": "d35178493ffac00492dcd9bb874911f65ee909a417a637f0719bfc205e2ce7fe",
+   "moveId": "48162de8-8d3f-4449-afd5-cec46bcf1078",
+   "moveSlug": "cammy-crouching-hp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-crouching-lk.gif",
+   "sha256": "43a82133b492cbb2e1a5395f554812f51089807494736ed0c848446ee9ab681f",
+   "moveId": "a4b70351-6955-4bd8-857f-40414c293776",
+   "moveSlug": "cammy-crouching-lk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-crouching-mk.gif",
+   "sha256": "5e64e103a2a5ceadbc4081d6fdaaed0c5d0a4c53aa84690b8652722860821284",
+   "moveId": "cae4b758-62cc-4115-a067-706e84ff59fd",
+   "moveSlug": "cammy-crouching-mk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-standing-hk.gif",
+   "sha256": "85940e1baa3be7d0bb7f80e6563f178ba11b312ede476e3cbc885a48243ca83b",
+   "moveId": "20e18c1b-7943-48b6-a2a3-cc6fe2f4d0d7",
+   "moveSlug": "cammy-standing-hk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-standing-hp.gif",
+   "sha256": "799c654ba3483edb21e54daf482b86d1776b1e00bf36d53bcfee436eb7342ea4",
+   "moveId": "e0fc3a4b-6aa8-4b6f-accc-ce98a46e1faa",
+   "moveSlug": "cammy-standing-hp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-standing-lk.gif",
+   "sha256": "c5c2435521f7740b2ece532cedd842ddbf28c9305715aba2bbeb57ec42b75f15",
+   "moveId": "f778ea31-4d34-4adc-adb0-713d01bffd51",
+   "moveSlug": "cammy-standing-lk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-standing-lp.gif",
+   "sha256": "2d24f9d66c14248ef2bd90c27e4fc4f683c5029fdc93adddfe8d382cffcd6d18",
+   "moveId": "087a4701-4c9c-4d72-aba7-6653466bb2bc",
+   "moveSlug": "cammy-standing-lp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-standing-mk.gif",
+   "sha256": "7482d0c9c1f6bea1fd236e057d96412da9f67f7e25b8e6026c8000c728bc2607",
+   "moveId": "f9b6bfa2-1c71-40f4-b77b-d075013b84be",
+   "moveSlug": "cammy-standing-mk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-standing-mp.gif",
+   "sha256": "fceb05ca3ce269275d889faaa37678880f0022a4cd0a621ceefc33124c0d30a2",
+   "moveId": "108b54e6-0bc5-4418-b42d-a8ff0c3c8f73",
+   "moveSlug": "cammy-standing-mp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-sa2-r16-final_under10mb.gif",
+   "sha256": "a86b938fdf6112b8d9f7f2fdf71cf3bec33138920155c3617edeb251ee17e0f1",
+   "moveId": "b71563a1-1e76-426e-846a-efe566eb419f",
+   "moveSlug": "cammy-sa2",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-sa2-air_under10mb.gif",
+   "sha256": "02e82a6440c261801779a4cbe249e7a3b7743db17fda21d02f7bfa896cb2fff2",
+   "moveId": "13a0114b-6cb3-4079-ae51-d51fa15b20ee",
+   "moveSlug": "cammy-sa2-air",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  }
+ ]
+}

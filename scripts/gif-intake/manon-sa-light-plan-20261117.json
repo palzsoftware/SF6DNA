@@ -1,0 +1,30 @@
+{
+ "character": "manon",
+ "total": 2,
+ "summary": {
+  "CONNECT_READY": 2
+ },
+ "holdReasons": {},
+ "rows": [
+  {
+   "file": "manon-sa3-pas-de-deux_under10mb_48color_nodither.gif",
+   "sha256": "bee950000618aed2a34e29e33f67ffca162bf99766e1d7eb8a124bfa2558dc7c",
+   "moveId": "061b7386-762e-467c-9b9d-09470f92a27d",
+   "moveSlug": "manon-sa3",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "manon-ca-pas-de-deux_under10mb_32color.gif",
+   "sha256": "1720773971c4d6ff7c0d4c505e9ccd7d55a1ddd1e093fd734707022c118267f3",
+   "moveId": "1d2d8c87-2a79-44c4-a3e3-263a7e00f9a4",
+   "moveSlug": "manon-ca",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "character": "manon",
+ "date": "2026-11-17",
+ "entries": [
+  {
+   "file": "manon-forward-throw-batch07-candidate.gif",
+   "moveSlug": "manon-forward-throw",
+   "moveId": "e9d7d8e0-0ead-44cc-9c9f-4137ecb3aae4",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "evidence": "位置入替なし=前投げ",
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "manon-back-throw-batch07-candidate.gif",
+   "moveSlug": "manon-back-throw",
+   "moveId": "55b92472-63bf-4775-baf8-ee65ee4b1b60",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "evidence": "位置入替=後ろ投げ",
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

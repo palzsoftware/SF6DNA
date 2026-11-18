@@ -1,0 +1,38 @@
+{
+ "date": "2026-11-17",
+ "drive_handoff_folder": "1env3Gfw3EGQ9YxiiSGF0wltUHb8iJZNj (ジュリ/マノン受渡。既存フォルダを利用、新規作成なし)",
+ "retrievability": {
+  "manon_new3_individual_gifs": "OK(個別GIFは5.4〜6.5MBで取得可。ZIP 18MBは不可)",
+  "juri_batch4": "ZIP 12.3MBは不可。個別GIFはDrive上に無い(Manifest/evidence/QAのみ取得可)",
+  "juri_sa3": "11,016,274B 不可(id 1w5TJOHr…)",
+  "luke_hissatsu_mp4": "40MB 不可(Claudeの担当外)",
+  "luke_2hit_gif_76s40": "Driveに無い"
+ },
+ "manon_new3": {
+  "received": 3,
+  "sha_match": 3,
+  "technical_qa_pass": 3,
+  "spec": "480x270/20fps(50ms)/loop=0/全フレーム読込 72,88,80",
+  "duplicate_sha_vs_existing_ledger": 0,
+  "move_id": null,
+  "plan": "HOLD(NO_MOVE_ID) x3",
+  "hold_release": "入力表示・技名の確認(映像)と、既存Manon20本との動作重複確認が必要。投げ系2本は前投げ/後ろ投げ/必殺技の区別が映像だけでは不可"
+ },
+ "juri_batch4_manifest_only": {
+  "shas": {
+   "juri_044314_67.20_69.60_ground_fire_arc_variant": "9329c7b0…",
+   "juri_044314_71.35_73.25_ground_purple_slash_variant": "64605581…",
+   "juri_044314_118.70_121.90_air_strike_impact_variant": "60eb98a6…"
+  },
+  "status": "ASSET_NOT_RETRIEVED(SIZE_LIMIT)+move_id null → HOLD",
+  "dup_candidates": "59.48-61.25 と 67.20-69.60(弧)、103.20-104.90 と 118.70-121.90(空中)は同一技の可能性(未証明)"
+ },
+ "local_qa_connected": {
+  "luke": 15,
+  "jp": 5,
+  "manon": 4,
+  "juri": 3,
+  "total": 27
+ },
+ "new_connections": 0
+}

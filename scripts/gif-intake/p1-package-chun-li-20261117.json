@@ -1,0 +1,140 @@
+{
+ "date": "2026-11-17",
+ "character": "chun-li",
+ "records": [
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-standing-lp-candidate.gif",
+   "asset_sha256": "724e2f8e3a24976e1c21961c1039a5a1ccd1aebb550b7a148f896e1f607e4c30",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "e8627cc1-85c3-4fae-a9ef-784311e4ce8d",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-jump-lk-candidate.gif",
+   "asset_sha256": "e038cf40407f3d60f91c6cfabecdad937445e82e0849aa075efd0f6ea09b3f4e",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "71252786-a5ad-45b4-92f9-bbf0b879f5cb",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-jump-mk-candidate.gif",
+   "asset_sha256": "cf8f1eea116b1de8bff02169babc5e389df86cd8cc11c570bedada7a6cd064f7",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "24182c23-c657-4ea8-b722-90a1e8ba3ac5",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-jump-hk-candidate.gif",
+   "asset_sha256": "1948e88edc970ff4ddad544f3512b0b0a3beebbddf399ef703b81dd8fd72809d",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "b99276eb-6300-4769-9ae5-7552ea21c134",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-frame-066-candidate.gif",
+   "asset_sha256": "524ca3d57b713680599ec812ae7e1624762c9525b7483aa58091401293471dbe",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "6b5687c5-02d7-4214-8df6-30587b3e6cd1"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-frame-067-candidate.gif",
+   "asset_sha256": "ac52f7e8b97d5ef4e3a95580c6489ab9434c29ce910de0aeb0e8dd5df27cc8eb",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "9bc191ba-9467-4532-aaa9-1df05fecab11"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-standing-mp-candidate.gif",
+   "asset_sha256": "f5c65ab0618f075621714c0d4c38a1c11826b2af9efdd55384556b06425ea93e",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "393af232-0ab0-40c0-86dc-096819601e19",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-standing-hp-candidate.gif",
+   "asset_sha256": "ba55bdb69796c28f731b7906b36ca8d7c7b81edb2c6121b2192fadb33e74f843",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "b1d5ec50-b033-43f4-b034-eb8ccbe7c4b2",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-crouching-lp-candidate.gif",
+   "asset_sha256": "7a426cd8581990cd3c26e681c92b17065aa43d69ab855bd719ee94954f5bcbdb",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "6ad4630c-772b-4a95-b58b-a9538d5ea0e3",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-crouching-mp-candidate.gif",
+   "asset_sha256": "3257de4685babea812c95ff56f211bdd8f541a27780789928b1113f6458bf4cd",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "eeda3e0e-f3e0-461f-a0c2-786bc22ca7c4",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-crouching-hp-candidate.gif",
+   "asset_sha256": "e00241b49c85fbcba89e9bc168dfed4dd4223e0e452b0360e96eac18fc6d97a0",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "99211c78-82ab-49ba-b508-e020d0c057a2",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-standing-lk-candidate.gif",
+   "asset_sha256": "e4db8e60954a0cf8b41d8b9616d3b07b15dfc15330e60efa1db1220927f68683",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "1d9a313e-8b88-445e-b8cd-896165c27123",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-standing-mk-candidate.gif",
+   "asset_sha256": "8165e5e05b4b7778b8010e4ee5e56a2bed36d73a763a2081101664249e09c29b",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "64f4a965-b6ba-4df0-9e20-c7dc9b1db299",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-standing-hk-candidate.gif",
+   "asset_sha256": "11e3e27686fe11a5f8a528eba256285034f001ebe690f0a5b7895a6dae097910",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "1abb4304-2025-4fd0-867e-bb42c1223945",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-crouching-lk-candidate.gif",
+   "asset_sha256": "81c4516fa4f3086c449efa0496d969f28f25e3e3a1fdf9bf68ee9afd439caea8",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "73f3ddfa-144b-45fa-8ecf-6f447186af20",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-crouching-mk-candidate.gif",
+   "asset_sha256": "c0d350a2a75d1f2c74aa530b64de2250f42354eaa0e2934ad44cf1f2bcc028b3",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "0bcdfe25-fd6d-44f2-9022-ec61223039d5",
+   "strength_status": "FILENAME_ONLY"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-crouching-hk-candidate.gif",
+   "asset_sha256": "0e108ff99409b808d07b377d3e98e01de2d9d8c2fabed26630035056c8dd3337",
+   "technical_qa": "PASS",
+   "confirmed_move_id": "9970b2ed-0620-4f0c-802c-7f3aa70ef085",
+   "strength_status": "FILENAME_ONLY"
+  }
+ ]
+}

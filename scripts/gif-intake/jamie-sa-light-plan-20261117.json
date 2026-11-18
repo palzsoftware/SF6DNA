@@ -1,0 +1,30 @@
+{
+ "character": "jamie",
+ "total": 2,
+ "summary": {
+  "CONNECT_READY": 2
+ },
+ "holdReasons": {},
+ "rows": [
+  {
+   "file": "jamie-sa3-getsusaiho_under10mb_64color_nodither.gif",
+   "sha256": "076ba920be6205c9d9174f51a615bfef8e385d38cbcede740165dd767942586e",
+   "moveId": "96b29319-40fe-4f5b-8d8c-cf923cae7dc2",
+   "moveSlug": "jamie-frame-090",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-ca-getsusaiho_under10mb_32color_nodither.gif",
+   "sha256": "4f9e86ad4f1ae598560fb281b94f185b3fb6039afdf15cbab80692a152ac52b6",
+   "moveId": "634d738b-026c-4414-9e20-303468bd83bc",
+   "moveSlug": "jamie-frame-091",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  }
+ ]
+}

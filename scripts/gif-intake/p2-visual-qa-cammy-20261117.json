@@ -1,0 +1,262 @@
+{
+ "generated": "2026-11-17",
+ "scope": "cammy 追加(P2)複合根拠QA",
+ "entries": [
+  {
+   "character": "cammy",
+   "file": "cammy-air-throw.gif",
+   "moveSlug": "cammy-air-throw",
+   "moveId": "2e4348f3-6108-41bc-a0ff-3cac35362291",
+   "fixtureName": "空中投げ",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示なし。空中の相手を掴んで投げ落とす動作(空中投げ)。強度なし。技IDは動作+Manifest主張+台帳の順序で確定。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 49,
+    "durationMs": 3270,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-crouching-hk.gif",
+   "moveSlug": "cammy-crouching-hk",
+   "moveId": "8cefd04a-ac28-44aa-b841-4ceed029513d",
+   "fixtureName": "しゃがみ強K",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 36,
+    "durationMs": 2880,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-crouching-hp.gif",
+   "moveSlug": "cammy-crouching-hp",
+   "moveId": "48162de8-8d3f-4449-afd5-cec46bcf1078",
+   "fixtureName": "しゃがみ強P",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 21,
+    "durationMs": 1680,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-crouching-lk.gif",
+   "moveSlug": "cammy-crouching-lk",
+   "moveId": "a4b70351-6955-4bd8-857f-40414c293776",
+   "fixtureName": "しゃがみ弱K",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 20,
+    "durationMs": 1600,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-crouching-mk.gif",
+   "moveSlug": "cammy-crouching-mk",
+   "moveId": "cae4b758-62cc-4115-a067-706e84ff59fd",
+   "fixtureName": "しゃがみ中K",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 21,
+    "durationMs": 1680,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-standing-hk.gif",
+   "moveSlug": "cammy-standing-hk",
+   "moveId": "20e18c1b-7943-48b6-a2a3-cc6fe2f4d0d7",
+   "fixtureName": "立ち強K",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 24,
+    "durationMs": 1920,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-standing-hp.gif",
+   "moveSlug": "cammy-standing-hp",
+   "moveId": "e0fc3a4b-6aa8-4b6f-accc-ce98a46e1faa",
+   "fixtureName": "立ち強P",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 24,
+    "durationMs": 1920,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-standing-lk.gif",
+   "moveSlug": "cammy-standing-lk",
+   "moveId": "f778ea31-4d34-4adc-adb0-713d01bffd51",
+   "fixtureName": "立ち弱K",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 16,
+    "durationMs": 1280,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-standing-lp.gif",
+   "moveSlug": "cammy-standing-lp",
+   "moveId": "087a4701-4c9c-4d72-aba7-6653466bb2bc",
+   "fixtureName": "立ち弱P",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 14,
+    "durationMs": 1120,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-standing-mk.gif",
+   "moveSlug": "cammy-standing-mk",
+   "moveId": "f9b6bfa2-1c71-40f4-b77b-d075013b84be",
+   "fixtureName": "立ち中K",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 21,
+    "durationMs": 1680,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-standing-mp.gif",
+   "moveSlug": "cammy-standing-mp",
+   "moveId": "108b54e6-0bc5-4418-b42d-a8ff0c3c8f73",
+   "fixtureName": "立ち中P",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 16,
+    "durationMs": 1280,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-sa2-r16-final_under10mb.gif",
+   "moveSlug": "cammy-sa2",
+   "moveId": "b71563a1-1e76-426e-846a-efe566eb419f",
+   "fixtureName": "キラービースピン",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↙←↓↙←+Pのボタン絵柄(拳)、ゲージ3→1消費=SA2。既存データは214214K(旧)だが2024年5月調整でPへ変更(二次情報で確認、CAPCOM公式ページは取得不可)。技IDはゲージ消費とモーションで確定。",
+   "unconfirmed": [],
+   "metrics": {
+    "frames": 90,
+    "durationMs": 7200,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-sa2-air_under10mb.gif",
+   "moveSlug": "cammy-sa2-air",
+   "moveId": "13a0114b-6cb3-4079-ae51-d51fa15b20ee",
+   "fixtureName": "エアキラービースピン",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↙←↓↙←+Pのボタン絵柄(拳)、ゲージ3→1消費=SA2。既存データは214214K(旧)だが2024年5月調整でPへ変更(二次情報で確認、CAPCOM公式ページは取得不可)。技IDはゲージ消費とモーションで確定。",
+   "unconfirmed": [],
+   "metrics": {
+    "frames": 135,
+    "durationMs": 9000,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

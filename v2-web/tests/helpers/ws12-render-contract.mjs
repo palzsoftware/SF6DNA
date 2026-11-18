@@ -22,6 +22,7 @@ export function makeSourceLoader(overrides = {}) {
   function load(path) {
     path = resolveSource(path);
     if (cache.has(path)) return cache.get(path).exports;
+    if (path.endsWith('.json')) { const data = JSON.parse(readFileSync(new URL(path, sourceRoot),'utf8')); cache.set(path,{exports:{default:data,__esModule:true}}); return cache.get(path).exports; }
     const loadedModule = {exports:{}};
     cache.set(path, loadedModule);
     const compiled = ts.transpileModule(readFileSync(new URL(path, sourceRoot),'utf8'), {

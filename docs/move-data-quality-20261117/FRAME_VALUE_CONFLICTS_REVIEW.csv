@@ -1,0 +1,613 @@
+character,move_id,move_slug,move_name,field,kind,db_value,official_txt_value,source_record_key,status
+aki,f2fb51ac-71f1-468c-b738-0ec90afcdd55,aki-nightshade-pulse,紫煙砲,recovery,TXT_BLANK_DB_HAS_VALUE,52 total,,aki:web:300,REVIEW_OFFICIAL_AND_PATCH
+aki,f7647e16-b9bb-43dc-a47f-5b8b6861214a,aki-nightshade-pulse-od,OD紫煙砲,recovery,TXT_BLANK_DB_HAS_VALUE,44 total,,aki:web:302,REVIEW_OFFICIAL_AND_PATCH
+aki,5ad21670-2e9a-44e3-8e35-b3eb76173713,aki-orchid-spring,紫泡泉,startup,VALUE_CONFLICT,46,26,aki:web:306,REVIEW_OFFICIAL_AND_PATCH
+aki,5ad21670-2e9a-44e3-8e35-b3eb76173713,aki-orchid-spring,紫泡泉,active,VALUE_CONFLICT,0,※,aki:web:306,REVIEW_OFFICIAL_AND_PATCH
+aki,5ad21670-2e9a-44e3-8e35-b3eb76173713,aki-orchid-spring,紫泡泉,recovery,TXT_BLANK_DB_HAS_VALUE,0,,aki:web:306,REVIEW_OFFICIAL_AND_PATCH
+aki,5ad21670-2e9a-44e3-8e35-b3eb76173713,aki-orchid-spring,紫泡泉,onHit,TXT_BLANK_DB_HAS_VALUE,0,,aki:web:306,REVIEW_OFFICIAL_AND_PATCH
+aki,5ad21670-2e9a-44e3-8e35-b3eb76173713,aki-orchid-spring,紫泡泉,onBlock,TXT_BLANK_DB_HAS_VALUE,0,,aki:web:306,REVIEW_OFFICIAL_AND_PATCH
+aki,5ad21670-2e9a-44e3-8e35-b3eb76173713,aki-orchid-spring,紫泡泉,damage,DB_MISSING_TXT_HAS_VALUE,,0,aki:web:306,REVIEW_OFFICIAL_AND_PATCH
+aki,41c2cf57-937b-4984-8def-033f2cdc52b0,aki-snake-step-l,弱蛇軽功,damage,DB_MISSING_TXT_HAS_VALUE,,0,aki:web:316,REVIEW_OFFICIAL_AND_PATCH
+aki,fb83abe8-2b71-40cc-9b56-7ae12c48d490,aki-snake-step-m,中蛇軽功,damage,DB_MISSING_TXT_HAS_VALUE,,0,aki:web:317,REVIEW_OFFICIAL_AND_PATCH
+aki,3f8da7a4-682c-479e-a1b6-47c453e3e6a1,aki-snake-step-h,強蛇軽功,damage,DB_MISSING_TXT_HAS_VALUE,,0,aki:web:318,REVIEW_OFFICIAL_AND_PATCH
+aki,20ab4271-c79d-442a-934a-73035f8c98a0,aki-snake-step-od,OD蛇軽功,damage,DB_MISSING_TXT_HAS_VALUE,,0,aki:web:319,REVIEW_OFFICIAL_AND_PATCH
+aki,6378f5d0-4700-4cce-90c0-5e8c96352fe8,aki-sinister-slide,悪鬼蛇行,startup,TXT_BLANK_DB_HAS_VALUE,216,,aki:web:320,REVIEW_OFFICIAL_AND_PATCH
+aki,6378f5d0-4700-4cce-90c0-5e8c96352fe8,aki-sinister-slide,悪鬼蛇行,active,TXT_BLANK_DB_HAS_VALUE,0,,aki:web:320,REVIEW_OFFICIAL_AND_PATCH
+aki,6378f5d0-4700-4cce-90c0-5e8c96352fe8,aki-sinister-slide,悪鬼蛇行,recovery,TXT_BLANK_DB_HAS_VALUE,0,,aki:web:320,REVIEW_OFFICIAL_AND_PATCH
+aki,6378f5d0-4700-4cce-90c0-5e8c96352fe8,aki-sinister-slide,悪鬼蛇行,onHit,TXT_BLANK_DB_HAS_VALUE,0,,aki:web:320,REVIEW_OFFICIAL_AND_PATCH
+aki,6378f5d0-4700-4cce-90c0-5e8c96352fe8,aki-sinister-slide,悪鬼蛇行,onBlock,TXT_BLANK_DB_HAS_VALUE,0,,aki:web:320,REVIEW_OFFICIAL_AND_PATCH
+aki,6378f5d0-4700-4cce-90c0-5e8c96352fe8,aki-sinister-slide,悪鬼蛇行,damage,DB_MISSING_TXT_HAS_VALUE,,0,aki:web:320,REVIEW_OFFICIAL_AND_PATCH
+akuma,16bba1f1-0f0d-4c36-872b-5f5985756ce3,akuma-resso-snap-kick,裂槍脚,active,DB_MISSING_TXT_HAS_VALUE,,10-12,akuma:web:201,REVIEW_OFFICIAL_AND_PATCH
+akuma,16bba1f1-0f0d-4c36-872b-5f5985756ce3,akuma-resso-snap-kick,裂槍脚,recovery,DB_MISSING_TXT_HAS_VALUE,,15,akuma:web:201,REVIEW_OFFICIAL_AND_PATCH
+akuma,752f9cfb-4992-44d7-94fa-1d18bcb223db,akuma-rago-high-kick,羅豪脚,active,DB_MISSING_TXT_HAS_VALUE,,12-16,akuma:web:202,REVIEW_OFFICIAL_AND_PATCH
+akuma,752f9cfb-4992-44d7-94fa-1d18bcb223db,akuma-rago-high-kick,羅豪脚,recovery,DB_MISSING_TXT_HAS_VALUE,,27,akuma:web:202,REVIEW_OFFICIAL_AND_PATCH
+akuma,752f9cfb-4992-44d7-94fa-1d18bcb223db,akuma-rago-high-kick,羅豪脚,onHit,KNOCKDOWN_NOTATION,KD +47,D,akuma:web:202,REVIEW_OFFICIAL_AND_PATCH
+akuma,51f6e665-17b1-4caa-b3b8-abfd97d4d787,akuma-gou-hadoken-od,OD豪波動拳,recovery,TXT_BLANK_DB_HAS_VALUE,全体 41,,akuma:web:309,REVIEW_OFFICIAL_AND_PATCH
+akuma,9740a707-802d-4c17-a452-77d948aa4165,akuma-tatsu-l,弱竜巻斬空脚,active,DB_MISSING_TXT_HAS_VALUE,,12-13,akuma:web:319,REVIEW_OFFICIAL_AND_PATCH
+akuma,9740a707-802d-4c17-a452-77d948aa4165,akuma-tatsu-l,弱竜巻斬空脚,recovery,DB_MISSING_TXT_HAS_VALUE,,21,akuma:web:319,REVIEW_OFFICIAL_AND_PATCH
+akuma,9740a707-802d-4c17-a452-77d948aa4165,akuma-tatsu-l,弱竜巻斬空脚,onHit,KNOCKDOWN_NOTATION,KD +33,D,akuma:web:319,REVIEW_OFFICIAL_AND_PATCH
+akuma,cff38b55-0e9d-4eb0-9985-0c7a1d91129e,akuma-demon-raid-od,OD百鬼襲,damage,DB_MISSING_TXT_HAS_VALUE,,0,akuma:web:336,REVIEW_OFFICIAL_AND_PATCH
+akuma,2ba11fb4-4e19-4d72-8b71-87778d097c9d,akuma-demon-swoop,百鬼潜影,recovery,TXT_BLANK_DB_HAS_VALUE,5 total,,akuma:web:340,REVIEW_OFFICIAL_AND_PATCH
+akuma,2ba11fb4-4e19-4d72-8b71-87778d097c9d,akuma-demon-swoop,百鬼潜影,damage,DB_MISSING_TXT_HAS_VALUE,,0,akuma:web:340,REVIEW_OFFICIAL_AND_PATCH
+alex,8c40a2bd-8778-4ddd-991b-d0cda1925665,alex-prowler-stance-2pp,ブレイカー・スタンス,recovery,TXT_BLANK_DB_HAS_VALUE,18 total,,alex:web:200,REVIEW_OFFICIAL_AND_PATCH
+alex,ea2c911c-7bc1-4d56-a43b-44fae109c7ad,alex-low-rush-2pp-6,ステップイン,recovery,TXT_BLANK_DB_HAS_VALUE,28 total,,alex:web:201,REVIEW_OFFICIAL_AND_PATCH
+alex,cde1ae13-ff8c-46ed-898a-9b6cb9dbfef9,alex-low-retreat-2pp-4,ステップアウト,recovery,TXT_BLANK_DB_HAS_VALUE,31 total,,alex:web:202,REVIEW_OFFICIAL_AND_PATCH
+alex,506b622b-765d-43c4-8111-321848d0fb0d,alex-tactical-hop-2pp-lk,タクティカルリープ,recovery,TXT_BLANK_DB_HAS_VALUE,39 total,,alex:web:210,REVIEW_OFFICIAL_AND_PATCH
+blanka,a56cdd07-fc2f-4db3-b0d7-ce61681d18f0,blanka-capcom-frame-025,フィアーダウン,recovery,TXT_BLANK_DB_HAS_VALUE,全体 98,,blanka:web:205,REVIEW_OFFICIAL_AND_PATCH
+blanka,74d45937-d537-4b26-b647-7c6e9e1794ef,blanka-capcom-frame-028,サプライズフォワード,recovery,TXT_BLANK_DB_HAS_VALUE,全体 27,,blanka:web:208,REVIEW_OFFICIAL_AND_PATCH
+blanka,aecbfb5f-ee4f-4c6a-98a4-134bc15d0b71,blanka-capcom-frame-029,サプライズバック,recovery,TXT_BLANK_DB_HAS_VALUE,全体 32,,blanka:web:209,REVIEW_OFFICIAL_AND_PATCH
+blanka,09fbdf70-6920-4387-bb5b-cf9de1b681e8,blanka-chan-bomb,ブランカちゃん爆弾,recovery,TXT_BLANK_DB_HAS_VALUE,全体 50,,blanka:web:340,REVIEW_OFFICIAL_AND_PATCH
+blanka,84d5aca6-ed49-42b3-9ff0-9bdf80f46358,blanka-sa1,SA1 シャウトオブアース,recovery,TXT_BLANK_DB_HAS_VALUE,全体 78,,blanka:web:400,REVIEW_OFFICIAL_AND_PATCH
+blanka,414ff01e-0f93-40d1-9e1d-6f3fff1d45a7,blanka-capcom-frame-075,【ライトニングビースト】 SA1 シャウトオブアース,recovery,TXT_BLANK_DB_HAS_VALUE,全体 78,,blanka:web:401,REVIEW_OFFICIAL_AND_PATCH
+blanka,46cc493a-facd-40dd-ad34-74cd7005acc4,blanka-sa2,SA2 ライトニングビースト,recovery,TXT_BLANK_DB_HAS_VALUE,全体 10,,blanka:web:402,REVIEW_OFFICIAL_AND_PATCH
+blanka,5b878f4d-f6e7-4a7b-9373-b07193be0f5b,blanka-capcom-frame-082,前方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 19,,blanka:web:600,REVIEW_OFFICIAL_AND_PATCH
+blanka,da025585-53da-4463-a9b9-7170df202667,blanka-capcom-frame-083,後方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 23,,blanka:web:601,REVIEW_OFFICIAL_AND_PATCH
+c-viper,7cf378d5-fb58-4990-9ae2-264add8f83b7,c-viper-standing-light-punch-5lp,立ち弱P（スナップナックル）,active,ACTIVE_DURATION_VS_RANGE,3,4-6,c-viper:web:100,REVIEW_OFFICIAL_AND_PATCH
+c-viper,cbb520c8-c3bc-4010-b2b5-9198d0119d98,c-viper-standing-light-kick-5lk,立ち弱K（ヒールキック）,active,ACTIVE_DURATION_VS_RANGE,3,5-7,c-viper:web:101,REVIEW_OFFICIAL_AND_PATCH
+c-viper,ec3336dc-4117-460a-a918-66dce99731dc,c-viper-standing-medium-kick-5mk,立ち中K（フロントキック）,active,ACTIVE_DURATION_VS_RANGE,3,8-10,c-viper:web:103,REVIEW_OFFICIAL_AND_PATCH
+c-viper,6c8f802e-4441-4adf-83d3-7eda3110ed00,c-viper-standing-heavy-punch-5hp,立ち強P（トマホークチョップ）,active,ACTIVE_DURATION_VS_RANGE,3,12-14,c-viper:web:104,REVIEW_OFFICIAL_AND_PATCH
+c-viper,95db82ab-3f5f-4349-a86e-d787d58b0b79,c-viper-crouching-light-punch-2lp,しゃがみ弱P（ジャブ）,active,ACTIVE_DURATION_VS_RANGE,3,4-6,c-viper:web:106,REVIEW_OFFICIAL_AND_PATCH
+c-viper,8c6ebc68-98f3-4659-88eb-5e8b24a9260d,c-viper-crouching-light-kick-2lk,しゃがみ弱K（クラウチングヒールキック）,active,ACTIVE_DURATION_VS_RANGE,2,5-6,c-viper:web:107,REVIEW_OFFICIAL_AND_PATCH
+c-viper,429891a9-c3d4-4664-b714-f73d7eacc9d5,c-viper-crouching-medium-punch-2mp,しゃがみ中P（ヴァイパーブロー）,active,ACTIVE_DURATION_VS_RANGE,4,6-9,c-viper:web:108,REVIEW_OFFICIAL_AND_PATCH
+c-viper,dfbce958-316b-4b40-845d-9993e9efba69,c-viper-crouching-medium-kick-2mk,しゃがみ中K（グランドキック）,active,ACTIVE_DURATION_VS_RANGE,3,8-10,c-viper:web:109,REVIEW_OFFICIAL_AND_PATCH
+c-viper,0b1cad3d-defb-4594-a4ae-aeec77d2b054,c-viper-crouching-heavy-punch-2hp,しゃがみ強P（ヴァイパースライサー）,active,ACTIVE_DURATION_VS_RANGE,3,9-11,c-viper:web:110,REVIEW_OFFICIAL_AND_PATCH
+c-viper,c95a618c-3fa1-49a5-98b0-24205b0ad6d3,c-viper-thunder-dash-214lp,弱 サンダースラップ,active,ACTIVE_DURATION_VS_RANGE,4,17-20,c-viper:web:300,REVIEW_OFFICIAL_AND_PATCH
+c-viper,3b48c919-c0a6-4813-9f8b-b78c3c32473a,c-viper-thunder-dash-214mp,中 サンダースラップ,active,ACTIVE_DURATION_VS_RANGE,4,16-19,c-viper:web:301,REVIEW_OFFICIAL_AND_PATCH
+c-viper,6eb936a0-b8db-48cd-84f1-6536b140ad79,c-viper-tracer-combination-214hp-6pp,強 トレースコンビネーション,onBlock,DB_MISSING_TXT_HAS_VALUE,,ー,c-viper:web:306,REVIEW_OFFICIAL_AND_PATCH
+c-viper,914e1504-a559-445c-888b-b90bd2d85ad0,c-viper-thunder-dash-feint-214p-k,[サンダースラップ]フェイント,recovery,TXT_BLANK_DB_HAS_VALUE,12 total,,c-viper:web:307,REVIEW_OFFICIAL_AND_PATCH
+c-viper,93188acc-38c2-42cc-86d1-7a6cdabb17d8,c-viper-seismic-hammer-feint-623p-k,[セイスモハンマー]フェイント,recovery,TXT_BLANK_DB_HAS_VALUE,16 total,,c-viper:web:322,REVIEW_OFFICIAL_AND_PATCH
+c-viper,f0ddeeeb-503a-404e-9b4b-89f4d38fd873,c-viper-focus-force-forward-step-66,[セービングフォース]前方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 21,,c-viper:web:329,REVIEW_OFFICIAL_AND_PATCH
+c-viper,493cb95f-ca38-4ca2-bc65-3b708e81e4e4,c-viper-forward-step-66,前方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 21,,c-viper:web:600,REVIEW_OFFICIAL_AND_PATCH
+c-viper,a0841ad5-a95c-43f8-81d4-46842fa7eba6,c-viper-back-step-44,後方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 23,,c-viper:web:601,REVIEW_OFFICIAL_AND_PATCH
+cammy,00785f4b-7d74-438a-ab56-be2b670a5a3f,cammy-lift-uppercut,リフトアッパー,active,ACTIVE_DURATION_VS_RANGE,5,5-9,cammy:web:200,REVIEW_OFFICIAL_AND_PATCH
+cammy,2507fb57-cbd0-4755-b06f-38134b36ce82,cammy-knuckle-l,弱アクセルスピンナックル,active,ACTIVE_DURATION_VS_RANGE,4,21-24,cammy:web:310,REVIEW_OFFICIAL_AND_PATCH
+cammy,48996237-b1cc-4a71-8376-c83fbb075e3a,cammy-knuckle-m,中アクセルスピンナックル,active,ACTIVE_DURATION_VS_RANGE,4,24-27,cammy:web:311,REVIEW_OFFICIAL_AND_PATCH
+cammy,8e97a311-869b-4bac-9452-7d922591b4a8,cammy-knuckle-h,強アクセルスピンナックル,active,ACTIVE_DURATION_VS_RANGE,4,28-31,cammy:web:312,REVIEW_OFFICIAL_AND_PATCH
+chun-li,99211c78-82ab-49ba-b508-e020d0c057a2,chun-li-crouching-hp,しゃがみ強P（孔雀掌）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,11-23,"11-13, 19-23",chun-li:web:110,REVIEW_OFFICIAL_AND_PATCH
+chun-li,86f4031d-8472-4ac2-8425-725e925bec5c,chun-li-jump-mp,ジャンプ中P（落昇旋）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,7-21,"7-10, 17-21",chun-li:web:114,REVIEW_OFFICIAL_AND_PATCH
+chun-li,61e12281-6b2b-4931-9163-dc77d196321f,chun-li-frame-029,行雲流水,recovery,TXT_BLANK_DB_HAS_VALUE,全体 89,,chun-li:web:210,REVIEW_OFFICIAL_AND_PATCH
+chun-li,d8cacb41-0dd4-4885-8c66-c8cee9ed1203,chun-li-frame-032,蓮掌,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,23-32,"23-24, 31-32",chun-li:web:213,REVIEW_OFFICIAL_AND_PATCH
+chun-li,8b0cdb1e-7700-4d9e-8500-d1b4fd6ecb03,chun-li-frame-036,弱 気功拳,recovery,TXT_BLANK_DB_HAS_VALUE,全体 47,,chun-li:web:300,REVIEW_OFFICIAL_AND_PATCH
+chun-li,a909b9fc-6ecc-451d-89f3-10b412db7274,chun-li-frame-037,中 気功拳,recovery,TXT_BLANK_DB_HAS_VALUE,全体 45,,chun-li:web:301,REVIEW_OFFICIAL_AND_PATCH
+chun-li,9ff85b4b-dea0-4bcd-8494-b3fb91e33da5,chun-li-frame-038,強 気功拳,recovery,TXT_BLANK_DB_HAS_VALUE,全体 43,,chun-li:web:302,REVIEW_OFFICIAL_AND_PATCH
+chun-li,56ce157e-4f2b-4d29-bbbe-8479944e556c,chun-li-frame-039,OD 気功拳,recovery,TXT_BLANK_DB_HAS_VALUE,全体 39,,chun-li:web:303,REVIEW_OFFICIAL_AND_PATCH
+chun-li,e978ab6b-689f-45ec-9ee7-dcdb7b2c7944,chun-li-frame-040,弱 百裂脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,5-20,"5-6, 12-13, 19-20",chun-li:web:304,REVIEW_OFFICIAL_AND_PATCH
+chun-li,67766141-a64b-4992-94f9-254fea18d9d0,chun-li-frame-041,中 百裂脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,12-32,"12-13, 18-19, 24-25, 31-32",chun-li:web:305,REVIEW_OFFICIAL_AND_PATCH
+chun-li,ea7c4150-6273-4330-8537-7b4660380306,chun-li-frame-042,強 百裂脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,23-47,"23-24, 28-29, 32-33, 38-39, 46-47",chun-li:web:306,REVIEW_OFFICIAL_AND_PATCH
+chun-li,768b50d3-4e24-45ae-8b2d-4913bf12fd8e,chun-li-frame-043,OD 百裂脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,8-33,"8-9, 14-15, 20-21, 26-27, 32-33",chun-li:web:307,REVIEW_OFFICIAL_AND_PATCH
+chun-li,70690fc1-0236-4be5-946e-db8c0a3e47d5,chun-li-frame-044,百裂連脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,11- 46,"11-12, 18-19, 24-25, 31-32, 46",chun-li:web:308,REVIEW_OFFICIAL_AND_PATCH
+chun-li,3b3fcce0-ee7a-4b34-8069-05bf3be3fba1,chun-li-frame-045,弱 空中百裂脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,8-21,"8-9, 14-15, 20-21",chun-li:web:309,REVIEW_OFFICIAL_AND_PATCH
+chun-li,5ec2d77a-ba11-4a4c-b970-bc3aea2859b9,chun-li-frame-046,中 空中百裂脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,10-30,"10-11, 16-17, 22-23, 29-30",chun-li:web:310,REVIEW_OFFICIAL_AND_PATCH
+chun-li,25e37a56-bce0-4392-be4d-dadf28734203,chun-li-frame-047,強 空中百裂脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,12-35,"12-13, 18-19, 23-24, 29-30, 34-35",chun-li:web:311,REVIEW_OFFICIAL_AND_PATCH
+chun-li,fc7a9212-57ab-4c0e-bc42-d06bbeb0af86,chun-li-frame-048,OD 空中百裂脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,6-31,"6-7, 12-13, 16-17, 21-22, 25-26, 30-31",chun-li:web:312,REVIEW_OFFICIAL_AND_PATCH
+chun-li,06a21273-49a1-463f-acb8-00bada1968ff,chun-li-frame-049,弱 スピニングバードキック,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,9-26,"9-10, 17-18, 25-26",chun-li:web:313,REVIEW_OFFICIAL_AND_PATCH
+chun-li,3d3d4362-3ed8-464f-a2ac-4fa43aafff06,chun-li-frame-050,中 スピニングバードキック,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,16-48,"16-17, 24-25, 32-33, 41-42, 47-48",chun-li:web:314,REVIEW_OFFICIAL_AND_PATCH
+chun-li,8fa46e96-6a3d-4add-bcd7-2076aad1f28a,chun-li-frame-051,強 スピニングバードキック,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,20-64,"20-21, 26-27, 36-37, 44-45, 51-52, 58-59, 63-64",chun-li:web:315,REVIEW_OFFICIAL_AND_PATCH
+chun-li,8b60879a-34a4-4aec-91a1-242bbb4d14a2,chun-li-frame-052,OD スピニングバードキック,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,16-55,"16-17, 22-23, 28-29, 35-36, 41-42, 48-49, 54-55",chun-li:web:316,REVIEW_OFFICIAL_AND_PATCH
+chun-li,b57d054e-699b-49fc-9c1a-b2d847982a70,chun-li-frame-057,弱 天昇脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,5-18,"5-7, 17-18",chun-li:web:321,REVIEW_OFFICIAL_AND_PATCH
+chun-li,8bc1525c-e5a5-476a-9f7a-a8b4b6952296,chun-li-frame-058,中 天昇脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,7-20,"7-9, 19-20",chun-li:web:322,REVIEW_OFFICIAL_AND_PATCH
+chun-li,75516fe6-7e94-4d92-ba10-ecbd8fe1207a,chun-li-frame-059,強 天昇脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,9-43,"9-11, 19-20, 29-30, 42-43",chun-li:web:323,REVIEW_OFFICIAL_AND_PATCH
+chun-li,b3ca5889-5aeb-4302-9d2d-7fe2fa9b4c67,chun-li-frame-060,OD 天昇脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,6-66,"6-8, 14-16,42-44,49-51,55-57,64-66",chun-li:web:324,REVIEW_OFFICIAL_AND_PATCH
+chun-li,fa887b11-c8d8-400e-b124-3c25cd0f26ad,chun-li-frame-061,SA1 気功掌,recovery,TXT_BLANK_DB_HAS_VALUE,全体 122,,chun-li:web:400,REVIEW_OFFICIAL_AND_PATCH
+chun-li,39e0a24d-465d-4c91-821f-1f5f9c9ef455,chun-li-frame-063,SA2 鳳翼扇,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,11-96,"11-12,14-15,17-18,20-21,24-25,27-28,30-31,33-34,46-47,50-51,54-55,58-59,62-63,66-67,69-70,94-96",chun-li:web:402,REVIEW_OFFICIAL_AND_PATCH
+chun-li,80c4ce4d-cb16-43d7-9018-521fa1198972,chun-li-frame-064,SA3 蒼天乱華,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,8-42,"8-9, 34,42",chun-li:web:403,REVIEW_OFFICIAL_AND_PATCH
+chun-li,b3d58f88-f945-42ed-af7d-755714b20832,chun-li-frame-065,CA 蒼天乱華,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,8-42,"8-9, 34,42",chun-li:web:404,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,bc492907-e534-4534-8929-eed2d0ab8571,dhalsim-yoga-fire,弱 ヨガファイア,recovery,TXT_BLANK_DB_HAS_VALUE,全体 48,,dhalsim:web:300,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,13390230-0f8a-4f5a-a110-6998c102112c,dhalsim-capcom-frame-033,弱 ヨガファイア（ホールド）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 73,,dhalsim:web:301,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,60a91e83-1be7-494a-a92a-12680b04ed7e,dhalsim-capcom-frame-034,中 ヨガファイア,recovery,TXT_BLANK_DB_HAS_VALUE,全体 48,,dhalsim:web:302,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,4d95edd8-d851-40c6-824c-10e363610ab6,dhalsim-capcom-frame-035,中 ヨガファイア（ホールド）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 73,,dhalsim:web:303,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,258abf5c-b889-4582-b347-b5ffef0317cd,dhalsim-capcom-frame-036,強 ヨガファイア,recovery,TXT_BLANK_DB_HAS_VALUE,全体 48,,dhalsim:web:304,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,2bfc6951-7e83-4189-b217-e8dafa928b7b,dhalsim-capcom-frame-037,強 ヨガファイア（ホールド）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 73,,dhalsim:web:305,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,61dbd23e-7f20-4f71-810e-95cb31cc0f23,dhalsim-yoga-fire-od,OD 弱 ヨガファイア,recovery,TXT_BLANK_DB_HAS_VALUE,全体 45,,dhalsim:web:306,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,c6033575-132f-4d41-a6cd-4edd807446d2,dhalsim-capcom-frame-039,OD 中 ヨガファイア,recovery,TXT_BLANK_DB_HAS_VALUE,全体 45,,dhalsim:web:307,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,c1cb6c6a-e4d6-40fc-b704-0f5172600174,dhalsim-capcom-frame-040,OD 強 ヨガファイア,recovery,TXT_BLANK_DB_HAS_VALUE,全体 45,,dhalsim:web:308,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,07f0f420-4bad-4f06-a4ae-9cc5a9f5ab23,dhalsim-yoga-arch,弱 ヨガアーチ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 45,,dhalsim:web:309,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,7e6e3f55-e96a-469e-a0db-5f51c68b5eae,dhalsim-capcom-frame-042,中 ヨガアーチ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 45,,dhalsim:web:310,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,5ec48254-6a44-4ab2-b018-452d6cb0337b,dhalsim-capcom-frame-043,強 ヨガアーチ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 45,,dhalsim:web:311,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,2a764ff7-4961-4891-97db-d96fbe5fd1a1,dhalsim-yoga-arch-od,OD 弱 ヨガアーチ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 45,,dhalsim:web:312,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,6a777a0d-97bd-435e-bf61-c832a031112c,dhalsim-capcom-frame-045,OD 中 ヨガアーチ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 45,,dhalsim:web:313,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,a7b7a811-affb-4f8c-94b1-84796f1552f3,dhalsim-capcom-frame-046,OD 強 ヨガアーチ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 45,,dhalsim:web:314,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,71c7f611-0b9a-4d82-a42c-ad89facabe9c,dhalsim-yoga-flame-l,弱 ヨガフレイム,recovery,TXT_BLANK_DB_HAS_VALUE,全体 45,,dhalsim:web:315,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,a3810256-fa9f-4b71-9bd6-c32247155c8d,dhalsim-yoga-flame-m,中 ヨガフレイム,recovery,TXT_BLANK_DB_HAS_VALUE,全体 51,,dhalsim:web:316,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,dfc1b4b7-1113-4326-8c95-5105b3f6d1c7,dhalsim-yoga-flame-h,強 ヨガフレイム,recovery,TXT_BLANK_DB_HAS_VALUE,全体 58,,dhalsim:web:317,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,793c9ae5-dee7-4289-9ac8-3bc8897d55da,dhalsim-yoga-flame-od,OD ヨガフレイム,recovery,TXT_BLANK_DB_HAS_VALUE,全体 66,,dhalsim:web:318,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,701d4ed3-9c19-465d-9c15-038655ea632d,dhalsim-yoga-blast-l,弱 ヨガブラスト,recovery,TXT_BLANK_DB_HAS_VALUE,全体 44,,dhalsim:web:319,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,75579d6f-c1f4-40ab-8445-b643e32a7d0c,dhalsim-yoga-blast-m,中 ヨガブラスト,recovery,TXT_BLANK_DB_HAS_VALUE,全体 44,,dhalsim:web:320,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,e9b48897-eda2-485e-b79c-6a64b8e800db,dhalsim-yoga-blast-h,強 ヨガブラスト,recovery,TXT_BLANK_DB_HAS_VALUE,全体 44,,dhalsim:web:321,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,87b4cc6c-2287-4495-8623-6120a2d66c6f,dhalsim-yoga-blast-od,OD ヨガブラスト,recovery,TXT_BLANK_DB_HAS_VALUE,全体 41,,dhalsim:web:322,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,86214164-dd87-4f41-a325-5e217251199e,dhalsim-yoga-float,ヨガフロート（その場）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 35,,dhalsim:web:327,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,74c5e2cb-1058-4e46-9cff-bad782d425be,dhalsim-capcom-frame-060,ヨガフロート（前方）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 35,,dhalsim:web:328,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,1d8d27d8-01e9-4c92-af23-67d564d9cef7,dhalsim-capcom-frame-061,空中ヨガフロート,recovery,TXT_BLANK_DB_HAS_VALUE,全体 15,,dhalsim:web:329,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,5a0df114-d300-4fae-b768-611a72836440,dhalsim-yoga-teleport,P ヨガテレポート（前方）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 39,,dhalsim:web:330,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,93b78193-d185-4578-9f3e-f91bba52bb50,dhalsim-capcom-frame-063,K ヨガテレポート（前方）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 39,,dhalsim:web:331,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,d29a6b51-cf11-4f25-9925-07906e807ee4,dhalsim-capcom-frame-064,P 空中ヨガテレポート（前方）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 29,,dhalsim:web:332,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,df4c97a6-f2d2-4bda-8fab-66a8745928cc,dhalsim-capcom-frame-065,K 空中ヨガテレポート（前方）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 29,,dhalsim:web:333,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,6ccdcffd-89fb-47d5-becf-b62dc711cba7,dhalsim-capcom-frame-067,P 空中ヨガテレポート（後方）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 34,,dhalsim:web:335,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,acbfd880-c7d0-4843-b61d-e37bef2a6d40,dhalsim-capcom-frame-068,K 空中ヨガテレポート（後方）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 34,,dhalsim:web:336,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,27166fa0-3dfa-4c7e-adcd-3658d8d068a1,dhalsim-sa1,SA1 弱 ヨガインフェルノ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 128,,dhalsim:web:400,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,5a3d48d4-50ca-4ae8-839c-daae8e378aa1,dhalsim-capcom-frame-070,SA1 中 ヨガインフェルノ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 128,,dhalsim:web:401,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,b53a4420-bffa-4164-9224-7c5f30ff16fe,dhalsim-capcom-frame-071,SA1 強 ヨガインフェルノ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 133,,dhalsim:web:402,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,9dfa14b1-f690-4ee3-9676-6664b392ec77,dhalsim-sa2,SA2 ヨガサンバースト（Lv1）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 67,,dhalsim:web:403,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,048eec3e-c6ea-4b0a-b97e-cdff5ef2f469,dhalsim-capcom-frame-073,SA2 ヨガサンバースト（Lv2）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 80,,dhalsim:web:404,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,fb5dbe18-c93b-44bc-b0f3-de514def8c60,dhalsim-capcom-frame-074,SA2 ヨガサンバースト（Lv3）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 128,,dhalsim:web:405,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,51530b14-bfe3-4255-91f1-5d709a320eac,dhalsim-capcom-frame-080,前方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 25,,dhalsim:web:600,REVIEW_OFFICIAL_AND_PATCH
+dhalsim,8f9ede3c-6a0c-4ebb-8ff2-42548e0d6ec2,dhalsim-capcom-frame-081,後方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 23,,dhalsim:web:601,REVIEW_OFFICIAL_AND_PATCH
+e-honda,78d7e1fb-4715-4e25-af6b-93e321c6bf8f,e-honda-sumo-dash,相撲ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 44,,e-honda:web:320,REVIEW_OFFICIAL_AND_PATCH
+e-honda,45ff83bf-7d74-403b-88b2-c7cd585fbf56,e-honda-sumo-dash-od,OD 相撲ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 34,,e-honda:web:321,REVIEW_OFFICIAL_AND_PATCH
+e-honda,7a391155-29e3-4e61-8463-349399343d54,e-honda-sumo-spirit,肩屋入り,recovery,TXT_BLANK_DB_HAS_VALUE,全体 52,,e-honda:web:329,REVIEW_OFFICIAL_AND_PATCH
+e-honda,31e4e2ba-9028-415d-b513-11572253dbef,e-honda-capcom-frame-061,前方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 19,,e-honda:web:600,REVIEW_OFFICIAL_AND_PATCH
+e-honda,544cc8fd-1062-48ff-aea7-1b48d0122c6d,e-honda-capcom-frame-062,後方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 23,,e-honda:web:601,REVIEW_OFFICIAL_AND_PATCH
+ed,43c8455c-3bd1-4843-a836-f03e013a49d7,ed-cobra-punch,コブラパンチ,active,DB_MISSING_TXT_HAS_VALUE,,17-19,ed:web:202,REVIEW_OFFICIAL_AND_PATCH
+ed,43c8455c-3bd1-4843-a836-f03e013a49d7,ed-cobra-punch,コブラパンチ,recovery,DB_MISSING_TXT_HAS_VALUE,,21,ed:web:202,REVIEW_OFFICIAL_AND_PATCH
+ed,8fa46e7c-be53-4d83-8500-44c9de7ca6da,ed-psycho-spark,サイコスパーク,active,DB_MISSING_TXT_HAS_VALUE,,14-25,ed:web:300,REVIEW_OFFICIAL_AND_PATCH
+ed,8fa46e7c-be53-4d83-8500-44c9de7ca6da,ed-psycho-spark,サイコスパーク,recovery,DB_MISSING_TXT_HAS_VALUE,,8,ed:web:300,REVIEW_OFFICIAL_AND_PATCH
+ed,ea3f3886-3a2b-4ee4-8c6d-7b8fb93e9076,ed-psycho-spark-od,ODサイコスパーク,active,DB_MISSING_TXT_HAS_VALUE,,14-25,ed:web:301,REVIEW_OFFICIAL_AND_PATCH
+ed,ea3f3886-3a2b-4ee4-8c6d-7b8fb93e9076,ed-psycho-spark-od,ODサイコスパーク,recovery,DB_MISSING_TXT_HAS_VALUE,,7,ed:web:301,REVIEW_OFFICIAL_AND_PATCH
+ed,ea3f3886-3a2b-4ee4-8c6d-7b8fb93e9076,ed-psycho-spark-od,ODサイコスパーク,onHit,KNOCKDOWN_NOTATION,KD Juggle +43,D,ed:web:301,REVIEW_OFFICIAL_AND_PATCH
+ed,6440734c-a3fa-45e0-a5de-50c93ec470b6,ed-psycho-upper-l,弱サイコアッパー,active,DB_MISSING_TXT_HAS_VALUE,,10-17,ed:web:308,REVIEW_OFFICIAL_AND_PATCH
+ed,6440734c-a3fa-45e0-a5de-50c93ec470b6,ed-psycho-upper-l,弱サイコアッパー,recovery,DB_MISSING_TXT_HAS_VALUE,,28,ed:web:308,REVIEW_OFFICIAL_AND_PATCH
+ed,6440734c-a3fa-45e0-a5de-50c93ec470b6,ed-psycho-upper-l,弱サイコアッパー,onHit,KNOCKDOWN_NOTATION,KD +38,D,ed:web:308,REVIEW_OFFICIAL_AND_PATCH
+ed,31996c83-5434-4c79-908f-75f65886877b,ed-psycho-upper-m,中サイコアッパー,active,DB_MISSING_TXT_HAS_VALUE,,14-19,ed:web:309,REVIEW_OFFICIAL_AND_PATCH
+ed,31996c83-5434-4c79-908f-75f65886877b,ed-psycho-upper-m,中サイコアッパー,recovery,DB_MISSING_TXT_HAS_VALUE,,32,ed:web:309,REVIEW_OFFICIAL_AND_PATCH
+ed,31996c83-5434-4c79-908f-75f65886877b,ed-psycho-upper-m,中サイコアッパー,onHit,KNOCKDOWN_NOTATION,KD +39,D,ed:web:309,REVIEW_OFFICIAL_AND_PATCH
+ed,621c4239-32eb-4b00-a075-0f9c15389675,ed-psycho-upper-h,強サイコアッパー,active,DB_MISSING_TXT_HAS_VALUE,,16-21,ed:web:310,REVIEW_OFFICIAL_AND_PATCH
+ed,621c4239-32eb-4b00-a075-0f9c15389675,ed-psycho-upper-h,強サイコアッパー,recovery,DB_MISSING_TXT_HAS_VALUE,,33,ed:web:310,REVIEW_OFFICIAL_AND_PATCH
+ed,621c4239-32eb-4b00-a075-0f9c15389675,ed-psycho-upper-h,強サイコアッパー,onHit,KNOCKDOWN_NOTATION,KD +38,D,ed:web:310,REVIEW_OFFICIAL_AND_PATCH
+ed,029f8661-b765-4faf-bff2-230a9f27f685,ed-psycho-upper-od,ODサイコアッパー,active,DB_MISSING_TXT_HAS_VALUE,,13-18,ed:web:311,REVIEW_OFFICIAL_AND_PATCH
+ed,029f8661-b765-4faf-bff2-230a9f27f685,ed-psycho-upper-od,ODサイコアッパー,recovery,DB_MISSING_TXT_HAS_VALUE,,36,ed:web:311,REVIEW_OFFICIAL_AND_PATCH
+ed,029f8661-b765-4faf-bff2-230a9f27f685,ed-psycho-upper-od,ODサイコアッパー,onHit,KNOCKDOWN_NOTATION,KD +18,D,ed:web:311,REVIEW_OFFICIAL_AND_PATCH
+ed,e6e924d2-2dd3-4bc2-80ed-aec6f175383c,ed-psycho-flicker-l,弱サイコフリッカー,active,DB_MISSING_TXT_HAS_VALUE,,16-19,ed:web:316,REVIEW_OFFICIAL_AND_PATCH
+ed,e6e924d2-2dd3-4bc2-80ed-aec6f175383c,ed-psycho-flicker-l,弱サイコフリッカー,recovery,DB_MISSING_TXT_HAS_VALUE,,26,ed:web:316,REVIEW_OFFICIAL_AND_PATCH
+ed,b7613ec3-5661-4e6a-bcf0-34ea5635b896,ed-psycho-flicker-m,中サイコフリッカー,active,DB_MISSING_TXT_HAS_VALUE,,20-23,ed:web:318,REVIEW_OFFICIAL_AND_PATCH
+ed,b7613ec3-5661-4e6a-bcf0-34ea5635b896,ed-psycho-flicker-m,中サイコフリッカー,recovery,DB_MISSING_TXT_HAS_VALUE,,26,ed:web:318,REVIEW_OFFICIAL_AND_PATCH
+ed,93f83e6d-9f9c-43fc-aaaf-70f954d44dcc,ed-psycho-flicker-h,強サイコフリッカー,active,DB_MISSING_TXT_HAS_VALUE,,17-24,ed:web:320,REVIEW_OFFICIAL_AND_PATCH
+ed,93f83e6d-9f9c-43fc-aaaf-70f954d44dcc,ed-psycho-flicker-h,強サイコフリッカー,recovery,DB_MISSING_TXT_HAS_VALUE,,18,ed:web:320,REVIEW_OFFICIAL_AND_PATCH
+ed,f25b82cb-2852-412c-b1e8-f51077fdd61d,ed-kill-switch-break,キルスイッチ・ブレイク,active,DB_MISSING_TXT_HAS_VALUE,,11-13,ed:web:324,REVIEW_OFFICIAL_AND_PATCH
+ed,f25b82cb-2852-412c-b1e8-f51077fdd61d,ed-kill-switch-break,キルスイッチ・ブレイク,recovery,DB_MISSING_TXT_HAS_VALUE,,20,ed:web:324,REVIEW_OFFICIAL_AND_PATCH
+ed,f25b82cb-2852-412c-b1e8-f51077fdd61d,ed-kill-switch-break,キルスイッチ・ブレイク,onHit,KNOCKDOWN_NOTATION,KD +38,D,ed:web:324,REVIEW_OFFICIAL_AND_PATCH
+elena,5f521773-71c7-4a90-a67e-33af09381e69,elena-standing-light-kick-5lk,立ち弱K（スタンドロー）,active,ACTIVE_DURATION_VS_RANGE,3,5-7,elena:web:101,REVIEW_OFFICIAL_AND_PATCH
+elena,886714a1-4920-4be1-b103-ab3847911ca5,elena-standing-medium-punch-5mp,立ち中P（ブレイズパーチ）,active,ACTIVE_DURATION_VS_RANGE,5,8-12,elena:web:102,REVIEW_OFFICIAL_AND_PATCH
+elena,223ad40c-6c36-41fc-9e6f-d5ca2d496e60,elena-standing-medium-kick-5mk,立ち中K（スプルースベンド）,active,ACTIVE_DURATION_VS_RANGE,4,6-9,elena:web:103,REVIEW_OFFICIAL_AND_PATCH
+elena,d8290194-9d3d-4499-be63-9c4a0be06763,elena-standing-heavy-punch-5hp,立ち強P（ラウンドホップ）,active,ACTIVE_DURATION_VS_RANGE,4,12-15,elena:web:104,REVIEW_OFFICIAL_AND_PATCH
+elena,97ee42d4-321f-456c-87df-e5b488b880ef,elena-crouching-light-punch-2lp,しゃがみ弱P（クラウチングフロント）,active,ACTIVE_DURATION_VS_RANGE,3,4-6,elena:web:106,REVIEW_OFFICIAL_AND_PATCH
+elena,7833a723-0962-4962-a1bc-e77ee624c1c5,elena-crouching-light-kick-2lk,しゃがみ弱K（リトルラップ）,active,ACTIVE_DURATION_VS_RANGE,3,5-7,elena:web:107,REVIEW_OFFICIAL_AND_PATCH
+elena,a741a091-7c7d-418a-8d1a-9b3e9a5e17ff,elena-crouching-medium-punch-2mp,しゃがみ中P（リングカッター）,active,ACTIVE_DURATION_VS_RANGE,3,8-10,elena:web:108,REVIEW_OFFICIAL_AND_PATCH
+elena,3e2fd952-26b8-4942-85fb-651512e650ba,elena-jumping-heavy-kick-j-hk,ジャンプ強K（オーバーヘッドキック）,active,VALUE_CONFLICT,"10-20 / 10-11,13-20","10-11, 13-20",elena:web:117,REVIEW_OFFICIAL_AND_PATCH
+elena,61398b6e-3e45-4ac8-8350-545f06d3ac47,elena-lynx-song-236lp,弱 リンクシング,recovery,TXT_BLANK_DB_HAS_VALUE,28 total,,elena:web:308,REVIEW_OFFICIAL_AND_PATCH
+elena,a2203168-0b8c-44b9-9493-1b75e1f275d6,elena-lynx-song-236mp,中 リンクシング,recovery,TXT_BLANK_DB_HAS_VALUE,36 total,,elena:web:309,REVIEW_OFFICIAL_AND_PATCH
+elena,e7008dc1-c61b-440e-bd0a-c25dd2416988,elena-lynx-song-236hp,強 リンクシング,recovery,TXT_BLANK_DB_HAS_VALUE,38 total,,elena:web:310,REVIEW_OFFICIAL_AND_PATCH
+elena,f5490cd6-dd8a-4050-9e98-82320951a393,elena-lynx-song-236pp,ODリンクシング,recovery,TXT_BLANK_DB_HAS_VALUE,29 total,,elena:web:311,REVIEW_OFFICIAL_AND_PATCH
+elena,dd5b1500-b646-4716-9c1b-c5cc0fb191f3,elena-mallet-smash-236p-6hk,マレットスマッシュ,active,ACTIVE_DURATION_VS_RANGE,3,22-24,elena:web:316,REVIEW_OFFICIAL_AND_PATCH
+elena,ad10bccc-42ea-41b3-9745-d6c1f5e2f8d1,elena-moon-glider-214lp,弱 ムーングライド（1段目）,active,ACTIVE_DURATION_VS_RANGE,3,20-22,elena:web:326,REVIEW_OFFICIAL_AND_PATCH
+elena,341bde0b-7471-4c28-85ee-b7ebb09ff371,elena-moon-glider-214pp,OD ムーングライド（1段目）,active,ACTIVE_DURATION_VS_RANGE,3,23-25,elena:web:330,REVIEW_OFFICIAL_AND_PATCH
+elena,16fe033a-0d3d-4270-8706-3b29a6d1d139,elena-forward-step-66,前方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 20,,elena:web:600,REVIEW_OFFICIAL_AND_PATCH
+elena,d9d7d368-3583-4535-9d64-ac6872e0758d,elena-back-step-44,後方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 23,,elena:web:601,REVIEW_OFFICIAL_AND_PATCH
+guile,c687eca2-108d-46a8-aee5-e32beb47e7c9,guile-crouching-hk,しゃがみ強K （ドラゴンスイープ）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,9-29,"9-10, 27-29",guile:web:111,REVIEW_OFFICIAL_AND_PATCH
+guile,4c009090-13ed-46c3-9751-5c7eded76507,guile-frame-031,弱 ソニックブーム,recovery,TXT_BLANK_DB_HAS_VALUE,全体 40,,guile:web:300,REVIEW_OFFICIAL_AND_PATCH
+guile,9f95c9ef-c12a-46c6-808b-5a9faf9c9f44,guile-frame-032,【ジャスト】 弱 ソニックブーム,recovery,TXT_BLANK_DB_HAS_VALUE,全体 40,,guile:web:301,REVIEW_OFFICIAL_AND_PATCH
+guile,2dabcaff-0024-4c40-8ff6-0399e3eb6e5d,guile-frame-033,中 ソニックブーム,recovery,TXT_BLANK_DB_HAS_VALUE,全体 40,,guile:web:302,REVIEW_OFFICIAL_AND_PATCH
+guile,8c89a3fd-d6f7-4390-9c20-ed4e0d44c91e,guile-frame-034,【ジャスト】 中 ソニックブーム,recovery,TXT_BLANK_DB_HAS_VALUE,全体 40,,guile:web:303,REVIEW_OFFICIAL_AND_PATCH
+guile,03f728d7-47d8-452b-bd67-61cd925bde33,guile-frame-035,強 ソニックブーム,recovery,TXT_BLANK_DB_HAS_VALUE,全体 40,,guile:web:304,REVIEW_OFFICIAL_AND_PATCH
+guile,a91413b5-6e55-498d-b010-e6d0b2bf24a5,guile-frame-036,【ジャスト】 強 ソニックブーム,recovery,TXT_BLANK_DB_HAS_VALUE,全体 40,,guile:web:305,REVIEW_OFFICIAL_AND_PATCH
+guile,9887a4fc-5935-4d09-9504-a326f6d3640e,guile-frame-037,OD ソニックブーム,recovery,TXT_BLANK_DB_HAS_VALUE,全体 38,,guile:web:306,REVIEW_OFFICIAL_AND_PATCH
+guile,cbc187f2-53f7-4075-a555-f51bd443bddf,guile-frame-038,弱 サマーソルトキック,damage,DB_MISSING_TXT_HAS_VALUE,,※1000,guile:web:307,REVIEW_OFFICIAL_AND_PATCH
+guile,691fc93c-afe9-4390-ae5e-aa8a49de482d,guile-frame-039,【ジャスト】 弱 サマーソルトキック,damage,DB_MISSING_TXT_HAS_VALUE,,※1200,guile:web:308,REVIEW_OFFICIAL_AND_PATCH
+guile,64c6f070-1497-4852-bc19-18c051a346c2,guile-frame-040,中 サマーソルトキック,damage,DB_MISSING_TXT_HAS_VALUE,,※1100,guile:web:309,REVIEW_OFFICIAL_AND_PATCH
+guile,83ad9057-9361-4de0-93f5-f3e3353105ac,guile-frame-041,【ジャスト】 中 サマーソルトキック,damage,DB_MISSING_TXT_HAS_VALUE,,※1300,guile:web:310,REVIEW_OFFICIAL_AND_PATCH
+guile,e9f02f89-e447-4d3d-95ba-a7062d5587b3,guile-frame-042,強 サマーソルトキック,damage,DB_MISSING_TXT_HAS_VALUE,,※1200,guile:web:311,REVIEW_OFFICIAL_AND_PATCH
+guile,40c95b20-76f0-4056-ae56-fee47784f3a9,guile-frame-043,【ジャスト】 強 サマーソルトキック,damage,DB_MISSING_TXT_HAS_VALUE,,※1400,guile:web:312,REVIEW_OFFICIAL_AND_PATCH
+guile,94e9ef6b-c696-4c51-baef-f49af33bf7f2,guile-frame-044,OD サマーソルトキック,damage,DB_MISSING_TXT_HAS_VALUE,,※1600,guile:web:313,REVIEW_OFFICIAL_AND_PATCH
+guile,89e18dc9-6db0-4e6e-a45d-519b0fdaa637,guile-frame-045,弱 ソニックブレイド,recovery,TXT_BLANK_DB_HAS_VALUE,全体 42,,guile:web:314,REVIEW_OFFICIAL_AND_PATCH
+guile,f9e2220a-b22e-43bd-99ea-42821c0d7356,guile-frame-046,中 ソニックブレイド,recovery,TXT_BLANK_DB_HAS_VALUE,全体 50,,guile:web:315,REVIEW_OFFICIAL_AND_PATCH
+guile,4c7b48f0-96a7-47eb-a600-1c2f6c26eb13,guile-frame-047,強 ソニックブレイド,recovery,TXT_BLANK_DB_HAS_VALUE,全体 54,,guile:web:316,REVIEW_OFFICIAL_AND_PATCH
+guile,302938a5-54f8-4d9e-8fed-f66b2b660118,guile-frame-048,OD 弱 ソニックブレイド,recovery,TXT_BLANK_DB_HAS_VALUE,全体 39,,guile:web:317,REVIEW_OFFICIAL_AND_PATCH
+guile,feb68d91-3737-4e4f-bcbd-2db7cb578918,guile-frame-049,OD 中 ソニックブレイド,recovery,TXT_BLANK_DB_HAS_VALUE,全体 39,,guile:web:318,REVIEW_OFFICIAL_AND_PATCH
+guile,e59fdd50-65ac-4fad-a808-8fbfc6ddb30d,guile-frame-050,OD 強 ソニックブレイド,recovery,TXT_BLANK_DB_HAS_VALUE,全体 39,,guile:web:319,REVIEW_OFFICIAL_AND_PATCH
+guile,fc35dd7b-6e42-40e9-abb0-2c0ca7204ff4,guile-frame-051,弱 ソニッククロス,recovery,TXT_BLANK_DB_HAS_VALUE,全体 38,,guile:web:320,REVIEW_OFFICIAL_AND_PATCH
+guile,443bd3e9-752c-4892-8ab8-03611d5bebcd,guile-frame-052,【ジャスト】弱 ソニッククロス,recovery,TXT_BLANK_DB_HAS_VALUE,全体 38,,guile:web:321,REVIEW_OFFICIAL_AND_PATCH
+guile,241b05ea-6c27-421e-b319-b180254fe22c,guile-frame-053,中 ソニッククロス,recovery,TXT_BLANK_DB_HAS_VALUE,全体 38,,guile:web:322,REVIEW_OFFICIAL_AND_PATCH
+guile,4fcd5dbf-d7e5-4f21-90c0-beccf9c9c1ff,guile-frame-054,【ジャスト】中 ソニッククロス,recovery,TXT_BLANK_DB_HAS_VALUE,全体 38,,guile:web:323,REVIEW_OFFICIAL_AND_PATCH
+guile,e5e2834c-719e-49d0-9825-960016c2420c,guile-frame-055,強 ソニッククロス,recovery,TXT_BLANK_DB_HAS_VALUE,全体 38,,guile:web:324,REVIEW_OFFICIAL_AND_PATCH
+guile,c0e4ec44-f717-459b-bca7-a217f5526c27,guile-frame-056,【ジャスト】強 ソニッククロス,recovery,TXT_BLANK_DB_HAS_VALUE,全体 38,,guile:web:325,REVIEW_OFFICIAL_AND_PATCH
+guile,5221d873-9622-4b06-8c4e-8a7a4b1f4e66,guile-frame-057,OD ソニッククロス１,recovery,TXT_BLANK_DB_HAS_VALUE,全体 38,,guile:web:326,REVIEW_OFFICIAL_AND_PATCH
+guile,391b8749-da29-4f20-8200-890f70630fe4,guile-frame-058,OD ソニッククロス２,recovery,TXT_BLANK_DB_HAS_VALUE,全体 38,,guile:web:327,REVIEW_OFFICIAL_AND_PATCH
+guile,f1c04eaf-50f1-47b5-b5df-8bf4bc99e05f,guile-frame-061,OD ソニックブレイク,recovery,TXT_BLANK_DB_HAS_VALUE,全体 35,,guile:web:330,REVIEW_OFFICIAL_AND_PATCH
+guile,7fef2076-927c-4f5c-a765-a155350ee8b6,guile-frame-062,SA1 ソニックハリケーン （上）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 75,,guile:web:400,REVIEW_OFFICIAL_AND_PATCH
+guile,68472c76-2eb3-4fdb-83e9-9e55fef5b76e,guile-frame-063,SA1 ソニックハリケーン （横）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 89,,guile:web:401,REVIEW_OFFICIAL_AND_PATCH
+guile,1d634ae8-f10b-4791-9ee5-4ebd401872d4,guile-frame-064,SA2 ソリッドパンチャー,recovery,TXT_BLANK_DB_HAS_VALUE,全体 6,,guile:web:402,REVIEW_OFFICIAL_AND_PATCH
+ingrid,5dbaff2a-f404-471b-ade9-603e3220f500,ingrid-vanishing-sun-back-4kkk,サンバニッシュ（後方）,recovery,TXT_BLANK_DB_HAS_VALUE,48 total,,ingrid:web:326,REVIEW_OFFICIAL_AND_PATCH
+ingrid,69f4a36e-028e-4dc0-ac4f-bad477196210,ingrid-shining-sun-1-stock-236236-k-1-stock,SA1 サンシャイン（Lv2）,onHit,TXT_BLANK_DB_HAS_VALUE,D,,ingrid:web:401,REVIEW_OFFICIAL_AND_PATCH
+ingrid,f40ca33c-4063-45f3-b39e-a415c0092eb7,ingrid-shining-sun-2-stock-236236-k-2-stock,SA1 サンシャイン（Lv3）,onHit,TXT_BLANK_DB_HAS_VALUE,D,,ingrid:web:402,REVIEW_OFFICIAL_AND_PATCH
+ingrid,4ef25e1d-afed-41ef-8d11-54f917b32b9d,ingrid-order-of-the-sun-0-stock-214214p-0-stock,SA2 サンオーダー（Lv1）,startup,VALUE_CONFLICT,L103 / M68 / H98,※,ingrid:web:403,REVIEW_OFFICIAL_AND_PATCH
+ingrid,4ef25e1d-afed-41ef-8d11-54f917b32b9d,ingrid-order-of-the-sun-0-stock-214214p-0-stock,SA2 サンオーダー（Lv1）,recovery,TXT_BLANK_DB_HAS_VALUE,13 total,,ingrid:web:403,REVIEW_OFFICIAL_AND_PATCH
+ingrid,6413aa87-0e47-49d2-93ef-bc94a010179e,ingrid-order-of-the-sun-1-stock-214214-p-1-stock,SA2 サンオーダー（Lv2）,startup,VALUE_CONFLICT,L103 / M68 / H98,※,ingrid:web:404,REVIEW_OFFICIAL_AND_PATCH
+ingrid,6413aa87-0e47-49d2-93ef-bc94a010179e,ingrid-order-of-the-sun-1-stock-214214-p-1-stock,SA2 サンオーダー（Lv2）,recovery,TXT_BLANK_DB_HAS_VALUE,13 total,,ingrid:web:404,REVIEW_OFFICIAL_AND_PATCH
+ingrid,b6bc235a-79d2-46f3-ba3e-92d958bf1868,ingrid-order-of-the-sun-2-stock-214214-p-2-stock,SA2 サンオーダー（Lv3）,startup,VALUE_CONFLICT,L103 / M68 / H98,※,ingrid:web:405,REVIEW_OFFICIAL_AND_PATCH
+ingrid,b6bc235a-79d2-46f3-ba3e-92d958bf1868,ingrid-order-of-the-sun-2-stock-214214-p-2-stock,SA2 サンオーダー（Lv3）,recovery,TXT_BLANK_DB_HAS_VALUE,13 total,,ingrid:web:405,REVIEW_OFFICIAL_AND_PATCH
+jamie,4fb6762e-7ea7-4f02-8017-1f84d748bd36,jamie-standing-hp,立ち強P（連發拳）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,5-14,"5, 7, 12-14",jamie:web:104,REVIEW_OFFICIAL_AND_PATCH
+jamie,826ca5b3-f64e-4022-a7ad-afe0000b6a62,jamie-crouching-hk,しゃがみ強K（始廻）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,9-15,"9-10, 13-15",jamie:web:111,REVIEW_OFFICIAL_AND_PATCH
+jamie,d895641f-3033-4950-82e9-2f3eff071cbd,jamie-jump-hk,ジャンプ強K（連空腿）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,8-19,"8-10, 16-19",jamie:web:117,REVIEW_OFFICIAL_AND_PATCH
+jamie,ef0ac821-3719-428f-976f-dce9b299453f,jamie-frame-021,幻酔舞（3段目）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 60,,jamie:web:203,REVIEW_OFFICIAL_AND_PATCH
+jamie,a0cad6db-9665-4401-ad74-707443c8e9f8,jamie-frame-029,円月脚（2段目）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,15-24,"15-17, 23-24",jamie:web:210,REVIEW_OFFICIAL_AND_PATCH
+jamie,1d42c55b-0dbe-44e1-aeaf-3f47f5d7d897,jamie-frame-030,円月脚（3段目）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 61,,jamie:web:211,REVIEW_OFFICIAL_AND_PATCH
+jamie,badf2c88-8b03-4a9d-bf5b-3623090ab005,jamie-frame-035,乱酔旋（2段目）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 75,,jamie:web:216,REVIEW_OFFICIAL_AND_PATCH
+jamie,7efd3e6d-5b75-4607-8f5d-bd0308ef6748,jamie-frame-037,乱酔旋（3段目/ディレイ派生）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,4-28,"4-5, 14-15, 27-28",jamie:web:218,REVIEW_OFFICIAL_AND_PATCH
+jamie,62a9d028-e70a-401f-adc0-d4d131819f01,jamie-frame-038,乱酔旋（3段目/大幅ディレイ派生）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 52,,jamie:web:219,REVIEW_OFFICIAL_AND_PATCH
+jamie,799268da-a1f2-4bb5-b016-6ea3035d2015,jamie-frame-039,魔身,recovery,TXT_BLANK_DB_HAS_VALUE,全体 50,,jamie:web:300,REVIEW_OFFICIAL_AND_PATCH
+jamie,c4b68e7e-6984-4038-9947-4ed1cdcea1bc,jamie-frame-041,[酔いレベル4]弱 流酔拳（1段目）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,13-26,"13-14,24-26",jamie:web:302,REVIEW_OFFICIAL_AND_PATCH
+jamie,0b0016b3-2d95-4406-994b-a44332288da2,jamie-frame-043,[酔いレベル4]中 流酔拳（1段目）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,16-29,"16-17,27-29",jamie:web:304,REVIEW_OFFICIAL_AND_PATCH
+jamie,67678625-588d-48cf-b6a3-560abbd7c6fd,jamie-frame-045,[酔いレベル4]強 流酔拳（1段目）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,19-32,"19-20,30-32",jamie:web:306,REVIEW_OFFICIAL_AND_PATCH
+jamie,0a5e3f53-114e-42f3-b28c-9b349050b122,jamie-frame-047,[酔いレベル4]OD 流酔拳（1段目）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,16-26,"16-17,24-26",jamie:web:308,REVIEW_OFFICIAL_AND_PATCH
+jamie,151a64be-a0a3-4d33-a365-4d9d0003573d,jamie-frame-051,[酔いレベル4]流酔拳（2段目）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,15-23,"15-16, 22-23",jamie:web:312,REVIEW_OFFICIAL_AND_PATCH
+jamie,76324203-2729-43eb-a88b-96e685c866dd,jamie-frame-053,[酔いレベル4]OD 流酔拳（2段目）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,15-23,"15-16, 22-23",jamie:web:314,REVIEW_OFFICIAL_AND_PATCH
+jamie,aa3eb346-3223-4c5a-a656-38f4415a6dd6,jamie-frame-057,[酔いレベル4]流酔拳（3段目）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,16-40,"16-17,22-23, 38-40",jamie:web:318,REVIEW_OFFICIAL_AND_PATCH
+jamie,92e71da8-94a6-4662-8c4f-5186717232f8,jamie-frame-059,[酔いレベル4]OD 流酔拳（3段目）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,16-40,"16-17,22-23, 38-40",jamie:web:320,REVIEW_OFFICIAL_AND_PATCH
+jamie,35eaf7e4-dd6e-43a7-afa4-aa207971a336,jamie-frame-072,弱 張弓腿,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,5-50,"5-14, 41-50",jamie:web:333,REVIEW_OFFICIAL_AND_PATCH
+jamie,f118f5a2-8d4c-4622-bcf6-fcd3ea915709,jamie-frame-073,中 張弓腿,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,8-43,"8-16, 39-43",jamie:web:334,REVIEW_OFFICIAL_AND_PATCH
+jamie,34d6227b-d156-4929-842e-ff1a034f3424,jamie-frame-074,強 張弓腿,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,10-57,"10-18, 41-45, 54-57",jamie:web:335,REVIEW_OFFICIAL_AND_PATCH
+jamie,c2316766-56c8-4381-893f-0341e3a91c83,jamie-frame-075,OD 張弓腿,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,6-51,"6-12, 37-38, 50-51",jamie:web:336,REVIEW_OFFICIAL_AND_PATCH
+jamie,d38b6a9d-6ad9-43ba-bf10-8b97275d3a4b,jamie-frame-076,弱 無影蹴,active,VALUE_CONFLICT,11-着地まで,"11,14-着地まで",jamie:web:337,REVIEW_OFFICIAL_AND_PATCH
+jamie,e8c4c6d3-c300-47ae-b94e-5051826ecf29,jamie-frame-077,中 無影蹴,active,VALUE_CONFLICT,11-着地まで,"11,14-着地まで",jamie:web:338,REVIEW_OFFICIAL_AND_PATCH
+jamie,69a093f4-92da-44a6-a659-ac11f1ee2f4a,jamie-frame-078,強 無影蹴,active,VALUE_CONFLICT,11-着地まで,"11,14-着地まで",jamie:web:339,REVIEW_OFFICIAL_AND_PATCH
+jamie,56e9221a-75ee-4a4a-8295-2c23cd60ce38,jamie-frame-079,OD 無影蹴,active,VALUE_CONFLICT,11-着地まで,"11,14-着地まで",jamie:web:340,REVIEW_OFFICIAL_AND_PATCH
+jamie,463834e8-201b-4a0c-a3b7-dc0257089c46,jamie-frame-080,弱 爆廻,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,18-43,"18-19, 22-24, 29-30, 42-43",jamie:web:341,REVIEW_OFFICIAL_AND_PATCH
+jamie,af159fff-39b2-4255-9c59-748e66e56203,jamie-frame-081,中 爆廻,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,22-59,"22-23, 25-26, 30-31, 37-38, 51-52, 58-59",jamie:web:342,REVIEW_OFFICIAL_AND_PATCH
+jamie,299f160e-cafb-43b6-9619-35f1dd864f6d,jamie-frame-082,強 爆廻,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,25-92,"25-27, 34-35, 42-43, 50-51, 65-66, 74-75, 91-92",jamie:web:343,REVIEW_OFFICIAL_AND_PATCH
+jamie,f0e84925-ec36-42dd-8fca-75c7e87712ef,jamie-frame-083,OD 爆廻,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,18-100,"18-23, 27-28, 37-38, 42-43, 51-52, 60-61, 74-75, 87-88, 93-94, 99-100",jamie:web:344,REVIEW_OFFICIAL_AND_PATCH
+jamie,e395af47-aedc-467e-b4cb-2aa5c112c348,jamie-frame-088,SA1 武麗禽,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,8-133,"8-16, 23-27, 34-35, 43-44, 52-53, 60-61, 68-69, 75-76, 106-107, 117-118, 125-126, 132-133",jamie:web:400,REVIEW_OFFICIAL_AND_PATCH
+jamie,e395af47-aedc-467e-b4cb-2aa5c112c348,jamie-frame-088,SA1 武麗禽,damage,DB_MISSING_TXT_HAS_VALUE,,2200※1850,jamie:web:400,REVIEW_OFFICIAL_AND_PATCH
+jamie,99b9dbf0-5322-4397-bd1f-976a60965a2d,jamie-frame-089,SA2 絶唱魔身,recovery,TXT_BLANK_DB_HAS_VALUE,全体 6,,jamie:web:401,REVIEW_OFFICIAL_AND_PATCH
+jamie,96b29319-40fe-4f5b-8d8c-cf923cae7dc2,jamie-frame-090,SA3 月牙叉炮,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,10-28,"10-12, 26-28",jamie:web:402,REVIEW_OFFICIAL_AND_PATCH
+jamie,634d738b-026c-4414-9e20-303468bd83bc,jamie-frame-091,CA 月牙叉炮,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,10-28,"10-12, 26-28",jamie:web:403,REVIEW_OFFICIAL_AND_PATCH
+juri,5a98da7b-3c31-4889-af24-22a93f74080b,juri-fuhajin-l,弱 風破刃,active,ACTIVE_DURATION_VS_RANGE,4,10-13,juri:web:300,REVIEW_OFFICIAL_AND_PATCH
+juri,5a98da7b-3c31-4889-af24-22a93f74080b,juri-fuhajin-l,弱 風破刃,recovery,VALUE_CONFLICT,19,※21,juri:web:300,REVIEW_OFFICIAL_AND_PATCH
+juri,5a98da7b-3c31-4889-af24-22a93f74080b,juri-fuhajin-l,弱 風破刃,onHit,KNOCKDOWN_NOTATION,KD +37,D,juri:web:300,REVIEW_OFFICIAL_AND_PATCH
+juri,c0222f7b-ade2-40b3-9306-1c73c9e3cc5a,juri-fuhajin-m,中 風破刃,active,ACTIVE_DURATION_VS_RANGE,4,13-16,juri:web:301,REVIEW_OFFICIAL_AND_PATCH
+juri,c0222f7b-ade2-40b3-9306-1c73c9e3cc5a,juri-fuhajin-m,中 風破刃,onHit,KNOCKDOWN_NOTATION,KD +37,D,juri:web:301,REVIEW_OFFICIAL_AND_PATCH
+juri,cbc368ca-d0f3-4777-ae9d-cbeeaf937a1f,juri-fuhajin-h,強 風破刃,active,ACTIVE_DURATION_VS_RANGE,5,25-29,juri:web:302,REVIEW_OFFICIAL_AND_PATCH
+juri,cbc368ca-d0f3-4777-ae9d-cbeeaf937a1f,juri-fuhajin-h,強 風破刃,recovery,VALUE_CONFLICT,20,19,juri:web:302,REVIEW_OFFICIAL_AND_PATCH
+juri,cbc368ca-d0f3-4777-ae9d-cbeeaf937a1f,juri-fuhajin-h,強 風破刃,onHit,KNOCKDOWN_NOTATION,KD +46,D,juri:web:302,REVIEW_OFFICIAL_AND_PATCH
+juri,7c61f024-fca7-4e40-a278-c69bacfe4c6e,juri-fuhajin-od,OD 風破刃,active,ACTIVE_DURATION_VS_RANGE,6,12-17,juri:web:303,REVIEW_OFFICIAL_AND_PATCH
+juri,7c61f024-fca7-4e40-a278-c69bacfe4c6e,juri-fuhajin-od,OD 風破刃,onHit,KNOCKDOWN_NOTATION,KD +45,D,juri:web:303,REVIEW_OFFICIAL_AND_PATCH
+juri,010a1ad9-e796-4af1-a1a7-2f8d17c7c3fb,juri-saihasho,歳破衝,active,TXT_BLANK_DB_HAS_VALUE,10 (...30),,juri:web:304,REVIEW_OFFICIAL_AND_PATCH
+juri,010a1ad9-e796-4af1-a1a7-2f8d17c7c3fb,juri-saihasho,歳破衝,recovery,TXT_BLANK_DB_HAS_VALUE,20,,juri:web:304,REVIEW_OFFICIAL_AND_PATCH
+juri,010a1ad9-e796-4af1-a1a7-2f8d17c7c3fb,juri-saihasho,歳破衝,onHit,VALUE_CONFLICT,-2... (+1)...,-2,juri:web:304,REVIEW_OFFICIAL_AND_PATCH
+juri,010a1ad9-e796-4af1-a1a7-2f8d17c7c3fb,juri-saihasho,歳破衝,onBlock,VALUE_CONFLICT,-8... (-3)...,-8,juri:web:304,REVIEW_OFFICIAL_AND_PATCH
+juri,221d7c73-57cc-4a5f-b94d-aa444ff9d222,juri-saihasho-od,OD 歳破衝,active,TXT_BLANK_DB_HAS_VALUE,...28,,juri:web:306,REVIEW_OFFICIAL_AND_PATCH
+juri,221d7c73-57cc-4a5f-b94d-aa444ff9d222,juri-saihasho-od,OD 歳破衝,recovery,TXT_BLANK_DB_HAS_VALUE,22,,juri:web:306,REVIEW_OFFICIAL_AND_PATCH
+juri,221d7c73-57cc-4a5f-b94d-aa444ff9d222,juri-saihasho-od,OD 歳破衝,onHit,KNOCKDOWN_NOTATION,KD +39...,D,juri:web:306,REVIEW_OFFICIAL_AND_PATCH
+juri,453d3d43-4df0-4281-a38f-4c2b5151fb81,juri-ankensatsu,暗剣殺,active,ACTIVE_DURATION_VS_RANGE,4,24-27,juri:web:307,REVIEW_OFFICIAL_AND_PATCH
+juri,453d3d43-4df0-4281-a38f-4c2b5151fb81,juri-ankensatsu,暗剣殺,onHit,VALUE_CONFLICT,+5 (+8),5,juri:web:307,REVIEW_OFFICIAL_AND_PATCH
+juri,4f7d14e2-ed50-4525-aac6-dff1f24c073d,juri-ankensatsu-od,OD 暗剣殺,active,ACTIVE_DURATION_VS_RANGE,4,24-27,juri:web:309,REVIEW_OFFICIAL_AND_PATCH
+juri,4f7d14e2-ed50-4525-aac6-dff1f24c073d,juri-ankensatsu-od,OD 暗剣殺,onBlock,VALUE_CONFLICT,-10,-8,juri:web:309,REVIEW_OFFICIAL_AND_PATCH
+juri,8b775baf-27e9-47cc-a3c3-9d21ae396d88,juri-go-ohsatsu,五黄殺,active,ACTIVE_DURATION_VS_RANGE,4,18-21,juri:web:310,REVIEW_OFFICIAL_AND_PATCH
+juri,8b775baf-27e9-47cc-a3c3-9d21ae396d88,juri-go-ohsatsu,五黄殺,onHit,KNOCKDOWN_NOTATION,KD +27 (KD +37),D,juri:web:310,REVIEW_OFFICIAL_AND_PATCH
+juri,8b775baf-27e9-47cc-a3c3-9d21ae396d88,juri-go-ohsatsu,五黄殺,onBlock,VALUE_CONFLICT,-11 (-12),-11,juri:web:310,REVIEW_OFFICIAL_AND_PATCH
+juri,8b14f12a-30f6-4092-a564-abc65dd214fc,juri-go-ohsatsu-od,OD 五黄殺,startup,VALUE_CONFLICT,"18,18,29",18,juri:web:312,REVIEW_OFFICIAL_AND_PATCH
+juri,8b14f12a-30f6-4092-a564-abc65dd214fc,juri-go-ohsatsu-od,OD 五黄殺,active,VALUE_CONFLICT,"4,3,5","18-21, 34-36, 65-69",juri:web:312,REVIEW_OFFICIAL_AND_PATCH
+juri,8b14f12a-30f6-4092-a564-abc65dd214fc,juri-go-ohsatsu-od,OD 五黄殺,onHit,KNOCKDOWN_NOTATION,KD +32,D,juri:web:312,REVIEW_OFFICIAL_AND_PATCH
+juri,1e7d1cc0-8118-4c5a-8b43-94f585c2a83e,juri-tensenrin-l,弱 天穿輪,active,VALUE_CONFLICT,3,"11-13, 16-17",juri:web:313,REVIEW_OFFICIAL_AND_PATCH
+juri,1e7d1cc0-8118-4c5a-8b43-94f585c2a83e,juri-tensenrin-l,弱 天穿輪,onHit,KNOCKDOWN_NOTATION,KD +37,D,juri:web:313,REVIEW_OFFICIAL_AND_PATCH
+juri,9f311585-00ac-4e7c-83fc-08a04f4f9f8d,juri-tensenrin-m,中 天穿輪,active,VALUE_CONFLICT,"8,2,2","5-12, 18-19, 23-24",juri:web:314,REVIEW_OFFICIAL_AND_PATCH
+juri,9f311585-00ac-4e7c-83fc-08a04f4f9f8d,juri-tensenrin-m,中 天穿輪,recovery,VALUE_CONFLICT,38,着地後14,juri:web:314,REVIEW_OFFICIAL_AND_PATCH
+juri,9f311585-00ac-4e7c-83fc-08a04f4f9f8d,juri-tensenrin-m,中 天穿輪,onHit,KNOCKDOWN_NOTATION,KD +31,D,juri:web:314,REVIEW_OFFICIAL_AND_PATCH
+juri,1201daae-e1b8-47aa-88d9-19be3fb4f80b,juri-tensenrin-h,強 天穿輪,active,VALUE_CONFLICT,"8,2,2","5-12, 18-19, 23-24",juri:web:315,REVIEW_OFFICIAL_AND_PATCH
+juri,1201daae-e1b8-47aa-88d9-19be3fb4f80b,juri-tensenrin-h,強 天穿輪,recovery,VALUE_CONFLICT,38,着地後14,juri:web:315,REVIEW_OFFICIAL_AND_PATCH
+juri,1201daae-e1b8-47aa-88d9-19be3fb4f80b,juri-tensenrin-h,強 天穿輪,onHit,KNOCKDOWN_NOTATION,KD +28,D,juri:web:315,REVIEW_OFFICIAL_AND_PATCH
+juri,3e607e52-090d-4c0b-96ec-d3bf99fd7c8b,juri-tensenrin-od,OD 天穿輪,active,VALUE_CONFLICT,"4,2,2,2","6-9, 11-12, 19-20, 23-24",juri:web:316,REVIEW_OFFICIAL_AND_PATCH
+juri,3e607e52-090d-4c0b-96ec-d3bf99fd7c8b,juri-tensenrin-od,OD 天穿輪,recovery,VALUE_CONFLICT,51,着地後19,juri:web:316,REVIEW_OFFICIAL_AND_PATCH
+juri,3e607e52-090d-4c0b-96ec-d3bf99fd7c8b,juri-tensenrin-od,OD 天穿輪,onHit,KNOCKDOWN_NOTATION,KD +5,D,juri:web:316,REVIEW_OFFICIAL_AND_PATCH
+juri,ba59597e-b3b2-4932-ac71-c57a5c8d43c9,juri-shikusen,疾空閃,active,VALUE_CONFLICT,variable,18-着地まで,juri:web:317,REVIEW_OFFICIAL_AND_PATCH
+juri,ba59597e-b3b2-4932-ac71-c57a5c8d43c9,juri-shikusen,疾空閃,recovery,VALUE_CONFLICT,variable,着地後18,juri:web:317,REVIEW_OFFICIAL_AND_PATCH
+juri,ba59597e-b3b2-4932-ac71-c57a5c8d43c9,juri-shikusen,疾空閃,onHit,TXT_BLANK_DB_HAS_VALUE,KD +35...,,juri:web:317,REVIEW_OFFICIAL_AND_PATCH
+juri,ba59597e-b3b2-4932-ac71-c57a5c8d43c9,juri-shikusen,疾空閃,onBlock,TXT_BLANK_DB_HAS_VALUE,-9...,,juri:web:317,REVIEW_OFFICIAL_AND_PATCH
+juri,d8b0f1e0-9608-4189-8118-b4bf13274f10,juri-shikusen-od,OD 疾空閃,active,VALUE_CONFLICT,variable,16-着地まで,juri:web:318,REVIEW_OFFICIAL_AND_PATCH
+juri,d8b0f1e0-9608-4189-8118-b4bf13274f10,juri-shikusen-od,OD 疾空閃,recovery,VALUE_CONFLICT,variable,着地後18,juri:web:318,REVIEW_OFFICIAL_AND_PATCH
+juri,d8b0f1e0-9608-4189-8118-b4bf13274f10,juri-shikusen-od,OD 疾空閃,onHit,TXT_BLANK_DB_HAS_VALUE,KD +38...,,juri:web:318,REVIEW_OFFICIAL_AND_PATCH
+juri,d8b0f1e0-9608-4189-8118-b4bf13274f10,juri-shikusen-od,OD 疾空閃,onBlock,TXT_BLANK_DB_HAS_VALUE,-9...,,juri:web:318,REVIEW_OFFICIAL_AND_PATCH
+juri,953af9d9-ad43-430d-9ea2-ffa332436fbe,juri-sa2,SA2 風水エンジン,startup,TXT_BLANK_DB_HAS_VALUE,7 (9),,juri:web:401,REVIEW_OFFICIAL_AND_PATCH
+juri,953af9d9-ad43-430d-9ea2-ffa332436fbe,juri-sa2,SA2 風水エンジン,active,TXT_BLANK_DB_HAS_VALUE,variable,,juri:web:401,REVIEW_OFFICIAL_AND_PATCH
+juri,953af9d9-ad43-430d-9ea2-ffa332436fbe,juri-sa2,SA2 風水エンジン,recovery,TXT_BLANK_DB_HAS_VALUE,variable,,juri:web:401,REVIEW_OFFICIAL_AND_PATCH
+juri,953af9d9-ad43-430d-9ea2-ffa332436fbe,juri-sa2,SA2 風水エンジン,onHit,TXT_BLANK_DB_HAS_VALUE,-- (+4),,juri:web:401,REVIEW_OFFICIAL_AND_PATCH
+juri,953af9d9-ad43-430d-9ea2-ffa332436fbe,juri-sa2,SA2 風水エンジン,onBlock,TXT_BLANK_DB_HAS_VALUE,-- (-17),,juri:web:401,REVIEW_OFFICIAL_AND_PATCH
+ken,7d2cac0c-e80b-43dd-a4df-15e6a3b71db5,ken-quick-dash,奮迅脚,startup,TXT_BLANK_DB_HAS_VALUE,11...,,ken:web:201,REVIEW_OFFICIAL_AND_PATCH
+ken,7d2cac0c-e80b-43dd-a4df-15e6a3b71db5,ken-quick-dash,奮迅脚,active,TXT_BLANK_DB_HAS_VALUE,--,,ken:web:201,REVIEW_OFFICIAL_AND_PATCH
+ken,7d2cac0c-e80b-43dd-a4df-15e6a3b71db5,ken-quick-dash,奮迅脚,recovery,TXT_BLANK_DB_HAS_VALUE,...45,,ken:web:201,REVIEW_OFFICIAL_AND_PATCH
+ken,7d2cac0c-e80b-43dd-a4df-15e6a3b71db5,ken-quick-dash,奮迅脚,damage,DB_MISSING_TXT_HAS_VALUE,,0,ken:web:201,REVIEW_OFFICIAL_AND_PATCH
+ken,da463a86-012e-489c-83c2-4d9c788ec522,ken-hadoken-l,弱 波動拳,active,TXT_BLANK_DB_HAS_VALUE,variable,,ken:web:300,REVIEW_OFFICIAL_AND_PATCH
+ken,da463a86-012e-489c-83c2-4d9c788ec522,ken-hadoken-l,弱 波動拳,recovery,TXT_BLANK_DB_HAS_VALUE,33,,ken:web:300,REVIEW_OFFICIAL_AND_PATCH
+ken,da463a86-012e-489c-83c2-4d9c788ec522,ken-hadoken-l,弱 波動拳,onHit,DB_TRAILING_ELLIPSIS,-1...,-1,ken:web:300,REVIEW_OFFICIAL_AND_PATCH
+ken,da463a86-012e-489c-83c2-4d9c788ec522,ken-hadoken-l,弱 波動拳,onBlock,DB_TRAILING_ELLIPSIS,-7...,-7,ken:web:300,REVIEW_OFFICIAL_AND_PATCH
+ken,a387256a-dac1-411f-9d33-3a0e9c1b6ab2,ken-hadoken-m,中 波動拳,active,TXT_BLANK_DB_HAS_VALUE,variable,,ken:web:301,REVIEW_OFFICIAL_AND_PATCH
+ken,a387256a-dac1-411f-9d33-3a0e9c1b6ab2,ken-hadoken-m,中 波動拳,recovery,TXT_BLANK_DB_HAS_VALUE,35,,ken:web:301,REVIEW_OFFICIAL_AND_PATCH
+ken,a387256a-dac1-411f-9d33-3a0e9c1b6ab2,ken-hadoken-m,中 波動拳,onHit,DB_TRAILING_ELLIPSIS,-3...,-3,ken:web:301,REVIEW_OFFICIAL_AND_PATCH
+ken,a387256a-dac1-411f-9d33-3a0e9c1b6ab2,ken-hadoken-m,中 波動拳,onBlock,DB_TRAILING_ELLIPSIS,-9...,-9,ken:web:301,REVIEW_OFFICIAL_AND_PATCH
+ken,7e7854bb-b559-456f-bb38-4eaf4ab8f317,ken-hadoken-h,強 波動拳,active,TXT_BLANK_DB_HAS_VALUE,variable,,ken:web:302,REVIEW_OFFICIAL_AND_PATCH
+ken,7e7854bb-b559-456f-bb38-4eaf4ab8f317,ken-hadoken-h,強 波動拳,recovery,TXT_BLANK_DB_HAS_VALUE,37,,ken:web:302,REVIEW_OFFICIAL_AND_PATCH
+ken,7e7854bb-b559-456f-bb38-4eaf4ab8f317,ken-hadoken-h,強 波動拳,onHit,DB_TRAILING_ELLIPSIS,-5...,-5,ken:web:302,REVIEW_OFFICIAL_AND_PATCH
+ken,7e7854bb-b559-456f-bb38-4eaf4ab8f317,ken-hadoken-h,強 波動拳,onBlock,DB_TRAILING_ELLIPSIS,-11...,-11,ken:web:302,REVIEW_OFFICIAL_AND_PATCH
+ken,fd90ad37-4df3-4385-a480-70458d20e24b,ken-hadoken-od,OD 波動拳,active,TXT_BLANK_DB_HAS_VALUE,variable,,ken:web:303,REVIEW_OFFICIAL_AND_PATCH
+ken,fd90ad37-4df3-4385-a480-70458d20e24b,ken-hadoken-od,OD 波動拳,recovery,TXT_BLANK_DB_HAS_VALUE,20,,ken:web:303,REVIEW_OFFICIAL_AND_PATCH
+ken,fd90ad37-4df3-4385-a480-70458d20e24b,ken-hadoken-od,OD 波動拳,onHit,DB_TRAILING_ELLIPSIS,+2...,2,ken:web:303,REVIEW_OFFICIAL_AND_PATCH
+ken,fd90ad37-4df3-4385-a480-70458d20e24b,ken-hadoken-od,OD 波動拳,onBlock,DB_TRAILING_ELLIPSIS,-2...,-2,ken:web:303,REVIEW_OFFICIAL_AND_PATCH
+ken,339114d8-31e2-4760-9a65-cf4c9e289616,ken-shoryuken-l,弱 昇龍拳,active,ACTIVE_DURATION_VS_RANGE,10,5-14,ken:web:304,REVIEW_OFFICIAL_AND_PATCH
+ken,339114d8-31e2-4760-9a65-cf4c9e289616,ken-shoryuken-l,弱 昇龍拳,recovery,VALUE_CONFLICT,33,21+着地後12,ken:web:304,REVIEW_OFFICIAL_AND_PATCH
+ken,339114d8-31e2-4760-9a65-cf4c9e289616,ken-shoryuken-l,弱 昇龍拳,onHit,KNOCKDOWN_NOTATION,KD +33,D,ken:web:304,REVIEW_OFFICIAL_AND_PATCH
+ken,bc92ba83-9725-464b-8358-aff0977879c7,ken-shoryuken-m,中 昇龍拳,active,ACTIVE_DURATION_VS_RANGE,10,"6-8,9-15",ken:web:305,REVIEW_OFFICIAL_AND_PATCH
+ken,bc92ba83-9725-464b-8358-aff0977879c7,ken-shoryuken-m,中 昇龍拳,recovery,VALUE_CONFLICT,40,28+着地後12,ken:web:305,REVIEW_OFFICIAL_AND_PATCH
+ken,bc92ba83-9725-464b-8358-aff0977879c7,ken-shoryuken-m,中 昇龍拳,onHit,KNOCKDOWN_NOTATION,KD +33,D,ken:web:305,REVIEW_OFFICIAL_AND_PATCH
+ken,be01ed12-ba8a-457b-9954-a996223e4426,ken-shoryuken-h,強 昇龍拳,active,ACTIVE_DURATION_VS_RANGE,10,"7-8,9-10,11-16",ken:web:306,REVIEW_OFFICIAL_AND_PATCH
+ken,be01ed12-ba8a-457b-9954-a996223e4426,ken-shoryuken-h,強 昇龍拳,recovery,VALUE_CONFLICT,50,35+着地後15,ken:web:306,REVIEW_OFFICIAL_AND_PATCH
+ken,be01ed12-ba8a-457b-9954-a996223e4426,ken-shoryuken-h,強 昇龍拳,onHit,KNOCKDOWN_NOTATION,KD +25,D,ken:web:306,REVIEW_OFFICIAL_AND_PATCH
+ken,6876468e-a58f-49ec-8141-ebac16b9a162,ken-shoryuken-od,OD 昇龍拳,active,VALUE_CONFLICT,"10,10","6-7, 8-15, 30-31, 32, 33-34, 35-39",ken:web:307,REVIEW_OFFICIAL_AND_PATCH
+ken,6876468e-a58f-49ec-8141-ebac16b9a162,ken-shoryuken-od,OD 昇龍拳,recovery,VALUE_CONFLICT,50,35+着地後15,ken:web:307,REVIEW_OFFICIAL_AND_PATCH
+ken,6876468e-a58f-49ec-8141-ebac16b9a162,ken-shoryuken-od,OD 昇龍拳,onHit,KNOCKDOWN_NOTATION,KD +22,D,ken:web:307,REVIEW_OFFICIAL_AND_PATCH
+ken,7e3c88e5-1626-4546-950f-7a7b1a3edcac,ken-tatsu-l,弱 竜巻旋風脚,startup,DB_TRAILING_ELLIPSIS,4...,4,ken:web:309,REVIEW_OFFICIAL_AND_PATCH
+ken,7e3c88e5-1626-4546-950f-7a7b1a3edcac,ken-tatsu-l,弱 竜巻旋風脚,active,VALUE_CONFLICT,"2,3","4-5, 12-14",ken:web:309,REVIEW_OFFICIAL_AND_PATCH
+ken,7e3c88e5-1626-4546-950f-7a7b1a3edcac,ken-tatsu-l,弱 竜巻旋風脚,onHit,KNOCKDOWN_NOTATION,KD +46,D,ken:web:309,REVIEW_OFFICIAL_AND_PATCH
+ken,e59ca6b7-22fc-40f4-94a2-e8a52bd02ade,ken-tatsu-m,中 竜巻旋風脚,startup,DB_TRAILING_ELLIPSIS,14...,14,ken:web:310,REVIEW_OFFICIAL_AND_PATCH
+ken,e59ca6b7-22fc-40f4-94a2-e8a52bd02ade,ken-tatsu-m,中 竜巻旋風脚,active,VALUE_CONFLICT,"2,2","14-15, 29-30",ken:web:310,REVIEW_OFFICIAL_AND_PATCH
+ken,e59ca6b7-22fc-40f4-94a2-e8a52bd02ade,ken-tatsu-m,中 竜巻旋風脚,onHit,KNOCKDOWN_NOTATION,KD +44,D,ken:web:310,REVIEW_OFFICIAL_AND_PATCH
+ken,69c0324c-b2d1-4d19-873f-e147d82c79ab,ken-tatsu-h,強 竜巻旋風脚,startup,DB_TRAILING_ELLIPSIS,16...,16,ken:web:311,REVIEW_OFFICIAL_AND_PATCH
+ken,69c0324c-b2d1-4d19-873f-e147d82c79ab,ken-tatsu-h,強 竜巻旋風脚,active,VALUE_CONFLICT,"2,2,2","16-17, 31-32, 46-47",ken:web:311,REVIEW_OFFICIAL_AND_PATCH
+ken,69c0324c-b2d1-4d19-873f-e147d82c79ab,ken-tatsu-h,強 竜巻旋風脚,onHit,KNOCKDOWN_NOTATION,KD +36,D,ken:web:311,REVIEW_OFFICIAL_AND_PATCH
+ken,69c0324c-b2d1-4d19-873f-e147d82c79ab,ken-tatsu-h,強 竜巻旋風脚,damage,VALUE_CONFLICT,1300,1000,ken:web:311,REVIEW_OFFICIAL_AND_PATCH
+ken,41217421-641d-40ab-89b6-e683ab04fcce,ken-tatsu-od,OD 竜巻旋風脚,startup,DB_TRAILING_ELLIPSIS,9...,9,ken:web:312,REVIEW_OFFICIAL_AND_PATCH
+ken,41217421-641d-40ab-89b6-e683ab04fcce,ken-tatsu-od,OD 竜巻旋風脚,active,VALUE_CONFLICT,"4,3,3,3,3","9-12, 18-20, 27-29, 36-38,54-56",ken:web:312,REVIEW_OFFICIAL_AND_PATCH
+ken,41217421-641d-40ab-89b6-e683ab04fcce,ken-tatsu-od,OD 竜巻旋風脚,recovery,VALUE_CONFLICT,34,22+着地後12,ken:web:312,REVIEW_OFFICIAL_AND_PATCH
+ken,41217421-641d-40ab-89b6-e683ab04fcce,ken-tatsu-od,OD 竜巻旋風脚,onHit,KNOCKDOWN_NOTATION,KD +28,D,ken:web:312,REVIEW_OFFICIAL_AND_PATCH
+ken,f6171332-63ad-40d3-8fb7-8c4fe6fa6218,ken-air-tatsu,空中竜巻旋風脚,active,VALUE_CONFLICT,2,"11-12,18-19,26-27",ken:web:314,REVIEW_OFFICIAL_AND_PATCH
+ken,f6171332-63ad-40d3-8fb7-8c4fe6fa6218,ken-air-tatsu,空中竜巻旋風脚,recovery,VALUE_CONFLICT,16...,着地後14,ken:web:314,REVIEW_OFFICIAL_AND_PATCH
+ken,f6171332-63ad-40d3-8fb7-8c4fe6fa6218,ken-air-tatsu,空中竜巻旋風脚,onHit,KNOCKDOWN_NOTATION,KD variable,D,ken:web:314,REVIEW_OFFICIAL_AND_PATCH
+ken,f6171332-63ad-40d3-8fb7-8c4fe6fa6218,ken-air-tatsu,空中竜巻旋風脚,onBlock,TXT_BLANK_DB_HAS_VALUE,-3...,,ken:web:314,REVIEW_OFFICIAL_AND_PATCH
+ken,bacc9cc1-aff3-4b61-841d-fb313a77e3d5,ken-air-tatsu-od,OD 空中竜巻旋風脚,active,VALUE_CONFLICT,"2,2,2","11-12, 14-15, 18-19, 22-23, 27-28",ken:web:315,REVIEW_OFFICIAL_AND_PATCH
+ken,bacc9cc1-aff3-4b61-841d-fb313a77e3d5,ken-air-tatsu-od,OD 空中竜巻旋風脚,recovery,VALUE_CONFLICT,14... (21 whiff),着地後14,ken:web:315,REVIEW_OFFICIAL_AND_PATCH
+ken,bacc9cc1-aff3-4b61-841d-fb313a77e3d5,ken-air-tatsu-od,OD 空中竜巻旋風脚,onHit,VALUE_CONFLICT,+7...,D,ken:web:315,REVIEW_OFFICIAL_AND_PATCH
+ken,bacc9cc1-aff3-4b61-841d-fb313a77e3d5,ken-air-tatsu-od,OD 空中竜巻旋風脚,onBlock,TXT_BLANK_DB_HAS_VALUE,-5...,,ken:web:315,REVIEW_OFFICIAL_AND_PATCH
+ken,2471b3a9-56a9-4e1c-80d0-3cfd73d4513e,ken-dragonlash-l,弱 龍尾脚,active,ACTIVE_DURATION_VS_RANGE,6,18-23,ken:web:316,REVIEW_OFFICIAL_AND_PATCH
+ken,2471b3a9-56a9-4e1c-80d0-3cfd73d4513e,ken-dragonlash-l,弱 龍尾脚,damage,VALUE_CONFLICT,950,1000,ken:web:316,REVIEW_OFFICIAL_AND_PATCH
+ken,3ca5b57a-0acb-4a5b-9f4f-512baa076a2d,ken-dragonlash-m,中 龍尾脚,active,ACTIVE_DURATION_VS_RANGE,5,23-27,ken:web:317,REVIEW_OFFICIAL_AND_PATCH
+ken,f767adcd-c716-46c3-a1f5-819390fde640,ken-dragonlash-h,強 龍尾脚,active,ACTIVE_DURATION_VS_RANGE,5,28-32,ken:web:318,REVIEW_OFFICIAL_AND_PATCH
+ken,2ae7c845-f576-49f2-b81a-9e556485a9ba,ken-dragonlash-od,OD 龍尾脚,active,VALUE_CONFLICT,"2,7","9-10, 18-24",ken:web:319,REVIEW_OFFICIAL_AND_PATCH
+ken,2ae7c845-f576-49f2-b81a-9e556485a9ba,ken-dragonlash-od,OD 龍尾脚,damage,VALUE_CONFLICT,700,1200,ken:web:319,REVIEW_OFFICIAL_AND_PATCH
+ken,5cb7c595-a3ad-4cf1-a9a1-6c319279c6cc,ken-jinrai-l,弱 迅雷脚,active,ACTIVE_DURATION_VS_RANGE,3,12-14,ken:web:321,REVIEW_OFFICIAL_AND_PATCH
+ken,3586bd08-a3f6-401e-9d49-0915b711dcbc,ken-jinrai-m,中 迅雷脚,active,ACTIVE_DURATION_VS_RANGE,3,16-18,ken:web:322,REVIEW_OFFICIAL_AND_PATCH
+ken,c2a9f794-1729-4a80-ae69-80eedea265a4,ken-jinrai-h,強 迅雷脚,active,ACTIVE_DURATION_VS_RANGE,3,25-27,ken:web:323,REVIEW_OFFICIAL_AND_PATCH
+ken,c2a9f794-1729-4a80-ae69-80eedea265a4,ken-jinrai-h,強 迅雷脚,onHit,KNOCKDOWN_NOTATION,KD +42,D,ken:web:323,REVIEW_OFFICIAL_AND_PATCH
+ken,7369f84d-cbee-48a6-9fb9-cf83805d36b0,ken-jinrai-od,OD 迅雷脚,active,ACTIVE_DURATION_VS_RANGE,3,13-15,ken:web:324,REVIEW_OFFICIAL_AND_PATCH
+ken,7ec44688-4e77-48bb-8b9f-0731b6eed185,ken-sa2,SA2 疾風迅雷脚,active,VALUE_CONFLICT,variable,"6-7,18-20,31-33,46-48,60-61",ken:web:401,REVIEW_OFFICIAL_AND_PATCH
+ken,7ec44688-4e77-48bb-8b9f-0731b6eed185,ken-sa2,SA2 疾風迅雷脚,recovery,VALUE_CONFLICT,32,28,ken:web:401,REVIEW_OFFICIAL_AND_PATCH
+ken,7ec44688-4e77-48bb-8b9f-0731b6eed185,ken-sa2,SA2 疾風迅雷脚,onHit,KNOCKDOWN_NOTATION,KD +36,D,ken:web:401,REVIEW_OFFICIAL_AND_PATCH
+ken,87998cdc-9b82-4b36-9582-3e144fe7b107,ken-sa3,SA3 神龍烈破,active,VALUE_CONFLICT,variable,"7-9,11-13,14-16,33-35,36-37,38-39,40-41,42-43,44-45",ken:web:403,REVIEW_OFFICIAL_AND_PATCH
+ken,87998cdc-9b82-4b36-9582-3e144fe7b107,ken-sa3,SA3 神龍烈破,recovery,VALUE_CONFLICT,variable,55,ken:web:403,REVIEW_OFFICIAL_AND_PATCH
+ken,87998cdc-9b82-4b36-9582-3e144fe7b107,ken-sa3,SA3 神龍烈破,onHit,KNOCKDOWN_NOTATION,KD +15 (CA +21),D,ken:web:403,REVIEW_OFFICIAL_AND_PATCH
+kimberly,b8d37824-f105-4b3d-9b6a-6953a9b3cfa7,kimberly-frame-031,弱 武神旋風脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,6-36,"6-11, 13-18※,20-25, 34-36",kimberly:web:300,REVIEW_OFFICIAL_AND_PATCH
+kimberly,7af1795b-62dd-4544-83d1-a321d28345d1,kimberly-frame-032,中 武神旋風脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,7-37,"7-12,14-19※, 21-26, 35-37",kimberly:web:301,REVIEW_OFFICIAL_AND_PATCH
+kimberly,674819e2-23fb-4579-84c8-8d6aedbb319d,kimberly-frame-033,強 武神旋風脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,8-38,"8-13, 15-20※, 22-27, 36-38",kimberly:web:302,REVIEW_OFFICIAL_AND_PATCH
+kimberly,8474bc48-410d-422e-98d7-8cab99b9c3e6,kimberly-frame-034,OD 武神旋風脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,6-35,"6-11, 13-18, 20-25, 27-32, 34-35",kimberly:web:303,REVIEW_OFFICIAL_AND_PATCH
+kimberly,cb7a0dac-3c05-47db-a32e-2a0551b7d20b,kimberly-frame-035,空中武神旋風脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,8-27,"8-9, 17-18, 26-27",kimberly:web:304,REVIEW_OFFICIAL_AND_PATCH
+kimberly,fc64cbd4-0202-40ee-b936-97baad4592ca,kimberly-frame-036,OD 空中武神旋風脚,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,8-27,"8-9, 12-14※, 17-18, 21-23※, 26-27 ",kimberly:web:305,REVIEW_OFFICIAL_AND_PATCH
+kimberly,c724f0ae-dffb-4afc-9ea3-e315b81c0d5d,kimberly-frame-037,疾駆け,recovery,TXT_BLANK_DB_HAS_VALUE,全体 55,,kimberly:web:306,REVIEW_OFFICIAL_AND_PATCH
+kimberly,88033ae3-3e0d-47b3-ae03-272023880ca6,kimberly-frame-038,OD 疾駆け,recovery,TXT_BLANK_DB_HAS_VALUE,全体 54,,kimberly:web:307,REVIEW_OFFICIAL_AND_PATCH
+kimberly,60a09c4f-d5e4-436a-9b27-f454edd44359,kimberly-frame-039,急停止,recovery,TXT_BLANK_DB_HAS_VALUE,全体 14,,kimberly:web:308,REVIEW_OFFICIAL_AND_PATCH
+kimberly,ad87f835-3557-4069-a387-f3fff79f1734,kimberly-frame-040,OD 急停止,recovery,TXT_BLANK_DB_HAS_VALUE,全体 13,,kimberly:web:309,REVIEW_OFFICIAL_AND_PATCH
+kimberly,5cd7c3d3-df99-435e-b8b2-0754a7a26e97,kimberly-frame-042,OD 胴刎ね,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,17-23,"17-18, 19-23",kimberly:web:311,REVIEW_OFFICIAL_AND_PATCH
+kimberly,e7688ace-f44a-4e7d-b579-ce72f1df54cb,kimberly-frame-044,OD 影すくい,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,8-19,"8-15, 16-19",kimberly:web:313,REVIEW_OFFICIAL_AND_PATCH
+kimberly,5e8d161a-51ca-4991-a6ce-313bdb134723,kimberly-frame-046,OD 首狩り,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,15-19,"15-16, 17-19",kimberly:web:315,REVIEW_OFFICIAL_AND_PATCH
+kimberly,cbb4223a-a290-4946-bb5a-021010e68923,kimberly-frame-047,弧空,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,6-15,"6-7, 14-15",kimberly:web:316,REVIEW_OFFICIAL_AND_PATCH
+kimberly,0bc64602-0d02-4049-907b-4df7d2b96542,kimberly-frame-048,OD 弧空,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,6-15,"6-7, 14-15",kimberly:web:317,REVIEW_OFFICIAL_AND_PATCH
+kimberly,2ea98501-ef65-4a1c-8e02-91250859825e,kimberly-frame-054,中 流転一文字,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,17-43※,"17-18, 41-43※",kimberly:web:323,REVIEW_OFFICIAL_AND_PATCH
+kimberly,f8320cbf-d12f-40c3-af5e-3306a6a8660f,kimberly-frame-055,強 流転一文字,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,24- 45※,"24-25, 45※",kimberly:web:324,REVIEW_OFFICIAL_AND_PATCH
+kimberly,34df6046-c6c8-4eae-b368-dd38847fc25f,kimberly-frame-056,OD 流転一文字,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,17- 38,"17-18, 38",kimberly:web:325,REVIEW_OFFICIAL_AND_PATCH
+kimberly,e297937e-6a0b-4ee6-80c5-d468ad554632,kimberly-frame-057,彩隠形,recovery,TXT_BLANK_DB_HAS_VALUE,全体 43,,kimberly:web:326,REVIEW_OFFICIAL_AND_PATCH
+kimberly,dca425fc-d8c6-4395-8fc1-fed18e7d54d4,kimberly-frame-059,召雷細工,recovery,TXT_BLANK_DB_HAS_VALUE,全体 44,,kimberly:web:328,REVIEW_OFFICIAL_AND_PATCH
+kimberly,f6a3ade1-5b2b-44c5-9a78-9c5f32ac136e,kimberly-frame-060,OD 召雷細工,recovery,TXT_BLANK_DB_HAS_VALUE,全体 44,,kimberly:web:329,REVIEW_OFFICIAL_AND_PATCH
+kimberly,c226c305-4d85-421d-8461-ceb46e619dda,kimberly-frame-061,弱 細工手裏剣,recovery,TXT_BLANK_DB_HAS_VALUE,全体 44,,kimberly:web:330,REVIEW_OFFICIAL_AND_PATCH
+kimberly,93a9c0ac-552d-4b29-8a88-86a5e9a29689,kimberly-frame-062,中 細工手裏剣,recovery,TXT_BLANK_DB_HAS_VALUE,全体 44,,kimberly:web:331,REVIEW_OFFICIAL_AND_PATCH
+kimberly,fbe7eb9f-ec4d-436a-8f8c-0b38b0e7760a,kimberly-frame-063,強 細工手裏剣,recovery,TXT_BLANK_DB_HAS_VALUE,全体 44,,kimberly:web:332,REVIEW_OFFICIAL_AND_PATCH
+kimberly,8f23066e-ec2d-41d6-aa5f-8dcd892c9025,kimberly-frame-064,弱 乱れ細工手裏剣,recovery,TXT_BLANK_DB_HAS_VALUE,全体 44,,kimberly:web:333,REVIEW_OFFICIAL_AND_PATCH
+kimberly,8a25ea74-8b68-43d4-873e-1a117d51104a,kimberly-frame-065,中 乱れ細工手裏剣,recovery,TXT_BLANK_DB_HAS_VALUE,全体 44,,kimberly:web:334,REVIEW_OFFICIAL_AND_PATCH
+kimberly,f21d57c9-88e5-41b3-919e-f14db0df3519,kimberly-frame-066,強 乱れ細工手裏剣,recovery,TXT_BLANK_DB_HAS_VALUE,全体 44,,kimberly:web:335,REVIEW_OFFICIAL_AND_PATCH
+lily,506d86ff-9851-4d4a-97f7-f5445ae0a5df,lily-ridge-thrust,スラストリッジ,active,ACTIVE_DURATION_VS_RANGE,3,25-27,lily:web:200,REVIEW_OFFICIAL_AND_PATCH
+lily,d9dc6a43-1108-4cc6-b910-a57dd875db7f,lily-condor-dive,コンドルダイブ,active,VALUE_CONFLICT,until landing,12-着地まで,lily:web:322,REVIEW_OFFICIAL_AND_PATCH
+lily,3d24b9fa-acd9-40c7-ab2d-c6072387bf4e,lily-condor-dive-od,OD コンドルダイブ,active,VALUE_CONFLICT,until landing,12-着地まで,lily:web:323,REVIEW_OFFICIAL_AND_PATCH
+lily,204a2e48-71e3-4180-b42e-8ec5c8bd1ed7,lily-typhoon-l,弱 メキシカンタイフーン,active,ACTIVE_DURATION_VS_RANGE,3,5-7,lily:web:326,REVIEW_OFFICIAL_AND_PATCH
+lily,204a2e48-71e3-4180-b42e-8ec5c8bd1ed7,lily-typhoon-l,弱 メキシカンタイフーン,onHit,KNOCKDOWN_NOTATION,KD +28,D,lily:web:326,REVIEW_OFFICIAL_AND_PATCH
+lily,c58e0a88-2a82-4f7f-a8d9-60b2b406f395,lily-typhoon-m,中 メキシカンタイフーン,active,ACTIVE_DURATION_VS_RANGE,3,5-7,lily:web:327,REVIEW_OFFICIAL_AND_PATCH
+lily,c58e0a88-2a82-4f7f-a8d9-60b2b406f395,lily-typhoon-m,中 メキシカンタイフーン,onHit,KNOCKDOWN_NOTATION,KD +28,D,lily:web:327,REVIEW_OFFICIAL_AND_PATCH
+lily,00098e8f-ce4d-45cf-a785-f3238be5e859,lily-typhoon-h,強 メキシカンタイフーン,active,ACTIVE_DURATION_VS_RANGE,3,5-7,lily:web:328,REVIEW_OFFICIAL_AND_PATCH
+lily,00098e8f-ce4d-45cf-a785-f3238be5e859,lily-typhoon-h,強 メキシカンタイフーン,onHit,KNOCKDOWN_NOTATION,KD +28,D,lily:web:328,REVIEW_OFFICIAL_AND_PATCH
+lily,f37f3b86-5ba5-4ccf-831b-f0ebcc4cae2d,lily-typhoon-od,OD メキシカンタイフーン,active,ACTIVE_DURATION_VS_RANGE,3,5-7,lily:web:329,REVIEW_OFFICIAL_AND_PATCH
+lily,f37f3b86-5ba5-4ccf-831b-f0ebcc4cae2d,lily-typhoon-od,OD メキシカンタイフーン,onHit,KNOCKDOWN_NOTATION,KD +28,D,lily:web:329,REVIEW_OFFICIAL_AND_PATCH
+lily,32d1cd8d-b7a2-4def-8074-667ee62e8536,lily-sa3,SA3 レイジングタイフーン,active,DB_MISSING_TXT_HAS_VALUE,,7-8,lily:web:405,REVIEW_OFFICIAL_AND_PATCH
+lily,32d1cd8d-b7a2-4def-8074-667ee62e8536,lily-sa3,SA3 レイジングタイフーン,recovery,DB_MISSING_TXT_HAS_VALUE,,106,lily:web:405,REVIEW_OFFICIAL_AND_PATCH
+lily,32d1cd8d-b7a2-4def-8074-667ee62e8536,lily-sa3,SA3 レイジングタイフーン,onHit,KNOCKDOWN_NOTATION,KD,D,lily:web:405,REVIEW_OFFICIAL_AND_PATCH
+lily,d443d973-0462-458f-a25e-3b51759ebfd2,lily-ca,CA レイジングタイフーン,active,DB_MISSING_TXT_HAS_VALUE,,7-8,lily:web:406,REVIEW_OFFICIAL_AND_PATCH
+lily,d443d973-0462-458f-a25e-3b51759ebfd2,lily-ca,CA レイジングタイフーン,recovery,DB_MISSING_TXT_HAS_VALUE,,106,lily:web:406,REVIEW_OFFICIAL_AND_PATCH
+lily,d443d973-0462-458f-a25e-3b51759ebfd2,lily-ca,CA レイジングタイフーン,onHit,KNOCKDOWN_NOTATION,KD,D,lily:web:406,REVIEW_OFFICIAL_AND_PATCH
+luke,938179e9-b0e1-4b22-8adb-d61bcb84ae86,luke-outlaw-kick,アウトローキック,active,ACTIVE_DURATION_VS_RANGE,4,12-15,luke:web:203,REVIEW_OFFICIAL_AND_PATCH
+luke,e5c37a22-9ba1-409b-bc2a-52b4839c8e6f,luke-sand-blast-l,弱 サンドブラスト,recovery,TXT_BLANK_DB_HAS_VALUE,47 total,,luke:web:300,REVIEW_OFFICIAL_AND_PATCH
+luke,e881de87-5e45-4e0f-bda5-668c28d2b76a,luke-sand-blast-m,中 サンドブラスト,recovery,TXT_BLANK_DB_HAS_VALUE,全体 47,,luke:web:301,REVIEW_OFFICIAL_AND_PATCH
+luke,fb68e4ad-4c0a-4bc1-bd8c-c79244c78d78,luke-sand-blast-h,強 サンドブラスト,recovery,TXT_BLANK_DB_HAS_VALUE,全体 47,,luke:web:302,REVIEW_OFFICIAL_AND_PATCH
+luke,0466a4f1-0e3c-4352-8f61-0f1874663e99,luke-sand-blast-od,OD サンドブラスト,recovery,TXT_BLANK_DB_HAS_VALUE,全体 40,,luke:web:303,REVIEW_OFFICIAL_AND_PATCH
+luke,423f6d80-072c-4dd1-863d-5b8e0061a37d,luke-fatal-shot,フェイタルショット,recovery,TXT_BLANK_DB_HAS_VALUE,全体 50,,luke:web:304,REVIEW_OFFICIAL_AND_PATCH
+luke,9616dccc-5222-420c-97c7-512fe6ebad17,luke-flash-knuckle-od,OD フラッシュナックル,startup,VALUE_CONFLICT,"15,33",15,luke:web:314,REVIEW_OFFICIAL_AND_PATCH
+luke,9616dccc-5222-420c-97c7-512fe6ebad17,luke-flash-knuckle-od,OD フラッシュナックル,active,VALUE_CONFLICT,"15,33-36",15,luke:web:314,REVIEW_OFFICIAL_AND_PATCH
+luke,9616dccc-5222-420c-97c7-512fe6ebad17,luke-flash-knuckle-od,OD フラッシュナックル,recovery,VALUE_CONFLICT,"39,16",39,luke:web:314,REVIEW_OFFICIAL_AND_PATCH
+luke,9616dccc-5222-420c-97c7-512fe6ebad17,luke-flash-knuckle-od,OD フラッシュナックル,onHit,VALUE_CONFLICT,"-,D",-,luke:web:314,REVIEW_OFFICIAL_AND_PATCH
+luke,9616dccc-5222-420c-97c7-512fe6ebad17,luke-flash-knuckle-od,OD フラッシュナックル,onBlock,VALUE_CONFLICT,"-22,-",-22,luke:web:314,REVIEW_OFFICIAL_AND_PATCH
+luke,9616dccc-5222-420c-97c7-512fe6ebad17,luke-flash-knuckle-od,OD フラッシュナックル,damage,VALUE_CONFLICT,800,400,luke:web:314,REVIEW_OFFICIAL_AND_PATCH
+luke,29ba87ce-14a6-40b2-84aa-936228092b66,luke-avenger,アベンジャー,startup,TXT_BLANK_DB_HAS_VALUE,45,,luke:web:320,REVIEW_OFFICIAL_AND_PATCH
+luke,29ba87ce-14a6-40b2-84aa-936228092b66,luke-avenger,アベンジャー,active,TXT_BLANK_DB_HAS_VALUE,0,,luke:web:320,REVIEW_OFFICIAL_AND_PATCH
+luke,29ba87ce-14a6-40b2-84aa-936228092b66,luke-avenger,アベンジャー,recovery,TXT_BLANK_DB_HAS_VALUE,0,,luke:web:320,REVIEW_OFFICIAL_AND_PATCH
+luke,29ba87ce-14a6-40b2-84aa-936228092b66,luke-avenger,アベンジャー,onHit,TXT_BLANK_DB_HAS_VALUE,0,,luke:web:320,REVIEW_OFFICIAL_AND_PATCH
+luke,29ba87ce-14a6-40b2-84aa-936228092b66,luke-avenger,アベンジャー,onBlock,TXT_BLANK_DB_HAS_VALUE,0,,luke:web:320,REVIEW_OFFICIAL_AND_PATCH
+luke,29ba87ce-14a6-40b2-84aa-936228092b66,luke-avenger,アベンジャー,damage,DB_MISSING_TXT_HAS_VALUE,,0,luke:web:320,REVIEW_OFFICIAL_AND_PATCH
+luke,9e34282d-9da4-43fb-a47c-dfdd72eda6ee,luke-sa1-vulcan-blast,SA1 バルカンブラスト,recovery,TXT_BLANK_DB_HAS_VALUE,全体 108,,luke:web:400,REVIEW_OFFICIAL_AND_PATCH
+luke,a1931623-d8f1-47e4-9f18-ef4fde632b4b,luke-sa2-eraser,SA2 イレイザー,active,DB_MISSING_TXT_HAS_VALUE,,5-7,luke:web:401,REVIEW_OFFICIAL_AND_PATCH
+luke,a1931623-d8f1-47e4-9f18-ef4fde632b4b,luke-sa2-eraser,SA2 イレイザー,recovery,DB_MISSING_TXT_HAS_VALUE,,51,luke:web:401,REVIEW_OFFICIAL_AND_PATCH
+luke,a1931623-d8f1-47e4-9f18-ef4fde632b4b,luke-sa2-eraser,SA2 イレイザー,onHit,KNOCKDOWN_NOTATION,KD +4,D,luke:web:401,REVIEW_OFFICIAL_AND_PATCH
+luke,03dc215b-fe91-445b-9089-9a9d090ac1a0,luke-sa3-pale-rider,SA3 ペイルライダー,active,DB_MISSING_TXT_HAS_VALUE,,10-13,luke:web:402,REVIEW_OFFICIAL_AND_PATCH
+luke,03dc215b-fe91-445b-9089-9a9d090ac1a0,luke-sa3-pale-rider,SA3 ペイルライダー,recovery,DB_MISSING_TXT_HAS_VALUE,,92,luke:web:402,REVIEW_OFFICIAL_AND_PATCH
+luke,03dc215b-fe91-445b-9089-9a9d090ac1a0,luke-sa3-pale-rider,SA3 ペイルライダー,onHit,KNOCKDOWN_NOTATION,KD +18,D,luke:web:402,REVIEW_OFFICIAL_AND_PATCH
+mai,c4813437-7ccf-4598-8723-6970a608688e,mai-standing-light-punch-5lp,立ち弱P（扇打）,active,ACTIVE_DURATION_VS_RANGE,3,4-6,mai:web:100,REVIEW_OFFICIAL_AND_PATCH
+mai,c36cb84d-b266-455d-96a9-836c93ac05ef,mai-standing-light-kick-5lk,立ち弱K（飛燕脚）,active,ACTIVE_DURATION_VS_RANGE,3,4-6,mai:web:101,REVIEW_OFFICIAL_AND_PATCH
+mai,c8456bde-c38f-45c7-9ec4-72f56146010e,mai-standing-medium-kick-5mk,立ち中K（舞蹴撃）,active,ACTIVE_DURATION_VS_RANGE,3,9-11,mai:web:103,REVIEW_OFFICIAL_AND_PATCH
+mai,6c114c87-785f-4b90-a830-1431f9aed5a5,mai-standing-heavy-punch-5hp,立ち強P（大扇打）,active,ACTIVE_DURATION_VS_RANGE,3,9-11,mai:web:104,REVIEW_OFFICIAL_AND_PATCH
+mai,c87f5c0a-5c24-4461-9113-6b416fababfa,mai-standing-heavy-kick-5hk,立ち強K（背面蹴り）,active,ACTIVE_DURATION_VS_RANGE,3,14-16,mai:web:105,REVIEW_OFFICIAL_AND_PATCH
+mai,799cbf62-e5b0-48d3-8546-1358987c7359,mai-crouching-light-punch-2lp,しゃがみ弱P（龍尾髪）,active,ACTIVE_DURATION_VS_RANGE,3,4-6,mai:web:106,REVIEW_OFFICIAL_AND_PATCH
+mai,2a58235d-299a-4618-8ea4-c230f3302cac,mai-crouching-light-kick-2lk,しゃがみ弱K（摺り蹴り）,active,ACTIVE_DURATION_VS_RANGE,3,5-7,mai:web:107,REVIEW_OFFICIAL_AND_PATCH
+mai,0e0a9837-cbe4-4f29-aa63-f6b88a786bcf,mai-crouching-medium-punch-2mp,しゃがみ中P（背面ひじ打ち）,active,ACTIVE_DURATION_VS_RANGE,4,6-9,mai:web:108,REVIEW_OFFICIAL_AND_PATCH
+mai,95730c67-addc-4642-a20a-5945ef11ed44,mai-crouching-medium-kick-2mk,しゃがみ中K（捌き蹴り）,active,ACTIVE_DURATION_VS_RANGE,3,7-9,mai:web:109,REVIEW_OFFICIAL_AND_PATCH
+mai,f3fc4f71-7de2-4f23-9a7c-5b98c41124b7,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,startup,VALUE_CONFLICT,7,10,mai:web:203,REVIEW_OFFICIAL_AND_PATCH
+mai,f3fc4f71-7de2-4f23-9a7c-5b98c41124b7,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,active,VALUE_CONFLICT,7-8,10-11,mai:web:203,REVIEW_OFFICIAL_AND_PATCH
+mai,f3fc4f71-7de2-4f23-9a7c-5b98c41124b7,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,recovery,VALUE_CONFLICT,20,28,mai:web:203,REVIEW_OFFICIAL_AND_PATCH
+mai,f3fc4f71-7de2-4f23-9a7c-5b98c41124b7,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,onHit,VALUE_CONFLICT,-2,3,mai:web:203,REVIEW_OFFICIAL_AND_PATCH
+mai,f3fc4f71-7de2-4f23-9a7c-5b98c41124b7,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,damage,VALUE_CONFLICT,400,500,mai:web:203,REVIEW_OFFICIAL_AND_PATCH
+mai,59f4a69e-972b-4a2e-a525-4685c62f4312,mai-kachousen-236lp,弱 花蝶扇,recovery,TXT_BLANK_DB_HAS_VALUE,48 total,,mai:web:300,REVIEW_OFFICIAL_AND_PATCH
+mai,7da2699f-52ed-4475-a1f6-2347a7f0a1d7,mai-kachousen-hold-236-lp,弱 花蝶扇（ホールド）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 64,,mai:web:301,REVIEW_OFFICIAL_AND_PATCH
+mai,30ffa854-0001-41d1-bfb1-809d7483b9a0,mai-kachousen-flame-236lp,[強化版]弱 花蝶扇,recovery,TXT_BLANK_DB_HAS_VALUE,45 total,,mai:web:302,REVIEW_OFFICIAL_AND_PATCH
+mai,0bed7ebe-1004-4a61-8eca-fa1cd10b92d2,mai-kachousen-flame-hold-236-lp,[強化版]弱 花蝶扇（ホールド）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 62,,mai:web:303,REVIEW_OFFICIAL_AND_PATCH
+mai,47d6dfe7-4242-4d43-a961-b7695a030e48,mai-kachousen-236mp,中 花蝶扇,recovery,TXT_BLANK_DB_HAS_VALUE,48 total,,mai:web:304,REVIEW_OFFICIAL_AND_PATCH
+mai,22b9fd52-c51b-4604-8fa0-117b720bc0c4,mai-kachousen-hold-236-mp,中 花蝶扇（ホールド）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 64,,mai:web:305,REVIEW_OFFICIAL_AND_PATCH
+mai,f9c3b0fa-760c-4e7f-ba79-5f83ba5aca06,mai-kachousen-flame-236mp,[強化版]中 花蝶扇,recovery,TXT_BLANK_DB_HAS_VALUE,45 total,,mai:web:306,REVIEW_OFFICIAL_AND_PATCH
+mai,56c99e61-d814-42ea-af96-c30f04aedd2c,mai-kachousen-flame-hold-236-mp,[強化版]中 花蝶扇（ホールド）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 62,,mai:web:307,REVIEW_OFFICIAL_AND_PATCH
+mai,10dcc221-233d-42bc-99aa-8706d7e1283a,mai-kachousen-236hp,強 花蝶扇,recovery,TXT_BLANK_DB_HAS_VALUE,48 total,,mai:web:308,REVIEW_OFFICIAL_AND_PATCH
+mai,70c44168-ecb6-4954-a2c2-8e235bfff5cd,mai-kachousen-hold-236-hp,強 花蝶扇（ホールド）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 64,,mai:web:309,REVIEW_OFFICIAL_AND_PATCH
+mai,a89daa00-59bb-4e97-bdee-8777baae8923,mai-kachousen-flame-236hp,[強化版]強 花蝶扇,recovery,TXT_BLANK_DB_HAS_VALUE,45 total,,mai:web:310,REVIEW_OFFICIAL_AND_PATCH
+mai,c6489cd0-e842-452d-abf0-4bc27a85622f,mai-kachousen-flame-hold-236-hp,[強化版]強 花蝶扇（ホールド）,recovery,TXT_BLANK_DB_HAS_VALUE,全体 62,,mai:web:311,REVIEW_OFFICIAL_AND_PATCH
+mai,452adbd1-a514-4306-8924-ded4748130d2,mai-kachousen-236pp,OD 花蝶扇,recovery,TXT_BLANK_DB_HAS_VALUE,42 total,,mai:web:312,REVIEW_OFFICIAL_AND_PATCH
+mai,98a28cf7-2575-41e3-88e5-ef939df6f3b5,mai-kachousen-hold-236-pp,OD 花蝶扇（ホールド）,recovery,TXT_BLANK_DB_HAS_VALUE,58 total,,mai:web:313,REVIEW_OFFICIAL_AND_PATCH
+mai,21dc9ace-04ee-4766-8b5b-a8cac9db4915,mai-kachousen-flame-236pp,[強化版]OD 花蝶扇,recovery,TXT_BLANK_DB_HAS_VALUE,42 total,,mai:web:314,REVIEW_OFFICIAL_AND_PATCH
+mai,03601c2d-0d4b-4c7d-be09-46c8bccd5448,mai-kachousen-flame-hold-236-pp,[強化版]OD 花蝶扇（ホールド）,recovery,TXT_BLANK_DB_HAS_VALUE,58 total,,mai:web:315,REVIEW_OFFICIAL_AND_PATCH
+mai,65d63ab3-e0c2-4e73-a26d-289f89c4f1bd,mai-midare-kachousen-236-pp-6p,乱れ花蝶扇,recovery,TXT_BLANK_DB_HAS_VALUE,39 total,,mai:web:316,REVIEW_OFFICIAL_AND_PATCH
+mai,25170cee-b17f-4b2e-9018-b06e4b40f3d1,mai-midare-kachousen-flame-236-pp-6p,[強化版]乱れ花蝶扇,recovery,TXT_BLANK_DB_HAS_VALUE,39 total,,mai:web:317,REVIEW_OFFICIAL_AND_PATCH
+mai,beb82132-a72c-4d8b-8b22-bd88143767b4,mai-musasabi-no-mai-flame-j-214p,[強化版]ムササビの舞,onBlock,VALUE_CONFLICT,-4...+2,-4～2,mai:web:343,REVIEW_OFFICIAL_AND_PATCH
+mai,ed62ecda-34f3-43c3-b2fc-4b9bf8a08065,mai-musasabi-no-mai-j-214pp,OD ムササビの舞,onBlock,VALUE_CONFLICT,-7...+1,-7～1,mai:web:345,REVIEW_OFFICIAL_AND_PATCH
+mai,18670ca7-c6c3-414e-8449-776b5585b10c,mai-musasabi-no-mai-flame-j-214pp,[強化版]OD ムササビの舞,onBlock,VALUE_CONFLICT,-4...+2,-4～2,mai:web:346,REVIEW_OFFICIAL_AND_PATCH
+mai,5f981ef0-e793-41f6-a8eb-c3f4d6e25fe6,mai-forward-step-66,前方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 18,,mai:web:600,REVIEW_OFFICIAL_AND_PATCH
+mai,c3c98b8c-819e-47bf-9fea-fa79032f230e,mai-back-step-44,後方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 23,,mai:web:601,REVIEW_OFFICIAL_AND_PATCH
+manon,f284f407-cbb4-4300-a615-9a11af7178df,manon-degage-h,強 デガジェ,active,ACTIVE_DURATION_VS_RANGE,3,20-22,manon:web:310,REVIEW_OFFICIAL_AND_PATCH
+manon,9de1ac97-fc73-4ae2-9271-64174f9b1c27,manon-degage-od,OD デガジェ,active,ACTIVE_DURATION_VS_RANGE,3,22-24,manon:web:311,REVIEW_OFFICIAL_AND_PATCH
+manon,d7961e55-c6ed-443d-a3fa-e53fdc54fd26,manon-sa1,SA1 アラベスク,active,ACTIVE_DURATION_VS_RANGE,4,10-13,manon:web:400,REVIEW_OFFICIAL_AND_PATCH
+manon,d7961e55-c6ed-443d-a3fa-e53fdc54fd26,manon-sa1,SA1 アラベスク,onHit,KNOCKDOWN_NOTATION,KD +7...,D,manon:web:400,REVIEW_OFFICIAL_AND_PATCH
+manon,061b7386-762e-467c-9b9d-09470f92a27d,manon-sa3,SA3 パ・ド・ドゥ,onBlock,TXT_BLANK_DB_HAS_VALUE,-65,,manon:web:402,REVIEW_OFFICIAL_AND_PATCH
+manon,1d2d8c87-2a79-44c4-a3e3-263a7e00f9a4,manon-ca,CA パ・ド・ドゥ,onBlock,TXT_BLANK_DB_HAS_VALUE,-65,,manon:web:403,REVIEW_OFFICIAL_AND_PATCH
+marisa,670780a3-5cf4-4b2f-8005-47093baac13d,marisa-scutum,スクトゥム,startup,TXT_BLANK_DB_HAS_VALUE,54,,marisa:web:324,REVIEW_OFFICIAL_AND_PATCH
+marisa,670780a3-5cf4-4b2f-8005-47093baac13d,marisa-scutum,スクトゥム,active,TXT_BLANK_DB_HAS_VALUE,0,,marisa:web:324,REVIEW_OFFICIAL_AND_PATCH
+marisa,670780a3-5cf4-4b2f-8005-47093baac13d,marisa-scutum,スクトゥム,recovery,TXT_BLANK_DB_HAS_VALUE,0,,marisa:web:324,REVIEW_OFFICIAL_AND_PATCH
+marisa,670780a3-5cf4-4b2f-8005-47093baac13d,marisa-scutum,スクトゥム,onHit,TXT_BLANK_DB_HAS_VALUE,0,,marisa:web:324,REVIEW_OFFICIAL_AND_PATCH
+marisa,670780a3-5cf4-4b2f-8005-47093baac13d,marisa-scutum,スクトゥム,onBlock,TXT_BLANK_DB_HAS_VALUE,0,,marisa:web:324,REVIEW_OFFICIAL_AND_PATCH
+marisa,670780a3-5cf4-4b2f-8005-47093baac13d,marisa-scutum,スクトゥム,damage,DB_MISSING_TXT_HAS_VALUE,,0,marisa:web:324,REVIEW_OFFICIAL_AND_PATCH
+marisa,f66f9d3e-fefd-41f5-83ef-8096ff841e23,marisa-scutum-od,OD スクトゥム,recovery,TXT_BLANK_DB_HAS_VALUE,57 total,,marisa:web:326,REVIEW_OFFICIAL_AND_PATCH
+marisa,f9981edd-a6d9-436b-baef-f8546d865ebb,marisa-sa3,SA3 アポロウーサ,active,DB_MISSING_TXT_HAS_VALUE,,13-19,marisa:web:404,REVIEW_OFFICIAL_AND_PATCH
+marisa,f9981edd-a6d9-436b-baef-f8546d865ebb,marisa-sa3,SA3 アポロウーサ,recovery,DB_MISSING_TXT_HAS_VALUE,,60,marisa:web:404,REVIEW_OFFICIAL_AND_PATCH
+marisa,f9981edd-a6d9-436b-baef-f8546d865ebb,marisa-sa3,SA3 アポロウーサ,onHit,KNOCKDOWN_NOTATION,KD,D,marisa:web:404,REVIEW_OFFICIAL_AND_PATCH
+marisa,f9981edd-a6d9-436b-baef-f8546d865ebb,marisa-sa3,SA3 アポロウーサ,onBlock,DB_MISSING_TXT_HAS_VALUE,,-39,marisa:web:404,REVIEW_OFFICIAL_AND_PATCH
+marisa,fd10b2f0-9eae-4bd5-b435-745cc1f7417b,marisa-ca,CA アポロウーサ,active,DB_MISSING_TXT_HAS_VALUE,,13-19,marisa:web:405,REVIEW_OFFICIAL_AND_PATCH
+marisa,fd10b2f0-9eae-4bd5-b435-745cc1f7417b,marisa-ca,CA アポロウーサ,recovery,DB_MISSING_TXT_HAS_VALUE,,60,marisa:web:405,REVIEW_OFFICIAL_AND_PATCH
+marisa,fd10b2f0-9eae-4bd5-b435-745cc1f7417b,marisa-ca,CA アポロウーサ,onHit,KNOCKDOWN_NOTATION,KD,D,marisa:web:405,REVIEW_OFFICIAL_AND_PATCH
+marisa,fd10b2f0-9eae-4bd5-b435-745cc1f7417b,marisa-ca,CA アポロウーサ,onBlock,DB_MISSING_TXT_HAS_VALUE,,-39,marisa:web:405,REVIEW_OFFICIAL_AND_PATCH
+rashid,de27f855-6232-4098-bf00-d718e26ceb7e,rashid-run,ラン,startup,TXT_BLANK_DB_HAS_VALUE,0,　,rashid:web:200,REVIEW_OFFICIAL_AND_PATCH
+rashid,de27f855-6232-4098-bf00-d718e26ceb7e,rashid-run,ラン,active,TXT_BLANK_DB_HAS_VALUE,0,　,rashid:web:200,REVIEW_OFFICIAL_AND_PATCH
+rashid,de27f855-6232-4098-bf00-d718e26ceb7e,rashid-run,ラン,recovery,TXT_BLANK_DB_HAS_VALUE,0,　,rashid:web:200,REVIEW_OFFICIAL_AND_PATCH
+rashid,40c5c26a-bcd7-4df0-8ff6-952dbec9b6c5,rashid-wing-stroke,ウイング・ストローク,startup,TXT_BLANK_DB_HAS_VALUE,0,,rashid:web:331,REVIEW_OFFICIAL_AND_PATCH
+rashid,40c5c26a-bcd7-4df0-8ff6-952dbec9b6c5,rashid-wing-stroke,ウイング・ストローク,active,TXT_BLANK_DB_HAS_VALUE,0,,rashid:web:331,REVIEW_OFFICIAL_AND_PATCH
+rashid,40c5c26a-bcd7-4df0-8ff6-952dbec9b6c5,rashid-wing-stroke,ウイング・ストローク,recovery,VALUE_CONFLICT,0,着地後6,rashid:web:331,REVIEW_OFFICIAL_AND_PATCH
+rashid,40c5c26a-bcd7-4df0-8ff6-952dbec9b6c5,rashid-wing-stroke,ウイング・ストローク,onHit,TXT_BLANK_DB_HAS_VALUE,0,,rashid:web:331,REVIEW_OFFICIAL_AND_PATCH
+rashid,40c5c26a-bcd7-4df0-8ff6-952dbec9b6c5,rashid-wing-stroke,ウイング・ストローク,onBlock,TXT_BLANK_DB_HAS_VALUE,0,,rashid:web:331,REVIEW_OFFICIAL_AND_PATCH
+rashid,40c5c26a-bcd7-4df0-8ff6-952dbec9b6c5,rashid-wing-stroke,ウイング・ストローク,damage,DB_MISSING_TXT_HAS_VALUE,,0,rashid:web:331,REVIEW_OFFICIAL_AND_PATCH
+ryu,3605c1b6-1f6b-42a3-981d-6ce606d760b4,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,startup,VALUE_CONFLICT,"6,5,17",5,ryu:web:208,REVIEW_OFFICIAL_AND_PATCH
+ryu,3605c1b6-1f6b-42a3-981d-6ce606d760b4,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,active,VALUE_CONFLICT,"6-9,5-7,17-20",5-7,ryu:web:208,REVIEW_OFFICIAL_AND_PATCH
+ryu,3605c1b6-1f6b-42a3-981d-6ce606d760b4,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,recovery,VALUE_CONFLICT,"11,16,20",16,ryu:web:208,REVIEW_OFFICIAL_AND_PATCH
+ryu,3605c1b6-1f6b-42a3-981d-6ce606d760b4,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,onHit,VALUE_CONFLICT,"7,1,D",1,ryu:web:208,REVIEW_OFFICIAL_AND_PATCH
+ryu,3605c1b6-1f6b-42a3-981d-6ce606d760b4,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,onBlock,VALUE_CONFLICT,"-1,-4,-8",-4,ryu:web:208,REVIEW_OFFICIAL_AND_PATCH
+ryu,3605c1b6-1f6b-42a3-981d-6ce606d760b4,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,damage,VALUE_CONFLICT,1800,300,ryu:web:208,REVIEW_OFFICIAL_AND_PATCH
+ryu,3922bb25-41b4-4ce9-bfb2-e0678d0a5c8e,ryu-h-hadoken,強 波動拳,recovery,TXT_BLANK_DB_HAS_VALUE,47 total,,ryu:web:302,REVIEW_OFFICIAL_AND_PATCH
+ryu,6e6d7e31-71b6-499c-b53a-a8725267879c,ryu-l-tatsumaki,弱 竜巻旋風脚,recovery,DB_MISSING_TXT_HAS_VALUE,,14＋着地後18,ryu:web:310,REVIEW_OFFICIAL_AND_PATCH
+ryu,12b670e7-d91b-4590-beee-a414726f7c23,ryu-l-high-blade-kick,弱 上段足刀蹴り,onHit,KNOCKDOWN_NOTATION,D+35,D,ryu:web:316,REVIEW_OFFICIAL_AND_PATCH
+ryu,ca18582a-dc15-4ad5-9eb3-86b2b269b2b0,ryu-m-high-blade-kick,中 上段足刀蹴り,onHit,KNOCKDOWN_NOTATION,D+40,D,ryu:web:317,REVIEW_OFFICIAL_AND_PATCH
+ryu,1aefba80-f15b-4bf2-b96c-a06155070371,ryu-od-high-blade-kick,OD 上段足刀蹴り,onHit,KNOCKDOWN_NOTATION,D+64,D,ryu:web:319,REVIEW_OFFICIAL_AND_PATCH
+ryu,41ad35a2-c41d-4b51-ab6c-4e2a37a526b5,ryu-h-hashogeki,強 波掌撃,active,VALUE_CONFLICT,30-35,30-34.35,ryu:web:322,REVIEW_OFFICIAL_AND_PATCH
+ryu,5a55599e-800f-4831-886c-345d1e88a9ef,ryu-denjin-hashogeki,[電刃錬気] 波掌撃,active,VALUE_CONFLICT,20-25,20-24.25,ryu:web:323,REVIEW_OFFICIAL_AND_PATCH
+ryu,db46db6f-26dd-4638-8397-d235750929b9,ryu-denjin-charge,電刃錬気,startup,TXT_BLANK_DB_HAS_VALUE,52,,ryu:web:326,REVIEW_OFFICIAL_AND_PATCH
+ryu,db46db6f-26dd-4638-8397-d235750929b9,ryu-denjin-charge,電刃錬気,recovery,TXT_BLANK_DB_HAS_VALUE,0,,ryu:web:326,REVIEW_OFFICIAL_AND_PATCH
+ryu,db46db6f-26dd-4638-8397-d235750929b9,ryu-denjin-charge,電刃錬気,damage,DB_MISSING_TXT_HAS_VALUE,,0,ryu:web:326,REVIEW_OFFICIAL_AND_PATCH
+terry,8884e700-85de-4019-89d6-a3270b0a4026,terry-power-dunk-tc,パワーダンク,startup,VALUE_CONFLICT,"7,18,18",18,terry:web:204,REVIEW_OFFICIAL_AND_PATCH
+terry,8884e700-85de-4019-89d6-a3270b0a4026,terry-power-dunk-tc,パワーダンク,active,VALUE_CONFLICT,"7-9,18-20,18-20;42-47","18-20,42-47 ",terry:web:204,REVIEW_OFFICIAL_AND_PATCH
+terry,8884e700-85de-4019-89d6-a3270b0a4026,terry-power-dunk-tc,パワーダンク,recovery,VALUE_CONFLICT,"16,31,33",33,terry:web:204,REVIEW_OFFICIAL_AND_PATCH
+terry,8884e700-85de-4019-89d6-a3270b0a4026,terry-power-dunk-tc,パワーダンク,onHit,VALUE_CONFLICT,"2,D,D",D,terry:web:204,REVIEW_OFFICIAL_AND_PATCH
+terry,8884e700-85de-4019-89d6-a3270b0a4026,terry-power-dunk-tc,パワーダンク,onBlock,VALUE_CONFLICT,"-3,-14,-",―,terry:web:204,REVIEW_OFFICIAL_AND_PATCH
+terry,8884e700-85de-4019-89d6-a3270b0a4026,terry-power-dunk-tc,パワーダンク,damage,VALUE_CONFLICT,2100,800,terry:web:204,REVIEW_OFFICIAL_AND_PATCH
+terry,77115c40-9327-4d01-905c-ade6640b41b7,terry-power-wave-l,弱パワーウェイブ,recovery,TXT_BLANK_DB_HAS_VALUE,49 total,,terry:web:300,REVIEW_OFFICIAL_AND_PATCH
+terry,5d6ce0dd-31e3-4f44-8ce4-45424fbbc86d,terry-power-wave-m,中パワーウェイブ,recovery,TXT_BLANK_DB_HAS_VALUE,48 total,,terry:web:301,REVIEW_OFFICIAL_AND_PATCH
+terry,09cdfa8f-b62d-41f8-b2ac-ef7488c9bd1c,terry-burn-knuckle-h,強バーンナックル,startup,DB_MISSING_TXT_HAS_VALUE,,23,terry:web:307,REVIEW_OFFICIAL_AND_PATCH
+terry,09cdfa8f-b62d-41f8-b2ac-ef7488c9bd1c,terry-burn-knuckle-h,強バーンナックル,active,DB_MISSING_TXT_HAS_VALUE,,23-36,terry:web:307,REVIEW_OFFICIAL_AND_PATCH
+terry,09cdfa8f-b62d-41f8-b2ac-ef7488c9bd1c,terry-burn-knuckle-h,強バーンナックル,recovery,DB_MISSING_TXT_HAS_VALUE,,17,terry:web:307,REVIEW_OFFICIAL_AND_PATCH
+terry,09cdfa8f-b62d-41f8-b2ac-ef7488c9bd1c,terry-burn-knuckle-h,強バーンナックル,onHit,DB_MISSING_TXT_HAS_VALUE,,D,terry:web:307,REVIEW_OFFICIAL_AND_PATCH
+terry,09cdfa8f-b62d-41f8-b2ac-ef7488c9bd1c,terry-burn-knuckle-h,強バーンナックル,onBlock,DB_MISSING_TXT_HAS_VALUE,,-8,terry:web:307,REVIEW_OFFICIAL_AND_PATCH
+terry,ee5354a6-15f6-48ad-ae18-4b7da6c9423c,terry-burn-knuckle-od,ODバーンナックル,startup,DB_MISSING_TXT_HAS_VALUE,,19,terry:web:308,REVIEW_OFFICIAL_AND_PATCH
+terry,ee5354a6-15f6-48ad-ae18-4b7da6c9423c,terry-burn-knuckle-od,ODバーンナックル,active,DB_MISSING_TXT_HAS_VALUE,,19-32,terry:web:308,REVIEW_OFFICIAL_AND_PATCH
+terry,ee5354a6-15f6-48ad-ae18-4b7da6c9423c,terry-burn-knuckle-od,ODバーンナックル,recovery,DB_MISSING_TXT_HAS_VALUE,,17,terry:web:308,REVIEW_OFFICIAL_AND_PATCH
+terry,ee5354a6-15f6-48ad-ae18-4b7da6c9423c,terry-burn-knuckle-od,ODバーンナックル,onHit,DB_MISSING_TXT_HAS_VALUE,,D,terry:web:308,REVIEW_OFFICIAL_AND_PATCH
+terry,ee5354a6-15f6-48ad-ae18-4b7da6c9423c,terry-burn-knuckle-od,ODバーンナックル,onBlock,DB_MISSING_TXT_HAS_VALUE,,-8,terry:web:308,REVIEW_OFFICIAL_AND_PATCH
+terry,c65414e9-b51d-4dc2-a5a8-64ca1bcb201a,terry-power-charge-od,ODパワーチャージ,active,DB_MISSING_TXT_HAS_VALUE,,19-26,terry:web:312,REVIEW_OFFICIAL_AND_PATCH
+terry,c65414e9-b51d-4dc2-a5a8-64ca1bcb201a,terry-power-charge-od,ODパワーチャージ,recovery,DB_MISSING_TXT_HAS_VALUE,,24,terry:web:312,REVIEW_OFFICIAL_AND_PATCH
+terry,c65414e9-b51d-4dc2-a5a8-64ca1bcb201a,terry-power-charge-od,ODパワーチャージ,onHit,DB_MISSING_TXT_HAS_VALUE,,D,terry:web:312,REVIEW_OFFICIAL_AND_PATCH
+terry,c65414e9-b51d-4dc2-a5a8-64ca1bcb201a,terry-power-charge-od,ODパワーチャージ,onBlock,DB_MISSING_TXT_HAS_VALUE,,-14,terry:web:312,REVIEW_OFFICIAL_AND_PATCH
+terry,d44ccb19-614d-4ee6-9f50-263b93271d28,terry-crack-shoot-m,中クラックシュート,startup,DB_MISSING_TXT_HAS_VALUE,,17,terry:web:314,REVIEW_OFFICIAL_AND_PATCH
+terry,d44ccb19-614d-4ee6-9f50-263b93271d28,terry-crack-shoot-m,中クラックシュート,active,DB_MISSING_TXT_HAS_VALUE,,17-23,terry:web:314,REVIEW_OFFICIAL_AND_PATCH
+terry,d44ccb19-614d-4ee6-9f50-263b93271d28,terry-crack-shoot-m,中クラックシュート,recovery,DB_MISSING_TXT_HAS_VALUE,,18,terry:web:314,REVIEW_OFFICIAL_AND_PATCH
+terry,d44ccb19-614d-4ee6-9f50-263b93271d28,terry-crack-shoot-m,中クラックシュート,onHit,DB_MISSING_TXT_HAS_VALUE,,3,terry:web:314,REVIEW_OFFICIAL_AND_PATCH
+terry,d44ccb19-614d-4ee6-9f50-263b93271d28,terry-crack-shoot-m,中クラックシュート,onBlock,DB_MISSING_TXT_HAS_VALUE,,-3,terry:web:314,REVIEW_OFFICIAL_AND_PATCH
+terry,d5d208ff-bfae-440f-9d47-c2236543ebb4,terry-crack-shoot-h,強クラックシュート,active,VALUE_CONFLICT,23-33,23--33,terry:web:315,REVIEW_OFFICIAL_AND_PATCH
+terry,ab1d9137-f56e-4055-9113-6980c39d7386,terry-crack-shoot-od,ODクラックシュート,startup,DB_MISSING_TXT_HAS_VALUE,,20,terry:web:316,REVIEW_OFFICIAL_AND_PATCH
+terry,ab1d9137-f56e-4055-9113-6980c39d7386,terry-crack-shoot-od,ODクラックシュート,active,DB_MISSING_TXT_HAS_VALUE,,20-23,terry:web:316,REVIEW_OFFICIAL_AND_PATCH
+terry,ab1d9137-f56e-4055-9113-6980c39d7386,terry-crack-shoot-od,ODクラックシュート,recovery,DB_MISSING_TXT_HAS_VALUE,,19,terry:web:316,REVIEW_OFFICIAL_AND_PATCH
+terry,ab1d9137-f56e-4055-9113-6980c39d7386,terry-crack-shoot-od,ODクラックシュート,onHit,DB_MISSING_TXT_HAS_VALUE,,D,terry:web:316,REVIEW_OFFICIAL_AND_PATCH
+terry,ab1d9137-f56e-4055-9113-6980c39d7386,terry-crack-shoot-od,ODクラックシュート,onBlock,DB_MISSING_TXT_HAS_VALUE,,-2,terry:web:316,REVIEW_OFFICIAL_AND_PATCH
+yasmine,42bfb7b6-2511-48e4-b50e-7045fc676ba9,yasmine-standing-light-punch-5lp,立ち弱P（マガアン・ナ・パグラスラス）,active,ACTIVE_DURATION_VS_RANGE,3,5-7,yasmine:web:100,REVIEW_OFFICIAL_AND_PATCH
+yasmine,77b8c07a-0085-40ab-bae7-ad37aadd44ce,yasmine-standing-light-kick-5lk,立ち弱K（マババング・シパ）,active,ACTIVE_DURATION_VS_RANGE,2,5-6,yasmine:web:101,REVIEW_OFFICIAL_AND_PATCH
+yasmine,72e48438-5de6-43cb-b421-41a5105dd213,yasmine-standing-heavy-kick-5hk,立ち強K（トゥマタロン・ナ・シパ）,active,ACTIVE_DURATION_VS_RANGE,3,14-16,yasmine:web:105,REVIEW_OFFICIAL_AND_PATCH
+yasmine,bcdb1926-b1a6-4a85-b8d0-25dcf464fd87,yasmine-crouching-light-punch-2lp,しゃがみ弱P（マビリサング・パグラスラス）,active,ACTIVE_DURATION_VS_RANGE,3,4-6,yasmine:web:106,REVIEW_OFFICIAL_AND_PATCH
+yasmine,dcda78cf-a5be-4d31-9fed-d18bcf34e9ac,yasmine-crouching-light-kick-2lk,しゃがみ弱K（マガアン・ナ・シパ）,active,ACTIVE_DURATION_VS_RANGE,3,5-7,yasmine:web:107,REVIEW_OFFICIAL_AND_PATCH
+yasmine,03a3c78f-d49e-4dff-9857-08856fd40b25,yasmine-crouching-medium-punch-2mp,しゃがみ中P（カルモット）,active,ACTIVE_DURATION_VS_RANGE,3,6-8,yasmine:web:108,REVIEW_OFFICIAL_AND_PATCH
+yasmine,44237752-18cd-4aa7-8e78-9670a78a6e2e,yasmine-crouching-medium-kick-2mk,しゃがみ中K（パンドゥログ・ナン・ルロッド）,active,ACTIVE_DURATION_VS_RANGE,3,8-10,yasmine:web:109,REVIEW_OFFICIAL_AND_PATCH
+yasmine,495aa9a0-c9b0-4484-b845-856a538832e4,yasmine-crouching-heavy-punch-2hp,しゃがみ強P（マミミツィン）,active,ACTIVE_DURATION_VS_RANGE,6,8-13,yasmine:web:110,REVIEW_OFFICIAL_AND_PATCH
+yasmine,6d0eac80-e601-47e0-bbde-5177918119c7,yasmine-alon-236lp-6p,弱 アロン（1段目）,onHit,DB_MISSING_TXT_HAS_VALUE,,ー,yasmine:web:301,REVIEW_OFFICIAL_AND_PATCH
+yasmine,94df5acf-0ac9-4ec7-b05e-f270b6820620,yasmine-alon-236mp-6p,中 アロン（1段目）,onHit,DB_MISSING_TXT_HAS_VALUE,,ー,yasmine:web:305,REVIEW_OFFICIAL_AND_PATCH
+yasmine,88e637c4-1c01-4b41-b1e4-8d0443cbf8a6,yasmine-alon-236hp-6p,強 アロン（1段目）,onHit,DB_MISSING_TXT_HAS_VALUE,,ー,yasmine:web:309,REVIEW_OFFICIAL_AND_PATCH
+yasmine,3485b1cd-dfdf-40d6-9125-42c8ebda906a,yasmine-alon-236pp-6p,OD アロン（1段目）,onHit,DB_MISSING_TXT_HAS_VALUE,,ー,yasmine:web:313,REVIEW_OFFICIAL_AND_PATCH
+yasmine,c709a4cc-37ca-4950-8496-1d7630044604,yasmine-alon-2-od-bayani-sa2,[ナカタゴン・ラカス中][強化版]OD アロン（2段目）,active,ACTIVE_ENVELOPE_VS_MULTI_HIT,47- 110,"47-106, 110",yasmine:web:316,REVIEW_OFFICIAL_AND_PATCH
+yasmine,48628cf4-d99e-420b-907e-16435f3650fe,yasmine-talim-ng-hangin-214lp,弱 タリム・ン・ハンギン,recovery,TXT_BLANK_DB_HAS_VALUE,35 total,,yasmine:web:317,REVIEW_OFFICIAL_AND_PATCH
+yasmine,063766f0-b20c-4f6d-bd7f-80cae0f692f7,yasmine-mukha-ng-langit-236lk,弱 ムカ・ン・ランギット,recovery,TXT_BLANK_DB_HAS_VALUE,全体 59,,yasmine:web:321,REVIEW_OFFICIAL_AND_PATCH
+yasmine,90ef6e3e-33a6-4407-935a-f9843b7d6b17,yasmine-mukha-ng-langit-236mk,中 ムカ・ン・ランギット,recovery,TXT_BLANK_DB_HAS_VALUE,全体 59,,yasmine:web:322,REVIEW_OFFICIAL_AND_PATCH
+yasmine,9d541ca6-b232-4a72-9d74-23efdff833a4,yasmine-mukha-ng-langit-236hk,強 ムカ・ン・ランギット,recovery,TXT_BLANK_DB_HAS_VALUE,全体 59,,yasmine:web:323,REVIEW_OFFICIAL_AND_PATCH
+yasmine,d3e482ae-ea0c-4643-92d9-9ec0a4727702,yasmine-mukha-ng-langit-236kk,OD ムカ・ン・ランギット,recovery,TXT_BLANK_DB_HAS_VALUE,全体 59,,yasmine:web:324,REVIEW_OFFICIAL_AND_PATCH
+yasmine,596a4a42-ce50-4c51-a367-0c12f83ce83a,yasmine-pangil-sa-likuran-22lp,弱 パンギル・サ・リクラン,recovery,TXT_BLANK_DB_HAS_VALUE,全体 50,,yasmine:web:333,REVIEW_OFFICIAL_AND_PATCH
+yasmine,d8540548-4ab4-49d0-adb8-42644a1d0eb3,yasmine-pangil-sa-likuran-22mp,中 パンギル・サ・リクラン,recovery,TXT_BLANK_DB_HAS_VALUE,全体 50,,yasmine:web:334,REVIEW_OFFICIAL_AND_PATCH
+yasmine,0396eb74-6549-41c5-a59f-332b92284393,yasmine-pangil-sa-likuran-22hp,強 パンギル・サ・リクラン,recovery,TXT_BLANK_DB_HAS_VALUE,全体 50,,yasmine:web:335,REVIEW_OFFICIAL_AND_PATCH
+yasmine,b7a7c5dc-0703-4239-9df4-e62559f5a8e5,yasmine-pangil-sa-likuran-22lpmp,OD 弱 パンギル・サ・リクラン,recovery,TXT_BLANK_DB_HAS_VALUE,全体 50,,yasmine:web:336,REVIEW_OFFICIAL_AND_PATCH
+yasmine,5386935e-aba2-4eb9-9da4-438334bdb845,yasmine-pangil-sa-likuran-22lphp,OD 中 パンギル・サ・リクラン,recovery,TXT_BLANK_DB_HAS_VALUE,全体 50,,yasmine:web:337,REVIEW_OFFICIAL_AND_PATCH
+yasmine,b923d388-06b0-43fe-9121-fd073404692a,yasmine-pangil-sa-likuran-22mphp,OD 強 パンギル・サ・リクラン,recovery,TXT_BLANK_DB_HAS_VALUE,全体 50,,yasmine:web:338,REVIEW_OFFICIAL_AND_PATCH
+yasmine,8ecba6ae-0914-473a-a91b-9619dc3b7ad6,yasmine-nakatagong-lakas-214214p,SA2 ナカタゴン・ラカス,recovery,TXT_BLANK_DB_HAS_VALUE,10 total,,yasmine:web:401,REVIEW_OFFICIAL_AND_PATCH
+yasmine,f7faa5a2-62a0-4c72-abf3-91c16631a7c2,yasmine-pigil-ulo-lplk,ピギル・ウロ,active,ACTIVE_DURATION_VS_RANGE,3,5-7,yasmine:web:500,REVIEW_OFFICIAL_AND_PATCH
+yasmine,f7faa5a2-62a0-4c72-abf3-91c16631a7c2,yasmine-pigil-ulo-lplk,ピギル・ウロ,onHit,DB_MISSING_TXT_HAS_VALUE,,D,yasmine:web:500,REVIEW_OFFICIAL_AND_PATCH
+yasmine,4301622d-102a-40e1-b583-2b02db739e54,yasmine-hila-kamay-4lplk,ヒラ・カマイ,active,ACTIVE_DURATION_VS_RANGE,3,5-7,yasmine:web:501,REVIEW_OFFICIAL_AND_PATCH
+yasmine,4301622d-102a-40e1-b583-2b02db739e54,yasmine-hila-kamay-4lplk,ヒラ・カマイ,onHit,DB_MISSING_TXT_HAS_VALUE,,D,yasmine:web:501,REVIEW_OFFICIAL_AND_PATCH
+yasmine,723e292b-7d41-47c1-85ab-b549b32d7742,yasmine-forward-step-66,前方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 19,,yasmine:web:600,REVIEW_OFFICIAL_AND_PATCH
+yasmine,da883fa5-c9ef-4a75-b8cc-3bfb26879ee9,yasmine-back-step-44,後方ステップ,recovery,TXT_BLANK_DB_HAS_VALUE,全体 23,,yasmine:web:601,REVIEW_OFFICIAL_AND_PATCH
+zangief,87266be2-2f2d-46e3-9be4-82e6205ba22a,zangief-forward-mp,ヘルスタブ,active,ACTIVE_DURATION_VS_RANGE,3,7-9,zangief:web:200,REVIEW_OFFICIAL_AND_PATCH
+zangief,a2d40675-a0c3-48c0-a4fd-404dba335d57,zangief-headbutt,ヘッドバット,active,ACTIVE_DURATION_VS_RANGE,5,14-18,zangief:web:202,REVIEW_OFFICIAL_AND_PATCH
+zangief,a906b77a-fac7-4af5-b504-6703c9c326fb,zangief-dropkick,スメタナドロップキック,active,ACTIVE_DURATION_VS_RANGE,4,16-19,zangief:web:204,REVIEW_OFFICIAL_AND_PATCH
+zangief,a906b77a-fac7-4af5-b504-6703c9c326fb,zangief-dropkick,スメタナドロップキック,onHit,KNOCKDOWN_NOTATION,KD +21,D,zangief:web:204,REVIEW_OFFICIAL_AND_PATCH
+zangief,b66ea408-f849-471c-9c83-6752ac418f97,zangief-spd-l,弱 スクリューパイルドライバー,active,ACTIVE_DURATION_VS_RANGE,3,5-7,zangief:web:302,REVIEW_OFFICIAL_AND_PATCH
+zangief,b66ea408-f849-471c-9c83-6752ac418f97,zangief-spd-l,弱 スクリューパイルドライバー,onHit,KNOCKDOWN_NOTATION,KD +30,D,zangief:web:302,REVIEW_OFFICIAL_AND_PATCH
+zangief,da70ca46-5657-4c92-b64f-a5d183868d2c,zangief-spd-m,中 スクリューパイルドライバー,active,ACTIVE_DURATION_VS_RANGE,3,5-7,zangief:web:303,REVIEW_OFFICIAL_AND_PATCH
+zangief,da70ca46-5657-4c92-b64f-a5d183868d2c,zangief-spd-m,中 スクリューパイルドライバー,onHit,KNOCKDOWN_NOTATION,KD +28,D,zangief:web:303,REVIEW_OFFICIAL_AND_PATCH
+zangief,5e58e436-e252-4954-9376-ee931ac2274f,zangief-spd-h,強 スクリューパイルドライバー,active,ACTIVE_DURATION_VS_RANGE,3,5-7,zangief:web:304,REVIEW_OFFICIAL_AND_PATCH
+zangief,5e58e436-e252-4954-9376-ee931ac2274f,zangief-spd-h,強 スクリューパイルドライバー,onHit,KNOCKDOWN_NOTATION,KD +28,D,zangief:web:304,REVIEW_OFFICIAL_AND_PATCH
+zangief,97e3e20a-2e9c-42fb-a469-db1ffad3461f,zangief-sa1,SA1 エリアルロシアンスラム,active,ACTIVE_DURATION_VS_RANGE,7,11-17,zangief:web:400,REVIEW_OFFICIAL_AND_PATCH
+zangief,97e3e20a-2e9c-42fb-a469-db1ffad3461f,zangief-sa1,SA1 エリアルロシアンスラム,onHit,KNOCKDOWN_NOTATION,KD +29,D,zangief:web:400,REVIEW_OFFICIAL_AND_PATCH
+zangief,07544f32-f3c5-4664-9769-2c6b6a51fbec,zangief-sa3,SA3 ボリショイストームバスター,startup,VALUE_CONFLICT,6,6+0,zangief:web:404,REVIEW_OFFICIAL_AND_PATCH
+zangief,329420bc-a269-4ab5-a252-f1ee48c76224,zangief-ca,CA ボリショイストームバスター,startup,VALUE_CONFLICT,6,6+0,zangief:web:405,REVIEW_OFFICIAL_AND_PATCH

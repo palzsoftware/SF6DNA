@@ -1,0 +1,80 @@
+{
+ "character": "chun-li",
+ "total": 7,
+ "summary": {
+  "CONNECT_READY": 7
+ },
+ "holdReasons": {},
+ "rows": [
+  {
+   "file": "chun-li-standing-lp-candidate.gif",
+   "sha256": "724e2f8e3a24976e1c21961c1039a5a1ccd1aebb550b7a148f896e1f607e4c30",
+   "moveId": "e8627cc1-85c3-4fae-a9ef-784311e4ce8d",
+   "moveSlug": "chun-li-standing-lp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "chun-li-standing-mp-candidate.gif",
+   "sha256": "f5c65ab0618f075621714c0d4c38a1c11826b2af9efdd55384556b06425ea93e",
+   "moveId": "393af232-0ab0-40c0-86dc-096819601e19",
+   "moveSlug": "chun-li-standing-mp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "chun-li-standing-hp-candidate.gif",
+   "sha256": "ba55bdb69796c28f731b7906b36ca8d7c7b81edb2c6121b2192fadb33e74f843",
+   "moveId": "b1d5ec50-b033-43f4-b034-eb8ccbe7c4b2",
+   "moveSlug": "chun-li-standing-hp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "chun-li-standing-lk-candidate.gif",
+   "sha256": "e4db8e60954a0cf8b41d8b9616d3b07b15dfc15330e60efa1db1220927f68683",
+   "moveId": "1d9a313e-8b88-445e-b8cd-896165c27123",
+   "moveSlug": "chun-li-standing-lk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "chun-li-standing-mk-candidate.gif",
+   "sha256": "8165e5e05b4b7778b8010e4ee5e56a2bed36d73a763a2081101664249e09c29b",
+   "moveId": "64f4a965-b6ba-4df0-9e20-c7dc9b1db299",
+   "moveSlug": "chun-li-standing-mk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "chun-li-standing-hk-candidate.gif",
+   "sha256": "11e3e27686fe11a5f8a528eba256285034f001ebe690f0a5b7895a6dae097910",
+   "moveId": "1abb4304-2025-4fd0-867e-bb42c1223945",
+   "moveSlug": "chun-li-standing-hk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "chun-li-crouching-lk-candidate.gif",
+   "sha256": "81c4516fa4f3086c449efa0496d969f28f25e3e3a1fdf9bf68ee9afd439caea8",
+   "moveId": "73f3ddfa-144b-45fa-8ecf-6f447186af20",
+   "moveSlug": "chun-li-crouching-lk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  }
+ ]
+}

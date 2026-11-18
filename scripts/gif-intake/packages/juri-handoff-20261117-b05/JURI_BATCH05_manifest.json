@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-17",
+  "previous_managed_files": 20,
+  "baseline_gifs": 7,
+  "prior_candidates": [
+    {
+      "filename": "juri_044314_049p75_051p55_UNMAPPED_HOLD.gif",
+      "sha256": "da60a96cc6d99d8081173dfeeff7c8c55a40f51a8b48fb64f56703b4165bab60",
+      "source_zip": "SF6DNA_GIF_BATCH6_MANON_JURI_20261116.zip"
+    },
+    {
+      "filename": "juri_044011_019p80_021p00_unmapped_HOLD.gif",
+      "sha256": "9d2b39b12af465678f0ed911c8c92ac10a06f519635727b83892caa6aca13106",
+      "source_zip": "SF6DNA_LUKE_MODERN_JURI_GIF_BATCH_20261116.zip"
+    },
+    {
+      "filename": "juri_044011_033p55_034p95_unmapped_HOLD.gif",
+      "sha256": "e1f82373a475d5a995428eab0dae4cd29b036ed8e2d0619f69a8ab6843eef8ef",
+      "source_zip": "SF6DNA_LUKE_MODERN_JURI_GIF_BATCH_20261116.zip"
+    },
+    {
+      "filename": "juri_044011_009.85_011.45_jump_air_movement_HOLD.gif",
+      "sha256": "b6ae107ca5028092e8d13e54dc6fa7c0f81ad6bce7aff66ce0267ceb19bea482",
+      "source_zip": "SF6DNA_JURI_GIF_BATCH_20261116_02.zip"
+    },
+    {
+      "filename": "juri_044011_012.00_013.10_standing_kick_movement_HOLD.gif",
+      "sha256": "fcd8331a396d1f2484bff279f938f46d0284ba3fe3e21b0fe1147a50f99bc5d2",
+      "source_zip": "SF6DNA_JURI_GIF_BATCH_20261116_02.zip"
+    },
+    {
+      "filename": "juri_044314_037.40_038.50_effect_attack_SPECIAL_HOLD.gif",
+      "sha256": "7e73a96cb5aa60a47d0882acdf4513d1b3ffa5694249563c1aa24378f3459491",
+      "source_zip": "SF6DNA_JURI_GIF_BATCH_20261116_02.zip"
+    },
+    {
+      "filename": "juri_044445_005.75_007.75_effect_attack_SPECIAL_HOLD.gif",
+      "sha256": "60e7e88de1c84fd11e8b0d768393db8562aad0ac7435456723994de19f105ebb",
+      "source_zip": "SF6DNA_JURI_GIF_BATCH_20261116_02.zip"
+    },
+    {
+      "filename": "juri_044314_103.20_104.90_air_spinning_hit_effect_HOLD.gif",
+      "sha256": "104850418a8ea3847728e8a7be12ca74d4a6269fa11fd416420cb702fc33d196",
+      "source_zip": "SF6DNA_JURI_SPECIAL_GIF_BATCH03_20261116.zip"
+    },
+    {
+      "filename": "juri_044314_59.48_61.25_purple_arc_multi_hit_ground_attack_HOLD.gif",
+      "sha256": "9b6e16f141c8e9d52a8819960bac97e0844bac4a9b8a942fbe9354278f883b8c",
+      "source_zip": "SF6DNA_JURI_SPECIAL_GIF_BATCH03_20261116.zip"
+    },
+    {
+      "filename": "juri_044445_30.35_32.30_forward_strike_fire_impact_HOLD.gif",
+      "sha256": "4a6115eb3c6d517ad938799ea49de4dde6897be3b89903929243d2188403913e",
+      "source_zip": "SF6DNA_JURI_SPECIAL_GIF_BATCH03_20261116.zip"
+    },
+    {
+      "filename": "juri_044314_118.70_121.90_air_strike_impact_variant_HOLD.gif",
+      "sha256": "60eb98a6e7397ccf7fcbb19b69421def1a60c37f8d46782db5aa0755cd0c1968",
+      "source_zip": "SF6DNA_JURI_SPECIAL_BATCH04_20261116.zip"
+    },
+    {
+      "filename": "juri_044314_71.35_73.25_ground_purple_slash_variant_HOLD.gif",
+      "sha256": "64605581da6375bb5b34ed94847f019e004a409a46a13d41684275d3daee0a96",
+      "source_zip": "SF6DNA_JURI_SPECIAL_BATCH04_20261116.zip"
+    },
+    {
+      "filename": "juri_044314_67.20_69.60_ground_fire_arc_variant_HOLD.gif",
+      "sha256": "9329c7b0227836c9416985dd9740d94c17c9a86e9e2aa940218fe88a6f4168cf",
+      "source_zip": "SF6DNA_JURI_SPECIAL_BATCH04_20261116.zip"
+    }
+  ],
+  "sa3_lightweight_derivative_not_counted": true,
+  "sources": [
+    {
+      "filename": "clip_1364780_20261004_044011.mp4",
+      "drive_id": "1DFSKoCBucnBfhwn8Ut4GKNLkYrNdWNrV",
+      "sha256": "1c2d92cd1d8a05ba3b2390e74082b81b6633a2236e3c64bd2c0c2f265c0faad5",
+      "bytes": 45215062,
+      "duration_seconds": 106.882,
+      "inspection": "sampled; 044101 candidate dense 4/20fps"
+    },
+    {
+      "filename": "clip_1364780_20261004_044101.mp4",
+      "drive_id": "1c0lmLFEXDNZ_gF6Sw4qIA7mPj7hq-ePo",
+      "sha256": "6ebb0210dffc029df89221a590dc4e87361403f539cab6f9d8bd87057d19e6bd",
+      "bytes": 125320220,
+      "duration_seconds": 43.911,
+      "inspection": "sampled; 044101 candidate dense 4/20fps"
+    },
+    {
+      "filename": "clip_1364780_20261004_044314.mp4",
+      "drive_id": "1okqu9guIE2sI-K6QyIXNvryHgFcGJolw",
+      "sha256": "626d109031b5a2d9962380c24814906ea82e5da5055a58cbe1c18536f83b1a90",
+      "bytes": 65784044,
+      "duration_seconds": 128.786334,
+      "inspection": "sampled; 044101 candidate dense 4/20fps"
+    },
+    {
+      "filename": "clip_1364780_20261004_044445.mp4",
+      "drive_id": "1Sq-tVhYClUYNG36Zg_nS9WjGOmCZXKwl",
+      "sha256": "81779db2154463ca867abbcb614e9bdfd1e966e3443db4ba0fc6bc4e96e99490",
+      "bytes": 57907349,
+      "duration_seconds": 86.564667,
+      "inspection": "sampled; 044101 candidate dense 4/20fps"
+    }
+  ],
+  "new_gifs": [
+    {
+      "filename": "juri_044101_039p15_041p50_three_hit_target_combo_HOLD.gif",
+      "character": "Juri",
+      "official_move_name_candidate": "死紋蹴",
+      "command_candidate": "MP > 4HP > HP",
+      "source_file": "clip_1364780_20261004_044101.mp4",
+      "source_drive_id": "1c0lmLFEXDNZ_gF6Sw4qIA7mPj7hq-ePo",
+      "source_sha256": "6ebb0210dffc029df89221a590dc4e87361403f539cab6f9d8bd87057d19e6bd",
+      "start_s": 39.15,
+      "end_s": 41.5,
+      "sha256": "b9ae235091c8e1a485b780046e3ddaa5e9580ba7e30edcb908dc290ed46b2036",
+      "size_bytes": 3464523,
+      "frames": 47,
+      "width": 480,
+      "height": 270,
+      "fps": 20,
+      "loop": 0,
+      "technical_qa": "PASS",
+      "drive_file_id": "1PuqvbaICatmzF6oK4bbaiM81I-5AUSVk",
+      "drive_sha_match": "PASS",
+      "move_id": null,
+      "status": "HOLD_MOVE_ID",
+      "visual_qa": "three-hit ground sequence, preceding menu selection supports candidate; input chronology not directly verified",
+      "duplicate_comparison": "13 prior candidate GIFs sampled at 5 positions; seven baseline file names are Tensenrin/SA; new distinct 3-hit ground sequence, exact semantic uniqueness not certified",
+      "approval": "NOT_APPROVED"
+    }
+  ],
+  "managed_files_after": 21,
+  "unique_moves": "NOT_VERIFIED",
+  "reshoot_required_confirmed": 0,
+  "next_character": "Juri",
+  "next_action": "044101 remaining special moves and 044011 normal moves; confirm 044445 and 044314 remaining coverage; compare against 21 file ledger before making new GIFs"
+}

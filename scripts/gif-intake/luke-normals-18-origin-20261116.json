@@ -1,0 +1,343 @@
+{
+ "generated": "2026-11-16",
+ "basis": "ChatGPT ORIGIN manifest + Claude一次台帳(2026-11-13)照合",
+ "duplicateResolution": [
+  {
+   "rejectedAlias": "22_5-luke-standing-hp.gif",
+   "identicalTo": "22_3-luke-standing-mp.gif",
+   "correctedCandidate": "22_5-luke-standing-hp-verified.gif",
+   "sha256Rejected": "8bc80480a6741f695f2cc639cf1e9e66885ce4eda1f62ef150cd669ce933ef1c"
+  },
+  {
+   "rejectedAlias": "22_18-luke-jumping-hk.gif",
+   "identicalTo": "22_16-luke-jumping-mk.gif",
+   "correctedCandidate": "22_18-luke-jumping-hk-verified.gif",
+   "sha256Rejected": "5211977b5b05dc55a7e6e2b38a9a9cefcbb9d3b3297d94d811a0b1bb0ded1fe1"
+  }
+ ],
+ "summary": {
+  "total": 18,
+  "moveIdRecordVerified": 0,
+  "inputStrengthConfirmed": 0,
+  "hold": 18,
+  "localQaAdded": 0,
+  "note": "2026-11-16 15:55 更新: 立ち弱Kの記録照合はChatGPT側の取り下げを受けて0件に変更"
+ },
+ "entries": [
+  {
+   "moveId": "beb7d320-94fb-4e21-93ca-7defe9570f50",
+   "moveSlug": "luke-standing-lp",
+   "name": "立ち弱P",
+   "gif": "22_1-luke-standing-lp.gif",
+   "sha256": "a7dcfdcf4edbe723437534b83794c0577905617dd02eafffaa8d6d1b4bde8898",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_tujou.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "b09359b8-9a9b-4fce-a1e6-5ed2a1bc1afe",
+   "moveSlug": "luke-standing-lk",
+   "name": "立ち弱K",
+   "gif": "22_2-luke-standing-lk.gif",
+   "sha256": "504bc896f3ebf0f2b364191bc7db9d9e8a2cfe3eac95d8efacdcaf121e38afe3",
+   "originRecord": {
+    "source": "luke_tujou.mp4",
+    "startSec": 28.35,
+    "endSec": 29.25,
+    "basis": "2026-11-13 制作台帳(Drive)記載。Claudeが一次台帳で確認",
+    "retracted": "ChatGPT 2026-11-16 06:26 の報告で、旧台帳の28.35-29.25秒は現行元動画の28.50秒付近の映像と一致しないとして VERIFIED を取り下げ(CONTRADICTED)。Claudeは元動画を取得できず独立確認はできない。"
+   },
+   "moveIdMatch": "RECORD_RETRACTED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_ORIGIN_CONTRADICTED",
+   "holdReasons": [
+    "旧台帳の元動画区間がChatGPT側の確認で不一致(CONTRADICTED)。強度も入力表示なしで未確認"
+   ],
+   "candidateSourceVideo": "luke_tujou.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "548d97af-d316-4a12-9574-e08b9dad159a",
+   "moveSlug": "luke-standing-mp",
+   "name": "立ち中P",
+   "gif": "22_3-luke-standing-mp.gif",
+   "sha256": "8bc80480a6741f695f2cc639cf1e9e66885ce4eda1f62ef150cd669ce933ef1c",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_DUPLICATE_CONTENT",
+   "holdReasons": [
+    "別ラベルの旧ファイルと内容が同一で、どちらのボタンの映像か確定できない",
+    "弱/中/強の違いを映像から確認できない"
+   ],
+   "candidateSourceVideo": "luke_tujou.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "82fb24e6-a9e4-4f76-9686-450d0ff43143",
+   "moveSlug": "luke-standing-mk",
+   "name": "立ち中K",
+   "gif": "22_4-luke-standing-mk.gif",
+   "sha256": "fcd60fed5df554ff32773161a2f688c3473c66ad1c24cd7c829925ac82af3ea5",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_tujou.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "97651c5b-50de-45b3-851d-4e6157c22192",
+   "moveSlug": "luke-standing-hp",
+   "name": "立ち強P",
+   "gif": "22_5-luke-standing-hp-verified.gif",
+   "sha256": "52b1d934f46441931567c1ef2820c1d2e9cfd337bd45d3cf1d85e7959b6af34c",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_tujou.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "0dd61560-79e9-4220-89a7-3044bc01b630",
+   "moveSlug": "luke-standing-hk",
+   "name": "立ち強K",
+   "gif": "22_6-luke-standing-hk.gif",
+   "sha256": "240819e38fb972c5cf1f4ab2fc72a1688619fac3e6aa6d51e5ca9eb5544f9003",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_tujou.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "40d7e3a8-5e6c-49b1-9e88-3cdb830f8ce0",
+   "moveSlug": "luke-crouching-lp",
+   "name": "しゃがみ弱P",
+   "gif": "22_7-luke-crouching-lp.gif",
+   "sha256": "27cead4d1fb484b65ae8c1820f5aececc90f1d3f71c3214efe71c6b9cf37a997",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_tujou.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "3ead79b6-43a0-4376-8ccb-04e068be8df7",
+   "moveSlug": "luke-crouching-lk",
+   "name": "しゃがみ弱K",
+   "gif": "22_8-luke-crouching-lk.gif",
+   "sha256": "dc4618586ad08c80fc3ae63d3d16c87fb3a8b320376ef6d700cd4552236317fb",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_tujou.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "d21b0a0c-4d1a-4ccf-9a0f-585246d91395",
+   "moveSlug": "luke-crouching-mp",
+   "name": "しゃがみ中P",
+   "gif": "22_9-luke-crouching-mp.gif",
+   "sha256": "b1dd119efbf46344e229a04307f460a9bd4d84000ee83d37c8308ccf4f142481",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_tujou.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "2666b0fc-64f1-405c-afbe-382431e1df9b",
+   "moveSlug": "luke-crouching-mk",
+   "name": "しゃがみ中K",
+   "gif": "110-luke-calf-squash.gif",
+   "sha256": "2fdb4476ea39410acc851f9bedd71ed01e158f7e2c7e2e7b3f6e4cb81ee42350",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_tujou.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "2efffb76-d9f8-44e2-830a-16ee127f96cc",
+   "moveSlug": "luke-crouching-hp",
+   "name": "しゃがみ強P",
+   "gif": "22_11-luke-crouching-hp.gif",
+   "sha256": "b0e14fcf45bd12ace392f6759fcd7d1187452735ec276b42265ebc15b66a5e50",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_tujou.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "9f9e639b-a942-40a2-ad23-33fa36e1ac06",
+   "moveSlug": "luke-crouching-hk",
+   "name": "しゃがみ強K",
+   "gif": "22_12-luke-trench-break.gif",
+   "sha256": "4068189e71c37345ca7edec253802e0cf1a9cb38285694f5abe01c34c93e157c",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_UNCONFIRMED_MAPPING",
+   "holdReasons": [
+    "技名と区分の対応が台帳に無い",
+    "弱/中/強の違いを映像から確認できない"
+   ],
+   "candidateSourceVideo": "luke_tujou.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "00fb09ee-aba9-4dc7-8115-29b46bd67dad",
+   "moveSlug": "luke-jump-lp",
+   "name": "ジャンプ弱P",
+   "gif": "22_13-luke-jumping-lp.gif",
+   "sha256": "81dd6a73922d0fadfac0419274a877d8ca95e8f8763aa4aef21063a9ec7e63da",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_jamp.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "31807b8f-99c8-446f-a2db-5200ae2fae69",
+   "moveSlug": "luke-jump-lk",
+   "name": "ジャンプ弱K",
+   "gif": "22_14-luke-jumping-lk.gif",
+   "sha256": "c966b5613a7d19eadbbc4290c1868a55e46b9ebfdd2e1321f0f5c195281dc814",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_jamp.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "48c184ed-390f-454f-9de8-75df3887fc13",
+   "moveSlug": "luke-jump-mp",
+   "name": "ジャンプ中P",
+   "gif": "22_15-luke-jumping-mp.gif",
+   "sha256": "1154bfdd3f5acce3f651962b93b71ffd86c4e50235b076aeac3e8eef21020af1",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_jamp.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "779533b9-24da-421b-ac57-bb8c3d5700b9",
+   "moveSlug": "luke-jump-mk",
+   "name": "ジャンプ中K",
+   "gif": "22_16-luke-jumping-mk.gif",
+   "sha256": "5211977b5b05dc55a7e6e2b38a9a9cefcbb9d3b3297d94d811a0b1bb0ded1fe1",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_DUPLICATE_CONTENT",
+   "holdReasons": [
+    "別ラベルの旧ファイルと内容が同一で、どちらのボタンの映像か確定できない",
+    "弱/中/強の違いを映像から確認できない"
+   ],
+   "candidateSourceVideo": "luke_jamp.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "229b7150-2d1c-46ae-87cf-c2dfa413d588",
+   "moveSlug": "luke-jump-hp",
+   "name": "ジャンプ強P",
+   "gif": "117-luke-gunmetal-hammer.gif",
+   "sha256": "7e78d82efc4f47573682a1f3aaa874cae177a8aa4dbf612df7e67b82434c1f3d",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_jamp.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "moveId": "5a9a9a77-2943-428c-8eb0-8729e26ed0bc",
+   "moveSlug": "luke-jump-hk",
+   "name": "ジャンプ強K",
+   "gif": "22_18-luke-jumping-hk-verified.gif",
+   "sha256": "fae484613fcd559c746aa7b4cba6ac485073a482942c135e437b6624dbe15eb8",
+   "originRecord": null,
+   "moveIdMatch": "NOT_MATCHED",
+   "inputStrength": "NOT_CONFIRMED",
+   "status": "HOLD_STRENGTH_UNDETERMINED",
+   "holdReasons": [
+    "弱/中/強の違いを映像(10フレーム)から確認できない"
+   ],
+   "candidateSourceVideo": "luke_jamp.mp4",
+   "localQaDisplay": false,
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

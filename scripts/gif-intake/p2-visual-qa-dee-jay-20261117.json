@@ -1,0 +1,426 @@
+{
+ "generated": "2026-11-17",
+ "scope": "dee-jay 追加(P2)複合根拠QA",
+ "entries": [
+  {
+   "character": "dee-jay",
+   "file": "001-dee-jay-standing-lp.gif",
+   "moveSlug": "dee-jay-standing-lp",
+   "moveId": "36de8f7a-a910-4315-8507-77174da08fef",
+   "fixtureName": "立ち弱P （ジャブ）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 12,
+    "durationMs": 960,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "002-dee-jay-standing-lk.gif",
+   "moveSlug": "dee-jay-standing-lk",
+   "moveId": "7debb114-baa2-4cbc-91b7-952b3d2ec571",
+   "fixtureName": "立ち弱K （ローキック）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 12,
+    "durationMs": 960,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "003-dee-jay-standing-mp.gif",
+   "moveSlug": "dee-jay-standing-mp",
+   "moveId": "a37ee100-dbdd-41f9-94a7-e1cc975d98c1",
+   "fixtureName": "立ち中P （フロントフック）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 15,
+    "durationMs": 1200,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "004-dee-jay-standing-mk.gif",
+   "moveSlug": "dee-jay-standing-mk",
+   "moveId": "54a83ad9-53e4-4f7b-ae16-8e827ebbbb2c",
+   "fixtureName": "立ち中K （ミドルキック）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 15,
+    "durationMs": 1200,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "005-dee-jay-standing-hp.gif",
+   "moveSlug": "dee-jay-standing-hp",
+   "moveId": "ebdd3009-fee4-4e55-87f1-b26439728dde",
+   "fixtureName": "立ち強P （ブラストアッパー）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 20,
+    "durationMs": 1600,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "006-dee-jay-standing-hk.gif",
+   "moveSlug": "dee-jay-standing-hk",
+   "moveId": "02fff13d-238d-4072-af8d-da1f75e1654c",
+   "fixtureName": "立ち強K （マキシマムキック）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 16,
+    "durationMs": 1280,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "007-dee-jay-crouching-lp.gif",
+   "moveSlug": "dee-jay-crouching-lp",
+   "moveId": "57beb616-7d69-45dd-972e-226521ec86e7",
+   "fixtureName": "しゃがみ弱P （アンダージャブ）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 14,
+    "durationMs": 1120,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "008-dee-jay-crouching-lk.gif",
+   "moveSlug": "dee-jay-crouching-lk",
+   "moveId": "594eaec7-0b10-49a4-b975-faab51565605",
+   "fixtureName": "しゃがみ弱K （アンダーウィップ）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 13,
+    "durationMs": 1040,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "009-dee-jay-crouching-mp.gif",
+   "moveSlug": "dee-jay-crouching-mp",
+   "moveId": "e0e9439e-1ded-4732-b34a-f669df106a59",
+   "fixtureName": "しゃがみ中P （レッグクラッシュエルボー）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 14,
+    "durationMs": 1120,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "010-dee-jay-crouching-mk.gif",
+   "moveSlug": "dee-jay-crouching-mk",
+   "moveId": "b60102f5-af5c-492a-bca6-0c0277bf69b7",
+   "fixtureName": "しゃがみ中K （グランドスクラッチ）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 20,
+    "durationMs": 1600,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "011-dee-jay-crouching-hp.gif",
+   "moveSlug": "dee-jay-crouching-hp",
+   "moveId": "516288aa-46c3-433c-b5ff-b72972e5baa8",
+   "fixtureName": "しゃがみ強P （バーストフック）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 21,
+    "durationMs": 1680,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "012-dee-jay-crouching-hk.gif",
+   "moveSlug": "dee-jay-crouching-hk",
+   "moveId": "e1052f7b-e246-4ca4-9e35-88a3eb86f96b",
+   "fixtureName": "しゃがみ強K （スライディングヒールアッパー）",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 23,
+    "durationMs": 1840,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "031-dee-jay-air-slasher-l.gif",
+   "moveSlug": "dee-jay-air-slasher-l",
+   "moveId": "373ec31c-6d7d-414e-a3e2-39d1e1c17e0d",
+   "fixtureName": "弱 エアスラッシャー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 30,
+    "durationMs": 2000,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "032-dee-jay-air-slasher-m.gif",
+   "moveSlug": "dee-jay-air-slasher-m",
+   "moveId": "048c78d4-2da9-461b-86ff-fb6b96a66f0b",
+   "fixtureName": "中 エアスラッシャー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 39,
+    "durationMs": 2600,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "033-dee-jay-air-slasher-h.gif",
+   "moveSlug": "dee-jay-air-slasher-h",
+   "moveId": "01a68cd2-ff35-4104-9ac6-9ed44641fdb1",
+   "fixtureName": "強 エアスラッシャー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 47,
+    "durationMs": 3140,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "036-dee-jay-jackknife-l.gif",
+   "moveSlug": "dee-jay-jackknife-l",
+   "moveId": "3f8211e6-9fdc-45ba-9558-bd5908199ec4",
+   "fixtureName": "弱 ジャックナイフマキシマム",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 21,
+    "durationMs": 1680,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "037-dee-jay-jackknife-m.gif",
+   "moveSlug": "dee-jay-jackknife-m",
+   "moveId": "fe965804-a210-4d77-93a3-295f3d7910b0",
+   "fixtureName": "中 ジャックナイフマキシマム",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 29,
+    "durationMs": 2320,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "038-dee-jay-jackknife-h.gif",
+   "moveSlug": "dee-jay-jackknife-h",
+   "moveId": "bc0d5768-33c4-44e4-a841-1c92751c77d8",
+   "fixtureName": "強 ジャックナイフマキシマム",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 44,
+    "durationMs": 3520,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "044-dee-jay-mgu-l.gif",
+   "moveSlug": "dee-jay-mgu-l",
+   "moveId": "6a35dfc9-4303-420b-ad28-6295c8abe713",
+   "fixtureName": "弱 マシンガンアッパー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 40,
+    "durationMs": 3200,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "045-dee-jay-mgu-m.gif",
+   "moveSlug": "dee-jay-mgu-m",
+   "moveId": "1d7e7bdf-87a6-48f4-b57b-ae5e4a39441e",
+   "fixtureName": "中 マシンガンアッパー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 40,
+    "durationMs": 3200,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "046-dee-jay-mgu-h.gif",
+   "moveSlug": "dee-jay-mgu-h",
+   "moveId": "6244edb0-12f3-4323-93bb-d3dbd65994d7",
+   "fixtureName": "強 マシンガンアッパー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+   "unconfirmed": [
+    "強度は複合根拠(入力表示の強度表示ではない)"
+   ],
+   "metrics": {
+    "frames": 59,
+    "durationMs": 4720,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

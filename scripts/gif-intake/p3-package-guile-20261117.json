@@ -1,0 +1,60 @@
+{
+ "date": "2026-11-17",
+ "character": "guile",
+ "records": [
+  {
+   "character": "guile",
+   "asset_filename": "guile-sonic-boom-od-r2-candidate.gif",
+   "asset_sha256": "8472d5032584d9b24424715baf5af1a41b55a14b53f8929003499ddb89f67ebf",
+   "technical_qa": "PASS"
+  },
+  {
+   "character": "guile",
+   "asset_filename": "guile-flash-kick-od-r2-candidate.gif",
+   "asset_sha256": "ad382c72bf78376a1072ac2ec0f7aa8706a0ef25e6f66559ceb9c56d3dbe6b0a",
+   "technical_qa": "PASS"
+  },
+  {
+   "character": "guile",
+   "asset_filename": "guile-sa1-up-r2-candidate.gif",
+   "asset_sha256": "48d9442040d171074bbb9d6da93b39364d2c3775eb49f64c8cc6de4a3a55c8e4",
+   "technical_qa": "PASS"
+  },
+  {
+   "character": "guile",
+   "asset_filename": "guile-sa1-r2-candidate.gif",
+   "asset_sha256": "b8108f7a8fa2fc8e383e1ad337271ada1e7659feef94f3995abb27a7dd3e81ce",
+   "technical_qa": "PASS"
+  },
+  {
+   "character": "guile",
+   "asset_filename": "guile-sa2-r2-candidate.gif",
+   "asset_sha256": "210a34069966d5fa129aa9c84c0d36926224c5cc1b64785aed54d0e47b757c5a",
+   "technical_qa": "PASS"
+  },
+  {
+   "character": "guile",
+   "asset_filename": "guile-sa3-r2-candidate.gif",
+   "asset_sha256": "2aa914cdec3b360286e01678d50b30d76c24f3206d8663ba846de81ea4742fe0",
+   "technical_qa": "PASS"
+  },
+  {
+   "character": "guile",
+   "asset_filename": "guile-ca-r2-candidate.gif",
+   "asset_sha256": "828d46e2dd04adebf5607173a98188ac1344f9b25869f5288f0ac1898c3b2600",
+   "technical_qa": "PASS"
+  },
+  {
+   "character": "guile",
+   "asset_filename": "guile-forward-throw-20261117-candidate.gif",
+   "asset_sha256": "b43b969d5ff302809da2069c26521bf3f4c827e00835796002a4b38327146f9c",
+   "technical_qa": "PASS"
+  },
+  {
+   "character": "guile",
+   "asset_filename": "guile-back-throw-20261117-candidate.gif",
+   "asset_sha256": "2f384906f28675fd4d8182b7d775fe831fc7051864dcd24f9b573f1e5ea238a2",
+   "technical_qa": "PASS"
+  }
+ ]
+}

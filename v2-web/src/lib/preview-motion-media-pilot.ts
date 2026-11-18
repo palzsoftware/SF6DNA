@@ -1,6 +1,7 @@
 import jpManifest from "@/data/SF6DNA_VER1_RYU_JP_MEDIA_MANIFEST_20260923.json";
 import ryuManifest from "@/data/SF6DNA_VER1_RYU_MEDIA_MANIFEST_20260924.json";
 import lukeManifest from "@/data/SF6DNA_VER1_LUKE_MEDIA_MANIFEST_20260924.json";
+import lukeGifManifest from "@/data/SF6DNA_VER1_LUKE_GIF_MANIFEST_20261116.json";
 import manonManifest from "@/data/SF6DNA_VER1_MANON_MEDIA_MANIFEST_20260925.json";
 import yasmineManifest from "@/data/SF6DNA_VER1_YASMINE_MEDIA_MANIFEST_20261003.json";
 import marisaManifest from "@/data/SF6DNA_VER1_MARISA_MEDIA_MANIFEST_20261003.json";
@@ -17,13 +18,24 @@ const YASMINE_CHARACTER_ID = "a9f61f3f-d6e0-4f98-8f1f-6fb94fae7baa";
 
 type PilotClip = (typeof jpManifest.clips)[number] | (typeof ryuManifest.clips)[number] | (typeof lukeManifest.clips)[number] | (typeof manonManifest.clips)[number] | (typeof yasmineManifest.clips)[number] | (typeof jamieManifest.clips)[number] | (typeof marisaManifest.clips)[number];
 
-function toPreviewRecord(clip: PilotClip, displayOrder: number, characterSlug: string): DevicePreviewMoveMotionMedia {
+/** The fields the Preview card needs. PilotClip (MP4 manifests) and the Luke GIF manifest both satisfy it. */
+type MotionClip = {
+  move_id: string;
+  move_slug: string;
+  variant: string;
+  media_type: string;
+  media_url: string;
+  poster_url?: string | null;
+  verification_status: string;
+};
+
+function toPreviewRecord(clip: MotionClip, displayOrder: number, characterSlug: string): DevicePreviewMoveMotionMedia {
   return {
     id: `${characterSlug}-motion-pilot-${clip.move_slug}-${clip.variant}`,
     moveId: clip.move_id,
     mediaType: clip.media_type === "gif" ? "gif" : "video",
     mediaUrl: clip.media_url,
-    posterUrl: clip.poster_url,
+    posterUrl: clip.poster_url ?? null,
     sourceUrl: null,
     sourceLabel: "ユーザー録画（Preview Pilot）",
     status: clip.verification_status,
@@ -47,7 +59,20 @@ export function getPreviewPilotMotionMedia(characterId: string): DevicePreviewMo
     : characterId === YASMINE_CHARACTER_ID && yasmineManifest.character_slug === "yasmine" ? yasmineManifest
     : null;
   if (!manifest) return [];
-  return manifest.clips
+  const records = manifest.clips
     .filter((clip) => clip.verification_status === "approved_for_preview")
     .map((clip, index) => toPreviewRecord(clip, index, manifest.character_slug));
+  if (characterId !== LUKE_CHARACTER_ID) return records;
+  return [...records, ...getLukeGifMotionMedia(new Set(records.map((record) => record.moveId)), records.length)];
+}
+
+/**
+ * Luke GIFs (docs: scripts/luke-gif). Same Preview-only gate as the MP4 clips: only "approved_for_preview" is shown.
+ * A move that already has an MP4 clip keeps it; its GIF is never added on top.
+ */
+function getLukeGifMotionMedia(movesWithMp4: ReadonlySet<string>, firstDisplayOrder: number): DevicePreviewMoveMotionMedia[] {
+  if (lukeGifManifest.character_slug !== "luke") return [];
+  return (lukeGifManifest.clips as ReadonlyArray<MotionClip>)
+    .filter((clip) => clip.verification_status === "approved_for_preview" && !movesWithMp4.has(clip.move_id))
+    .map((clip, index) => toPreviewRecord(clip, firstDisplayOrder + index, "luke"));
 }

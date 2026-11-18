@@ -1,0 +1,42 @@
+{
+ "generated": "2026-11-17",
+ "note": "SA3/CA軽量版の素材台帳(Drive個別取得・SHA一致)",
+ "records": [
+  {
+   "character": "manon",
+   "file": "manon-sa3-pas-de-deux_under10mb_48color_nodither.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "bee950000618aed2a34e29e33f67ffca162bf99766e1d7eb8a124bfa2558dc7c",
+   "width": 480,
+   "height": 270,
+   "frames": 215,
+   "durationMs": 10750,
+   "bytes": 9701305,
+   "derivedFrom": {
+    "original": "manon-sa3-pas-de-deux.gif",
+    "originalSha256": "c443a415fe396d3607bcb7119906d381adfb3fa90ba8db2ff8e20b7a5f586297",
+    "originalBytes": 15557342,
+    "originalDriveId": "1yW6iTp9GeDX1hcsr9GZjL6FmPgWSEZR1",
+    "note": "10MB未満の軽量版(減色)。元は10MB超でコネクタ取得不可だった"
+   }
+  },
+  {
+   "character": "manon",
+   "file": "manon-ca-pas-de-deux_under10mb_32color.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "1720773971c4d6ff7c0d4c505e9ccd7d55a1ddd1e093fd734707022c118267f3",
+   "width": 480,
+   "height": 270,
+   "frames": 237,
+   "durationMs": 11850,
+   "bytes": 9205251,
+   "derivedFrom": {
+    "original": "manon-ca-pas-de-deux.gif",
+    "originalSha256": "4d36e3b538f8473ec59d23d6b4318a26bba81d0237e4981f8f463287b5a2eabe",
+    "originalBytes": 16906857,
+    "originalDriveId": "1lTMT3TvNyL0jnKCm1SJCIXQYyMyqpSWY",
+    "note": "10MB未満の軽量版(減色)。元は10MB超でコネクタ取得不可だった"
+   }
+  }
+ ]
+}

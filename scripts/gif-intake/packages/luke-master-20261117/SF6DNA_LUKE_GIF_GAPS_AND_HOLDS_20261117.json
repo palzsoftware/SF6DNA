@@ -1,0 +1,110 @@
+[
+  {
+    "official_web_id": "202",
+    "name": "トレンチブレイク",
+    "gif_status": "MODERN_ROUTE_SAME_MOTION_CANDIDATE_NEEDS_REVIEW",
+    "gif_filename": null,
+    "drive_file_id": null,
+    "hold_release": "SOURCE_INPUT_VISUAL_CURRENT_CARD_ID_PENDING",
+    "priority": "P1"
+  },
+  {
+    "official_web_id": "204",
+    "name": "ダブルインパクト（1段目）",
+    "gif_status": "EXISTING_ZIP_HOLD_FIRST_HIT_MAPPING",
+    "gif_filename": "luke_double_impact_first_strike_22s12_22s98_HOLD.gif",
+    "drive_file_id": "11rGPDK1M1w09nE7PmNFrwQlYzrAm2Xsd",
+    "hold_release": "SOURCE_INPUT_VISUAL_CURRENT_CARD_ID_PENDING",
+    "priority": "P0"
+  },
+  {
+    "official_web_id": "206",
+    "name": "トリプルインパクト（2段目）",
+    "gif_status": "NO_ASSET_IN_71_NOT_PROOF_MISSING",
+    "gif_filename": null,
+    "drive_file_id": null,
+    "hold_release": "SOURCE_INPUT_VISUAL_CURRENT_CARD_ID_PENDING",
+    "priority": "P1"
+  },
+  {
+    "official_web_id": "208",
+    "name": "スナップバックコンボ（2段目）",
+    "gif_status": "NO_ASSET_IN_71_NOT_PROOF_MISSING",
+    "gif_filename": null,
+    "drive_file_id": null,
+    "hold_release": "SOURCE_INPUT_VISUAL_CURRENT_CARD_ID_PENDING",
+    "priority": "P1"
+  },
+  {
+    "official_web_id": "210",
+    "name": "スナップバックコンボ（3段目）",
+    "gif_status": "NO_ASSET_IN_71_NOT_PROOF_MISSING",
+    "gif_filename": null,
+    "drive_file_id": null,
+    "hold_release": "SOURCE_INPUT_VISUAL_CURRENT_CARD_ID_PENDING",
+    "priority": "P1"
+  },
+  {
+    "official_web_id": "314",
+    "name": "OD フラッシュナックル",
+    "gif_status": "EXISTING_HANDOFF_HOLD_2HITS_MAPPING",
+    "gif_filename": "luke_hissatsu1_76s40_77s95_unmapped_candidate.gif",
+    "drive_file_id": "1EHzWdiMplDMzrzliDpnXChbM_rf9AW-e",
+    "hold_release": "SOURCE_INPUT_VISUAL_CURRENT_CARD_ID_PENDING",
+    "priority": "P0"
+  },
+  {
+    "official_web_id": "315",
+    "name": "OD フラッシュナックル（2段目）",
+    "gif_status": "HOLD_OD_FLASH_MAPPING",
+    "gif_filename": "22_45-luke-od-flash-knuckle-followup.gif",
+    "drive_file_id": "1ny1UlnnU8PbvntpqbRHN5NygnFpcYCg9",
+    "hold_release": "SOURCE_INPUT_VISUAL_CURRENT_CARD_ID_PENDING",
+    "priority": "P0"
+  },
+  {
+    "official_web_id": "601",
+    "name": "後方ステップ",
+    "gif_status": "NO_ASSET_IN_71_NOT_PROOF_MISSING",
+    "gif_filename": null,
+    "drive_file_id": null,
+    "hold_release": "SOURCE_INPUT_VISUAL_CURRENT_CARD_ID_PENDING",
+    "priority": "P1"
+  },
+  {
+    "official_web_id": "603",
+    "name": "[ガード時]ドライブリバーサル（バッターリングラム）",
+    "gif_status": "NO_ASSET_IN_71_NOT_PROOF_MISSING",
+    "gif_filename": null,
+    "drive_file_id": null,
+    "hold_release": "SOURCE_INPUT_VISUAL_CURRENT_CARD_ID_PENDING",
+    "priority": "P1"
+  },
+  {
+    "official_web_id": "604",
+    "name": "[起き上がり時]ドライブリバーサル（バッターリングラム）",
+    "gif_status": "NO_ASSET_IN_71_NOT_PROOF_MISSING",
+    "gif_filename": null,
+    "drive_file_id": null,
+    "hold_release": "SOURCE_INPUT_VISUAL_CURRENT_CARD_ID_PENDING",
+    "priority": "P1"
+  },
+  {
+    "official_web_id": "606",
+    "name": "ジャストパリィ（打撃）",
+    "gif_status": "NO_ASSET_IN_71_NOT_PROOF_MISSING",
+    "gif_filename": null,
+    "drive_file_id": null,
+    "hold_release": "SOURCE_INPUT_VISUAL_CURRENT_CARD_ID_PENDING",
+    "priority": "P1"
+  },
+  {
+    "official_web_id": "607",
+    "name": "ジャストパリィ（飛び道具）",
+    "gif_status": "NO_ASSET_IN_71_NOT_PROOF_MISSING",
+    "gif_filename": null,
+    "drive_file_id": null,
+    "hold_release": "SOURCE_INPUT_VISUAL_CURRENT_CARD_ID_PENDING",
+    "priority": "P1"
+  }
+]

@@ -1,0 +1,122 @@
+{
+  "created_at_jst": "2026-11-16",
+  "scope": "Luke Modern handoff + Juri new GIF pilot",
+  "production_change": false,
+  "luke": {
+    "modern_route_count_provisionally": 3,
+    "modern_route_ids_verified": 0,
+    "modern_gifs_created": 0,
+    "source_videos": [
+      {
+        "filename": "luke_combo1.mp4",
+        "status": "AVAILABLE",
+        "modern_assisted_route_confirmed": false
+      },
+      {
+        "filename": "luke_combo2.mp4",
+        "status": "AVAILABLE",
+        "modern_assisted_route_confirmed": false
+      },
+      {
+        "filename": "luke_combo3.mp4",
+        "status": "AVAILABLE",
+        "modern_assisted_route_confirmed": false
+      },
+      {
+        "filename": "luke_combo_crmk_basic_001_evidence.mp4",
+        "status": "AVAILABLE",
+        "modern_assisted_route_confirmed": false
+      }
+    ],
+    "reason": "Combo recordings and short training evidence alone do not establish Modern Assist input routes. Require on-screen input or current route evidence. No speculative integration.",
+    "prior_category_status": {
+      "normal": "18 candidates, strength HOLD",
+      "unique": "8 candidates; 4 GIF existing, 3 MP4 priority, 1 HOLD",
+      "special": "9 basic candidate GIF plus 10 variation candidate GIF; mapping to exact 19 current skills unverified",
+      "common": "6 GIF existing, 4 HOLD, 1 candidate NOT_CHECKED",
+      "SA_CA": "7 existing assets for four animation types; MP4 priority to be respected",
+      "modern": "3 likely route categories; scope unverified, all HOLD"
+    }
+  },
+  "juri": {
+    "existing_drive_gif_count": 7,
+    "prior_batch6_candidate_count": 1,
+    "new_count": 2,
+    "new_candidates": [
+      {
+        "character": "juri",
+        "category": "normal_move_candidate",
+        "file": "juri_044011_019p80_021p00_unmapped_HOLD.gif",
+        "source": "clip_1364780_20261004_044011.mp4",
+        "source_interval_seconds": {
+          "start": 19.8,
+          "end": 21.0
+        },
+        "recording_input_confirmed": false,
+        "official_move_id": null,
+        "strength": null,
+        "verification": "HOLD",
+        "technical_qa": "PASS",
+        "image_dimensions": [
+          480,
+          270
+        ],
+        "frames": 24,
+        "frame_duration_ms_unique": [
+          50
+        ],
+        "nominal_fps": 20,
+        "loop": 0,
+        "bytes": 1682275,
+        "sha256": "9d2b39b12af465678f0ed911c8c92ac10a06f519635727b83892caa6aca13106",
+        "same_sha_as_previous_batch6": false,
+        "notes": "Source features a distinct movement sample. Exact command and single-technique segment boundaries are not independently verified. Private candidate only."
+      },
+      {
+        "character": "juri",
+        "category": "normal_move_candidate",
+        "file": "juri_044011_033p55_034p95_unmapped_HOLD.gif",
+        "source": "clip_1364780_20261004_044011.mp4",
+        "source_interval_seconds": {
+          "start": 33.55,
+          "end": 34.95
+        },
+        "recording_input_confirmed": false,
+        "official_move_id": null,
+        "strength": null,
+        "verification": "HOLD",
+        "technical_qa": "PASS",
+        "image_dimensions": [
+          480,
+          270
+        ],
+        "frames": 28,
+        "frame_duration_ms_unique": [
+          50
+        ],
+        "nominal_fps": 20,
+        "loop": 0,
+        "bytes": 1328479,
+        "sha256": "e1f82373a475d5a995428eab0dae4cd29b036ed8e2d0619f69a8ab6843eef8ef",
+        "same_sha_as_previous_batch6": false,
+        "notes": "Source features a distinct movement sample. Exact command and single-technique segment boundaries are not independently verified. Private candidate only."
+      }
+    ],
+    "source_video": {
+      "filename": "clip_1364780_20261004_044011.mp4",
+      "sha256": "1c2d92cd1d8a05ba3b2390e74082b81b6633a2236e3c64bd2c0c2f265c0faad5",
+      "bytes": 45215062
+    },
+    "existing_drive_names": [
+      "17_62-juri-light-tensenrin.gif",
+      "17_63-juri-medium-tensenrin.gif",
+      "17_64-juri-heavy-tensenrin.gif",
+      "17_65-juri-od-tensenrin.gif",
+      "17_70-juri-sa1-sakkai-fuhazan.gif",
+      "17_71-juri-sa2-feng-shui-engine.gif",
+      "17_73-juri-sa3-kaisen-dankai-raku.gif"
+    ],
+    "previous_candidate_sha256": "da60a96cc6d99d8081173dfeeff7c8c55a40f51a8b48fb64f56703b4165bab60",
+    "semantic_duplicate_excluded": "Not guaranteed by differing file hashes; no official move mapping established"
+  }
+}

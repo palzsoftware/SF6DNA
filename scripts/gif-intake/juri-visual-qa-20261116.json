@@ -1,0 +1,145 @@
+{
+ "generated": "2026-11-16",
+ "scope": "ジュリ既存GIF 目視QA(コンタクトシート12コマ)。OD・SA1・SA2のみ実施",
+ "method": "12コマの等間隔コンタクトシートを目視",
+ "limits": [
+  "入力表示は映像に無く、強度・区分は技名とファイル名の一致で判断",
+  "承認ではない"
+ ],
+ "entries": [
+  {
+   "file": "17_62-juri-light-tensenrin.gif",
+   "moveSlug": "juri-tensenrin-l",
+   "moveId": "1e7d1cc0-8118-4c5a-8b43-94f585c2a83e",
+   "result": "NOT_RUN_STRENGTH_HOLD",
+   "localConnectionCandidate": false,
+   "checks": {},
+   "observation": "強度の裏付けが無いため目視QAは実施しない(強度が確定してから)",
+   "unconfirmed": [
+    "強度(弱/中/強)の入力・撮影記録の証拠"
+   ],
+   "metrics": {
+    "frames": 30,
+    "durationMs": 1500,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "17_63-juri-medium-tensenrin.gif",
+   "moveSlug": "juri-tensenrin-m",
+   "moveId": "9f311585-00ac-4e7c-83fc-08a04f4f9f8d",
+   "result": "NOT_RUN_STRENGTH_HOLD",
+   "localConnectionCandidate": false,
+   "checks": {},
+   "observation": "強度の裏付けが無いため目視QAは実施しない(強度が確定してから)",
+   "unconfirmed": [
+    "強度(弱/中/強)の入力・撮影記録の証拠"
+   ],
+   "metrics": {
+    "frames": 34,
+    "durationMs": 1700,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "17_64-juri-heavy-tensenrin.gif",
+   "moveSlug": "juri-tensenrin-h",
+   "moveId": "1201daae-e1b8-47aa-88d9-19be3fb4f80b",
+   "result": "NOT_RUN_STRENGTH_HOLD",
+   "localConnectionCandidate": false,
+   "checks": {},
+   "observation": "強度の裏付けが無いため目視QAは実施しない(強度が確定してから)",
+   "unconfirmed": [
+    "強度(弱/中/強)の入力・撮影記録の証拠"
+   ],
+   "metrics": {
+    "frames": 37,
+    "durationMs": 1850,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "17_65-juri-od-tensenrin.gif",
+   "moveSlug": "juri-tensenrin-od",
+   "moveId": "3e607e52-090d-4c0b-96ec-d3bf99fd7c8b",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": null
+   },
+   "observation": "天穿輪の回転蹴り(空中の連続回転+ヒット数表示が5→7へ増加)→着地後に追撃へ移る流れ。技名と整合。",
+   "unconfirmed": [
+    "OD(強化版)としての入力(ボタン2つ同時)は映像に表示されない。技名とファイル名の区分で判断",
+    "弱/中/強版との取り違えは区分OD(ヒット数・長さ)で判断"
+   ],
+   "metrics": {
+    "frames": 41,
+    "durationMs": 2050,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "17_70-juri-sa1-sakkai-fuhazan.gif",
+   "moveSlug": "juri-sa1",
+   "moveId": "a0b600a3-0b0c-432d-8a6a-75bba7af99cb",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": null
+   },
+   "observation": "暗転演出から多段ヒット(ヒット数表示が増加)・最後に吹き飛ばしで終わる超必殺技の動き。SA1の技名と整合。",
+   "unconfirmed": [
+    "公開用データのSP+HはModernの入力。公式の236236+K(Classic)とは入力経路の違いで差異ではない",
+    "SA1とSA2/SA3の取り違えは演出内容とファイル名で判断(入力表示なし)"
+   ],
+   "metrics": {
+    "frames": 104,
+    "durationMs": 5200,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "17_71-juri-sa2-feng-shui-engine.gif",
+   "moveSlug": "juri-sa2",
+   "moveId": "953af9d9-ad43-430d-9ea2-ffa332436fbe",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "appearanceMatchesName": true,
+    "recordingRangeCoversMove": true,
+    "noUnrelatedScreenOrCutoff": true,
+    "derivationConditionVisible": null,
+    "strengthOrVariantDistinguishableFromFrames": null
+   },
+   "observation": "発動の暗転カットイン→紫のエネルギー演出(風水エンジン)→元の画面へ戻る流れ。SA2の技名と整合。",
+   "unconfirmed": [
+    "SA1/SA3との取り違えは演出内容とファイル名で判断(入力表示なし)"
+   ],
+   "metrics": {
+    "frames": 47,
+    "durationMs": 2350,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

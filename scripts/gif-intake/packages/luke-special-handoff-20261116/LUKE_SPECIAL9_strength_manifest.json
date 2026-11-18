@@ -1,0 +1,678 @@
+{
+  "scope": "LUKE_SPECIAL_9_STRENGTH_EVIDENCE_ONLY",
+  "date": "2026-11-16",
+  "sources": {
+    "luke_hissatsu1.mp4": {
+      "sha256": "b7fb82fb5b06d90c0071bf393958e13af3931f27ba3f04e82b96f0855ba5cbee",
+      "size_bytes": 40350014
+    },
+    "luke_hissatsu2.mp4": {
+      "sha256": "5bd9173164e596fdf9aa9d89bd8e370559d3c89daf80c51515069681ad8fdb92",
+      "size_bytes": 40810673
+    }
+  },
+  "rows": [
+    {
+      "move": "sand-blast",
+      "strength": "light",
+      "gif": "22_30-luke-light-sand-blast.gif",
+      "source": "luke_hissatsu1.mp4",
+      "ledger_start": 5.1,
+      "ledger_end": 6.43,
+      "source_sha256": "b7fb82fb5b06d90c0071bf393958e13af3931f27ba3f04e82b96f0855ba5cbee",
+      "gif_sha256": "3901f3778a84f0d501e7b11897cf95bfdf8770663d7d1639b05458d73e1666d0",
+      "gif_frames": 27,
+      "global_matches": [
+        [
+          5.3,
+          10.19
+        ],
+        [
+          5.5,
+          12.12
+        ],
+        [
+          5.7,
+          10.19
+        ],
+        [
+          5.9,
+          9.34
+        ],
+        [
+          6.2,
+          5.48
+        ]
+      ],
+      "ledger_window_matches": [
+        [
+          5.3,
+          10.19
+        ],
+        [
+          5.5,
+          12.12
+        ],
+        [
+          5.7,
+          10.19
+        ],
+        [
+          5.9,
+          9.34
+        ],
+        [
+          6.2,
+          5.48
+        ]
+      ],
+      "gif_bytes": 2185831,
+      "gif_dimensions": [
+        [
+          480,
+          270
+        ]
+      ],
+      "gif_fps_nominal": 20.0,
+      "gif_loop": 0,
+      "frame_decode": "PASS",
+      "gif_technical_qa": "PASS",
+      "input_overlay": "NOT_VISIBLE",
+      "filming_order": "WEAK_MEDIUM_HEAVY_OD_USER_REPORTED",
+      "move_strength": "CANDIDATE_NOT_VERIFIED",
+      "video_segment_match": "MATCHED_BY_MULTIFRAME_VISUAL_COMPARISON",
+      "source_time_basis": "LEGACY_LEDGER_PLUS_MULTIFRAME_MATCH",
+      "formal_move_id": "CLAUDE_VERIFY",
+      "published": false
+    },
+    {
+      "move": "sand-blast",
+      "strength": "medium",
+      "gif": "22_31-luke-medium-sand-blast.gif",
+      "source": "luke_hissatsu1.mp4",
+      "ledger_start": 9.36,
+      "ledger_end": 10.69,
+      "source_sha256": "b7fb82fb5b06d90c0071bf393958e13af3931f27ba3f04e82b96f0855ba5cbee",
+      "gif_sha256": "244d08ca756e75e796b1405f691d8a72419ea4754cc4a822e684fb9e2f0cb89c",
+      "gif_frames": 27,
+      "global_matches": [
+        [
+          9.6,
+          9.24
+        ],
+        [
+          9.8,
+          3.81
+        ],
+        [
+          10.0,
+          3.45
+        ],
+        [
+          10.2,
+          3.58
+        ],
+        [
+          10.5,
+          7.6
+        ]
+      ],
+      "ledger_window_matches": [
+        [
+          9.6,
+          9.24
+        ],
+        [
+          9.8,
+          3.81
+        ],
+        [
+          10.0,
+          3.45
+        ],
+        [
+          10.2,
+          3.58
+        ],
+        [
+          10.5,
+          7.6
+        ]
+      ],
+      "gif_bytes": 2181571,
+      "gif_dimensions": [
+        [
+          480,
+          270
+        ]
+      ],
+      "gif_fps_nominal": 20.0,
+      "gif_loop": 0,
+      "frame_decode": "PASS",
+      "gif_technical_qa": "PASS",
+      "input_overlay": "NOT_VISIBLE",
+      "filming_order": "WEAK_MEDIUM_HEAVY_OD_USER_REPORTED",
+      "move_strength": "CANDIDATE_NOT_VERIFIED",
+      "video_segment_match": "MATCHED_BY_MULTIFRAME_VISUAL_COMPARISON",
+      "source_time_basis": "LEGACY_LEDGER_PLUS_MULTIFRAME_MATCH",
+      "formal_move_id": "CLAUDE_VERIFY",
+      "published": false
+    },
+    {
+      "move": "sand-blast",
+      "strength": "heavy",
+      "gif": "22_32-luke-heavy-sand-blast.gif",
+      "source": "luke_hissatsu1.mp4",
+      "ledger_start": 13.38,
+      "ledger_end": 14.76,
+      "source_sha256": "b7fb82fb5b06d90c0071bf393958e13af3931f27ba3f04e82b96f0855ba5cbee",
+      "gif_sha256": "d302e82b104b87d20ad23dc964a798216ee8c9a44f94701dc725a6a946603328",
+      "gif_frames": 28,
+      "global_matches": [
+        [
+          13.6,
+          4.39
+        ],
+        [
+          13.8,
+          10.61
+        ],
+        [
+          10.1,
+          7.34
+        ],
+        [
+          10.3,
+          5.91
+        ],
+        [
+          14.5,
+          6.29
+        ]
+      ],
+      "ledger_window_matches": [
+        [
+          13.6,
+          4.39
+        ],
+        [
+          13.8,
+          10.61
+        ],
+        [
+          14.1,
+          9.31
+        ],
+        [
+          14.3,
+          8.59
+        ],
+        [
+          14.5,
+          6.29
+        ]
+      ],
+      "gif_bytes": 2237252,
+      "gif_dimensions": [
+        [
+          480,
+          270
+        ]
+      ],
+      "gif_fps_nominal": 20.0,
+      "gif_loop": 0,
+      "frame_decode": "PASS",
+      "gif_technical_qa": "PASS",
+      "input_overlay": "NOT_VISIBLE",
+      "filming_order": "WEAK_MEDIUM_HEAVY_OD_USER_REPORTED",
+      "move_strength": "CANDIDATE_NOT_VERIFIED",
+      "video_segment_match": "MATCHED_BY_MULTIFRAME_VISUAL_COMPARISON",
+      "source_time_basis": "LEGACY_LEDGER_PLUS_MULTIFRAME_MATCH",
+      "formal_move_id": "CLAUDE_VERIFY",
+      "published": false
+    },
+    {
+      "move": "flash-knuckle",
+      "strength": "light",
+      "gif": "22_35-luke-light-flash-knuckle.gif",
+      "source": "luke_hissatsu1.mp4",
+      "ledger_start": 37.64,
+      "ledger_end": 38.75,
+      "source_sha256": "b7fb82fb5b06d90c0071bf393958e13af3931f27ba3f04e82b96f0855ba5cbee",
+      "gif_sha256": "30869638ca2c0a6ddbdffb7234b2283bef95942f3c81a0a185495b00640420e6",
+      "gif_frames": 22,
+      "global_matches": [
+        [
+          37.8,
+          7.03
+        ],
+        [
+          41.1,
+          7.05
+        ],
+        [
+          38.2,
+          5.53
+        ],
+        [
+          29.2,
+          11.64
+        ],
+        [
+          29.4,
+          8.88
+        ]
+      ],
+      "ledger_window_matches": [
+        [
+          37.8,
+          7.03
+        ],
+        [
+          38.0,
+          7.84
+        ],
+        [
+          38.2,
+          5.53
+        ],
+        [
+          38.3,
+          12.35
+        ],
+        [
+          38.5,
+          10.77
+        ]
+      ],
+      "gif_bytes": 1914529,
+      "gif_dimensions": [
+        [
+          480,
+          270
+        ]
+      ],
+      "gif_fps_nominal": 20.0,
+      "gif_loop": 0,
+      "frame_decode": "PASS",
+      "gif_technical_qa": "PASS",
+      "input_overlay": "NOT_VISIBLE",
+      "filming_order": "WEAK_MEDIUM_HEAVY_OD_USER_REPORTED",
+      "move_strength": "CANDIDATE_NOT_VERIFIED",
+      "video_segment_match": "MATCHED_BY_MULTIFRAME_VISUAL_COMPARISON",
+      "source_time_basis": "LEGACY_LEDGER_PLUS_MULTIFRAME_MATCH",
+      "formal_move_id": "CLAUDE_VERIFY",
+      "published": false
+    },
+    {
+      "move": "flash-knuckle",
+      "strength": "medium",
+      "gif": "22_38-luke-medium-flash-knuckle.gif",
+      "source": "luke_hissatsu1.mp4",
+      "ledger_start": 48.93,
+      "ledger_end": 50.38,
+      "source_sha256": "b7fb82fb5b06d90c0071bf393958e13af3931f27ba3f04e82b96f0855ba5cbee",
+      "gif_sha256": "0c49140bacb24cc382a8ecd8ad72752fa393e15c2e04e0d96200fac9a345c3a6",
+      "gif_frames": 29,
+      "global_matches": [
+        [
+          49.2,
+          4.95
+        ],
+        [
+          49.4,
+          10.08
+        ],
+        [
+          49.6,
+          5.68
+        ],
+        [
+          49.9,
+          6.86
+        ],
+        [
+          50.1,
+          9.19
+        ]
+      ],
+      "ledger_window_matches": [
+        [
+          49.2,
+          4.95
+        ],
+        [
+          49.4,
+          10.08
+        ],
+        [
+          49.6,
+          5.68
+        ],
+        [
+          49.9,
+          6.86
+        ],
+        [
+          50.1,
+          9.19
+        ]
+      ],
+      "gif_bytes": 2465833,
+      "gif_dimensions": [
+        [
+          480,
+          270
+        ]
+      ],
+      "gif_fps_nominal": 20.0,
+      "gif_loop": 0,
+      "frame_decode": "PASS",
+      "gif_technical_qa": "PASS",
+      "input_overlay": "NOT_VISIBLE",
+      "filming_order": "WEAK_MEDIUM_HEAVY_OD_USER_REPORTED",
+      "move_strength": "CANDIDATE_NOT_VERIFIED",
+      "video_segment_match": "MATCHED_BY_MULTIFRAME_VISUAL_COMPARISON",
+      "source_time_basis": "LEGACY_LEDGER_PLUS_MULTIFRAME_MATCH",
+      "formal_move_id": "CLAUDE_VERIFY",
+      "published": false
+    },
+    {
+      "move": "flash-knuckle",
+      "strength": "heavy",
+      "gif": "22_41-luke-heavy-flash-knuckle.gif",
+      "source": "luke_hissatsu1.mp4",
+      "ledger_start": 62.69,
+      "ledger_end": 64.28,
+      "source_sha256": "b7fb82fb5b06d90c0071bf393958e13af3931f27ba3f04e82b96f0855ba5cbee",
+      "gif_sha256": "82e05ff0ac86444d337c49addde25766d1a7338477bc376ef17e4a1f4d3aa386",
+      "gif_frames": 32,
+      "global_matches": [
+        [
+          62.9,
+          9.35
+        ],
+        [
+          63.2,
+          9.63
+        ],
+        [
+          63.5,
+          9.44
+        ],
+        [
+          63.7,
+          15.45
+        ],
+        [
+          64.0,
+          6.85
+        ]
+      ],
+      "ledger_window_matches": [
+        [
+          62.9,
+          9.35
+        ],
+        [
+          63.2,
+          9.63
+        ],
+        [
+          63.5,
+          9.44
+        ],
+        [
+          63.7,
+          15.45
+        ],
+        [
+          64.0,
+          6.85
+        ]
+      ],
+      "gif_bytes": 2771462,
+      "gif_dimensions": [
+        [
+          480,
+          270
+        ]
+      ],
+      "gif_fps_nominal": 20.0,
+      "gif_loop": 0,
+      "frame_decode": "PASS",
+      "gif_technical_qa": "PASS",
+      "input_overlay": "NOT_VISIBLE",
+      "filming_order": "WEAK_MEDIUM_HEAVY_OD_USER_REPORTED",
+      "move_strength": "CANDIDATE_NOT_VERIFIED",
+      "video_segment_match": "MATCHED_BY_MULTIFRAME_VISUAL_COMPARISON",
+      "source_time_basis": "LEGACY_LEDGER_PLUS_MULTIFRAME_MATCH",
+      "formal_move_id": "CLAUDE_VERIFY",
+      "published": false
+    },
+    {
+      "move": "rising-uppercut",
+      "strength": "light",
+      "gif": "luke-light-rising-uppercut.gif",
+      "source": "luke_hissatsu2.mp4",
+      "ledger_start": 63.05,
+      "ledger_end": 64.85,
+      "source_sha256": "5bd9173164e596fdf9aa9d89bd8e370559d3c89daf80c51515069681ad8fdb92",
+      "gif_sha256": "140035eaa1707133efe10b152712147c1027f174a2208bd655fd327955c37ee5",
+      "gif_frames": 36,
+      "global_matches": [
+        [
+          63.3,
+          7.09
+        ],
+        [
+          63.6,
+          10.45
+        ],
+        [
+          63.9,
+          14.41
+        ],
+        [
+          64.2,
+          6.78
+        ],
+        [
+          64.5,
+          5.48
+        ]
+      ],
+      "ledger_window_matches": [
+        [
+          63.3,
+          7.09
+        ],
+        [
+          63.6,
+          10.45
+        ],
+        [
+          63.9,
+          14.41
+        ],
+        [
+          64.2,
+          6.78
+        ],
+        [
+          64.5,
+          5.48
+        ]
+      ],
+      "gif_bytes": 2924577,
+      "gif_dimensions": [
+        [
+          480,
+          270
+        ]
+      ],
+      "gif_fps_nominal": 20.0,
+      "gif_loop": 0,
+      "frame_decode": "PASS",
+      "gif_technical_qa": "PASS",
+      "input_overlay": "NOT_VISIBLE",
+      "filming_order": "WEAK_MEDIUM_HEAVY_OD_USER_REPORTED",
+      "move_strength": "CANDIDATE_NOT_VERIFIED",
+      "video_segment_match": "MATCHED_BY_MULTIFRAME_VISUAL_COMPARISON",
+      "source_time_basis": "LEGACY_LEDGER_PLUS_MULTIFRAME_MATCH",
+      "formal_move_id": "CLAUDE_VERIFY",
+      "published": false
+    },
+    {
+      "move": "rising-uppercut",
+      "strength": "medium",
+      "gif": "luke-medium-rising-uppercut.gif",
+      "source": "luke_hissatsu2.mp4",
+      "ledger_start": 67.12,
+      "ledger_end": 68.92,
+      "source_sha256": "5bd9173164e596fdf9aa9d89bd8e370559d3c89daf80c51515069681ad8fdb92",
+      "gif_sha256": "44fad8918e29b54419ee9ae008baab55057abe17b0b924d65be575477486bc4b",
+      "gif_frames": 36,
+      "global_matches": [
+        [
+          67.4,
+          3.65
+        ],
+        [
+          67.7,
+          3.15
+        ],
+        [
+          68.0,
+          10.23
+        ],
+        [
+          68.3,
+          10.01
+        ],
+        [
+          68.6,
+          7.89
+        ]
+      ],
+      "ledger_window_matches": [
+        [
+          67.4,
+          3.65
+        ],
+        [
+          67.7,
+          3.15
+        ],
+        [
+          68.0,
+          10.23
+        ],
+        [
+          68.3,
+          10.01
+        ],
+        [
+          68.6,
+          7.89
+        ]
+      ],
+      "gif_bytes": 2966895,
+      "gif_dimensions": [
+        [
+          480,
+          270
+        ]
+      ],
+      "gif_fps_nominal": 20.0,
+      "gif_loop": 0,
+      "frame_decode": "PASS",
+      "gif_technical_qa": "PASS",
+      "input_overlay": "NOT_VISIBLE",
+      "filming_order": "WEAK_MEDIUM_HEAVY_OD_USER_REPORTED",
+      "move_strength": "CANDIDATE_NOT_VERIFIED",
+      "video_segment_match": "MATCHED_BY_MULTIFRAME_VISUAL_COMPARISON",
+      "source_time_basis": "LEGACY_LEDGER_PLUS_MULTIFRAME_MATCH",
+      "formal_move_id": "CLAUDE_VERIFY",
+      "published": false
+    },
+    {
+      "move": "rising-uppercut",
+      "strength": "heavy",
+      "gif": "luke-heavy-rising-uppercut.gif",
+      "source": "luke_hissatsu2.mp4",
+      "ledger_start": 71.12,
+      "ledger_end": 73.09,
+      "source_sha256": "5bd9173164e596fdf9aa9d89bd8e370559d3c89daf80c51515069681ad8fdb92",
+      "gif_sha256": "00d89bb2f6720273561a46a29529304c69cd205b3a8738f89c4aa5a896489fe2",
+      "gif_frames": 40,
+      "global_matches": [
+        [
+          71.5,
+          6.56
+        ],
+        [
+          32.1,
+          13.25
+        ],
+        [
+          72.1,
+          3.43
+        ],
+        [
+          72.4,
+          7.98
+        ],
+        [
+          72.7,
+          3.62
+        ]
+      ],
+      "ledger_window_matches": [
+        [
+          71.5,
+          6.56
+        ],
+        [
+          71.8,
+          15.38
+        ],
+        [
+          72.1,
+          3.43
+        ],
+        [
+          72.4,
+          7.98
+        ],
+        [
+          72.7,
+          3.62
+        ]
+      ],
+      "gif_bytes": 3268075,
+      "gif_dimensions": [
+        [
+          480,
+          270
+        ]
+      ],
+      "gif_fps_nominal": 20.0,
+      "gif_loop": 0,
+      "frame_decode": "PASS",
+      "gif_technical_qa": "PASS",
+      "input_overlay": "NOT_VISIBLE",
+      "filming_order": "WEAK_MEDIUM_HEAVY_OD_USER_REPORTED",
+      "move_strength": "CANDIDATE_NOT_VERIFIED",
+      "video_segment_match": "MATCHED_BY_MULTIFRAME_VISUAL_COMPARISON",
+      "source_time_basis": "LEGACY_LEDGER_PLUS_MULTIFRAME_MATCH",
+      "formal_move_id": "CLAUDE_VERIFY",
+      "published": false
+    }
+  ],
+  "independent_strength_verified": 0,
+  "candidate": 9,
+  "hold": 0,
+  "new_gifs": 0,
+  "input": "No controller button display detected; filming order alone insufficient to verify strengths"
+}

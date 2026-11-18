@@ -29,7 +29,7 @@ test("approved character shared template is enabled on ordinary RC Preview route
 });
 
 test("pilot combo cards keep local preferences independent and accessible", () => {
-  const source = readProjectFile("src/components/pilot-combo-card.tsx");
+  const source = readProjectFile("src/components/pilot-combo-card.tsx") + readProjectFile("src/components/strategy-card.tsx");
 
   assert.match(source, /sf6dna:favorite-combos:v1/);
   assert.match(source, /sf6dna:training-combos:v1/);
@@ -41,12 +41,13 @@ test("pilot combo cards keep local preferences independent and accessible", () =
 });
 
 test("pilot supports motion media with a compact missing-media fallback", () => {
-  const source = readProjectFile("src/components/pilot-combo-card.tsx");
+  // Rendering moved to the shared StrategyCard (approved common design); assert across both files.
+  const source = readProjectFile("src/components/pilot-combo-card.tsx") + readProjectFile("src/components/strategy-card.tsx");
   const css = readProjectFile("src/components/pilot-combo-card.module.css");
 
   assert.match(source, /"gif" \| "webp" \| "video"/);
-  assert.match(source, /poster=\{combo\.media\.posterUrl/);
-  assert.match(source, /動作メディア未登録/);
+  assert.match(source, /poster=\{media\.posterUrl/);
+  assert.match(source, /実演GIF追加予定/);
   assert.match(css, /prefers-reduced-motion/);
   assert.doesNotMatch(source, /準備中|NO SIGNAL|画像なし/);
 });
@@ -76,7 +77,7 @@ test("V2.2 exposes complete comparison fields and explicit unknown values", () =
     assert.match(combo, new RegExp(label));
   }
   assert.match(combo, /コマンド未確認/);
-  assert.match(combo, /動作メディア未登録/);
+  assert.match(readProjectFile("src/components/strategy-card.tsx"), /実演GIF追加予定/);
   assert.match(pilot, /ダメージ \{valueOrUnknown\(setup\.damage\)\}/);
   assert.match(pilot, /ダメージ \{valueOrUnknown\(sequence\.damage\)\}/);
   assert.match(fixture, /command:\s*"小技×3/);

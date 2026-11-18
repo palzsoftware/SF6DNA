@@ -1,0 +1,164 @@
+{
+ "generated": "2026-11-16",
+ "kind": "CLUE_ONLY",
+ "note": "GIFの長さと公式フレーム値の順位相関。手がかりであり確認ではない。録画は技ごとに余白・撮影タイミングが異なるため、強度/ボタンの確定根拠にしない。24本はNEEDS_MORE_CHECKのまま。",
+ "families": {
+  "standing": {
+   "spearman_gifDuration_vs_official": 0.9,
+   "n": 5,
+   "rows": [
+    [
+     "lp",
+     750,
+     20
+    ],
+    [
+     "lk",
+     900,
+     19
+    ],
+    [
+     "mk",
+     950,
+     27
+    ],
+    [
+     "hp",
+     1200,
+     36
+    ],
+    [
+     "hk",
+     1100,
+     33
+    ]
+   ]
+  },
+  "crouching": {
+   "spearman_gifDuration_vs_official": 0.9,
+   "n": 5,
+   "rows": [
+    [
+     "lp",
+     800,
+     16
+    ],
+    [
+     "lk",
+     850,
+     19
+    ],
+    [
+     "mp",
+     1000,
+     22
+    ],
+    [
+     "mk",
+     950,
+     30
+    ],
+    [
+     "hp",
+     1050,
+     36
+    ]
+   ]
+  },
+  "jump(発生のみ比較)": {
+   "spearman_gifDuration_vs_official": 0.05,
+   "n": 5,
+   "rows": [
+    [
+     "lp",
+     1300,
+     5
+    ],
+    [
+     "lk",
+     1100,
+     6
+    ],
+    [
+     "mp",
+     1100,
+     8
+    ],
+    [
+     "hp",
+     950,
+     9
+    ],
+    [
+     "hk",
+     1400,
+     10
+    ]
+   ]
+  },
+  "sand-blast": {
+   "spearman_gifDuration_vs_official": 0.87,
+   "n": 3,
+   "rows": [
+    [
+     "l",
+     1350,
+     14
+    ],
+    [
+     "m",
+     1350,
+     17
+    ],
+    [
+     "h",
+     1400,
+     20
+    ]
+   ]
+  },
+  "flash-knuckle": {
+   "spearman_gifDuration_vs_official": 0.5,
+   "n": 3,
+   "rows": [
+    [
+     "l",
+     1100,
+     43
+    ],
+    [
+     "m",
+     1450,
+     49
+    ],
+    [
+     "h",
+     1600,
+     46
+    ]
+   ]
+  },
+  "rising-uppercut": {
+   "spearman_gifDuration_vs_official": 0.87,
+   "n": 3,
+   "rows": [
+    [
+     "l",
+     1800,
+     37
+    ],
+    [
+     "m",
+     1800,
+     40
+    ],
+    [
+     "h",
+     2000,
+     44
+    ]
+   ]
+  }
+ },
+ "verdict": "UNCHANGED_NEEDS_MORE_CHECK"
+}

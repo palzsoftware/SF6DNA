@@ -1,0 +1,153 @@
+[
+ {
+  "character": "cammy",
+  "moveSlug": "cammy-forward-throw",
+  "originalFrames": 62,
+  "trimmedFrames": 59,
+  "cutFromFrame": 59,
+  "originalBytes": 8655635,
+  "trimmedBytes": 8419966,
+  "trimmedSha256": "50d7b508205e119c219f1445839a23114ef4d0e29ae0bfc45ee6f73b31d21315",
+  "size": [
+   640,
+   360
+  ],
+  "note": "黒フレーム以降の画面遷移3フレームを除去。元のローカルQA素材は未変更",
+  "originalSha256": "8dd04fb48af7b082686f5c7e132b12fceeb17bd56c8798fcfe41f30018fcf890",
+  "originalFile": "cammy-forward-throw.gif",
+  "reason": "終端付近の「完全黒1コマ→暗転復帰」画面遷移(技動作ではない)を除去",
+  "visualReview": {
+   "attackMotionComplete": true,
+   "reviewedAt": "2026-11-17",
+   "method": "全体を等間隔に抜いたコンタクトシートで目視"
+  },
+  "status": "ADOPTION_CANDIDATE_NOT_APPLIED",
+  "candidateFile": "trimmed/cammy__cammy-forward-throw.gif"
+ },
+ {
+  "character": "cammy",
+  "moveSlug": "cammy-sa2",
+  "originalFrames": 90,
+  "trimmedFrames": 87,
+  "cutFromFrame": 87,
+  "originalBytes": 8946223,
+  "trimmedBytes": 8783307,
+  "trimmedSha256": "8415c69397ef07817942af57ff739efb79a857fe2ba29a8e289e672fa3ea6e12",
+  "size": [
+   640,
+   360
+  ],
+  "note": "黒フレーム以降の画面遷移3フレームを除去。元のローカルQA素材は未変更",
+  "originalSha256": "a86b938fdf6112b8d9f7f2fdf71cf3bec33138920155c3617edeb251ee17e0f1",
+  "originalFile": "cammy-sa2.gif",
+  "reason": "終端付近の「完全黒1コマ→暗転復帰」画面遷移(技動作ではない)を除去",
+  "visualReview": {
+   "attackMotionComplete": true,
+   "reviewedAt": "2026-11-17",
+   "method": "全体を等間隔に抜いたコンタクトシートで目視"
+  },
+  "status": "ADOPTION_CANDIDATE_NOT_APPLIED",
+  "candidateFile": "trimmed/cammy__cammy-sa2.gif"
+ },
+ {
+  "character": "dee-jay",
+  "moveSlug": "dee-jay-jackknife-od",
+  "originalFrames": 49,
+  "trimmedFrames": 46,
+  "cutFromFrame": 46,
+  "originalBytes": 6813770,
+  "trimmedBytes": 6602485,
+  "trimmedSha256": "14d073043bac0e3701530700bbda9c7f1f09720fefacd3491eeb39c9bc8ed2da",
+  "size": [
+   640,
+   360
+  ],
+  "note": "黒フレーム以降の画面遷移3フレームを除去。元のローカルQA素材は未変更",
+  "originalSha256": "72bb75f6fb1098d1eab664b25308d8cd9ead71f11fe3e98b24fa987998a80d8b",
+  "originalFile": "dee-jay-jackknife-od.gif",
+  "reason": "終端付近の「完全黒1コマ→暗転復帰」画面遷移(技動作ではない)を除去",
+  "visualReview": {
+   "attackMotionComplete": true,
+   "reviewedAt": "2026-11-17",
+   "method": "全体を等間隔に抜いたコンタクトシートで目視"
+  },
+  "status": "ADOPTION_CANDIDATE_NOT_APPLIED",
+  "candidateFile": "trimmed/dee-jay__dee-jay-jackknife-od.gif"
+ },
+ {
+  "character": "dee-jay",
+  "moveSlug": "dee-jay-sa3",
+  "originalFrames": 197,
+  "trimmedFrames": 194,
+  "cutFromFrame": 194,
+  "originalBytes": 8283473,
+  "trimmedBytes": 8207817,
+  "trimmedSha256": "6e8668cd2ef98ba9c627a378f35cba9655ecea1a6ff1cac25b2d28abd27800a9",
+  "size": [
+   480,
+   270
+  ],
+  "note": "黒フレーム以降の画面遷移3フレームを除去。元のローカルQA素材は未変更",
+  "originalSha256": "4d4e93b55f385201015fdf4083d8a7430d1eba90d61096efd7bfc86c071ab153",
+  "originalFile": "dee-jay-sa3.gif",
+  "reason": "終端付近の「完全黒1コマ→暗転復帰」画面遷移(技動作ではない)を除去",
+  "visualReview": {
+   "attackMotionComplete": true,
+   "reviewedAt": "2026-11-17",
+   "method": "全体を等間隔に抜いたコンタクトシートで目視"
+  },
+  "status": "ADOPTION_CANDIDATE_NOT_APPLIED",
+  "candidateFile": "trimmed/dee-jay__dee-jay-sa3.gif"
+ },
+ {
+  "character": "dee-jay",
+  "moveSlug": "dee-jay-air-slasher-h",
+  "originalFrames": 47,
+  "trimmedFrames": 40,
+  "cutFromFrame": 40,
+  "originalBytes": 6225825,
+  "trimmedBytes": 5511851,
+  "trimmedSha256": "dc5c482b3945591b141f9a931c15cc769c1c9ff0870e2af06691443ec81ba56c",
+  "size": [
+   640,
+   360
+  ],
+  "note": "黒フレーム以降の画面遷移3フレームを除去。元のローカルQA素材は未変更",
+  "originalSha256": "79fb80b806bddf3818a9dcd3a4a6ddfbfa639b3775c3e8450e5e6f8a41d94210",
+  "originalFile": "dee-jay-air-slasher-h.gif",
+  "reason": "終端付近の「完全黒1コマ→暗転復帰」画面遷移(技動作ではない)を除去",
+  "visualReview": {
+   "attackMotionComplete": true,
+   "reviewedAt": "2026-11-17",
+   "method": "全体を等間隔に抜いたコンタクトシートで目視",
+   "note": "除去した7コマ(元40〜46)は黒1+復帰遷移6で全て待機姿勢。攻撃(発生→飛び道具→ヒット→ダウン)は全て残存"
+  },
+  "status": "ADOPTION_CANDIDATE_NOT_APPLIED",
+  "candidateFile": "trimmed/dee-jay__dee-jay-air-slasher-h.gif"
+ },
+ {
+  "character": "jamie",
+  "moveSlug": "jamie-frame-075",
+  "originalFrames": 67,
+  "trimmedFrames": 64,
+  "cutFromFrame": 64,
+  "originalBytes": 5314590,
+  "trimmedBytes": 5178714,
+  "trimmedSha256": "e9d15da9a932f8439335f6147da28a66ea8023d3b844f23a389ba69729b04e49",
+  "size": [
+   480,
+   270
+  ],
+  "note": "黒フレーム以降の画面遷移3フレームを除去。元のローカルQA素材は未変更",
+  "originalSha256": "39d2ccf34854269d4b3f3daa09d57f0d6e28d0c0dfec43589a707e851f0791c5",
+  "originalFile": "jamie-frame-075.gif",
+  "reason": "終端付近の「完全黒1コマ→暗転復帰」画面遷移(技動作ではない)を除去",
+  "visualReview": {
+   "attackMotionComplete": true,
+   "reviewedAt": "2026-11-17",
+   "method": "全体を等間隔に抜いたコンタクトシートで目視"
+  },
+  "status": "ADOPTION_CANDIDATE_NOT_APPLIED",
+  "candidateFile": "trimmed/jamie__jamie-frame-075.gif"
+ }
+]

@@ -1,0 +1,78 @@
+txt_key,type,skill,command,startup,preview_card_id,preview_card_slug,in_preview_77,in_official_72,note
+arjun:web:100,NORMAL,立ち弱P（ぶつ）,LP,4,sf6dna-preview:arjun:arjun%3Aweb%3A100,txt-arjun-arjun-web-100,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:101,NORMAL,立ち弱K（蹴る）,LK,6,sf6dna-preview:arjun:arjun%3Aweb%3A101,txt-arjun-arjun-web-101,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:102,NORMAL,立ち中P（ぶん殴る）,MP,11,sf6dna-preview:arjun:arjun%3Aweb%3A102,txt-arjun-arjun-web-102,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:103,NORMAL,立ち中K（引っ掛ける）,MK,7,sf6dna-preview:arjun:arjun%3Aweb%3A103,txt-arjun-arjun-web-103,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:104,NORMAL,立ち強P（打ち砕く）,HP,15,sf6dna-preview:arjun:arjun%3Aweb%3A104,txt-arjun-arjun-web-104,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:105,NORMAL,立ち強K（ぶっ飛ばす）,HK,14,sf6dna-preview:arjun:arjun%3Aweb%3A105,txt-arjun-arjun-web-105,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:106,NORMAL,しゃがみ弱P（小突く）,2 + LP,5,sf6dna-preview:arjun:arjun%3Aweb%3A106,txt-arjun-arjun-web-106,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:107,NORMAL,しゃがみ弱K（突く）,2 + LK,5,sf6dna-preview:arjun:arjun%3Aweb%3A107,txt-arjun-arjun-web-107,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:108,NORMAL,しゃがみ中P（はらう）,2 + MP,9,sf6dna-preview:arjun:arjun%3Aweb%3A108,txt-arjun-arjun-web-108,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:109,NORMAL,しゃがみ中K（伸ばす）,2 + MK,8,sf6dna-preview:arjun:arjun%3Aweb%3A109,txt-arjun-arjun-web-109,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:110,NORMAL,しゃがみ強P（かちあげる）,2 + HP,10,sf6dna-preview:arjun:arjun%3Aweb%3A110,txt-arjun-arjun-web-110,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:111,NORMAL,しゃがみ強K（踏み潰す）,2 + HK,14,sf6dna-preview:arjun:arjun%3Aweb%3A111,txt-arjun-arjun-web-111,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:112,AIR,ジャンプ弱P（打つ）,（ジャンプ中に）LP,5,sf6dna-preview:arjun:arjun%3Aweb%3A112,txt-arjun-arjun-web-112,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:113,AIR,ジャンプ弱K（踏む）,（ジャンプ中に）LK,7,sf6dna-preview:arjun:arjun%3Aweb%3A113,txt-arjun-arjun-web-113,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:114,AIR,ジャンプ中P（すくい上げる）,（ジャンプ中に）MP,8,sf6dna-preview:arjun:arjun%3Aweb%3A114,txt-arjun-arjun-web-114,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:115,AIR,ジャンプ中K（突き破る）,（ジャンプ中に）MK,9,sf6dna-preview:arjun:arjun%3Aweb%3A115,txt-arjun-arjun-web-115,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:116,AIR,ジャンプ強P（振り回す）,（ジャンプ中に）HP,10,sf6dna-preview:arjun:arjun%3Aweb%3A116,txt-arjun-arjun-web-116,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:117,AIR,ジャンプ強K（叩き壊す）,（ジャンプ中に）HK,10,sf6dna-preview:arjun:arjun%3Aweb%3A117,txt-arjun-arjun-web-117,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:200,NORMAL,仁義の一刀,6 + HP,22,sf6dna-preview:arjun:arjun%3Aweb%3A200,txt-arjun-arjun-web-200,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:201,NORMAL,踏み潰す,,14,sf6dna-preview:arjun:arjun%3Aweb%3A201,txt-arjun-arjun-web-201,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:202,NORMAL,頑強な跳舞,6 + HK,19,sf6dna-preview:arjun:arjun%3Aweb%3A202,txt-arjun-arjun-web-202,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:203,NORMAL,規律の躍動,MK>HK,17,sf6dna-preview:arjun:arjun%3Aweb%3A203,txt-arjun-arjun-web-203,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:204,NORMAL,不敵の調べ,HP>HP,16,sf6dna-preview:arjun:arjun%3Aweb%3A204,txt-arjun-arjun-web-204,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:205,NORMAL,鎮圧,HP>HP>HP,18,sf6dna-preview:arjun:arjun%3Aweb%3A205,txt-arjun-arjun-web-205,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:206,NORMAL,追跡,HP>HP>HK,,sf6dna-preview:arjun:arjun%3Aweb%3A206,txt-arjun-arjun-web-206,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:208,NORMAL,無情の拳,HK>HP,24,sf6dna-preview:arjun:arjun%3Aweb%3A208,txt-arjun-arjun-web-208,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:209,NORMAL,無情の拳（ホールド）,HK>HPホールド,41,sf6dna-preview:arjun:arjun%3Aweb%3A209,txt-arjun-arjun-web-209,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:300,SPECIAL,弱 大義の巨腕,236 + LP,15,sf6dna-preview:arjun:arjun%3Aweb%3A300,txt-arjun-arjun-web-300,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:301,SPECIAL,中 大義の巨腕,236 + MP,20,sf6dna-preview:arjun:arjun%3Aweb%3A301,txt-arjun-arjun-web-301,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:302,SPECIAL,強 大義の巨腕,236 + HP,28,sf6dna-preview:arjun:arjun%3Aweb%3A302,txt-arjun-arjun-web-302,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:303,SPECIAL,追撃,（大義の巨腕中に）6 + LP | MP | HP,20,sf6dna-preview:arjun:arjun%3Aweb%3A303,txt-arjun-arjun-web-303,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:304,SPECIAL,OD 大義の巨腕,236 + LPMPHP,23,sf6dna-preview:arjun:arjun%3Aweb%3A304,txt-arjun-arjun-web-304,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:305,SPECIAL,OD 追撃,（OD大義の巨腕中に）6 + LP | MP | HP,20,sf6dna-preview:arjun:arjun%3Aweb%3A305,txt-arjun-arjun-web-305,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:306,SPECIAL,弱 厳酷な岩肩,623 + LP,19,sf6dna-preview:arjun:arjun%3Aweb%3A306,txt-arjun-arjun-web-306,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:307,SPECIAL,中 厳酷な岩肩,623 + MP,23,sf6dna-preview:arjun:arjun%3Aweb%3A307,txt-arjun-arjun-web-307,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:308,SPECIAL,強 厳酷な岩肩,623 + HP,28,sf6dna-preview:arjun:arjun%3Aweb%3A308,txt-arjun-arjun-web-308,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:309,SPECIAL,過剰な正義,（厳酷な岩肩で岩に触れると自動派生）,11,sf6dna-preview:arjun:arjun%3Aweb%3A309,txt-arjun-arjun-web-309,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:310,SPECIAL,OD 厳酷な岩肩,623 + LPMPHP,22,sf6dna-preview:arjun:arjun%3Aweb%3A310,txt-arjun-arjun-web-310,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:311,SPECIAL,OD 過剰な正義,（厳酷な岩肩で岩に触れると自動派生）,11,sf6dna-preview:arjun:arjun%3Aweb%3A311,txt-arjun-arjun-web-311,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:312,SPECIAL,息吹の円筒,236 + LK | MK | HK,17,sf6dna-preview:arjun:arjun%3Aweb%3A312,txt-arjun-arjun-web-312,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:313,SPECIAL,弱 息吹の震撼,（息吹の円筒中に）6 + LP,15,sf6dna-preview:arjun:arjun%3Aweb%3A313,txt-arjun-arjun-web-313,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:314,SPECIAL,中 息吹の震撼,（息吹の円筒中に）6 + MP,15,sf6dna-preview:arjun:arjun%3Aweb%3A314,txt-arjun-arjun-web-314,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:315,SPECIAL,強 息吹の震撼,（息吹の円筒中に）6 + HP,15,sf6dna-preview:arjun:arjun%3Aweb%3A315,txt-arjun-arjun-web-315,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:316,SPECIAL,息吹の震撼(飛び道具),　,,sf6dna-preview:arjun:arjun%3Aweb%3A316,txt-arjun-arjun-web-316,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:317,SPECIAL,OD 息吹の円筒,236 + LKMKHK,17,sf6dna-preview:arjun:arjun%3Aweb%3A317,txt-arjun-arjun-web-317,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:318,SPECIAL,OD 弱 息吹の震撼,（OD息吹の円筒中に）6 + LP,15,sf6dna-preview:arjun:arjun%3Aweb%3A318,txt-arjun-arjun-web-318,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:319,SPECIAL,OD 中 息吹の震撼,（OD息吹の円筒中に）6 + MP,15,sf6dna-preview:arjun:arjun%3Aweb%3A319,txt-arjun-arjun-web-319,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:320,SPECIAL,OD 強 息吹の震撼,（OD息吹の円筒中に）6 + HP,15,sf6dna-preview:arjun:arjun%3Aweb%3A320,txt-arjun-arjun-web-320,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:321,SPECIAL,OD 息吹の震撼(飛び道具),　,,sf6dna-preview:arjun:arjun%3Aweb%3A321,txt-arjun-arjun-web-321,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:322,SPECIAL,弱 神気の巨巌,214 + LK,25,sf6dna-preview:arjun:arjun%3Aweb%3A322,txt-arjun-arjun-web-322,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:323,SPECIAL,中 神気の巨巌,214 + MK,25,sf6dna-preview:arjun:arjun%3Aweb%3A323,txt-arjun-arjun-web-323,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:324,SPECIAL,強 神気の巨巌,214 + HK,25,sf6dna-preview:arjun:arjun%3Aweb%3A324,txt-arjun-arjun-web-324,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:325,SPECIAL,神気の巨巌(飛び道具),　,,sf6dna-preview:arjun:arjun%3Aweb%3A325,txt-arjun-arjun-web-325,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:326,SPECIAL,OD 弱 神気の巨巌,214 + LKMK,20,sf6dna-preview:arjun:arjun%3Aweb%3A326,txt-arjun-arjun-web-326,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:327,SPECIAL,OD 中 神気の巨巌,214 + LKHK,20,sf6dna-preview:arjun:arjun%3Aweb%3A327,txt-arjun-arjun-web-327,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:328,SPECIAL,OD 強 神気の巨巌,214 + MKHK,20,sf6dna-preview:arjun:arjun%3Aweb%3A328,txt-arjun-arjun-web-328,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:329,SPECIAL,OD 神気の巨巌(飛び道具),　,,sf6dna-preview:arjun:arjun%3Aweb%3A329,txt-arjun-arjun-web-329,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:330,SPECIAL,鬼気迫る尋問,（近距離で）63214 +LP | MP | HP,8,sf6dna-preview:arjun:arjun%3Aweb%3A330,txt-arjun-arjun-web-330,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:331,SPECIAL,OD 鬼気迫る尋問,（近距離で）63214 + LPMPHP,26,sf6dna-preview:arjun:arjun%3Aweb%3A331,txt-arjun-arjun-web-331,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:332,SPECIAL,不撓の警衛,5252 + HK,3,sf6dna-preview:arjun:arjun%3Aweb%3A332,txt-arjun-arjun-web-332,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:333,SPECIAL,倫理の崩壊,（不撓の警衛中に）LP | MP | HP,28,sf6dna-preview:arjun:arjun%3Aweb%3A333,txt-arjun-arjun-web-333,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:400,SUPER,SA1 破壊の蛮声,236236 + LK | MK | HK,8,sf6dna-preview:arjun:arjun%3Aweb%3A400,txt-arjun-arjun-web-400,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:401,SUPER,SA2 忘却の一槌,214214 + LP | MP | HP,9,sf6dna-preview:arjun:arjun%3Aweb%3A401,txt-arjun-arjun-web-401,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:402,SUPER,SA3 秩序の鬼神,236236 + LP | MP | HP,13,sf6dna-preview:arjun:arjun%3Aweb%3A402,txt-arjun-arjun-web-402,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:403,SUPER,CA 秩序の鬼神,（体力25%以下で）236236 + LP | MP | HP,13,sf6dna-preview:arjun:arjun%3Aweb%3A403,txt-arjun-arjun-web-403,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:500,NORMAL,豪胆な制裁,（近距離で）N or 6 + LPLK,5,sf6dna-preview:arjun:arjun%3Aweb%3A500,txt-arjun-arjun-web-500,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:501,NORMAL,処罰の天秤,（近距離で）4 + LPLK,5,sf6dna-preview:arjun:arjun%3Aweb%3A501,txt-arjun-arjun-web-501,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:600,F_DASH,前方ステップ,5656 + 6,,sf6dna-preview:arjun:arjun%3Aweb%3A600,txt-arjun-arjun-web-600,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:601,B_DASH,後方ステップ,5454 + 4,,sf6dna-preview:arjun:arjun%3Aweb%3A601,txt-arjun-arjun-web-601,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:602,SPECIAL,ドライブインパクト（暴力沙汰）,HPHK,26,sf6dna-preview:arjun:arjun%3Aweb%3A602,txt-arjun-arjun-web-602,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:603,SPECIAL,[ガード時]ドライブリバーサル（過剰防衛）,（ガード中 or ドライブパリィ成立中に）6 + HPHK,20,sf6dna-preview:arjun:arjun%3Aweb%3A603,txt-arjun-arjun-web-603,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:604,SPECIAL,[起き上がり時]ドライブリバーサル（過剰防衛）,（起き上がり時に）6 ＋ HPHK,18,sf6dna-preview:arjun:arjun%3Aweb%3A604,txt-arjun-arjun-web-604,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:605,PARRY,ドライブパリィ,MPMK,1,sf6dna-preview:arjun:arjun%3Aweb%3A605,txt-arjun-arjun-web-605,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:606,PARRY,ジャストパリィ（打撃）,ガード方向 ＋  MPMK,1,sf6dna-preview:arjun:arjun%3Aweb%3A606,txt-arjun-arjun-web-606,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:607,PARRY,ジャストパリィ（飛び道具）,MPMK,1,sf6dna-preview:arjun:arjun%3Aweb%3A607,txt-arjun-arjun-web-607,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:608,DRIVE_STEP,パリィドライブラッシュ,（ドライブパリィ中に）5656 + MPMK + 6,,sf6dna-preview:arjun:arjun%3Aweb%3A608,txt-arjun-arjun-web-608,Y,UNKNOWN,72枚の一覧が未受領のため照合不能
+arjun:web:609,DRIVE_STEP,キャンセルドライブラッシュ,（必殺技キャンセル可能な攻撃ヒット中に）5656 + 6,,sf6dna-preview:arjun:arjun%3Aweb%3A609,txt-arjun-arjun-web-609,Y,UNKNOWN,72枚の一覧が未受領のため照合不能

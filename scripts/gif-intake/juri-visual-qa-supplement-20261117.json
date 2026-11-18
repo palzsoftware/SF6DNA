@@ -1,0 +1,58 @@
+{
+ "generated": "2026-11-17",
+ "scope": "ジュリ 第7バッチ空中投げ + P0のSA3軽量版 の目視QA(コンタクトシート16コマ)",
+ "method": "40フレームから16コマを等間隔で目視",
+ "limits": [
+  "技名は映像の動作(空中での掴み→叩きつけ→ダウン)と、公開用データにジュリの『空中投げ』が1行のみであることに基づく。入力表示は映像に収録されていない",
+  "地上投げ2HITS/3HITS候補は前投げ・後ろ投げの区別ができないためHOLD(目視QA対象外)"
+ ],
+ "entries": [
+  {
+   "file": "juri_044011_100.40_102.40_air_throw_HOLD.gif",
+   "moveSlug": "juri-air-throw",
+   "moveId": "f1f7bdc0-5abb-4dcd-9a18-6ed7ebcacabd",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "airborneGrab": true,
+    "slamAndKnockdown": true,
+    "singleMoveNoBranch": true
+   },
+   "observation": "両者が空中で組み合い、叩きつけ後にダウンする一連の空中投げ。動作は途中で切れていない(40フレーム・2.0秒)。",
+   "unconfirmed": [
+    "空中投げの入力(弱P+弱K)は映像に表示されない。公開用データのコマンドとの一致は静的照合のみ"
+   ],
+   "metrics": {
+    "frames": 40,
+    "durationMs": 2000,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "file": "17_73-juri-sa3-kaisen-dankai-raku_under10mb_128color.gif",
+   "moveSlug": "juri-sa3",
+   "moveId": "d93fe029-deff-4d33-9a36-edf219cb92d5",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "checks": {
+    "juriSuperCinematic": true,
+    "koAtEnd": true,
+    "fullSequence": true
+   },
+   "observation": "ジュリの超必殺技の演出(紫の暗転・多段ヒット数表示5→10超・顔アップ)から、ハードノックダウンで終了する全体が収録されている。公開用データのジュリSA3は『SA3 Kaisen Dankai Raku』の1行のみ。",
+   "unconfirmed": [
+    "SA3(通常)とクリティカルアーツの区別は映像から確認できない(公開用データにCA行は無い)",
+    "軽量版は元版(11MB)とは別SHA。元版との同一性は派生元の記録(ChatGPT)に基づき、元版の実体は未確認"
+   ],
+   "metrics": {
+    "frames": 208,
+    "durationMs": 10400,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

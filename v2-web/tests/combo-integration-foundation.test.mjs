@@ -17,7 +17,7 @@ test("Combo list keeps publication filtering before mapping expanded data", () =
 test("Expanded Combo path preserves the unknown numeric state and source safety", () => {
   const loader = read("src/lib/character-sections.ts");
   const explorer = read("src/components/combo-explorer.tsx");
-  const card = read("src/components/pilot-combo-card.tsx");
+  const card = read("src/components/pilot-combo-card.tsx") + read("src/components/strategy-card.tsx"); // shared StrategyCard renders the approved common design
   assert.match(loader, /command: row\.notation \?\? null/);
   assert.match(loader, /patch: row\.valid_to_patch_id === null && patch\?\.version_label/);
   assert.match(explorer, /\.\.\.item\.combo/);

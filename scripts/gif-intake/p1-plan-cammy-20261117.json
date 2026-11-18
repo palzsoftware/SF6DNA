@@ -1,0 +1,201 @@
+{
+ "character": "cammy",
+ "total": 19,
+ "summary": {
+  "CONNECT_READY": 16,
+  "NEEDS_VISUAL_QA": 3
+ },
+ "holdReasons": {},
+ "rows": [
+  {
+   "file": "cammy-back-throw.gif",
+   "sha256": "e5f877138dd831721f81690eb5a4d51e74cc7e21d09b35834719f7c1924968ad",
+   "moveId": "5003bab7-95fe-405f-960b-f1af0fa4151b",
+   "moveSlug": "cammy-back-throw",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-ca_under10mb.gif",
+   "sha256": "1d73c58b76bcb504314c16d7dca37c2e4e5d42ff928173a34970fc68dc4d2fd1",
+   "moveId": "71d63a3e-9f39-41fa-b44e-14c42a6bde23",
+   "moveSlug": "cammy-ca",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "NEEDS_VISUAL_QA",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-cannon-strike-od.gif",
+   "sha256": "e286baf203617c67c19c81d2eb562c98df5d6c973fd745a093d474185b303dd8",
+   "moveId": "6dd6a2a0-d98b-4b2f-82d3-115d34e7ae1e",
+   "moveSlug": "cammy-cannon-strike-od",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-cannon-strike.gif",
+   "sha256": "9e9380c78c49f2167bcb85ae6b57b46ef410ae3d5fe3e5d7a87842564e0748a5",
+   "moveId": "80bee02a-249d-4230-9640-bb29964c1434",
+   "moveSlug": "cammy-cannon-strike",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-forward-throw.gif",
+   "sha256": "8dd04fb48af7b082686f5c7e132b12fceeb17bd56c8798fcfe41f30018fcf890",
+   "moveId": "00398ea1-7adc-44eb-8edc-321538bec402",
+   "moveSlug": "cammy-forward-throw",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-hooligan-reverse.gif",
+   "sha256": "40ffcb7163d1a4bd5569b1777aff77e3b121956d040a7ee9d88ef4e6f188d3dd",
+   "moveId": "7c8eb8b0-fb38-4e7d-a5cd-648448f931b4",
+   "moveSlug": "cammy-hooligan-reverse",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-hooligan-slicer-od-r16.gif",
+   "sha256": "5b3436c7cb17d3f831d225ecaad71691764fc2b2607dd147ba76e55e2dcc2470",
+   "moveId": "db190382-371c-4b77-9134-7cf125ac8bb0",
+   "moveSlug": "cammy-hooligan-slicer-od",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-hooligan-slicer-r16.gif",
+   "sha256": "e00009fb604219d3200ecaf6d4e74cdf3becf2d9fc7b74477ecac5697b6e0e4d",
+   "moveId": "61721245-946e-4951-9035-a59e0922d101",
+   "moveSlug": "cammy-hooligan-slicer",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-hooligan-strike.gif",
+   "sha256": "619ca2066e0065cfbf696cdf9e4ac45a91a6df7ee0a2b6da10f79fb5938dfbab",
+   "moveId": "84a3ca4b-ab3c-4034-bbeb-e1bcba8775cc",
+   "moveSlug": "cammy-hooligan-strike",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-hooligan-throw.gif",
+   "sha256": "be032844fd1e6362b4f6011010f76d689ef6a1756478199d6ad0ac482171e13f",
+   "moveId": "5e300bea-0365-4a60-b820-f42679cd2c7e",
+   "moveSlug": "cammy-hooligan-throw",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-knuckle-od-r16-final.gif",
+   "sha256": "f7e717952f0bc88860eb107508ca77bd693af4592c3c2d9ff7d9894d1d28435c",
+   "moveId": "a7a85481-b314-4e21-ba23-11b261a41335",
+   "moveSlug": "cammy-knuckle-od",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-lift-combination.gif",
+   "sha256": "eb154cfaac839cbbd0b50724c545e403aafb09fbb06c50d6314a0adc91cf834e",
+   "moveId": "f4475688-1cb6-4d3a-b8a2-67af5f0d0e28",
+   "moveSlug": "cammy-lift-combination",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-sa1_under10mb.gif",
+   "sha256": "a04373d1e63d83028106aa0f35fba635aba9633cd0e156243bff1fa89a9dffd7",
+   "moveId": "6e3fe94c-78fe-4993-99d9-1cc050510fc9",
+   "moveSlug": "cammy-sa1",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-sa2-air_under10mb.gif",
+   "sha256": "02e82a6440c261801779a4cbe249e7a3b7743db17fda21d02f7bfa896cb2fff2",
+   "moveId": "13a0114b-6cb3-4079-ae51-d51fa15b20ee",
+   "moveSlug": "cammy-sa2-air",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "NEEDS_VISUAL_QA",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-sa2-r16-final_under10mb.gif",
+   "sha256": "a86b938fdf6112b8d9f7f2fdf71cf3bec33138920155c3617edeb251ee17e0f1",
+   "moveId": "b71563a1-1e76-426e-846a-efe566eb419f",
+   "moveSlug": "cammy-sa2",
+   "idSource": "PACKAGE_CLAIM",
+   "status": "NEEDS_VISUAL_QA",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-sa3-r16_under10mb.gif",
+   "sha256": "6d96cc68f38bc08085196420890c107653314be604ca6118b9e0c30ed8c53e28",
+   "moveId": "d6b92f12-9c33-48e7-9220-f75922701a3e",
+   "moveSlug": "cammy-sa3",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-spike-od-r16.gif",
+   "sha256": "7f43ea994c064f21410c0d2a43b5928089d5759638a85f12c71287bce282abbc",
+   "moveId": "3b480694-4948-443a-8a08-c3db8691bcf0",
+   "moveSlug": "cammy-spike-od",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-spiral-od-r16-trimmed.gif",
+   "sha256": "e69b25d86fb28e06f19adcb80ebb73c4833f02f18ca38efd2145babfda9f7fa8",
+   "moveId": "d4eaa3bd-9caa-4bd6-a135-09f0ea3c5813",
+   "moveSlug": "cammy-spiral-od",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "cammy-swing-combination.gif",
+   "sha256": "9be7d6196fb18a591d07492f08122c28f4a7e717c9cf426934c07bf61eecb325",
+   "moveId": "0d8d69be-af5f-4af6-8467-bb409688c5a8",
+   "moveSlug": "cammy-swing-combination",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  }
+ ]
+}

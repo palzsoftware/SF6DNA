@@ -1,0 +1,32 @@
+priority,subclass,character,slug,name,field,db,txt,sourceRecordKey,decision,reason,action
+P0,ROW_GRANULARITY_MISMATCH,ken,ken-air-tatsu-od,OD 空中竜巻旋風脚,active,"2,2,2","11-12, 14-15, 18-19, 22-23, 27-28",ken:web:315,PATCH_OR_SOURCE_DIFFERENCE,DBは非公式表記（...・whiff値）でヒット数も異なる（3回/TXT 5区間）,現行公式値の確認後に置換を検討（DB更新は保留）
+P0,SUSPECTED_MAPPING_ERROR,ken,ken-air-tatsu-od,OD 空中竜巻旋風脚,recovery,14... (21 whiff),着地後14,ken:web:315,PATCH_OR_SOURCE_DIFFERENCE,DBは非公式表記（...・whiff値）でヒット数も異なる（3回/TXT 5区間）,現行公式値の確認後に置換を検討（DB更新は保留）
+P0,SUSPECTED_MAPPING_ERROR,ken,ken-air-tatsu-od,OD 空中竜巻旋風脚,onHit,+7...,D,ken:web:315,PATCH_OR_SOURCE_DIFFERENCE,DBは非公式表記（...・whiff値）でヒット数も異なる（3回/TXT 5区間）,現行公式値の確認後に置換を検討（DB更新は保留）
+P0,ROW_GRANULARITY_MISMATCH,luke,luke-flash-knuckle-od,OD フラッシュナックル,onHit,"-,D",-,luke:web:314,ROW_GRANULARITY,"DBは1段目・2段目を1行に保持（15,33 / 400+400=800）。TXTは314/315の2行",DB更新なし。段ごとに行を分けるかは表示仕様の判断
+P0,SUSPECTED_MAPPING_ERROR,luke,luke-flash-knuckle-od,OD フラッシュナックル,damage,800,400,luke:web:314,ROW_GRANULARITY,"DBは1段目・2段目を1行に保持（15,33 / 400+400=800）。TXTは314/315の2行",DB更新なし。段ごとに行を分けるかは表示仕様の判断
+P0,SUSPECTED_MAPPING_ERROR,mai,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,startup,7,10,mai:web:203,CONFIRMED_DB_ERROR,DBの3段目の値が2段目(DB/TXT mai:web:202)と全項目一致するコピー,SQL候補済み（docs/move-data-fix-20261117/sql/mai_hien_step3_*、公式確認フラグ付き）
+P0,SUSPECTED_MAPPING_ERROR,mai,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,active,7-8,10-11,mai:web:203,CONFIRMED_DB_ERROR,DBの3段目の値が2段目(DB/TXT mai:web:202)と全項目一致するコピー,SQL候補済み（docs/move-data-fix-20261117/sql/mai_hien_step3_*、公式確認フラグ付き）
+P0,SUSPECTED_MAPPING_ERROR,mai,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,recovery,20,28,mai:web:203,CONFIRMED_DB_ERROR,DBの3段目の値が2段目(DB/TXT mai:web:202)と全項目一致するコピー,SQL候補済み（docs/move-data-fix-20261117/sql/mai_hien_step3_*、公式確認フラグ付き）
+P0,SUSPECTED_MAPPING_ERROR,mai,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,onHit,-2,3,mai:web:203,CONFIRMED_DB_ERROR,DBの3段目の値が2段目(DB/TXT mai:web:202)と全項目一致するコピー,SQL候補済み（docs/move-data-fix-20261117/sql/mai_hien_step3_*、公式確認フラグ付き）
+P0,SUSPECTED_MAPPING_ERROR,mai,mai-hien-ren-kyaku-2-5lk-lk-lk,飛燕連脚（3段目）,damage,400,500,mai:web:203,CONFIRMED_DB_ERROR,DBの3段目の値が2段目(DB/TXT mai:web:202)と全項目一致するコピー,SQL候補済み（docs/move-data-fix-20261117/sql/mai_hien_step3_*、公式確認フラグ付き）
+P0,SUSPECTED_MAPPING_ERROR,ryu,ryu-fuwa-triple-strike,中P→弱K→強K（Fuwa Triple Strike）,damage,1800,300,ryu:web:208,WS5_IDENTITY_MAPPING_ERROR,DB行はTC全体（中P→弱K→強K、ダメージ合計1800）。R3候補がTXTの2段目 ryu:web:208 に対応付けている,DB更新なし。WS5担当へ: この対応付けを解除し、TCの段ごとの行へ分割するか対応付けなしにする
+P0,ROW_GRANULARITY_MISMATCH,terry,terry-power-dunk-tc,パワーダンク,active,"7-9,18-20,18-20;42-47","18-20,42-47 ",terry:web:204,ROW_GRANULARITY,"DBは3パート（7,18,18 / 合計2100）。TXTは最終パートのみ（800）",DB更新なし。表示仕様の判断
+P0,ROW_GRANULARITY_MISMATCH,terry,terry-power-dunk-tc,パワーダンク,onHit,"2,D,D",D,terry:web:204,ROW_GRANULARITY,"DBは3パート（7,18,18 / 合計2100）。TXTは最終パートのみ（800）",DB更新なし。表示仕様の判断
+P0,ROW_GRANULARITY_MISMATCH,terry,terry-power-dunk-tc,パワーダンク,onBlock,"-3,-14,-",―,terry:web:204,ROW_GRANULARITY,"DBは3パート（7,18,18 / 合計2100）。TXTは最終パートのみ（800）",DB更新なし。表示仕様の判断
+P0,SUSPECTED_MAPPING_ERROR,terry,terry-power-dunk-tc,パワーダンク,damage,2100,800,terry:web:204,ROW_GRANULARITY,"DBは3パート（7,18,18 / 合計2100）。TXTは最終パートのみ（800）",DB更新なし。表示仕様の判断
+P1,NUMERIC_CONFLICT,aki,aki-orchid-spring,紫泡泉,startup,46,26,aki:web:306,DB_PLACEHOLDER_AND_STARTUP_DIFF,DB持続/硬直などが0のプレースホルダ。発生46は全体フレームの可能性（TXT 26）,DB更新保留。0プレースホルダ12技は別表で確認
+P1,ACTIVE_RANGE_CONFLICT,elena,elena-jumping-heavy-kick-j-hk,ジャンプ強K（オーバーヘッドキック）,active,"10-20 / 10-11,13-20","10-11, 13-20",elena:web:117,CONFIRMED_DB_NOTATION_ERROR,DB値が「全体範囲 / 詳細」の併記。後半がTXTと同値,SQL候補作成（docs/move-data-release-prep-20261117/sql/elena_jhk_active_*）
+P1,NUMERIC_CONFLICT,juri,juri-ankensatsu-od,OD 暗剣殺,onBlock,-10,-8,juri:web:309,PATCH_CHECK_REQUIRED,数値そのものが相違。内部根拠では誤りと断定できない（パッチ差の可能性）,現行公式値の確認待ち（DB更新は保留）
+P1,NUMERIC_CONFLICT,juri,juri-fuhajin-h,強 風破刃,recovery,20,19,juri:web:302,PATCH_CHECK_REQUIRED,数値そのものが相違。内部根拠では誤りと断定できない（パッチ差の可能性）,現行公式値の確認待ち（DB更新は保留）
+P1,NUMERIC_CONFLICT,juri,juri-fuhajin-l,弱 風破刃,recovery,19,※21,juri:web:300,PATCH_CHECK_REQUIRED,数値そのものが相違。内部根拠では誤りと断定できない（パッチ差の可能性）,現行公式値の確認待ち（DB更新は保留）
+P1,NUMERIC_CONFLICT,juri,juri-tensenrin-h,強 天穿輪,recovery,38,着地後14,juri:web:315,DIFFERENT_BASIS,DBは全体硬直、TXTは着地後硬直（基準が異なり比較不能）,DB更新なし（表記基準の統一は別途）
+P1,ACTIVE_RANGE_CONFLICT,juri,juri-tensenrin-l,弱 天穿輪,active,3,"11-13, 16-17",juri:web:313,PATCH_CHECK_REQUIRED,数値そのものが相違。内部根拠では誤りと断定できない（パッチ差の可能性）,現行公式値の確認待ち（DB更新は保留）
+P1,NUMERIC_CONFLICT,juri,juri-tensenrin-m,中 天穿輪,recovery,38,着地後14,juri:web:314,DIFFERENT_BASIS,DBは全体硬直、TXTは着地後硬直（基準が異なり比較不能）,DB更新なし（表記基準の統一は別途）
+P1,NUMERIC_CONFLICT,juri,juri-tensenrin-od,OD 天穿輪,recovery,51,着地後19,juri:web:316,DIFFERENT_BASIS,DBは全体硬直、TXTは着地後硬直（基準が異なり比較不能）,DB更新なし（表記基準の統一は別途）
+P1,ACTIVE_RANGE_CONFLICT,ken,ken-air-tatsu,空中竜巻旋風脚,active,2,"11-12,18-19,26-27",ken:web:314,PATCH_CHECK_REQUIRED,数値そのものが相違。内部根拠では誤りと断定できない（パッチ差の可能性）,現行公式値の確認待ち（DB更新は保留）
+P1,NUMERIC_CONFLICT,ken,ken-air-tatsu,空中竜巻旋風脚,recovery,16...,着地後14,ken:web:314,PATCH_CHECK_REQUIRED,数値そのものが相違。内部根拠では誤りと断定できない（パッチ差の可能性）,現行公式値の確認待ち（DB更新は保留）
+P1,NUMERIC_CONFLICT,ken,ken-dragonlash-l,弱 龍尾脚,damage,950,1000,ken:web:316,PATCH_CHECK_REQUIRED,数値そのものが相違。内部根拠では誤りと断定できない（パッチ差の可能性）,現行公式値の確認待ち（DB更新は保留）
+P1,NUMERIC_CONFLICT,ken,ken-dragonlash-od,OD 龍尾脚,damage,700,1200,ken:web:319,PATCH_CHECK_REQUIRED,数値そのものが相違。内部根拠では誤りと断定できない（パッチ差の可能性）,現行公式値の確認待ち（DB更新は保留）
+P1,NUMERIC_CONFLICT,ken,ken-sa2,SA2 疾風迅雷脚,recovery,32,28,ken:web:401,PATCH_CHECK_REQUIRED,数値そのものが相違。内部根拠では誤りと断定できない（パッチ差の可能性）,現行公式値の確認待ち（DB更新は保留）
+P1,ACTIVE_RANGE_CONFLICT,ken,ken-shoryuken-od,OD 昇龍拳,active,"10,10","6-7, 8-15, 30-31, 32, 33-34, 35-39",ken:web:307,PATCH_CHECK_REQUIRED,数値そのものが相違。内部根拠では誤りと断定できない（パッチ差の可能性）,現行公式値の確認待ち（DB更新は保留）
+P1,NUMERIC_CONFLICT,ken,ken-tatsu-h,強 竜巻旋風脚,damage,1300,1000,ken:web:311,PATCH_CHECK_REQUIRED,数値そのものが相違。内部根拠では誤りと断定できない（パッチ差の可能性）,現行公式値の確認待ち（DB更新は保留）

@@ -1,0 +1,668 @@
+{
+ "schema": 1,
+ "baseSha": "52eddb31e0bbd3ebc316598af7d65a4acb14d087",
+ "driveFolderId": "13s-urRloxz-XoWbuegvfY31uHl9XJtLh",
+ "driveManifest": "SF6DNA_LUKE_GIF_MANIFEST_20261113.md (Drive file 19iF4rVRhRad50UT3XahFqnptnwOEZLZs)",
+ "mp4MaintainedSlugs": [
+  "luke-nose-breaker",
+  "luke-sa1-vulcan-blast",
+  "luke-sa2-eraser",
+  "luke-sa3-pale-rider",
+  "luke-snapback-combo",
+  "luke-triple-impact"
+ ],
+ "holdNoAssetSlugs": [
+  "luke-forward-hp",
+  "luke-forward-throw",
+  "luke-back-throw",
+  "luke-forward-hp-hp"
+ ],
+ "roles": {
+  "candidate": "接続候補(検査合格で CONNECTABLE)",
+  "alt_version": "同じ技の別版。取得しない",
+  "unconfirmed_mapping": "技との対応が不明。映像確認までHOLD",
+  "suspected_old": "旧版の疑い。使用しない",
+  "no_move_match": "50技に対応する技が無い。接続しない"
+ },
+ "files": [
+  {
+   "driveTitle": "22_1-luke-standing-lp.gif",
+   "driveId": "1K3fvqI9yXbd9DVQrsa4EuL7viPlon9Zc",
+   "expectedSize": 1168686,
+   "slug": "luke-standing-lp",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_2-luke-standing-lk.gif",
+   "driveId": "1-JM3IOb59aK3ZCjzBT9hg9Qal5eRy3da",
+   "expectedSize": 1512364,
+   "slug": "luke-standing-lk",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_3-luke-standing-mp.gif",
+   "driveId": "16SdvuZswESWKaXTpwI13X9sdvzPU8X3U",
+   "expectedSize": 1378624,
+   "slug": "luke-standing-mp",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_4-luke-standing-mk.gif",
+   "driveId": "1zEuHy4qTN49fvRZONiAmKTd_seDoLYx-",
+   "expectedSize": 1090154,
+   "slug": "luke-standing-mk",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_5-luke-standing-hp-verified.gif",
+   "driveId": "1-R6QBYcrSstnyv9Jrc7hXDeXU22yV5vc",
+   "expectedSize": 1746659,
+   "slug": "luke-standing-hp",
+   "role": "candidate",
+   "fetch": true,
+   "note": "verified版を採用"
+  },
+  {
+   "driveTitle": "22_6-luke-standing-hk.gif",
+   "driveId": "1NZtu9TcCHL5cEHMOvpWrVEyUjw5Tpqmv",
+   "expectedSize": 1395893,
+   "slug": "luke-standing-hk",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_7-luke-crouching-lp.gif",
+   "driveId": "18PJlBeccrTTL3EgGZlywPAD3qhml0Hov",
+   "expectedSize": 939806,
+   "slug": "luke-crouching-lp",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_8-luke-crouching-lk.gif",
+   "driveId": "1VhSLt6t1cfV308VMjN6LvJNiYYJr1TXm",
+   "expectedSize": 949801,
+   "slug": "luke-crouching-lk",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_9-luke-crouching-mp.gif",
+   "driveId": "12Xw6J_mYpIN2tyLMbmPj8NX-9J3Hbnpz",
+   "expectedSize": 1205731,
+   "slug": "luke-crouching-mp",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "110-luke-calf-squash.gif",
+   "driveId": "1fubtZZsNYQW8U25e_Z8eI-5hkjL-OwT0",
+   "expectedSize": 907267,
+   "slug": "luke-crouching-mk",
+   "role": "candidate",
+   "fetch": true,
+   "note": "台帳に『しゃがみ中K(22_10)』と明記"
+  },
+  {
+   "driveTitle": "22_11-luke-crouching-hp.gif",
+   "driveId": "14BmWuDZoMN5PVBqd_GopoTmWDgFHowdv",
+   "expectedSize": 1357507,
+   "slug": "luke-crouching-hp",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_12-luke-trench-break.gif",
+   "driveId": "1y6YGSqx44MgUVt7MxvumHtixwE-uMKct",
+   "expectedSize": 1619627,
+   "slug": "luke-crouching-hk",
+   "role": "unconfirmed_mapping",
+   "fetch": true,
+   "note": "技名と区分の対応が台帳に無い。参照番号の並び順のみが根拠 / 方針: 映像確認までHOLD"
+  },
+  {
+   "driveTitle": "22_13-luke-jumping-lp.gif",
+   "driveId": "1nLcG7IYfppZv42qN-fsgxRW4Uk0nfOSO",
+   "expectedSize": 2174271,
+   "slug": "luke-jump-lp",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_14-luke-jumping-lk.gif",
+   "driveId": "1DWkG58Ezqhh6sUWCyf1rH0xyyaRF8m2h",
+   "expectedSize": 1916402,
+   "slug": "luke-jump-lk",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_15-luke-jumping-mp.gif",
+   "driveId": "17GINSqd2w2jVeNnqXjYHNq_GX7Z1gIHV",
+   "expectedSize": 1842742,
+   "slug": "luke-jump-mp",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_16-luke-jumping-mk.gif",
+   "driveId": "1ShKJhj099lJRflaMEZAyW76YDPu7_cw6",
+   "expectedSize": 2225692,
+   "slug": "luke-jump-mk",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "117-luke-gunmetal-hammer.gif",
+   "driveId": "1ObSPccdX-H8feXX8bnkTIT_juB13wsbY",
+   "expectedSize": 1127525,
+   "slug": "luke-jump-hp",
+   "role": "candidate",
+   "fetch": true,
+   "note": "台帳に『ジャンプ強P(22_17)』と明記"
+  },
+  {
+   "driveTitle": "22_18-luke-jumping-hk-verified.gif",
+   "driveId": "10vXlcuYWH4Q3a_Fc3z00mZ-URpiMmmij",
+   "expectedSize": 2370412,
+   "slug": "luke-jump-hk",
+   "role": "candidate",
+   "fetch": true,
+   "note": "verified版を採用"
+  },
+  {
+   "driveTitle": "22_19-luke-rawhide.gif",
+   "driveId": "1hp-3lO1U4b_RIteafkZfxW6y4KcrKVmf",
+   "expectedSize": 1998213,
+   "slug": "luke-rawhide",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_20-luke-suppressor.gif",
+   "driveId": "1i3nr_r4DHqWTKjKSMdTXWI3co79EzVqd",
+   "expectedSize": 2134076,
+   "slug": "luke-suppressor",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_21-luke-outlaw-kick.gif",
+   "driveId": "13QxCGIsMdMdOaWY2Bpf-aREyiP-GsSW3",
+   "expectedSize": 2039917,
+   "slug": "luke-outlaw-kick",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_25-luke-triple-impact-full.gif",
+   "driveId": "1bdFCjfbbHiRN62P9P-YcI-V41PryiOyy",
+   "expectedSize": 3782913,
+   "slug": "luke-triple-impact",
+   "role": "candidate",
+   "fetch": true,
+   "note": "既存MP4(approved_for_preview)は維持"
+  },
+  {
+   "driveTitle": "22_27-luke-nose-breaker.gif",
+   "driveId": "16a6ubkV6rRV4NMdxWcC_-INkUYWtcDo0",
+   "expectedSize": 2993724,
+   "slug": "luke-nose-breaker",
+   "role": "candidate",
+   "fetch": true,
+   "note": "既存MP4は維持"
+  },
+  {
+   "driveTitle": "22_29-luke-snapback-combo-full.gif",
+   "driveId": "15e8XXFvtF1CgCo8TRIw2xoEnaNRC-X7V",
+   "expectedSize": 4896925,
+   "slug": "luke-snapback-combo",
+   "role": "candidate",
+   "fetch": true,
+   "note": "既存MP4は維持"
+  },
+  {
+   "driveTitle": "22_30-luke-light-sand-blast.gif",
+   "driveId": "1UnNWcaMq9fcKv8esEBcXzgrhVSAFFIAk",
+   "expectedSize": 2185831,
+   "slug": "luke-sand-blast-l",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_31-luke-medium-sand-blast.gif",
+   "driveId": "1618vGTySHEzh02EQl38wZayFNJ5MZAmn",
+   "expectedSize": 2181571,
+   "slug": "luke-sand-blast-m",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_32-luke-heavy-sand-blast.gif",
+   "driveId": "1k7YhCRr44dKJxMzgNsMdbNhuj6s_Pz8N",
+   "expectedSize": 2237252,
+   "slug": "luke-sand-blast-h",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_33-luke-od-sand-blast.gif",
+   "driveId": "1SjnXi2gnSwBF2xl5DCJpOQDQYMDsQM6J",
+   "expectedSize": 2948897,
+   "slug": "luke-sand-blast-od",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_34-luke-fatal-shot.gif",
+   "driveId": "1B7Dk2MqS3_EoyZZ0I5iO_c20TZUYiXyU",
+   "expectedSize": 3494922,
+   "slug": "luke-fatal-shot",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_35-luke-light-flash-knuckle.gif",
+   "driveId": "111YJ1dyqA6r3QPLESItT6rHyaLXfVbaJ",
+   "expectedSize": 1914529,
+   "slug": "luke-flash-knuckle-l",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_38-luke-medium-flash-knuckle.gif",
+   "driveId": "16R-U3m2l8cPlYq50Ck3bT_Ujl7yN4jch",
+   "expectedSize": 2465833,
+   "slug": "luke-flash-knuckle-m",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_41-luke-heavy-flash-knuckle.gif",
+   "driveId": "1qzBwp8rmtCAr9kV0y_eq_QC15KyHIC0e",
+   "expectedSize": 2771462,
+   "slug": "luke-flash-knuckle-h",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_45-luke-od-flash-knuckle-followup.gif",
+   "driveId": "1ny1UlnnU8PbvntpqbRHN5NygnFpcYCg9",
+   "expectedSize": 2302640,
+   "slug": "luke-flash-knuckle-od",
+   "role": "unconfirmed_mapping",
+   "fetch": true,
+   "note": "台帳に『OD初段のみは未確定、追撃まで出す版は既存』とあるが、このファイルがその版かは台帳に明記なし / 方針: 映像確認までHOLD"
+  },
+  {
+   "driveTitle": "22_46-luke-ddt.gif",
+   "driveId": "1elfXm3gg-u6tvXqPgTHqGpm1oNPpgrK-",
+   "expectedSize": 5304748,
+   "slug": "luke-ddt",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "22_47-luke-aerial-flash-knuckle.gif",
+   "driveId": "15WOvueZXMqhxNKZ3Zi6qOtfoR6j3XUJu",
+   "expectedSize": 3638639,
+   "slug": "luke-aerial-flash-knuckle",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "luke-avenger.gif",
+   "driveId": "1cuF8Tyf50G4FCiYhWHqHcGcZoZJwOMcP",
+   "expectedSize": 2367058,
+   "slug": "luke-avenger",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "luke-no-chaser.gif",
+   "driveId": "11rUapqYvu8tH0sYabbRg22hQmGx8iTRd",
+   "expectedSize": 2851274,
+   "slug": "luke-no-chaser",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "luke-impaler.gif",
+   "driveId": "1dSoxbjX7fX9XNRMyYx_5odSlDyJ8pa0r",
+   "expectedSize": 2809196,
+   "slug": "luke-impaler",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "luke-light-rising-uppercut.gif",
+   "driveId": "1wrBfakYL6mave0_XUDO71DO2L4gHkBNb",
+   "expectedSize": 2924577,
+   "slug": "luke-rising-uppercut-l",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "luke-medium-rising-uppercut.gif",
+   "driveId": "1d_Yvu2XoJWQkENX6mibpMyH4uFHzL6Ue",
+   "expectedSize": 2966895,
+   "slug": "luke-rising-uppercut-m",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "luke-heavy-rising-uppercut.gif",
+   "driveId": "186-Rso3JPlAtFUySk0QaoJgKQvS1aBoa",
+   "expectedSize": 3268075,
+   "slug": "luke-rising-uppercut-h",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "luke-od-rising-uppercut.gif",
+   "driveId": "1cMGy9ksVFClgtEco6hSSKLkikunUuf69",
+   "expectedSize": 3631171,
+   "slug": "luke-rising-uppercut-od",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "luke-slam-dunk.gif",
+   "driveId": "1fxNu-oPsMN_ivKTbUvJeg1LdmiiWETi9",
+   "expectedSize": 3553097,
+   "slug": "luke-slam-dunk",
+   "role": "candidate",
+   "fetch": true,
+   "note": ""
+  },
+  {
+   "driveTitle": "01-luke-sa1-vulcan-blast.gif",
+   "driveId": "1tycXIxuNglm_UOcWWI1slb6Tw7SBhT1J",
+   "expectedSize": 7462061,
+   "slug": "luke-sa1-vulcan-blast",
+   "role": "alt_version",
+   "fetch": false,
+   "note": "SA候補(通常版)。balanced版と二択 / 方針: balanced版を優先、通常版は取得しない"
+  },
+  {
+   "driveTitle": "luke-sa1-balanced.gif",
+   "driveId": "1y6pOnuNFEpxHk9YhqDJ2AIYOErsFTbX3",
+   "expectedSize": 2864902,
+   "slug": "luke-sa1-vulcan-blast",
+   "role": "candidate",
+   "fetch": true,
+   "note": "SA候補(balanced版)"
+  },
+  {
+   "driveTitle": "02-luke-sa2-eraser.gif",
+   "driveId": "1sO2hX2YnAK_B6WGXFOsLpfgWMCHs18_f",
+   "expectedSize": 15873690,
+   "slug": "luke-sa2-eraser",
+   "role": "alt_version",
+   "fetch": false,
+   "note": "SA候補(通常版)。balanced版と二択 / 方針: balanced版を優先、通常版は取得しない"
+  },
+  {
+   "driveTitle": "luke-sa2-balanced.gif",
+   "driveId": "1qUfXzXqULM9CxaCjzIG56IYb-F4WrMC3",
+   "expectedSize": 5995259,
+   "slug": "luke-sa2-eraser",
+   "role": "candidate",
+   "fetch": true,
+   "note": "SA候補(balanced版)"
+  },
+  {
+   "driveTitle": "03-luke-sa3-pale-rider.gif",
+   "driveId": "1xdHvitoXNFadPNRSY3ouN3QiiEP8mUc-",
+   "expectedSize": 19640018,
+   "slug": "luke-sa3-pale-rider",
+   "role": "alt_version",
+   "fetch": false,
+   "note": "SA候補(通常版・19.6MB)。balanced版と二択 / 方針: balanced版を優先、通常版は取得しない"
+  },
+  {
+   "driveTitle": "luke-sa3-balanced.gif",
+   "driveId": "1oUQDJccy6Gk8T4anAeo7-okPvunaKvHv",
+   "expectedSize": 7856912,
+   "slug": "luke-sa3-pale-rider",
+   "role": "candidate",
+   "fetch": true,
+   "note": "SA候補(balanced版)"
+  },
+  {
+   "driveTitle": "22_5-luke-standing-hp.gif",
+   "driveId": "1Xhjmp0HZU2HyXiCUbl-hGCWYd7b7HUxF",
+   "expectedSize": 1378624,
+   "slug": "luke-standing-hp",
+   "role": "suspected_old",
+   "fetch": true,
+   "note": "22_3(立ち中P)とバイト数が完全一致=中Pの誤切り出しの可能性。verified版に置換済みと推定 / 方針: 使用しない(重複内容の検査用にのみ取得)"
+  },
+  {
+   "driveTitle": "22_18-luke-jumping-hk.gif",
+   "driveId": "1i9-OVeRWfJRPvZGBSQ95xRQKXgnZPz1t",
+   "expectedSize": 2225692,
+   "slug": "luke-jump-hk",
+   "role": "suspected_old",
+   "fetch": true,
+   "note": "22_16(ジャンプ中K)とバイト数が完全一致=中Kの誤切り出しの可能性。verified版に置換済みと推定 / 方針: 使用しない(重複内容の検査用にのみ取得)"
+  },
+  {
+   "driveTitle": "22_36-luke-light-flash-knuckle-charged.gif",
+   "driveId": "1wMYSHageINOja2cZQ2asiHUFc5JkPgxe",
+   "expectedSize": 1899869,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "弱FK 溜め版(50技に別スラッグなし)"
+  },
+  {
+   "driveTitle": "22_37-luke-light-flash-knuckle-perfect.gif",
+   "driveId": "1XPs1LFAokPOReIV1Y25maZjH64fOxZ8O",
+   "expectedSize": 3325327,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "弱FK パーフェクト版(同上)"
+  },
+  {
+   "driveTitle": "22_39-luke-medium-flash-knuckle-charged.gif",
+   "driveId": "1WxqLuQsje7LNu_EP1aIT_IMG7R5qG_xf",
+   "expectedSize": 3945365,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "中FK 溜め版(同上)"
+  },
+  {
+   "driveTitle": "22_40-luke-medium-flash-knuckle-perfect.gif",
+   "driveId": "1y3imwXtQQmYUMA6EqhE_tdjT0L_r1hhX",
+   "expectedSize": 3458304,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "中FK パーフェクト版(同上)"
+  },
+  {
+   "driveTitle": "22_42-luke-heavy-flash-knuckle-charged.gif",
+   "driveId": "1EMYfjv92kT3i7mzyw9kzmhILX20VqZPh",
+   "expectedSize": 3839086,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "強FK 溜め版(同上)"
+  },
+  {
+   "driveTitle": "22_43-luke-heavy-flash-knuckle-perfect.gif",
+   "driveId": "1YSl6Hy_5kngTqdejSo-8z76To6Rnr95N",
+   "expectedSize": 3800652,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "強FK パーフェクト版(同上)"
+  },
+  {
+   "driveTitle": "22_48-luke-aerial-flash-knuckle-charged.gif",
+   "driveId": "1qDjrw5d_Ie4qfj0YRwekPJDnUfVB3LSV",
+   "expectedSize": 3723169,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "エアリアルFK 溜め版(同上)"
+  },
+  {
+   "driveTitle": "22_49-luke-od-aerial-flash-knuckle.gif",
+   "driveId": "1_v5iDfJrPxF1JMnecz1Ux-wTtYcqaivQ",
+   "expectedSize": 3988846,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "ODエアリアルFK(同上)"
+  },
+  {
+   "driveTitle": "luke-od-avenger.gif",
+   "driveId": "1K0HfCbVeTdtHbbTW3Y4QDR8POU8Kzu-u",
+   "expectedSize": 2527143,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "ODアベンジャー(同上)"
+  },
+  {
+   "driveTitle": "luke-od-no-chaser.gif",
+   "driveId": "1pN5lqHt5dmWMoSsA_NnrDMfNLr2aGTc7",
+   "expectedSize": 3419537,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "ODノーチェイサー(同上)"
+  },
+  {
+   "driveTitle": "luke-od-impaler.gif",
+   "driveId": "1H7Wr6VD8dVD0M4XuXPDr0vr2Tg5C0TAZ",
+   "expectedSize": 3426861,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "ODインペイラー(同上)"
+  },
+  {
+   "driveTitle": "22_23-luke-double-impact-followup.gif",
+   "driveId": "1-ZOUXEIxvDiQsIsVSLbQG_A804Cors3T",
+   "expectedSize": 2836499,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "ダブルインパクト2段目。fixtureの『前強P・強P』と同一かは未確認。台帳には記載なし"
+  },
+  {
+   "driveTitle": "22_64-luke-ca-pale-rider.gif",
+   "driveId": "150KS5e91tptiXc6Wwq2rd_EKKnVStRLW",
+   "expectedSize": 9551436,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "CA(クリティカルアーツ)。50技に該当なし"
+  },
+  {
+   "driveTitle": "22_65-luke-sweeper.gif",
+   "driveId": "1lz3jUm9QDp2swYQx8IxKUfpXLSJ4LnWu",
+   "expectedSize": 3833372,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "50技に該当なし・台帳に記載なし"
+  },
+  {
+   "driveTitle": "22_66-luke-scrapper.gif",
+   "driveId": "1n00Knl1qRT04-p1QYb8n1VZZ3Z1E4qVm",
+   "expectedSize": 3574082,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "50技に該当なし・台帳に記載なし"
+  },
+  {
+   "driveTitle": "22_67-luke-forward-dash.gif",
+   "driveId": "17gbkBhFMm6KIdFnOps00qVtK5mFUj3jt",
+   "expectedSize": 1391720,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "台帳(07:58)より後(17:08)の追加分。台帳70本と実体71本の差はこの1本"
+  },
+  {
+   "driveTitle": "22_69-luke-muzzle-flash.gif",
+   "driveId": "1wP1_u269KHS5a-JQZif2CoXABgDhH_yH",
+   "expectedSize": 2724984,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "50技に該当なし・台帳に記載なし"
+  },
+  {
+   "driveTitle": "22_72-luke-drive-parry.gif",
+   "driveId": "1zBaHkRDTyvkv4W95q_v-2eRKxQGpz5Tb",
+   "expectedSize": 691073,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "50技に該当なし"
+  },
+  {
+   "driveTitle": "22_75-luke-parry-drive-rush.gif",
+   "driveId": "1vNTbF_dVCnbOzkUYwyKI4UzjLzvlYEEg",
+   "expectedSize": 1608045,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "50技に該当なし"
+  },
+  {
+   "driveTitle": "22_76-luke-cancel-drive-rush.gif",
+   "driveId": "1Fv602ZoKz0Tr3Q_jmFe68ybSJFqePE45",
+   "expectedSize": 2079774,
+   "slug": null,
+   "role": "no_move_match",
+   "fetch": false,
+   "note": "50技に該当なし"
+  }
+ ]
+}

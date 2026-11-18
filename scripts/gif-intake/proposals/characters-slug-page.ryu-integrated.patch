@@ -1,0 +1,22 @@
+--- a/v2-web/src/app/characters/[slug]/page.tsx (Ryuブランチ 25dd9b9)
++++ b/v2-web/src/app/characters/[slug]/page.tsx (Ryu + Luke QA統合案)
+@@ -1,4 +1,5 @@
+ import { connectRyuQaMotion } from "@/lib/ryu-qa-motion";
++import { connectLocalQaGifToBundle } from "@/lib/local-qa-gif-page";
+ import { Suspense } from "react";
+ import { youtubeVideoIdFromUrl } from "@/lib/character-related-video-contract.mjs";
+ import { headers } from "next/headers";
+@@ -113,10 +114,12 @@
+     records:(await import("@/data/SF6DNA_WS5_OFFICIAL_TXT_CANONICAL_20261026.json")).default as unknown as Record<string,CanonicalTxtRecord>,
+   }) : null;
+   const resolvedBundle = connectedTxt?.bundle ?? bundle;
+-  const finalBundle = resolvedBundle ? { ...resolvedBundle,
++  const ryuConnectedBundle = resolvedBundle ? { ...resolvedBundle,
+     moves: connectRyuQaMotion(character.slug, resolvedBundle.moves, (await headers()).get("host"),
+       data.source === "device-preview" ? previewToken : null),
+   } : null;
++  // ローカルQA(開発環境のlocalhost限定)のみ、media の無い技へ未承認GIFを接続する。Ryuの接続結果やMP4には触れない
++  const finalBundle = await connectLocalQaGifToBundle({ characterSlug: character.slug, bundle: ryuConnectedBundle, host: admission.host });
+   // Only the existing authenticated Preview RPC is eligible. Fixture/research are excluded.
+   const strategyCardsAuthorized = process.env.VERCEL_ENV === "preview" && Boolean(previewToken) && data.source === "device-preview";
+   const strategyCards = strategyCardsAuthorized && finalBundle ? projectPreviewStrategyCards(finalBundle) : [];

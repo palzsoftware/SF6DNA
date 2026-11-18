@@ -1,0 +1,9 @@
+# ジュリ②特殊技／③必殺技用 非公開GIF候補
+
+新規3本。全フレーム読込・480×270・20fps・ループ・容量は検査PASS。入力と正式な技名・特殊技/必殺技の区分はHOLD。
+
+既存7本＋過去候補7本を維持し、同一区間での再制作なし。同一技の別収録による重複は未解消。
+
+- juri_044314_103.20_104.90_air_spinning_hit_effect_HOLD.gif：clip_1364780_20261004_044314.mp4 103.2–104.9秒 SHA256=104850418a8ea3847728e8a7be12ca74d4a6269fa11fd416420cb702fc33d196
+- juri_044314_59.48_61.25_purple_arc_multi_hit_ground_attack_HOLD.gif：clip_1364780_20261004_044314.mp4 59.48–61.25秒 SHA256=9b6e16f141c8e9d52a8819960bac97e0844bac4a9b8a942fbe9354278f883b8c
+- juri_044445_30.35_32.30_forward_strike_fire_impact_HOLD.gif：clip_1364780_20261004_044445.mp4 30.35–32.3秒 SHA256=4a6115eb3c6d517ad938799ea49de4dde6897be3b89903929243d2188403913e

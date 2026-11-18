@@ -1,0 +1,59 @@
+{
+ "source": "Drive JURI_CLOSEOUT_MANON_NEW3_manifest_20261116.json (id 1_o_cWGBNzJziEopWx_pwLuYYwlyQK6lw) の assets を転記。GIF実体は個別ファイルとしてDriveから取得しSHA照合済み",
+ "new_gifs": [
+  {
+   "filename": "manon_134616_040p60_044p20_throw_variant_HOLD.gif",
+   "source_file": "clip_1364780_20260924_134616.mp4",
+   "start_s": 40.6,
+   "end_s": 44.2,
+   "frames": 72,
+   "fps": 20,
+   "width": 480,
+   "height": 270,
+   "loop": 0,
+   "size_bytes": 5405985,
+   "sha256": "af910188316377abff0b6c047cb65fbdb850bf4e5a165789d573418493c033ed",
+   "technical_QA": "PASS",
+   "visual_QA": "HOLD",
+   "move_id": "UNVERIFIED",
+   "input_condition": "UNVERIFIED",
+   "publication": "NOT_APPROVED"
+  },
+  {
+   "filename": "manon_134616_158p80_163p20_close_throw_variant_HOLD.gif",
+   "source_file": "clip_1364780_20260924_134616.mp4",
+   "start_s": 158.8,
+   "end_s": 163.2,
+   "frames": 88,
+   "fps": 20,
+   "width": 480,
+   "height": 270,
+   "loop": 0,
+   "size_bytes": 6513161,
+   "sha256": "6d4ae9291b5c10828e60ff77545d5b6af5dc9725c3b357eb6205a4f78723e1e3",
+   "technical_QA": "PASS",
+   "visual_QA": "HOLD",
+   "move_id": "UNVERIFIED",
+   "input_condition": "UNVERIFIED",
+   "publication": "NOT_APPROVED"
+  },
+  {
+   "filename": "manon_134616_240p00_244p00_kick_impact_variant_HOLD.gif",
+   "source_file": "clip_1364780_20260924_134616.mp4",
+   "start_s": 240.0,
+   "end_s": 244.0,
+   "frames": 80,
+   "fps": 20,
+   "width": 480,
+   "height": 270,
+   "loop": 0,
+   "size_bytes": 5572924,
+   "sha256": "1e740b7e29688c2777eca3f60b796f75dd20e93686d05be569d5b216d3923291",
+   "technical_QA": "PASS",
+   "visual_QA": "HOLD",
+   "move_id": "UNVERIFIED",
+   "input_condition": "UNVERIFIED",
+   "publication": "NOT_APPROVED"
+  }
+ ]
+}

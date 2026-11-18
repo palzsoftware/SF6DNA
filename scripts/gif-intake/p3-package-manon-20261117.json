@@ -1,0 +1,54 @@
+{
+ "date": "2026-11-17",
+ "character": "manon",
+ "records": [
+  {
+   "character": "manon",
+   "asset_filename": "manon-standing-lp.gif",
+   "asset_sha256": "ee76c1d6319d434ac394bb9c7b5c18d5015afe452a8a367874a35c091a20cd1c",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "manon",
+   "asset_filename": "manon-standing-mp.gif",
+   "asset_sha256": "99652d337a76c69d92dfc7b3205b878c0ca0668d72a5a7e17cf99dbed8034525",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "manon",
+   "asset_filename": "manon-standing-hp.gif",
+   "asset_sha256": "3fe3851ef3c3d286491dbf62248724919098fe2013f1b60bac5d9c3c7ab601af",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "manon",
+   "asset_filename": "manon-standing-lk.gif",
+   "asset_sha256": "bc9853b6a1b79f195db176ac1a717f01350b09862a8bb1b341822f6dda27a46e",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "manon",
+   "asset_filename": "manon-standing-mk.gif",
+   "asset_sha256": "c49cb57a7c288fa515aa65d69e16210e15d916bfc37bf7ccb4ee0fb5bf5f0322",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "manon",
+   "asset_filename": "manon-standing-hk.gif",
+   "asset_sha256": "85a3f9bee4adb8aec993df0b497e242b4cd9f7c7fb3bf15cecd38814426771a0",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  }
+ ]
+}

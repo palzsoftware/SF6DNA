@@ -1,0 +1,108 @@
+{
+ "generated": "2026-11-16",
+ "scope": "special/super/throw/target_combo/unique",
+ "note": "技単位の集計。通常技・共通システムは対象外。素材があることは映像QA・承認を意味しない",
+ "perCharacter": {
+  "jp": {
+   "targetMoves": 41,
+   "covered": 37,
+   "gaps": [
+    {
+     "slug": "jp-back-mp",
+     "name": "後ろ中P / Back + Medium Punch",
+     "moveType": "unique"
+    },
+    {
+     "slug": "jp-amnesia",
+     "name": "アムネジア / Amnesia",
+     "moveType": "special"
+    },
+    {
+     "slug": "jp-amnesia-od",
+     "name": "OD アムネジア / Amnesia",
+     "moveType": "special"
+    },
+    {
+     "slug": "jp-tornado",
+     "name": "トルネード / Tornado",
+     "moveType": "throw"
+    }
+   ],
+   "gapCount": 4
+  },
+  "luke": {
+   "targetMoves": 32,
+   "covered": 30,
+   "gaps": [
+    {
+     "slug": "luke-forward-hp",
+     "name": "前強P",
+     "moveType": "unique"
+    },
+    {
+     "slug": "luke-flash-knuckle-od",
+     "name": "OD フラッシュナックル",
+     "moveType": "special"
+    }
+   ],
+   "gapCount": 2
+  },
+  "manon": {
+   "targetMoves": 31,
+   "covered": 21,
+   "gaps": [
+    {
+     "slug": "manon-back-mk",
+     "name": "後ろ中K",
+     "moveType": "unique"
+    },
+    {
+     "slug": "manon-temps-lie-2hp",
+     "name": "タン・リエ（2HP > HP）",
+     "moveType": "target_combo"
+    },
+    {
+     "slug": "manon-renverse-l",
+     "name": "弱 ランヴェルセ",
+     "moveType": "special"
+    },
+    {
+     "slug": "manon-renverse-m",
+     "name": "中 ランヴェルセ",
+     "moveType": "special"
+    },
+    {
+     "slug": "manon-renverse-h",
+     "name": "強 ランヴェルセ",
+     "moveType": "special"
+    },
+    {
+     "slug": "manon-grand-fouette",
+     "name": "グラン・フェッテ",
+     "moveType": "special"
+    },
+    {
+     "slug": "manon-sa3",
+     "name": "SA3 パ・ド・ドゥ",
+     "moveType": "super"
+    },
+    {
+     "slug": "manon-ca",
+     "name": "CA パ・ド・ドゥ",
+     "moveType": "super"
+    },
+    {
+     "slug": "manon-forward-throw",
+     "name": "前投げ",
+     "moveType": "throw"
+    },
+    {
+     "slug": "manon-back-throw",
+     "name": "後ろ投げ",
+     "moveType": "throw"
+    }
+   ],
+   "gapCount": 10
+  }
+ }
+}

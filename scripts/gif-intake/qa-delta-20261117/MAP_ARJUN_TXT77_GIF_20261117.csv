@@ -1,0 +1,78 @@
+txt_key,skill,command,startup,active,recovery,gif_file,gif_sha256,status
+arjun:web:100,立ち弱P（ぶつ）,LP,4,4-6,9,,,GIF_NOT_RECEIVED
+arjun:web:101,立ち弱K（蹴る）,LK,6,6-8,14,,,GIF_NOT_RECEIVED
+arjun:web:102,立ち中P（ぶん殴る）,MP,11,11-13,19,,,GIF_NOT_RECEIVED
+arjun:web:103,立ち中K（引っ掛ける）,MK,7,7-9,19,,,GIF_NOT_RECEIVED
+arjun:web:104,立ち強P（打ち砕く）,HP,15,15-16,24,,,GIF_NOT_RECEIVED
+arjun:web:105,立ち強K（ぶっ飛ばす）,HK,14,14-17,21,,,GIF_NOT_RECEIVED
+arjun:web:106,しゃがみ弱P（小突く）,2 + LP,5,5-7,9,,,GIF_NOT_RECEIVED
+arjun:web:107,しゃがみ弱K（突く）,2 + LK,5,5-7,12,,,GIF_NOT_RECEIVED
+arjun:web:108,しゃがみ中P（はらう）,2 + MP,9,9-11,22,,,GIF_NOT_RECEIVED
+arjun:web:109,しゃがみ中K（伸ばす）,2 + MK,8,8-10,18,,,GIF_NOT_RECEIVED
+arjun:web:110,しゃがみ強P（かちあげる）,2 + HP,10,10-16,22,,,GIF_NOT_RECEIVED
+arjun:web:111,しゃがみ強K（踏み潰す）,2 + HK,14,14-16,25,,,GIF_NOT_RECEIVED
+arjun:web:112,ジャンプ弱P（打つ）,（ジャンプ中に）LP,5,5-12,着地後3,,,GIF_NOT_RECEIVED
+arjun:web:113,ジャンプ弱K（踏む）,（ジャンプ中に）LK,7,7-15,着地後3,,,GIF_NOT_RECEIVED
+arjun:web:114,ジャンプ中P（すくい上げる）,（ジャンプ中に）MP,8,8-12,着地後3,,,GIF_NOT_RECEIVED
+arjun:web:115,ジャンプ中K（突き破る）,（ジャンプ中に）MK,9,9-16,着地後3,,,GIF_NOT_RECEIVED
+arjun:web:116,ジャンプ強P（振り回す）,（ジャンプ中に）HP,10,10-15,着地後3,,,GIF_NOT_RECEIVED
+arjun:web:117,ジャンプ強K（叩き壊す）,（ジャンプ中に）HK,10,10-16,着地後3,,,GIF_NOT_RECEIVED
+arjun:web:200,仁義の一刀,6 + HP,22,22-24,21,,,GIF_NOT_RECEIVED
+arjun:web:201,踏み潰す,,14,14-16,25,,,GIF_NOT_RECEIVED
+arjun:web:202,頑強な跳舞,6 + HK,19,19-21,21,,,GIF_NOT_RECEIVED
+arjun:web:203,規律の躍動,MK>HK,17,17-19,20,,,GIF_NOT_RECEIVED
+arjun:web:204,不敵の調べ,HP>HP,16,16-18,30,,,GIF_NOT_RECEIVED
+arjun:web:205,鎮圧,HP>HP>HP,18,18-20,40,,,GIF_NOT_RECEIVED
+arjun:web:206,追跡,HP>HP>HK,,,,,,GIF_NOT_RECEIVED
+arjun:web:208,無情の拳,HK>HP,24,24-26,42,,,GIF_NOT_RECEIVED
+arjun:web:209,無情の拳（ホールド）,HK>HPホールド,41,41-43,42,,,GIF_NOT_RECEIVED
+arjun:web:300,弱 大義の巨腕,236 + LP,15,15-21,17,,,GIF_NOT_RECEIVED
+arjun:web:301,中 大義の巨腕,236 + MP,20,20-26,17,,,GIF_NOT_RECEIVED
+arjun:web:302,強 大義の巨腕,236 + HP,28,28-33,20,,,GIF_NOT_RECEIVED
+arjun:web:303,追撃,（大義の巨腕中に）6 + LP | MP | HP,20,20-27,19,,,GIF_NOT_RECEIVED
+arjun:web:304,OD 大義の巨腕,236 + LPMPHP,23,23-28,20,,,GIF_NOT_RECEIVED
+arjun:web:305,OD 追撃,（OD大義の巨腕中に）6 + LP | MP | HP,20,20-27,19,,,GIF_NOT_RECEIVED
+arjun:web:306,弱 厳酷な岩肩,623 + LP,19,19-34,22,,,GIF_NOT_RECEIVED
+arjun:web:307,中 厳酷な岩肩,623 + MP,23,23-41,19,,,GIF_NOT_RECEIVED
+arjun:web:308,強 厳酷な岩肩,623 + HP,28,28-48,27,,,GIF_NOT_RECEIVED
+arjun:web:309,過剰な正義,（厳酷な岩肩で岩に触れると自動派生）,11,11-26,27,,,GIF_NOT_RECEIVED
+arjun:web:310,OD 厳酷な岩肩,623 + LPMPHP,22,22-42,27,,,GIF_NOT_RECEIVED
+arjun:web:311,OD 過剰な正義,（厳酷な岩肩で岩に触れると自動派生）,11,11-26,27,,,GIF_NOT_RECEIVED
+arjun:web:312,息吹の円筒,236 + LK | MK | HK,17,,,,,GIF_NOT_RECEIVED
+arjun:web:313,弱 息吹の震撼,（息吹の円筒中に）6 + LP,15,15-24,18,,,GIF_NOT_RECEIVED
+arjun:web:314,中 息吹の震撼,（息吹の円筒中に）6 + MP,15,15-24,18,,,GIF_NOT_RECEIVED
+arjun:web:315,強 息吹の震撼,（息吹の円筒中に）6 + HP,15,15-24,18,,,GIF_NOT_RECEIVED
+arjun:web:316,息吹の震撼(飛び道具),　,,,,,,GIF_NOT_RECEIVED
+arjun:web:317,OD 息吹の円筒,236 + LKMKHK,17,,,,,GIF_NOT_RECEIVED
+arjun:web:318,OD 弱 息吹の震撼,（OD息吹の円筒中に）6 + LP,15,15-24,18,,,GIF_NOT_RECEIVED
+arjun:web:319,OD 中 息吹の震撼,（OD息吹の円筒中に）6 + MP,15,15-24,18,,,GIF_NOT_RECEIVED
+arjun:web:320,OD 強 息吹の震撼,（OD息吹の円筒中に）6 + HP,15,15-24,18,,,GIF_NOT_RECEIVED
+arjun:web:321,OD 息吹の震撼(飛び道具),　,,,,,,GIF_NOT_RECEIVED
+arjun:web:322,弱 神気の巨巌,214 + LK,25,25-34,21,,,GIF_NOT_RECEIVED
+arjun:web:323,中 神気の巨巌,214 + MK,25,25-34,21,,,GIF_NOT_RECEIVED
+arjun:web:324,強 神気の巨巌,214 + HK,25,25-34,21,,,GIF_NOT_RECEIVED
+arjun:web:325,神気の巨巌(飛び道具),　,,,,,,GIF_NOT_RECEIVED
+arjun:web:326,OD 弱 神気の巨巌,214 + LKMK,20,20-29,21,,,GIF_NOT_RECEIVED
+arjun:web:327,OD 中 神気の巨巌,214 + LKHK,20,20-29,21,,,GIF_NOT_RECEIVED
+arjun:web:328,OD 強 神気の巨巌,214 + MKHK,20,20-29,21,,,GIF_NOT_RECEIVED
+arjun:web:329,OD 神気の巨巌(飛び道具),　,,,,,,GIF_NOT_RECEIVED
+arjun:web:330,鬼気迫る尋問,（近距離で）63214 +LP | MP | HP,8,8-10,35,,,GIF_NOT_RECEIVED
+arjun:web:331,OD 鬼気迫る尋問,（近距離で）63214 + LPMPHP,26,26-28,38,,,GIF_NOT_RECEIVED
+arjun:web:332,不撓の警衛,5252 + HK,3,3-28,30,,,GIF_NOT_RECEIVED
+arjun:web:333,倫理の崩壊,（不撓の警衛中に）LP | MP | HP,28,28-65,23,,,GIF_NOT_RECEIVED
+arjun:web:400,SA1 破壊の蛮声,236236 + LK | MK | HK,8,8-69,67,,,GIF_NOT_RECEIVED
+arjun:web:401,SA2 忘却の一槌,214214 + LP | MP | HP,9,9-12,57,,,GIF_NOT_RECEIVED
+arjun:web:402,SA3 秩序の鬼神,236236 + LP | MP | HP,13,13-15,58,,,GIF_NOT_RECEIVED
+arjun:web:403,CA 秩序の鬼神,（体力25%以下で）236236 + LP | MP | HP,13,13-15,58,,,GIF_NOT_RECEIVED
+arjun:web:500,豪胆な制裁,（近距離で）N or 6 + LPLK,5,5-7,23,,,GIF_NOT_RECEIVED
+arjun:web:501,処罰の天秤,（近距離で）4 + LPLK,5,5-7,23,,,GIF_NOT_RECEIVED
+arjun:web:600,前方ステップ,5656 + 6,,,,,,GIF_NOT_RECEIVED
+arjun:web:601,後方ステップ,5454 + 4,,,,,,GIF_NOT_RECEIVED
+arjun:web:602,ドライブインパクト（暴力沙汰）,HPHK,26,26-27,35,,,GIF_NOT_RECEIVED
+arjun:web:603,[ガード時]ドライブリバーサル（過剰防衛）,（ガード中 or ドライブパリィ成立中に）6 + HPHK,20,20-22,26,,,GIF_NOT_RECEIVED
+arjun:web:604,[起き上がり時]ドライブリバーサル（過剰防衛）,（起き上がり時に）6 ＋ HPHK,18,18-20,26,,,GIF_NOT_RECEIVED
+arjun:web:605,ドライブパリィ,MPMK,1,[※2] 1-12,33,,,GIF_NOT_RECEIVED
+arjun:web:606,ジャストパリィ（打撃）,ガード方向 ＋  MPMK,1,　,1,,,GIF_NOT_RECEIVED
+arjun:web:607,ジャストパリィ（飛び道具）,MPMK,1,　,10,,,GIF_NOT_RECEIVED
+arjun:web:608,パリィドライブラッシュ,（ドライブパリィ中に）5656 + MPMK + 6,,,,,,GIF_NOT_RECEIVED
+arjun:web:609,キャンセルドライブラッシュ,（必殺技キャンセル可能な攻撃ヒット中に）5656 + 6,,,,,,GIF_NOT_RECEIVED

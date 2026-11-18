@@ -129,6 +129,7 @@ test('a nonpilot card keeps a byte-for-byte text recipe instead of enabling icon
   };
   const recipe = loadComponent('combo-input-recipe.tsx', { '@/lib/combo-input-tokens': testModule.exports });
   const { PilotComboCard } = loadComponent('pilot-combo-card.tsx', {
+    './strategy-card': loadComponent('strategy-card.tsx', {}),
     './sf6-card-command': loadSource('components/sf6-card-command.ts'),
     './combo-input-recipe': recipe,
     'next/link': { default: props => React.createElement('a', props), __esModule: true },

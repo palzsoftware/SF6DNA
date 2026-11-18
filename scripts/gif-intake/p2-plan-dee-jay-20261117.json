@@ -1,0 +1,220 @@
+{
+ "character": "dee-jay",
+ "total": 21,
+ "summary": {
+  "CONNECT_READY": 21
+ },
+ "holdReasons": {},
+ "rows": [
+  {
+   "file": "001-dee-jay-standing-lp.gif",
+   "sha256": "5fb8518f8a31d2516c5d1992596f39574d3a9c654568ff7bad442b8a784fa452",
+   "moveId": "36de8f7a-a910-4315-8507-77174da08fef",
+   "moveSlug": "dee-jay-standing-lp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "002-dee-jay-standing-lk.gif",
+   "sha256": "47acd66dbb73925028acc6aefedcb5ed3986fa0187d5216f9bd52b7094040684",
+   "moveId": "7debb114-baa2-4cbc-91b7-952b3d2ec571",
+   "moveSlug": "dee-jay-standing-lk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "003-dee-jay-standing-mp.gif",
+   "sha256": "7538ee63cd8dc4666bda9ec2af70f745cbd97ef66c4bae3f24aefd240b48dc54",
+   "moveId": "a37ee100-dbdd-41f9-94a7-e1cc975d98c1",
+   "moveSlug": "dee-jay-standing-mp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "004-dee-jay-standing-mk.gif",
+   "sha256": "2314d5735cc4df2c968f7f74dd0ccf804f01b57477cd9efbf735d13d63a2cbd2",
+   "moveId": "54a83ad9-53e4-4f7b-ae16-8e827ebbbb2c",
+   "moveSlug": "dee-jay-standing-mk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "005-dee-jay-standing-hp.gif",
+   "sha256": "023843f59017971c37977ee3b9545036a4df5592fd7c7a51648552802809bb24",
+   "moveId": "ebdd3009-fee4-4e55-87f1-b26439728dde",
+   "moveSlug": "dee-jay-standing-hp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "006-dee-jay-standing-hk.gif",
+   "sha256": "c26df0993da333602f30bf9daf690a1adabf4f30884f791ee63a701e0a2973af",
+   "moveId": "02fff13d-238d-4072-af8d-da1f75e1654c",
+   "moveSlug": "dee-jay-standing-hk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "007-dee-jay-crouching-lp.gif",
+   "sha256": "c78d97aff5679752ae9bed75f495501043f8e18e3203854266cad61f79703fc6",
+   "moveId": "57beb616-7d69-45dd-972e-226521ec86e7",
+   "moveSlug": "dee-jay-crouching-lp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "008-dee-jay-crouching-lk.gif",
+   "sha256": "5b3179958a31e48306682ce2a9e1c16285fda494af532f846bc40b69bc560f3f",
+   "moveId": "594eaec7-0b10-49a4-b975-faab51565605",
+   "moveSlug": "dee-jay-crouching-lk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "009-dee-jay-crouching-mp.gif",
+   "sha256": "d35c5c791ef7af38fb1c20d06510941c1f471298613f7ba411f2ae6c46bb789f",
+   "moveId": "e0e9439e-1ded-4732-b34a-f669df106a59",
+   "moveSlug": "dee-jay-crouching-mp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "010-dee-jay-crouching-mk.gif",
+   "sha256": "a914a907b56d2014790c0d23a079b498c39479aabe7622af41bd8aceb4df0125",
+   "moveId": "b60102f5-af5c-492a-bca6-0c0277bf69b7",
+   "moveSlug": "dee-jay-crouching-mk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "011-dee-jay-crouching-hp.gif",
+   "sha256": "84a40ff151aea32371a6b27eef8b176a3601443b5a320d8dc836db903a49f005",
+   "moveId": "516288aa-46c3-433c-b5ff-b72972e5baa8",
+   "moveSlug": "dee-jay-crouching-hp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "012-dee-jay-crouching-hk.gif",
+   "sha256": "b08f0f7e006e05cb40b252b9cec018375543219b87e95f9548cea23609369824",
+   "moveId": "e1052f7b-e246-4ca4-9e35-88a3eb86f96b",
+   "moveSlug": "dee-jay-crouching-hk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "031-dee-jay-air-slasher-l.gif",
+   "sha256": "e3093f539bbda5a2465219bc649aafad816091f1365cea0de92d594817dbad59",
+   "moveId": "373ec31c-6d7d-414e-a3e2-39d1e1c17e0d",
+   "moveSlug": "dee-jay-air-slasher-l",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "032-dee-jay-air-slasher-m.gif",
+   "sha256": "15ec688be4e3d58e8648dabc161c06a2ef64ca6b34f0992a1f4d1e31248b1729",
+   "moveId": "048c78d4-2da9-461b-86ff-fb6b96a66f0b",
+   "moveSlug": "dee-jay-air-slasher-m",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "033-dee-jay-air-slasher-h.gif",
+   "sha256": "79fb80b806bddf3818a9dcd3a4a6ddfbfa639b3775c3e8450e5e6f8a41d94210",
+   "moveId": "01a68cd2-ff35-4104-9ac6-9ed44641fdb1",
+   "moveSlug": "dee-jay-air-slasher-h",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "036-dee-jay-jackknife-l.gif",
+   "sha256": "8016f1908708465ece5bd1be9c066ebaa31dd28abd836669a581c69eba8646d2",
+   "moveId": "3f8211e6-9fdc-45ba-9558-bd5908199ec4",
+   "moveSlug": "dee-jay-jackknife-l",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "037-dee-jay-jackknife-m.gif",
+   "sha256": "5f455f2204d5c33853eb5bf2eab4ba5eca469343a34a62f1758e005f5cf1e48c",
+   "moveId": "fe965804-a210-4d77-93a3-295f3d7910b0",
+   "moveSlug": "dee-jay-jackknife-m",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "038-dee-jay-jackknife-h.gif",
+   "sha256": "77a0ada9a367111a94a3c140ba844fb2bba05f589eb2fe7bbe328091fccb5636",
+   "moveId": "bc0d5768-33c4-44e4-a841-1c92751c77d8",
+   "moveSlug": "dee-jay-jackknife-h",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "044-dee-jay-mgu-l.gif",
+   "sha256": "41cb37bced8afb0f9cb1bec4306095672660f8edff4889609048a7cf030a0ae4",
+   "moveId": "6a35dfc9-4303-420b-ad28-6295c8abe713",
+   "moveSlug": "dee-jay-mgu-l",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "045-dee-jay-mgu-m.gif",
+   "sha256": "2f2dc3b39f65d005e26d02ddcbff36c4163c01e6a08cc5a147b29421d1b32d5c",
+   "moveId": "1d7e7bdf-87a6-48f4-b57b-ae5e4a39441e",
+   "moveSlug": "dee-jay-mgu-m",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "046-dee-jay-mgu-h.gif",
+   "sha256": "3e52ee275925ace330a08260860cf78320bffe5c7d6623f6cbe12d2d6763516d",
+   "moveId": "6244edb0-12f3-4323-93bb-d3dbd65994d7",
+   "moveSlug": "dee-jay-mgu-h",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  }
+ ]
+}

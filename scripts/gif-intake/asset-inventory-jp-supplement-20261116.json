@@ -1,0 +1,27 @@
+{
+ "generated": "2026-11-16",
+ "records": [
+  {
+   "character": "jp",
+   "file": "9_36-jp-od-stribog.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "b95d154c38fbd0fc86491df20e80bc2a9f42bcd21bc02c94b8246767e071211b",
+   "width": 480,
+   "height": 270,
+   "frames": 43,
+   "durationMs": 2150,
+   "bytes": 2839138
+  },
+  {
+   "character": "jp",
+   "file": "9_50-jp-od-torbalan.gif",
+   "assetStatus": "ASSET_VERIFIED",
+   "sha256": "a0789c82011bd8bb25abf3f56b698cc13954cde76ac0f8ccdaff0e5730fe87c2",
+   "width": 480,
+   "height": 270,
+   "frames": 45,
+   "durationMs": 2250,
+   "bytes": 3669017
+  }
+ ]
+}

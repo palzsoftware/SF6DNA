@@ -1,0 +1,121 @@
+{
+ "character": "juri",
+ "total": 9,
+ "summary": {
+  "HOLD": 6,
+  "CONNECT_READY": 3
+ },
+ "holdReasons": {
+  "MAPPING_HOLD": 2,
+  "NO_MOVE_ID": 3,
+  "STRENGTH_NOT_VERIFIED": 3,
+  "ASSET_NOT_RETRIEVED": 1
+ },
+ "rows": [
+  {
+   "file": "juri_044011_019p80_021p00_unmapped_HOLD.gif",
+   "sha256": "9d2b39b12af465678f0ed911c8c92ac10a06f519635727b83892caa6aca13106",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "MAPPING_HOLD",
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "juri_044011_033p55_034p95_unmapped_HOLD.gif",
+   "sha256": "e1f82373a475d5a995428eab0dae4cd29b036ed8e2d0619f69a8ab6843eef8ef",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "MAPPING_HOLD",
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "17_62-juri-light-tensenrin.gif",
+   "sha256": "a05706711d02a2a64bd79eaa610a1a1ec1cd41c1b12a1cf0288618262cfd07d5",
+   "moveId": "1e7d1cc0-8118-4c5a-8b43-94f585c2a83e",
+   "moveSlug": "juri-tensenrin-l",
+   "idSource": "ALIAS_TABLE",
+   "status": "HOLD",
+   "reasons": [
+    "STRENGTH_NOT_VERIFIED"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "17_63-juri-medium-tensenrin.gif",
+   "sha256": "3dcc62b7419585992f4aa223a4dc42510470548ccd9ac0280f14035d6d655f3f",
+   "moveId": "9f311585-00ac-4e7c-83fc-08a04f4f9f8d",
+   "moveSlug": "juri-tensenrin-m",
+   "idSource": "ALIAS_TABLE",
+   "status": "HOLD",
+   "reasons": [
+    "STRENGTH_NOT_VERIFIED"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "17_64-juri-heavy-tensenrin.gif",
+   "sha256": "a570ba3a0a5e3af1e7494379b97cdbcdd80b93154baeae165447f05d0d19cdb0",
+   "moveId": "1201daae-e1b8-47aa-88d9-19be3fb4f80b",
+   "moveSlug": "juri-tensenrin-h",
+   "idSource": "ALIAS_TABLE",
+   "status": "HOLD",
+   "reasons": [
+    "STRENGTH_NOT_VERIFIED"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "17_65-juri-od-tensenrin.gif",
+   "sha256": "310cefac6e38626b35cfb802a6e9ec74d61880ceeb5f4925327f6f6ed05c3b60",
+   "moveId": "3e607e52-090d-4c0b-96ec-d3bf99fd7c8b",
+   "moveSlug": "juri-tensenrin-od",
+   "idSource": "ALIAS_TABLE",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "17_70-juri-sa1-sakkai-fuhazan.gif",
+   "sha256": "fc4df289bc5cee4bf5758ff96c525bf11c7635b2d34f1c39fd1a306b1acf96ef",
+   "moveId": "a0b600a3-0b0c-432d-8a6a-75bba7af99cb",
+   "moveSlug": "juri-sa1",
+   "idSource": "ALIAS_TABLE",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "17_71-juri-sa2-feng-shui-engine.gif",
+   "sha256": "7b61dc5a5e23908242370abaf6c6996405e09ac088fa4574d087dca58b5bbc0a",
+   "moveId": "953af9d9-ad43-430d-9ea2-ffa332436fbe",
+   "moveSlug": "juri-sa2",
+   "idSource": "ALIAS_TABLE",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "17_73-juri-sa3-kaisen-dankai-raku.gif",
+   "sha256": null,
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "ASSET_NOT_RETRIEVED",
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "manifest_version": "1.0",
+ "character_slug": "juri",
+ "source_owner": "user_capture",
+ "captured_patch": "2026.08.03",
+ "capture_date": "2026-11-13",
+ "source_files": [
+  {
+   "category": "gif_delivery",
+   "filename": "17_71-juri-sa2-feng-shui-engine.gif",
+   "sha256": "7b61dc5a5e23908242370abaf6c6996405e09ac088fa4574d087dca58b5bbc0a"
+  },
+  {
+   "category": "gif_delivery",
+   "filename": "17_65-juri-od-tensenrin.gif",
+   "sha256": "310cefac6e38626b35cfb802a6e9ec74d61880ceeb5f4925327f6f6ed05c3b60"
+  },
+  {
+   "category": "gif_delivery",
+   "filename": "17_64-juri-heavy-tensenrin.gif",
+   "sha256": "a570ba3a0a5e3af1e7494379b97cdbcdd80b93154baeae165447f05d0d19cdb0"
+  },
+  {
+   "category": "gif_delivery",
+   "filename": "17_62-juri-light-tensenrin.gif",
+   "sha256": "a05706711d02a2a64bd79eaa610a1a1ec1cd41c1b12a1cf0288618262cfd07d5"
+  },
+  {
+   "category": "gif_delivery",
+   "filename": "17_63-juri-medium-tensenrin.gif",
+   "sha256": "3dcc62b7419585992f4aa223a4dc42510470548ccd9ac0280f14035d6d655f3f"
+  }
+ ],
+ "clips": [
+  {
+   "move_id": "953af9d9-ad43-430d-9ea2-ffa332436fbe",
+   "move_slug": "juri-sa2",
+   "category": "super",
+   "variant": "default",
+   "media_url": "/media/moves/juri/gif/juri-sa2.gif",
+   "media_type": "gif",
+   "poster_url": null,
+   "verification_status": "capture_received",
+   "loop_start_ms": 0,
+   "loop_end_ms": 2350,
+   "duration_ms": 2350,
+   "width": 480,
+   "height": 270,
+   "fps": 20.0,
+   "filesize_bytes": 2545179,
+   "source_file": "17_71-juri-sa2-feng-shui-engine.gif",
+   "cut_review_status": "CUT_REVIEW_PENDING",
+   "mapping_evidence": "既存GIFの技ID/slugが公開用データ(ALL_CHARACTER_RELEASE_FIXTURE_20261004)の技「SA2 風水エンジン」と一致。公式コマンド: ←+SP+H。映像の目視確認: 未実施"
+  },
+  {
+   "move_id": "3e607e52-090d-4c0b-96ec-d3bf99fd7c8b",
+   "move_slug": "juri-tensenrin-od",
+   "category": "special",
+   "variant": "default",
+   "media_url": "/media/moves/juri/gif/juri-tensenrin-od.gif",
+   "media_type": "gif",
+   "poster_url": null,
+   "verification_status": "capture_received",
+   "loop_start_ms": 0,
+   "loop_end_ms": 2050,
+   "duration_ms": 2050,
+   "width": 480,
+   "height": 270,
+   "fps": 20.0,
+   "filesize_bytes": 3404264,
+   "source_file": "17_65-juri-od-tensenrin.gif",
+   "cut_review_status": "CUT_REVIEW_PENDING",
+   "mapping_evidence": "既存GIFの技ID/slugが公開用データ(ALL_CHARACTER_RELEASE_FIXTURE_20261004)の技「OD 天穿輪」と一致。公式コマンド: →+A+SP。映像の目視確認: 未実施"
+  },
+  {
+   "move_id": "1201daae-e1b8-47aa-88d9-19be3fb4f80b",
+   "move_slug": "juri-tensenrin-h",
+   "category": "special",
+   "variant": "default",
+   "media_url": "/media/moves/juri/gif/juri-tensenrin-h.gif",
+   "media_type": "gif",
+   "poster_url": null,
+   "verification_status": "capture_received",
+   "loop_start_ms": 0,
+   "loop_end_ms": 1850,
+   "duration_ms": 1850,
+   "width": 480,
+   "height": 270,
+   "fps": 20.0,
+   "filesize_bytes": 3210358,
+   "source_file": "17_64-juri-heavy-tensenrin.gif",
+   "cut_review_status": "CUT_REVIEW_PENDING",
+   "mapping_evidence": "既存GIFの技ID/slugが公開用データ(ALL_CHARACTER_RELEASE_FIXTURE_20261004)の技「強 天穿輪」と一致。公式コマンド: →↓↘+H。映像の目視確認: 未実施"
+  },
+  {
+   "move_id": "1e7d1cc0-8118-4c5a-8b43-94f585c2a83e",
+   "move_slug": "juri-tensenrin-l",
+   "category": "special",
+   "variant": "default",
+   "media_url": "/media/moves/juri/gif/juri-tensenrin-l.gif",
+   "media_type": "gif",
+   "poster_url": null,
+   "verification_status": "capture_received",
+   "loop_start_ms": 0,
+   "loop_end_ms": 1500,
+   "duration_ms": 1500,
+   "width": 480,
+   "height": 270,
+   "fps": 20.0,
+   "filesize_bytes": 2457421,
+   "source_file": "17_62-juri-light-tensenrin.gif",
+   "cut_review_status": "CUT_REVIEW_PENDING",
+   "mapping_evidence": "既存GIFの技ID/slugが公開用データ(ALL_CHARACTER_RELEASE_FIXTURE_20261004)の技「弱 天穿輪」と一致。公式コマンド: →↓↘+L。映像の目視確認: 未実施"
+  },
+  {
+   "move_id": "9f311585-00ac-4e7c-83fc-08a04f4f9f8d",
+   "move_slug": "juri-tensenrin-m",
+   "category": "special",
+   "variant": "default",
+   "media_url": "/media/moves/juri/gif/juri-tensenrin-m.gif",
+   "media_type": "gif",
+   "poster_url": null,
+   "verification_status": "capture_received",
+   "loop_start_ms": 0,
+   "loop_end_ms": 1700,
+   "duration_ms": 1700,
+   "width": 480,
+   "height": 270,
+   "fps": 20.0,
+   "filesize_bytes": 2877002,
+   "source_file": "17_63-juri-medium-tensenrin.gif",
+   "cut_review_status": "CUT_REVIEW_PENDING",
+   "mapping_evidence": "既存GIFの技ID/slugが公開用データ(ALL_CHARACTER_RELEASE_FIXTURE_20261004)の技「中 天穿輪」と一致。公式コマンド: →+SP / →↓↘+M。映像の目視確認: 未実施"
+  }
+ ]
+}

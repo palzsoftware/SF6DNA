@@ -1,0 +1,22 @@
+{
+ "date": "2026-11-17",
+ "character": "manon",
+ "records": [
+  {
+   "character": "manon",
+   "asset_filename": "manon-sa3-pas-de-deux_under10mb_48color_nodither.gif",
+   "asset_sha256": "bee950000618aed2a34e29e33f67ffca162bf99766e1d7eb8a124bfa2558dc7c",
+   "technical_qa": "PASS",
+   "frames": 215,
+   "bytes": 9701305
+  },
+  {
+   "character": "manon",
+   "asset_filename": "manon-ca-pas-de-deux_under10mb_32color.gif",
+   "asset_sha256": "1720773971c4d6ff7c0d4c505e9ccd7d55a1ddd1e093fd734707022c118267f3",
+   "technical_qa": "PASS",
+   "frames": 237,
+   "bytes": 9205251
+  }
+ ]
+}

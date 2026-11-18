@@ -1,0 +1,388 @@
+{
+ "generated": "2026-11-17",
+ "scope": "cammy 追加素材(Drive個別GIF)の入力表示QA",
+ "entries": [
+  {
+   "character": "cammy",
+   "file": "cammy-cannon-strike-od.gif",
+   "moveSlug": "cammy-cannon-strike-od",
+   "moveId": "6dd6a2a0-d98b-4b2f-82d3-115d34e7ae1e",
+   "fixtureName": "ODキャノンストライク",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 緑のOD SUCCESS ↓↙←+K。空中での動作(j.214KK)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 27,
+    "durationMs": 1800,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-cannon-strike.gif",
+   "moveSlug": "cammy-cannon-strike",
+   "moveId": "80bee02a-249d-4230-9640-bb29964c1434",
+   "fixtureName": "キャノンストライク",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↙←+K。空中での動作(j.214K)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 38,
+    "durationMs": 2540,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-forward-throw.gif",
+   "moveSlug": "cammy-forward-throw",
+   "moveId": "00398ea1-7adc-44eb-8edc-321538bec402",
+   "fixtureName": "前投げ",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示なし(投げ)。相手を投げて位置の入れ替えなし=前投げ。",
+   "unconfirmed": [
+    "入力表示が無く、前/後ろは位置入替の有無による目視判定",
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 62,
+    "durationMs": 4140,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-back-throw.gif",
+   "moveSlug": "cammy-back-throw",
+   "moveId": "5003bab7-95fe-405f-960b-f1af0fa4151b",
+   "fixtureName": "後ろ投げ",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示なし(投げ)。相手を飛び越えて背後へ投げ位置が入れ替わる=後ろ投げ。",
+   "unconfirmed": [
+    "入力表示が無く、前/後ろは位置入替の有無による目視判定",
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 53,
+    "durationMs": 3540,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-hooligan-reverse.gif",
+   "moveSlug": "cammy-hooligan-reverse",
+   "moveId": "7c8eb8b0-fb38-4e7d-a5cd-648448f931b4",
+   "fixtureName": "フーリガン＞リバースエッジ",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↘→+P のあと ↓+K(236P > 2K)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 26,
+    "durationMs": 2080,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-hooligan-slicer-od-r16.gif",
+   "moveSlug": "cammy-hooligan-slicer-od",
+   "moveId": "db190382-371c-4b77-9134-7cf125ac8bb0",
+   "fixtureName": "ODフーリガン＞レイザーエッジスライサー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 緑のOD SUCCESS ↓↘→+P(236PP)。追加入力なし。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 37,
+    "durationMs": 2960,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-hooligan-slicer-r16.gif",
+   "moveSlug": "cammy-hooligan-slicer",
+   "moveId": "61721245-946e-4951-9035-a59e0922d101",
+   "fixtureName": "フーリガンコンビネーション＞レイザーエッジスライサー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↘→+P(236P)。追加入力なし。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 33,
+    "durationMs": 2640,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-hooligan-strike.gif",
+   "moveSlug": "cammy-hooligan-strike",
+   "moveId": "84a3ca4b-ab3c-4034-bbeb-e1bcba8775cc",
+   "fixtureName": "フーリガン＞キャノンストライク",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↘→+P のあと K(236P > K)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 23,
+    "durationMs": 1840,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-hooligan-throw.gif",
+   "moveSlug": "cammy-hooligan-throw",
+   "moveId": "5e300bea-0365-4a60-b820-f42679cd2c7e",
+   "fixtureName": "フーリガン＞フェイタルレッグツイスター",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↘→+P のあと 弱P+弱K(青2つ)(236P > LP+LK)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 44,
+    "durationMs": 2940,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-knuckle-od-r16-final.gif",
+   "moveSlug": "cammy-knuckle-od",
+   "moveId": "a7a85481-b314-4e21-ba23-11b261a41335",
+   "fixtureName": "ODアクセルスピンナックル",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 緑のOD SUCCESS ↓↙←+P(214PP)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 22,
+    "durationMs": 1760,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-lift-combination.gif",
+   "moveSlug": "cammy-lift-combination",
+   "moveId": "f4475688-1cb6-4d3a-b8a2-67af5f0d0e28",
+   "fixtureName": "リフトコンビネーション",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ←+中P ▶ 強K(4MP > HK)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 33,
+    "durationMs": 2640,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-sa1_under10mb.gif",
+   "moveSlug": "cammy-sa1",
+   "moveId": "6e3fe94c-78fe-4993-99d9-1cc050510fc9",
+   "fixtureName": "スピンドライブスマッシャー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↘→↓↘→+K(236236K)。ゲージ3→2。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 84,
+    "durationMs": 5600,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-sa3-r16_under10mb.gif",
+   "moveSlug": "cammy-sa3",
+   "moveId": "d6b92f12-9c33-48e7-9220-f75922701a3e",
+   "fixtureName": "デルタレッドアサルト",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↘→↓↘→+P(236236P)。ゲージ3→0(3本消費)。体力バー満タンでCAではない=SA3。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 132,
+    "durationMs": 10560,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-spike-od-r16.gif",
+   "moveSlug": "cammy-spike-od",
+   "moveId": "3b480694-4948-443a-8a08-c3db8691bcf0",
+   "fixtureName": "ODキャノンスパイク",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 緑のOD SUCCESS →↓↘+K(623KK)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 31,
+    "durationMs": 2480,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-spiral-od-r16-trimmed.gif",
+   "moveSlug": "cammy-spiral-od",
+   "moveId": "d4eaa3bd-9caa-4bd6-a135-09f0ea3c5813",
+   "fixtureName": "ODスパイラルアロー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 緑のOD SUCCESS ↓↘→+K(236KK)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 29,
+    "durationMs": 2320,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-swing-combination.gif",
+   "moveSlug": "cammy-swing-combination",
+   "moveId": "0d8d69be-af5f-4af6-8467-bb409688c5a8",
+   "fixtureName": "スイングコンビネーション",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 強P ▶ 強K(HP > HK)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 35,
+    "durationMs": 2800,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-sa2-air_under10mb.gif",
+   "moveSlug": "cammy-sa2-air",
+   "moveId": null,
+   "fixtureName": "エアキラービースピン",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "observation": "入力表示は↓↙←↓↙←+『P(拳)』アイコン(ゲージ3→1)。データは214214K(K)で、ボタンの種類が不一致。",
+   "unconfirmed": [
+    "入力表示は↓↙←↓↙←+『P(拳)』アイコン(ゲージ3→1)。データは214214K(K)で、ボタンの種類が不一致。"
+   ],
+   "metrics": {
+    "frames": 135,
+    "durationMs": 9000,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-sa2-r16-final_under10mb.gif",
+   "moveSlug": "cammy-sa2",
+   "moveId": null,
+   "fixtureName": "キラービースピン",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "observation": "入力表示は↓↙←↓↙←+『P(拳)』アイコン(ゲージ3→1)。データは214214K(K)で、ボタンの種類が不一致。",
+   "unconfirmed": [
+    "入力表示は↓↙←↓↙←+『P(拳)』アイコン(ゲージ3→1)。データは214214K(K)で、ボタンの種類が不一致。"
+   ],
+   "metrics": {
+    "frames": 90,
+    "durationMs": 7200,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "cammy",
+   "file": "cammy-ca_under10mb.gif",
+   "moveSlug": "cammy-ca",
+   "moveId": null,
+   "fixtureName": "デルタレッドアサルト（CA）",
+   "result": "NEEDS_MORE_CHECK",
+   "localConnectionCandidate": false,
+   "observation": "体力バーが満タンで『CA』表示もなく(ゲージ0から開始)、CAの条件(体力25%以下)を確認できない。Modern操作で入力表示も無し。",
+   "unconfirmed": [
+    "体力バーが満タンで『CA』表示もなく(ゲージ0から開始)、CAの条件(体力25%以下)を確認できない。Modern操作で入力表示も無し。"
+   ],
+   "metrics": {
+    "frames": 139,
+    "durationMs": 11120,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

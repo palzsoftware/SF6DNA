@@ -1,0 +1,50 @@
+{
+ "character": "jamie",
+ "total": 4,
+ "summary": {
+  "CONNECT_READY": 4
+ },
+ "holdReasons": {},
+ "rows": [
+  {
+   "file": "jamie-standing-hp.gif",
+   "sha256": "26d7ea92c668a303f00a73d2ef0bc2b672ee5ac74e669e0aa2e0f618349c6d43",
+   "moveId": "4fb6762e-7ea7-4f02-8017-1f84d748bd36",
+   "moveSlug": "jamie-standing-hp",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-standing-lk.gif",
+   "sha256": "98ff02848b3d4691440e46f80ce8f07cd65a4c5b2e1de6752703df5e504f512a",
+   "moveId": "da6ccd2f-8299-4ec1-bf92-c3473685557c",
+   "moveSlug": "jamie-standing-lk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-standing-mk.gif",
+   "sha256": "7ab5fdbb5c48de6115efa4c49a56142942bc37a76ed60e80f5065478e6d718dc",
+   "moveId": "720eb2bf-9bf5-4bf9-8722-1cdc5ab3dcf6",
+   "moveSlug": "jamie-standing-mk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "jamie-standing-hk.gif",
+   "sha256": "76a9889391e66598e360822b0b919018dcd0c6243665e932e4cec1677b0ea5d8",
+   "moveId": "183019ce-f164-4619-b634-3192d008013b",
+   "moveSlug": "jamie-standing-hk",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  }
+ ]
+}

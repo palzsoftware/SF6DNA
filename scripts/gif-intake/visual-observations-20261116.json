@@ -1,0 +1,13 @@
+{
+  "generated": "2026-11-16",
+  "method": "各GIFを等間隔8フレームに間引いたコンタクトシートを目視(Claude)。動作の連続確認ではなく、入力操作との一致も確認できない。",
+  "note": "VISUAL_SAMPLED=抜き取り目視のみ(合格ではない)。VISUAL_PASS/APPROVEDは人手の映像確認後にのみ設定する。ここに載らない素材は VISUAL_NOT_RUN。",
+  "observations": [
+    {"file": "9_39-jp-heavy-departure.gif", "status": "VISUAL_SAMPLED", "observed": ["JP同士の対戦画面で、紫の演出が出る必殺技の動作が見える", "無関係な画面・別技の混入は見当たらない", "終端付近は倒れた相手が写り、途中切れの兆候は見当たらない"], "unconfirmed": ["強P入力であること", "技名との一致"]},
+    {"file": "9_43-jp-departure-window.gif", "status": "VISUAL_SAMPLED", "observed": ["冒頭に紫のエフェクトが画面上部に出ており、その後に別の動作が続く(設置後の派生かは判別できない)", "無関係な画面の混入は見当たらない"], "unconfirmed": ["ヴィーハト設置中の入力であること", "弱P/中P派生であること"]},
+    {"file": "9_44-jp-departure-shadow.gif", "status": "VISUAL_SAMPLED", "observed": ["JP同士の対戦画面で紫の演出と相手の被弾が見える", "無関係な画面の混入は見当たらない"], "unconfirmed": ["ヴィーハト設置中の入力であること", "強P派生であること"]},
+    {"file": "22_66-luke-scrapper.gif", "status": "VISUAL_SAMPLED", "observed": ["Luke同士の画面で、掴み動作→相手が飛ばされる流れに見える(投げ系の動作)", "無関係な画面の混入は見当たらない"], "unconfirmed": ["後ろ投げ(4+弱P弱K)であること", "名称がスクラッパーであること"]},
+    {"file": "jp-od-departure-mp-hp.gif", "status": "VISUAL_SAMPLED", "observed": ["JP同士の対戦画面で、強い紫の演出と相手の被弾が見える", "無関係な画面の混入は見当たらない"], "unconfirmed": ["OD消費であること", "入力ボタンの組合せ(中P+強P)"]},
+    {"file": "jp-od-departure-lp-mp.gif", "status": "VISUAL_SAMPLED", "observed": ["JP同士の対戦画面で、紫の演出と相手の被弾が見える", "無関係な画面の混入は見当たらない"], "unconfirmed": ["OD消費であること", "入力ボタンの組合せ(弱P+中P)"]}
+  ]
+}

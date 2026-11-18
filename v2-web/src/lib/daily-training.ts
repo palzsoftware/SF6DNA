@@ -110,6 +110,15 @@ export function buildDailyTrainingHref(diagnosisType: unknown, rows: unknown): s
   return `/me/training?${params.toString()}`;
 }
 
+// Saved history record -> today's 15-minute practice link.
+// Reuses buildDailyTrainingHref; returns null for diagnosis kinds that do not yield a practice issue
+// (playstyle / character_fit), so history never implies a weakness for them.
+export function buildHistoryDailyTrainingHref(diagnosisType: unknown, topResults: unknown): string | null {
+  if (!isIssueDiagnosisType(diagnosisType) || !Array.isArray(topResults)) return null;
+  const rows = topResults.map((item) => isRecord(item) ? [item.key, item.score] : null);
+  return buildDailyTrainingHref(diagnosisType, rows);
+}
+
 // URL values are user-controlled menu hints, never proof of a saved/verified diagnosis.
 export function parseDailyTrainingRequest(params: Record<string, unknown>): DailyTrainingRequest | null {
   if (!isIssueDiagnosisType(params.diagnosis)) return null;

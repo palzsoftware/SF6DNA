@@ -1,0 +1,20 @@
+--- v2-web/src/app/characters/[slug]/page.tsx	2026-11-16 08:43:53.969703523 +0900
++++ v2-web/src/app/characters/[slug]/page.tsx	2026-11-16 14:38:26.200265262 +0900
+@@ -22,6 +22,7 @@
+ import { getWs5TxtPreviewCandidate } from "@/lib/official-txt-preview-snapshot";
+ import { connectOfficialTxtCharacterPageData, isWs5LocalCardRequest } from "@/lib/official-txt-character-page-connection.mjs";
+ import type { CanonicalTxtRecord } from "@/lib/canonical-txt-connection.mjs";
++import { connectLocalQaGifToBundle } from "@/lib/local-qa-gif-page";
+ 
+ export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+   const { slug } = await params;
+@@ -91,7 +92,8 @@
+     mediaRegistry:(await import("@/data/SF6DNA_WS5_MEDIA_KEY_REGISTRY_20261026.json")).default,
+     records:(await import("@/data/SF6DNA_WS5_OFFICIAL_TXT_CANONICAL_20261026.json")).default as unknown as Record<string,CanonicalTxtRecord>,
+   }) : null;
+-  const finalBundle = connectedTxt?.bundle ?? bundle;
++  // ローカルQA(開発環境のlocalhost限定)のみ、未承認GIFを media の無い技へ接続する。それ以外の環境では何もしない
++  const finalBundle = await connectLocalQaGifToBundle({ characterSlug: character.slug, bundle: connectedTxt?.bundle ?? bundle, host: admission.host });
+   const combinedMoveEvidence = connectedTxt?.moveEvidence ?? moveEvidence;
+   return <CharacterUnifiedPage automaticVideos={<Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} /></Suspense>} character={character} bundle={finalBundle} players={players} videos={videos}
+     moveEvidence={combinedMoveEvidence}

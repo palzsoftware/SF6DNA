@@ -1,0 +1,5808 @@
+{
+  "schema": "sf6dna/arjun-official-intake/1",
+  "characterSlug": "arjun",
+  "patch": {
+    "label": null,
+    "verified": false
+  },
+  "captures": [],
+  "moves": [
+    {
+      "localKey": "arjun-standing-lp",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-100",
+      "parentLocalKey": null,
+      "name": {
+        "value": "立ち弱P（ぶつ）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "LP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "弱",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "4",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "4-6",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "9",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "4",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "1",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "300",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "連打キャンセル対応 / 始動補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-standing-lk",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-101",
+      "parentLocalKey": null,
+      "name": {
+        "value": "立ち弱K（蹴る）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "LK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "6",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "6-8",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "14",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "1",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-4",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "400",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "始動補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-standing-mp",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-102",
+      "parentLocalKey": null,
+      "name": {
+        "value": "立ち中P（ぶん殴る）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "MP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "AUTO + 中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "11",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "11-13",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "19",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "4",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-2",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "700",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-standing-mk",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-103",
+      "parentLocalKey": null,
+      "name": {
+        "value": "立ち中K（引っ掛ける）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "MK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "7-9",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "19",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "2",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "700",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時硬直2F減少",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-standing-hp",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-104",
+      "parentLocalKey": null,
+      "name": {
+        "value": "立ち強P（打ち砕く）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "AUTO + 強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "15",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "15-16",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "24",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "2",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時硬直1F減少",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-standing-hk",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-105",
+      "parentLocalKey": null,
+      "name": {
+        "value": "立ち強K（ぶっ飛ばす）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "HK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "14",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "14-17",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "21",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "パニッシュカウンター時吹き飛び時間延長",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-crouching-lp",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-106",
+      "parentLocalKey": null,
+      "name": {
+        "value": "しゃがみ弱P（小突く）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "2 + LP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "2 + 弱",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "5",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "5-7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "9",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "5",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-1",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "300",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "連打キャンセル対応 / 始動補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-crouching-lk",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-107",
+      "parentLocalKey": null,
+      "name": {
+        "value": "しゃがみ弱K（突く）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "2 + LK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "AUTO + 弱",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "5",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "5-7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "12",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "2",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-2",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "300",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "連打キャンセル対応 / 始動補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-crouching-mp",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-108",
+      "parentLocalKey": null,
+      "name": {
+        "value": "しゃがみ中P（はらう）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "2 + MP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "2 + 中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "9",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "9-11",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "22",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-4",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "700",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "パニッシュカウンター時ハードノックダウン",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-crouching-mk",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-109",
+      "parentLocalKey": null,
+      "name": {
+        "value": "しゃがみ中K（伸ばす）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "2 + MK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "8",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "8-10",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "18",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "5",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-2",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "600",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "始動補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-crouching-hp",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-110",
+      "parentLocalKey": null,
+      "name": {
+        "value": "しゃがみ強P（かちあげる）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "2 + HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "2 + 強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "10",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "10-16",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "22",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "-1",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-5",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-crouching-hk",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-111",
+      "parentLocalKey": null,
+      "name": {
+        "value": "しゃがみ強K（踏み潰す）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "2 + HK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "14",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "14-16",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "25",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-11",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "パニッシュカウンター時床バウンド、ハードノックダウン / 始動補正15% / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-jumping-lp",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-112",
+      "parentLocalKey": null,
+      "name": {
+        "value": "ジャンプ弱P（打つ）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "LP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "弱",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "ジャンプ中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "ジャンプ中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "5",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "5-12",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "着地後3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "300",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-jumping-lk",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-113",
+      "parentLocalKey": null,
+      "name": {
+        "value": "ジャンプ弱K（踏む）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "LK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "AUTO＋弱",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "ジャンプ中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "ジャンプ中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "7-15",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "着地後3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "300",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-jumping-mp",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-114",
+      "parentLocalKey": null,
+      "name": {
+        "value": "ジャンプ中P（すくい上げる）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "MP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "ジャンプ中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "ジャンプ中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "8",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "8-12",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "着地後3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "700",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "空中ヒット時吹き飛びダウン",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-jumping-mk",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-115",
+      "parentLocalKey": null,
+      "name": {
+        "value": "ジャンプ中K（突き破る）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "MK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "AUTO＋中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "ジャンプ中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "ジャンプ中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "9",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "9-16",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "着地後3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "700",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-jumping-hp",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-116",
+      "parentLocalKey": null,
+      "name": {
+        "value": "ジャンプ強P（振り回す）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "AUTO＋強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "ジャンプ中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "ジャンプ中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "10",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "10-15",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "着地後3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "めくり性能 / 空中ヒット時叩きつけダウン",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-jumping-hk",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "normal",
+      "variantKey": "web-117",
+      "parentLocalKey": null,
+      "name": {
+        "value": "ジャンプ強K（叩き壊す）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "HK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "ジャンプ中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "ジャンプ中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "10",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "10-16",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "着地後3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "900",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "叩きつけダウン",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-200",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "unique",
+      "variantKey": "web-200",
+      "parentLocalKey": null,
+      "name": {
+        "value": "仁義の一刀",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "6 + HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "6 + 強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "22",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "22-24",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "21",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1000",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-201",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "unique",
+      "variantKey": "web-201",
+      "parentLocalKey": null,
+      "name": {
+        "value": "踏み潰す",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "3 + 強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "14",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "14-16",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "25",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-11",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "パニッシュカウンター時床バウンド、ハードノックダウン / 始動補正15% / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-202",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "unique",
+      "variantKey": "web-202",
+      "parentLocalKey": null,
+      "name": {
+        "value": "頑強な跳舞",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "6 + HK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "19",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "19-21",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "21",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-4",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1000",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "8-23F　空中判定",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-203",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "unique",
+      "variantKey": "web-203",
+      "parentLocalKey": null,
+      "name": {
+        "value": "規律の躍動",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "MK>HK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "中>中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "17",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "17-19",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "20",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "900",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "カウンター/パニッシュカウンター時ダウン / 始動補正30% / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-204",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "unique",
+      "variantKey": "web-204",
+      "parentLocalKey": null,
+      "name": {
+        "value": "不敵の調べ",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "HP>HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "AUTO + 強>AUTO + 強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "16",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "16-18",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "30",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-11",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "コンボ補正30%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-205",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "unique",
+      "variantKey": "web-205",
+      "parentLocalKey": null,
+      "name": {
+        "value": "鎮圧",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "HP>HP>HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "AUTO + 強>AUTO + 強>強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "18",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "18-20",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "40",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "ー",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "2000",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-206",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "unique",
+      "variantKey": "web-206",
+      "parentLocalKey": null,
+      "name": {
+        "value": "追跡",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "HP>HP>HK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "AUTO + 強>AUTO + 強>6 + 強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "0",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-208",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "unique",
+      "variantKey": "web-208",
+      "parentLocalKey": null,
+      "name": {
+        "value": "無情の拳",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "HK>HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "強>強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "24",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "24-26",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "42",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-23",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "30F以上ホールドすると性能変化 / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-209",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "unique",
+      "variantKey": "web-209",
+      "parentLocalKey": null,
+      "name": {
+        "value": "無情の拳（ホールド）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "HK>HPホールド",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "強>強ホールド",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "41",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "41-43",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "42",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-19",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1000",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "壁到達時に壁やられ / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-300",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-300",
+      "parentLocalKey": null,
+      "name": {
+        "value": "弱 大義の巨腕",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "236 + LP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "SP/236 + 弱",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "15",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "15-21",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "17",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "2",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-2",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "飛び道具相殺判定あり（1回） / ガード時に500のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / カウンター/パニッシュカウンター時吹き飛びダウン",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-301",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-301",
+      "parentLocalKey": null,
+      "name": {
+        "value": "中 大義の巨腕",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "236 + MP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "236 + 中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "20",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "20-26",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "17",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "2",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-2",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "900",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "飛び道具相殺判定あり（1回） / ガード時に700のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / カウンター/パニッシュカウンター時吹き飛びダウン",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-302",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-302",
+      "parentLocalKey": null,
+      "name": {
+        "value": "強 大義の巨腕",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "236 + HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "236 + 強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "28",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "28-33",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "20",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "2",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1000",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "飛び道具相殺判定あり（1回） / 空振り時硬直3F増加 / ガード時に800のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(6000) / カウンターヒット時吹き飛び時間延長 / パニッシュカウンター時膝崩れダウン+26",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-303",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-303",
+      "parentLocalKey": null,
+      "name": {
+        "value": "追撃",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "6 + LP | MP | HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "6 + 攻撃",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "大義の巨腕中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "大義の巨腕中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "20",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "20-27",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "19",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "1",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に600のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / 始動補正10%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-304",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-304",
+      "parentLocalKey": null,
+      "name": {
+        "value": "OD 大義の巨腕",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "236 + LPMPHP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "AUTO + SP/236 + 攻撃二つ",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "23",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "23-28",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "20",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "2",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1000",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "飛び道具相殺判定あり（2回） / 空振り時硬直3F増加 / ガード時に800のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(6000) / カウンター/パニッシュカウンター時吹き飛び時間延長",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-305",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-305",
+      "parentLocalKey": null,
+      "name": {
+        "value": "OD 追撃",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "6 + LP | MP | HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "6 + 攻撃",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "OD大義の巨腕中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "OD大義の巨腕中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "20",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "20-27",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "19",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "1",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に600のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / 始動補正10% / コンボ補正15%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-306",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-306",
+      "parentLocalKey": null,
+      "name": {
+        "value": "弱 厳酷な岩肩",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "623 + LP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "623 + 弱",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "19",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "19-34",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "22",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-4",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1000",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "6-23F　空中判定の打撃・空弾属性に対して無敵 / ガード時に600のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / 岩に触れると「過剰な正義」に派生",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-307",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-307",
+      "parentLocalKey": null,
+      "name": {
+        "value": "中 厳酷な岩肩",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "623 + MP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "6+SP/623 + 中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "23",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "23-41",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "19",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-4",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1100",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "6-27F　空中判定の打撃・空弾属性に対して無敵 / ガード時に700のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / 岩に触れると「過剰な正義」に派生",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-308",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-308",
+      "parentLocalKey": null,
+      "name": {
+        "value": "強 厳酷な岩肩",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "623 + HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "623 + 強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "28",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "28-48",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "27",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "1",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1200",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に800のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(6000) / 岩に触れると「過剰な正義」に派生",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-309",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-309",
+      "parentLocalKey": null,
+      "name": {
+        "value": "過剰な正義",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "（厳酷な岩肩で岩に触れると自動派生）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "（厳酷な岩肩で岩に触れると自動派生）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "11",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "11-26",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "27",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1600",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "アーマーブレイク属性 / ガード時に1000のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(8000)",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-310",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-310",
+      "parentLocalKey": null,
+      "name": {
+        "value": "OD 厳酷な岩肩",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "623 + LPMPHP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "6 + AUTO + SP/623 + 攻撃二つ",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "22",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "22-42",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "27",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "1",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1200",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に800のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(6000) / 岩に触れると「OD過剰な正義」に派生",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-311",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-311",
+      "parentLocalKey": null,
+      "name": {
+        "value": "OD 過剰な正義",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "（厳酷な岩肩で岩に触れると自動派生）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "（厳酷な岩肩で岩に触れると自動派生）",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "11",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "11-26",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "27",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1600",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "アーマーブレイク属性 / ガード時に1000のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(8000)",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-312",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-312",
+      "parentLocalKey": null,
+      "name": {
+        "value": "息吹の円筒",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "236 + LK | MK | HK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "4 + SP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "17",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-6",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "600",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に300のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(2000) / 26-36Fまで、息吹の震撼に派生可",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-313",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-313",
+      "parentLocalKey": null,
+      "name": {
+        "value": "弱 息吹の震撼",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "6 + LP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "6 + SP/6 + 弱",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "息吹の円筒中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "息吹の円筒中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "15",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "15-24",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "18",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に400のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(3000)",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-314",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-314",
+      "parentLocalKey": null,
+      "name": {
+        "value": "中 息吹の震撼",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "6 + MP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "6 + 中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "息吹の円筒中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "息吹の円筒中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "15",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "15-24",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "18",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に400のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(3000)",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-315",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-315",
+      "parentLocalKey": null,
+      "name": {
+        "value": "強 息吹の震撼",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "6 + HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "6 + 強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "息吹の円筒中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "息吹の円筒中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "15",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "15-24",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "18",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に400のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(3000)",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-317",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-317",
+      "parentLocalKey": null,
+      "name": {
+        "value": "OD 息吹の円筒",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "236 + LKMKHK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "4 + AUTO + SP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "17",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "1",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "600",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に400のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(2500) / 26-36Fまで、OD息吹の震撼に派生可 / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-318",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-318",
+      "parentLocalKey": null,
+      "name": {
+        "value": "OD 弱 息吹の震撼",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "6 + LP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "6 + SP/6 + 弱",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "OD息吹の円筒中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "OD息吹の円筒中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "15",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "15-24",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "18",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に400のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(3000) / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-319",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-319",
+      "parentLocalKey": null,
+      "name": {
+        "value": "OD 中 息吹の震撼",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "6 + MP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "6 + 中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "OD息吹の円筒中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "OD息吹の円筒中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "15",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "15-24",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "18",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に400のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(3000) / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-320",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-320",
+      "parentLocalKey": null,
+      "name": {
+        "value": "OD 強 息吹の震撼",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "6 + HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "6 + 強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "OD息吹の円筒中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "OD息吹の円筒中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "15",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "15-24",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "18",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に400のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(3000) / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-322",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-322",
+      "parentLocalKey": null,
+      "name": {
+        "value": "弱 神気の巨巌",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "214 + LK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "1+SP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "25",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "25-34",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "21",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-6",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に500のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / 始動補正20% / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-323",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-323",
+      "parentLocalKey": null,
+      "name": {
+        "value": "中 神気の巨巌",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "214 + MK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "2+SP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "25",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "25-34",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "21",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-6",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に500のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / 始動補正20% / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-324",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-324",
+      "parentLocalKey": null,
+      "name": {
+        "value": "強 神気の巨巌",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "214 + HK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "3+SP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "25",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "25-34",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "21",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-6",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に500のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / 始動補正20% / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-326",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-326",
+      "parentLocalKey": null,
+      "name": {
+        "value": "OD 弱 神気の巨巌",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "214 + LKMK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "1 + AUTO + SP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "20",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "20-29",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "21",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-6",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に500のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / 始動補正20% / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-327",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-327",
+      "parentLocalKey": null,
+      "name": {
+        "value": "OD 中 神気の巨巌",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "214 + LKHK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "2 + AUTO + SP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "20",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "20-29",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "21",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-6",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に500のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / 始動補正20% / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-328",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-328",
+      "parentLocalKey": null,
+      "name": {
+        "value": "OD 強 神気の巨巌",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "214 + MKHK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "3 + AUTO + SP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "20",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "20-29",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "21",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-6",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に500のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / 始動補正20% / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-330",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-330",
+      "parentLocalKey": null,
+      "name": {
+        "value": "鬼気迫る尋問",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "63214 +LP | MP | HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "63214 + 攻撃",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "近距離で",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "近距離で",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "8",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "8-10",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "35",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1600",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "リカバリアブルダメージ / 相手がリカバリアブルダメージ中の場合、性能変化 / ・ダメージ1800",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-331",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-331",
+      "parentLocalKey": null,
+      "name": {
+        "value": "OD 鬼気迫る尋問",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "63214 + LPMPHP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "63214 + 攻撃二つ",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "近距離で",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "近距離で",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "26",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "26-28",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "38",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "2200",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "リカバリアブルダメージ / 相手がリカバリアブルダメージ中の場合、性能変化 / ・ダメージ2400",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-332",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-332",
+      "parentLocalKey": null,
+      "name": {
+        "value": "不撓の警衛",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "5252 + HK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "5252 + 強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "3-28",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "30",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1500",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "3-28F　飛び道具/打撃当身、打撃当身時派生技に移行 / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(3000) / ボタンホールドで動作延長可 / ボタンホールド中、26Fから倫理の崩壊に派生可",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-333",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "special",
+      "variantKey": "web-333",
+      "parentLocalKey": null,
+      "name": {
+        "value": "倫理の崩壊",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "LP | MP | HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "攻撃",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "不撓の警衛中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "不撓の警衛中に",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "28",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "28-65",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "23",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "3",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1500",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "ガード時に1100のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / 飛び道具相殺時の強度はOD版相当 / 始動補正30% / コンボ補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-400",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "super",
+      "variantKey": "web-400",
+      "parentLocalKey": null,
+      "name": {
+        "value": "SA1 破壊の蛮声",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "236236 + LK | MK | HK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "5 or 6＋強SP/236236＋弱",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "8",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "8-69",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "67",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-46",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "2000",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "1-8F　打撃・投げに対して無敵 / ガード時に100のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(2500) / 最低保障ダメージ30％ / カウンター/パニッシュカウンターで数値が変動しない",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-401",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "super",
+      "variantKey": "web-401",
+      "parentLocalKey": null,
+      "name": {
+        "value": "SA2 忘却の一槌",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "214214 + LP | MP | HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "4＋強SP/214214＋中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "9",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "9-12",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "57",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-41",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "3000",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "1-12F　完全無敵 / ガード時に200のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(5000) / 最低保障ダメージ40％ / カウンター/パニッシュカウンターで数値が変動しない",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-402",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "super",
+      "variantKey": "web-402",
+      "parentLocalKey": null,
+      "name": {
+        "value": "SA3 秩序の鬼神",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "236236 + LP | MP | HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "2＋強SP/236236＋強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "13",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "13-15",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "58",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-41",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "4000",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "1-15F 完全無敵 / ガード時に300のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(7500) / 最低保障ダメージ50％ / カウンター/パニッシュカウンターで数値が変動しない / ※必殺技キャンセル時のみ適用",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-403",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "super",
+      "variantKey": "web-403",
+      "parentLocalKey": null,
+      "name": {
+        "value": "CA 秩序の鬼神",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "236236 + LP | MP | HP",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "2＋強SP/236236＋強",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "体力25%以下で",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "体力25%以下で",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "13",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "13-15",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "58",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": "-41",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "4500",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "1-15F 完全無敵 / ガード時に300のリカバリアブルダメージを与える / バーンアウト中の相手にガードさせた時の相手Dゲージ増加量(10000) / 最低保障ダメージ50％ / カウンター/パニッシュカウンターで数値が変動しない / ※必殺技キャンセル時のみ適用",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-500",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "throw",
+      "variantKey": "web-500",
+      "parentLocalKey": null,
+      "name": {
+        "value": "豪胆な制裁",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "N or 6 + LPLK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "N or 6 + 弱中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "近距離で",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "近距離で",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "5",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "5-7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "23",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1200",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "パニッシュカウンター時以下の性能変化 / ・ダメージ2040 / ・SAゲージ4000増加 / ・ハードノックダウン / 即時補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "localKey": "arjun-capcom-web-501",
+      "canonicalMoveId": null,
+      "canonicalIdentityVerified": false,
+      "category": "throw",
+      "variantKey": "web-501",
+      "parentLocalKey": null,
+      "name": {
+        "value": "処罰の天秤",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classic": {
+        "value": "4 + LPLK",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modern": {
+        "value": "4 + 弱中",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "classicCondition": {
+        "value": "近距離で",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "modernCondition": {
+        "value": "近距離で",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "startup": {
+        "value": "5",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "active": {
+        "value": "5-7",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "recovery": {
+        "value": "23",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onHit": {
+        "value": "D",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "onBlock": {
+        "value": null,
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "damage": {
+        "value": "1200",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "notes": {
+        "value": "パニッシュカウンター時以下の性能変化 / ・ダメージ2040 / ・SAゲージ4000増加 / ・ハードノックダウン / 即時補正20%",
+        "status": "UNCONFIRMED",
+        "evidence": [],
+        "reviewedBy": null,
+        "reviewedAt": null
+      }
+    }
+  ],
+  "coverage": []
+}

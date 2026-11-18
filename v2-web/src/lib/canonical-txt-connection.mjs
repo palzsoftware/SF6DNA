@@ -1,3 +1,4 @@
+import { ws5SlugForApp } from './ws5-slug-alias.mjs';
 const FRAME = { startup:'startup_frame', active:'active_frame', recovery:'recovery_frame', onHit:'hit_frame', onBlock:'block_frame', damage:'damage' };
 const TYPES = { NORMAL:'normal', AIR:'normal', UNIQUE:'unique', TARGET_COMBO:'target_combo', SPECIAL:'special', SUPER:'super_art', THROW:'throw', PARRY:'system', DRIVE_STEP:'system', F_DASH:'system', B_DASH:'system' };
 const own = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
@@ -5,8 +6,22 @@ const text = value => typeof value === 'string' && value.trim() ? value : null;
 function rawValue(value) { return typeof value === 'number' && Number.isFinite(value) ? String(value) : text(value); }
 function state(value, exists) {
   if (!exists || value == null || value === '') return 'PENDING';
-  if (typeof value === 'string' && /^(?:-|—|－|N\/A)$/.test(value.trim())) return 'OFFICIAL_NA';
+  // "ー"(U+30FC) / "―"(U+2015) appear in the official TXT where a hit/block value does not apply (same as "-").
+  if (typeof value === 'string' && /^(?:-|—|－|ー|―|N\/A)$/.test(value.trim())) return 'OFFICIAL_NA';
   return rawValue(value) === null ? 'PENDING' : 'LOCAL_OFFICIAL_TXT_CANONICAL';
+}
+/** Product-slug identity keys (dee-jay:web:N) resolve to the WS5-keyed canonical record (deejay:web:N). */
+function resolveRecord(records, key, characterSlug) {
+  if (typeof key !== 'string' || !records) return null;
+  if (own(records, key)) return records[key];
+  const ws5Slug = ws5SlugForApp(characterSlug);
+  if (ws5Slug === characterSlug || !key.startsWith(characterSlug + ':')) return null;
+  const aliasKey = ws5Slug + ':' + key.slice(characterSlug.length + 1);
+  return own(records, aliasKey) ? records[aliasKey] : null;
+}
+function recordInScope(record, characterSlug) {
+  return [...new Set([characterSlug, ws5SlugForApp(characterSlug)])].some(slug =>
+    record.characterSlug === slug && typeof record.sourceRecordKey === 'string' && record.sourceRecordKey.startsWith(slug + ':'));
 }
 function sourceIdentityAgrees(record, identity) {
   const web = value => value == null ? '' : String(value).trim();
@@ -73,8 +88,8 @@ export function connectCanonicalTxtCandidate(base, candidate, records, options =
   const stagedMoves=[...(base?.moves ?? [])];
   for (const move of candidate.bundle.moves) {
     const identity=candidate.identityByMoveId[move.id];
-    const record=records?.[identity?.sourceRecordKey];
-    if (!identity || !record || record.characterSlug !== characterSlug || !record.sourceRecordKey.startsWith(characterSlug+':') ||
+    const record=resolveRecord(records, identity?.sourceRecordKey, characterSlug);
+    if (!identity || !record || !recordInScope(record, characterSlug) ||
         !sourceIdentityAgrees(record, identity) || typeof record.raw?.skill !== 'string' || !record.raw.skill.trim()) {
       holds.push({sourceRecordKey:identity?.sourceRecordKey,reason:'CANONICAL_SOURCE_SCOPE_OR_ROW_MISSING'}); continue;
     }

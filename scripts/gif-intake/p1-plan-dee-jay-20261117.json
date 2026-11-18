@@ -1,0 +1,150 @@
+{
+ "character": "dee-jay",
+ "total": 14,
+ "summary": {
+  "CONNECT_READY": 14
+ },
+ "holdReasons": {},
+ "rows": [
+  {
+   "file": "030-dee-jay-speedy-maracas_under10mb.gif",
+   "sha256": "05100907b54425c56f955257f1e831519a1cb40e50ea42c7ea70501e195857c3",
+   "moveId": "155af88f-6cb8-40c1-b585-ebfdfb7d2ad3",
+   "moveSlug": "dee-jay-speedy-maracas",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "034-dee-jay-air-slasher-od.gif",
+   "sha256": "8f43f25e2b3e84d00e21b5c99446ed1d2f2b9bf8aef58b64993bcac7c93d3cd1",
+   "moveId": "1d7f9f79-bff7-4c9b-8645-54e95b310d24",
+   "moveSlug": "dee-jay-air-slasher-od",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "039-dee-jay-jackknife-od.gif",
+   "sha256": "72bb75f6fb1098d1eab664b25308d8cd9ead71f11fe3e98b24fa987998a80d8b",
+   "moveId": "bc019a33-449a-4662-aaa6-d86d0a766a1c",
+   "moveSlug": "dee-jay-jackknife-od",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "040-dee-jay-sobat-l.gif",
+   "sha256": "0ac6e32ef7b281e7ab9463bc88e25c49c1df4d404e9975e67aeda568f42c2e6c",
+   "moveId": "49f0d4ea-618e-4ce9-94f3-8e6db0b9f7b7",
+   "moveSlug": "dee-jay-sobat-l",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "041-dee-jay-sobat-m.gif",
+   "sha256": "1476c725d41f00e981bc6194ea3f51e050ff6e86e8e8ccf42d26495c7f0916d3",
+   "moveId": "0f1c3e4a-ce03-4f74-8950-5b4c92c4bb68",
+   "moveSlug": "dee-jay-sobat-h",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "042-dee-jay-sobat-h.gif",
+   "sha256": "8a5684b9b9d8b6429946ff3ce1b37efcc9a621a48259fe43751fbfe1264ca212",
+   "moveId": "033a5787-d194-4a0f-b05d-6686f04601fe",
+   "moveSlug": "dee-jay-sobat-m",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "043-dee-jay-sobat-od.gif",
+   "sha256": "0babf530830fe4bee3ffd60cd5bb7f27a5c987a46c296e4caa195dcddfed847f",
+   "moveId": "d2b2199c-f28b-4270-a8e1-e7ba02b621b2",
+   "moveSlug": "dee-jay-sobat-od",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "047-dee-jay-mgu-od_under10mb.gif",
+   "sha256": "0a668cae801c23e7708770b34c1662fc2bed4240f469aece592d9592307140c6",
+   "moveId": "978c3660-a958-4dd9-87a6-c1c4620d9b8d",
+   "moveSlug": "dee-jay-mgu-od",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "048-dee-jay-jus-cool.gif",
+   "sha256": "b468a93b70dfc1a81fb47cc5fefbe5225050a190b2925252977994d3d5915473",
+   "moveId": "cb65cb89-a54c-4847-aee3-6de1ea6131c6",
+   "moveSlug": "dee-jay-jus-cool",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "060-dee-jay-sa1.gif",
+   "sha256": "3e226d9a0b611bec703abcc420ab84a4910dba060734ea7d05d1fc06f245c0ee",
+   "moveId": "71e6690e-c671-4261-8357-5897427db6b2",
+   "moveSlug": "dee-jay-sa1",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "092-dee-jay-sa3_under10mb.gif",
+   "sha256": "4d4e93b55f385201015fdf4083d8a7430d1eba90d61096efd7bfc86c071ab153",
+   "moveId": "e52bdd7f-b29f-43ba-83cc-e9f139b4b809",
+   "moveSlug": "dee-jay-sa3",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "093-dee-jay-ca_under10mb.gif",
+   "sha256": "ac7e70a95d2bb7772303aa71e5f1c12e47c9f0921b5fdbc27b1228c441e83369",
+   "moveId": "88ef0949-2a51-4923-90e2-5a77f1501844",
+   "moveSlug": "dee-jay-ca",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "094-dee-jay-forward-throw.gif",
+   "sha256": "1e2f528ce093d758ad648c224d7c1b2432f91eacdcfa169d6b6adfac8872e1f6",
+   "moveId": "f6538624-3bad-4968-a1b3-1292f9d96311",
+   "moveSlug": "dee-jay-forward-throw",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  },
+  {
+   "file": "095-dee-jay-back-throw.gif",
+   "sha256": "1aecb65c59c3f4caeb1f5fe18881348362ae641722779f1543d0286066c26dfd",
+   "moveId": "e8b09fbd-4b14-49a8-a1b7-52067f87409b",
+   "moveSlug": "dee-jay-back-throw",
+   "idSource": "VISUAL_QA",
+   "status": "CONNECT_READY",
+   "reasons": [],
+   "warnings": []
+  }
+ ]
+}

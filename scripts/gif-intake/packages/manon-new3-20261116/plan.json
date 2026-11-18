@@ -1,0 +1,48 @@
+{
+ "character": "manon",
+ "total": 3,
+ "summary": {
+  "HOLD": 3
+ },
+ "holdReasons": {
+  "NO_MOVE_ID": 3
+ },
+ "rows": [
+  {
+   "file": "manon_134616_040p60_044p20_throw_variant_HOLD.gif",
+   "sha256": "af910188316377abff0b6c047cb65fbdb850bf4e5a165789d573418493c033ed",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "manon_134616_158p80_163p20_close_throw_variant_HOLD.gif",
+   "sha256": "6d4ae9291b5c10828e60ff77545d5b6af5dc9725c3b357eb6205a4f78723e1e3",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  },
+  {
+   "file": "manon_134616_240p00_244p00_kick_impact_variant_HOLD.gif",
+   "sha256": "1e740b7e29688c2777eca3f60b796f75dd20e93686d05be569d5b216d3923291",
+   "moveId": null,
+   "moveSlug": null,
+   "idSource": null,
+   "status": "HOLD",
+   "reasons": [
+    "NO_MOVE_ID"
+   ],
+   "warnings": []
+  }
+ ]
+}

@@ -4,6 +4,7 @@ import { MiniIllustration } from "@/components/mini-illustration";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { deleteDiagnosisHistory, getDiagnosisHistory, type DiagnosisHistoryRecord } from "@/lib/local-user-tools";
+import { buildHistoryDailyTrainingHref } from "@/lib/daily-training";
 import { usePersonalizationOwner } from "@/lib/use-personalization-owner";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
 import { createOwnerResponseFence, deleteSupabaseDiagnosisHistory, readSupabaseDiagnosisHistory, type DbDiagnosisHistoryRecord, type DiagnosisHistoryDeleteResult, type DiagnosisHistorySupabaseClient } from "@/lib/diagnosis-history-supabase";
@@ -121,6 +122,10 @@ export function DiagnosisHistoryTool() {
               {record.topResults.map((item) => <li key={item.key}><strong>{"label" in item ? item.label : item.key}</strong>：{item.score}</li>)}
             </ol>
           ) : <p>強い傾向は記録されませんでした。</p>}
+          {(() => {
+            const practiceHref = buildHistoryDailyTrainingHref(record.diagnosisType, record.topResults);
+            return practiceHref ? <p><Link className="text-link" href={practiceHref}>この結果で今日の15分練習へ</Link></p> : null;
+          })()}
           {record.diagnosisSlug ? <Link className="text-link" href={`/diagnosis/${record.diagnosisSlug}`}>この診断をもう一度行う</Link> : null}
         </article>
       ))}

@@ -31,3 +31,5 @@
 .source > span:first-child { color: var(--copy-muted, var(--muted)); font-size: .7rem; }
 @media (prefers-reduced-motion: reduce) { .media img[src$=".gif"] { display: none; } }
 @media (max-width: 560px) { .card { padding: 14px; } .summaryRow { gap: 10px; } .damage { min-width: 78px; } .detailBody dl { grid-template-columns: 1fr; } .actions button { flex: 1 1 145px; } }
+.bookmark { width: 36px; height: 36px; border-radius: 999px; border: 0; background: rgba(0,0,0,.55); color: #fff; font-size: 1rem; cursor: pointer; }
+.trainingToggle { min-height: 44px; margin-top: 8px; padding: 0 14px; border-radius: 10px; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; }

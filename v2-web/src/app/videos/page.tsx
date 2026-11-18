@@ -2,6 +2,7 @@ import { VideoSearchForm, VideoSearchResults } from "@/components/video-search-p
 import { parseVideoSearchFilters, type VideoSearchParams } from "@/lib/video-search-filters";
 import { Suspense } from "react";
 import { AutoVideoLoading } from "@/components/auto-youtube-videos";
+import { LatestYouTubeVideos } from "@/components/latest-youtube-videos";
 import { publicPageMetadata } from "@/lib/public-page-metadata";
 export const dynamic = "force-dynamic";
 
@@ -41,6 +42,8 @@ export default async function VideosPage({ searchParams }: {
       <VideoSearchForm key={JSON.stringify(params)} filters={filters} params={params} />
       <Suspense key={JSON.stringify(params)} fallback={<AutoVideoLoading />}><VideoSearchResults filters={filters}
         exact={{ playerId, characterId, tournamentId, player, invalidFilter }} /></Suspense>
+
+      <Suspense fallback={null}><LatestYouTubeVideos /></Suspense>
 
       <section aria-label="掲載動画"><h2>掲載動画</h2><p>こちらは掲載済みの動画です。上の検索条件はYouTube検索に使用します。</p>
       {result.state === "SUCCESS_WITH_RESULTS" ? (

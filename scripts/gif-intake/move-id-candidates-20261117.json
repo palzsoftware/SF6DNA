@@ -1,0 +1,128 @@
+{
+ "date": "2026-11-17",
+ "note": "技ID候補の整理(静的照合のみ)。webIdは内部moveIdではない。承認・公開・接続は行わない。",
+ "luke_od_flash_knuckle": {
+  "fixtureRow": {
+   "moveId": "9616dccc-5222-420c-97c7-512fe6ebad17",
+   "slug": "luke-flash-knuckle-od",
+   "name": "OD フラッシュナックル",
+   "rowsInFixture": 1
+  },
+  "officialRecords": {
+   "314_first_hit": {
+    "key": "luke:web:314",
+    "command": "214 + LPMPHP",
+    "active_frame": "15",
+    "note": [
+     "ヒット時2段目に派生",
+     "初段ヒット時のみDDTへ派生可"
+    ]
+   },
+   "315_second_stage": {
+    "key": "luke:web:315",
+    "command": "214 + LPMPHP",
+    "active_frame": "33-36",
+    "note": null
+   },
+   "316_ddt_follow": {
+    "key": "luke:web:316",
+    "command": "（ODフラッシュナックル後に）LPMPHP",
+    "active_frame": "1",
+    "note": [
+     "発動時にドライブゲージを10000消費　"
+    ]
+   }
+  },
+  "finding": "公式資料では OD フラッシュナックルは「初段(web314)・2段目(web315)・DDT派生(web316)」の別行。公開用データ(fixture)には OD フラッシュナックルの1行のみで、2段目・DDTの行は存在しない。",
+  "decision": {
+   "twoHitCandidate_76s40_77s95": "HOLD。GIF実体が未受領。内容が初段のみ/2段目まで/OD全体のどれかは映像で確認できない。2段目の行が無いため新規登録もしない",
+   "fourHit_22_45": "HOLD(従来どおり)",
+   "relationship_2hit_4hit": "未確定(別シーケンス。どちらがカード用かの確認が必要)",
+   "moveIdAssigned": null
+  }
+ },
+ "jp_vihat_two": {
+  "rows": [
+   {
+    "file": "9_43-jp-departure-window.gif",
+    "sha256": "7c61ea368d88b1bd2152fee1f10ca9bb36683f5081049166e9fcb8bd7ed0517d",
+    "moveId": "6fbfed6b-7805-4277-b216-60503d4cee88",
+    "moveSlug": "jp-departure-window",
+    "officialName": "ヴィーハト・アクノ",
+    "aliasCommand": "（ヴィーハト設置中に）214 + LPorMP",
+    "status": "NEEDS_VISUAL_QA",
+    "existingMp4": false
+   },
+   {
+    "file": "9_44-jp-departure-shadow.gif",
+    "sha256": "09698fd558e04aded20b44d258e6aa19696c66e148236ca184470598903bc6c6",
+    "moveId": "a6b9d663-b9b3-494b-8d43-7aed196be8f4",
+    "moveSlug": "jp-departure-shadow",
+    "officialName": "ヴィーハト・チェーニ",
+    "aliasCommand": "（ヴィーハト設置中に）214 + HP",
+    "status": "NEEDS_VISUAL_QA",
+    "existingMp4": false
+   }
+  ],
+  "officialRecords": {
+   "316": {
+    "key": "jp:web:316",
+    "command": "（ヴィーハト設置中に）214 + LPorMP",
+    "active_frame": null,
+    "note": [
+     "6-25F　完全無敵",
+     "26F目から空中判定",
+     "31F目から行動可"
+    ]
+   },
+   "317": {
+    "key": "jp:web:317",
+    "command": "（ヴィーハト設置中に）214 + HP",
+    "active_frame": null,
+    "note": null
+   }
+  },
+  "finding": "公式316のコマンド「（ヴィーハト設置中に）214 + LPorMP」はアクノ、317「…214 + HP」はチェーニの別名表コマンドと完全一致。技名とコマンドの静的対応は強化されたが、設置中という条件と映像内容の一致は映像未確認。",
+  "decision": "NEEDS_VISUAL_QA のまま(接続・承認しない)"
+ },
+ "alt_notation_16": {
+  "status": {
+   "manon:MATCHED_STATIC": 5,
+   "jp:NEEDS_VISUAL_QA": 7,
+   "luke:NEEDS_VISUAL_QA": 3,
+   "juri:MATCHED_STATIC": 1
+  },
+  "connectable_note": "MATCHED_STATIC 6本(Manon5/Juri1)は静的一意。ただしGIF実体の映像QAが済んでいないものは接続しない。残り10本はNEEDS_VISUAL_QA(JP7に含む前投げ・後ろ投げ等は必殺技と区別)",
+  "rules_checked": {
+   "jp_abunimarch_embrace_bilingual": true,
+   "jp_od_vihat_by_button_combo": [
+    [
+     "OD 弱 ヴィーハト",
+     "214 + LPMP"
+    ],
+    [
+     "OD 中 ヴィーハト",
+     "214 + LPHP"
+    ],
+    [
+     "OD 強 ヴィーハト",
+     "214 + MPHP"
+    ]
+   ],
+   "jp_throws_separated_from_specials": [
+    "前投げ",
+    "後ろ投げ"
+   ],
+   "luke_double_impact_second_stage": [
+    "ダブルインパクト（2段目）"
+   ],
+   "juri_sa1_classic_vs_modern": [
+    [
+     "23626 | 26236 + LK | MK | HK",
+     "↓↘→↓↘→+K",
+     "SP+H"
+    ]
+   ]
+  }
+ }
+}

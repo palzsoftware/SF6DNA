@@ -1,0 +1,677 @@
+[
+ {
+  "character": "luke",
+  "file": "22_36-luke-light-flash-knuckle-charged.gif",
+  "officialName": "弱 フラッシュナックル（ホールド）",
+  "officialCommand": "214 + LPホールド",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_37-luke-light-flash-knuckle-perfect.gif",
+  "officialName": "弱 フラッシュナックル（ジャスト）",
+  "officialCommand": "214 + LPホールド",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_39-luke-medium-flash-knuckle-charged.gif",
+  "officialName": "中 フラッシュナックル（ホールド）",
+  "officialCommand": "214 + MPホールド",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_40-luke-medium-flash-knuckle-perfect.gif",
+  "officialName": "中 フラッシュナックル（ジャスト）",
+  "officialCommand": "214 + MPホールド",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_42-luke-heavy-flash-knuckle-charged.gif",
+  "officialName": "強 フラッシュナックル（ホールド）",
+  "officialCommand": "214 + HPホールド",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_43-luke-heavy-flash-knuckle-perfect.gif",
+  "officialName": "強 フラッシュナックル（ジャスト）",
+  "officialCommand": "214 + HPホールド",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_48-luke-aerial-flash-knuckle-charged.gif",
+  "officialName": "エアフラッシュナックル（ホールド）",
+  "officialCommand": "（垂直or前ジャンプ中に）214 + LP | MP | HPホールド",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_49-luke-od-aerial-flash-knuckle.gif",
+  "officialName": "OD エアフラッシュナックル",
+  "officialCommand": "（垂直or前ジャンプ中に）214 + LPMPHP",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "luke-od-avenger.gif",
+  "officialName": "OD アベンジャー",
+  "officialCommand": "236 + LKMKHK",
+  "category": "既存技への統合の可能性",
+  "candidateSlug": "luke-avenger",
+  "note": "同名の技はあるが 強度/OD/派生の区分が公開用データに無い"
+ },
+ {
+  "character": "luke",
+  "file": "luke-od-no-chaser.gif",
+  "officialName": "OD ノーチェイサー",
+  "officialCommand": "（ODアベンジャー中に）LP | MP | HP",
+  "category": "既存技への統合の可能性",
+  "candidateSlug": "luke-no-chaser",
+  "note": "同名の技はあるが 強度/OD/派生の区分が公開用データに無い"
+ },
+ {
+  "character": "luke",
+  "file": "luke-od-impaler.gif",
+  "officialName": "OD インパラー",
+  "officialCommand": "（ODアベンジャー中に）LK | MK | HK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_23-luke-double-impact-followup.gif",
+  "officialName": "ダブルインパクト（2段目）",
+  "officialCommand": "6 + HP>HP",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_64-luke-ca-pale-rider.gif",
+  "officialName": "CA ペイルライダー",
+  "officialCommand": "（体力25%以下で）23626 | 26236 + LK | MK | HK",
+  "category": "既存技への統合の可能性",
+  "candidateSlug": "luke-sa3-pale-rider",
+  "note": "同名の技はあるが 強度/OD/派生の区分が公開用データに無い"
+ },
+ {
+  "character": "luke",
+  "file": "22_65-luke-sweeper.gif",
+  "officialName": "スウィーパー",
+  "officialCommand": "（近距離で）N or 6 + LPLK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_66-luke-scrapper.gif",
+  "officialName": "スクラッパー",
+  "officialCommand": "（近距離で）4 + LPLK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_67-luke-forward-dash.gif",
+  "officialName": "前方ステップ",
+  "officialCommand": "5656 ＋ 6",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_69-luke-muzzle-flash.gif",
+  "officialName": "ドライブインパクト（マズルフラッシュ）",
+  "officialCommand": "HPHK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_72-luke-drive-parry.gif",
+  "officialName": "ドライブパリィ",
+  "officialCommand": "MPMK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_75-luke-parry-drive-rush.gif",
+  "officialName": "パリィドライブラッシュ",
+  "officialCommand": "（ドライブパリィ中に）5656 ＋ MPMK ＋ 6",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "luke",
+  "file": "22_76-luke-cancel-drive-rush.gif",
+  "officialName": "キャンセルドライブラッシュ",
+  "officialCommand": "（必殺技キャンセル可能な攻撃ヒット中に）5656 ＋ 6 or (N or 6) + MPMK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "jp",
+  "file": "jp-od-departure-mp-hp.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "jp",
+  "file": "jp-od-departure-lp-mp.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "jp",
+  "file": "jp-od-departure-lp-hp.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "jp",
+  "file": "9_38-jp-medium-departure.gif",
+  "officialName": "中 ヴィーハト",
+  "officialCommand": "214 + MP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-departure-m",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_37-jp-light-departure.gif",
+  "officialName": "弱 ヴィーハト",
+  "officialCommand": "214 + LP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-departure-l",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_39-jp-heavy-departure.gif",
+  "officialName": "強 ヴィーハト",
+  "officialCommand": "214 + HP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-departure-h",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "jp-abnimach.gif",
+  "officialName": "アブニマーチ",
+  "officialCommand": "214 + LK|MK|HK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "jp",
+  "file": "jp-od-abnimach.gif",
+  "officialName": "OD アブニマーチ",
+  "officialCommand": "214 + LKMKHK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "jp",
+  "file": "jp-torbalan-feint.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "jp",
+  "file": "9_50-jp-od-torbalan.gif",
+  "officialName": "OD トルバラン",
+  "officialCommand": "236 + LKMKHK",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-torbalan-od",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_48-jp-medium-torbalan.gif",
+  "officialName": "中 トルバラン",
+  "officialCommand": "236 + MK",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-torbalan-m",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_47-jp-light-torbalan.gif",
+  "officialName": "弱 トルバラン",
+  "officialCommand": "236 + LK",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-torbalan-l",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_49-jp-heavy-torbalan.gif",
+  "officialName": "強 トルバラン",
+  "officialCommand": "236 + HK",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-torbalan-h",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_32-jp-od-heavy-triglav.gif",
+  "officialName": "OD 強 トリグラフ",
+  "officialCommand": "5252 + MPHP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-triglav-od-h",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_31-jp-od-medium-triglav.gif",
+  "officialName": "OD 中 トリグラフ",
+  "officialCommand": "5252 + LPHP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-triglav-od-m",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_33-jp-light-stribog.gif",
+  "officialName": "弱 ストリボーグ",
+  "officialCommand": "236 + LP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-stribog-l",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_34-jp-medium-stribog.gif",
+  "officialName": "中 ストリボーグ",
+  "officialCommand": "236 + MP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-stribog-m",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "manon",
+  "file": "manon-od-renverse.gif",
+  "officialName": "OD ランヴェルセ（メダルLvに応じて動作が変化）",
+  "officialCommand": "236 + LPMPHP",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "manon",
+  "file": "manon-grand-fouette-whiff.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "manon",
+  "file": "manon-renverse-hit.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "manon",
+  "file": "manon-heavy-manege-dore.gif",
+  "officialName": "強 マネージュ・ドレ（メダルLvに応じて動作が変化）",
+  "officialCommand": "（近距離で）6314 | 6214 | 6324 + HP",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "manon",
+  "file": "manon-medium-manege-dore.gif",
+  "officialName": "中 マネージュ・ドレ（メダルLvに応じて動作が変化）",
+  "officialCommand": "（近距離で）6314 | 6214 | 6324 + MP",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "manon",
+  "file": "manon-od-manege-dore.gif",
+  "officialName": "OD マネージュ・ドレ（メダルLvに応じて動作が変化）",
+  "officialCommand": "（近距離で）6314 | 6214 | 6324 + LPMPHP",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "manon",
+  "file": "manon-light-manege-dore.gif",
+  "officialName": "弱 マネージュ・ドレ（メダルLvに応じて動作が変化）",
+  "officialCommand": "（近距離で）6314 | 6214 | 6324 + LP",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "jamie",
+  "file": "jamie-the-devil-inside-held.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "jamie",
+  "file": "jamie-lv4-heavy-freeflow-strikes-full.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "jamie",
+  "file": "jamie-lv4-medium-freeflow-strikes-full.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "jamie",
+  "file": "jamie-lv4-light-freeflow-strikes-full.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "jp",
+  "file": "9_36-jp-od-stribog.gif",
+  "officialName": "OD ストリボーグ",
+  "officialCommand": "236 + LPMPHP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-stribog-od",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_35-jp-heavy-stribog.gif",
+  "officialName": "強 ストリボーグ",
+  "officialCommand": "236 + HP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-stribog-h",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "juri",
+  "file": "17_70-juri-sa1-sakkai-fuhazan.gif",
+  "officialName": "SA1 殺界風破斬",
+  "officialCommand": "23626 | 26236 + LK | MK | HK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "jp",
+  "file": "9_58-jp-uragan.gif",
+  "officialName": "ウラガーン",
+  "officialCommand": "（近距離で）4 + LPLK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "jp",
+  "file": "9_57-jp-ravina.gif",
+  "officialName": "ラヴィーナ",
+  "officialCommand": "（近距離で）N or 6 + LPLK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "jp",
+  "file": "9_55-jp-sa3-interdiction.gif",
+  "officialName": "SA3 ザプリェット",
+  "officialCommand": "23626 | 26236 + LK | MK | HK",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-sa3",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_54-jp-sa2-lovushka.gif",
+  "officialName": "SA2 ラヴーシュカ",
+  "officialCommand": "21424 | 24214 + LP | MP | HP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-sa2",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_53-jp-sa1-chornobog.gif",
+  "officialName": "SA1 チェルノボーグ",
+  "officialCommand": "23626 | 26236 + LP | MP | HP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-sa1",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_30-jp-od-light-triglav.gif",
+  "officialName": "OD 弱 トリグラフ",
+  "officialCommand": "5252 + LPMP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-triglav-od-l",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_29-jp-heavy-triglav.gif",
+  "officialName": "強 トリグラフ",
+  "officialCommand": "5252 + HP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-triglav-h",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_44-jp-departure-shadow.gif",
+  "officialName": "ヴィーハト・チェーニ",
+  "officialCommand": "（ヴィーハト設置中に）214 + HP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-departure-shadow",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_27-jp-light-triglav.gif",
+  "officialName": "弱 トリグラフ",
+  "officialCommand": "5252 + LP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-triglav-l",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_28-jp-medium-triglav.gif",
+  "officialName": "中 トリグラフ",
+  "officialCommand": "5252 + MP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-triglav-m",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "jp",
+  "file": "9_43-jp-departure-window.gif",
+  "officialName": "ヴィーハト・アクノ",
+  "officialCommand": "（ヴィーハト設置中に）214 + LPorMP",
+  "category": "識別名不一致",
+  "candidateSlug": "jp-departure-window",
+  "note": "公式名=公開用データの技名と一意に一致。ファイル名slugが公開用slugと異なるだけ(別名として登録すれば接続可能)"
+ },
+ {
+  "character": "ryu",
+  "file": "ryu-medium-burnout-stats.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "ryu",
+  "file": "ryu-heavy-burnout-stats.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "ryu",
+  "file": "ryu-light-burnout-stats.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "ryu",
+  "file": "ryu-drive-reversal.gif",
+  "officialName": "[ガード時]ドライブリバーサル（胸尖打ち）",
+  "officialCommand": "（ガード中 or ドライブパリィ成立中に）6 ＋ HPHK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "ryu",
+  "file": "ryu-drive-rush.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "ryu",
+  "file": "ryu-drive-impact.gif",
+  "officialName": "ドライブインパクト（震撃）",
+  "officialCommand": "HPHK",
+  "category": "データ未登録",
+  "candidateSlug": null,
+  "note": "公開用データに同名の技なし(派生・別版・システム技等)"
+ },
+ {
+  "character": "ryu",
+  "file": "ryu-drive-parry.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "ryu",
+  "file": "ryu-cancel-drive-rush.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "ryu",
+  "file": "ryu-jump-normal-hit.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "jamie",
+  "file": "SUPERSEDED_strength-unknown_Jamie_Lv4_FlowingDrunkenFist_CANDIDATE.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "jamie",
+  "file": "Jamie_Lv4_FlowingDrunkenFist_HP_candidate.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "jamie",
+  "file": "Jamie_Lv4_FlowingDrunkenFist_MP_candidate.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ },
+ {
+  "character": "jamie",
+  "file": "Jamie_Lv4_FlowingDrunkenFist_LP_candidate.gif",
+  "officialName": null,
+  "officialCommand": null,
+  "category": "その他(公式名が未特定: 対応不明・撮影内容要確認)",
+  "candidateSlug": null,
+  "note": null
+ }
+]

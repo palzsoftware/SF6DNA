@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "characterSlug": "luke",
+  "localQaOnly": true,
+  "approval": "NOT_APPROVED",
+  "note": "ローカルQA専用。公開承認ではない。同じ技IDに複数GIFを切り替えて見せる表示方法の検証用。技IDは増やしていない。",
+  "groups": [
+    {
+      "moveId": "5d28a0ed-7abe-4c1b-8cc4-bcb208d55626",
+      "moveSlug": "luke-aerial-flash-knuckle",
+      "connection": "CONNECTED",
+      "variants": [
+        {
+          "variantKey": "normal",
+          "fileName": "luke-aerial-flash-knuckle.gif",
+          "sha256": "539857ce413be67fb8973392bc8c57e8436f9c622262dcd71682d924270f7ff0",
+          "bytes": 3638639,
+          "durationMs": 2150,
+          "sourceFile": "22_47-luke-aerial-flash-knuckle.gif",
+          "observation": "空中で前方へ進みヒット火花。接続済みの通常版(変更なし)。"
+        },
+        {
+          "variantKey": "charged",
+          "fileName": "luke-aerial-flash-knuckle-charged.gif",
+          "sha256": "839ea0a4831ec6b1c581a1c557f5ba7e5d04468febffa878c339126c976ab6bf",
+          "bytes": 3723169,
+          "durationMs": 2200,
+          "sourceFile": "22_48-luke-aerial-flash-knuckle-charged.gif",
+          "observation": "通常版と違い、構え→宙返りを含む動きと紫がかった火花。映像上は別パターンと判別できる。"
+        }
+      ]
+    },
+    {
+      "moveId": "53070580-449c-4fcb-b6f5-bb97de387ba1",
+      "moveSlug": "luke-flash-knuckle-l",
+      "connection": "PENDING_PARENT_STRENGTH",
+      "pendingReason": "親の技(弱/中/強)の強度を映像だけでは確認できない。技カードには接続せず、表示方法の試作確認のみ。",
+      "variants": [
+        {
+          "variantKey": "normal",
+          "fileName": "luke-flash-knuckle-l-normal.gif",
+          "sha256": "30869638ca2c0a6ddbdffb7234b2283bef95942f3c81a0a185495b00640420e6",
+          "bytes": 1914529,
+          "durationMs": 1100,
+          "sourceFile": "22_35-luke-light-flash-knuckle.gif",
+          "observation": "弱フラッシュナックルの通常版候補(強度は未確認)。"
+        },
+        {
+          "variantKey": "charged",
+          "fileName": "luke-flash-knuckle-l-charged.gif",
+          "sha256": "fe22dc00ec9d6f2d09a3ec4ab5dddf505651a2e9e5b7eb92bba582d9152d781b",
+          "bytes": 1899869,
+          "durationMs": 1100,
+          "sourceFile": "22_36-luke-light-flash-knuckle-charged.gif",
+          "observation": "通常版候補とほぼ同じ動き・同じ長さで、映像だけでは違いを判別しにくい。"
+        },
+        {
+          "variantKey": "perfect",
+          "fileName": "luke-flash-knuckle-l-perfect.gif",
+          "sha256": "268aaf4010133aa3a8f6b91864c8e6b38a07908ca35ba1bf18dfd1c56b6c75cb",
+          "bytes": 3325327,
+          "durationMs": 2000,
+          "sourceFile": "22_37-luke-light-flash-knuckle-perfect.gif",
+          "observation": "パーフェクト版候補(画面左下にSUCCESS表示を含むものがある)。"
+        }
+      ]
+    },
+    {
+      "moveId": "8668e8a5-945a-437c-a833-f265d837d0bc",
+      "moveSlug": "luke-flash-knuckle-m",
+      "connection": "PENDING_PARENT_STRENGTH",
+      "pendingReason": "親の技(弱/中/強)の強度を映像だけでは確認できない。技カードには接続せず、表示方法の試作確認のみ。",
+      "variants": [
+        {
+          "variantKey": "normal",
+          "fileName": "luke-flash-knuckle-m-normal.gif",
+          "sha256": "0c49140bacb24cc382a8ecd8ad72752fa393e15c2e04e0d96200fac9a345c3a6",
+          "bytes": 2465833,
+          "durationMs": 1450,
+          "sourceFile": "22_38-luke-medium-flash-knuckle.gif",
+          "observation": "中フラッシュナックルの通常版候補(強度は未確認)。"
+        },
+        {
+          "variantKey": "charged",
+          "fileName": "luke-flash-knuckle-m-charged.gif",
+          "sha256": "a561f657854a6668ed2b46ff3d1dca4e4c3d07456243a338aee513f57e54f163",
+          "bytes": 3945365,
+          "durationMs": 2350,
+          "sourceFile": "22_39-luke-medium-flash-knuckle-charged.gif",
+          "observation": "チャージ版候補。"
+        },
+        {
+          "variantKey": "perfect",
+          "fileName": "luke-flash-knuckle-m-perfect.gif",
+          "sha256": "6533341039639da8c62485a3d93ea4557321d8c1a0b6950225ef0b6113e3dfb8",
+          "bytes": 3458304,
+          "durationMs": 2050,
+          "sourceFile": "22_40-luke-medium-flash-knuckle-perfect.gif",
+          "observation": "パーフェクト版候補(画面左下にSUCCESS表示を含むものがある)。"
+        }
+      ]
+    },
+    {
+      "moveId": "4b6fa7c0-c85c-4d4f-aca4-b54b29599818",
+      "moveSlug": "luke-flash-knuckle-h",
+      "connection": "PENDING_PARENT_STRENGTH",
+      "pendingReason": "親の技(弱/中/強)の強度を映像だけでは確認できない。技カードには接続せず、表示方法の試作確認のみ。",
+      "variants": [
+        {
+          "variantKey": "normal",
+          "fileName": "luke-flash-knuckle-h-normal.gif",
+          "sha256": "82e05ff0ac86444d337c49addde25766d1a7338477bc376ef17e4a1f4d3aa386",
+          "bytes": 2771462,
+          "durationMs": 1600,
+          "sourceFile": "22_41-luke-heavy-flash-knuckle.gif",
+          "observation": "強フラッシュナックルの通常版候補(強度は未確認)。"
+        },
+        {
+          "variantKey": "charged",
+          "fileName": "luke-flash-knuckle-h-charged.gif",
+          "sha256": "fb4c3ce0bb73e17f7fcbad3dbe75aecfa0b4fb7c9f12fbe0ad13f272ed24c88c",
+          "bytes": 3839086,
+          "durationMs": 2350,
+          "sourceFile": "22_42-luke-heavy-flash-knuckle-charged.gif",
+          "observation": "チャージ版候補。"
+        },
+        {
+          "variantKey": "perfect",
+          "fileName": "luke-flash-knuckle-h-perfect.gif",
+          "sha256": "f682eef616a0d8df6259f87230349b01436ff02a5037cfaeecc3aeb6f7b04b16",
+          "bytes": 3800652,
+          "durationMs": 2300,
+          "sourceFile": "22_43-luke-heavy-flash-knuckle-perfect.gif",
+          "observation": "パーフェクト版候補(画面左下にSUCCESS表示を含むものがある)。"
+        }
+      ]
+    }
+  ]
+}

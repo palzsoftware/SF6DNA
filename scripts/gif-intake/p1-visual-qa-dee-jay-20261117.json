@@ -1,0 +1,292 @@
+{
+ "generated": "2026-11-17",
+ "scope": "dee-jay 追加素材(Drive個別GIF)の入力表示QA",
+ "entries": [
+  {
+   "character": "dee-jay",
+   "file": "030-dee-jay-speedy-maracas_under10mb.gif",
+   "moveSlug": "dee-jay-speedy-maracas",
+   "moveId": "155af88f-6cb8-40c1-b585-ebfdfb7d2ad3",
+   "fixtureName": "マラカスビート",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↓+PP(22+PP)。SUCCESS表示。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 221,
+    "durationMs": 14740,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "034-dee-jay-air-slasher-od.gif",
+   "moveSlug": "dee-jay-air-slasher-od",
+   "moveId": "1d7f9f79-bff7-4c9b-8645-54e95b310d24",
+   "fixtureName": "OD エアスラッシャー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 緑のOD SUCCESS ←→+P(溜め[4]6+PP)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 39,
+    "durationMs": 3120,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "039-dee-jay-jackknife-od.gif",
+   "moveSlug": "dee-jay-jackknife-od",
+   "moveId": "bc019a33-449a-4662-aaa6-d86d0a766a1c",
+   "fixtureName": "OD ジャックナイフマキシマム",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 緑のOD SUCCESS ↓↑+K([2]8+KK)。ジャンプ蹴り上げの動作。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 49,
+    "durationMs": 3920,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "040-dee-jay-sobat-l.gif",
+   "moveSlug": "dee-jay-sobat-l",
+   "moveId": "49f0d4ea-618e-4ce9-94f3-8e6db0b9f7b7",
+   "fixtureName": "フェイクロールステップ",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↘→+K・弱(青)。236+弱Kに一致。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 22,
+    "durationMs": 1760,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "041-dee-jay-sobat-m.gif",
+   "moveSlug": "dee-jay-sobat-h",
+   "moveId": "0f1c3e4a-ce03-4f74-8950-5b4c92c4bb68",
+   "fixtureName": "ダブルローリングソバット",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↘→+K・強(赤・文字『強』)。2回蹴る動作でダブルローリングソバットと整合。パッケージ主張(クイック・中)とは不一致=ファイル名と中身が入れ替わっている。",
+   "unconfirmed": [
+    "パッケージ記載の技ID・ファイル名(sobat-m)と不一致。入力表示(強)を根拠にダブルローリングソバットへ接続",
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 28,
+    "durationMs": 2240,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "042-dee-jay-sobat-h.gif",
+   "moveSlug": "dee-jay-sobat-m",
+   "moveId": "033a5787-d194-4a0f-b05d-6686f04601fe",
+   "fixtureName": "クイックローリングソバット",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↘→+K・中(黄・文字『中』)。1回の蹴りでクイックローリングソバットと整合。パッケージ主張(ダブル・強)とは不一致=ファイル名と中身が入れ替わっている。",
+   "unconfirmed": [
+    "パッケージ記載の技ID・ファイル名(sobat-h)と不一致。入力表示(中)を根拠にクイックローリングソバットへ接続",
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 33,
+    "durationMs": 2640,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "043-dee-jay-sobat-od.gif",
+   "moveSlug": "dee-jay-sobat-od",
+   "moveId": "d2b2199c-f28b-4270-a8e1-e7ba02b621b2",
+   "fixtureName": "OD ダブルローリングソバット",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 緑のOD SUCCESS ↓↘→+K。金色発光。236+KKに一致。",
+   "unconfirmed": [
+    "ODの2ボタン表示は1アイコン表記のため、ボタン数は発光(OD)で判断",
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 28,
+    "durationMs": 2240,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "047-dee-jay-mgu-od_under10mb.gif",
+   "moveSlug": "dee-jay-mgu-od",
+   "moveId": "978c3660-a958-4dd9-87a6-c1c4620d9b8d",
+   "fixtureName": "OD マシンガンアッパー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 緑のOD SUCCESS ↓↙←+P(214+PP)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 75,
+    "durationMs": 6000,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "048-dee-jay-jus-cool.gif",
+   "moveSlug": "dee-jay-jus-cool",
+   "moveId": "cb65cb89-a54c-4847-aee3-6de1ea6131c6",
+   "fixtureName": "ジョスクール",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↙←+K(214+K)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 14,
+    "durationMs": 1120,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "060-dee-jay-sa1.gif",
+   "moveSlug": "dee-jay-sa1",
+   "moveId": "71e6690e-c671-4261-8357-5897427db6b2",
+   "fixtureName": "SA1 グレイテストソバット",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↘→↓↘→+K(236236+K)。ゲージ3→2(1本消費)。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 41,
+    "durationMs": 3280,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "092-dee-jay-sa3_under10mb.gif",
+   "moveSlug": "dee-jay-sa3",
+   "moveId": "e52bdd7f-b29f-43ba-83cc-e9f139b4b809",
+   "fixtureName": "SA3 サタデーナイト",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↙←↓↙←+P(214214+P)。ゲージ3→0(3本消費)で『CA』表示なし=SA3。",
+   "unconfirmed": [
+    "SA3とCAは同コマンド。ゲージ3本消費(開始時3)で区別",
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 197,
+    "durationMs": 13140,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "093-dee-jay-ca_under10mb.gif",
+   "moveSlug": "dee-jay-ca",
+   "moveId": "88ef0949-2a51-4923-90e2-5a77f1501844",
+   "fixtureName": "CA サタデーナイト",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示 ↓↙←↓↙←+P(214214+P)。ゲージ位置に『CA』表示(赤)=クリティカルアーツ。",
+   "unconfirmed": [
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 207,
+    "durationMs": 13800,
+    "width": 480,
+    "height": 270
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "094-dee-jay-forward-throw.gif",
+   "moveSlug": "dee-jay-forward-throw",
+   "moveId": "f6538624-3bad-4968-a1b3-1292f9d96311",
+   "fixtureName": "スタンプ・ザ・ビート",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示なし(投げ)。相手を蹴り上げて前方へ吹き飛ばす。位置の入れ替えなし=前投げ。",
+   "unconfirmed": [
+    "入力表示が無く、前/後ろは位置入替の有無による目視判定",
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 39,
+    "durationMs": 3120,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  },
+  {
+   "character": "dee-jay",
+   "file": "095-dee-jay-back-throw.gif",
+   "moveSlug": "dee-jay-back-throw",
+   "moveId": "e8b09fbd-4b14-49a8-a1b7-52067f87409b",
+   "fixtureName": "フリップスルー",
+   "result": "CONFIRMED",
+   "localConnectionCandidate": true,
+   "observation": "入力表示なし(投げ)。相手を背後へ投げ飛ばす。位置が入れ替わる=後ろ投げ。",
+   "unconfirmed": [
+    "入力表示が無く、前/後ろは位置入替の有無による目視判定",
+    "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+   ],
+   "metrics": {
+    "frames": 50,
+    "durationMs": 3340,
+    "width": 640,
+    "height": 360
+   },
+   "approval": "NOT_APPROVED"
+  }
+ ]
+}

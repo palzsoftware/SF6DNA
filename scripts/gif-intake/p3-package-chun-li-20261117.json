@@ -1,0 +1,62 @@
+{
+ "date": "2026-11-17",
+ "character": "chun-li",
+ "records": [
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-standing-lp-candidate.gif",
+   "asset_sha256": "724e2f8e3a24976e1c21961c1039a5a1ccd1aebb550b7a148f896e1f607e4c30",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-standing-mp-candidate.gif",
+   "asset_sha256": "f5c65ab0618f075621714c0d4c38a1c11826b2af9efdd55384556b06425ea93e",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-standing-hp-candidate.gif",
+   "asset_sha256": "ba55bdb69796c28f731b7906b36ca8d7c7b81edb2c6121b2192fadb33e74f843",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-standing-lk-candidate.gif",
+   "asset_sha256": "e4db8e60954a0cf8b41d8b9616d3b07b15dfc15330e60efa1db1220927f68683",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-standing-mk-candidate.gif",
+   "asset_sha256": "8165e5e05b4b7778b8010e4ee5e56a2bed36d73a763a2081101664249e09c29b",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-standing-hk-candidate.gif",
+   "asset_sha256": "11e3e27686fe11a5f8a528eba256285034f001ebe690f0a5b7895a6dae097910",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  },
+  {
+   "character": "chun-li",
+   "asset_filename": "chun-li-crouching-lk-candidate.gif",
+   "asset_sha256": "81c4516fa4f3086c449efa0496d969f28f25e3e3a1fdf9bf68ee9afd439caea8",
+   "technical_qa": "PASS",
+   "strength_status": "VERIFIED",
+   "strength_evidence": "COMPOSITE_20261117_STRICT"
+  }
+ ]
+}

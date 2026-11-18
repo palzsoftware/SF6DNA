@@ -1,0 +1,34 @@
+{
+  "generated": "2026-11-16",
+  "scope": "ジュリ第2バッチ(SF6DNA_JURI_GIF_BATCH_20261116_02.zip)の新規4本の受入判定。受領日の同日に、既存素材との比較を実体で行った。",
+  "result": { "received": 4, "connected": 0, "hold": 4, "reason": "4本とも技ID・強度・入力条件が未記載(入力表示なし)で、ChatGPT側でも visual_semantic_QA=HOLD。技名を確定しない。" },
+  "sha256Check": "4本ともManifestのSHA-256・フレーム数・480x270・20fps・loop=0と実体が一致",
+  "items": [
+    { "file": "juri_044011_009.85_011.45_jump_air_movement_HOLD.gif", "frames": 32, "durationMs": 1600, "status": "HOLD", "observation": "ジャンプ→着地までを含む移動動作。ジャンプ移動自体が技カードの対象かは未確認。" },
+    { "file": "juri_044011_012.00_013.10_standing_kick_movement_HOLD.gif", "frames": 22, "durationMs": 1100, "status": "HOLD", "observation": "斜めに上がる蹴りの動作。最終コマは構えに戻っている。" },
+    { "file": "juri_044314_037.40_038.50_effect_attack_SPECIAL_HOLD.gif", "frames": 22, "durationMs": 1100, "status": "HOLD", "observation": "紫の軌跡と橙の衝撃エフェクトを伴う攻撃。ヒット数表示が出て、相手が打ち上げられた空中のまま終わる。暗転演出は無い。" },
+    { "file": "juri_044445_005.75_007.75_effect_attack_SPECIAL_HOLD.gif", "frames": 40, "durationMs": 2000, "status": "HOLD", "observation": "冒頭に暗転・稲妻・白い球体の演出があり、その後に黒い墨の斬撃を伴う多段ヒット。相手がヒット中の空中で終わる。" }
+  ],
+  "checks": {
+    "standingKickVsPrevious": {
+      "question": "立ちキック候補(12.00-13.10秒)は前回の類似候補(33.55-34.95秒)と同一技か",
+      "answer": "確認できない(同一とも別技とも断定しない。両方HOLD)",
+      "evidence": ["SHA-256は別。切出区間(12.00-13.10と33.55-34.95)も重複しない","全フレームを既存素材と比較し、ほぼ同一のフレーム(平均絶対誤差3未満)は0件(同一区間の再切出しではない)","新:22コマ・斜めに上がる蹴り / 前回:28コマ・水平近くまで伸びる蹴りを含む。見た目の動作範囲が異なる","入力表示が無く、同一の技の別録画か別の技かは映像だけでは判定できない(新と前回の最近傍フレーム誤差は、無関係な通常技系素材との誤差と同程度で判定材料にならない)"]
+    },
+    "effectAttacksClassification": {
+      "question": "エフェクト付き攻撃2本は特殊技・必殺技・SAのどれか",
+      "answer": "どちらも確定しない。ただし手掛かりは異なる",
+      "items": [
+        { "file": "044314 37.40-38.50", "lean": "SAの演出(暗転)が無いため、SAではない可能性が高い。特殊技・必殺技・ユニーク技のどれかは不明", "confirmed": false },
+        { "file": "044445 5.75-7.75", "lean": "冒頭の暗転・稲妻・球体演出はSA(超必殺技)の特徴。既存SA1(17_70)と同系統の墨の斬撃表現だがフレームは一致せず、SA1の別録画か別のSAかは確定できない", "confirmed": false }
+      ],
+      "note": "ジュリの現行技データは特殊技16件・SA3件・ユニーク4件。技名の候補は入力表示が無いため絞れない。"
+    },
+    "durationSufficiency": {
+      "question": "収録動作は技カード用として十分な長さか",
+      "answer": "不十分の可能性が高い(2本)",
+      "evidence": ["044314 37.40-38.50(1.1秒): 相手が空中のまま終わり、着地・硬直を含まない","044445 5.75-7.75(2.0秒): 多段ヒットの途中の空中で終わる","立ちキック(1.1秒)は最終コマで構えに戻っており、動作は完結している(ただし技IDが未確定)","ジャンプ(1.6秒)は着地まで含む"]
+    }
+  },
+  "sa3": { "file": "17_73-juri-sa3-kaisen-dankai-raku.gif", "status": "SIZE_LIMIT", "bytes": 11016274, "alternativeFound": false, "note": "Driveを検索した結果、軽量版・別保存先は見つからなかった(同名のSA3 GIFは1本のみ)。Googleドライブコネクタの10MB上限で取得不可。素材不存在ではない。" }
+}

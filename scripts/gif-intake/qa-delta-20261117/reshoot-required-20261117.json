@@ -1,0 +1,352 @@
+[
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "cammy/crouching/k",
+  "members": [
+   "cammy-crouching-lk",
+   "cammy-crouching-mk",
+   "cammy-crouching-hk"
+  ],
+  "priority": "HIGH",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=False / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "cammy/crouching/p",
+  "members": [
+   "cammy-crouching-hp"
+  ],
+  "priority": "LOW(比較不可)",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=None / 公式発生順=None(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "cammy/standing/k",
+  "members": [
+   "cammy-standing-lk",
+   "cammy-standing-mk",
+   "cammy-standing-hk"
+  ],
+  "priority": "HIGH",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=False / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "cammy/standing/p",
+  "members": [
+   "cammy-standing-lp",
+   "cammy-standing-mp",
+   "cammy-standing-hp"
+  ],
+  "priority": "MID",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=True / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "chun-li/crouching/k",
+  "members": [
+   "chun-li-crouching-lk"
+  ],
+  "priority": "LOW(比較不可)",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=None / 公式発生順=None(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "chun-li/standing/k",
+  "members": [
+   "chun-li-standing-lk",
+   "chun-li-standing-mk",
+   "chun-li-standing-hk"
+  ],
+  "priority": "MID",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=True / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "chun-li/standing/p",
+  "members": [
+   "chun-li-standing-lp",
+   "chun-li-standing-mp",
+   "chun-li-standing-hp"
+  ],
+  "priority": "MID",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=True / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "dee-jay/crouching/k",
+  "members": [
+   "dee-jay-crouching-lk",
+   "dee-jay-crouching-mk",
+   "dee-jay-crouching-hk"
+  ],
+  "priority": "HIGH",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=False / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "dee-jay/crouching/p",
+  "members": [
+   "dee-jay-crouching-lp",
+   "dee-jay-crouching-mp",
+   "dee-jay-crouching-hp"
+  ],
+  "priority": "HIGH",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=False / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "dee-jay/standing/k",
+  "members": [
+   "dee-jay-standing-lk",
+   "dee-jay-standing-mk",
+   "dee-jay-standing-hk"
+  ],
+  "priority": "HIGH",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=False / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "dee-jay/standing/p",
+  "members": [
+   "dee-jay-standing-lp",
+   "dee-jay-standing-mp",
+   "dee-jay-standing-hp"
+  ],
+  "priority": "HIGH",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=False / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "dee-jay-air-slasher/special/",
+  "members": [
+   "dee-jay-air-slasher-l",
+   "dee-jay-air-slasher-m",
+   "dee-jay-air-slasher-h"
+  ],
+  "priority": "MID",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=True / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "dee-jay-jackknife/special/",
+  "members": [
+   "dee-jay-jackknife-l",
+   "dee-jay-jackknife-m",
+   "dee-jay-jackknife-h"
+  ],
+  "priority": "MID",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=True / 公式発生順=False(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "dee-jay-mgu/special/",
+  "members": [
+   "dee-jay-mgu-l",
+   "dee-jay-mgu-m",
+   "dee-jay-mgu-h"
+  ],
+  "priority": "MID",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=True / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "jamie/standing/k",
+  "members": [
+   "jamie-standing-lk",
+   "jamie-standing-mk",
+   "jamie-standing-hk"
+  ],
+  "priority": "MID",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=True / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "jamie/standing/p",
+  "members": [
+   "jamie-standing-hp"
+  ],
+  "priority": "LOW(比較不可)",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=None / 公式発生順=None(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "manon/standing/k",
+  "members": [
+   "manon-standing-lk",
+   "manon-standing-mk",
+   "manon-standing-hk"
+  ],
+  "priority": "HIGH",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=False / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "接続済み弱根拠の強度再確認",
+  "group": "manon/standing/p",
+  "members": [
+   "manon-standing-lp",
+   "manon-standing-mp",
+   "manon-standing-hp"
+  ],
+  "priority": "MID",
+  "ask": "強度が判別できる撮影(入力履歴表示にL/M/Hボタンが読める状態、または弱→中→強を同一カットで連続)",
+  "reason": "振幅順=True / 公式発生順=True(振幅指標は検証不能のため参考値)"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "dee-jay/jump-lk/mp/mk/hp/hk",
+  "priority": "MID",
+  "reason": "ジャンプ攻撃は再生時間が着地で決まり判別不能。jump-K は強<中で矛盾",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "cammy/crouching-lp/mp",
+  "priority": "MID",
+  "reason": "再生時間が逆転(lp17>mp16)",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "cammy/jump x6",
+  "priority": "MID",
+  "reason": "着地依存で判別不能",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "cammy/knuckle l/m/h",
+  "priority": "MID",
+  "reason": "再生時間 22/21/21 で逆転・同値",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "cammy/spike l/m",
+  "priority": "MID",
+  "reason": "30/30 同値",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "cammy/spiral l/m",
+  "priority": "MID",
+  "reason": "26/23 逆転",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "chun-li/crouching-lp/mp/hp",
+  "priority": "MID",
+  "reason": "再生時間 14/16/14 で hp<mp",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "chun-li/crouching-mk/hk",
+  "priority": "MID",
+  "reason": "17/17 同値",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "chun-li/jump-lk/mk/hk",
+  "priority": "MID",
+  "reason": "着地依存",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "chun-li/jump-lp/mp/hp(新規3本)",
+  "priority": "MID",
+  "reason": "供給側でHOLD_WHIFF_AND_AIR_CLIPPING(画面上端欠け)",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "jamie/standing-lp/mp",
+  "priority": "MID",
+  "reason": "再生時間 29>27 で逆転",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "jamie/新規9本",
+  "priority": "MID",
+  "reason": "供給側で全HOLD(旧採用映像との重複可能性)",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "guile/standing/crouching 通常技12",
+  "priority": "MID",
+  "reason": "供給側HOLD_WHIFF_HIT_MEDIA_REQUIRED(空振りのみ・hit素材必要)",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "guile/flash-kick l/m/h",
+  "priority": "MID",
+  "reason": "再生時間 49/51/51 同値、ジャスト版との区別不能",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "guile/sonic-boom hit a/b・sonic-blade a・sonic-cross hit a/b/variant・target-combo a-e",
+  "priority": "MID",
+  "reason": "供給側HOLD_STRENGTH/IDENTITY",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "guile/OD sonic blade",
+  "priority": "MID",
+  "reason": "OD弱/中/強3行のどれか判別不能",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "guile/OD sonic cross",
+  "priority": "MID",
+  "reason": "複数入力の連続でID未確定",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "未接続HOLD(前回までの記録)",
+  "group": "guile/forward/back air throw",
+  "priority": "MID",
+  "reason": "供給側HOLD_AIR_CLIPPING(画面上端欠け)",
+  "ask": "着地/ヒット/強度が判別できる再撮影 or 入力表示付き素材"
+ },
+ {
+  "kind": "新規受入(差分)",
+  "group": "yasmine/通常技12",
+  "priority": "MID",
+  "reason": "入力表示なし。強度は複合根拠のみ(弱根拠扱い)",
+  "ask": "入力履歴付きで再撮影、または強度確認用の連続カット"
+ },
+ {
+  "kind": "新規受入(差分)",
+  "group": "luke/drive-impact",
+  "priority": "LOW",
+  "reason": "素材は良好。技IDがfixtureに無い(公式TXT luke:web:602)",
+  "ask": "撮影不要。ID方針の確認(Claude Code)"
+ }
+]

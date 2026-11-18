@@ -1,0 +1,399 @@
+{
+ "generated": "2026-11-16",
+ "note": "重複は同一録画の証明ではない(同じ動作は別テイクでも似る)",
+ "threshold": 2.0,
+ "pairs": [
+  {
+   "a": "jp-od-departure-lp-mp.gif",
+   "inB": "jp-od-departure-lp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.037,
+   "longestMatchedRun": 1,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-mp.gif",
+   "inB": "jp-od-departure-mp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-mp.gif",
+   "inB": "9_37-jp-light-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-mp.gif",
+   "inB": "9_38-jp-medium-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-mp.gif",
+   "inB": "9_39-jp-heavy-departure.gif",
+   "fractionOfAFramesFoundInB": 0.019,
+   "longestMatchedRun": 1,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-mp.gif",
+   "inB": "9_43-jp-departure-window.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-mp.gif",
+   "inB": "9_44-jp-departure-shadow.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-hp.gif",
+   "inB": "jp-od-departure-lp-mp.gif",
+   "fractionOfAFramesFoundInB": 0.037,
+   "longestMatchedRun": 1,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-hp.gif",
+   "inB": "jp-od-departure-mp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-hp.gif",
+   "inB": "9_37-jp-light-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-hp.gif",
+   "inB": "9_38-jp-medium-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-hp.gif",
+   "inB": "9_39-jp-heavy-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-hp.gif",
+   "inB": "9_43-jp-departure-window.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-lp-hp.gif",
+   "inB": "9_44-jp-departure-shadow.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 54
+  },
+  {
+   "a": "jp-od-departure-mp-hp.gif",
+   "inB": "jp-od-departure-lp-mp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 60
+  },
+  {
+   "a": "jp-od-departure-mp-hp.gif",
+   "inB": "jp-od-departure-lp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 60
+  },
+  {
+   "a": "jp-od-departure-mp-hp.gif",
+   "inB": "9_37-jp-light-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 60
+  },
+  {
+   "a": "jp-od-departure-mp-hp.gif",
+   "inB": "9_38-jp-medium-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 60
+  },
+  {
+   "a": "jp-od-departure-mp-hp.gif",
+   "inB": "9_39-jp-heavy-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 60
+  },
+  {
+   "a": "jp-od-departure-mp-hp.gif",
+   "inB": "9_43-jp-departure-window.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 60
+  },
+  {
+   "a": "jp-od-departure-mp-hp.gif",
+   "inB": "9_44-jp-departure-shadow.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 60
+  },
+  {
+   "a": "9_37-jp-light-departure.gif",
+   "inB": "jp-od-departure-lp-mp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 72
+  },
+  {
+   "a": "9_37-jp-light-departure.gif",
+   "inB": "jp-od-departure-lp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 72
+  },
+  {
+   "a": "9_37-jp-light-departure.gif",
+   "inB": "jp-od-departure-mp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 72
+  },
+  {
+   "a": "9_37-jp-light-departure.gif",
+   "inB": "9_38-jp-medium-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 72
+  },
+  {
+   "a": "9_37-jp-light-departure.gif",
+   "inB": "9_39-jp-heavy-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 72
+  },
+  {
+   "a": "9_37-jp-light-departure.gif",
+   "inB": "9_43-jp-departure-window.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 72
+  },
+  {
+   "a": "9_37-jp-light-departure.gif",
+   "inB": "9_44-jp-departure-shadow.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 72
+  },
+  {
+   "a": "9_38-jp-medium-departure.gif",
+   "inB": "jp-od-departure-lp-mp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 74
+  },
+  {
+   "a": "9_38-jp-medium-departure.gif",
+   "inB": "jp-od-departure-lp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 74
+  },
+  {
+   "a": "9_38-jp-medium-departure.gif",
+   "inB": "jp-od-departure-mp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 74
+  },
+  {
+   "a": "9_38-jp-medium-departure.gif",
+   "inB": "9_37-jp-light-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 74
+  },
+  {
+   "a": "9_38-jp-medium-departure.gif",
+   "inB": "9_39-jp-heavy-departure.gif",
+   "fractionOfAFramesFoundInB": 0.095,
+   "longestMatchedRun": 6,
+   "framesA": 74
+  },
+  {
+   "a": "9_38-jp-medium-departure.gif",
+   "inB": "9_43-jp-departure-window.gif",
+   "fractionOfAFramesFoundInB": 0.27,
+   "longestMatchedRun": 13,
+   "framesA": 74
+  },
+  {
+   "a": "9_38-jp-medium-departure.gif",
+   "inB": "9_44-jp-departure-shadow.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 74
+  },
+  {
+   "a": "9_39-jp-heavy-departure.gif",
+   "inB": "jp-od-departure-lp-mp.gif",
+   "fractionOfAFramesFoundInB": 0.013,
+   "longestMatchedRun": 1,
+   "framesA": 75
+  },
+  {
+   "a": "9_39-jp-heavy-departure.gif",
+   "inB": "jp-od-departure-lp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 75
+  },
+  {
+   "a": "9_39-jp-heavy-departure.gif",
+   "inB": "jp-od-departure-mp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 75
+  },
+  {
+   "a": "9_39-jp-heavy-departure.gif",
+   "inB": "9_37-jp-light-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 75
+  },
+  {
+   "a": "9_39-jp-heavy-departure.gif",
+   "inB": "9_38-jp-medium-departure.gif",
+   "fractionOfAFramesFoundInB": 0.08,
+   "longestMatchedRun": 5,
+   "framesA": 75
+  },
+  {
+   "a": "9_39-jp-heavy-departure.gif",
+   "inB": "9_43-jp-departure-window.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 75
+  },
+  {
+   "a": "9_39-jp-heavy-departure.gif",
+   "inB": "9_44-jp-departure-shadow.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 75
+  },
+  {
+   "a": "9_43-jp-departure-window.gif",
+   "inB": "jp-od-departure-lp-mp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 28
+  },
+  {
+   "a": "9_43-jp-departure-window.gif",
+   "inB": "jp-od-departure-lp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 28
+  },
+  {
+   "a": "9_43-jp-departure-window.gif",
+   "inB": "jp-od-departure-mp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 28
+  },
+  {
+   "a": "9_43-jp-departure-window.gif",
+   "inB": "9_37-jp-light-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 28
+  },
+  {
+   "a": "9_43-jp-departure-window.gif",
+   "inB": "9_38-jp-medium-departure.gif",
+   "fractionOfAFramesFoundInB": 0.464,
+   "longestMatchedRun": 6,
+   "framesA": 28
+  },
+  {
+   "a": "9_43-jp-departure-window.gif",
+   "inB": "9_39-jp-heavy-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 28
+  },
+  {
+   "a": "9_43-jp-departure-window.gif",
+   "inB": "9_44-jp-departure-shadow.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 28
+  },
+  {
+   "a": "9_44-jp-departure-shadow.gif",
+   "inB": "jp-od-departure-lp-mp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 26
+  },
+  {
+   "a": "9_44-jp-departure-shadow.gif",
+   "inB": "jp-od-departure-lp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 26
+  },
+  {
+   "a": "9_44-jp-departure-shadow.gif",
+   "inB": "jp-od-departure-mp-hp.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 26
+  },
+  {
+   "a": "9_44-jp-departure-shadow.gif",
+   "inB": "9_37-jp-light-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 26
+  },
+  {
+   "a": "9_44-jp-departure-shadow.gif",
+   "inB": "9_38-jp-medium-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 26
+  },
+  {
+   "a": "9_44-jp-departure-shadow.gif",
+   "inB": "9_39-jp-heavy-departure.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 26
+  },
+  {
+   "a": "9_44-jp-departure-shadow.gif",
+   "inB": "9_43-jp-departure-window.gif",
+   "fractionOfAFramesFoundInB": 0.0,
+   "longestMatchedRun": 0,
+   "framesA": 26
+  }
+ ]
+}

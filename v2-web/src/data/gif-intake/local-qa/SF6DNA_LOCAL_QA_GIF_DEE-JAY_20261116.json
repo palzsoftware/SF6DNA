@@ -1,0 +1,617 @@
+{
+  "schemaVersion": 1,
+  "characterSlug": "dee-jay",
+  "localQaOnly": true,
+  "approval": "NOT_APPROVED",
+  "note": "ローカルQA専用。公開承認ではない。表示は開発環境のlocalhost限定の隔離ルートのみ。",
+  "entries": [
+    {
+      "moveId": "155af88f-6cb8-40c1-b585-ebfdfb7d2ad3",
+      "moveSlug": "dee-jay-speedy-maracas",
+      "fileName": "dee-jay-speedy-maracas.gif",
+      "sha256": "05100907b54425c56f955257f1e831519a1cb40e50ea42c7ea70501e195857c3",
+      "bytes": 7587767,
+      "width": 480,
+      "height": 270,
+      "durationMs": 14740,
+      "sourceFile": "030-dee-jay-speedy-maracas_under10mb.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↓+PP(22+PP)。SUCCESS表示。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "1d7f9f79-bff7-4c9b-8645-54e95b310d24",
+      "moveSlug": "dee-jay-air-slasher-od",
+      "fileName": "dee-jay-air-slasher-od.gif",
+      "sha256": "8f43f25e2b3e84d00e21b5c99446ed1d2f2b9bf8aef58b64993bcac7c93d3cd1",
+      "bytes": 5330614,
+      "width": 640,
+      "height": 360,
+      "durationMs": 3120,
+      "sourceFile": "034-dee-jay-air-slasher-od.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 緑のOD SUCCESS ←→+P(溜め[4]6+PP)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "bc019a33-449a-4662-aaa6-d86d0a766a1c",
+      "moveSlug": "dee-jay-jackknife-od",
+      "fileName": "dee-jay-jackknife-od.gif",
+      "sha256": "14d073043bac0e3701530700bbda9c7f1f09720fefacd3491eeb39c9bc8ed2da",
+      "bytes": 6602485,
+      "width": 640,
+      "height": 360,
+      "durationMs": 3680,
+      "sourceFile": "039-dee-jay-jackknife-od.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 緑のOD SUCCESS ↓↑+K([2]8+KK)。ジャンプ蹴り上げの動作。 [2026-11-17 修正版: 終端の画面遷移(黒1+復帰)を除去。元SHA=72bb75f6fb10…]",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "49f0d4ea-618e-4ce9-94f3-8e6db0b9f7b7",
+      "moveSlug": "dee-jay-sobat-l",
+      "fileName": "dee-jay-sobat-l.gif",
+      "sha256": "0ac6e32ef7b281e7ab9463bc88e25c49c1df4d404e9975e67aeda568f42c2e6c",
+      "bytes": 3039358,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1760,
+      "sourceFile": "040-dee-jay-sobat-l.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↘→+K・弱(青)。236+弱Kに一致。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "0f1c3e4a-ce03-4f74-8950-5b4c92c4bb68",
+      "moveSlug": "dee-jay-sobat-h",
+      "fileName": "dee-jay-sobat-h.gif",
+      "sha256": "1476c725d41f00e981bc6194ea3f51e050ff6e86e8e8ccf42d26495c7f0916d3",
+      "bytes": 4194645,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2240,
+      "sourceFile": "041-dee-jay-sobat-m.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↘→+K・強(赤・文字『強』)。2回蹴る動作でダブルローリングソバットと整合。パッケージ主張(クイック・中)とは不一致=ファイル名と中身が入れ替わっている。",
+      "unconfirmed": [
+        "パッケージ記載の技ID・ファイル名(sobat-m)と不一致。入力表示(強)を根拠にダブルローリングソバットへ接続",
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "033a5787-d194-4a0f-b05d-6686f04601fe",
+      "moveSlug": "dee-jay-sobat-m",
+      "fileName": "dee-jay-sobat-m.gif",
+      "sha256": "8a5684b9b9d8b6429946ff3ce1b37efcc9a621a48259fe43751fbfe1264ca212",
+      "bytes": 4647720,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2640,
+      "sourceFile": "042-dee-jay-sobat-h.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↘→+K・中(黄・文字『中』)。1回の蹴りでクイックローリングソバットと整合。パッケージ主張(ダブル・強)とは不一致=ファイル名と中身が入れ替わっている。",
+      "unconfirmed": [
+        "パッケージ記載の技ID・ファイル名(sobat-h)と不一致。入力表示(中)を根拠にクイックローリングソバットへ接続",
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "d2b2199c-f28b-4270-a8e1-e7ba02b621b2",
+      "moveSlug": "dee-jay-sobat-od",
+      "fileName": "dee-jay-sobat-od.gif",
+      "sha256": "0babf530830fe4bee3ffd60cd5bb7f27a5c987a46c296e4caa195dcddfed847f",
+      "bytes": 4129351,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2240,
+      "sourceFile": "043-dee-jay-sobat-od.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 緑のOD SUCCESS ↓↘→+K。金色発光。236+KKに一致。",
+      "unconfirmed": [
+        "ODの2ボタン表示は1アイコン表記のため、ボタン数は発光(OD)で判断",
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "978c3660-a958-4dd9-87a6-c1c4620d9b8d",
+      "moveSlug": "dee-jay-mgu-od",
+      "fileName": "dee-jay-mgu-od.gif",
+      "sha256": "0a668cae801c23e7708770b34c1662fc2bed4240f469aece592d9592307140c6",
+      "bytes": 8192444,
+      "width": 640,
+      "height": 360,
+      "durationMs": 6000,
+      "sourceFile": "047-dee-jay-mgu-od_under10mb.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 緑のOD SUCCESS ↓↙←+P(214+PP)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "cb65cb89-a54c-4847-aee3-6de1ea6131c6",
+      "moveSlug": "dee-jay-jus-cool",
+      "fileName": "dee-jay-jus-cool.gif",
+      "sha256": "b468a93b70dfc1a81fb47cc5fefbe5225050a190b2925252977994d3d5915473",
+      "bytes": 1945197,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1120,
+      "sourceFile": "048-dee-jay-jus-cool.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↙←+K(214+K)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "71e6690e-c671-4261-8357-5897427db6b2",
+      "moveSlug": "dee-jay-sa1",
+      "fileName": "dee-jay-sa1.gif",
+      "sha256": "3e226d9a0b611bec703abcc420ab84a4910dba060734ea7d05d1fc06f245c0ee",
+      "bytes": 5180655,
+      "width": 640,
+      "height": 360,
+      "durationMs": 3280,
+      "sourceFile": "060-dee-jay-sa1.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↘→↓↘→+K(236236+K)。ゲージ3→2(1本消費)。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "e52bdd7f-b29f-43ba-83cc-e9f139b4b809",
+      "moveSlug": "dee-jay-sa3",
+      "fileName": "dee-jay-sa3.gif",
+      "sha256": "6e8668cd2ef98ba9c627a378f35cba9655ecea1a6ff1cac25b2d28abd27800a9",
+      "bytes": 8207817,
+      "width": 480,
+      "height": 270,
+      "durationMs": 12940,
+      "sourceFile": "092-dee-jay-sa3_under10mb.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↙←↓↙←+P(214214+P)。ゲージ3→0(3本消費)で『CA』表示なし=SA3。 [2026-11-17 修正版: 終端の画面遷移(黒1+復帰)を除去。元SHA=4d4e93b55f38…]",
+      "unconfirmed": [
+        "SA3とCAは同コマンド。ゲージ3本消費(開始時3)で区別",
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "88ef0949-2a51-4923-90e2-5a77f1501844",
+      "moveSlug": "dee-jay-ca",
+      "fileName": "dee-jay-ca.gif",
+      "sha256": "ac7e70a95d2bb7772303aa71e5f1c12e47c9f0921b5fdbc27b1228c441e83369",
+      "bytes": 8569907,
+      "width": 480,
+      "height": 270,
+      "durationMs": 13800,
+      "sourceFile": "093-dee-jay-ca_under10mb.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示 ↓↙←↓↙←+P(214214+P)。ゲージ位置に『CA』表示(赤)=クリティカルアーツ。",
+      "unconfirmed": [
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "f6538624-3bad-4968-a1b3-1292f9d96311",
+      "moveSlug": "dee-jay-forward-throw",
+      "fileName": "dee-jay-forward-throw.gif",
+      "sha256": "1e2f528ce093d758ad648c224d7c1b2432f91eacdcfa169d6b6adfac8872e1f6",
+      "bytes": 5719714,
+      "width": 640,
+      "height": 360,
+      "durationMs": 3120,
+      "sourceFile": "094-dee-jay-forward-throw.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示なし(投げ)。相手を蹴り上げて前方へ吹き飛ばす。位置の入れ替えなし=前投げ。",
+      "unconfirmed": [
+        "入力表示が無く、前/後ろは位置入替の有無による目視判定",
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "e8b09fbd-4b14-49a8-a1b7-52067f87409b",
+      "moveSlug": "dee-jay-back-throw",
+      "fileName": "dee-jay-back-throw.gif",
+      "sha256": "1aecb65c59c3f4caeb1f5fe18881348362ae641722779f1543d0286066c26dfd",
+      "bytes": 7174737,
+      "width": 640,
+      "height": 360,
+      "durationMs": 3340,
+      "sourceFile": "095-dee-jay-back-throw.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "入力表示なし(投げ)。相手を背後へ投げ飛ばす。位置が入れ替わる=後ろ投げ。",
+      "unconfirmed": [
+        "入力表示が無く、前/後ろは位置入替の有無による目視判定",
+        "強度タグの無い技のみ対象。ボタン絵柄(P/K)は拡大の見た目で判断"
+      ]
+    },
+    {
+      "moveId": "36de8f7a-a910-4315-8507-77174da08fef",
+      "moveSlug": "dee-jay-standing-lp",
+      "fileName": "dee-jay-standing-lp.gif",
+      "sha256": "5fb8518f8a31d2516c5d1992596f39574d3a9c654568ff7bad442b8a784fa452",
+      "bytes": 1576771,
+      "width": 640,
+      "height": 360,
+      "durationMs": 960,
+      "sourceFile": "001-dee-jay-standing-lp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "7debb114-baa2-4cbc-91b7-952b3d2ec571",
+      "moveSlug": "dee-jay-standing-lk",
+      "fileName": "dee-jay-standing-lk.gif",
+      "sha256": "47acd66dbb73925028acc6aefedcb5ed3986fa0187d5216f9bd52b7094040684",
+      "bytes": 1649992,
+      "width": 640,
+      "height": 360,
+      "durationMs": 960,
+      "sourceFile": "002-dee-jay-standing-lk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "a37ee100-dbdd-41f9-94a7-e1cc975d98c1",
+      "moveSlug": "dee-jay-standing-mp",
+      "fileName": "dee-jay-standing-mp.gif",
+      "sha256": "7538ee63cd8dc4666bda9ec2af70f745cbd97ef66c4bae3f24aefd240b48dc54",
+      "bytes": 2128684,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1200,
+      "sourceFile": "003-dee-jay-standing-mp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "54a83ad9-53e4-4f7b-ae16-8e827ebbbb2c",
+      "moveSlug": "dee-jay-standing-mk",
+      "fileName": "dee-jay-standing-mk.gif",
+      "sha256": "2314d5735cc4df2c968f7f74dd0ccf804f01b57477cd9efbf735d13d63a2cbd2",
+      "bytes": 2102558,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1200,
+      "sourceFile": "004-dee-jay-standing-mk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "ebdd3009-fee4-4e55-87f1-b26439728dde",
+      "moveSlug": "dee-jay-standing-hp",
+      "fileName": "dee-jay-standing-hp.gif",
+      "sha256": "023843f59017971c37977ee3b9545036a4df5592fd7c7a51648552802809bb24",
+      "bytes": 2719323,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1600,
+      "sourceFile": "005-dee-jay-standing-hp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "02fff13d-238d-4072-af8d-da1f75e1654c",
+      "moveSlug": "dee-jay-standing-hk",
+      "fileName": "dee-jay-standing-hk.gif",
+      "sha256": "c26df0993da333602f30bf9daf690a1adabf4f30884f791ee63a701e0a2973af",
+      "bytes": 2352441,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1280,
+      "sourceFile": "006-dee-jay-standing-hk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "57beb616-7d69-45dd-972e-226521ec86e7",
+      "moveSlug": "dee-jay-crouching-lp",
+      "fileName": "dee-jay-crouching-lp.gif",
+      "sha256": "c78d97aff5679752ae9bed75f495501043f8e18e3203854266cad61f79703fc6",
+      "bytes": 1859650,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1120,
+      "sourceFile": "007-dee-jay-crouching-lp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "594eaec7-0b10-49a4-b975-faab51565605",
+      "moveSlug": "dee-jay-crouching-lk",
+      "fileName": "dee-jay-crouching-lk.gif",
+      "sha256": "5b3179958a31e48306682ce2a9e1c16285fda494af532f846bc40b69bc560f3f",
+      "bytes": 1730482,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1040,
+      "sourceFile": "008-dee-jay-crouching-lk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "e0e9439e-1ded-4732-b34a-f669df106a59",
+      "moveSlug": "dee-jay-crouching-mp",
+      "fileName": "dee-jay-crouching-mp.gif",
+      "sha256": "d35c5c791ef7af38fb1c20d06510941c1f471298613f7ba411f2ae6c46bb789f",
+      "bytes": 1936985,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1120,
+      "sourceFile": "009-dee-jay-crouching-mp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "b60102f5-af5c-492a-bca6-0c0277bf69b7",
+      "moveSlug": "dee-jay-crouching-mk",
+      "fileName": "dee-jay-crouching-mk.gif",
+      "sha256": "a914a907b56d2014790c0d23a079b498c39479aabe7622af41bd8aceb4df0125",
+      "bytes": 2435579,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1600,
+      "sourceFile": "010-dee-jay-crouching-mk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "516288aa-46c3-433c-b5ff-b72972e5baa8",
+      "moveSlug": "dee-jay-crouching-hp",
+      "fileName": "dee-jay-crouching-hp.gif",
+      "sha256": "84a40ff151aea32371a6b27eef8b176a3601443b5a320d8dc836db903a49f005",
+      "bytes": 2897011,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1680,
+      "sourceFile": "011-dee-jay-crouching-hp.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "e1052f7b-e246-4ca4-9e35-88a3eb86f96b",
+      "moveSlug": "dee-jay-crouching-hk",
+      "fileName": "dee-jay-crouching-hk.gif",
+      "sha256": "b08f0f7e006e05cb40b252b9cec018375543219b87e95f9548cea23609369824",
+      "bytes": 3243382,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1840,
+      "sourceFile": "012-dee-jay-crouching-hk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "373ec31c-6d7d-414e-a3e2-39d1e1c17e0d",
+      "moveSlug": "dee-jay-air-slasher-l",
+      "fileName": "dee-jay-air-slasher-l.gif",
+      "sha256": "e3093f539bbda5a2465219bc649aafad816091f1365cea0de92d594817dbad59",
+      "bytes": 3612408,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2000,
+      "sourceFile": "031-dee-jay-air-slasher-l.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "048c78d4-2da9-461b-86ff-fb6b96a66f0b",
+      "moveSlug": "dee-jay-air-slasher-m",
+      "fileName": "dee-jay-air-slasher-m.gif",
+      "sha256": "15ec688be4e3d58e8648dabc161c06a2ef64ca6b34f0992a1f4d1e31248b1729",
+      "bytes": 5092005,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2600,
+      "sourceFile": "032-dee-jay-air-slasher-m.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "01a68cd2-ff35-4104-9ac6-9ed44641fdb1",
+      "moveSlug": "dee-jay-air-slasher-h",
+      "fileName": "dee-jay-air-slasher-h.gif",
+      "sha256": "dc5c482b3945591b141f9a931c15cc769c1c9ff0870e2af06691443ec81ba56c",
+      "bytes": 5511851,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2670,
+      "sourceFile": "033-dee-jay-air-slasher-h.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。 [2026-11-17 修正版: 終端の画面遷移(黒1+復帰)を除去。元SHA=79fb80b806bd…]",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "3f8211e6-9fdc-45ba-9558-bd5908199ec4",
+      "moveSlug": "dee-jay-jackknife-l",
+      "fileName": "dee-jay-jackknife-l.gif",
+      "sha256": "8016f1908708465ece5bd1be9c066ebaa31dd28abd836669a581c69eba8646d2",
+      "bytes": 2951963,
+      "width": 640,
+      "height": 360,
+      "durationMs": 1680,
+      "sourceFile": "036-dee-jay-jackknife-l.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "fe965804-a210-4d77-93a3-295f3d7910b0",
+      "moveSlug": "dee-jay-jackknife-m",
+      "fileName": "dee-jay-jackknife-m.gif",
+      "sha256": "5f455f2204d5c33853eb5bf2eab4ba5eca469343a34a62f1758e005f5cf1e48c",
+      "bytes": 4259985,
+      "width": 640,
+      "height": 360,
+      "durationMs": 2320,
+      "sourceFile": "037-dee-jay-jackknife-m.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "bc0d5768-33c4-44e4-a841-1c92751c77d8",
+      "moveSlug": "dee-jay-jackknife-h",
+      "fileName": "dee-jay-jackknife-h.gif",
+      "sha256": "77a0ada9a367111a94a3c140ba844fb2bba05f589eb2fe7bbe328091fccb5636",
+      "bytes": 6234663,
+      "width": 640,
+      "height": 360,
+      "durationMs": 3520,
+      "sourceFile": "038-dee-jay-jackknife-h.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "6a35dfc9-4303-420b-ad28-6295c8abe713",
+      "moveSlug": "dee-jay-mgu-l",
+      "fileName": "dee-jay-mgu-l.gif",
+      "sha256": "41cb37bced8afb0f9cb1bec4306095672660f8edff4889609048a7cf030a0ae4",
+      "bytes": 5607538,
+      "width": 640,
+      "height": 360,
+      "durationMs": 3200,
+      "sourceFile": "044-dee-jay-mgu-l.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "1d7e7bdf-87a6-48f4-b57b-ae5e4a39441e",
+      "moveSlug": "dee-jay-mgu-m",
+      "fileName": "dee-jay-mgu-m.gif",
+      "sha256": "2f2dc3b39f65d005e26d02ddcbff36c4163c01e6a08cc5a147b29421d1b32d5c",
+      "bytes": 5600230,
+      "width": 640,
+      "height": 360,
+      "durationMs": 3200,
+      "sourceFile": "045-dee-jay-mgu-m.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    },
+    {
+      "moveId": "6244edb0-12f3-4323-93bb-d3dbd65994d7",
+      "moveSlug": "dee-jay-mgu-h",
+      "fileName": "dee-jay-mgu-h.gif",
+      "sha256": "3e52ee275925ace330a08260860cf78320bffe5c7d6623f6cbe12d2d6763516d",
+      "bytes": 8423444,
+      "width": 640,
+      "height": 360,
+      "durationMs": 4720,
+      "sourceFile": "046-dee-jay-mgu-h.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "複合根拠(2026-11-17ユーザー指示): ①元動画の撮影順=コマンドリスト順(必殺技は弱中強OD順)とファイル名/連番が一致 ②Manifestの技ID主張がfixtureと一致 ③GIF再生時間が弱≦中≦強で矛盾しない(同ボタン群内) ④fixtureフレームデータの順序と矛盾なし ⑤入力表示のコマンドがfixtureと一致(必殺技のみ)。入力表示の強度色は読めないため、入力表示単独の強度確認ではない。",
+      "unconfirmed": [
+        "強度は複合根拠(入力表示の強度表示ではない)"
+      ],
+      "evidenceTier": "COMPOSITE_WEAK_STRENGTH",
+      "publicCandidate": false
+    }
+  ]
+}

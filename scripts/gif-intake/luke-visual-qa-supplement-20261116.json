@@ -1,0 +1,83 @@
+{
+  "generated": "2026-11-16",
+  "scope": "静的一致36本の一括QA(luke-visual-qa-20261116.json)の対象外だった素材の個別QA。",
+  "note": "22_23は台帳上 NEEDS_VISUAL_QA(技名不一致: 公式ダブルインパクト2段目/公開用 前強P・強P)だった。",
+  "entries": [
+    {
+      "file": "22_23-luke-double-impact-followup.gif",
+      "moveSlug": "luke-forward-hp-hp",
+      "moveId": "4f16469c-504c-4290-a5c7-6b685169b8c3",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": true,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "立ち状態から2回の打撃(火花2回)が連続して入り、相手がダウンする2段の連携。1段目から含むため、前強P単発には使えない。",
+      "unconfirmed": [
+        "実際の入力操作(→+強P ＞ 強P)との一致(映像からは証明できない)",
+        "元動画の切り出し区間(記録なし)",
+        "公式名はダブルインパクト(2段目)。公開用の呼称は前強P・強P"
+      ],
+      "metrics": {
+        "durationMs": 1850,
+        "frames": 37
+      },
+      "approval": "NOT_APPROVED",
+      "qaMethod": "2026-11-16 12枚コンタクトシートの目視(1回のみ)"
+    },
+    {
+      "file": "22_65-luke-sweeper.gif",
+      "moveSlug": "luke-forward-throw",
+      "moveId": "dc4d041c-4259-4636-8142-d2f329b7d77b",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": true,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "掴んで持ち上げ、相手を前方へ叩きつける。終了時に位置の入れ替わりがない(前方向の投げ)。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)",
+        "元動画の切り出し区間(記録なし)",
+        "公開用の呼称は方向のみ。公式名スウィーパーとの対応は台帳の別名照合による"
+      ],
+      "metrics": {
+        "durationMs": 2600
+      },
+      "approval": "NOT_APPROVED",
+      "qaMethod": "2026-11-16 コンタクトシート目視(投げ方向=位置入れ替えの有無で判別)"
+    },
+    {
+      "file": "22_66-luke-scrapper.gif",
+      "moveSlug": "luke-back-throw",
+      "moveId": "c40c1f4a-5753-486d-a902-e017ae79de78",
+      "result": "CONFIRMED",
+      "localConnectionCandidate": true,
+      "checks": {
+        "appearanceMatchesName": true,
+        "recordingRangeCoversMove": true,
+        "noUnrelatedScreenOrCutoff": true,
+        "derivationConditionVisible": true,
+        "strengthOrVariantDistinguishableFromFrames": true
+      },
+      "observation": "掴んでヒット火花の後、攻撃側と相手の立ち位置が入れ替わって終わる(後ろ方向の投げ)。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)",
+        "元動画の切り出し区間(記録なし)",
+        "公開用の呼称は方向のみ。公式名スクラッパーとの対応は台帳の別名照合による"
+      ],
+      "metrics": {
+        "durationMs": 2300
+      },
+      "approval": "NOT_APPROVED",
+      "qaMethod": "2026-11-16 コンタクトシート目視(投げ方向=位置入れ替えの有無で判別)"
+    }
+  ]
+}

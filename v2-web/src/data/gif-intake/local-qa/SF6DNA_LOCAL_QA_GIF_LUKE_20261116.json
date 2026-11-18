@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "characterSlug": "luke",
+  "localQaOnly": true,
+  "approval": "NOT_APPROVED",
+  "note": "ローカルQA専用。公開承認ではない。表示は開発環境のlocalhost限定の隔離ルートのみ。",
+  "entries": [
+    {
+      "moveId": "f415ffa3-f701-4586-8e02-e30596c119e9",
+      "moveSlug": "luke-rawhide",
+      "fileName": "luke-rawhide.gif",
+      "sha256": "cadfca07fca1ddff686ae7726ef0430bdca85d8d55ecb7823ef9ff6490a07b5b",
+      "bytes": 1998213,
+      "width": 480,
+      "height": 270,
+      "durationMs": 1250,
+      "sourceFile": "22_19-luke-rawhide.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "前進して身を屈める構えからの打撃とヒット火花。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "4383dae4-bdac-418f-9a11-e4632eb25696",
+      "moveSlug": "luke-suppressor",
+      "fileName": "luke-suppressor.gif",
+      "sha256": "5213834492e7a4380b71cc10d5cef1fc02410c52ace0e97b35bcd834bc172b8c",
+      "bytes": 2134076,
+      "width": 480,
+      "height": 270,
+      "durationMs": 1300,
+      "sourceFile": "22_20-luke-suppressor.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "1歩下がる構えから強打とヒット火花。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "938179e9-b0e1-4b22-8adb-d61bcb84ae86",
+      "moveSlug": "luke-outlaw-kick",
+      "fileName": "luke-outlaw-kick.gif",
+      "sha256": "ac84c876b3446d9a56b8431e10c66e57e7ade2bde744bbf6ff3478f5aabaece6",
+      "bytes": 2039917,
+      "width": 480,
+      "height": 270,
+      "durationMs": 1300,
+      "sourceFile": "22_21-luke-outlaw-kick.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "踏み込みの飛び蹴りとヒット火花、相手が倒れる。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "0466a4f1-0e3c-4352-8f61-0f1874663e99",
+      "moveSlug": "luke-sand-blast-od",
+      "fileName": "luke-sand-blast-od.gif",
+      "sha256": "dd0c68bc040d6c53f47f221a127ff66e25adb2179b305d01dc301224c9eaffd8",
+      "bytes": 2948897,
+      "width": 480,
+      "height": 270,
+      "durationMs": 1800,
+      "sourceFile": "22_33-luke-od-sand-blast.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "金色のOD演出を伴う炎の弾が命中し相手が倒れる(OD演出が通常版と明確に違う)。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "423f6d80-072c-4dd1-863d-5b8e0061a37d",
+      "moveSlug": "luke-fatal-shot",
+      "fileName": "luke-fatal-shot.gif",
+      "sha256": "bc9bf0cc46bddc8c9a40f409801f9910b45725c4b34e83853eefee46a17579f6",
+      "bytes": 3494922,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2200,
+      "sourceFile": "22_34-luke-fatal-shot.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "ODサンドブラスト(金色演出)の後に大きな爆発の追撃が出て相手が大きく吹き飛ぶ。派生条件の見た目と一致。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "6afa6076-dff0-4ca5-b00d-acbf1a6f74e0",
+      "moveSlug": "luke-ddt",
+      "fileName": "luke-ddt.gif",
+      "sha256": "91a9f9ebe83adc5e56bd60143b37ce2c6872dff96365c3d80d5d8324bb7d4777",
+      "bytes": 5304748,
+      "width": 480,
+      "height": 270,
+      "durationMs": 3350,
+      "sourceFile": "22_46-luke-ddt.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "ODフラッシュナックル(金色演出)から掴み、DDTで相手を地面に叩きつける。派生条件の見た目と一致。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "5d28a0ed-7abe-4c1b-8cc4-bcb208d55626",
+      "moveSlug": "luke-aerial-flash-knuckle",
+      "fileName": "luke-aerial-flash-knuckle.gif",
+      "sha256": "539857ce413be67fb8973392bc8c57e8436f9c622262dcd71682d924270f7ff0",
+      "bytes": 3638639,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2150,
+      "sourceFile": "22_47-luke-aerial-flash-knuckle.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "ジャンプ中に突進パンチを出し命中、着地まで収録。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "29ba87ce-14a6-40b2-84aa-936228092b66",
+      "moveSlug": "luke-avenger",
+      "fileName": "luke-avenger.gif",
+      "sha256": "8eb8e20e2210c78bc9cca716476b49e68572ef78646bf6b78e36fbe50753b7d0",
+      "bytes": 2367058,
+      "width": 480,
+      "height": 270,
+      "durationMs": 1450,
+      "sourceFile": "luke-avenger.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "身を沈めて相手へ突進し、組み合った構えで終わる(派生技の分岐点)。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "b2aaf0e6-82b4-49eb-8690-96450cfb7d1e",
+      "moveSlug": "luke-impaler",
+      "fileName": "luke-impaler.gif",
+      "sha256": "60d9908205a56cc97f7775803d5fcac0f370dba530b83122f0c22a85ad0d73a2",
+      "bytes": 2809196,
+      "width": 480,
+      "height": 270,
+      "durationMs": 1600,
+      "sourceFile": "luke-impaler.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "アベンジャーの突進から派生して回転蹴りが命中、相手が吹き飛ぶ。派生条件の見た目と一致。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "c9027806-a085-4461-a802-592e907e9a46",
+      "moveSlug": "luke-no-chaser",
+      "fileName": "luke-no-chaser.gif",
+      "sha256": "d3d63d27ea30b986528fcd03f6d169321c6b074285ae0179698c9d732fa1d679",
+      "bytes": 2851274,
+      "width": 480,
+      "height": 270,
+      "durationMs": 1650,
+      "sourceFile": "luke-no-chaser.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "アベンジャーの突進から派生して大きな爆発の一撃が命中、相手が吹き飛ぶ。派生条件の見た目と一致。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "3176f9a4-9586-49cc-9dd6-8a444e2cd1ae",
+      "moveSlug": "luke-rising-uppercut-od",
+      "fileName": "luke-rising-uppercut-od.gif",
+      "sha256": "a632c4c724e787272dc0c8af71ffdbba40c92cb5e82cb195a93d2fe3fb57f9e2",
+      "bytes": 3631171,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2150,
+      "sourceFile": "luke-od-rising-uppercut.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "金色のOD演出を伴う多段の昇りアッパーが命中(OD演出が通常版と明確に違う)。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "4743c57a-35e7-404f-82e2-79a0854b12f6",
+      "moveSlug": "luke-slam-dunk",
+      "fileName": "luke-slam-dunk.gif",
+      "sha256": "f55a250449195fc6ef258c185adc5181c618662344aabdd33980f52b86a64bbe",
+      "bytes": 3553097,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2100,
+      "sourceFile": "luke-slam-dunk.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "ODライジングアッパー(金色演出)から派生し、炎をまとった叩きつけで相手を落とす。派生条件の見た目と一致。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)"
+      ]
+    },
+    {
+      "moveId": "4f16469c-504c-4290-a5c7-6b685169b8c3",
+      "moveSlug": "luke-forward-hp-hp",
+      "fileName": "luke-forward-hp-hp.gif",
+      "sha256": "5331d40ffebf5d9134ba06324cf20b60cac0eec3be3e6da0e2bed6d510876db5",
+      "bytes": 2836499,
+      "width": 480,
+      "height": 270,
+      "durationMs": 1850,
+      "sourceFile": "22_23-luke-double-impact-followup.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "立ち状態から2回の打撃(火花2回)が連続して入り、相手がダウンする2段の連携。1段目から含むため、前強P単発(luke-forward-hp)には使えない。",
+      "unconfirmed": [
+        "実際の入力操作(→+強P ＞ 強P)との一致(映像からは証明できない)",
+        "元動画の切り出し区間(記録なし)",
+        "公式名はダブルインパクト(2段目)。公開用の呼称は前強P・強P"
+      ]
+    },
+    {
+      "moveId": "dc4d041c-4259-4636-8142-d2f329b7d77b",
+      "moveSlug": "luke-forward-throw",
+      "fileName": "luke-forward-throw.gif",
+      "sha256": "38aa984f5b8bfe058577393e9a8a83eac608f0daa483aec4f9043423cae29d12",
+      "bytes": 3833372,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2600,
+      "sourceFile": "22_65-luke-sweeper.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "掴んで持ち上げ、相手を前方へ叩きつける。終了時に位置の入れ替わりがない(前方向の投げ)。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)",
+        "元動画の切り出し区間(記録なし)",
+        "公開用の呼称は方向のみ。公式名スウィーパーとの対応は台帳の別名照合による"
+      ]
+    },
+    {
+      "moveId": "c40c1f4a-5753-486d-a902-e017ae79de78",
+      "moveSlug": "luke-back-throw",
+      "fileName": "luke-back-throw.gif",
+      "sha256": "9f2def673759ccdcdc325499a4c3f8c4166204bf545e1db236624d2d8186b993",
+      "bytes": 3574082,
+      "width": 480,
+      "height": 270,
+      "durationMs": 2300,
+      "sourceFile": "22_66-luke-scrapper.gif",
+      "visualQa": "CONFIRMED",
+      "observation": "掴んでヒット火花の後、攻撃側と相手の立ち位置が入れ替わって終わる(後ろ方向の投げ)。",
+      "unconfirmed": [
+        "実際の入力操作との一致(映像からは証明できない)",
+        "元動画の切り出し区間(記録なし)",
+        "公開用の呼称は方向のみ。公式名スクラッパーとの対応は台帳の別名照合による"
+      ]
+    }
+  ]
+}
