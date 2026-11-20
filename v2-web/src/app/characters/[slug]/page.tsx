@@ -28,7 +28,7 @@ import { playerDirectoryHref } from "@/lib/player-directory-navigation";
 import { videoEntityIdFromQuery } from "@/lib/video-player-filter";
 import type { CanonicalTxtRecord } from "@/lib/canonical-txt-connection.mjs";
 import { mergeOfficialTxtControlSchemeListings } from "@/lib/official-txt-control-scheme-merge";
-import { withOfficialTxtMoveLinks, type OfficialTxtMoveLinkData } from "@/lib/official-txt-move-links";
+import { withOfficialTxtMoveLinks, withOfficialTxtMultiHit, type OfficialTxtMoveLinkData, type OfficialTxtMultiHitData } from "@/lib/official-txt-move-links";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -131,11 +131,18 @@ export default async function CharacterPage({
   const moveLinks = (review || officialTxtPreview) && txtRecords
     ? (await import("@/data/SF6DNA_R17_OFFICIAL_TXT_MOVE_LINKS_20261120.json")).default as unknown as OfficialTxtMoveLinkData
     : null;
+  // ① Round18: first-hit links (startup/damage/name verified), whole-move per-hit details, labels, Classic supplements.
+  const multiHit = moveLinks
+    ? (await import("@/data/SF6DNA_R18_OFFICIAL_TXT_MULTIHIT_20261120.json")).default as unknown as OfficialTxtMultiHitData
+    : null;
+  const linkData: OfficialTxtMoveLinkData | null = moveLinks ? { links: { ...moveLinks.links, ...multiHit?.firstStageLinks },
+    variantLabels: { ...moveLinks.variantLabels, ...multiHit?.variantLabels } } : null;
   const overlaid = (target: DevicePreviewBundle | null) => {
     const filled = target && displayOverlay ? withOfficialTxtDisplayOverlay(target, displayOverlay) : target;
-    return filled && moveLinks && txtRecords ? withOfficialTxtMoveLinks(filled, moveLinks, txtRecords) : filled;
+    return filled && linkData && txtRecords ? withOfficialTxtMoveLinks(filled, linkData, txtRecords) : filled;
   };
-  const selectedBundle = arjun?.bundle ?? (txtRecords && (connectedTxt?.bundle ?? bundle) ? mergeOfficialTxtControlSchemeListings(withOfficialTotalFrames(overlaid(connectedTxt?.bundle ?? bundle)!, txtRecords), txtRecords) : bundle);
+  const withMultiHit = (target: DevicePreviewBundle) => multiHit && txtRecords ? withOfficialTxtMultiHit(target, bundle, multiHit, txtRecords) : target;
+  const selectedBundle = arjun?.bundle ?? (txtRecords && (connectedTxt?.bundle ?? bundle) ? withMultiHit(mergeOfficialTxtControlSchemeListings(withOfficialTotalFrames(overlaid(connectedTxt?.bundle ?? bundle)!, txtRecords), txtRecords)) : bundle);
   const finalBundle = review ? withoutMotionMedia(selectedBundle) : selectedBundle;
   const strategyMoveLinks = review ? await getWs5StrategyMoveLinks(finalBundle, admission) : undefined;
   const characterId = review ? videoEntityIdFromQuery(character.id) : null;

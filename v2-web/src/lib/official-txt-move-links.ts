@@ -53,3 +53,52 @@ export function withOfficialTxtMoveLinks(bundle: DevicePreviewBundle, data: Offi
     return { ...move, ws5CanonicalSource: key, frame, frameFieldStatus, commands };
   }) };
 }
+
+export type OfficialTxtMultiHitData = {
+  firstStageLinks: Record<string, string>;
+  wholeMoveStages: Record<string, { stageKeys: string[]; damageSum: number; stageNames?: string[] }>;
+  variantLabels?: Record<string, { label: string; evidence: string }>;
+  classicSupplements?: Record<string, { classicFromKey: string; officialName: string }>;
+};
+export type OfficialStageRow = { key: string; label: string; startup: string; active: string; recovery: string;
+  total: string; onHit: string; onBlock: string; damage: string };
+
+/**
+ * ① Round18 (Preview/local only):
+ * - whole-move cards stay one card with their whole-move values. If an earlier connection renamed such a card
+ *   to a single hit (e.g. Ryu 3605c1b6 → 不破三連撃（2段目）), the pre-connection card is restored.
+ *   Each official hit is attached as detail rows only; values are never replaced by a single hit.
+ *   damageSum is the simple sum of official per-hit damage (scaling is not in the official data).
+ * - Modern-only official listings with no Classic card get the official Classic command and name from the
+ *   paired Classic row (ID unchanged; e.g. Juri [チェーンコンボ]刈脚).
+ */
+export function withOfficialTxtMultiHit(bundle: DevicePreviewBundle, original: DevicePreviewBundle | null,
+  data: OfficialTxtMultiHitData, records: Record<string, TxtRecord>): DevicePreviewBundle {
+  const before = new Map((original?.moves ?? []).map(move => [move.id, move]));
+  return { ...bundle, moves: bundle.moves.map(current => {
+    let move = current;
+    const whole = own(data.wholeMoveStages, move.id);
+    if (whole) {
+      const prior = before.get(move.id);
+      if (prior && prior.name !== move.name) move = prior;
+      const stages: OfficialStageRow[] = whole.stageKeys.flatMap((key, index) => {
+        const raw = own(records, key)?.raw;
+        if (!raw) return [];
+        return [{ key, label: whole.stageNames?.[index] ?? text(raw.skill),
+          startup: text(raw.startup_frame), active: text(raw.active_frame), recovery: text(raw.recovery_frame),
+          total: text(raw.frame), onHit: text(raw.hit_frame), onBlock: text(raw.block_frame), damage: text(raw.damage) }];
+      });
+      if (stages.length === whole.stageKeys.length) move = { ...move, ws5OfficialStages: stages, ws5StageDamageSum: whole.damageSum } as typeof move;
+    }
+    const supplement = own(data.classicSupplements, move.id);
+    const raw = supplement ? own(records, supplement.classicFromKey)?.raw : undefined;
+    const classic = raw ? text(raw.command) : "";
+    if (supplement && classic) {
+      const commands = move.commands ?? [];
+      const hasClassic = commands.some(row => row.moveId === move.id && row.scheme.trim().toLowerCase() === "classic" && text(row.commandText));
+      move = { ...move, name: supplement.officialName, commands: hasClassic ? commands : [...commands,
+        { moveId: move.id, scheme: "classic", commandText: classic, numericNotation: null, buttonNotation: null, conditionText: null, sortOrder: 0 }] };
+    }
+    return move;
+  }) };
+}

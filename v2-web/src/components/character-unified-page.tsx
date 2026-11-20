@@ -18,7 +18,8 @@ import { safeExternalUrl } from "@/lib/safe-external-url";
 import { UNIFIED_MEDIA_PLACEHOLDER, unifiedCommandRows, unifiedCommandText, unifiedConditionRows, unifiedFrameValue,
   unifiedInputPathLabel, unifiedOtherCommandRows, unifiedMoveMedia, unifiedPlayers, unifiedSources,
   unifiedControlInputFallback, unifiedMoveFilterSchemes, unifiedCommandDisplay,
-  type UnifiedMove, type UnifiedMoveEvidence } from "@/lib/character-unified-contract";
+  japaneseFrameText, type UnifiedMove, type UnifiedMoveEvidence } from "@/lib/character-unified-contract";
+import type { OfficialStageRow } from "@/lib/official-txt-move-links";
 import { getOfficialTxtPreviewDisplayCategory } from "@/lib/official-txt-device-preview-adapter.mjs";
 import type { DevicePreviewBundle } from "@/lib/device-preview";
 import type { CharacterDetail, SourceReference } from "@/types/character";
@@ -136,6 +137,14 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
           const notes = officialMoveDisplayNotes(item);
           return notes.length ? <div key={`${item.id}-official-notes`}><dt>公式備考</dt><dd>{notes.map((note, index) => <p key={index}>{note}</p>)}</dd></div> : null;
         }) : null}
+        {showOfficialTxtValues && (move as UnifiedMove & { ws5OfficialStages?: OfficialStageRow[] }).ws5OfficialStages ? (() => {
+          const stagedMove = move as UnifiedMove & { ws5OfficialStages: OfficialStageRow[]; ws5StageDamageSum?: number };
+          const cell = (value: string) => value ? japaneseFrameText(value) : "公式資料に記載なし";
+          return <div data-official-stages="true"><dt>段別データ（公式）</dt><dd>
+            {stagedMove.ws5OfficialStages.map(stage => <p key={stage.key}>{stage.label}：発生 {cell(stage.startup)} / 持続 {cell(stage.active)} / 硬直 {cell(stage.recovery)} / 全体 {cell(stage.total)} / ヒット時 {cell(stage.onHit)} / ガード時 {cell(stage.onBlock)} / ダメージ {cell(stage.damage)}</p>)}
+            {typeof stagedMove.ws5StageDamageSum === "number" ? <p>各段ダメージの単純合計：{stagedMove.ws5StageDamageSum}（補正込みの実ダメージは公式資料に記載なし）</p> : null}
+          </dd></div>;
+        })() : null}
         <div><dt>Patch</dt><dd>{evidence?.patch ?? (showOfficialTxtValues && (move as UnifiedMove & { ws5CanonicalSource?: string }).ws5CanonicalSource ? "Patch未確認（公式TXT 2026-10-23取得の記載値）" : "対応バージョン確認中")}</dd></div>
         <div><dt>Verification</dt><dd>{evidence?.verification ?? (move.releaseFixture ? "保存データ・公式照合状態を確認中" : "照合状態を確認中")}</dd></div>
       </dl>

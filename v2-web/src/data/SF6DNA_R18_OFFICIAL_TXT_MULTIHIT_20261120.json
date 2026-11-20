@@ -1,0 +1,130 @@
+{
+ "schema": "sf6dna/official-txt-multihit/1",
+ "base": "c85005a0",
+ "source": "① Round18 (MULTI_HIT_19_*, RYU_FUWA_SANRENGEKI_OFFICIAL, LABEL_HELD_11_EVIDENCE, Juri chain)",
+ "note": "Preview表示専用。技全体カードの値は上書きしない（段別は詳細欄のみ）。damageSumは各段ダメージの単純合計で、補正込みの実ダメージではない。",
+ "firstStageLinks": {
+  "00306fb8-0213-4c10-af70-df4286431957": "jp:web:203",
+  "1476cf16-7efd-4570-8d43-32ce58ac52f4": "zangief:web:210",
+  "1e553e7b-1abf-47eb-8864-c46d2f8cfa58": "luke:web:204",
+  "701cd562-2e2b-4b05-afdb-e9a162b076ce": "manon:web:204",
+  "8b6b34bf-96c7-44a9-aa4f-bb2c6347d48a": "ingrid:web:206",
+  "cd158bd7-7e4c-45da-9a44-2faa9e3633f8": "akuma:web:206",
+  "f7a86d2f-1e98-4e54-9a74-7a066e144ab2": "marisa:web:210"
+ },
+ "wholeMoveStages": {
+  "07d94252-18d9-46b4-a466-7b949a899564": {
+   "stageKeys": [
+    "marisa:web:310",
+    "marisa:web:311"
+   ],
+   "damageSum": 1300
+  },
+  "7381e9e3-1f6a-4846-8658-f3526750da51": {
+   "stageKeys": [
+    "akuma:web:325",
+    "akuma:web:326"
+   ],
+   "damageSum": 1200
+  },
+  "789c5644-c97f-4f51-b406-eea0d3d13ad1": {
+   "stageKeys": [
+    "akuma:web:327",
+    "akuma:web:328"
+   ],
+   "damageSum": 1400
+  },
+  "9217a5dc-508e-4f69-a4ee-7ef8ea4cc947": {
+   "stageKeys": [
+    "marisa:web:314",
+    "marisa:web:315"
+   ],
+   "damageSum": 1200
+  },
+  "96b61c92-9208-422d-b230-b3f4f550c67e": {
+   "stageKeys": [
+    "ed:web:103",
+    "ed:web:207",
+    "ed:web:208"
+   ],
+   "damageSum": 1500
+  },
+  "98d29190-1a77-4567-a7f7-95659013c566": {
+   "stageKeys": [
+    "marisa:web:308",
+    "marisa:web:309"
+   ],
+   "damageSum": 1200
+  },
+  "abf6ef9d-b60c-41ca-98ed-86fdbb4a05bb": {
+   "stageKeys": [
+    "marisa:web:312",
+    "marisa:web:313"
+   ],
+   "damageSum": 1400
+  },
+  "b3103a67-2ffb-44eb-bb46-d098e85e571a": {
+   "stageKeys": [
+    "ed:web:101",
+    "ed:web:204",
+    "ed:web:205"
+   ],
+   "damageSum": 1300
+  },
+  "e7f0e25f-ffa0-4cd0-969b-89c30c12f912": {
+   "stageKeys": [
+    "akuma:web:329",
+    "akuma:web:330"
+   ],
+   "damageSum": 1500
+  },
+  "ee465bb0-22b4-41d2-9b26-a2fa733c3d06": {
+   "stageKeys": [
+    "manon:web:204",
+    "manon:web:205"
+   ],
+   "damageSum": 1100
+  },
+  "fbc6b3d1-45a8-4f14-9ae4-6883e9a0e804": {
+   "stageKeys": [
+    "akuma:web:331",
+    "akuma:web:332"
+   ],
+   "damageSum": 1400
+  },
+  "3605c1b6-1f6b-42a3-981d-6ce606d760b4": {
+   "stageKeys": [
+    "ryu:web:102",
+    "ryu:web:208",
+    "ryu:web:209"
+   ],
+   "damageSum": 1800,
+   "stageNames": [
+    "1段目（立ち中P）",
+    "2段目",
+    "3段目"
+   ]
+  }
+ },
+ "variantLabels": {
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A10a58258d4454f7c016e": {
+   "label": "バーンアウト中・SA1発動時用",
+   "evidence": "公式内部名 バーンアウト中_SA1発動時用(HJ_F_Barnout)（前ハイジャンプ3行で一意）"
+  },
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A505385c81c60d236868c": {
+   "label": "アシストコンボで使用中",
+   "evidence": "公式内部名 アシストコンボで使用中(C_HJ_F_Barnout)（前ハイジャンプ3行で一意）"
+  }
+ },
+ "classicSupplements": {
+  "sf6dna-preview:juri:juri%3Aweb%3A209": {
+   "classicFromKey": "juri:web:123",
+   "officialName": "[チェーンコンボ]しゃがみ強K（刈脚）"
+  }
+ },
+ "held": {
+  "ryuFuwaRename": "表示名「不破三連撃」への変更はユーザー承認待ち（現状の名称を維持）",
+  "cviperLabels": "8件（同一文言2組・文言なし2件・OD空中バーニング2件）",
+  "lilyDesertStorm": "既存表示を維持（段別値は既にカードに列挙）"
+ }
+}
