@@ -15,8 +15,25 @@ test("all current Remote history versions have unique 14-digit Local markers", (
   const remoteAligned = migrationFiles.filter((name) => /^\d{14}_/.test(name));
   const versions = remoteAligned.map((name) => name.slice(0, 14));
 
-  assert.equal(remoteAligned.length, 195);
-  assert.equal(new Set(versions).size, 195);
+  // 196 versions recorded in the Prod migration ledger (2026-11-20) + 1 Git-only forward candidate awaiting approval.
+  assert.equal(remoteAligned.length, 197);
+  assert.equal(new Set(versions).size, 197);
+});
+
+test("Prod-only ledger versions are back-ported to Git and Git-only versions are explicit candidates", () => {
+  const versions = new Set(migrationFiles.map((name) => name.slice(0, 14)));
+  // Applied on Prod outside Git until 2026-11-20 (source boundary fix; contact inbox under its Prod version).
+  for (const v of ["20260916060806", "20260922130139"]) assert.ok(versions.has(v), v);
+  assert.ok(!versions.has("20260922143000"), "contact inbox must use the Prod ledger version");
+  // Single forward migration sets the final source boundary (functions + grants); no second variant.
+  assert.ok(versions.has("20261120120000"));
+  for (const v of ["20260923000000", "20261120000100"]) assert.ok(!versions.has(v), `superseded candidate ${v}`);
+  // The Prod-only history version is a no-op placeholder so definitions are applied exactly once.
+  const placeholder = readMigration("_fix_public_source_boundary.sql").replace(/^--.*$/gm, "").trim();
+  assert.equal(placeholder, "SELECT 1;");
+  const forward = readMigration("_align_source_boundary_with_production.sql");
+  assert.match(forward, /\$preflight\$/);
+  assert.match(forward, /REVOKE ALL ON TABLE public\.sources, public\.entity_sources FROM anon;/);
 });
 
 test("retired Phase20 audit endpoints are represented by safe no-op markers", () => {

@@ -39,7 +39,7 @@ test("Contact server contract submits only through the validated Supabase RPC", 
 });
 
 test("Contact migration denies direct public rows and exposes only the submission RPC", () => {
-  const migration = readFileSync(new URL("../../supabase/migrations/20260922143000_add_contact_inbox.sql", import.meta.url), "utf8");
+  const migration = readFileSync(new URL("../../supabase/migrations/20260922130139_add_contact_inbox.sql", import.meta.url), "utf8");
   assert.match(migration, /alter table public\.contact_inbox enable row level security/);
   assert.match(migration, /revoke all on table public\.contact_inbox from public, anon, authenticated/);
   assert.doesNotMatch(migration, /create policy/i);
