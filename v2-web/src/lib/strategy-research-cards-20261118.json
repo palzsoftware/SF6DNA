@@ -10972,8 +10972,10 @@
       "knockdownAdvantage": null
     },
     "referenceVersion": "2026-08-03対応資料",
-    "sourceUrl": null,
-    "sourceUrls": [],
+    "sourceUrl": "https://sf6-lab.net/fighters/cviper/combo",
+    "sourceUrls": [
+      "https://sf6-lab.net/fighters/cviper/combo"
+    ],
     "media": null,
     "referenceNotice": "参考攻略・実機未検証",
     "commandNotice": "原資料の表記を整形した参考手順",
@@ -11005,8 +11007,10 @@
       "knockdownAdvantage": null
     },
     "referenceVersion": "2026-08-03対応資料",
-    "sourceUrl": null,
-    "sourceUrls": [],
+    "sourceUrl": "https://sf6-lab.net/fighters/cviper/combo",
+    "sourceUrls": [
+      "https://sf6-lab.net/fighters/cviper/combo"
+    ],
     "media": null,
     "referenceNotice": "参考攻略・実機未検証",
     "commandNotice": "原資料の表記を整形した参考手順",
@@ -11038,8 +11042,10 @@
       "knockdownAdvantage": null
     },
     "referenceVersion": "2026-08-03対応資料",
-    "sourceUrl": null,
-    "sourceUrls": [],
+    "sourceUrl": "https://sf6-lab.net/fighters/cviper/combo",
+    "sourceUrls": [
+      "https://sf6-lab.net/fighters/cviper/combo"
+    ],
     "media": null,
     "referenceNotice": "参考攻略・実機未検証",
     "commandNotice": "原資料の表記を整形した参考手順",
@@ -11203,8 +11209,10 @@
       "knockdownAdvantage": null
     },
     "referenceVersion": "2026-08-03対応資料",
-    "sourceUrl": null,
-    "sourceUrls": [],
+    "sourceUrl": "https://sf6-lab.net/fighters/cviper/combo",
+    "sourceUrls": [
+      "https://sf6-lab.net/fighters/cviper/combo"
+    ],
     "media": null,
     "referenceNotice": "参考攻略・実機未検証",
     "commandNotice": "原資料の表記を整形した参考手順",
@@ -11236,8 +11244,10 @@
       "knockdownAdvantage": null
     },
     "referenceVersion": "2026-08-03対応資料",
-    "sourceUrl": null,
-    "sourceUrls": [],
+    "sourceUrl": "https://sf6-lab.net/fighters/cviper/combo",
+    "sourceUrls": [
+      "https://sf6-lab.net/fighters/cviper/combo"
+    ],
     "media": null,
     "referenceNotice": "参考攻略・実機未検証",
     "commandNotice": "原資料の表記を整形した参考手順",
@@ -11352,7 +11362,7 @@
     "controlLabel": "クラシック（資料表記）",
     "commandRaw": "2弱K→5弱P→5弱K→中サンライズ",
     "commandJapanese": "しゃがみ弱K → 立ち弱P → 立ち弱K → 中サンライズ",
-    "description": "3小技からの安定締め。2弱P→5弱Kは通常ヒットで繋がらないため混同しない",
+    "description": "小技3発を刻んで中サンライズで締める安定型。始動をしゃがみ弱Pにした場合、立ち弱Kへの連結は通常ヒットでは成立しない点に注意。",
     "condition": "中央／近距離",
     "position": "原文の条件欄参照。独立した位置検証は未確認",
     "reportedStats": {
@@ -11368,8 +11378,10 @@
       "knockdownAdvantage": null
     },
     "referenceVersion": "2026-08-03対応記事を優先。2026-05以前の記事は変更点と照合が必要",
-    "sourceUrl": null,
-    "sourceUrls": [],
+    "sourceUrl": "https://sf6-lab.net/fighters/ingrid/combo",
+    "sourceUrls": [
+      "https://sf6-lab.net/fighters/ingrid/combo"
+    ],
     "media": null,
     "referenceNotice": "参考攻略・実機未検証",
     "commandNotice": "原資料の表記を整形した参考手順",
@@ -11401,8 +11413,10 @@
       "knockdownAdvantage": null
     },
     "referenceVersion": "2026-08-03対応記事を優先。2026-05以前の記事は変更点と照合が必要",
-    "sourceUrl": null,
-    "sourceUrls": [],
+    "sourceUrl": "https://sf6-lab.net/fighters/ingrid/combo",
+    "sourceUrls": [
+      "https://sf6-lab.net/fighters/ingrid/combo"
+    ],
     "media": null,
     "referenceNotice": "参考攻略・実機未検証",
     "commandNotice": "原資料の表記を整形した参考手順",
@@ -11434,8 +11448,10 @@
       "knockdownAdvantage": null
     },
     "referenceVersion": "2026-08-03対応記事を優先。2026-05以前の記事は変更点と照合が必要",
-    "sourceUrl": null,
-    "sourceUrls": [],
+    "sourceUrl": "https://sf6-lab.net/fighters/ingrid/combo",
+    "sourceUrls": [
+      "https://sf6-lab.net/fighters/ingrid/combo"
+    ],
     "media": null,
     "referenceNotice": "旧版を含む・現行成立未確認",
     "commandNotice": "原資料の表記を整形した参考手順",
@@ -11467,8 +11483,10 @@
       "knockdownAdvantage": null
     },
     "referenceVersion": "2026-08-03対応記事を優先。2026-05以前の記事は変更点と照合が必要",
-    "sourceUrl": null,
-    "sourceUrls": [],
+    "sourceUrl": "https://sf6-genten.com/character/ingrid/category/okizeme-setplay",
+    "sourceUrls": [
+      "https://sf6-genten.com/character/ingrid/category/okizeme-setplay"
+    ],
     "media": null,
     "referenceNotice": "参考攻略・実機未検証",
     "commandNotice": "原資料の表記を整形した参考手順",
@@ -11500,8 +11518,10 @@
       "knockdownAdvantage": null
     },
     "referenceVersion": "2026-08-03対応記事を優先。2026-05以前の記事は変更点と照合が必要",
-    "sourceUrl": null,
-    "sourceUrls": [],
+    "sourceUrl": "https://sf6-genten.com/character/ingrid/category/okizeme-setplay",
+    "sourceUrls": [
+      "https://sf6-genten.com/character/ingrid/category/okizeme-setplay"
+    ],
     "media": null,
     "referenceNotice": "参考攻略・実機未検証",
     "commandNotice": "原資料の表記を整形した参考手順",
@@ -11533,8 +11553,10 @@
       "knockdownAdvantage": null
     },
     "referenceVersion": "2026-08-03対応記事を優先。2026-05以前の記事は変更点と照合が必要",
-    "sourceUrl": null,
-    "sourceUrls": [],
+    "sourceUrl": "https://sf6-genten.com/character/ingrid/category/okizeme-setplay",
+    "sourceUrls": [
+      "https://sf6-genten.com/character/ingrid/category/okizeme-setplay"
+    ],
     "media": null,
     "referenceNotice": "参考攻略・実機未検証",
     "commandNotice": "原資料の表記を整形した参考手順",
@@ -11566,8 +11588,10 @@
       "knockdownAdvantage": null
     },
     "referenceVersion": "2026-08-03対応記事を優先。2026-05以前の記事は変更点と照合が必要",
-    "sourceUrl": null,
-    "sourceUrls": [],
+    "sourceUrl": "https://sf6-lab.net/fighters/ingrid/combo",
+    "sourceUrls": [
+      "https://sf6-lab.net/fighters/ingrid/combo"
+    ],
     "media": null,
     "referenceNotice": "参考攻略・実機未検証",
     "commandNotice": "原資料の表記を整形した参考手順",
