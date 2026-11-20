@@ -206,6 +206,30 @@ AS $function$
     );
 $function$;
 
+-- ③ Round16 safety precondition: never revoke while a policy still reads the source tables as the caller
+-- (20261120115000 / 20261120116000 must have moved move_commands and the 3 preview RPCs off direct source reads).
+DO $policy_precondition$
+BEGIN
+  IF EXISTS (
+    SELECT 1 FROM pg_catalog.pg_policy p
+    WHERE p.polrelid = 'public.move_commands'::regclass
+      AND pg_catalog.pg_get_expr(p.polqual, p.polrelid) ~ '(^|[^_a-z])(entity_sources|sources)([^_a-z]|$)'
+  ) THEN
+    RAISE EXCEPTION 'move_commands_policy_reads_source_tables_inline: apply 20261120115000 first';
+  END IF;
+  IF EXISTS (
+    SELECT 1 FROM pg_catalog.pg_proc p
+    WHERE p.oid IN (pg_catalog.to_regprocedure('public.get_phase39_content_detail_preview(text,text,text)'),
+                    pg_catalog.to_regprocedure('public.get_phase42_counter_detail_preview(text,text)'),
+                    pg_catalog.to_regprocedure('public.get_phase44_move_detail_preview(text,text)'))
+      AND NOT p.prosecdef
+      AND pg_catalog.pg_get_functiondef(p.oid) ~ '(public\.entity_sources|public\.sources)([^_a-z]|$)'
+  ) THEN
+    RAISE EXCEPTION 'preview_rpcs_read_source_tables_inline: apply 20261120116000 first';
+  END IF;
+END;
+$policy_precondition$;
+
 -- ① Round10 PROD_SOURCE_GRANT_ALIGN (verbatim intent): table access only via the RPCs above.
 REVOKE ALL ON TABLE public.sources, public.entity_sources FROM anon;
 REVOKE TRUNCATE, REFERENCES, TRIGGER ON TABLE public.sources, public.entity_sources FROM authenticated;

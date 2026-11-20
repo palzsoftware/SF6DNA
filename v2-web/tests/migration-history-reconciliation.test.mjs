@@ -15,9 +15,11 @@ test("all current Remote history versions have unique 14-digit Local markers", (
   const remoteAligned = migrationFiles.filter((name) => /^\d{14}_/.test(name));
   const versions = remoteAligned.map((name) => name.slice(0, 14));
 
-  // 196 versions recorded in the Prod migration ledger (2026-11-20) + 1 Git-only forward candidate awaiting approval.
-  assert.equal(remoteAligned.length, 197);
-  assert.equal(new Set(versions).size, 197);
+  // 196 versions recorded in the Prod migration ledger (2026-11-20) + 3 Git-only forward candidates awaiting approval
+  // (20261120115000 move_commands SECURITY DEFINER source check, 20261120116000 preview RPC source boundary,
+  //  20261120120000 source boundary REVOKE). They must be applied together, in this order.
+  assert.equal(remoteAligned.length, 199);
+  assert.equal(new Set(versions).size, 199);
 });
 
 test("Prod-only ledger versions are back-ported to Git and Git-only versions are explicit candidates", () => {
