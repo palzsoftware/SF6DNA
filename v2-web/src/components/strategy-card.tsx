@@ -20,8 +20,9 @@ export function japaneseRouteFromRecipe(recipe: CardRecipe | null | undefined): 
 
 /**
  * Shared strategy card (combo / setplay / sequence / counter).
- * Fixed order: 1 name+category, 2 demo GIF, 3 facts, 4 command icons, 5 Japanese route,
- * 6 explanation, 7 conditions/patch/sources (collapsible). Presentation only: it never decides publication.
+ * Fixed order: 1 name+category (demo GIF directly under it when present), 2 command icons, 3 Japanese route,
+ * 4 facts (damage, frame advantage, gauge use), 5 explanation, 6 conditions/patch/sources (collapsible).
+ * Presentation only: it never decides publication.
  */
 export function StrategyCard({ kind, title, category, control, media, mediaAction, facts, commandIcons, commandJa, body, details, detailsExtra }: {
   kind: StrategyCardKind;
@@ -60,15 +61,15 @@ export function StrategyCard({ kind, title, category, control, media, mediaActio
         <div className={styles.mediaPending}><span>実演GIF追加予定</span>{mediaAction ? <div className={styles.pendingAction}>{mediaAction}</div> : null}</div>
       )}
 
-      <dl className={styles.facts}>
-        {facts.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
-      </dl>
-
       <section className={styles.block} aria-label={labels.command}>
         <h4>{labels.command}</h4>
         <div className={styles.icons}>{commandIcons ?? <span className={styles.muted}>コマンド確認中</span>}</div>
         <p className={styles.route}>{commandJa ?? "技名表記確認中"}</p>
       </section>
+
+      <dl className={styles.facts}>
+        {facts.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
+      </dl>
 
       <section className={styles.block} aria-label={labels.body}>
         <h4>{labels.body}</h4>

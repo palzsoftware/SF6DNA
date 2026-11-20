@@ -1,6 +1,6 @@
 import { StrategyCardScroll } from "./strategy-card-scroll";
 import { StrategyCard } from "./strategy-card";
-import { ComboInputRecipe } from "./combo-input-recipe";
+import { StrategyCommandIcons } from "./strategy-command-icons";
 import { strategyResearchDisplay } from "@/lib/strategy-research-display";
 import { listStrategyResearchCards, safeStrategyResearchSource, type StrategyResearchCard, type StrategySlotKind } from "@/lib/strategy-research-contract";
 
@@ -30,13 +30,15 @@ export function CharacterStrategyResearchGrid({ characterSlug, kind, moveLinks, 
             control={display.controlLabel}
             media={null}
             facts={display.metrics.map(metric => [metric.label, metric.value] as const)}
-            commandIcons={display.iconInput ? <ComboInputRecipe recipe={display.iconInput} iconPilot={false} /> : null}
+            // Upper row: icons from official commands (HOLD → "コマンド確認中"). Lower row: Japanese move names.
+            commandIcons={display.iconSteps?.length ? <StrategyCommandIcons steps={display.iconSteps} names={display.commandJapanese} /> : null}
             commandJa={display.commandJapanese || null}
             body={description ? `${display.referenceNotice}。${description}` : null}
             details={[
               ["成立条件", display.condition || "未確認"],
               ["位置", card.position || "未確認"],
               ["手順の扱い", display.commandRole],
+              ["原表記", card.commandRaw || "未確認"],
               ["対応バージョン", `参考資料: ${card.referenceVersion}`],
               ...(links?.length ? [["参照技", <span key="phase2-moves">{links.map(link => <a key={link.href} href={link.href}>{link.name} </a>)}</span>] as const] : []),
               ["検証状態", "参考値・実機未検証"],
