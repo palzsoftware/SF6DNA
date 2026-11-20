@@ -1,0 +1,6199 @@
+{
+ "schema": "sf6dna/official-txt-display-overlay/1",
+ "base": "c2b9334d",
+ "note": "Preview表示用。値は公式TXT記載値（取得日2026-10-23扱い・Patch未確認）。DB値は上書きしない",
+ "byMoveId": {
+  "5f9ea511-7dec-40bf-ab39-31d6eb4190e9": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:112"
+   }
+  },
+  "c5b3f30f-6d75-4ff5-a73d-2310856de401": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:113"
+   }
+  },
+  "88a66202-ea61-4f19-a337-1e0952935b36": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:114"
+   }
+  },
+  "389dc6e2-eb99-4077-b93f-379bdac1edce": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:115"
+   }
+  },
+  "add403d6-41fe-4395-b9b9-8d9f24e20e96": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:116"
+   }
+  },
+  "ea563fe3-90d2-4816-b9da-6310611ab084": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:117"
+   }
+  },
+  "5ad21670-2e9a-44e3-8e35-b3eb76173713": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:306"
+   },
+   "modernCommand": {
+    "value": "214＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:306"
+   }
+  },
+  "41c2cf57-937b-4984-8def-033f2cdc52b0": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:316"
+   }
+  },
+  "fb83abe8-2b71-40cc-9b56-7ae12c48d490": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:317"
+   }
+  },
+  "3f8da7a4-682c-479e-a1b6-47c453e3e6a1": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:318"
+   }
+  },
+  "20ab4271-c79d-442a-934a-73035f8c98a0": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:319"
+   }
+  },
+  "6378f5d0-4700-4cce-90c0-5e8c96352fe8": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:320"
+   }
+  },
+  "946e201d-443f-42fc-ace6-485647936bb5": {
+   "recovery": {
+    "value": "11",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:102"
+   },
+   "onHit": {
+    "value": "4",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:102"
+   },
+   "onBlock": {
+    "value": "1",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:102"
+   }
+  },
+  "55f69a8a-11cc-4445-9363-b427b6f1b8f2": {
+   "active": {
+    "value": "7-11",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:103"
+   },
+   "recovery": {
+    "value": "15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:103"
+   }
+  },
+  "0935ef23-577e-4440-8a2b-041fa30c8151": {
+   "active": {
+    "value": "9-13",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:104"
+   },
+   "recovery": {
+    "value": "18",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:104"
+   }
+  },
+  "8ed97e52-13e7-4662-90f7-b38dc27121ed": {
+   "active": {
+    "value": "4-5",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:106"
+   },
+   "recovery": {
+    "value": "9",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:106"
+   },
+   "modernCommand": {
+    "value": "2＋弱＞2＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:106"
+   }
+  },
+  "fd0cf9f2-1d64-49d8-95cf-b706398eb295": {
+   "active": {
+    "value": "6-8",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:108"
+   },
+   "recovery": {
+    "value": "14",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:108"
+   }
+  },
+  "179062b4-5359-449b-8ddf-01c2a22fb153": {
+   "active": {
+    "value": "8-15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:110"
+   },
+   "recovery": {
+    "value": "19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:110"
+   },
+   "modernCommand": {
+    "value": "2＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:110"
+   }
+  },
+  "191fbb0d-54dd-4ab1-ac02-a60aeadd7f40": {
+   "active": {
+    "value": "9-11",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:111"
+   },
+   "recovery": {
+    "value": "23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:111"
+   }
+  },
+  "042db52d-5484-4097-b2a9-df47b8d96889": {
+   "active": {
+    "value": "4-13",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:112"
+   },
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:112"
+   }
+  },
+  "256b4f38-7a75-437f-89b5-b187eb576f0e": {
+   "active": {
+    "value": "6-15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:113"
+   },
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:113"
+   }
+  },
+  "921f1862-981a-42d2-9c9a-17a423221c78": {
+   "active": {
+    "value": "8-11",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:114"
+   },
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:114"
+   }
+  },
+  "7c2add4a-6967-4f3f-b1c8-719a61a608e7": {
+   "active": {
+    "value": "7-12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:115"
+   },
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:115"
+   }
+  },
+  "e04c5b9a-2c16-4b39-86ce-28f30f24fb31": {
+   "active": {
+    "value": "9-14",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:116"
+   },
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:116"
+   }
+  },
+  "b2b9c27e-2aec-47cb-b7e2-a918e0186932": {
+   "active": {
+    "value": "12-17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:117"
+   },
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:117"
+   }
+  },
+  "16bba1f1-0f0d-4c36-872b-5f5985756ce3": {
+   "active": {
+    "value": "10-12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:201"
+   },
+   "recovery": {
+    "value": "15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:201"
+   },
+   "modernCommand": {
+    "value": "6＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:201"
+   }
+  },
+  "752f9cfb-4992-44d7-94fa-1d18bcb223db": {
+   "active": {
+    "value": "12-16",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:202"
+   },
+   "recovery": {
+    "value": "27",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:202"
+   },
+   "modernCommand": {
+    "value": "4＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:202"
+   }
+  },
+  "9740a707-802d-4c17-a452-77d948aa4165": {
+   "active": {
+    "value": "12-13",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:319"
+   },
+   "recovery": {
+    "value": "21",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:319"
+   },
+   "modernCommand": {
+    "value": "214＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:319"
+   }
+  },
+  "cff38b55-0e9d-4eb0-9985-0c7a1d91129e": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:336"
+   }
+  },
+  "2ba11fb4-4e19-4d72-8b71-87778d097c9d": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:340"
+   }
+  },
+  "ed13ddb1-b91d-4ba7-9c93-51c39b480f1d": {
+   "active": {
+    "value": "8-11, 15-20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:400"
+   }
+  },
+  "91de3adc-9dd9-4466-85fe-fb91dcceae2c": {
+   "active": {
+    "value": "23-26, 31-34",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:323"
+   }
+  },
+  "693063de-3497-496e-96ab-61127a34a89d": {
+   "active": {
+    "value": "20-23, 28-31",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:326"
+   }
+  },
+  "570742cf-d489-4e82-8f84-bb9073942d67": {
+   "active": {
+    "value": "67-70, 75-78",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:328"
+   }
+  },
+  "5c268a9a-b2b3-4bce-89e4-85086de94f0f": {
+   "active": {
+    "value": "30-33, 38-41",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:327"
+   }
+  },
+  "26c08ccb-4685-43b3-96c0-358fc6c6544d": {
+   "active": {
+    "value": "69-72, 77-80",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:325"
+   }
+  },
+  "c882978d-8618-4caa-926c-c11941d8e6c0": {
+   "active": {
+    "value": "30-33, 38-41",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:324"
+   }
+  },
+  "3263e1a6-dfdc-4f8d-a319-d1586b355d19": {
+   "active": {
+    "value": "18-21, 38-41",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:303"
+   }
+  },
+  "a2cbe042-5f17-4eab-bd89-053015e7dbc0": {
+   "active": {
+    "value": "8-10, 32-35",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:sha:b75efff92f78be96e952"
+   }
+  },
+  "03851aac-fb3f-4a1f-bfa8-1cc6517f5b3a": {
+   "active": {
+    "value": "11-13, 29-31",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:201"
+   }
+  },
+  "4cbf54f3-dcb6-4cae-be0b-53d2da935a6f": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:112"
+   }
+  },
+  "6060d323-fa4e-4b00-845f-131524b49f6d": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:113"
+   }
+  },
+  "bf6e9444-04e0-42bb-8bd0-529fd8cb7858": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:114"
+   }
+  },
+  "4dd98dcb-5860-4283-8152-31ef60d7a057": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:115"
+   }
+  },
+  "3f29b3ca-9e60-4469-b102-07091159ce98": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:116"
+   }
+  },
+  "9c176e07-df77-49eb-a10f-86f0d248694c": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:117"
+   }
+  },
+  "e6977b57-168b-4876-833c-b0629b37532d": {
+   "active": {
+    "value": "7-8,9-12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:202"
+   }
+  },
+  "fe965804-a210-4d77-93a3-295f3d7910b0": {
+   "active": {
+    "value": "6-9, 19-22",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:306"
+   }
+  },
+  "bc0d5768-33c4-44e4-a841-1c92751c77d8": {
+   "active": {
+    "value": "5-9, 17-21, 30-33",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:307"
+   }
+  },
+  "bc019a33-449a-4662-aaa6-d86d0a766a1c": {
+   "active": {
+    "value": "6-11, 19-21, 31-33, 49-51, 61-64",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:308"
+   }
+  },
+  "0f1c3e4a-ce03-4f74-8950-5b4c92c4bb68": {
+   "active": {
+    "value": "15-17, 36-39",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:311"
+   }
+  },
+  "d2b2199c-f28b-4270-a8e1-e7ba02b621b2": {
+   "active": {
+    "value": "17-18, 28-30",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:312"
+   }
+  },
+  "7b84810e-b64a-490a-9544-b3e5ad56e18a": {
+   "active": {
+    "value": "18-20, 26-28",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:407"
+   }
+  },
+  "23c7fa26-6be5-4265-9cf5-9fa755d7dc49": {
+   "active": {
+    "value": "18-20, 26-28",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:414"
+   }
+  },
+  "a2ce8de3-a0ca-4dd7-ab28-d675bb88c037": {
+   "active": {
+    "value": "18-20, 26-28",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:421"
+   }
+  },
+  "b2804ff3-6b1a-426e-b22f-f1e76a65fa30": {
+   "active": {
+    "value": "11-13, 91-97",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:422"
+   }
+  },
+  "1cd1f765-83a1-484f-b376-d4ba0dad6dde": {
+   "active": {
+    "value": "11-13, 91-97",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:423"
+   }
+  },
+  "70f30fa3-7f7c-4c95-b5a7-53c4c51aaa6e": {
+   "active": {
+    "value": "18-20, 26-28",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:431"
+   }
+  },
+  "8b1fbe0c-461e-459f-9e51-aad6833afd46": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:112"
+   }
+  },
+  "bb38c8c9-c5d3-41b3-a800-10a6e53344be": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:113"
+   }
+  },
+  "b009be13-ba4b-4075-916b-d5ca5cb0ed4b": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:114"
+   }
+  },
+  "f4e388a0-7616-48b6-9b97-266ced50ebb0": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:115"
+   }
+  },
+  "62bb74b1-ab83-414d-9e83-fb21f539399c": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:116"
+   }
+  },
+  "fe1009d4-44e0-4702-950b-0d5ebf69862f": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:117"
+   }
+  },
+  "8fa46e7c-be53-4d83-8500-44c9de7ca6da": {
+   "active": {
+    "value": "14-25",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:300"
+   },
+   "recovery": {
+    "value": "8",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:300"
+   }
+  },
+  "ea3f3886-3a2b-4ee4-8c6d-7b8fb93e9076": {
+   "active": {
+    "value": "14-25",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:301"
+   },
+   "recovery": {
+    "value": "7",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:301"
+   }
+  },
+  "6440734c-a3fa-45e0-a5de-50c93ec470b6": {
+   "active": {
+    "value": "10-17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:308"
+   },
+   "recovery": {
+    "value": "28",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:308"
+   }
+  },
+  "31996c83-5434-4c79-908f-75f65886877b": {
+   "active": {
+    "value": "14-19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:309"
+   },
+   "recovery": {
+    "value": "32",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:309"
+   },
+   "modernCommand": {
+    "value": "623＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:309"
+   }
+  },
+  "621c4239-32eb-4b00-a075-0f9c15389675": {
+   "active": {
+    "value": "16-21",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:310"
+   },
+   "recovery": {
+    "value": "33",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:310"
+   },
+   "modernCommand": {
+    "value": "623＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:310"
+   }
+  },
+  "029f8661-b765-4faf-bff2-230a9f27f685": {
+   "active": {
+    "value": "13-18",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:311"
+   },
+   "recovery": {
+    "value": "36",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:311"
+   }
+  },
+  "e6e924d2-2dd3-4bc2-80ed-aec6f175383c": {
+   "active": {
+    "value": "16-19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:316"
+   },
+   "recovery": {
+    "value": "26",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:316"
+   }
+  },
+  "b7613ec3-5661-4e6a-bcf0-34ea5635b896": {
+   "active": {
+    "value": "20-23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:318"
+   },
+   "recovery": {
+    "value": "26",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:318"
+   },
+   "modernCommand": {
+    "value": "236＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:318"
+   }
+  },
+  "93f83e6d-9f9c-43fc-aaaf-70f954d44dcc": {
+   "active": {
+    "value": "17-24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:320"
+   },
+   "recovery": {
+    "value": "18",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:320"
+   },
+   "modernCommand": {
+    "value": "236＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:320"
+   }
+  },
+  "f25b82cb-2852-412c-b1e8-f51077fdd61d": {
+   "active": {
+    "value": "11-13",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:324"
+   },
+   "recovery": {
+    "value": "20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:324"
+   }
+  },
+  "43c8455c-3bd1-4843-a836-f03e013a49d7": {
+   "active": {
+    "value": "17-19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:202"
+   },
+   "recovery": {
+    "value": "21",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:202"
+   },
+   "modernCommand": {
+    "value": "6＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:202"
+   }
+  },
+  "f7fa0d87-9ffe-44cf-b263-c3e01893c205": {
+   "active": {
+    "value": "7-11, 18-21, 38-39",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:400"
+   }
+  },
+  "fbe394c7-3820-491f-a365-50769eca14ac": {
+   "active": {
+    "value": "24-27, 45-47, 70-74, 77-78",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:324"
+   }
+  },
+  "a04fe8b5-007c-4731-a5bb-0a8e2161d9ce": {
+   "active": {
+    "value": "18-21, 34-36, 61-62, 66-68",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:325"
+   }
+  },
+  "5d2ffa11-e0fd-4c81-ba40-06e24e8d3d2e": {
+   "active": {
+    "value": "15-18, 33-35, 60-61, 65-67",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:322"
+   }
+  },
+  "68fb4360-a536-4ada-9759-a4b78bbce0ae": {
+   "active": {
+    "value": "20-23, 43-45, 68-72, 75-76",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:323"
+   }
+  },
+  "9916c7aa-9882-4e13-9c62-b839c1346ff7": {
+   "active": {
+    "value": "16-17, 22-25, 45-47",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:331"
+   }
+  },
+  "375ab2d8-4862-424a-a736-fcc6df15205b": {
+   "active": {
+    "value": "16-17, 22-25",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:329"
+   }
+  },
+  "8ddf7123-8e88-475f-a0a0-56853b050f04": {
+   "active": {
+    "value": "21-25, 37-42",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:302"
+   }
+  },
+  "261aebad-45a9-4fe5-88dd-8a419c988b43": {
+   "active": {
+    "value": "11-17, 25-35",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:303"
+   }
+  },
+  "4c80247d-5c92-4c0f-828d-b71be622f735": {
+   "active": {
+    "value": "13-17, 28-33",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:300"
+   }
+  },
+  "ac7bab5a-33b7-41e1-bb63-d7930a9ae0e4": {
+   "active": {
+    "value": "17-21, 33-38",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:301"
+   }
+  },
+  "a38cfb8b-3a44-4172-b9b1-5b502d2e53f7": {
+   "active": {
+    "value": "22-23, 26-27",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:sha:03dca99964f1b9b383c1"
+   }
+  },
+  "6e0b8aa1-fccd-44e4-aac5-b2313b959f94": {
+   "active": {
+    "value": "6-11, 24-25, 27-28",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:307"
+   }
+  },
+  "c9401f16-e65c-4d8f-a193-bdd40eca23f2": {
+   "active": {
+    "value": "9-11, 16-18",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:110"
+   },
+   "classicCommand": {
+    "value": "2 + HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:110"
+   },
+   "modernCommand": {
+    "value": "2 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:110"
+   }
+  },
+  "c6aa3b3e-09fe-49fa-b430-7998a00df1b3": {
+   "active": {
+    "value": "17-20, 24-27",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:208"
+   }
+  },
+  "4c808394-2c01-4481-9d5f-3fd5cd855f81": {
+   "active": {
+    "value": "7-9, 15-17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:211"
+   }
+  },
+  "3e2fd952-26b8-4942-85fb-651512e650ba": {
+   "active": {
+    "value": "10-11, 13-20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:117"
+   },
+   "classicCommand": {
+    "value": "（ジャンプ中に）HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:117"
+   }
+  },
+  "cbc187f2-53f7-4075-a555-f51bd443bddf": {
+   "damage": {
+    "value": "※1000",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "guile:web:307"
+   }
+  },
+  "691fc93c-afe9-4390-ae5e-aa8a49de482d": {
+   "damage": {
+    "value": "※1200",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "guile:web:308"
+   }
+  },
+  "64c6f070-1497-4852-bc19-18c051a346c2": {
+   "damage": {
+    "value": "※1100",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "guile:web:309"
+   }
+  },
+  "83ad9057-9361-4de0-93f5-f3e3353105ac": {
+   "damage": {
+    "value": "※1300",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "guile:web:310"
+   }
+  },
+  "e9f02f89-e447-4d3d-95ba-a7062d5587b3": {
+   "damage": {
+    "value": "※1200",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "guile:web:311"
+   }
+  },
+  "40c95b20-76f0-4056-ae56-fee47784f3a9": {
+   "damage": {
+    "value": "※1400",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "guile:web:312"
+   }
+  },
+  "94e9ef6b-c696-4c51-baef-f49af33bf7f2": {
+   "damage": {
+    "value": "※1600",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "guile:web:313"
+   }
+  },
+  "10016add-2efb-44cc-a5b4-444d610e24a5": {
+   "active": {
+    "value": "11-15, 30-36, 48-50",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:400"
+   }
+  },
+  "69f4a36e-028e-4dc0-ac4f-bad477196210": {
+   "active": {
+    "value": "11-15, 30-36, 48-50",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:401"
+   }
+  },
+  "f40ca33c-4063-45f3-b39e-a415c0092eb7": {
+   "active": {
+    "value": "11-15, 30-36, 48-50",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:402"
+   }
+  },
+  "f467c51d-f893-418b-850b-2bec448a3439": {
+   "active": {
+    "value": "9-13, 15-17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:105"
+   },
+   "classicCommand": {
+    "value": "HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:105"
+   },
+   "modernCommand": {
+    "value": "強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:105"
+   }
+  },
+  "3658815c-407c-4aa2-a068-f8f80ea685fd": {
+   "active": {
+    "value": "8-10, 13-16",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:208"
+   }
+  },
+  "e395af47-aedc-467e-b4cb-2aa5c112c348": {
+   "damage": {
+    "value": "2200※1850",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jamie:web:400"
+   }
+  },
+  "0f570ab6-a5d5-469d-9a18-fea8f85b3962": {
+   "active": {
+    "value": "5-6, 8-10",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:106"
+   },
+   "classicCommand": {
+    "value": "MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:106"
+   }
+  },
+  "8b14f12a-30f6-4092-a564-abc65dd214fc": {
+   "active": {
+    "value": "18-21, 34-36, 65-69",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:312"
+   }
+  },
+  "1e7d1cc0-8118-4c5a-8b43-94f585c2a83e": {
+   "active": {
+    "value": "11-13, 16-17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:313"
+   }
+  },
+  "9f311585-00ac-4e7c-83fc-08a04f4f9f8d": {
+   "active": {
+    "value": "5-12, 18-19, 23-24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:314"
+   }
+  },
+  "1201daae-e1b8-47aa-88d9-19be3fb4f80b": {
+   "active": {
+    "value": "5-12, 18-19, 23-24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:315"
+   }
+  },
+  "3e607e52-090d-4c0b-96ec-d3bf99fd7c8b": {
+   "active": {
+    "value": "6-9, 11-12, 19-20, 23-24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:316"
+   }
+  },
+  "7d2cac0c-e80b-43dd-a4df-15e6a3b71db5": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ken:web:201"
+   }
+  },
+  "7c920824-53ef-4ed5-95da-a744eb17a49c": {
+   "active": {
+    "value": "10-11,12-15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:110"
+   },
+   "classicCommand": {
+    "value": "2 + HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:110"
+   },
+   "modernCommand": {
+    "value": "2 ＋ 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:110"
+   }
+  },
+  "b9d5b6ee-30ba-4dd8-a005-618a2fb5573d": {
+   "active": {
+    "value": "11-12, 19-20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:111"
+   },
+   "classicCommand": {
+    "value": "2 + HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:111"
+   }
+  },
+  "c0d1f90a-71dc-4cd6-97a5-e9b300369320": {
+   "active": {
+    "value": "10-11,17-18,26-27,36-37,46-47",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:400"
+   }
+  },
+  "b6c4e084-c653-42b8-94b8-c0a5dd115702": {
+   "active": {
+    "value": "9-30,40-41",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:401"
+   }
+  },
+  "00fb09ee-aba9-4dc7-8115-29b46bd67dad": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:113"
+   }
+  },
+  "31807b8f-99c8-446f-a2db-5200ae2fae69": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:114"
+   }
+  },
+  "48c184ed-390f-454f-9de8-75df3887fc13": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:115"
+   }
+  },
+  "779533b9-24da-421b-ac57-bb8c3d5700b9": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:116"
+   }
+  },
+  "229b7150-2d1c-46ae-87cf-c2dfa413d588": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:117"
+   }
+  },
+  "5a9a9a77-2943-428c-8eb0-8729e26ed0bc": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:118"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:118"
+   }
+  },
+  "29ba87ce-14a6-40b2-84aa-936228092b66": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:320"
+   }
+  },
+  "a1931623-d8f1-47e4-9f18-ef4fde632b4b": {
+   "active": {
+    "value": "5-7",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:401"
+   },
+   "recovery": {
+    "value": "51",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:401"
+   },
+   "modernCommand": {
+    "value": "4＋強SP/214214＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:401"
+   }
+  },
+  "03dc215b-fe91-445b-9089-9a9d090ac1a0": {
+   "active": {
+    "value": "10-13",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:402"
+   },
+   "recovery": {
+    "value": "92",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:402"
+   },
+   "modernCommand": {
+    "value": "2＋強SP/236236＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:402"
+   }
+  },
+  "ffc46504-0632-4b6e-ac49-5d799425d179": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:112"
+   }
+  },
+  "fd6994d7-9b39-442b-80fa-88eeaf147f93": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:113"
+   }
+  },
+  "849683cc-dc9a-46f6-b33a-16a15ec9aa13": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:114"
+   }
+  },
+  "86f77e43-38bc-47e6-8781-2ec32010d60f": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:115"
+   }
+  },
+  "68dc311a-e131-4e22-9a14-2536452298a2": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:116"
+   }
+  },
+  "62338ed3-a07e-4767-a3c4-fa27579545a4": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:117"
+   }
+  },
+  "47d8e1cb-af05-4495-994d-cdf7f83675da": {
+   "damage": {
+    "value": "※2000",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:300"
+   },
+   "modernCommand": {
+    "value": "（近距離で）63214＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:300"
+   }
+  },
+  "1c8375a6-7858-40ad-8ca3-aa265f2da682": {
+   "damage": {
+    "value": "※2000",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:301"
+   },
+   "modernCommand": {
+    "value": "（近距離で）63214＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:301"
+   }
+  },
+  "7508a273-cd0f-43ae-85f1-e16dc8f9b850": {
+   "damage": {
+    "value": "※2000",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:302"
+   },
+   "modernCommand": {
+    "value": "（近距離で）5+SP/（近距離で）63214＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:302"
+   }
+  },
+  "ddc87d1a-7319-4f33-836d-1f1d49e31e79": {
+   "damage": {
+    "value": "※2000",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:303"
+   },
+   "modernCommand": {
+    "value": "（近距離で）AUTO＋SP/（近距離で）63214＋攻撃二つ",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:303"
+   }
+  },
+  "af90da9b-b6e2-4ce8-a1cc-4ec156f3b2e2": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:116"
+   }
+  },
+  "0fb71af6-f90c-4e8f-900a-86e4b1e27ae2": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:117"
+   }
+  },
+  "4b1a0068-0a3f-47ae-a6e7-25203715422a": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:118"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:118"
+   }
+  },
+  "8b09cf50-8806-480a-ad0f-f84d8ecda4b0": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:119"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:119"
+   }
+  },
+  "670780a3-5cf4-4b2f-8005-47093baac13d": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:324"
+   },
+   "modernCommand": {
+    "value": "6 ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:324"
+   }
+  },
+  "f9981edd-a6d9-436b-baef-f8546d865ebb": {
+   "active": {
+    "value": "13-19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:404"
+   },
+   "recovery": {
+    "value": "60",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:404"
+   },
+   "onBlock": {
+    "value": "-39",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:404"
+   }
+  },
+  "fd10b2f0-9eae-4bd5-b435-745cc1f7417b": {
+   "active": {
+    "value": "13-19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:405"
+   },
+   "recovery": {
+    "value": "60",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:405"
+   },
+   "onBlock": {
+    "value": "-39",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:405"
+   }
+  },
+  "9d9f4f43-8e2e-4265-ae16-a327357e001e": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:112"
+   }
+  },
+  "af4a3e5d-e550-4e1f-9b77-0f9b8040de93": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:113"
+   }
+  },
+  "d3d1c380-8ba4-4244-8ac5-57a5fab0b5c3": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:114"
+   }
+  },
+  "a277674a-e207-425d-8f63-48d8c7a2882f": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:115"
+   }
+  },
+  "634dfdac-eb2c-4f55-9ee8-57a4a748d6f6": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:117"
+   }
+  },
+  "bbb5a868-6323-476f-b782-6bca034959ff": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:210"
+   },
+   "modernCommand": {
+    "value": "6＋中強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:210"
+   }
+  },
+  "4f6cfd73-f0f6-4042-bb5b-769c11b4dd93": {
+   "recovery": {
+    "value": "着地後8",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:211"
+   },
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:211"
+   },
+   "modernCommand": {
+    "value": "（サイド・フリップ中に）4or5or6＋中強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:211"
+   }
+  },
+  "40c5c26a-bcd7-4df0-8ff6-952dbec9b6c5": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:331"
+   },
+   "modernCommand": {
+    "value": "（アラビアン・サイクロン中に）4＋攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:331"
+   }
+  },
+  "ad5f57f5-f156-4d20-8f0a-f4da4772831d": {
+   "active": {
+    "value": "4-6",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:100"
+   },
+   "recovery": {
+    "value": "7",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:100"
+   },
+   "onHit": {
+    "value": "4",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:100"
+   }
+  },
+  "631c8d80-2000-4756-be30-bb1ffbe52060": {
+   "active": {
+    "value": "5-7",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:101"
+   },
+   "recovery": {
+    "value": "11",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:101"
+   },
+   "onHit": {
+    "value": "2",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:101"
+   }
+  },
+  "b33dd19c-add5-4420-8856-163fab932249": {
+   "active": {
+    "value": "6-9",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:102"
+   },
+   "recovery": {
+    "value": "11",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:102"
+   },
+   "onHit": {
+    "value": "7",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:102"
+   }
+  },
+  "7ac63edd-7d49-4a1a-9a2f-09ad04dc7d0d": {
+   "active": {
+    "value": "9-11",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:103"
+   },
+   "recovery": {
+    "value": "18",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:103"
+   },
+   "onHit": {
+    "value": "4",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:103"
+   }
+  },
+  "2ca379aa-216c-4bae-829d-50b8c273b7d7": {
+   "active": {
+    "value": "10-14",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:104"
+   },
+   "recovery": {
+    "value": "18",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:104"
+   },
+   "onHit": {
+    "value": "4",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:104"
+   }
+  },
+  "b2362378-1411-45ae-a0f0-014e898042e0": {
+   "active": {
+    "value": "12-15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:105"
+   },
+   "recovery": {
+    "value": "20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:105"
+   },
+   "onHit": {
+    "value": "9",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:105"
+   }
+  },
+  "b52d8627-51e8-46f2-84b9-021d41d34c9c": {
+   "active": {
+    "value": "4-5",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:106"
+   },
+   "recovery": {
+    "value": "9",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:106"
+   },
+   "onHit": {
+    "value": "4",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:106"
+   },
+   "modernCommand": {
+    "value": "2＋弱＞2＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:106"
+   }
+  },
+  "e12c05a0-4a5f-43fd-84a1-c258ca99f18f": {
+   "active": {
+    "value": "5-6",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:107"
+   },
+   "recovery": {
+    "value": "10",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:107"
+   },
+   "onHit": {
+    "value": "3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:107"
+   }
+  },
+  "e1ab790a-51d5-4461-b496-6fdc8f50a703": {
+   "active": {
+    "value": "6-9",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:108"
+   },
+   "recovery": {
+    "value": "13",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:108"
+   },
+   "onHit": {
+    "value": "5",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:108"
+   }
+  },
+  "46093af4-c66f-4941-94a6-939a0730f7d5": {
+   "active": {
+    "value": "8-10",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:109"
+   },
+   "recovery": {
+    "value": "19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:109"
+   },
+   "onHit": {
+    "value": "1",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:109"
+   }
+  },
+  "477ec830-0cbf-4400-950a-d6fce904306a": {
+   "active": {
+    "value": "9-14",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:110"
+   },
+   "recovery": {
+    "value": "22",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:110"
+   },
+   "onHit": {
+    "value": "1",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:110"
+   }
+  },
+  "06cb478c-ed44-47f7-99ec-1a2dbe45e8b5": {
+   "active": {
+    "value": "9-11",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:111"
+   },
+   "recovery": {
+    "value": "23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:111"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:111"
+   }
+  },
+  "034b09a8-7a59-4aff-a35d-90a022094914": {
+   "active": {
+    "value": "4-13",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:112"
+   },
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:112"
+   }
+  },
+  "199c77e5-2064-4090-8f9b-4226af92a68d": {
+   "active": {
+    "value": "6-15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:113"
+   },
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:113"
+   }
+  },
+  "389b1337-3b9b-4ea6-9d90-14383797c6b4": {
+   "active": {
+    "value": "8-12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:114"
+   },
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:114"
+   }
+  },
+  "51da4eb2-83d2-4afe-981d-cdcd52582424": {
+   "active": {
+    "value": "7-12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:115"
+   },
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:115"
+   }
+  },
+  "ec64fb71-06c8-4603-9aa5-b74f40f2df06": {
+   "active": {
+    "value": "9-14",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:116"
+   },
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:116"
+   }
+  },
+  "f0b5f99f-692a-4706-8f68-40bb4e4f0015": {
+   "active": {
+    "value": "10-17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:117"
+   },
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:117"
+   }
+  },
+  "1bc5bdf1-5471-4f09-ab27-093482bf5954": {
+   "active": {
+    "value": "20-23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:200"
+   },
+   "recovery": {
+    "value": "19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:200"
+   },
+   "onHit": {
+    "value": "3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:200"
+   }
+  },
+  "e0df5bcc-6bf7-4f08-9d8d-311ea95ed89f": {
+   "active": {
+    "value": "20-24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:201"
+   },
+   "recovery": {
+    "value": "16",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:201"
+   },
+   "onHit": {
+    "value": "6",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:201"
+   }
+  },
+  "3605c1b6-1f6b-42a3-981d-6ce606d760b4": {
+   "active": {
+    "value": "5-7",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:208"
+   },
+   "recovery": {
+    "value": "16",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:208"
+   },
+   "onHit": {
+    "value": "1",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:208"
+   }
+  },
+  "f1ca42ab-4cd4-414c-9b06-b70f5a3e8b43": {
+   "onHit": {
+    "value": "2",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:300"
+   }
+  },
+  "99caf881-5986-41a8-bb7f-9282a7409cad": {
+   "onHit": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:301"
+   }
+  },
+  "3922bb25-41b4-4ce9-bfb2-e0678d0a5c8e": {
+   "onHit": {
+    "value": "-2",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:302"
+   }
+  },
+  "e1307e32-ef9f-4b5e-8a9f-b64863bf9303": {
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:303"
+   }
+  },
+  "cd656302-682f-41ea-9ea3-4dd48e121764": {
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:304"
+   }
+  },
+  "5593524d-b9d7-4203-8ec3-15b483ed23dc": {
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:305"
+   }
+  },
+  "2e127af1-553f-477c-81ce-c4027213b237": {
+   "active": {
+    "value": "5-14",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:306"
+   },
+   "recovery": {
+    "value": "21＋着地後12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:306"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:306"
+   }
+  },
+  "ba18efcc-5215-49f9-94b0-bab116f79f43": {
+   "active": {
+    "value": "6-15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:307"
+   },
+   "recovery": {
+    "value": "30＋着地後12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:307"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:307"
+   }
+  },
+  "5e4a8e85-0eac-4c86-a343-b69c17ce9fec": {
+   "active": {
+    "value": "7-16",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:308"
+   },
+   "recovery": {
+    "value": "34＋着地後12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:308"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:308"
+   }
+  },
+  "d525aa87-9b71-44a0-a0b2-77e152dd23a8": {
+   "active": {
+    "value": "6-7,8-15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:309"
+   },
+   "recovery": {
+    "value": "37＋着地後15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:309"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:309"
+   }
+  },
+  "6e6d7e31-71b6-499c-b53a-a8725267879c": {
+   "active": {
+    "value": "12-14",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:310"
+   },
+   "recovery": {
+    "value": "14＋着地後18",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:310"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:310"
+   }
+  },
+  "f45ed8ef-efc2-45fe-af69-6af95691af3c": {
+   "active": {
+    "value": "14-15, 29-30",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:311"
+   },
+   "recovery": {
+    "value": "11＋着地後20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:311"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:311"
+   }
+  },
+  "7f7f8816-f6ac-40ef-9f3b-bc8c64d9666c": {
+   "active": {
+    "value": "16-17, 31-32, 46-47",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:312"
+   },
+   "recovery": {
+    "value": "14＋着地後17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:312"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:312"
+   }
+  },
+  "1b2cae35-53bd-4334-9e29-c1be501d0567": {
+   "active": {
+    "value": "13-14, 19-20, 25-26, 30-31, 36-37",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:313"
+   },
+   "recovery": {
+    "value": "10＋着地後13",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:313"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:313"
+   }
+  },
+  "12b670e7-d91b-4590-beee-a414726f7c23": {
+   "active": {
+    "value": "14-19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:316"
+   },
+   "recovery": {
+    "value": "22",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:316"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:316"
+   }
+  },
+  "ca18582a-dc15-4ad5-9eb3-86b2b269b2b0": {
+   "active": {
+    "value": "18-26",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:317"
+   },
+   "recovery": {
+    "value": "19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:317"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:317"
+   }
+  },
+  "46ac6533-8a93-4783-8c70-7c466e27cfe5": {
+   "active": {
+    "value": "27-35",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:318"
+   },
+   "recovery": {
+    "value": "15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:318"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:318"
+   }
+  },
+  "1aefba80-f15b-4bf2-b96c-a06155070371": {
+   "active": {
+    "value": "17-21",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:319"
+   },
+   "recovery": {
+    "value": "33",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:319"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:319"
+   }
+  },
+  "3dd9e618-062b-483b-bc45-d2819c97030b": {
+   "active": {
+    "value": "12-17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:320"
+   },
+   "recovery": {
+    "value": "18",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:320"
+   },
+   "onHit": {
+    "value": "2",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:320"
+   }
+  },
+  "ed402fb3-798e-4b66-9d94-5098a28369a1": {
+   "active": {
+    "value": "19-24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:321"
+   },
+   "recovery": {
+    "value": "17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:321"
+   },
+   "onHit": {
+    "value": "2",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:321"
+   }
+  },
+  "41ad35a2-c41d-4b51-ab6c-4e2a37a526b5": {
+   "active": {
+    "value": "30-34.35",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:322"
+   },
+   "recovery": {
+    "value": "19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:322"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:322"
+   }
+  },
+  "ec9b330f-ae5e-457b-993e-8c60ea0afabd": {
+   "active": {
+    "value": "18-22",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:324"
+   },
+   "recovery": {
+    "value": "20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:324"
+   },
+   "onHit": {
+    "value": "3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:324"
+   }
+  },
+  "db46db6f-26dd-4638-8397-d235750929b9": {
+   "damage": {
+    "value": "0",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:326"
+   }
+  },
+  "5a55599e-800f-4831-886c-345d1e88a9ef": {
+   "active": {
+    "value": "20-24.25",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:323"
+   },
+   "recovery": {
+    "value": "19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:323"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:323"
+   }
+  },
+  "2a83a1ca-a458-4e02-a496-40ff278964c2": {
+   "active": {
+    "value": "18-23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:325"
+   },
+   "recovery": {
+    "value": "19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:325"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:325"
+   }
+  },
+  "ed764818-867d-4188-b9fa-71bbd7cfb0b8": {
+   "active": {
+    "value": "11-12,18-19,26-27",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:314"
+   },
+   "recovery": {
+    "value": "着地後16",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:314"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:314"
+   }
+  },
+  "271fc7f0-8035-4945-8b68-40e43ab42725": {
+   "active": {
+    "value": "11-12, 14-16, 18-20, 22-24, 27-28",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:315"
+   },
+   "recovery": {
+    "value": "着地後16",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:315"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:315"
+   }
+  },
+  "af1a30a4-7bf1-49eb-bd60-76b10861c470": {
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:400"
+   }
+  },
+  "560625d9-16b9-484e-883d-6ace0adeb39c": {
+   "active": {
+    "value": "5-6, 7-8, 9-10, 11-12, 13-14, 15-16",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:408"
+   },
+   "recovery": {
+    "value": "71",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:408"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:408"
+   }
+  },
+  "252287ef-f49c-4347-ace6-76dce143ef59": {
+   "active": {
+    "value": "5-7",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:500"
+   },
+   "recovery": {
+    "value": "23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:500"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ryu:web:500"
+   }
+  },
+  "fc8dba88-8de7-4656-b6ac-6198538940d6": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:112"
+   }
+  },
+  "59cfffe0-2b84-4020-ac71-61dd3746e7e4": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:113"
+   }
+  },
+  "08d6e0a3-298d-463a-b406-df8db280b17e": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:114"
+   }
+  },
+  "9c1eebcf-2c81-44c8-86a2-d701afcc1284": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:115"
+   }
+  },
+  "e43326d2-278e-461b-994d-14205ba9687c": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:116"
+   }
+  },
+  "08f65128-4b48-4a17-b73f-fc039f7664dc": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:117"
+   }
+  },
+  "09cdfa8f-b62d-41f8-b2ac-ef7488c9bd1c": {
+   "startup": {
+    "value": "23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:307"
+   },
+   "active": {
+    "value": "23-36",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:307"
+   },
+   "recovery": {
+    "value": "17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:307"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:307"
+   },
+   "onBlock": {
+    "value": "-8",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:307"
+   },
+   "modernCommand": {
+    "value": "214 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:307"
+   }
+  },
+  "ee5354a6-15f6-48ad-ae18-4b7da6c9423c": {
+   "startup": {
+    "value": "19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:308"
+   },
+   "active": {
+    "value": "19-32",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:308"
+   },
+   "recovery": {
+    "value": "17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:308"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:308"
+   },
+   "onBlock": {
+    "value": "-8",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:308"
+   },
+   "modernCommand": {
+    "value": "214＋弱強or中強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:308"
+   }
+  },
+  "d44ccb19-614d-4ee6-9f50-263b93271d28": {
+   "startup": {
+    "value": "17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:314"
+   },
+   "active": {
+    "value": "17-23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:314"
+   },
+   "recovery": {
+    "value": "18",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:314"
+   },
+   "onHit": {
+    "value": "3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:314"
+   },
+   "onBlock": {
+    "value": "-3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:314"
+   }
+  },
+  "ab1d9137-f56e-4055-9113-6980c39d7386": {
+   "startup": {
+    "value": "20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:316"
+   },
+   "active": {
+    "value": "20-23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:316"
+   },
+   "recovery": {
+    "value": "19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:316"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:316"
+   },
+   "onBlock": {
+    "value": "-2",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:316"
+   }
+  },
+  "c65414e9-b51d-4dc2-a5a8-64ca1bcb201a": {
+   "active": {
+    "value": "19-26",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:312"
+   },
+   "recovery": {
+    "value": "24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:312"
+   },
+   "onHit": {
+    "value": "D",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:312"
+   },
+   "onBlock": {
+    "value": "-14",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:312"
+   }
+  },
+  "8416a1f7-69c0-4cc6-8c94-62e5d599ce1f": {
+   "active": {
+    "value": "12-14",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:300"
+   },
+   "recovery": {
+    "value": "22",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:300"
+   },
+   "modernCommand": {
+    "value": "236 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:300"
+   }
+  },
+  "6d0eac80-e601-47e0-bbde-5177918119c7": {
+   "active": {
+    "value": "13-14, 21-22, 32-33",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:301"
+   },
+   "recovery": {
+    "value": "24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:301"
+   },
+   "modernCommand": {
+    "value": "236 + 弱>攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:301"
+   }
+  },
+  "b425b72b-4769-4e8b-81ce-25d5b630de86": {
+   "active": {
+    "value": "16-18",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:302"
+   },
+   "recovery": {
+    "value": "20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:302"
+   },
+   "modernCommand": {
+    "value": "-",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:302"
+   }
+  },
+  "77e1c548-9ad0-4224-abee-8d3beab0840a": {
+   "active": {
+    "value": "16-18",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:303"
+   },
+   "recovery": {
+    "value": "20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:303"
+   },
+   "modernCommand": {
+    "value": "-",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:303"
+   }
+  },
+  "5844bf2f-b0b1-4fc0-a357-5fba2447c274": {
+   "active": {
+    "value": "16-18",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:304"
+   },
+   "recovery": {
+    "value": "22",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:304"
+   },
+   "modernCommand": {
+    "value": "SP/236 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:304"
+   }
+  },
+  "94df5acf-0ac9-4ec7-b05e-f270b6820620": {
+   "active": {
+    "value": "13-14, 21-22, 32-33",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:305"
+   },
+   "recovery": {
+    "value": "24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:305"
+   },
+   "modernCommand": {
+    "value": "SP>攻撃/236 + 中>攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:305"
+   }
+  },
+  "1aa99f82-81aa-4cac-8532-d5a0aa2a0f7e": {
+   "active": {
+    "value": "22-24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:306"
+   },
+   "recovery": {
+    "value": "22",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:306"
+   },
+   "modernCommand": {
+    "value": "-",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:306"
+   }
+  },
+  "8dcbfc4d-c704-4397-bffa-791e12496d45": {
+   "active": {
+    "value": "22-24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:307"
+   },
+   "recovery": {
+    "value": "22",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:307"
+   },
+   "modernCommand": {
+    "value": "-",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:307"
+   }
+  },
+  "368baecb-d1cc-4164-923b-a7512ad7cf55": {
+   "active": {
+    "value": "21-23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:308"
+   },
+   "recovery": {
+    "value": "22",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:308"
+   },
+   "modernCommand": {
+    "value": "236 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:308"
+   }
+  },
+  "88e637c4-1c01-4b41-b1e4-8d0443cbf8a6": {
+   "active": {
+    "value": "13-14, 21-22, 32-33",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:309"
+   },
+   "recovery": {
+    "value": "24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:309"
+   },
+   "modernCommand": {
+    "value": "236 + 強>攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:309"
+   }
+  },
+  "b17cb130-2e18-4789-8645-3c979a3c5f4f": {
+   "active": {
+    "value": "22-24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:310"
+   },
+   "recovery": {
+    "value": "26",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:310"
+   },
+   "modernCommand": {
+    "value": "-",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:310"
+   }
+  },
+  "21410a7b-74b6-40da-8639-7ae894a98e35": {
+   "active": {
+    "value": "22-24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:311"
+   },
+   "recovery": {
+    "value": "26",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:311"
+   },
+   "modernCommand": {
+    "value": "-",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:311"
+   }
+  },
+  "adcc4f11-0d51-41b5-9b6b-2ad04b63ac46": {
+   "active": {
+    "value": "12-14",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:312"
+   },
+   "recovery": {
+    "value": "22",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:312"
+   },
+   "modernCommand": {
+    "value": "AUTO + SP/236 + 攻撃二つ",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:312"
+   }
+  },
+  "3485b1cd-dfdf-40d6-9125-42c8ebda906a": {
+   "active": {
+    "value": "13-14, 21-22, 32-33",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:313"
+   },
+   "recovery": {
+    "value": "24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:313"
+   },
+   "modernCommand": {
+    "value": "AUTO + SP>攻撃/236 + 攻撃二つ>攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:313"
+   }
+  },
+  "4a6a8134-98c7-4fe2-817c-8131b54cbbc4": {
+   "active": {
+    "value": "56",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:314"
+   },
+   "recovery": {
+    "value": "58",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:314"
+   },
+   "modernCommand": {
+    "value": "-",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:314"
+   }
+  },
+  "67ba636f-2fb0-4356-b49d-6031c96a44a1": {
+   "active": {
+    "value": "56",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:315"
+   },
+   "recovery": {
+    "value": "58",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:315"
+   },
+   "modernCommand": {
+    "value": "-",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:315"
+   }
+  },
+  "c709a4cc-37ca-4950-8496-1d7630044604": {
+   "active": {
+    "value": "47-106, 110",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:316"
+   },
+   "recovery": {
+    "value": "59",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:316"
+   },
+   "modernCommand": {
+    "value": "-",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:316"
+   }
+  },
+  "b075f9f1-5c86-43bd-b391-c6d8857d7ddb": {
+   "active": {
+    "value": "21-22",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:318"
+   },
+   "recovery": {
+    "value": "24",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:318"
+   },
+   "modernCommand": {
+    "value": "4 + SP/214 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:318"
+   }
+  },
+  "fcc23bd3-7104-4cb5-8421-000a2a5e6db7": {
+   "active": {
+    "value": "30-31",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:319"
+   },
+   "recovery": {
+    "value": "17",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:319"
+   },
+   "modernCommand": {
+    "value": "214 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:319"
+   }
+  },
+  "46bc481b-23be-4394-9781-cd11b77d52bd": {
+   "active": {
+    "value": "20-21",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:320"
+   },
+   "recovery": {
+    "value": "28",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:320"
+   },
+   "modernCommand": {
+    "value": "4 + AUTO + SP/214 + 攻撃二つ",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:320"
+   }
+  },
+  "5223be98-b774-44f3-93c6-f525e9bcd293": {
+   "active": {
+    "value": "17-20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:325"
+   },
+   "recovery": {
+    "value": "着地後12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:325"
+   },
+   "modernCommand": {
+    "value": "（ムカ・ン・ランギット中に）2 + 攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:325"
+   }
+  },
+  "6038b360-5979-4a12-a69f-7b2cbc35edd4": {
+   "active": {
+    "value": "17-20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:326"
+   },
+   "recovery": {
+    "value": "着地後12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:326"
+   },
+   "modernCommand": {
+    "value": "（ムカ・ン・ランギット中に）2 + AUTO + SP/2 + 攻撃二つ/\n（ODムカ・ン・ランギット中に）2 + 攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:326"
+   }
+  },
+  "f10077f2-758d-43a5-b0ff-d6a801a17762": {
+   "active": {
+    "value": "17-着地まで",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:327"
+   },
+   "recovery": {
+    "value": "着地後12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:327"
+   },
+   "modernCommand": {
+    "value": "（ムカ・ン・ランギット中に）攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:327"
+   }
+  },
+  "0ac54e2d-a6af-4ab1-8e54-bfea51f851a4": {
+   "active": {
+    "value": "17-着地まで",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:328"
+   },
+   "recovery": {
+    "value": "着地後12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:328"
+   },
+   "modernCommand": {
+    "value": "（ムカ・ン・ランギット中に）AUTO + SP/攻撃二つ/\n（ODムカ・ン・ランギット中に）攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:328"
+   }
+  },
+  "802cddff-6b17-4069-9fbb-520d81a10914": {
+   "active": {
+    "value": "5-8, 13-14",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:329"
+   },
+   "recovery": {
+    "value": "27＋着地後12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:329"
+   },
+   "modernCommand": {
+    "value": "6+SP/623 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:329"
+   }
+  },
+  "a2be59a6-469a-4501-a18d-515c58849bd4": {
+   "active": {
+    "value": "6-9, 14-15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:330"
+   },
+   "recovery": {
+    "value": "27＋着地後12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:330"
+   },
+   "modernCommand": {
+    "value": "623 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:330"
+   }
+  },
+  "104a6f55-f256-4521-9190-15e6daf741ea": {
+   "active": {
+    "value": "7-10, 15-16",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:331"
+   },
+   "recovery": {
+    "value": "27＋着地後12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:331"
+   },
+   "modernCommand": {
+    "value": "623 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:331"
+   }
+  },
+  "b79816b6-b16f-47f7-8cbf-32221c3914e6": {
+   "active": {
+    "value": "6-9, 14-15",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:332"
+   },
+   "recovery": {
+    "value": "27＋着地後19",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:332"
+   },
+   "modernCommand": {
+    "value": "6＋ AUTO ＋ SP/623＋攻撃二つ",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:332"
+   }
+  },
+  "720e4c8e-a93c-457e-b1c8-6ec230947b61": {
+   "active": {
+    "value": "22-23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:339"
+   },
+   "recovery": {
+    "value": "20",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:339"
+   },
+   "modernCommand": {
+    "value": "（ナカタゴン・ラカス中に）4 + 中強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:339"
+   }
+  },
+  "1c09f2c2-5300-4355-b988-3756a2c8c5dd": {
+   "active": {
+    "value": "7-12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:400"
+   },
+   "recovery": {
+    "value": "50",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:400"
+   },
+   "modernCommand": {
+    "value": "5 or 6＋強SP/236236＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:400"
+   }
+  },
+  "9e92c699-6f60-4553-b1db-322bbdcb32e0": {
+   "active": {
+    "value": "10-12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:402"
+   },
+   "recovery": {
+    "value": "70",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:402"
+   },
+   "modernCommand": {
+    "value": "2＋強SP/214214＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:402"
+   }
+  },
+  "b55d287e-ca8e-46bd-bf81-db53775b8294": {
+   "active": {
+    "value": "10-12",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:403"
+   },
+   "recovery": {
+    "value": "70",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:403"
+   },
+   "modernCommand": {
+    "value": "（体力25%以下で）2＋強SP/214214＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:403"
+   }
+  },
+  "f7faa5a2-62a0-4c72-abf3-91c16631a7c2": {
+   "active": {
+    "value": "5-7",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:500"
+   },
+   "recovery": {
+    "value": "23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:500"
+   },
+   "modernCommand": {
+    "value": "（近距離で）N or 6 + 弱中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:500"
+   }
+  },
+  "4301622d-102a-40e1-b583-2b02db739e54": {
+   "active": {
+    "value": "5-7",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:501"
+   },
+   "recovery": {
+    "value": "23",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:501"
+   },
+   "modernCommand": {
+    "value": "（近距離で）4 + 弱中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:501"
+   }
+  },
+  "e8255860-cfad-4d52-b565-2b93285b5d35": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:116"
+   }
+  },
+  "c14f9dc6-0bf8-4bfd-a851-597b6c2ea538": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO+弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:117"
+   }
+  },
+  "62d308f8-1d29-4e0f-9b43-936bfd951583": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:118"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:118"
+   }
+  },
+  "7c3aa976-8051-46a7-bc51-484cc42a09cd": {
+   "recovery": {
+    "value": "着地後3",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:119"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO+中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:119"
+   }
+  },
+  "a87a45ad-a06b-4278-9e8a-93e412757dff": {
+   "modernCommand": {
+    "value": "3＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:200"
+   }
+  },
+  "a2331c9b-1ccd-43bf-b2a4-f0a488b180a3": {
+   "modernCommand": {
+    "value": "6＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:202"
+   }
+  },
+  "75ae8e69-d41e-4994-ac4a-ed7cb5db84f1": {
+   "modernCommand": {
+    "value": "強＞強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:206"
+   }
+  },
+  "255a6469-e7cb-4e02-b3e6-f34640a957e9": {
+   "modernCommand": {
+    "value": "214＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:307"
+   }
+  },
+  "add3bf91-944a-4c88-99af-7b033b12f602": {
+   "modernCommand": {
+    "value": "1 ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:312"
+   }
+  },
+  "6d02c3e6-590f-42be-8412-03933b1744ec": {
+   "modernCommand": {
+    "value": "2 ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "aki:web:313"
+   }
+  },
+  "86460772-32a6-449e-b696-cf308eb20c98": {
+   "modernCommand": {
+    "value": "（前ジャンプ中に）2＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:sha:10e11e65f1fad1114998"
+   }
+  },
+  "51f6e665-17b1-4caa-b3b8-abfd97d4d787": {
+   "modernCommand": {
+    "value": "AUTO ＋ SP/236＋攻撃二つ",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:309"
+   }
+  },
+  "883800f7-16a1-4db7-8300-0891db54362e": {
+   "modernCommand": {
+    "value": "623＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:315"
+   }
+  },
+  "a511faed-1ae1-40ec-bab5-30fc8c0d77ea": {
+   "modernCommand": {
+    "value": "623＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:316"
+   }
+  },
+  "7acdbd27-e087-403b-9d13-43683f066c3e": {
+   "modernCommand": {
+    "value": "214＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:320"
+   }
+  },
+  "d715027d-4941-4fab-bb96-efd6482898e1": {
+   "modernCommand": {
+    "value": "214＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:321"
+   }
+  },
+  "18b61e05-3245-4101-9234-747a9431cd7c": {
+   "modernCommand": {
+    "value": "214＋攻撃二つ",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:322"
+   }
+  },
+  "a44c6608-1e01-40f7-b05b-5ea899b42c8d": {
+   "modernCommand": {
+    "value": "（前ジャンプ中に）4＋SP\n/（前ジャンプ中に）214＋攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:323"
+   }
+  },
+  "ffe7b417-928a-4ec8-a618-94e092c01a02": {
+   "modernCommand": {
+    "value": "（前ジャンプ中に）4＋ AUTO＋SP\n/（前ジャンプ中に）214＋攻撃二つ",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "akuma:web:324"
+   }
+  },
+  "722822a4-42cd-474f-809b-981acd8d6151": {
+   "classicCommand": {
+    "value": "2 + HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:112"
+   },
+   "modernCommand": {
+    "value": "2 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:112"
+   }
+  },
+  "4a767cab-a099-4066-98b1-5b004bc28c1c": {
+   "classicCommand": {
+    "value": "2 + LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:109"
+   },
+   "modernCommand": {
+    "value": "2 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:109"
+   }
+  },
+  "4e02716a-415f-4866-9055-c5869ebefebe": {
+   "classicCommand": {
+    "value": "2 + LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:108"
+   },
+   "modernCommand": {
+    "value": "2 + 弱>2 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:108"
+   }
+  },
+  "e647cf99-9518-4a09-a260-fbec66e090ed": {
+   "classicCommand": {
+    "value": "2 + MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:111"
+   },
+   "modernCommand": {
+    "value": "2 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:111"
+   }
+  },
+  "2b4abc16-695d-4e0d-a503-df2819624a2a": {
+   "classicCommand": {
+    "value": "2 + MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:110"
+   },
+   "modernCommand": {
+    "value": "AUTO + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:110"
+   }
+  },
+  "24ad3665-2bb5-4c37-8089-b07386e38983": {
+   "classicCommand": {
+    "value": "LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:101"
+   },
+   "modernCommand": {
+    "value": "AUTO + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:101"
+   }
+  },
+  "90e1bd5d-0305-4ba0-b56f-8553db6d7f72": {
+   "classicCommand": {
+    "value": "LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:100"
+   },
+   "modernCommand": {
+    "value": "弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:100"
+   }
+  },
+  "f6486eb1-7501-461d-8893-e52e46961a80": {
+   "classicCommand": {
+    "value": "MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:103"
+   }
+  },
+  "1ac8c98d-1504-4f70-985a-581e3f185003": {
+   "classicCommand": {
+    "value": "MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:102"
+   },
+   "modernCommand": {
+    "value": "中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:102"
+   }
+  },
+  "fa2e772a-edf7-4bc6-91b5-a268233449ca": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:119"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:119"
+   }
+  },
+  "a9d9c4e7-283b-4752-b4e0-479d0f1918c0": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:118"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:118"
+   }
+  },
+  "e23d9ea0-95fa-413d-a422-522925408935": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:115"
+   }
+  },
+  "48afacd7-cf3c-4abe-9aef-dfb65cead3f4": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:114"
+   }
+  },
+  "3ee78b99-47b1-4000-a31a-bf83fb0d1b96": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:117"
+   }
+  },
+  "dcaea7bc-4cc8-414f-8a01-6cfae24f14e7": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "alex:web:116"
+   }
+  },
+  "0b1cad3d-defb-4594-a4ae-aeec77d2b054": {
+   "classicCommand": {
+    "value": "2 + HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:110"
+   },
+   "modernCommand": {
+    "value": "2＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:110"
+   }
+  },
+  "8c6ebc68-98f3-4659-88eb-5e8b24a9260d": {
+   "classicCommand": {
+    "value": "2 + LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:107"
+   },
+   "modernCommand": {
+    "value": "2 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:107"
+   }
+  },
+  "95db82ab-3f5f-4349-a86e-d787d58b0b79": {
+   "classicCommand": {
+    "value": "2 + LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:106"
+   },
+   "modernCommand": {
+    "value": "2 + 弱>2＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:106"
+   }
+  },
+  "dfbce958-316b-4b40-845d-9993e9efba69": {
+   "classicCommand": {
+    "value": "2 + MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:109"
+   },
+   "modernCommand": {
+    "value": "2 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:109"
+   }
+  },
+  "429891a9-c3d4-4664-b714-f73d7eacc9d5": {
+   "classicCommand": {
+    "value": "2 + MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:108"
+   },
+   "modernCommand": {
+    "value": "AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:108"
+   }
+  },
+  "bd181bb3-8825-40e5-bfb7-6fefb961f18d": {
+   "classicCommand": {
+    "value": "HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:105"
+   }
+  },
+  "6c8f802e-4441-4adf-83d3-7eda3110ed00": {
+   "classicCommand": {
+    "value": "HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:104"
+   },
+   "modernCommand": {
+    "value": "強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:104"
+   }
+  },
+  "cbb520c8-c3bc-4010-b2b5-9198d0119d98": {
+   "classicCommand": {
+    "value": "LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:101"
+   },
+   "modernCommand": {
+    "value": "AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:101"
+   }
+  },
+  "7cf378d5-fb58-4990-9ae2-264add8f83b7": {
+   "classicCommand": {
+    "value": "LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:100"
+   },
+   "modernCommand": {
+    "value": "弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:100"
+   }
+  },
+  "ec3336dc-4117-460a-a918-66dce99731dc": {
+   "classicCommand": {
+    "value": "MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:103"
+   },
+   "modernCommand": {
+    "value": "中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:103"
+   }
+  },
+  "3434bc4c-6132-4e8d-87b3-dd86357fbebc": {
+   "classicCommand": {
+    "value": "MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:102"
+   }
+  },
+  "e2e8ddfd-0d71-44a0-9e3b-d3a80bf7c2eb": {
+   "classicCommand": {
+    "value": "（垂直ジャンプ中に）HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:118"
+   },
+   "modernCommand": {
+    "value": "（垂直ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:118"
+   }
+  },
+  "0894f523-66f8-45de-966d-d7fec4c97be3": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:117"
+   }
+  },
+  "01afbb21-1c1f-4ac7-82ee-48c50654668c": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:116"
+   }
+  },
+  "8fc36ad0-ee77-492d-8965-11067f4a2eff": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:113"
+   }
+  },
+  "2d75ffb0-1bac-405b-a149-8e7f28e3f0f3": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:112"
+   }
+  },
+  "f0125277-c547-4549-aedb-d2be9fa3bf8f": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:115"
+   }
+  },
+  "a9376105-7a20-46d0-b259-0a2d05f8ec7f": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:114"
+   }
+  },
+  "493cb95f-ca38-4ca2-bc65-3b708e81e4e4": {
+   "classicCommand": {
+    "value": "5656 + 6",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:600"
+   },
+   "modernCommand": {
+    "value": "5656 + 6",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:600"
+   }
+  },
+  "a0841ad5-a95c-43f8-81d4-46842fa7eba6": {
+   "classicCommand": {
+    "value": "5454 + 4",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:601"
+   },
+   "modernCommand": {
+    "value": "5454 + 4",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "c-viper:web:601"
+   }
+  },
+  "5e4a4363-f1ee-43d6-bec9-caed4d1c6d26": {
+   "modernCommand": {
+    "value": "2 ＋ 弱＞2 ＋ 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:106"
+   }
+  },
+  "ceade123-4db9-4071-abfb-d0ba645b587f": {
+   "modernCommand": {
+    "value": "AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:108"
+   }
+  },
+  "00785f4b-7d74-438a-ab56-be2b670a5a3f": {
+   "modernCommand": {
+    "value": "4 ＋ 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:200"
+   }
+  },
+  "35fa1349-e2c3-47d7-9aa2-e3a714c3e748": {
+   "modernCommand": {
+    "value": "6 ＋ 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:201"
+   }
+  },
+  "f4475688-1cb6-4d3a-b8a2-67af5f0d0e28": {
+   "modernCommand": {
+    "value": "4 ＋ 中＞中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:203"
+   }
+  },
+  "0d8d69be-af5f-4af6-8467-bb409688c5a8": {
+   "modernCommand": {
+    "value": "AUTO＋強＞強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:205"
+   }
+  },
+  "87b8fb8d-fb42-47ab-888a-3cef95bed816": {
+   "modernCommand": {
+    "value": "236 ＋ 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:300"
+   }
+  },
+  "b5d594f6-2302-4b9b-8d8d-4deedc32697e": {
+   "modernCommand": {
+    "value": "236 ＋ 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:302"
+   }
+  },
+  "ce06088f-6db6-4cf8-abe2-e524d0c05787": {
+   "modernCommand": {
+    "value": "623＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:305"
+   }
+  },
+  "bf240fb8-69c0-4e92-a450-4e4f1bfb3f3d": {
+   "modernCommand": {
+    "value": "623 ＋ 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:307"
+   }
+  },
+  "2507fb57-cbd0-4755-b06f-38134b36ce82": {
+   "modernCommand": {
+    "value": "214 ＋ 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:310"
+   }
+  },
+  "48996237-b1cc-4a71-8376-c83fbb075e3a": {
+   "modernCommand": {
+    "value": "214 ＋ 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:311"
+   }
+  },
+  "a7a85481-b314-4e21-ba23-11b261a41335": {
+   "modernCommand": {
+    "value": "4＋AUTO＋SP/214 ＋ 攻撃二つ",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "cammy:web:313"
+   }
+  },
+  "36de8f7a-a910-4315-8507-77174da08fef": {
+   "classicCommand": {
+    "value": "LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:100"
+   },
+   "modernCommand": {
+    "value": "弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:100"
+   }
+  },
+  "7debb114-baa2-4cbc-91b7-952b3d2ec571": {
+   "classicCommand": {
+    "value": "LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:101"
+   },
+   "modernCommand": {
+    "value": "AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:101"
+   }
+  },
+  "a37ee100-dbdd-41f9-94a7-e1cc975d98c1": {
+   "classicCommand": {
+    "value": "MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:102"
+   },
+   "modernCommand": {
+    "value": "中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:102"
+   }
+  },
+  "54a83ad9-53e4-4f7b-ae16-8e827ebbbb2c": {
+   "classicCommand": {
+    "value": "MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:103"
+   }
+  },
+  "ebdd3009-fee4-4e55-87f1-b26439728dde": {
+   "classicCommand": {
+    "value": "HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:104"
+   }
+  },
+  "02fff13d-238d-4072-af8d-da1f75e1654c": {
+   "classicCommand": {
+    "value": "HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:105"
+   },
+   "modernCommand": {
+    "value": "強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:105"
+   }
+  },
+  "57beb616-7d69-45dd-972e-226521ec86e7": {
+   "classicCommand": {
+    "value": "2 + LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:106"
+   },
+   "modernCommand": {
+    "value": "2＋弱＞2＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:106"
+   }
+  },
+  "594eaec7-0b10-49a4-b975-faab51565605": {
+   "classicCommand": {
+    "value": "2 + LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:107"
+   },
+   "modernCommand": {
+    "value": "2＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:107"
+   }
+  },
+  "e0e9439e-1ded-4732-b34a-f669df106a59": {
+   "classicCommand": {
+    "value": "2 + MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:108"
+   },
+   "modernCommand": {
+    "value": "AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:108"
+   }
+  },
+  "b60102f5-af5c-492a-bca6-0c0277bf69b7": {
+   "classicCommand": {
+    "value": "2 + MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:109"
+   },
+   "modernCommand": {
+    "value": "2＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:109"
+   }
+  },
+  "516288aa-46c3-433c-b5ff-b72972e5baa8": {
+   "classicCommand": {
+    "value": "2 + HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:110"
+   },
+   "modernCommand": {
+    "value": "2＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:110"
+   }
+  },
+  "e1052f7b-e246-4ca4-9e35-88a3eb86f96b": {
+   "classicCommand": {
+    "value": "2 + HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:111"
+   }
+  },
+  "c23de894-0516-4edd-9b97-5b14e536cd32": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に） AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:112"
+   }
+  },
+  "efd4a014-1971-4185-84e4-43168d2dc991": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に） 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:113"
+   }
+  },
+  "0f8ed5f9-a022-4246-9eef-36b077a1441d": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に） 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:114"
+   }
+  },
+  "dc32dc03-29b1-4507-95cd-53e49ff1d5fa": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に） AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:115"
+   }
+  },
+  "83273f07-dab4-4632-bbce-975f2c9ff506": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に） AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:116"
+   }
+  },
+  "c6b4199e-1e8e-421a-8826-d091f8028c61": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に） 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:117"
+   }
+  },
+  "c19eaa3a-aa16-4e44-9428-ff6e69f7d051": {
+   "classicCommand": {
+    "value": "5656 + 6",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:600"
+   },
+   "modernCommand": {
+    "value": "5656 + 6",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:600"
+   }
+  },
+  "40ee2c2c-00cb-43af-a311-bd194e69c283": {
+   "classicCommand": {
+    "value": "5454 + 4",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:601"
+   },
+   "modernCommand": {
+    "value": "5454 + 4",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "deejay:web:601"
+   }
+  },
+  "bac9265b-c97a-4b9b-b081-b67eb119743c": {
+   "modernCommand": {
+    "value": "214＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:312"
+   }
+  },
+  "c49df832-9544-4ef2-8f68-f6e5973a0e31": {
+   "modernCommand": {
+    "value": "214＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:313"
+   }
+  },
+  "e3cc2a7a-d7f2-4512-b1f2-ff3f660260ed": {
+   "modernCommand": {
+    "value": "4＋SP/214＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:314"
+   }
+  },
+  "0a896d13-4937-4300-af00-3dd1e2548c1a": {
+   "modernCommand": {
+    "value": "4＋AUTO＋SP/214＋攻撃二つ",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:315"
+   }
+  },
+  "e3c8cc1d-3891-4812-910b-cc27ccfa9a9b": {
+   "modernCommand": {
+    "value": "AUTO＋中>中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ed:web:206"
+   }
+  },
+  "eb39b4bf-47fd-4405-b2d0-66045e8c61b1": {
+   "modernCommand": {
+    "value": "4+SP＞6＋攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:329"
+   }
+  },
+  "1ccbe0bd-8d08-418d-b498-72cc842fc211": {
+   "modernCommand": {
+    "value": "4+SP＞6＋攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:329"
+   }
+  },
+  "7833a723-0962-4962-a1bc-e77ee624c1c5": {
+   "classicCommand": {
+    "value": "2 + LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:107"
+   },
+   "modernCommand": {
+    "value": "AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:107"
+   }
+  },
+  "97ee42d4-321f-456c-87df-e5b488b880ef": {
+   "classicCommand": {
+    "value": "2 + LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:106"
+   },
+   "modernCommand": {
+    "value": "2 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:106"
+   }
+  },
+  "fa6d9e96-c1e6-47ab-902f-efb78ae9cf84": {
+   "classicCommand": {
+    "value": "2 + MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:109"
+   },
+   "modernCommand": {
+    "value": "2 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:109"
+   }
+  },
+  "a741a091-7c7d-418a-8d1a-9b3e9a5e17ff": {
+   "classicCommand": {
+    "value": "2 + MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:108"
+   },
+   "modernCommand": {
+    "value": "AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:108"
+   }
+  },
+  "b90072af-d85b-4cbe-a240-036ab7742891": {
+   "classicCommand": {
+    "value": "HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:105"
+   }
+  },
+  "d8290194-9d3d-4499-be63-9c4a0be06763": {
+   "classicCommand": {
+    "value": "HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:104"
+   },
+   "modernCommand": {
+    "value": "強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:104"
+   }
+  },
+  "5f521773-71c7-4a90-a67e-33af09381e69": {
+   "classicCommand": {
+    "value": "LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:101"
+   },
+   "modernCommand": {
+    "value": "弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:101"
+   }
+  },
+  "abc19582-3e56-44db-9415-a9e7e0251a27": {
+   "classicCommand": {
+    "value": "LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:100"
+   }
+  },
+  "223ad40c-6c36-41fc-9e6f-d5ca2d496e60": {
+   "classicCommand": {
+    "value": "MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:103"
+   },
+   "modernCommand": {
+    "value": "AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:103"
+   }
+  },
+  "886714a1-4920-4be1-b103-ab3847911ca5": {
+   "classicCommand": {
+    "value": "MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:102"
+   },
+   "modernCommand": {
+    "value": "中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:102"
+   }
+  },
+  "6800af4c-4cb0-4746-9d38-d5018258239b": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:116"
+   }
+  },
+  "03636a7c-3511-43a3-ac8f-f44441b3f97d": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:113"
+   }
+  },
+  "b8d2ab8e-c245-4fbd-8518-9d332befb15f": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:112"
+   }
+  },
+  "d26c2adf-536b-4e81-9e75-7e49fefefa7d": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:115"
+   }
+  },
+  "34ad9991-74c8-4819-a88d-0c1204cd4573": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:114"
+   }
+  },
+  "16fe033a-0d3d-4270-8706-3b29a6d1d139": {
+   "classicCommand": {
+    "value": "5656 + 6",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:600"
+   },
+   "modernCommand": {
+    "value": "5656 + 6",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:600"
+   }
+  },
+  "d9d7d368-3583-4535-9d64-ac6872e0758d": {
+   "classicCommand": {
+    "value": "5454 + 4",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:601"
+   },
+   "modernCommand": {
+    "value": "5454 + 4",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "elena:web:601"
+   }
+  },
+  "090b6c76-7d7a-4fac-9b5d-480783eb142c": {
+   "classicCommand": {
+    "value": "2 + HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:110"
+   },
+   "modernCommand": {
+    "value": "2 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:110"
+   }
+  },
+  "085b713f-2fa2-4ad3-b5fc-9b181801dc07": {
+   "classicCommand": {
+    "value": "2 + LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:107"
+   },
+   "modernCommand": {
+    "value": "2 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:107"
+   }
+  },
+  "c46008e0-e4d0-4ea6-9361-f64397569f51": {
+   "classicCommand": {
+    "value": "2 + LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:106"
+   },
+   "modernCommand": {
+    "value": "2 + 弱>2 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:106"
+   }
+  },
+  "a0605fb6-b60f-4ba0-be1e-c39610de1cb3": {
+   "classicCommand": {
+    "value": "2 + MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:109"
+   },
+   "modernCommand": {
+    "value": "2 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:109"
+   }
+  },
+  "1bbc8a7b-7dab-4156-890f-c59158f9f96c": {
+   "classicCommand": {
+    "value": "2 + MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:108"
+   },
+   "modernCommand": {
+    "value": "AUTO + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:108"
+   }
+  },
+  "41172dc1-d44c-4ba7-97d2-d95cd9dcbfe4": {
+   "classicCommand": {
+    "value": "HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:104"
+   }
+  },
+  "1161be83-5832-44a1-afef-d23fcfd9732d": {
+   "classicCommand": {
+    "value": "LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:101"
+   },
+   "modernCommand": {
+    "value": "弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:101"
+   }
+  },
+  "3ec12cfd-c155-4eb6-90d9-65092aaf37db": {
+   "classicCommand": {
+    "value": "LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:100"
+   },
+   "modernCommand": {
+    "value": "AUTO + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:100"
+   }
+  },
+  "6734fcd5-29c3-4064-8679-956460208ba0": {
+   "classicCommand": {
+    "value": "MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:103"
+   },
+   "modernCommand": {
+    "value": "中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:103"
+   }
+  },
+  "3dd49984-4b15-4f9e-9634-2b55cad264ea": {
+   "classicCommand": {
+    "value": "MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:102"
+   },
+   "modernCommand": {
+    "value": "AUTO + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:102"
+   }
+  },
+  "59d6f7e0-928a-43bb-bcf0-ce90c8f69463": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:117"
+   }
+  },
+  "78a246c6-7c64-4143-aeb4-dd0e68ef7720": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:116"
+   }
+  },
+  "37be78a6-8061-49a5-8e19-9b00a5244ed9": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:113"
+   }
+  },
+  "46862ac1-c8f8-4aaf-95d3-4c22cf7379bb": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:112"
+   }
+  },
+  "473156b0-0500-4d8b-8960-21f725345e39": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:115"
+   }
+  },
+  "7a7e74ff-40b3-4008-aeda-0515ea8656ed": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ingrid:web:114"
+   }
+  },
+  "b558b854-1a5b-41a3-89ec-b119abc475ae": {
+   "classicCommand": {
+    "value": "LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:100"
+   },
+   "modernCommand": {
+    "value": "弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:100"
+   }
+  },
+  "45d7ef0d-2f7c-415d-b433-1e04ad9fe09b": {
+   "classicCommand": {
+    "value": "LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:101"
+   }
+  },
+  "e4ed90d9-23bf-4089-978a-4f2061e3b94a": {
+   "classicCommand": {
+    "value": "MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:102"
+   }
+  },
+  "94ad1cb7-1464-432d-b7ee-34e0171541b0": {
+   "classicCommand": {
+    "value": "MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:103"
+   },
+   "modernCommand": {
+    "value": "中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:103"
+   }
+  },
+  "45863f7d-e112-42d8-ab88-d33839b4873a": {
+   "classicCommand": {
+    "value": "HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:104"
+   },
+   "modernCommand": {
+    "value": "AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:104"
+   }
+  },
+  "9e959d30-059e-404b-ab0e-279ec4c5a54a": {
+   "classicCommand": {
+    "value": "HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:105"
+   },
+   "modernCommand": {
+    "value": "強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:105"
+   }
+  },
+  "7c4584fd-fdb5-4fb9-84a2-472c3c03febe": {
+   "classicCommand": {
+    "value": "2 + LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:106"
+   },
+   "modernCommand": {
+    "value": "2 ＋ 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:106"
+   }
+  },
+  "5a596631-df8f-450b-b735-ae4b9ca14390": {
+   "classicCommand": {
+    "value": "2 + LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:107"
+   },
+   "modernCommand": {
+    "value": "AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:107"
+   }
+  },
+  "0afd12fb-5c7a-4799-b222-21daa7ca18f3": {
+   "classicCommand": {
+    "value": "2 + MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:108"
+   },
+   "modernCommand": {
+    "value": "AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:108"
+   }
+  },
+  "92ecb272-1cbd-46f0-95f2-ad4d21506e99": {
+   "classicCommand": {
+    "value": "2 + MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:109"
+   },
+   "modernCommand": {
+    "value": "2 ＋ 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:109"
+   }
+  },
+  "33b785cd-b4e9-4232-be5c-aca9ccef7b0a": {
+   "classicCommand": {
+    "value": "2 + HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:110"
+   },
+   "modernCommand": {
+    "value": "2 ＋ 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:110"
+   }
+  },
+  "5fad21d1-bb82-4a22-bf29-f125688d3cb9": {
+   "classicCommand": {
+    "value": "2 + HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:111"
+   }
+  },
+  "00edfdc1-cf06-4b8c-b836-a213a7028cf6": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:112"
+   }
+  },
+  "6cb6065e-9c33-47d1-af2c-00e4b3871182": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:113"
+   }
+  },
+  "3baf3077-05b0-4360-b548-ee16b68f8a37": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:114"
+   }
+  },
+  "ce1e365b-8572-44a2-8767-0bce9f20054b": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:115"
+   }
+  },
+  "88b7028e-f54a-4b51-a75a-670ccfce75dc": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:116"
+   }
+  },
+  "61797d46-a331-4638-ba60-3dc3ea0cfd16": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "jp:web:117"
+   }
+  },
+  "67327dc0-faeb-419b-ab35-0a006ca1fc21": {
+   "classicCommand": {
+    "value": "LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:100"
+   },
+   "modernCommand": {
+    "value": "2＋弱>弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:100"
+   }
+  },
+  "6805e9b9-a136-4b38-b91a-9a8b9854afa3": {
+   "classicCommand": {
+    "value": "MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:104"
+   },
+   "modernCommand": {
+    "value": "中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:104"
+   }
+  },
+  "bb2f57bb-6a4b-4c81-ab6c-1315ea7433f3": {
+   "classicCommand": {
+    "value": "HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:108"
+   },
+   "modernCommand": {
+    "value": "AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:108"
+   }
+  },
+  "31e7f452-d59f-4ff8-9c6e-6e4b0d4839b6": {
+   "classicCommand": {
+    "value": "LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:102"
+   },
+   "modernCommand": {
+    "value": "弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:102"
+   }
+  },
+  "6eec0561-3a94-44e2-83f5-7f7b408cc3f9": {
+   "classicCommand": {
+    "value": "HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:110"
+   },
+   "modernCommand": {
+    "value": "強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:110"
+   }
+  },
+  "d0b3f714-9b4b-45fa-a223-dcf772f3c1d4": {
+   "classicCommand": {
+    "value": "2 + LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:112"
+   },
+   "modernCommand": {
+    "value": "2 ＋ 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:112"
+   }
+  },
+  "e0df78eb-f4eb-4b61-b5ff-c8c194ded0b2": {
+   "classicCommand": {
+    "value": "2 + MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:116"
+   },
+   "modernCommand": {
+    "value": "AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:116"
+   }
+  },
+  "5e48fac3-fa32-4536-8e2d-bf0570cb98cb": {
+   "classicCommand": {
+    "value": "2 + HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:120"
+   },
+   "modernCommand": {
+    "value": "2 ＋ 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:120"
+   }
+  },
+  "2b16c519-2cc7-4164-8f26-8cf28eeb4c42": {
+   "classicCommand": {
+    "value": "2 + LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:114"
+   },
+   "modernCommand": {
+    "value": "AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:114"
+   }
+  },
+  "501c9852-448b-434a-96fc-f9227225f89c": {
+   "classicCommand": {
+    "value": "2 + MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:118"
+   },
+   "modernCommand": {
+    "value": "2 ＋ 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:118"
+   }
+  },
+  "8c772908-c117-4985-aa01-02f9e357525e": {
+   "classicCommand": {
+    "value": "2 + HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:122"
+   }
+  },
+  "c3c885f1-6446-441b-97cb-bb4ff28021ff": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:124"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:124"
+   }
+  },
+  "be322e27-dde3-48e7-8080-9261e7a98ba0": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:128"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:128"
+   }
+  },
+  "87b089e4-becb-4768-b5dd-96f736e0981d": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:132"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:132"
+   }
+  },
+  "f5e75dfd-4b1b-4030-a5e0-06b58df5e0cd": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:126"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:126"
+   }
+  },
+  "1ee8ba21-5b52-4f70-a342-e49959242e5d": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:130"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:130"
+   }
+  },
+  "10ca8307-afd5-4742-a064-3406619c3b96": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:134"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:134"
+   }
+  },
+  "ce47d469-55ed-4743-b467-dc62a689b5b0": {
+   "classicCommand": {
+    "value": "（垂直ジャンプ中に）HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:136"
+   },
+   "modernCommand": {
+    "value": "（垂直ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "juri:web:136"
+   }
+  },
+  "c19fb166-6fe5-4bef-b046-32d90312b827": {
+   "modernCommand": {
+    "value": "弱 or 2 ＋弱＞2 ＋ 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "ken:web:106"
+   }
+  },
+  "47688cef-f3bf-45f6-b4bf-83bec7695c18": {
+   "classicCommand": {
+    "value": "LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:100"
+   },
+   "modernCommand": {
+    "value": "弱＞弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:100"
+   }
+  },
+  "6a0a575f-4548-4adf-ac32-d043cc15dfbf": {
+   "classicCommand": {
+    "value": "LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:101"
+   },
+   "modernCommand": {
+    "value": "弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:101"
+   }
+  },
+  "f4c2b403-675b-48ef-a04a-78d2382ca631": {
+   "classicCommand": {
+    "value": "MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:102"
+   },
+   "modernCommand": {
+    "value": "中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:102"
+   }
+  },
+  "48125962-89d1-4fbe-88f0-a29b4b4173ba": {
+   "classicCommand": {
+    "value": "MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:103"
+   }
+  },
+  "0cf0c983-503b-437c-81d9-0d3c5ce2c243": {
+   "classicCommand": {
+    "value": "HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:104"
+   },
+   "modernCommand": {
+    "value": "強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:104"
+   }
+  },
+  "2e7b4bbc-a9da-47a2-86b0-7987ad5b69a3": {
+   "classicCommand": {
+    "value": "HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:105"
+   }
+  },
+  "a59a7028-d1e4-46de-8c39-445ab2793bc2": {
+   "classicCommand": {
+    "value": "2 + LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:106"
+   },
+   "modernCommand": {
+    "value": "2 ＋ 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:106"
+   }
+  },
+  "a7dca108-10d6-4d01-b2c8-987a2a543d19": {
+   "classicCommand": {
+    "value": "2 + LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:107"
+   },
+   "modernCommand": {
+    "value": "AUTO ＋ 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:107"
+   }
+  },
+  "562bdd63-69d2-45af-a846-1575e7ed6164": {
+   "classicCommand": {
+    "value": "2 + MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:108"
+   },
+   "modernCommand": {
+    "value": "2 ＋ 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:108"
+   }
+  },
+  "99d40d81-1aee-4194-99df-27a556359da1": {
+   "classicCommand": {
+    "value": "2 + MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:109"
+   },
+   "modernCommand": {
+    "value": "AUTO ＋ 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:109"
+   }
+  },
+  "db1dc9a6-a40d-4a67-a9f2-23cfc5da9cb6": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:112"
+   }
+  },
+  "c019e770-945f-49ba-90cc-6f27cdd7cc49": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO ＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:113"
+   }
+  },
+  "9e0e16a5-893b-4afc-8768-b809085f2b3c": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:114"
+   }
+  },
+  "9b0d90ef-57d6-44bf-b3e4-979fbe61d341": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO ＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:115"
+   }
+  },
+  "d0e0be38-756e-4649-8b42-ab710f43c81d": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO ＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:116"
+   }
+  },
+  "0290a978-c728-46e4-a8f7-b493f68df73c": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "lily:web:117"
+   }
+  },
+  "f415ffa3-f701-4586-8e02-e30596c119e9": {
+   "modernCommand": {
+    "value": "6＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:200"
+   }
+  },
+  "4383dae4-bdac-418f-9a11-e4632eb25696": {
+   "modernCommand": {
+    "value": "4＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:201"
+   }
+  },
+  "aab86b9c-f501-4928-8818-114f5fc0574a": {
+   "modernCommand": {
+    "value": "2＋中＞2＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:sha:7a63ddc756dc065ed6e4"
+   }
+  },
+  "e5c37a22-9ba1-409b-bc2a-52b4839c8e6f": {
+   "modernCommand": {
+    "value": "236＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:300"
+   }
+  },
+  "fb68e4ad-4c0a-4bc1-bd8c-c79244c78d78": {
+   "modernCommand": {
+    "value": "236＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:302"
+   }
+  },
+  "53070580-449c-4fcb-b6f5-bb97de387ba1": {
+   "modernCommand": {
+    "value": "214＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:305"
+   }
+  },
+  "4b6fa7c0-c85c-4d4f-aca4-b54b29599818": {
+   "modernCommand": {
+    "value": "214＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:311"
+   }
+  },
+  "c9027806-a085-4461-a802-592e907e9a46": {
+   "modernCommand": {
+    "value": "（アベンジャー中に）攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:322"
+   }
+  },
+  "ee3a7178-324f-4238-9e0d-b3735dfc9beb": {
+   "modernCommand": {
+    "value": "626＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:326"
+   }
+  },
+  "c647ddae-2f4f-440d-ab84-8c44b5ba9188": {
+   "modernCommand": {
+    "value": "626＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:328"
+   }
+  },
+  "9e34282d-9da4-43fb-a47c-dfdd72eda6ee": {
+   "modernCommand": {
+    "value": "5 or 6＋強SP/236236＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "luke:web:400"
+   }
+  },
+  "b96ff6c3-1824-49a1-b908-48dd9bb48810": {
+   "modernCommand": {
+    "value": "2 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:109"
+   }
+  },
+  "51fc51dc-9d49-446c-9593-1f7b0504fb47": {
+   "modernCommand": {
+    "value": "2 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:110"
+   }
+  },
+  "ef1bccbb-f2aa-41f5-bbe9-7b2bd501a7f8": {
+   "modernCommand": {
+    "value": "（シャドウライズ中に）攻撃二つ/\n（ODシャドウライズ中に）攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:326"
+   }
+  },
+  "3650688e-300c-4846-9b2f-2b9c59cc50b7": {
+   "modernCommand": {
+    "value": "（ヘッドプレス後に）攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:327"
+   }
+  },
+  "e0432fac-9d08-49ac-8314-6b094fec9eb2": {
+   "modernCommand": {
+    "value": "236 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:309"
+   }
+  },
+  "fcb5f9cf-db38-4230-87dc-3b4312d0cc92": {
+   "modernCommand": {
+    "value": "236 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:310"
+   }
+  },
+  "0e0a450a-c755-499a-b295-bb2dd9fb861e": {
+   "modernCommand": {
+    "value": "214 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:312"
+   }
+  },
+  "f7d9014b-5cad-4add-a2cc-8b5e3f7f2ca8": {
+   "modernCommand": {
+    "value": "214 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:316"
+   }
+  },
+  "0f5b1b32-dd83-4fcc-b38b-63b219a2585d": {
+   "modernCommand": {
+    "value": "（シャドウライズ中に）攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:325"
+   }
+  },
+  "06f6772d-c72a-4204-a21f-86a1c39c7785": {
+   "modernCommand": {
+    "value": "6 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:200"
+   }
+  },
+  "3fd9568c-2f2c-4832-89db-8ee137f5e070": {
+   "modernCommand": {
+    "value": "4 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:201"
+   }
+  },
+  "cf27b61b-2a87-482a-ab89-6353b06bb5db": {
+   "modernCommand": {
+    "value": "AUTO＋強>6 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:204"
+   }
+  },
+  "fda154bc-d27a-4763-92e7-1f93c15f971e": {
+   "modernCommand": {
+    "value": "AUTO＋強>2 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "m-bison:web:205"
+   }
+  },
+  "a581ec10-1e15-42d2-ba9b-18f968c65f39": {
+   "modernCommand": {
+    "value": "AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:101"
+   }
+  },
+  "0e2b2802-d460-4eaa-bc76-c4da80e6bb29": {
+   "modernCommand": {
+    "value": "AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:103"
+   }
+  },
+  "e833739b-e7f2-43af-9e30-8b8d57513a15": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:112"
+   }
+  },
+  "a921d7b3-84e2-4cb5-998c-e28063671f5d": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:114"
+   }
+  },
+  "1b7f9b40-80d2-472f-b954-be1619adb7c7": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:116"
+   }
+  },
+  "4181126f-96c6-4856-96f7-cea78f874c41": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:113"
+   }
+  },
+  "b6d91c3a-0516-428f-9b80-14720578e991": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:115"
+   }
+  },
+  "de77ddfe-d9e0-48c6-9776-7585a70193ac": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:117"
+   }
+  },
+  "44b0a3f1-968d-48e7-8162-8c03e994e443": {
+   "modernCommand": {
+    "value": "4＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:200"
+   }
+  },
+  "1a11e706-08e7-4a29-a656-84ac942d5a18": {
+   "modernCommand": {
+    "value": "中＞中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:203"
+   }
+  },
+  "a517d65e-66a7-48ed-bbcc-7fd5be704c28": {
+   "modernCommand": {
+    "value": "236＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:304"
+   }
+  },
+  "dbde2cbc-e04d-4c39-8847-4eaf65282637": {
+   "modernCommand": {
+    "value": "236＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:306"
+   }
+  },
+  "61da79b8-44e4-4102-8fd8-b8567c34b055": {
+   "modernCommand": {
+    "value": "214 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:309"
+   }
+  },
+  "f284f407-cbb4-4300-a615-9a11af7178df": {
+   "modernCommand": {
+    "value": "214 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:310"
+   }
+  },
+  "453697c0-bbee-4cd4-bb25-dc0fa55d688c": {
+   "modernCommand": {
+    "value": "（ランヴェルセ中に）攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:316"
+   }
+  },
+  "1ee03250-5022-4db8-ab9c-f08af76c1a4b": {
+   "modernCommand": {
+    "value": "（ODランヴェルセ中に）攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "manon:web:317"
+   }
+  },
+  "8da451d3-fce6-47af-99c2-bb7dfe30c4bc": {
+   "modernCommand": {
+    "value": "AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:102"
+   }
+  },
+  "ccc15440-1a93-47d3-b418-0c19ffaa9ac9": {
+   "modernCommand": {
+    "value": "AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:109"
+   }
+  },
+  "bbeef1e8-9287-453d-bc4f-d115974a9331": {
+   "modernCommand": {
+    "value": "（垂直ジャンプ中に）2 ＋ 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:204"
+   }
+  },
+  "e9ce6c9c-9cf2-4e01-b562-957f93bf9244": {
+   "modernCommand": {
+    "value": "236 ＋攻撃二つ/AUTO ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:306"
+   }
+  },
+  "5a668792-db6c-40cb-a688-0831f0b4cd36": {
+   "modernCommand": {
+    "value": "623 ＋ 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:316"
+   }
+  },
+  "6b7b0036-ebfa-4321-88a4-20f5f4a8a234": {
+   "modernCommand": {
+    "value": "623 ＋ 中/4 ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:317"
+   }
+  },
+  "2c260a98-659f-4f5d-99be-937bbead788e": {
+   "modernCommand": {
+    "value": "623 ＋ 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:318"
+   }
+  },
+  "6055f004-87c8-4693-a2ae-4bbb05bc007a": {
+   "modernCommand": {
+    "value": "623 ＋ 攻撃二つ/4 ＋ AUTO ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:319"
+   }
+  },
+  "3ee9366f-f7dd-455b-be30-b32cff494759": {
+   "modernCommand": {
+    "value": "1 ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:320"
+   }
+  },
+  "aa6c3d5d-ecea-4d7a-bbfb-55842c2495d8": {
+   "modernCommand": {
+    "value": "2 ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:321"
+   }
+  },
+  "eec39fbf-0e15-4910-93db-bb00358f13cc": {
+   "modernCommand": {
+    "value": "3 ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:322"
+   }
+  },
+  "0d5b60c4-22a5-4806-9c05-4dfec9991fb8": {
+   "modernCommand": {
+    "value": "2 ＋ AUTO ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:323"
+   }
+  },
+  "f66f9d3e-fefd-41f5-83ef-8096ff841e23": {
+   "modernCommand": {
+    "value": "6 ＋ AUTO ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "marisa:web:326"
+   }
+  },
+  "1b689c0d-f1d1-41a0-b2e5-ef32b1ce40c3": {
+   "modernCommand": {
+    "value": "2＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:110"
+   }
+  },
+  "b687a0aa-1c7a-4bed-8eda-4dc14b9ce951": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:116"
+   }
+  },
+  "de27f855-6232-4098-bf00-d718e26ceb7e": {
+   "modernCommand": {
+    "value": "5656 + 6溜め",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:200"
+   }
+  },
+  "8cc71489-4897-48cf-b77e-e4ba87ac6843": {
+   "modernCommand": {
+    "value": "（ラン中に）6＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:201"
+   }
+  },
+  "ac08f4e5-d61d-4455-81cf-78044483eeec": {
+   "modernCommand": {
+    "value": "（ラン中に）6＋中or強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:sha:f8ae2c85dd586efa3877"
+   }
+  },
+  "de7eb545-550e-4acb-a16a-f9d10e0a7c18": {
+   "modernCommand": {
+    "value": "AUTO＋中＞AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:209"
+   }
+  },
+  "fa221c4d-c9b5-45dc-a9ba-8f97c39c77fe": {
+   "modernCommand": {
+    "value": "236＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:300"
+   }
+  },
+  "9cf342db-df03-4ca4-8784-95862d8beb5b": {
+   "modernCommand": {
+    "value": "236＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:302"
+   }
+  },
+  "3ab2ac67-fa8f-4ccd-bee1-dc4e0bec45b2": {
+   "modernCommand": {
+    "value": "2＋SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:310"
+   }
+  },
+  "b4065448-f993-46cb-85fe-b765647c2ce0": {
+   "modernCommand": {
+    "value": "3＋SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:312"
+   }
+  },
+  "c784a575-3056-451f-bb91-29bc9d22c467": {
+   "modernCommand": {
+    "value": "214＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:328"
+   }
+  },
+  "ac645307-8547-4842-ac04-0dcfce948526": {
+   "modernCommand": {
+    "value": "214＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:329"
+   }
+  },
+  "dc601d7e-3b68-489f-8cba-26af3dd27576": {
+   "modernCommand": {
+    "value": "（前ジャンプ中に）SP/（前ジャンプ中に）214＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:334"
+   }
+  },
+  "0e176630-093f-45da-b14d-89aedc0351dd": {
+   "modernCommand": {
+    "value": "（前ジャンプ中に）214＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:335"
+   }
+  },
+  "199d95f3-0448-47ad-8755-907025ec73b6": {
+   "modernCommand": {
+    "value": "（前ジャンプ中に）214＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:336"
+   }
+  },
+  "a2c35da5-202c-47b5-ac09-1183910eddde": {
+   "modernCommand": {
+    "value": "（前ジャンプ中に）AUTO＋SP/（前ジャンプ中に）214＋攻撃二つ",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "rashid:web:337"
+   }
+  },
+  "1122e5ca-33ab-48f3-839a-db11a92df23c": {
+   "classicCommand": {
+    "value": "2 + HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:110"
+   },
+   "modernCommand": {
+    "value": "2 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:110"
+   }
+  },
+  "1fb18471-9519-48c4-a54a-47fece316b9d": {
+   "classicCommand": {
+    "value": "2 + LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:107"
+   },
+   "modernCommand": {
+    "value": "AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:107"
+   }
+  },
+  "631788a5-6005-40b1-9173-eaa1668986c6": {
+   "classicCommand": {
+    "value": "2 + LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:106"
+   },
+   "modernCommand": {
+    "value": "2 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:106"
+   }
+  },
+  "a6da1642-2c37-4a21-96a8-d5df30bbeb35": {
+   "classicCommand": {
+    "value": "2 + MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:109"
+   },
+   "modernCommand": {
+    "value": "2 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:109"
+   }
+  },
+  "7670ef08-4cb0-4bea-adca-ef9bd51c2cba": {
+   "classicCommand": {
+    "value": "2 + MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:108"
+   },
+   "modernCommand": {
+    "value": "AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:108"
+   }
+  },
+  "14be0a8f-f528-4c4f-84db-f4d5eb19e7f9": {
+   "classicCommand": {
+    "value": "HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:105"
+   },
+   "modernCommand": {
+    "value": "AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:105"
+   }
+  },
+  "e4fe4542-2341-41c0-bf33-c12587764b40": {
+   "classicCommand": {
+    "value": "HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:104"
+   },
+   "modernCommand": {
+    "value": "強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:104"
+   }
+  },
+  "cb40fb77-ad4e-4c87-b356-559401001528": {
+   "classicCommand": {
+    "value": "LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:101"
+   },
+   "modernCommand": {
+    "value": "弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:101"
+   }
+  },
+  "757453f1-253e-4d42-bed1-1347b68af148": {
+   "classicCommand": {
+    "value": "LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:100"
+   },
+   "modernCommand": {
+    "value": "2 + 弱>弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:100"
+   }
+  },
+  "4a6edef5-5184-45df-b332-4146fb16e9e2": {
+   "classicCommand": {
+    "value": "MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:103"
+   },
+   "modernCommand": {
+    "value": "中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:103"
+   }
+  },
+  "0d0c933c-45e4-4064-8ab8-533839b0bfc3": {
+   "classicCommand": {
+    "value": "MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:102"
+   }
+  },
+  "b4493b55-f441-4b45-af15-1c88cf599e88": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:117"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:117"
+   }
+  },
+  "a96dc8ea-2f1b-4fae-917e-7f9566745116": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）HP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:116"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:116"
+   }
+  },
+  "e652b451-8724-4ada-b51d-6abcd1f7f340": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:113"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:113"
+   }
+  },
+  "a7931a35-5e71-41c3-a02c-29b0e9cda8a9": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）LP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:112"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:112"
+   }
+  },
+  "e27fde8a-f1f6-4127-a3a2-3e95daa81d34": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MK",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:115"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:115"
+   }
+  },
+  "95d6f194-a3eb-43dc-96b4-54e0563d2173": {
+   "classicCommand": {
+    "value": "（ジャンプ中に）MP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:114"
+   },
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "sagat:web:114"
+   }
+  },
+  "c49c61ff-d013-47be-83f1-d9eab3dd2df9": {
+   "modernCommand": {
+    "value": "AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:108"
+   }
+  },
+  "14702465-d5f5-44cd-8848-338de1426ce1": {
+   "modernCommand": {
+    "value": "2 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:109"
+   }
+  },
+  "ba6e696c-80f2-4f22-be2d-66042011f432": {
+   "modernCommand": {
+    "value": "2 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:110"
+   }
+  },
+  "34e678af-4277-4e6d-869a-483f73f93416": {
+   "modernCommand": {
+    "value": "6 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:200"
+   }
+  },
+  "f0b380fa-6ddd-488c-adf0-1db4b1d7b6d4": {
+   "modernCommand": {
+    "value": "中>強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:202"
+   }
+  },
+  "0459a697-071e-49f9-a203-120441648d22": {
+   "modernCommand": {
+    "value": "214＋弱中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:305"
+   }
+  },
+  "77115c40-9327-4d01-905c-ade6640b41b7": {
+   "modernCommand": {
+    "value": "236＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:300"
+   }
+  },
+  "7299be56-d518-4794-a111-2e0608615b76": {
+   "modernCommand": {
+    "value": "214 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:306"
+   }
+  },
+  "e19b086b-c4ca-4162-acdc-4572fa4fa173": {
+   "modernCommand": {
+    "value": "623 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:318"
+   }
+  },
+  "a278ec2e-546e-467a-9c88-cdd85ef6aadb": {
+   "modernCommand": {
+    "value": "623 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:319"
+   }
+  },
+  "11e5667b-aece-434e-87af-8725413ce7f4": {
+   "modernCommand": {
+    "value": "1 ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:309"
+   }
+  },
+  "4bb58091-85b9-4dc4-8a1c-eca25085c1b7": {
+   "modernCommand": {
+    "value": "3 ＋ SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:311"
+   }
+  },
+  "ed082d1e-0859-4473-ade6-a007105f7b7d": {
+   "modernCommand": {
+    "value": "中>6 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:203"
+   }
+  },
+  "8884e700-85de-4019-89d6-a3270b0a4026": {
+   "modernCommand": {
+    "value": "中>6 + 強>強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:204"
+   }
+  },
+  "a5f4ab80-ee51-478c-b755-b194b7e81cb6": {
+   "modernCommand": {
+    "value": "中>中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:205"
+   }
+  },
+  "563d6042-ecce-48c0-9e28-90056a509e5b": {
+   "modernCommand": {
+    "value": "2 + 中>2 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "terry:web:208"
+   }
+  },
+  "42bfb7b6-2511-48e4-b50e-7045fc676ba9": {
+   "modernCommand": {
+    "value": "2 + 弱>弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:100"
+   }
+  },
+  "77b8c07a-0085-40ab-bae7-ad37aadd44ce": {
+   "modernCommand": {
+    "value": "弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:101"
+   }
+  },
+  "6b816c73-20c6-4590-8389-2bd0db98b251": {
+   "modernCommand": {
+    "value": "中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:102"
+   }
+  },
+  "de5b585d-28cd-4be8-b495-2611b995ef2f": {
+   "modernCommand": {
+    "value": "AUTO + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:104"
+   }
+  },
+  "72e48438-5de6-43cb-b421-41a5105dd213": {
+   "modernCommand": {
+    "value": "強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:105"
+   }
+  },
+  "bcdb1926-b1a6-4a85-b8d0-25dcf464fd87": {
+   "modernCommand": {
+    "value": "2 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:106"
+   }
+  },
+  "dcda78cf-a5be-4d31-9fed-d18bcf34e9ac": {
+   "modernCommand": {
+    "value": "AUTO + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:107"
+   }
+  },
+  "03a3c78f-d49e-4dff-9857-08856fd40b25": {
+   "modernCommand": {
+    "value": "AUTO + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:108"
+   }
+  },
+  "44237752-18cd-4aa7-8e78-9670a78a6e2e": {
+   "modernCommand": {
+    "value": "2 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:109"
+   }
+  },
+  "495aa9a0-c9b0-4484-b845-856a538832e4": {
+   "modernCommand": {
+    "value": "2 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:110"
+   }
+  },
+  "d66223a6-df43-4ce9-801b-dbc83cf21bf1": {
+   "modernCommand": {
+    "value": "3 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:202"
+   }
+  },
+  "7949413b-1ea3-41cd-83be-250b5759aca1": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:112"
+   }
+  },
+  "d58cda82-9f2a-4cc7-b421-7ab696cbbd32": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:113"
+   }
+  },
+  "3e76ed52-4ebe-4bcd-a44d-2a60960c5e55": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:114"
+   }
+  },
+  "697468cc-a9d2-4531-b974-b919aec0fc12": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:115"
+   }
+  },
+  "84d5d088-b584-42e0-a20b-5627d457eb00": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO＋強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:116"
+   }
+  },
+  "c030fb18-aa67-4ec7-923e-a54179286219": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:117"
+   }
+  },
+  "de33eadd-d757-4794-a2bb-ad809acf4247": {
+   "modernCommand": {
+    "value": "6 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:200"
+   }
+  },
+  "62dd7d64-e7b7-48f4-a2d7-58ed81feb84d": {
+   "modernCommand": {
+    "value": "4 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:201"
+   }
+  },
+  "c7bb118a-d199-4e59-bc32-e1b6d34de8c8": {
+   "modernCommand": {
+    "value": "2 + 弱>弱>弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:203"
+   }
+  },
+  "e1b79767-8628-4a4a-b36d-570655e8c039": {
+   "modernCommand": {
+    "value": "中>中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:204"
+   }
+  },
+  "3ca23e5c-4ae7-4047-b8fb-9b72af2c62c1": {
+   "modernCommand": {
+    "value": "2 + 中>中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:207"
+   }
+  },
+  "48628cf4-d99e-420b-907e-16435f3650fe": {
+   "modernCommand": {
+    "value": "214 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:317"
+   }
+  },
+  "063766f0-b20c-4f6d-bd7f-80cae0f692f7": {
+   "modernCommand": {
+    "value": "1 + SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:321"
+   }
+  },
+  "90ef6e3e-33a6-4407-935a-f9843b7d6b17": {
+   "modernCommand": {
+    "value": "2 + SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:322"
+   }
+  },
+  "9d541ca6-b232-4a72-9d74-23efdff833a4": {
+   "modernCommand": {
+    "value": "3 + SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:323"
+   }
+  },
+  "d3e482ae-ea0c-4643-92d9-9ec0a4727702": {
+   "modernCommand": {
+    "value": "2 + AUTO + SP",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:324"
+   }
+  },
+  "596a4a42-ce50-4c51-a367-0c12f83ce83a": {
+   "modernCommand": {
+    "value": "5252 + 弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:333"
+   }
+  },
+  "d8540548-4ab4-49d0-adb8-42644a1d0eb3": {
+   "modernCommand": {
+    "value": "5252 + 中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:334"
+   }
+  },
+  "0396eb74-6549-41c5-a59f-332b92284393": {
+   "modernCommand": {
+    "value": "5252 + 強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:335"
+   }
+  },
+  "b7a7c5dc-0703-4239-9df4-e62559f5a8e5": {
+   "modernCommand": {
+    "value": "5252 + 弱中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:336"
+   }
+  },
+  "5386935e-aba2-4eb9-9da4-438334bdb845": {
+   "modernCommand": {
+    "value": "5252 + 弱強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:337"
+   }
+  },
+  "b923d388-06b0-43fe-9121-fd073404692a": {
+   "modernCommand": {
+    "value": "5252 + 中強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:338"
+   }
+  },
+  "8ecba6ae-0914-473a-a91b-9619dc3b7ad6": {
+   "modernCommand": {
+    "value": "4＋強SP/214214＋中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "yasmine:web:401"
+   }
+  },
+  "eeea022d-c2c8-4806-b098-9ac01ac64768": {
+   "modernCommand": {
+    "value": "2+中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:112"
+   }
+  },
+  "d947a02d-bc33-4488-88e6-d3c47ded3cdf": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）AUTO+強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:120"
+   }
+  },
+  "87266be2-2f2d-46e3-9be4-82e6205ba22a": {
+   "modernCommand": {
+    "value": "3+中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:200"
+   }
+  },
+  "35687da1-7e42-4f95-8291-997afe2a87d4": {
+   "modernCommand": {
+    "value": "6+中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:201"
+   }
+  },
+  "a2d40675-a0c3-48c0-a4fd-404dba335d57": {
+   "modernCommand": {
+    "value": "AUTO+強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:202"
+   }
+  },
+  "d9586bd9-7772-4848-ae3c-07678e098dce": {
+   "modernCommand": {
+    "value": "6+強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:203"
+   }
+  },
+  "bf6c5e62-ea0c-4a56-a50f-86b0315639e0": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）2+強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:206"
+   }
+  },
+  "2ebe76b8-1ebb-4858-8768-506d735f6950": {
+   "modernCommand": {
+    "value": "（垂直ジャンプ中に）8+強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:207"
+   }
+  },
+  "b66ea408-f849-471c-9c83-6752ac418f97": {
+   "modernCommand": {
+    "value": "（近距離で）1回転+弱",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:302"
+   }
+  },
+  "da70ca46-5657-4c92-b64f-a5d183868d2c": {
+   "modernCommand": {
+    "value": "（近距離で）1回転+中",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:303"
+   }
+  },
+  "289e792a-b1df-465c-9a70-625738990b50": {
+   "modernCommand": {
+    "value": "（近距離で）5or6+AUTO+SP/1回転+攻撃二つ",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:305"
+   }
+  },
+  "581d6f69-8903-42e9-9cab-95516dc08c62": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）（近距離で）SP/（ジャンプ中に）（近距離で）1回転+攻撃",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:306"
+   }
+  },
+  "24fc2e5a-1a00-4483-8038-a699a7910f5a": {
+   "modernCommand": {
+    "value": "（ジャンプ中に）（近距離で）AUTO+SP/（ジャンプ中に）（近距離で）1回転+攻撃二つ",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:307"
+   }
+  },
+  "bfb8b0aa-7e06-413c-9060-3d1ae5d1ddf0": {
+   "modernCommand": {
+    "value": "22+強",
+    "status": "OFFICIAL_TXT_PATCH_UNCONFIRMED",
+    "txtKey": "zangief:web:314"
+   }
+  }
+ }
+}

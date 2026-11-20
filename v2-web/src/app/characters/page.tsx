@@ -2,6 +2,19 @@ import { publicPageMetadata } from "@/lib/public-page-metadata";
 import Link from "next/link";
 import { CharacterCard } from "@/components/character-card";
 import { characterDataSourceStatus, listCharacters } from "@/lib/characters";
+import { getPreReleaseCharacter } from "@/lib/pre-release-character";
+import type { CharacterSummary } from "@/types/character";
+
+/** Access-protected Vercel Preview only: list the pre-release Arjun record when the DB has no published row.
+ * Production keeps the DB publication boundary (published AND is_playable). */
+function withPreviewPreRelease(characters: CharacterSummary[]): CharacterSummary[] {
+  if (process.env.VERCEL !== "1" || process.env.VERCEL_ENV !== "preview") return characters;
+  const arjun = getPreReleaseCharacter("arjun");
+  if (!arjun || characters.some(character => character.slug === arjun.slug)) return characters;
+  return [...characters, { id: "local-pre-release-arjun", slug: arjun.slug, name: arjun.name, nameEn: arjun.nameEn,
+    shortDescription: arjun.summary, imageUrl: null, difficulty: null, rangeLabel: null, archetypeLabel: null,
+    releaseDate: arjun.releaseDate, updatedAt: null }];
+}
 
 export const metadata = publicPageMetadata("/characters", {
   title: "キャラクター情報",
@@ -19,7 +32,7 @@ export default async function CharactersPage({
   searchParams: Promise<{ q?: string | string[] }>;
 }) {
   const [characters, query] = await Promise.all([
-    listCharacters(),
+    listCharacters().then(withPreviewPreRelease),
     searchParams.then((params) => normalizeQuery(params.q)),
   ]);
   const sourceStatus = characterDataSourceStatus();

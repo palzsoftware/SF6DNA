@@ -26,7 +26,8 @@ test('corrected Arjun still has nine draft placeholders and no preference action
   const html=renderToStaticMarkup(React.createElement(loadSource('components/character-unified-page').CharacterUnifiedPage,props));
   assert.doesNotMatch(html,/user-tool-actions|神気の巨厳|参戦予定/);assertUniqueAnchors(assert,html);
   const frames=[...html.matchAll(/<dl class="frames">(.*?)<\/dl>/g)].map(m=>m[1]).join('');
-  assert.equal((frames.match(/>確認中<\/dd>/g)||[]).length,54);
+  // 9 placeholders x 7 frame fields (発生/持続/硬直/全体/ヒット時/ガード時/ダメージ).
+  assert.equal((frames.match(/>確認中<\/dd>/g)||[]).length,63);
   assert.match(html,/update20261013/);assert.match(html,/arjun\/movelist/);
  }finally{if(previous===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=previous;}
 });

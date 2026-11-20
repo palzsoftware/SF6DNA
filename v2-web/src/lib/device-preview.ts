@@ -21,7 +21,7 @@ export type DevicePreviewBundle = {
     /** Read-only DB candidate, never a claim of official identity approval. */
     releaseFixture?: boolean;
     /** NULL values retain their source classification; N/A is distinct from pending. */
-    frameFieldStatus?: Partial<Record<"startup" | "active" | "recovery" | "onHit" | "onBlock" | "damage", string>>;
+    frameFieldStatus?: Partial<Record<"startup" | "active" | "recovery" | "total" | "onHit" | "onBlock" | "damage", string>>;
     descriptionJa?: string | null;
     usageSummaryJa?: string | null;
     status: string;
@@ -29,6 +29,8 @@ export type DevicePreviewBundle = {
       startup: string | null;
       active?: string | null;
       recovery?: string | null;
+      /** Official total frames (公式TXT「全体」) when connected; never derived. */
+      total?: string | null;
       onHit?: string | null;
       onBlock: string | null;
       /** Official conditional/multi-hit notation must not be reduced to a guessed total. */

@@ -34,8 +34,11 @@ const officialCategories = [
   { type: "special", label: "必殺技" }, { type: "throw", label: "投げ" }, { type: "super", label: "SA" },
 ];
 const showLocalTxtCandidateValues = process.env.NODE_ENV === "development" && process.env.SF6DNA_WS5_TXT_PREVIEW === "1";
+// Access-protected Vercel Preview shows official TXT values (Patch unconfirmed). Production never.
+const officialTxtPreviewValues = process.env.VERCEL === "1" && process.env.VERCEL_ENV === "preview";
+const showOfficialTxtValues = showLocalTxtCandidateValues || officialTxtPreviewValues;
 function displayMoveKind(move: UnifiedMove): string {
-  const local = showLocalTxtCandidateValues ? getOfficialTxtPreviewDisplayCategory(move) : null;
+  const local = showOfficialTxtValues ? getOfficialTxtPreviewDisplayCategory(move) : null;
   if (local) return local;
   if (move.moveType === "target_combo") return "unique";
   if (move.moveType === "super_art") return "super";
@@ -49,7 +52,7 @@ function frameDisplayUnit(value: string, field: string): string {
   return /^[+\-−]?\d+(?:\.\d+)?(?:\s*[-~〜～–]\s*[+\-−]?\d+(?:\.\d+)?)*$/.test(trimmed)
     ? `${trimmed}F` : value;
 }
-const fields = [["startup", "発生"], ["active", "持続"], ["recovery", "硬直"],
+const fields = [["startup", "発生"], ["active", "持続"], ["recovery", "硬直"], ["total", "全体"],
   ["onHit", "ヒット時"], ["onBlock", "ガード時"], ["damage", "ダメージ"]] as const;
 const publicText = (value: string | null | undefined, fallback: string) =>
   value?.trim() && !isInternalMoveNote(value) ? normalizePublicCopy(value) : fallback;
@@ -102,7 +105,7 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
           {variants.length > 1 ? <small>入力{variantIndex + 1}</small> : null}
           {commands.map((command, index) => {
             const display = unifiedCommandDisplay(item, command);
-            const presented = showLocalTxtCandidateValues ? { value: display.value, condition: trailingCommandCondition(unifiedCommandText(command)).condition } : { value: display.value, condition: null };
+            const presented = showOfficialTxtValues ? { value: display.value, condition: trailingCommandCondition(unifiedCommandText(command)).condition } : { value: display.value, condition: null };
             return <div className={styles.commandLine} key={`${command.scheme}-${index}`}>
               {unifiedInputPathLabel(command.scheme) ? <small>{unifiedInputPathLabel(command.scheme)}</small> : null}
               <Sf6CommandInput value={presented.value} scheme={scheme} />
@@ -120,18 +123,18 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
     {variants.map((item, variantIndex) => <section className={styles.frameVariant} key={`${item.id}-frames`} data-frame-move-id={item.id}>
       {variants.length > 1 ? <strong>数値セット{variantIndex + 1}</strong> : null}
       <dl className={styles.frames}>{fields.map(([field, label]) => <div key={field}><dt>{label}</dt>
-        <dd>{frameDisplayUnit(unifiedFrameValue(item, field, showLocalTxtCandidateValues), field)}</dd></div>)}</dl>
+        <dd>{frameDisplayUnit(unifiedFrameValue(item, field, showOfficialTxtValues), field)}</dd></div>)}</dl>
     </section>)}
     <details className={styles.moveDetails}><summary>詳細（条件・Patch・照合・出典）</summary>
       <dl className={styles.notes}>
         <div><dt>Condition / 条件</dt><dd>{conditions.length ? conditions.map((row, index) => <div key={`${row.scheme}-${index}`} data-condition-control={row.scheme}>
           {row.label ? `${row.label}・` : ""}{row.scheme === "classic" ? "Classic" : "Modern"}：{row.text}
         </div>) : "条件確認中"}</dd></div>
-        {showLocalTxtCandidateValues ? variants.map(item => {
+        {showOfficialTxtValues ? variants.map(item => {
           const notes = officialMoveDisplayNotes(item);
           return notes.length ? <div key={`${item.id}-official-notes`}><dt>公式備考</dt><dd>{notes.map((note, index) => <p key={index}>{note}</p>)}</dd></div> : null;
         }) : null}
-        <div><dt>Patch</dt><dd>{evidence?.patch ?? "対応バージョン確認中"}</dd></div>
+        <div><dt>Patch</dt><dd>{evidence?.patch ?? (showOfficialTxtValues && (move as UnifiedMove & { ws5CanonicalSource?: string }).ws5CanonicalSource ? "Patch未確認（公式TXT 2026-10-23取得の記載値）" : "対応バージョン確認中")}</dd></div>
         <div><dt>Verification</dt><dd>{evidence?.verification ?? (move.releaseFixture ? "保存データ・公式照合状態を確認中" : "照合状態を確認中")}</dd></div>
       </dl>
       <div className={styles.cardSources}><strong>Source / 情報源</strong><SourceLinks sources={evidence?.sources ?? []} /></div>
@@ -211,8 +214,9 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, moveE
         <div><h3>注意点</h3><p>{publicText(character.weaknessesSummary, "注意点は確認中です。")}</p></div></div>
     </section>
     <section id="pilot-moves" tabIndex={-1} className={styles.section}><h2>技カード</h2>
-      <p>「—」は公式資料のN/A、「公式資料に記載なし」は未記載、「確認中」は未確認項目です。「ダウン」はヒット時に相手がダウンする意味です。ClassicとModernは別の入力として表示します。</p>
+      <p>数値は公式資料の記載値です（対応Patchは未確認）。「—」は公式資料のN/A、「公式資料に記載なし」は未記載、「確認中」は未確認項目です。「全体」は技全体のフレーム数です。「ダウン」はヒット時に相手がダウンする意味です。ClassicとModernは別の入力として表示します。</p>
       {showLocalTxtCandidateValues ? <p className={styles.localCandidateNotice}>ローカル確認表示：10/23公式TXTを優先した候補値です。公開承認・Patch照合済みを意味しません。</p> : null}
+      {officialTxtPreviewValues && !showLocalTxtCandidateValues ? <p className={styles.localCandidateNotice}>Preview確認表示：2026-10-23取得の公式TXTの記載値です。対応Patch・公開承認は未確認です。</p> : null}
       {groups.length ? <CharacterMoveExplorer className={styles.explorer} groupClassName={styles.moveGroup} listClassName={styles.moveGrid}
         categories={officialCategories}
         groups={groups.map(([kind, items]) => ({ type: kind, label: labels[kind] ?? "分類確認中", items: items.map(entry => ({

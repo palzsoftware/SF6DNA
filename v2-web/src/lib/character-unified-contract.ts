@@ -64,18 +64,44 @@ export function unifiedInputPathLabel(scheme: string) {
   if (normalized.endsWith("_assist")) return "アシスト";
   return null;
 }
-export function unifiedFrameValue(move: UnifiedMove, field: "startup" | "active" | "recovery" | "onHit" | "onBlock" | "damage", showLocalTxtCandidate = false) {
-  const state = move.frameFieldStatus?.[field];
+export type UnifiedFrameField = "startup" | "active" | "recovery" | "total" | "onHit" | "onBlock" | "damage";
+/** Display-only Japanese for English fragments found in official TXT and stored frame notes.
+ * Numbers and order are kept; unknown English is left as is. */
+export function japaneseFrameText(value: string): string {
+  return value
+    .replace(/LAND\((\d+)\)/g, "着地後$1")
+    .replace(/(\d+(?:\+\d+)?)\s*\((?:landing)\)/gi, "着地後$1")
+    .replace(/(\d+)\s+Landing\b/g, "着地後$1")
+    .replace(/until landing/gi, "着地まで")
+    .replace(/([\d/]+)\s+total\b/gi, "全体$1")
+    .replace(/\(\s*(\d+)\s+on whiff\s*\)/gi, "（空振り時$1）")
+    .replace(/(\d+)\s+fastest\b/gi, "最速$1")
+    .replace(/\bKD\s+Juggle\b/g, "ダウン（追撃可）")
+    .replace(/\bKD\b/g, "ダウン")
+    .replace(/(^|[\s,/])D(?=$|[\s,/])/g, "$1ダウン")
+    .replace(/\bvariable\b/gi, "変動")
+    .replace(/\bfar:/g, "遠:").replace(/\bmiddle:/g, "中:").replace(/\bnear:/g, "近:")
+    .replace(/\bactivation:/g, "発動:").replace(/\brelease:/g, "リリース:");
+}
+/** Field state for labels: official TXT value (Patch unconfirmed), official N/A, not listed, or pending. */
+export function unifiedFrameState(move: UnifiedMove, field: UnifiedFrameField, showLocalTxtCandidate = false): "OFFICIAL_TXT" | "OFFICIAL_NA" | "NOT_LISTED" | "PENDING" | "STORED" {
+  const state = move.frameFieldStatus?.[field as keyof NonNullable<UnifiedMove["frameFieldStatus"]>];
+  if (state === "OFFICIAL_NA") return "OFFICIAL_NA";
+  if (state === "OFFICIAL_NOT_LISTED") return "NOT_LISTED";
+  if ((state === "LOCAL_OFFICIAL_TXT_MATCHED" || state === "LOCAL_OFFICIAL_TXT_CANONICAL") && showLocalTxtCandidate) return "OFFICIAL_TXT";
+  if (state && state !== "CURRENT_OFFICIAL_SNAPSHOT_ACCEPTED") return "PENDING";
+  return "STORED";
+}
+export function unifiedFrameValue(move: UnifiedMove, field: UnifiedFrameField, showLocalTxtCandidate = false) {
+  const state = move.frameFieldStatus?.[field as keyof NonNullable<UnifiedMove["frameFieldStatus"]>];
+  const raw = (move.frame as Record<string, unknown> | null | undefined)?.[field];
+  const text = (candidate: unknown) => typeof candidate === "number" ? (Number.isFinite(candidate) ? String(candidate) : "確認中")
+    : typeof candidate === "string" && candidate.trim() ? (field === "onHit" && candidate.trim() === "D" ? "ダウン" : japaneseFrameText(candidate)) : "確認中";
   if (state === "OFFICIAL_NA") return "—";
   if (state === "OFFICIAL_NOT_LISTED") return "公式資料に記載なし";
-  if ((state === "LOCAL_OFFICIAL_TXT_MATCHED" || state === "LOCAL_OFFICIAL_TXT_CANONICAL") && showLocalTxtCandidate) {
-    const candidate = move.frame?.[field];
-    return typeof candidate === "number" ? String(candidate) : typeof candidate === "string" && candidate.trim() ? (field === "onHit" && candidate.trim() === "D" ? "ダウン" : candidate) : "確認中";
-  }
+  if ((state === "LOCAL_OFFICIAL_TXT_MATCHED" || state === "LOCAL_OFFICIAL_TXT_CANONICAL") && showLocalTxtCandidate) return text(raw);
   if (state && state !== "CURRENT_OFFICIAL_SNAPSHOT_ACCEPTED") return "確認中";
-  const value = move.frame?.[field];
-  if (typeof value === "number") return Number.isFinite(value) ? String(value) : "確認中";
-  return typeof value === "string" && value.trim() ? (field === "onHit" && value.trim() === "D" ? "ダウン" : value) : "確認中";
+  return text(raw);
 }
 export function unifiedMoveMedia(move: UnifiedMove) {
   const selected = selectMoveMotionMedia(move);

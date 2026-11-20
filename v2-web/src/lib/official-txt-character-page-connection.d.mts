@@ -6,6 +6,7 @@ import type { OfficialTxtPreviewResult } from '@/lib/official-txt-device-preview
 import type { CanonicalTxtRecord, connectCanonicalTxtCandidate } from '@/lib/canonical-txt-connection.mjs';
 export type Ws5LocalAdmission = { nodeEnv?: string; vercelEnv?: string; vercel?: string; enabled?: string; host?: string | null };
 export function isWs5LocalCardRequest(admission: Ws5LocalAdmission): boolean;
+export function isOfficialTxtPreviewRequest(admission: Pick<Ws5LocalAdmission, 'vercelEnv' | 'vercel'>): boolean;
 export function connectOfficialTxtCharacterPageData(input: {
  character: Pick<CharacterDetail,'id'|'slug'>; resolved:CharacterDetailData;
  moveEvidence?:Record<string,UnifiedMoveEvidence>; candidate:OfficialTxtPreviewResult;

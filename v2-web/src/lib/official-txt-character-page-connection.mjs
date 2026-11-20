@@ -9,18 +9,26 @@ export function isWs5LocalCardRequest({ nodeEnv, vercelEnv, vercel, enabled, hos
     (!vercelEnv || vercelEnv === 'development') && typeof host === 'string' &&
     /^(?:127\.0\.0\.1|localhost|\[::1\])(?::\d{1,5})?$/i.test(host);
 }
+/** Access-protected Vercel Preview only (never Production, never local without VERCEL).
+ * Admits the official TXT move-data connection alone; local-only review data stays behind
+ * isWs5LocalCardRequest. */
+export function isOfficialTxtPreviewRequest({ vercelEnv, vercel }) {
+  return vercel === '1' && vercelEnv === 'preview';
+}
 /** Pass the existing resolver result through one shared projection to the existing page.
  * Disabled or out-of-scope calls preserve the original bundle and evidence by reference.
  */
 export function connectOfficialTxtCharacterPageData({ character, resolved, moveEvidence = {}, candidate, records, admission, mediaRegistry }) {
-  if (!isWs5LocalCardRequest(admission)) return { ...resolved, moveEvidence, candidateConnection:null };
+  const local = isWs5LocalCardRequest(admission);
+  if (!local && !isOfficialTxtPreviewRequest(admission)) return { ...resolved, moveEvidence, candidateConnection:null };
   if (!character?.slug || candidate?.characterSlug !== character.slug) return { ...resolved, moveEvidence, candidateConnection:null };
   const connected = connectCanonicalTxtCandidate(resolved.bundle, candidate, records, {
     characterSlug:character.slug, bundleCharacterSlug:character.slug, characterId:character.id,
     connectExisting:connectOfficialTxtPreviewCandidate,
   });
   let media = null;
-  if (mediaRegistry) {
+  // Motion media keys are local review material; Preview receives move data only.
+  if (mediaRegistry && local) {
     const adoptions = new Map(ws5LocalCorrections.identityAdoptions
       .map(row => [row.existingMoveId, row.sourceRecordKey]));
     const adoptedMoves = new Map((connected.bundle?.moves ?? [])
