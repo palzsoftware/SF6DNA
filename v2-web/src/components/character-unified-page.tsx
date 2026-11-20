@@ -93,7 +93,9 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
       const aliasId = moveCardAnchorId(item.slug);
       return aliasId && aliasId !== moveCardAnchorId(move.slug) ? <span id={aliasId} className={styles.anchorAlias} tabIndex={-1} aria-hidden="true" key={aliasId} /> : null;
     })}
-    <header><span className={styles.tag}>{labels[displayMoveKind(move)] ?? "分類確認中"}</span><h3>{cardTitle}</h3></header>
+    <header><span className={styles.tag}>{labels[displayMoveKind(move)] ?? "分類確認中"}</span><h3>{cardTitle}</h3>
+      {(move as UnifiedMove & { ws5VariantLabel?: string }).ws5VariantLabel
+        ? <p className={styles.variantLabel} data-variant-label="true">区別：{(move as UnifiedMove & { ws5VariantLabel?: string }).ws5VariantLabel}</p> : null}</header>
     <div className={styles.mediaSlot} data-media-move-id={move.id}>
       {media ? <MoveMotionMedia media={media} title={move.name} className={styles.mediaAsset} />
         : <span>{UNIFIED_MEDIA_PLACEHOLDER}</span>}

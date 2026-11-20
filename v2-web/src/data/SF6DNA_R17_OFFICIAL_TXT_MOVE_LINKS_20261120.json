@@ -1,0 +1,334 @@
+{
+ "schema": "sf6dna/official-txt-move-links/1",
+ "base": "8d83476f (tree a4e51e37)",
+ "source": "① Round17 RESOLVED_MOVE_DATA_DIFF_R17.csv + SCHEME_PAIRS_13_OFFICIAL_CHECK.csv",
+ "note": "Preview表示専用。公式TXT（2026-10-23取得・対応Patch未確認）への技ID→行キー対応。技ID・DB値は変更しない。",
+ "links": {
+  "00398ea1-7adc-44eb-8edc-321538bec402": "cammy:web:500",
+  "008eb6cd-42d9-4890-93e6-4c9989226aa2": "marisa:web:122",
+  "01f701c5-e0b5-402d-94b3-d8166c686370": "ryu:web:202",
+  "05cf88f7-41f8-40f6-8f83-cdbb0ca95d31": "akuma:web:403",
+  "06f4575b-6654-459f-bf7b-2357dcf71478": "jp:web:320",
+  "0b13852f-0f76-4787-b794-1ef8257fa5fe": "jp:web:321",
+  "0b963e9d-0a9d-4d32-83f8-38187e4fc12e": "ken:web:500",
+  "0c0a3ca4-6f2d-4636-af55-75e756d16ba3": "rashid:web:501",
+  "0d0bf082-34ab-4cc1-a26b-6a227d6f0f31": "akuma:web:501",
+  "106c2942-c3ec-48ca-b673-51e7d0fa932a": "ingrid:web:302",
+  "11e260da-3978-4c5d-9e1c-963770000246": "akuma:web:303",
+  "1288b242-aeaa-475d-ba3d-07e53b4d1b2c": "sagat:web:406",
+  "131d987f-722c-4e08-8852-d6b81302d1ab": "akuma:web:500",
+  "14090a4d-132e-4d55-8d8d-4669444dba8f": "jp:web:304",
+  "159999da-db98-44ff-b5bd-e6c6687e02ac": "alex:web:106",
+  "193c7170-ee4d-4781-829c-0a77ed7c81b2": "ingrid:web:320",
+  "1ad5ddd7-9079-40df-be00-c12204e91d6d": "ingrid:web:307",
+  "1c662b91-d7e2-4642-8505-bbec0dad0176": "sagat:web:300",
+  "1c6a8286-4ea0-454b-8fa6-03902af6fd73": "sagat:web:312",
+  "1ffae614-098c-465a-a2c7-7944d57800f6": "sagat:web:316",
+  "20ab47b8-49bd-4bc0-b54e-ae8cb55aa7b2": "manon:web:206",
+  "2c31c0cb-4d0f-48b8-8bbe-fef4bff88c34": "ingrid:web:313",
+  "3073d9fd-49df-451d-9c8c-93a51bf34e40": "alex:web:307",
+  "31d8df84-a2fd-42a4-b706-5a2d0d0bf664": "sagat:web:306",
+  "32b42551-6729-4d36-92a2-c54f76f098f0": "alex:web:107",
+  "32d6df45-6fb9-44f0-b1b4-ce65096c3ad4": "zangief:web:501",
+  "34287e66-c123-4cba-8c97-7bb0bd5a90b6": "jp:web:306",
+  "354b338e-970f-460a-9e32-3d9e2199f96f": "cammy:web:303",
+  "37dfc815-fab3-4be0-a0d3-c83db2f4c3b1": "ken:web:501",
+  "3ce7e264-3236-45aa-ad20-5b574a4e60f3": "sagat:web:307",
+  "3d782d80-90d2-4dac-a551-7d1440154270": "marisa:web:501",
+  "3eb3f810-dc04-40dd-82a6-dcad8a5eb0c1": "marisa:web:500",
+  "3ecf9a07-5539-4a4a-81fd-ab90b9fc3b61": "ryu:web:203",
+  "3ed94fcd-3820-4ad6-91ea-7405360afac0": "jp:web:202",
+  "3efe3247-d69b-499e-aaed-b81b421b7b5e": "lily:sha:365a9e651799bc2cb8e5",
+  "40e948eb-d634-4dc8-8b3a-43aef82df522": "jp:web:314",
+  "43f19305-48cc-4928-b355-b07daf382c00": "jp:web:308",
+  "48860f55-2304-4e43-9b31-54fe0ab34fbf": "ingrid:web:301",
+  "4a25d3d8-585e-4b52-bec2-ca7ee2888210": "m-bison:web:501",
+  "4b143800-5803-4bcb-b2f7-0b3939146dc4": "ed:web:501",
+  "4ce0a704-d05a-41a5-9973-f1d30ca5b118": "ingrid:web:314",
+  "4d0d1ebf-0226-487b-a19a-109d7efaa506": "manon:web:111",
+  "5003bab7-95fe-405f-960b-f1af0fa4151b": "cammy:web:501",
+  "50c13c49-015c-423a-880e-9c4663ad34d9": "jp:web:312",
+  "51680ee1-db0b-4906-80da-93ba82dde6f1": "jp:web:318",
+  "55b92472-63bf-4775-baf8-ee65ee4b1b60": "manon:web:501",
+  "5808d5ef-4abb-443e-86a6-31ea7ed83b91": "akuma:web:300",
+  "5ad21670-2e9a-44e3-8e35-b3eb76173713": "aki:web:306",
+  "5c35ac75-3556-47be-86e0-a772d49af0f1": "alex:web:306",
+  "5cc1893e-1ad5-41cd-bd06-6688b060508e": "juri:web:501",
+  "5d51d98d-1c65-42ac-bfbf-88a6d3acc0f9": "marisa:web:107",
+  "5df39884-a7fd-4c62-8463-33b417c0ce2d": "cammy:web:202",
+  "5fab46b1-9288-406b-ad2d-a26aba0a8dd3": "sagat:web:313",
+  "60fe5e26-346d-4244-bb8d-8d66cb939b47": "alex:web:300",
+  "61b21c00-8448-4264-ae8b-50bbcebb7c91": "aki:web:501",
+  "666e7042-3c1b-4179-babe-b7cb67896272": "ingrid:web:322",
+  "6884aee0-ea97-470d-9bb7-7d7337a9815f": "marisa:web:114",
+  "69221b02-e8c8-4f6b-9705-cd7d6adc577a": "zangief:web:106",
+  "6cda610f-fab6-4960-bf8c-95a85af896a8": "alex:web:311",
+  "6d1e92da-67bf-49ea-8630-7c333d1199e9": "juri:web:500",
+  "6f14be7e-c55f-4abb-a795-be18d766991c": "m-bison:web:111",
+  "6f77b24f-8671-4370-bd3a-f8e0e7c7028e": "jp:web:305",
+  "733b2825-ba9f-42a6-b563-e8edb7b96815": "sagat:web:314",
+  "76deda71-a355-4b5c-a0c5-fc41d1cd8d98": "sagat:web:310",
+  "7817f9e6-8542-4da1-be01-c6bd24294f22": "jp:web:400",
+  "79250547-4ce6-4a4a-a4d5-0f39e1cb38d3": "ed:web:110",
+  "7965380d-dbe7-4ff6-b747-87b7708c38a9": "sagat:web:317",
+  "7be699d6-7021-450a-823f-235eb9513561": "ryu:web:204",
+  "7e400c75-ee2f-491c-a063-c70d1c73d5ff": "jp:web:301",
+  "80b7025d-c89b-44f5-9847-21a1e31b2769": "akuma:web:306",
+  "8191ea60-a364-46b8-af7a-48e5c796a226": "sagat:web:301",
+  "83045762-537a-4ac0-91f4-ff7e6a5094a0": "terry:web:500",
+  "850d653e-51e4-406e-9a32-420ad09e7ef2": "terry:web:304",
+  "852ac443-78e0-4c00-a43e-5196d33aba36": "jp:web:323",
+  "85762bb5-b5ae-4a88-b4ee-55112037774e": "jp:web:401",
+  "86e06c95-6bbe-4ad4-842a-b22e46cdbc13": "sagat:web:311",
+  "896bcfc7-5f28-420f-9edb-0290359b43f1": "ingrid:web:321",
+  "8c772908-c117-4985-aa01-02f9e357525e": "juri:web:122",
+  "8cefd04a-ac28-44aa-b841-4ceed029513d": "cammy:web:111",
+  "9168f1d7-f1db-4052-9671-ce8d7af1f787": "alex:web:309",
+  "97ba8ecf-cac1-4dbe-8ac2-92118bbc7f34": "terry:web:401",
+  "97f29df8-fc86-4644-bdfc-6b8a4b7d5cbd": "zangief:web:105",
+  "9862cfc2-b16b-48a6-9f2c-a4f698abff92": "aki:web:500",
+  "9af93d94-e6d3-4ff4-8fd6-52900942192f": "marisa:web:115",
+  "9b8e20f3-1bef-48e4-ae7f-8aa3dc16aeb3": "alex:web:304",
+  "9e860acc-4183-42c6-8071-28a50656d749": "alex:web:403",
+  "9ec80073-a3d7-4d24-9437-8a21dc112c68": "jp:web:313",
+  "9ef9c617-af65-417a-8637-b239ebadb818": "terry:web:302",
+  "a0d8ffde-c03a-4132-9182-35cfa18c384a": "marisa:web:206",
+  "a6059d53-b985-4dcd-85bd-d8430b33f8bf": "sagat:web:315",
+  "a62a7836-7c5b-4e47-a4e9-61dbfa2f082a": "alex:web:308",
+  "a903733b-bfea-4ae3-bb7a-a2ab1f8db7bc": "lily:sha:625bb933e64727df6641",
+  "a9c526e6-55e2-400e-943a-30dbd838497e": "alex:web:310",
+  "a9e69d63-6089-4b37-84da-b82130315be0": "ingrid:web:323",
+  "ac58d193-6639-4fe4-921c-fb69f7a85908": "jp:web:300",
+  "acef0697-16a0-49eb-b289-4df09a1843e7": "jp:web:307",
+  "af1d4cda-8efa-4486-8538-58ffa69f3d6b": "marisa:web:120",
+  "b0e5f2a6-29fd-4aa0-98ed-05b9b248343a": "ryu:web:501",
+  "b6dd3ebf-80dc-40af-b69a-cbb8b8fb8935": "terry:web:111",
+  "b8329b05-de0d-46dd-8688-e44231540c80": "jp:web:309",
+  "b9d5b6ee-30ba-4dd8-a005-618a2fb5573d": "lily:web:111",
+  "bb752526-d05a-42bc-bdd1-f73213ad600b": "zangief:web:115",
+  "bdc8a84c-243a-4d97-80fd-6d96fa2698a6": "ed:web:500",
+  "c31fe91a-5449-49c7-b264-97dccae0908f": "jp:web:303",
+  "c40c1f4a-5753-486d-a902-e017ae79de78": "luke:web:501",
+  "c5b400be-6611-41cb-8fd8-ba4ba5c69960": "terry:web:501",
+  "c6b7057f-1029-427f-b5be-7c6b899eda2d": "alex:web:305",
+  "c6bcbf1d-e8ea-40f3-ae9e-c341ececf18d": "jp:web:302",
+  "c7d2d956-6cb6-4b50-9958-37e3345b907c": "m-bison:web:500",
+  "c9f1220a-5353-4da4-803e-02b71563cf85": "jp:web:315",
+  "cbcab1b6-75cc-4b86-932c-8a190812e623": "m-bison:web:402",
+  "cd0255a1-bf6f-4b92-ad4e-1b2d5905983c": "jp:web:322",
+  "cdc01926-65fc-48d3-936e-ec17651e24ce": "zangief:web:121",
+  "cdde3afe-40c5-40b3-8883-294a19aa35ff": "ken:web:111",
+  "cf6c7a7b-d2c0-443c-8419-47ea312ab61c": "sagat:web:305",
+  "d2a9ee6d-9154-449e-bd1e-59c3541cfb1e": "marisa:web:105",
+  "d72274a8-0aad-475d-a176-dcee5068a8ec": "alex:web:104",
+  "d877e908-2212-4549-aefd-c6a437fd19c4": "sagat:web:309",
+  "dc4d041c-4259-4636-8142-d2f329b7d77b": "luke:web:500",
+  "e8afff26-8248-4f84-80a8-5befd9bdccc9": "rashid:web:111",
+  "e9d7d8e0-0ead-44cc-9c9f-4137ecb3aae4": "manon:web:500",
+  "f0766896-f8e9-45eb-a769-0762d98a2714": "jp:web:310",
+  "f1171ce3-0b61-4af3-9906-43af129b39c4": "alex:web:105",
+  "f262b667-3ec4-4b75-a7f1-df1748df2ba3": "jp:web:319",
+  "f3264dc7-cead-4fbd-a48b-2fc550b41446": "ingrid:web:300",
+  "f5e14a1b-ade5-48b1-8bd8-37cad87bb8d0": "terry:web:405",
+  "f5f54109-2d7e-407c-88fb-2d131ac0c6a3": "rashid:web:500",
+  "fd9176ef-2810-46e8-ada0-6f5bca4e5b40": "alex:web:301",
+  "fdd1def1-6703-48c2-9c0f-d6bf382fdf4d": "sagat:web:302"
+ },
+ "held": {
+  "00306fb8-0213-4c10-af70-df4286431957": {
+   "txtKey": "jp:web:203",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "07d94252-18d9-46b4-a466-7b949a899564": {
+   "txtKey": "marisa:web:310",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "1476cf16-7efd-4570-8d43-32ce58ac52f4": {
+   "txtKey": "zangief:web:210",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "1e553e7b-1abf-47eb-8864-c46d2f8cfa58": {
+   "txtKey": "luke:web:204",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "3605c1b6-1f6b-42a3-981d-6ce606d760b4": {
+   "txtKey": "ryu:web:102+208+209",
+   "reason": "NO_SINGLE_OFFICIAL_ROW (combined parts; rename needs approval)"
+  },
+  "701cd562-2e2b-4b05-afdb-e9a162b076ce": {
+   "txtKey": "manon:web:204",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "7381e9e3-1f6a-4846-8658-f3526750da51": {
+   "txtKey": "akuma:web:326",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "789c5644-c97f-4f51-b406-eea0d3d13ad1": {
+   "txtKey": "akuma:web:328",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "8b413672-a9a4-4b33-a4d0-c71fc2bbd7bb": {
+   "txtKey": "lily:web:207",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "8b6b34bf-96c7-44a9-aa4f-bb2c6347d48a": {
+   "txtKey": "ingrid:web:206",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "9217a5dc-508e-4f69-a4ee-7ef8ea4cc947": {
+   "txtKey": "marisa:web:314",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "96b61c92-9208-422d-b230-b3f4f550c67e": {
+   "txtKey": "ed:web:208",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "98d29190-1a77-4567-a7f7-95659013c566": {
+   "txtKey": "marisa:web:308",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "abf6ef9d-b60c-41ca-98ed-86fdbb4a05bb": {
+   "txtKey": "marisa:web:312",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "b3103a67-2ffb-44eb-bb46-d098e85e571a": {
+   "txtKey": "ed:web:205",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "cd158bd7-7e4c-45da-9a44-2faa9e3633f8": {
+   "txtKey": "akuma:web:206",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "e7f0e25f-ffa0-4cd0-969b-89c30c12f912": {
+   "txtKey": "akuma:web:330",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "ee465bb0-22b4-41d2-9b26-a2fa733c3d06": {
+   "txtKey": "manon:web:205",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "f7a86d2f-1e98-4e54-9a74-7a066e144ab2": {
+   "txtKey": "marisa:web:210",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  },
+  "fbc6b3d1-45a8-4f14-9ae4-6883e9a0e804": {
+   "txtKey": "akuma:web:332",
+   "reason": "PART_ROW_ONLY (official row is one hit of a multi-hit move)"
+  }
+ },
+ "variantLabels": {
+  "1e826784-d57a-4c4a-9dbe-855978d54a99": {
+   "label": "通常版",
+   "evidence": "DBコマンド 214K~6MK／タイガーネクサス中 →+中攻撃"
+  },
+  "2eb50331-ac42-40e4-ae0b-693f148ef844": {
+   "label": "通常版",
+   "evidence": "DBコマンド 214K~6LK／タイガーネクサス中 →+弱攻撃"
+  },
+  "38c00b79-1916-4713-be8e-afd2f2a3e3ea": {
+   "label": "←入力",
+   "evidence": "DBコマンド ← + 中K"
+  },
+  "48860f55-2304-4e43-9b31-54fe0ab34fbf": {
+   "label": "中P版",
+   "evidence": "DBコマンド 236MP"
+  },
+  "5fdc1648-ad0c-46fb-8ed1-2024ab7c3299": {
+   "label": "→入力",
+   "evidence": "DBコマンド → + 中K"
+  },
+  "89790402-97e4-4ffb-900c-357f2a8978b8": {
+   "label": "通常版",
+   "evidence": "DBコマンド 214K~6HK／タイガーネクサス中 →+強攻撃"
+  },
+  "d72a2eba-6a3e-4e0f-8bcc-96c148357d13": {
+   "label": "OD版",
+   "evidence": "DBコマンド 214KK~6HK／ODタイガーネクサス中 →+強攻撃"
+  },
+  "e2da3a09-5904-4ebf-8355-967b4c814fca": {
+   "label": "OD版",
+   "evidence": "DBコマンド 214KK~6MK／ODタイガーネクサス中 →+中攻撃"
+  },
+  "e49aa0bc-fea3-4618-806a-4096f4fd3b56": {
+   "label": "OD版",
+   "evidence": "DBコマンド 214KK~6LK／ODタイガーネクサス中 →+弱攻撃"
+  },
+  "f3264dc7-cead-4fbd-a48b-2fc550b41446": {
+   "label": "弱P版",
+   "evidence": "DBコマンド 236LP"
+  },
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A5289a256e972b33503a4": {
+   "label": "弱K＋強K",
+   "evidence": "公式内部名 (Save_OD_HJ_LKHK)"
+  },
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A70e3d2cf6b200625e9e7": {
+   "label": "弱K＋中K",
+   "evidence": "公式内部名 (Save_OD_HJ_LKMK)"
+  },
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A7205b781b0c05ea82d2e": {
+   "label": "弱P＋強P",
+   "evidence": "公式内部名 (Thunder_OD_HJ_LPHP)"
+  },
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A7d88168d1d24d19620fe": {
+   "label": "弱P＋中P",
+   "evidence": "公式内部名 (Sei_OD_HJ_LPMP)"
+  },
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A85d0306da9e6b3d6174b": {
+   "label": "弱P＋中P",
+   "evidence": "公式内部名 (Thunder_OD_HJ_LPMP)"
+  },
+  "sf6dna-preview:c-viper:c-viper%3Asha%3Aaa186db2aade09afea43": {
+   "label": "弱P＋強P",
+   "evidence": "公式内部名 (Sei_OD_HJ_LPHP)"
+  },
+  "sf6dna-preview:c-viper:c-viper%3Asha%3Ab5d16439bd8ae54961be": {
+   "label": "中P＋強P",
+   "evidence": "公式内部名 (Sei_OD_HJ_MPHP)"
+  },
+  "sf6dna-preview:c-viper:c-viper%3Asha%3Ab614513088c6b6042ad7": {
+   "label": "中K＋強K",
+   "evidence": "公式内部名 (Save_OD_HJ_MKHK)"
+  },
+  "sf6dna-preview:c-viper:c-viper%3Asha%3Aecc61a07ff8aeb5eac1b": {
+   "label": "中P＋強P",
+   "evidence": "公式内部名 (Thunder_OD_HJ_MPHP)"
+  },
+  "sf6dna-preview:jp:jp%3Asha%3A23e7a4ef2fd6edfafe7c": {
+   "label": "中K",
+   "evidence": "公式コマンド 5252 + MK"
+  },
+  "sf6dna-preview:jp:jp%3Asha%3A2c83553551b4b019ecdb": {
+   "label": "中P",
+   "evidence": "公式コマンド 21424 | 24214 + MP"
+  },
+  "sf6dna-preview:jp:jp%3Asha%3A45c8d868d955e579ffd7": {
+   "label": "強P",
+   "evidence": "公式コマンド 21424 | 24214 + HP"
+  },
+  "sf6dna-preview:jp:jp%3Asha%3A67557c1c50c63778100c": {
+   "label": "強K",
+   "evidence": "公式コマンド 214 + HK"
+  },
+  "sf6dna-preview:jp:jp%3Asha%3A77a488ce4d8322b22094": {
+   "label": "強K",
+   "evidence": "公式コマンド 5252 + HK"
+  },
+  "sf6dna-preview:jp:jp%3Asha%3Aaeda5826faf8bfa83b33": {
+   "label": "中K",
+   "evidence": "公式コマンド 214 + MK"
+  }
+ },
+ "variantLabelsHeld": {
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A08ce80f21bf4bd84908f": "STATE_VARIANT: 公式・DBの記載だけでは区別ラベルを一意に決められない",
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A10a58258d4454f7c016e": "STATE_VARIANT: 公式・DBの記載だけでは区別ラベルを一意に決められない",
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A124737c5e75881a788f0": "STATE_VARIANT: 公式・DBの記載だけでは区別ラベルを一意に決められない",
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A12bb4668ee075c50eb5c": "STATE_VARIANT: 公式・DBの記載だけでは区別ラベルを一意に決められない",
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A505385c81c60d236868c": "STATE_VARIANT: 公式・DBの記載だけでは区別ラベルを一意に決められない",
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A6ee87ac61be86223ded1": "STATE_VARIANT: 公式・DBの記載だけでは区別ラベルを一意に決められない",
+  "sf6dna-preview:c-viper:c-viper%3Asha%3A9401d5558ce1575dc7cd": "STATE_VARIANT: 公式・DBの記載だけでは区別ラベルを一意に決められない",
+  "sf6dna-preview:c-viper:c-viper%3Asha%3Aaddaeed16bb63733b47f": "STRENGTH_OR_BUTTON_VARIANT: 公式・DBの記載だけでは区別ラベルを一意に決められない",
+  "sf6dna-preview:c-viper:c-viper%3Asha%3Abb9f3e9d83d17a9bac0f": "STATE_VARIANT: 公式・DBの記載だけでは区別ラベルを一意に決められない",
+  "sf6dna-preview:c-viper:c-viper%3Asha%3Adbdba83f06e651df6343": "STRENGTH_OR_BUTTON_VARIANT: 公式・DBの記載だけでは区別ラベルを一意に決められない",
+  "sf6dna-preview:c-viper:c-viper%3Asha%3Aeb65b4d3736338d58c9f": "STATE_VARIANT: 公式・DBの記載だけでは区別ラベルを一意に決められない"
+ }
+}

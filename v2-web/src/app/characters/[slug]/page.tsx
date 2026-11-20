@@ -28,6 +28,7 @@ import { playerDirectoryHref } from "@/lib/player-directory-navigation";
 import { videoEntityIdFromQuery } from "@/lib/video-player-filter";
 import type { CanonicalTxtRecord } from "@/lib/canonical-txt-connection.mjs";
 import { mergeOfficialTxtControlSchemeListings } from "@/lib/official-txt-control-scheme-merge";
+import { withOfficialTxtMoveLinks, type OfficialTxtMoveLinkData } from "@/lib/official-txt-move-links";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -126,8 +127,15 @@ export default async function CharacterPage({
   const displayOverlay = review || officialTxtPreview
     ? ((await import("@/data/SF6DNA_R15_OFFICIAL_TXT_DISPLAY_OVERLAY_20261120.json")).default as unknown as { byMoveId: OfficialTxtDisplayOverlay }).byMoveId
     : null;
-  const overlaid = (target: DevicePreviewBundle | null) => target && displayOverlay ? withOfficialTxtDisplayOverlay(target, displayOverlay) : target;
-  const selectedBundle = arjun?.bundle ?? (connectedTxt?.bundle && txtRecords ? mergeOfficialTxtControlSchemeListings(withOfficialTotalFrames(overlaid(connectedTxt.bundle)!, txtRecords), txtRecords) : overlaid(bundle));
+  // ① Round17 confirmed links (exact official command match) and duplicate labels: Preview/local only.
+  const moveLinks = (review || officialTxtPreview) && txtRecords
+    ? (await import("@/data/SF6DNA_R17_OFFICIAL_TXT_MOVE_LINKS_20261120.json")).default as unknown as OfficialTxtMoveLinkData
+    : null;
+  const overlaid = (target: DevicePreviewBundle | null) => {
+    const filled = target && displayOverlay ? withOfficialTxtDisplayOverlay(target, displayOverlay) : target;
+    return filled && moveLinks && txtRecords ? withOfficialTxtMoveLinks(filled, moveLinks, txtRecords) : filled;
+  };
+  const selectedBundle = arjun?.bundle ?? (txtRecords && (connectedTxt?.bundle ?? bundle) ? mergeOfficialTxtControlSchemeListings(withOfficialTotalFrames(overlaid(connectedTxt?.bundle ?? bundle)!, txtRecords), txtRecords) : bundle);
   const finalBundle = review ? withoutMotionMedia(selectedBundle) : selectedBundle;
   const strategyMoveLinks = review ? await getWs5StrategyMoveLinks(finalBundle, admission) : undefined;
   const characterId = review ? videoEntityIdFromQuery(character.id) : null;
