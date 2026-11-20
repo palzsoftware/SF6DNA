@@ -130,6 +130,7 @@ test('video loader API_ERROR preserves player page and forwards the error state'
       '@/lib/player-labels':{playerTypeLabel:()=>'',playerRoleLabel:()=>''},
       '@/lib/player-presentation':{playerRegionLabel:()=>'',playerSourceCta:()=>'',safePlayerBio:()=>null,playerBioSummary:()=>null},
       '@/lib/video-player-filter':{videoPlayerHref:()=>'/videos'},
+      'next/headers':{headers:async()=>new Headers({host:'example.com'})},
       'next/navigation':{notFound:()=>{throw Error('NOT_FOUND')}},
       'next/link':{default:({children,...props})=>React.createElement('a',props,children),__esModule:true},
       '../players.module.css':{default:{},__esModule:true},

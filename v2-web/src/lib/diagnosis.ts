@@ -29,7 +29,7 @@ export async function listDiagnoses(): Promise<Array<Pick<DiagnosisDefinition, "
 }
 
 export async function getDiagnosisBySlug(slug: string): Promise<DiagnosisDefinition | null> {
-  if (!isConfigured()) return null;
+  if (!isConfigured()) throw new Error("diagnosis_service_unavailable");
   const supabase = getSupabaseServerClient();
   const { data: diagnosis, error } = await supabase
     .from("diagnoses")
@@ -38,10 +38,11 @@ export async function getDiagnosisBySlug(slug: string): Promise<DiagnosisDefinit
     .eq("status", "published")
     .maybeSingle();
 
-  if (error || !diagnosis) {
-    if (error) console.error("[diagnosis] detail failed", error.message);
-    return null;
+  if (error) {
+    console.error("[diagnosis] detail failed", error.message);
+    throw new Error("diagnosis_service_unavailable");
   }
+  if (!diagnosis) return null;
 
   const { data: questions, error: questionError } = await supabase
     .from("diagnosis_questions")
@@ -52,7 +53,7 @@ export async function getDiagnosisBySlug(slug: string): Promise<DiagnosisDefinit
 
   if (questionError) {
     console.error("[diagnosis] questions failed", questionError.message);
-    return null;
+    throw new Error("diagnosis_service_unavailable");
   }
 
   const mapped: DiagnosisQuestion[] = (questions ?? []).map((row) => {
@@ -77,6 +78,13 @@ export async function getDiagnosisBySlug(slug: string): Promise<DiagnosisDefinit
         .map(({ displayOrder: _displayOrder, ...option }) => option),
     };
   });
+
+  if (mapped.some((question) => question.options.length === 0)) {
+    throw new Error("diagnosis_questions_incomplete");
+  }
+  if (Number(diagnosis.question_count ?? mapped.length) !== mapped.length) {
+    throw new Error("diagnosis_questions_incomplete");
+  }
 
   return {
     id: String(diagnosis.id),

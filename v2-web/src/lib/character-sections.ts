@@ -87,7 +87,6 @@ export async function listCharacterSectionItems(
           sa: row.saCost, difficulty: row.difficulty ? Number(row.difficulty) || null : null,
           verificationStatus: row.verificationStatus, preview: true,
           category: row.category, command: row.command, startCondition: row.startCondition,
-          starter: row.startCondition,
           endCondition: row.endCondition, position: row.position, patch: row.patch,
           sourceLabel: row.sourceLabel, sourceUrl: row.sourceUrl,
         },

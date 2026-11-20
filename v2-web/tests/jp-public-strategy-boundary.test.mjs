@@ -40,7 +40,7 @@ test("ordinary JP detail never passes draft strategy cards to its public rendere
     finally{if(previous===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=previous;}
   }
   assert.equal(JSON.stringify(input),before);
-  assert.match(page,/localReferences=\{!production \?/);
+  assert.match(page,/localReferences=\{!review && !production \?/);
 
 });
 

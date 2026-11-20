@@ -1,0 +1,1889 @@
+{
+ "schema": "sf6dna.strategy-card-refs.v1",
+ "generatedAt": "2026-11-20",
+ "note": "練習候補が参照する攻略カード（WORK_IMPORT_CARDS_AB）の公開状態。HOLD_NOT_APPROVED のカードを参照する候補は公開しない。 旧形式（strategyManagementNo のみ）の候補は formerProvisionalNo で同じカードを引き、見つからなければ公開しない。",
+ "cards": {
+  "NB-R13-0198": {
+   "characterSlug": "aki",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003733"
+  },
+  "NB-R13-0201": {
+   "characterSlug": "aki",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003736"
+  },
+  "NB-R13-0206": {
+   "characterSlug": "akuma",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003741"
+  },
+  "NB-R13-0207": {
+   "characterSlug": "akuma",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003742"
+  },
+  "NB-R13-0208": {
+   "characterSlug": "akuma",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003743"
+  },
+  "NB-R13-0224": {
+   "characterSlug": "alex",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003759"
+  },
+  "NB-R13-0226": {
+   "characterSlug": "alex",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003761"
+  },
+  "NB-R13-0240": {
+   "characterSlug": "arjun",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003775"
+  },
+  "NB-R13-0241": {
+   "characterSlug": "arjun",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003776"
+  },
+  "NB-R13-0242": {
+   "characterSlug": "arjun",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003777"
+  },
+  "NB-R13-0243": {
+   "characterSlug": "arjun",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003778"
+  },
+  "NB-R18-0049": {
+   "characterSlug": "arjun",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0050": {
+   "characterSlug": "arjun",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0052": {
+   "characterSlug": "arjun",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0053": {
+   "characterSlug": "arjun",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R13-0129": {
+   "characterSlug": "blanka",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003664"
+  },
+  "NB-R13-0248": {
+   "characterSlug": "c-viper",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003783"
+  },
+  "NB-R13-0258": {
+   "characterSlug": "c-viper",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003793"
+  },
+  "NB-R13-0053": {
+   "characterSlug": "cammy",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003588"
+  },
+  "NB-R13-0054": {
+   "characterSlug": "cammy",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003589"
+  },
+  "NB-R13-0055": {
+   "characterSlug": "cammy",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003590"
+  },
+  "NB-R13-0056": {
+   "characterSlug": "cammy",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003591"
+  },
+  "NB-R13-0057": {
+   "characterSlug": "cammy",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003592"
+  },
+  "NB-R13-0058": {
+   "characterSlug": "cammy",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003593"
+  },
+  "NB-R13-0061": {
+   "characterSlug": "cammy",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003596"
+  },
+  "NB-R13-0063": {
+   "characterSlug": "cammy",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003598"
+  },
+  "NB-R13-0064": {
+   "characterSlug": "cammy",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003599"
+  },
+  "NB-R13-0066": {
+   "characterSlug": "cammy",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003601"
+  },
+  "NB-R13-0067": {
+   "characterSlug": "cammy",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003602"
+  },
+  "NB-R13-0069": {
+   "characterSlug": "cammy",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003604"
+  },
+  "NB-R13-0071": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003606"
+  },
+  "NB-R13-0072": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003607"
+  },
+  "NB-R13-0073": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003608"
+  },
+  "NB-R13-0074": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003609"
+  },
+  "NB-R13-0075": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003610"
+  },
+  "NB-R13-0076": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003611"
+  },
+  "NB-R13-0077": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "qualityAfterDayReagg": "B",
+   "dayReaggNote": "日中再集計で品質A外（B 掲載候補（Patch確認待ち: 2026-10-13修正）。既存候補は維持・統括判断待ち",
+   "formerProvisionalNo": "003612"
+  },
+  "NB-R13-0079": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "qualityAfterDayReagg": "B",
+   "dayReaggNote": "日中再集計で品質A外（B 掲載候補（Patch確認待ち: 2026-10-13修正）。既存候補は維持・統括判断待ち",
+   "formerProvisionalNo": "003614"
+  },
+  "NB-R13-0080": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003615"
+  },
+  "NB-R13-0084": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003619"
+  },
+  "NB-R13-0085": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003620"
+  },
+  "NB-R13-0086": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "qualityAfterDayReagg": "B",
+   "dayReaggNote": "日中再集計で品質A外（B 掲載候補（Patch確認待ち: 2026-10-13修正）。既存候補は維持・統括判断待ち",
+   "formerProvisionalNo": "003621"
+  },
+  "NB-R13-0087": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003622"
+  },
+  "NB-R13-0088": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003623"
+  },
+  "NB-R13-0089": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003624"
+  },
+  "NB-R13-0090": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003625"
+  },
+  "NB-R13-0091": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003626"
+  },
+  "NB-R13-0092": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003627"
+  },
+  "NB-R13-0093": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003628"
+  },
+  "NB-R13-0094": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "qualityAfterDayReagg": "B",
+   "dayReaggNote": "日中再集計で品質A外（B 掲載候補（Patch確認待ち: 2026-10-13修正）。既存候補は維持・統括判断待ち",
+   "formerProvisionalNo": "003629"
+  },
+  "NB-R13-0097": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "qualityAfterDayReagg": "B",
+   "dayReaggNote": "日中再集計で品質A外（B 掲載候補（Patch確認待ち: 2026-10-13修正）。既存候補は維持・統括判断待ち",
+   "formerProvisionalNo": "003632"
+  },
+  "NB-R13-0101": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003636"
+  },
+  "NB-R13-0102": {
+   "characterSlug": "chun-li",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003637"
+  },
+  "NB-R14-0022": {
+   "characterSlug": "dee-jay",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003968"
+  },
+  "NB-R14-0031": {
+   "characterSlug": "dee-jay",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003977"
+  },
+  "NB-R14-0043": {
+   "characterSlug": "dee-jay",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003989"
+  },
+  "NB-R14-0046": {
+   "characterSlug": "dee-jay",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003991"
+  },
+  "NB-R14-0060": {
+   "characterSlug": "dee-jay",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "004005"
+  },
+  "NB-R15-0043": {
+   "characterSlug": "dee-jay",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0047": {
+   "characterSlug": "dee-jay",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0049": {
+   "characterSlug": "dee-jay",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R13-0146": {
+   "characterSlug": "dhalsim",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003681"
+  },
+  "NB-R13-0148": {
+   "characterSlug": "dhalsim",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003683"
+  },
+  "NB-R13-0154": {
+   "characterSlug": "e-honda",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003689"
+  },
+  "NB-R13-0156": {
+   "characterSlug": "e-honda",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003691"
+  },
+  "NB-R13-0160": {
+   "characterSlug": "e-honda",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003695"
+  },
+  "NB-R13-0161": {
+   "characterSlug": "e-honda",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003696"
+  },
+  "NB-R13-0162": {
+   "characterSlug": "e-honda",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003697"
+  },
+  "NB-R13-0163": {
+   "characterSlug": "e-honda",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003698"
+  },
+  "NB-R12-1045": {
+   "characterSlug": "ed",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003314"
+  },
+  "NB-R13-0260": {
+   "characterSlug": "ed",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003795"
+  },
+  "NB-R12-1150": {
+   "characterSlug": "elena",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003494"
+  },
+  "NB-R12-1151": {
+   "characterSlug": "elena",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003495"
+  },
+  "NB-R12-1152": {
+   "characterSlug": "elena",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003496"
+  },
+  "NB-R12-1153": {
+   "characterSlug": "elena",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003497"
+  },
+  "NB-R12-1154": {
+   "characterSlug": "elena",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003498"
+  },
+  "NB-R12-1155": {
+   "characterSlug": "elena",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003499"
+  },
+  "NB-R12-1156": {
+   "characterSlug": "elena",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003500"
+  },
+  "NB-R13-0103": {
+   "characterSlug": "guile",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003638"
+  },
+  "NB-R13-0104": {
+   "characterSlug": "guile",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003639"
+  },
+  "NB-R13-0105": {
+   "characterSlug": "guile",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003640"
+  },
+  "NB-R13-0106": {
+   "characterSlug": "guile",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003641"
+  },
+  "NB-R13-0107": {
+   "characterSlug": "guile",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003642"
+  },
+  "NB-R13-0109": {
+   "characterSlug": "guile",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003644"
+  },
+  "NB-R13-0111": {
+   "characterSlug": "guile",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003646"
+  },
+  "NB-R13-0112": {
+   "characterSlug": "guile",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003647"
+  },
+  "NB-R13-0115": {
+   "characterSlug": "guile",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003650"
+  },
+  "NB-R13-0265": {
+   "characterSlug": "ingrid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003800"
+  },
+  "NB-R13-0268": {
+   "characterSlug": "ingrid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003803"
+  },
+  "NB-R13-0269": {
+   "characterSlug": "ingrid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003804"
+  },
+  "NB-R13-0271": {
+   "characterSlug": "ingrid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003806"
+  },
+  "NB-R13-0274": {
+   "characterSlug": "ingrid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003809"
+  },
+  "NB-R13-0275": {
+   "characterSlug": "ingrid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003810"
+  },
+  "NB-R13-0276": {
+   "characterSlug": "ingrid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003811"
+  },
+  "NB-R13-0002": {
+   "characterSlug": "jamie",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003537"
+  },
+  "NB-R12-1158": {
+   "characterSlug": "jp",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003502"
+  },
+  "NB-R12-1160": {
+   "characterSlug": "jp",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003504"
+  },
+  "NB-R19-0018": {
+   "characterSlug": "jp",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0019": {
+   "characterSlug": "jp",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0023": {
+   "characterSlug": "jp",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0035": {
+   "characterSlug": "jp",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R12-1163": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003507"
+  },
+  "NB-R12-1164": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003508"
+  },
+  "NB-R12-1165": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003509"
+  },
+  "NB-R12-1166": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003510"
+  },
+  "NB-R12-1167": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003511"
+  },
+  "NB-R12-1168": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003512"
+  },
+  "NB-R12-1169": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003513"
+  },
+  "NB-R12-1171": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003515"
+  },
+  "NB-R12-1172": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003516"
+  },
+  "NB-R12-1173": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003517"
+  },
+  "NB-R12-1174": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003518"
+  },
+  "NB-R12-1175": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003519"
+  },
+  "NB-R14-0013": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003959"
+  },
+  "NB-R15-0003": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0004": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0008": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0020": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0022": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0028": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0029": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0030": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0034": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0035": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0036": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0038": {
+   "characterSlug": "ken",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R13-0280": {
+   "characterSlug": "kimberly",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003815"
+  },
+  "NB-R13-0281": {
+   "characterSlug": "kimberly",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003816"
+  },
+  "NB-R13-0287": {
+   "characterSlug": "kimberly",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003822"
+  },
+  "NB-R13-0288": {
+   "characterSlug": "kimberly",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003823"
+  },
+  "NB-R13-0290": {
+   "characterSlug": "kimberly",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003825"
+  },
+  "NB-R13-0291": {
+   "characterSlug": "kimberly",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003826"
+  },
+  "NB-R13-0292": {
+   "characterSlug": "kimberly",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003827"
+  },
+  "NB-R13-0293": {
+   "characterSlug": "kimberly",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003828"
+  },
+  "NB-R13-0304": {
+   "characterSlug": "lily",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003839"
+  },
+  "NB-R12-1176": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003520"
+  },
+  "NB-R12-1177": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003521"
+  },
+  "NB-R12-1180": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003524"
+  },
+  "NB-R12-1185": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003529"
+  },
+  "NB-R12-1186": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003530"
+  },
+  "NB-R12-1188": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003532"
+  },
+  "NB-R19-0001": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0002": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0003": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0006": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0007": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0008": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0010": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0011": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0012": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0013": {
+   "characterSlug": "luke",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R15-0062": {
+   "characterSlug": "m-bison",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R21-0009": {
+   "characterSlug": "m-bison",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R21-0011": {
+   "characterSlug": "m-bison",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R21-0019": {
+   "characterSlug": "m-bison",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R13-0308": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003843"
+  },
+  "NB-R13-0320": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003855"
+  },
+  "NB-R13-0321": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003856"
+  },
+  "NB-R13-0326": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003861"
+  },
+  "NB-R13-0327": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003862"
+  },
+  "NB-R13-0328": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003863"
+  },
+  "NB-R18-0034": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0035": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0036": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0037": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0038": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0041": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0042": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0043": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0044": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0045": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0046": {
+   "characterSlug": "mai",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R13-0006": {
+   "characterSlug": "manon",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003541"
+  },
+  "NB-R13-0330": {
+   "characterSlug": "marisa",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003865"
+  },
+  "NB-R13-0342": {
+   "characterSlug": "rashid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003877"
+  },
+  "NB-R13-0343": {
+   "characterSlug": "rashid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003878"
+  },
+  "NB-R13-0344": {
+   "characterSlug": "rashid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003879"
+  },
+  "NB-R13-0345": {
+   "characterSlug": "rashid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003880"
+  },
+  "NB-R13-0346": {
+   "characterSlug": "rashid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003881"
+  },
+  "NB-R13-0347": {
+   "characterSlug": "rashid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003882"
+  },
+  "NB-R13-0353": {
+   "characterSlug": "rashid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003888"
+  },
+  "NB-R13-0018": {
+   "characterSlug": "ryu",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003553"
+  },
+  "NB-R13-0021": {
+   "characterSlug": "ryu",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003556"
+  },
+  "NB-R13-0023": {
+   "characterSlug": "ryu",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003558"
+  },
+  "NB-R19-0041": {
+   "characterSlug": "ryu",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0042": {
+   "characterSlug": "ryu",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0047": {
+   "characterSlug": "ryu",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0048": {
+   "characterSlug": "ryu",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0049": {
+   "characterSlug": "ryu",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0050": {
+   "characterSlug": "ryu",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0051": {
+   "characterSlug": "ryu",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0052": {
+   "characterSlug": "ryu",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R19-0054": {
+   "characterSlug": "ryu",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R13-0361": {
+   "characterSlug": "sagat",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003896"
+  },
+  "NB-R13-0368": {
+   "characterSlug": "terry",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003903"
+  },
+  "NB-R13-0369": {
+   "characterSlug": "terry",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003904"
+  },
+  "NB-R13-0370": {
+   "characterSlug": "terry",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003905"
+  },
+  "NB-R13-0371": {
+   "characterSlug": "terry",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003906"
+  },
+  "NB-R13-0372": {
+   "characterSlug": "terry",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003907"
+  },
+  "NB-R13-0373": {
+   "characterSlug": "terry",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003908"
+  },
+  "NB-R13-0374": {
+   "characterSlug": "terry",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003909"
+  },
+  "NB-R13-0377": {
+   "characterSlug": "terry",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003912"
+  },
+  "NB-R13-0379": {
+   "characterSlug": "terry",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003914"
+  },
+  "NB-R13-0380": {
+   "characterSlug": "terry",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003915"
+  },
+  "NB-R13-0381": {
+   "characterSlug": "terry",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003916"
+  },
+  "NB-R13-0398": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003933"
+  },
+  "NB-R13-0399": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003934"
+  },
+  "NB-R13-0402": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003937"
+  },
+  "NB-R13-0403": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003938"
+  },
+  "NB-R13-0405": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003940"
+  },
+  "NB-R13-0409": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003944"
+  },
+  "NB-R13-0411": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003946"
+  },
+  "NB-R18-0020": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0021": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "qualityAfterDayReagg": "?",
+   "dayReaggNote": "日中再集計で品質A外（?）。既存候補は維持・統括判断待ち"
+  },
+  "NB-R18-0023": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0024": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0025": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0026": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0028": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0029": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0031": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0032": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R18-0033": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R13-0167": {
+   "characterSlug": "zangief",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003702"
+  },
+  "NB-R13-0172": {
+   "characterSlug": "zangief",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003707"
+  },
+  "NB-R13-0176": {
+   "characterSlug": "zangief",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003711"
+  },
+  "NB-R13-0177": {
+   "characterSlug": "zangief",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003712"
+  },
+  "NB-R13-0180": {
+   "characterSlug": "zangief",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003715"
+  },
+  "NB-R13-0194": {
+   "characterSlug": "aki",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003729"
+  },
+  "NB-R13-0196": {
+   "characterSlug": "aki",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003731"
+  },
+  "NB-R13-0197": {
+   "characterSlug": "aki",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003732"
+  },
+  "NB-R13-0199": {
+   "characterSlug": "aki",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003734"
+  },
+  "NB-R13-0222": {
+   "characterSlug": "alex",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003757"
+  },
+  "NB-R13-0223": {
+   "characterSlug": "alex",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003758"
+  },
+  "NB-D3-0001": {
+   "characterSlug": "alex",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D3-0006": {
+   "characterSlug": "alex",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D3-0012": {
+   "characterSlug": "alex",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R13-0140": {
+   "characterSlug": "blanka",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003675"
+  },
+  "NB-D2-0002": {
+   "characterSlug": "blanka",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0005": {
+   "characterSlug": "blanka",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0007": {
+   "characterSlug": "blanka",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D3-0036": {
+   "characterSlug": "c-viper",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D3-0015": {
+   "characterSlug": "ed",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D3-0024": {
+   "characterSlug": "ed",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R13-0272": {
+   "characterSlug": "ingrid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003807"
+  },
+  "NB-R13-0273": {
+   "characterSlug": "ingrid",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003808"
+  },
+  "NB-R13-0003": {
+   "characterSlug": "jamie",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003538"
+  },
+  "NB-R12-0855": {
+   "characterSlug": "jp",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "002957"
+  },
+  "NB-R12-1170": {
+   "characterSlug": "juri",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003514"
+  },
+  "NB-R13-0282": {
+   "characterSlug": "kimberly",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003817"
+  },
+  "NB-R13-0283": {
+   "characterSlug": "kimberly",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003818"
+  },
+  "NB-R13-0284": {
+   "characterSlug": "kimberly",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003819"
+  },
+  "NB-R13-0297": {
+   "characterSlug": "kimberly",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003832"
+  },
+  "NB-D2-0044": {
+   "characterSlug": "lily",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0045": {
+   "characterSlug": "lily",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0046": {
+   "characterSlug": "lily",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0047": {
+   "characterSlug": "lily",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0048": {
+   "characterSlug": "lily",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0049": {
+   "characterSlug": "lily",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0050": {
+   "characterSlug": "lily",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0052": {
+   "characterSlug": "lily",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0037": {
+   "characterSlug": "manon",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0039": {
+   "characterSlug": "manon",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0040": {
+   "characterSlug": "manon",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0041": {
+   "characterSlug": "manon",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0042": {
+   "characterSlug": "manon",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0022": {
+   "characterSlug": "sagat",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0024": {
+   "characterSlug": "sagat",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0025": {
+   "characterSlug": "sagat",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0027": {
+   "characterSlug": "sagat",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0028": {
+   "characterSlug": "sagat",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0030": {
+   "characterSlug": "sagat",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-D2-0032": {
+   "characterSlug": "sagat",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED"
+  },
+  "NB-R13-0397": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003932"
+  },
+  "NB-R13-0400": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003935"
+  },
+  "NB-R13-0401": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003936"
+  },
+  "NB-R13-0404": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003939"
+  },
+  "NB-R13-0406": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003941"
+  },
+  "NB-R13-0407": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003942"
+  },
+  "NB-R13-0408": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003943"
+  },
+  "NB-R13-0410": {
+   "characterSlug": "yasmine",
+   "category": "combo",
+   "quality": "A",
+   "publication": "HOLD_NOT_APPROVED",
+   "formerProvisionalNo": "003945"
+  }
+ }
+}

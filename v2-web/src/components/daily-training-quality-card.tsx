@@ -11,6 +11,7 @@ import styles from "./daily-training-quality-card.module.css";
 type Props = {
   item: DailyTrainingItem;
   index: number;
+  anchorId: string;
   expanded: boolean;
   complete: boolean;
   enabled: boolean;
@@ -24,7 +25,7 @@ function Lines({ lines }: { lines: readonly string[] }) {
 }
 
 // Local timing only: no persistence, owner lookup, diagnosis read, or completion callback.
-export function DailyTrainingQualityCard({ item, index, expanded, complete, enabled, onToggle, onComplete }: Props) {
+export function DailyTrainingQualityCard({ item, index, anchorId, expanded, complete, enabled, onToggle, onComplete }: Props) {
   const panelId = useId();
   const headingId = useId();
   const [timer, setTimer] = useState(resetTrainingTimer);
@@ -115,7 +116,7 @@ export function DailyTrainingQualityCard({ item, index, expanded, complete, enab
   }
 
   const status = complete ? "完了に設定（保存状態は画面上部の案内をご確認ください）" : remaining === 0 ? "5分の目安に達しました。目標未達でも終了できます。" : running ? "計測中" : remaining < FIVE_MINUTES_MS ? "一時停止中" : "計測前";
-  return <article className={styles.card} aria-labelledby={headingId}>
+  return <article id={anchorId} tabIndex={-1} className={styles.card} aria-labelledby={headingId}>
     <button className={styles.header} type="button" aria-expanded={expanded} aria-controls={panelId} onClick={() => { cancelSound(); onToggle(); }}>
       <span className={styles.number}>{index + 1}</span>
       <span><span className={styles.meta}>{complete ? "完了" : expanded ? "内容を表示中" : "内容を確認"}・5分</span><strong id={headingId}>{item.title}</strong></span>
@@ -163,12 +164,12 @@ export function DailyTrainingQualityCard({ item, index, expanded, complete, enab
         <section><h3>練習の目的</h3><p>{item.detail.why}</p></section>
         <section><h3>準備する内容</h3><Lines lines={item.detail.setup} /></section>
         {guide?.hold.length ? <p className={styles.caution}>条件確認が必要です。確認できない設定は使わず、単独の動作・入力の確認までで区切れます。</p> : null}
+        <section><h3>成功の目安</h3><Lines lines={item.detail.successCondition} />{item.detail.successCondition.length > 0 ? <p className={styles.note}>数値は練習用の仮目標です。準備済みの条件で難しければ単純な練習に戻してください。達成までの延長は不要です。</p> : null}</section>
         <section><h3>5分間の練習手順</h3><ol className={styles.steps}>
           <li><strong>0〜1分</strong><Lines lines={item.detail.minute01} /></li>
           <li><strong>1〜3分</strong><Lines lines={item.detail.minute13} /></li>
           <li><strong>3〜5分</strong><Lines lines={item.detail.minute35} /></li>
         </ol></section>
-        <section><h3>今回の目標</h3><Lines lines={item.detail.successCondition} />{item.detail.successCondition.length > 0 ? <p className={styles.note}>数値は練習用の仮目標です。準備済みの条件で難しければ単純な練習に戻してください。達成までの延長は不要です。</p> : null}</section>
         <section><h3>次の対戦で意識すること</h3><p className={styles.action}>{item.detail.matchFocus[0] ?? "この項目の説明は保存されていません。"}</p></section>
         <details><summary>詳しい設定・理由・つまずき・難易度調整</summary>
           <section><h3>詳しいトレモ設定方法</h3>{guide ? <Lines lines={guide.details} /> : <p>保存時点の説明を表示しています。現在のメニューへ自動置換しません。</p>}</section>

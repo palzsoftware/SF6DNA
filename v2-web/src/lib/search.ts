@@ -81,7 +81,8 @@ function hrefFor(type: SearchEntityType, slug: string) {
 
 export async function searchAcrossContent(rawQuery: string): Promise<SearchResultItem[]> {
   const query = normalizeSearchQuery(rawQuery);
-  if (!query || !isConfigured()) return [];
+  if (!query) return [];
+  if (!isConfigured()) throw new Error("search_service_unavailable");
 
   const supabase = getSupabaseServerClient();
   const { data, error } = await supabase.rpc("search_sf6dna", {
@@ -89,12 +90,12 @@ export async function searchAcrossContent(rawQuery: string): Promise<SearchResul
     result_limit: 40,
   });
 
-  if (error) {
-    console.error("[search] RPC failed", error.message);
-    return [];
+  if (error || !Array.isArray(data)) {
+    console.error("[search] RPC failed", error?.code ?? "invalid_response");
+    throw new Error("search_service_unavailable");
   }
 
-  const rows = (data ?? []) as SearchRpcRow[];
+  const rows = data as SearchRpcRow[];
   const mapped = rows.flatMap((row): SearchResultItem[] => {
     const rawType = row.entity_type ?? "";
     if (!SEARCH_ENTITY_TYPES.has(rawType as SearchEntityType)) return [];

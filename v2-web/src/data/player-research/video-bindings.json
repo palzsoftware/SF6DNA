@@ -46,5 +46,3503 @@
     "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
     "playerSlug": "dogura",
     "recommendationKey": "dogura-uWenGJimPRE"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-vvxT_NX2eJI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-vvxT_NX2eJI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-Krw6cHqFYvI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-Krw6cHqFYvI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-POdewS08jZk"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-POdewS08jZk"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-EoxvAwnaP9g"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-EoxvAwnaP9g"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "7847d0ac-4911-4062-9a1e-0b140de1aaef",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-h3RmwnO48Ok"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b3f67376-cb75-4b44-8b2d-ef50058a1b98",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-h3RmwnO48Ok"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-xbL17gWTP4U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-xbL17gWTP4U"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-XOyUTXwhwHg"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-XOyUTXwhwHg"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-2ESaomvCYS8"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-2ESaomvCYS8"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "062106c7-faba-4351-864c-6d4247104d3c",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-2L2YoNn8DLI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "78d2c3bf-8074-4098-b152-607229b7aaac",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-2L2YoNn8DLI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-0n4BDakdzgo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-0n4BDakdzgo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-dFoT5fPFXJ0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-dFoT5fPFXJ0"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-3bhVngSEGtU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-3bhVngSEGtU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-MMua2zNxfRI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-MMua2zNxfRI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-CJmxiRTQazU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-CJmxiRTQazU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-u-p_c9HWZq8"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-u-p_c9HWZq8"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-GLhvbb70_Ek"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-GLhvbb70_Ek"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-7Zuu20zcu08"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-7Zuu20zcu08"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-NUvBaJlBNdc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-NUvBaJlBNdc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-Z51ItlSh5tw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-Z51ItlSh5tw"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-t4LA_Bx-dic"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-t4LA_Bx-dic"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-jstre3SwonQ"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-jstre3SwonQ"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-MnP-rQuOVDU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-MnP-rQuOVDU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-UUpurWV4cS4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-UUpurWV4cS4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-5BcVUsfdD-Y"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-5BcVUsfdD-Y"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-sVWVy4ZTFFM"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-sVWVy4ZTFFM"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-h_DP4j29j_M"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-h_DP4j29j_M"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-LWFey_d41Cs"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-LWFey_d41Cs"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-OI6ZNJ4oDJI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-OI6ZNJ4oDJI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-lmZA1Iq11u0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-lmZA1Iq11u0"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-ozw04IvZl-8"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-ozw04IvZl-8"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-UY7QqpCMmAA"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-UY7QqpCMmAA"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-E1N_APHCHsE"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-E1N_APHCHsE"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-4WfA2HVHCD4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-4WfA2HVHCD4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-LT0ubwCDDrs"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-LT0ubwCDDrs"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-ZnkZmwiDObs"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-ZnkZmwiDObs"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-QseXH7mfTOk"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-QseXH7mfTOk"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-saYiYCNWeuY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-saYiYCNWeuY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-WHSdWBapbmU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-WHSdWBapbmU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-IWsPOywKfP4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-IWsPOywKfP4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-7ZshVYO403Y"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-7ZshVYO403Y"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-7SgiDRAdLi8"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-7SgiDRAdLi8"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-36h7iMAG-Qo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-36h7iMAG-Qo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-5GudjbDTzV0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-5GudjbDTzV0"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-WXHWItNKobw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-WXHWItNKobw"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-vXGKp8Yywds"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-vXGKp8Yywds"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-5pAeg44xdFA"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-5pAeg44xdFA"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-VFGN5lavwIg"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-VFGN5lavwIg"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-DURs9ya3_ZU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-DURs9ya3_ZU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-zTJWuKlcH7U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-zTJWuKlcH7U"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-FbvrrO3_iks"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-FbvrrO3_iks"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "062106c7-faba-4351-864c-6d4247104d3c",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-O8ru1t4_77o"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "78d2c3bf-8074-4098-b152-607229b7aaac",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-O8ru1t4_77o"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-gLu9RUUVUeY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-gLu9RUUVUeY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-ewXzpP-jnM8"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-ewXzpP-jnM8"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "082e5e11-4622-4df7-9123-969e2812584a",
+    "playerSlug": "sako",
+    "recommendationKey": "sako-30U8flBglDU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "082e5e11-4622-4df7-9123-969e2812584a",
+    "playerSlug": "sako",
+    "recommendationKey": "sako-30U8flBglDU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "66f1e8db-358c-4cd6-9e00-005162fec7eb",
+    "playerSlug": "ryusei",
+    "recommendationKey": "ryusei-LHKmS49O1Q8"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "fa32345b-a9a5-4113-b584-49009f54639d",
+    "playerSlug": "ryusei",
+    "recommendationKey": "ryusei-LHKmS49O1Q8"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "66f1e8db-358c-4cd6-9e00-005162fec7eb",
+    "playerSlug": "ryusei",
+    "recommendationKey": "ryusei-sSdTl3hedsc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "fa32345b-a9a5-4113-b584-49009f54639d",
+    "playerSlug": "ryusei",
+    "recommendationKey": "ryusei-sSdTl3hedsc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "062106c7-faba-4351-864c-6d4247104d3c",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "78d2c3bf-8074-4098-b152-607229b7aaac",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7a90ef97-9573-40e9-b2ad-10dbfcfc62af",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "53b40fa8-2fe7-4f68-8e81-6f60c61850f4",
+    "playerSlug": "johnny",
+    "recommendationKey": "johnny-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "recommendationKey": "kobayan-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "recommendationKey": "kobayan-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "a7c857d1-688b-420d-bfa2-5182d3b7d007",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "383d3822-4380-4a7e-abb0-dd2e1107e970",
+    "playerSlug": "moke",
+    "recommendationKey": "moke-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "7847d0ac-4911-4062-9a1e-0b140de1aaef",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b3f67376-cb75-4b44-8b2d-ef50058a1b98",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "082e5e11-4622-4df7-9123-969e2812584a",
+    "playerSlug": "sako",
+    "recommendationKey": "sako-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "082e5e11-4622-4df7-9123-969e2812584a",
+    "playerSlug": "sako",
+    "recommendationKey": "sako-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d",
+    "playerSlug": "takepi",
+    "recommendationKey": "takepi-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d",
+    "playerSlug": "takepi",
+    "recommendationKey": "takepi-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "recommendationKey": "yamaguchi-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "recommendationKey": "yamaguchi-RdpsP-M30sU"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7764028a-a2a1-4521-9d71-f767cb23522d",
+    "playerSlug": "yanai",
+    "recommendationKey": "yanai-RdpsP-M30sU"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0f15ca45-13d9-48c4-aec1-48f53b9ebec0",
+    "playerSlug": "acqua",
+    "recommendationKey": "acqua-4-TyAmHuxGY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-4-TyAmHuxGY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "062106c7-faba-4351-864c-6d4247104d3c",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "78d2c3bf-8074-4098-b152-607229b7aaac",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "8ee95472-918e-4e26-973f-229d013428bc",
+    "playerSlug": "cosa",
+    "recommendationKey": "cosa-4-TyAmHuxGY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7a90ef97-9573-40e9-b2ad-10dbfcfc62af",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-4-TyAmHuxGY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "53b40fa8-2fe7-4f68-8e81-6f60c61850f4",
+    "playerSlug": "johnny",
+    "recommendationKey": "johnny-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8123b68-73ab-47cd-8e96-66a19b742430",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-4-TyAmHuxGY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "a7c857d1-688b-420d-bfa2-5182d3b7d007",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-4-TyAmHuxGY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "383d3822-4380-4a7e-abb0-dd2e1107e970",
+    "playerSlug": "moke",
+    "recommendationKey": "moke-4-TyAmHuxGY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "7847d0ac-4911-4062-9a1e-0b140de1aaef",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b3f67376-cb75-4b44-8b2d-ef50058a1b98",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-4-TyAmHuxGY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-4-TyAmHuxGY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d",
+    "playerSlug": "takepi",
+    "recommendationKey": "takepi-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d",
+    "playerSlug": "takepi",
+    "recommendationKey": "takepi-4-TyAmHuxGY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-4-TyAmHuxGY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "recommendationKey": "yamaguchi-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "recommendationKey": "yamaguchi-4-TyAmHuxGY"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7764028a-a2a1-4521-9d71-f767cb23522d",
+    "playerSlug": "yanai",
+    "recommendationKey": "yanai-4-TyAmHuxGY"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0f15ca45-13d9-48c4-aec1-48f53b9ebec0",
+    "playerSlug": "acqua",
+    "recommendationKey": "acqua-IffWcLB_XMo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "8ee95472-918e-4e26-973f-229d013428bc",
+    "playerSlug": "cosa",
+    "recommendationKey": "cosa-IffWcLB_XMo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7a90ef97-9573-40e9-b2ad-10dbfcfc62af",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-IffWcLB_XMo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-IffWcLB_XMo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8123b68-73ab-47cd-8e96-66a19b742430",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-IffWcLB_XMo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "a7c857d1-688b-420d-bfa2-5182d3b7d007",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-IffWcLB_XMo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "383d3822-4380-4a7e-abb0-dd2e1107e970",
+    "playerSlug": "moke",
+    "recommendationKey": "moke-IffWcLB_XMo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-IffWcLB_XMo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "7847d0ac-4911-4062-9a1e-0b140de1aaef",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b3f67376-cb75-4b44-8b2d-ef50058a1b98",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-IffWcLB_XMo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-IffWcLB_XMo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-IffWcLB_XMo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7764028a-a2a1-4521-9d71-f767cb23522d",
+    "playerSlug": "yanai",
+    "recommendationKey": "yanai-IffWcLB_XMo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0f15ca45-13d9-48c4-aec1-48f53b9ebec0",
+    "playerSlug": "acqua",
+    "recommendationKey": "acqua-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "062106c7-faba-4351-864c-6d4247104d3c",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "78d2c3bf-8074-4098-b152-607229b7aaac",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7a90ef97-9573-40e9-b2ad-10dbfcfc62af",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8123b68-73ab-47cd-8e96-66a19b742430",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "recommendationKey": "kobayan-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "recommendationKey": "kobayan-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "a7c857d1-688b-420d-bfa2-5182d3b7d007",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "383d3822-4380-4a7e-abb0-dd2e1107e970",
+    "playerSlug": "moke",
+    "recommendationKey": "moke-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "7847d0ac-4911-4062-9a1e-0b140de1aaef",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b3f67376-cb75-4b44-8b2d-ef50058a1b98",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "082e5e11-4622-4df7-9123-969e2812584a",
+    "playerSlug": "sako",
+    "recommendationKey": "sako-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "082e5e11-4622-4df7-9123-969e2812584a",
+    "playerSlug": "sako",
+    "recommendationKey": "sako-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "recommendationKey": "yamaguchi-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "recommendationKey": "yamaguchi-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7764028a-a2a1-4521-9d71-f767cb23522d",
+    "playerSlug": "yanai",
+    "recommendationKey": "yanai-WfaUMDDZ6Es"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0f15ca45-13d9-48c4-aec1-48f53b9ebec0",
+    "playerSlug": "acqua",
+    "recommendationKey": "acqua-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "8ee95472-918e-4e26-973f-229d013428bc",
+    "playerSlug": "cosa",
+    "recommendationKey": "cosa-OyvntovP-BI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7a90ef97-9573-40e9-b2ad-10dbfcfc62af",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-OyvntovP-BI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-OyvntovP-BI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "53b40fa8-2fe7-4f68-8e81-6f60c61850f4",
+    "playerSlug": "johnny",
+    "recommendationKey": "johnny-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8123b68-73ab-47cd-8e96-66a19b742430",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-OyvntovP-BI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-OyvntovP-BI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "recommendationKey": "kobayan-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "recommendationKey": "kobayan-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "a7c857d1-688b-420d-bfa2-5182d3b7d007",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-OyvntovP-BI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "383d3822-4380-4a7e-abb0-dd2e1107e970",
+    "playerSlug": "moke",
+    "recommendationKey": "moke-OyvntovP-BI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-OyvntovP-BI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "7847d0ac-4911-4062-9a1e-0b140de1aaef",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b3f67376-cb75-4b44-8b2d-ef50058a1b98",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-OyvntovP-BI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-OyvntovP-BI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d",
+    "playerSlug": "takepi",
+    "recommendationKey": "takepi-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d",
+    "playerSlug": "takepi",
+    "recommendationKey": "takepi-OyvntovP-BI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-OyvntovP-BI"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7764028a-a2a1-4521-9d71-f767cb23522d",
+    "playerSlug": "yanai",
+    "recommendationKey": "yanai-OyvntovP-BI"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0f15ca45-13d9-48c4-aec1-48f53b9ebec0",
+    "playerSlug": "acqua",
+    "recommendationKey": "acqua-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "062106c7-faba-4351-864c-6d4247104d3c",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "78d2c3bf-8074-4098-b152-607229b7aaac",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "8ee95472-918e-4e26-973f-229d013428bc",
+    "playerSlug": "cosa",
+    "recommendationKey": "cosa-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7a90ef97-9573-40e9-b2ad-10dbfcfc62af",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "53b40fa8-2fe7-4f68-8e81-6f60c61850f4",
+    "playerSlug": "johnny",
+    "recommendationKey": "johnny-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8123b68-73ab-47cd-8e96-66a19b742430",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "recommendationKey": "kobayan-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "recommendationKey": "kobayan-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "a7c857d1-688b-420d-bfa2-5182d3b7d007",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "383d3822-4380-4a7e-abb0-dd2e1107e970",
+    "playerSlug": "moke",
+    "recommendationKey": "moke-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "7847d0ac-4911-4062-9a1e-0b140de1aaef",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b3f67376-cb75-4b44-8b2d-ef50058a1b98",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d",
+    "playerSlug": "takepi",
+    "recommendationKey": "takepi-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d",
+    "playerSlug": "takepi",
+    "recommendationKey": "takepi-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "recommendationKey": "yamaguchi-bHJ4IMV5cro"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "recommendationKey": "yamaguchi-bHJ4IMV5cro"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0f15ca45-13d9-48c4-aec1-48f53b9ebec0",
+    "playerSlug": "acqua",
+    "recommendationKey": "acqua-WVSMETYIztc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-WVSMETYIztc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7a90ef97-9573-40e9-b2ad-10dbfcfc62af",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-WVSMETYIztc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-WVSMETYIztc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8123b68-73ab-47cd-8e96-66a19b742430",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-WVSMETYIztc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-WVSMETYIztc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "recommendationKey": "kobayan-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "recommendationKey": "kobayan-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "a7c857d1-688b-420d-bfa2-5182d3b7d007",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-WVSMETYIztc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "383d3822-4380-4a7e-abb0-dd2e1107e970",
+    "playerSlug": "moke",
+    "recommendationKey": "moke-WVSMETYIztc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "7847d0ac-4911-4062-9a1e-0b140de1aaef",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b3f67376-cb75-4b44-8b2d-ef50058a1b98",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-WVSMETYIztc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-WVSMETYIztc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-WVSMETYIztc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "recommendationKey": "yamaguchi-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "recommendationKey": "yamaguchi-WVSMETYIztc"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7764028a-a2a1-4521-9d71-f767cb23522d",
+    "playerSlug": "yanai",
+    "recommendationKey": "yanai-WVSMETYIztc"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "recommendationKey": "2bassa-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0f15ca45-13d9-48c4-aec1-48f53b9ebec0",
+    "playerSlug": "acqua",
+    "recommendationKey": "acqua-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "recommendationKey": "akira-cammy-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "062106c7-faba-4351-864c-6d4247104d3c",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "78d2c3bf-8074-4098-b152-607229b7aaac",
+    "playerSlug": "bonchan",
+    "recommendationKey": "bonchan-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "8ee95472-918e-4e26-973f-229d013428bc",
+    "playerSlug": "cosa",
+    "recommendationKey": "cosa-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "recommendationKey": "dogura-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7a90ef97-9573-40e9-b2ad-10dbfcfc62af",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "recommendationKey": "hibiki-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "recommendationKey": "higuchi-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "53b40fa8-2fe7-4f68-8e81-6f60c61850f4",
+    "playerSlug": "johnny",
+    "recommendationKey": "johnny-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8123b68-73ab-47cd-8e96-66a19b742430",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "recommendationKey": "kincho-terry-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "recommendationKey": "kobayan-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "recommendationKey": "kobayan-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "a7c857d1-688b-420d-bfa2-5182d3b7d007",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "recommendationKey": "menard-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "383d3822-4380-4a7e-abb0-dd2e1107e970",
+    "playerSlug": "moke",
+    "recommendationKey": "moke-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "recommendationKey": "momochi-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "7847d0ac-4911-4062-9a1e-0b140de1aaef",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b3f67376-cb75-4b44-8b2d-ef50058a1b98",
+    "playerSlug": "ryukichi",
+    "recommendationKey": "ryukichi-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "082e5e11-4622-4df7-9123-969e2812584a",
+    "playerSlug": "sako",
+    "recommendationKey": "sako-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "082e5e11-4622-4df7-9123-969e2812584a",
+    "playerSlug": "sako",
+    "recommendationKey": "sako-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "recommendationKey": "shuto-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d",
+    "playerSlug": "takepi",
+    "recommendationKey": "takepi-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d",
+    "playerSlug": "takepi",
+    "recommendationKey": "takepi-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "recommendationKey": "torimeshi-eNlppthzST4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "recommendationKey": "yamaguchi-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "recommendationKey": "yamaguchi-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "7764028a-a2a1-4521-9d71-f767cb23522d",
+    "playerSlug": "yanai",
+    "recommendationKey": "yanai-eNlppthzST4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "beb71f4d-8a13-4a75-8a76-d4b3dd869e87",
+    "playerSlug": "daigo",
+    "recommendationKey": "daigo-DMaK8ybx1ao"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-DMaK8ybx1ao"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "002a208f-3804-4a01-908a-72d713390998",
+    "playerSlug": "hikaru-aki",
+    "recommendationKey": "hikaru-aki-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "002a208f-3804-4a01-908a-72d713390998",
+    "playerSlug": "hikaru-aki",
+    "recommendationKey": "hikaru-aki-DMaK8ybx1ao"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+    "playerSlug": "hinao",
+    "recommendationKey": "hinao-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+    "playerSlug": "hinao",
+    "recommendationKey": "hinao-DMaK8ybx1ao"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "recommendationKey": "itabashi-zangief-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "recommendationKey": "itabashi-zangief-DMaK8ybx1ao"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-DMaK8ybx1ao"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-DMaK8ybx1ao"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "e55d5abe-c01b-4f34-b4a6-6a68875b10f9",
+    "playerSlug": "mizuha",
+    "recommendationKey": "mizuha-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "d04a2537-3071-4ee5-944b-6241d8422b8a",
+    "playerSlug": "mocchi",
+    "recommendationKey": "mocchi-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "50e69eec-324e-4a14-ab05-d4a17153d499",
+    "playerSlug": "nauman",
+    "recommendationKey": "nauman-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "94514ef4-6035-4d16-8b7d-5b0b0e800efa",
+    "playerSlug": "otani",
+    "recommendationKey": "otani-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "35f872d6-5217-4ac5-8f5f-6cacfbd08671",
+    "playerSlug": "raoyamu",
+    "recommendationKey": "raoyamu-DMaK8ybx1ao"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "recommendationKey": "sahara-ed-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "recommendationKey": "sahara-ed-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b179dd80-e897-40a9-855f-5af4f3ac97ee",
+    "playerSlug": "takagi",
+    "recommendationKey": "takagi-DMaK8ybx1ao"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b873fd7a-8989-4012-af27-5048b973f880",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "42057adf-9dc1-422d-b991-867f140009f3",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-DMaK8ybx1ao"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "ebbdd60b-d733-486f-b6e2-e61d35f19f17",
+    "playerSlug": "adelie",
+    "recommendationKey": "adelie-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "002a208f-3804-4a01-908a-72d713390998",
+    "playerSlug": "hikaru-aki",
+    "recommendationKey": "hikaru-aki-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "002a208f-3804-4a01-908a-72d713390998",
+    "playerSlug": "hikaru-aki",
+    "recommendationKey": "hikaru-aki-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+    "playerSlug": "hinao",
+    "recommendationKey": "hinao-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+    "playerSlug": "hinao",
+    "recommendationKey": "hinao-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "recommendationKey": "itabashi-zangief-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "recommendationKey": "itabashi-zangief-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "8b2973ca-8f44-405e-b283-f18ebe8eb2af",
+    "playerSlug": "keib",
+    "recommendationKey": "keib-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "ae0979da-221d-4103-a359-ab77e07e425c",
+    "playerSlug": "mago",
+    "recommendationKey": "mago-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "e55d5abe-c01b-4f34-b4a6-6a68875b10f9",
+    "playerSlug": "mizuha",
+    "recommendationKey": "mizuha-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "d04a2537-3071-4ee5-944b-6241d8422b8a",
+    "playerSlug": "mocchi",
+    "recommendationKey": "mocchi-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "94514ef4-6035-4d16-8b7d-5b0b0e800efa",
+    "playerSlug": "otani",
+    "recommendationKey": "otani-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "recommendationKey": "sahara-ed-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "recommendationKey": "sahara-ed-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "a9168dfc-4134-46fc-b133-5ba6c8c229c8",
+    "playerSlug": "seiya",
+    "recommendationKey": "seiya-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b873fd7a-8989-4012-af27-5048b973f880",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "42057adf-9dc1-422d-b991-867f140009f3",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-IrZHAeV6Cx4"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "ebbdd60b-d733-486f-b6e2-e61d35f19f17",
+    "playerSlug": "adelie",
+    "recommendationKey": "adelie-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "beb71f4d-8a13-4a75-8a76-d4b3dd869e87",
+    "playerSlug": "daigo",
+    "recommendationKey": "daigo-3X1zd27viu0"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-3X1zd27viu0"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-3X1zd27viu0"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "recommendationKey": "itabashi-zangief-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "recommendationKey": "itabashi-zangief-3X1zd27viu0"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-3X1zd27viu0"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "8b2973ca-8f44-405e-b283-f18ebe8eb2af",
+    "playerSlug": "keib",
+    "recommendationKey": "keib-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "ae0979da-221d-4103-a359-ab77e07e425c",
+    "playerSlug": "mago",
+    "recommendationKey": "mago-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "e55d5abe-c01b-4f34-b4a6-6a68875b10f9",
+    "playerSlug": "mizuha",
+    "recommendationKey": "mizuha-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "d04a2537-3071-4ee5-944b-6241d8422b8a",
+    "playerSlug": "mocchi",
+    "recommendationKey": "mocchi-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "50e69eec-324e-4a14-ab05-d4a17153d499",
+    "playerSlug": "nauman",
+    "recommendationKey": "nauman-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "94514ef4-6035-4d16-8b7d-5b0b0e800efa",
+    "playerSlug": "otani",
+    "recommendationKey": "otani-3X1zd27viu0"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "35f872d6-5217-4ac5-8f5f-6cacfbd08671",
+    "playerSlug": "raoyamu",
+    "recommendationKey": "raoyamu-3X1zd27viu0"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "recommendationKey": "sahara-ed-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "recommendationKey": "sahara-ed-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b179dd80-e897-40a9-855f-5af4f3ac97ee",
+    "playerSlug": "takagi",
+    "recommendationKey": "takagi-3X1zd27viu0"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b873fd7a-8989-4012-af27-5048b973f880",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "42057adf-9dc1-422d-b991-867f140009f3",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-3X1zd27viu0"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "ebbdd60b-d733-486f-b6e2-e61d35f19f17",
+    "playerSlug": "adelie",
+    "recommendationKey": "adelie-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "beb71f4d-8a13-4a75-8a76-d4b3dd869e87",
+    "playerSlug": "daigo",
+    "recommendationKey": "daigo-OvwqJkBiJqw"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-OvwqJkBiJqw"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-OvwqJkBiJqw"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "002a208f-3804-4a01-908a-72d713390998",
+    "playerSlug": "hikaru-aki",
+    "recommendationKey": "hikaru-aki-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "002a208f-3804-4a01-908a-72d713390998",
+    "playerSlug": "hikaru-aki",
+    "recommendationKey": "hikaru-aki-OvwqJkBiJqw"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+    "playerSlug": "hinao",
+    "recommendationKey": "hinao-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+    "playerSlug": "hinao",
+    "recommendationKey": "hinao-OvwqJkBiJqw"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "recommendationKey": "itabashi-zangief-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "recommendationKey": "itabashi-zangief-OvwqJkBiJqw"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-OvwqJkBiJqw"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-OvwqJkBiJqw"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "8b2973ca-8f44-405e-b283-f18ebe8eb2af",
+    "playerSlug": "keib",
+    "recommendationKey": "keib-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "e55d5abe-c01b-4f34-b4a6-6a68875b10f9",
+    "playerSlug": "mizuha",
+    "recommendationKey": "mizuha-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "50e69eec-324e-4a14-ab05-d4a17153d499",
+    "playerSlug": "nauman",
+    "recommendationKey": "nauman-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "94514ef4-6035-4d16-8b7d-5b0b0e800efa",
+    "playerSlug": "otani",
+    "recommendationKey": "otani-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "35f872d6-5217-4ac5-8f5f-6cacfbd08671",
+    "playerSlug": "raoyamu",
+    "recommendationKey": "raoyamu-OvwqJkBiJqw"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "recommendationKey": "sahara-ed-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "recommendationKey": "sahara-ed-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "a9168dfc-4134-46fc-b133-5ba6c8c229c8",
+    "playerSlug": "seiya",
+    "recommendationKey": "seiya-OvwqJkBiJqw"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b873fd7a-8989-4012-af27-5048b973f880",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "42057adf-9dc1-422d-b991-867f140009f3",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-OvwqJkBiJqw"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "ebbdd60b-d733-486f-b6e2-e61d35f19f17",
+    "playerSlug": "adelie",
+    "recommendationKey": "adelie-uJmB3lK0WNo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-uJmB3lK0WNo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-uJmB3lK0WNo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+    "playerSlug": "hinao",
+    "recommendationKey": "hinao-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+    "playerSlug": "hinao",
+    "recommendationKey": "hinao-uJmB3lK0WNo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "recommendationKey": "itabashi-zangief-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "recommendationKey": "itabashi-zangief-uJmB3lK0WNo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-uJmB3lK0WNo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-uJmB3lK0WNo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "8b2973ca-8f44-405e-b283-f18ebe8eb2af",
+    "playerSlug": "keib",
+    "recommendationKey": "keib-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "ae0979da-221d-4103-a359-ab77e07e425c",
+    "playerSlug": "mago",
+    "recommendationKey": "mago-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "d04a2537-3071-4ee5-944b-6241d8422b8a",
+    "playerSlug": "mocchi",
+    "recommendationKey": "mocchi-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "50e69eec-324e-4a14-ab05-d4a17153d499",
+    "playerSlug": "nauman",
+    "recommendationKey": "nauman-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "94514ef4-6035-4d16-8b7d-5b0b0e800efa",
+    "playerSlug": "otani",
+    "recommendationKey": "otani-uJmB3lK0WNo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "35f872d6-5217-4ac5-8f5f-6cacfbd08671",
+    "playerSlug": "raoyamu",
+    "recommendationKey": "raoyamu-uJmB3lK0WNo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "recommendationKey": "sahara-ed-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "recommendationKey": "sahara-ed-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b179dd80-e897-40a9-855f-5af4f3ac97ee",
+    "playerSlug": "takagi",
+    "recommendationKey": "takagi-uJmB3lK0WNo"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b873fd7a-8989-4012-af27-5048b973f880",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "42057adf-9dc1-422d-b991-867f140009f3",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-uJmB3lK0WNo"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "beb71f4d-8a13-4a75-8a76-d4b3dd869e87",
+    "playerSlug": "daigo",
+    "recommendationKey": "daigo-6AialyrOq6U"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-6AialyrOq6U"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-6AialyrOq6U"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "002a208f-3804-4a01-908a-72d713390998",
+    "playerSlug": "hikaru-aki",
+    "recommendationKey": "hikaru-aki-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "002a208f-3804-4a01-908a-72d713390998",
+    "playerSlug": "hikaru-aki",
+    "recommendationKey": "hikaru-aki-6AialyrOq6U"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+    "playerSlug": "hinao",
+    "recommendationKey": "hinao-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+    "playerSlug": "hinao",
+    "recommendationKey": "hinao-6AialyrOq6U"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-6AialyrOq6U"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-6AialyrOq6U"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "8b2973ca-8f44-405e-b283-f18ebe8eb2af",
+    "playerSlug": "keib",
+    "recommendationKey": "keib-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "ae0979da-221d-4103-a359-ab77e07e425c",
+    "playerSlug": "mago",
+    "recommendationKey": "mago-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "e55d5abe-c01b-4f34-b4a6-6a68875b10f9",
+    "playerSlug": "mizuha",
+    "recommendationKey": "mizuha-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "50e69eec-324e-4a14-ab05-d4a17153d499",
+    "playerSlug": "nauman",
+    "recommendationKey": "nauman-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "94514ef4-6035-4d16-8b7d-5b0b0e800efa",
+    "playerSlug": "otani",
+    "recommendationKey": "otani-6AialyrOq6U"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "aad1fb9f-1890-4822-8959-32937215f949",
+    "playerSlug": "pugera",
+    "recommendationKey": "pugera-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "35f872d6-5217-4ac5-8f5f-6cacfbd08671",
+    "playerSlug": "raoyamu",
+    "recommendationKey": "raoyamu-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "a9168dfc-4134-46fc-b133-5ba6c8c229c8",
+    "playerSlug": "seiya",
+    "recommendationKey": "seiya-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b179dd80-e897-40a9-855f-5af4f3ac97ee",
+    "playerSlug": "takagi",
+    "recommendationKey": "takagi-6AialyrOq6U"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b873fd7a-8989-4012-af27-5048b973f880",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "42057adf-9dc1-422d-b991-867f140009f3",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-6AialyrOq6U"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "ebbdd60b-d733-486f-b6e2-e61d35f19f17",
+    "playerSlug": "adelie",
+    "recommendationKey": "adelie-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "beb71f4d-8a13-4a75-8a76-d4b3dd869e87",
+    "playerSlug": "daigo",
+    "recommendationKey": "daigo-BDKiKN1KD0s"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "recommendationKey": "fuudo-BDKiKN1KD0s"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "recommendationKey": "gachikun-BDKiKN1KD0s"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "002a208f-3804-4a01-908a-72d713390998",
+    "playerSlug": "hikaru-aki",
+    "recommendationKey": "hikaru-aki-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "002a208f-3804-4a01-908a-72d713390998",
+    "playerSlug": "hikaru-aki",
+    "recommendationKey": "hikaru-aki-BDKiKN1KD0s"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "recommendationKey": "itabashi-zangief-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "recommendationKey": "itabashi-zangief-BDKiKN1KD0s"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "recommendationKey": "john-takeuchi-BDKiKN1KD0s"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "recommendationKey": "jr-BDKiKN1KD0s"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "recommendationKey": "kawano-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "8b2973ca-8f44-405e-b283-f18ebe8eb2af",
+    "playerSlug": "keib",
+    "recommendationKey": "keib-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "ae0979da-221d-4103-a359-ab77e07e425c",
+    "playerSlug": "mago",
+    "recommendationKey": "mago-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "d04a2537-3071-4ee5-944b-6241d8422b8a",
+    "playerSlug": "mocchi",
+    "recommendationKey": "mocchi-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "94514ef4-6035-4d16-8b7d-5b0b0e800efa",
+    "playerSlug": "otani",
+    "recommendationKey": "otani-BDKiKN1KD0s"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "recommendationKey": "sahara-ed-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "recommendationKey": "sahara-ed-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "a9168dfc-4134-46fc-b133-5ba6c8c229c8",
+    "playerSlug": "seiya",
+    "recommendationKey": "seiya-BDKiKN1KD0s"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "recommendationKey": "tokido-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "b873fd7a-8989-4012-af27-5048b973f880",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-BDKiKN1KD0s"
+  },
+  {
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "playerId": "42057adf-9dc1-422d-b991-867f140009f3",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-BDKiKN1KD0s"
   }
 ]

@@ -1,4 +1,8 @@
 import { ws5SlugForApp } from './ws5-slug-alias.mjs';
+import { ws5LocalCorrections } from './ws5-local-corrections-20261120.mjs';
+// Review-only correction candidates, keyed by official TXT record. Never infers values; each entry carries its evidence.
+const COMMAND_CORRECTIONS = new Map(ws5LocalCorrections.commandCorrections.map(c => [c.sourceRecordKey+'|'+c.scheme, c]));
+const IDENTITY_ADOPTIONS = new Map(ws5LocalCorrections.identityAdoptions.map(a => [a.sourceRecordKey, a]));
 const FRAME = { startup:'startup_frame', active:'active_frame', recovery:'recovery_frame', onHit:'hit_frame', onBlock:'block_frame', damage:'damage' };
 const TYPES = { NORMAL:'normal', AIR:'normal', UNIQUE:'unique', TARGET_COMBO:'target_combo', SPECIAL:'special', SUPER:'super_art', THROW:'throw', PARRY:'system', DRIVE_STEP:'system', F_DASH:'system', B_DASH:'system' };
 const own = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
@@ -51,8 +55,14 @@ function canonicalMove(move, identity, record, existingMove) {
   const commands = [];
   const commandProvenance = {};
   for (const [scheme,key,sortOrder] of [['classic','command',0],['modern','command_modern',1]]) {
-    const value = own(raw,key) ? text(raw[key]) : null;
-    if (value) {
+    const official = own(raw,key) ? text(raw[key]) : null;
+    const correction = COMMAND_CORRECTIONS.get(record.sourceRecordKey+'|'+scheme);
+    const corrected = correction && (correction.mode === 'REPLACE' || (correction.mode === 'FILL_BLANK' && !official)) ? correction.commandText : null;
+    const value = corrected ?? official;
+    if (corrected) {
+      commands.push({ moveId:move.id, scheme, commandText:corrected, numericNotation:null, buttonNotation:null, conditionText:null, sortOrder });
+      commandProvenance[scheme] = 'LOCAL_CORRECTION_CANDIDATE';
+    } else if (value) {
       commands.push({ moveId:move.id, scheme, commandText:value, numericNotation:null, buttonNotation:null, conditionText:null, sortOrder });
       commandProvenance[scheme] = 'OFFICIAL_TXT_CANONICAL';
     } else {
@@ -84,10 +94,15 @@ export function connectCanonicalTxtCandidate(base, candidate, records, options =
   const pending = reason => ({ bundle:base, moveEvidence:{}, holds:[{reason}], mergedExisting:0, appended:0, releaseEligible:false, sourcePriorityChanges:[] });
   if (!characterSlug || characterSlug !== bundleCharacterSlug || characterSlug !== candidate?.characterSlug) return pending('CHARACTER_SCOPE_NOT_BOUND');
   if (typeof connectExisting !== 'function') return pending('EXISTING_CONNECTOR_NOT_SUPPLIED');
-  const moves=[], holds=[], sourcePriorityChanges=[];
+  const moves=[], holds=[], sourcePriorityChanges=[], adoptedFrom=Object.create(null);
   const stagedMoves=[...(base?.moves ?? [])];
-  for (const move of candidate.bundle.moves) {
-    const identity=candidate.identityByMoveId[move.id];
+  for (const candidateMove of candidate.bundle.moves) {
+    const identity=candidate.identityByMoveId[candidateMove.id];
+    // Adopt an already-existing ID for a TXT row proven identical (label + all frames). Existing IDs are never renamed.
+    const adoption=identity ? IDENTITY_ADOPTIONS.get(identity.sourceRecordKey) : null;
+    const move=adoption && !candidate.bundle.moves.some(other=>other.id===adoption.existingMoveId)
+      ? {...candidateMove,id:adoption.existingMoveId,slug:adoption.existingSlug,ws5IdentityAdoption:'LOCAL_CORRECTION_CANDIDATE'} : candidateMove;
+    if(move!==candidateMove) adoptedFrom[move.id]=candidateMove.id;
     const record=resolveRecord(records, identity?.sourceRecordKey, characterSlug);
     if (!identity || !record || !recordInScope(record, characterSlug) ||
         !sourceIdentityAgrees(record, identity) || typeof record.raw?.skill !== 'string' || !record.raw.skill.trim()) {
@@ -118,6 +133,8 @@ export function connectCanonicalTxtCandidate(base, candidate, records, options =
     moves.push(projected);
   }
   const stagedBase=base ? {...base,moves:stagedMoves} : null;
-  const result=connectExisting(stagedBase,{...candidate,bundle:{...candidate.bundle,moves}});
+  const identityByMoveId={...candidate.identityByMoveId}, moveEvidence={...(candidate.moveEvidence ?? {})};
+  for(const [id,from] of Object.entries(adoptedFrom)){ identityByMoveId[id]=candidate.identityByMoveId[from]; if(moveEvidence[from]) moveEvidence[id]=moveEvidence[from]; }
+  const result=connectExisting(stagedBase,{...candidate,identityByMoveId,moveEvidence,bundle:{...candidate.bundle,moves}});
   return {...result,holds:[...holds,...result.holds],releaseEligible:false,sourcePriorityChanges};
 }

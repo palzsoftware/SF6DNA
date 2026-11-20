@@ -1,4 +1,6 @@
 import { attachPlayerTeamResults, playerDetailSupplements } from "@/components/player-detail-supplements";
+import { headers } from "next/headers";
+import { playerLocalPreviewEnabled } from "@/lib/player-local-preview";
 import { Suspense } from "react";
 import { AutoYouTubeVideos, AutoVideoLoading } from "@/components/auto-youtube-videos";
 import { publicPageMetadata } from "@/lib/public-page-metadata";
@@ -23,7 +25,8 @@ export default async function PlayerDetailPage({ params, searchParams }: { param
   const directoryHref = safePlayerDirectoryReturn(query.returnTo);
   let researchEnvironment = "";
   try { researchEnvironment = new URL(process.env.NEXT_PUBLIC_SUPABASE_URL ?? "").hostname.split(".")[0]; } catch { /* Unknown environment keeps supplements hidden. */ }
-  const supplements = playerDetailSupplements(player, researchEnvironment);
-  const displayPlayer = attachPlayerTeamResults(player, researchEnvironment);
+  const preview = playerLocalPreviewEnabled(process.env, (await headers()).get("host"));
+  const supplements = playerDetailSupplements(player, researchEnvironment, preview);
+  const displayPlayer = attachPlayerTeamResults(player, researchEnvironment, undefined, preview);
   return <PlayerProfile {...supplements} automaticVideos={<Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[player.displayName]} /></Suspense>} player={displayPlayer} relatedVideos={related.items} relatedVideoState={related.state} directoryHref={directoryHref} />;
 }

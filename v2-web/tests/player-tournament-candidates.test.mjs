@@ -14,7 +14,8 @@ const VERIFIED_SOURCES = new Set([
   'https://esports.gg/news/fgc/ufa-2025-details-results',
   'https://www.inside-games.jp/release/prtimes/20260818/302058.html',
 ]);
-const items = rows.flatMap(row => row.display.sections.filter(s => s.title === TITLE).map(s => ({ row, items: s.items })));
+// 2026-11-19: 同じ内容を Production の実IDにも接続したため、11/17 の検証は Development 行で行う(Production行は同一内容であることを別途確認)
+const items = rows.filter(row => row.environment === 'vvsknbmlfvvnrmgtyhbf').flatMap(row => row.display.sections.filter(s => s.title === TITLE).map(s => ({ row, items: s.items })));
 
 test('15 source-checked results for 12 SFL2026 players, all still PENDING', () => {
   const flat = items.flatMap(x => x.items);
@@ -44,5 +45,18 @@ test('no duplicate result per player and no character claims', () => {
   for (const { row, items: list } of items) {
     assert.equal(new Set(list.map(i => i.text)).size, list.length, row.playerSlug);
     assert.ok(list.every(i => !('characters' in i)));
+  }
+});
+
+// 2026-11-19 追加: 環境を問わず、この見出しの全行が11/17検証済みの出典・形式・PENDINGであること(本番接続分も同じ条件)
+test('every environment row under the major-tournament title uses verified sources and stays PENDING', () => {
+  const all = rows.flatMap(row => row.display.sections.filter(s => s.title === TITLE).map(s => ({ row, items: s.items })));
+  assert.ok(all.length >= items.length);
+  for (const { row, items: list } of all) {
+    assert.equal(row.publicationApproval, 'PENDING');
+    for (const item of list) {
+      assert.ok(VERIFIED_SOURCES.has(item.sourceUrl), `${row.environment}:${row.playerSlug}: ${item.sourceUrl}`);
+      assert.match(item.text, /^(EVO Japan 2025|EVO 2025|EVO Japan 2026|CAPCOM CUP 12|UFA 2025|CEO 2026): (優勝|[1-8]位|同率[57]位)$/);
+    }
   }
 });

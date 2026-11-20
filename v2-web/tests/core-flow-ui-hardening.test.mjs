@@ -60,7 +60,7 @@ test('successful signup retains confirmation messaging without redirect', async 
 test('Daily15 closes first and other cards and handles a changed plan', () => {
   const h = hooks(); let ids = ['a', 'b', 'c'];
   const { DailyTrainingPlanner } = load('daily-training-planner.tsx', {
-    react: h.react, 'react/jsx-runtime': jsx, 'next/link': { default: 'a' },
+    react: { ...h.react, useId: () => 'daily-training-fixture' }, 'react/jsx-runtime': jsx, 'next/link': { default: 'a' },
     'next/navigation': { useRouter: () => ({ refresh: () => { throw Error('unexpected refresh'); } }) },
     '@/lib/use-personalization-owner': { usePersonalizationOwner: () => ({ state: { status: 'ready', owner: 'guest', version: 1 }, isCurrent: () => true }) },
     '@/lib/personalization-storage': { getCharacterStatuses: () => ({}) },
@@ -92,4 +92,25 @@ test('Daily15 closes first and other cards and handles a changed plan', () => {
   list[1].props.onToggle(); list = cards(); assert.deepEqual(list.map(x => x.props.expanded), [false, true, false]);
   list[1].props.onToggle(); list = cards(); assert.deepEqual(list.map(x => x.props.expanded), [false, false, false]);
   list[2].props.onToggle(); ids = ['d', 'e', 'f']; list = cards(); assert.deepEqual(list.map(x => x.props.expanded), [true, false, false]);
+});
+
+test('Daily15 auth error shows a heading and recovery links without internal details', () => {
+  const h = hooks();
+  const { DailyTrainingPlanner } = load('daily-training-planner.tsx', {
+    react: { ...h.react, useId: () => 'daily-training-fixture' }, 'react/jsx-runtime': jsx, 'next/link': { default: 'a' },
+    'next/navigation': { useRouter: () => ({ refresh: () => { throw Error('unexpected refresh'); } }) },
+    '@/lib/use-personalization-owner': { usePersonalizationOwner: () => ({ state: { status: 'error' }, isCurrent: () => false }) },
+    '@/lib/personalization-storage': {}, '@/lib/daily-diagnosis-input': {}, '@/lib/daily-practice-owner': {},
+    '@/lib/daily-practice-owner-lock': {}, './daily-training-quality-card': { DailyTrainingQualityCard: () => null },
+    '@/lib/daily-practice': {}, '@/lib/daily-training': { isImprovementFocus: () => false }, './daily-training-planner.module.css': { default: {} },
+  });
+  h.reset();
+  const tree = DailyTrainingPlanner({ dateKey: '2026-09-30', request: null, context: { state: 'empty', primaryIssue: null } });
+  assert.equal(tree.props.role, 'alert');
+  const nodes = [];
+  const walk = node => { if (!node || typeof node !== 'object') return; nodes.push(node); [node.props?.children].flat(Infinity).forEach(walk); };
+  walk(tree);
+  assert.ok(nodes.some(n => n.type === 'h1'), 'page heading present in error state');
+  const hrefs = nodes.filter(n => n.type === 'a').map(n => n.props.href);
+  assert.deepEqual(hrefs, ['/me/training', '/']);
 });

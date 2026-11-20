@@ -32,7 +32,7 @@ test("all 31 character routes select the V2 shared template in RC Preview", () =
   assert.match(page,/<CharacterUnifiedPage/);
   assert.match(page,/resolveCharacterDetailData\(character\.id, character\.slug, previewToken\)/);
   assert.match(page,/process\.env\.VERCEL_ENV === "production" \? null : normalizeDevicePreviewToken/);
-  assert.match(page,/localReferences=\{!production \?/);
+  assert.match(page,/localReferences=\{!review && !production \?/);
   assert.doesNotMatch(page,/pilotBundle && previewToken/);
 
 });

@@ -88,7 +88,7 @@ function isDiagnosisHistoryRecord(value: unknown): value is DiagnosisHistoryReco
   return typeof record.id === "string" && record.id.length > 0 &&
     typeof record.diagnosisSlug === "string" && record.diagnosisSlug.length > 0 &&
     typeof record.diagnosisTitle === "string" && typeof record.diagnosisType === "string" &&
-    typeof record.completedAt === "string" && Array.isArray(record.topResults) &&
+    typeof record.completedAt === "string" && Number.isFinite(Date.parse(record.completedAt)) && Array.isArray(record.topResults) &&
     record.topResults.every((item) => item && typeof item.key === "string" &&
       typeof item.label === "string" && typeof item.score === "number" && Number.isFinite(item.score));
 }

@@ -22,14 +22,17 @@ const themeInit = `(function(){var m='dark',a='standard';try{m=localStorage.getI
 function getMetadataBase() {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
   const vercelUrl = process.env.VERCEL_URL?.trim();
-  const candidate = explicit || (vercelUrl ? `https://${vercelUrl}` : null);
-  if (!candidate) return undefined;
-
-  try {
-    return new URL(candidate);
-  } catch {
-    return undefined;
+  for (const candidate of [explicit, vercelUrl && `https://${vercelUrl}`]) {
+    if (!candidate) continue;
+    try {
+      const base = new URL(candidate);
+      if (["https:", "http:"].includes(base.protocol) && !base.username && !base.password &&
+          base.pathname === "/" && !base.search && !base.hash) return base;
+    } catch {
+      // Try the deployment URL when the explicit site URL is malformed.
+    }
   }
+  return undefined;
 }
 
 export const metadata: Metadata = {
@@ -70,6 +73,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <nav className="site-nav desktop-global-nav" aria-label="主要ナビゲーション">
               <Link href="/characters">キャラクター</Link>
               <Link href="/diagnosis">診断</Link>
+              <Link href="/me/training">15分練習</Link>
               <Link href="/search">検索</Link>
               <Link href="/players">プレイヤー</Link>
               <Link href="/videos">動画</Link>
@@ -79,6 +83,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <nav className="site-nav" aria-label="モバイル探索メニュー">
               <Link href="/characters">キャラクター</Link>
               <Link href="/diagnosis">診断</Link>
+              <Link href="/me/training">15分練習</Link>
               <Link href="/search">検索</Link>
               <Link href="/players">プレイヤー</Link>
               <Link href="/videos">動画</Link>
@@ -94,7 +99,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div className="site-footer__brand"><strong>SF6DNA</strong><p>SF6の情報を、根拠と一緒に。</p></div>
             <nav className="site-footer__nav" aria-label="補助ナビゲーション">
               <div><strong>ガイド</strong><Link href="/about">SF6DNAについて</Link><Link href="/faq">よくある質問</Link><Link href="/feedback">フィードバック</Link></div>
-              <div><strong>コンテンツ</strong><Link href="/characters">キャラクター</Link><Link href="/players">プレイヤー</Link><Link href="/videos">動画</Link><Link href="/diagnosis">診断</Link></div>
+              <div><strong>練習とコンテンツ</strong><Link href="/diagnosis">診断</Link><Link href="/me/training">15分練習</Link><Link href="/characters">キャラクター</Link><Link href="/players">プレイヤー</Link><Link href="/videos">動画</Link></div>
               <div><strong>情報と方針</strong><Link href="/sources">情報源</Link><Link href="/privacy">プライバシー</Link><Link href="/terms">利用規約</Link><Link href="/disclaimer">免責事項</Link></div>
               <div><strong>その他</strong><Link href="/changelog">更新履歴</Link><Link href="/contact">お問い合わせ</Link><Link href="/auth">アカウント</Link></div>
             </nav>

@@ -327,7 +327,7 @@ export async function getTournamentBySlug(
 
 export async function getVideoBySlug(
   slug: string,
-): Promise<SimpleDetail | null> {
+): Promise<(SimpleDetail & { relatedCharacters: Array<{ slug: string; name: string }> }) | null> {
   if (!configured()) return null;
 
   const supabase = getSupabaseServerClient();
@@ -380,7 +380,7 @@ export async function getVideoBySlug(
     ),
   );
 
-  let relatedCharacters: string[] = [];
+  let relatedCharacters: Array<{ slug: string; name: string }> = [];
 
   if (characterIds.length) {
     const {
@@ -388,7 +388,7 @@ export async function getVideoBySlug(
       error: characterError,
     } = await supabase
       .from("characters")
-      .select("id, name_ja, status")
+      .select("id, slug, name_ja, status")
       .in("id", characterIds)
       .eq("status", "published");
 
@@ -398,23 +398,12 @@ export async function getVideoBySlug(
         characterError.message,
       );
     } else {
-      const nameById = new Map(
-        (characters ?? []).map((character) => [
-          String(character.id),
-          String(character.name_ja),
-        ]),
-      );
-
-      relatedCharacters = (relationRows ?? [])
-        .map(
-          (row) =>
-            nameById.get(String(row.entity_id)) ??
-            null,
-        )
-        .filter(
-          (name): name is string =>
-            Boolean(name),
-        );
+      const characterById = new Map((characters ?? []).map(character => [String(character.id), character]));
+      relatedCharacters = characterIds.flatMap(id => {
+        const character = characterById.get(id);
+        if (!character || typeof character.slug !== "string" || typeof character.name_ja !== "string") return [];
+        return [{ slug: character.slug, name: character.name_ja }];
+      });
     }
   }
 
@@ -441,13 +430,8 @@ export async function getVideoBySlug(
       ["プラットフォーム", data.platform ?? null],
       ["種類", data.video_type ?? null],
       ["公開日", data.published_at ?? null],
-      [
-        "関連キャラクター",
-        relatedCharacters.length
-          ? relatedCharacters.join(" / ")
-          : null,
-      ],
     ],
+    relatedCharacters,
     sources,
     externalLink:
       videoUrl.startsWith("https:")

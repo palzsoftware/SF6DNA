@@ -313,7 +313,9 @@ function DiagnosisSession({ diagnosis, ownerContext }: {
       const fingerprint = JSON.stringify({ diagnosisId: diagnosis.id, resultPayload, answerPayload });
       const storageKey = saveRequestKey(saveOwner, diagnosis.slug);
       if (!storageKey) throw new Error("diagnosis_owner_invalid");
+      const rawRequest = window.localStorage.getItem(storageKey);
       const stored = readPendingSave(storageKey);
+      if (rawRequest !== null && !stored) throw new Error("diagnosis_request_unreadable");
       const pending = stored?.fingerprint === fingerprint
         ? stored
         : { requestId: createRequestId(), fingerprint };

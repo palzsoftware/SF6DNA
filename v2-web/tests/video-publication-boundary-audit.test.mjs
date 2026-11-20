@@ -69,8 +69,13 @@ test('a changed URL (including YouTube ID letter case) or title drops the annota
   assert.deepEqual(registered.getRegisteredVideoLearning([{ ...exact, title: `${exact.title} ` }], DEV_URL), []);
 });
 
-test('8 Player video binding candidates resolve to existing videos with matching slugs', () => {
-  assert.equal(bindings.length, 8);
+test('Player video binding candidates resolve to existing videos with matching slugs', () => {
+  // 2026-11-19: 動画56件の統合で 8件 → 増加。件数ではなく全件の整合を確認する
+  assert.ok(bindings.length >= 8);
+  // 2026-11-19 以前の8件は、環境・ID・動画キーとも1件も欠けずに残っていること
+  const ORIGINAL_8 = [["wnuxaxbrpudyypzdbdho", "830621f4-38aa-49e3-a320-31621e983fb5", "blaz-Z9xK6zsfQ6o"], ["wnuxaxbrpudyypzdbdho", "15778fa3-31cb-4567-851f-5d443cd2e0ac", "chris-wong-_DbJcZXq-qo"], ["wnuxaxbrpudyypzdbdho", "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6", "dogura-uWenGJimPRE"], ["vvsknbmlfvvnrmgtyhbf", "b1d6c5b4-9157-455a-84b5-6b5c2ecb80ee", "kakeru-Z9xK6zsfQ6o"], ["vvsknbmlfvvnrmgtyhbf", "830621f4-38aa-49e3-a320-31621e983fb5", "blaz-Z9xK6zsfQ6o"], ["vvsknbmlfvvnrmgtyhbf", "3fd5264b-4ab4-4dc6-9efe-1bea209c4573", "uma-_DbJcZXq-qo"], ["vvsknbmlfvvnrmgtyhbf", "15778fa3-31cb-4567-851f-5d443cd2e0ac", "chris-wong-_DbJcZXq-qo"], ["vvsknbmlfvvnrmgtyhbf", "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6", "dogura-uWenGJimPRE"]];
+  const now = new Set(bindings.map(b => `${b.environment}:${b.playerId}:${b.recommendationKey}`));
+  for (const [e, i, k] of ORIGINAL_8) assert.ok(now.has(`${e}:${i}:${k}`), k);
   const keys = new Map(videos.map(v => [v.key, v]));
   for (const b of bindings) {
     assert.ok([DEV, PROD].includes(b.environment), b.recommendationKey);
@@ -78,12 +83,19 @@ test('8 Player video binding candidates resolve to existing videos with matching
     assert.ok(video, b.recommendationKey);
     assert.equal(video.playerSlug, b.playerSlug);
   }
-  assert.equal(new Set(bindings.map(b => `${b.environment}:${b.playerId}:${b.recommendationKey}`)).size, 8);
+  assert.equal(new Set(bindings.map(b => `${b.environment}:${b.playerId}:${b.recommendationKey}`)).size, bindings.length);
 });
 
 test('binding requires same environment, UUID and slug', () => {
   const dogura = { id: '0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6', slug: 'dogura' };
-  assert.deepEqual(boundPlayerVideoRecommendations(dogura, DEV, videos, bindings).map(v => v.key), ['dogura-uWenGJimPRE']);
+  // 2026-11-19: どぐらの動画が追加されたため、元の動画を含み、すべてどぐらの動画であることを確認する
+  const doguraKeys = boundPlayerVideoRecommendations(dogura, DEV, videos, bindings).map(v => v.key);
+  assert.ok(doguraKeys.includes('dogura-uWenGJimPRE'));
+  assert.ok(doguraKeys.every(k => k.startsWith('dogura-')));
+  // 関数の結果が、データ上の接続(同じ環境・同じID・同じslug)と過不足なく一致すること
+  const expected = [...new Set(bindings.filter(b => b.environment === DEV && b.playerId === dogura.id && b.playerSlug === dogura.slug).map(b => b.recommendationKey))]
+    .filter(k => videos.some(v => v.key === k && v.playerSlug === dogura.slug));
+  assert.deepEqual([...doguraKeys].sort(), expected.sort());
   assert.deepEqual(boundPlayerVideoRecommendations(dogura, 'unknown', videos, bindings), []);
   assert.deepEqual(boundPlayerVideoRecommendations({ ...dogura, slug: 'other' }, DEV, videos, bindings), []);
   assert.deepEqual(boundPlayerVideoRecommendations({ ...dogura, id: '00000000-0000-4000-8000-000000000000' }, DEV, videos, bindings), []);

@@ -48,13 +48,13 @@ const browseLinks = [
 const learnLinks = [
   {
     phase: "PLAYER ARCHIVE", icon: "player", href: "/players",
-    title: "憧れのプレイから、ヒントを。",
+    title: "プレイヤー図鑑",
     description: "名前・所属・使用キャラから探せるプレイヤー図鑑。",
     action: "プレイヤー図鑑へ",
   },
   {
     phase: "VIDEO LIBRARY", icon: "video", href: "/videos",
-    title: "今、見たい動画にたどり着く。",
+    title: "動画リスト",
     description: "キャラクターや目的で絞り込み、見たいものを整理。",
     action: "動画リストへ",
   },
@@ -135,8 +135,7 @@ export default async function HomePage() {
 
       <section className="experience-learn" aria-labelledby="learn-title">
         <div className="section-heading">
-          <h2 id="learn-title">見つけて、学ぶ。</h2>
-          <p>気になるプレイヤーや動画から、次の一歩へ。</p>
+          <h2 id="learn-title">プレイヤーと動画を探す</h2>
         </div>
         <div className="home-learn-grid">
           {learnLinks.map((item) => (

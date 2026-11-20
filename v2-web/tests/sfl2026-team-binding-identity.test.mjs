@@ -36,14 +36,21 @@ const supplements = loadSource('../src/components/player-detail-supplements.tsx'
   '../data/player-research/videos.json': esm([]),
   '../data/player-research/video-bindings.json': esm([]),
   '../data/player-research/research-bindings.json': esm({}),
+  // 2026-11-19: ローカル確認スイッチ。本テストは公開ゲートを検証するため常に無効(false)で読み込む
+  '../lib/player-local-preview': { playerLocalPreviewEnabled: () => false },
 });
 const { resolveTeamBindingIdentities, attachPlayerTeamResults } = supplements;
 const player = (id, slug) => ({ id, slug, displayName: slug, aliases: [], characters: [], sources: [], tournamentResults: [] });
 const approve = rows => rows.map(row => ({ ...row, publicationApproval: 'APPROVED' }));
 
 test('all 48 SFL2026 team rows resolve to unique Development UUID+slug identities', () => {
-  const resolved = resolveTeamBindingIdentities(teamBindings, DEV);
+  // 2026-11-19: SFL2026の48行に限定して検証する(ユーザー提供の11名の行は note で区別し、別テストで検証)
+  const resolved = resolveTeamBindingIdentities(teamBindings.filter(r => !String(r.note ?? '').startsWith('メイン・サブは2026-11-18')), DEV);
   assert.equal(resolved.length, 48);
+  // 除外したのはユーザー提供11名の行だけで、仮slug・identityVariantsを持つ行は除外されていないこと
+  const excluded = teamBindings.filter(r => r.environment === DEV && String(r.note ?? '').startsWith('メイン・サブは2026-11-18'));
+  assert.ok(excluded.every(r => !r.identityVariants && !/^sfl2026-\d+$/.test(r.playerSlug)));
+  assert.equal(teamBindings.filter(r => r.environment === DEV).length, 48 + excluded.length);
   assert.equal(new Set(resolved.map(r => r.playerId)).size, 48);
   assert.equal(new Set(resolved.map(r => r.playerSlug)).size, 48);
   assert.ok(resolved.every(r => r.display.slug === r.playerSlug));

@@ -34,18 +34,30 @@ export default async function VideosPage({ searchParams }: {
     <div className="site-shell page-stack experience-video">
       <section className="hero">
         <p className="eyebrow">VIDEOS</p>
-        <h1>動画から、次のヒントを。</h1>
+        <h1>動画リスト</h1>
         <p>攻略・対戦・大会などの動画を探せます。</p><p className="experience-video-note">お気に入りは「また見たい動画」、視聴済みは「見終えた動画」の目印です。</p>
       </section>
 
-      {hasServerFilters ? <p>指定された条件で表示しています。 <Link href="/videos">指定条件を解除</Link></p> : null}
-      <VideoSearchForm key={JSON.stringify(params)} filters={filters} params={params} />
-      <Suspense key={JSON.stringify(params)} fallback={<AutoVideoLoading />}><VideoSearchResults filters={filters}
+      <nav aria-label="動画リスト内の移動">
+        <ul>
+          <li><a href="#youtube-search">YouTubeで探す</a></li>
+          <li><a href="#listed-videos">掲載動画を見る</a></li>
+        </ul>
+      </nav>
+
+      {hasServerFilters || invalidFilter ? (
+        <p>{invalidFilter ? "指定された条件を確認できませんでした。" : "指定された条件で表示しています。"} <Link href="/videos">指定条件を解除</Link></p>
+      ) : null}
+      <section id="youtube-search" aria-labelledby="youtube-search-title">
+      <h2 id="youtube-search-title">YouTube検索</h2>
+      <VideoSearchForm key={`form:${JSON.stringify(params)}`} filters={filters} params={params} />
+      <Suspense key={`results:${JSON.stringify(params)}`} fallback={<AutoVideoLoading />}><VideoSearchResults filters={filters}
         exact={{ playerId, characterId, tournamentId, player, invalidFilter }} /></Suspense>
+      </section>
 
       <Suspense fallback={null}><LatestYouTubeVideos /></Suspense>
 
-      <section aria-label="掲載動画"><h2>掲載動画</h2><p>こちらは掲載済みの動画です。上の検索条件はYouTube検索に使用します。</p>
+      <section id="listed-videos" aria-labelledby="listed-videos-title"><h2 id="listed-videos-title">掲載動画</h2>
       {result.state === "SUCCESS_WITH_RESULTS" ? (
         <VideoLibrary videos={result.items} learningRecords={getRegisteredVideoLearning(result.items)} initialPlayer={playerId ? null : player} key={[player, playerId, characterId, tournamentId].join(":")} />
       ) : result.state === "SUCCESS_EMPTY" ? <p>掲載動画は準備中です。上のYouTube検索もご利用ください。</p>

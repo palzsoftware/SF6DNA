@@ -1,0 +1,208 @@
+{
+  "guide-ref:SF6DNA-AKUMA-R5-001": [
+    {
+      "nameJa": "強 豪昇龍拳",
+      "moveSlug": "akuma-gou-shoryu-h",
+      "reviewId": "238fd74b-2cfe-44f8-8514-889bb8fa3ad7"
+    }
+  ],
+  "guide-ref:SF6DNA-AKUMA-R5-034": [
+    {
+      "nameJa": "強 豪昇龍拳",
+      "moveSlug": "akuma-gou-shoryu-h",
+      "reviewId": "238fd74b-2cfe-44f8-8514-889bb8fa3ad7"
+    }
+  ],
+  "guide-ref:SF6DNA-BLANKA-R5-003": [
+    {
+      "nameJa": "中 ローリングアタック",
+      "moveSlug": "blanka-rolling-m",
+      "reviewId": "7e6426db-209c-4087-8b1d-6d4e4ff4d071"
+    }
+  ],
+  "guide-ref:SF6DNA-CVIPER-R5-037": [
+    {
+      "nameJa": "強 サンダースラップ",
+      "moveSlug": "c-viper-thunder-dash-214hp",
+      "reviewId": "e4ffd9f9-782f-4409-ad16-9f31e8b59f9c"
+    }
+  ],
+  "guide-ref:cammy-r4-record-0079": [
+    {
+      "nameJa": "強 スパイラルアロー",
+      "moveSlug": "cammy-spiral-h",
+      "reviewId": "b5d594f6-2302-4b9b-8d8d-4deedc32697e"
+    },
+    {
+      "nameJa": "強 キャノンスパイク",
+      "moveSlug": "cammy-spike-h",
+      "reviewId": "bf240fb8-69c0-4e92-a450-4e4f1bfb3f3d"
+    }
+  ],
+  "guide-ref:cammy-r4-record-0099": [
+    {
+      "nameJa": "中 スパイラルアロー",
+      "moveSlug": "cammy-spiral-m",
+      "reviewId": "b59dd7ce-b8fa-4d16-b242-5a65e23681fb"
+    }
+  ],
+  "guide-ref:SF6DNA-CHUNLI-R5-030": [
+    {
+      "nameJa": "発勁",
+      "moveSlug": "chun-li-frame-021",
+      "reviewId": "5c254fcf-742b-4943-bdb8-1ab6ae4252f5"
+    }
+  ],
+  "guide-ref:deejay-r5-0003": [
+    {
+      "nameJa": "クイックローリングソバット",
+      "moveSlug": "dee-jay-sobat-m",
+      "reviewId": "033a5787-d194-4a0f-b05d-6686f04601fe"
+    }
+  ],
+  "guide-ref:SF6DNA-12-EHONDA-R5-0001": [
+    {
+      "nameJa": "弱 百裂張り手",
+      "moveSlug": "e-honda-hhs-l",
+      "reviewId": "7145f149-c0d8-45e3-a48b-fd84e0609faa"
+    }
+  ],
+  "guide-ref:SF6DNA-12-EHONDA-R5-0089": [
+    {
+      "nameJa": "弱 百裂張り手",
+      "moveSlug": "e-honda-hhs-l",
+      "reviewId": "7145f149-c0d8-45e3-a48b-fd84e0609faa"
+    }
+  ],
+  "guide-ref:SF6DNA-ED-R5-001": [
+    {
+      "nameJa": "中 サイコブリッツ",
+      "moveSlug": "ed-psycho-blitz-m",
+      "reviewId": "c49df832-9544-4ef2-8f68-f6e5973a0e31"
+    }
+  ],
+  "guide-ref:SF6DNA-ED-R5-040": [
+    {
+      "nameJa": "強 サイコブリッツ",
+      "moveSlug": "ed-psycho-blitz-h",
+      "reviewId": "e3cc2a7a-d7f2-4512-b1f2-ff3f660260ed"
+    }
+  ],
+  "guide-ref:SF6DNA-ELENA-R5-005": [
+    {
+      "nameJa": "中 ライノホーン",
+      "moveSlug": "elena-rhino-horn-236mk",
+      "reviewId": "ac7bab5a-33b7-41e1-bb63-d7930a9ae0e4"
+    }
+  ],
+  "guide-ref:SF6DNA-ELENA-R5-036": [
+    {
+      "nameJa": "強スピンサイズ",
+      "moveSlug": "elena-spinning-scythe-214hk",
+      "reviewId": "fbe394c7-3820-491f-a365-50769eca14ac"
+    }
+  ],
+  "guide-ref:SF6DNA-ELENA-R5-079": [
+    {
+      "nameJa": "弱 リンクシング",
+      "moveSlug": "elena-lynx-song-236lp",
+      "reviewId": "61398b6e-3e45-4ac8-8350-545f06d3ac47"
+    }
+  ],
+  "guide-ref:SF6DNA-MODERN-14-0036": [
+    {
+      "nameJa": "強 サマーソルトキック",
+      "moveSlug": "guile-frame-042",
+      "reviewId": "e9f02f89-e447-4d3d-95ba-a7062d5587b3"
+    },
+    {
+      "nameJa": "弱 ソニックブレイド",
+      "moveSlug": "guile-frame-045",
+      "reviewId": "89e18dc9-6db0-4e6e-a45d-519b0fdaa637"
+    }
+  ],
+  "guide-ref:juri-r5-legacy-juri-r4-record-0008": [
+    {
+      "nameJa": "中 風破刃",
+      "moveSlug": "juri-fuhajin-m",
+      "reviewId": "c0222f7b-ade2-40b3-9306-1c73c9e3cc5a"
+    }
+  ],
+  "guide-ref:juri-r5-legacy-juri-r4-record-0013": [
+    {
+      "nameJa": "中 風破刃",
+      "moveSlug": "juri-fuhajin-m",
+      "reviewId": "c0222f7b-ade2-40b3-9306-1c73c9e3cc5a"
+    }
+  ],
+  "guide-ref:KIM26-C-003": [
+    {
+      "nameJa": "弱 流転一文字",
+      "moveSlug": "kimberly-frame-053",
+      "reviewId": "64885448-37ed-4e4d-86e3-6ba61c672202"
+    }
+  ],
+  "guide-ref:LK26-COMBO-003": [
+    {
+      "nameJa": "弱 フラッシュナックル",
+      "moveSlug": "luke-flash-knuckle-l",
+      "reviewId": "53070580-449c-4fcb-b6f5-bb97de387ba1"
+    }
+  ],
+  "guide-ref:LK26-SETPLAY-001": [
+    {
+      "nameJa": "弱 フラッシュナックル",
+      "moveSlug": "luke-flash-knuckle-l",
+      "reviewId": "53070580-449c-4fcb-b6f5-bb97de387ba1"
+    }
+  ],
+  "guide-ref:SF6DNA-BISON-R5-008": [
+    {
+      "nameJa": "強 バックフィストコンボ",
+      "moveSlug": "m-bison-backfist-h",
+      "reviewId": "f7d9014b-5cad-4add-a2cc-8b5e3f7f2ca8"
+    }
+  ],
+  "guide-ref:MN26-COMBO-015": [
+    {
+      "nameJa": "強 ロン・ポワン",
+      "moveSlug": "manon-rond-point-h",
+      "reviewId": "dbde2cbc-e04d-4c39-8847-4eaf65282637"
+    }
+  ],
+  "guide-ref:marisa-deep-combo-003": [
+    {
+      "nameJa": "中 グラディウス",
+      "moveSlug": "marisa-gladius-m",
+      "reviewId": "b7eadec4-8fd6-4a2c-8bec-7e850cce87a5"
+    }
+  ],
+  "guide-ref:marisa-deep-string-001": [
+    {
+      "nameJa": "中 グラディウス",
+      "moveSlug": "marisa-gladius-m",
+      "reviewId": "b7eadec4-8fd6-4a2c-8bec-7e850cce87a5"
+    }
+  ],
+  "guide-ref:SF6DNA-TERRY-R5-039": [
+    {
+      "nameJa": "弱 ライジングタックル",
+      "moveSlug": "terry-rising-tackle-l",
+      "reviewId": "8f186d65-1026-4806-b232-8bb1914471f1"
+    }
+  ],
+  "guide-ref:SF6DNA-YASMINE-R5-005": [
+    {
+      "nameJa": "強 ダロイ・ン・トゥビグ",
+      "moveSlug": "yasmine-daloy-ng-tubig-236hp",
+      "reviewId": "368baecb-d1cc-4164-923b-a7512ad7cf55"
+    }
+  ],
+  "guide-ref:SF6DNA-YASMINE-R5-033": [
+    {
+      "nameJa": "強 ダロイ・ン・トゥビグ",
+      "moveSlug": "yasmine-daloy-ng-tubig-236hp",
+      "reviewId": "368baecb-d1cc-4164-923b-a7512ad7cf55"
+    }
+  ]
+}

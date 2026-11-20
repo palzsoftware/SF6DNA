@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { SimpleDetail } from "@/lib/content-detail";
 import { localizeSourceRelationship, localizeSourceType } from "@/lib/detail-localization";
 
@@ -5,10 +6,12 @@ export function SimpleDetailView({
   detail,
   eyebrow,
   preview = false,
+  children,
 }: {
   detail: SimpleDetail;
   eyebrow: string;
   preview?: boolean;
+  children?: ReactNode;
 }) {
   const rows = detail.body.filter(([, value]) => value !== null && value !== "");
   return (
@@ -59,6 +62,7 @@ export function SimpleDetailView({
           ))}
         </dl>
       </section>
+      {children}
       {detail.sources?.length ? (
         <section className="info-panel">
           <h2>情報源</h2>

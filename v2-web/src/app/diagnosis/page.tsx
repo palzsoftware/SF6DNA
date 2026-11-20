@@ -31,7 +31,10 @@ export default async function DiagnosisPage() {
               <span className={styles.action}><span>{diagnosis.questionCount > 0 ? `全${diagnosis.questionCount}問` : "質問に回答"}</span><strong>診断を始める <span aria-hidden="true">↗</span></strong></span>
             </Link>;
           })}
-        </div> : <div className="empty-state"><p>現在利用できる診断はありません。公開準備が整った診断から順に表示します。</p></div>}
+        </div> : <div className="empty-state">
+          <p>現在利用できる診断はありません。公開準備が整った診断から順に表示します。</p>
+          <Link className="button-primary" href="/me/training">今日の15分練習へ</Link>
+        </div>}
         <Link className={styles.consultation} href="/diagnosis/character-consultation"><span>使っているキャラの悩みなら</span><strong>キャラ別お悩み診断へ →</strong></Link>
       </section>
     </div>

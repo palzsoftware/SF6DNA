@@ -1,0 +1,29 @@
+vocabId,kind,meaning,officialSystemMoveName(if any),scope
+BUFFER,CONDITION,入力を仕込む（条件成立時のみ発動）,,全キャラ共通（キャラ固有の技は含まない）
+FASTEST,CONDITION,最速入力,,全キャラ共通（キャラ固有の技は含まない）
+FORWARD_STEP,SYSTEM_ACTION,前方ステップ（共通システム）,前方ステップ,全キャラ共通（キャラ固有の技は含まない）
+JUMP_BACK,SYSTEM_ACTION,後ろジャンプ,,全キャラ共通（キャラ固有の技は含まない）
+JUMP_FORWARD,SYSTEM_ACTION,前ジャンプ,,全キャラ共通（キャラ固有の技は含まない）
+JUMP_NEUTRAL,SYSTEM_ACTION,垂直ジャンプ,,全キャラ共通（キャラ固有の技は含まない）
+MEATY,CONDITION,持続を重ねる（起き上がりに持続部分を当てる）,,全キャラ共通（キャラ固有の技は含まない）
+MEATY_LAST_ACTIVE,CONDITION,持続の最終フレームを重ねる,,全キャラ共通（キャラ固有の技は含まない）
+OKI_OVERLAP,CONDITION,起き上がりに重ねる（持続/発生の指定なし）,,全キャラ共通（キャラ固有の技は含まない）
+OVERHEAD_NOTE,CONDITION,中段として当てる（性質の注記）,,全キャラ共通（キャラ固有の技は含まない）
+REPEAT_N,CONDITION,直前の行動を n 回繰り返す,,全キャラ共通（キャラ固有の技は含まない）
+VARIANT_ATTACK,CONDITION,攻撃する派生版（技固有、要技側確認）,,全キャラ共通（キャラ固有の技は含まない）
+WALK_FORWARD,SYSTEM_ACTION,前歩き,,全キャラ共通（キャラ固有の技は含まない）
+WHIFF,CONDITION,技を空振りする（当てない）,,全キャラ共通（キャラ固有の技は含まない）
+PUNISH_COUNTER,CONDITION,パニッシュカウンター（PC）時,,全キャラ共通
+DRIVE_RUSH_PREFIX,SYSTEM_ACTION,ドライブラッシュから出す（キャンセル/パリィ種別は表記に従う。未指定は種別未確定）,,全キャラ共通
+DELAY,CONDITION,遅らせ・ディレイ入力,,全キャラ共通
+WALL,CONDITION,画面端/壁際（壁）,,全キャラ共通
+DRIVE_RUSH_CANCEL,SYSTEM_ACTION,キャンセルドライブラッシュ（CDR/Cラッシュ/CR）,キャンセルドライブラッシュ,全キャラ共通
+DRIVE_RUSH_PARRY,SYSTEM_ACTION,パリィドライブラッシュ（生ラッシュ）,パリィドライブラッシュ,全キャラ共通
+DRIVE_RUSH_UNSPECIFIED,SYSTEM_ACTION,ドライブラッシュ（種別未指定）,,全キャラ共通
+WALK,SYSTEM_ACTION,歩き,,全キャラ共通
+WALK_SHORT,SYSTEM_ACTION,微歩き,,全キャラ共通
+GUARD,SYSTEM_ACTION,ガード,,全キャラ共通
+BACK_STEP,SYSTEM_ACTION,後方ステップ,後方ステップ,全キャラ共通
+DRIVE_PARRY,SYSTEM_ACTION,ドライブパリィ,ドライブパリィ,全キャラ共通
+DRIVE_IMPACT_ABBR,MOVE_ABBREVIATION,DI＝そのキャラの公式ドライブインパクト行（1行のみの場合）,ドライブインパクト,全キャラ共通
+OPPONENT_MOVE,COUNTER_TARGET,「相手の技：」以降は相手キャラの技。自キャラ手順から分離し対策対象として管理,,全キャラ共通

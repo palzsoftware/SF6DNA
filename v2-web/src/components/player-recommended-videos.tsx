@@ -2,7 +2,10 @@ export type PlayerVideoRecommendation = {
   key: string; playerSlug: string; title: string; youtubeId: string;
   channelName: string; reason: string; kind: "本人解説" | "大会対戦";
   relationConfirmed: boolean; publicationApproval: "PENDING" | "APPROVED";
+  /** 動画で使われているキャラ。キャラクター詳細ページ(/characters/[slug])へのリンクに使う。任意。 */
+  characterLinks?: readonly { slug: string; name: string }[];
 };
+const CHARACTER_SLUG = /^[a-z][a-z0-9-]{0,30}$/;
 export function PlayerRecommendedVideos({ playerSlug, items, draftPreview = false }: {
   playerSlug: string; items: readonly PlayerVideoRecommendation[]; draftPreview?: boolean;
 }) {
@@ -24,6 +27,7 @@ export function PlayerRecommendedVideos({ playerSlug, items, draftPreview = fals
           <img src={`https://i.ytimg.com/vi/${item.youtubeId}/hqdefault.jpg`} alt={item.title} width={480} height={270} loading="lazy" style={{ width: "100%", height: "auto", aspectRatio: "16 / 9", objectFit: "cover" }} />
         </a>
         <div className="video-card__body"><span>{item.kind}</span><h3>{item.title}</h3><p>{item.channelName}</p><p>{item.reason}</p>
+          {item.characterLinks?.some(c => CHARACTER_SLUG.test(c.slug)) ? <p>キャラクター: {item.characterLinks.filter(c => CHARACTER_SLUG.test(c.slug)).map((c, i) => <span key={c.slug}>{i ? "、" : ""}<a href={`/characters/${c.slug}`}>{c.name}</a></span>)}</p> : null}
           <a href={`https://www.youtube.com/watch?v=${item.youtubeId}`} target="_blank" rel="noopener noreferrer">YouTubeで再生 ↗</a>
         </div>
       </article>)}

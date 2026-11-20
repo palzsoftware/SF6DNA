@@ -94,7 +94,7 @@
  .desktop-global-nav { display: none; }
  .mobile-global-menu { display: block; position: static; font-size: .78rem; }
  .mobile-global-menu > summary { min-height: 44px; padding: 12px 8px; cursor: pointer; }
- .mobile-global-menu .site-nav { position: absolute; top: 100%; right: 10px; width: min(240px, 75vw); display: grid; gap: 0; padding: 8px; background: var(--surface); border: 1px solid var(--border); box-shadow: 0 12px 30px var(--shadow-color); mask-image: none; -webkit-mask-image: none; }
+ .mobile-global-menu .site-nav { position: absolute; top: 100%; right: 10px; width: min(240px, 75vw); max-height: calc(100dvh - 9rem); overflow-y: auto; overscroll-behavior: contain; display: grid; gap: 0; padding: 8px; background: var(--surface); border: 1px solid var(--border); box-shadow: 0 12px 30px var(--shadow-color); mask-image: none; -webkit-mask-image: none; }
  .mobile-global-menu .site-nav a { min-height: 44px; padding: 10px 12px; }
  .display-settings { margin-left: 0; }
  .display-settings > summary { padding: 12px 8px; }

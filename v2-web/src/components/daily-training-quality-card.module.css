@@ -1,4 +1,4 @@
-.card { color: var(--text, #ecf1fa); background: var(--surface, #131d2e); border: 1px solid var(--border, #435370); border-radius: 16px; overflow: hidden; min-width: 0; }
+.card { color: var(--text, #ecf1fa); background: var(--surface, #131d2e); border: 1px solid var(--border, #435370); border-radius: 16px; overflow: hidden; min-width: 0; scroll-margin-top: 96px; }
 .card * { box-sizing: border-box; }
 .header { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr) 1.2rem; gap: 12px; width: 100%; padding: 18px; text-align: left; color: inherit; background: transparent; border: 0; cursor: pointer; font: inherit; }
 .header strong { display: block; line-height: 1.5; }

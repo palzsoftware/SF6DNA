@@ -32,10 +32,7 @@ function toSummary(
       typeof row.player_type === "string"
         ? row.player_type
         : null,
-    teamName:
-      typeof row.team_name === "string"
-        ? row.team_name
-        : null,
+    teamName: typeof row.team_name === "string" ? row.team_name.trim() || null : null,
     countryCode:
       typeof row.country_code === "string"
         ? row.country_code

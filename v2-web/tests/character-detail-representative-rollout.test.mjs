@@ -33,7 +33,7 @@ test("shared component receives the adapted profile and renders natural section 
     ts.forEachChild(node, visit);
   }
   visit(tree);
-  assert.deepEqual(forwarded, ['character']);
+  assert.deepEqual(forwarded, [null, 'character']);
   for (const slug of ['ryu','jp','luke','yasmine']) {
     const missing=renderUnified(slug);
     for(const text of ['概要は確認中です。','強みは確認中です。','注意点は確認中です。','英名確認中','技データは確認中です。','使用プレイヤーの情報を確認中です。','関連動画は準備中です。','情報源を確認中です。'])assert.ok(missing.includes(text),text);

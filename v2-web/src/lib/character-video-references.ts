@@ -4,11 +4,11 @@ import type { SourceReference } from "@/types/character";
 export function getYouTubeVideoId(value: string): string | null {
   let url: URL;
   try { url = new URL(value); } catch { return null; }
-  if (url.protocol !== "https:") return null;
+  if (url.protocol !== "https:" || url.username || url.password || url.port) return null;
   const host = url.hostname.toLowerCase();
-  const id = host === "youtu.be" ? url.pathname.slice(1)
+  const id = host === "youtu.be" ? url.pathname.match(/^\/([^/]+)\/?$/)?.[1]
     : ["youtube.com", "www.youtube.com", "m.youtube.com"].includes(host)
-      ? url.searchParams.get("v") ?? url.pathname.match(/^\/(?:live|shorts|embed)\/([^/]+)\/?$/)?.[1] : null;
+      ? (url.pathname === "/watch" ? url.searchParams.get("v") : url.pathname.match(/^\/(?:live|shorts|embed)\/([^/]+)\/?$/)?.[1]) : null;
   return id && /^[A-Za-z0-9_-]{11}$/.test(id) ? id : null;
 }
 export function uniqueCharacterVideos<T extends { id: string; url: string }>(videos: T[]): T[] {

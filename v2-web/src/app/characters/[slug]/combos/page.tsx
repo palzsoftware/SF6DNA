@@ -28,6 +28,13 @@ export default async function CharacterCombosPage({
     q?: string | string[];
     difficulty?: string | string[];
     resource?: string | string[];
+    starter?: string | string[];
+    position?: string | string[];
+    hit?: string | string[];
+    control?: string | string[];
+    drive?: string | string[];
+    sa?: string | string[];
+    sort?: string | string[];
   }>;
 }) {
   const [{ slug }, query] = await Promise.all([params, searchParams]);
@@ -64,6 +71,7 @@ export default async function CharacterCombosPage({
           q={query.q}
           difficulty={query.difficulty}
           resource={query.resource}
+          search={{ starter: query.starter, position: query.position, hit: query.hit, control: query.control, drive: query.drive, sa: query.sa, sort: query.sort }}
         />
       ) : (
         <section className="empty-state">

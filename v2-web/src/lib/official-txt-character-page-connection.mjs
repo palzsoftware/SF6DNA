@@ -1,4 +1,5 @@
 import { attachMoveMediaKeys } from './media-key-registry.mjs';
+import { ws5LocalCorrections } from './ws5-local-corrections-20261120.mjs';
 import { connectCanonicalTxtCandidate } from './canonical-txt-connection.mjs';
 import { connectOfficialTxtPreviewCandidate } from './official-txt-device-preview-adapter.mjs';
 
@@ -18,7 +19,22 @@ export function connectOfficialTxtCharacterPageData({ character, resolved, moveE
     characterSlug:character.slug, bundleCharacterSlug:character.slug, characterId:character.id,
     connectExisting:connectOfficialTxtPreviewCandidate,
   });
-  const media = mediaRegistry ? attachMoveMediaKeys(connected.bundle, mediaRegistry, character.slug) : null;
+  let media = null;
+  if (mediaRegistry) {
+    const adoptions = new Map(ws5LocalCorrections.identityAdoptions
+      .map(row => [row.existingMoveId, row.sourceRecordKey]));
+    const adoptedMoves = new Map((connected.bundle?.moves ?? [])
+      .filter(move => adoptions.get(move.id) === move.ws5CanonicalSource && adoptions.has(move.id))
+      .map(move => [move.ws5CanonicalSource, move]));
+    const existingIds = new Set(mediaRegistry.map(row => row.currentMoveId));
+    const registry = mediaRegistry.map(row => {
+      const move = adoptedMoves.get(row.sourceRecordKey);
+      if (!move || row.characterSlug !== character.slug || existingIds.has(move.id) ||
+          row.currentMoveId !== `sf6dna-preview:${character.slug}:${encodeURIComponent(row.sourceRecordKey)}`) return row;
+      return { ...row, currentMoveId:move.id, moveSlug:move.slug };
+    });
+    media = attachMoveMediaKeys(connected.bundle, registry, character.slug);
+  }
   return { ...resolved, bundle:media ? media.bundle : connected.bundle, mediaKeyHolds:media?.holds ?? [],
     moveEvidence:{...moveEvidence,...connected.moveEvidence}, candidateConnection:connected };
 }

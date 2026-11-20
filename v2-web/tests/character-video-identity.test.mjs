@@ -8,7 +8,8 @@ new Function("module", "exports", js)(result, result.exports);
 const { getYouTubeVideoId, uniqueCharacterVideos, characterVideoReferences } = result.exports;
 test("watch, short, live and short-link URLs share identity; untrusted hosts are rejected", () => {
   for (const url of ["https://youtu.be/abcdefghijk", "https://www.youtube.com/watch?v=abcdefghijk&t=20", "https://youtube.com/shorts/abcdefghijk", "https://m.youtube.com/live/abcdefghijk/"]) assert.equal(getYouTubeVideoId(url), "abcdefghijk");
-  for (const url of ["https://youtube.com.evil.test/watch?v=abcdefghijk", "http://youtu.be/abcdefghijk", "javascript:alert(1)"]) assert.equal(getYouTubeVideoId(url), null);
+  assert.equal(getYouTubeVideoId("https://www.youtube.com/shorts/abcdefghijk?v=lmnopqrstuv"), "abcdefghijk");
+  for (const url of ["https://youtube.com.evil.test/watch?v=abcdefghijk", "http://youtu.be/abcdefghijk", "javascript:alert(1)", "https://www.youtube.com/playlist?v=abcdefghijk", "https://account@youtu.be/abcdefghijk", "https://youtu.be:8443/abcdefghijk"]) assert.equal(getYouTubeVideoId(url), null);
 });
 test("video dedupe has no three or six card cap and retains relation order", () => {
   const videos = Array.from({ length: 12 }, (_, i) => ({ id: String(i), url: `https://youtu.be/abcdefghi${String(i).padStart(2, "0")}` }));

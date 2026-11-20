@@ -1,6 +1,7 @@
 // 通常ページ(characters/[slug]/page.tsx)へGIFを接続する「差分案」の安全確認テスト。
 // 実ページはまだ変更しない(承認待ち)。ここでは差分案そのものと、差分案が呼ぶ関数の動きだけを確認する。
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import test from "node:test";
 import { readFileSync, writeFileSync, mkdirSync, mkdtempSync, copyFileSync, readdirSync } from "node:fs";
 import { tmpdir } from "node:os";
@@ -29,17 +30,23 @@ test("差分案A(HEAD用): 触るのは page.tsx だけ。追加3行(import・�
   assert.ok(added.some((l) => l.includes("bundle: connectedTxt?.bundle ?? bundle")));
 });
 
-test("差分案Aは現在のHEADの page.tsx に当たり、当てた結果は検証用コピー(_page-copy)と一致する", () => {
+test("差分案Aは作成時のRC基準に当たり、検証用コピーと一致する", () => {
   const dir = mkdtempSync(join(tmpdir(), "pgc-"));
   const target = join(dir, PAGE_REL);
   mkdirSync(join(target, ".."), { recursive: true });
-  // HEADの内容(作業ツリーが未変更である限り同じ)。実ページが未変更であることも同時に確認する
+  // 旧提案の適用先と、現在の製品ルートに未承認GIFが入っていないことを別々に確認する。
   const real = read("../src/app/characters/[slug]/page.tsx");
   assert.ok(!/local-qa-gif/.test(real), "実ページは承認前なので未変更のまま");
-  writeFileSync(target, real);
-  const r = spawnSync("patch", ["-p1", "--silent", "-d", dir, "-i", here("../../scripts/gif-intake/proposals/page-gif-connect-head.patch")], { encoding: "utf8" });
+  const expected = read("../src/app/internal/gif-qa/_page-copy/page.tsx");
+  const patchFile = here("../../scripts/gif-intake/proposals/page-gif-connect-head.patch");
+  writeFileSync(target, expected);
+  const reverse = spawnSync("patch", ["-R", "-p1", "--silent", "-d", dir, "-i", patchFile], { encoding: "utf8" });
+  assert.equal(reverse.status, 0, (reverse.stderr ?? "") + (reverse.stdout ?? ""));
+  const hash = createHash("sha256").update(readFileSync(target, "utf8").replaceAll("\r\n", "\n")).digest("hex");
+  assert.equal(hash, "ad72f88fc9cada52b8540708b912225089e7faeac6ccaa028ee3fce95977995e", "RC 884862a の前像");
+  const r = spawnSync("patch", ["-p1", "--silent", "-d", dir, "-i", patchFile], { encoding: "utf8" });
   assert.equal(r.status, 0, r.stderr + r.stdout);
-  assert.equal(readFileSync(target, "utf8"), read("../src/app/internal/gif-qa/_page-copy/page.tsx"));
+  assert.equal(readFileSync(target, "utf8"), expected);
 });
 
 test("差分案B(Ryuブランチ用)は page.tsx だけを触り、Ryuの既存接続を残したまま QA接続を後段に足す", () => {

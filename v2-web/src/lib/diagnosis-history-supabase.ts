@@ -110,7 +110,7 @@ export async function readSupabaseDiagnosisHistory(
     if (resultResponse.error || !Array.isArray(resultResponse.data)) return { status: "failed" };
     const rows = resultResponse.data as ResultRow[];
     if (!rows.every(row => row && row.user_id?.toLowerCase() === userId && typeof row.id === "string" &&
-      typeof row.diagnosis_id === "string" && typeof row.created_at === "string")) return { status: "failed" };
+      typeof row.diagnosis_id === "string" && typeof row.created_at === "string" && Number.isFinite(Date.parse(row.created_at)))) return { status: "failed" };
     if (!rows.length) return { status: "ok", records: [] };
 
     const diagnosisIds = [...new Set(rows.map(row => row.diagnosis_id))];

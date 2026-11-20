@@ -8,7 +8,16 @@
       "slug": "2bassa",
       "name": "2BASSA",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "ジュリ"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ジュリ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -32,7 +41,16 @@
       "slug": "akira-cammy",
       "name": "あきら",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "キャミィ、C.ヴァイパー"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "キャミィ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -83,7 +101,16 @@
       "slug": "dogura",
       "name": "どぐら",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "エレナ、ベガ"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "エレナ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -131,7 +158,16 @@
       "slug": "fuudo",
       "name": "ふ～ど",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "エド、C.ヴァイパー"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "C.ヴァイパー"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -194,7 +230,12 @@
       "slug": "gachikun",
       "name": "ガチくん",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ラシード"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -242,7 +283,12 @@
       "slug": "hibiki",
       "name": "ひびき",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "リリー"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -274,7 +320,16 @@
       "slug": "higuchi",
       "name": "ひぐち",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "ガイル"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ガイル"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -331,7 +386,12 @@
       "slug": "hikaru-aki",
       "name": "ひかる",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "A.K.I."
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -359,7 +419,16 @@
       "slug": "hinao",
       "name": "ひなお",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "サガット、リュウ、ルーク"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "サガット"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -383,7 +452,12 @@
       "slug": "itabashi-zangief",
       "name": "板橋ザンギエフ",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ザンギエフ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -421,6 +495,23 @@
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
             }
           ]
+        },
+        {
+          "title": "その他の大会成績（2つの出典で確認）",
+          "items": [
+            {
+              "text": "Capcom Cup 12 9〜16位（2026-03-14）",
+              "sourceUrl": "https://dashfight.com/news/capcom-cup-12-last-16-revealed-8519"
+            },
+            {
+              "text": "Esports World Cup 2025 9〜16位（2025-08-23）",
+              "sourceUrl": "https://esports.gg/news/street-fighter-6/ewc-2025-sf6-stream-matchups-results"
+            },
+            {
+              "text": "Combo Breaker 2025 2位（2025-05-25）",
+              "sourceUrl": "https://esports.gg/news/street-fighter-6/street-fighter-6-at-combo-breaker-2025"
+            }
+          ]
         }
       ]
     },
@@ -435,7 +526,16 @@
       "slug": "john-takeuchi",
       "name": "竹内ジョン",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "ジェイミー"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ジェイミー"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -479,7 +579,12 @@
       "slug": "jr",
       "name": "Jr.",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ザンギエフ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -503,7 +608,16 @@
       "slug": "kawano",
       "name": "カワノ",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "ルーク、豪鬼"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ルーク"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -555,7 +669,12 @@
       "slug": "kincho-terry",
       "name": "きんちょ",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "テリー"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -563,6 +682,15 @@
             {
               "text": "初出場",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kincho/"
+            }
+          ]
+        },
+        {
+          "title": "その他の大会成績（2つの出典で確認）",
+          "items": [
+            {
+              "text": "Capcom Cup 12 9〜16位（2026-03-14）",
+              "sourceUrl": "https://dashfight.com/news/capcom-cup-12-last-16-revealed-8519"
             }
           ]
         }
@@ -579,7 +707,12 @@
       "slug": "kobayan",
       "name": "こばやん",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ザンギエフ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -614,7 +747,12 @@
       "slug": "menard",
       "name": "MenaRD",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ブランカ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -655,7 +793,16 @@
       "slug": "momochi",
       "name": "ももち",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "エド、ジェイミー"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ジェイミー"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -710,7 +857,12 @@
       "slug": "sahara-ed",
       "name": "さはら",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "エド"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -751,7 +903,16 @@
       "slug": "sako",
       "name": "sako",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "エレナ"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "エレナ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -795,7 +956,16 @@
       "slug": "sfl2026-01",
       "name": "りゅうきち",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "ケン、舞"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "舞"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -848,7 +1018,16 @@
       "slug": "sfl2026-03",
       "name": "藤村",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "C.ヴァイパー"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "C.ヴァイパー"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -910,7 +1089,16 @@
       "slug": "sfl2026-04",
       "name": "もけ",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "舞、春麗"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "舞"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -968,7 +1156,16 @@
       "slug": "sfl2026-06",
       "name": "ボンちゃん",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "ルーク、豪鬼、サガット"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "サガット"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -996,6 +1193,19 @@
             {
               "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 3位 フードガイア",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            }
+          ]
+        },
+        {
+          "title": "その他の大会成績（2つの出典で確認）",
+          "items": [
+            {
+              "text": "Esports World Cup 2025 9〜16位（2025-08-23）",
+              "sourceUrl": "https://esports.gg/news/street-fighter-6/ewc-2025-sf6-stream-matchups-results"
+            },
+            {
+              "text": "Combo Breaker 2025 5〜6位（2025-05-25）",
+              "sourceUrl": "https://esports.gg/news/street-fighter-6/street-fighter-6-at-combo-breaker-2025"
             }
           ]
         }
@@ -1026,7 +1236,16 @@
       "slug": "sfl2026-07",
       "name": "かずのこ",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "キャミィ、C.ヴァイパー"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "C.ヴァイパー"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1072,7 +1291,16 @@
       "slug": "sfl2026-09",
       "name": "cosa",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "リュウ、ケン、豪鬼"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ケン"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1118,7 +1346,16 @@
       "slug": "sfl2026-10",
       "name": "まちゃぼー",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "リュウ"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "リュウ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1180,7 +1417,16 @@
       "slug": "sfl2026-17",
       "name": "ACQUA",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "ブランカ、JP"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ブランカ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1226,7 +1472,12 @@
       "slug": "sfl2026-21",
       "name": "ヤナイ",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "サガット"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1272,7 +1523,12 @@
       "slug": "sfl2026-22",
       "name": "ジョニィ",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "エレナ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1322,7 +1578,12 @@
       "slug": "sfl2026-25",
       "name": "マゴ",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "舞"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1388,7 +1649,12 @@
       "slug": "sfl2026-27",
       "name": "水派",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "キャミィ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1446,7 +1712,12 @@
       "slug": "sfl2026-28",
       "name": "わびいち",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "テリー"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1484,7 +1755,12 @@
       "slug": "sfl2026-31",
       "name": "ぷげら",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "C.ヴァイパー"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1512,6 +1788,15 @@
             {
               "text": "ストリートファイターリーグ: Pro-JP 2020 4位 フードガイア",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            }
+          ]
+        },
+        {
+          "title": "その他の大会成績（2つの出典で確認）",
+          "items": [
+            {
+              "text": "Esports World Cup 2025 17〜20位（2025-08-23）",
+              "sourceUrl": "https://esports.gg/news/street-fighter-6/ewc-2025-sf6-stream-matchups-results"
             }
           ]
         }
@@ -1542,7 +1827,12 @@
       "slug": "sfl2026-34",
       "name": "KEI.B",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "舞"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1588,7 +1878,12 @@
       "slug": "sfl2026-35",
       "name": "ナウマン",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "舞"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1646,7 +1941,12 @@
       "slug": "sfl2026-37",
       "name": "Seiya",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "春麗"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1684,7 +1984,12 @@
       "slug": "sfl2026-38",
       "name": "らおやむ",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ベガ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1722,7 +2027,12 @@
       "slug": "sfl2026-39",
       "name": "大谷",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ルーク"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1768,7 +2078,12 @@
       "slug": "sfl2026-40",
       "name": "もっちー",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "豪鬼"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1810,7 +2125,12 @@
       "slug": "sfl2026-41",
       "name": "ウメハラ",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "豪鬼"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1872,7 +2192,12 @@
       "slug": "sfl2026-43",
       "name": "YAS",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "リュウ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1910,7 +2235,12 @@
       "slug": "sfl2026-45",
       "name": "高木",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ブランカ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1948,7 +2278,12 @@
       "slug": "sfl2026-46",
       "name": "あでりい",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "エド"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -1986,7 +2321,16 @@
       "slug": "shuto",
       "name": "Shuto",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "リュウ、ルーク、豪鬼"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "リュウ"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -2049,7 +2393,12 @@
       "slug": "takepi",
       "name": "takepi",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "JP"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -2084,7 +2433,12 @@
       "slug": "tokido",
       "name": "ときど",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "JP"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -2147,7 +2501,12 @@
       "slug": "torimeshi",
       "name": "鶏めし",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ダルシム"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -2169,6 +2528,15 @@
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/"
             }
           ]
+        },
+        {
+          "title": "その他の大会成績（2つの出典で確認）",
+          "items": [
+            {
+              "text": "Esports World Cup 2025 9〜16位（2025-08-23）",
+              "sourceUrl": "https://esports.gg/news/street-fighter-6/ewc-2025-sf6-stream-matchups-results"
+            }
+          ]
         }
       ]
     },
@@ -2183,7 +2551,12 @@
       "slug": "yamaguchi",
       "name": "ヤマグチ",
       "intro": null,
-      "facts": [],
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "舞"
+        }
+      ],
       "sections": [
         {
           "title": "チームのリーグ実績",
@@ -2220,5 +2593,2841 @@
       ]
     },
     "note": "既存archiveDisplay契約に対応。チーム成績を個人成績へ変換しない。公開待ちのためruntime既定配列へ未追加。"
+  },
+  {
+    "playerId": "0b1001f0-8f5b-413c-b466-455273239867",
+    "playerSlug": "2bassa",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "2bassa",
+      "name": "2BASSA",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "ジュリ"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ジュリ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 6位 FUKUSHIMA IBUSHIGIN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/2bassa/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "dca58064-9f76-4fee-982d-f624698db658",
+    "playerSlug": "akira-cammy",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "akira-cammy",
+      "name": "あきら",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "キャミィ、C.ヴァイパー"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "キャミィ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 2位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 1位 Yogibo REJECT",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 7位 名古屋OJA BODY STAR",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 3位 名古屋OJA BODY STAR Mildom",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 6位 名古屋OJA BODY STAR",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2025: 5位",
+              "sourceUrl": "https://www.shacknews.com/article/144229/evo-japan-2025-results-winners-top-8",
+              "researchId": "A_2025-05",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6",
+    "playerSlug": "dogura",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "dogura",
+      "name": "どぐら",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "エレナ、ベガ"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "エレナ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 3位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 2位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 5位 CYCLOPS athlete gaming OSAKA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 6位 名古屋OJA BODY STAR",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 4位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 5位 イタザンオーシャン",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623",
+    "playerSlug": "fuudo",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "fuudo",
+      "name": "ふ～ど",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "エド、C.ヴァイパー"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "C.ヴァイパー"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 優勝/Division F 1位 REJECT",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 2位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 2位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 3位 名古屋OJA BODY STAR Mildom",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 3位 Mildom Beast",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 4位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 3位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 6位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO 2025: 同率5位",
+              "sourceUrl": "https://evo.gg/news/evo-2025-street-fighter-6-recap/",
+              "researchId": "A_2025-08",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003",
+    "playerSlug": "gachikun",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "gachikun",
+      "name": "ガチくん",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ラシード"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 優勝/Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 8位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 2位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 1位 ネモオーロラ",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 6位 トキドフレイム",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff",
+    "playerSlug": "hibiki",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "hibiki",
+      "name": "ひびき",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "リリー"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 2位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 3位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 5位 トキドフレイム",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "670431a1-addb-4c8e-9828-a45652ff976b",
+    "playerSlug": "higuchi",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "higuchi",
+      "name": "ひぐち",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "ガイル"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ガイル"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 3位 ZETA DIVISION Geekly",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 2位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 3位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 2位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2025: 7位",
+              "sourceUrl": "https://www.shacknews.com/article/144229/evo-japan-2025-results-winners-top-8",
+              "researchId": "A_2025-06",
+              "sourceCheckedOn": "2026-11-17"
+            },
+            {
+              "text": "EVO Japan 2026: 3位",
+              "sourceUrl": "https://www.shacknews.com/article/148960/evo-japan-2026-winners-top-8",
+              "researchId": "C_2026-01",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "002a208f-3804-4a01-908a-72d713390998",
+    "playerSlug": "hikaru-aki",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "hikaru-aki",
+      "name": "ひかる",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "A.K.I."
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 3位 ZETA DIVISION Geekly",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 3位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc",
+    "playerSlug": "hinao",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "hinao",
+      "name": "ひなお",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "サガット、リュウ、ルーク"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "サガット"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hinao/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "942d66dd-0840-433d-be18-81f867799116",
+    "playerSlug": "itabashi-zangief",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "itabashi-zangief",
+      "name": "板橋ザンギエフ",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ザンギエフ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 4位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 6位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 2位 DetonarioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 7位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 8位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 2位 トキドフレイム",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 5位 イタザンオーシャン",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 1位 イタザンオーシャン",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/"
+            }
+          ]
+        },
+        {
+          "title": "その他の大会成績（2つの出典で確認）",
+          "items": [
+            {
+              "text": "Capcom Cup 12 9〜16位（2026-03-14）",
+              "sourceUrl": "https://dashfight.com/news/capcom-cup-12-last-16-revealed-8519"
+            },
+            {
+              "text": "Esports World Cup 2025 9〜16位（2025-08-23）",
+              "sourceUrl": "https://esports.gg/news/street-fighter-6/ewc-2025-sf6-stream-matchups-results"
+            },
+            {
+              "text": "Combo Breaker 2025 2位（2025-05-25）",
+              "sourceUrl": "https://esports.gg/news/street-fighter-6/street-fighter-6-at-combo-breaker-2025"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22",
+    "playerSlug": "john-takeuchi",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "john-takeuchi",
+      "name": "竹内ジョン",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "ジェイミー"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ジェイミー"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 4位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 6位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 2位 DetonarioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 7位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 8位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 2位 ネモオーロラ",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f",
+    "playerSlug": "jr",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "jr",
+      "name": "Jr.",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ザンギエフ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/jr/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64",
+    "playerSlug": "kawano",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "kawano",
+      "name": "カワノ",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "ルーク、豪鬼"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ルーク"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 優勝/Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 8位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 2位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 3位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 4位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 6位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c",
+    "playerSlug": "kincho-terry",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "kincho-terry",
+      "name": "きんちょ",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "テリー"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kincho/"
+            }
+          ]
+        },
+        {
+          "title": "その他の大会成績（2つの出典で確認）",
+          "items": [
+            {
+              "text": "Capcom Cup 12 9〜16位（2026-03-14）",
+              "sourceUrl": "https://dashfight.com/news/capcom-cup-12-last-16-revealed-8519"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415",
+    "playerSlug": "kobayan",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "kobayan",
+      "name": "こばやん",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ザンギエフ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 6位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kobayan/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2025: 3位",
+              "sourceUrl": "https://www.shacknews.com/article/144229/evo-japan-2025-results-winners-top-8",
+              "researchId": "A_2025-03",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072",
+    "playerSlug": "menard",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "menard",
+      "name": "MenaRD",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ブランカ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mena/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2025: 1位",
+              "sourceUrl": "https://www.shacknews.com/article/144229/evo-japan-2025-results-winners-top-8",
+              "researchId": "A_2025-01",
+              "sourceCheckedOn": "2026-11-17"
+            },
+            {
+              "text": "EVO 2025: 優勝",
+              "sourceUrl": "https://evo.gg/news/evo-2025-street-fighter-6-recap/",
+              "researchId": "A_2025-07",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29",
+    "playerSlug": "momochi",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "momochi",
+      "name": "ももち",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "エド、ジェイミー"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ジェイミー"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 3位 ZETA DIVISION Geekly",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 4位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 6位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 6位 モモチスプラッシュ",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2025: 4位",
+              "sourceUrl": "https://www.shacknews.com/article/144229/evo-japan-2025-results-winners-top-8",
+              "researchId": "A_2025-04",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb",
+    "playerSlug": "sahara-ed",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "sahara-ed",
+      "name": "さはら",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "エド"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sahara/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "CAPCOM CUP 12: 優勝",
+              "sourceUrl": "https://saiganak.com/event/capcomcup-12-sfl-world-championship-2025-result/amp/",
+              "researchId": "R20261117-CC12-01",
+              "sourceCheckedOn": "2026-11-17"
+            },
+            {
+              "text": "UFA 2025: 優勝",
+              "sourceUrl": "https://esports.gg/news/fgc/ufa-2025-details-results",
+              "researchId": "R20261117-UFA25-01",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "082e5e11-4622-4df7-9123-969e2812584a",
+    "playerSlug": "sako",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "sako",
+      "name": "sako",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "エレナ"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "エレナ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 5位 Victrix FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 6位 FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 1位 FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 4位 v6プラス FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 1位 v6プラス FAV Rohto Z!",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 1位 ネモオーロラ",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "7847d0ac-4911-4062-9a1e-0b140de1aaef",
+    "playerSlug": "ryukichi",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "ryukichi",
+      "name": "りゅうきち",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "ケン、舞"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "舞"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 5位 Victrix FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 6位 FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2025: 2位",
+              "sourceUrl": "https://www.shacknews.com/article/144229/evo-japan-2025-results-winners-top-8",
+              "researchId": "A_2025-02",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+    "playerSlug": "fujimura",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "fujimura",
+      "name": "藤村",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "C.ヴァイパー"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "C.ヴァイパー"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 5位 Victrix FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 4位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 6位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 6位 モモチスプラッシュ",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 4位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "4567da1f-313c-4e33-9188-f0b6b40bd5ef",
+    "playerSlug": "moke",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "moke",
+      "name": "もけ",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "舞、春麗"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "舞"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 5位 Victrix FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 5位 VARREL",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 6位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 5位 マゴスカーレット",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "062106c7-faba-4351-864c-6d4247104d3c",
+    "playerSlug": "bonchan",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "bonchan",
+      "name": "ボンちゃん",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "ルーク、豪鬼、サガット"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "サガット"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 3位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 2位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 1位 FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 4位 v6プラス FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 1位 v6プラス FAV Rohto Z!",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 3位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/"
+            }
+          ]
+        },
+        {
+          "title": "その他の大会成績（2つの出典で確認）",
+          "items": [
+            {
+              "text": "Esports World Cup 2025 9〜16位（2025-08-23）",
+              "sourceUrl": "https://esports.gg/news/street-fighter-6/ewc-2025-sf6-stream-matchups-results"
+            },
+            {
+              "text": "Combo Breaker 2025 5〜6位（2025-05-25）",
+              "sourceUrl": "https://esports.gg/news/street-fighter-6/street-fighter-6-at-combo-breaker-2025"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+    "playerSlug": "kazunoko",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "kazunoko",
+      "name": "かずのこ",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "キャミィ、C.ヴァイパー"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "C.ヴァイパー"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 3位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 2位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 5位 CYCLOPS athlete gaming OSAKA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40",
+    "playerSlug": "cosa",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "cosa",
+      "name": "cosa",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "リュウ、ケン、豪鬼"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ケン"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 6位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 3位 FUKUSHIMA IBUSHIGIN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 3位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+    "playerSlug": "machabo",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "machabo",
+      "name": "まちゃぼー",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "リュウ"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "リュウ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 6位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 6位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 6位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 3位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 1位 マゴスカーレット",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "7e097cfa-f78d-4f34-8ec4-3b824fbe629b",
+    "playerSlug": "acqua",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "acqua",
+      "name": "ACQUA",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "ブランカ、JP"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ブランカ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 2位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 3位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 9位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "550ff109-ebb9-49ca-9075-beda80781a2b",
+    "playerSlug": "yanai",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "yanai",
+      "name": "ヤナイ",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "サガット"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 6位 FUKUSHIMA IBUSHIGIN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 3位 FUKUSHIMA IBUSHIGIN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 7位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "4cbf8a8c-b4d8-47f0-9d24-dae5fc75e98f",
+    "playerSlug": "johnny",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "johnny",
+      "name": "ジョニィ",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "エレナ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 6位 FUKUSHIMA IBUSHIGIN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 4位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 6位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "acecad48-2087-4384-94c0-0797a679edf9",
+    "playerSlug": "mago",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "mago",
+      "name": "マゴ",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "舞"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 5位 VARREL",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 5位 VARREL",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 6位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 5位 マゴスカーレット",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 1位 マゴスカーレット",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 3位 マゴスカーレット",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "543994bb-8c4f-48df-9000-876ba1ede2dc",
+    "playerSlug": "mizuha",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "mizuha",
+      "name": "水派",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "キャミィ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 5位 VARREL",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 5位 VARREL",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 6位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 4位 魚群",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 5位 マゴスカーレット",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+    "playerSlug": "wabiichi",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "wabiichi",
+      "name": "わびいち",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "テリー"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/wabiichi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44",
+    "playerSlug": "pugera",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "pugera",
+      "name": "ぷげら",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "C.ヴァイパー"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 優勝/Division S 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 8位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 1位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 2位 Good 8 Squad",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 4位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/"
+            }
+          ]
+        },
+        {
+          "title": "その他の大会成績（2つの出典で確認）",
+          "items": [
+            {
+              "text": "Esports World Cup 2025 17〜20位（2025-08-23）",
+              "sourceUrl": "https://esports.gg/news/street-fighter-6/ewc-2025-sf6-stream-matchups-results"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "59e8dc48-ce3b-4bb2-8ef3-b685988f3d34",
+    "playerSlug": "keib",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "keib",
+      "name": "KEI.B",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "舞"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 2位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 5位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 7位 名古屋OJA BODY STAR",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "f53b36e7-978f-4920-b157-6124fc91b44a",
+    "playerSlug": "nauman",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "nauman",
+      "name": "ナウマン",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "舞"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 4位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 6位 DetonatioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 2位 DetonarioN FocusMe",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 7位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 8位 コミュファDetonatioN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 3位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "7469e615-8c28-40f6-929f-3b01aec9d3f4",
+    "playerSlug": "seiya",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "seiya",
+      "name": "Seiya",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "春麗"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 2位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/seiya/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "4980df9e-9c1c-440a-bead-f1a6bd55250e",
+    "playerSlug": "raoyamu",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "raoyamu",
+      "name": "らおやむ",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ベガ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/raoyamu/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "215f7aa3-8a4a-402c-be2a-49eac857b6b8",
+    "playerSlug": "otani",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "otani",
+      "name": "大谷",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ルーク"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 2位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 5位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "ab837dad-605a-41a2-9d5c-2fe4d6fe22d8",
+    "playerSlug": "mocchi",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "mocchi",
+      "name": "もっちー",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "豪鬼"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 2位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 5位 名古屋NTPOJA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "877b2d79-a55a-4514-ae0e-4356d6d109a3",
+    "playerSlug": "daigo",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "daigo",
+      "name": "ウメハラ",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "豪鬼"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 優勝/Division F 1位 REJECT",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 2位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 3位 名古屋OJA BODY STAR Mildom",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 3位 Mildom Beast",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 3位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 4位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 4位 ウメハラゴールド",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+    "playerSlug": "yas",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "yas",
+      "name": "YAS",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "リュウ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yas/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "106e21de-1383-4dcb-ab09-4d0d7dc2c4ed",
+    "playerSlug": "takagi",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "takagi",
+      "name": "高木",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ブランカ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 4位 CAG OSAKA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takagi/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "50ff5be0-2e00-46f8-b9b2-2dbba268f7e6",
+    "playerSlug": "adelie",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "adelie",
+      "name": "あでりい",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "エド"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 2位 広島 TEAM iXA",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/adelie/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0",
+    "playerSlug": "shuto",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "shuto",
+      "name": "Shuto",
+      "intro": null,
+      "facts": [
+        {
+          "label": "使用キャラクター（ユーザー指定）",
+          "value": "リュウ、ルーク、豪鬼"
+        },
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "リュウ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division S 3位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 2位 Crazy Raccoon",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 3位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 2位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 7位 Saishunkan Sol 熊本",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 4位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 3位 フードガイア",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 2位 ネモオーロラ",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2026: 同率5位",
+              "sourceUrl": "https://www.shacknews.com/article/148960/evo-japan-2026-winners-top-8",
+              "researchId": "C_2026-02",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d",
+    "playerSlug": "takepi",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "takepi",
+      "name": "takepi",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "JP"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "初出場",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takepi/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2026: 同率7位",
+              "sourceUrl": "https://www.shacknews.com/article/148960/evo-japan-2026-winners-top-8",
+              "researchId": "C_2026-03",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb",
+    "playerSlug": "tokido",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "tokido",
+      "name": "ときど",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "JP"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 優勝/Division F 1位 REJECT",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 1位 Yogibo REJECT",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 1位 FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 4位 v6プラス FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2021 1位 v6プラス FAV Rohto Z!",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2020 2位 トキドフレイム",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 6位 トキドフレイム",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            },
+            {
+              "text": "ストリートファイターリーグ powered by RAGE 5位 トキドフレイム",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "CEO 2026: 優勝",
+              "sourceUrl": "https://www.inside-games.jp/release/prtimes/20260818/302058.html",
+              "researchId": "R20261117-CEO26-01",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3",
+    "playerSlug": "torimeshi",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "torimeshi",
+      "name": "鶏めし",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "ダルシム"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 6位 FUKUSHIMA IBUSHIGIN",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division F 1位 Yogibo REJECT",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 7位 名古屋OJA BODY STAR",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 4位 v6プラス FAV gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/"
+            }
+          ]
+        },
+        {
+          "title": "その他の大会成績（2つの出典で確認）",
+          "items": [
+            {
+              "text": "Esports World Cup 2025 9〜16位（2025-08-23）",
+              "sourceUrl": "https://esports.gg/news/street-fighter-6/ewc-2025-sf6-stream-matchups-results"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3",
+    "playerSlug": "yamaguchi",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "yamaguchi",
+      "name": "ヤマグチ",
+      "intro": null,
+      "facts": [
+        {
+          "label": "SFL2026での使用キャラクター",
+          "value": "舞"
+        }
+      ],
+      "sections": [
+        {
+          "title": "チームのリーグ実績",
+          "items": [
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2025 Division F 3位 ZETA DIVISION Geekly",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2024 Division S 4位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2023 6位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/"
+            },
+            {
+              "text": "ストリートファイターリーグ: Pro-JP 2022 5位 忍ism Gaming",
+              "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2026: 1位",
+              "sourceUrl": "https://www.shacknews.com/article/148960/evo-japan-2026-winners-top-8",
+              "researchId": "R20261117-EVOJ2026-01",
+              "sourceCheckedOn": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "Productionの実IDに接続（2026-11-19）。publicationApproval=PENDINGのため非表示。"
+  },
+  {
+    "playerId": "830621f4-38aa-49e3-a320-31621e983fb5",
+    "playerSlug": "blaz",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "blaz",
+      "name": "Blaz",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "リュウ"
+        },
+        {
+          "label": "サブキャラクター",
+          "value": "サガット、ルーク、ジェイミー"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "830621f4-38aa-49e3-a320-31621e983fb5",
+    "playerSlug": "blaz",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "blaz",
+      "name": "Blaz",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "リュウ"
+        },
+        {
+          "label": "サブキャラクター",
+          "value": "サガット、ルーク、ジェイミー"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "626062e4-4300-43ee-a20d-10d4c7672364",
+    "playerSlug": "kilzyou",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "kilzyou",
+      "name": "Kilzyou",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "舞"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "626062e4-4300-43ee-a20d-10d4c7672364",
+    "playerSlug": "kilzyou",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "kilzyou",
+      "name": "Kilzyou",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "舞"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "e3cb3bf2-9ec9-4b40-a89a-e33361211cf4",
+    "playerSlug": "craime",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "craime",
+      "name": "Craime",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "リュウ"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "e3cb3bf2-9ec9-4b40-a89a-e33361211cf4",
+    "playerSlug": "craime",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "craime",
+      "name": "Craime",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "リュウ"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "e5afe19f-e311-4e6f-ab33-781e0263efdf",
+    "playerSlug": "crossoverrd",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "crossoverrd",
+      "name": "CrossoverRD",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "サガット"
+        },
+        {
+          "label": "サブキャラクター",
+          "value": "ルーク"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "e5afe19f-e311-4e6f-ab33-781e0263efdf",
+    "playerSlug": "crossoverrd",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "crossoverrd",
+      "name": "CrossoverRD",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "サガット"
+        },
+        {
+          "label": "サブキャラクター",
+          "value": "ルーク"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "99addbae-9429-4128-9242-b8f2b89365c2",
+    "playerSlug": "micky",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "micky",
+      "name": "Micky",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "舞"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "99addbae-9429-4128-9242-b8f2b89365c2",
+    "playerSlug": "micky",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "micky",
+      "name": "Micky",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "舞"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "952f2765-bafc-47d0-8be6-af76179a8bfa",
+    "playerSlug": "tantanmen",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "tantanmen",
+      "name": "タンタンメン",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "ジェイミー"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "952f2765-bafc-47d0-8be6-af76179a8bfa",
+    "playerSlug": "tantanmen",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "tantanmen",
+      "name": "タンタンメン",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "ジェイミー"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "210a2651-87f7-436f-ae88-fdee5df4868a",
+    "playerSlug": "go1",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "go1",
+      "name": "GO1",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "春麗"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "210a2651-87f7-436f-ae88-fdee5df4868a",
+    "playerSlug": "go1",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "go1",
+      "name": "GO1",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "春麗"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "b1d6c5b4-9157-455a-84b5-6b5c2ecb80ee",
+    "playerSlug": "kakeru",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "kakeru",
+      "name": "kakeru",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "JP"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "fde7c095-b6fc-40ad-a287-6a8f8d3e3444",
+    "playerSlug": "leshar",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "leshar",
+      "name": "Leshar",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "テリー"
+        },
+        {
+          "label": "サブキャラクター",
+          "value": "エド、ルーク"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "fde7c095-b6fc-40ad-a287-6a8f8d3e3444",
+    "playerSlug": "leshar",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "leshar",
+      "name": "Leshar",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "テリー"
+        },
+        {
+          "label": "サブキャラクター",
+          "value": "エド、ルーク"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "dca72b60-2ab0-4685-a87e-1b68bbdd17ba",
+    "playerSlug": "noahtheprodigy",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "noahtheprodigy",
+      "name": "NoahTheProdigy",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "ルーク"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "dca72b60-2ab0-4685-a87e-1b68bbdd17ba",
+    "playerSlug": "noahtheprodigy",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "noahtheprodigy",
+      "name": "NoahTheProdigy",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "ルーク"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "2e98c322-7880-4aec-be51-d2bffc7d3836",
+    "playerSlug": "tachikawa",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "tachikawa",
+      "name": "Tachikawa",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "C.ヴァイパー"
+        }
+      ],
+      "sections": []
+    },
+    "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "20b3b275-e3e0-4e90-a728-6cfc9affa77b",
+    "playerSlug": "phenom",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "phenom",
+      "name": "Phenom",
+      "intro": null,
+      "facts": [
+        {
+          "label": "主要大会での使用キャラクター",
+          "value": "キャミィ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO 2025: 4位",
+              "sourceUrl": "https://evo.gg/news/evo-2025-street-fighter-6-recap/"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "主要大会Top8選手。本番登録済みIDに接続(2026-11-19)。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "60a080e8-e127-478b-9672-166289f38d00",
+    "playerSlug": "punk",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "punk",
+      "name": "Punk",
+      "intro": null,
+      "facts": [
+        {
+          "label": "主要大会での使用キャラクター",
+          "value": "キャミィ"
+        }
+      ],
+      "sections": [
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2026: 2位",
+              "sourceUrl": "https://www.shacknews.com/article/148960/evo-japan-2026-winners-top-8"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "主要大会Top8選手。本番登録済みIDに接続(2026-11-19)。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "ec550353-56f4-4708-b3b5-f8cb9dbc6828",
+    "playerSlug": "hope-aki",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "hope-aki",
+      "name": "Hope",
+      "intro": null,
+      "facts": [
+        {
+          "label": "主要大会での使用キャラクター",
+          "value": "A.K.I."
+        }
+      ],
+      "sections": [
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2026: 4位",
+              "sourceUrl": "https://www.shacknews.com/article/148960/evo-japan-2026-winners-top-8"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "主要大会Top8選手。本番登録済みIDに接続(2026-11-19)。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "851f4b0f-5843-4bff-b3fc-fd999835a233",
+    "playerSlug": "naooonn",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "naooonn",
+      "name": "Naooonn",
+      "intro": null,
+      "facts": [
+        {
+          "label": "主要大会での使用キャラクター",
+          "value": "豪鬼"
+        }
+      ],
+      "sections": [
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO Japan 2026: 同率5位",
+              "sourceUrl": "https://www.shacknews.com/article/148960/evo-japan-2026-winners-top-8"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "主要大会Top8選手。本番登録済みIDに接続(2026-11-19)。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "92a7f5e5-2399-4756-9a0f-94f30114d1b0",
+    "playerSlug": "booce-lee",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "booce-lee",
+      "name": "Booce_Lee",
+      "intro": null,
+      "facts": [],
+      "sections": [
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "CEO 2026: 2位",
+              "sourceUrl": "https://www.inside-games.jp/release/prtimes/20260818/302058.html"
+            }
+          ]
+        }
+      ]
+    },
+    "note": "主要大会Top8選手。本番登録済みIDに接続(2026-11-19)。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "acc4a52c-ee9e-4f9c-ab09-788818789841",
+    "playerSlug": "shigematsu",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "shigematsu",
+      "name": "Shigematsu",
+      "intro": null,
+      "facts": [
+        {
+          "label": "主要大会での使用キャラクター",
+          "value": "ブランカ"
+        }
+      ],
+      "sections": []
+    },
+    "note": "主要大会Top8選手。本番登録済みIDに接続(2026-11-19)。PENDINGのため非表示。順位の出典が矛盾するため実績はHOLD。"
+  },
+  {
+    "playerId": "19fc9bdb-bd77-443e-b67e-2434731ff758",
+    "playerSlug": "zhen-bison",
+    "publicationApproval": "PENDING",
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "display": {
+      "slug": "zhen-bison",
+      "name": "Zhen",
+      "intro": null,
+      "facts": [],
+      "sections": []
+    },
+    "note": "主要大会Top8選手。本番登録済みIDに接続(2026-11-19)。PENDINGのため非表示。順位の出典が矛盾するため実績はHOLD。"
   }
 ]

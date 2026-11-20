@@ -93,6 +93,8 @@ export function commandIconAccessibleName(tokens: Sf6CommandToken[]): string {
       spoken.push((token.raw === "+" || token.raw === "＋") ? "同時押し" : token.raw === "~" ? "続けて入力" : "次の入力");
       continue;
     }
+    // Alternative-input markers ("A | B", "A / B") are read as a word, not as a bare symbol.
+    if (token.kind === "text" && /^[|｜/／]$/.test(token.raw.trim())) { spoken.push("または"); continue; }
     const label = spokenText(commandIconPresentation(token).label);
     if (label) spoken.push(label);
   }

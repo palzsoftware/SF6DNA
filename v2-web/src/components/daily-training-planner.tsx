@@ -2,7 +2,7 @@
 
 import { MiniIllustration } from "@/components/mini-illustration";
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { readDailyDiagnosisInput, type DailyDiagnosisRecord } from "@/lib/daily-diagnosis-input";
 import { getCharacterStatuses, type PersonalOwner } from "@/lib/personalization-storage";
@@ -34,7 +34,12 @@ export function DailyTrainingPlanner(props: PlannerProps) {
     refreshed.current = ownerGeneration;
     router.refresh();
   }, [waitingForContext, ownerGeneration, isCurrent, router]);
-  if (state.status !== "ready") return <section role="status" className="info-panel">{state.status === "error" ? "認証状態を確認できません。再読み込みしてお試しください。" : "利用者を確認しています。"}</section>;
+  if (state.status === "error") return <section role="alert" className="info-panel">
+    <h1>練習メニューを表示できませんでした</h1>
+    <p>認証状態を確認できません。ページを再読み込みしてお試しください。</p>
+    <p><Link className="button-primary inline-button" href="/me/training">15分練習を開き直す</Link> <Link className="button-secondary inline-button" href="/">ホームへ戻る</Link></p>
+  </section>;
+  if (state.status !== "ready") return <section role="status" className="info-panel">利用者を確認しています。</section>;
   if (waitingForContext) return <section role="status" className="info-panel">利用者の練習情報を再確認しています。完了しない場合はページを再読み込みしてください。</section>;
   return <DailyTrainingPlannerOwned key={JSON.stringify([state.owner, state.version, props.dateKey, requestType, requestFocus, props.sessionId ?? null, !!props.fresh])} {...props} request={request} owner={state.owner} isCurrent={isCurrent} />;
 }
@@ -103,6 +108,8 @@ function DailyTrainingPlannerOwned({ dateKey, request, context, sessionId = null
   const completeMinutes = activeCompletedIds.size * 5;
   const completed = completeMinutes === plan.totalMinutes;
   const checkingHistory = !request && !local.ready;
+  const cardAnchorPrefix = useId();
+  const cardAnchor = (index: number) => `${cardAnchorPrefix}-practice-${index}`;
   const completionFocus = plan.items.find((item) => activeCompletedIds.has(item.id))?.detail.matchFocus[0] ?? plan.items[0]?.detail.matchFocus[0];
 
   async function persist(write: PracticeWrite, preview: PracticeSession) {
@@ -172,7 +179,7 @@ function DailyTrainingPlannerOwned({ dateKey, request, context, sessionId = null
       {session && notice.includes("保存できませんでした") ? <button className="button-secondary" type="button" disabled={saving || !isCurrent()} onClick={() => { if (pending.current) void persist(pending.current, session); }}>再度保存する</button> : null}
       {!checkingHistory && plan.source === "default" && (context.state === "unavailable" || local.unavailable) ? <p>{context.state === "unavailable" ? (local.unavailable ? "診断履歴と対戦の課題を読み込めなかったため、基本メニューを表示しています。" : "対戦の課題を読み込めなかったため、基本メニューを表示しています。") : "診断履歴を読み込めなかったため、基本メニューを表示しています。"}</p> : null}
     </section>
-    <section className={styles.cards} aria-label="今日の練習項目">{plan.items.map((item, index) => <TrainingCard key={`${session?.id ?? "draft"}:${item.id}`} item={item} index={index} expanded={activeExpandedId === item.id} complete={activeCompletedIds.has(item.id)} enabled={loaded && !checkingHistory && !saving && isCurrent()}
+    <section className={styles.cards} aria-label="今日の練習項目">{plan.items.map((item, index) => <TrainingCard key={`${session?.id ?? "draft"}:${item.id}`} item={item} index={index} anchorId={cardAnchor(index)} expanded={activeExpandedId === item.id} complete={activeCompletedIds.has(item.id)} enabled={loaded && !checkingHistory && !saving && isCurrent()}
       onToggle={() => setExpandedId(activeExpandedId === item.id ? null : item.id)} onComplete={() => completeItem(item.id)} />)}</section>
     {completed ? <section className={styles.completion} aria-live="polite"><p className={styles.sectionLabel}>15 / 15分</p><h2>15分メニュー完了</h2><p>おつかれさまでした。次の対戦では、まず1つだけ試してみましょう。</p>{completionFocus ? <p><strong>実戦テーマ：</strong>{completionFocus}</p> : null}<div className="diagnosis-actions"><Link className="button-primary" href="/me/training/history">練習履歴を見る</Link><Link className="button-secondary" href={session ? `${practiceHref(session.id)}&new=1` : "/me/training?new=1"}>もう一度練習する</Link><Link className="button-secondary" href="/">Homeへ戻る</Link></div></section> : null}
     </div>
@@ -182,7 +189,10 @@ function DailyTrainingPlannerOwned({ dateKey, request, context, sessionId = null
         <div aria-live="polite"><strong>{activeCompletedIds.size} / 3 完了</strong><span>{completeMinutes} / {plan.totalMinutes}分のメニュー</span></div>
         <div className={styles.progressTrack} role="progressbar" aria-label="この練習の進捗" aria-valuemin={0} aria-valuemax={15} aria-valuenow={completeMinutes}><span style={{ width: `${completeMinutes / plan.totalMinutes * 100}%` }} /></div>
         <p className={styles.progressNote}>完了にした項目の目安です。タイマーで計測した時間とは別です。</p>
-        <ol className={styles.progressItems}>{plan.items.map((item, index) => <li key={item.id}><button type="button" aria-current={activeExpandedId === item.id ? "step" : undefined} onClick={() => setExpandedId(item.id)}><span>{activeCompletedIds.has(item.id) ? "✓" : String(index + 1).padStart(2, "0")}</span><span>{item.title}<small>{activeCompletedIds.has(item.id) ? "完了" : "5分メニュー"}</small></span></button></li>)}</ol>
+        <ol className={styles.progressItems}>{plan.items.map((item, index) => <li key={item.id}><button type="button" aria-current={activeExpandedId === item.id ? "step" : undefined} aria-controls={cardAnchor(index)} onClick={() => {
+          setExpandedId(item.id);
+          document.getElementById(cardAnchor(index))?.focus();
+        }}><span>{activeCompletedIds.has(item.id) ? "✓" : String(index + 1).padStart(2, "0")}</span><span>{item.title}<small>{activeCompletedIds.has(item.id) ? "完了" : "5分メニュー"}</small></span></button></li>)}</ol>
         <p className={styles.progressNote}>すべて終わらなくても、次の対戦で試すことを一つ持ち帰りましょう。</p>
         <Link className={styles.progressLink} href="/me/training/history">練習履歴を見る →</Link>
       </div>

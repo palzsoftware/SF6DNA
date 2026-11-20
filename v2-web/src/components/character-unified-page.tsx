@@ -6,6 +6,7 @@ import { Sf6CommandInput } from "./sf6-command-input";
 import { MoveMotionMedia } from "./move-motion-media";
 import { CharacterPlayerCard } from "./character-player-card";
 import { VideoCard } from "./video-card";
+import type { StrategyMoveLinks } from "./character-strategy-research-grid";
 import { CharacterStrategySlot } from "./character-strategy-slot";
 import { CharacterPreferenceActions } from "./character-preference-actions";
 import { moveCardAnchorId } from "@/lib/move-card-reference";
@@ -138,9 +139,13 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
   </article>;
 }
 
-export function CharacterUnifiedPage({ character, bundle, players, videos, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true }: {
+export function CharacterUnifiedPage({ character, bundle, players, videos, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, playerDirectoryUrl = "/players", videoDirectoryUrl = "/videos", strategyMoveLinks, strategyReviewDescriptions, reviewedStrategyCards }: {
   character: CharacterDetail; bundle: DevicePreviewBundle | null; players: PlayerDetail[]; videos: VideoSummary[];
   moveEvidence?: Record<string, UnifiedMoveEvidence>; localReferences?: ReactNode; localMoveReferences?: ReactNode; automaticVideos?: ReactNode; showPreferences?: boolean;
+  playerDirectoryUrl?: string; videoDirectoryUrl?: string;
+  strategyMoveLinks?: StrategyMoveLinks;
+  strategyReviewDescriptions?: Readonly<Record<string, string>>;
+  reviewedStrategyCards?: readonly import("@/lib/strategy-research-contract").StrategyResearchCard[];
 }) {
   const moves = bundle?.moves ?? [];
   const dReversalCondition = (move: UnifiedMove): "guard" | "wakeup" | null => {
@@ -196,7 +201,7 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, moveE
       <a href="#pilot-overview">基本情報</a><a href="#pilot-moves">技カード</a><a href="#character-players">使用Player</a>
       <a href="#character-videos">関連Video</a><a href="#sources">情報源</a>
     </nav>
-    <section id="pilot-overview" className={styles.section}><h2>基本情報</h2>
+    <section id="pilot-overview" tabIndex={-1} className={styles.section}><h2>基本情報</h2>
       <dl className={styles.facts}>
         <div><dt>得意距離</dt><dd>{publicText(character.rangeLabel, "確認中")}</dd></div>
         <div><dt>タイプ</dt><dd>{publicText(character.archetypeLabel, "確認中")}</dd></div>
@@ -205,7 +210,7 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, moveE
       <div className={styles.profileGrid}><div><h3>強み</h3><p>{publicText(character.strengthsSummary, "強みは確認中です。")}</p></div>
         <div><h3>注意点</h3><p>{publicText(character.weaknessesSummary, "注意点は確認中です。")}</p></div></div>
     </section>
-    <section id="pilot-moves" className={styles.section}><h2>技カード</h2>
+    <section id="pilot-moves" tabIndex={-1} className={styles.section}><h2>技カード</h2>
       <p>「—」は公式資料のN/A、「公式資料に記載なし」は未記載、「確認中」は未確認項目です。「ダウン」はヒット時に相手がダウンする意味です。ClassicとModernは別の入力として表示します。</p>
       {showLocalTxtCandidateValues ? <p className={styles.localCandidateNotice}>ローカル確認表示：10/23公式TXTを優先した候補値です。公開承認・Patch照合済みを意味しません。</p> : null}
       {groups.length ? <CharacterMoveExplorer className={styles.explorer} groupClassName={styles.moveGroup} listClassName={styles.moveGrid}
@@ -221,25 +226,25 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, moveE
     </section>
     {character.slug === "luke" && ["development", "preview"].includes(process.env.VERCEL_ENV ?? process.env.NODE_ENV ?? "") ? localMoveReferences : null}
     <section className={styles.relatedSections} aria-label="参考になるプレイヤーと動画">
-      <section id="character-players" className={`${styles.section} ${styles.relatedPanel}`}><h2>使用プレイヤー</h2>
+      <section id="character-players" tabIndex={-1} className={`${styles.section} ${styles.relatedPanel}`}><h2>使用プレイヤー</h2>
         {connectedPlayers.length ? <div className={styles.relatedGrid}>{connectedPlayers.map(player =>
           <CharacterPlayerCard player={player} characterSlug={character.slug} key={player.id} />)}</div>
           : <p>使用プレイヤーの情報を確認中です。</p>}
-        <Link className={styles.relatedLink} href="/players">プレイヤー図鑑を見る →</Link>
+        <Link className={styles.relatedLink} href={playerDirectoryUrl}>プレイヤー図鑑を見る →</Link>
       </section>
-      <section id="character-videos" className={`${styles.section} ${styles.relatedPanel}`}><h2>関連ビデオ</h2>
+      <section id="character-videos" tabIndex={-1} className={`${styles.section} ${styles.relatedPanel}`}><h2>関連ビデオ</h2>
         {connectedVideos.length ? <div className={styles.relatedGrid}>{connectedVideos.map(video =>
           <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />)}</div>
           : <p>関連動画は準備中です。</p>}
         {automaticVideos}
-        <Link className={styles.relatedLink} href="/videos">動画一覧を見る →</Link>
+        <Link className={styles.relatedLink} href={videoDirectoryUrl}>動画一覧を見る →</Link>
       </section>
     </section>
-    <CharacterStrategySlot kind="combo" characterSlug={character.slug} previewContent={character.slug === "luke" ? localReferences : null} />
-    <CharacterStrategySlot kind="setplay" characterSlug={character.slug} />
-    <CharacterStrategySlot kind="sequence" characterSlug={character.slug} />
-    <CharacterStrategySlot kind="counter" characterSlug={character.slug} />
-    <section id="sources" className={styles.section}><h2>情報源</h2><SourceLinks sources={character.sources} /></section>
+    <CharacterStrategySlot moveLinks={strategyMoveLinks} reviewDescriptions={strategyReviewDescriptions} reviewedCards={reviewedStrategyCards} kind="combo" characterSlug={character.slug} previewContent={character.slug === "luke" ? localReferences : null} />
+    <CharacterStrategySlot moveLinks={strategyMoveLinks} reviewDescriptions={strategyReviewDescriptions} reviewedCards={reviewedStrategyCards} kind="setplay" characterSlug={character.slug} />
+    <CharacterStrategySlot moveLinks={strategyMoveLinks} reviewDescriptions={strategyReviewDescriptions} reviewedCards={reviewedStrategyCards} kind="sequence" characterSlug={character.slug} />
+    <CharacterStrategySlot moveLinks={strategyMoveLinks} reviewDescriptions={strategyReviewDescriptions} reviewedCards={reviewedStrategyCards} kind="counter" characterSlug={character.slug} />
+    <section id="sources" tabIndex={-1} className={styles.section}><h2>情報源</h2><SourceLinks sources={character.sources} /></section>
     {/* Strategy reference media is retained in source, hidden for Ver.1.0. */}
   </div>;
 }

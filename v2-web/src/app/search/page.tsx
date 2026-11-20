@@ -52,8 +52,13 @@ export default async function SearchPage({
   const params = await searchParams;
   const q = one(params.q).slice(0, 100);
   const selectedType = one(params.type) || "all";
+  // An outage must not look like "0 results", and must not crash the page (no route error boundary).
+  let searchUnavailable = false;
   const [results, suggestionCandidates] = q
-    ? await Promise.all([searchAcrossContent(q), getPublicSearchSuggestionCandidates()])
+    ? await Promise.all([
+      searchAcrossContent(q).catch(() => { searchUnavailable = true; return [] as SearchResultItem[]; }),
+      getPublicSearchSuggestionCandidates().catch(() => []),
+    ])
     : [[], []];
   const suggestions = q ? suggestSearchTerms(q, suggestionCandidates) : [];
   const suggestionHeading = suggestions.some((suggestion) => suggestion.matchedBy === "typo")
@@ -119,7 +124,7 @@ export default async function SearchPage({
             <div className={styles.resultHead}>
               <div>
                 <h2>「{q}」</h2>
-                <p>{results.length}件の結果</p>
+                <p role={searchUnavailable ? "alert" : undefined}>{searchUnavailable ? "現在、検索サービスに接続できません。時間をおいて再度お試しください。" : `${results.length}件の結果`}</p>
               </div>
               {selectedType !== "all" ? <Link className="text-link" href={typeHref(q, "all")}>すべて表示</Link> : null}
             </div>
@@ -173,7 +178,7 @@ export default async function SearchPage({
             </div>
           ) : (
             <section className={`empty-state ${styles.emptyHelp}`}>
-              <h2>{results.length ? "この種類では一致する情報がありません" : "一致する情報が見つかりません"}</h2><p>検索語：{q} / 種類：{TYPE_LABELS[selectedType] ?? "すべて"}</p><Link className="text-link" href="/search">検索条件をリセット</Link>
+              <h2>{searchUnavailable ? "検索結果を取得できませんでした" : results.length ? "この種類では一致する情報がありません" : "一致する情報が見つかりません"}</h2><p>検索語：{q} / 種類：{TYPE_LABELS[selectedType] ?? "すべて"}</p><Link className="text-link" href="/search">検索条件をリセット</Link>
               <ul>
                 <li>キャラクター名やプレイヤー名の一部でも検索できます。</li>
                 <li>つづりが不明なときは、短い名前でも試せます。</li>

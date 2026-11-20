@@ -1,0 +1,5878 @@
+{
+ "schema": "sf6dna.strategy-variant-links.v1",
+ "generatedAt": "2026-11-20",
+ "status": "CANDIDATE_NOT_CONNECTED",
+ "note": "監査（第2段階）の派生判定から作成した親子関連付けの実装候補。画面からは参照しない。カードIDの変更・削除・物理的な統合はしない。",
+ "counts": {
+  "MERGE_INTO_PARENT": 159,
+  "KEEP_LINKED_ALTERNATIVE": 232
+ },
+ "links": [
+  {
+   "childId": "local-review:e09a98ef4269c07d",
+   "parentId": "local-review:85188716bf5c544b",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:90508d49bc277286",
+   "parentId": "local-review:85188716bf5c544b",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:bfeb982fa938950e",
+   "parentId": "local-review:d2dc24d5d2a16daf",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:80337804e95f26d0",
+   "parentId": "local-review:133bc20f9b50479e",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0b8a6965cac50a6f",
+   "parentId": "guide-ref:SF6DNA-ARJUN-R5-008",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f9e75919d121b4e4",
+   "parentId": "local-review:133bc20f9b50479e",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:21d0f184b8097884",
+   "parentId": "local-review:133bc20f9b50479e",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:636c79180377225d",
+   "parentId": "local-review:0b317f42c29259db",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9c52e6a838e89232",
+   "parentId": "local-review:278ce846bcc7dfc4",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:2498b5dc725930dd",
+   "parentId": "local-review:ddc3052c9b7b61c9",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:dedb5c1d6e6c1794",
+   "parentId": "local-review:da5bb296f6a31ad2",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2efad8f1636d1ce5",
+   "parentId": "local-review:514322577cfcb629",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:7beb9e851db72828",
+   "parentId": "local-review:60bc381b520ca44c",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:bd407f2c4ad8aded",
+   "parentId": "local-review:5285c79ee66b2a9d",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:687016246616d89f",
+   "parentId": "local-review:92fa06a98bf53072",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:8a46fff9d2b4a2e3",
+   "parentId": "local-review:35c26f265cae7101",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:901f1aa6130d5551",
+   "parentId": "local-review:b9eea03d49402ad0",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:15f824ff8eb9f631",
+   "parentId": "local-review:da7f4b227af09ec1",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:8ab5c737cec52249",
+   "parentId": "local-review:ffdbcc10e07dbd5c",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:7cf3390f65e34e0b",
+   "parentId": "local-review:ffdbcc10e07dbd5c",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:e5d6ee2d6b7c109c",
+   "parentId": "local-review:77d123049110bc17",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:c34342e5677aa674",
+   "parentId": "local-review:da7f4b227af09ec1",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:ecc4aa4abae0925d",
+   "parentId": "local-review:ef55caea5a74f3cf",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:07155167cd1c35b7",
+   "parentId": "local-review:93756339964eba42",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0b6f74de29964d1c",
+   "parentId": "local-review:0d338b8931223d96",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:1283a11428845212",
+   "parentId": "local-review:15f824ff8eb9f631",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:bc6f2df0e464000a",
+   "parentId": "local-review:70b78241a40255a4",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:cda3eed189c09e89",
+   "parentId": "local-review:90acb3423dca0864",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9b8fb73ccb55dc3f",
+   "parentId": "local-review:24d05055c1e0d73e",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:5e1b26d71e083fc9",
+   "parentId": "local-review:e99176c107c44d2e",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:15c3100373960c7c",
+   "parentId": "local-review:5e1b26d71e083fc9",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2882a79b96f9b9db",
+   "parentId": "local-review:9b8fb73ccb55dc3f",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:443947ec47d08a36",
+   "parentId": "local-review:46dc3661807849bf",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:374dc65f195ab0d2",
+   "parentId": "local-review:46dc3661807849bf",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:dfa8f884ae8da0e9",
+   "parentId": "local-review:7e70bf295901a26f",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:8e35bb29fb5154df",
+   "parentId": "local-review:93756339964eba42",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3a246a19a92858fc",
+   "parentId": "local-review:e99176c107c44d2e",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b269b3e200ffa1cd",
+   "parentId": "local-review:0b317f42c29259db",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:63234a82a4275c9a",
+   "parentId": "local-review:d1f57a5924780719",
+   "characterSlug": "arjun",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0f1b805d2bf427b4",
+   "parentId": "local-review:9554cc9bb99ea179",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f9e6c01b72e4c313",
+   "parentId": "local-review:6d336fa2d77702f9",
+   "characterSlug": "arjun",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:ff637fe015146644",
+   "parentId": "guide-ref:cammy-r4-record-0099",
+   "characterSlug": "cammy",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:eac41f7b6827aef6",
+   "parentId": "local-review:b0bf69b112f1bc23",
+   "characterSlug": "cammy",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:feef240146999b23",
+   "parentId": "local-review:fa10cd50fd99dde1",
+   "characterSlug": "cammy",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:a6f3b248c928dbf9",
+   "parentId": "guide-ref:cammy-r4-record-0099",
+   "characterSlug": "cammy",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:87b938badcf287be",
+   "parentId": "guide-ref:cammy-r4-record-0079",
+   "characterSlug": "cammy",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3c10b19e4496f107",
+   "parentId": "local-review:017205a106695002",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:99f54ed1ce2a94c7",
+   "parentId": "local-review:340282e650df2175",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3c6f42f8756e770a",
+   "parentId": "local-review:1ee8d21ad5e487e6",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3f7cd11862069986",
+   "parentId": "local-review:d6d93c9949add551",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:15b361156b705474",
+   "parentId": "local-review:b64a2c3ba718db97",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:37664b4850c9d484",
+   "parentId": "local-review:d6d93c9949add551",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:83cb2e081b76fac0",
+   "parentId": "local-review:b29cad22bcc06a24",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:82759c7d3fbe6bde",
+   "parentId": "local-review:8ce174e66e4fcedd",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:29ab1ddec541519f",
+   "parentId": "local-review:60a3535ee4b78a21",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:60a3535ee4b78a21",
+   "parentId": "local-review:3fda088607140a7b",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:4a92f6ffa7990f69",
+   "parentId": "local-review:0fc71b74827ea6e9",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:6a3327873de52bed",
+   "parentId": "local-review:520c86a84e51853b",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0d50e4926a05586a",
+   "parentId": "local-review:bec38f071a17db38",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:4e34c25819df4b94",
+   "parentId": "local-review:d24c2ace03e0334b",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:5ca0fe065f7dae17",
+   "parentId": "local-review:e1bceefdcd34006a",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:09bb0803a78c0e97",
+   "parentId": "local-review:3d248528f6183aa5",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:56f1cd7f5fd8de72",
+   "parentId": "local-review:717518dd5c155e7c",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:dc6d7dd19a6b7e83",
+   "parentId": "local-review:d24c2ace03e0334b",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f3b96714455d2202",
+   "parentId": "local-review:8fc6da0b5226f0b1",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:46c89b5699ee9e47",
+   "parentId": "local-review:b6f79311fe5a2e0d",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:29252267ccd304c8",
+   "parentId": "local-review:b6f79311fe5a2e0d",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:cf6bde5ef3da3090",
+   "parentId": "local-review:a1a41b5405b1323a",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:1e6df51a91355bd2",
+   "parentId": "local-review:623e208a35460f19",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:fbc2fd6b9c327756",
+   "parentId": "local-review:3d74482f770dd7db",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:55cf7591a2c899b0",
+   "parentId": "local-review:a3529d3f76756207",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:c46cfa1b5b7c58b5",
+   "parentId": "local-review:037592437a61fe0d",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:893b13e323276e47",
+   "parentId": "local-review:14fd15d57f3ff762",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:a7c16a04c1dac7ea",
+   "parentId": "local-review:3d74482f770dd7db",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:86cd743ffe711289",
+   "parentId": "local-review:75b33625212221b7",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:a8587c922fe6017e",
+   "parentId": "local-review:79ce95f011e27109",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:de4df5c49a0e7d50",
+   "parentId": "local-review:a10c8082c97a2edc",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:b52cae7f18b8b6a9",
+   "parentId": "local-review:b6f79311fe5a2e0d",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:d27c79ddcf42d35b",
+   "parentId": "local-review:e56261652f13576a",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0def3c5578b48141",
+   "parentId": "local-review:0437b688d42a5128",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:a9b5cb3534925a5b",
+   "parentId": "local-review:3fda088607140a7b",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:eb15227c667cd5b5",
+   "parentId": "local-review:60a3535ee4b78a21",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:01785353387040c7",
+   "parentId": "local-review:7463e184784f492d",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:e0c8d737f612c30e",
+   "parentId": "local-review:2088a1b0773ca0dd",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:6b7dad7ff3d189ec",
+   "parentId": "local-review:139d2c5cd1092de0",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:d05896989622925e",
+   "parentId": "local-review:79d802d15703d9e5",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:4637caea83a1986e",
+   "parentId": "local-review:73872b5bd541dff7",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:e11fac94d1c6764f",
+   "parentId": "local-review:fd30aa8eb1fdc594",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f645c16d2a3d7c19",
+   "parentId": "local-review:340282e650df2175",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2413782d2383c9ad",
+   "parentId": "local-review:4c5cbbdaa38ac7be",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2f79ab5804e1ef9c",
+   "parentId": "local-review:4c5cbbdaa38ac7be",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:b93ede0a3121b253",
+   "parentId": "local-review:5671293506d7f25e",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:762c5db4a5bd2749",
+   "parentId": "local-review:c2b106bb81ec5c83",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:ef694ba55a644745",
+   "parentId": "local-review:125d16936c61b5ba",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b9aa3dc4b6573706",
+   "parentId": "local-review:65d4b5ccdbd9f920",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:31e0557a447f587f",
+   "parentId": "guide-ref:deejay-r5-0001",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:c058a6ee20a976d3",
+   "parentId": "local-review:91a77a07772eec83",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:aab65e08cb9bbba9",
+   "parentId": "local-review:037592437a61fe0d",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:1626b28f7f28face",
+   "parentId": "local-review:e47ebbade471c07a",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3f5c92a008158b51",
+   "parentId": "local-review:77c11572b5024dc1",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f0543e8daa166533",
+   "parentId": "local-review:523ca41a47c55469",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:129c8d2a855db1a2",
+   "parentId": "local-review:544709204ff7b142",
+   "characterSlug": "akuma",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:95a8ac7b7dd63c55",
+   "parentId": "local-review:fb28bb817eb107b7",
+   "characterSlug": "akuma",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:a4fd19d5cae365a8",
+   "parentId": "guide-ref:SF6DNA-AKUMA-R5-001",
+   "characterSlug": "akuma",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:e84da1f026e5cc98",
+   "parentId": "local-review:544709204ff7b142",
+   "characterSlug": "akuma",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:dc6b7a500b03c2b0",
+   "parentId": "guide-ref:jp-r4-record-0001",
+   "characterSlug": "jp",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:5c2048526a49ebcf",
+   "parentId": "local-review:11f48c3c1c57a354",
+   "characterSlug": "jp",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b7494740d3abd84f",
+   "parentId": "local-review:fe2820328ecf971a",
+   "characterSlug": "jp",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:405be6a817b20fb1",
+   "parentId": "local-review:694eeaae8bd7c51a",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9ab1aac9545394cc",
+   "parentId": "local-review:27608ed108bea1ff",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b596a0b9ccc770bd",
+   "parentId": "guide-ref:SF6DNA-KEN-R5-0001",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f3a2965912350e86",
+   "parentId": "guide-ref:SF6DNA-KEN-R5-0001",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:19c22fa81a0554a1",
+   "parentId": "local-review:fba7e46a53263e01",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:bc3f155f59e79319",
+   "parentId": "local-review:fba7e46a53263e01",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:ed25a9ce9e7db91f",
+   "parentId": "local-review:ec81f08af82244cc",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:268f830eab3e4581",
+   "parentId": "local-review:3d8ece18624b5666",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:92f033ddbd097e44",
+   "parentId": "local-review:fba7e46a53263e01",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:c78a0c28a20c11d6",
+   "parentId": "local-review:5d5d7948f058f940",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:4232ccf6bb2e03e9",
+   "parentId": "local-review:606606ba69d1ac98",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:39ec4c791397391e",
+   "parentId": "local-review:27608ed108bea1ff",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:884b7e93c5d43b87",
+   "parentId": "local-review:c7af8896cd14ae7e",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:6d563d12616737b0",
+   "parentId": "local-review:5e4837d210f899d1",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f8b953d92abc00e9",
+   "parentId": "local-review:5e4837d210f899d1",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:aedbbddcbdac6602",
+   "parentId": "local-review:c418f65cfe02424c",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:e462f8996d289782",
+   "parentId": "local-review:de4a062f8e6b63cf",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:b46172a2ade59ddc",
+   "parentId": "local-review:84492f7e0367f723",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:8f4e53e8152fd812",
+   "parentId": "guide-ref:SF6DNA-KEN-R5-0094",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:1892e445b5472143",
+   "parentId": "local-review:84e7b1f132911547",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:83c63330592efc5a",
+   "parentId": "local-review:392a4760dc65821c",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:81779a3ea02e78d9",
+   "parentId": "local-review:d36b0ebb75f43e87",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:1f650bb48c4dbcaa",
+   "parentId": "local-review:5c1ae7cc44ed0199",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:21588fad390fc9e3",
+   "parentId": "local-review:b4b4088003711a6c",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b4d53a3735305c23",
+   "parentId": "local-review:dfce68784b9f8d2e",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:28b53c471dc5570f",
+   "parentId": "local-review:b4d29953b93a1e43",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:e1db2134c5141393",
+   "parentId": "local-review:5225f55cd8866207",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:38dc39a4f25bae1c",
+   "parentId": "local-review:ab5d5928f0bd98c3",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0bc03c320920ec48",
+   "parentId": "local-review:ebadb6aa24b3a737",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2981ce5faac08576",
+   "parentId": "local-review:c7af8896cd14ae7e",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:063a2dafc136c1ff",
+   "parentId": "local-review:5e4837d210f899d1",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:528ffe416d3ad11d",
+   "parentId": "local-review:5e4837d210f899d1",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3604a1fa0f042737",
+   "parentId": "local-review:de4a062f8e6b63cf",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b860bcfad6c8b683",
+   "parentId": "local-review:27608ed108bea1ff",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:eb506742f665d576",
+   "parentId": "local-review:72157cc217dd29a2",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0f4076e11bd9ffd4",
+   "parentId": "local-review:3e28b586a3dd5490",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:61c47f8081cefa9e",
+   "parentId": "local-review:564d251356eb0579",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b07ffb863f0ff56f",
+   "parentId": "local-review:84e7b1f132911547",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:1dc16e055d77e2c8",
+   "parentId": "local-review:9c466cb589a51c57",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:58e852078deb00d4",
+   "parentId": "local-review:ebadb6aa24b3a737",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:f5a425dc15f5d8b0",
+   "parentId": "local-review:5c1ae7cc44ed0199",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3756d6e461a72231",
+   "parentId": "local-review:632c24e681cdfe69",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:ca709bbccf143c2b",
+   "parentId": "local-review:9c1bd76030b44186",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:8bce4e9af0af3ae6",
+   "parentId": "local-review:4d7e3b41ebb1c84b",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:a20e1d4deb1049ec",
+   "parentId": "local-review:71354956bad2ea41",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:8e292ddf9479e6d8",
+   "parentId": "local-review:1f8e459a59613fa8",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:db22a4c226a27aa0",
+   "parentId": "local-review:ebadb6aa24b3a737",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:8a526562932b6247",
+   "parentId": "local-review:c33b5f5aa435472f",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:1c2e6ea8fcf6e2d4",
+   "parentId": "local-review:7e888f95cb00ec9e",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0f231ef160589604",
+   "parentId": "local-review:a11d4f3ebf5154bd",
+   "characterSlug": "ryu",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:98a7d778b7d4ae15",
+   "parentId": "local-review:8c8da2b1ef149d05",
+   "characterSlug": "ryu",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3e9db242e1948517",
+   "parentId": "local-review:dbe520c8f09bd85a",
+   "characterSlug": "ryu",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:a6a5f9eb9804a00f",
+   "parentId": "guide-ref:RYU-R5-C001",
+   "characterSlug": "ryu",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:752b306a557104c9",
+   "parentId": "local-review:f60993aebe08d142",
+   "characterSlug": "ryu",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:62b0ac6a7680486c",
+   "parentId": "local-review:dbe520c8f09bd85a",
+   "characterSlug": "ryu",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:001ae84f5862a0de",
+   "parentId": "local-review:d0638c104c588c5a",
+   "characterSlug": "ryu",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9cdcf991a00401a6",
+   "parentId": "local-review:dbe520c8f09bd85a",
+   "characterSlug": "ryu",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:5a8cdaac8330fac5",
+   "parentId": "local-review:f60993aebe08d142",
+   "characterSlug": "ryu",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:bee637f85c2a60ab",
+   "parentId": "local-review:d46da3eaaaf1603d",
+   "characterSlug": "ryu",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f7c06ab8a59ca832",
+   "parentId": "local-review:593cb8bf91ac4c1a",
+   "characterSlug": "ryu",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:859831bca5f58315",
+   "parentId": "local-review:d0638c104c588c5a",
+   "characterSlug": "ryu",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:1c4189af977e2aaf",
+   "parentId": "local-review:5c89aea88c55ce8f",
+   "characterSlug": "ryu",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2048e793308b1c26",
+   "parentId": "local-review:90bac12a7e91bf4d",
+   "characterSlug": "ryu",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:23e019eac3391621",
+   "parentId": "local-review:e68219f21ad50cd8",
+   "characterSlug": "ryu",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b612c463c5d4a430",
+   "parentId": "local-review:752b306a557104c9",
+   "characterSlug": "ryu",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:dcf18e26c461df06",
+   "parentId": "guide-ref:SF6DNA-TERRY-R5-036",
+   "characterSlug": "terry",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:8cfaa677f50448d0",
+   "parentId": "local-review:5b105eae878ceb9a",
+   "characterSlug": "terry",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:ddd0702d3b2593dc",
+   "parentId": "local-review:9730397816b7e878",
+   "characterSlug": "terry",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9845fb0b2659425e",
+   "parentId": "local-review:3ace03331556c98e",
+   "characterSlug": "terry",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:484846686763b81b",
+   "parentId": "local-review:01f6c3d79d0ddde4",
+   "characterSlug": "terry",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9ca9557cf91dbad0",
+   "parentId": "local-review:1ea480e1ab7f2441",
+   "characterSlug": "terry",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:a3498687998e8473",
+   "parentId": "local-review:1899b391b14f649d",
+   "characterSlug": "terry",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:5d2d833e8efa646b",
+   "parentId": "local-review:01f6c3d79d0ddde4",
+   "characterSlug": "terry",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:476a94d671949694",
+   "parentId": "local-review:89c104bf598fe69e",
+   "characterSlug": "terry",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:d4fbd08d18ec29d5",
+   "parentId": "local-review:96ff42a523a342f5",
+   "characterSlug": "terry",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:e1359e402209013a",
+   "parentId": "local-review:96ff42a523a342f5",
+   "characterSlug": "terry",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:3981528f3662fc51",
+   "parentId": "local-review:83c94f9d9c5b3a1f",
+   "characterSlug": "terry",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:88de136dd986c99e",
+   "parentId": "guide-ref:SF6DNA-BISON-R5-008",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:e37dbb7467074ac4",
+   "parentId": "guide-ref:SF6DNA-BISON-R5-103",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:e55f6ed709785a8a",
+   "parentId": "local-review:13fc2d768c038c92",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b0e5a7e3552ecb8f",
+   "parentId": "local-review:a46778483ee49706",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:552ffb8b50100e2f",
+   "parentId": "local-review:9d09c12745e14ea0",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:087051d9d9b9baac",
+   "parentId": "local-review:a46778483ee49706",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:1e8cd9888f6d5510",
+   "parentId": "local-review:5ea4d7d0c0736f9a",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:c65ba7fa8e32a09a",
+   "parentId": "local-review:1b00eb52b63e93f9",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:197dff8b5cf0d501",
+   "parentId": "guide-ref:SF6DNA-BISON-R5-001",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f8db9a2271053bac",
+   "parentId": "local-review:1e8cd9888f6d5510",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:f5375b7aa7035342",
+   "parentId": "local-review:6dff6ab42bd938fc",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:5b145cff3dff3a45",
+   "parentId": "local-review:f76364441743e30c",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:ec89491fa0782732",
+   "parentId": "local-review:e0bd4aa2621a0b26",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:615fe0686e452c65",
+   "parentId": "local-review:ee1f1cf4d590a2e0",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3a48e033a2f6fb76",
+   "parentId": "local-review:e0bd4aa2621a0b26",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:c062e1d06a9c4eb3",
+   "parentId": "local-review:370698a2bd03d391",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9f618e7fe37b1381",
+   "parentId": "local-review:8668625b10b21e0f",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:41f2546864963b7b",
+   "parentId": "local-review:7e0be736d9933df9",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:ed2d3cf82f1b7878",
+   "parentId": "local-review:a46778483ee49706",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9ce6cfccde65491f",
+   "parentId": "local-review:41f2546864963b7b",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:d921164cb77b6d93",
+   "parentId": "local-review:7028b634c10c32f5",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:f241e13d3ba10292",
+   "parentId": "local-review:7028b634c10c32f5",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:f7f7bbcd7ff51b13",
+   "parentId": "local-review:190587e500fb3802",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:e78761bdb7824896",
+   "parentId": "local-review:115263f89fb7978c",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:6a3d559039c6e649",
+   "parentId": "local-review:d07b59877e589da1",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9baf92f560c547e4",
+   "parentId": "local-review:cbe2f85bc76ce52e",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:4a000425e753db47",
+   "parentId": "guide-ref:SF6DNA-BISON-R5-103",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:782e769dfe2e0548",
+   "parentId": "local-review:c10d2675fdfc96ee",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:722cd5dc6eb7e7b6",
+   "parentId": "local-review:9d09c12745e14ea0",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:aef1d93b9ec58557",
+   "parentId": "local-review:636db99a1ab5c423",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:43486f7059ce42fb",
+   "parentId": "local-review:08cd40cfbe198894",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9d75b56f241efc28",
+   "parentId": "local-review:230eb439d2854d3d",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3b751799f5bd659d",
+   "parentId": "local-review:f08df383b8b8de7f",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:a9cea981f1670eaa",
+   "parentId": "local-review:c83271c9d761fe07",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:4776b7fcb7bd8a80",
+   "parentId": "local-review:7bb166aea4ad99d1",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:b987e902d74a7006",
+   "parentId": "local-review:7bb166aea4ad99d1",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:88e7bc710fc3179c",
+   "parentId": "local-review:0c4e2eb499b3b961",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:74fe9c47f368c35e",
+   "parentId": "local-review:12764bd59dd9f3da",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:786e0fceacecb95d",
+   "parentId": "local-review:f0db3059d380cec6",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:57cb2acc3eb4e822",
+   "parentId": "local-review:7bb166aea4ad99d1",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:fb89819dcbe59bae",
+   "parentId": "local-review:87f977d747f728a0",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:90c2aecab0e0bc84",
+   "parentId": "local-review:3c998e87fe482a93",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:711486b4932a8178",
+   "parentId": "local-review:81ce488d313b859c",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:68ff8cbd37dc97e1",
+   "parentId": "local-review:df3d348f24d65476",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:88b8f4d4b6a653a7",
+   "parentId": "local-review:0cb91ef35b4d6471",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:6467ea1b2c270eac",
+   "parentId": "local-review:0cb91ef35b4d6471",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:671711969d28bddb",
+   "parentId": "local-review:cd5b4af32034ec78",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:7c23b7166d65ed4c",
+   "parentId": "local-review:115263f89fb7978c",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:61376baab1ec400a",
+   "parentId": "local-review:df3d348f24d65476",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:ff2d91e634791c1d",
+   "parentId": "local-review:df3d348f24d65476",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9c12b5868a5acc61",
+   "parentId": "local-review:1c929abc234e08dd",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:59120b55caf49147",
+   "parentId": "local-review:46c7c5425039a521",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:e2a572d4be8ee826",
+   "parentId": "local-review:05cdc8410cfd9d1b",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:1c2fd8dbc52a3da7",
+   "parentId": "local-review:b9c2a53b9a74785f",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2ccc18cb7ff8291a",
+   "parentId": "local-review:a0ccb4d8a1a9442a",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:e2275c7064cf45a6",
+   "parentId": "local-review:df3d348f24d65476",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b9c76ea6fa77568e",
+   "parentId": "local-review:6dff6ab42bd938fc",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:1dccd42d8b524a69",
+   "parentId": "local-review:f76364441743e30c",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9bc2d556655b49d0",
+   "parentId": "local-review:9d09c12745e14ea0",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f1c2ee0f30a356d5",
+   "parentId": "local-review:3a48e033a2f6fb76",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:ee1f1cf4d590a2e0",
+   "parentId": "local-review:5656ee084b4327f4",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:db8d50d547316733",
+   "parentId": "local-review:2741810d07a6b971",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:7b48fc76bda2b511",
+   "parentId": "local-review:6dff6ab42bd938fc",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2f7c911bc7aa7905",
+   "parentId": "local-review:8000d7899a48e0ca",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:f1f38638128838a0",
+   "parentId": "local-review:72aa9c46a90d75f1",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:d523191ca8808297",
+   "parentId": "local-review:e0bd4aa2621a0b26",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:c2c0955d22ea346f",
+   "parentId": "local-review:1b00eb52b63e93f9",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:c9d39343c5e8cf23",
+   "parentId": "local-review:3a48e033a2f6fb76",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:125751a099176090",
+   "parentId": "local-review:ee1f1cf4d590a2e0",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:d7eed5adb13af9ce",
+   "parentId": "local-review:54b40e59c8237be8",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b8095399b19cdcd5",
+   "parentId": "local-review:abf5d8f07a523af9",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f26737095ab5443c",
+   "parentId": "local-review:6ea619c6e1cb578c",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:39f212ea83ef4119",
+   "parentId": "local-review:4a000425e753db47",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:22167893be50ad7f",
+   "parentId": "local-review:991a04de2474f088",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:fe073152be520406",
+   "parentId": "local-review:d07b59877e589da1",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:abf5d8f07a523af9",
+   "parentId": "local-review:566b01e8692fdc40",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:7fe6c7e0c4d9b9ff",
+   "parentId": "local-review:ba52a13f8af91092",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:e4ae96deac308071",
+   "parentId": "local-review:656ecc2d6cd5689f",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:30973f8662c17850",
+   "parentId": "local-review:a0ccb4d8a1a9442a",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:52c9d66139ed30df",
+   "parentId": "local-review:a0ccb4d8a1a9442a",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:d14f6d5208a9be0f",
+   "parentId": "local-review:656ecc2d6cd5689f",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:a00a1d33f3e565e0",
+   "parentId": "local-review:6ea619c6e1cb578c",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:be9be8af466397e4",
+   "parentId": "local-review:d126b529cac854f8",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:14788d918ca466ae",
+   "parentId": "local-review:d126b529cac854f8",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:a6d99d02d17fd8b0",
+   "parentId": "local-review:d126b529cac854f8",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0c3f9ab385c2fb51",
+   "parentId": "local-review:1e0364c65725f533",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:8fc6b60f13beb77f",
+   "parentId": "local-review:43204be3d555562b",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:087bf39b782b6639",
+   "parentId": "local-review:018af9794ecc6ed1",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:fbcceddbdd41a408",
+   "parentId": "local-review:13fc2d768c038c92",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:d07db96f96ba17b2",
+   "parentId": "local-review:ddef8216c9fba5db",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:95a2c0359193da28",
+   "parentId": "local-review:ddef8216c9fba5db",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:20d97832d9f37eef",
+   "parentId": "local-review:d921164cb77b6d93",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3eb4f124350cabd7",
+   "parentId": "local-review:d921164cb77b6d93",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:955bdf00fef3ec7f",
+   "parentId": "local-review:7028b634c10c32f5",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:7fdc15856d45c0a0",
+   "parentId": "local-review:3c998e87fe482a93",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2197f63040f5bab2",
+   "parentId": "local-review:87f977d747f728a0",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:97f1a814bb514307",
+   "parentId": "local-review:fb8134d61c393039",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:d81d4105a7c9f549",
+   "parentId": "local-review:6e446012949eb20b",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f3d6017c7643f063",
+   "parentId": "local-review:fb8134d61c393039",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0bc19b526761eb75",
+   "parentId": "local-review:475f5a58e9df5404",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2d09304007980d43",
+   "parentId": "local-review:fb8134d61c393039",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b10ea0c071a78682",
+   "parentId": "local-review:2d09304007980d43",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:525085e63e968717",
+   "parentId": "local-review:5b8da6de0484bd73",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:3130ac213dacc3cb",
+   "parentId": "local-review:11a71f13fe697076",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:ad6f40d6088f7510",
+   "parentId": "local-review:02c3bdce978c8536",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:542b2c7abccf06c7",
+   "parentId": "local-review:23e03d4861d42b61",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:04d70cc6e7002c2a",
+   "parentId": "local-review:1b00eb52b63e93f9",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:6b81442114bc730f",
+   "parentId": "local-review:011ebf91a32ed813",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:9222b9b4385add57",
+   "parentId": "local-review:a2cf63c7e98dda65",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:7d951f1f4e317be3",
+   "parentId": "local-review:851d86fa4102a516",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:19ebc3a72e197adb",
+   "parentId": "local-review:b144945419974c51",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9256b115a5de51d8",
+   "parentId": "local-review:6ea619c6e1cb578c",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:36130a8e3e464588",
+   "parentId": "local-review:cbe2f85bc76ce52e",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2626dd25610549b5",
+   "parentId": "local-review:44adfd5c62d649d8",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:c2622a8b624e6de9",
+   "parentId": "local-review:6dc9ec98d1337c15",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:514a4ed9bb9a4336",
+   "parentId": "local-review:1a296e71502408dc",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f08df383b8b8de7f",
+   "parentId": "local-review:abb55684e71489f4",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:c83271c9d761fe07",
+   "parentId": "local-review:abb55684e71489f4",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:d11a7347998d8d72",
+   "parentId": "local-review:5b8da6de0484bd73",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:dcdc35cbf2c024dd",
+   "parentId": "local-review:011ebf91a32ed813",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:5de0c67a4ba63a1b",
+   "parentId": "local-review:6113e2a05d736736",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:857e6b322c145b12",
+   "parentId": "local-review:49f409786e2cbf20",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f0ed37d45fd620c1",
+   "parentId": "local-review:61c63fdaf246fe37",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:a2dc6537452a74d2",
+   "parentId": "local-review:8967ecac6c3897bc",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:de014be9480218bb",
+   "parentId": "local-review:8f15df9677ed9ef7",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0b0bd7dfce82e459",
+   "parentId": "local-review:49f409786e2cbf20",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:d643b07d6a6011e8",
+   "parentId": "guide-ref:SF6DNA-BISON-R5-103",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:d76ef5b5885b54ca",
+   "parentId": "local-review:4a42e5b7eb4cfc50",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:d7859f11f14d383d",
+   "parentId": "local-review:61c63fdaf246fe37",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:36204a71658884d5",
+   "parentId": "local-review:5b8da6de0484bd73",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:4e2ba39b8f95bf50",
+   "parentId": "local-review:02c3bdce978c8536",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:330dd1f661b3d2b9",
+   "parentId": "local-review:6ccf2b8d1cc0f50d",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:bdf18d0f2d43cbff",
+   "parentId": "local-review:c4ce82e95033f8e2",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0bca66273ddb5aab",
+   "parentId": "local-review:c7b3d084599ce663",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:88dd509d174e419a",
+   "parentId": "local-review:65fcbb327588a153",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:dbb1b312e148da92",
+   "parentId": "local-review:c4ce82e95033f8e2",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:3a5c5fe95f0d91a0",
+   "parentId": "local-review:af5faafa57bce4f5",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:89741b2d512f2ef1",
+   "parentId": "local-review:7d599ed7ddb5454f",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:6c75117f956eb0a8",
+   "parentId": "local-review:7d599ed7ddb5454f",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:4d6dc3fbbb8b0496",
+   "parentId": "local-review:370698a2bd03d391",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:560fd23a6b31ee6a",
+   "parentId": "local-review:087c9bac1d2ff2b3",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:2516573cc81b3270",
+   "parentId": "local-review:34776c34bc053f8f",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:1fe5dbe046a7b364",
+   "parentId": "local-review:cc7a92938fd64158",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:a1378f8555103809",
+   "parentId": "local-review:cc7a92938fd64158",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:2f92f23a5bb088a9",
+   "parentId": "local-review:d1eaa52ffb7aba3d",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:ba9d56e808527af1",
+   "parentId": "local-review:aa17df9167778352",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2112b0f2e5cbd2d8",
+   "parentId": "local-review:c7b3d084599ce663",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:5165c29c7fee8e12",
+   "parentId": "local-review:cc7a92938fd64158",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:af959746fbfe8d9e",
+   "parentId": "local-review:91fba7f55cbae79f",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:bd9cee51ff73abea",
+   "parentId": "local-review:9a91470abd0ecc9e",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:2d6ed6728858fc68",
+   "parentId": "local-review:8f15df9677ed9ef7",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:eaf6be46a56f432b",
+   "parentId": "local-review:6113e2a05d736736",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:e2d41689a7b86319",
+   "parentId": "local-review:47e101a6c79d28e7",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:c88704972ac9b765",
+   "parentId": "local-review:1d83a9cdaa9d3e13",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:24ee0b979e9d002f",
+   "parentId": "local-review:08cd40cfbe198894",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:15e292c83e83423b",
+   "parentId": "local-review:ddef8216c9fba5db",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b142a782b6530ae2",
+   "parentId": "local-review:ddef8216c9fba5db",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:8e6ff67ef78fd1ef",
+   "parentId": "local-review:e23c503e3d3cfe80",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:4e26a72135673249",
+   "parentId": "local-review:054d746f7c1e2cd5",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:0b29a796daf2a48e",
+   "parentId": "local-review:6ccf2b8d1cc0f50d",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:9d3b88337002743a",
+   "parentId": "local-review:d64894bd977b7a9b",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:45e2b6e1abcfcfd2",
+   "parentId": "local-review:14788d918ca466ae",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:6c1b0f3ba568bf8e",
+   "parentId": "local-review:d126b529cac854f8",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:a36c16f3075887a6",
+   "parentId": "local-review:0c4e2eb499b3b961",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:55bc177487c3212b",
+   "parentId": "local-review:5eea6b4d325bf7ad",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:c0f05cd87b5ca44e",
+   "parentId": "local-review:760be1571b54aff5",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:fa6b3d283180d5b2",
+   "parentId": "local-review:a6d99d02d17fd8b0",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:afd8e12de594410a",
+   "parentId": "local-review:14788d918ca466ae",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b1fc77a52ba32a4d",
+   "parentId": "local-review:be9be8af466397e4",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:7e5db763d86324d2",
+   "parentId": "local-review:c7b3d084599ce663",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:f3eeb36102a6edc8",
+   "parentId": "local-review:a14981b8d69c91ba",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:4db519871f4cd821",
+   "parentId": "local-review:b5c4815b98d5dcbc",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:55d1303948f8e9d9",
+   "parentId": "local-review:b5c4815b98d5dcbc",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:ef903764342c6c6b",
+   "parentId": "local-review:2ee8efb53868a5a2",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:0f32648df5dd20c7",
+   "parentId": "local-review:23e03d4861d42b61",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:e503385fdf0f71b5",
+   "parentId": "local-review:ef903764342c6c6b",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b7f7120307572371",
+   "parentId": "local-review:8762bfc8e62126bb",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:d38e66dd35392991",
+   "parentId": "local-review:e66306a4a8154ae7",
+   "characterSlug": "m-bison",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0be325d526850435",
+   "parentId": "local-review:23e03d4861d42b61",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:54ae81503675a2e2",
+   "parentId": "local-review:de6140f10fe281ce",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:1a72dc88b25ed3a8",
+   "parentId": "local-review:13fc2d768c038c92",
+   "characterSlug": "m-bison",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:8849bb9c632ddda3",
+   "parentId": "local-review:0642fce9440fb42a",
+   "characterSlug": "yasmine",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:70bfe2ca5a6eebe6",
+   "parentId": "local-review:9733728d7dc29152",
+   "characterSlug": "yasmine",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:959d0c455c3d1922",
+   "parentId": "local-review:9733728d7dc29152",
+   "characterSlug": "yasmine",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:4a6b2dd7ccc3ea48",
+   "parentId": "local-review:d03286609aa9243b",
+   "characterSlug": "yasmine",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:0718c8fddf108bfd",
+   "parentId": "local-review:88dcef80dbf5af79",
+   "characterSlug": "yasmine",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:6c0b2bef78cb505a",
+   "parentId": "local-review:0edc6d6937c3c8ab",
+   "characterSlug": "yasmine",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:5228e5a9ad0cec68",
+   "parentId": "local-review:a69842113c1d9a1e",
+   "characterSlug": "yasmine",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3c1c757c112ab81c",
+   "parentId": "local-review:65d4b5ccdbd9f920",
+   "characterSlug": "dee-jay",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:5ab4e172bb120c00",
+   "parentId": "local-review:5ad72a78118cb573",
+   "characterSlug": "dee-jay",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:e09e9e53c6296dd8",
+   "parentId": "guide-ref:SF6DNA-12-EHONDA-R5-0001",
+   "characterSlug": "e-honda",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:8a85b241bca41059",
+   "parentId": "local-review:30125b17c940b7fd",
+   "characterSlug": "guile",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:6efff17b01e51be2",
+   "parentId": "local-review:30125b17c940b7fd",
+   "characterSlug": "guile",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:355a02d7e852b370",
+   "parentId": "local-review:04c621d3ab6e1470",
+   "characterSlug": "jp",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:cfe6db30465f6a6b",
+   "parentId": "local-review:874da0bdc8b708c7",
+   "characterSlug": "jp",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:106af337908090e4",
+   "parentId": "local-review:434498e12b0c1e66",
+   "characterSlug": "ken",
+   "relation": "SAME_ROUTE_EXCEPT_STARTER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:a8cb57ec8ac3118e",
+   "parentId": "guide-ref:SF6DNA-KEN-R5-0003",
+   "characterSlug": "ken",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:4397829ab69a98f1",
+   "parentId": "local-review:8def307eaa7752dd",
+   "characterSlug": "kimberly",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:b6cb990c2921971c",
+   "parentId": "local-review:16d66a27fd935934",
+   "characterSlug": "kimberly",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:99885e09fd85e0ee",
+   "parentId": "local-review:16d66a27fd935934",
+   "characterSlug": "kimberly",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  },
+  {
+   "childId": "local-review:5dae1131cac1831c",
+   "parentId": "local-review:e7baa71ead63c01e",
+   "characterSlug": "mai",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": true,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:3416e3d9f1b4b5d9",
+   "parentId": "local-review:0d980df6cbea3b48",
+   "characterSlug": "ryu",
+   "relation": "SAME_ROUTE_EXCEPT_ENDER",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": false,
+    "enderDiffers": true,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:1e72ff9180011383",
+   "parentId": "local-review:a11d4f3ebf5154bd",
+   "characterSlug": "ryu",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": true,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:59f0ab3fdce40b8e",
+   "parentId": "local-review:eaada07e749249cf",
+   "characterSlug": "terry",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:cef17b8900f176e3",
+   "parentId": "guide-ref:SF6DNA-YASMINE-R5-037",
+   "characterSlug": "yasmine",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "KEEP_LINKED_ALTERNATIVE",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": true,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": true
+   }
+  },
+  {
+   "childId": "local-review:c13947a665706037",
+   "parentId": "local-review:1c7840a6444f5050",
+   "characterSlug": "zangief",
+   "relation": "SUB_ROUTE_OF",
+   "recommendation": "MERGE_INTO_PARENT",
+   "differs": {
+    "starterDiffers": true,
+    "enderDiffers": false,
+    "positionDiffers": false,
+    "counterStartDiffers": false,
+    "gaugeDiffers": false,
+    "conditionDiffers": false
+   }
+  }
+ ],
+ "matchingSpec": "STEP_MATCHING_SPEC_V1_1（CHとPCを別の始動条件として比較）"
+}
