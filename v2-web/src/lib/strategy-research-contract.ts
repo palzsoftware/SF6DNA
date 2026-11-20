@@ -1,4 +1,5 @@
 import rawCards from "./strategy-research-cards-20261118.json";
+import sourceHold from "./strategy-reference-source-hold-20261120.json";
 
 export type StrategySlotKind = "combo" | "setplay" | "sequence" | "counter";
 export type ResearchCardCategory = "combo" | "setplay" | "pressure" | "counter";
@@ -49,9 +50,17 @@ export function isStrategyReferenceVisible(env: { VERCEL_ENV?: string; NODE_ENV?
   return isStrategyResearchPreviewAllowed(env) || isStrategyReferencePublic(env, slug);
 }
 
+// Cards whose source terms are not cleared/reviewed or that have no source are withheld in every
+// environment (Preview included). This does not change any release flag; removing an ID requires
+// source clearance recorded by the strategy owner.
+const SOURCE_HOLD_IDS: ReadonlySet<string> = new Set(sourceHold.holdCardIds);
+export function isStrategyResearchCardHeld(id: string): boolean {
+  return SOURCE_HOLD_IDS.has(id);
+}
+
 export function listStrategyResearchCards(slug: string, kind: StrategySlotKind): readonly StrategyResearchCard[] {
   const category = categoryBySlot[kind];
-  return cards.filter(card => card.characterSlug === slug && card.category === category);
+  return cards.filter(card => card.characterSlug === slug && card.category === category && !SOURCE_HOLD_IDS.has(card.id));
 }
 
 // Reference-page links must never use the internal research archive, credentials or executable URLs.

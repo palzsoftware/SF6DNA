@@ -125,7 +125,7 @@ test('Production slot shows reference cards only with the switch; DB strategy st
     process.env.SF6DNA_PUBLIC_STRATEGY_REFERENCE='all';
     for(const k of ['combo','setplay','sequence','counter']){h=html(k);
       assert.match(h,/data-strategy-publication="CLOSED"/);assert.match(h,/data-strategy-reference="VISIBLE"/);
-      assert.equal((h.match(/data-strategy-kind=/g)||[]).length,3);assert.doesNotMatch(h,/DB_PILOT/);assert.match(h,/参考攻略（実機未検証）/);}
+      const allCards=JSON.parse(readFileSync(new URL('../src/lib/strategy-research-cards-20261118.json',import.meta.url),'utf8'));const held=new Set(JSON.parse(readFileSync(new URL('../src/lib/strategy-reference-source-hold-20261120.json',import.meta.url),'utf8')).holdCardIds);const cat={combo:'combo',setplay:'setplay',sequence:'pressure',counter:'counter'}[k];const expected=allCards.filter(c=>c.characterSlug==='luke'&&c.category===cat&&!held.has(c.id)).length;assert.equal(allCards.filter(c=>c.characterSlug==='luke'&&c.category===cat).length,3);assert.equal((h.match(/data-strategy-kind=/g)||[]).length,expected);assert.doesNotMatch(h,/DB_PILOT/);assert.match(h,/参考攻略（実機未検証）/);}
   } finally { for(const k of Object.keys(process.env)) if(!(k in old)) delete process.env[k]; Object.assign(process.env,old); }
 });
 test('without an API key the shelves fall back to registered videos without calling YouTube',async()=>withEnv({SF6DNA_LATEST_VIDEO_ENABLED:'1',YOUTUBE_DATA_API_KEY:'',VERCEL_ENV:'preview'},async()=>{
