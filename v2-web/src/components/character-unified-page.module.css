@@ -141,3 +141,13 @@
 .comboDescription { border-top: 1px solid var(--border, #35414f); margin-top: 12px; padding-top: 12px; }
 .comboDescription h4 { margin: 0 0 8px; }
 .comboDescription p { margin: 6px 0; }
+
+/* G101: in multi-column move grids, a card without motion media keeps the same
+   16:9 media footprint as its media-bearing neighbours so commands and frame data
+   line up across the row. Groups with no media at all, and single-column mobile,
+   keep the compact placeholder bar. Copy and data attributes are unchanged. */
+@media (min-width: 641px) {
+  .moveGrid:has(> .moveCard[data-has-media="true"]) > .moveCard[data-has-media="false"] .mediaSlot {
+    height: auto; min-height: 0; aspect-ratio: 16 / 9; padding: 10px;
+  }
+}
