@@ -1,6 +1,10 @@
 import { listCharacters } from '@/lib/characters';
+import { publicPageMetadata } from '@/lib/public-page-metadata';
 import ConsultationRunner from './runner';
 import { consultationCatalogForEnvironment } from '@/lib/consultation-card-catalog';
+
+// Title only: the shared helper keeps the existing root description for OG/Twitter.
+export const metadata = publicPageMetadata('/diagnosis/character-consultation', { title: 'キャラ別お悩み診断' });
 
 export default async function CharacterConsultationPage() {
   const characters = await listCharacters();

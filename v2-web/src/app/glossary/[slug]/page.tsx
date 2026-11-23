@@ -1,10 +1,11 @@
+import { cache } from "react";
 import { notFound } from "next/navigation";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
+import { publicPageMetadata } from "@/lib/public-page-metadata";
 
-export default async function GlossaryPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) notFound();
-
+// One published-row read shared by metadata and page within a request (React cache).
+const getPublishedGlossaryTerm = cache(async (slug: string) => {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) return null;
   const supabase = getSupabaseServerClient();
   const { data, error } = await supabase
     .from("glossary")
@@ -12,8 +13,19 @@ export default async function GlossaryPage({ params }: { params: Promise<{ slug:
     .eq("slug", slug)
     .eq("status", "published")
     .maybeSingle();
+  return error || !data ? null : data;
+});
 
-  if (error || !data) notFound();
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const data = await getPublishedGlossaryTerm(slug);
+  return publicPageMetadata(`/glossary/${encodeURIComponent(slug)}`, { title: data?.term ?? "用語", description: data?.short_definition ?? undefined }, Boolean(data));
+}
+
+export default async function GlossaryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const data = await getPublishedGlossaryTerm(slug);
+  if (!data) notFound();
 
   return (
     <div className="site-shell page-stack">
