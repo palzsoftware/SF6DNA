@@ -99,8 +99,8 @@ function PlayerDirectoryControls({ players }: { players: PlayerSummary[] }) {
       <div className={styles.rankState}><strong>ランク</strong><span>ランクでの絞り込みは現在利用できません</span></div>
       {(categories.length || characters.length || teams.length) ? <div className={styles.filterChips} aria-label="選択中のフィルター">
         {teams.map(team => <button type="button" key={`team:${team}`} aria-label={`${team}の絞り込みを解除`} onClick={() => toggle(team, teams, setTeams)}>{team} ×</button>)}
-        {categories.map((category) => <button type="button" key={category} onClick={() => toggle(category, categories, setCategories)}>{playerTypeLabel(category)} ×</button>)}
-        {characters.map((slug) => <button type="button" key={slug} onClick={() => toggle(slug, characters, setCharacters)}>{characterOptions.find((item) => item.slug === slug)?.name ?? slug} ×</button>)}
+        {categories.map((category) => <button type="button" key={category} aria-label={`${playerTypeLabel(category)}の絞り込みを解除`} onClick={() => toggle(category, categories, setCategories)}>{playerTypeLabel(category)} ×</button>)}
+        {characters.map((slug) => { const name = characterOptions.find((item) => item.slug === slug)?.name ?? slug; return <button type="button" key={slug} aria-label={`${name}の絞り込みを解除`} onClick={() => toggle(slug, characters, setCharacters)}>{name} ×</button>; })}
       </div> : null}
       <p className={styles.filterNote}>チーム・キャラの各項目は掲載情報に基づきます。過去の使用を含み、現在の所属やメインを断定しません。</p>
       <p className={styles.resultCount} aria-live="polite">{filteredPlayers.length}件</p>
