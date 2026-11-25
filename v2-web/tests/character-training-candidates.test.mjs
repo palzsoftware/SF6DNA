@@ -143,10 +143,11 @@ const DIAGNOSIS_PATHS = [
 ];
 const APPROVED_DIAGNOSIS_CHANGES = {
   'src/app/diagnosis/history/page.tsx': '6daedbe7bab2123b8c682cc071edb028333796586c3769363536fa9c636b24c2',
-  'src/components/diagnosis-history-tool.tsx': '2dcec87c07f7e6e7645949ce55096926beb58bfa5a83414e23b559467146945b',
+  // 2026-11-25 案B：表示文言の統一（「上位傾向」→「上位の結果」、上達課題診断の空表示、「録画」→「レコード」）。
+  'src/components/diagnosis-history-tool.tsx': 'ab3224cf24441d72293ea923fb56035509c42f7313abfce07a245d08b9e2f917',
   // 2026-11-25: Aの案内原稿（SF6DNA_DIAG_TRAINING_UX_DRAFT_20261125 の A1〜A4）を表示だけで追加。質問・選択肢・採点・推薦・保存は不変。
-  'src/components/diagnosis-runner.tsx': 'd2ee65985313b7133a268d905dd14478d84b54af4c89de25cdffcc742fcebae2',
-  'src/components/diagnosis-guide-notes.tsx': 'ad2702f232234d9a4988e66d1f5f630a15f9c1d6d643d8e26991c1b73268121c',
+  'src/components/diagnosis-runner.tsx': '11be09775d7ebfb77c613177d7162a958b473920e569c70c369a24a698153cee',
+  'src/components/diagnosis-guide-notes.tsx': '110131293b8cec73c8adacce42d28d05cea4efe20f9e0b6a422f561c49dc6432',
   'src/components/daily-training-planner.tsx': '719cab0e7e48bfbdea071ba9066a8b6aa03765920813ffc252db9d0efc288329',
   'src/components/daily-training-setup-guide.tsx': 'abacf5b7b2479ce862c6868bf02feb30034814cf173c0cbe08d13ee0d6160af9',
   'src/lib/diagnosis-axis-labels.ts': '08cdfb16e77dcca105ac1b168cb823c54510429740999c62142401526d5c5b32',
@@ -175,7 +176,9 @@ test('Aの案内原稿の反映は表示の追加だけ（取り除くと承認�
     .replace('import { DiagnosisQuestionNotes, ImprovementResultGuide } from "./diagnosis-guide-notes";\n', '')
     .replace('<DiagnosisQuestionNotes question={question} />', '')
     .replace('<ImprovementResultGuide axes={improvement.map(([key]) => key)} labelOf={axisLabel} />', '')
-    .replace('{diagnosis.diagnosisType === "improvement" ? <ImprovementResultGuide axes={priorities.map(([key]) => key)} labelOf={axisLabel} /> : null}', '');
+    .replace('{diagnosis.diagnosisType === "improvement" ? <ImprovementResultGuide axes={priorities.map(([key]) => key)} labelOf={axisLabel} /> : null}', '')
+    // 案B：練習文の「録画」を「レコード」に統一（表示文言のみ）。
+    .split('レコードに記録し').join('録画し');
   // 34051280… = 承認済みの診断履歴の表示修正だけを当てた版（採点・保存はこの版と同一）。
   assert.equal(sha(runner), '34051280930a06669cf0406a4e67a0c29a1e5d4672682559f936f12b5ac7a81f');
   const planner = read('src/components/daily-training-planner.tsx')

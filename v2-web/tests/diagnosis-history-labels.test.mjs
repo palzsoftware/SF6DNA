@@ -41,8 +41,8 @@ test("label table is shared, not duplicated, across result screen and history", 
 
 test("storage notices describe account storage when signed in and browser storage otherwise", () => {
   const tool = read("src/components/diagnosis-history-tool.tsx");
-  assert.match(tool, /ログイン中のため、完了した診断の上位傾向はアカウントに保存されます/);
-  assert.match(tool, /ログインしていないため、完了した診断の上位傾向をこのブラウザ内に最大50件保存しています/);
+  assert.match(tool, /ログイン中のため、完了した診断の上位の結果はアカウントに保存されます/);
+  assert.match(tool, /ログインしていないため、完了した診断の上位の結果をこのブラウザ内に最大50件保存しています/);
   assert.match(read("src/app/diagnosis/history/page.tsx"), /<DiagnosisHistoryStorageNote \/>/);
   assert.match(read("src/components/diagnosis-runner.tsx"), /guest=\{currentOwner === "guest"\}/);
 });

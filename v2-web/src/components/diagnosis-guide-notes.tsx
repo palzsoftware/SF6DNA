@@ -42,7 +42,7 @@ export function ImprovementResultGuide({ axes, labelOf }: { axes: readonly strin
     <h3>結果の読み方</h3>
     <ul>
       <li>この結果は、あなたの自己評価から「練習する順番」を出したものです。実際の操作の上手さや反応速度は測っていません。</li>
-      <li>「よくわからない・意識できていない」と答えた項目は、「苦手」と答えた項目より優先して表示されます。</li>
+      <li>「よくわからない」と答えた項目は、「苦手」と答えた項目より優先して表示されます。</li>
     </ul>
     {hints.length ? <><h4>試合で意識すること</h4><ul>{hints.map(axis => <li key={axis}><strong>{labelOf(axis)}</strong>：{SCENE_HINTS[axis]}</li>)}</ul></> : null}
   </div>;

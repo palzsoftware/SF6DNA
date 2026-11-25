@@ -407,12 +407,12 @@ const RESULT_PRACTICE: Record<string, { scene: string; observe: string; practice
   "anti_air": {
     "scene": "相手のジャンプを見た場面",
     "observe": "飛び込みを受けた直前、自分が技を出していたか、地上で待っていたかを確認します。",
-    "practice": "相手のジャンプを録画し、自分が動ける状態で対空を出せるか試します。"
+    "practice": "相手のジャンプをレコードに記録し、自分が動ける状態で対空を出せるか試します。"
   },
   "drive_rush_defense": {
     "scene": "ラッシュから触られた場面",
     "observe": "ラッシュが始まった距離と、そのとき自分が押していた技を確認します。",
-    "practice": "同じ距離のラッシュを録画し、ガードする場合と技で止める場合を比べます。"
+    "practice": "同じ距離のラッシュをレコードに記録し、ガードする場合と技で止める場合を比べます。"
   },
   "impact_response": {
     "scene": "インパクトを受けた直前",
@@ -427,12 +427,12 @@ const RESULT_PRACTICE: Record<string, { scene: string; observe: string; practice
   "defense": {
     "scene": "起き上がりに攻撃を受けた場面",
     "observe": "ガード・投げ抜け・技出しのどれを選び、相手の何に負けたかを確認します。",
-    "practice": "相手の攻めを1つ録画し、まず打撃をガードする練習から試します。"
+    "practice": "相手の攻めを1つレコードに記録し、まず打撃をガードする練習から試します。"
   },
   "offense": {
     "scene": "自分の攻めが止まった場面",
     "observe": "相手がガード・技出し・後退のどれで対応したかを確認します。",
-    "practice": "相手の対応を録画し、それに対して使う攻めを1つ試します。"
+    "practice": "相手の対応をレコードに記録し、それに対して使う攻めを1つ試します。"
   },
   "meter": {
     "scene": "ゲージを使った場面",
@@ -442,7 +442,7 @@ const RESULT_PRACTICE: Record<string, { scene: string; observe: string; practice
   "matchup": {
     "scene": "同じ相手の技に困った場面",
     "observe": "技名、距離、ガードしたか当たったかを1つ記録します。",
-    "practice": "その技を録画し、ガード後に反撃できるか、距離を取れるか試します。"
+    "practice": "その技をレコードに記録し、ガード後に反撃できるか、距離を取れるか試します。"
   },
   "execution": {
     "scene": "コンボや起き攻めが途切れた場面",
@@ -457,7 +457,7 @@ const RESULT_PRACTICE: Record<string, { scene: string; observe: string; practice
   "corner_defense": {
     "scene": "画面端でダメージを受けた直前",
     "observe": "自分が「技を出した・ジャンプした・ガードしていた」のどれだったか、相手の行動と一緒に確認します。",
-    "practice": "技を出して相手の打撃に負けていた場合は、その攻めを録画してガードする練習を試します。"
+    "practice": "技を出して相手の打撃に負けていた場合は、その攻めをレコードに記録してガードする練習を試します。"
   },
   "decision": {
     "scene": "同じ相手の行動を2回受けた場面",

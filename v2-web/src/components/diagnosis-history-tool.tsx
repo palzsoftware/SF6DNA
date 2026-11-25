@@ -22,10 +22,10 @@ function resultLabel(item: { key: string; label?: string }) {
 /** Where the history lives, matching what is actually saved: the account when signed in, this browser otherwise. */
 export function DiagnosisHistoryStorageNote() {
   const { state, isCurrent } = usePersonalizationOwner();
-  if (state.status !== "ready" || !isCurrent()) return <p>完了した診断の上位傾向を履歴として表示します。</p>;
+  if (state.status !== "ready" || !isCurrent()) return <p>完了した診断の上位の結果を履歴として表示します。</p>;
   return state.owner === "guest"
-    ? <p>ログインしていないため、完了した診断の上位傾向をこのブラウザ内に最大50件保存しています。アカウントには保存されないため、ほかの端末やブラウザでは表示されません。</p>
-    : <p>ログイン中のため、完了した診断の上位傾向はアカウントに保存されます。新しい順に最大50件を表示します。</p>;
+    ? <p>ログインしていないため、完了した診断の上位の結果をこのブラウザ内に最大50件保存しています。アカウントには保存されないため、ほかの端末やブラウザでは表示されません。</p>
+    : <p>ログイン中のため、完了した診断の上位の結果はアカウントに保存されます。新しい順に最大50件を表示します。</p>;
 }
 function historyClient() { return getSupabaseBrowserClient() as unknown as DiagnosisHistorySupabaseClient; }
 
@@ -136,7 +136,7 @@ export function DiagnosisHistoryTool() {
             <ol>
               {record.topResults.map((item) => <li key={item.key}><strong>{resultLabel(item)}</strong>：{item.score}</li>)}
             </ol>
-          ) : <p>強い傾向は記録されませんでした。</p>}
+          ) : <p>{record.diagnosisType === "improvement" ? "優先して練習する項目は記録されませんでした。" : "強い傾向は記録されませんでした。"}</p>}
           {(() => {
             const practiceHref = buildHistoryDailyTrainingHref(record.diagnosisType, record.topResults);
             return practiceHref ? <p><Link className="text-link" href={practiceHref}>この結果で今日の15分練習へ</Link></p> : null;

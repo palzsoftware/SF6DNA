@@ -223,8 +223,8 @@ export function CharacterUnifiedPage({ character: dbCharacter, bundle, players, 
     </section>
     <nav className={styles.navigation} aria-label="キャラクターページ内の移動">
       {copy?.firstSteps?.length ? <a href="#character-first-steps">最初にやること</a> : null}
-      <a href="#pilot-overview">基本情報</a><a href="#pilot-moves">技カード</a><a href="#character-players">使用Player</a>
-      <a href="#character-videos">関連Video</a><a href="#sources">情報源</a>
+      <a href="#pilot-overview">基本情報</a><a href="#pilot-moves">技カード</a><a href="#character-players">使用プレイヤー</a>
+      <a href="#character-videos">関連動画</a><a href="#sources">情報源</a>
     </nav>
     {copy?.firstSteps?.length ? <section id="character-first-steps" tabIndex={-1} className={`${styles.section} ${styles.firstSteps}`} aria-labelledby="character-first-steps-title">
       <h2 id="character-first-steps-title">最初にやること</h2>
@@ -269,7 +269,7 @@ export function CharacterUnifiedPage({ character: dbCharacter, bundle, players, 
           : <p>使用プレイヤーの情報を確認中です。</p>}
         <Link className={styles.relatedLink} href={playerDirectoryUrl}>プレイヤー図鑑を見る →</Link>
       </section>
-      <section id="character-videos" tabIndex={-1} className={`${styles.section} ${styles.relatedPanel}`}><h2>関連ビデオ</h2>
+      <section id="character-videos" tabIndex={-1} className={`${styles.section} ${styles.relatedPanel}`}><h2>関連動画</h2>
         {connectedVideos.length ? <div className={styles.relatedGrid}>{connectedVideos.map(video =>
           <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />)}</div>
           : <p>関連動画は準備中です。</p>}
