@@ -1,0 +1,79 @@
+{
+ "source": {
+  "file": "SF6DNA_OFFPAGE33_OFFICIAL_COMMANDLIST_CHECK_20261125.csv",
+  "driveId": "1CjNk7eWIp45JuovdBkYHiZo2pPdZqPXv",
+  "sha256": "a017c262f8dae3145f5655fce8285ffd20726016ef29849143769b6efeb98209",
+  "checkedOn": "2026-11-25",
+  "by": "C (Chrome) — CAPCOM 公式コマンドリスト・フレーム表"
+ },
+ "note": "公式ページ外33行の照合結果。統合行は別カードにせず既存カードへ対応付け、確認できた公式の条件・派生説明だけを補う。内部行の入力（例: キャミィ空中投げの 6+、ガイルの 4/6 差）は反映しない。",
+ "mergeInto": {
+  "akuma:sha:5269a10b625e17dbaa02": "akuma:web:339",
+  "akuma:sha:16ecab6638b84a2ad81e": "akuma:web:339",
+  "cammy:sha:eb02118811585d9c2e94": "cammy:web:316",
+  "cammy:sha:3f8974b949dd85a228ae": "cammy:web:322",
+  "cammy:sha:e87cfaf0d646a195d80e": "cammy:web:322",
+  "cammy:sha:29ca49463714624927db": "cammy:web:314",
+  "cammy:sha:b7fe8e164ead2e10a8be": "cammy:web:314",
+  "cammy:sha:9782f286153045b2f6bd": "cammy:web:502",
+  "dhalsim:sha:0625aff0e48cd511751d": "dhalsim:web:334",
+  "ed:sha:48767800e65f8b4dfb1a": "ed:web:402",
+  "ed:sha:d0b0988c8bc0d908872d": "ed:web:608",
+  "ed:sha:75f364adbd9742a0fb31": "ed:web:324",
+  "guile:sha:0d3152dd3006824f0c35": "guile:web:328",
+  "guile:sha:de2eef04318342c0b96a": "guile:web:328",
+  "guile:sha:c1229a37217c29286798": "guile:web:329",
+  "guile:sha:a7f1b0def151661f174d": "guile:web:329",
+  "guile:sha:b4477909f15dcf4ab350": "guile:web:329",
+  "guile:sha:5b5229644f888e1763bf": "guile:web:329",
+  "guile:sha:a3519e81604798a29349": "guile:web:329",
+  "guile:sha:e4be8a01332b2565a3b2": "guile:web:608",
+  "juri:sha:460373b8123677ddfe58": "juri:web:400",
+  "ken:sha:17226aafc186ee914ed0": "ken:web:608",
+  "kimberly:sha:6b51a982edb10c0d4f14": "kimberly:web:204",
+  "kimberly:sha:9f70515ea61cd3e15cfb": "kimberly:web:204",
+  "kimberly:sha:185e8fbe78c8002c1a5c": "kimberly:web:326",
+  "kimberly:sha:b8c7ac61d00dbd74182a": "kimberly:web:326",
+  "terry:sha:8bc09a898c5f635585be": "terry:web:401",
+  "terry:sha:bf4c02fec75bed41ad97": "terry:web:402",
+  "terry:sha:106d91e5918dc8285d62": "terry:web:403"
+ },
+ "holdUnconfirmed": [
+  "m-bison:sha:c6700c05ec48c75b1ee3",
+  "m-bison:sha:70445f2291fdc2cacd37",
+  "m-bison:sha:f96416428c167ca8d9bd",
+  "m-bison:sha:aa83cc2ce25f2d8215e4"
+ ],
+ "supplementCondition": {
+  "cammy:web:316": [
+   "強のみホールド可能"
+  ],
+  "ed:web:324": [
+   "キルステップ（前方）の動作前半に",
+   "11-12Fでキルスイッチ・ブレイク、13-24Fでキルスイッチ・チェイスに派生可能"
+  ],
+  "guile:web:328": [
+   "13-21Fで通常版ソニックブレイクへ派生可能"
+  ],
+  "guile:web:329": [
+   "派生は3回まで、派生最終段のみ硬直1F減少"
+  ],
+  "juri:web:400": [
+   "風破ストックがある時にボタンホールドで性質変化"
+  ],
+  "kimberly:web:326": [
+   "ボタンホールドで性質変化",
+   "19F以上ホールドで性能変化"
+  ],
+  "terry:web:401": [
+   "ヒット時のみ25～38Fまでツインゲイザーに派生可能"
+  ],
+  "terry:web:402": [
+   "パワーゲイザーヒット後に",
+   "ヒット時のみ38～42Fまでトリプルゲイザー、トリプルゲイザー(不発)に派生可能"
+  ],
+  "terry:web:403": [
+   "ツインゲイザーヒット後に"
+  ]
+ }
+}

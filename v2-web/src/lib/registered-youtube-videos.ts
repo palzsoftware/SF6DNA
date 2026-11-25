@@ -23,6 +23,8 @@ type PlayerRow = {
   characterLinks?: readonly { slug: string; name: string }[]; startSeconds?: number;
   sameMatchFullStream?: { youtubeId: string; startSeconds: number | null; chapterNote?: string | null };
   pastYear?: string;
+  /** Short label shown on the card, e.g. 「チーム間スクリム（公式大会ではない）」. */
+  cardNote?: string;
 };
 type CharacterRow = {
   key: string; characterSlug: string | null; youtubeId: string; title: string; channelName: string; sourceDate: string;
@@ -88,6 +90,7 @@ export function registeredYouTubeVideos(environment: string, preview: boolean, s
     }
     if (typeof r.startSeconds === "number" && r.startSeconds > 0) a.start = r.startSeconds;
     if (r.pastYear) a.notes.add(`${r.pastYear}年の動画`);
+    if (r.cardNote) a.notes.add(r.cardNote);
     const full = r.sameMatchFullStream;
     if (full && YOUTUBE_ID.test(full.youtubeId)) a.supporting.set(youtubeWatch(full.youtubeId, full.startSeconds),
       typeof full.startSeconds === "number" && full.startSeconds > 0 ? "同じ試合のフル配信（YouTube・開始位置から）" : "同じ試合のフル配信（YouTube）");

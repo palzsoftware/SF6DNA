@@ -5,6 +5,7 @@ import { isLukeSampleRequest } from "@/lib/luke-sample-cards";
 import { LukeSampleCards } from "@/components/luke-sample-cards";
 import { LukeCanonicalComboReference } from "@/components/luke-canonical-combo-reference";
 import { CharacterUnifiedPage } from "@/components/character-unified-page";
+import { getCharacterCopy } from "@/lib/character-copy";
 import { characterUnifiedEvidence } from "@/lib/character-unified-evidence";
 import { projectJpSafeMoveCard } from "@/lib/jp-safe-move-reference";
 import { publicPageMetadata } from "@/lib/public-page-metadata";
@@ -23,6 +24,7 @@ import { getWs5TxtPreviewCandidate } from "@/lib/official-txt-preview-snapshot";
 import { connectOfficialTxtCharacterPageData, isWs5LocalCardRequest } from "@/lib/official-txt-character-page-connection.mjs";
 import { getPreReleaseCharacter, preReleaseUnifiedProps } from "@/lib/pre-release-character";
 import type { DevicePreviewBundle } from "@/lib/device-preview";
+import type { OfficialMoveFillData } from "@/lib/all32-official-move-fill";
 import { getWs5CharacterReview, getWs5StrategyMoveLinks, getWs5StrategyReviewDescriptions, getWs5ReviewedStrategyCards, withoutMotionMedia } from "@/lib/ws5-character-review";
 import { playerDirectoryHref } from "@/lib/player-directory-navigation";
 import { playerLocalPreviewEnabled } from "@/lib/player-local-preview";
@@ -82,13 +84,14 @@ export default async function CharacterPage({
       candidate, admission, records: txtRecords });
     const bundle = mergeOfficialTxtControlSchemeListings(withOfficialTotalFrames(connected.bundle ?? empty, txtRecords), txtRecords);
     const props = preReleaseUnifiedProps({ ...record, bundle, localCardDraft: true });
-    return <CharacterUnifiedPage {...props} moveEvidence={{ ...props.moveEvidence, ...connected.moveEvidence }} />;
+    return <CharacterUnifiedPage copy={getCharacterCopy(slug)} {...props} moveEvidence={{ ...props.moveEvidence, ...connected.moveEvidence }} />;
   }
   if (!character) {
-    const local = !previewToken && review ? await getWs5CharacterReview(slug, admission) : null;
-    if (!local) notFound();
+    const reviewed = !previewToken && review ? await getWs5CharacterReview(slug, admission) : null;
+    if (!reviewed) notFound();
+    const local = await withLocalOfficialMoveFill(reviewed, slug);
     const strategyMoveLinks = await getWs5StrategyMoveLinks(local.bundle, admission);
-    return <CharacterUnifiedPage {...local} strategyMoveLinks={strategyMoveLinks} strategyReviewDescriptions={await getWs5StrategyReviewDescriptions(admission)} reviewedStrategyCards={await getWs5ReviewedStrategyCards(slug, admission)} playerDirectoryUrl={reviewPlayerDirectoryUrl(local.character.slug)} />;
+    return <CharacterUnifiedPage copy={getCharacterCopy(slug)} {...local} strategyMoveLinks={strategyMoveLinks} strategyReviewDescriptions={await getWs5StrategyReviewDescriptions(admission)} reviewedStrategyCards={await getWs5ReviewedStrategyCards(slug, admission)} playerDirectoryUrl={reviewPlayerDirectoryUrl(local.character.slug)} />;
   }
 
   const [relatedPlayers, relatedVideos] = await Promise.all([
@@ -117,7 +120,9 @@ export default async function CharacterPage({
     getPlayerBySlug(item.href.split("/").filter(Boolean).at(-1) ?? "")))).filter(player => player !== null);
   const videos = resolveCharacterRelatedVideos(allVideos,
     [...relatedVideos.map(video => video.id), ...allVideos.map(video => video.id)]);
-  const moveEvidence = await characterUnifiedEvidence(character.slug, bundle?.moves ?? [], process.env.VERCEL_ENV);
+  // Moves that passed the public gate and their production grant carry the official sources the gate checked.
+  const moveEvidence = { ...await characterUnifiedEvidence(character.slug, bundle?.moves ?? [], process.env.VERCEL_ENV),
+    ...Object.fromEntries((bundle?.moves ?? []).flatMap(move => move.publicEvidence ? [[move.id, move.publicEvidence]] : [])) };
   const txtCandidate = review || officialTxtPreview ? getWs5TxtPreviewCandidate(character.slug) : null;
   const connectedTxt = txtCandidate ? connectOfficialTxtCharacterPageData({ character,
     resolved:{...data,bundle}, moveEvidence, candidate:txtCandidate, admission,
@@ -145,15 +150,16 @@ export default async function CharacterPage({
   };
   const withMultiHit = (target: DevicePreviewBundle) => multiHit && txtRecords ? withOfficialTxtMultiHit(target, bundle, multiHit, txtRecords) : target;
   const selectedBundle = arjun?.bundle ?? (txtRecords && (connectedTxt?.bundle ?? bundle) ? withMultiHit(mergeOfficialTxtControlSchemeListings(withOfficialTotalFrames(overlaid(connectedTxt?.bundle ?? bundle)!, txtRecords), txtRecords)) : bundle);
-  const finalBundle = review ? withoutMotionMedia(selectedBundle) : selectedBundle;
+  const filled = review ? await withLocalOfficialMoveFill({ bundle: withoutMotionMedia(selectedBundle), moveEvidence: {} }, character.slug) : null;
+  const finalBundle = filled ? filled.bundle : selectedBundle;
   const strategyMoveLinks = review ? await getWs5StrategyMoveLinks(finalBundle, admission) : undefined;
   const characterId = review ? videoEntityIdFromQuery(character.id) : null;
-  const combinedMoveEvidence = arjun?.moveEvidence ?? connectedTxt?.moveEvidence ?? moveEvidence;
+  const combinedMoveEvidence = { ...(arjun?.moveEvidence ?? connectedTxt?.moveEvidence ?? moveEvidence), ...filled?.moveEvidence };
   // Registered 解説/対戦 videos: APPROVED only, or pending rows in loopback local preview (same switch as Player図鑑).
   const registeredVideoPreview = playerLocalPreviewEnabled(process.env, (await headers()).get("host"));
   let registeredEnvironment = "";
   try { registeredEnvironment = new URL(process.env.NEXT_PUBLIC_SUPABASE_URL ?? "").hostname.split(".")[0]; } catch { /* unknown: nothing registered */ }
-  return <CharacterUnifiedPage automaticVideos={<><CharacterRegisteredVideos characterSlug={character.slug} environment={registeredEnvironment} preview={registeredVideoPreview} listedUrls={videos.map(video => video.url)} /><Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} /></Suspense></>} character={character} bundle={finalBundle} players={players} videos={videos}
+  return <CharacterUnifiedPage copy={getCharacterCopy(slug)} automaticVideos={<><CharacterRegisteredVideos characterSlug={character.slug} environment={registeredEnvironment} preview={registeredVideoPreview} listedUrls={videos.map(video => video.url)} /><Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} /></Suspense></>} character={character} bundle={finalBundle} players={players} videos={videos}
     moveEvidence={combinedMoveEvidence}
     strategyMoveLinks={strategyMoveLinks} strategyReviewDescriptions={await getWs5StrategyReviewDescriptions(admission)} reviewedStrategyCards={await getWs5ReviewedStrategyCards(slug, admission)}
     playerDirectoryUrl={review ? reviewPlayerDirectoryUrl(character.slug) : undefined}
@@ -161,6 +167,18 @@ export default async function CharacterPage({
     localMoveReferences={!review && !production && isLukeSampleRequest(character.slug, query.sample, process.env.VERCEL_ENV) ?
       <LukeSampleCards slug={character.slug} requested={query.sample} environment={process.env.VERCEL_ENV} moveOnly /> : null}
     localReferences={!review && !production ? <LukeCanonicalComboReference characterSlug={character.slug} /> : null} />;
+}
+
+/** Local review only (callers check the WS5 admission): every official row of the 2026-11-24 frame tables gets a card;
+ * existing cards only gain values they lack. Data is loaded lazily so Preview/Production never import it. */
+async function withLocalOfficialMoveFill<T extends { bundle: DevicePreviewBundle | null; moveEvidence?: Record<string, unknown> }>(view: T, slug: string): Promise<T> {
+  if (!view.bundle) return view;
+  const [{ withAll32OfficialMoveFill }, { default: data }] = await Promise.all([
+    import("@/lib/all32-official-move-fill"),
+    import("@/data/SF6DNA_ALL32_OFFICIAL_MOVE_FILL_20261125.json"),
+  ]);
+  const filled = withAll32OfficialMoveFill(view.bundle, slug, data as unknown as OfficialMoveFillData);
+  return { ...view, bundle: filled.bundle, moveEvidence: { ...view.moveEvidence, ...filled.evidence } };
 }
 
 function reviewPlayerDirectoryUrl(slug: string) {

@@ -1,0 +1,25 @@
+{
+ "source": {
+  "diffList": "SF6DNA_ALL32_PUBLIC_IMPACT_DIFFS_20261125.csv (Drive 180FCVy_mT0W4rrQohdTm8b6D6bdnIc1z)",
+  "byCharacter": "SF6DNA_ALL32_OFFICIAL_RECHECK_BY_CHARACTER_20261125.csv (Drive 1Bevoopw6w450WfgPqTOq504EUQPqhaMy)",
+  "checkedOn": "2026-11-25",
+  "by": "C (Chrome) — CAPCOM 公式フレーム表の画面表示"
+ },
+ "note": "内部データの値に付いている「※」が公式フレーム表の画面には表示されない2行。画面表示の値を採用する（数値は同一）。",
+ "frameScreenValues": {
+  "kimberly:web:327": {
+   "recovery": {
+    "screen": "着地後3",
+    "internal": "着地後3※",
+    "url": "https://www.streetfighter.com/6/ja-jp/character/kimberly/frame"
+   }
+  },
+  "zangief:web:122": {
+   "recovery": {
+    "screen": "着地後20",
+    "internal": "着地後20※",
+    "url": "https://www.streetfighter.com/6/ja-jp/character/zangief/frame"
+   }
+  }
+ }
+}

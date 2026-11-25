@@ -3,8 +3,11 @@ import registry from "@/data/CHARACTER_PRODUCTION_RELEASE_APPROVAL.json";
 import type { DevicePreviewBundle } from "@/lib/device-preview";
 import type { PublicEntitySourceRow } from "@/lib/public-source-links";
 
+/** commandScheme "modern_only": the official Classic table has no row for this move, so the grant binds its
+ * official Modern input instead. Absent = Classic (the existing rule). */
 export type MoveApproval = { id: string; slug: string; factDigest: string; identityConfirmed: true;
-  commandEvidence: "APPROVED_CURRENT"; frameEvidence: "APPROVED_CURRENT"; sourceStatus: "APPROVED_CURRENT" };
+  commandEvidence: "APPROVED_CURRENT"; frameEvidence: "APPROVED_CURRENT"; sourceStatus: "APPROVED_CURRENT";
+  commandScheme?: "modern_only" };
 export type CharacterApproval = { characterId: string; slug: string; approved: true; revoked: false;
   patchId: string; approvalRef: string; approvedBy: string; approvedAt: string;
   checkpointId: string; checkpointHash: string; candidateHash: string; expectedCount: number; moves: MoveApproval[] };
@@ -30,7 +33,8 @@ export function validateApprovalRegistry(value: unknown): value is ApprovalRegis
     return c.moves.every(m => {
       if (!m || !text(m.id) || !text(m.slug) || moveIds.has(m.id) || moveSlugs.has(m.slug)
         || !digestPattern.test(m.factDigest ?? "") || m.identityConfirmed !== true
-        || m.commandEvidence !== "APPROVED_CURRENT" || m.frameEvidence !== "APPROVED_CURRENT" || m.sourceStatus !== "APPROVED_CURRENT") return false;
+        || m.commandEvidence !== "APPROVED_CURRENT" || m.frameEvidence !== "APPROVED_CURRENT" || m.sourceStatus !== "APPROVED_CURRENT"
+        || (m.commandScheme !== undefined && m.commandScheme !== "modern_only")) return false;
       moveIds.add(m.id); moveSlugs.add(m.slug); return true;
     });
   });
@@ -61,14 +65,15 @@ export function isProductionMoveApproved(grant: CharacterApproval, proof: Produc
   if (raw?.id !== move.id || raw.character_id !== proof.characterId || raw.status !== "published"
     || frame?.move_id !== move.id || frame.valid_from_patch_id !== proof.patchId || frame.valid_to_patch_id !== null
     || frame.verification_status !== "verified") return false;
+  const approval = grant.moves.find(m => m.id === move.id && m.slug === move.slug);
+  if (!approval) return false;
+  const scheme = approval.commandScheme === "modern_only" ? "modern" : "classic";
   const commandIds = new Set<string>();
   for (const row of proof.commands) {
     const command = row as { id?: string; move_id?: string; control_scheme?: string };
-    if (!text(command?.id) || commandIds.has(command.id) || command.move_id !== move.id || command.control_scheme !== "classic") return false;
+    if (!text(command?.id) || commandIds.has(command.id) || command.move_id !== move.id || command.control_scheme !== scheme) return false;
     commandIds.add(command.id);
   }
-  const approval = grant.moves.find(m => m.id === move.id && m.slug === move.slug);
-  if (!approval) return false;
   const sourceFor = (type: string[], id: string) => proof.sources.some(s => type.includes(s.entityType)
     && s.entityId === id && s.reliabilityLevel === "official" && text(s.sourceId) && text(s.url));
   if (!sourceFor(["move"], move.id)) return false;

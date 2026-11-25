@@ -21,6 +21,9 @@ const B = "22222222-2222-4222-8222-222222222222";
 const storageModule={exports:{}};
 new Function("module","exports",ts.transpileModule(readFileSync(new URL("../../src/lib/personalization-storage.ts",import.meta.url),"utf8"),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText)(storageModule,storageModule.exports);
 const {personalStorageKey}=storageModule.exports;
+// 診断結果と履歴で共有する軸ラベル表（副作用のない実モジュールをそのまま読み込む）。
+const axisLabelModule={exports:{}};
+new Function("module","exports",ts.transpileModule(readFileSync(new URL("../../src/lib/diagnosis-axis-labels.ts",import.meta.url),"utf8"),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText)(axisLabelModule,axisLabelModule.exports);
 const scopedKey=(user,kind)=>personalStorageKey(user ? `uid:${user}` : "guest",kind)+":improvement";
 const draftKey = scopedKey(A,"diagnosis_draft");
 const requestKey = scopedKey(A,"diagnosis_save_request");
@@ -98,6 +101,9 @@ function environment(options = {}) {
       "@/lib/personalization-storage": storageModule.exports,
       react, "react/jsx-runtime": jsx, "next/link": { default: "a" },
       "@/lib/local-user-tools": localHistoryModule.exports,
+      "@/lib/diagnosis-axis-labels": axisLabelModule.exports,
+      // Display-only notes (A's draft 2026-11-25); not part of the save contract under test.
+      "./diagnosis-guide-notes": { DiagnosisQuestionNotes: () => null, ImprovementResultGuide: () => null },
       "@/lib/daily-training": { buildDailyTrainingHref: () => "/daily" },
       "@/lib/release-features": { releaseFeatures: { aiCoach: false } },
       "@/lib/supabase/client": { getSupabaseBrowserClient: () => client },

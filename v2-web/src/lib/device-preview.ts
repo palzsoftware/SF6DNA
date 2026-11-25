@@ -24,6 +24,13 @@ export type DevicePreviewBundle = {
     frameFieldStatus?: Partial<Record<"startup" | "active" | "recovery" | "total" | "onHit" | "onBlock" | "damage", string>>;
     descriptionJa?: string | null;
     usageSummaryJa?: string | null;
+    /** "modern_only": the official Classic table has no row for this move (its grant binds the Modern input). */
+    officialControl?: "modern_only";
+    /** The official condition for a damage value written with a mark (e.g. "※1100"), kept as written. */
+    damageCondition?: string;
+    /** Patch / verification / official sources of a move that passed the public gate and its production grant. */
+    publicEvidence?: { patch: string | null; verification: string;
+      sources: Array<{ id: string; title: string; url: string; publisher: string; sourceType: string; relationship: string }> };
     status: string;
     frame: {
       startup: string | null;

@@ -1,9 +1,12 @@
+import { correctedOfficialNote } from '@/lib/official-note-corrections';
 /** Local candidate presentation. No ID, frame value or publication status changes. */
 export function officialMoveDisplayNotes(move: unknown): string[] {
   if (!move || typeof move !== 'object') return [];
   const raw = (move as { ws5OfficialRawRecord?: { note?: unknown } }).ws5OfficialRawRecord;
   if (!Array.isArray(raw?.note)) return [];
-  return [...new Set(raw.note.filter((line): line is string => typeof line === 'string' && Boolean(line.trim())).map(line => line.trim()))];
+  const key = (move as { ws5CanonicalSource?: string }).ws5CanonicalSource;
+  return [...new Set(raw.note.filter((line): line is string => typeof line === 'string' && Boolean(line.trim()))
+    .map(line => correctedOfficialNote(key, line.trim())))];
 }
 export function trailingCommandCondition(value: string): { value: string; condition: string | null } {
   const match = value.match(/^\s*[（(]([^）)]+)[）)]\s*([\s\S]+)$/);

@@ -1,6 +1,8 @@
 /** Read-only adapter for the authenticated diagnosis history view.
  * This does not change scoring, saving, deletion, or publication policy.
  */
+import { diagnosisAxisLabel } from "@/lib/diagnosis-axis-labels";
+
 export type CloudDiagnosisHistoryRecord = {
   id: string;
   diagnosisSlug: string;
@@ -9,14 +11,6 @@ export type CloudDiagnosisHistoryRecord = {
   topResults: Array<{ key: string; label: string; score: number }>;
 };
 
-const AXIS_LABELS: Record<string, string> = {
-  anti_air: "対空", drive_rush_defense: "ドライブラッシュ対応", impact_response: "インパクト返し", punish: "確定反撃",
-  defense: "防御・切り返し", offense: "攻めの選択肢", meter: "ゲージ管理", matchup: "キャラ対策",
-  execution: "コンボ・セットプレイ精度", neutral: "中距離・立ち回り", corner_defense: "画面端の守り", decision: "観察・判断",
-  aggression: "前に出る攻め", patience: "待ち・観察", keepout: "遠距離・けん制", rushdown: "近距離ラッシュ",
-  grappling: "投げ・コマンド投げ", setup: "設置・セットプレイ", footsies: "差し合い・地上戦", mobility: "機動力・位置調整",
-  simplicity: "操作の分かりやすさ", technicality: "テクニカル操作", defense_preference: "守りから組み立てる", explosive: "一気に試合を動かす",
-};
 
 function record(value: unknown): Record<string, unknown> | null {
   return typeof value === "object" && value !== null && !Array.isArray(value)
@@ -43,7 +37,7 @@ export function mapCloudDiagnosisRows(rows: unknown): CloudDiagnosisHistoryRecor
       .slice(0, 6)
       .map((item) => ({
         key: item.key as string,
-        label: AXIS_LABELS[item.key as string] ?? (item.key as string),
+        label: diagnosisAxisLabel(item.key as string),
         score: item.score as number,
       }));
     mapped.push({

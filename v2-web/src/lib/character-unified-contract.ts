@@ -27,6 +27,7 @@ export function unifiedCommandText(command: DevicePreviewMoveCommand) {
 /** Absence of a DB command is UNKNOWN, never proof a move is unavailable. */
 export function unifiedControlInputFallback(scheme: "classic" | "modern", move?: UnifiedMove) {
   if (scheme === "modern" && move && (move as UnifiedMove & { ws5ModernInputState?: string }).ws5ModernInputState === "OFFICIAL_NOT_LISTED") return "技入力なし（公式原文にModern入力記載なし）";
+  if (scheme === "classic" && move?.officialControl === "modern_only") return "Classic表に掲載なし（公式表はModernのみ）";
   return scheme === "modern" ? "データ確認中" : "入力確認中";
 }
 
@@ -83,12 +84,14 @@ export function japaneseFrameText(value: string): string {
     .replace(/\bfar:/g, "遠:").replace(/\bmiddle:/g, "中:").replace(/\bnear:/g, "近:")
     .replace(/\bactivation:/g, "発動:").replace(/\brelease:/g, "リリース:");
 }
+/** Local review only: a value taken from the official frame table checked on 2026-11-24 (src/lib/all32-official-move-fill.ts). */
+export const LOCAL_OFFICIAL_FRAME_STATUS = "LOCAL_OFFICIAL_FRAME_20261124";
 /** Field state for labels: official TXT value (Patch unconfirmed), official N/A, not listed, or pending. */
 export function unifiedFrameState(move: UnifiedMove, field: UnifiedFrameField, showLocalTxtCandidate = false): "OFFICIAL_TXT" | "OFFICIAL_NA" | "NOT_LISTED" | "PENDING" | "STORED" {
   const state = move.frameFieldStatus?.[field as keyof NonNullable<UnifiedMove["frameFieldStatus"]>];
   if (state === "OFFICIAL_NA") return "OFFICIAL_NA";
   if (state === "OFFICIAL_NOT_LISTED") return "NOT_LISTED";
-  if ((state === "LOCAL_OFFICIAL_TXT_MATCHED" || state === "LOCAL_OFFICIAL_TXT_CANONICAL") && showLocalTxtCandidate) return "OFFICIAL_TXT";
+  if ((state === "LOCAL_OFFICIAL_TXT_MATCHED" || state === "LOCAL_OFFICIAL_TXT_CANONICAL" || state === LOCAL_OFFICIAL_FRAME_STATUS) && showLocalTxtCandidate) return "OFFICIAL_TXT";
   if (state && state !== "CURRENT_OFFICIAL_SNAPSHOT_ACCEPTED") return "PENDING";
   return "STORED";
 }
@@ -99,7 +102,7 @@ export function unifiedFrameValue(move: UnifiedMove, field: UnifiedFrameField, s
     : typeof candidate === "string" && candidate.trim() ? (field === "onHit" && candidate.trim() === "D" ? "ダウン" : japaneseFrameText(candidate)) : "確認中";
   if (state === "OFFICIAL_NA") return "—";
   if (state === "OFFICIAL_NOT_LISTED") return "公式資料に記載なし";
-  if ((state === "LOCAL_OFFICIAL_TXT_MATCHED" || state === "LOCAL_OFFICIAL_TXT_CANONICAL") && showLocalTxtCandidate) return text(raw);
+  if ((state === "LOCAL_OFFICIAL_TXT_MATCHED" || state === "LOCAL_OFFICIAL_TXT_CANONICAL" || state === LOCAL_OFFICIAL_FRAME_STATUS) && showLocalTxtCandidate) return text(raw);
   if (state && state !== "CURRENT_OFFICIAL_SNAPSHOT_ACCEPTED") return "確認中";
   return text(raw);
 }

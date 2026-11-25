@@ -68,6 +68,7 @@ test('Daily15 closes first and other cards and handles a changed plan', () => {
     '@/lib/daily-practice-owner': { readOwnedPractice: () => { throw Error('unexpected practice read'); } },
     '@/lib/daily-practice-owner-lock': { savePracticeWithOwnerLock: () => { throw Error('unexpected write'); } },
     './daily-training-quality-card': { DailyTrainingQualityCard: () => null },
+    './daily-training-setup-guide': { DailyTrainingSetupGuide: () => null },
     '@/lib/daily-practice': {},
     '@/lib/daily-training': { isImprovementFocus: () => false, resolveDailyTrainingSelection: () => ({}), buildDailyTrainingPlan: () => ({
       dateKey: '2026-09-30', theme: 'fixture', reason: 'fixture', source: 'default', totalMinutes: 15,
@@ -101,7 +102,7 @@ test('Daily15 auth error shows a heading and recovery links without internal det
     'next/navigation': { useRouter: () => ({ refresh: () => { throw Error('unexpected refresh'); } }) },
     '@/lib/use-personalization-owner': { usePersonalizationOwner: () => ({ state: { status: 'error' }, isCurrent: () => false }) },
     '@/lib/personalization-storage': {}, '@/lib/daily-diagnosis-input': {}, '@/lib/daily-practice-owner': {},
-    '@/lib/daily-practice-owner-lock': {}, './daily-training-quality-card': { DailyTrainingQualityCard: () => null },
+    '@/lib/daily-practice-owner-lock': {}, './daily-training-quality-card': { DailyTrainingQualityCard: () => null }, './daily-training-setup-guide': { DailyTrainingSetupGuide: () => null },
     '@/lib/daily-practice': {}, '@/lib/daily-training': { isImprovementFocus: () => false }, './daily-training-planner.module.css': { default: {} },
   });
   h.reset();

@@ -2,7 +2,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { execSync } from 'node:child_process';
+import { execSync, execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import ts from 'typescript';
 
 const refs = JSON.parse(readFileSync(new URL('../src/data/training-candidates/strategy-card-refs-20261120.json', import.meta.url), 'utf8'));
@@ -132,12 +133,69 @@ test('trainingフラグは false のまま・未承認データは練習経由�
   for (const slug of Object.keys(data.characters)) assert.deepEqual(lib.listCharacterTrainingCandidates(slug), []);
 });
 
-test('既存の診断・練習コードは変更していない', () => {
-  // 対象は診断・練習のコードに限定する（攻略カードなどのデータ追加はこのテストの対象外）。
-  const paths = [
-    'src/lib/daily-diagnosis-input.ts', 'src/lib/daily-training*.ts', 'src/lib/diagnosis*.ts',
-    'src/components/daily-training*', 'src/components/diagnosis*', 'src/app/diagnosis', 'src/app/training',
-  ].map((p) => `':(glob)${p}'`).join(' ');
-  const changed = execSync(`git diff --name-only -- ${paths}`, { cwd: new URL('..', import.meta.url) }).toString().trim();
-  assert.equal(changed, '', `既存ファイルの変更: ${changed}`);
+// 既存の診断・練習コード（質問・採点・保存の契約）は、承認済みの「診断履歴の表示修正」以外は変更しない。
+// 2026-11-25: 比較の基準を作業ツリーの未コミット差分から基準コミットに変え、Windows でも動く呼び出しにした。
+// 承認済みの変更（SF6DNA_DIAGNOSIS_HISTORY_LABELS_20261125.patch）は内容を sha256 で固定し、それ以外の変更は検出する。
+const DIAGNOSIS_BASE = '5da63536b616dc86366a048ee5542acefa16f471';
+const DIAGNOSIS_PATHS = [
+  'src/lib/daily-diagnosis-input.ts', 'src/lib/daily-training*.ts', 'src/lib/diagnosis*.ts',
+  'src/components/daily-training*', 'src/components/diagnosis*', 'src/app/diagnosis', 'src/app/training',
+];
+const APPROVED_DIAGNOSIS_CHANGES = {
+  'src/app/diagnosis/history/page.tsx': '6daedbe7bab2123b8c682cc071edb028333796586c3769363536fa9c636b24c2',
+  'src/components/diagnosis-history-tool.tsx': '2dcec87c07f7e6e7645949ce55096926beb58bfa5a83414e23b559467146945b',
+  // 2026-11-25: Aの案内原稿（SF6DNA_DIAG_TRAINING_UX_DRAFT_20261125 の A1〜A4）を表示だけで追加。質問・選択肢・採点・推薦・保存は不変。
+  'src/components/diagnosis-runner.tsx': 'd2ee65985313b7133a268d905dd14478d84b54af4c89de25cdffcc742fcebae2',
+  'src/components/diagnosis-guide-notes.tsx': 'ad2702f232234d9a4988e66d1f5f630a15f9c1d6d643d8e26991c1b73268121c',
+  'src/components/daily-training-planner.tsx': '719cab0e7e48bfbdea071ba9066a8b6aa03765920813ffc252db9d0efc288329',
+  'src/components/daily-training-setup-guide.tsx': 'abacf5b7b2479ce862c6868bf02feb30034814cf173c0cbe08d13ee0d6160af9',
+  'src/lib/diagnosis-axis-labels.ts': '08cdfb16e77dcca105ac1b168cb823c54510429740999c62142401526d5c5b32',
+  'src/lib/diagnosis-history-cloud.ts': '9d0e7c79c21c23718040d045cf1317404bef9de23123daf16a91dab045e7d82b',
+};
+const webDir = new URL('..', import.meta.url);
+const git = (...args) => execFileSync('git', args, { cwd: webDir, encoding: 'utf8' }).trim();
+const lf = (s) => s.replace(/\r\n/g, '\n');
+const sha = (s) => createHash('sha256').update(lf(s)).digest('hex');
+
+test('既存の診断・練習コードは変更していない（承認済みの診断履歴の表示修正のみ許容）', () => {
+  const specs = DIAGNOSIS_PATHS.map((p) => `:(glob)${p}`);
+  const changed = git('diff', '--name-only', '--relative', DIAGNOSIS_BASE, '--', ...specs).split('\n').filter(Boolean);
+  const added = git('ls-files', '--others', '--exclude-standard', '--', ...specs).split('\n').filter(Boolean);
+  const touched = [...new Set([...changed, ...added])].sort();
+  const unexpected = touched.filter((f) => !(f in APPROVED_DIAGNOSIS_CHANGES));
+  assert.deepEqual(unexpected, [], `承認外の診断・練習コードの変更: ${unexpected.join(', ')}`);
+  for (const [file, expected] of Object.entries(APPROVED_DIAGNOSIS_CHANGES)) {
+    assert.equal(sha(readFileSync(new URL(`../${file}`, import.meta.url), 'utf8')), expected, `承認済みの内容から変更あり: ${file}`);
+  }
+});
+
+test('Aの案内原稿の反映は表示の追加だけ（取り除くと承認済みの版・基準コミットと一致する）', () => {
+  const read = (f) => lf(readFileSync(new URL(`../${f}`, import.meta.url), 'utf8'));
+  const runner = read('src/components/diagnosis-runner.tsx')
+    .replace('import { DiagnosisQuestionNotes, ImprovementResultGuide } from "./diagnosis-guide-notes";\n', '')
+    .replace('<DiagnosisQuestionNotes question={question} />', '')
+    .replace('<ImprovementResultGuide axes={improvement.map(([key]) => key)} labelOf={axisLabel} />', '')
+    .replace('{diagnosis.diagnosisType === "improvement" ? <ImprovementResultGuide axes={priorities.map(([key]) => key)} labelOf={axisLabel} /> : null}', '');
+  // 34051280… = 承認済みの診断履歴の表示修正だけを当てた版（採点・保存はこの版と同一）。
+  assert.equal(sha(runner), '34051280930a06669cf0406a4e67a0c29a1e5d4672682559f936f12b5ac7a81f');
+  const planner = read('src/components/daily-training-planner.tsx')
+    .replace('import { DailyTrainingSetupGuide } from "./daily-training-setup-guide";\n', '')
+    .replace('\n      <DailyTrainingSetupGuide fromDiagnosis={!checkingHistory && (plan.source === "diagnosis_link" || plan.source === "local_diagnosis")} />', '');
+  assert.equal(planner, lf(git('show', `${DIAGNOSIS_BASE}:./src/components/daily-training-planner.tsx`)) + '\n');
+  // 新しい表示部品は保存・採点・通信を持たない。
+  for (const f of ['src/components/diagnosis-guide-notes.tsx', 'src/components/daily-training-setup-guide.tsx']) {
+    assert.doesNotMatch(read(f), /useState|useEffect|localStorage|fetch\(|supabase|scorePayload|setAnswers|saveDiagnosis/, f);
+  }
+});
+
+test('診断の軸ラベル（保存・履歴表示の値）は基準コミットの定義と一致する', () => {
+  // 承認済みの修正はラベル表を共通モジュールへ移しただけ。保存される label の値が変わらないことを確かめる。
+  const parse = (src) => Object.fromEntries([...src.matchAll(/([a-z_]+): "([^"]+)"/g)].map((m) => [m[1], m[2]]));
+  const block = (src) => (src.match(/AXIS_LABELS[^=]*=\s*\{([\s\S]*?)\};/) || [])[1] ?? '';
+  const baseRunner = parse(block(git('show', `${DIAGNOSIS_BASE}:./src/components/diagnosis-runner.tsx`)));
+  const baseCloud = parse(block(git('show', `${DIAGNOSIS_BASE}:./src/lib/diagnosis-history-cloud.ts`)));
+  const shared = parse(block(readFileSync(new URL('../src/lib/diagnosis-axis-labels.ts', import.meta.url), 'utf8')));
+  assert.equal(Object.keys(baseRunner).length, 24);
+  assert.deepEqual(shared, baseRunner);
+  assert.deepEqual(shared, baseCloud);
 });

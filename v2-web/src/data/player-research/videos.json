@@ -21631,5 +21631,1776 @@
       }
     ],
     "uploaderChannel": "ACQUA（@ACQUA316）"
+  },
+  {
+    "key": "gachikun-AYSipIXEp18",
+    "playerSlug": "gachikun",
+    "title": "SF6 ▰ CHRISWONG (Jamie) vs GACHIKUN (Rashid)",
+    "youtubeId": "AYSipIXEp18",
+    "channelName": "Ascent Games",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでラシードを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-19",
+    "evidenceBasis": "映像確認：RASHID側CFN「TsuneHERO」。ガチくん本人の配信動画（rqA52NTPMho）で自分側「YOU」＝TsuneHEROを確認し本人のCFNと判断（映像確認時刻 1:00／本人配信2:30。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "rashid",
+        "name": "ラシード"
+      }
+    ],
+    "uploaderChannel": "Ascent Games（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00／本人配信2:30",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "gachikun-rqA52NTPMho",
+    "playerSlug": "gachikun",
+    "title": "【脳内解説】リアルタイムで立ち回りを喋りながらランクマをするガチくん【スト6】",
+    "youtubeId": "rqA52NTPMho",
+    "channelName": "ガチくん",
+    "kind": "本人解説",
+    "reason": "ラシードについて本人が解説・実演している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-04-23",
+    "evidenceBasis": "映像確認：自分側「YOU」・CFN「TsuneHERO」。キャラ表示は配信レイアウトで隠れており、竜巻エフェクトからラシードと判断（確度中）（映像確認時刻 2:30。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "rashid",
+        "name": "ラシード"
+      }
+    ],
+    "uploaderChannel": "ガチくん（本人ch）",
+    "matchEvidence": {
+      "identifiedAt": "2:30",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    },
+    "versionNote": "Year3期",
+    "patchVerified": false
+  },
+  {
+    "key": "raoyamu-a0XuExmvnyM",
+    "playerSlug": "raoyamu",
+    "title": "SF6 Daigo (Akuma) VS Raoyamu (M.Bison)",
+    "youtubeId": "a0XuExmvnyM",
+    "channelName": "MESSATSU !",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでベガを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-23",
+    "evidenceBasis": "映像確認：CFN「らおやむやむ☆ハイハイ謝謝♪」（本人チャンネル名と同じ表記）・M.BISON／相手CFN「DaigoTheBeasTV」・AKUMA（映像確認時刻 3:20。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "m-bison",
+        "name": "ベガ"
+      }
+    ],
+    "uploaderChannel": "MESSATSU !（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "3:20",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "hikaru-aki-fNY8d-kYgLQ",
+    "playerSlug": "hikaru-aki",
+    "title": "SF6 - A.K.I. High-Level Ranked Replays | Ayasaka, Hikaru",
+    "youtubeId": "fNY8d-kYgLQ",
+    "channelName": "Street Scholars",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでA.K.I.を使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-16",
+    "evidenceBasis": "映像確認：右側CFN「hikaru_shiftne」・A.K.I.（複数試合のまとめ動画で、6:40の試合）（映像確認時刻 6:40。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "aki",
+        "name": "A.K.I."
+      }
+    ],
+    "uploaderChannel": "Street Scholars（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "6:40",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "kincho-terry-Vy0EW4VMsBA",
+    "playerSlug": "kincho-terry",
+    "title": "【スト６】ランクマで当たった正体不明の鬼強テリーに驚くきんちょ【きんちょ切り抜き】",
+    "youtubeId": "Vy0EW4VMsBA",
+    "channelName": "きんちょ / kincho",
+    "kind": "本人解説",
+    "reason": "テリーについて本人が解説・実演している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-04-21",
+    "evidenceBasis": "映像確認：縦型ショートでテリー同キャラ戦の対戦画面を確認（映像確認時刻 0:40。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "terry",
+        "name": "テリー"
+      }
+    ],
+    "uploaderChannel": "きんちょ / kincho（本人ch）",
+    "matchEvidence": {
+      "identifiedAt": "0:40",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    },
+    "versionNote": "縦型ショート動画。Year3期",
+    "patchVerified": false
+  },
+  {
+    "key": "sako-8MFw1DJkbVQ",
+    "playerSlug": "sako",
+    "title": "【スト６】アプデで強化！コンボ20種類くらい増えた！カプコンさんありがとうやで！【SF6】",
+    "youtubeId": "8MFw1DJkbVQ",
+    "channelName": "sakonoko_game",
+    "kind": "本人解説",
+    "reason": "エレナについて本人が解説・実演している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2025-12-23",
+    "evidenceBasis": "タイトル・投稿チャンネル（Wiki掲載・CFN「SAKONOKO_GAME」と同名）。SFL公式データにsakoのYouTube掲載あり（c/sakonoko_game）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "elena",
+        "name": "エレナ"
+      }
+    ],
+    "uploaderChannel": "sakonoko_game（本人ch）",
+    "versionNote": "2025年12月のアップデート時点（Year3期）",
+    "patchVerified": false
+  },
+  {
+    "key": "sako-tHY0EVxoVW4",
+    "playerSlug": "sako",
+    "title": "【スト6】この当たり方は見たことがない！？エレナの激ムズコンボルートを発見し驚愕するsako",
+    "youtubeId": "tHY0EVxoVW4",
+    "channelName": "sakonoko_game",
+    "kind": "本人解説",
+    "reason": "エレナについて本人が解説・実演している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-18",
+    "evidenceBasis": "タイトル・投稿チャンネル（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "elena",
+        "name": "エレナ"
+      }
+    ],
+    "uploaderChannel": "sakonoko_game（本人ch）"
+  },
+  {
+    "key": "mizuha-eXG4C3aS0co",
+    "playerSlug": "mizuha",
+    "title": "【スト6】舞とキャミィの二刀流でランクマッチに挑む水派",
+    "youtubeId": "eXG4C3aS0co",
+    "channelName": "水派　Mizuha",
+    "kind": "本人解説",
+    "reason": "キャミィについて本人が解説・実演している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2025-09-10",
+    "evidenceBasis": "映像確認：本人顔出しワイプとキャミィ対マリーザの対戦画面（映像確認時刻 5:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "cammy",
+        "name": "キャミィ"
+      }
+    ],
+    "uploaderChannel": "水派　Mizuha（本人ch）",
+    "matchEvidence": {
+      "identifiedAt": "5:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    },
+    "versionNote": "2025年9月（Year2〜3期）。舞も使用",
+    "patchVerified": false
+  },
+  {
+    "key": "takagi-lI5xepdsW1g",
+    "playerSlug": "takagi",
+    "title": "成長した新ブランカで大暴れ！？プロライセンスをかけたRiddle大会で勝ちまくる高木【ストリートファイター6】",
+    "youtubeId": "lI5xepdsW1g",
+    "channelName": "高木チャンネル",
+    "kind": "本人解説",
+    "reason": "ブランカについて本人が解説・実演している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2025-12-04",
+    "evidenceBasis": "タイトル・投稿チャンネル名（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "blanka",
+        "name": "ブランカ"
+      }
+    ],
+    "uploaderChannel": "高木チャンネル"
+  },
+  {
+    "key": "takagi-QO9NjhEBZac",
+    "playerSlug": "takagi",
+    "title": "【レベル別上達方法】高木選手が格ゲーをイチから始めてレジェンド到達までにやったこと8選",
+    "youtubeId": "QO9NjhEBZac",
+    "channelName": "SmashlogTV - SF6（メディア）",
+    "kind": "本人解説",
+    "reason": "ブランカについて本人が解説・実演している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2025-12-27",
+    "evidenceBasis": "タイトルに高木選手の出演を明記（メディア投稿）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "blanka",
+        "name": "ブランカ"
+      }
+    ],
+    "uploaderChannel": "SmashlogTV - SF6（メディア）"
+  },
+  {
+    "key": "mocchi-Ibku3tT1oy0",
+    "playerSlug": "mocchi",
+    "title": "【SF6#65】ランクマ",
+    "youtubeId": "Ibku3tT1oy0",
+    "channelName": "もっちー(Mocchi)",
+    "kind": "本人解説",
+    "reason": "豪鬼について本人が解説・実演している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-22",
+    "evidenceBasis": "タイトル・投稿チャンネル（本人配信アーカイブ）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "akuma",
+        "name": "豪鬼"
+      }
+    ],
+    "uploaderChannel": "もっちー(Mocchi)（本人ch）"
+  },
+  {
+    "key": "mocchi-XDkO3oGn6zU",
+    "playerSlug": "mocchi",
+    "title": "【SF6#52】豪鬼ランクマ",
+    "youtubeId": "XDkO3oGn6zU",
+    "channelName": "もっちー(Mocchi)",
+    "kind": "本人解説",
+    "reason": "豪鬼について本人が解説・実演している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-03-04",
+    "evidenceBasis": "タイトルにキャラ明記・投稿チャンネル（本人配信アーカイブ）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "akuma",
+        "name": "豪鬼"
+      }
+    ],
+    "uploaderChannel": "もっちー(Mocchi)（本人ch）",
+    "versionNote": "Year3期。長尺",
+    "patchVerified": false
+  },
+  {
+    "key": "yanai--Xz9iszQL70",
+    "playerSlug": "yanai",
+    "title": "【スト6解説】初級者向け！マリーザの立ち回り＆読み合いについてリプレイを見ながらアドバイス！！【スト６・ヤナイ】",
+    "youtubeId": "-Xz9iszQL70",
+    "channelName": "ヤナイ / Yanai",
+    "kind": "本人解説",
+    "reason": "マリーザについて本人が解説・実演している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2023-07-21",
+    "evidenceBasis": "タイトル・投稿チャンネル（SFL公式掲載のYouTube）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "marisa",
+        "name": "マリーザ"
+      }
+    ],
+    "uploaderChannel": "ヤナイ / Yanai（本人ch）",
+    "versionNote": "2023年（Year1）の解説。現行パッチ未対応の可能性",
+    "patchVerified": false
+  },
+  {
+    "key": "yanai-8wjRFojD9hc",
+    "playerSlug": "yanai",
+    "title": "【初心者向け】1から始める！マリーザ講座　強い行動編【スト６・ヤナイ】",
+    "youtubeId": "8wjRFojD9hc",
+    "channelName": "ヤナイ / Yanai",
+    "kind": "本人解説",
+    "reason": "マリーザについて本人が解説・実演している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2024-01-03",
+    "evidenceBasis": "タイトル・投稿チャンネル（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "marisa",
+        "name": "マリーザ"
+      }
+    ],
+    "uploaderChannel": "ヤナイ / Yanai（本人ch）",
+    "versionNote": "2024年1月（Year1）",
+    "patchVerified": false
+  },
+  {
+    "key": "yanai-h2jSJe7fIx4",
+    "playerSlug": "yanai",
+    "title": "ジャスパ後の最適解コンボ解説＆ジャスパ後のフレーム計算方法を知るヤナイ【スト６・ヤナイ】",
+    "youtubeId": "h2jSJe7fIx4",
+    "channelName": "ヤナイ / Yanai",
+    "kind": "本人解説",
+    "reason": "本人がキャラ共通のシステムを解説している動画（特定キャラには紐づけていません）。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2023-12-26",
+    "evidenceBasis": "タイトル・投稿チャンネル（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [],
+    "uploaderChannel": "ヤナイ / Yanai（本人ch）",
+    "pastYear": "2023"
+  },
+  {
+    "key": "momochi-Yi-HG0yyYSk",
+    "playerSlug": "momochi",
+    "title": "SF6 ▰ MOMOCHI (Ed) vs TOMOROCK (#3 Ranked Dee Jay)",
+    "youtubeId": "Yi-HG0yyYSk",
+    "channelName": "SF6 High Level Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでエドを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-02-14",
+    "evidenceBasis": "映像確認：CFN「Momochi」・ED／相手CFN「tomorock」・DEE JAY（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ed",
+        "name": "エド"
+      }
+    ],
+    "uploaderChannel": "SF6 High Level Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "yamaguchi--WK9HXyV8yw",
+    "playerSlug": "yamaguchi",
+    "title": "🔥 BOOCE LEE ( #1 TERRY ) VS YAMAGUCHI ( #1 MAI ) 🔥SF6 high level replay",
+    "youtubeId": "-WK9HXyV8yw",
+    "channelName": "SF6 HIgh Fight Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイで舞を使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-10-21",
+    "evidenceBasis": "映像確認：画面の名前表示「Yamaguchi」・MAI／「Booce Lee」・TERRY（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "mai",
+        "name": "舞"
+      }
+    ],
+    "uploaderChannel": "SF6 HIgh Fight Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "adelie-6Cxrg_WhZ1A",
+    "playerSlug": "adelie",
+    "title": "SF6 🤜 SHUTO (#1 Ranked Ryu) vs ADELIE (#1 Ranked Ed) 🤛",
+    "youtubeId": "6Cxrg_WhZ1A",
+    "channelName": "The FGC Place",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでエドを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-09-02",
+    "evidenceBasis": "映像確認：CFN「あでりい」・ED／相手CFN「Shuto」・RYU（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ed",
+        "name": "エド"
+      }
+    ],
+    "uploaderChannel": "The FGC Place（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "hinao-ZhTZhh3mIwA",
+    "playerSlug": "hinao",
+    "title": "SF6 ▰ HINAO (#1 Ranked Ingrid) vs ZABUTONN (#1 Ranked Dee Jay)",
+    "youtubeId": "ZhTZhh3mIwA",
+    "channelName": "SF6 High Level Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでイングリッドを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-06-05",
+    "evidenceBasis": "映像確認：CFN「hinao」・INGRID（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ingrid",
+        "name": "イングリッド"
+      }
+    ],
+    "uploaderChannel": "SF6 High Level Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "daigo-a0XuExmvnyM",
+    "playerSlug": "daigo",
+    "title": "SF6 Daigo (Akuma) VS Raoyamu (M.Bison)",
+    "youtubeId": "a0XuExmvnyM",
+    "channelName": "MESSATSU !",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイで豪鬼を使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-23",
+    "evidenceBasis": "映像確認：CFN「らおやむやむ☆ハイハイ謝謝♪」（本人チャンネル名と同じ表記）・M.BISON／相手CFN「DaigoTheBeasTV」・AKUMA（相手側CFN・キャラの映像確認によりウメハラにも紐づけ）（映像確認時刻 3:20。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V4）",
+    "identityBinding": "2026-11-25 V4。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "akuma",
+        "name": "豪鬼"
+      }
+    ],
+    "uploaderChannel": "MESSATSU !（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "3:20",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "sako-DD89UGsERhs",
+    "playerSlug": "sako",
+    "title": "SF6 🤜 SAKO (#3 Ranked Elena) vs 2BASSA (#2 Ranked Cammy) 🤛 SF6 High Level Gameplay",
+    "youtubeId": "DD89UGsERhs",
+    "channelName": "The FGC Place",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでエレナを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-21",
+    "evidenceBasis": "映像確認：CFN「SAKONOKO_GAME」・ELENA／相手CFN「2BASSA」・CAMMY（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "elena",
+        "name": "エレナ"
+      }
+    ],
+    "uploaderChannel": "The FGC Place（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "sako-yIKvy2cpLFM",
+    "playerSlug": "sako",
+    "title": "SF6 🤜 SAKO (#3 Ranked Elena) vs KINCHO (#1 Ranked Terry) 🤛 SF6 High Level Gameplay",
+    "youtubeId": "yIKvy2cpLFM",
+    "channelName": "The FGC Place",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでエレナを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-12",
+    "evidenceBasis": "映像確認：CFN「SAKONOKO_GAME」・ELENA／相手CFN「kincho」・TERRY（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "elena",
+        "name": "エレナ"
+      }
+    ],
+    "uploaderChannel": "The FGC Place（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "sako-xaeF26BKOTQ",
+    "playerSlug": "sako",
+    "title": "SF6 🤜 SAKO (#2 Ranked Elena) vs TOMOROCK (Dee Jay) 🤛 SF6 High Level Gameplay",
+    "youtubeId": "xaeF26BKOTQ",
+    "channelName": "The FGC Place",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでエレナを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-11",
+    "evidenceBasis": "映像確認：CFN「SAKONOKO_GAME」・ELENA（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "elena",
+        "name": "エレナ"
+      }
+    ],
+    "uploaderChannel": "The FGC Place（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "sako-ovzsPmWvLfY",
+    "playerSlug": "sako",
+    "title": "【スト6】さすがの判断力！Sako（エレナ）、冴える差し合い | ストリートファイター6",
+    "youtubeId": "ovzsPmWvLfY",
+    "channelName": "SF6 DOJO REPLAYS",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでエレナを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-08",
+    "evidenceBasis": "映像確認：CFN「SAKONOKO_GAME」・ELENA（相手はアルジュン）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "elena",
+        "name": "エレナ"
+      }
+    ],
+    "uploaderChannel": "SF6 DOJO REPLAYS（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "cosa-fVGwS4JGx7k",
+    "playerSlug": "cosa",
+    "title": "Street Fighter 6 🔥 HIBIKI (Alex) Vs COSA (Ken) 🔥 SF6 High Level Matches!",
+    "youtubeId": "fVGwS4JGx7k",
+    "channelName": "STREET FIGHTER Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでケンを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-04-01",
+    "evidenceBasis": "映像確認：CFN「cosazeku」・KEN／相手CFN「SBI_Hibiki」・ALEX（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ken",
+        "name": "ケン"
+      }
+    ],
+    "uploaderChannel": "STREET FIGHTER Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "hibiki-fVGwS4JGx7k",
+    "playerSlug": "hibiki",
+    "title": "Street Fighter 6 🔥 HIBIKI (Alex) Vs COSA (Ken) 🔥 SF6 High Level Matches!",
+    "youtubeId": "fVGwS4JGx7k",
+    "channelName": "STREET FIGHTER Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでアレックスを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-04-01",
+    "evidenceBasis": "映像確認：CFN「SBI_Hibiki」・ALEX（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "alex",
+        "name": "アレックス"
+      }
+    ],
+    "uploaderChannel": "STREET FIGHTER Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "cosa-d6BdRPSexZE",
+    "playerSlug": "cosa",
+    "title": "ストリートファイター6【cosa (ケン) VS ウメハラ (豪鬼)】cosa (KEN) VS DAIGO (AKUMA)",
+    "youtubeId": "d6BdRPSexZE",
+    "channelName": "GAME-PC-LIFE",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでケンを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-08-10",
+    "evidenceBasis": "映像確認：CFN「cosazeku」・KEN／相手CFN「DaigoTheBeasTV」・AKUMA（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ken",
+        "name": "ケン"
+      }
+    ],
+    "uploaderChannel": "GAME-PC-LIFE（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "cosa-TY_6fv7heAg",
+    "playerSlug": "cosa",
+    "title": "Street Fighter 6 🔥 BONCHAN (#1 Ranked Sagat) Vs COSA (#3 Ranked Ken)🔥",
+    "youtubeId": "TY_6fv7heAg",
+    "channelName": "STREET FIGHTER Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでケンを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-04-04",
+    "evidenceBasis": "映像確認：CFN「cosazeku」・KEN（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ken",
+        "name": "ケン"
+      }
+    ],
+    "uploaderChannel": "STREET FIGHTER Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "bonchan-TY_6fv7heAg",
+    "playerSlug": "bonchan",
+    "title": "Street Fighter 6 🔥 BONCHAN (#1 Ranked Sagat) Vs COSA (#3 Ranked Ken)🔥",
+    "youtubeId": "TY_6fv7heAg",
+    "channelName": "STREET FIGHTER Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでサガットを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-04-04",
+    "evidenceBasis": "映像確認：CFN「BonchanRB」・SAGAT（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "sagat",
+        "name": "サガット"
+      }
+    ],
+    "uploaderChannel": "STREET FIGHTER Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "takepi-zxZwFDZd7TI",
+    "playerSlug": "takepi",
+    "title": "SF6 🔥 KIDO (#1 Ranked Arjun) Vs TAKEPI (#1 Ranked JP)🔥",
+    "youtubeId": "zxZwFDZd7TI",
+    "channelName": "STREET FIGHTER Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでJPを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-10-25",
+    "evidenceBasis": "映像確認：CFN「takepi」（キャラ表記は画面端で欠けているがタイトル・映像の構えからJP）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "jp",
+        "name": "JP"
+      }
+    ],
+    "uploaderChannel": "STREET FIGHTER Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "takepi--U_O_xe8bRI",
+    "playerSlug": "takepi",
+    "title": "【スト6】全く近づけないｗｗｗ世界1位JP！ takepi(JP)【SF6】",
+    "youtubeId": "-U_O_xe8bRI",
+    "channelName": "スト6 Best Legend Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでJPを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-08-27",
+    "evidenceBasis": "映像確認：CFN「takepi」（相手はテリー）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "jp",
+        "name": "JP"
+      }
+    ],
+    "uploaderChannel": "スト6 Best Legend Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "takepi-UMtCym6c9XE",
+    "playerSlug": "takepi",
+    "title": "【SF6】世界1位JP！選択肢を奪い尽くす支配の美学！！「takepi:JP」【スト6】",
+    "youtubeId": "UMtCym6c9XE",
+    "channelName": "SF6-MODERN",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでJPを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-06",
+    "evidenceBasis": "映像確認：CFN「takepi」・JP（相手はザンギエフ）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "jp",
+        "name": "JP"
+      }
+    ],
+    "uploaderChannel": "SF6-MODERN（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "adelie-gVEd_wScSrE",
+    "playerSlug": "adelie",
+    "title": "SF6 ▰ HIBIKI (#1 Ranked Lily) vs ADELIE (#1 Ranked Ed) ▰ High Level Gameplay",
+    "youtubeId": "gVEd_wScSrE",
+    "channelName": "SF6 High Level Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでエドを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-07-01",
+    "evidenceBasis": "映像確認：CFN「あでりい」・ED／相手CFN「SBI_Hibiki」・LILY（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ed",
+        "name": "エド"
+      }
+    ],
+    "uploaderChannel": "SF6 High Level Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "hibiki-gVEd_wScSrE",
+    "playerSlug": "hibiki",
+    "title": "SF6 ▰ HIBIKI (#1 Ranked Lily) vs ADELIE (#1 Ranked Ed) ▰ High Level Gameplay",
+    "youtubeId": "gVEd_wScSrE",
+    "channelName": "SF6 High Level Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでリリーを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-07-01",
+    "evidenceBasis": "映像確認：CFN「SBI_Hibiki」・LILY（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "lily",
+        "name": "リリー"
+      }
+    ],
+    "uploaderChannel": "SF6 High Level Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "adelie-8yLj51OL12A",
+    "playerSlug": "adelie",
+    "title": "SF6 Suisenri (Yasmine) VS Adelie (Ed)💥Messatsu!💥",
+    "youtubeId": "8yLj51OL12A",
+    "channelName": "MESSATSU !",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでエドを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-07",
+    "evidenceBasis": "映像確認：CFN「あでりい」・ED（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ed",
+        "name": "エド"
+      }
+    ],
+    "uploaderChannel": "MESSATSU !（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "adelie-LD6mm8QKzb0",
+    "playerSlug": "adelie",
+    "title": "SF6 | Adelie ED No.1 Ranked! Aggressive & Powerfull Combos",
+    "youtubeId": "LD6mm8QKzb0",
+    "channelName": "SF6 DLC Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでエドを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-10-20",
+    "evidenceBasis": "映像確認：CFN「あでりい」・ED／相手CFN「zabutonn」・DEE JAY（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ed",
+        "name": "エド"
+      }
+    ],
+    "uploaderChannel": "SF6 DLC Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "raoyamu-kr9TVquTBNo",
+    "playerSlug": "raoyamu",
+    "title": "SF6 Sahara (Ryu) VS Raoyamu (M.Bison)💥Messatsu!💥",
+    "youtubeId": "kr9TVquTBNo",
+    "channelName": "MESSATSU !",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでベガを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-08-28",
+    "evidenceBasis": "映像確認：CFN「らおやむやむ☆ハイハイ謝謝♪」・M.BISON（映像確認時刻 1:30。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "m-bison",
+        "name": "ベガ"
+      }
+    ],
+    "uploaderChannel": "MESSATSU !（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:30",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "raoyamu-5exp6ytMt8Q",
+    "playerSlug": "raoyamu",
+    "title": "【スト6】らおやむ (ベガ) VS ストーム久保 (アルジュン)",
+    "youtubeId": "5exp6ytMt8Q",
+    "channelName": "GAME-PC-LIFE",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでベガを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-10-26",
+    "evidenceBasis": "映像確認：CFN「らおやむやむ☆ハイハイ謝謝♪」・VEGA（映像確認時刻 2:30。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "m-bison",
+        "name": "ベガ"
+      }
+    ],
+    "uploaderChannel": "GAME-PC-LIFE（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "2:30",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "raoyamu-v_FQxxpAnow",
+    "playerSlug": "raoyamu",
+    "title": "【SF6】🔥ACT10全1ベガ🔥らおやむやむ☆ハイハイ謝謝から学ぶ立ち回り",
+    "youtubeId": "v_FQxxpAnow",
+    "channelName": "SF6キャラ対策リプレイコレクション",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでベガを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-02-23",
+    "evidenceBasis": "映像確認：CFN「らおやむやむ☆ハイハイ謝謝♪」・VEGA（相手はジュリ）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "m-bison",
+        "name": "ベガ"
+      }
+    ],
+    "uploaderChannel": "SF6キャラ対策リプレイコレクション（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    },
+    "versionNote": "Year3期（ACT10）。対戦日は不明（公開日のみ）",
+    "patchVerified": false
+  },
+  {
+    "key": "johnny-2S07m9mHefI",
+    "playerSlug": "johnny",
+    "title": "【スト6】ジョニィによるエレナの立ち回り！これがジョニィだ【Johnny:ELENA】",
+    "youtubeId": "2S07m9mHefI",
+    "channelName": "バトルの軌跡",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでエレナを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-04-26",
+    "evidenceBasis": "映像確認：CFN「ジョニィ」・ELENA（相手は舞）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "elena",
+        "name": "エレナ"
+      }
+    ],
+    "uploaderChannel": "バトルの軌跡（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "nauman-Cc757UEvlUE",
+    "playerSlug": "nauman",
+    "title": "SF6 ◆ PUGERA [Yasmine] vs NAUMAN [Mai] ◆ SF6 High Level Gameplay",
+    "youtubeId": "Cc757UEvlUE",
+    "channelName": "SF6 Elite Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイで舞を使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-08-10",
+    "evidenceBasis": "映像確認：CFN「naumanzoh」・MAI（相手CFNはぷげら本人と照合できず）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "mai",
+        "name": "舞"
+      }
+    ],
+    "uploaderChannel": "SF6 Elite Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "nauman-sqGsabbSj3U",
+    "playerSlug": "nauman",
+    "title": "SF6 Tokido (JP) VS Nauman (Mai)💥Messatsu!💥",
+    "youtubeId": "sqGsabbSj3U",
+    "channelName": "MESSATSU !",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイで舞を使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-10-08",
+    "evidenceBasis": "映像確認：CFN「naumanzoh」・MAI／相手CFN「tokido」・JP（LP表示＝カジュアル/ルーム戦の可能性）（映像確認時刻 1:30。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "mai",
+        "name": "舞"
+      }
+    ],
+    "uploaderChannel": "MESSATSU !（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:30",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "nauman-7-zPQ0rmVYs",
+    "playerSlug": "nauman",
+    "title": "ナウマン先生による解説でフレームの理屈を最速で理解する藍沢エマ【ナウマン/スト6/切り抜き】",
+    "youtubeId": "7-zPQ0rmVYs",
+    "channelName": "ナウマン / Nauman",
+    "kind": "本人解説",
+    "reason": "本人がキャラ共通のシステムを解説している動画（特定キャラには紐づけていません）。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-01-11",
+    "evidenceBasis": "タイトル・投稿チャンネル（SFL公式掲載のYouTube）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [],
+    "uploaderChannel": "ナウマン / Nauman（本人ch）"
+  },
+  {
+    "key": "yamaguchi-EEHn2wYff9U",
+    "playerSlug": "yamaguchi",
+    "title": "YAMAGUCHI MAI vs HINAO SAGAT 🔥 TOP 2 DECIDER | EWC 2026 FINALS",
+    "youtubeId": "EEHn2wYff9U",
+    "channelName": "Best Replay SF6",
+    "kind": "大会対戦",
+    "reason": "舞を使用（使用履歴として掲載。メイン・サブの判定ではありません）。対戦相手: ひなお（サガット）。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-08-07",
+    "evidenceBasis": "映像確認：EWC26オーバーレイ「YAMAGUCHI MAI」「HINAO SAGAT」3RD PLACE MATCH（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "mai",
+        "name": "舞"
+      }
+    ],
+    "uploaderChannel": "Best Replay SF6（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "yamaguchi-L8_Z2OoXVtY",
+    "playerSlug": "yamaguchi",
+    "title": "YAMAGUCHI MAI vs CRAIME RYU 🔥 TOP 3 DECIDER | EWC 2026",
+    "youtubeId": "L8_Z2OoXVtY",
+    "channelName": "Best Replay SF6",
+    "kind": "大会対戦",
+    "reason": "舞を使用（使用履歴として掲載。メイン・サブの判定ではありません）。対戦相手: Craime（リュウ）。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-08-07",
+    "evidenceBasis": "映像確認：EWC26オーバーレイ「YAMAGUCHI MAI」「CRAIME RYU」SEMIFINALS（映像確認時刻 3:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "mai",
+        "name": "舞"
+      }
+    ],
+    "uploaderChannel": "Best Replay SF6（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "3:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "yamaguchi-7GPcDkQCH2I",
+    "playerSlug": "yamaguchi",
+    "title": "Sahara (Ed) vs Yamaguchi (Mai) - Who Advances? 👊 SF6 EVO JAPAN 2026",
+    "youtubeId": "7GPcDkQCH2I",
+    "channelName": "Super Fighters-Domi",
+    "kind": "大会対戦",
+    "reason": "舞を使用（使用履歴として掲載。メイン・サブの判定ではありません）。対戦相手: さはら（サガット）。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-05-02",
+    "evidenceBasis": "映像確認：オーバーレイ「ZETA YAMAGUCHI」「GBS/PWS SAHARA」Pool Winners Final、さはら側SAGAT表示（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "mai",
+        "name": "舞"
+      }
+    ],
+    "uploaderChannel": "Super Fighters-Domi（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "hibiki-302dn8gqi9Y",
+    "playerSlug": "hibiki",
+    "title": "SF6 ▰ HIBIKI (#1 Ranked Lily) vs LESHAR (Luke) ▰ High Level Gameplay",
+    "youtubeId": "302dn8gqi9Y",
+    "channelName": "SF6 High Level Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでリリーを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-04",
+    "evidenceBasis": "映像確認：CFN「SBI_Hibiki」・LILY（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "lily",
+        "name": "リリー"
+      }
+    ],
+    "uploaderChannel": "SF6 High Level Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "mizuha-_XOD5Y8eWow",
+    "playerSlug": "mizuha",
+    "title": "SF6 ▰ HIGUCHI (#1 Ranked Guile) vs MIZUHA (Cammy) ▰ High Level Gameplay",
+    "youtubeId": "_XOD5Y8eWow",
+    "channelName": "SF6 High Level Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでキャミィを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2025-12-06",
+    "evidenceBasis": "映像確認：CFN「Mizuha」・CAMMY／相手CFN「ひぐち！」・GUILE（LP表示）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "cammy",
+        "name": "キャミィ"
+      }
+    ],
+    "uploaderChannel": "SF6 High Level Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "mizuha-B8VaK8AcsLI",
+    "playerSlug": "mizuha",
+    "title": "🔥 DAIGO (#1 RANKED AKUMA) VS MIZUHA ( CAMMY ) 🔥SF6 high level replays",
+    "youtubeId": "B8VaK8AcsLI",
+    "channelName": "SF6 HIgh Fight Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでキャミィを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-03",
+    "evidenceBasis": "映像確認：CFN「Mizuha」・CAMMY／相手CFN「DaigoTheBeasTV」・AKUMA（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "cammy",
+        "name": "キャミィ"
+      }
+    ],
+    "uploaderChannel": "SF6 HIgh Fight Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "machabo-KNFr7Bj_CDA",
+    "playerSlug": "machabo",
+    "title": "SF6 ▰ MACHABO (Ryu) vs DOGURA (Ingrid) FULL GAMEPLAY",
+    "youtubeId": "KNFr7Bj_CDA",
+    "channelName": "SF6 Fight Data",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでリュウを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-06-08",
+    "evidenceBasis": "映像確認：画面名「MACHABO」CFN「machabo」・RYU／相手CFN「生駒デビル」・INGRID（ルームマッチ）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ryu",
+        "name": "リュウ"
+      }
+    ],
+    "uploaderChannel": "SF6 Fight Data（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "otani-r7Q8GYy9Enc",
+    "playerSlug": "otani",
+    "title": "SF6 ▰ HAITANI (Chun-Li) vs OTANI (Terry) HIGH LEVEL MATCH",
+    "youtubeId": "r7Q8GYy9Enc",
+    "channelName": "SF6 Fight Data",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでテリーを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-05-26",
+    "evidenceBasis": "映像確認：CFN「otaniBCT」・TERRY（RANKED MATCH）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "terry",
+        "name": "テリー"
+      }
+    ],
+    "uploaderChannel": "SF6 Fight Data（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "john-takeuchi-7RFs-QOOkq4",
+    "playerSlug": "john-takeuchi",
+    "title": "SF6 ▰ KAZUNOKO (#1 Ranked C.Viper) vs JOHN TAKEUCHI (#1 Ranked Jamie)",
+    "youtubeId": "7RFs-QOOkq4",
+    "channelName": "SF6 High Level Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでジェイミーを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-06-19",
+    "evidenceBasis": "映像確認：CFN「DFM竹内ジョン(新コン)」・JAMIE／相手CFN「Kazunoko」・C.VIPER（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "jamie",
+        "name": "ジェイミー"
+      }
+    ],
+    "uploaderChannel": "SF6 High Level Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "fujimura-aBgfy9tJyZc",
+    "playerSlug": "fujimura",
+    "title": "C. VIPER 💥 FUJIMURA VS SHUNICHI 💥 AKUMA | STREET FIGHTER 6",
+    "youtubeId": "aBgfy9tJyZc",
+    "channelName": "The Best of FGC",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでC.ヴァイパーを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-08-15",
+    "evidenceBasis": "映像確認：CFN「Fujimura」・C.VIPER（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "c-viper",
+        "name": "C.ヴァイパー"
+      }
+    ],
+    "uploaderChannel": "The Best of FGC（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "fujimura-8LyVjAlKyJU",
+    "playerSlug": "fujimura",
+    "title": "「スト6勝てる人はシステムを使いこなす人です」システムの鬼・藤村がドライブシステムの使い所・読み合いを徹底解説！",
+    "youtubeId": "8LyVjAlKyJU",
+    "channelName": "ももち / Momochi（他選手ch・本人出演）",
+    "kind": "本人解説",
+    "reason": "本人がキャラ共通のシステムを解説している動画（特定キャラには紐づけていません）。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2023-04-20",
+    "evidenceBasis": "タイトルに藤村の出演・解説を明記（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [],
+    "uploaderChannel": "ももち / Momochi（他選手ch・本人出演）",
+    "pastYear": "2023"
+  },
+  {
+    "key": "takagi-g9TtfpcvfjU",
+    "playerSlug": "takagi",
+    "title": "【世界1位 極・ブランカ】高木 (ブランカ) vs 豪鬼 , リュウ , ルーク｜狩りの時間ダッ！",
+    "youtubeId": "g9TtfpcvfjU",
+    "channelName": "SF6 Battlers Archive",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでブランカを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-08-17",
+    "evidenceBasis": "映像確認：CFN「高木サンダー」・BLANKA（複数試合のまとめ）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V5）",
+    "identityBinding": "2026-11-25 V5。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "blanka",
+        "name": "ブランカ"
+      }
+    ],
+    "uploaderChannel": "SF6 Battlers Archive（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "takagi-m1LN2rBPnJ8",
+    "playerSlug": "takagi",
+    "title": "【世界1位 極・ブランカ】高木 (ブランカ) vs ルーク , ガイル , A.K.I.",
+    "youtubeId": "m1LN2rBPnJ8",
+    "channelName": "SF6 Battlers Archive",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでブランカを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-09-12",
+    "evidenceBasis": "映像確認：CFN「高木サンダー」・BLANKA（相手CFN「HJK | pinkstar」・LUKE）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V6）",
+    "identityBinding": "2026-11-25 V6。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "blanka",
+        "name": "ブランカ"
+      }
+    ],
+    "uploaderChannel": "SF6 Battlers Archive（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "takagi-g5N3BzDUnYA",
+    "playerSlug": "takagi",
+    "title": "【世界1位 極・ブランカ】高木 (ブランカ) vs イングリッド , ダルシム , リリー",
+    "youtubeId": "g5N3BzDUnYA",
+    "channelName": "SF6 Battlers Archive",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでブランカを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-09-14",
+    "evidenceBasis": "映像確認：CFN「高木サンダー」・BLANKA（相手はイングリッド）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V6）",
+    "identityBinding": "2026-11-25 V6。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "blanka",
+        "name": "ブランカ"
+      }
+    ],
+    "uploaderChannel": "SF6 Battlers Archive（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "mocchi-8RyenhRcdF8",
+    "playerSlug": "mocchi",
+    "title": "【スト6】もっちー (豪鬼) VS あくたがわ (マノン)",
+    "youtubeId": "8RyenhRcdF8",
+    "channelName": "GAME-PC-LIFE",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイで豪鬼を使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-22",
+    "evidenceBasis": "映像確認：CFN「JOZ_Mocchi」・GOUKI／相手CFN「あくたがわ」・MANON（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V6）",
+    "identityBinding": "2026-11-25 V6。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "akuma",
+        "name": "豪鬼"
+      }
+    ],
+    "uploaderChannel": "GAME-PC-LIFE（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "mocchi-xna7wMfzWc8",
+    "playerSlug": "mocchi",
+    "title": "ストリートファイター6【翔 (イングリッド) VS もっちー (豪鬼)】",
+    "youtubeId": "xna7wMfzWc8",
+    "channelName": "GAME-PC-LIFE",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイで豪鬼を使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-06-07",
+    "evidenceBasis": "映像確認：CFN「JOZ_Mocchi」・GOUKI（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V6）",
+    "identityBinding": "2026-11-25 V6。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "akuma",
+        "name": "豪鬼"
+      }
+    ],
+    "uploaderChannel": "GAME-PC-LIFE（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "otani-6xy7_acFPBk",
+    "playerSlug": "otani",
+    "title": "SF6 ▰ OTANI (Terry) vs DAIGO (Akuma) HIGH LEVEL MATCH",
+    "youtubeId": "6xy7_acFPBk",
+    "channelName": "SF6 Fight Data",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでテリーを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-05-25",
+    "evidenceBasis": "映像確認：CFN「otaniBCT」・TERRY／相手CFN「DaigoTheBeasTV」・AKUMA（RANKED MATCH）（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V6）",
+    "identityBinding": "2026-11-25 V6。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "terry",
+        "name": "テリー"
+      }
+    ],
+    "uploaderChannel": "SF6 Fight Data（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "seiya-dUrVwj0b9mU",
+    "playerSlug": "seiya",
+    "title": "【スト6】Seiya vs 水派 (チュンリー/春麗 vs キャミィ)",
+    "youtubeId": "dUrVwj0b9mU",
+    "channelName": "SF6 Replay Cafe",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイで春麗を使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-06-19",
+    "evidenceBasis": "映像確認：CFN「Seiya」・CHUN-LI（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V6）",
+    "identityBinding": "2026-11-25 V6。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "chun-li",
+        "name": "春麗"
+      }
+    ],
+    "uploaderChannel": "SF6 Replay Cafe（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "mizuha-dUrVwj0b9mU",
+    "playerSlug": "mizuha",
+    "title": "【スト6】Seiya vs 水派 (チュンリー/春麗 vs キャミィ)",
+    "youtubeId": "dUrVwj0b9mU",
+    "channelName": "SF6 Replay Cafe",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでキャミィを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-06-19",
+    "evidenceBasis": "映像確認：CFN「Mizuha」・CAMMY（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V6）",
+    "identityBinding": "2026-11-25 V6。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "cammy",
+        "name": "キャミィ"
+      }
+    ],
+    "uploaderChannel": "SF6 Replay Cafe（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "mago-picSvyjAPUM",
+    "playerSlug": "mago",
+    "title": "SF6 Mago (Mai) VS Orarin (Ken)💥Messatsu!💥",
+    "youtubeId": "picSvyjAPUM",
+    "channelName": "MESSATSU !",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイで舞を使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-19",
+    "evidenceBasis": "映像確認：CFN「mago2dgod」（SFL公式掲載のTwitch IDと同じ）・MAI（映像確認時刻 1:30。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V6）",
+    "identityBinding": "2026-11-25 V6。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "mai",
+        "name": "舞"
+      }
+    ],
+    "uploaderChannel": "MESSATSU !（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:30",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "wabiichi-W4mD7AFqqsQ",
+    "playerSlug": "wabiichi",
+    "title": "🔥 HIBIKI (LILY) vs WABIICHI (TERRY) — SF6 High Level Gameplay",
+    "youtubeId": "W4mD7AFqqsQ",
+    "channelName": "Fight Replays SF",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでテリーを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-10-31",
+    "evidenceBasis": "映像確認：CFN「Wabiichi」・TERRY／相手CFN「SBI_Hibiki」・LILY（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V6）",
+    "identityBinding": "2026-11-25 V6。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "terry",
+        "name": "テリー"
+      }
+    ],
+    "uploaderChannel": "Fight Replays SF（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "hibiki-W4mD7AFqqsQ",
+    "playerSlug": "hibiki",
+    "title": "🔥 HIBIKI (LILY) vs WABIICHI (TERRY) — SF6 High Level Gameplay",
+    "youtubeId": "W4mD7AFqqsQ",
+    "channelName": "Fight Replays SF",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでリリーを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-10-31",
+    "evidenceBasis": "映像確認：CFN「SBI_Hibiki」・LILY（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V6）",
+    "identityBinding": "2026-11-25 V6。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "lily",
+        "name": "リリー"
+      }
+    ],
+    "uploaderChannel": "Fight Replays SF（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "adelie-S-INbMaQdSY",
+    "playerSlug": "adelie",
+    "title": "SF6 | No.1 Ranked ED (Adelie) vs Pro Players (Aki - -Alex - Akuma - Cammy)",
+    "youtubeId": "S-INbMaQdSY",
+    "channelName": "SF6 DLC Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでエドを使用（使用履歴。メイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-09-26",
+    "evidenceBasis": "映像確認：CFN「あでりい」・ED／相手CFN「hikaru_shiftne」・A.K.I.（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・Chrome 2026-11-25 V6）",
+    "identityBinding": "2026-11-25 V6。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ed",
+        "name": "エド"
+      }
+    ],
+    "uploaderChannel": "SF6 DLC Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "johnny-AmZn_aPumJY",
+    "playerSlug": "johnny",
+    "title": "【スト6】 Noah率いる海外チームBANDITSと公開スクリム！俺たちやったるぞスペシャル【ジョニィ】【FUKUSHIMA IBUSHIGIN】",
+    "youtubeId": "AmZn_aPumJY",
+    "channelName": "ジョニィ / Johnny",
+    "kind": "本人解説",
+    "reason": "チーム間スクリムでエレナを使用（ENZO・サガットとの対戦。公式大会ではありません）。使用履歴として掲載し、メイン・サブの判定ではありません。投稿チャンネルの運営者は未確認です。日付は公開日です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-03",
+    "evidenceBasis": "映像確認：自分側「YOU」・ゲーム内名「ジョニィ」（第三者リプレイ9A4pgVExKUI・2S07m9mHefIで確認済みのCFNと同じ）・ELENA。画面上部に「ENZO vs Johnny」「IBSG 20-0 BANDITS」表示。概要欄チャプター「02:34 ジョニィ VS ENZO」（映像確認時刻 3:20。本人とキャラの確認時刻で、試合開始時刻ではない。概要欄の章時刻 2:34 は映像で開始位置を確認するまで備考のみ）（B・Chrome 2026-11-25 V7）",
+    "identityBinding": "2026-11-25 V7。SFL48の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "elena",
+        "name": "エレナ"
+      }
+    ],
+    "uploaderChannel": "ジョニィ / Johnny（チーム関係者ch・本人出演）",
+    "channelOperatorConfirmed": false,
+    "cardNote": "チーム間スクリム（公式大会ではない）",
+    "matchEvidence": {
+      "identifiedAt": "3:20",
+      "chapterTime": "2:34",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "yas-ogYDRoQZ7cw",
+    "playerSlug": "yas",
+    "title": "SF6 ▰ YAS (#1 Ranked Ryu) vs KAZUNOKO (#3 Ranked Cammy) ▰ High Level Gameplay",
+    "youtubeId": "ogYDRoQZ7cw",
+    "channelName": "SF6 High Level Replays",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでリュウを使用（使用履歴。メイン・サブの判定ではありません）。相手: かずのこ（キャミィ）。第三者チャンネルの投稿（出演選手は画面で確認）。公開日は未確認です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "evidenceBasis": "映像確認：ゲーム内名「YAS」・RYU／相手「Kazunoko」・CAMMY（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・2026-11-25 最終点検）",
+    "identityBinding": "2026-11-25 B最終点検。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ryu",
+        "name": "リュウ"
+      }
+    ],
+    "uploaderChannel": "SF6 High Level Replays（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "john-takeuchi-CNsAkggGGmc",
+    "playerSlug": "john-takeuchi",
+    "title": "【世界1位 極・ジェイミー】 竹内ジョン (ジェイミー) vs キャミィ , サガット , ルーク｜魅せるゼェッ！酔いを深めつつ叩き込む豪快な連撃 【スト6】",
+    "youtubeId": "CNsAkggGGmc",
+    "channelName": "SF6 Battlers Archive",
+    "kind": "配信・ランクマ",
+    "reason": "ランクマッチ／リプレイでジェイミーを使用（複数試合のまとめ。使用履歴でメイン・サブの判定ではありません）。第三者チャンネルの投稿（出演選手は画面で確認）。公開日は未確認です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "evidenceBasis": "映像確認：ゲーム内名「DFM竹内ジョン(本垢)」・JAMIE（映像確認時刻 1:00。本人とキャラの確認時刻で、試合開始時刻ではない）（B・2026-11-25 最終点検）",
+    "identityBinding": "2026-11-25 B最終点検。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "jamie",
+        "name": "ジェイミー"
+      }
+    ],
+    "uploaderChannel": "SF6 Battlers Archive（第三者）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "johnny-AkcN0vJFDLk",
+    "playerSlug": "johnny",
+    "title": "【スト6】IBUSHIGINチーム練習ヴァイパー編！CR対策とアニメマンガ雑談【ジョニィ】【FUKUSHIMA IBUSHIGIN】",
+    "youtubeId": "AkcN0vJFDLk",
+    "channelName": "ジョニィ / Johnny",
+    "kind": "本人解説",
+    "reason": "チーム練習の対戦でエレナを使用（公式大会ではありません。使用履歴として掲載し、メイン・サブの判定ではありません）。投稿チャンネルの運営者は未確認です。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "evidenceBasis": "映像確認：自分側「YOU」・ゲーム内名「ジョニィ」・ELENA（V7と同じCFN。映像確認時刻 1:00）。概要欄チャプター「00:10 ジョニィ試合」は備考のみ（B・2026-11-25 最終点検）",
+    "identityBinding": "2026-11-25 B最終点検。既存の環境別IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "elena",
+        "name": "エレナ"
+      }
+    ],
+    "uploaderChannel": "ジョニィ / Johnny",
+    "channelOperatorConfirmed": false,
+    "cardNote": "チーム練習の対戦（公式大会ではない）",
+    "matchEvidence": {
+      "identifiedAt": "1:00",
+      "chapterTime": "0:10",
+      "startTimeConfirmed": false,
+      "checkedOn": "2026-11-25"
+    }
   }
 ]

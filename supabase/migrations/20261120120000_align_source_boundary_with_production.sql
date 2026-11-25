@@ -217,6 +217,17 @@ BEGIN
   ) THEN
     RAISE EXCEPTION 'move_commands_policy_reads_source_tables_inline: apply 20261120115000 first';
   END IF;
+  -- 2026-11-25: any other public policy reading the source tables as the caller (combos, setups, sequences,
+  -- counters, trainings were missed before) would make anonymous /search fail after the REVOKE below.
+  IF EXISTS (
+    SELECT 1 FROM pg_catalog.pg_policy p
+    JOIN pg_catalog.pg_class c ON c.oid = p.polrelid
+    JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+    WHERE n.nspname = 'public'
+      AND pg_catalog.pg_get_expr(p.polqual, p.polrelid) ~ '(^|[^_a-z])(entity_sources|sources)([^_a-z]|$)'
+  ) THEN
+    RAISE EXCEPTION 'public_policy_reads_source_tables_inline: apply 20261120117000 first';
+  END IF;
   IF EXISTS (
     SELECT 1 FROM pg_catalog.pg_proc p
     WHERE p.oid IN (pg_catalog.to_regprocedure('public.get_phase39_content_detail_preview(text,text,text)'),

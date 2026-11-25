@@ -1,4 +1,4 @@
-import { resolveReleaseCharacterMoves } from "@/lib/release-character-move-resolver";
+import { resolveReleaseCharacterMoves, type ReleaseFrameRow } from "@/lib/release-character-move-resolver";
 import { getGeneratedReleaseFixture } from "@/lib/generated-release-fixture";
 import { getNineCharacterIntegrationCandidate, hasNineCharacterIntegrationCandidate } from "@/lib/nine-character-integration-candidate";
 import { getCharacterProductionApproval, isProductionMoveApproved, type CharacterApproval } from "@/lib/production-character-approval";
@@ -9,13 +9,31 @@ import { isCharacterDetailV2Route } from "@/lib/character-detail-route";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import { isMovePublicReady } from "@/lib/public-move-gate";
 import { getYasmineMoveMediaPilot } from "@/lib/yasmine-move-media-pilot";
-import { getPublicEntitySources } from "@/lib/public-source-links";
+import { getPublicEntitySources, type PublicEntitySourceRow } from "@/lib/public-source-links";
 import type { VideoSummary } from "@/lib/event-media";
 
 export type CharacterDetailData = {
   bundle: DevicePreviewBundle | null;
   source: "device-preview" | "public" | "fixture" | "unavailable";
 };
+
+const FRAME_COLUMNS = "id, move_id, startup, active, recovery, on_hit, on_block, damage, verification_status, valid_from_patch_id, valid_to_patch_id";
+/** Optional per-frame evidence (candidate migration): official table check date, version state, official damage notation. */
+const FRAME_EVIDENCE_COLUMNS = "official_checked_on, version_status, damage_official_text, damage_official_condition";
+type FrameEvidenceRow = { official_checked_on?: string | null; version_status?: string | null };
+
+/** Card evidence for a move that passed the gate and its grant: only the official sources the gate itself checked. */
+function grantedMoveEvidence(frame: FrameEvidenceRow | undefined, sources: PublicEntitySourceRow[]): NonNullable<DevicePreviewBundle["moves"][number]["publicEvidence"]> {
+  const checked = typeof frame?.official_checked_on === "string" && /^\d{4}-\d{2}-\d{2}$/.test(frame.official_checked_on) ? frame.official_checked_on : null;
+  const unconfirmed = frame?.version_status === "unconfirmed";
+  const seen = new Set<string>();
+  return {
+    patch: unconfirmed ? `対応バージョン未確定（公式フレーム表${checked ? ` ${checked}確認` : ""}）` : null,
+    verification: checked ? `公式フレーム表（${checked}確認）の値と照合済み` : "公式出典と照合済み",
+    sources: sources.filter(source => source.reliabilityLevel === "official" && source.url && !seen.has(source.sourceId) && seen.add(source.sourceId))
+      .map(source => ({ id: source.sourceId, title: source.title, url: source.url, publisher: source.publisher ?? "", sourceType: "official", relationship: source.relationship })),
+  };
+}
 
 /** Normal requests use the existing public gate, never privileged DB access. */
 export async function loadPublicCharacterMoves(characterId: string, approval?: CharacterApproval): Promise<DevicePreviewBundle["moves"] | null> {
@@ -31,41 +49,47 @@ export async function loadPublicCharacterMoves(characterId: string, approval?: C
   if (error || patchError || !patch?.id) return null;
   const rows = moves ?? [];
   if (!rows.length) return [];
+  // A Modern-only move is possible only where its own production grant says so (never inferred from the data).
+  const modernOnlyIds = new Set((approval?.moves ?? []).filter(m => m.commandScheme === "modern_only").map(m => m.id));
   // Reuse the complete Move / Classic / current verified Frame evidence contract.
-  const readiness = await Promise.all(rows.map((move) => isMovePublicReady(String(move.slug))));
+  const readiness = await Promise.all(rows.map((move) => isMovePublicReady(String(move.slug), { modernOnly: modernOnlyIds.has(String(move.id)) })));
   const ready = rows.filter((move, index) => move.status === "published" && readiness[index]);
   if (!ready.length) return [];
   const includeModern = !approval && process.env.VERCEL_ENV === "preview";
   const ids = ready.map((move) => String(move.id));
-  const [{ data: commands, error: commandError }, { data: frames, error: frameError }] = await Promise.all([
+  const frameQuery = (columns: string) => supabase.from("move_frame_data").select(columns)
+    .in("move_id", ids).eq("valid_from_patch_id", patch.id).is("valid_to_patch_id", null).eq("verification_status", "verified");
+  const [{ data: commands, error: commandError }, framesWithEvidence] = await Promise.all([
     supabase.from("move_commands")
       .select("id, move_id, control_scheme, command_text, numeric_notation, button_notation, condition_text, sort_order")
-      .in("move_id", ids).in("control_scheme", includeModern ? ["classic", "modern"] : ["classic"]).order("sort_order", { ascending: true }),
-    supabase.from("move_frame_data")
-      .select("id, move_id, startup, active, recovery, on_hit, on_block, damage, verification_status, valid_from_patch_id, valid_to_patch_id")
-      .in("move_id", ids).eq("valid_from_patch_id", patch.id)
-      .is("valid_to_patch_id", null).eq("verification_status", "verified"),
+      .in("move_id", ids).in("control_scheme", includeModern || modernOnlyIds.size ? ["classic", "modern"] : ["classic"]).order("sort_order", { ascending: true }),
+    approval ? frameQuery(`${FRAME_COLUMNS}, ${FRAME_EVIDENCE_COLUMNS}`) : frameQuery(FRAME_COLUMNS),
   ]);
+  // Before the evidence columns exist (undefined column 42703) the frames are read exactly as before.
+  const { data: frameRows, error: frameError } = framesWithEvidence.error?.code === "42703" ? await frameQuery(FRAME_COLUMNS) : framesWithEvidence;
+  const frames = (frameRows ?? []) as unknown as Array<ReleaseFrameRow & FrameEvidenceRow>;
   if (commandError || frameError) return null;
   const [commandSources, frameSources, moveSources] = await Promise.all([
     getPublicEntitySources(["move_command"], (commands ?? []).map((command) => String(command.id))),
-    getPublicEntitySources(["frame", "move_frame_data"], (frames ?? []).map((frame) => String(frame.id))),
+    getPublicEntitySources(["frame", "move_frame_data"], frames.map((frame) => String(frame.id))),
     approval ? getPublicEntitySources(["move"], ids) : Promise.resolve([]),
   ]);
   const officialCommands = new Set(commandSources.filter((source) => source.reliabilityLevel === "official").map((source) => source.entityId));
   const officialFrames = new Set(frameSources.filter((source) => source.reliabilityLevel === "official").map((source) => source.entityId));
+  const schemeOf = (moveId: string) => modernOnlyIds.has(moveId) ? "modern" : "classic";
   const selected = resolveReleaseCharacterMoves({ characterId, currentPatchId: String(patch.id),
-    moves: ready, commands: (commands ?? []).filter(c => includeModern || c.control_scheme === "classic"), frames: frames ?? [], includeModern,
-    gateReadyIds: new Set(ids), officialCommandIds: officialCommands, officialFrameIds: officialFrames });
+    moves: ready, commands: (commands ?? []).filter(c => includeModern || c.control_scheme === schemeOf(String(c.move_id))), frames, includeModern,
+    gateReadyIds: new Set(ids), officialCommandIds: officialCommands, officialFrameIds: officialFrames, modernOnlyIds });
   if (!approval) return selected;
-  return selected.filter(move => {
-    const selectedCommands = (commands ?? []).filter(c => c.move_id === move.id && c.control_scheme === "classic" && officialCommands.has(String(c.id)));
-    const selectedFrames = (frames ?? []).filter(f => f.move_id === move.id);
+  return selected.flatMap(move => {
+    const selectedCommands = (commands ?? []).filter(c => c.move_id === move.id && c.control_scheme === schemeOf(move.id) && officialCommands.has(String(c.id)));
+    const selectedFrames = frames.filter(f => f.move_id === move.id);
     const entityIds = new Set([move.id, ...selectedCommands.map(c => String(c.id)), ...selectedFrames.map(f => String(f.id))]);
     const sources = [...moveSources, ...commandSources, ...frameSources].filter(s => entityIds.has(s.entityId))
       .sort((a,b) => `${a.entityType}:${a.entityId}:${a.sourceId}`.localeCompare(`${b.entityType}:${b.entityId}:${b.sourceId}`));
-    return isProductionMoveApproved(approval, { move, characterId, patchId: String(patch.id),
-      rawMove: ready.find(r => r.id === move.id), commands: selectedCommands, frames: selectedFrames, sources });
+    if (!isProductionMoveApproved(approval, { move, characterId, patchId: String(patch.id),
+      rawMove: ready.find(r => r.id === move.id), commands: selectedCommands, frames: selectedFrames, sources })) return [];
+    return [{ ...move, publicEvidence: grantedMoveEvidence(selectedFrames[0], sources) }];
   });
 }
 

@@ -149,6 +149,20 @@ async function getReleaseMetadata(
   };
 }
 
+const MOVE_FRAME_COLUMNS = "id, startup, active, recovery, on_hit, on_block, damage, drive_damage, super_gain, cancel_type, hit_level, invincibility, notes, valid_from_patch_id, verification_status";
+type MoveFrameRow = { id: string; startup: string | null; active: string | null; recovery: string | null; on_hit: string | null; on_block: string | null;
+  damage: number | null; drive_damage: number | null; super_gain: number | null; cancel_type: string | null; hit_level: string | null;
+  invincibility: string | null; notes: string | null; valid_from_patch_id: string | null; verification_status: string;
+  version_status?: string | null; official_checked_on?: string | null; damage_official_text?: string | null; damage_official_condition?: string | null };
+/** Current verified frame, with the version/damage evidence columns when they exist (undefined column 42703: read as before). */
+async function readCurrentMoveFrame(supabase: ReturnType<typeof getSupabaseServerClient>, moveId: string): Promise<{ data: MoveFrameRow | null; error: { message: string } | null }> {
+  const query = (columns: string) => supabase.from("move_frame_data").select(columns).eq("move_id", moveId)
+    .eq("verification_status", "verified").is("valid_to_patch_id", null).limit(1).maybeSingle();
+  const withEvidence = await query(`${MOVE_FRAME_COLUMNS}, version_status, official_checked_on, damage_official_text, damage_official_condition`);
+  const result = withEvidence.error?.code === "42703" ? await query(MOVE_FRAME_COLUMNS) : withEvidence;
+  return { data: (result.data ?? null) as unknown as MoveFrameRow | null, error: result.error };
+}
+
 export async function getMoveBySlug(
   slug: string,
   previewToken?: string | null
@@ -242,14 +256,7 @@ export async function getMoveBySlug(
       .select("id, control_scheme, command_text, numeric_notation, button_notation, condition_text, sort_order")
       .eq("move_id", data.id)
       .order("sort_order", { ascending: true }),
-    supabase
-      .from("move_frame_data")
-      .select("id, startup, active, recovery, on_hit, on_block, damage, drive_damage, super_gain, cancel_type, hit_level, invincibility, notes, valid_from_patch_id, verification_status")
-      .eq("move_id", data.id)
-      .eq("verification_status", "verified")
-      .is("valid_to_patch_id", null)
-      .limit(1)
-      .maybeSingle(),
+    readCurrentMoveFrame(supabase, String(data.id)),
     getPublicEntitySources(
       ["move"],
       [String(data.id)],
@@ -268,10 +275,12 @@ export async function getMoveBySlug(
 
   let patch: { version_label?: string; name?: string | null } | null = null;
   let frameSources: DetailSource[] = [];
+  // Values from an official table that states no game version are never labelled with the site's current patch.
+  const unconfirmedVersion = frame?.version_status === "unconfirmed";
 
   if (frame) {
     const frameQueries = await Promise.all([
-      frame.valid_from_patch_id
+      frame.valid_from_patch_id && !unconfirmedVersion
         ? supabase.from("patches").select("version_label, name").eq("id", frame.valid_from_patch_id).maybeSingle()
         : Promise.resolve({ data: null, error: null }),
       getPublicEntitySources(
@@ -317,13 +326,16 @@ export async function getMoveBySlug(
       ["クラシック入力", classicCommands.length ? classicCommands.join(" / ") : null],
       ["モダン入力", modernCommands.length ? modernCommands.join(" / ") : null],
       ["フレーム検証状態", localizeComboText(frame?.verification_status ?? null)],
-      ["対応バージョン", patch?.version_label ? `${patch.version_label}${patch.name ? ` / ${patch.name}` : ""}` : null],
+      ["対応バージョン", unconfirmedVersion
+        ? `対応バージョン未確定（公式フレーム表${typeof frame?.official_checked_on === "string" ? ` ${frame.official_checked_on}確認` : ""}）`
+        : patch?.version_label ? `${patch.version_label}${patch.name ? ` / ${patch.name}` : ""}` : null],
       ["発生", frame?.startup ?? null],
       ["持続", frame?.active ?? null],
       ["硬直", frame?.recovery ?? null],
       ["ヒット時", frame?.on_hit ?? null],
       ["ガード時", frame?.on_block ?? null],
-      ["ダメージ", frame?.damage ?? null],
+      ["ダメージ", frame?.damage ?? frame?.damage_official_text ?? null],
+      ["ダメージの条件（公式備考）", frame?.damage === null ? frame?.damage_official_condition ?? null : null],
       ["Dゲージダメージ", frame?.drive_damage ?? null],
       ["SAゲージ増加", frame?.super_gain ?? null],
       ["キャンセル", localizeMoveCancelType(frame?.cancel_type ?? null)],

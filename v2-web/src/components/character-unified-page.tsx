@@ -26,6 +26,7 @@ import type { CharacterDetail, SourceReference } from "@/types/character";
 import type { PlayerDetail } from "@/types/player";
 import { formatVideoPublishedDate, type VideoSummary } from "@/lib/event-media";
 import { officialMoveDisplayNotes, trailingCommandCondition, simultaneousButtonHint } from "@/lib/official-move-display-notes";
+import type { CharacterCopy } from "@/lib/character-copy";
 import styles from "./character-unified-page.module.css";
 
 const labels: Record<string, string> = { normal: "通常技", unique: "特殊技", target_combo: "特殊技",
@@ -123,7 +124,8 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
     {unifiedOtherCommandRows(move).length ? <div className={styles.commandLine}><strong>入力経路確認中</strong>
       {unifiedOtherCommandRows(move).map((row, index) => <Sf6CommandInput key={index} value={unifiedCommandText(row)} scheme="unknown" />)}
     </div> : null}
-    {variants.map((item, variantIndex) => <section className={styles.frameVariant} key={`${item.id}-frames`} data-frame-move-id={item.id}>
+    {variants.map((item, variantIndex) => <section className={styles.frameVariant} key={`${item.id}-frames`} data-frame-move-id={item.id}
+      data-official-source={(item as UnifiedMove & { ws5CanonicalSource?: string }).ws5CanonicalSource}>
       {variants.length > 1 ? <strong>数値セット{variantIndex + 1}</strong> : null}
       <dl className={styles.frames}>{fields.map(([field, label]) => <div key={field}><dt>{label}</dt>
         <dd>{frameDisplayUnit(unifiedFrameValue(item, field, showOfficialTxtValues), field)}</dd></div>)}</dl>
@@ -145,6 +147,8 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
             {typeof stagedMove.ws5StageDamageSum === "number" ? <p>各段ダメージの単純合計：{stagedMove.ws5StageDamageSum}（補正込みの実ダメージは公式資料に記載なし）</p> : null}
           </dd></div>;
         })() : null}
+        {variants.map(item => item.damageCondition ? <div key={`${item.id}-damage-condition`} data-damage-condition={item.id}><dt>ダメージの条件（公式備考）</dt>
+          <dd>{variants.length > 1 ? `${item.name}：` : ""}{String(item.frame?.damage ?? "")}／{item.damageCondition}</dd></div> : null)}
         <div><dt>Patch</dt><dd>{evidence?.patch ?? (showOfficialTxtValues && (move as UnifiedMove & { ws5CanonicalSource?: string }).ws5CanonicalSource ? "Patch未確認（公式TXT 2026-10-23取得の記載値）" : "対応バージョン確認中")}</dd></div>
         <div><dt>Verification</dt><dd>{evidence?.verification ?? (move.releaseFixture ? "保存データ・公式照合状態を確認中" : "照合状態を確認中")}</dd></div>
       </dl>
@@ -153,14 +157,20 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
   </article>;
 }
 
-export function CharacterUnifiedPage({ character, bundle, players, videos, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, playerDirectoryUrl = "/players", videoDirectoryUrl = "/videos", strategyMoveLinks, strategyReviewDescriptions, reviewedStrategyCards }: {
+export function CharacterUnifiedPage({ character: dbCharacter, bundle, players, videos, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, playerDirectoryUrl = "/players", videoDirectoryUrl = "/videos", strategyMoveLinks, strategyReviewDescriptions, reviewedStrategyCards, copy = null }: {
   character: CharacterDetail; bundle: DevicePreviewBundle | null; players: PlayerDetail[]; videos: VideoSummary[];
   moveEvidence?: Record<string, UnifiedMoveEvidence>; localReferences?: ReactNode; localMoveReferences?: ReactNode; automaticVideos?: ReactNode; showPreferences?: boolean;
   playerDirectoryUrl?: string; videoDirectoryUrl?: string;
   strategyMoveLinks?: StrategyMoveLinks;
   strategyReviewDescriptions?: Readonly<Record<string, string>>;
   reviewedStrategyCards?: readonly import("@/lib/strategy-research-contract").StrategyResearchCard[];
+  copy?: CharacterCopy | null;
 }) {
+  // C's copy is passed in by the public character route only; other callers (QA / fixtures) render DB data as is.
+  const character = copy ? { ...dbCharacter, shortDescription: copy.summary ?? dbCharacter.shortDescription,
+    strengthsSummary: copy.strengths ?? dbCharacter.strengthsSummary, weaknessesSummary: copy.weaknesses ?? dbCharacter.weaknessesSummary } : dbCharacter;
+  const guideParts = copy?.guide ? ([["how", "どう勝つか"], ["strong", "強いところ"], ["weak", "苦手なところ"]] as const)
+    .filter(([key]) => copy.guide?.[key]).map(([key, label]) => ({ key, label, text: copy.guide![key]! })) : [];
   const moves = bundle?.moves ?? [];
   const dReversalCondition = (move: UnifiedMove): "guard" | "wakeup" | null => {
     const evidence = (move.commands ?? []).filter(row => row.moveId === move.id)
@@ -212,9 +222,15 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, moveE
         : <div className={styles.imageFallback} aria-label={`${character.name}の画像は準備中`}>キャラクター画像は準備中</div>}
     </section>
     <nav className={styles.navigation} aria-label="キャラクターページ内の移動">
+      {copy?.firstSteps?.length ? <a href="#character-first-steps">最初にやること</a> : null}
       <a href="#pilot-overview">基本情報</a><a href="#pilot-moves">技カード</a><a href="#character-players">使用Player</a>
       <a href="#character-videos">関連Video</a><a href="#sources">情報源</a>
     </nav>
+    {copy?.firstSteps?.length ? <section id="character-first-steps" tabIndex={-1} className={`${styles.section} ${styles.firstSteps}`} aria-labelledby="character-first-steps-title">
+      <h2 id="character-first-steps-title">最初にやること</h2>
+      <ol>{copy.firstSteps.map(step => <li key={step}>{step}</li>)}</ol>
+      <p className={styles.copyNote}>出典で確認した練習手順です。ゲーム内での確認は済んでいません。</p>
+    </section> : null}
     <section id="pilot-overview" tabIndex={-1} className={styles.section}><h2>基本情報</h2>
       <dl className={styles.facts}>
         <div><dt>得意距離</dt><dd>{publicText(character.rangeLabel, "確認中")}</dd></div>
@@ -223,6 +239,12 @@ export function CharacterUnifiedPage({ character, bundle, players, videos, moveE
       </dl>
       <div className={styles.profileGrid}><div><h3>強み</h3><p>{publicText(character.strengthsSummary, "強みは確認中です。")}</p></div>
         <div><h3>注意点</h3><p>{publicText(character.weaknessesSummary, "注意点は確認中です。")}</p></div></div>
+      {guideParts.length ? <div className={styles.guide} aria-label="詳しい解説">
+        <h3>詳しい解説</h3>
+        {guideParts.map(part => <details key={part.key} className={styles.guidePart}><summary>{part.label}</summary><p>{part.text}</p></details>)}
+        {copy?.sources.length ? <p className={styles.copyNote}>出典：{copy.sources.map((source, index) => <span key={source.url}>{index ? "／" : ""}
+          {safeExternalUrl(source.url) ? <a href={source.url} target="_blank" rel="noopener noreferrer">{new URL(source.url).hostname.replace(/^www\./, "")}{source.note ? `（${source.note}）` : ""}</a> : source.note}</span>)}（{copy.checkedOn}確認・ゲーム内での確認は未実施）</p> : null}
+      </div> : null}
     </section>
     <section id="pilot-moves" tabIndex={-1} className={styles.section}><h2>技カード</h2>
       <p>数値は公式資料の記載値です（対応Patchは未確認）。「—」は公式資料のN/A、「公式資料に記載なし」は未記載、「確認中」は未確認項目です。「全体」は技全体のフレーム数です。「ダウン」はヒット時に相手がダウンする意味です。ClassicとModernは別の入力として表示します。</p>

@@ -151,3 +151,12 @@
     height: auto; min-height: 0; aspect-ratio: 16 / 9; padding: 10px;
   }
 }
+
+/* C's character copy (2026-11-25): first steps near the top, detailed guide as readable toggles. */
+.firstSteps ol { margin: 8px 0 0; padding-left: 1.4em; display: grid; gap: 8px; line-height: 1.7; overflow-wrap: anywhere; }
+.copyNote { margin-top: 10px; font-size: 0.85rem; color: var(--muted, #9aa7b5); overflow-wrap: anywhere; }
+.guide { margin-top: 16px; display: grid; gap: 8px; }
+.guide h3 { margin: 0; }
+.guidePart { background: var(--surface-raised, #19222e); border-radius: 10px; padding: 12px 16px; }
+.guidePart summary { cursor: pointer; font-weight: 700; min-height: 24px; }
+.guidePart p { margin: 8px 0 0; line-height: 1.7; overflow-wrap: anywhere; }

@@ -14,6 +14,7 @@ import { createPractice, togglePracticeItem, planIdentity, latestUnfinished, pra
 import type { DailyTrainingContext } from "@/lib/daily-training-data";
 import styles from "./daily-training-planner.module.css";
 import { DailyTrainingQualityCard as TrainingCard } from "./daily-training-quality-card";
+import { DailyTrainingSetupGuide } from "./daily-training-setup-guide";
 
 type PlannerProps = { dateKey: string; request: DailyTrainingRequest | null; context: DailyTrainingContext; sessionId?: string | null; fresh?: boolean };
 export function DailyTrainingPlanner(props: PlannerProps) {
@@ -171,6 +172,7 @@ function DailyTrainingPlannerOwned({ dateKey, request, context, sessionId = null
     <div className={styles.mainColumn}>
     <section className={styles.reason} aria-live="polite"><p className={styles.sectionLabel}>この3課題を選んだ理由</p><h2>{plan.theme}</h2>
       <p>{checkingHistory ? "診断履歴を読み込んでいます。その間は基礎または対戦向けのメニューを表示します。" : plan.reason}</p>
+      <DailyTrainingSetupGuide fromDiagnosis={!checkingHistory && (plan.source === "diagnosis_link" || plan.source === "local_diagnosis")} />
       <div className="diagnosis-actions">
         {!session ? <button className="button-primary" type="button" disabled={!loaded || checkingHistory || saving || !isCurrent()} onClick={start}>このメニューで練習を始める</button> : <span>{completed ? "15分完了" : `${activeCompletedIds.size} / 3 完了・残り ${15 - completeMinutes}分`}</span>}
         <Link className="button-secondary" href="/me/training/history">練習履歴を見る</Link>

@@ -32,7 +32,7 @@ async function hasOfficialEvidence(
  * status=published is not enough.
  *
  * A public move must have:
- * - a Classic command with official evidence
+ * - a Classic command with official evidence (or, for a grant marked modern_only, a Modern one)
  * - a verified current frame with official evidence
  * - official evidence for the Move itself
  *
@@ -40,7 +40,11 @@ async function hasOfficialEvidence(
  */
 export async function isMovePublicReady(
   slug: string,
+  options: { modernOnly?: boolean } = {},
 ): Promise<boolean> {
+  // modernOnly: only for a move whose per-move production grant says the official Classic table has no row
+  // for it; the same official-source rule then applies to its Modern command.
+  const scheme = options.modernOnly ? "modern" : "classic";
   if (!configured()) return false;
 
   const supabase = getSupabaseServerClient();
@@ -81,7 +85,7 @@ export async function isMovePublicReady(
       .from("move_commands")
       .select("id")
       .eq("move_id", move.id)
-      .eq("control_scheme", "classic"),
+      .eq("control_scheme", scheme),
 
     supabase
       .from("move_frame_data")
