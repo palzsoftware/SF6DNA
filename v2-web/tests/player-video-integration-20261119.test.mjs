@@ -69,7 +69,8 @@ test('動画: キー・YouTube ID・公開承認・接続先が正しい', () =>
     keys.add(v.key);
     assert.match(v.youtubeId, /^[A-Za-z0-9_-]{11}$/);
     assert.equal(v.publicationApproval, 'PENDING');
-    assert.ok(['本人解説', '大会対戦'].includes(v.kind));
+    // 2026-11-24: ranked/stream usage gets its own label instead of being shown as 本人解説.
+    assert.ok(['本人解説', '大会対戦', '配信・ランクマ'].includes(v.kind));
     for (const c of v.characterLinks ?? []) assert.match(c.slug, /^[a-z][a-z0-9-]{0,30}$/);
   }
   const byKey = new Map(videos.map(v => [v.key, v]));
