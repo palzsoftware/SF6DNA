@@ -36,6 +36,10 @@ export type VideoSummary = {
   viewCountCheckedAt: string | null;
   entityRefs?: { characters: Array<{ id: string; label: string }>; players: Array<{ id: string; label: string }>; tournaments: Array<{ id: string; label: string }> };
   matchBindings?: Array<{ matchId: string; playerId: string; characterId: string; tournamentId: string | null }>;
+  /** null: no internal /videos/[slug] page (registered YouTube data). Undefined keeps the default detail link. */
+  detailHref?: string | null;
+  /** Extra YouTube links on the same card, e.g. the full stream of the same match. YouTube only. */
+  supportingLinks?: Array<{ url: string; label: string }>;
 
 };
 

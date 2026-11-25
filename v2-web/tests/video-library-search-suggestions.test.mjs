@@ -41,7 +41,9 @@ test("video preferences stay local and reversible while Character V2.1 links to 
   assert.match(card, /useOwnedVideoPreferences/);
   assert.match(card, /navigator\.share/);
   assert.match(card, /navigator\.clipboard\.writeText/);
-  assert.match(globalPage, /<VideoLibrary videos=\{result\.items\}/);
+  // 2026-11-25: DB-listed videos stay first; registered YouTube data is appended without duplicate YouTube IDs.
+  assert.match(globalPage, /mergeWithListedVideos\(result\.state === "SUCCESS_WITH_RESULTS" \? result\.items : \[\], registered\)/);
+  assert.match(globalPage, /<VideoLibrary videos=\{libraryVideos\}/);
   assert.match(pilot, /uniqueCharacterVideos\(videos\)/);
   assert.match(pilot, /`\/characters\/\$\{characterSlug\}\/videos`/);
 });

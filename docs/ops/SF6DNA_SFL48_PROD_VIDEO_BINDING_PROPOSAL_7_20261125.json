@@ -1,0 +1,324 @@
+[
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-RdpsP-M30sU",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-4-TyAmHuxGY",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-IffWcLB_XMo",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-WfaUMDDZ6Es",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-OyvntovP-BI",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-bHJ4IMV5cro",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-WVSMETYIztc",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+    "playerSlug": "fujimura",
+    "recommendationKey": "fujimura-eNlppthzST4",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-4-TyAmHuxGY",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-IffWcLB_XMo",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-WfaUMDDZ6Es",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-OyvntovP-BI",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-bHJ4IMV5cro",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-WVSMETYIztc",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+    "playerSlug": "kazunoko",
+    "recommendationKey": "kazunoko-eNlppthzST4",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40",
+    "playerSlug": "cosa",
+    "recommendationKey": "cosa-4-TyAmHuxGY",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40",
+    "playerSlug": "cosa",
+    "recommendationKey": "cosa-IffWcLB_XMo",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40",
+    "playerSlug": "cosa",
+    "recommendationKey": "cosa-OyvntovP-BI",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40",
+    "playerSlug": "cosa",
+    "recommendationKey": "cosa-bHJ4IMV5cro",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40",
+    "playerSlug": "cosa",
+    "recommendationKey": "cosa-eNlppthzST4",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-RdpsP-M30sU",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-4-TyAmHuxGY",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-IffWcLB_XMo",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-WfaUMDDZ6Es",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-OyvntovP-BI",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-bHJ4IMV5cro",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-WVSMETYIztc",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+    "playerSlug": "machabo",
+    "recommendationKey": "machabo-eNlppthzST4",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-DMaK8ybx1ao",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-IrZHAeV6Cx4",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-3X1zd27viu0",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-OvwqJkBiJqw",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-uJmB3lK0WNo",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-6AialyrOq6U",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+    "playerSlug": "wabiichi",
+    "recommendationKey": "wabiichi-BDKiKN1KD0s",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-DMaK8ybx1ao",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-IrZHAeV6Cx4",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-3X1zd27viu0",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-OvwqJkBiJqw",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-uJmB3lK0WNo",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-6AialyrOq6U",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+    "playerSlug": "yas",
+    "recommendationKey": "yas-BDKiKN1KD0s",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "106e21de-1383-4dcb-ab09-4d0d7dc2c4ed",
+    "playerSlug": "takagi",
+    "recommendationKey": "takagi-DMaK8ybx1ao",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "106e21de-1383-4dcb-ab09-4d0d7dc2c4ed",
+    "playerSlug": "takagi",
+    "recommendationKey": "takagi-3X1zd27viu0",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "106e21de-1383-4dcb-ab09-4d0d7dc2c4ed",
+    "playerSlug": "takagi",
+    "recommendationKey": "takagi-uJmB3lK0WNo",
+    "idSource": "team-bindings.json (production row)"
+  },
+  {
+    "environment": "wnuxaxbrpudyypzdbdho",
+    "playerId": "106e21de-1383-4dcb-ab09-4d0d7dc2c4ed",
+    "playerSlug": "takagi",
+    "recommendationKey": "takagi-6AialyrOq6U",
+    "idSource": "team-bindings.json (production row)"
+  }
+]

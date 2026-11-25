@@ -37,6 +37,7 @@ const supplementModule = realModule("components/player-profile-supplement.tsx");
 const videoModule = realModule("components/player-recommended-videos.tsx");
 const bindingModule = realModule("lib/player-video-binding.ts");
 const characterModule = realModule("components/character-registered-videos.tsx");
+const registeredModule = realModule("lib/registered-youtube-videos.ts");
 const gate = realModule("lib/player-publication-gate.ts");
 const FULL = "BDKiKN1KD0s";
 
@@ -62,10 +63,48 @@ test("Wikiのプレイスタイル本文は転載せず、公式Q&Aは本人コ�
   assert.doesNotMatch(html, /ウメハラの弟子/);
 });
 
-test("ボンちゃん・かずのこ: 入れ替わり疑いのYouTube/Twitchは保留、既存確認済みのXは維持", () => {
+test("ボンちゃん・かずのこ: 相互リンクで確認したYouTube/Twitchを採用し、既存確認済みのXは維持", () => {
   const sns = slug => supplements.find(s => s.playerSlug === slug).facts.find(f => f.field === "sns")?.value ?? [];
-  assert.deepEqual(sns("bonchan").map(l => l.url), ["https://x.com/katitagaribon"]);
-  assert.deepEqual(sns("kazunoko").map(l => l.url), ["https://x.com/kazunoko0215"]);
+  assert.deepEqual(sns("bonchan").map(l => l.url), ["https://x.com/katitagaribon", "https://www.youtube.com/@progamerbonchan5855", "https://www.twitch.tv/bonchan0311"]);
+  assert.deepEqual(sns("kazunoko").map(l => l.url), ["https://x.com/kazunoko0215", "https://www.youtube.com/@KazunokoChannel", "https://www.twitch.tv/kazunokon"]);
+});
+
+test("第7節の4選手: 公式クリップが主リンク、フル配信は時刻なしの補助リンクで1試合1カード", () => {
+  for (const [slug, clip] of [["jr", "e-V2iILIsUQ"], ["yas", "e-V2iILIsUQ"], ["wabiichi", "86lnoMqGvIs"], ["kawano", "86lnoMqGvIs"]]) {
+    const player = { id: bindings.find(b => b.playerSlug === slug && b.environment === ENV.development).playerId, slug };
+    const items = bindingModule.boundPlayerVideoRecommendations(player, ENV.development, videos, bindings);
+    const html = renderToStaticMarkup(videoModule.PlayerRecommendedVideos({ playerSlug: slug, items, draftPreview: true }));
+    assert.equal((html.match(new RegExp(`data-recommendation-key="${slug}-${clip}"`, "g")) ?? []).length, 1, slug);
+    assert.doesNotMatch(html, new RegExp(`data-recommendation-key="${slug}-${FULL}"`), slug);
+    assert.equal((html.match(/data-same-match-full-stream="BDKiKN1KD0s"/g) ?? []).length, 1, slug);
+    assert.doesNotMatch(html, /&amp;t=/, slug);
+    assert.match(videos.find(v => v.key === `${slug}-${clip}`).matchEvidence.chapterNote, /概要欄の章/);
+  }
+});
+
+test("マリーザの2025年公式対戦は年を明記し、食い違うDivision・未確認の使用時刻を表示しない", () => {
+  const rows = characterVideos.filter(v => v.characterSlug === "marisa" && v.category === "対戦");
+  assert.equal(rows.length, 2);
+  const g = characterModule.characterRegisteredVideoGroups("marisa", ENV.development, true);
+  const html = renderToStaticMarkup(characterModule.CharacterRegisteredVideos({ characterSlug: "marisa", environment: ENV.development, preview: true }));
+  for (const r of rows) {
+    assert.ok(g.match.some(c => c.id === `youtube:${r.youtubeId}`));
+    assert.match(r.origin, /2025年の過去大会/);
+    assert.doesNotMatch(r.title, /Division|第\d+節/);
+  }
+  assert.match(html, /2025年の過去大会/);
+  // The two adopted 2025 cards: no conflicting Division text and no unconfirmed time offset.
+  for (const r of rows) {
+    const card = html.split(`data-registered-video="${r.youtubeId}"`)[1].split("</article>")[0];
+    assert.doesNotMatch(card, /Division|&amp;t=/, r.youtubeId);
+  }
+});
+
+test("ヤスミンの候補2本は保留のため未登録", () => {
+  for (const id of ["U_NF2QbJnTY", "dxig3iBlxXk"]) {
+    assert.ok(!characterVideos.some(v => v.youtubeId === id));
+    assert.ok(!videos.some(v => v.youtubeId === id));
+  }
 });
 
 test("デバイス機種は機種まで確認済みの行だけ。候補止まりは種類のみ", () => {
@@ -85,7 +124,7 @@ test("開幕前の公式登録キャラは現在のメイン・サブとは別�
 });
 
 test("第7節: 映像確認時刻は試合特定の根拠で、開始時刻にしない。キャラ根拠を区別", () => {
-  const rows = videos.filter(v => v.matchEvidence);
+  const rows = videos.filter(v => v.matchEvidence && (v.youtubeId === FULL || v.sameMatchFullStream?.youtubeId === FULL));
   const full = rows.filter(v => v.youtubeId === FULL);
   assert.equal(full.length, 18);
   for (const v of rows) {
@@ -129,9 +168,12 @@ test("キャラ動画: 公式ガイドは29本・29キャラ。全件PENDING", (
 
 test("現在の公開設定ではキャラ動画も選手補足も出ない", () => {
   for (const slug of characters) {
-    const g = characterModule.characterRegisteredVideoGroups(slug, false);
-    assert.equal(g.guide.length + g.match.length, 0, slug);
+    for (const env of Object.values(ENV)) {
+      const g = characterModule.characterRegisteredVideoGroups(slug, env, false);
+      assert.equal(g.guide.length + g.match.length, 0, slug);
+    }
   }
+  for (const env of Object.values(ENV)) assert.equal(registeredModule.registeredYouTubeVideos(env, false).length, 0, env);
   const row = supplements[0];
   const player = { id: row.identities[0].playerId, slug: row.playerSlug };
   assert.equal(supplementModule.boundProfileSupplement(player, row.identities[0].environment, supplements, false), null);
@@ -147,10 +189,9 @@ export function sfl48Counts() {
     const withId = players.filter(p => p.id);
     const gateVisible = withId.filter(p => gateKeys.has(`${p.id}:${p.slug}`) || gateKeys.has(`${p.slug}:${p.id}`) || [...gateKeys].some(k => k.includes(p.id) && k.includes(p.slug)));
     const profileShown = list => list.filter(p => supplementModule.boundProfileSupplement({ id: p.id, slug: p.slug }, ref, approved(supplements), false));
-    const videoShown = list => list.filter(p => {
-      const items = approved(bindingModule.boundPlayerVideoRecommendations({ id: p.id, slug: p.slug }, ref, videos, bindings));
-      return renderToStaticMarkup(videoModule.PlayerRecommendedVideos({ playerSlug: p.slug, items }) ?? "").includes("video-card");
-    });
+    // Same projection the Player図鑑 関連動画 section uses, with approved copies in memory.
+    const projected = registeredModule.registeredYouTubeVideos(ref, false, { players: approved(videos), characters: approved(characterVideos) });
+    const videoShown = list => list.filter(p => projected.some(v => v.entityRefs.players.some(r => r.id === p.id)));
     out[env] = {
       idInEnvironment: withId.length, gateVisiblePages: gateVisible.length, gateVisibleSlugs: gateVisible.map(p => p.slug),
       isolatedProfiles: profileShown(withId).length, isolatedVideos: videoShown(withId).length,
@@ -158,9 +199,8 @@ export function sfl48Counts() {
       noVideoData: withId.filter(p => !videoShown([p]).length).map(p => p.slug),
     };
   }
-  const approvedMatches = approved(videos);
-  const approvedGuides = approved(characterVideos);
-  const groups = characters.map(slug => ({ slug, ...characterModule.characterRegisteredVideoGroups(slug, false, approvedGuides, approvedMatches) }));
+  const projectedProd = registeredModule.registeredYouTubeVideos(ENV.production, false, { players: approved(videos), characters: approved(characterVideos) });
+  const groups = characters.map(slug => ({ slug, ...characterModule.characterRegisteredVideoGroups(slug, ENV.production, false, [], projectedProd) }));
   out.characters = {
     guide: groups.filter(g => g.guide.length).length, match: groups.filter(g => g.match.length).length,
     noGuide: groups.filter(g => !g.guide.length).map(g => g.slug), noMatch: groups.filter(g => !g.match.length).map(g => g.slug),
@@ -174,4 +214,89 @@ test("隔離環境(承認済みコピー)での表示件数", t => {
   assert.equal(c.production.isolatedProfiles, c.production.idInEnvironment);
   assert.equal(c.development.isolatedProfiles, c.development.idInEnvironment);
   assert.ok(c.characters.guide >= 29);
+});
+
+// ---- 3-screen shared projection (registered-youtube-videos.ts) ----
+const approvedAll = rows => rows.map(r => ({ ...r, publicationApproval: "APPROVED" }));
+const projectedDev = () => registeredModule.registeredYouTubeVideos(ENV.development, false, { players: approvedAll(videos), characters: approvedAll(characterVideos) });
+
+test("3画面共通: YouTube IDごとに1枚、サムネイル・再生リンクはYouTube", () => {
+  const list = projectedDev();
+  assert.equal(new Set(list.map(v => v.id)).size, list.length);
+  for (const v of list) {
+    const id = v.id.replace("youtube:", "");
+    assert.match(id, /^[A-Za-z0-9_-]{11}$/);
+    assert.ok(v.url.startsWith(`https://www.youtube.com/watch?v=${id}`), v.id);
+    assert.equal(v.thumbnailUrl, `https://i.ytimg.com/vi/${id}/hqdefault.jpg`);
+    assert.equal(v.detailHref, null);
+    for (const s of v.supportingLinks) assert.match(s.url, /^https:\/\/www\.youtube\.com\/watch\?v=/);
+    assert.doesNotMatch(JSON.stringify(v), /twitch\.tv/);
+  }
+});
+
+test("同じ試合: クリップが主リンク、フル配信は補助リンク。全試合がクリップで覆われたフル配信は単独カードにしない", () => {
+  const list = projectedDev();
+  assert.ok(!list.some(v => v.id === `youtube:${FULL}`), `full stream listed separately: ${JSON.stringify(list.find(v => v.id === `youtube:${FULL}`)?.playerSlugs)}`);
+  for (const clip of ["e-V2iILIsUQ", "86lnoMqGvIs", "awpc0ZUw9yQ", "tN5gStQ8EhM"]) {
+    const v = list.find(x => x.id === `youtube:${clip}`);
+    assert.ok(v, clip);
+    assert.deepEqual(v.supportingLinks.map(s => s.url), [`https://www.youtube.com/watch?v=${FULL}`]);
+    assert.equal(v.playerSlugs.length, 2, clip);
+  }
+  // Chapter times only: no time-offset link. Offsets appear only where the start was confirmed in the video.
+  const confirmedFull = new Set(videos.filter(r => r.sameMatchFullStream?.startSeconds > 0).map(r => `${r.sameMatchFullStream.youtubeId}&t=${r.sameMatchFullStream.startSeconds}s`));
+  for (const v of list) for (const s of v.supportingLinks) if (/&t=/.test(s.url)) assert.ok(confirmedFull.has(s.url.split("v=")[1]), s.url);
+  assert.ok(!list.some(v => v.supportingLinks.some(s => s.url.includes(`${FULL}&t=`))));
+  const offsets = list.filter(v => /&t=/.test(v.url)).map(v => v.id.replace("youtube:", ""));
+  for (const id of offsets) assert.ok(videos.some(r => r.youtubeId === id && r.startSeconds > 0 && !/概要欄/.test(r.evidenceBasis ?? "")), id);
+});
+
+test("ランクマ／リプレイ: 種別を分け、投稿チャンネルと出演選手を区別", () => {
+  const ranked = projectedDev().filter(v => v.registeredCategory === "ranked_replay");
+  assert.ok(ranked.length >= 1);
+  const shuto = ranked.find(v => v.id === "youtube:hzweo7_uwps");
+  assert.equal(shuto.videoType, "ranked_replay");
+  assert.equal(shuto.channelName, "しゅーとチャンネル / Shuto");
+  assert.deepEqual(shuto.playerSlugs, ["shuto"]);
+  assert.deepEqual(shuto.players.length, 1);
+});
+
+test("キャラ・選手の紐づけは現行ID（キャラUUID・環境別の選手ID）だけ", () => {
+  const ids = read("../src/data/character-videos/character-ids.json").characters;
+  const charIds = new Set(Object.values(ids).map(c => c.id));
+  const playerIds = new Set(bindings.filter(b => b.environment === ENV.development).map(b => b.playerId));
+  for (const v of projectedDev()) {
+    for (const c of v.entityRefs.characters) assert.ok(charIds.has(c.id), c.id);
+    for (const p of v.entityRefs.players) assert.ok(playerIds.has(p.id), p.id);
+  }
+  assert.ok(!projectedDev().some(v => v.characterSlugs.includes("arjun")));
+});
+
+test("Player図鑑: フル配信のカードには本人の試合のキャラ・選手だけを出す（同じ配信内の別試合と区別）", () => {
+  const tokido = bindings.find(b => b.playerSlug === "tokido" && b.environment === ENV.development).playerId;
+  const list = registeredModule.registeredYouTubeVideos(ENV.development, false, { players: approvedAll(videos), onlyPlayerId: tokido });
+  assert.ok(list.length > 0);
+  for (const v of list) {
+    assert.deepEqual(v.playerSlugs, ["tokido"], v.id);
+    assert.ok(!v.players.includes("YAS"), v.id);
+  }
+});
+
+test("V1〜V3: リプレイの確認時刻（1:00など）は開始時刻に使わず、Year表記は未検証の版情報として扱う", () => {
+  const checked = videos.filter(v => v.matchEvidence?.identifiedAt && v.matchEvidence.startTimeConfirmed === false);
+  assert.ok(checked.length > 0);
+  for (const v of checked) assert.ok(!(v.startSeconds > 0), v.key);
+  const list = projectedDev();
+  for (const v of checked) {
+    const card = list.find(x => x.id === `youtube:${v.youtubeId}`);
+    if (card) assert.doesNotMatch(card.url, /&t=/, v.key);
+  }
+  const versioned = [...videos, ...characterVideos].filter(v => v.versionNote || /出典の版情報/.test(v.caution ?? ""));
+  assert.ok(versioned.length > 0);
+  for (const v of videos.filter(x => x.versionNote)) assert.equal(v.patchVerified, false, v.key);
+});
+
+test("通常設定: 未承認の動画はどの画面のデータにも入らない", () => {
+  for (const env of Object.values(ENV)) assert.equal(registeredModule.registeredYouTubeVideos(env, false).length, 0);
+  assert.equal(registeredModule.registeredYouTubeVideos("unknownref", true).length, 0);
 });

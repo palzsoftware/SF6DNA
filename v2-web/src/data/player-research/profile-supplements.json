@@ -674,6 +674,16 @@
             "kind": "X",
             "url": "https://x.com/katitagaribon",
             "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）・既存確認済みを維持"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@progamerbonchan5855",
+            "basis": "本人のYouTube・Twitch・Xの相互リンクで確認（B・Chrome 2026-11-25）。SFL公式データ側は入れ替わりの誤登録と判断"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/bonchan0311",
+            "basis": "本人のYouTube・Twitch・Xの相互リンクで確認（B・Chrome 2026-11-25）。SFL公式データ側は入れ替わりの誤登録と判断"
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
@@ -782,6 +792,16 @@
             "kind": "X",
             "url": "https://x.com/kazunoko0215",
             "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）・既存確認済みを維持"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@KazunokoChannel",
+            "basis": "本人のYouTube・Twitch・Xの相互リンクで確認（B・Chrome 2026-11-25）。SFL公式データ側は入れ替わりの誤登録と判断"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/kazunokon",
+            "basis": "本人のYouTube・Twitch・Xの相互リンクで確認（B・Chrome 2026-11-25）。SFL公式データ側は入れ替わりの誤登録と判断"
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",

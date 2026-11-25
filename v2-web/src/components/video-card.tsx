@@ -47,6 +47,11 @@ export function VideoCard({ video, publishedDate, onPreferenceChange }: { video:
   const category = video.videoType ? VIDEO_CATEGORY_LABELS[video.videoType] ?? video.videoType : null;
   const youtubeHost = videoUrl ? ["youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be"].includes(new URL(videoUrl).hostname) : false;
   const watchLabel = youtubeHost ? "YouTubeで再生 ↗" : "外部サイトで再生 ↗";
+  // Supporting links are YouTube only (never Twitch or other hosts).
+  const supportingLinks = (video.supportingLinks ?? []).flatMap(link => {
+    const url = videoPresentationUrl(link.url);
+    return url && ["youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be"].includes(new URL(url).hostname) ? [{ url, label: link.label }] : [];
+  });
   return (
     <article className={`video-card${watched ? " video-card--watched" : ""}`}>
       {videoUrl ? <a className="video-card__thumbnail" href={videoUrl} target="_blank" rel="noopener noreferrer" aria-label={`${video.title}を外部サイトで再生`}>
@@ -60,10 +65,11 @@ export function VideoCard({ video, publishedDate, onPreferenceChange }: { video:
       <div className="video-card__body">
         <span className="search-result__type">{[video.platform, category].filter(Boolean).join(" / ") || "VIDEO"}</span>
         <div className="video-card__flags"><span><VisualIcon kind="saved" />{preferenceReady ? favorite ? "保存済み" : "未保存" : pendingLabel}</span><span>{preferenceReady ? watched ? "視聴済み" : "未視聴" : pendingLabel}</span></div>
-        <h2><Link href={`/videos/${encodeURIComponent(video.slug)}`}>{video.title}</Link></h2>
+        <h2>{video.detailHref === null ? video.title : <Link href={video.detailHref ?? `/videos/${encodeURIComponent(video.slug)}`}>{video.title}</Link>}</h2>
         {video.channelName ? <p>{video.channelName}</p> : null}
         {relations.length ? <ul className="video-card__relations" aria-label="関連する人物・キャラクター・大会">{relations.map((name, index) => <li key={`${name}-${index}`}>{name}</li>)}</ul> : null}
         {publishedDate || duration ? <small>{[publishedDate, duration].filter(Boolean).join(" / ")}</small> : null}
+        {supportingLinks.length ? <p className="video-card__supporting">{supportingLinks.map(link => <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">{link.label} ↗</a>)}</p> : null}
         <div className="video-card__actions">
           {videoUrl ? <a className="video-card__watch" href={videoUrl} target="_blank" rel="noopener noreferrer"><VisualIcon kind="video" />{watchLabel}</a> : <span role="status">安全な動画リンクを確認できません。</span>}
           <button className="button-secondary" type="button" onClick={toggleFavorite} disabled={!preferenceReady} aria-pressed={preferenceReady ? favorite : undefined} aria-label={`${video.title}を${favorite ? "お気に入りから外す" : "お気に入りに追加"}`}>{preferenceReady ? favorite ? "★ お気に入り" : "☆ お気に入り" : `お気に入り（${pendingLabel}）`}</button>

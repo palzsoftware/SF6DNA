@@ -151,7 +151,9 @@ export default async function CharacterPage({
   const combinedMoveEvidence = arjun?.moveEvidence ?? connectedTxt?.moveEvidence ?? moveEvidence;
   // Registered 解説/対戦 videos: APPROVED only, or pending rows in loopback local preview (same switch as Player図鑑).
   const registeredVideoPreview = playerLocalPreviewEnabled(process.env, (await headers()).get("host"));
-  return <CharacterUnifiedPage automaticVideos={<><CharacterRegisteredVideos characterSlug={character.slug} preview={registeredVideoPreview} /><Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} /></Suspense></>} character={character} bundle={finalBundle} players={players} videos={videos}
+  let registeredEnvironment = "";
+  try { registeredEnvironment = new URL(process.env.NEXT_PUBLIC_SUPABASE_URL ?? "").hostname.split(".")[0]; } catch { /* unknown: nothing registered */ }
+  return <CharacterUnifiedPage automaticVideos={<><CharacterRegisteredVideos characterSlug={character.slug} environment={registeredEnvironment} preview={registeredVideoPreview} listedUrls={videos.map(video => video.url)} /><Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} /></Suspense></>} character={character} bundle={finalBundle} players={players} videos={videos}
     moveEvidence={combinedMoveEvidence}
     strategyMoveLinks={strategyMoveLinks} strategyReviewDescriptions={await getWs5StrategyReviewDescriptions(admission)} reviewedStrategyCards={await getWs5ReviewedStrategyCards(slug, admission)}
     playerDirectoryUrl={review ? reviewPlayerDirectoryUrl(character.slug) : undefined}

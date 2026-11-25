@@ -38,6 +38,8 @@ export const VIDEO_CATEGORY_LABELS: Record<string, string> = {
   official_guide: "公式ガイド",
   tournament: "大会",
   match: "対戦",
+  explainer: "解説",
+  ranked_replay: "ランクマ／リプレイ",
 };
 
 export const VIDEO_LANGUAGE_LABELS: Record<string, string> = { ja: "日本語", en: "英語", other: "その他" };

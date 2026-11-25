@@ -122,6 +122,8 @@ test('video loader API_ERROR preserves player page and forwards the error state'
       }},
       '@/components/player-detail-supplements':{attachPlayerTeamResults:received=>{assert.equal(received,player);return received;},playerDetailSupplements:received=>{ assert.equal(received, player); return {}; }},
       '@/components/auto-youtube-videos':{AutoYouTubeVideos:()=>null,AutoVideoLoading:()=>null},
+      // 2026-11-25: registered YouTube data is empty here, so the DB error state must still be forwarded.
+      '@/lib/registered-youtube-videos':{registeredYouTubeVideos:()=>[],mergeWithListedVideos:(listed,registered)=>[...listed,...registered]},
       '@/components/player-profile':{PlayerProfile:({player,relatedVideos,relatedVideoState})=>{
         assert.deepEqual(relatedVideos, []);
         assert.equal(relatedVideoState, 'API_ERROR');

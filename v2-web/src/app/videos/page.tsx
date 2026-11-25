@@ -12,6 +12,9 @@ import { VideoRetrievalStatus } from "@/components/video-retrieval-status";
 import { VideoLibrary } from "@/components/video-library";
 import { getRegisteredVideoLearning } from "@/lib/video-learning-registered";
 import { videoPlayerFromQuery, videoEntityIdFromQuery } from "@/lib/video-player-filter";
+import { headers } from "next/headers";
+import { playerLocalPreviewEnabled } from "@/lib/player-local-preview";
+import { registeredYouTubeVideos, mergeWithListedVideos } from "@/lib/registered-youtube-videos";
 
 export const metadata = publicPageMetadata("/videos", { title: "動画" });
 
@@ -29,6 +32,14 @@ export default async function VideosPage({ searchParams }: {
     ? { state: "RELATION_UNRESOLVED" as const, items: [], warnings: ["INVALID_FILTER"] }
     : await listVideosResult({ playerId: playerId ?? undefined, characterId: characterId ?? undefined, tournamentId: tournamentId ?? undefined });
   const hasServerFilters = Boolean(playerId || characterId || tournamentId);
+  // Registered YouTube data (same projection as character pages and Player図鑑). APPROVED rows only,
+  // unless loopback local preview is on. DB rows keep priority; duplicates by YouTube ID are dropped.
+  let environment = "";
+  try { environment = new URL(process.env.NEXT_PUBLIC_SUPABASE_URL ?? "").hostname.split(".")[0]; } catch { /* unknown environment: nothing registered */ }
+  const registered = invalidFilter || tournamentId ? [] : registeredYouTubeVideos(environment, playerLocalPreviewEnabled(process.env, (await headers()).get("host")))
+    .filter(v => (!playerId || v.entityRefs?.players.some(p => p.id === playerId)) && (!characterId || v.entityRefs?.characters.some(c => c.id === characterId)));
+  const listedOk = result.state === "SUCCESS_WITH_RESULTS" || result.state === "SUCCESS_EMPTY";
+  const libraryVideos = mergeWithListedVideos(result.state === "SUCCESS_WITH_RESULTS" ? result.items : [], registered);
 
   return (
     <div className="site-shell page-stack experience-video">
@@ -58,8 +69,8 @@ export default async function VideosPage({ searchParams }: {
       <Suspense fallback={null}><LatestYouTubeVideos /></Suspense>
 
       <section id="listed-videos" aria-labelledby="listed-videos-title"><h2 id="listed-videos-title">掲載動画</h2>
-      {result.state === "SUCCESS_WITH_RESULTS" ? (
-        <VideoLibrary videos={result.items} learningRecords={getRegisteredVideoLearning(result.items)} initialPlayer={playerId ? null : player} key={[player, playerId, characterId, tournamentId].join(":")} />
+      {libraryVideos.length && (listedOk || registered.length) ? (
+        <VideoLibrary videos={libraryVideos} learningRecords={getRegisteredVideoLearning(libraryVideos)} initialPlayer={playerId ? null : player} key={[player, playerId, characterId, tournamentId].join(":")} />
       ) : result.state === "SUCCESS_EMPTY" ? <p>掲載動画は準備中です。上のYouTube検索もご利用ください。</p>
         : <VideoRetrievalStatus state={result.state} invalidFilter={invalidFilter} />}
       </section>

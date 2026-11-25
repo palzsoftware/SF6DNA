@@ -1,0 +1,965 @@
+{
+  "note": "提案のみ。videos.json / video-bindings.json / profile-supplements.json には適用していない。全行 PENDING のまま追加する想定。",
+  "productionBindings": {
+    "sevenPlayers": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+        "playerSlug": "fujimura",
+        "recommendationKey": "fujimura-RdpsP-M30sU"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+        "playerSlug": "fujimura",
+        "recommendationKey": "fujimura-4-TyAmHuxGY"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+        "playerSlug": "fujimura",
+        "recommendationKey": "fujimura-IffWcLB_XMo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+        "playerSlug": "fujimura",
+        "recommendationKey": "fujimura-WfaUMDDZ6Es"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+        "playerSlug": "fujimura",
+        "recommendationKey": "fujimura-OyvntovP-BI"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+        "playerSlug": "fujimura",
+        "recommendationKey": "fujimura-bHJ4IMV5cro"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+        "playerSlug": "fujimura",
+        "recommendationKey": "fujimura-WVSMETYIztc"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2",
+        "playerSlug": "fujimura",
+        "recommendationKey": "fujimura-eNlppthzST4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+        "playerSlug": "kazunoko",
+        "recommendationKey": "kazunoko-4-TyAmHuxGY"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+        "playerSlug": "kazunoko",
+        "recommendationKey": "kazunoko-IffWcLB_XMo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+        "playerSlug": "kazunoko",
+        "recommendationKey": "kazunoko-WfaUMDDZ6Es"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+        "playerSlug": "kazunoko",
+        "recommendationKey": "kazunoko-OyvntovP-BI"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+        "playerSlug": "kazunoko",
+        "recommendationKey": "kazunoko-bHJ4IMV5cro"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+        "playerSlug": "kazunoko",
+        "recommendationKey": "kazunoko-WVSMETYIztc"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e",
+        "playerSlug": "kazunoko",
+        "recommendationKey": "kazunoko-eNlppthzST4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40",
+        "playerSlug": "cosa",
+        "recommendationKey": "cosa-4-TyAmHuxGY"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40",
+        "playerSlug": "cosa",
+        "recommendationKey": "cosa-IffWcLB_XMo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40",
+        "playerSlug": "cosa",
+        "recommendationKey": "cosa-OyvntovP-BI"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40",
+        "playerSlug": "cosa",
+        "recommendationKey": "cosa-bHJ4IMV5cro"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40",
+        "playerSlug": "cosa",
+        "recommendationKey": "cosa-eNlppthzST4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+        "playerSlug": "machabo",
+        "recommendationKey": "machabo-RdpsP-M30sU"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+        "playerSlug": "machabo",
+        "recommendationKey": "machabo-4-TyAmHuxGY"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+        "playerSlug": "machabo",
+        "recommendationKey": "machabo-IffWcLB_XMo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+        "playerSlug": "machabo",
+        "recommendationKey": "machabo-WfaUMDDZ6Es"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+        "playerSlug": "machabo",
+        "recommendationKey": "machabo-OyvntovP-BI"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+        "playerSlug": "machabo",
+        "recommendationKey": "machabo-bHJ4IMV5cro"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+        "playerSlug": "machabo",
+        "recommendationKey": "machabo-WVSMETYIztc"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca",
+        "playerSlug": "machabo",
+        "recommendationKey": "machabo-eNlppthzST4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+        "playerSlug": "wabiichi",
+        "recommendationKey": "wabiichi-DMaK8ybx1ao"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+        "playerSlug": "wabiichi",
+        "recommendationKey": "wabiichi-IrZHAeV6Cx4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+        "playerSlug": "wabiichi",
+        "recommendationKey": "wabiichi-3X1zd27viu0"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+        "playerSlug": "wabiichi",
+        "recommendationKey": "wabiichi-OvwqJkBiJqw"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+        "playerSlug": "wabiichi",
+        "recommendationKey": "wabiichi-uJmB3lK0WNo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+        "playerSlug": "wabiichi",
+        "recommendationKey": "wabiichi-6AialyrOq6U"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21",
+        "playerSlug": "wabiichi",
+        "recommendationKey": "wabiichi-BDKiKN1KD0s"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+        "playerSlug": "yas",
+        "recommendationKey": "yas-DMaK8ybx1ao"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+        "playerSlug": "yas",
+        "recommendationKey": "yas-IrZHAeV6Cx4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+        "playerSlug": "yas",
+        "recommendationKey": "yas-3X1zd27viu0"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+        "playerSlug": "yas",
+        "recommendationKey": "yas-OvwqJkBiJqw"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+        "playerSlug": "yas",
+        "recommendationKey": "yas-uJmB3lK0WNo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+        "playerSlug": "yas",
+        "recommendationKey": "yas-6AialyrOq6U"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0",
+        "playerSlug": "yas",
+        "recommendationKey": "yas-BDKiKN1KD0s"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "106e21de-1383-4dcb-ab09-4d0d7dc2c4ed",
+        "playerSlug": "takagi",
+        "recommendationKey": "takagi-DMaK8ybx1ao"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "106e21de-1383-4dcb-ab09-4d0d7dc2c4ed",
+        "playerSlug": "takagi",
+        "recommendationKey": "takagi-3X1zd27viu0"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "106e21de-1383-4dcb-ab09-4d0d7dc2c4ed",
+        "playerSlug": "takagi",
+        "recommendationKey": "takagi-uJmB3lK0WNo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "106e21de-1383-4dcb-ab09-4d0d7dc2c4ed",
+        "playerSlug": "takagi",
+        "recommendationKey": "takagi-6AialyrOq6U"
+      }
+    ],
+    "partialPlayersAdd": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4567da1f-313c-4e33-9188-f0b6b40bd5ef",
+        "playerSlug": "moke",
+        "recommendationKey": "moke-RdpsP-M30sU"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4567da1f-313c-4e33-9188-f0b6b40bd5ef",
+        "playerSlug": "moke",
+        "recommendationKey": "moke-4-TyAmHuxGY"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4567da1f-313c-4e33-9188-f0b6b40bd5ef",
+        "playerSlug": "moke",
+        "recommendationKey": "moke-IffWcLB_XMo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4567da1f-313c-4e33-9188-f0b6b40bd5ef",
+        "playerSlug": "moke",
+        "recommendationKey": "moke-WfaUMDDZ6Es"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4567da1f-313c-4e33-9188-f0b6b40bd5ef",
+        "playerSlug": "moke",
+        "recommendationKey": "moke-OyvntovP-BI"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4567da1f-313c-4e33-9188-f0b6b40bd5ef",
+        "playerSlug": "moke",
+        "recommendationKey": "moke-bHJ4IMV5cro"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4567da1f-313c-4e33-9188-f0b6b40bd5ef",
+        "playerSlug": "moke",
+        "recommendationKey": "moke-WVSMETYIztc"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4567da1f-313c-4e33-9188-f0b6b40bd5ef",
+        "playerSlug": "moke",
+        "recommendationKey": "moke-eNlppthzST4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "7e097cfa-f78d-4f34-8ec4-3b824fbe629b",
+        "playerSlug": "acqua",
+        "recommendationKey": "acqua-4-TyAmHuxGY"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "7e097cfa-f78d-4f34-8ec4-3b824fbe629b",
+        "playerSlug": "acqua",
+        "recommendationKey": "acqua-IffWcLB_XMo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "7e097cfa-f78d-4f34-8ec4-3b824fbe629b",
+        "playerSlug": "acqua",
+        "recommendationKey": "acqua-WfaUMDDZ6Es"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "7e097cfa-f78d-4f34-8ec4-3b824fbe629b",
+        "playerSlug": "acqua",
+        "recommendationKey": "acqua-OyvntovP-BI"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "7e097cfa-f78d-4f34-8ec4-3b824fbe629b",
+        "playerSlug": "acqua",
+        "recommendationKey": "acqua-bHJ4IMV5cro"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "7e097cfa-f78d-4f34-8ec4-3b824fbe629b",
+        "playerSlug": "acqua",
+        "recommendationKey": "acqua-WVSMETYIztc"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "550ff109-ebb9-49ca-9075-beda80781a2b",
+        "playerSlug": "yanai",
+        "recommendationKey": "yanai-RdpsP-M30sU"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "550ff109-ebb9-49ca-9075-beda80781a2b",
+        "playerSlug": "yanai",
+        "recommendationKey": "yanai-WfaUMDDZ6Es"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "550ff109-ebb9-49ca-9075-beda80781a2b",
+        "playerSlug": "yanai",
+        "recommendationKey": "yanai-OyvntovP-BI"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "550ff109-ebb9-49ca-9075-beda80781a2b",
+        "playerSlug": "yanai",
+        "recommendationKey": "yanai-WVSMETYIztc"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "550ff109-ebb9-49ca-9075-beda80781a2b",
+        "playerSlug": "yanai",
+        "recommendationKey": "yanai-eNlppthzST4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4cbf8a8c-b4d8-47f0-9d24-dae5fc75e98f",
+        "playerSlug": "johnny",
+        "recommendationKey": "johnny-RdpsP-M30sU"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4cbf8a8c-b4d8-47f0-9d24-dae5fc75e98f",
+        "playerSlug": "johnny",
+        "recommendationKey": "johnny-4-TyAmHuxGY"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4cbf8a8c-b4d8-47f0-9d24-dae5fc75e98f",
+        "playerSlug": "johnny",
+        "recommendationKey": "johnny-OyvntovP-BI"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4cbf8a8c-b4d8-47f0-9d24-dae5fc75e98f",
+        "playerSlug": "johnny",
+        "recommendationKey": "johnny-bHJ4IMV5cro"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "acecad48-2087-4384-94c0-0797a679edf9",
+        "playerSlug": "mago",
+        "recommendationKey": "mago-IrZHAeV6Cx4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "acecad48-2087-4384-94c0-0797a679edf9",
+        "playerSlug": "mago",
+        "recommendationKey": "mago-3X1zd27viu0"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "acecad48-2087-4384-94c0-0797a679edf9",
+        "playerSlug": "mago",
+        "recommendationKey": "mago-uJmB3lK0WNo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "acecad48-2087-4384-94c0-0797a679edf9",
+        "playerSlug": "mago",
+        "recommendationKey": "mago-6AialyrOq6U"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "543994bb-8c4f-48df-9000-876ba1ede2dc",
+        "playerSlug": "mizuha",
+        "recommendationKey": "mizuha-DMaK8ybx1ao"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "543994bb-8c4f-48df-9000-876ba1ede2dc",
+        "playerSlug": "mizuha",
+        "recommendationKey": "mizuha-IrZHAeV6Cx4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "543994bb-8c4f-48df-9000-876ba1ede2dc",
+        "playerSlug": "mizuha",
+        "recommendationKey": "mizuha-3X1zd27viu0"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "543994bb-8c4f-48df-9000-876ba1ede2dc",
+        "playerSlug": "mizuha",
+        "recommendationKey": "mizuha-OvwqJkBiJqw"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "59e8dc48-ce3b-4bb2-8ef3-b685988f3d34",
+        "playerSlug": "keib",
+        "recommendationKey": "keib-IrZHAeV6Cx4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "59e8dc48-ce3b-4bb2-8ef3-b685988f3d34",
+        "playerSlug": "keib",
+        "recommendationKey": "keib-3X1zd27viu0"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "59e8dc48-ce3b-4bb2-8ef3-b685988f3d34",
+        "playerSlug": "keib",
+        "recommendationKey": "keib-OvwqJkBiJqw"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "59e8dc48-ce3b-4bb2-8ef3-b685988f3d34",
+        "playerSlug": "keib",
+        "recommendationKey": "keib-uJmB3lK0WNo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "59e8dc48-ce3b-4bb2-8ef3-b685988f3d34",
+        "playerSlug": "keib",
+        "recommendationKey": "keib-6AialyrOq6U"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "f53b36e7-978f-4920-b157-6124fc91b44a",
+        "playerSlug": "nauman",
+        "recommendationKey": "nauman-DMaK8ybx1ao"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "f53b36e7-978f-4920-b157-6124fc91b44a",
+        "playerSlug": "nauman",
+        "recommendationKey": "nauman-3X1zd27viu0"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "f53b36e7-978f-4920-b157-6124fc91b44a",
+        "playerSlug": "nauman",
+        "recommendationKey": "nauman-OvwqJkBiJqw"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "f53b36e7-978f-4920-b157-6124fc91b44a",
+        "playerSlug": "nauman",
+        "recommendationKey": "nauman-uJmB3lK0WNo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "f53b36e7-978f-4920-b157-6124fc91b44a",
+        "playerSlug": "nauman",
+        "recommendationKey": "nauman-6AialyrOq6U"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "7469e615-8c28-40f6-929f-3b01aec9d3f4",
+        "playerSlug": "seiya",
+        "recommendationKey": "seiya-IrZHAeV6Cx4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "7469e615-8c28-40f6-929f-3b01aec9d3f4",
+        "playerSlug": "seiya",
+        "recommendationKey": "seiya-OvwqJkBiJqw"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "7469e615-8c28-40f6-929f-3b01aec9d3f4",
+        "playerSlug": "seiya",
+        "recommendationKey": "seiya-6AialyrOq6U"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "215f7aa3-8a4a-402c-be2a-49eac857b6b8",
+        "playerSlug": "otani",
+        "recommendationKey": "otani-DMaK8ybx1ao"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "215f7aa3-8a4a-402c-be2a-49eac857b6b8",
+        "playerSlug": "otani",
+        "recommendationKey": "otani-IrZHAeV6Cx4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "215f7aa3-8a4a-402c-be2a-49eac857b6b8",
+        "playerSlug": "otani",
+        "recommendationKey": "otani-3X1zd27viu0"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "215f7aa3-8a4a-402c-be2a-49eac857b6b8",
+        "playerSlug": "otani",
+        "recommendationKey": "otani-OvwqJkBiJqw"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "215f7aa3-8a4a-402c-be2a-49eac857b6b8",
+        "playerSlug": "otani",
+        "recommendationKey": "otani-uJmB3lK0WNo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "215f7aa3-8a4a-402c-be2a-49eac857b6b8",
+        "playerSlug": "otani",
+        "recommendationKey": "otani-6AialyrOq6U"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "ab837dad-605a-41a2-9d5c-2fe4d6fe22d8",
+        "playerSlug": "mocchi",
+        "recommendationKey": "mocchi-DMaK8ybx1ao"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "ab837dad-605a-41a2-9d5c-2fe4d6fe22d8",
+        "playerSlug": "mocchi",
+        "recommendationKey": "mocchi-IrZHAeV6Cx4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "ab837dad-605a-41a2-9d5c-2fe4d6fe22d8",
+        "playerSlug": "mocchi",
+        "recommendationKey": "mocchi-3X1zd27viu0"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "ab837dad-605a-41a2-9d5c-2fe4d6fe22d8",
+        "playerSlug": "mocchi",
+        "recommendationKey": "mocchi-uJmB3lK0WNo"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "877b2d79-a55a-4514-ae0e-4356d6d109a3",
+        "playerSlug": "daigo",
+        "recommendationKey": "daigo-DMaK8ybx1ao"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "877b2d79-a55a-4514-ae0e-4356d6d109a3",
+        "playerSlug": "daigo",
+        "recommendationKey": "daigo-3X1zd27viu0"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "877b2d79-a55a-4514-ae0e-4356d6d109a3",
+        "playerSlug": "daigo",
+        "recommendationKey": "daigo-OvwqJkBiJqw"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "877b2d79-a55a-4514-ae0e-4356d6d109a3",
+        "playerSlug": "daigo",
+        "recommendationKey": "daigo-6AialyrOq6U"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "50ff5be0-2e00-46f8-b9b2-2dbba268f7e6",
+        "playerSlug": "adelie",
+        "recommendationKey": "adelie-IrZHAeV6Cx4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "50ff5be0-2e00-46f8-b9b2-2dbba268f7e6",
+        "playerSlug": "adelie",
+        "recommendationKey": "adelie-3X1zd27viu0"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "50ff5be0-2e00-46f8-b9b2-2dbba268f7e6",
+        "playerSlug": "adelie",
+        "recommendationKey": "adelie-OvwqJkBiJqw"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "50ff5be0-2e00-46f8-b9b2-2dbba268f7e6",
+        "playerSlug": "adelie",
+        "recommendationKey": "adelie-uJmB3lK0WNo"
+      }
+    ],
+    "partialPlayersNoVisibleEffect": [
+      {
+        "recommendationKey": "acqua-eNlppthzST4",
+        "reason": "同じ試合のクリップが本番に紐づけ済み（1カードにまとまる）"
+      },
+      {
+        "recommendationKey": "yanai-4-TyAmHuxGY",
+        "reason": "同じ試合のクリップが本番に紐づけ済み（1カードにまとまる）"
+      },
+      {
+        "recommendationKey": "yanai-IffWcLB_XMo",
+        "reason": "同じ試合のクリップが本番に紐づけ済み（1カードにまとまる）"
+      },
+      {
+        "recommendationKey": "johnny-eNlppthzST4",
+        "reason": "同じ試合のクリップが本番に紐づけ済み（1カードにまとまる）"
+      },
+      {
+        "recommendationKey": "mizuha-6AialyrOq6U",
+        "reason": "同じ試合のクリップが本番に紐づけ済み（1カードにまとまる）"
+      },
+      {
+        "recommendationKey": "raoyamu-DMaK8ybx1ao",
+        "reason": "同じ試合のクリップが本番に紐づけ済み（1カードにまとまる）"
+      },
+      {
+        "recommendationKey": "raoyamu-3X1zd27viu0",
+        "reason": "同じ試合のクリップが本番に紐づけ済み（1カードにまとまる）"
+      },
+      {
+        "recommendationKey": "raoyamu-OvwqJkBiJqw",
+        "reason": "同じ試合のクリップが本番に紐づけ済み（1カードにまとまる）"
+      },
+      {
+        "recommendationKey": "raoyamu-uJmB3lK0WNo",
+        "reason": "同じ試合のクリップが本番に紐づけ済み（1カードにまとまる）"
+      },
+      {
+        "recommendationKey": "raoyamu-6AialyrOq6U",
+        "reason": "同じ試合のクリップが本番に紐づけ済み（1カードにまとまる）"
+      }
+    ]
+  },
+  "clipCards": [
+    {
+      "key": "jr-e-V2iILIsUQ",
+      "playerSlug": "jr",
+      "title": "Jr.（ザンギエフ/C/AWAY）vs  YAS（リュウ/C/HOME）「Division F 第7節 Team Match 2 中堅戦」【SFL JAPAN 2026】",
+      "youtubeId": "e-V2iILIsUQ",
+      "channelName": "Capcom Fighters JP",
+      "kind": "大会対戦",
+      "reason": "ザンギエフを使用（使用履歴として掲載。メイン・サブの判定ではありません）。対戦相手: YAS（リュウ）。",
+      "relationConfirmed": true,
+      "publicationApproval": "PENDING",
+      "sourceDate": "2026-11-11",
+      "evidenceBasis": "公式単試合クリップのタイトル・公開日・長さ、概要欄の「ノーカットの本配信」リンクがBDKiKN1KD0sを指すことを確認（B・Chrome 2026-11-25 SF6DNA_SFL48_ADD2_20261125.csv）。",
+      "identityBinding": "2026-11-25 ADD2 CSV。既存のフル配信行と同じ選手IDで照合。",
+      "characterLinks": [
+        {
+          "slug": "zangief",
+          "name": "ザンギエフ"
+        }
+      ],
+      "startSeconds": 0,
+      "sameMatchFullStream": {
+        "youtubeId": "BDKiKN1KD0s",
+        "startSeconds": null,
+        "chapterNote": "概要欄の章 2:05:51・未照合"
+      },
+      "matchEvidence": {
+        "chapterTime": "2:05:51",
+        "matchIdentifiedAt": "2:07:51",
+        "characterBasis": "official_clip_title",
+        "checkedOn": "2026-11-25"
+      },
+      "bindings": [
+        {
+          "environment": "wnuxaxbrpudyypzdbdho",
+          "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f"
+        },
+        {
+          "environment": "vvsknbmlfvvnrmgtyhbf",
+          "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f"
+        }
+      ]
+    },
+    {
+      "key": "yas-e-V2iILIsUQ",
+      "playerSlug": "yas",
+      "title": "Jr.（ザンギエフ/C/AWAY）vs  YAS（リュウ/C/HOME）「Division F 第7節 Team Match 2 中堅戦」【SFL JAPAN 2026】",
+      "youtubeId": "e-V2iILIsUQ",
+      "channelName": "Capcom Fighters JP",
+      "kind": "大会対戦",
+      "reason": "リュウを使用（使用履歴として掲載。メイン・サブの判定ではありません）。対戦相手: Jr.（ザンギエフ）。",
+      "relationConfirmed": true,
+      "publicationApproval": "PENDING",
+      "sourceDate": "2026-11-11",
+      "evidenceBasis": "公式単試合クリップのタイトル・公開日・長さ、概要欄の「ノーカットの本配信」リンクがBDKiKN1KD0sを指すことを確認（B・Chrome 2026-11-25 SF6DNA_SFL48_ADD2_20261125.csv）。",
+      "identityBinding": "2026-11-25 ADD2 CSV。既存のフル配信行と同じ選手IDで照合。",
+      "characterLinks": [
+        {
+          "slug": "ryu",
+          "name": "リュウ"
+        }
+      ],
+      "startSeconds": 0,
+      "sameMatchFullStream": {
+        "youtubeId": "BDKiKN1KD0s",
+        "startSeconds": null,
+        "chapterNote": "概要欄の章 2:05:51・未照合"
+      },
+      "matchEvidence": {
+        "chapterTime": "2:05:51",
+        "matchIdentifiedAt": "2:07:51",
+        "characterBasis": "official_clip_title",
+        "checkedOn": "2026-11-25"
+      },
+      "bindings": [
+        {
+          "environment": "wnuxaxbrpudyypzdbdho",
+          "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0"
+        },
+        {
+          "environment": "vvsknbmlfvvnrmgtyhbf",
+          "playerId": "42057adf-9dc1-422d-b991-867f140009f3"
+        }
+      ]
+    },
+    {
+      "key": "wabiichi-86lnoMqGvIs",
+      "playerSlug": "wabiichi",
+      "title": "わびいち（テリー/C/AWAY）vs  カワノ（ルーク/C/HOME）「Division F 第7節 Team Match 3 大将戦」【SFL JAPAN 2026】",
+      "youtubeId": "86lnoMqGvIs",
+      "channelName": "Capcom Fighters JP",
+      "kind": "大会対戦",
+      "reason": "テリーを使用（使用履歴として掲載。メイン・サブの判定ではありません）。対戦相手: カワノ（ルーク）。",
+      "relationConfirmed": true,
+      "publicationApproval": "PENDING",
+      "sourceDate": "2026-11-11",
+      "evidenceBasis": "公式単試合クリップのタイトル・公開日・長さ、概要欄の「ノーカットの本配信」リンクがBDKiKN1KD0sを指すことを確認（B・Chrome 2026-11-25 SF6DNA_SFL48_ADD2_20261125.csv）。",
+      "identityBinding": "2026-11-25 ADD2 CSV。既存のフル配信行と同じ選手IDで照合。",
+      "characterLinks": [
+        {
+          "slug": "terry",
+          "name": "テリー"
+        }
+      ],
+      "startSeconds": 0,
+      "sameMatchFullStream": {
+        "youtubeId": "BDKiKN1KD0s",
+        "startSeconds": null,
+        "chapterNote": "概要欄の章 3:23:41・未照合"
+      },
+      "matchEvidence": {
+        "chapterTime": "3:23:41",
+        "matchIdentifiedAt": "3:25:44",
+        "characterBasis": "video_confirmed",
+        "checkedOn": "2026-11-25"
+      },
+      "bindings": [
+        {
+          "environment": "wnuxaxbrpudyypzdbdho",
+          "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21"
+        },
+        {
+          "environment": "vvsknbmlfvvnrmgtyhbf",
+          "playerId": "b873fd7a-8989-4012-af27-5048b973f880"
+        }
+      ]
+    },
+    {
+      "key": "kawano-86lnoMqGvIs",
+      "playerSlug": "kawano",
+      "title": "わびいち（テリー/C/AWAY）vs  カワノ（ルーク/C/HOME）「Division F 第7節 Team Match 3 大将戦」【SFL JAPAN 2026】",
+      "youtubeId": "86lnoMqGvIs",
+      "channelName": "Capcom Fighters JP",
+      "kind": "大会対戦",
+      "reason": "ルークを使用（使用履歴として掲載。メイン・サブの判定ではありません）。対戦相手: わびいち（テリー）。",
+      "relationConfirmed": true,
+      "publicationApproval": "PENDING",
+      "sourceDate": "2026-11-11",
+      "evidenceBasis": "公式単試合クリップのタイトル・公開日・長さ、概要欄の「ノーカットの本配信」リンクがBDKiKN1KD0sを指すことを確認（B・Chrome 2026-11-25 SF6DNA_SFL48_ADD2_20261125.csv）。",
+      "identityBinding": "2026-11-25 ADD2 CSV。既存のフル配信行と同じ選手IDで照合。",
+      "characterLinks": [
+        {
+          "slug": "luke",
+          "name": "ルーク"
+        }
+      ],
+      "startSeconds": 0,
+      "sameMatchFullStream": {
+        "youtubeId": "BDKiKN1KD0s",
+        "startSeconds": null,
+        "chapterNote": "概要欄の章 3:23:41・未照合"
+      },
+      "matchEvidence": {
+        "chapterTime": "3:23:41",
+        "matchIdentifiedAt": "3:25:44",
+        "characterBasis": "video_confirmed",
+        "checkedOn": "2026-11-25"
+      },
+      "bindings": [
+        {
+          "environment": "wnuxaxbrpudyypzdbdho",
+          "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64"
+        },
+        {
+          "environment": "vvsknbmlfvvnrmgtyhbf",
+          "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64"
+        }
+      ]
+    }
+  ],
+  "characterMatchRows": [
+    {
+      "key": "johnny-goaaIfjiP7c",
+      "playerSlug": "johnny",
+      "youtubeId": "goaaIfjiP7c",
+      "kind": "大会対戦",
+      "characterLinks": [
+        {
+          "slug": "marisa",
+          "name": "マリーザ"
+        }
+      ],
+      "title": "あきら（キャミィ/C/AWAY）vs ジョニィ（マリーザ/C/HOME）「Division F 第8節 Team Match 3 先鋒戦」【SFL: Pro-JP 2025】",
+      "evidence": "公式タイトルで選手・キャラを確認。映像未確認。概要欄の節表記（Division S）がタイトルと不一致のため節情報はHOLD。SFL2025（最新パッチではない）",
+      "bindings": [
+        {
+          "environment": "wnuxaxbrpudyypzdbdho",
+          "playerId": "4cbf8a8c-b4d8-47f0-9d24-dae5fc75e98f"
+        },
+        {
+          "environment": "vvsknbmlfvvnrmgtyhbf",
+          "playerId": "53b40fa8-2fe7-4f68-8e81-6f60c61850f4"
+        }
+      ]
+    },
+    {
+      "key": "itabashi-zangief-lzINQNblcww",
+      "playerSlug": "itabashi-zangief",
+      "youtubeId": "lzINQNblcww",
+      "kind": "大会対戦",
+      "characterLinks": [
+        {
+          "slug": "marisa",
+          "name": "マリーザ"
+        },
+        {
+          "slug": "zangief",
+          "name": "ザンギエフ"
+        }
+      ],
+      "title": "水派 （舞/C/AWAY）vs 板橋ザンギエフ（マリーザ・ザンギエフ/C/HOME）「Division F 第10節 Team Match 1 大将戦」【SFL: Pro-JP 2025】",
+      "evidence": "公式タイトルで確認。マリーザ使用区間は映像未確認。SFL2025",
+      "bindings": [
+        {
+          "environment": "wnuxaxbrpudyypzdbdho",
+          "playerId": "942d66dd-0840-433d-be18-81f867799116"
+        },
+        {
+          "environment": "vvsknbmlfvvnrmgtyhbf",
+          "playerId": "942d66dd-0840-433d-be18-81f867799116"
+        }
+      ]
+    }
+  ],
+  "characterOnlyCandidates": [
+    {
+      "character": "alex",
+      "youtubeId": "hXprOsQeWPs",
+      "player": "HotDog29（48名対象外）",
+      "status": "公式大会（SFL EMEAA 2026）。選手に紐づけず、キャラページの対戦動画としてのみ掲載する経路が必要（registered.json に category=対戦 を追加するコード変更）"
+    },
+    {
+      "character": "alex",
+      "youtubeId": "zihsXcwbTV0",
+      "player": "HotDog29（48名対象外）",
+      "status": "同上"
+    },
+    {
+      "character": "yasmine",
+      "youtubeId": "U_NF2QbJnTY",
+      "player": "Earl（48名対象外）",
+      "status": "HOLD: 大会主催の公式チャンネルか未確認"
+    },
+    {
+      "character": "yasmine",
+      "youtubeId": "dxig3iBlxXk",
+      "player": "ninosk（48名対象外）",
+      "status": "HOLD: コミュニティ大会・主催者公式か未確認"
+    }
+  ],
+  "snsHoldRelease": [
+    {
+      "playerSlug": "bonchan",
+      "youtube": "https://www.youtube.com/@progamerbonchan5855",
+      "twitch": "https://www.twitch.tv/bonchan0311",
+      "x": "https://x.com/katitagaribon",
+      "basis": "YouTube・Twitch・X の相互リンクで本人確認（B・Chrome 2026-11-25）。SFL公式データ側は誤登録と判断"
+    },
+    {
+      "playerSlug": "kazunoko",
+      "youtube": "https://www.youtube.com/@KazunokoChannel",
+      "twitch": "https://www.twitch.tv/kazunokon",
+      "x": "https://x.com/kazunoko0215",
+      "basis": "同上。所属チーム公式での照合は未実施"
+    }
+  ]
+}
