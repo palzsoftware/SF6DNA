@@ -8,13 +8,17 @@ import research from "../data/player-research/records.json";
 import videos from "../data/player-research/videos.json";
 import videoBindings from "../data/player-research/video-bindings.json";
 import researchBindings from "../data/player-research/research-bindings.json";
+import profileSupplements from "../data/player-research/profile-supplements.json";
+import { boundProfileSupplement, PlayerProfileSupplementSection, type PlayerProfileSupplement } from "./player-profile-supplement";
 /** Server-side selection. Unknown environments and unresolved identities stay empty. */
 export function playerDetailSupplements(player: { id: string; slug: string }, environment: string, preview = false) {
  const scope = environment === "wnuxaxbrpudyypzdbdho" ? "production" : environment === "vvsknbmlfvvnrmgtyhbf" ? "development" : null;
  const identities = researchBindings as Record<string, { production: string | null; development: string | null }>;
  const boundResearch = scope && identities[player.slug]?.[scope] === player.id ? research.filter(r => r.player_slug === player.slug && (preview || (r.verification_status === "verified" && r.publication_approval === "APPROVED"))) : [];
  const boundVideos = boundPlayerVideoRecommendations(player, environment, videos as PlayerVideoRecommendation[], videoBindings).filter(v => (preview || v.publicationApproval === "APPROVED") && v.relationConfirmed);
+ const profile = scope ? boundProfileSupplement(player, environment, profileSupplements as PlayerProfileSupplement[], preview) : null;
  return {
+  profileSupplementSection: profile ? <PlayerProfileSupplementSection row={profile} draftPreview={preview} /> : undefined,
   researchSection: boundResearch.length ? <PlayerResearchSections playerSlug={player.slug} items={boundResearch as PlayerResearchItem[]} draftPreview={preview} /> : undefined,
   recommendedVideoSection: boundVideos.length ? <PlayerRecommendedVideos playerSlug={player.slug} items={boundVideos} draftPreview={preview} /> : undefined,
  };

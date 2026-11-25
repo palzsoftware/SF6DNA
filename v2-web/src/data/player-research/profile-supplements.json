@@ -1,0 +1,5506 @@
+[
+  {
+    "playerSlug": "ryukichi",
+    "displayName": "りゅうきち",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "7847d0ac-4911-4062-9a1e-0b140de1aaef"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "b3f67376-cb75-4b44-8b2d-ef50058a1b98"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "KADOKAWA FAV gaming",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "FAV gaming 2024年3月13日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%8A%E3%82%85%E3%81%86%E3%81%8D%E3%81%A1",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "舞・ケン",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ケン→舞",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%8A%E3%82%85%E3%81%86%E3%81%8D%E3%81%A1",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）（Qanba Obsidian）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": "Qanba Obsidian"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1996年12月14日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "広島県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "カラオケ、夜のお散歩",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "コンボ選択と最後まで足掻いているところ",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/ryukichi1214",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@ryukichi1214",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/ryukichi_",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "sako",
+    "displayName": "sako",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "082e5e11-4622-4df7-9123-969e2812584a"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "082e5e11-4622-4df7-9123-969e2812584a"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "KADOKAWA FAV gaming",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "FAV gaming 2018年6月11日～／Victrix Pro 2025年7月3日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?sako",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "エレナ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "JP、春麗、豪鬼、A.K.I.、エレナ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?sako",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）（Victrix Pro FS）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": "Victrix Pro FS"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1979年4月9日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "鹿児島県生まれ大阪府育ち",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "ドライブ、散歩",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "レアキャラへの変な対策",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/sakonoko",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/c/sakonoko_game",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/sakonoko_game",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "fujimura",
+    "displayName": "藤村",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "7a90ef97-9573-40e9-b2ad-10dbfcfc62af"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c39fec4d-0a0f-44e4-84df-32dd02d27df2"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "KADOKAWA FAV gaming",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "FAV gaming 2025年3月29日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E8%97%A4%E6%9D%91",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "C.ヴァイパー・舞",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ケン、春麗、豪鬼、舞、C.ヴァイパー",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E8%97%A4%E6%9D%91",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス（オーダーメイド AFGコントローラー）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": "オーダーメイド AFGコントローラー"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1986年12月21日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "香川県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "旅行",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "堅実さ",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/fujimura333",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/fujimura333",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "moke",
+    "displayName": "もけ",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "383d3822-4380-4a7e-abb0-dd2e1107e970"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4567da1f-313c-4e33-9188-f0b6b40bd5ef"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "KADOKAWA FAV gaming",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "FAV gaming 2025年3月29日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%82%E3%81%91",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "春麗・舞",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "春麗、舞",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%82%E3%81%91",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1995年11月22日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "大阪府",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "カーレース",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "攻め！攻め！",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/lllmokelll",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@mokeasobi",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/lllmokelll",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "dogura",
+    "displayName": "どぐら",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "0a8aacc8-3feb-42c4-88e5-3dd5d3a9efe6"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "Crazy Raccoon",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "Crazy Raccoon 2023年6月25日～現在",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%A9%E3%81%90%E3%82%89",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "エレナ・ベガ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）（iO どぐら Edition（GRAPHT））",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": "iO どぐら Edition（GRAPHT）"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1987年6月12日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "奈良県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "筋トレ",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "ラッシュ中段打つ時はドキドキしながら打ってます",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/maneater_dgr",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@ikoma_dogura",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/ikoma_dogura",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "bonchan",
+    "displayName": "ボンちゃん",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "062106c7-faba-4351-864c-6d4247104d3c"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "78d2c3bf-8074-4098-b152-607229b7aaac"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "Crazy Raccoon",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "Red Bull eSports（RB） 2015年9月1日～／HyperX 2018年7月31日～／Qanba 2019年6月～／CELLORB 2024年4月～／Crazy Raccoon 2024年6月30日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%83%9C%E3%83%B3%E3%81%A1%E3%82%83%E3%82%93",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "サガット・豪鬼",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ルーク、豪鬼、サガット",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%83%9C%E3%83%B3%E3%81%A1%E3%82%83%E3%82%93",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）（Qanba Obsidian）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": "Qanba Obsidian"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1987年3月11日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "東京都",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "麻雀、筋トレ",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "無敵技のヒット率！",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/katitagaribon",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）・既存確認済みを維持"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "kazunoko",
+    "displayName": "かずのこ",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "b8123b68-73ab-47cd-8e96-66a19b742430"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "724e15ca-09ca-4fe3-a88f-295ab096ee6e"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "Crazy Raccoon",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "Crazy Raccoon 2024年5月12日～／PUNK WORKSHOP 2026年4月28日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%8B%E3%81%9A%E3%81%AE%E3%81%93",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "C.ヴァイパー・キャミィ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "キャミィ、舞、C.ヴァイパー",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%8B%E3%81%9A%E3%81%AE%E3%81%93",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1988年2月15日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "埼玉県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "読書",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "ノーミスなヴァイパーのプレイ",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/kazunoko0215",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）・既存確認済みを維持"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "shuto",
+    "displayName": "Shuto",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "264c841d-6962-449c-9c50-cacf88f91cc0"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "Crazy Raccoon",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "Crazy Raccoon 2024年2月11日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?Shuto",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "リュウ・豪鬼・ベガ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "マリーザ、豪鬼、リュウ、ベガ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?Shuto",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス（PUNK WORKSHOP R14 Shuto Model）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": "PUNK WORKSHOP R14 Shuto Model"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1998年8月14日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "福島県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "料理",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "試合のプランニング",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/Shuto_fgc",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@shuto6713",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/shuto_fgc",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "cosa",
+    "displayName": "cosa",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "8ee95472-918e-4e26-973f-229d013428bc"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "ae813bdf-3bef-40b4-80b2-0c7c83476a40"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "Saishunkan Sol 熊本",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "Saishunkan Sol 熊本 2025年4月24日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?cosa",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "豪鬼・ケン",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ケン→リュウ→豪鬼、エレナ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?cosa",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "パッド（HORI ファイティングコマンダー OCTA）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "パッド",
+        "deviceModel": "HORI ファイティングコマンダー OCTA"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1993年6月24日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "北海道",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "音楽、映画、漫画",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "硬派さと思い切り。我慢強さとブレないメンタル。",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/cosazeku",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/channel/UCIEF_HU8Bx116tgJ0jHc1jw",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/cosazeku",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "machabo",
+    "displayName": "まちゃぼー",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "a7c857d1-688b-420d-bfa2-5182d3b7d007"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "c3669ee5-c426-426e-b7b4-fa59b36fa6ca"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "Saishunkan Sol 熊本",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "Saishunkan Sol 熊本 2025年4月24日～（Wiki更新日2026-05-05のため古い可能性）",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%BE%E3%81%A1%E3%82%83%E3%81%BC%E3%83%BC",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "リュウ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ケン、豪鬼、リュウ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%BE%E3%81%A1%E3%82%83%E3%81%BC%E3%83%BC",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1988年7月26日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "埼玉県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "ライブに行く",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "全能感あるプレイ",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/mcb_0726",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/channel/UCRfFltHXvIxmePGRfki0MQQ",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "kobayan",
+    "displayName": "こばやん",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "1417f9b3-60a4-4837-919f-d0f9fc2e5415"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "Saishunkan Sol 熊本",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "Answer.M.Gameing（A.M.G） 2020年4月1日～／Saishunkan Sol 熊本 2025年4月24日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%93%E3%81%B0%E3%82%84%E3%82%93",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "ザンギエフ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kobayan/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ザンギエフ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%93%E3%81%B0%E3%82%84%E3%82%93",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）（オーダーメイド AFGコントローラー）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kobayan/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": "オーダーメイド AFGコントローラー"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "2002年1月31日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kobayan/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "栃木県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kobayan/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "筋トレ 自炊",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kobayan/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "こばやんのザンギエフ強すぎるよ…‼",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kobayan/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/kobayan_new",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@kobayan0222",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/kobayan0222",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kobayan/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "kincho-terry",
+    "displayName": "きんちょ",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "9f875c6c-f62a-40fb-a377-704c96bf4e0c"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "Saishunkan Sol 熊本",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "SCARZ 2025年9月9日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%8D%E3%82%93%E3%81%A1%E3%82%87",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "テリー",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kincho-terry/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ケン、テリー、舞",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%8D%E3%82%93%E3%81%A1%E3%82%87",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）（PUNK WORKSHOP FS-24）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kincho/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": "PUNK WORKSHOP FS-24"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1995年2月11日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kincho-terry/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "愛媛県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kincho-terry/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "カラオケが好き",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kincho-terry/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "攻めを見て！と言いたいところなんですけど実は守りも自信あります",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kincho-terry/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/kincho0211",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@kincho0211",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/kincho0211",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kincho-terry/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "momochi",
+    "displayName": "ももち",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "4398b674-1d5d-4725-a322-ecf5a61fef29"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "ZETA DIVISION Geekly",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "Victrix Pro 2019年2月14日～／ZETA DIVISION 2025年4月1日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%82%E3%82%82%E3%81%A1",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "エド",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ディージェイ、ケン、ラシード、ルーク、エド、舞、JP、ジェイミー",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%82%E3%82%82%E3%81%A1",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス（ZENAIM レバーレス（プロトタイプ））",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": "ZENAIM レバーレス（プロトタイプ）"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1986年2月12日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "愛媛県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "犬の散歩",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "忍耐力",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/momochi212",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/channel/UCPB5UJ70KDnL_hy0TyT79NA",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/momochoco",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "higuchi",
+    "displayName": "ひぐち",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "670431a1-addb-4c8e-9828-a45652ff976b"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "670431a1-addb-4c8e-9828-a45652ff976b"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "ZETA DIVISION Geekly",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "ZETA DIVISION 2025年4月1日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%B2%E3%81%90%E3%81%A1",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "ガイル",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ガイル",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%B2%E3%81%90%E3%81%A1",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）（オーダーメイド AFGコントローラー）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": "オーダーメイド AFGコントローラー"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "2001年9月14日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "群馬県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "最近あんまりできてないけどプロレスを見ること",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "粘り強く戦う",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/higuchi010914",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@higuchi2001",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/higuchi2001",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "yamaguchi",
+    "displayName": "ヤマグチ",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "f7a3ae8e-8692-467b-9ca3-8d31597774d3"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "ZETA DIVISION Geekly",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "ZETA DIVISION 2025年4月1日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%83%A4%E3%83%9E%E3%82%B0%E3%83%81",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "舞",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ディージェイ、エド、舞",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%83%A4%E3%83%9E%E3%82%B0%E3%83%81",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "2001年11月28日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "神奈川県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "散歩、読書、映画鑑賞",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "これまでとのプレイスタイルの変化",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/yamae1128",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/yama1128_fgc",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "menard",
+    "displayName": "MenaRD",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "b2aa9518-06eb-45d1-bf37-e39147173072"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "ZETA DIVISION Geekly（所属組織はWeibo Gaming。SFLはZETA DIVISIONへレンタル）",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "ブランカ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/menard/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ルーク、ブランカ、豪鬼、ザンギエフ、ベガ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?MenaRD",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "パッド（SONY DualSense）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mena/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "パッド",
+        "deviceModel": "SONY DualSense"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1999年8月28日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/menard/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "ドミニカ共和国",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/menard/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "映画、音楽、読書、スポーツ観戦",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/menard/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "同じ状況に2回目に直面したときの対応です。ぜひ楽しみにしてください！",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/menard/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/_MenaRD__",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@saulmenard",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/menard_fgc",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/menard/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "acqua",
+    "displayName": "ACQUA",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "0f15ca45-13d9-48c4-aec1-48f53b9ebec0"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "7e097cfa-f78d-4f34-8ec4-3b824fbe629b"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "広島 TEAM iXA",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "広島 TEAM iXA 2023年3月22日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?ACQUA",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "JP・ブランカ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "JP、ブランカ、舞",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?ACQUA",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1986年3月16日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "千葉県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "カードゲーム、Vtuber",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "中段とインパクトを絶対喰らわないところ",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/acqua_db",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/user/ACQUA41",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/acqua_0316",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "hibiki",
+    "displayName": "ひびき",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "013ddba8-c557-4162-8f9f-636ae67568ff"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "広島 TEAM iXA",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "SBI e-Sports 2023年12月20日～（SFL出場チームは広島 TEAM iXA）",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%B2%E3%81%B3%E3%81%8D",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "リリー",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "リリー",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%B2%E3%81%B3%E3%81%8D",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）（PUNK WORKSHOP FS-24）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": "PUNK WORKSHOP FS-24"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1996年5月27日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "東京都",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "カードゲーム",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "ちじょうせん",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/HibikiTheBeast",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@hibiki-sf6",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/hibikithebeast",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "akira-cammy",
+    "displayName": "あきら",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "dca58064-9f76-4fee-982d-f624698db658"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "dca58064-9f76-4fee-982d-f624698db658"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "広島 TEAM iXA",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "PUNK WORKSHOP 2026年6月15日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%82%E3%81%8D%E3%82%89",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "キャミィ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira-cammy/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "キャミィ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%82%E3%81%8D%E3%82%89",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1991年8月19日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira-cammy/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "広島県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira-cammy/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "麻雀、Vtuberさんの配信を見る",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira-cammy/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "電光石火！コンボ判断！！ODフーリガン！！！",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira-cammy/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/akiradayooooo",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@akiradayooooo",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/c6akira",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira-cammy/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "takepi",
+    "displayName": "takepi",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "e6d36527-9b82-4b4d-b4c3-9b3a1a602c4d"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "広島 TEAM iXA",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "広島 TEAM iXA 2025年3月23日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?takepi",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "JP",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takepi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "JP",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?takepi",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "パッド",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takepi/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "パッド",
+        "deviceModel": null
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "広島県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takepi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "寝ること ゲームをしていない時は基本寝てます",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takepi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "相手を寄せ付けない弾撃ち",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takepi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/piano_taketake",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/taketake_piano",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takepi/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "yanai",
+    "displayName": "ヤナイ",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "7764028a-a2a1-4521-9d71-f767cb23522d"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "550ff109-ebb9-49ca-9075-beda80781a2b"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "FUKUSHIMA IBUSHIGIN",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "IBUSHIGIN 2022年7月1日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%83%A4%E3%83%8A%E3%82%A4",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "サガット・ベガ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "マリーザ、リリー、ベガ、サガット",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%83%A4%E3%83%8A%E3%82%A4",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "2000年2月13日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "福島県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "アニメ鑑賞",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "わんぱくな読み合い",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/yanai_0213",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@yanai0213",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/yanai_0213",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "johnny",
+    "displayName": "ジョニィ",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "53b40fa8-2fe7-4f68-8e81-6f60c61850f4"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4cbf8a8c-b4d8-47f0-9d24-dae5fc75e98f"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "FUKUSHIMA IBUSHIGIN",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "エレナ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "マノン、マリーザ、エレナ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%B8%E3%83%A7%E3%83%8B%E3%82%A3",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1996年4月18日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "宮城県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "散歩 音楽 お酒",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "ボタン押し放題",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/Johnny4act",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/johnny_fgc",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "torimeshi",
+    "displayName": "鶏めし",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "b8639b00-f40b-4273-afea-7a6afe797cc3"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "FUKUSHIMA IBUSHIGIN",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "ダルシム",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ダルシム",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E9%B6%8F%E3%82%81%E3%81%97",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）（Qanba Obsidian）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": "Qanba Obsidian"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1988年9月11日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "福島県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "バイクです。",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "他のダルシム使いでは見れないプレイ",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/torimesi911",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@torimeshi88",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/cg_torimeshi",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "2bassa",
+    "displayName": "2BASSA",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "0b1001f0-8f5b-413c-b466-455273239867"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "0b1001f0-8f5b-413c-b466-455273239867"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "FUKUSHIMA IBUSHIGIN",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "FUKUSHIMA IBUSHIGIN 2026年1月5日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?2BASSA",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "ジュリ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/2bassa/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ジュリ、キャミィ、舞",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?2BASSA",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/2bassa/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "2002年8月28日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/2bassa/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "福島県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/2bassa/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "スト6のスロットが出ましたね！",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/2bassa/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "若さとおじっぽさが入り混じるプレイ",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/2bassa/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/2BASSA_",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/2bassa",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/2bassa/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "tokido",
+    "displayName": "ときど",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "24f7c815-946f-49f0-aede-7b8f42fdfebb"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "VARREL",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "VARREL 2026年5月1日～／CELLORB 2024年4月8日～／Sony Music 2019年3月14日～／Qanba 2019年6月5日～／大塚食品 2019年9月12日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%A8%E3%81%8D%E3%81%A9",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "JP",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ルーク、ケン、豪鬼、JP",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%A8%E3%81%8D%E3%81%A9",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1985年7月7日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "沖縄県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "筋トレを少々",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "JPのハマった時の絶対的な強さ",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/tokidoki77",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@Tokido",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/tokidoki77",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "mago",
+    "displayName": "マゴ",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "ae0979da-221d-4103-a359-ab77e07e425c"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "acecad48-2087-4384-94c0-0797a679edf9"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "VARREL",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "VARREL 2024年4月11日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%83%9E%E3%82%B4",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "舞",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ジュリ、キャミィ、サガット、舞",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%83%9E%E3%82%B4",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1985年1月21日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "神奈川県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "漫画とアニメ",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "技の当て感",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/magotto3",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@magolong3",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/mago2dgod",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "mizuha",
+    "displayName": "水派",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "e55d5abe-c01b-4f34-b4a6-6a68875b10f9"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "543994bb-8c4f-48df-9000-876ba1ede2dc"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "VARREL",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "VARREL 2024年4月11日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E6%B0%B4%E6%B4%BE",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "サガット・キャミィ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "キャミィ、舞、サガット",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E6%B0%B4%E6%B4%BE",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）（PUNK WORKSHOP FS-30）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": "PUNK WORKSHOP FS-30"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1994年6月10日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "神奈川県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "飲み物を飲むこと 嗜好品を楽しむ",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "体力ゲージが少なくなってくると悲しい気持ちでプレイしてます",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/mizuha11",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@mizuha3015",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/mizuha11/videos",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "wabiichi",
+    "displayName": "わびいち",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "b873fd7a-8989-4012-af27-5048b973f880"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "538bb704-b076-4325-a81c-27a8f5d7ca21"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "VARREL",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "VARREL 2026年7月1日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%8F%E3%81%B3%E3%81%84%E3%81%A1",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "テリー・リュウ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/wabiichi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ルーク→エド→リュウ→テリー",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%8F%E3%81%B3%E3%81%84%E3%81%A1",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/wabiichi/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "2007年1月30日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/wabiichi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "大阪府",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/wabiichi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "アイドル見ること",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/wabiichi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "攻めまくるプレイ！",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/wabiichi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/wabiichi_fgc",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/wabiichi_fgc/videos",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/wabiichi/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "gachikun",
+    "displayName": "ガチくん",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "747b1ec4-1a50-4248-ab49-961ed880e003"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "Good 8 Squad",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "Red Bull eSports（RB） 2018年11月7日～／Good 8 Squad（G8S） 2021年5月19日～／PUNK WORKSHOP 2024年7月16日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%AC%E3%83%81%E3%81%8F%E3%82%93",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "ラシード",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "マノン、ラシード",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%AC%E3%83%81%E3%81%8F%E3%82%93",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス（PUNK WORKSHOP R14 Gachikun Model）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": "PUNK WORKSHOP R14 Gachikun Model"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1992年4月23日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "広島県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "最近は筋トレ",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "緩急をつけるスタイルを今年は意識しているのでそこを見て欲しいです！",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/gachikun0423",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/channel/UCp_dcjCih34lTPNycKBSw7Q",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/gachikun0423",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "kawano",
+    "displayName": "カワノ",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "cba12da5-5ffe-41c6-8b06-d159f7366c64"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "Good 8 Squad",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "豪鬼",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ルーク、豪鬼、イングリッド",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%AB%E3%83%AF%E3%83%8E",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス（Hit Box ULTRA）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": "Hit Box ULTRA"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1998年9月3日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "熊本県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "読書 スマホ内に本を買ってるが容量が足りない",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "立ち回り",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/kawano_di",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/channel/UCzRzPAT-AjlPyec5yXG974g",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/kawanochannn",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "pugera",
+    "displayName": "ぷげら",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "14f7601e-ca6c-4f33-9c2f-1f1b4271eb44"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "aad1fb9f-1890-4822-8959-32937215f949"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "Good 8 Squad",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "Good 8 Squad 2021年5月19日～／PUNK WORKSHOP 2024年9月26日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%B7%E3%81%92%E3%82%89",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "ジュリ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ジュリ、ディージェイ、リリー、エド、ベガ、サガット、C.ヴァイパー、ヤスミン",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%B7%E3%81%92%E3%82%89",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）（PUNK WORKSHOP PWS FS ver.PGR）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": "PUNK WORKSHOP PWS FS ver.PGR"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1991年10月17日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "福岡県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "楽器",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "ラッシュ止め",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/pgr_pgr_",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/channel/UCIG27RighMGSjxvTPJgSzcQ",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/pugepino",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "sahara-ed",
+    "displayName": "さはら",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "98d27414-aaae-4367-95a6-54bb1897d0cb"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "Good 8 Squad",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "Good 8 Squad 2025年1月4日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%95%E3%81%AF%E3%82%89",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "エド",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sahara-ed/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ルーク→豪鬼、エド",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%95%E3%81%AF%E3%82%89",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス（WizardRoom GlimPearl Limited Edition Sahara）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sahara/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": "WizardRoom GlimPearl Limited Edition Sahara"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "2005年2月24日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sahara-ed/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "愛知県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sahara-ed/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "カラオケ、散歩",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sahara-ed/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "中段ガード",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sahara-ed/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/sahara7h",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/channel/UCIONt3FKZlpVuSJ4wRZ2wyQ",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/saharatvt",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sahara-ed/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "itabashi-zangief",
+    "displayName": "板橋ザンギエフ",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "942d66dd-0840-433d-be18-81f867799116"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "942d66dd-0840-433d-be18-81f867799116"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "DetonatioN FocusMe",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "DetonatioN FocusMe（DFM） 2022年12月12日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E6%9D%BF%E6%A9%8B%E3%82%B6%E3%83%B3%E3%82%AE%E3%82%A8%E3%83%95",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "ザンギエフ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itabashi-zangief/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ザンギエフ、マリーザ、アレックス",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E6%9D%BF%E6%A9%8B%E3%82%B6%E3%83%B3%E3%82%AE%E3%82%A8%E3%83%95",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）（ガフロ製作所 ネオ・ガフロコン）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": "ガフロ製作所 ネオ・ガフロコン"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1981年5月21日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itabashi-zangief/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "東京都",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itabashi-zangief/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "ゲーム一本",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itabashi-zangief/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "どうみても豪快",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itabashi-zangief/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/Itazan_Kuma",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@ItabashiZangief",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/itazan0429",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itabashi-zangief/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "keib",
+    "displayName": "KEI.B",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "8b2973ca-8f44-405e-b283-f18ebe8eb2af"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "59e8dc48-ce3b-4bb2-8ef3-b685988f3d34"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "DetonatioN FocusMe",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "DetonatioN FocusMe 2026年4月28日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?KEI.B",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "舞",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "JP、ベガ、舞",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?KEI.B",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1988年12月31日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "愛知県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "めちゃめちゃ散歩ハマってます",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "人読み",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/_BNBBN_",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@bnbbn_8183",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/kei_b_bnbbn",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "nauman",
+    "displayName": "ナウマン",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "50e69eec-324e-4a14-ab05-d4a17153d499"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "f53b36e7-978f-4920-b157-6124fc91b44a"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "DetonatioN FocusMe",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "DetonatioN FocusMe（DFM） 2022年12月12日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%83%8A%E3%82%A6%E3%83%9E%E3%83%B3",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "舞・ケン",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ケン、舞",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%83%8A%E3%82%A6%E3%83%9E%E3%83%B3",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1996年5月23日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "東京都",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "動画配信を見る",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "かわせない花蝶扇",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/naumanzoh",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@naumanzoh",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/naumanzoh",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "john-takeuchi",
+    "displayName": "竹内ジョン",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "4a081ccd-1f5a-4293-aead-31deb9fadd22"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "DetonatioN FocusMe",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "DetonatioN FocusMe（DFM） 2022年12月12日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E7%AB%B9%E5%86%85%E3%82%B8%E3%83%A7%E3%83%B3",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "ラシード・ジェイミー",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/john-takeuchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ジェイミー、ラシード",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E7%AB%B9%E5%86%85%E3%82%B8%E3%83%A7%E3%83%B3",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "パッド",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "パッド",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1998年3月21日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/john-takeuchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "東京都",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/john-takeuchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "イラスト",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/john-takeuchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "試合展開の豊富さ",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/john-takeuchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/john_takeuchi",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/channel/UC-udqjj0_jxbrdqpf-fJDDA",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/john_takeuchi",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/john-takeuchi/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "seiya",
+    "displayName": "Seiya",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "a9168dfc-4134-46fc-b133-5ba6c8c229c8"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "7469e615-8c28-40f6-929f-3b01aec9d3f4"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "名古屋NTPOJA",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "春麗",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/seiya/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ケン→春麗",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?Seiya",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/seiya/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1992年12月1日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/seiya/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "北海道",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/seiya/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "カラオケ",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/seiya/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "対応力、確認精度",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/seiya/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/owaechan",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@Seiya_owaechan",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/seiya_1201",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/seiya/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "raoyamu",
+    "displayName": "らおやむ",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "35f872d6-5217-4ac5-8f5f-6cacfbd08671"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "4980df9e-9c1c-440a-bead-f1a6bd55250e"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "名古屋NTPOJA",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "名古屋OJA 2026年6月25日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%89%E3%81%8A%E3%82%84%E3%82%80",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "ベガ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/raoyamu/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ベガ、マリーザ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%89%E3%81%8A%E3%82%84%E3%82%80",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/raoyamu/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "2003年6月21日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/raoyamu/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "奈良県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/raoyamu/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "車・バイク",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/raoyamu/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "土壇場の胆力",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/raoyamu/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/raoyamuyamu",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@raoyamuyamu",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/raoyamu/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "otani",
+    "displayName": "大谷",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "94514ef4-6035-4d16-8b7d-5b0b0e800efa"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "215f7aa3-8a4a-402c-be2a-49eac857b6b8"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "名古屋NTPOJA",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "Burning Core（BC） 2023年3月1日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E5%A4%A7%E8%B0%B7",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "テリー・ケン",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "リュウ→ルーク→ケン→豪鬼→テリー→ケン、テリー、アレックス、エレナ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E5%A4%A7%E8%B0%B7",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1997年4月21日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "富山県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "バッティングセンター",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "オラオラ",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/otani_saru",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/otani_bc",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "mocchi",
+    "displayName": "もっちー",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "d04a2537-3071-4ee5-944b-6241d8422b8a"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "ab837dad-605a-41a2-9d5c-2fe4d6fe22d8"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "名古屋NTPOJA",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "JOZ 2022/1/18～（Wiki更新日2025-09-05のため古い可能性）",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%82%E3%81%A3%E3%81%A1%E3%83%BC",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "豪鬼",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "豪鬼",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%82%E3%81%A3%E3%81%A1%E3%83%BC",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1988年12月7日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "愛知県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "運動",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "やり込みから来る豪鬼のプレイング",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/mugentoubu2",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@mugentoubu",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "daigo",
+    "displayName": "ウメハラ",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "beb71f4d-8a13-4a75-8a76-d4b3dd869e87"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "877b2d79-a55a-4514-ae0e-4356d6d109a3"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "REJECT",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "REJECT 2025年5月15日～／Red Bull eSports（RB） 2016年5月14日～／Hit Box Arcade 2022年8月3日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%A6%E3%83%A1%E3%83%8F%E3%83%A9",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "豪鬼",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ケン、豪鬼",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%82%A6%E3%83%A1%E3%83%8F%E3%83%A9",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス（Hit Box PC Beast Box（ウメハラモデル））",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": "Hit Box PC Beast Box（ウメハラモデル）"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1981年5月19日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "青森県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "散歩、麻雀、酒",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "瞬獄殺",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/daigothebeastJP",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/c/DaigotheBeasTV",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/daigothebeastv",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "fuudo",
+    "displayName": "ふ～ど",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "6c068ce4-7bb9-4c2e-ad2c-37159e9f7623"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "REJECT",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "REJECT 2025年5月15日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%B5%EF%BD%9E%E3%81%A9",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "エド・ディージェイ・ダルシム・C.ヴァイパー",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ダルシム、ディージェイ、エド、C.ヴァイパー",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%B5%EF%BD%9E%E3%81%A9",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1985年11月7日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "千葉県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "飯、酒",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "動きを封じるところ",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/TheFuudo",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@thefuudo",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/thefuudo",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "yas",
+    "displayName": "YAS",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "42057adf-9dc1-422d-b991-867f140009f3"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "8ab50c59-0968-4e27-a3ff-80319ec83cf0"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "REJECT",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "REJECT 2025年8月11日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?YAS",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "リュウ・ヤスミン",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yas/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "リュウ→ケン→リュウ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?YAS",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "パッド",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yas/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "パッド",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "1993年9月13日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yas/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "東京都",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yas/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "インディアカ、カラオケ",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yas/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "補正切り",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yas/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/YAS_jittyoku",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@yas-jittyoku",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/yas_jittyoku",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yas/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "hinao",
+    "displayName": "ひなお",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "84c0c16a-4ccc-4928-b284-2e6e22143adc"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "REJECT",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "REJECT 2025年10月29日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%B2%E3%81%AA%E3%81%8A",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "リュウ・サガット",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hinao/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ルーク、リュウ、サガット",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%B2%E3%81%AA%E3%81%8A",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "パッド（SONY DualSense）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hinao/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "パッド",
+        "deviceModel": "SONY DualSense"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "和歌山県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hinao/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "トランプ（大富豪）",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hinao/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "強気なところ",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hinao/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/hinatoo02",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hinao/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "takagi",
+    "displayName": "高木",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "b179dd80-e897-40a9-855f-5af4f3ac97ee"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "106e21de-1383-4dcb-ab09-4d0d7dc2c4ed"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "RIDDLE ORDER",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "RIDDLE 2023年7月30日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E9%AB%98%E6%9C%A8",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "ブランカ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takagi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ブランカ→ブランカ→エド→ブランカ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E9%AB%98%E6%9C%A8",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takagi/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "2005年12月1日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takagi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "東京都",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takagi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "散歩",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takagi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "強気な姿勢",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takagi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/Takagi_Progamer",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@takagikirinukidouga",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/takagitv",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takagi/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "adelie",
+    "displayName": "あでりい",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "ebbdd60b-d733-486f-b6e2-e61d35f19f17"
+      },
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "50ff5be0-2e00-46f8-b9b2-2dbba268f7e6"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "RIDDLE ORDER",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "RIDDLE 2025年2月9日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%82%E3%81%A7%E3%82%8A%E3%81%84",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "エド",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/adelie/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ディージェイ→エド",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%82%E3%81%A7%E3%82%8A%E3%81%84",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "アケコン（レバー）",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/adelie/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "アケコン（レバー）",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "2006年4月5日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/adelie/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "北海道",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/adelie/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "多分ないです",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/adelie/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "反応速度",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/adelie/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/adelie54",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/adelie54",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/adelie/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "jr",
+    "displayName": "Jr.",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "fe1a20d8-4341-408b-b02a-1308c1cafe6f"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "RIDDLE ORDER",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "RIDDLE ORDER 2024年6月25日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?Jr.",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "ザンギエフ",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/jr/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "ザンギエフ、ベガ",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?Jr.",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "パッド",
+        "basis": "種類はSFL公式選手データ（機種は未確認のため非掲載）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/jr/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "パッド",
+        "deviceModel": null
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "2002年11月12日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/jr/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "福岡県",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/jr/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "漫画とアニメ",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/jr/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "地上戦と命を賭けた読み合い",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/jr/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/juniorchaaaan",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/juniorzangief",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/jr/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  },
+  {
+    "playerSlug": "hikaru-aki",
+    "displayName": "ひかる",
+    "publicationApproval": "PENDING",
+    "identities": [
+      {
+        "environment": "wnuxaxbrpudyypzdbdho",
+        "playerId": "002a208f-3804-4a01-908a-72d713390998"
+      },
+      {
+        "environment": "vvsknbmlfvvnrmgtyhbf",
+        "playerId": "002a208f-3804-4a01-908a-72d713390998"
+      }
+    ],
+    "facts": [
+      {
+        "field": "sflTeam",
+        "label": "SFL2026所属チーム",
+        "value": "RIDDLE ORDER",
+        "basis": "SFL2026公式ロスター",
+        "sourceUrl": "https://saiganak.com/event/sfl-japan-2026-opening-date-division-announcement/amp/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "affiliationHistory",
+        "label": "所属・スポンサー（履歴）",
+        "value": "RIDDLE ORDER 2026年4月30日～",
+        "basis": "Wiki記載（スポンサー・事務所を含む）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%B2%E3%81%8B%E3%82%8B",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "sflRegisteredCharacters",
+        "label": "開幕前のSFL公式登録キャラ",
+        "value": "A.K.I.",
+        "basis": "SFL公式選手データ（開幕前登録。現在のメイン・サブとは別）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru-aki/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "characterHistory",
+        "label": "SF6での使用キャラ（履歴・参考）",
+        "value": "マノン、A.K.I.、アルジュン",
+        "basis": "Wiki記載の使用履歴（現在のメイン・サブの判定ではない）",
+        "sourceUrl": "https://fgamers.jp/?%E3%81%B2%E3%81%8B%E3%82%8B",
+        "checkedOn": "2026-11-25",
+        "state": "HISTORICAL"
+      },
+      {
+        "field": "device",
+        "label": "デバイス",
+        "value": "レバーレス（ZENAIM Leverless）",
+        "basis": "種類はSFL公式選手データ、機種は二次まとめ（今季の本人発信は未照合）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru/",
+        "checkedOn": "2026-11-25",
+        "deviceType": "レバーレス",
+        "deviceModel": "ZENAIM Leverless"
+      },
+      {
+        "field": "birthDate",
+        "label": "生年月日",
+        "value": "2004年10月2日",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru-aki/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hometown",
+        "label": "出身",
+        "value": "京都府",
+        "basis": "SFL公式選手プロフィール",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru-aki/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "hobby",
+        "label": "趣味",
+        "value": "アニメ、漫画、音楽鑑賞",
+        "basis": "本人回答（SFL公式Q&A・開幕前）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru-aki/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "selfComment",
+        "label": "本人コメント（プレイの見どころ）",
+        "value": "A.K.I.使いにしかわからない偉いポイント",
+        "basis": "本人回答（SFL公式Q&A「俺のプレイのここを見ろ！」・開幕前の自己申告）",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru-aki/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "sns",
+        "label": "SNS・外部リンク",
+        "value": [
+          {
+            "kind": "X",
+            "url": "https://x.com/hikaru_shiftne",
+            "basis": "SFL公式ロスター（CAPCOM eSports投稿の転載）"
+          },
+          {
+            "kind": "YouTube",
+            "url": "https://www.youtube.com/@hikaru_shiftne",
+            "basis": "SFL公式選手データのSNSリンク"
+          },
+          {
+            "kind": "Twitch",
+            "url": "https://www.twitch.tv/hikaru_shiftne",
+            "basis": "SFL公式選手データのSNSリンク"
+          }
+        ],
+        "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru-aki/",
+        "checkedOn": "2026-11-25"
+      }
+    ],
+    "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
+  }
+]

@@ -36,6 +36,9 @@ const supplements = loadSource('../src/components/player-detail-supplements.tsx'
   '../data/player-research/videos.json': esm([]),
   '../data/player-research/video-bindings.json': esm([]),
   '../data/player-research/research-bindings.json': esm({}),
+  // 2026-11-25: profile supplements are covered by sfl48-profile-character-videos-20261125.test.mjs.
+  '../data/player-research/profile-supplements.json': esm([]),
+  './player-profile-supplement': { boundProfileSupplement: () => null, PlayerProfileSupplementSection: () => null },
   // 2026-11-19: ローカル確認スイッチ。本テストは公開ゲートを検証するため常に無効(false)で読み込む
   '../lib/player-local-preview': { playerLocalPreviewEnabled: () => false },
 });

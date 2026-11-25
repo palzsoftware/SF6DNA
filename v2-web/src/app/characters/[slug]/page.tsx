@@ -25,6 +25,8 @@ import { getPreReleaseCharacter, preReleaseUnifiedProps } from "@/lib/pre-releas
 import type { DevicePreviewBundle } from "@/lib/device-preview";
 import { getWs5CharacterReview, getWs5StrategyMoveLinks, getWs5StrategyReviewDescriptions, getWs5ReviewedStrategyCards, withoutMotionMedia } from "@/lib/ws5-character-review";
 import { playerDirectoryHref } from "@/lib/player-directory-navigation";
+import { playerLocalPreviewEnabled } from "@/lib/player-local-preview";
+import { CharacterRegisteredVideos } from "@/components/character-registered-videos";
 import { videoEntityIdFromQuery } from "@/lib/video-player-filter";
 import type { CanonicalTxtRecord } from "@/lib/canonical-txt-connection.mjs";
 import { mergeOfficialTxtControlSchemeListings } from "@/lib/official-txt-control-scheme-merge";
@@ -147,7 +149,9 @@ export default async function CharacterPage({
   const strategyMoveLinks = review ? await getWs5StrategyMoveLinks(finalBundle, admission) : undefined;
   const characterId = review ? videoEntityIdFromQuery(character.id) : null;
   const combinedMoveEvidence = arjun?.moveEvidence ?? connectedTxt?.moveEvidence ?? moveEvidence;
-  return <CharacterUnifiedPage automaticVideos={<Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} /></Suspense>} character={character} bundle={finalBundle} players={players} videos={videos}
+  // Registered 解説/対戦 videos: APPROVED only, or pending rows in loopback local preview (same switch as Player図鑑).
+  const registeredVideoPreview = playerLocalPreviewEnabled(process.env, (await headers()).get("host"));
+  return <CharacterUnifiedPage automaticVideos={<><CharacterRegisteredVideos characterSlug={character.slug} preview={registeredVideoPreview} /><Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} /></Suspense></>} character={character} bundle={finalBundle} players={players} videos={videos}
     moveEvidence={combinedMoveEvidence}
     strategyMoveLinks={strategyMoveLinks} strategyReviewDescriptions={await getWs5StrategyReviewDescriptions(admission)} reviewedStrategyCards={await getWs5ReviewedStrategyCards(slug, admission)}
     playerDirectoryUrl={review ? reviewPlayerDirectoryUrl(character.slug) : undefined}

@@ -6766,7 +6766,15 @@
         "slug": "ed",
         "name": "エド"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "2:22:14",
+      "matchIdentifiedAt": "2:24:17",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 2 3rd PLAYER MATCH ADELIE vs FUUDO",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "daigo-BDKiKN1KD0s",
@@ -6786,7 +6794,15 @@
         "slug": "akuma",
         "name": "豪鬼"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "1:51:33",
+      "matchIdentifiedAt": "1:53:36",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 2 1st PLAYER MATCH HIKARU vs DAIGO",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "fuudo-BDKiKN1KD0s",
@@ -6806,7 +6822,15 @@
         "slug": "c-viper",
         "name": "C.ヴァイパー"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "2:22:14",
+      "matchIdentifiedAt": "2:24:17",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 2 3rd PLAYER MATCH ADELIE vs FUUDO",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "gachikun-BDKiKN1KD0s",
@@ -6826,7 +6850,15 @@
         "slug": "rashid",
         "name": "ラシード"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "3:07:52",
+      "matchIdentifiedAt": "3:09:55",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 3 2nd PLAYER MATCH TOKIDO vs GACHIKUN",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "hikaru-aki-BDKiKN1KD0s",
@@ -6846,7 +6878,15 @@
         "slug": "aki",
         "name": "A.K.I."
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "1:51:33",
+      "matchIdentifiedAt": "1:53:36",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 2 1st PLAYER MATCH HIKARU vs DAIGO",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "itabashi-zangief-BDKiKN1KD0s",
@@ -6866,7 +6906,15 @@
         "slug": "zangief",
         "name": "ザンギエフ"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "1:05:26",
+      "matchIdentifiedAt": "1:07:29",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 1 3rd PLAYER MATCH ITABASHI ZANGIEF vs OTANI",
+      "characterBasis": "video_confirmed",
+      "characterBasisNote": "1:07:43でザンギエフ対ルークを画面確認",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "john-takeuchi-BDKiKN1KD0s",
@@ -6886,7 +6934,15 @@
         "slug": "jamie",
         "name": "ジェイミー"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "44:24",
+      "matchIdentifiedAt": "46:24",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 1 1st PLAYER MATCH JOHN TAKEUCHI vs MOCCHI",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "jr-BDKiKN1KD0s",
@@ -6906,7 +6962,15 @@
         "slug": "zangief",
         "name": "ザンギエフ"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "2:05:51",
+      "matchIdentifiedAt": "2:07:51",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 2 2nd PLAYER MATCH JR. vs YAS",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "kawano-BDKiKN1KD0s",
@@ -6926,7 +6990,15 @@
         "slug": "luke",
         "name": "ルーク"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "3:23:41",
+      "matchIdentifiedAt": "3:25:44",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 3 3rd PLAYER MATCH WABIICHI vs KAWANO",
+      "characterBasis": "video_confirmed",
+      "characterBasisNote": "3:25:44でテリー対ルークを画面確認",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "keib-BDKiKN1KD0s",
@@ -6946,7 +7018,15 @@
         "slug": "mai",
         "name": "舞"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "53:39",
+      "matchIdentifiedAt": "55:42",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 1 2nd PLAYER MATCH KEI.B vs SEIYA",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "mago-BDKiKN1KD0s",
@@ -6966,7 +7046,15 @@
         "slug": "mai",
         "name": "舞"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "2:58:54",
+      "matchIdentifiedAt": "3:00:57",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 3 1st PLAYER MATCH MAGO vs SAHARA",
+      "characterBasis": "video_confirmed",
+      "characterBasisNote": "3:01:13でさはら側「LUKE WIN」を画面確認",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "mocchi-BDKiKN1KD0s",
@@ -6986,7 +7074,15 @@
         "slug": "akuma",
         "name": "豪鬼"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "44:24",
+      "matchIdentifiedAt": "46:24",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 1 1st PLAYER MATCH JOHN TAKEUCHI vs MOCCHI",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "otani-BDKiKN1KD0s",
@@ -7006,7 +7102,15 @@
         "slug": "luke",
         "name": "ルーク"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "1:05:26",
+      "matchIdentifiedAt": "1:07:29",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 1 3rd PLAYER MATCH ITABASHI ZANGIEF vs OTANI",
+      "characterBasis": "video_confirmed",
+      "characterBasisNote": "1:07:43でザンギエフ対ルークを画面確認",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "sahara-ed-BDKiKN1KD0s",
@@ -7026,7 +7130,15 @@
         "slug": "ed",
         "name": "エド"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "2:58:54",
+      "matchIdentifiedAt": "3:00:57",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 3 1st PLAYER MATCH MAGO vs SAHARA",
+      "characterBasis": "video_confirmed",
+      "characterBasisNote": "3:01:13でさはら側「LUKE WIN」を画面確認",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "seiya-BDKiKN1KD0s",
@@ -7046,7 +7158,15 @@
         "slug": "chun-li",
         "name": "春麗"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "53:39",
+      "matchIdentifiedAt": "55:42",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 1 2nd PLAYER MATCH KEI.B vs SEIYA",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "tokido-BDKiKN1KD0s",
@@ -7066,7 +7186,15 @@
         "slug": "jp",
         "name": "JP"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "3:07:52",
+      "matchIdentifiedAt": "3:09:55",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 3 2nd PLAYER MATCH TOKIDO vs GACHIKUN",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "wabiichi-BDKiKN1KD0s",
@@ -7086,7 +7214,15 @@
         "slug": "terry",
         "name": "テリー"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "3:23:41",
+      "matchIdentifiedAt": "3:25:44",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 3 3rd PLAYER MATCH WABIICHI vs KAWANO",
+      "characterBasis": "video_confirmed",
+      "characterBasisNote": "3:25:44でテリー対ルークを画面確認",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "yas-BDKiKN1KD0s",
@@ -7106,7 +7242,15 @@
         "slug": "ryu",
         "name": "リュウ"
       }
-    ]
+    ],
+    "matchEvidence": {
+      "chapterTime": "2:05:51",
+      "matchIdentifiedAt": "2:07:51",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 2 2nd PLAYER MATCH JR. vs YAS",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
   },
   {
     "key": "hikaru-aki-RbqPkG7nhDs",
@@ -7132,6 +7276,14 @@
       "youtubeId": "BDKiKN1KD0s",
       "startSeconds": null,
       "chapterNote": "概要欄の章 1:51:33・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "1:51:33",
+      "matchIdentifiedAt": "1:53:36",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 2 1st PLAYER MATCH HIKARU vs DAIGO",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
     }
   },
   {
@@ -7158,6 +7310,14 @@
       "youtubeId": "BDKiKN1KD0s",
       "startSeconds": null,
       "chapterNote": "概要欄の章 44:24・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "44:24",
+      "matchIdentifiedAt": "46:24",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 1 1st PLAYER MATCH JOHN TAKEUCHI vs MOCCHI",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
     }
   },
   {
@@ -7230,6 +7390,14 @@
       "youtubeId": "BDKiKN1KD0s",
       "startSeconds": null,
       "chapterNote": "概要欄の章 2:22:14・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "2:22:14",
+      "matchIdentifiedAt": "2:24:17",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 2 3rd PLAYER MATCH ADELIE vs FUUDO",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
     }
   },
   {
@@ -7282,6 +7450,14 @@
       "youtubeId": "BDKiKN1KD0s",
       "startSeconds": null,
       "chapterNote": "概要欄の章 53:39・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "53:39",
+      "matchIdentifiedAt": "55:42",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 1 2nd PLAYER MATCH KEI.B vs SEIYA",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
     }
   },
   {
@@ -7376,6 +7552,14 @@
       "youtubeId": "BDKiKN1KD0s",
       "startSeconds": null,
       "chapterNote": "概要欄の章 2:22:14・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "2:22:14",
+      "matchIdentifiedAt": "2:24:17",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 2 3rd PLAYER MATCH ADELIE vs FUUDO",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
     }
   },
   {
@@ -7501,6 +7685,14 @@
       "youtubeId": "BDKiKN1KD0s",
       "startSeconds": null,
       "chapterNote": "概要欄の章 44:24・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "44:24",
+      "matchIdentifiedAt": "46:24",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 1 1st PLAYER MATCH JOHN TAKEUCHI vs MOCCHI",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
     }
   },
   {
@@ -7605,6 +7797,14 @@
       "youtubeId": "BDKiKN1KD0s",
       "startSeconds": null,
       "chapterNote": "概要欄の章 2:58:54・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "2:58:54",
+      "matchIdentifiedAt": "3:00:57",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 3 1st PLAYER MATCH MAGO vs SAHARA",
+      "characterBasis": "video_confirmed",
+      "characterBasisNote": "3:01:13でさはら側「LUKE WIN」を画面確認",
+      "checkedOn": "2026-11-25"
     }
   },
   {
@@ -7631,6 +7831,14 @@
       "youtubeId": "BDKiKN1KD0s",
       "startSeconds": null,
       "chapterNote": "概要欄の章 1:05:26・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "1:05:26",
+      "matchIdentifiedAt": "1:07:29",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 1 3rd PLAYER MATCH ITABASHI ZANGIEF vs OTANI",
+      "characterBasis": "video_confirmed",
+      "characterBasisNote": "1:07:43でザンギエフ対ルークを画面確認",
+      "checkedOn": "2026-11-25"
     }
   },
   {
@@ -7699,6 +7907,14 @@
       "youtubeId": "BDKiKN1KD0s",
       "startSeconds": null,
       "chapterNote": "概要欄の章 2:58:54・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "2:58:54",
+      "matchIdentifiedAt": "3:00:57",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 3 1st PLAYER MATCH MAGO vs SAHARA",
+      "characterBasis": "video_confirmed",
+      "characterBasisNote": "3:01:13でさはら側「LUKE WIN」を画面確認",
+      "checkedOn": "2026-11-25"
     }
   },
   {
@@ -7792,6 +8008,14 @@
       "youtubeId": "BDKiKN1KD0s",
       "startSeconds": null,
       "chapterNote": "概要欄の章 3:07:52・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "3:07:52",
+      "matchIdentifiedAt": "3:09:55",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 3 2nd PLAYER MATCH TOKIDO vs GACHIKUN",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
     }
   },
   {
@@ -7890,6 +8114,14 @@
       "youtubeId": "BDKiKN1KD0s",
       "startSeconds": null,
       "chapterNote": "概要欄の章 1:05:26・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "1:05:26",
+      "matchIdentifiedAt": "1:07:29",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 1 3rd PLAYER MATCH ITABASHI ZANGIEF vs OTANI",
+      "characterBasis": "video_confirmed",
+      "characterBasisNote": "1:07:43でザンギエフ対ルークを画面確認",
+      "checkedOn": "2026-11-25"
     }
   },
   {
@@ -8156,5 +8388,407 @@
       }
     ],
     "startSeconds": 0
+  },
+  {
+    "key": "keib-awpc0ZUw9yQ",
+    "playerSlug": "keib",
+    "title": "SFL JAPAN 2026 Division F 第7節 Team Match 1 中堅戦",
+    "youtubeId": "awpc0ZUw9yQ",
+    "channelName": "Capcom Fighters JP",
+    "kind": "大会対戦",
+    "reason": "舞を使用（使用履歴として掲載。メイン・サブの判定ではありません）。対戦相手: Seiya（春麗）。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "",
+    "evidenceBasis": "フル配信の対戦カード映像確認（55:42・2026-11-25）＋公式単試合クリップ題名。",
+    "identityBinding": "2026-11-25 SF6DNA_SFL48_VIDEOS_DELTA_20261125.csv。既存のフル配信行と同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "mai",
+        "name": "舞"
+      }
+    ],
+    "startSeconds": 0,
+    "sameMatchFullStream": {
+      "youtubeId": "BDKiKN1KD0s",
+      "startSeconds": null,
+      "chapterNote": "概要欄の章 53:39・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "53:39",
+      "matchIdentifiedAt": "55:42",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 1 2nd PLAYER MATCH KEI.B vs SEIYA",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "tokido-wA5betZMs1c",
+    "playerSlug": "tokido",
+    "title": "SFL JAPAN 2026 Division F 第7節 Team Match 3 中堅戦",
+    "youtubeId": "wA5betZMs1c",
+    "channelName": "Capcom Fighters JP",
+    "kind": "大会対戦",
+    "reason": "JPを使用（使用履歴として掲載。メイン・サブの判定ではありません）。対戦相手: ガチくん（ラシード）。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "",
+    "evidenceBasis": "フル配信の対戦カード映像確認（3:09:55・2026-11-25）＋公式単試合クリップ題名。",
+    "identityBinding": "2026-11-25 SF6DNA_SFL48_VIDEOS_DELTA_20261125.csv。既存のフル配信行と同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "jp",
+        "name": "JP"
+      }
+    ],
+    "startSeconds": 0,
+    "sameMatchFullStream": {
+      "youtubeId": "BDKiKN1KD0s",
+      "startSeconds": null,
+      "chapterNote": "概要欄の章 3:07:52・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "3:07:52",
+      "matchIdentifiedAt": "3:09:55",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 3 2nd PLAYER MATCH TOKIDO vs GACHIKUN",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "daigo-RbqPkG7nhDs",
+    "playerSlug": "daigo",
+    "title": "SFL JAPAN 2026 Division F 第7節 Team Match 2 先鋒戦",
+    "youtubeId": "RbqPkG7nhDs",
+    "channelName": "Capcom Fighters JP",
+    "kind": "大会対戦",
+    "reason": "豪鬼を使用（使用履歴として掲載。メイン・サブの判定ではありません）。対戦相手: ひかる（A.K.I.）。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "",
+    "evidenceBasis": "フル配信の対戦カード映像確認（1:53:36・2026-11-25）＋公式単試合クリップ題名。",
+    "identityBinding": "2026-11-25 SF6DNA_SFL48_VIDEOS_DELTA_20261125.csv。既存のフル配信行と同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "akuma",
+        "name": "豪鬼"
+      }
+    ],
+    "startSeconds": 0,
+    "sameMatchFullStream": {
+      "youtubeId": "BDKiKN1KD0s",
+      "startSeconds": null,
+      "chapterNote": "概要欄の章 1:51:33・未照合"
+    },
+    "matchEvidence": {
+      "chapterTime": "1:51:33",
+      "matchIdentifiedAt": "1:53:36",
+      "matchIdentifiedBy": "画面上部オーバーレイの対戦カード：TEAM MATCH 2 1st PLAYER MATCH HIKARU vs DAIGO",
+      "characterBasis": "official_clip_title",
+      "characterBasisNote": "公式単試合クリップの題名で確認（映像の使用キャラは未確認）",
+      "checkedOn": "2026-11-25"
+    }
+  },
+  {
+    "key": "pugera-poeaDvvqapE",
+    "playerSlug": "pugera",
+    "title": "とりあえずコレ！ヤスミンを始める人に絶対見て欲しい“ヤスミン基本解説”【ぷげら/スト6】",
+    "youtubeId": "poeaDvvqapE",
+    "channelName": "ぷげら pugera",
+    "kind": "本人解説",
+    "reason": "ヤスミンについて本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-08-04",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "yasmine",
+        "name": "ヤスミン"
+      }
+    ]
+  },
+  {
+    "key": "nauman-ufMtYAzeyvU",
+    "playerSlug": "nauman",
+    "title": "【使い方＆対策】レジェンド到達のナウマン直伝！ヤスミンの高火力コンボ／強い行動／バヤニ・モード／対策",
+    "youtubeId": "ufMtYAzeyvU",
+    "channelName": "SmashlogTV - SF6",
+    "kind": "本人解説",
+    "reason": "ヤスミンについて本人が出演して解説している動画（メディア制作）。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-08-25",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "yasmine",
+        "name": "ヤスミン"
+      }
+    ]
+  },
+  {
+    "key": "acqua-dzV986Pekx0",
+    "playerSlug": "acqua",
+    "title": "【スト6、SF6】イングリッドとりこれ使い方講座！",
+    "youtubeId": "dzV986Pekx0",
+    "channelName": "ACQUA",
+    "kind": "本人解説",
+    "reason": "イングリッドについて本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-05-29",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "ingrid",
+        "name": "イングリッド"
+      }
+    ]
+  },
+  {
+    "key": "acqua-SgBhgRoufXk",
+    "playerSlug": "acqua",
+    "title": "【スト6、SF6】初心者向けランクSSS！エドモンド本田の使い方講座【モダン、クラシック】",
+    "youtubeId": "SgBhgRoufXk",
+    "channelName": "ACQUA",
+    "kind": "本人解説",
+    "reason": "エドモンド本田について本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2025-01-14",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "e-honda",
+        "name": "エドモンド本田"
+      }
+    ]
+  },
+  {
+    "key": "acqua-E5IUpL8Xl8w",
+    "playerSlug": "acqua",
+    "title": "【スト6、SF6】アルジュン対策『完成版』。これでもう困らない！",
+    "youtubeId": "E5IUpL8Xl8w",
+    "channelName": "ACQUA",
+    "kind": "本人解説",
+    "reason": "アルジュン（対策）について本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-10-18",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "arjun",
+        "name": "アルジュン"
+      }
+    ]
+  },
+  {
+    "key": "acqua-Zz8rMDbYuRw",
+    "playerSlug": "acqua",
+    "title": "【スト6、SF6】アルジュンはあのキャラの追加時の感覚に似ている…",
+    "youtubeId": "Zz8rMDbYuRw",
+    "channelName": "ACQUA",
+    "kind": "本人解説",
+    "reason": "アルジュンについて本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-24",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "arjun",
+        "name": "アルジュン"
+      }
+    ]
+  },
+  {
+    "key": "shuto-Bbu-9Kn0Dfs",
+    "playerSlug": "shuto",
+    "title": "【スト6】2年ぶりに復活！釈迦マリーザにコーチングするシュート【CR/シュート/釈迦/切り抜き/マリーザ】",
+    "youtubeId": "Bbu-9Kn0Dfs",
+    "channelName": "しゅーとチャンネル / Shuto",
+    "kind": "本人解説",
+    "reason": "マリーザについて本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-09-01",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "marisa",
+        "name": "マリーザ"
+      }
+    ]
+  },
+  {
+    "key": "shuto-eHHYEvLPIrQ",
+    "playerSlug": "shuto",
+    "title": "【スト６】マリーザはこう戦え！全１によるマリーザ解説！【シュート】",
+    "youtubeId": "eHHYEvLPIrQ",
+    "channelName": "しゅーとチャンネル / Shuto",
+    "kind": "本人解説",
+    "reason": "マリーザについて本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2023-06-04",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "marisa",
+        "name": "マリーザ"
+      }
+    ]
+  },
+  {
+    "key": "shuto-hzweo7_uwps",
+    "playerSlug": "shuto",
+    "title": "「マジで天才だろ…」16歳のアレックス使いに破壊されるシュート【CR/シュート/切り抜き/ルーク/SFL/SF6】",
+    "youtubeId": "hzweo7_uwps",
+    "channelName": "しゅーとチャンネル / Shuto",
+    "kind": "配信・ランクマ",
+    "reason": "ルークを使用（本人チャンネルの切り抜き。対戦相手の選手名は未確認）。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-18",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "luke",
+        "name": "ルーク"
+      }
+    ]
+  },
+  {
+    "key": "moke-F-1aeE0mRys",
+    "playerSlug": "moke",
+    "title": "【スト6】超実用的な舞の攻めを伝授！もけの舞講座：基本的な攻め方編【ストリートファイター6/SF6】",
+    "youtubeId": "F-1aeE0mRys",
+    "channelName": "もけあそび!",
+    "kind": "本人解説",
+    "reason": "舞について本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2026-11-24",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "mai",
+        "name": "舞"
+      }
+    ]
+  },
+  {
+    "key": "moke-6KHeYtKCnDo",
+    "playerSlug": "moke",
+    "title": "春麗が持つ特徴的な3つの技とその強さを解説するもけ【スト6】【もけ】",
+    "youtubeId": "6KHeYtKCnDo",
+    "channelName": "もけあそび!",
+    "kind": "本人解説",
+    "reason": "春麗について本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2024-12-13",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "chun-li",
+        "name": "春麗"
+      }
+    ]
+  },
+  {
+    "key": "gachikun-TP0pKLTMKDI",
+    "playerSlug": "gachikun",
+    "title": "今だからこそ解るガチくんのマノンへの評価…！？【スト6】",
+    "youtubeId": "TP0pKLTMKDI",
+    "channelName": "ガチくん /Gachikun",
+    "kind": "本人解説",
+    "reason": "マノンについて本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2024-04-23",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "manon",
+        "name": "マノン"
+      }
+    ]
+  },
+  {
+    "key": "gachikun-qsPAVjoWU3g",
+    "playerSlug": "gachikun",
+    "title": "【初心者向け】今更聞けないマノンの使い方をプロゲーマーガチくんが教えます！【スト６】",
+    "youtubeId": "qsPAVjoWU3g",
+    "channelName": "ガチくん /Gachikun",
+    "kind": "本人解説",
+    "reason": "マノンについて本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2023-09-28",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "manon",
+        "name": "マノン"
+      }
+    ]
+  },
+  {
+    "key": "pugera-uL5SnciAvpM",
+    "playerSlug": "pugera",
+    "title": "【前編】ファイあつ式ジュリ講座！ジュリ運用時のぷげらの考え方を紹介します【SF6】",
+    "youtubeId": "uL5SnciAvpM",
+    "channelName": "ぷげら pugera",
+    "kind": "本人解説",
+    "reason": "ジュリについて本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2025-03-14",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "juri",
+        "name": "ジュリ"
+      }
+    ]
+  },
+  {
+    "key": "sako-HIro8dvcINA",
+    "playerSlug": "sako",
+    "title": "【スト６】エレナで対処しづらいダルシム・マリーザのsako流ピンポイント対処法！【SF6】",
+    "youtubeId": "HIro8dvcINA",
+    "channelName": "sakonoko_game",
+    "kind": "本人解説",
+    "reason": "エレナ（vs ダルシム・マリーザ）について本人が解説している動画。",
+    "relationConfirmed": true,
+    "publicationApproval": "PENDING",
+    "sourceDate": "2025-12-16",
+    "evidenceBasis": "題名・チャンネル名・公開日（動画ページのメタデータ）。映像未確認（2026-11-25 SF6DNA_SFL48_VIDEOS_20261125.csv）",
+    "identityBinding": "2026-11-25 動画CSV。既存の確認済みバインディングと同じ選手IDで照合。",
+    "characterLinks": [
+      {
+        "slug": "elena",
+        "name": "エレナ"
+      }
+    ]
   }
 ]

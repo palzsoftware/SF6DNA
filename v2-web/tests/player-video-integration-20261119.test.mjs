@@ -156,6 +156,9 @@ function loadSupplements() {
     '../data/player-research/videos.json': esm(videos),
     '../data/player-research/video-bindings.json': esm(bindings),
     '../data/player-research/research-bindings.json': esm(read('research-bindings.json')),
+    // 2026-11-25: profile supplements are covered by sfl48-profile-character-videos-20261125.test.mjs.
+    '../data/player-research/profile-supplements.json': esm([]),
+    './player-profile-supplement': { boundProfileSupplement: () => null, PlayerProfileSupplementSection: 'PlayerProfileSupplementSection' },
   };
   const m = { exports: {} };
   new Function('module', 'exports', 'require', js)(m, m.exports, n => { assert.ok(n in deps, n); return deps[n]; });
