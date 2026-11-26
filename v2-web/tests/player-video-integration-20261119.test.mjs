@@ -38,7 +38,9 @@ test('Playerカード: 追加行はすべて PENDING、環境・ID・slugが正�
 test('Playerカード: 大会使用キャラとメイン/サブを別ラベルで持つ', () => {
   const labels = new Set(team.flatMap(r => r.display.facts.map(f => f.label)));
   for (const label of labels) {
-    assert.ok(['SFL2026での使用キャラクター', '主要大会での使用キャラクター', '使用キャラクター（ユーザー指定）', 'メインキャラクター', 'サブキャラクター'].includes(label), label);
+    assert.ok(['SFL2026での使用キャラクター', '主要大会での使用キャラクター', '使用キャラクター（ユーザー指定）', 'メインキャラクター', 'サブキャラクター'].includes(label)
+      // 2026-11-26 V26: 現在の所属と大会登録時のチームを別ラベルで持つ(承認14名の行のみ)
+      || label === '現在の所属' || /^大会登録チーム（.+）$/.test(label), label);
   }
   for (const row of team) {
     const ls = row.display.facts.map(f => f.label);

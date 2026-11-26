@@ -1,0 +1,89 @@
+[
+ {
+  "targetSlug": "problem-x",
+  "displayName": "Problem X",
+  "countryCodeCandidate": "GB",
+  "identityReview": "PENDING_FINAL_ALIAS_AND_SOURCE_REVIEW",
+  "state": "HOLD_NO_DEV_ROW",
+  "factsCandidate": [
+   {
+    "label": "主要大会での使用キャラクター",
+    "value": "イングリッド、アレックス"
+   },
+   {
+    "label": "大会登録チーム（SFL EMEAA 2026）",
+    "value": "Mouz"
+   }
+  ],
+  "publicationApproval": "PENDING"
+ },
+ {
+  "targetSlug": "oil-king",
+  "displayName": "Oil King",
+  "countryCodeCandidate": "TW",
+  "identityReview": "PENDING_FINAL_ALIAS_AND_SOURCE_REVIEW",
+  "state": "HOLD_NO_DEV_ROW",
+  "factsCandidate": [
+   {
+    "label": "主要大会での使用キャラクター",
+    "value": "テリー、ラシード"
+   }
+  ],
+  "publicationApproval": "PENDING"
+ },
+ {
+  "targetSlug": "kusanagi",
+  "displayName": "Kusanagi",
+  "countryCodeCandidate": "FR",
+  "identityReview": "FR_ONLY_EXCLUDE_CENTRAL_AMERICA_WEST",
+  "state": "HOLD_NO_DEV_ROW",
+  "factsCandidate": [
+   {
+    "label": "主要大会での使用キャラクター",
+    "value": "舞"
+   },
+   {
+    "label": "大会登録チーム（SFL EMEAA 2026）",
+    "value": "Team Falcons"
+   }
+  ],
+  "publicationApproval": "PENDING"
+ },
+ {
+  "targetSlug": "broski",
+  "displayName": "Broski",
+  "countryCodeCandidate": "GB",
+  "identityReview": "PENDING_FINAL_ALIAS_AND_SOURCE_REVIEW",
+  "state": "HOLD_NO_DEV_ROW",
+  "factsCandidate": [
+   {
+    "label": "主要大会での使用キャラクター",
+    "value": "JP"
+   }
+  ],
+  "publicationApproval": "PENDING"
+ },
+ {
+  "targetSlug": "xian",
+  "displayName": "Xian",
+  "countryCodeCandidate": "SG",
+  "identityReview": "PENDING_FINAL_ALIAS_AND_SOURCE_REVIEW",
+  "state": "HOLD_NO_DEV_ROW",
+  "factsCandidate": [
+   {
+    "label": "大会登録チーム（SFL EMEAA 2026）",
+    "value": "GTW"
+   }
+  ],
+  "publicationApproval": "PENDING"
+ },
+ {
+  "targetSlug": "luffy",
+  "displayName": "Luffy",
+  "countryCodeCandidate": "FR",
+  "identityReview": "PENDING_FINAL_ALIAS_AND_SOURCE_REVIEW",
+  "state": "HOLD_NO_DEV_ROW",
+  "factsCandidate": [],
+  "publicationApproval": "PENDING"
+ }
+]

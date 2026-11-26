@@ -5433,5 +5433,162 @@
       "sections": []
     },
     "note": "主要大会Top8選手。本番登録済みIDに接続(2026-11-19)。PENDINGのため非表示。順位の出典が矛盾するため実績はHOLD。"
+  },
+  {
+    "playerId": "77d50854-04a2-46be-88fb-f86fe9d9177d",
+    "playerSlug": "xiaohai",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "xiaohai",
+      "name": "Xiaohai",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "舞"
+        },
+        {
+          "label": "主要大会での使用キャラクター",
+          "value": "豪鬼、ジュリ、JP"
+        },
+        {
+          "label": "大会登録チーム（SFL EMEAA 2026）",
+          "value": "Team Falcons"
+        }
+      ],
+      "sections": []
+    },
+    "note": "V26承認14名(2026-11-26)。開発draftを再利用。本番UUIDなし。subは正式確認なし、大会実績・動画・研究は照合待ちのため未接続。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "7e1a49d6-e495-488b-b8ff-629f45dcc8f8",
+    "playerSlug": "vxbao",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "vxbao",
+      "name": "Vxbao",
+      "intro": null,
+      "facts": [
+        {
+          "label": "主要大会での使用キャラクター",
+          "value": "ベガ"
+        },
+        {
+          "label": "大会登録チーム（SFL EMEAA 2026）",
+          "value": "Team Falcons"
+        }
+      ],
+      "sections": []
+    },
+    "note": "V26承認14名(2026-11-26)。開発draftを再利用。本番UUIDなし。subは正式確認なし、大会実績・動画・研究は照合待ちのため未接続。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "6fcc0db3-10bc-4d23-8701-2b00349ccab0",
+    "playerSlug": "haitani",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "haitani",
+      "name": "ハイタニ / HAITANI",
+      "intro": null,
+      "facts": [
+        {
+          "label": "現在の所属",
+          "value": "REJECT"
+        }
+      ],
+      "sections": []
+    },
+    "note": "V26承認14名(2026-11-26)。開発draftを再利用。本番UUIDなし。subは正式確認なし、大会実績・動画・研究は照合待ちのため未接続。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "15140d85-7ef7-4fea-b49f-60d3006ce0eb",
+    "playerSlug": "angrybird",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "angrybird",
+      "name": "AngryBird",
+      "intro": null,
+      "facts": [
+        {
+          "label": "大会登録チーム（SFL EMEAA 2026）",
+          "value": "Red Dunes"
+        }
+      ],
+      "sections": []
+    },
+    "note": "V26承認14名(2026-11-26)。開発draftを再利用。本番UUIDなし。subは正式確認なし、大会実績・動画・研究は照合待ちのため未接続。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "4447cd18-265a-4c06-8fa5-b771b06d4cb9",
+    "playerSlug": "nl",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "nl",
+      "name": "NL",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "豪鬼"
+        },
+        {
+          "label": "大会登録チーム（SFL EMEAA 2026）",
+          "value": "MVS"
+        }
+      ],
+      "sections": []
+    },
+    "note": "V26承認14名(2026-11-26)。開発draftを再利用。本番UUIDなし。subは正式確認なし、大会実績・動画・研究は照合待ちのため未接続。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "6838bbb3-6c71-4170-bb7e-15d25717fc7e",
+    "playerSlug": "nuckledu",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "nuckledu",
+      "name": "NuckleDu",
+      "intro": null,
+      "facts": [
+        {
+          "label": "メインキャラクター",
+          "value": "ガイル（公式プロフィールの記載・2026-11-26確認）"
+        },
+        {
+          "label": "主要大会での使用キャラクター",
+          "value": "舞"
+        },
+        {
+          "label": "現在の所属",
+          "value": "Shopify Rebellion"
+        }
+      ],
+      "sections": []
+    },
+    "note": "V26承認14名(2026-11-26)。開発draftを再利用。本番UUIDなし。subは正式確認なし、大会実績・動画・研究は照合待ちのため未接続。PENDINGのため非表示。"
+  },
+  {
+    "playerId": "5f568260-4453-49f5-882b-fe0f3dd30da3",
+    "playerSlug": "juicyjoe",
+    "publicationApproval": "PENDING",
+    "environment": "vvsknbmlfvvnrmgtyhbf",
+    "display": {
+      "slug": "juicyjoe",
+      "name": "Juicyjoe",
+      "intro": null,
+      "facts": [
+        {
+          "label": "大会登録チーム（SFL EMEAA 2026）",
+          "value": "Red Dunes"
+        }
+      ],
+      "sections": []
+    },
+    "note": "V26承認14名(2026-11-26)。開発draftを再利用。本番UUIDなし。subは正式確認なし、大会実績・動画・研究は照合待ちのため未接続。PENDINGのため非表示。"
   }
 ]

@@ -19,8 +19,10 @@ test("all current Remote history versions have unique 14-digit Local markers", (
   // (20261120115000 move_commands SECURITY DEFINER source check, 20261120116000 preview RPC source boundary,
   //  20261120117000 public content policies off inline source reads (2026-11-25; no-op on Production),
   //  20261120120000 source boundary REVOKE). They must be applied together, in this order.
-  assert.equal(remoteAligned.length, 200);
-  assert.equal(new Set(versions).size, 200);
+  // 2026-11-26 (V26): + 20261126100000 entity_videos public target boundary (independent candidate, not applied).
+  //  Production DDL check 2026-11-26: 115000 is also safe on its own (no grant change); 116000 is only needed before 120000.
+  assert.equal(remoteAligned.length, 201);
+  assert.equal(new Set(versions).size, 201);
 });
 
 test("Prod-only ledger versions are back-ported to Git and Git-only versions are explicit candidates", () => {

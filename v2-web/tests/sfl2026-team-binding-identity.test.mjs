@@ -48,10 +48,11 @@ const approve = rows => rows.map(row => ({ ...row, publicationApproval: 'APPROVE
 
 test('all 48 SFL2026 team rows resolve to unique Development UUID+slug identities', () => {
   // 2026-11-19: SFL2026の48行に限定して検証する(ユーザー提供の11名の行は note で区別し、別テストで検証)
-  const resolved = resolveTeamBindingIdentities(teamBindings.filter(r => !String(r.note ?? '').startsWith('メイン・サブは2026-11-18')), DEV);
+  const resolved = resolveTeamBindingIdentities(teamBindings.filter(r => !/^(メイン・サブは2026-11-18|V26承認14名)/.test(String(r.note ?? ''))), DEV);
   assert.equal(resolved.length, 48);
   // 除外したのはユーザー提供11名の行だけで、仮slug・identityVariantsを持つ行は除外されていないこと
-  const excluded = teamBindings.filter(r => r.environment === DEV && String(r.note ?? '').startsWith('メイン・サブは2026-11-18'));
+  // 2026-11-26: V26承認14名のうち開発draftがある行(別テスト v26-player14-bindings で検証)も除外対象に含める
+  const excluded = teamBindings.filter(r => r.environment === DEV && /^(メイン・サブは2026-11-18|V26承認14名)/.test(String(r.note ?? '')));
   assert.ok(excluded.every(r => !r.identityVariants && !/^sfl2026-\d+$/.test(r.playerSlug)));
   assert.equal(teamBindings.filter(r => r.environment === DEV).length, 48 + excluded.length);
   assert.equal(new Set(resolved.map(r => r.playerId)).size, 48);
