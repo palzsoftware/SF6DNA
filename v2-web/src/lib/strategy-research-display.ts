@@ -1,5 +1,6 @@
 import lukeDisplay from "./luke-strategy-display-20261118.json";
 import commandIcons from "../data/strategy-card-command-icons-20261120.json";
+import commandIconsV8 from "../data/strategy-card-command-icons-v8-20261126.json";
 import type { StrategyResearchCard } from "./strategy-research-contract";
 export type StrategyMetric = { label: string; value: string };
 export type StrategyIconStep = { kind: "command" | "text" | "opponent"; value: string };
@@ -9,7 +10,10 @@ const overlays: Record<string, StrategyDisplay> = lukeDisplay;
 // classic command; walking/guarding/hit-confirm etc. are supporting text; the opponent's moves stay separate.
 // Missing card = HOLD ("コマンド確認中"), never guessed.
 type GeneratedStep = { command?: string; text?: string; opponent?: string };
-const generatedIcons = (commandIcons as { cards: Record<string, readonly GeneratedStep[]> }).cards;
+const generatedIcons: Record<string, readonly GeneratedStep[]> = {
+  ...(commandIcons as { cards: Record<string, readonly GeneratedStep[]> }).cards,
+  ...(commandIconsV8 as { cards: Record<string, readonly GeneratedStep[]> }).cards,
+};
 const toStep = (step: GeneratedStep): StrategyIconStep | null =>
   step.command ? { kind: "command", value: step.command } : step.opponent ? { kind: "opponent", value: step.opponent } : step.text ? { kind: "text", value: step.text } : null;
 export function strategyCommandIconSteps(card: StrategyResearchCard): readonly StrategyIconStep[] | null {
@@ -26,5 +30,7 @@ export function strategyResearchDisplay(card: StrategyResearchCard): StrategyDis
   if (known && card.characterSlug === "luke") return { ...known, iconSteps: strategyCommandIconSteps(card) };
   const s = card.reportedStats;
   const metrics = card.category === "combo" ? [{label:"ダメージ",value:reference(s.damage)},{label:"D消費",value:reference(s.drive)},{label:"SA消費",value:reference(s.sa)}] : card.category === "setplay" ? [unknown("ダウン有利"),unknown("ガード有利"),unknown("D消費")] : card.category === "pressure" ? [unknown("始動技ガード時"),unknown("割り込み猶予"),unknown("連続ガード")] : [unknown("相手ガード時"),unknown("反撃猶予"),unknown("距離条件")];
+  // Only figures the cited source/official table states are shown (verbatim); no value is computed or filled in.
+  if (card.frameNotes?.length) metrics.push({ label: "有利F（資料記載）", value: card.frameNotes.join(" ／ ") });
   return {title:card.title,iconInput:card.commandRaw,iconSteps:strategyCommandIconSteps(card),description:card.description,condition:card.condition,commandRole:card.category === "counter" ? "参考手順（主体要確認）" : "参考入力手順",metrics,controlLabel:card.controlLabel,commandJapanese:card.commandJapanese,referenceNotice:card.referenceNotice};
 }

@@ -72,6 +72,8 @@ export async function getWs5StrategyReviewDescriptions(admission: Ws5LocalAdmiss
 export async function getWs5ReviewedStrategyCards(slug: string, admission: Ws5LocalAdmission) {
   if (!isWs5LocalCardRequest(admission)) return undefined;
   const { default: cards } = await import('@/data/ws5-local-reviewed-strategy-cards.json');
-  return (cards as readonly import('./strategy-research-contract').StrategyResearchCard[])
+  // V8: 2,003 product-reflection candidates (V7 ledger). Same local-admission path; ids are prefixed "v7-ref:".
+  const { default: v7Cards } = await import('@/data/strategy-v7-reviewed-cards-20261126.json');
+  return ([...(cards as readonly import('./strategy-research-contract').StrategyResearchCard[]), ...(v7Cards as readonly import('./strategy-research-contract').StrategyResearchCard[])])
     .filter(card => card.characterSlug === slug);
 }

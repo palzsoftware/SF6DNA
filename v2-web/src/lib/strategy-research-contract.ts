@@ -11,6 +11,8 @@ export type StrategyResearchCard = {
   condition: string; position: string; reportedStats: ReferenceStats; verifiedStats: ReferenceStats;
   referenceVersion: string; sourceUrl: string | null; sourceUrls: string[]; media: null;
   referenceNotice: string; commandNotice: string; caution: string | null;
+  /** Frame figures quoted by the cited source/official table, shown verbatim (never computed or filled in). */
+  frameNotes?: readonly string[];
 };
 const cards = rawCards as readonly StrategyResearchCard[];
 const categoryBySlot: Record<StrategySlotKind, ResearchCardCategory> = {

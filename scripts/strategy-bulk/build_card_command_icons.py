@@ -65,11 +65,14 @@ def projectile_parent(master, key):
     return parents[0] if len(parents) == 1 else None
 
 
-def load_abbreviations(path):
+ADOPTED_STATUSES = ("CC1_ADOPTED_ROUND16", "V8_ADOPTED_UNIQUE_20261126")
+
+
+def load_abbreviations(paths):
     table = {}
-    if path:
+    for path in paths or []:
         for row in csv.DictReader(path.open(encoding="utf-8-sig")):
-            if row["status"] == "CC1_ADOPTED_ROUND16" and row["moveKey"]:
+            if row["status"] in ADOPTED_STATUSES and row["moveKey"]:
                 table[(row["characterSlug"], row["abbreviation"])] = row["moveKey"]
     return table
 
@@ -126,7 +129,7 @@ def main():
     parser.add_argument("--master", type=Path, required=True)
     parser.add_argument("--aliases", type=Path, required=True)
     parser.add_argument("--same-label-pairs", type=Path, required=True)
-    parser.add_argument("--abbreviations", type=Path, help="STRATEGY_ABBREVIATION_CANDIDATES csv (unique-prefix rows)")
+    parser.add_argument("--abbreviations", type=Path, nargs="*", help="STRATEGY_ABBREVIATION_CANDIDATES csv (unique-prefix rows)")
     parser.add_argument("--hold-ids", type=Path, help="strategy-reference-source-hold JSON (reported, not skipped)")
     parser.add_argument("--out-json", type=Path, required=True)
     parser.add_argument("--report", type=Path, required=True)
