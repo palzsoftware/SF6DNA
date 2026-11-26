@@ -31,7 +31,8 @@ test('V26: main only from an official profile (2) or dated basis (1 new); no sub
   assert.match(v26.find(r => r.playerSlug === 'nuckledu').display.facts[0].value, /公式プロフィールの記載・2026-11-26確認/);
   assert.ok(!labels.some(([, l]) => /サブ/.test(l)));
   assert.ok(labels.every(([, l]) => ['メインキャラクター', '主要大会での使用キャラクター', '現在の所属'].includes(l) || /^大会登録チーム（.+）$/.test(l)));
-  assert.ok(v26.every(r => r.display.sections.length === 0 && r.display.intro === null));
+  // V29: the only allowed section is the major-tournament title, holding Capcom-official CPT results re-checked on 2026-11-26.
+  assert.ok(v26.every(r => r.display.intro === null && r.display.sections.every(s => s.title === '主要大会の個人成績' && s.items.every(i => i.sourceCheckedOn === '2026-11-26' && /^https:\/\/sf\.esports\.capcom\.com\/cpt\/news\//.test(i.sourceUrl)))));
   assert.ok(!JSON.stringify(v26.map(r => r.display)).match(/twitter\.com|x\.com|twitch\.tv|youtube\.com/));
   // 現在所属と大会登録チームは別ラベル
   assert.ok(v26.every(r => r.display.facts.filter(f => f.label === '現在の所属').length <= 1));

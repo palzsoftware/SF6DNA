@@ -269,6 +269,17 @@
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
             }
           ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "CAPCOM CUP X: 3位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/240314_cpt2024.html",
+              "researchId": "R20261126-CCX-03",
+              "sourceCheckedOn": "2026-11-26"
+            }
+          ]
         }
       ]
     },
@@ -655,6 +666,17 @@
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
             }
           ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "CAPCOM CUP X: 同率7位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/240314_cpt2024.html",
+              "researchId": "R20261126-CCX-07",
+              "sourceCheckedOn": "2026-11-26"
+            }
+          ]
         }
       ]
     },
@@ -777,6 +799,12 @@
               "sourceUrl": "https://evo.gg/news/evo-2025-street-fighter-6-recap/",
               "researchId": "A_2025-07",
               "sourceCheckedOn": "2026-11-17"
+            },
+            {
+              "text": "EVO 2023: 2位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/230816_evo.html",
+              "researchId": "R20261126-EVO23-02",
+              "sourceCheckedOn": "2026-11-26"
             }
           ]
         }
@@ -2485,6 +2513,12 @@
               "sourceUrl": "https://www.inside-games.jp/release/prtimes/20260818/302058.html",
               "researchId": "R20261117-CEO26-01",
               "sourceCheckedOn": "2026-11-17"
+            },
+            {
+              "text": "EVO 2023: 4位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/230816_evo.html",
+              "researchId": "R20261126-EVO23-04",
+              "sourceCheckedOn": "2026-11-26"
             }
           ]
         }
@@ -2862,6 +2896,17 @@
             {
               "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 6位 トキドフレイム",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "CAPCOM CUP X: 3位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/240314_cpt2024.html",
+              "researchId": "R20261126-CCX-03",
+              "sourceCheckedOn": "2026-11-26"
             }
           ]
         }
@@ -3250,6 +3295,17 @@
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/"
             }
           ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "CAPCOM CUP X: 同率7位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/240314_cpt2024.html",
+              "researchId": "R20261126-CCX-07",
+              "sourceCheckedOn": "2026-11-26"
+            }
+          ]
         }
       ]
     },
@@ -3372,6 +3428,12 @@
               "sourceUrl": "https://evo.gg/news/evo-2025-street-fighter-6-recap/",
               "researchId": "A_2025-07",
               "sourceCheckedOn": "2026-11-17"
+            },
+            {
+              "text": "EVO 2023: 2位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/230816_evo.html",
+              "researchId": "R20261126-EVO23-02",
+              "sourceCheckedOn": "2026-11-26"
             }
           ]
         }
@@ -3640,6 +3702,17 @@
             {
               "text": "ストリートファイターリーグ: Pro-JP operated by RAGE 4位 ウメハラゴールド",
               "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/"
+            }
+          ]
+        },
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO 2023: 同率7位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/230816_evo.html",
+              "researchId": "R20261126-EVO23-07",
+              "sourceCheckedOn": "2026-11-26"
             }
           ]
         }
@@ -4748,6 +4821,12 @@
               "sourceUrl": "https://www.inside-games.jp/release/prtimes/20260818/302058.html",
               "researchId": "R20261117-CEO26-01",
               "sourceCheckedOn": "2026-11-17"
+            },
+            {
+              "text": "EVO 2023: 4位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/230816_evo.html",
+              "researchId": "R20261126-EVO23-04",
+              "sourceCheckedOn": "2026-11-26"
             }
           ]
         }
@@ -5154,7 +5233,19 @@
           "value": "JP"
         }
       ],
-      "sections": []
+      "sections": [
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO 2023: 同率5位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/230816_evo.html",
+              "researchId": "R20261126-EVO23-05",
+              "sourceCheckedOn": "2026-11-26"
+            }
+          ]
+        }
+      ]
     },
     "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
   },
@@ -5177,7 +5268,19 @@
           "value": "エド、ルーク"
         }
       ],
-      "sections": []
+      "sections": [
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "CAPCOM CUP X: 5位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/240314_cpt2024.html",
+              "researchId": "R20261126-CCX-05",
+              "sourceCheckedOn": "2026-11-26"
+            }
+          ]
+        }
+      ]
     },
     "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
   },
@@ -5200,7 +5303,19 @@
           "value": "エド、ルーク"
         }
       ],
-      "sections": []
+      "sections": [
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "CAPCOM CUP X: 5位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/240314_cpt2024.html",
+              "researchId": "R20261126-CCX-05",
+              "sourceCheckedOn": "2026-11-26"
+            }
+          ]
+        }
+      ]
     },
     "note": "メイン・サブは2026-11-18ユーザー直接提供。サブ未回答は表示しない。PENDINGのため非表示。"
   },
@@ -5312,6 +5427,12 @@
             {
               "text": "EVO Japan 2026: 2位",
               "sourceUrl": "https://www.shacknews.com/article/148960/evo-japan-2026-winners-top-8"
+            },
+            {
+              "text": "EVO 2023: 3位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/230816_evo.html",
+              "researchId": "R20261126-EVO23-03",
+              "sourceCheckedOn": "2026-11-26"
             }
           ]
         }
@@ -5499,7 +5620,19 @@
           "value": "REJECT"
         }
       ],
-      "sections": []
+      "sections": [
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO 2023: 同率5位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/230816_evo.html",
+              "researchId": "R20261126-EVO23-06",
+              "sourceCheckedOn": "2026-11-26"
+            }
+          ]
+        }
+      ]
     },
     "note": "V26承認14名(2026-11-26)。開発draftを再利用。本番UUIDなし。subは正式確認なし、大会実績・動画・研究は照合待ちのため未接続。PENDINGのため非表示。"
   },
@@ -5518,7 +5651,19 @@
           "value": "Red Dunes"
         }
       ],
-      "sections": []
+      "sections": [
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "EVO 2023: 優勝",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/230816_evo.html",
+              "researchId": "R20261126-EVO23-01",
+              "sourceCheckedOn": "2026-11-26"
+            }
+          ]
+        }
+      ]
     },
     "note": "V26承認14名(2026-11-26)。開発draftを再利用。本番UUIDなし。subは正式確認なし、大会実績・動画・研究は照合待ちのため未接続。PENDINGのため非表示。"
   },
@@ -5541,7 +5686,19 @@
           "value": "MVS"
         }
       ],
-      "sections": []
+      "sections": [
+        {
+          "title": "主要大会の個人成績",
+          "items": [
+            {
+              "text": "CAPCOM CUP X: 4位",
+              "sourceUrl": "https://sf.esports.capcom.com/cpt/news/240314_cpt2024.html",
+              "researchId": "R20261126-CCX-04",
+              "sourceCheckedOn": "2026-11-26"
+            }
+          ]
+        }
+      ]
     },
     "note": "V26承認14名(2026-11-26)。開発draftを再利用。本番UUIDなし。subは正式確認なし、大会実績・動画・研究は照合待ちのため未接続。PENDINGのため非表示。"
   },

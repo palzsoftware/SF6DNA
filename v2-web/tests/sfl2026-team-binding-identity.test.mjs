@@ -102,7 +102,10 @@ test('card connection: every one of the 48 attaches a non-blank archive once app
     const out = attachPlayerTeamResults(player(r.playerId, r.playerSlug), DEV, rows).archiveDisplay;
     return out?.slug === r.playerSlug && out.sections.some(s => s.items.some(i => String(i.text).trim()));
   });
-  assert.equal(connected.length, 48);
+  // V29: 5 rows are connected only through the 2026-11-26 CPT official results (EVO 2023 / CAPCOM CUP X); the SFL2026 48 stay connected.
+  const V29_ONLY = ['angrybird', 'haitani', 'kakeru', 'leshar', 'nl'];
+  assert.equal(connected.length, 48 + V29_ONLY.length);
+  assert.deepEqual(V29_ONLY.filter(slug => !connected.some(r => r.playerSlug === slug)), []);
   // Still PENDING in the shipped data: nothing attaches for any of them.
   assert.equal(resolved.filter(r => attachPlayerTeamResults(player(r.playerId, r.playerSlug), DEV).archiveDisplay).length, 0);
 });
