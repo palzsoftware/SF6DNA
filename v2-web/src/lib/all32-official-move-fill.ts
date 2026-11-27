@@ -19,6 +19,9 @@ const sourceKeyOf = (move: Move): string | null => {
   if (key) return key;
   return move.id.startsWith("sf6dna-preview:") ? decodeURIComponent(move.id.split(":").slice(2).join(":")) : null;
 };
+/** Display name of a new official-row card: drops an empty "（）" left by the official source and collapses repeated spaces.
+ * The row key, values and every other field stay as the official data has them. */
+export const officialMoveDisplayName = (name: string) => name.replace(/[（(]\s*[）)]/g, "").replace(/\s{2,}/g, " ").trim();
 /** Official rows whose input cell only says the move comes out on its own, e.g. "（疾駆けで相手に一定距離まで近付くと自動派生）". */
 const AUTO_DERIVED = /^（(.+自動派生)）$/;
 export const AUTO_DERIVED_COMMAND_TEXT = "自動派生（個別入力なし）";
@@ -87,7 +90,7 @@ export function withAll32OfficialMoveFill(bundle: DevicePreviewBundle, character
       else if (value) { frame[field] = value; frameFieldStatus[field] = LOCAL_OFFICIAL_FRAME_STATUS; }
       else frameFieldStatus[field] = "OFFICIAL_NOT_LISTED";
     }
-    return { id, slug: `${characterSlug}-official-20261124-${index + 1}`, name: row.n, moveType: row.t, usageSummary: null,
+    return { id, slug: `${characterSlug}-official-20261124-${index + 1}`, name: officialMoveDisplayName(row.n), moveType: row.t, usageSummary: null,
       releaseFixture: false, status: "draft", frame: frame as Move["frame"], frameFieldStatus: frameFieldStatus as Move["frameFieldStatus"],
       commands: (["classic", "modern"] as const).flatMap((scheme, sortOrder) => row.i[scheme]
         ? [withAutoDerivedCommand({ moveId: id, scheme, commandText: row.i[scheme] as string, numericNotation: null, buttonNotation: null, conditionText: null, sortOrder })] : []),

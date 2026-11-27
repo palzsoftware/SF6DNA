@@ -18,7 +18,7 @@ function realModule(file) {
   return result.exports;
 }
 const data = JSON.parse(readFileSync(new URL("../src/data/SF6DNA_ALL32_OFFICIAL_MOVE_FILL_20261125.json", import.meta.url), "utf8"));
-const { withAll32OfficialMoveFill } = realModule("lib/all32-official-move-fill.ts");
+const { withAll32OfficialMoveFill, officialMoveDisplayName } = realModule("lib/all32-official-move-fill.ts");
 const { unifiedFrameValue } = realModule("lib/character-unified-contract.ts");
 
 test("data: every official row of all 32 characters (2672), one record per source key, ids stable", () => {
@@ -87,4 +87,18 @@ test("old rows: a card whose official source key is not in the latest table leav
   assert.deepEqual(out.heldOldRows.map(r => [r.id, r.sourceKey]), [["old", "ryu:sha:3f62f456a4fc6c6a30d5"]]);
   const untouched = withAll32OfficialMoveFill(bundle([old]), "unknown", fixture);
   assert.equal(untouched.bundle.moves.length, 1, "characters without official rows are left as they are");
+});
+
+test("V36 display names: empty （） and repeated spaces are dropped from new cards only; the official value 10982 (Elena STEP row) is never a displayed frame field", () => {
+  assert.equal(officialMoveDisplayName("ジャンプ弱K（）"), "ジャンプ弱K");
+  assert.equal(officialMoveDisplayName("強  百鬼豪刃"), "強 百鬼豪刃");
+  assert.equal(officialMoveDisplayName("立ち中P （フック）"), "立ち中P （フック）", "non-empty parentheses are kept");
+  const row = { ...record, k: "c-viper:sha:706b2fdab5586b46fc8f", n: "ジャンプ弱K（）", i: {}, h: "empty-paren" };
+  const out = withAll32OfficialMoveFill(bundle([]), "c-viper", { ...fixture, byCharacter: { "c-viper": [row] } });
+  assert.equal(out.bundle.moves[0].name, "ジャンプ弱K");
+  assert.equal(out.bundle.moves[0].officialFrameKey, "c-viper:sha:706b2fdab5586b46fc8f", "the official key is unchanged");
+  // "total" is not a displayed field, so the odd official total 10982 cannot reach a card; every displayed field stays plausible.
+  for (const [char, list] of Object.entries(data.byCharacter)) for (const r of list) for (const f of ["startup", "active", "recovery", "onHit", "onBlock"]) {
+    assert.ok(!/\d{4,}/.test(String(r.v[f] ?? "")), `${char}:${r.n}:${f}`);
+  }
 });

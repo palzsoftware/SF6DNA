@@ -1,0 +1,12 @@
+{
+  "status": "CANDIDATE_NOT_WIRED",
+  "note": "15分練習の初心者向け補足候補。既存の『仮目標』は変更しない。数値は既存の仮目標（10回中7〜8回）の段階的な前段で、ゲームの性能・成立条件の主張ではない。接続先: DailyTrainingDetail の successCondition に1行追加、または daily-training-quality.ts のガイドとして表示。",
+  "beginnerNote": "慣れないうちは『10回中5回』を最初の目安にして、できたら既存の仮目標へ進みます。回数を数えにくい場合は、2回連続で狙いどおりにできたら次へ進みます。",
+  "appliesTo": ["anti_air", "drive_rush_defense", "impact_response", "punish", "defense", "offense", "execution", "neutral", "corner_defense", "decision"],
+  "explanationOnlyKeys": ["meter", "matchup", "knowledge", "habit", "review"],
+  "explanationOnlyNote": "説明型の5種は回数目標がないため補足なし。『1つ説明できれば達成』のままにする。",
+  "setupWording": {
+    "issue": "準備欄の『相手は前ジャンプ攻撃を再現できるキャラ』等は、初心者に『ダミー（レコード）の設定』と結びつきにくい。",
+    "candidate": "トレーニングモードの『ダミー設定』（レコード）で相手の行動を1つ記録しておきます。分からない場合は、まず1回だけ操作して確認します。（機種ごとの操作方法は未確認のため、メニュー名の断定はしない）"
+  }
+}
