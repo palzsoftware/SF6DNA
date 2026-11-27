@@ -185,6 +185,9 @@ export default async function SearchPage({
                 <li>掲載前の情報は検索結果に表示されません。</li>
               </ul>
               {results.length ? <Link className="inline-button button-secondary" href={typeHref(q, "all")}>すべての種類を見る</Link> : null}
+              {/* 検索が0件でも次の行動へ進めるよう、既存の診断・15分練習への導線を添える（検索・診断ロジックは変更しない）。 */}
+              <p>調べたい情報が見つからなくても、練習は進められます。</p>
+              <div className="diagnosis-actions"><Link className="inline-button button-primary" href="/me/training">今日の15分練習を決める</Link><Link className="inline-button button-secondary" href="/diagnosis">診断で課題を確認する</Link></div>
             </section>
           )}
         </>

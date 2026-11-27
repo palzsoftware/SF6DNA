@@ -263,3 +263,9 @@ test('診断結果の検索リンクは最優先の軸1語だけで検索する�
   assert.equal(runner.split('const topQuery = priorityQuery(').length - 1, 2);
   assert.doesNotMatch(runner, /const topQuery = [^;]*\.join\(" "\)/);
 });
+
+test('検索0件画面に、15分練習と診断への導線がある', () => {
+  const page = readFileSync(new URL('../src/app/search/page.tsx', import.meta.url), 'utf8');
+  assert.match(page, /href="\/me\/training"[^>]*>今日の15分練習を決める/);
+  assert.match(page, /href="\/diagnosis"[^>]*>診断で課題を確認する/);
+});
