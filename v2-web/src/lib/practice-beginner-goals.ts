@@ -28,7 +28,7 @@ export type PracticeBeginnerGoal = {
 };
 
 export const BEGINNER_GOAL_NOTICE =
-  "回数の目安はSF6DNAの練習の目安で、ゲーム公式の基準ではありません。できたら、カードにある仮目標へ進みます。";
+  "回数の目安はSF6DNA独自の推奨練習目安で、ゲーム公式の基準ではありません。できたら、カードにある仮目標へ進みます。";
 
 const COUNT_TARGET = "まずは10回中5回を目安にします。数えにくいときは、2回続けて狙いどおりにできたら次へ進みます。";
 const RECORD_ONE = (what: string) =>

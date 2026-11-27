@@ -118,3 +118,11 @@ body[data-ui="unified-20261030"] .lab-home .experience-explore .home-public-nav 
 @media (max-width: 420px) {
   body[data-ui="unified-20261030"] .lab-home .experience-explore .home-public-nav { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* A-V44: 傾向12軸の説明・15分練習の初心者向け補足（表示専用）。スマホで本文幅が狭くならないよう既定の字下げを外す。 */
+.style-axis-guide-notes dl { margin: 0.75rem 0 0; }
+.style-axis-guide-notes dl > div + div { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line, rgba(255, 255, 255, 0.12)); }
+.style-axis-guide-notes dt { font-weight: 700; }
+.style-axis-guide-notes dd { margin: 0.25rem 0 0; }
+.practice-beginner-goal-note summary { cursor: pointer; }
+.practice-beginner-goal-note ol { padding-left: 1.25rem; }
