@@ -1,0 +1,155 @@
+{
+ "base": "e7a6c9d（DB: 開発 vvsknbmlfvvnrmgtyhbf を2026-11-27に読み取り。tournaments 11 / tournament_results 61 / players 102）",
+ "add": [
+  {
+   "tournament_slug": "evo-2023-sf6",
+   "tournament_id": "d6b91b96-cf08-4f54-b2b9-256735daf0c5",
+   "player_slug": "kakeru",
+   "player_id": "b1d6c5b4-9157-455a-84b5-6b5c2ecb80ee",
+   "placement": 5,
+   "source_url": "https://evo.gg/news/evo-2023-top-6-results-street-fighter-6",
+   "evidence": "主催者Top6記事（11/25確認）",
+   "checkedAt": "2026-11-27"
+  },
+  {
+   "tournament_slug": "evo-2024-sf6",
+   "tournament_id": "46ae8cc9-e995-4897-8e5c-7b16c4d5aa38",
+   "player_slug": "nemo",
+   "player_id": "f219456a-9a27-4fae-a874-f52b12c9160d",
+   "placement": 5,
+   "source_url": "https://evo.gg/news/evo-2024-top-6-recap---street-fighter-6",
+   "evidence": "主催者記事で5位タイ",
+   "checkedAt": "2026-11-27"
+  },
+  {
+   "tournament_slug": "evo-2024-sf6",
+   "tournament_id": "46ae8cc9-e995-4897-8e5c-7b16c4d5aa38",
+   "player_slug": "zhen-bison",
+   "player_id": "19fc9bdb-bd77-443e-b67e-2434731ff758",
+   "placement": 5,
+   "source_url": "https://evo.gg/news/evo-2024-top-6-recap---street-fighter-6",
+   "evidence": "主催者記事で5位タイ",
+   "checkedAt": "2026-11-27"
+  },
+  {
+   "tournament_slug": "evo-2025-sf6",
+   "tournament_id": "257a33ff-d698-4254-8cc0-bdf71d884a04",
+   "player_slug": "kakeru",
+   "player_id": "b1d6c5b4-9157-455a-84b5-6b5c2ecb80ee",
+   "placement": 2,
+   "source_url": "https://evo.gg/news/evo-2025-street-fighter-6-recap",
+   "evidence": "主催者記事",
+   "checkedAt": "2026-11-27"
+  },
+  {
+   "tournament_slug": "evo-2025-sf6",
+   "tournament_id": "257a33ff-d698-4254-8cc0-bdf71d884a04",
+   "player_slug": "xiaohai",
+   "player_id": "77d50854-04a2-46be-88fb-f86fe9d9177d",
+   "placement": 5,
+   "source_url": "https://evo.gg/news/evo-2025-street-fighter-6-recap",
+   "evidence": "主催者記事（既存台帳と一致）",
+   "checkedAt": "2026-11-27"
+  },
+  {
+   "tournament_slug": "evo-2025-sf6",
+   "tournament_id": "257a33ff-d698-4254-8cc0-bdf71d884a04",
+   "player_slug": "angrybird",
+   "player_id": "15140d85-7ef7-4fea-b49f-60d3006ce0eb",
+   "placement": 7,
+   "source_url": "https://evo.gg/news/evo-2025-street-fighter-6-recap",
+   "evidence": "既存台帳（P6 Top8）で官記事出典。LeSharの7位は推定のため不採用",
+   "checkedAt": "2026-11-27"
+  },
+  {
+   "tournament_slug": "evo-2026-sf6",
+   "tournament_id": "3293dcbe-a84f-4332-9fd5-f3cc4e46ec10",
+   "player_slug": "craime",
+   "player_id": "e3cb3bf2-9ec9-4b40-a89a-e33361211cf4",
+   "placement": 4,
+   "source_url": "https://saiganak.com/event/evo-2026-streetfighter-6-result/amp/",
+   "evidence": "Saiga NAK全順位＋既存台帳と一致（決勝は主催者で確認）",
+   "checkedAt": "2026-11-27"
+  },
+  {
+   "tournament_slug": "evo-japan-2026-sf6",
+   "tournament_id": "939c6ea5-d49c-40ba-ade7-880c2156be26",
+   "player_slug": "punk",
+   "player_id": "60a080e8-e127-478b-9672-166289f38d00",
+   "placement": 2,
+   "source_url": "https://evo.gg/news/yamaguchi-takes-biggest-street-fighter-tournament-ever-at-evo-japan-2026",
+   "evidence": "主催者記事で準優勝",
+   "checkedAt": "2026-11-27"
+  },
+  {
+   "tournament_slug": "capcom-cup-x-sf6",
+   "tournament_id": "aa4a4756-f588-496b-84fa-49a6837d5df5",
+   "player_slug": "leshar",
+   "player_id": "fde7c095-b6fc-40ad-a287-6a8f8d3e3444",
+   "placement": 5,
+   "source_url": "https://sf.esports.capcom.com/cpt/news/240314_cpt2024.html",
+   "evidence": "CPT公式ニュース（11/25確認）",
+   "checkedAt": "2026-11-27"
+  },
+  {
+   "tournament_slug": "ewc-2025-sf6",
+   "tournament_id": "dca71b7c-fd64-4971-8dee-e309eac64d67",
+   "player_slug": "blaz",
+   "player_id": "830621f4-38aa-49e3-a320-31621e983fb5",
+   "placement": 2,
+   "source_url": "https://esportsworldcup.com/en/news/zeng-xiao-hai-zhuojun-retains-his-crown-as-street-fighter6-at-2025-ewc-champion-in-a-thrilling-final-round-finale",
+   "evidence": "主催者記事で決勝相手",
+   "checkedAt": "2026-11-27"
+  }
+ ],
+ "hold": [
+  {
+   "tournament": "ewc-2026-sf6",
+   "player": "hibiki",
+   "placement": 2,
+   "reason": "既存DB行あり。主催者はSBI e-SportsのHibiki。既存SFL選手ひびきとの同一性は未確認→公開前に本人確認必須（行は変更しない）"
+  },
+  {
+   "tournament": "capcom-cup-11-sf6",
+   "player": "angrybird",
+   "placement": 4,
+   "reason": "esportsearnings（Amjad Alshalabi・4位相当の賞金）のみ。公式結果未確認"
+  },
+  {
+   "tournament": "ewc-2025-sf6",
+   "player": "leshar",
+   "placement": 3,
+   "reason": "報道（esports.gg）のみ。主催者順位表未確認"
+  },
+  {
+   "tournament": "evo-2025-sf6",
+   "player": "leshar",
+   "placement": 7,
+   "reason": "主催者記事に順位明記なし（推定）"
+  },
+  {
+   "tournament": "evo-2024-sf6",
+   "player": "angrybird",
+   "placement": 7,
+   "reason": "主催者記事はTop6のみ"
+  },
+  {
+   "tournament": "capcom-cup-12",
+   "player": "（大会IDなし）",
+   "placement": null,
+   "reason": "CC12 Top8（報道：さはら1・Kilzyou2・Blaz3・ひぐち4・ふ～ど/Dual Kevin/Vxbao/Micky5）。大会ID未作成のため取り込み不可"
+  },
+  {
+   "tournament": "ewc-2024",
+   "player": "（大会IDなし）",
+   "placement": null,
+   "reason": "Xiaohai1（主催者）ほか。大会ID未作成"
+  },
+  {
+   "tournament": "topanga-6 ほか国内招待大会",
+   "player": "（大会IDなし）",
+   "placement": null,
+   "reason": "TOPANGA・CRカップ・獅白杯等は大会ID未作成（11/25 B4一覧）"
+  }
+ ]
+}

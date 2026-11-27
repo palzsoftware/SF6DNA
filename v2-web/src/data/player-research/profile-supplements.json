@@ -1783,7 +1783,7 @@
       {
         "field": "sflMatchCharacters",
         "label": "SFL2026の試合での使用キャラ（使用回数）",
-        "value": "舞6、Cヴァイパー1",
+        "value": "舞6、C.ヴァイパー1",
         "basis": "格ゲーチェッカーの試合別記録（大会での使用履歴。現在のメイン・サブの判定ではない）",
         "sourceUrl": "https://kakuge-checker.com/topic/view/09243/",
         "checkedOn": "2026-11-25",
