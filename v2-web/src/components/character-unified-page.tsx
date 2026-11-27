@@ -5,11 +5,12 @@ import { CharacterMoveExplorer } from "./character-move-explorer";
 import { Sf6CommandInput } from "./sf6-command-input";
 import { MoveMotionMedia } from "./move-motion-media";
 import { CharacterPlayerCard } from "./character-player-card";
-import { VideoCard } from "./video-card";
+import { CharacterVideoRail } from "./character-video-rail";
 import type { StrategyMoveLinks } from "./character-strategy-research-grid";
 import { CharacterStrategySlot } from "./character-strategy-slot";
 import { CharacterPreferenceActions } from "./character-preference-actions";
 import { moveCardAnchorId } from "@/lib/move-card-reference";
+import { sortByOfficialMoveOrder } from "@/lib/official-move-order";
 import { moveCommandSearchTerms } from "@/lib/move-command-format";
 import { sf6CommandSearchTerms } from "@/lib/sf6-command-tokens";
 import { isInternalMoveNote, normalizePublicCopy } from "@/lib/public-copy";
@@ -24,7 +25,7 @@ import { getOfficialTxtPreviewDisplayCategory } from "@/lib/official-txt-device-
 import type { DevicePreviewBundle } from "@/lib/device-preview";
 import type { CharacterDetail, SourceReference } from "@/types/character";
 import type { PlayerDetail } from "@/types/player";
-import { formatVideoPublishedDate, type VideoSummary } from "@/lib/event-media";
+import type { VideoSummary } from "@/lib/event-media";
 import { officialMoveDisplayNotes, trailingCommandCondition, simultaneousButtonHint } from "@/lib/official-move-display-notes";
 import type { CharacterCopy } from "@/lib/character-copy";
 import styles from "./character-unified-page.module.css";
@@ -35,7 +36,10 @@ const officialCategories = [
   { type: "normal", label: "通常技" }, { type: "unique", label: "特殊技" },
   { type: "special", label: "必殺技" }, { type: "throw", label: "投げ" }, { type: "super", label: "SA" },
 ];
-const showLocalTxtCandidateValues = process.env.NODE_ENV === "development" && process.env.SF6DNA_WS5_TXT_PREVIEW === "1";
+/** Group order of the official command list: 通常技 → 特殊技 → 必殺技 → SA → 投げ, then anything unclassified. */
+const GROUP_ORDER = ["normal", "unique", "special", "super", "throw"];
+const groupRank = (kind: string) => GROUP_ORDER.includes(kind) ? GROUP_ORDER.indexOf(kind) : GROUP_ORDER.length;
+const showLocalTxtCandidateValues =process.env.NODE_ENV === "development" && process.env.SF6DNA_WS5_TXT_PREVIEW === "1";
 // Access-protected Vercel Preview shows official TXT values (Patch unconfirmed). Production never.
 const officialTxtPreviewValues = process.env.VERCEL === "1" && process.env.VERCEL_ENV === "preview";
 const showOfficialTxtValues = showLocalTxtCandidateValues || officialTxtPreviewValues;
@@ -157,8 +161,10 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
   </article>;
 }
 
-export function CharacterUnifiedPage({ character: dbCharacter, bundle, players, videos, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, playerDirectoryUrl = "/players", videoDirectoryUrl = "/videos", strategyMoveLinks, strategyReviewDescriptions, reviewedStrategyCards, copy = null }: {
+export function CharacterUnifiedPage({ character: dbCharacter, bundle, players, videos, moveEvidence = {}, localReferences, localMoveReferences, automaticVideos, showPreferences = true, playerDirectoryUrl = "/players", videoDirectoryUrl = "/videos", strategyMoveLinks, strategyReviewDescriptions, reviewedStrategyCards, copy = null, registeredVideoCount = 0 }: {
   character: CharacterDetail; bundle: DevicePreviewBundle | null; players: PlayerDetail[]; videos: VideoSummary[];
+  /** Registered 解説/対戦 videos rendered through `automaticVideos` (decides whether 「準備中」 is shown). */
+  registeredVideoCount?: number;
   moveEvidence?: Record<string, UnifiedMoveEvidence>; localReferences?: ReactNode; localMoveReferences?: ReactNode; automaticVideos?: ReactNode; showPreferences?: boolean;
   playerDirectoryUrl?: string; videoDirectoryUrl?: string;
   strategyMoveLinks?: StrategyMoveLinks;
@@ -202,12 +208,13 @@ export function CharacterUnifiedPage({ character: dbCharacter, bundle, players, 
     reversalPairs.set(guard.id, pair);
     hiddenReversalIds.add(wakeup.id);
   }
-  const displayMoves = moves.filter(move => !hiddenReversalIds.has(move.id))
-    .map(move => ({ move, variants: reversalPairs.get(move.id) ?? [move] }));
+  // Cards follow the saved official command list (弱→中→強→OD, follow-ups as listed, SA1→SA2→SA3→CA).
+  const displayMoves = sortByOfficialMoveOrder(character.slug, moves.filter(move => !hiddenReversalIds.has(move.id))
+    .map(move => ({ move, variants: reversalPairs.get(move.id) ?? [move] })), entry => entry.move as UnifiedMove & { ws5CanonicalSource?: string; officialFrameKey?: string });
   const groups = Object.entries(displayMoves.reduce<Record<string, typeof displayMoves>>((result, entry) => {
     const kind = displayMoveKind(entry.move);
     (result[kind] ??= []).push(entry); return result;
-  }, {}));
+  }, {})).sort(([a], [b]) => groupRank(a) - groupRank(b));
   const connectedPlayers = unifiedPlayers(character, players);
   const connectedVideos = videos.filter((video, index) => safeExternalUrl(video.url) && videos.findIndex(row => row.id === video.id) === index);
   return <div className={`site-shell ${styles.page}`} data-character-template="unified-v1" data-character-slug={character.slug}>
@@ -262,20 +269,19 @@ export function CharacterUnifiedPage({ character: dbCharacter, bundle, players, 
         })) }))} /> : <p className={styles.empty}>技データは確認中です。確認できた技から掲載します。</p>}
     </section>
     {character.slug === "luke" && ["development", "preview"].includes(process.env.VERCEL_ENV ?? process.env.NODE_ENV ?? "") ? localMoveReferences : null}
-    <section className={styles.relatedSections} aria-label="参考になるプレイヤーと動画">
-      <section id="character-players" tabIndex={-1} className={`${styles.section} ${styles.relatedPanel}`}><h2>使用プレイヤー</h2>
-        {connectedPlayers.length ? <div className={styles.relatedGrid}>{connectedPlayers.map(player =>
-          <CharacterPlayerCard player={player} characterSlug={character.slug} key={player.id} />)}</div>
-          : <p>使用プレイヤーの情報を確認中です。</p>}
-        <Link className={styles.relatedLink} href={playerDirectoryUrl}>プレイヤー図鑑を見る →</Link>
-      </section>
-      <section id="character-videos" tabIndex={-1} className={`${styles.section} ${styles.relatedPanel}`}><h2>関連動画</h2>
-        {connectedVideos.length ? <div className={styles.relatedGrid}>{connectedVideos.map(video =>
-          <VideoCard video={video} publishedDate={formatVideoPublishedDate(video.publishedAt)} key={video.id} />)}</div>
-          : <p>関連動画は準備中です。</p>}
-        {automaticVideos}
-        <Link className={styles.relatedLink} href={videoDirectoryUrl}>動画一覧を見る →</Link>
-      </section>
+    {/* 使用プレイヤー and 関連動画 are separate full-width sections. */}
+    <section id="character-players" tabIndex={-1} className={`${styles.section} ${styles.relatedPanel}`}><h2>使用プレイヤー</h2>
+      {connectedPlayers.length ? <div className={styles.playerGrid}>{connectedPlayers.map(player =>
+        <CharacterPlayerCard player={player} characterSlug={character.slug} key={player.id} />)}</div>
+        : <p>使用プレイヤーの情報を確認中です。</p>}
+      <Link className={styles.relatedLink} href={playerDirectoryUrl}>プレイヤー図鑑を見る →</Link>
+    </section>
+    <section id="character-videos" tabIndex={-1} className={`${styles.section} ${styles.relatedPanel}`}><h2>関連動画</h2>
+      {connectedVideos.length ? <CharacterVideoRail groups={[{ key: "listed", label: "掲載動画", videos: connectedVideos }]} searchLabel="掲載動画を検索" /> : null}
+      {/* 「準備中」 only when neither listed nor registered videos exist for this character. */}
+      {!connectedVideos.length && !registeredVideoCount ? <p>関連動画は準備中です。</p> : null}
+      {automaticVideos}
+      <Link className={styles.relatedLink} href={videoDirectoryUrl}>動画一覧を見る →</Link>
     </section>
     <CharacterStrategySlot moveLinks={strategyMoveLinks} reviewDescriptions={strategyReviewDescriptions} reviewedCards={reviewedStrategyCards} kind="combo" characterSlug={character.slug} previewContent={character.slug === "luke" ? localReferences : null} />
     <CharacterStrategySlot moveLinks={strategyMoveLinks} reviewDescriptions={strategyReviewDescriptions} reviewedCards={reviewedStrategyCards} kind="setplay" characterSlug={character.slug} />

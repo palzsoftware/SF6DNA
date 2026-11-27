@@ -28,7 +28,7 @@ import type { OfficialMoveFillData } from "@/lib/all32-official-move-fill";
 import { getWs5CharacterReview, getWs5StrategyMoveLinks, getWs5StrategyReviewDescriptions, getWs5ReviewedStrategyCards, withoutMotionMedia } from "@/lib/ws5-character-review";
 import { playerDirectoryHref } from "@/lib/player-directory-navigation";
 import { playerLocalPreviewEnabled } from "@/lib/player-local-preview";
-import { CharacterRegisteredVideos } from "@/components/character-registered-videos";
+import { CharacterRegisteredVideos, characterRegisteredVideoGroups } from "@/components/character-registered-videos";
 import { videoEntityIdFromQuery } from "@/lib/video-player-filter";
 import type { CanonicalTxtRecord } from "@/lib/canonical-txt-connection.mjs";
 import { mergeOfficialTxtControlSchemeListings } from "@/lib/official-txt-control-scheme-merge";
@@ -159,7 +159,8 @@ export default async function CharacterPage({
   const registeredVideoPreview = playerLocalPreviewEnabled(process.env, (await headers()).get("host"));
   let registeredEnvironment = "";
   try { registeredEnvironment = new URL(process.env.NEXT_PUBLIC_SUPABASE_URL ?? "").hostname.split(".")[0]; } catch { /* unknown: nothing registered */ }
-  return <CharacterUnifiedPage copy={getCharacterCopy(slug)} automaticVideos={<><CharacterRegisteredVideos characterSlug={character.slug} environment={registeredEnvironment} preview={registeredVideoPreview} listedUrls={videos.map(video => video.url)} /><Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} /></Suspense></>} character={character} bundle={finalBundle} players={players} videos={videos}
+  const registeredGroups = characterRegisteredVideoGroups(character.slug, registeredEnvironment, registeredVideoPreview, videos.map(video => video.url));
+  return <CharacterUnifiedPage copy={getCharacterCopy(slug)} registeredVideoCount={registeredGroups.guide.length + registeredGroups.match.length} automaticVideos={<><CharacterRegisteredVideos characterSlug={character.slug} environment={registeredEnvironment} preview={registeredVideoPreview} listedUrls={videos.map(video => video.url)} /><Suspense fallback={<AutoVideoLoading />}><AutoYouTubeVideos names={[character.name]} englishNames={[character.nameEn || character.name]} /></Suspense></>} character={character} bundle={finalBundle} players={players} videos={videos}
     moveEvidence={combinedMoveEvidence}
     strategyMoveLinks={strategyMoveLinks} strategyReviewDescriptions={await getWs5StrategyReviewDescriptions(admission)} reviewedStrategyCards={await getWs5ReviewedStrategyCards(slug, admission)}
     playerDirectoryUrl={review ? reviewPlayerDirectoryUrl(character.slug) : undefined}
