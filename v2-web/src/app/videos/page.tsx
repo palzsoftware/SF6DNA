@@ -39,6 +39,8 @@ export default async function VideosPage({ searchParams }: {
   const registered = invalidFilter || tournamentId ? [] : registeredYouTubeVideos(environment, playerLocalPreviewEnabled(process.env, (await headers()).get("host")))
     .filter(v => (!playerId || v.entityRefs?.players.some(p => p.id === playerId)) && (!characterId || v.entityRefs?.characters.some(c => c.id === characterId)));
   const listedOk = result.state === "SUCCESS_WITH_RESULTS" || result.state === "SUCCESS_EMPTY";
+  const youtubeSearchActive = ["character", "playerName", "kind", "topic", "targetRank", "level", "control", "tournament", "language"]
+    .some(key => typeof params[key] === "string" && (params[key] as string).trim() !== "");
   const libraryVideos = mergeWithListedVideos(result.state === "SUCCESS_WITH_RESULTS" ? result.items : [], registered);
 
   return (
@@ -51,29 +53,31 @@ export default async function VideosPage({ searchParams }: {
 
       <nav aria-label="動画リスト内の移動">
         <ul>
-          <li><a href="#youtube-search">YouTubeで探す</a></li>
-          <li><a href="#listed-videos">掲載動画を見る</a></li>
+          <li><a href="#listed-videos">掲載動画から探す</a></li>
+          <li><a href="#youtube-search">YouTube全体から探す</a></li>
         </ul>
       </nav>
 
       {hasServerFilters || invalidFilter ? (
         <p>{invalidFilter ? "指定された条件を確認できませんでした。" : "指定された条件で表示しています。"} <Link href="/videos">指定条件を解除</Link></p>
       ) : null}
-      <section id="youtube-search" aria-labelledby="youtube-search-title">
-      <h2 id="youtube-search-title">YouTube検索</h2>
-      <VideoSearchForm key={`form:${JSON.stringify(params)}`} filters={filters} params={params} />
-      <Suspense key={`results:${JSON.stringify(params)}`} fallback={<AutoVideoLoading />}><VideoSearchResults filters={filters}
-        exact={{ playerId, characterId, tournamentId, player, invalidFilter }} /></Suspense>
-      </section>
-
-      <Suspense fallback={null}><LatestYouTubeVideos /></Suspense>
-
+      {/* The listed videos carry the page's one main search box. */}
       <section id="listed-videos" aria-labelledby="listed-videos-title"><h2 id="listed-videos-title">掲載動画</h2>
       {libraryVideos.length && (listedOk || registered.length) ? (
         <VideoLibrary videos={libraryVideos} learningRecords={getRegisteredVideoLearning(libraryVideos)} initialPlayer={playerId ? null : player} key={[player, playerId, characterId, tournamentId].join(":")} />
-      ) : result.state === "SUCCESS_EMPTY" ? <p>掲載動画は準備中です。上のYouTube検索もご利用ください。</p>
+      ) : result.state === "SUCCESS_EMPTY" ? <p>掲載動画は準備中です。下の「YouTube全体から探す」もご利用ください。</p>
         : <VideoRetrievalStatus state={result.state} invalidFilter={invalidFilter} />}
       </section>
+
+      {/* YouTube search (URL parameters unchanged) is folded away; it opens when the URL already carries its conditions. */}
+      <details id="youtube-search" className="experience-video-external" open={youtubeSearchActive}>
+      <summary><h2 id="youtube-search-title">YouTube全体から探す（外部の検索結果）</h2></summary>
+      <VideoSearchForm key={`form:${JSON.stringify(params)}`} filters={filters} params={params} />
+      <Suspense key={`results:${JSON.stringify(params)}`} fallback={<AutoVideoLoading />}><VideoSearchResults filters={filters}
+        exact={{ playerId, characterId, tournamentId, player, invalidFilter }} /></Suspense>
+      </details>
+
+      <Suspense fallback={null}><LatestYouTubeVideos /></Suspense>
 
 
     </div>

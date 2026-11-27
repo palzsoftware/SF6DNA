@@ -39,9 +39,12 @@ const EMPTY_FILTERS: VideoFilters = {
   preference: new Set(),
 };
 
+const yearOf = (video: VideoSummary) => /^\d{4}/.exec(video.publishedAt ?? "")?.[0] ?? null;
+
 function unique(values: string[]) { return [...new Set(values)].sort((a, b) => a.localeCompare(b, "ja")); }
 
-function FilterGroup({ title, values, selected, labels, unavailable, disabled = false, onToggle }: {
+/** Long lists (players, characters, events) get a name search; selected items stay listed first. Several items can be checked. */
+function FilterGroup({ title, values, selected, labels, unavailable, disabled = false, onToggle, searchPlaceholder }: {
   title: string;
   values: string[];
   selected: Set<string>;
@@ -49,18 +52,27 @@ function FilterGroup({ title, values, selected, labels, unavailable, disabled = 
   unavailable?: string;
   disabled?: boolean;
   onToggle: (value: string) => void;
+  searchPlaceholder?: string;
 }) {
+  const [find, setFind] = useState("");
+  const label = (value: string) => labels?.[value] ?? value;
+  const term = find.trim().toLowerCase();
+  const shown = (term ? values.filter(value => selected.has(value) || label(value).toLowerCase().includes(term)) : values)
+    .slice().sort((a, b) => Number(selected.has(b)) - Number(selected.has(a)));
   return (
     <fieldset className={styles.filter}>
-      <legend>{title}</legend>
+      <legend>{title}{selected.size ? `（${selected.size}件選択）` : ""}</legend>
+      {searchPlaceholder && values.length > 8 ? <input className={styles.optionSearch} type="search" value={find} onChange={event => setFind(event.target.value)}
+        aria-label={`${title}を名前で探す`} placeholder={searchPlaceholder} /> : null}
       {values.length ? (
-        <div className={styles.options}>
-          {values.map((value) => (
+        <div className={`${styles.options} ${values.length > 12 ? styles.optionsLong : ""}`}>
+          {shown.map((value) => (
             <label className={styles.option} key={value}>
               <input type="checkbox" disabled={disabled} checked={selected.has(value)} onChange={() => onToggle(value)} />
-              {labels?.[value] ?? value}
+              {label(value)}
             </label>
           ))}
+          {term && !shown.length ? <p className={styles.unavailable}>「{find.trim()}」に一致する項目はありません。</p> : null}
         </div>
       ) : <p className={styles.unavailable}>{unavailable ?? "この条件で選べる項目はまだありません。"}</p>}
     </fieldset>
@@ -83,6 +95,8 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
   const watched = useMemo(() => new Set(preferences.watched), [preferences.watched]);
   const preferenceWaiting = !preferenceReady && (filters.preference.size > 0 || ["favorite", "unwatched", "watched"].includes(sort));
   const [filtersOpen, setFiltersOpen] = useState(false);
+  // Publication year (from publishedAt). Kept beside VideoFilters so the shared filter contract stays unchanged.
+  const [years, setYears] = useState<Set<string>>(() => new Set());
 
   const refreshPreferences = preferences.refresh;
 
@@ -106,14 +120,16 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
     ? { ...filters, characters: new Set(options.characters.some(ref => ref.label === lockedCharacter) ? options.characters.filter(ref => ref.label === lockedCharacter).map(ref => ref.id) : [lockedCharacter]) }
     : filters, [filters, lockedCharacter, options.characters]);
   const results = useMemo(
-    () => preferenceWaiting ? [] : sortVideos(filterVideos(videos, effectiveFilters, favorites, watched, learningRecords), sort, favorites, watched),
-    [videos, effectiveFilters, favorites, watched, sort, preferenceWaiting, learningRecords],
+    () => preferenceWaiting ? [] : sortVideos(filterVideos(videos, effectiveFilters, favorites, watched, learningRecords)
+      .filter(video => !years.size || years.has(yearOf(video) ?? "")), sort, favorites, watched),
+    [videos, effectiveFilters, favorites, watched, sort, preferenceWaiting, learningRecords, years],
   );
+  const yearOptions = useMemo(() => [...new Set(videos.flatMap(video => yearOf(video) ?? []))].sort().reverse(), [videos]);
   const activeFilterCount = useMemo(() => (
-    Number(Boolean(filters.query.trim())) + filters.events.size + filters.players.size + (lockedCharacter ? 0 : filters.characters.size) +
+    years.size + Number(Boolean(filters.query.trim())) + filters.events.size + filters.players.size + (lockedCharacter ? 0 : filters.characters.size) +
     filters.controls.size + filters.categories.size + filters.levels.size +
     filters.languages.size + filters.modes.size + filters.preference.size + (filters.learningTopics?.size ?? 0) + (filters.targetRanks?.size ?? 0)
-  ), [filters, lockedCharacter]);
+  ), [filters, lockedCharacter, years]);
 
   const activeSelections = [
     ...[...(filters.learningTopics ?? [])].map(value => ({ group: "learningTopics" as const, value, label: `座学：${VIDEO_LEARNING_TOPIC_LABELS[value] ?? value}` })),
@@ -129,8 +145,14 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
     ...([...filters.preference].map(value => ({ group: "preference" as const, value, label: `ライブラリ：${VIDEO_PREFERENCE_LABELS[value] ?? value}` }))),
   ];
 
+  function toggleYear(value: string) {
+    setYears(current => { const next = new Set(current); if (next.has(value)) next.delete(value); else next.add(value); return next; });
+    setVisible(12);
+  }
+
   function clearFilters() {
     setFilters(EMPTY_FILTERS);
+    setYears(new Set());
     setSort("recommended");
     setVisible(12);
   }
@@ -147,9 +169,21 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
   return (
     <div className={`${styles.library} experience-video-library`}>
       <div className={styles.toolbar}>
-        <div className={styles.topRow}>
-          <label>掲載動画を検索<input type="search" aria-describedby={scopeId} value={filters.query} onChange={(event) => { setFilters((current) => ({ ...current, query: event.target.value })); setVisible(12); }} placeholder="例：ダイヤ帯 モダン、初心者、座学 MR1600" /></label>
-          <label>並び順<select value={sort} onChange={(event) => setSort(event.target.value as VideoSort)}>
+        {/* The page's one main search box. Filters (collapsed) and sort are separate controls below it. */}
+        <label className={styles.mainSearch}>動画を検索<input type="search" aria-describedby={scopeId} value={filters.query} onChange={(event) => { setFilters((current) => ({ ...current, query: event.target.value })); setVisible(12); }} placeholder="例：エレナ コンボ、ときど、初心者 モダン" /></label>
+        <p id={scopeId} className={styles.searchScope}>掲載中の動画からタイトル・キャラ・選手・大会・内容で探せます。分類を確認できていない動画は、その条件の絞り込みには含めません。</p>
+        <div className={styles.controlRow}>
+          <button
+            className={styles.filterToggle}
+            type="button"
+            aria-expanded={filtersOpen}
+            aria-controls={panelId}
+            onClick={() => setFiltersOpen((open) => !open)}
+          >
+            絞り込み{activeFilterCount ? `（${activeFilterCount}）` : ""}
+            <span aria-hidden="true">{filtersOpen ? "閉じる −" : "開く ＋"}</span>
+          </button>
+          <label className={styles.sort}>並び順<select value={sort} onChange={(event) => setSort(event.target.value as VideoSort)}>
             <option value="recommended">おすすめ順</option><option value="newest">新しい順</option><option value="oldest">古い順</option>
             <option value="view_count" disabled={!videos.some((video) => video.viewCount !== null)}>再生回数順</option>
             <option value="favorite" disabled={!preferenceReady}>お気に入り優先</option><option value="unwatched" disabled={!preferenceReady}>未視聴優先</option><option value="watched" disabled={!preferenceReady}>視聴済み優先</option>
@@ -157,31 +191,22 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
             <option value="longest" disabled={!videos.some((video) => video.durationSeconds !== null)}>長い順</option>
           </select></label>
         </div>
-        <p id={scopeId} className={styles.searchScope}>現在登録されている公開動画を検索します。YouTube全体の検索ではありません。大会の年度は、確認済みの大会名にある場合のみ絞り込めます。座学はテーマ別、対象ランク・MRは講座の対象者として確認した情報で絞り込みます。ダイヤ帯・プラチナ帯、初心者、モダンなども組み合わせて検索できます。分類が未確認の動画は、その条件に含めません。</p>
-        <button
-          className={styles.filterToggle}
-          type="button"
-          aria-expanded={filtersOpen}
-          aria-controls={panelId}
-          onClick={() => setFiltersOpen((open) => !open)}
-        >
-          絞り込み{activeFilterCount ? `（${activeFilterCount}）` : ""}
-          <span aria-hidden="true">{filtersOpen ? "閉じる −" : "開く ＋"}</span>
-        </button>
         {activeFilterCount ? <div className={styles.activeSummary} aria-live="polite">
           <span>{activeFilterCount}件の条件を選択中</span>
           <button type="button" onClick={clearFilters}>すべて解除</button>
         </div> : null}
-        {activeSelections.length || filters.query ? <div className={styles.selectedConditions} aria-label="選択中の検索条件">
+        {activeSelections.length || filters.query || years.size ? <div className={styles.selectedConditions} aria-label="選択中の検索条件">
           {filters.query ? <button type="button" onClick={() => { setFilters(current => ({ ...current, query: "" })); setVisible(12); }} aria-label="キーワードを解除">キーワード：{filters.query} ×</button> : null}
           {activeSelections.map(item => <button type="button" key={`${item.group}:${item.value}`} onClick={() => toggle(item.group, item.value)} aria-label={`${item.label}を解除`}>{item.label} ×</button>)}
+          {[...years].map(year => <button type="button" key={`year:${year}`} onClick={() => toggleYear(year)} aria-label={`公開年：${year}年を解除`}>公開年：{year}年 ×</button>)}
         </div> : null}
         <div className={`${styles.filters} ${filtersOpen ? styles.filtersOpen : ""}`} id={panelId}>
-          <FilterGroup title="大会・イベント" values={options.events.map(ref => ref.id)} labels={Object.fromEntries(options.events.map(ref => [ref.id, ref.label]))} selected={filters.events} onToggle={(value) => toggle("events", value)} unavailable="大会との関連を確認できた動画はまだありません。" />
-          <FilterGroup title="プレイヤー（1P / 2P）" values={options.players.map(ref => ref.id)} labels={Object.fromEntries(options.players.map(ref => [ref.id, ref.label]))} selected={filters.players} onToggle={(value) => toggle("players", value)} unavailable="出演を確認できた動画はまだありません。" />
+          <FilterGroup title="プレイヤー（1P / 2P）" values={options.players.map(ref => ref.id)} labels={Object.fromEntries(options.players.map(ref => [ref.id, ref.label]))} selected={filters.players} onToggle={(value) => toggle("players", value)} unavailable="出演を確認できた動画はまだありません。" searchPlaceholder="選手名で探す（例：ときど）" />
           {lockedCharacter ? (
             <fieldset className={styles.filter}><legend>キャラクター</legend><p className={styles.unavailable}>{lockedCharacter}で自動絞り込み中</p></fieldset>
-          ) : <FilterGroup title="キャラクター（1P / 2P）" values={options.characters.map(ref => ref.id)} labels={Object.fromEntries(options.characters.map(ref => [ref.id, ref.label]))} selected={filters.characters} onToggle={(value) => toggle("characters", value)} />}
+          ) : <FilterGroup title="キャラクター（1P / 2P）" values={options.characters.map(ref => ref.id)} labels={Object.fromEntries(options.characters.map(ref => [ref.id, ref.label]))} selected={filters.characters} onToggle={(value) => toggle("characters", value)} searchPlaceholder="キャラ名で探す" />}
+          <FilterGroup title="大会・イベント" values={options.events.map(ref => ref.id)} labels={Object.fromEntries(options.events.map(ref => [ref.id, ref.label]))} selected={filters.events} onToggle={(value) => toggle("events", value)} unavailable="大会との関連を確認できた動画はまだありません。" searchPlaceholder="大会名で探す" />
+          <FilterGroup title="公開年" values={yearOptions} labels={Object.fromEntries(yearOptions.map(year => [year, `${year}年`]))} selected={years} onToggle={toggleYear} unavailable="公開日を確認できた動画はまだありません。" />
           <FilterGroup title="操作タイプ" values={options.controls} selected={filters.controls} labels={VIDEO_CONTROL_LABELS} onToggle={(value) => toggle("controls", value)} unavailable="クラシック・モダンの情報は順次追加予定です。" />
           <FilterGroup title="学びたいテーマ（座学）" values={options.learningTopics} selected={filters.learningTopics ?? new Set()} labels={VIDEO_LEARNING_TOPIC_LABELS} onToggle={(value) => toggle("learningTopics", value)} unavailable="テーマを確認できた座学動画はまだありません。" />
           <FilterGroup title="対象ランク・MR" values={options.targetRanks} selected={filters.targetRanks ?? new Set()} labels={VIDEO_TARGET_RANK_LABELS} onToggle={(value) => toggle("targetRanks", value)} unavailable="講座の対象ランク・MRを確認できた動画はまだありません。配信者のMRからは分類しません。" />

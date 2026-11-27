@@ -80,3 +80,16 @@
 @media (max-width: 560px) {
   :global(body[data-ui="unified-20261030"]) .toolbar { padding: 12px; }
 }
+
+/* V53: one main search box; filters collapsed at every width (opened with the toggle); sort is its own control. */
+.mainSearch { display: grid; gap: 6px; min-width: 0; color: var(--copy-muted, var(--muted)); font-size: .875rem; font-weight: 750; }
+.mainSearch input, .sort select, .optionSearch { min-width: 0; max-width: 100%; min-height: 46px; padding: 9px 12px; border: 1px solid var(--line-strong, var(--border)); border-radius: 10px; background: var(--input-bg, #090d12); color: var(--text); font: inherit; font-size: 16px; }
+.controlRow { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; }
+.controlRow .filterToggle { display: flex; flex: 1 1 200px; }
+.sort { display: grid; flex: 0 1 220px; gap: 4px; min-width: 0; color: var(--copy-muted, var(--muted)); font-size: .8rem; font-weight: 750; }
+.filters { display: none; }
+.filters.filtersOpen { display: grid; }
+.optionSearch { width: 100%; margin-bottom: 8px; min-height: 44px; }
+/* Long option lists scroll inside their box instead of making the page very tall. */
+.optionsLong { max-height: 220px; overflow-y: auto; overscroll-behavior: contain; padding-right: 4px; }
+@media (max-width: 560px) { .sort { flex-basis: 100%; } }
