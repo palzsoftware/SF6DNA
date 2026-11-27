@@ -6,7 +6,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import ts from "typescript";
 // A displayed card carries id "youtube:<id>"; raw data rows carry youtubeId.
 const yid = x => x.youtubeId ?? String(x.id).replace(/^youtube:/, "");
-import { approvedRowKeys, expectedApproval, preApproval, readyIds, holdIds, excludedIds } from "./helpers/approved-videos-v47.mjs";
+import { approvedRowKeys, expectedApproval, preApproval, readyIds, holdIds, excludedIds, laterRowKeys } from "./helpers/approved-videos-v47.mjs";
 
 // 2026-11-25 SFL48 profile supplements, Division F 第7節 match evidence and character 解説/対戦 videos.
 // Every row stays PENDING. "Isolated" checks render approved copies in memory only.
@@ -86,7 +86,8 @@ test("第7節の4選手: 公式クリップが主リンク、フル配信は時�
 });
 
 test("マリーザの2025年公式対戦は年を明記し、食い違うDivision・未確認の使用時刻を表示しない", () => {
-  const rows = characterVideos.filter(v => v.characterSlug === "marisa" && v.category === "対戦");
+  // The two reviewed 2025 rows from before V51 (later approved additions are checked against their own list).
+  const rows = characterVideos.filter(v => v.characterSlug === "marisa" && v.category === "対戦" && !laterRowKeys.has(v.key));
   assert.equal(rows.length, 2);
   const g = characterModule.characterRegisteredVideoGroups("marisa", ENV.development, true);
   const html = renderToStaticMarkup(characterModule.CharacterRegisteredVideos({ characterSlug: "marisa", environment: ENV.development, preview: true }));
@@ -187,7 +188,11 @@ test("現在の公開設定: 表示されるのは承認済み動画だけ。承
   }
   // Production shows every approved card; development differs only by the Arjun character rows that the development DB does not know (B projection: 691 / 687).
   assert.deepEqual([...ids(registeredModule.registeredYouTubeVideos(ENV.production, false))].sort(), [...readyIds].sort());
-  assert.equal(registeredModule.registeredYouTubeVideos(ENV.development, false).length, 687);
+  // Development = production minus cards whose only characters are unknown to the development DB (Arjun rows).
+  const devMissing = new Set(Object.entries(read("../src/data/character-videos/character-ids.json").characters).filter(([, c]) => c.developmentMissing).map(([s]) => s));
+  const prodCards = registeredModule.registeredYouTubeVideos(ENV.production, false);
+  const devOnlyMissing = prodCards.filter(c => c.playerSlugs.length === 0 && c.characterSlugs.length > 0 && c.characterSlugs.every(s => devMissing.has(s)));
+  assert.equal(registeredModule.registeredYouTubeVideos(ENV.development, false).length, prodCards.length - devOnlyMissing.length);
   const row = supplements[0];
   const player = { id: row.identities[0].playerId, slug: row.playerSlug };
   assert.equal(supplementModule.boundProfileSupplement(player, row.identities[0].environment, supplements, false), null);
