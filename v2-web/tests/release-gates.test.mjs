@@ -257,3 +257,9 @@ test("both completed diagnosis result views offer daily training without changin
   assert.equal((source.match(/今日の練習を決める/g) ?? []).length, 2);
   assert.equal((source.match(/releaseFeatures\.aiCoach\s*&&\s*topQuery/g) ?? []).length, 2);
 });
+
+test('診断結果の検索リンクは最優先の軸1語だけで検索する（複数ラベルの連結は検索0件になる）', () => {
+  const runner = readFileSync(new URL('../src/components/diagnosis-runner.tsx', import.meta.url), 'utf8');
+  assert.equal(runner.split('const topQuery = priorityQuery(').length - 1, 2);
+  assert.doesNotMatch(runner, /const topQuery = [^;]*\.join\(" "\)/);
+});
