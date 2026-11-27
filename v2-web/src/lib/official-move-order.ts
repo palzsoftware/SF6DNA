@@ -41,3 +41,18 @@ export function sortByOfficialMoveOrder<T>(characterSlug: string, items: readonl
   return items.map((item, position) => ({ item, position, index: officialMoveOrderIndex(characterSlug, moveOf(item)) }))
     .sort((a, b) => a.index - b.index || a.position - b.position).map(entry => entry.item);
 }
+
+/**
+ * True when the move matches (by official row key, or exact name ignoring a leading state tag such as [ガード時]) a row of the official 共通システム section
+ * (web row numbers 600–699: steps, Drive Impact / Reversal / Parry / Rush). Loose name matches never count.
+ */
+export function isOfficialCommonSystemMove(characterSlug: string, move: OrderableMove): boolean {
+  const rows = ORDER[characterSlug];
+  if (!rows?.length) return false;
+  const key = move.ws5CanonicalSource ?? move.officialFrameKey ?? preview(move.id);
+  // "[ガード時]ドライブリバーサル（…）" and the card "ドライブリバーサル（…）" are the same row; only the state prefix is ignored.
+  const plain = (value: string) => normalize(value).replace(/^\[[^\]]*\]/, "");
+  const name = plain(move.name);
+  const row = (key ? rows.find(([rowKey]) => rowKey === key) : undefined) ?? rows.find(([, rowName]) => plain(rowName) === name);
+  return /:web:6\d\d$/.test(row?.[0] ?? "");
+}

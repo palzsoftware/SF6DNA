@@ -10,7 +10,7 @@ import type { StrategyMoveLinks } from "./character-strategy-research-grid";
 import { CharacterStrategySlot } from "./character-strategy-slot";
 import { CharacterPreferenceActions } from "./character-preference-actions";
 import { moveCardAnchorId } from "@/lib/move-card-reference";
-import { sortByOfficialMoveOrder } from "@/lib/official-move-order";
+import { sortByOfficialMoveOrder, isOfficialCommonSystemMove } from "@/lib/official-move-order";
 import { moveCommandSearchTerms } from "@/lib/move-command-format";
 import { sf6CommandSearchTerms } from "@/lib/sf6-command-tokens";
 import { isInternalMoveNote, normalizePublicCopy } from "@/lib/public-copy";
@@ -31,24 +31,25 @@ import type { CharacterCopy } from "@/lib/character-copy";
 import styles from "./character-unified-page.module.css";
 
 const labels: Record<string, string> = { normal: "通常技", unique: "特殊技", target_combo: "特殊技",
-  special: "必殺技", super: "SA", super_art: "SA", throw: "投げ", system: "必殺技", drive: "必殺技" };
+  special: "必殺技", super: "SA", super_art: "SA", throw: "通常投げ", system: "共通システム", drive: "共通システム" };
 const officialCategories = [
-  { type: "normal", label: "通常技" }, { type: "unique", label: "特殊技" },
-  { type: "special", label: "必殺技" }, { type: "throw", label: "投げ" }, { type: "super", label: "SA" },
+  { type: "normal", label: "通常技" }, { type: "special", label: "必殺技" }, { type: "super", label: "SA" },
+  { type: "unique", label: "特殊技" }, { type: "throw", label: "通常投げ" }, { type: "system", label: "共通システム" },
 ];
-/** Group order of the official command list: 通常技 → 特殊技 → 必殺技 → SA → 投げ, then anything unclassified. */
-const GROUP_ORDER = ["normal", "unique", "special", "super", "throw"];
+/** Group order of the in-game movelist (confirmed by C): 通常技 → 必殺技 → SA → 特殊技 → 通常投げ → 共通システム, then anything unclassified. */
+const GROUP_ORDER = ["normal", "special", "super", "unique", "throw", "system"];
 const groupRank = (kind: string) => GROUP_ORDER.includes(kind) ? GROUP_ORDER.indexOf(kind) : GROUP_ORDER.length;
 const showLocalTxtCandidateValues =process.env.NODE_ENV === "development" && process.env.SF6DNA_WS5_TXT_PREVIEW === "1";
 // Access-protected Vercel Preview shows official TXT values (Patch unconfirmed). Production never.
 const officialTxtPreviewValues = process.env.VERCEL === "1" && process.env.VERCEL_ENV === "preview";
 const showOfficialTxtValues = showLocalTxtCandidateValues || officialTxtPreviewValues;
-function displayMoveKind(move: UnifiedMove): string {
+function displayMoveKind(move: UnifiedMove, characterSlug: string): string {
+  // Drive / step moves are common to every character: their own group, whatever section a candidate row carries.
+  if (move.moveType === "system" || move.moveType === "drive" || isOfficialCommonSystemMove(characterSlug, move)) return "system";
   const local = showOfficialTxtValues ? getOfficialTxtPreviewDisplayCategory(move) : null;
   if (local) return local;
   if (move.moveType === "target_combo") return "unique";
   if (move.moveType === "super_art") return "super";
-  if (move.moveType === "system" || move.moveType === "drive") return "special";
   return officialCategories.some(item => item.type === move.moveType) ? move.moveType! : "other";
 }
 function frameDisplayUnit(value: string, field: string): string {
@@ -75,7 +76,7 @@ function SourceLinks({ sources }: { sources: SourceReference[] }) {
   })}</ul> : <p>情報源を確認中です。</p>;
 }
 
-export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: UnifiedMove; variants?: UnifiedMove[]; evidence?: UnifiedMoveEvidence }) {
+export function UnifiedMoveCard({ move, variants = [move], evidence, kind }: { move: UnifiedMove; variants?: UnifiedMove[]; evidence?: UnifiedMoveEvidence; kind?: string }) {
   const media = unifiedMoveMedia(move);
   const variantLabel = (item: UnifiedMove, index: number) => item.name.match(/^[\[［（(【「]([^\]］）)】」]+)[\]］）)】」]/)?.[1] ?? (variants.length > 1 ? `条件${index + 1}` : "");
   const cardTitle = variants.length > 1 ? move.name.replace(/^[\[［（(【「][^\]］）)】」]+[\]］）)】」]\s*/, "").trim() : move.name;
@@ -99,7 +100,7 @@ export function UnifiedMoveCard({ move, variants = [move], evidence }: { move: U
       const aliasId = moveCardAnchorId(item.slug);
       return aliasId && aliasId !== moveCardAnchorId(move.slug) ? <span id={aliasId} className={styles.anchorAlias} tabIndex={-1} aria-hidden="true" key={aliasId} /> : null;
     })}
-    <header><span className={styles.tag}>{labels[displayMoveKind(move)] ?? "分類確認中"}</span><h3>{cardTitle}</h3>
+    <header><span className={styles.tag}>{labels[kind ?? displayMoveKind(move, "")] ?? "分類確認中"}</span><h3>{cardTitle}</h3>
       {(move as UnifiedMove & { ws5VariantLabel?: string }).ws5VariantLabel
         ? <p className={styles.variantLabel} data-variant-label="true">区別：{(move as UnifiedMove & { ws5VariantLabel?: string }).ws5VariantLabel}</p> : null}</header>
     <div className={styles.mediaSlot} data-media-move-id={move.id}>
@@ -212,7 +213,7 @@ export function CharacterUnifiedPage({ character: dbCharacter, bundle, players, 
   const displayMoves = sortByOfficialMoveOrder(character.slug, moves.filter(move => !hiddenReversalIds.has(move.id))
     .map(move => ({ move, variants: reversalPairs.get(move.id) ?? [move] })), entry => entry.move as UnifiedMove & { ws5CanonicalSource?: string; officialFrameKey?: string });
   const groups = Object.entries(displayMoves.reduce<Record<string, typeof displayMoves>>((result, entry) => {
-    const kind = displayMoveKind(entry.move);
+    const kind = displayMoveKind(entry.move, character.slug);
     (result[kind] ??= []).push(entry); return result;
   }, {})).sort(([a], [b]) => groupRank(a) - groupRank(b));
   const connectedPlayers = unifiedPlayers(character, players);
@@ -265,7 +266,7 @@ export function CharacterUnifiedPage({ character: dbCharacter, bundle, players, 
           schemes: [...new Set(entry.variants.flatMap(unifiedMoveFilterSchemes))],
           commands: entry.variants.flatMap(move => (move.commands ?? []).filter(row => row.moveId === move.id)
             .flatMap(row => [...moveCommandSearchTerms(unifiedCommandText(row)), ...sf6CommandSearchTerms(unifiedCommandText(row))])),
-          content: <UnifiedMoveCard move={entry.move} variants={entry.variants} evidence={moveEvidence[entry.move.id]} />,
+          content: <UnifiedMoveCard move={entry.move} variants={entry.variants} evidence={moveEvidence[entry.move.id]} kind={kind} />,
         })) }))} /> : <p className={styles.empty}>技データは確認中です。確認できた技から掲載します。</p>}
     </section>
     {character.slug === "luke" && ["development", "preview"].includes(process.env.VERCEL_ENV ?? process.env.NODE_ENV ?? "") ? localMoveReferences : null}

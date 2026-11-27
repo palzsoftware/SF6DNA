@@ -16,7 +16,8 @@ function load() {
   });
   return { ...loaded.exports, data };
 }
-const { sortByOfficialMoveOrder, officialMoveOrderIndex, data } = load();
+const loaded = load();
+const { sortByOfficialMoveOrder, officialMoveOrderIndex, data } = loaded;
 const elena = ["SA3 グラスランドソング", "CA グラスランドソング", "SA1 ミーティアボレー", "SA2リヴァイブダンス", "リヴァイブダンス（回復）",
   "強スピンサイズ", "OD スピンサイズ", "弱 スピンサイズ", "中 スピンサイズ", "強 ライノホーン", "OD ライノホーン", "弱 ライノホーン", "中 ライノホーン",
   "強 リンクシング", "弱 リンクシング", "中 リンクシング", "ODリンクシング", "マレットスマッシュ", "レオパードスナップ", "ハーベストサークル",
@@ -54,4 +55,16 @@ test("order data covers all 32 characters and matches the official frame tables 
   const fill = JSON.parse(readFileSync(new URL("../src/data/SF6DNA_ALL32_OFFICIAL_MOVE_FILL_20261125.json", import.meta.url), "utf8"));
   assert.equal(Object.keys(data.byCharacter).length, 32);
   for (const [slug, rows] of Object.entries(fill.byCharacter)) assert.deepEqual(data.byCharacter[slug], rows.map(row => [row.k ?? null, row.n]), slug);
+});
+
+test("V54: common system rows (web 6xx) are detected by key or exact name only", () => {
+  const { isOfficialCommonSystemMove } = loaded;
+  assert.equal(isOfficialCommonSystemMove("elena", { id: "x", name: "ドライブパリィ" }), true);
+  assert.equal(isOfficialCommonSystemMove("elena", { id: "x", name: "前方ステップ" }), true);
+  assert.equal(isOfficialCommonSystemMove("elena", { id: "x", name: "x", officialFrameKey: "elena:web:602" }), true);
+  assert.equal(isOfficialCommonSystemMove("elena", { id: "x", name: "ドライブリバーサル（ボアチャージ）" }), true);
+  assert.equal(isOfficialCommonSystemMove("elena", { id: "x", name: "弱 ライノホーン" }), false);
+  assert.equal(isOfficialCommonSystemMove("elena", { id: "x", name: "レオパードスナップ" }), false);
+  assert.equal(isOfficialCommonSystemMove("elena", { id: "x", name: "レッグスタック" }), false);
+  assert.equal(isOfficialCommonSystemMove("unknown-character", { id: "x", name: "ドライブパリィ" }), false);
 });
