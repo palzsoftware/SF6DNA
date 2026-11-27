@@ -187,3 +187,8 @@ html { scroll-padding-block-start: 5rem; }
 .daily-training-setup-guide { margin-top: 10px; display: grid; gap: 8px; overflow-wrap: anywhere; }
 .daily-training-setup-guide summary { cursor: pointer; font-weight: 700; min-height: 24px; }
 .daily-training-setup-guide ol { padding-left: 1.4em; line-height: 1.7; }
+
+/* V54: text fields stay at 16px or more on phones so iOS Safari does not zoom in when a field is focused. */
+@media (max-width: 640px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]), select, textarea { font-size: max(16px, 1em) !important; }
+}

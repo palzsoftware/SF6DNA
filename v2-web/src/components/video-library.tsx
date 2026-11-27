@@ -230,7 +230,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
           </div>
           {visible < results.length ? <button className={`button-secondary ${styles.more}`} type="button" onClick={() => setVisible((count) => count + 12)}>さらに12件表示</button> : null}
         </>
-      ) : <section className="empty-state"><h2>現在登録されている公開動画に該当するものがありません</h2><p>条件を減らすか、検索語を変えてください。確認できていないプレイヤー・大会・対象MR情報は検索対象に含めません。座学やMRの条件は、分類情報が登録された動画のみが対象です。</p></section>}
+      ) : <section className="empty-state"><h2>条件に合う動画が見つかりませんでした</h2><p>条件を減らすか、別の言葉で検索してください。選手・大会・対象MRなどの条件では、その情報を確認できた動画だけが表示されます。</p></section>}
     </div>
   );
 }
