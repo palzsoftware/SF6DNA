@@ -1,0 +1,110 @@
+[
+ {
+  "playerSlug": "fujimura",
+  "current": "レバーレス（オーダーメイド AFGコントローラー）",
+  "candidate": "レバーレス／オーダーメイド AFGコントローラー",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "moke",
+  "current": "レバーレス",
+  "candidate": "レバーレス／機種候補:Victrix Pro KO",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "shuto",
+  "current": "レバーレス（PUNK WORKSHOP R14 Shuto Model）",
+  "candidate": "レバーレス／PUNK WORKSHOP R14 Shuto Model",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "cosa",
+  "current": "パッド（HORI ファイティングコマンダー OCTA）",
+  "candidate": "パッド／HORI ファイティングコマンダー OCTA",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "momochi",
+  "current": "レバーレス（ZENAIM レバーレス（プロトタイプ））",
+  "candidate": "レバーレス／ZENAIM レバーレス（プロトタイプ）",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "menard",
+  "current": "パッド（SONY DualSense）",
+  "candidate": "パッド／SONY DualSense",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "yanai",
+  "current": "レバーレス",
+  "candidate": "レバーレス／機種候補:PUNK WORKSHOP MINI BOX",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "tokido",
+  "current": "レバーレス",
+  "candidate": "レバーレス／機種候補:Hit Box ULTRA",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "gachikun",
+  "current": "レバーレス（PUNK WORKSHOP R14 Gachikun Model）",
+  "candidate": "レバーレス／PUNK WORKSHOP R14 Gachikun Model",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "kawano",
+  "current": "レバーレス（Hit Box ULTRA）",
+  "candidate": "レバーレス／Hit Box ULTRA",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "sahara-ed",
+  "current": "レバーレス（WizardRoom GlimPearl Limited Edition Sahara）",
+  "candidate": "レバーレス／WizardRoom GlimPearl Limited Edition Sahara",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "nauman",
+  "current": "レバーレス",
+  "candidate": "レバーレス／機種候補:PUNK WORKSHOP MINI BOX",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "john-takeuchi",
+  "current": "パッド",
+  "candidate": "パッド／機種候補:HORI ファイティングコマンダー OCTA Pro",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "otani",
+  "current": "レバーレス",
+  "candidate": "レバーレス／機種候補:WizardRoom GlimPearl",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "daigo",
+  "current": "レバーレス（Hit Box PC Beast Box（ウメハラモデル））",
+  "candidate": "レバーレス／Hit Box PC Beast Box（ウメハラモデル）",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "yas",
+  "current": "パッド",
+  "candidate": "パッド／機種候補:Turtle Beach（型番不明）",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "hinao",
+  "current": "パッド（SONY DualSense）",
+  "candidate": "パッド／SONY DualSense",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ },
+ {
+  "playerSlug": "hikaru-aki",
+  "current": "レバーレス（ZENAIM Leverless）",
+  "candidate": "レバーレス／ZENAIM Leverless",
+  "reason": "既存のデバイス値と異なる。上書きせずHOLD（本人発信で確認後に判断）"
+ }
+]

@@ -122,6 +122,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「コンボ選択と最後まで足掻いているところ」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/ryukichi/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -249,6 +257,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「レアキャラへの変な対策」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sako/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -360,6 +376,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「堅実さ」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fujimura/",
         "checkedOn": "2026-11-25"
       }
@@ -489,6 +513,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「攻め！攻め！」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/moke/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -605,6 +637,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「ラッシュ中段打つ時はドキドキしながら打ってます」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/dogura/",
         "checkedOn": "2026-11-25"
       }
@@ -734,6 +774,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「無敵技のヒット率！」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/bonchan/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -850,6 +898,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「ノーミスなヴァイパーのプレイ」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kazunoko/",
         "checkedOn": "2026-11-25"
       }
@@ -979,6 +1035,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「試合のプランニング」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/shuto/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -1106,6 +1170,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「硬派さと思い切り。我慢強さとブレないメンタル。」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/cosa/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -1226,6 +1298,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「全能感あるプレイ」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/machabo/",
         "checkedOn": "2026-11-25"
       }
@@ -1355,6 +1435,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kobayan/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「こばやんのザンギエフ強すぎるよ…‼」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kobayan/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -1482,6 +1570,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kincho-terry/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「攻めを見て！と言いたいところなんですけど実は守りも自信あります」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kincho/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -1607,6 +1703,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「忍耐力」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/momochi/",
         "checkedOn": "2026-11-25"
       }
@@ -1736,6 +1840,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「粘り強く戦う」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/higuchi/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -1858,6 +1970,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「これまでとのプレイスタイルの変化」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yamaguchi/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -1966,6 +2086,14 @@
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/menard/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「同じ状況に2回目に直面したときの対応です。ぜひ楽しみにしてください！」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mena/",
         "checkedOn": "2026-11-25"
       }
     ],
@@ -2094,6 +2222,22 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「中段とインパクトを絶対喰らわないところ」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/acqua/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "alias",
+        "label": "別表記",
+        "value": "あくあ（格ゲーチェッカー表記）",
+        "basis": "検索・照合用の別表記として登録（表示名は変更しない）",
+        "sourceUrl": "https://kakuge-checker.com/topic/view/09243/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -2221,6 +2365,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「ちじょうせん」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hibiki/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -2339,6 +2491,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira-cammy/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「電光石火！コンボ判断！！ODフーリガン！！！」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/akira/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -2451,6 +2611,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takepi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「相手を寄せ付けない弾撃ち」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takepi/",
         "checkedOn": "2026-11-25"
       }
@@ -2571,6 +2739,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「わんぱくな読み合い」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yanai/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -2683,6 +2859,22 @@
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「ボタン押し放題」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/johnny/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "alias",
+        "label": "別表記",
+        "value": "ジョニイ（公式クリップ題名の表記ゆれ）",
+        "basis": "検索・照合用の別表記として登録（表示名は変更しない）",
+        "sourceUrl": "https://kakuge-checker.com/topic/view/09243/",
         "checkedOn": "2026-11-25"
       }
     ],
@@ -2802,6 +2994,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「他のダルシム使いでは見れないプレイ」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/torimeshi/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -2914,6 +3114,22 @@
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/2bassa/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「若さとおじっぽさが入り混じるプレイ」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/2bassa/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "alias",
+        "label": "別表記",
+        "value": "２BASSA（全角、公式クリップ題名）",
+        "basis": "検索・照合用の別表記として登録（表示名は変更しない）",
+        "sourceUrl": "https://kakuge-checker.com/topic/view/09243/",
         "checkedOn": "2026-11-25"
       }
     ],
@@ -3040,6 +3256,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「JPのハマった時の絶対的な強さ」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/tokido/",
         "checkedOn": "2026-11-25"
       }
@@ -3169,6 +3393,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「技の当て感」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mago/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -3296,6 +3528,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「体力ゲージが少なくなってくると悲しい気持ちでプレイしてます」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mizuha/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -3416,6 +3656,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/wabiichi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「攻めまくるプレイ！」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/wabiichi/",
         "checkedOn": "2026-11-25"
       }
@@ -3545,6 +3793,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「緩急をつけるスタイルを今年は意識しているのでそこを見て欲しいです！」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/gachikun/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -3663,6 +3919,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「立ち回り」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/kawano/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -3779,6 +4043,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「ラッシュ止め」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/pugera/",
         "checkedOn": "2026-11-25"
       }
@@ -3908,6 +4180,22 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sahara-ed/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「中段ガード」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/sahara/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "alias",
+        "label": "別表記",
+        "value": "さはら.（格ゲーチェッカー表記）",
+        "basis": "検索・照合用の別表記として登録（表示名は変更しない）",
+        "sourceUrl": "https://kakuge-checker.com/topic/view/09243/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -4035,6 +4323,22 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itabashi-zangief/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「どうみても豪快」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/itazan/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "alias",
+        "label": "別表記",
+        "value": "板ザン（略称）",
+        "basis": "検索・照合用の別表記として登録（表示名は変更しない）",
+        "sourceUrl": "https://kakuge-checker.com/topic/view/09243/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -4160,6 +4464,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「人読み」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/keib/",
         "checkedOn": "2026-11-25"
       }
@@ -4289,6 +4601,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「かわせない花蝶扇」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/nauman/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -4416,6 +4736,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/john-takeuchi/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「試合展開の豊富さ」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takeuchi/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -4532,6 +4860,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/seiya/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「対応力、確認精度」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/seiya/",
         "checkedOn": "2026-11-25"
       }
@@ -4656,6 +4992,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/raoyamu/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「土壇場の胆力」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/raoyamu/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -4767,6 +5111,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「オラオラ」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/otani/",
         "checkedOn": "2026-11-25"
       }
@@ -4889,6 +5241,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「やり込みから来る豪鬼のプレイング」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/mocchi/",
         "checkedOn": "2026-11-25"
       }
@@ -5018,6 +5378,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「瞬獄殺」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/daigo/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -5134,6 +5502,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「動きを封じるところ」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/fuudo/",
         "checkedOn": "2026-11-25"
       }
@@ -5263,6 +5639,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yas/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「補正切り」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/yas/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -5370,6 +5754,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hinao/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「強気なところ」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hinao/",
         "checkedOn": "2026-11-25"
       }
@@ -5499,6 +5891,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takagi/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「強気な姿勢」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/takagi/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -5619,6 +6019,14 @@
           }
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/adelie/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「反応速度」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/adelie/",
         "checkedOn": "2026-11-25"
       }
@@ -5743,6 +6151,14 @@
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/jr/",
         "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「地上戦と命を賭けた読み合い」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/jr/",
+        "checkedOn": "2026-11-25"
       }
     ],
     "note": "2026-11-25 B・Chrome CSV（SFL48_PROFILE・PROFILE_DELTA）から作成。プレイスタイルのWiki本文は転載しない。"
@@ -5860,6 +6276,14 @@
         ],
         "basis": "本人との対応を確認できた公式リンクのみ",
         "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru-aki/",
+        "checkedOn": "2026-11-25"
+      },
+      {
+        "field": "playStyle",
+        "label": "プレイスタイル（本人回答）",
+        "value": "「A.K.I.使いにしかわからない偉いポイント」",
+        "basis": "公式Q&A（開幕前）の本人回答を短く掲載。Wiki本文の要約は使わない",
+        "sourceUrl": "https://sf.esports.capcom.com/sfl2026/player/hikaru/",
         "checkedOn": "2026-11-25"
       }
     ],
