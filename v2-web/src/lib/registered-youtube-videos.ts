@@ -29,6 +29,10 @@ type PlayerRow = {
 type CharacterRow = {
   key: string; characterSlug: string | null; youtubeId: string; title: string; channelName: string; sourceDate: string;
   category: "解説" | "対戦"; origin: string; playerSlug: string | null; caution: string | null; publicationApproval: "PENDING" | "APPROVED";
+  /** Optional reviewed content tags (V50). Unknown values are ignored; the 解説/対戦 category above stays the card type. */
+  contentCategories?: readonly string[];
+  /** Optional reviewed length in seconds from the video page (V50). */
+  durationSeconds?: number | null;
 };
 type Binding = { environment: string; playerId: string; playerSlug: string; recommendationKey: string };
 type Supplement = { playerSlug: string; displayName: string };
@@ -37,6 +41,9 @@ export type RegisteredVideoCategory = "guide" | "match" | "ranked_replay";
 export const REGISTERED_VIDEO_CATEGORY_LABELS: Record<RegisteredVideoCategory, string> = { guide: "解説", match: "対戦", ranked_replay: "ランクマ／リプレイ" };
 const KIND_CATEGORY: Record<PlayerRow["kind"], RegisteredVideoCategory> = { 本人解説: "guide", 大会対戦: "match", "配信・ランクマ": "ranked_replay" };
 const YOUTUBE_ID = /^[A-Za-z0-9_-]{11}$/;
+/** Content tags a registered row may add to `categories` (labels in VIDEO_CATEGORY_LABELS). */
+const CONTENT_CATEGORIES = new Set(["combo", "lethal", "counter", "setplay", "patch", "system", "tournament", "ranked_replay"]);
+const validDuration = (s: unknown): s is number => typeof s === "number" && Number.isInteger(s) && s > 0 && s < 86400 * 2;
 const CHARACTERS = (characterIds as { characters: Record<string, { id: string; name: string; developmentMissing?: boolean; developmentId?: string }> }).characters;
 const PRODUCTION = "wnuxaxbrpudyypzdbdho";
 const DEVELOPMENT = "vvsknbmlfvvnrmgtyhbf";
@@ -67,11 +74,11 @@ export function registeredYouTubeVideos(environment: string, preview: boolean, s
 
   type Acc = { first: { title: string; channelName: string; date: string | null }; categories: Set<RegisteredVideoCategory>;
     characters: Map<string, string>; players: Map<string, { slug: string; label: string }>; bindings: VideoSummary["matchBindings"];
-    supporting: Map<string, string>; notes: Set<string>; start: number | null; rows: number };
+    supporting: Map<string, string>; notes: Set<string>; start: number | null; rows: number; content: Set<string>; duration: number | null };
   const acc = new Map<string, Acc>();
   const get = (id: string, title: string, channelName: string, date: string | null) => {
     let a = acc.get(id);
-    if (!a) acc.set(id, a = { first: { title, channelName, date }, categories: new Set(), characters: new Map(), players: new Map(), bindings: [], supporting: new Map(), notes: new Set(), start: null, rows: 0 });
+    if (!a) acc.set(id, a = { first: { title, channelName, date }, categories: new Set(), characters: new Map(), players: new Map(), bindings: [], supporting: new Map(), notes: new Set(), start: null, rows: 0, content: new Set(), duration: null });
     return a;
   };
 
@@ -107,6 +114,8 @@ export function registeredYouTubeVideos(environment: string, preview: boolean, s
     a.rows++;
     a.categories.add(r.category === "解説" ? "guide" : "match");
     a.characters.set(r.characterSlug, CHARACTERS[r.characterSlug].name);
+    for (const c of r.contentCategories ?? []) if (CONTENT_CATEGORIES.has(c)) a.content.add(c);
+    if (a.duration === null && validDuration(r.durationSeconds)) a.duration = r.durationSeconds;
     // Past tournaments are labelled on the card (e.g. 2025年の過去大会).
     if (r.caution) a.notes.add(r.origin);
   }
@@ -119,9 +128,9 @@ export function registeredYouTubeVideos(environment: string, preview: boolean, s
     return {
       id: `youtube:${id}`, slug: `youtube-${id}`, title: a.first.title, platform: "YouTube", videoType: typeKey,
       publishedAt: a.first.date, description: null, url: youtubeWatch(id, a.start), thumbnailUrl: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
-      channelName: a.first.channelName, durationSeconds: null, language: null, controlTypes: [], events: [...a.notes],
+      channelName: a.first.channelName, durationSeconds: a.duration, language: null, controlTypes: [], events: [...a.notes],
       characters: characterSlugs.map(s => CHARACTERS[s].name), players: playerRefs.map(p => p.label),
-      categories: [typeKey], level: "unknown", viewCount: null, viewCountCheckedAt: null,
+      categories: [typeKey, ...[...a.content].filter(c => c !== typeKey).sort()], level: "unknown", viewCount: null, viewCountCheckedAt: null,
       entityRefs: { characters: characterSlugs.map(s => ({ id: characterId(s), label: CHARACTERS[s].name })), players: playerRefs, tournaments: [] },
       matchBindings: a.bindings,
       detailHref: null, supportingLinks: [...a.supporting].map(([url, label]) => ({ url, label })),

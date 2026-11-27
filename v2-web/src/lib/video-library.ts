@@ -40,6 +40,8 @@ export const VIDEO_CATEGORY_LABELS: Record<string, string> = {
   match: "対戦",
   explainer: "解説",
   ranked_replay: "ランクマ／リプレイ",
+  patch: "Patch解説",
+  system: "システム解説",
 };
 
 export const VIDEO_LANGUAGE_LABELS: Record<string, string> = { ja: "日本語", en: "英語", other: "その他" };
@@ -62,7 +64,7 @@ function includesAny(values: string[], selected: Set<string>) {
 function modeValues(video: VideoSummary): Array<"guide" | "match"> {
   const type = video.videoType?.toLowerCase() ?? "";
   const values: Array<"guide" | "match"> = [];
-  if (["guide", "official_guide", "theory"].includes(type)) values.push("guide");
+  if (["guide", "official_guide", "theory", "explainer"].includes(type)) values.push("guide");
   if (["match", "tournament"].includes(type)) values.push("match");
   return values;
 }

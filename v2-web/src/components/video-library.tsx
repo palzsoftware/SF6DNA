@@ -98,7 +98,7 @@ export function VideoLibrary({ videos: suppliedVideos, lockedCharacter, initialP
     languages: unique(videos.flatMap((video) => video.language ? [video.language] : [])),
     modes: unique(videos.flatMap((video) => {
       const type = video.videoType?.toLowerCase();
-      return ["guide", "official_guide", "theory"].includes(type ?? "") ? ["guide"] : ["match", "tournament"].includes(type ?? "") ? ["match"] : [];
+      return ["guide", "official_guide", "theory", "explainer"].includes(type ?? "") ? ["guide"] : ["match", "tournament"].includes(type ?? "") ? ["match"] : [];
     })),
   }), [videos, learningRecords]);
 
