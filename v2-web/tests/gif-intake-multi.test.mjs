@@ -20,9 +20,10 @@ const clone = (v) => JSON.parse(JSON.stringify(v));
 /** TypeScriptの本物のモジュール(preview-gif-media.ts)を、Nodeの型除去モードで読み込んで実行する。 */
 function runTs(fn, args) {
   const mod = pathToFileURL(here("../src/lib/preview-gif-media.ts")).href;
-  const code = `const m = await import(${JSON.stringify(mod)}); const a = JSON.parse(process.argv[1]);
+  // Arguments go through stdin: on Windows a long argv (over ~32K chars) fails with ENAMETOOLONG.
+  const code = `import { readFileSync } from "node:fs"; const m = await import(${JSON.stringify(mod)}); const a = JSON.parse(readFileSync(0, "utf8"));
     const out = (${fn})(m, a); console.log(JSON.stringify(out));`;
-  const r = spawnSync(process.execPath, ["--experimental-strip-types", "--no-warnings", "--input-type=module", "-e", code, JSON.stringify(args)], { encoding: "utf8" });
+  const r = spawnSync(process.execPath, ["--experimental-strip-types", "--no-warnings", "--input-type=module", "-e", code], { encoding: "utf8", input: JSON.stringify(args) });
   assert.equal(r.status, 0, r.stderr);
   return JSON.parse(r.stdout);
 }
