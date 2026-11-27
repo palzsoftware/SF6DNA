@@ -1,478 +1,546 @@
 [
-  {
-    "playerSlug": "xiaohai",
-    "youtubeId": "ha-x7AMqBD0",
-    "title": "Interview with Xiaohai, the World’s Best KOF Player and SFL & EWC Champion from China!",
-    "kind": "INTERVIEW",
-    "startSeconds": 203,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "ときどチャンネル / Tokido",
-    "performerCheck": "title_or_own_channel_confirms_player"
+ {
+  "playerSlug": "xiaohai",
+  "youtubeId": "ha-x7AMqBD0",
+  "title": "Interview with Xiaohai, the World’s Best KOF Player and SFL & EWC Champion from China!",
+  "kind": "INTERVIEW",
+  "startSeconds": 203,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "xiaohai",
-    "youtubeId": "SzJNDmjXvkw",
-    "title": "UFA 2024 GRAND FINAL KUSANAGI VS KSG | XIAOHAI",
-    "kind": "OFFICIAL_MATCH",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Capcom Fighters JP",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "ときどチャンネル / Tokido",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2025-04-12",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "xiaohai",
+  "youtubeId": "SzJNDmjXvkw",
+  "title": "UFA 2024 GRAND FINAL KUSANAGI VS KSG | XIAOHAI",
+  "kind": "OFFICIAL_MATCH",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "problem-x",
-    "youtubeId": "8rR2KknjU9g",
-    "title": "Problem X (Alex) vs. Leshar (Akuma) - Day 3 - SFL EMEAA 2026",
-    "kind": "OFFICIAL_MATCH",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Capcom Fighters",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "Capcom Fighters JP",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2024-09-15",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "problem-x",
+  "youtubeId": "8rR2KknjU9g",
+  "title": "Problem X (Alex) vs. Leshar (Akuma) - Day 3 - SFL EMEAA 2026",
+  "kind": "OFFICIAL_MATCH",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "problem-x",
-    "youtubeId": "qIXTVR9f8os",
-    "title": "Problem X (Alex) vs. Angrybird (Akuma) - Day 1 - SFL EMEAA 2026",
-    "kind": "OFFICIAL_MATCH",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Capcom Fighters",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "Capcom Fighters",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2026-09-09",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "problem-x",
+  "youtubeId": "qIXTVR9f8os",
+  "title": "Problem X (Alex) vs. Angrybird (Akuma) - Day 1 - SFL EMEAA 2026",
+  "kind": "OFFICIAL_MATCH",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "vxbao",
-    "youtubeId": "aVYLUrT-OmY",
-    "title": "STREET FIGHTER LEAGUE EMEAA 2026 DAY5 日本語実況",
-    "kind": "OFFICIAL_ARCHIVE_CANDIDATE",
-    "startSeconds": 11138,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手が未確認(概要欄・タイムスタンプ確認が必要)。公開承認(PENDING)までruntime未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Capcom Fighters JP",
-    "performerCheck": "UNCONFIRMED_from_title (description/timestamp check needed)"
+  "channelName": "Capcom Fighters",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2026-09-07",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "vxbao",
+  "youtubeId": "aVYLUrT-OmY",
+  "title": "STREET FIGHTER LEAGUE EMEAA 2026 DAY5 日本語実況",
+  "kind": "OFFICIAL_ARCHIVE_CANDIDATE",
+  "startSeconds": 11138,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手が未確認(概要欄・タイムスタンプ確認が必要)。公開承認(PENDING)までruntime未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "kakeru",
-    "youtubeId": "ztQbHCRtSnc",
-    "title": "WWで大活躍！真逆のプレイスタイルなのに最強格なたけぴJPと翔JPを分析。",
-    "kind": "ANALYSIS",
-    "startSeconds": 79,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "ACQUA",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "Capcom Fighters JP",
+  "performerCheck": "description_chapter_confirms_player",
+  "sourceDate": "2026-09-06",
+  "sourceDateMethod": "youtube_publishDate",
+  "isLiveArchive": true,
+  "performerEvidence": "3:05:38 NL VS VXBAO"
+ },
+ {
+  "playerSlug": "kakeru",
+  "youtubeId": "ztQbHCRtSnc",
+  "title": "WWで大活躍！真逆のプレイスタイルなのに最強格なたけぴJPと翔JPを分析。",
+  "kind": "ANALYSIS",
+  "startSeconds": 79,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "kakeru",
-    "youtubeId": "VatCnnEmotk",
-    "title": "Kakeru (JP) vs AngryBird (Ken) Gamers8 2023 Grand Final",
-    "kind": "THIRD_PARTY_MATCH",
-    "startSeconds": 33,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "GAMING DIMENSION",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "ACQUA",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2026-05-11",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "kakeru",
+  "youtubeId": "VatCnnEmotk",
+  "title": "Kakeru (JP) vs AngryBird (Ken) Gamers8 2023 Grand Final",
+  "kind": "THIRD_PARTY_MATCH",
+  "startSeconds": 33,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "haitani",
-    "youtubeId": "aF9L9IGfLTs",
-    "title": null,
-    "kind": "LEGACY_REFERENCE",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "ハイタニ TV",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "GAMING DIMENSION",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2023-08-17",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "haitani",
+  "youtubeId": "aF9L9IGfLTs",
+  "title": null,
+  "kind": "LEGACY_REFERENCE",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "haitani",
-    "youtubeId": "YWOEuyawgnM",
-    "title": "クラシック春麗ならではの強みを説明するハイタニ",
-    "kind": "PLAYER_EXPLANATION",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "ハイタニ TV",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "ハイタニ TV",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2026-05-31",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "haitani",
+  "youtubeId": "YWOEuyawgnM",
+  "title": "クラシック春麗ならではの強みを説明するハイタニ",
+  "kind": "PLAYER_EXPLANATION",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "haitani",
-    "youtubeId": "TY5VriLI9es",
-    "title": "アプデ後のモダン春麗をとおこにコーチングするハイタニ",
-    "kind": "COACHING",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "ハイタニ TV",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "ハイタニ TV",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2025-01-05",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "haitani",
+  "youtubeId": "TY5VriLI9es",
+  "title": "アプデ後のモダン春麗をとおこにコーチングするハイタニ",
+  "kind": "COACHING",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "angrybird",
-    "youtubeId": "GCBjYrNOWrM",
-    "title": "Evo 2023: Street Fighter 6 Top 6",
-    "kind": "OFFICIAL_EVENT_ARCHIVE",
-    "startSeconds": 8913,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手が未確認(概要欄・タイムスタンプ確認が必要)。公開承認(PENDING)までruntime未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Evo Events",
-    "performerCheck": "UNCONFIRMED_from_title (description/timestamp check needed)"
+  "channelName": "ハイタニ TV",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2025-06-10",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "angrybird",
+  "youtubeId": "GCBjYrNOWrM",
+  "title": "Evo 2023: Street Fighter 6 Top 6",
+  "kind": "OFFICIAL_EVENT_ARCHIVE",
+  "startSeconds": 8913,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手が未確認(概要欄・タイムスタンプ確認が必要)。公開承認(PENDING)までruntime未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "angrybird",
-    "youtubeId": "qIXTVR9f8os",
-    "title": "Problem X (Alex) vs. Angrybird (Akuma) - Day 1 - SFL EMEAA 2026",
-    "kind": "OFFICIAL_MATCH",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Capcom Fighters",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "Evo Events",
+  "performerCheck": "description_chapter_confirms_player",
+  "sourceDate": "2023-08-07",
+  "sourceDateMethod": "youtube_publishDate",
+  "performerEvidence": "2:28:33 AngryBird (Ken) vs. MenaRD (Blanka)",
+  "characterInChapterCandidate": "ken"
+ },
+ {
+  "playerSlug": "angrybird",
+  "youtubeId": "qIXTVR9f8os",
+  "title": "Problem X (Alex) vs. Angrybird (Akuma) - Day 1 - SFL EMEAA 2026",
+  "kind": "OFFICIAL_MATCH",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "angrybird",
-    "youtubeId": "VatCnnEmotk",
-    "title": "Kakeru (JP) vs AngryBird (Ken) Gamers8 2023 Grand Final",
-    "kind": "THIRD_PARTY_MATCH",
-    "startSeconds": 33,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "GAMING DIMENSION",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "Capcom Fighters",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2026-09-07",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "angrybird",
+  "youtubeId": "VatCnnEmotk",
+  "title": "Kakeru (JP) vs AngryBird (Ken) Gamers8 2023 Grand Final",
+  "kind": "THIRD_PARTY_MATCH",
+  "startSeconds": 33,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "nl",
-    "youtubeId": "ZVIgViJoLfI",
-    "title": "NL 豪鬼 高レベル対戦",
-    "kind": "RANKED_REPLAY_CANDIDATE",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "SF6-MODERN",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "GAMING DIMENSION",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2023-08-17",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "nl",
+  "youtubeId": "ZVIgViJoLfI",
+  "title": "NL 豪鬼 高レベル対戦",
+  "kind": "RANKED_REPLAY_CANDIDATE",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "nl",
-    "youtubeId": "Q0M06XzJg5o",
-    "title": "NL player appears! International interview",
-    "kind": "INTERVIEW",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "ときどチャンネル / Tokido",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "SF6-MODERN",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2026-04-28",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "nl",
+  "youtubeId": "Q0M06XzJg5o",
+  "title": "NL player appears! International interview",
+  "kind": "INTERVIEW",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "nuckledu",
-    "youtubeId": "UJWxiBfnh2A",
-    "title": "Ingrid is Here! - TNS Street Fighter 6 #148",
-    "kind": "TOURNAMENT_ARCHIVE",
-    "startSeconds": 3061,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手が未確認(概要欄・タイムスタンプ確認が必要)。公開承認(PENDING)までruntime未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Tampa Never Sleeps (TampaNeverSleeps)",
-    "performerCheck": "UNCONFIRMED_from_title (description/timestamp check needed)"
+  "channelName": "ときどチャンネル / Tokido",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2023-07-13",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "nuckledu",
+  "youtubeId": "UJWxiBfnh2A",
+  "title": "Ingrid is Here! - TNS Street Fighter 6 #148",
+  "kind": "TOURNAMENT_ARCHIVE",
+  "startSeconds": 3061,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手が未確認(概要欄・タイムスタンプ確認が必要)。公開承認(PENDING)までruntime未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "nuckledu",
-    "youtubeId": "UJWxiBfnh2A",
-    "title": "Ingrid is Here! - TNS Street Fighter 6 #148",
-    "kind": "TOURNAMENT_ARCHIVE",
-    "startSeconds": 4097,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手が未確認(概要欄・タイムスタンプ確認が必要)。公開承認(PENDING)までruntime未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Tampa Never Sleeps (TampaNeverSleeps)",
-    "performerCheck": "UNCONFIRMED_from_title (description/timestamp check needed)"
+  "channelName": "Tampa Never Sleeps (TampaNeverSleeps)",
+  "performerCheck": "description_chapter_confirms_player",
+  "sourceDate": "2026-05-29",
+  "sourceDateMethod": "youtube_publishDate",
+  "performerEvidence": "00:51:01 SR NuckleDu (Mai) vs HUNG (Manon)",
+  "characterInChapterCandidate": "mai"
+ },
+ {
+  "playerSlug": "nuckledu",
+  "youtubeId": "UJWxiBfnh2A",
+  "title": "Ingrid is Here! - TNS Street Fighter 6 #148",
+  "kind": "TOURNAMENT_ARCHIVE",
+  "startSeconds": 4097,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手が未確認(概要欄・タイムスタンプ確認が必要)。公開承認(PENDING)までruntime未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "oil-king",
-    "youtubeId": "Itfv9ykuxaI",
-    "title": "Capcom presents TOPANGA CONCEPT MATCH Asia Special",
-    "kind": "OFFICIAL_EVENT_ARCHIVE",
-    "startSeconds": 10920,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手が未確認(概要欄・タイムスタンプ確認が必要)。公開承認(PENDING)までruntime未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "TOPANGA",
-    "performerCheck": "UNCONFIRMED_from_title (description/timestamp check needed)"
+  "channelName": "Tampa Never Sleeps (TampaNeverSleeps)",
+  "performerCheck": "description_chapter_confirms_player",
+  "sourceDate": "2026-05-29",
+  "sourceDateMethod": "youtube_publishDate",
+  "performerEvidence": "01:08:17 SR NuckleDu (Guile) vs DomaXD (Elena)",
+  "characterInChapterCandidate": "guile"
+ },
+ {
+  "playerSlug": "oil-king",
+  "youtubeId": "Itfv9ykuxaI",
+  "title": "Capcom presents TOPANGA CONCEPT MATCH Asia Special",
+  "kind": "OFFICIAL_EVENT_ARCHIVE",
+  "startSeconds": 10920,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手が未確認(概要欄・タイムスタンプ確認が必要)。公開承認(PENDING)までruntime未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "kusanagi",
-    "youtubeId": "SzJNDmjXvkw",
-    "title": "UFA 2024 GRAND FINAL KUSANAGI VS KSG | XIAOHAI",
-    "kind": "OFFICIAL_MATCH",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Capcom Fighters JP",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "TOPANGA",
+  "performerCheck": "description_chapter_confirms_player",
+  "sourceDate": "2025-12-27",
+  "sourceDateMethod": "youtube_publishDate",
+  "isLiveArchive": true,
+  "performerEvidence": "3:02:08 ときど / Oil King インタビュー（対戦は3:04:34 ときど vs Oil King）"
+ },
+ {
+  "playerSlug": "kusanagi",
+  "youtubeId": "SzJNDmjXvkw",
+  "title": "UFA 2024 GRAND FINAL KUSANAGI VS KSG | XIAOHAI",
+  "kind": "OFFICIAL_MATCH",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "broski",
-    "youtubeId": "70tTqLmPO3M",
-    "title": "What goes on inside the mind of an A.K.I player?",
-    "kind": "PLAYER_ANALYSIS",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Broski",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "Capcom Fighters JP",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2024-09-15",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "broski",
+  "youtubeId": "70tTqLmPO3M",
+  "title": "What goes on inside the mind of an A.K.I player?",
+  "kind": "PLAYER_ANALYSIS",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "broski",
-    "youtubeId": "LChTecM5SzE",
-    "title": "Another 5 tips to take your SF6 game to the next level",
-    "kind": "PLAYER_EXPLANATION",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Broski",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "Broski",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2025-11-13",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "broski",
+  "youtubeId": "LChTecM5SzE",
+  "title": "Another 5 tips to take your SF6 game to the next level",
+  "kind": "PLAYER_EXPLANATION",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "juicyjoe",
-    "youtubeId": "LsnmsYumz_k",
-    "title": "JuicyJoe (JP) vs Luffy (Manon) ranked matches",
-    "kind": "RANKED_REPLAY_CANDIDATE",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Fighting Game Watcher",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "Broski",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2024-04-11",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "juicyjoe",
+  "youtubeId": "LsnmsYumz_k",
+  "title": "JuicyJoe (JP) vs Luffy (Manon) ranked matches",
+  "kind": "RANKED_REPLAY_CANDIDATE",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "juicyjoe",
-    "youtubeId": "JR143U4mlWg",
-    "title": "Capcom Cup Top 5 with a Unique Pad-on-Knee Style! Interview with Juicyjoe",
-    "kind": "INTERVIEW",
-    "startSeconds": 394,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "ときどチャンネル / Tokido",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "Fighting Game Watcher",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2026-02-04",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "juicyjoe",
+  "youtubeId": "JR143U4mlWg",
+  "title": "Capcom Cup Top 5 with a Unique Pad-on-Knee Style! Interview with Juicyjoe",
+  "kind": "INTERVIEW",
+  "startSeconds": 394,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "xian",
-    "youtubeId": "97JlqeSytxE",
-    "title": "Xian (Kimberly) vs Lexx (Guile)",
-    "kind": "MATCH_CANDIDATE",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "SF6 Fighting World X",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "ときどチャンネル / Tokido",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2025-03-13",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "xian",
+  "youtubeId": "97JlqeSytxE",
+  "title": "Xian (Kimberly) vs Lexx (Guile)",
+  "kind": "MATCH_CANDIDATE",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "xian",
-    "youtubeId": "ZWmvPgcsLnM",
-    "title": "Xian on His EWC Comeback, SF6 Career and Competing at 35",
-    "kind": "INTERVIEW",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Team Nemesis",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "SF6 Fighting World X",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2026-09-06",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "xian",
+  "youtubeId": "ZWmvPgcsLnM",
+  "title": "Xian on His EWC Comeback, SF6 Career and Competing at 35",
+  "kind": "INTERVIEW",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "xian",
-    "youtubeId": "aVYLUrT-OmY",
-    "title": "STREET FIGHTER LEAGUE EMEAA 2026 DAY5 日本語実況",
-    "kind": "OFFICIAL_ARCHIVE_CANDIDATE",
-    "startSeconds": 4615,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手が未確認(概要欄・タイムスタンプ確認が必要)。公開承認(PENDING)までruntime未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Capcom Fighters JP",
-    "performerCheck": "UNCONFIRMED_from_title (description/timestamp check needed)"
+  "channelName": "Team Nemesis",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2026-07-28",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "xian",
+  "youtubeId": "aVYLUrT-OmY",
+  "title": "STREET FIGHTER LEAGUE EMEAA 2026 DAY5 日本語実況",
+  "kind": "OFFICIAL_ARCHIVE_CANDIDATE",
+  "startSeconds": 4615,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手が未確認(概要欄・タイムスタンプ確認が必要)。公開承認(PENDING)までruntime未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "luffy",
-    "youtubeId": "LsnmsYumz_k",
-    "title": "JuicyJoe (JP) vs Luffy (Manon) ranked matches",
-    "kind": "RANKED_REPLAY_CANDIDATE",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Fighting Game Watcher",
-    "performerCheck": "title_or_own_channel_confirms_player"
+  "channelName": "Capcom Fighters JP",
+  "performerCheck": "description_chapter_confirms_player",
+  "sourceDate": "2026-09-06",
+  "sourceDateMethod": "youtube_publishDate",
+  "isLiveArchive": true,
+  "performerEvidence": "1:16:55 XIAN VS LESHAR"
+ },
+ {
+  "playerSlug": "luffy",
+  "youtubeId": "LsnmsYumz_k",
+  "title": "JuicyJoe (JP) vs Luffy (Manon) ranked matches",
+  "kind": "RANKED_REPLAY_CANDIDATE",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
   },
-  {
-    "playerSlug": "luffy",
-    "youtubeId": "05KLpRLo9wo",
-    "title": "Luffy Manon Gameplay - Street Fighter 6 Ranked Matches",
-    "kind": "RANKED_REPLAY_CANDIDATE",
-    "startSeconds": null,
-    "dedupe": "NEW_VIDEO_HOLD",
-    "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
-    "publicationApproval": "PENDING",
-    "playbackEmbedCheck": {
-      "method": "youtube-oembed",
-      "result": "HTTP 200 (public, embeddable)",
-      "checkedOn": "2026-11-26"
-    },
-    "channelName": "Street Fighter Play",
-    "performerCheck": "title_or_own_channel_confirms_player"
-  }
+  "channelName": "Fighting Game Watcher",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2026-02-04",
+  "sourceDateMethod": "youtube_publishDate"
+ },
+ {
+  "playerSlug": "luffy",
+  "youtubeId": "05KLpRLo9wo",
+  "title": "Luffy Manon Gameplay - Street Fighter 6 Ranked Matches",
+  "kind": "RANKED_REPLAY_CANDIDATE",
+  "startSeconds": null,
+  "dedupe": "NEW_VIDEO_HOLD",
+  "hold": "出演選手のタイトル確認済・再生/埋込確認済。公開承認(PENDING)とsourceDate取得までruntime(videos.json)へ未接続",
+  "publicationApproval": "PENDING",
+  "playbackEmbedCheck": {
+   "method": "youtube-oembed",
+   "result": "HTTP 200 (public, embeddable)",
+   "checkedOn": "2026-11-26"
+  },
+  "channelName": "Street Fighter Play",
+  "performerCheck": "title_or_own_channel_confirms_player",
+  "sourceDate": "2026-01-31",
+  "sourceDateMethod": "youtube_publishDate"
+ }
 ]
