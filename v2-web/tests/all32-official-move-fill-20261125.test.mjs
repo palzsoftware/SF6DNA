@@ -97,8 +97,16 @@ test("V36 display names: empty （） and repeated spaces are dropped from new c
   const out = withAll32OfficialMoveFill(bundle([]), "c-viper", { ...fixture, byCharacter: { "c-viper": [row] } });
   assert.equal(out.bundle.moves[0].name, "ジャンプ弱K");
   assert.equal(out.bundle.moves[0].officialFrameKey, "c-viper:sha:706b2fdab5586b46fc8f", "the official key is unchanged");
-  // "total" is not a displayed field, so the odd official total 10982 cannot reach a card; every displayed field stays plausible.
+  // Fill fields never carry a 4-digit frame value ("total" is not filled; a 4-digit total from the TXT snapshot is held in unifiedFrameValue, tested below).
   for (const [char, list] of Object.entries(data.byCharacter)) for (const r of list) for (const f of ["startup", "active", "recovery", "onHit", "onBlock"]) {
     assert.ok(!/\d{4,}/.test(String(r.v[f] ?? "")), `${char}:${r.n}:${f}`);
   }
+});
+
+test("V37: an official total of 1000F or more (Elena STEP row 10982, found on Preview) is shown as unconfirmed, normal totals are unchanged", () => {
+  const m = (total) => ({ id: "x", frame: { total }, frameFieldStatus: { total: "LOCAL_OFFICIAL_TXT_CANONICAL" } });
+  assert.equal(unifiedFrameValue(m("10982"), "total", true), "確認中");
+  assert.equal(unifiedFrameValue(m(10982), "total", true), "確認中");
+  assert.equal(unifiedFrameValue(m("45"), "total", true), "45");
+  assert.equal(unifiedFrameValue(m("45"), "startup", true), "確認中", "other fields are untouched by the guard");
 });

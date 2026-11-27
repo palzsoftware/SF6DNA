@@ -98,6 +98,8 @@ export function unifiedFrameState(move: UnifiedMove, field: UnifiedFrameField, s
 export function unifiedFrameValue(move: UnifiedMove, field: UnifiedFrameField, showLocalTxtCandidate = false) {
   const state = move.frameFieldStatus?.[field as keyof NonNullable<UnifiedMove["frameFieldStatus"]>];
   const raw = (move.frame as Record<string, unknown> | null | undefined)?.[field];
+  // An official "total" of 1000F or more is a source-data anomaly (e.g. Elena's STEP row 10982), not a move length: show it as unconfirmed.
+  if (field === "total" && /^\d{4,}$/.test(String(raw ?? "").trim())) return "確認中";
   const text = (candidate: unknown) => typeof candidate === "number" ? (Number.isFinite(candidate) ? String(candidate) : "確認中")
     : typeof candidate === "string" && candidate.trim() ? (field === "onHit" && candidate.trim() === "D" ? "ダウン" : japaneseFrameText(candidate)) : "確認中";
   if (state === "OFFICIAL_NA") return "—";
