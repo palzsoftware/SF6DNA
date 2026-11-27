@@ -81,6 +81,6 @@ test("原因の根拠：診断結果画面は保存の完了を待たずに履�
   const runner = read("src/components/diagnosis-runner.tsx");
   const save = runner.slice(runner.indexOf("const saveCompletedDiagnosis"), runner.indexOf("function reset()"));
   assert.ok(save.indexOf("auth.getUser()") < save.indexOf('rpc("save_diagnosis_result_with_answers"'));
-  // 履歴へのリンクは保存状態に関係なく常に表示されている（現状の仕様の記録）。
-  assert.match(runner, /<Link className="button-secondary" href="\/diagnosis\/history">診断履歴を見る<\/Link>/);
+  // 履歴へのボタンは保存中も押せる（修正案Aで、保存中・保存失敗のときだけ短い注意を添える）。
+  assert.equal(runner.split('<SaveAwareHistoryLink status={databaseSaveStatus} guest={currentOwner === "guest"} />').length - 1, 2);
 });

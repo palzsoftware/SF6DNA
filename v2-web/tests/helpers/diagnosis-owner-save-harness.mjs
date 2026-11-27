@@ -34,7 +34,7 @@ function environment(options = {}) {
   const storage = new Map([[draftKey, JSON.stringify({ q1: "a1" })]]);
   const rows = new Map(); const calls = []; const errors = [];
   let counter = 0; let user = A; let failNext = false; let commitThenFail = false;
-  let authError = null; let authThrow = null;
+  let authError = null; let authThrow = null; let holdGate = null;
   const localStorage = {
     getItem: key => storage.get(key) ?? null,
     setItem: (key, value) => {
@@ -55,6 +55,8 @@ function environment(options = {}) {
     rpc: async (name, payload) => {
       assert.equal(name, "save_diagnosis_result_with_answers");
       calls.push({ user, ...payload });
+      // 通信遅延の再現：holdNext() で次の1回だけ、release() まで応答を止める（既定では使われない）。
+      if (holdGate) { const gate = holdGate; holdGate = null; await gate; }
       if (failNext) { failNext = false; return { data: null, error: Error("fixture retry") }; }
       const key = JSON.stringify([user, payload.p_diagnosis_id, payload.p_request_id]);
       const fingerprint = JSON.stringify([payload.p_result_payload, payload.p_answers]);
@@ -105,6 +107,13 @@ function environment(options = {}) {
       // Display-only notes (A's draft 2026-11-25); not part of the save contract under test.
       "./diagnosis-guide-notes": { DiagnosisQuestionNotes: () => null, ImprovementResultGuide: () => null },
       "./style-axis-guide-notes": { StyleAxisGuideNotes: () => null },
+      // A V45：履歴ボタンの表示部品は本物を読み込み、既存の画面検査（履歴リンクの有無）をそのまま通す。
+      "./save-aware-history-link": (() => {
+        const linkModule = { exports: {} };
+        const linkJs = ts.transpileModule(readFileSync(new URL("../../src/components/save-aware-history-link.tsx", import.meta.url), "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX } }).outputText;
+        new Function("module", "exports", "require", linkJs)(linkModule, linkModule.exports, name => name === "next/link" ? { default: "a" } : { ...jsx, Fragment: ({ children }) => children });
+        return linkModule.exports;
+      })(),
       "@/lib/daily-training": { buildDailyTrainingHref: () => "/daily" },
       "@/lib/release-features": { releaseFeatures: { aiCoach: false } },
       "@/lib/supabase/client": { getSupabaseBrowserClient: () => client },
@@ -158,6 +167,7 @@ function environment(options = {}) {
     setAuthThrow: value => { authThrow = value; },
     failNext: () => { failNext = true; },
     loseNextResponse: () => { commitThenFail = true; },
+    holdNext: () => { let release; holdGate = new Promise(resolve => { release = resolve; }); return () => release(); },
   };
 }
 
