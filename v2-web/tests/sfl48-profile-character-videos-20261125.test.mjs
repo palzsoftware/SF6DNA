@@ -331,3 +331,16 @@ test("承認値の検査: 承認済み行のキー一覧が承認リストと完
   // HOLD / EXCLUDED video ids have no APPROVED row anywhere in the data.
   for (const r of [...videos, ...characterVideos]) if (holdIds.has(r.youtubeId) || excludedIds.has(r.youtubeId)) assert.equal(r.publicationApproval, "PENDING", r.key);
 });
+
+test("アルジュン: 開発DBは別ID(draft)。developmentMissingが有効な間は開発に出ず、解除時だけ環境別IDを使う（公開境界は変えない）", () => {
+  const ids = read("../src/data/character-videos/character-ids.json").characters;
+  assert.equal(ids.arjun.developmentMissing, true); // the development row is still draft: nothing is shown there
+  assert.equal(ids.arjun.id, "d8d0fac8-c6af-485f-89b6-b3593ff1d38c");
+  assert.equal(ids.arjun.developmentId, "d886366d-8ef0-417a-a524-8cae980697b5");
+  for (const [slug, c] of Object.entries(ids)) if (slug !== "arjun") assert.equal(c.developmentId, undefined, slug); // every other id is identical in both environments
+  const arjun = characterVideos.filter(v => v.characterSlug === "arjun");
+  const shownIds = env => registeredModule.registeredYouTubeVideos(env, false).flatMap(v => v.entityRefs.characters.map(c => c.id));
+  assert.ok(arjun.length > 0);
+  assert.ok(!shownIds(ENV.development).includes(ids.arjun.developmentId) && !shownIds(ENV.development).includes(ids.arjun.id));
+  assert.ok(shownIds(ENV.production).includes(ids.arjun.id));
+});

@@ -4,7 +4,7 @@
     "aki": { "id": "92aa12c9-d4b0-4384-9ef8-a6d1d0115989", "name": "A.K.I." },
     "akuma": { "id": "4b6afb51-f50e-48cf-9115-896b5f4a5042", "name": "豪鬼" },
     "alex": { "id": "0a82075f-b2c3-4a3d-9267-89f3da1543dd", "name": "アレックス" },
-    "arjun": { "id": "d8d0fac8-c6af-485f-89b6-b3593ff1d38c", "name": "アルジュン", "developmentMissing": true },
+    "arjun": { "id": "d8d0fac8-c6af-485f-89b6-b3593ff1d38c", "name": "アルジュン", "developmentMissing": true, "developmentId": "d886366d-8ef0-417a-a524-8cae980697b5" },
     "blanka": { "id": "40b89dd5-38ba-4157-8f5f-0c4202c7d6aa", "name": "ブランカ" },
     "c-viper": { "id": "77f7116b-8d7e-4cc0-885b-7b5a3ac27f3b", "name": "C.ヴァイパー" },
     "cammy": { "id": "08c200c1-c205-4934-9184-8b85a06bc7e5", "name": "キャミィ" },

@@ -37,7 +37,7 @@ export type RegisteredVideoCategory = "guide" | "match" | "ranked_replay";
 export const REGISTERED_VIDEO_CATEGORY_LABELS: Record<RegisteredVideoCategory, string> = { guide: "解説", match: "対戦", ranked_replay: "ランクマ／リプレイ" };
 const KIND_CATEGORY: Record<PlayerRow["kind"], RegisteredVideoCategory> = { 本人解説: "guide", 大会対戦: "match", "配信・ランクマ": "ranked_replay" };
 const YOUTUBE_ID = /^[A-Za-z0-9_-]{11}$/;
-const CHARACTERS = (characterIds as { characters: Record<string, { id: string; name: string; developmentMissing?: boolean }> }).characters;
+const CHARACTERS = (characterIds as { characters: Record<string, { id: string; name: string; developmentMissing?: boolean; developmentId?: string }> }).characters;
 const PRODUCTION = "wnuxaxbrpudyypzdbdho";
 const DEVELOPMENT = "vvsknbmlfvvnrmgtyhbf";
 
@@ -60,6 +60,8 @@ export function registeredYouTubeVideos(environment: string, preview: boolean, s
     .flatMap(t => t.display?.name ? [[t.playerSlug, t.display.name] as [string, string]] : []));
   for (const s of source.supplements ?? profileSupplements as Supplement[]) names.set(s.playerSlug, s.displayName);
   const allowed = (approval: string) => preview || approval === "APPROVED";
+  // Same UUID in both environments except where the development DB row was created separately (arjun): developmentId.
+  const characterId = (slug: string) => (environment !== PRODUCTION && CHARACTERS[slug].developmentId) || CHARACTERS[slug].id;
   const characterAvailable = (slug: string) => Boolean(CHARACTERS[slug]) && !(environment !== PRODUCTION && CHARACTERS[slug].developmentMissing);
   const bound = new Map(bindings.filter(b => b.environment === environment).map(b => [b.recommendationKey, b]));
 
@@ -86,7 +88,7 @@ export function registeredYouTubeVideos(environment: string, preview: boolean, s
     a.players.set(b.playerId, { slug: r.playerSlug, label: names.get(r.playerSlug) ?? r.playerSlug });
     for (const c of r.characterLinks ?? []) if (characterAvailable(c.slug)) {
       a.characters.set(c.slug, CHARACTERS[c.slug].name);
-      a.bindings!.push({ matchId: r.key, playerId: b.playerId, characterId: CHARACTERS[c.slug].id, tournamentId: null });
+      a.bindings!.push({ matchId: r.key, playerId: b.playerId, characterId: characterId(c.slug), tournamentId: null });
     }
     if (typeof r.startSeconds === "number" && r.startSeconds > 0) a.start = r.startSeconds;
     if (r.pastYear) a.notes.add(`${r.pastYear}年の動画`);
@@ -120,7 +122,7 @@ export function registeredYouTubeVideos(environment: string, preview: boolean, s
       channelName: a.first.channelName, durationSeconds: null, language: null, controlTypes: [], events: [...a.notes],
       characters: characterSlugs.map(s => CHARACTERS[s].name), players: playerRefs.map(p => p.label),
       categories: [typeKey], level: "unknown", viewCount: null, viewCountCheckedAt: null,
-      entityRefs: { characters: characterSlugs.map(s => ({ id: CHARACTERS[s].id, label: CHARACTERS[s].name })), players: playerRefs, tournaments: [] },
+      entityRefs: { characters: characterSlugs.map(s => ({ id: characterId(s), label: CHARACTERS[s].name })), players: playerRefs, tournaments: [] },
       matchBindings: a.bindings,
       detailHref: null, supportingLinks: [...a.supporting].map(([url, label]) => ({ url, label })),
       registeredCategory: category, characterSlugs, playerSlugs: [...a.players.values()].map(p => p.slug),
