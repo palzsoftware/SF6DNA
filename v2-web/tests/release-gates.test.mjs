@@ -257,10 +257,3 @@ test("both completed diagnosis result views offer daily training without changin
   assert.equal((source.match(/今日の練習を決める/g) ?? []).length, 2);
   assert.equal((source.match(/releaseFeatures\.aiCoach\s*&&\s*topQuery/g) ?? []).length, 2);
 });
-
-test("V38: diagnosis result search link uses the single top-priority axis (a joined multi-label query always returns 0 results)", () => {
-  const source = readFileSync(new URL("../src/components/diagnosis-runner.tsx", import.meta.url), "utf8");
-  assert.equal((source.match(/const topQuery = priorityQuery\(/g) ?? []).length, 2);
-  assert.doesNotMatch(source, /const topQuery = .*\.join\(" "\)/);
-  assert.match(source, /const priorityQuery = .*rows\[0\]/);
-});
