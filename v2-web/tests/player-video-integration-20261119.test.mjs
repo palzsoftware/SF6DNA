@@ -4,6 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import ts from 'typescript';
+import { approvedRowKeys, expectedApproval, preApproval, readyIds, holdIds, excludedIds } from "./helpers/approved-videos-v47.mjs";
 
 const read = path => JSON.parse(readFileSync(new URL(`../src/data/player-research/${path}`, import.meta.url), 'utf8'));
 const team = read('team-bindings.json');
@@ -70,7 +71,7 @@ test('動画: キー・YouTube ID・公開承認・接続先が正しい', () =>
     assert.ok(!keys.has(v.key), `動画キー重複: ${v.key}`);
     keys.add(v.key);
     assert.match(v.youtubeId, /^[A-Za-z0-9_-]{11}$/);
-    assert.equal(v.publicationApproval, 'PENDING');
+    assert.equal(v.publicationApproval, expectedApproval(v.key));
     // 2026-11-24: ranked/stream usage gets its own label instead of being shown as 本人解説.
     assert.ok(['本人解説', '大会対戦', '配信・ランクマ'].includes(v.kind));
     for (const c of v.characterLinks ?? []) assert.match(c.slug, /^[a-z][a-z0-9-]{0,30}$/);
@@ -112,7 +113,8 @@ test('Player補足の既定値は公開承認を要求する', () => {
   assert.equal(loadLib('player-local-preview').playerLocalPreviewEnabled({ NODE_ENV: 'development', SF6DNA_PLAYER_LOCAL_PREVIEW: '1' }, 'example.com'), false);
   assert.match(src, /【ローカル確認用・未公開】/);
   assert.ok(!/searchParams|URLSearchParams/.test(src), 'URLパラメータから有効にしない');
-  assert.ok([...team, ...videos].every(r => r.publicationApproval === 'PENDING'));
+  assert.ok(team.every(r => r.publicationApproval === 'PENDING'));
+  assert.ok(videos.every(r => r.publicationApproval === expectedApproval(r.key)));
 });
 
 test('複数選手の動画は選手ごとに別キーで接続され、同じ動画が同じ選手に重複しない', () => {
@@ -133,7 +135,7 @@ test('動画カード: ローカル確認(draftPreview)では承認待ちでも�
     compilerOptions: { module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.React },
   }).outputText;
   new Function('module', 'exports', 'require', 'React', code)(m, m.exports, n => (n === 'react' ? React : {}), React);
-  const v = videos.find(x => x.characterLinks?.length);
+  const v = preApproval(videos).find(x => x.characterLinks?.length);
   const el = props => React.createElement(m.exports.PlayerRecommendedVideos, props);
   assert.equal(renderToStaticMarkup(el({ playerSlug: v.playerSlug, items: [v] })), '');
   const html = renderToStaticMarkup(el({ playerSlug: v.playerSlug, items: [v], draftPreview: true }));
@@ -174,7 +176,11 @@ test('表示確認: ローカル確認ONならPlayer詳細にカードと動画�
   const player = { id: row.playerId, slug: row.playerSlug };
   // 公開環境(プレビューOFF): PENDING は表示されない
   assert.equal(attachPlayerTeamResults(player, PROD, team, false).archiveDisplay, undefined);
-  assert.equal(playerDetailSupplements(player, PROD, false).recommendedVideoSection, undefined);
+  const publicSection = playerDetailSupplements(player, PROD, false).recommendedVideoSection;
+  if (publicSection) { // only approved, listed rows may appear in the public environment
+    assert.equal(publicSection.props.draftPreview, false);
+    assert.ok(publicSection.props.items.every(i => i.publicationApproval === 'APPROVED' && approvedRowKeys.has(i.key)));
+  }
   // ローカル確認ON: カードは「ローカル確認用」と明記して表示、元データは PENDING のまま
   const shown = attachPlayerTeamResults(player, PROD, team, true).archiveDisplay;
   assert.match(shown.intro, /^【ローカル確認用・未公開】/);

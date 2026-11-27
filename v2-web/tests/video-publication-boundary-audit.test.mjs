@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import ts from 'typescript';
+import { approvedRowKeys, expectedApproval, preApproval, readyIds, holdIds, excludedIds } from "./helpers/approved-videos-v47.mjs";
 
 // Video audit 2026-11-17: a DB row with status=published is visible in /videos,
 // but learning metadata and Player relations need their own approval. These
@@ -104,7 +105,7 @@ test('binding requires same environment, UUID and slug', () => {
 });
 
 test('PENDING recommendations render nothing; an approved copy renders one YouTube card', () => {
-  const items = videos.filter(v => v.playerSlug === 'dogura');
+  const items = preApproval(videos).filter(v => v.playerSlug === 'dogura');
   assert.ok(items.every(v => v.publicationApproval === 'PENDING'));
   assert.equal(renderToStaticMarkup(PlayerRecommendedVideos({ playerSlug: 'dogura', items })), '');
   const approved = items.map(v => ({ ...v, publicationApproval: 'APPROVED' }));

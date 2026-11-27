@@ -4,6 +4,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { createRequire } from "node:module";
 import { renderToStaticMarkup } from "react-dom/server";
 import ts from "typescript";
+import { approvedRowKeys, expectedApproval, preApproval, readyIds, holdIds, excludedIds } from "./helpers/approved-videos-v47.mjs";
 
 const require = createRequire(import.meta.url);
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url), "utf8"));
@@ -38,7 +39,7 @@ const recheck = videos.filter(v => v.identityBinding?.includes("SF6DNA_PLAYER_RE
 test("registration list: 39 rows added as pending (Psycho production-only), Brayan_Job held", () => {
   assert.equal(added.length, 39);
   for (const v of added.filter(v => v.key !== "psycho-olyYbGuRgOM")) {
-    assert.equal(v.publicationApproval, "PENDING");
+    assert.equal(v.publicationApproval, expectedApproval(v.key));
     assert.equal(v.relationConfirmed, true);
     assert.ok(v.characterLinks?.length === 1, v.key);
     assert.ok(bindings.some(b => b.environment === DEV && b.recommendationKey === v.key), `${v.key}: dev binding`);
@@ -103,7 +104,7 @@ test("recheck rows: Yanai section 2 and Raoyamu x3 are added once, merged with t
   assert.match(yanai.evidenceBasis, /確度中/);
   assert.match(yanai.evidenceBasis, /動画タイトル「ヤナイ（ベガ\/C\/HOME）」/);
   for (const v of recheck) {
-    assert.equal(v.publicationApproval, "PENDING");
+    assert.equal(v.publicationApproval, expectedApproval(v.key));
     for (const env of [DEV, PROD]) assert.equal(bindings.filter(b => b.environment === env && b.recommendationKey === v.key).length, 1, `${v.key} ${env}`);
   }
   // Whole player list: one card per match (the section full stream folds into the clip card).

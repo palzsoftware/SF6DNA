@@ -4,6 +4,9 @@ import { readFileSync, existsSync } from "node:fs";
 import { createRequire } from "node:module";
 import { renderToStaticMarkup } from "react-dom/server";
 import ts from "typescript";
+// A displayed card carries id "youtube:<id>"; raw data rows carry youtubeId.
+const yid = x => x.youtubeId ?? String(x.id).replace(/^youtube:/, "");
+import { approvedRowKeys, expectedApproval, preApproval, readyIds, holdIds, excludedIds } from "./helpers/approved-videos-v47.mjs";
 
 // 2026-11-25 SFL48 profile supplements, Division F 第7節 match evidence and character 解説/対戦 videos.
 // Every row stays PENDING. "Isolated" checks render approved copies in memory only.
@@ -158,22 +161,33 @@ test("新規バインディングは既存の環境別IDと一致し、キーは
   }
 });
 
-test("キャラ動画: 公式ガイドは29本・29キャラ。全件PENDING", () => {
+test("キャラ動画: 公式ガイドは29本・29キャラ。承認状態は承認済みリスト(V47)と一致し、それ以外はPENDING", () => {
   assert.equal(characters.length, 32);
   const official = characterVideos.filter(v => v.origin === "公式キャラクターガイド");
   assert.equal(new Set(official.map(v => v.youtubeId)).size, 29);
   assert.equal(new Set(official.map(v => v.characterSlug)).size, 29);
-  for (const v of characterVideos) { assert.equal(v.publicationApproval, "PENDING"); assert.ok(characters.includes(v.characterSlug), v.key); }
+  for (const v of characterVideos) { assert.equal(v.publicationApproval, expectedApproval(v.key)); assert.ok(characters.includes(v.characterSlug), v.key); }
 });
 
-test("現在の公開設定ではキャラ動画も選手補足も出ない", () => {
-  for (const slug of characters) {
-    for (const env of Object.values(ENV)) {
+test("現在の公開設定: 表示されるのは承認済み動画だけ。承認前データなら従来どおり何も出ない。補足は出ない", () => {
+  const ids = rows => new Set(rows.map(yid));
+  const preSource = { players: preApproval(videos), characters: preApproval(characterVideos) };
+  for (const env of Object.values(ENV)) {
+    const shown = registeredModule.registeredYouTubeVideos(env, false);
+    const shownIds = ids(shown);
+    assert.equal(shownIds.size, shown.length, `${env}: duplicate cards`);
+    for (const id of shownIds) assert.ok(readyIds.has(id), `${env}: ${id} is not in the approved list`);
+    for (const id of [...holdIds, ...excludedIds]) assert.ok(!shownIds.has(id), `${env}: HOLD/EXCLUDED ${id} must not be shown`);
+    // Original non-public contract is kept for the same data before approval.
+    assert.equal(registeredModule.registeredYouTubeVideos(env, false, preSource).length, 0, `${env}: pre-approval data`);
+    for (const slug of characters) {
       const g = characterModule.characterRegisteredVideoGroups(slug, env, false);
-      assert.equal(g.guide.length + g.match.length, 0, slug);
+      for (const c of [...g.guide, ...g.match]) assert.ok(readyIds.has(yid(c)), `${slug}/${env}: ${yid(c)}`);
     }
   }
-  for (const env of Object.values(ENV)) assert.equal(registeredModule.registeredYouTubeVideos(env, false).length, 0, env);
+  // Production shows every approved card; development differs only by the Arjun character rows that the development DB does not know (B projection: 691 / 687).
+  assert.deepEqual([...ids(registeredModule.registeredYouTubeVideos(ENV.production, false))].sort(), [...readyIds].sort());
+  assert.equal(registeredModule.registeredYouTubeVideos(ENV.development, false).length, 687);
   const row = supplements[0];
   const player = { id: row.identities[0].playerId, slug: row.playerSlug };
   assert.equal(supplementModule.boundProfileSupplement(player, row.identities[0].environment, supplements, false), null);
@@ -297,6 +311,23 @@ test("V1〜V3: リプレイの確認時刻（1:00など）は開始時刻に使�
 });
 
 test("通常設定: 未承認の動画はどの画面のデータにも入らない", () => {
-  for (const env of Object.values(ENV)) assert.equal(registeredModule.registeredYouTubeVideos(env, false).length, 0);
+  const preSource = { players: preApproval(videos), characters: preApproval(characterVideos) };
+  for (const env of Object.values(ENV)) {
+    assert.equal(registeredModule.registeredYouTubeVideos(env, false, preSource).length, 0);
+    for (const v of registeredModule.registeredYouTubeVideos(env, false)) assert.ok(readyIds.has(yid(v)), yid(v));
+  }
   assert.equal(registeredModule.registeredYouTubeVideos("unknownref", true).length, 0);
+});
+
+test("承認値の検査: 承認済み行のキー一覧が承認リストと完全一致し、不正な承認値・HOLD・EXCLUDEDは表示されない", () => {
+  const approvedKeys = [...videos, ...characterVideos].filter(r => r.publicationApproval === "APPROVED").map(r => r.key).sort();
+  assert.deepEqual(approvedKeys, [...approvedRowKeys].sort());
+  for (const r of [...videos, ...characterVideos]) assert.ok(["APPROVED", "PENDING"].includes(r.publicationApproval), r.key);
+  // Anything that is not exactly APPROVED never becomes a card.
+  for (const bad of ["approved", "Approved", "TRUE", "true", "YES", "", null, undefined, 1]) {
+    const source = { players: videos.map(v => ({ ...v, publicationApproval: bad })), characters: characterVideos.map(v => ({ ...v, publicationApproval: bad })) };
+    for (const env of Object.values(ENV)) assert.equal(registeredModule.registeredYouTubeVideos(env, false, source).length, 0, String(bad));
+  }
+  // HOLD / EXCLUDED video ids have no APPROVED row anywhere in the data.
+  for (const r of [...videos, ...characterVideos]) if (holdIds.has(r.youtubeId) || excludedIds.has(r.youtubeId)) assert.equal(r.publicationApproval, "PENDING", r.key);
 });
