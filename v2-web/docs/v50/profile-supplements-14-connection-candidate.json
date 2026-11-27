@@ -1,0 +1,440 @@
+{
+ "_note": "V50 candidate: 14 players converted to the product profile-supplements shape. NOT merged. displayName null (needs product display name), only development identity known, publicationApproval PENDING, no main-character claim, SNS held where not self-published.",
+ "rows": [
+  {
+   "playerSlug": "xiaohai",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": "77d50854-04a2-46be-88fb-f86fe9d9177d",
+     "dbStatus": "開発DB draft"
+    }
+   ],
+   "facts": [
+    {
+     "field": "country",
+     "label": "国・地域",
+     "value": "中国",
+     "basis": "B V44確認（出典記事）",
+     "sourceUrl": "https://dashfight.com/news/team-falcons-sign-micky-in-a-statement-move-for-their-sf-6-roster-8639",
+     "checkedOn": "2026-11-27"
+    },
+    {
+     "field": "affiliation",
+     "label": "所属（報道ベース）",
+     "value": "Team Falcons（報道）。EWC2024/2025時はKuaiShou Gaming",
+     "basis": "B V44確認（報道記事。公式ロスターではない）",
+     "sourceUrl": "https://dashfight.com/news/team-falcons-sign-micky-in-a-statement-move-for-their-sf-6-roster-8639",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    },
+    {
+     "field": "tournamentCharacters",
+     "label": "大会での使用キャラ（履歴・参考）",
+     "value": "舞・ベガ（EWC2025大会使用）",
+     "basis": "大会使用の根拠。現在のメイン・サブの判定ではない",
+     "sourceUrl": "https://dashfight.com/news/team-falcons-sign-micky-in-a-statement-move-for-their-sf-6-roster-8639",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    }
+   ],
+   "hold": [
+    "sns"
+   ]
+  },
+  {
+   "playerSlug": "problem-x",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": "257b81ea-e6c6-4a1c-9893-4dbfc9017e74",
+     "dbStatus": "開発DB draft"
+    }
+   ],
+   "facts": [],
+   "hold": [
+    "country",
+    "affiliation",
+    "tournamentCharacters",
+    "sns"
+   ]
+  },
+  {
+   "playerSlug": "vxbao",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": "7e1a49d6-e495-488b-b8ff-629f45dcc8f8",
+     "dbStatus": "開発DB draft"
+    }
+   ],
+   "facts": [],
+   "hold": [
+    "country",
+    "affiliation",
+    "tournamentCharacters",
+    "sns"
+   ]
+  },
+  {
+   "playerSlug": "kakeru",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": "b1d6c5b4-9157-455a-84b5-6b5c2ecb80ee",
+     "dbStatus": "開発DB draft"
+    }
+   ],
+   "facts": [
+    {
+     "field": "country",
+     "label": "国・地域",
+     "value": "日本",
+     "basis": "B V44確認（出典記事）",
+     "sourceUrl": "https://news.denfaminicogamer.jp/news/251220y",
+     "checkedOn": "2026-11-27"
+    },
+    {
+     "field": "affiliation",
+     "label": "所属（報道ベース）",
+     "value": "所属なし（2025-12-31 ZETA DIVISION退団、2025-10-23選手活動引退）",
+     "basis": "B V44確認（報道記事。公式ロスターではない）",
+     "sourceUrl": "https://news.denfaminicogamer.jp/news/251220y",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    },
+    {
+     "field": "tournamentCharacters",
+     "label": "大会での使用キャラ（履歴・参考）",
+     "value": "JP（現行メインは本人・チーム発表でJP）",
+     "basis": "大会使用の根拠。現在のメイン・サブの判定ではない",
+     "sourceUrl": "https://news.denfaminicogamer.jp/news/251220y",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    }
+   ],
+   "hold": []
+  },
+  {
+   "playerSlug": "haitani",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": "6fcc0db3-10bc-4d23-8701-2b00349ccab0",
+     "dbStatus": "開発DB draft"
+    }
+   ],
+   "facts": [
+    {
+     "field": "country",
+     "label": "国・地域",
+     "value": "日本",
+     "basis": "B V44確認（出典記事）",
+     "sourceUrl": "https://www.youtube.com/channel/UCxn5UDn9U-Km4Ug_bChuG6Q",
+     "checkedOn": "2026-11-27"
+    },
+    {
+     "field": "affiliation",
+     "label": "所属（報道ベース）",
+     "value": "REJECT（ストリーマー部門・Wiki 2026-10-31）",
+     "basis": "B V44確認（報道記事。公式ロスターではない）",
+     "sourceUrl": "https://www.youtube.com/channel/UCxn5UDn9U-Km4Ug_bChuG6Q",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    },
+    {
+     "field": "tournamentCharacters",
+     "label": "大会での使用キャラ（履歴・参考）",
+     "value": "クラシック春麗（本人動画題名）",
+     "basis": "大会使用の根拠。現在のメイン・サブの判定ではない",
+     "sourceUrl": "https://www.youtube.com/channel/UCxn5UDn9U-Km4Ug_bChuG6Q",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    }
+   ],
+   "hold": []
+  },
+  {
+   "playerSlug": "angrybird",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": "15140d85-7ef7-4fea-b49f-60d3006ce0eb",
+     "dbStatus": "開発DB draft"
+    }
+   ],
+   "facts": [
+    {
+     "field": "country",
+     "label": "国・地域",
+     "value": "アラブ首長国連邦",
+     "basis": "B V44確認（出典記事）",
+     "sourceUrl": "https://fgamers.jp/?AngryBird",
+     "checkedOn": "2026-11-27"
+    },
+    {
+     "field": "affiliation",
+     "label": "所属（報道ベース）",
+     "value": "REJECT（2025年1月加入・報道）",
+     "basis": "B V44確認（報道記事。公式ロスターではない）",
+     "sourceUrl": "https://fgamers.jp/?AngryBird",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    },
+    {
+     "field": "tournamentCharacters",
+     "label": "大会での使用キャラ（履歴・参考）",
+     "value": "ケン・豪鬼（Wiki）／ケン（EVO2023決勝・章名）",
+     "basis": "大会使用の根拠。現在のメイン・サブの判定ではない",
+     "sourceUrl": "https://fgamers.jp/?AngryBird",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    }
+   ],
+   "hold": []
+  },
+  {
+   "playerSlug": "nl",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": "4447cd18-265a-4c06-8fa5-b771b06d4cb9",
+     "dbStatus": "開発DB draft"
+    }
+   ],
+   "facts": [
+    {
+     "field": "country",
+     "label": "国・地域",
+     "value": "韓国",
+     "basis": "B V44確認（出典記事）",
+     "sourceUrl": "https://www.youtube.com/@nltv9433",
+     "checkedOn": "2026-11-27"
+    },
+    {
+     "field": "tournamentCharacters",
+     "label": "大会での使用キャラ（履歴・参考）",
+     "value": "ルーク・豪鬼（Wiki・メイン）",
+     "basis": "大会使用の根拠。現在のメイン・サブの判定ではない",
+     "sourceUrl": "https://www.youtube.com/@nltv9433",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    }
+   ],
+   "hold": [
+    "affiliation"
+   ]
+  },
+  {
+   "playerSlug": "nuckledu",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": "6838bbb3-6c71-4170-bb7e-15d25717fc7e",
+     "dbStatus": "開発DB draft"
+    }
+   ],
+   "facts": [
+    {
+     "field": "country",
+     "label": "国・地域",
+     "value": "アメリカ",
+     "basis": "B V44確認（出典記事）",
+     "sourceUrl": "https://www.youtube.com/watch?v=UJWxiBfnh2A",
+     "checkedOn": "2026-11-27"
+    },
+    {
+     "field": "tournamentCharacters",
+     "label": "大会での使用キャラ（履歴・参考）",
+     "value": "舞・ガイル（TNS #148 章名・大会使用）",
+     "basis": "大会使用の根拠。現在のメイン・サブの判定ではない",
+     "sourceUrl": "https://www.youtube.com/watch?v=UJWxiBfnh2A",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    }
+   ],
+   "hold": [
+    "affiliation",
+    "sns"
+   ]
+  },
+  {
+   "playerSlug": "oil-king",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": "2929d702-16d6-44c0-b54c-1d8743b67bc4",
+     "dbStatus": "開発DB draft"
+    }
+   ],
+   "facts": [],
+   "hold": [
+    "country",
+    "affiliation",
+    "tournamentCharacters",
+    "sns"
+   ]
+  },
+  {
+   "playerSlug": "kusanagi",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": "908552e5-1a3c-4ef7-aef5-9fac6687efb5",
+     "dbStatus": "開発DB draft"
+    }
+   ],
+   "facts": [],
+   "hold": [
+    "country",
+    "affiliation",
+    "tournamentCharacters",
+    "sns"
+   ]
+  },
+  {
+   "playerSlug": "broski",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": null,
+     "dbStatus": "DB未登録（保留継続）"
+    }
+   ],
+   "facts": [
+    {
+     "field": "country",
+     "label": "国・地域",
+     "value": "イギリス",
+     "basis": "B V44確認（出典記事）",
+     "sourceUrl": "https://game.watch.impress.co.jp/docs/kikaku/1668840.html",
+     "checkedOn": "2026-11-27"
+    },
+    {
+     "field": "tournamentCharacters",
+     "label": "大会での使用キャラ（履歴・参考）",
+     "value": "A.K.I.（CC11大会使用・報道）",
+     "basis": "大会使用の根拠。現在のメイン・サブの判定ではない",
+     "sourceUrl": "https://game.watch.impress.co.jp/docs/kikaku/1668840.html",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    }
+   ],
+   "hold": [
+    "affiliation",
+    "sns"
+   ]
+  },
+  {
+   "playerSlug": "juicyjoe",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": "5f568260-4453-49f5-882b-fe0f3dd30da3",
+     "dbStatus": "開発DB draft"
+    }
+   ],
+   "facts": [
+    {
+     "field": "country",
+     "label": "国・地域",
+     "value": "スウェーデン（GAME Watch）",
+     "basis": "B V44確認（出典記事）",
+     "sourceUrl": "https://game.watch.impress.co.jp/docs/kikaku/1668840.html",
+     "checkedOn": "2026-11-27"
+    },
+    {
+     "field": "tournamentCharacters",
+     "label": "大会での使用キャラ（履歴・参考）",
+     "value": "JP（CC11大会使用・報道）",
+     "basis": "大会使用の根拠。現在のメイン・サブの判定ではない",
+     "sourceUrl": "https://game.watch.impress.co.jp/docs/kikaku/1668840.html",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    }
+   ],
+   "hold": [
+    "affiliation",
+    "sns"
+   ]
+  },
+  {
+   "playerSlug": "xian",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": null,
+     "dbStatus": "DB未登録（V41時点。draft登録は承認待ち）"
+    }
+   ],
+   "facts": [
+    {
+     "field": "country",
+     "label": "国・地域",
+     "value": "シンガポール",
+     "basis": "B V44確認（出典記事）",
+     "sourceUrl": "https://sf.esports.capcom.com/cpt/news/231207",
+     "checkedOn": "2026-11-27"
+    },
+    {
+     "field": "tournamentCharacters",
+     "label": "大会での使用キャラ（履歴・参考）",
+     "value": "ディージェイ（CPT2023公式）",
+     "basis": "大会使用の根拠。現在のメイン・サブの判定ではない",
+     "sourceUrl": "https://sf.esports.capcom.com/cpt/news/231207",
+     "checkedOn": "2026-11-27",
+     "state": "HISTORICAL"
+    }
+   ],
+   "hold": [
+    "affiliation",
+    "sns"
+   ]
+  },
+  {
+   "playerSlug": "luffy",
+   "displayName": null,
+   "publicationApproval": "PENDING",
+   "identities": [
+    {
+     "environment": "vvsknbmlfvvnrmgtyhbf",
+     "playerId": null,
+     "dbStatus": "DB未登録（保留継続）"
+    }
+   ],
+   "facts": [],
+   "hold": [
+    "country",
+    "affiliation",
+    "tournamentCharacters",
+    "sns"
+   ]
+  }
+ ]
+}
