@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useEffectEvent, useId, useMemo, useRef, useState } from "react";
+import { PracticeBeginnerGoalNote } from "./practice-beginner-goal-note";
 import type { DailyTrainingItem } from "@/lib/daily-training";
 import { getQualityGuide } from "../lib/daily-training-quality";
 import { pauseTrainingTimer, remainingTrainingTime, resetTrainingTimer, startTrainingTimer, FIVE_MINUTES_MS } from "../lib/daily-training-timer";
@@ -165,6 +166,7 @@ export function DailyTrainingQualityCard({ item, index, anchorId, expanded, comp
         <section><h3>準備する内容</h3><Lines lines={item.detail.setup} /></section>
         {guide?.hold.length ? <p className={styles.caution}>条件確認が必要です。確認できない設定は使わず、単独の動作・入力の確認までで区切れます。</p> : null}
         <section><h3>成功の目安</h3><Lines lines={item.detail.successCondition} />{item.detail.successCondition.length > 0 ? <p className={styles.note}>数値は練習用の仮目標です。準備済みの条件で難しければ単純な練習に戻してください。達成までの延長は不要です。</p> : null}</section>
+        <PracticeBeginnerGoalNote focus={item.id.split(":").pop()} />
         <section><h3>5分間の練習手順</h3><ol className={styles.steps}>
           <li><strong>0〜1分</strong><Lines lines={item.detail.minute01} /></li>
           <li><strong>1〜3分</strong><Lines lines={item.detail.minute13} /></li>

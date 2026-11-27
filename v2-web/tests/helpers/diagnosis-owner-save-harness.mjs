@@ -104,6 +104,7 @@ function environment(options = {}) {
       "@/lib/diagnosis-axis-labels": axisLabelModule.exports,
       // Display-only notes (A's draft 2026-11-25); not part of the save contract under test.
       "./diagnosis-guide-notes": { DiagnosisQuestionNotes: () => null, ImprovementResultGuide: () => null },
+      "./style-axis-guide-notes": { StyleAxisGuideNotes: () => null },
       "@/lib/daily-training": { buildDailyTrainingHref: () => "/daily" },
       "@/lib/release-features": { releaseFeatures: { aiCoach: false } },
       "@/lib/supabase/client": { getSupabaseBrowserClient: () => client },

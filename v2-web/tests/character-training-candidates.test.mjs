@@ -147,7 +147,10 @@ const APPROVED_DIAGNOSIS_CHANGES = {
   'src/components/diagnosis-history-tool.tsx': 'ab3224cf24441d72293ea923fb56035509c42f7313abfce07a245d08b9e2f917',
   // 2026-11-25: Aの案内原稿（SF6DNA_DIAG_TRAINING_UX_DRAFT_20261125 の A1〜A4）を表示だけで追加。質問・選択肢・採点・推薦・保存は不変。
   // V41：検索リンク生成の2行＋補助関数のみ変更（11be0977… → e14010e5…）。変更範囲は下の「Aの案内原稿…」テストが基準版34051280…との一致で別途固定している。
-  'src/components/diagnosis-runner.tsx': 'e14010e583777d9370e5e291f09f75ded08a799af588da16160299fdd5ed3491',
+  // A V43（承認待ち）：傾向12軸の説明部品 StyleAxisGuideNotes の挿入のみ（import 1行＋表示2か所）。下の「Aの案内原稿…」テストで除去後の一致を固定。
+  'src/components/diagnosis-runner.tsx': 'af236c781ec5a40ab4568b422c979cd53075bed2408e57eddaf4e25ff107baa6',
+  // A V43（承認待ち）：初心者向け補足 PracticeBeginnerGoalNote の挿入のみ（import 1行＋表示1行）。
+  'src/components/daily-training-quality-card.tsx': '418e24c16ff08fd57da13056673a082a19b1b2a8e93ad1476f97ce3a4e115bd8',
   'src/components/diagnosis-guide-notes.tsx': '110131293b8cec73c8adacce42d28d05cea4efe20f9e0b6a422f561c49dc6432',
   'src/components/daily-training-planner.tsx': '719cab0e7e48bfbdea071ba9066a8b6aa03765920813ffc252db9d0efc288329',
   'src/components/daily-training-setup-guide.tsx': 'abacf5b7b2479ce862c6868bf02feb30034814cf173c0cbe08d13ee0d6160af9',
@@ -185,15 +188,24 @@ test('Aの案内原稿の反映は表示の追加だけ（取り除くと承認�
     // ハッシュを書き換えて通すのではなく、変更が検索リンク生成の2行と補助関数だけであることを固定する。
     .replace(/\/\/ search_sf6dna matches the whole query[^\n]*\n\/\/ never matches anything[^\n]*\nconst priorityQuery = [^\n]*\n\n/, '')
     .replace('const topQuery = priorityQuery([...improvement, ...style]);', 'const topQuery = [...improvement, ...style].map(([key]) => axisLabel(key)).join(" ");')
-    .replace('const topQuery = priorityQuery(priorities);', 'const topQuery = priorities.map(([key]) => axisLabel(key)).join(" ");');
+    .replace('const topQuery = priorityQuery(priorities);', 'const topQuery = priorities.map(([key]) => axisLabel(key)).join(" ");')
+    // A V43：傾向12軸の説明の挿入（表示のみ）を取り除く。
+    .replace('import { StyleAxisGuideNotes } from "./style-axis-guide-notes";\n', '')
+    .replace('<StyleAxisGuideNotes axes={style.map(([key]) => key)} labelOf={axisLabel} />', '')
+    .replace('{diagnosis.diagnosisType !== "improvement" ? <StyleAxisGuideNotes axes={priorities.map(([key]) => key)} labelOf={axisLabel} /> : null}', '');
   // 34051280… = 承認済みの診断履歴の表示修正だけを当てた版（採点・保存はこの版と同一）。
   assert.equal(sha(runner), '34051280930a06669cf0406a4e67a0c29a1e5d4672682559f936f12b5ac7a81f');
   const planner = read('src/components/daily-training-planner.tsx')
     .replace('import { DailyTrainingSetupGuide } from "./daily-training-setup-guide";\n', '')
     .replace('\n      <DailyTrainingSetupGuide fromDiagnosis={!checkingHistory && (plan.source === "diagnosis_link" || plan.source === "local_diagnosis")} />', '');
   assert.equal(planner, lf(git('show', `${DIAGNOSIS_BASE}:./src/components/daily-training-planner.tsx`)) + '\n');
+  // A V43：練習カードへの初心者向け補足の挿入（表示のみ）を取り除くと基準コミットと一致する。
+  const card = read('src/components/daily-training-quality-card.tsx')
+    .replace('import { PracticeBeginnerGoalNote } from "./practice-beginner-goal-note";\n', '')
+    .replace('\n        <PracticeBeginnerGoalNote focus={item.id.split(":").pop()} />', '');
+  assert.equal(card, lf(git('show', `${DIAGNOSIS_BASE}:./src/components/daily-training-quality-card.tsx`)) + '\n');
   // 新しい表示部品は保存・採点・通信を持たない。
-  for (const f of ['src/components/diagnosis-guide-notes.tsx', 'src/components/daily-training-setup-guide.tsx']) {
+  for (const f of ['src/components/diagnosis-guide-notes.tsx', 'src/components/daily-training-setup-guide.tsx', 'src/components/style-axis-guide-notes.tsx', 'src/components/practice-beginner-goal-note.tsx']) {
     assert.doesNotMatch(read(f), /useState|useEffect|localStorage|fetch\(|supabase|scorePayload|setAnswers|saveDiagnosis/, f);
   }
 });
